@@ -130,7 +130,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.IsType<OpenXmlUnknownElement>(unknownElement.FirstChild);
             Assert.IsType<OpenXmlUnknownElement>(unknownElement.FirstChild.FirstChild);
             Assert.IsType<OpenXmlUnknownElement>(unknownElement.FirstChild.FirstChild.FirstChild);
-            // Assert.IsType(unknownElement.FirstChild.FirstChild.FirstChild.FirstChild, typeof(OpenXmlMiscNode));
             Assert.Equal("Text in <drawing>.", (unknownElement.FirstChild.FirstChild.FirstChild as OpenXmlUnknownElement).Text);
 
             Assert.Equal(outerXml, unknownElement.OuterXml);
@@ -145,7 +144,6 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.IsType<OpenXmlUnknownElement>(clonedElement.FirstChild);
             Assert.IsType<OpenXmlUnknownElement>(clonedElement.FirstChild.FirstChild);
             Assert.IsType<OpenXmlUnknownElement>(clonedElement.FirstChild.FirstChild.FirstChild);
-            //Assert.IsType(typeof(OpenXmlMiscNode), clonedElement.FirstChild.FirstChild.FirstChild.FirstChild);
             Assert.Equal("Text in <drawing>.", (clonedElement.FirstChild.FirstChild.FirstChild as OpenXmlUnknownElement).Text);
 
             Assert.Equal(outerXml, clonedElement.OuterXml);
@@ -232,7 +230,7 @@ namespace DocumentFormat.OpenXml.Tests
                                     "</ap:Properties>";
 
             var properties = new DocumentFormat.OpenXml.ExtendedProperties.Properties();
-            var property = properties.AppendChild( new DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts() );;
+            var property = properties.AppendChild( new DocumentFormat.OpenXml.ExtendedProperties.TitlesOfParts() );
             property.VTVector = new DocumentFormat.OpenXml.VariantTypes.VTVector();
             property.VTVector.BaseType = DocumentFormat.OpenXml.VariantTypes.VectorBaseValues.Lpstr;
             property.VTVector.Size = 1;
@@ -249,8 +247,10 @@ namespace DocumentFormat.OpenXml.Tests
             var customProperties = new DocumentFormat.OpenXml.CustomProperties.Properties();
             var foo = new DocumentFormat.OpenXml.CustomProperties.CustomDocumentProperty();
             foo.Name = "crap";
+
             // format id is required, i copied this from a Word document.
             foo.FormatId = "{D5CDD505-2E9C-101B-9397-08002B2CF9AE}";
+
             // property id is required.
             foo.PropertyId = 2;
             foo.VTBool = new DocumentFormat.OpenXml.VariantTypes.VTBool("true");

@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// Get PartRootElement of current element
         /// </summary>
         /// <param name="element">current element</param>
-        /// <returns>Part root element of current elemen, null if root element is not of OpenXmlPartRootElement.</returns>
+        /// <returns>Part root element of current element, null if root element is not of OpenXmlPartRootElement.</returns>
         public static OpenXmlPartRootElement PartRootElement(this OpenXmlElement element)
         {
             if (null == element)

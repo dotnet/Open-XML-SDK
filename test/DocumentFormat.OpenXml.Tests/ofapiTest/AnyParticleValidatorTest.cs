@@ -20,12 +20,12 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AnyParticleValidateTest()
         {
-            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
+            SdbSchemaData sdbSchemaDatas = SdbSchemaData.GetSchemaData(FileFormatVersions.Office2007);
 
             TestSimpleAny(sdbSchemaDatas);
         }
 
-        private void TestSimpleAny(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleAny(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
@@ -35,6 +35,7 @@ namespace DocumentFormat.OpenXml.Tests
             var target = particleConstraint.ParticleValidator as ChoiceParticleValidator;
             validationContext.Element = textBox;
             var expected = textBox;
+
               //<xsd:complexType name="CT_Textbox">
               //  <xsd:choice>
               //    <xsd:element ref="w:txbxContent" minOccurs="0" />
@@ -44,7 +45,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
 
-            // empty is ok
+            // empty is OK
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
@@ -57,7 +58,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** error case ******
 
-            // any element with namespace is invlaid
+            // any element with namespace is invalid
             errorChild = textBox.AppendChild(new TextBox());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
@@ -71,8 +72,9 @@ namespace DocumentFormat.OpenXml.Tests
             textBox.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // any element with namespace is invalid
-            errorChild = textBox.AppendChild(new OpenXmlUnknownElement("", "test", "http://test"));
+            errorChild = textBox.AppendChild(new OpenXmlUnknownElement(string.Empty, "test", "http://test"));
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
             Assert.Single(validationContext.Errors);
@@ -85,7 +87,8 @@ namespace DocumentFormat.OpenXml.Tests
             textBox.RemoveChild(errorChild);
 
             validationContext.Clear();
-            // any element with namespace is invlaid
+
+            // any element with namespace is invalid
             errorChild = textBox.AppendChild(new OpenXmlUnknownElement("t", "test", "http://test"));
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
@@ -99,6 +102,7 @@ namespace DocumentFormat.OpenXml.Tests
             textBox.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // only one element without namespace is allowed
             textBox.AppendChild(new OpenXmlUnknownElement("test"));
             errorChild = textBox.AppendChild(new OpenXmlUnknownElement("errorElement"));
@@ -113,6 +117,7 @@ namespace DocumentFormat.OpenXml.Tests
             textBox.RemoveAllChildren();
 
             validationContext.Clear();
+
             // only one element without namespace is allowed
             textBox.AppendChild(new OpenXmlUnknownElement("test"));
             errorChild = textBox.AppendChild(new OpenXmlUnknownElement("test"));

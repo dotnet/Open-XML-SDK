@@ -8,9 +8,9 @@ namespace DocumentFormat.OpenXml.Packaging
 {
     internal static class RelationshipTypeList
     {
-        private static Dictionary<String, int> _list;
+        private static Dictionary<string, int> _list;
 
-        public static Dictionary<String, int> IsoKnownRelationships
+        public static Dictionary<string, int> IsoKnownRelationships
         {
             get
             {
@@ -90,6 +90,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     _list.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/image", 1);
                     _list.Add("http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing", 1);
                 }
+
                 return _list;
             }
         }

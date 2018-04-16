@@ -13,8 +13,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class AttributeValuePatternConstraint : SemanticConstraint
     {
-        private byte _attribute;
-        private string _pattern;
+        private readonly byte _attribute;
+        private readonly Regex _pattern;
 
         public AttributeValuePatternConstraint(byte attribute, string pattern)
             : base(SemanticValidationLevel.Element)
@@ -23,28 +23,25 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             _attribute = attribute;
 
-            if (pattern.StartsWith("^", StringComparison.Ordinal) && pattern.EndsWith("$", StringComparison.Ordinal))
+            if (!pattern.StartsWith("^", StringComparison.Ordinal) || !pattern.EndsWith("$", StringComparison.Ordinal))
             {
-                _pattern = pattern;
+                pattern = string.Concat("^", pattern, "$");
             }
-            else
-            {
-                _pattern = "^" + pattern + "$";
-            }
+
+            _pattern = new Regex(pattern, RegexOptions.Compiled);
         }
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
             OpenXmlSimpleType attributeValue = context.Element.Attributes[_attribute];
 
-            //if the attribute is omited, semantic validation will do nothing
+            //if the attribute is omitted, semantic validation will do nothing
             if (attributeValue == null || string.IsNullOrEmpty(attributeValue.InnerText))
             {
                 return null;
             }
 
-            Regex regex = new Regex(_pattern);
-            if (regex.IsMatch(attributeValue.InnerText))
+            if (_pattern.IsMatch(attributeValue.InnerText))
             {
                 return null;
             }
@@ -56,7 +53,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 ErrorType = ValidationErrorType.Schema,
                 Node = context.Element,
                 Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_AttributeValueDataTypeDetailed,
-                                            GetAttributeQualifiedName(context.Element, _attribute), attributeValue.InnerText, subMsg)
+                                            GetAttributeQualifiedName(context.Element, _attribute), attributeValue.InnerText, subMsg),
             };
         }
     }

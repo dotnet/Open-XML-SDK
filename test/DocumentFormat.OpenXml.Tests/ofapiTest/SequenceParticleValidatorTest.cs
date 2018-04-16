@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void SequenceParticleValidateTest()
         {
-            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
+            SdbSchemaData sdbSchemaDatas = SdbSchemaData.GetSchemaData(FileFormatVersions.Office2007);
 
             TestSimpleSequence(sdbSchemaDatas);
             TestSimpleSequence2(sdbSchemaDatas);
@@ -29,7 +29,7 @@ namespace DocumentFormat.OpenXml.Tests
             TestSimpleSequence4(sdbSchemaDatas);
         }
 
-        private void TestSimpleSequence4(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleSequence4(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
@@ -47,7 +47,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
 
-            // empty is ok
+            // empty is OK
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
@@ -77,6 +77,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":cat", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // last child is invalid
             categories.RemoveChild(errorChild);
             errorChild = categories.AppendChild(new Paragraph());
@@ -90,6 +91,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":cat", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // 2nd child is invalid
             categories.RemoveChild(errorChild);
             errorChild = categories.InsertAfter(new Paragraph(), categories.FirstChild);
@@ -103,6 +105,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":cat", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // 3rd child is invalid
             categories.RemoveChild(errorChild);
             errorChild = categories.InsertBefore(new Paragraph(), categories.LastChild);
@@ -116,6 +119,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":cat", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // only one invalid child
             categories.RemoveAllChildren();
             errorChild = categories.AppendChild(new Paragraph());
@@ -129,7 +133,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":cat", validationContext.Errors[0].Description);
         }
 
-        private void TestSimpleSequence3(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleSequence3(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             Divs divs = new Divs();
@@ -173,6 +177,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":div", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // last child is invalid
             divs.RemoveChild(errorChild);
             errorChild = divs.AppendChild(new Paragraph());
@@ -186,6 +191,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":div", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // 2nd child is invalid
             divs.RemoveChild(errorChild);
             errorChild = divs.InsertAfter(new Paragraph(), divs.FirstChild);
@@ -199,6 +205,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":div", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // 3rd child is invalid
             divs.RemoveChild(errorChild);
             errorChild = divs.InsertBefore(new Paragraph(), divs.LastChild);
@@ -212,6 +219,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":div", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // empty,
             divs.RemoveAllChildren();
             target.Validate(validationContext);
@@ -223,6 +231,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":div", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // only one invalid child
             errorChild = divs.AppendChild(new Paragraph());
             target.Validate(validationContext);
@@ -235,7 +244,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":div", validationContext.Errors[0].Description);
         }
 
-        private void TestSimpleSequence2(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleSequence2(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             Ruby ruby = new Ruby();
@@ -245,6 +254,7 @@ namespace DocumentFormat.OpenXml.Tests
             var target = particleConstraint.ParticleValidator as SequenceParticleValidator;
             validationContext.Element = ruby;
             var expected = ruby;
+
             //<xsd:complexType name="CT_Ruby">
             //  <xsd:sequence>
             //    <xsd:element name="rubyPr" type="CT_RubyPr">
@@ -271,6 +281,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":rubyBase", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // No RubyContent child, incomplete error
             ruby.RemoveChild(ruby.LastChild);
             target.Validate(validationContext);
@@ -282,6 +293,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":rt", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // Empty, incomplete error
             ruby.RemoveChild(ruby.LastChild);
             target.Validate(validationContext);
@@ -293,6 +305,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":rubyPr", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // No RubyContent child, incomplete error
             ruby.Append(new RubyProperties(), new RubyBase());
             errorChild = ruby.LastChild;
@@ -306,6 +319,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":rt", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // No RubyProperties child, incomplete error
             ruby.RemoveAllChildren();
             ruby.Append(new RubyContent(), new RubyBase());
@@ -320,6 +334,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":rubyPr", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // first should be RubyProperties()
             ruby.PrependChild(new RubyContent());
             errorChild = ruby.FirstChild;
@@ -333,6 +348,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":rubyPr", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // 2nd and 3rd are same element, error
             errorChild = ruby.FirstChild.NextSibling();
             ruby.PrependChild(new RubyProperties());
@@ -346,7 +362,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":rt", validationContext.Errors[0].Description);
         }
 
-        private void TestSimpleSequence(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleSequence(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
 
@@ -400,6 +416,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Contains(":result", validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // 2nd child is invalid
             ddList.PrependChild(new DropDownListSelection());
             target.Validate(validationContext);
@@ -412,6 +429,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // the sequence of the first 2 children are wrong
             errorChild = ddList.FirstChild;
             ddList.PrependChild(new DefaultDropDownListItemIndex());
@@ -425,6 +443,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // 1st and 2nd are same type, maxOccurs error
             errorChild = ddList.FirstChild;
             ddList.PrependChild(new DefaultDropDownListItemIndex());
@@ -438,6 +457,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // the 2nd and 3rd are same type, maxOccurs error
             ddList.PrependChild(new DropDownListSelection());
             target.Validate(validationContext);
@@ -450,6 +470,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // expectedNode are now the 4th, the first 3 are OK.
             ddList.InsertAfter(new ListEntryFormField(), errorChild);
             target.Validate(validationContext);

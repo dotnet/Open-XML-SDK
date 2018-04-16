@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Validation
         }
 
         /// <summary>
-        /// Validat the specified document.
+        /// Validate the specified document.
         /// </summary>
         /// <param name="document">The document to be validated.</param>
         /// <returns>Return results in ValidationResult.</returns>
@@ -51,9 +51,8 @@ namespace DocumentFormat.OpenXml.Validation
             foreach (var part in PartsToBeValidated(document))
             {
                 // traverse from the part root element (by DOM or by Reader) in post-order
-                // that means validate the children firt, then validate the parent
+                // that means validate the children first, then validate the parent
                 // the validation engine call bookkeep information
-
                 ValidatePart(part, context);
             }
 
@@ -121,7 +120,7 @@ namespace DocumentFormat.OpenXml.Validation
                     Id = "ExceptionError",
                     Part = part,
                     Path = new XmlPath(part),
-                    Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.ExceptionError, e.Message)
+                    Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.ExceptionError, e.Message),
                 };
 
                 context.AddError(errorInfo);
@@ -133,7 +132,7 @@ namespace DocumentFormat.OpenXml.Validation
             var context = new ValidationContext
             {
                 FileFormat = _validationSettings.FileFormat,
-                MaxNumberOfErrors = _validationSettings.MaxNumberOfErrors
+                MaxNumberOfErrors = _validationSettings.MaxNumberOfErrors,
             };
 
             _semanticValidator.ClearConstraintState(SemanticValidationLevel.PackageOnly);
@@ -199,7 +198,7 @@ namespace DocumentFormat.OpenXml.Validation
                     var errorInfo = new ValidationErrorInfo
                     {
                         ErrorType = ValidationErrorType.Package,
-                        Id = "Pkg_" + e.MessageId
+                        Id = "Pkg_" + e.MessageId,
                     };
 
                     string name;
@@ -209,7 +208,7 @@ namespace DocumentFormat.OpenXml.Validation
                         case "Pkg_PartIsNotAllowed":
                             Debug.Assert(e.SubPart != null);
                             name = e.Part != null ? GetPartNameAndUri(e.Part) : documentName;
-                            errorInfo.Description = String.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_PartIsNotAllowed, name, GetPartNameAndUri(e.SubPart));
+                            errorInfo.Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_PartIsNotAllowed, name, GetPartNameAndUri(e.SubPart));
                             break;
 
                         case "Pkg_RequiredPartDoNotExist":
@@ -218,7 +217,7 @@ namespace DocumentFormat.OpenXml.Validation
 
                         case "Pkg_OnlyOnePartAllowed":
                             name = e.Part != null ? GetPartNameAndUri(e.Part) : documentName;
-                            errorInfo.Description = String.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_OnlyOnePartAllowed, name, e.PartClassName);
+                            errorInfo.Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_OnlyOnePartAllowed, name, e.PartClassName);
 #if DEBUG
                             Debug.Assert(e.SubPart != null);
                             errorInfo.RelatedPart = e.SubPart;
@@ -233,7 +232,7 @@ namespace DocumentFormat.OpenXml.Validation
                         case "Pkg_DataPartReferenceIsNotAllowed":
                             Debug.Assert(e.DataPartReferenceRelationship != null);
                             name = e.Part != null ? GetPartNameAndUri(e.Part) : documentName;
-                            errorInfo.Description = String.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_PartIsNotAllowed, name, e.DataPartReferenceRelationship.Uri);
+                            errorInfo.Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Pkg_PartIsNotAllowed, name, e.DataPartReferenceRelationship.Uri);
                             break;
 
                         case "Pkg_InvalidContentTypePart":  // won't get this error.
@@ -260,6 +259,7 @@ namespace DocumentFormat.OpenXml.Validation
         {
             Debug.Assert(part != null);
             string partClassName = part.GetType().Name;
+
             // Example: WordprocessingCommentsPart{/word/comments.xml}
             return string.Format(CultureInfo.CurrentUICulture, "{0}{1}{2}{3}", partClassName, '{', part.Uri, '}');
         }
@@ -267,6 +267,7 @@ namespace DocumentFormat.OpenXml.Validation
         private static string GetPartUri(OpenXmlPart part)
         {
             Debug.Assert(part != null);
+
             // Example: WordprocessingCommentsPart{/word/comments.xml}
             return string.Format(CultureInfo.CurrentUICulture, "{0}{1}{2}", '{', part.Uri, '}');
         }

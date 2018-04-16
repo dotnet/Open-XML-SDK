@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
 using System.Runtime.Serialization;
 
 namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
@@ -9,12 +8,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// <summary>
     /// Single (xsd:float) based value restriction.
     /// </summary>
-    [DataContract]
-    internal class SingleValueRestriction : SimpleValueRestriction<Single, SingleValue>
+    [DataContract(Name = "fl")]
+    internal class SingleValueRestriction : SimpleValueRestriction<float, SingleValue>
     {
-        protected override Single MinValue => Single.MinValue;
+        protected override float MinValue => float.MinValue;
 
-        protected override Single MaxValue => Single.MaxValue;
+        protected override float MaxValue => float.MaxValue;
 
         /// <inheritdoc />
         public override XsdType XsdType => XsdType.Float;
@@ -30,6 +29,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                 //Single value = ((SingleValue)attributeValue).Value;
                 //return !Single.IsNaN(value);
             }
+
             return false;
         }
     }

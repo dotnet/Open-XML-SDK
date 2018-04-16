@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml.Packaging
         public bool MinOccursIsNonZero { get; }
 
         /// <summary>
-        /// Gets a value indicating whether max occurs > 1, (i.e. has multiple occurances).
+        /// Gets a value indicating whether max occurs > 1, (i.e. has multiple occurrences).
         /// </summary>
         public bool MaxOccursGreatThanOne { get; }
 

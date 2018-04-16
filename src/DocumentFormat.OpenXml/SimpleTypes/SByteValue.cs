@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     [System.CLSCompliant(false)]
     [DebuggerDisplay("{InnerText}")]
-    public class SByteValue : OpenXmlSimpleValue<SByte>
+    public class SByteValue : OpenXmlSimpleValue<sbyte>
     {
         /// <summary>
         /// Initializes a new instance of the SByteValue class.
@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the SByteValue class using the supplied SByte value.
         /// </summary>
         /// <param name="value">The SByte value.</param>
-        public SByteValue(SByte value)
+        public SByteValue(sbyte value)
             : base(value)
         {
         }
@@ -50,7 +50,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="xmlAttribute">The SByteValue to convert.</param>
         /// <returns>The converted SByte value.</returns>
         /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
-        public static implicit operator SByte(SByteValue xmlAttribute)
+        public static implicit operator sbyte(SByteValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The specified SByte value.</param>
         /// <returns>A new SByteValue instance with the value.</returns>
-        public static implicit operator SByteValue(SByte value)
+        public static implicit operator SByteValue(sbyte value)
         {
             return FromSByte(value);
         }
@@ -75,7 +75,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">An SByte value to use to create a new SByteValue object.</param>
         /// <returns>An SByteValue that corresponds to the value parameter.</returns>
-        public static SByteValue FromSByte(SByte value)
+        public static SByteValue FromSByte(sbyte value)
         {
             return new SByteValue(value);
         }
@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml
         /// An SByteValue object to retrieve an SByte representation.
         /// </param>
         /// <returns>An SByte value that represents an SByteValue object.</returns>
-        public static SByte ToSByte(SByteValue xmlAttribute)
+        public static sbyte ToSByte(SByteValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {

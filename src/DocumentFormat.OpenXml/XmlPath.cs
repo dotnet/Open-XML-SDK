@@ -10,7 +10,7 @@ using System.Text;
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Defines the XmlPath - XPath like informaiton for OpenXmlElement.
+    /// Defines XPath like information for OpenXmlElement.
     /// </summary>
     [DebuggerDisplay("XPath={XPath}")]
     public class XmlPath
@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Initlizes a new instance of the XmlPath from the specified OpenXmlPart.
+        /// Initializes a new instance of the XmlPath from the specified OpenXmlPart.
         /// </summary>
         /// <param name="part">The OpenXmlPart.</param>
         internal XmlPath(OpenXmlPart part)
@@ -65,6 +65,7 @@ namespace DocumentFormat.OpenXml
             if (element == null)
             {
                 return null;
+
                 // throw new ArgumentNullException(nameof(element));
             }
 
@@ -74,7 +75,7 @@ namespace DocumentFormat.OpenXml
 
             Dictionary<string, string> namespaces = new Dictionary<string, string>();
 
-            StringBuilder xpath = new StringBuilder("");
+            StringBuilder xpath = new StringBuilder(string.Empty);
 
             BuildXPath(element, xpath, namespaces);
 
@@ -84,7 +85,7 @@ namespace DocumentFormat.OpenXml
 
             foreach (var ns in namespaces)
             {
-                nsString = new StringBuilder("");
+                nsString = new StringBuilder(string.Empty);
                 nsString.Append("xmlns:");
                 nsString.Append(ns.Key);
                 nsString.Append("=\"");
@@ -125,6 +126,7 @@ namespace DocumentFormat.OpenXml
                     {
                         namespaces.Add(element.Prefix, element.NamespaceUri);
                     }
+
                     xpath.Append(element.Prefix);
                     xpath.Append(":");
                 }

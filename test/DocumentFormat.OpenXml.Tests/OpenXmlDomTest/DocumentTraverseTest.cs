@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="root">the loaded part root element to be traversed</param>
         private void TestTraverseUp<U>(OpenXmlPart part, OpenXmlElement root) where U : OpenXmlElement
         {
-            String UTagName = (Activator.CreateInstance(typeof(U)) as OpenXmlElement).LocalName;
+            string UTagName = (Activator.CreateInstance(typeof(U)) as OpenXmlElement).LocalName;
 
             Log.Comment("retrieve last child of the root element in XElement");
             XElement Xroot = ConvertToXElement(part, root);
@@ -56,7 +56,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="root">the OpenXmlElement need to be traversed</param>
         private void TestTraverseDown<U>(OpenXmlPart part, OpenXmlElement root) where U : OpenXmlElement
         {
-            String UTagName = (Activator.CreateInstance(typeof(U)) as OpenXmlElement).LocalName;
+            string UTagName = (Activator.CreateInstance(typeof(U)) as OpenXmlElement).LocalName;
             XElement Xroot = ConvertToXElement(part, root);
 
             Log.Comment(" ****** test HasChildren ******");
@@ -81,7 +81,7 @@ namespace DocumentFormat.OpenXml.Tests
                 VerifyEqual(Xroot.Elements(), root.ChildElements, part);
 
                 Log.Comment(" ****** test Descendants ******");
-                Log.Comment("check if the decndants if the first child returned are correct");
+                Log.Comment("check if the descendants if the first child returned are correct");
                 VerifyEqual(Xroot.Descendants(), root.Descendants(), part);
 
                 Log.Comment(" ******test Elements<T> ******");
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment("check if the Descendants<OpenXmlElement> of the first child are returned correctly");
                 VerifyEqual(Xroot.Descendants(), root.Descendants<OpenXmlElement>(), part);
 
-                Log.Comment("check if the Decendants<{0}> returned are correct", typeof(U).Name);
+                Log.Comment("check if the Descendants<{0}> returned are correct", typeof(U).Name);
                 VerifyEqual(Xroot.Descendants().Where(x => x.Name.LocalName == UTagName), root.Descendants<U>(), part);
 
                 Log.Comment(" ****** test GetFirstChildOfType<T> ******");
@@ -152,7 +152,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// <param name="Element">the OpenXmlElement need to be traversed</param>
         private void TestTraverseSibling<U>(OpenXmlPart part, OpenXmlElement Element) where U : OpenXmlElement
         {
-            String UTagName = (Activator.CreateInstance(typeof(U)) as OpenXmlElement).LocalName;
+            string UTagName = (Activator.CreateInstance(typeof(U)) as OpenXmlElement).LocalName;
 
             OpenXmlElement walker = Element;
             XElement Xele = ConvertToXElement(part, Element);

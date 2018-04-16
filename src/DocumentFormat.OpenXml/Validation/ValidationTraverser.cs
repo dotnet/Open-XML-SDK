@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Validation
 
         /// <summary>
         /// Enumerate all the descendants elements of this element and do validating.
-        /// Preorder traversering.
+        /// Preorder traversing.
         /// </summary>
         /// <param name="validationContext"></param>
         /// <param name="validateAction">The delegate method to do the validating.</param>
@@ -39,7 +39,7 @@ namespace DocumentFormat.OpenXml.Validation
 
             // bookkeep MC context,
             // MC Spec: Compatibility-rule attributes shall affect the element to which they 1 are attached, including the element’s other attributes and contents.
-            validationContext.McContext.PushMCAttributes2(element.MCAttributes, prefix => element.LookupNamespace(prefix));
+            validationContext.McContext.PushMCAttributes2(element.MCAttributes, element.LookupNamespace);
 
             if (element.IsStrongTypedElement())
             {
@@ -67,7 +67,6 @@ namespace DocumentFormat.OpenXml.Validation
                 if (validationContext.McContext.IsProcessContent(element))
                 {
                     // do validating on children elements.
-
                     foreach (OpenXmlElement child in element.ChildElements)
                     {
                         validationContext.Element = child;

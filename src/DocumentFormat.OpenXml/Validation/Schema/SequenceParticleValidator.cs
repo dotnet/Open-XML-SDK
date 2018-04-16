@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// This data field is moved from TryMatchOnce.
         /// Base on the following point.
         /// - The TryMatchOnce() method will NOT be called more than once with same ChoiceParticleValidator instance on the stack when validating one element.
-        /// - That means this data field will not be overriden in recursive calling when validating one element.
+        /// - That means this data field will not be overridden in recursive calling when validating one element.
         /// </summary>
         private ParticleMatchInfo _childMatchInfo = new ParticleMatchInfo();
 
@@ -52,7 +52,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 childConstraint = ParticleConstraint.ChildrenParticles[constraintIndex];
 
-                // Use Reset() instead of new() to avoid heavy memory alloction and GC.
+                // Use Reset() instead of new() to avoid heavy memory allocation and GC.
                 _childMatchInfo.Reset(next);
 
                 childConstraint.ParticleValidator.TryMatch(_childMatchInfo, validationContext);
@@ -73,7 +73,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                                 }
                                 else
                                 {
-                                    // reuse same object, avoid object alloction.
+                                    // reuse same object, avoid object allocation.
                                     particleMatchInfo.ExpectedChildren.Clear();
                                     childConstraint.ParticleValidator.GetRequiredElements(particleMatchInfo.ExpectedChildren);
                                 }
@@ -104,6 +104,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     case ParticleMatch.Matched:
                         particleMatchInfo.LastMatchedElement = _childMatchInfo.LastMatchedElement;
                         next = validationContext.GetNextChildMc(particleMatchInfo.LastMatchedElement);
+
                         // continue trying match next child constraint.
                         constraintIndex++;
                         break;
@@ -116,6 +117,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         {
                             particleMatchInfo.SetExpectedChildren(_childMatchInfo.ExpectedChildren);
                         }
+
                         return;
                 }
             }
@@ -130,6 +132,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     particleMatchInfo.Match = ParticleMatch.Nomatch;
                 }
+
                 return;
             }
             else
@@ -144,12 +147,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             {
                                 particleMatchInfo.InitExpectedChildren();
                             }
+
                             ParticleConstraint.ChildrenParticles[constraintIndex].ParticleValidator.GetRequiredElements(particleMatchInfo.ExpectedChildren);
                         }
+
                         particleMatchInfo.Match = ParticleMatch.Partial;
                         return;
                     }
                 }
+
                 // all other children constraint are optional.
                 particleMatchInfo.Match = ParticleMatch.Matched;
                 return;
@@ -178,6 +184,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     }
                 }
             }
+
             return requiredElements;
         }
 

@@ -9,18 +9,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// <summary>
     /// Base class for string (xsd:string) based simple type constraints.
     /// </summary>
-    [DataContract]
+    [DataContract(Name = "str")]
     internal class StringRestriction : SimpleTypeRestriction
     {
-        /// <inheritdoc />
-        public override int MaxLength { get; set; }
-
-        /// <inheritdoc />
-        public override int MinLength { get; set; }
-
-        /// <inheritdoc />
-        public override int Length { get; set; }
-
         /// <inheritdoc />
         public override XsdType XsdType => XsdType.String;
 
@@ -35,11 +26,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                 string pattern = @"\A(" + Pattern + @")\z";
                 return Regex.IsMatch(attributeValue.InnerText, pattern, RegexOptions.CultureInvariant);
             }
+
             return true;
         }
 
         /// <summary>
-        /// Get the lenght of the attribute value according to the xsd type.
+        /// Get the length of the attribute value according to the xsd type.
         /// </summary>
         /// <param name="attributeValue"></param>
         /// <returns></returns>
@@ -66,6 +58,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                     return false;
                 }
             }
+
             return true;
         }
 
@@ -79,6 +72,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                     return false;
                 }
             }
+
             return true;
         }
 
@@ -92,6 +86,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                     return false;
                 }
             }
+
             return true;
         }
     }

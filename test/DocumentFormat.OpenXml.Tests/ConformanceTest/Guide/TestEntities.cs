@@ -16,20 +16,23 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
     public class TestEntities
     {
         #region Setting values
-        //sldGuideLst pos attribute vallues.
+        //sldGuideLst pos attribute values.
         private readonly int position1 = 1000;
         private readonly int position2 = 2000;
         private readonly int position3 = 3000;
         private readonly int position4 = 4000;
-        //sldGuideLst orient attribute vallues.
+
+        //sldGuideLst orient attribute values.
         private readonly DirectionValues directionValues1 = DirectionValues.Horizontal;
         private readonly DirectionValues directionValues2 = DirectionValues.Vertical;
-        //ExtendedGuide RgbColorModelHex vallues.
+
+        //ExtendedGuide RgbColorModelHex values.
         private readonly string Color1 = "FF0000";
         private readonly string Color2 = "00FF00";
         private readonly string Color3 = "0000FF";
         private readonly string Color4 = "F0F0F0";
-        //ExtendedGuide Id vallues.
+
+        //ExtendedGuide Id values.
         private readonly uint Id1 = 1;
         private readonly uint Id2 = 2;
         private readonly uint Id3 = 3;
@@ -37,12 +40,12 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         #endregion
 
         /// <summary>
-        /// Gets or sets URI attribute value of PresentationExtension.(Parent of P15.SlideGuideList elemenet)
+        /// Gets or sets URI attribute value of PresentationExtension.(Parent of P15.SlideGuideList element)
         /// </summary>
         private string SldExtUri { get; set; }
 
         /// <summary>
-        /// Gets or sets URI attribute value of PresentationExtension.(Parent of P15.NotesGuideList elemenet)
+        /// Gets or sets URI attribute value of PresentationExtension.(Parent of P15.NotesGuideList element)
         /// </summary>
         private string NotesExtUri { get; set; }
 
@@ -55,14 +58,14 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         {
             using (PresentationDocument package = PresentationDocument.Open(stream, false))
             {
-                //Get Extension Uri value. (This element is P15.SlideGuideList parrent element.)
+                //Get Extension Uri value. (This element is P15.SlideGuideList parent element.)
                 P15.SlideGuideList slideGuideList = package.PresentationPart.RootElement.Descendants<P15.SlideGuideList>().Single();
                 PresentationExtension slideGuidePresentationExtension = (PresentationExtension)slideGuideList.Parent;
                 SldExtUri = slideGuidePresentationExtension.Uri;
                 if (string.IsNullOrEmpty(SldExtUri))
                     throw new Exception("Uri attribute value in Extension element is not set. It element of P15.SlideGuideList parent element.");
 
-                //Get Extension Uri value. (This element is P15.SlideGuideList parrent element.)
+                //Get Extension Uri value. (This element is P15.SlideGuideList parent element.)
                 P15.NotesGuideList notesGuideList = package.PresentationPart.RootElement.Descendants<P15.NotesGuideList>().Single();
                 PresentationExtension notesGuidePresentationExtension = (PresentationExtension)notesGuideList.Parent;
                 NotesExtUri = notesGuidePresentationExtension.Uri;
@@ -74,7 +77,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// <summary>
         /// Editing PresentationExtensionList element.
         /// </summary>
-        /// <param name="stream">Tartget stream</param>
+        /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
         public void EditElement(Stream stream, VerifiableLog log)
         {
@@ -129,7 +132,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// <summary>
         /// Verifying PresentationExtensionList element.
         /// </summary>
-        /// <param name="stream">Tartget stream</param>
+        /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
         public void VerifyElement(Stream stream, VerifiableLog log)
         {
@@ -181,7 +184,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// <summary>
         /// Deleting PresentationExtensionList element.
         /// </summary>
-        /// <param name="stream">Tartget stream</param>
+        /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
         public void DeleteElement(Stream stream, VerifiableLog log)
         {
@@ -192,6 +195,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 {
                     rgbColorModelHex.Remove();
                 }
+
                 log.Pass("Deleted the RgbColorModelHex element.");
 
                 //Delete ColorType element
@@ -199,6 +203,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 {
                     colorType.Remove();
                 }
+
                 log.Pass("Deleted the ColorType element.");
 
                 //Delete ExtendedGuide element
@@ -206,6 +211,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 {
                     extendedGuide.Remove();
                 }
+
                 log.Pass("Deleted the ExtendedGuide element.");
 
                 //Delete ExtendedGuideList element(P15.ExtendedGuideList = P15.SlideGuideList)
@@ -213,6 +219,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 {
                     extendedGuideList.Remove();
                 }
+
                 log.Pass("Deleted the ExtendedGuideList element.");
 
                 //Delete PresentationExtension element
@@ -220,6 +227,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
                 {
                     presentationExtension.Remove();
                 }
+
                 log.Pass("Deleted the PresentationExtension element.");
 
                 //Delete PresentationExtensionList element
@@ -232,7 +240,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// <summary>
         /// Verifying PresentationExtensionList element.
         /// </summary>
-        /// <param name="stream">Tartget stream</param>
+        /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
         public void VerifyDeletedElement(Stream stream, VerifiableLog log)
         {
@@ -255,7 +263,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// <summary>
         /// Adding PresentationExtensionList element.
         /// </summary>
-        /// <param name="stream">Tartget stream</param>
+        /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
         public void AddElement(Stream stream, VerifiableLog log)
         {
@@ -314,7 +322,7 @@ namespace DocumentFormat.OpenXml.Tests.GuideTest
         /// <summary>
         /// Verifying PresentationExtensionList element.
         /// </summary>
-        /// <param name="stream">Tartget stream</param>
+        /// <param name="stream">Target stream</param>
         /// <param name="log">Logger</param>
         public void VerifyAddedElemenet(Stream stream, VerifiableLog log)
         {

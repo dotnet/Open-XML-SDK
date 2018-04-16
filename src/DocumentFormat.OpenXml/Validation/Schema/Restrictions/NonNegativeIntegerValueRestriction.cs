@@ -17,10 +17,10 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     ///
     /// !******************** TODO: at current, the CodeGen generate int for xsd:integer
     /// </remarks>
-    [DataContract]
+    [DataContract(Name = "ni")]
     internal class NonNegativeIntegerValueRestriction : IntegerValueRestriction
     {
-        protected override Int64 MinValue => 0;
+        protected override long MinValue => 0;
 
         public NonNegativeIntegerValueRestriction()
         {

@@ -45,7 +45,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         {
             OpenXmlSimpleType attributeValue = context.Element.Attributes[_attribute];
 
-            //if the attribute is omited, semantic validation will do nothing
+            //if the attribute is omitted, semantic validation will do nothing
             if (attributeValue == null || string.IsNullOrEmpty(attributeValue.InnerText))
             {
                 return null;
@@ -71,7 +71,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_MissingIndexedElement,
                                             _refElementName,context.Element.LocalName,
                                             GetAttributeQualifiedName(context.Element, _attribute),
-                                            _relatedPart == null? _refPartType : _relatedPart.PackagePart.Uri.ToString(), index)
+                                            _relatedPart == null? _refPartType : _relatedPart.PackagePart.Uri.ToString(), index),
             };
         }
 
@@ -101,7 +101,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                     FileFormat = context.FileFormat,
                     Package = context.Package,
                     Part = part,
-                    Element = part.RootElement
+                    Element = part.RootElement,
                 };
 
                 if (_refElementParent == -1)

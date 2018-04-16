@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Tests
             //"w:start" element is newly added
             //its class is StartBorder
             //its parent is TableCellBorder
-            //its parent should have corresponding attring
+            //its parent should have corresponding attribute
             foreach (var ce in typeof(TableCellBorders).GetTypeInfo().GetCustomAttributes<ChildElementInfoAttribute>(false))
             {
                 if (ce.ElementType == typeof(TopBorder))

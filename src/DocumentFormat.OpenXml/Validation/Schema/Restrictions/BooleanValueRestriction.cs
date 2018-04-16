@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
 using System.Diagnostics;
 using System.Runtime.Serialization;
 
@@ -10,12 +9,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// <summary>
     /// Boolean (xsd:boolean) based simple type constraint.
     /// </summary>
-    [DataContract]
+    [DataContract(Name = "bl")]
     internal class BooleanValueRestriction : SimpleTypeRestriction
     {
         // BooleanValueRestriction is the only SimpleTypeRestriction that can have
         // multiple values of XsdType, so we only need to serialize this instance
-        [DataMember(Name = nameof(XsdType))]
+        [DataMember(Name = "x")]
         private XsdType _xsdType = XsdType.Boolean;
 
         /// <inheritdoc />
@@ -28,7 +27,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         }
 
         /// <inheritdoc />
-        public override string ClrTypeName => typeof(Boolean).Name;
+        public override string ClrTypeName => typeof(bool).Name;
 
 #if DEBUG
         public override void Verify()

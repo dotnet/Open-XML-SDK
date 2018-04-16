@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void LoadSdbSchemaDatasTest()
         {
-            var actual = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
+            var actual = SdbSchemaData.GetSchemaData(FileFormatVersions.Office2007);
 
             AttributeConstraintTest(actual);
 
@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Tests
             SimpleTypeConstraintTest(actual);
         }
 
-        private void AttributeConstraintTest(SdbSchemaDatas actual)
+        private void AttributeConstraintTest(SdbSchemaData actual)
         {
               //<xsd:complexType name="CT_FileVersion">
               //  <xsd:attribute name="appName" type="xsd:string" use="optional">
@@ -50,7 +50,6 @@ namespace DocumentFormat.OpenXml.Tests
               //  <xsd:attribute name="rupBuild" type="xsd:string" use="optional">
               //  <xsd:attribute name="codeName" type="ST_Guid" use="optional">
               //</xsd:complexType>
-
             var schemaTypeData = actual.GetSchemaTypeData(DocumentFormat.OpenXml.Spreadsheet.FileVersion.ElementTypeIdConst);
             Assert.Equal(5, schemaTypeData.AttributeConstraintsCount);
 
@@ -75,7 +74,6 @@ namespace DocumentFormat.OpenXml.Tests
               //  <xsd:attribute name="unhideWhenUsed" type="ST_OnOff">
               //  <xsd:attribute name="qFormat" type="ST_OnOff">
               //</xsd:complexType>
-
             schemaTypeData = actual.GetSchemaTypeData(LatentStyleExceptionInfo.ElementTypeIdConst);
             Assert.Equal(6, schemaTypeData.AttributeConstraintsCount);
 
@@ -135,7 +133,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.IsType<StringRestriction>(attributeConstraint.SimpleTypeConstraint);
         }
 
-        private void SimpleLoadTest(SdbSchemaDatas actual)
+        private void SimpleLoadTest(SdbSchemaData actual)
         {
             var schemaTypeData = actual.GetSchemaTypeData(RunProperties.ElementTypeIdConst);
             Assert.True(schemaTypeData.IsCompositeType);
@@ -146,9 +144,10 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.False(schemaTypeData.IsSimpleContent);
         }
 
-        private void DocumentConstraintTest(SdbSchemaDatas actual)
+        private void DocumentConstraintTest(SdbSchemaData actual)
         {
             ElementParticle elementParticle;
+
             // CT_Document
             //<xsd:complexType name="CT_DocumentBase">
             //  <xsd:sequence>
@@ -224,7 +223,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        private void BodyConstraintTest(SdbSchemaDatas actual)
+        private void BodyConstraintTest(SdbSchemaData actual)
         {
             ElementParticle elementParticle;
 
@@ -262,7 +261,6 @@ namespace DocumentFormat.OpenXml.Tests
           //    <xsd:group ref="EG_BlockLevelEltsBase" minOccurs="0" maxOccurs="unbounded" />
           //    <xsd:group ref="EG_BlockLevelChunkElts" minOccurs="0" maxOccurs="unbounded" />
           //  </xsd:choice>
-
             var body = new Body();
             var bodyData = actual.GetSchemaTypeData(body.ElementTypeId);
             Assert.Equal(body.ElementTypeId, bodyData.OpenXmlTypeId);
@@ -344,7 +342,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        private void ParagraphConstraintTest(SdbSchemaDatas actual)
+        private void ParagraphConstraintTest(SdbSchemaData actual)
         {
             //<xsd:complexType name="CT_P">
             //  <xsd:sequence>
@@ -395,7 +393,7 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        private void TextboxConstraintTest(SdbSchemaDatas actual)
+        private void TextboxConstraintTest(SdbSchemaData actual)
         {
               //<xsd:complexType name="CT_Textbox">
               //  <xsd:choice>
@@ -407,7 +405,6 @@ namespace DocumentFormat.OpenXml.Tests
               //  <xsd:attribute name="inset" type="xsd:string" use="optional">
               //  <xsd:attribute ref="o:singleclick">
               //</xsd:complexType>
-
             var constraintData = actual.GetSchemaTypeData(DocumentFormat.OpenXml.Vml.TextBox.ElementTypeIdConst);
             Assert.Equal(DocumentFormat.OpenXml.Vml.TextBox.ElementTypeIdConst, constraintData.OpenXmlTypeId);
             Assert.True(constraintData.HasAttributeConstraints);
@@ -442,11 +439,10 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        private void SimpleTypeConstraintTest(SdbSchemaDatas actual)
+        private void SimpleTypeConstraintTest(SdbSchemaData actual)
         {
             // <Bibliography:SourceType /> is a simple type
             // <xsd:element name="SourceType" type="ST_SourceType">
-
             SourceType sourceType = new SourceType();
             var schemaTypeData = actual.GetSchemaTypeData(sourceType.ElementTypeId);
             Assert.Equal(sourceType.ElementTypeId, schemaTypeData.OpenXmlTypeId);

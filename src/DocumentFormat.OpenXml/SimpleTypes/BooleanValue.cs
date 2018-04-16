@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the Boolean value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class BooleanValue : OpenXmlSimpleValue<Boolean>
+    public class BooleanValue : OpenXmlSimpleValue<bool>
     {
         /// <summary>
         /// Initializes a new instance of the BooleanValue class.
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the BooleanValue class using the supplied Boolean value.
         /// </summary>
         /// <param name="value">The Boolean value.</param>
-        public BooleanValue(Boolean value)
+        public BooleanValue(bool value)
             : base(value)
         {
         }
@@ -52,7 +52,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="xmlAttribute">The BooleanValue to convert.</param>
         /// <returns>The converted Boolean value.</returns>
         /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
-        public static implicit operator Boolean(BooleanValue xmlAttribute)
+        public static implicit operator bool(BooleanValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The Boolean value.</param>
         /// <returns>A new BooleanValue instance with the value.</returns>
-        public static implicit operator BooleanValue(Boolean value)
+        public static implicit operator BooleanValue(bool value)
         {
             return FromBoolean(value);
         }
@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">A Boolean value to use to create a new BooleanValue object.</param>
         /// <returns>A BooleanValue that corresponds to the value parameter.</returns>
-        public static BooleanValue FromBoolean(Boolean value)
+        public static BooleanValue FromBoolean(bool value)
         {
             return new BooleanValue(value);
         }
@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml
         /// A BooleanValue object to retrieve a Boolean representation.
         /// </param>
         /// <returns>A Boolean value that represents a BooleanValue object.</returns>
-        public static Boolean ToBoolean(BooleanValue xmlAttribute)
+        public static bool ToBoolean(BooleanValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {

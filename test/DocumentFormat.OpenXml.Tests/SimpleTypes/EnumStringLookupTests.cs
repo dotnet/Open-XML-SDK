@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         private enum SingleItemWithName
         {
             [EnumString("name")]
-            Item
+            Item,
         }
 
         [Fact]
@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
         private enum SingleItemWithoutName
         {
-            Item
+            Item,
         }
 
         [Fact]
@@ -59,7 +59,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             [EnumString("name4")]
             Item4 = 2,
             [EnumString("NAME4")]
-            Item5 = 4
+            Item5 = 4,
         }
 
         public static IEnumerable<object[]> GetMultipleItemsWithNamesAndVersionsTestData()
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
             [EnumString("a")]
             Item1 = 0,
             [EnumString("b")]
-            Item2 = 2
+            Item2 = 2,
         }
 
         [Fact]
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         private enum ValueLessThan0
         {
             [EnumString("a")]
-            Item = -1
+            Item = -1,
         }
 
         [Fact]
@@ -103,7 +103,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
 
         private enum NonInt32 : byte
         {
-            Item
+            Item,
         }
 
         [Fact]

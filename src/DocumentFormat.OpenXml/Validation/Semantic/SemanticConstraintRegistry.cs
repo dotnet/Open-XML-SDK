@@ -13,12 +13,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal partial class SemanticConstraintRegistry
     {
-        protected Dictionary<int, List<SemanticConstraint>> _semConstraintMap = new Dictionary<int, List<SemanticConstraint>>();
-        protected Dictionary<int, List<SemanticConstraint>> _cleanList = new Dictionary<int,List<SemanticConstraint>>();
-        protected Dictionary<int, List<CallBackMethod>> _callBackMethods = new Dictionary<int,List<CallBackMethod>>();
+        protected readonly Dictionary<int, List<SemanticConstraint>> _semConstraintMap = new Dictionary<int, List<SemanticConstraint>>();
+        protected readonly Dictionary<int, List<SemanticConstraint>> _cleanList = new Dictionary<int, List<SemanticConstraint>>();
+        protected readonly Dictionary<int, List<CallBackMethod>> _callBackMethods = new Dictionary<int, List<CallBackMethod>>();
 
-        private FileFormatVersions _format;
-        private ApplicationType _appType;
+        private readonly FileFormatVersions _format;
+        private readonly ApplicationType _appType;
 
         /// <summary>
         /// Constructor
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         /// <summary>
         /// Register a constraint to this registry.
         /// </summary>
-        public void RegisterConstraint(int elementTypeID, int ancestorTypeID, FileFormatVersions fileFormat, ApplicationType appType, SemanticConstraint constraint )
+        public void RegisterConstraint(int elementTypeID, int ancestorTypeID, FileFormatVersions fileFormat, ApplicationType appType, SemanticConstraint constraint)
         {
             if ((fileFormat & _format) == _format && (appType & _appType) == _appType)
             {
@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             // _callBackMethods[element.ElementTypeId] is a List. Let's check if the method obj is already added to the list.
             if (!_callBackMethods[element.ElementTypeId].Contains(method))
             {
-               _callBackMethods[element.ElementTypeId].Add(method);
+                _callBackMethods[element.ElementTypeId].Add(method);
             }
         }
 
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             // Let's check if the constraint obj is already added to the list.
             if (!list.Contains(constraint))
             {
-               list.Add(constraint);
+                list.Add(constraint);
             }
         }
 
@@ -104,17 +104,17 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             int elementTypeID = context.Element.ElementTypeId;
 
-            if (_cleanList.Keys.Contains(elementTypeID))
+            if (_cleanList.TryGetValue(elementTypeID, out var cleanConstraints))
             {
-                foreach (var con in _cleanList[elementTypeID])
+                foreach (var con in cleanConstraints)
                 {
                     con.ClearState(context);
                 }
             }
 
-            if (_semConstraintMap.ContainsKey(elementTypeID))
+            if (_semConstraintMap.TryGetValue(elementTypeID, out var constraints))
             {
-                foreach (SemanticConstraint constraint in _semConstraintMap[elementTypeID])
+                foreach (SemanticConstraint constraint in constraints)
                 {
                     if ((constraint.SemanticValidationLevel & level) == level)
                     {
@@ -131,9 +131,9 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public void ActCallBack(int elementId)
         {
-            if (_callBackMethods.ContainsKey(elementId))
+            if (_callBackMethods.TryGetValue(elementId, out var callbacks))
             {
-                foreach (var method in _callBackMethods[elementId])
+                foreach (var method in callbacks)
                 {
                     method();
                 }
@@ -147,9 +147,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         {
             foreach (var constraints in _semConstraintMap.Values)
             {
-                foreach (var constraint in constraints.Where(c => (c.StateScope & level) != 0))
+                foreach (var constraint in constraints)
                 {
-                    constraint.ClearState(null);
+                    if ((constraint.StateScope & level) != 0)
+                    {
+                        constraint.ClearState(null);
+                    }
                 }
             }
         }

@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="childrenElements">A collection of elements.</param>
         protected OpenXmlCompositeElement(IEnumerable childrenElements)
-            : this( )
+            : this()
         {
             if (childrenElements == null)
             {
@@ -110,6 +110,7 @@ namespace DocumentFormat.OpenXml
                 {
                     return lastChild.next;
                 }
+
                 return null;
             }
         }
@@ -161,11 +162,10 @@ namespace DocumentFormat.OpenXml
                 // first, clear all children
                 RemoveAllChildren();
 
-                if ( ! String.IsNullOrEmpty(value))
+                if (!string.IsNullOrEmpty(value))
                 {
                     // create an outer XML by wrapping the InnerXml with this element.
                     // because XmlReader can not be created on InnerXml ( InnerXml may have several root elements ).
-
                     using (StringWriter w = new StringWriter(CultureInfo.InvariantCulture))
                     {
                         using (XmlWriter writer2 = new XmlDOMTextWriter(w))
@@ -239,7 +239,6 @@ namespace DocumentFormat.OpenXml
             }
 
             newChild.Parent = this;
-            // SetOwner(newChild);
 
             ElementInsertedEvent(newChild);
 
@@ -298,7 +297,6 @@ namespace DocumentFormat.OpenXml
             }
 
             newChild.Parent = this;
-            // SetOwner(newChild);
 
             ElementInsertedEvent(newChild);
 
@@ -356,7 +354,6 @@ namespace DocumentFormat.OpenXml
             }
 
             newChild.Parent = this;
-            // SetOwner(newChild);
 
             ElementInsertedEvent(newChild);
 
@@ -388,11 +385,11 @@ namespace DocumentFormat.OpenXml
             {
                 throw new ArgumentOutOfRangeException(nameof(index));
             }
-            else if ( index == 0 )
+            else if (index == 0)
             {
                 return PrependChild(newChild);
             }
-            else if ( index == ChildElements.Count )
+            else if (index == ChildElements.Count)
             {
                 return AppendChild(newChild);
             }
@@ -476,14 +473,8 @@ namespace DocumentFormat.OpenXml
                 prevNode.next = next;
             }
 
-            //foreach (OpenXmlElement descendant in removedElement.Descendants())
-            //{
-            //    descendant.Owner = null;
-            //}
-
             removedElement.next = null;
             removedElement.Parent = null;
-            //removedElement.Owner = null;
 
             ElementRemovedEvent(removedElement);
 
@@ -687,29 +678,33 @@ namespace DocumentFormat.OpenXml
                                 AddANode(element);
                                 break;
                             }
+
                         case ElementAction.Ignore:
                             {
                                 element.Parent = null;
                                 continue;
                             }
+
                         case ElementAction.ProcessContent:
                             {
                                 element.Parent = null;
-                                while(element.ChildElements.Count > 0)
+                                while (element.ChildElements.Count > 0)
                                 {
                                     var node = element.FirstChild;
                                     node.Remove();
                                     OpenXmlElement newnode = null;
-                                    //if node is an UnknowElement, we should try to see whether the parent element can load the node as strong typed element
+
+                                    // If node is an UnknowElement, we should try to see whether the parent element can load the node as strong typed element
                                     if (node is OpenXmlUnknownElement)
                                     {
                                         newnode = ElementFactory(node.Prefix, node.LocalName, node.NamespaceUri);
                                         if (!(newnode is OpenXmlUnknownElement))
                                         {
-                                            //the following method will load teh element in MCMode.Full
-                                            //since the node is already MC-processed when loading as unknown type, full loading the outerXml is fine
+                                            // The following method will load teh element in MCMode.Full
+                                            // since the node is already MC-processed when loading as unknown type, full loading the outerXml is fine
                                             newnode.OuterXml = node.OuterXml;
-                                            //unnecessary xmlns attr will be added, remove it.
+
+                                            // unnecessary xmlns attribute will be added, remove it.
                                             RemoveUnnecessaryExtAttr(node, newnode);
                                         }
                                         else
@@ -717,6 +712,7 @@ namespace DocumentFormat.OpenXml
                                             newnode = null;
                                         }
                                     }
+
                                     if (newnode != null)
                                     {
                                         AddANode(newnode);
@@ -727,8 +723,10 @@ namespace DocumentFormat.OpenXml
                                         AddANode(node);
                                     }
                                 }
+
                                 break;
                             }
+
                         case ElementAction.ACBlock:
                             {
                                 var effectiveNode = OpenXmlElementContext.MCContext.GetContentFromACBlock(element as AlternateContent, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
@@ -736,15 +734,17 @@ namespace DocumentFormat.OpenXml
                                 {
                                     break;
                                 }
+
                                 element.Parent = null;
                                 effectiveNode.Parent = null;
-                                while(effectiveNode.FirstChild != null)
+                                while (effectiveNode.FirstChild != null)
                                 {
                                     var node = effectiveNode.FirstChild;
                                     node.Remove();
                                     AddANode(node);
                                     node.CheckMustUnderstandAttr();
                                 }
+
                                 break;
                             }
                     }
@@ -755,13 +755,13 @@ namespace DocumentFormat.OpenXml
                 xmlReader.Skip();
             }
 
-            // set raw outer xml to empty to indicate that it is pased
+            // Set raw outer xml to empty to indicate that it passed
             RawOuterXml = string.Empty;
         }
 
         private static void RemoveUnnecessaryExtAttr(OpenXmlElement node, OpenXmlElement newnode)
         {
-            //re-construct the _nsMappings for newnode based on the orignal node
+            // Reconstruct the _nsMappings for the new node based on the original node
             node.MakeSureParsed();
             if (newnode.NamespaceDeclField != null && node.NamespaceDeclField != null)
             {
@@ -773,7 +773,7 @@ namespace DocumentFormat.OpenXml
         /// Gets the tag names of the child elements.
         /// </summary>
         /// <remarks>
-        /// This property is overriden in generated classes.
+        /// This property is overridden in generated classes.
         /// </remarks>
         internal virtual string[] ElementTagNames
         {
@@ -784,18 +784,18 @@ namespace DocumentFormat.OpenXml
         /// Gets the namespace IDs of the child elements.
         /// </summary>
         /// <remarks>
-        /// This property is overriden in generated classes.
+        /// This property is overridden in generated classes.
         /// </remarks>
         internal virtual byte[] ElementNamespaceIds
         {
             get { return null; }
         }
 
-        private int GetSequenceNumber( OpenXmlElement child )
+        private int GetSequenceNumber(OpenXmlElement child)
         {
             for (int i = 0; i < ElementNamespaceIds.Length; i++)
             {
-                if (ElementNamespaceIds[i] == child.NamespaceId && Object.Equals(ElementTagNames[i], child.LocalName))
+                if (ElementNamespaceIds[i] == child.NamespaceId && object.Equals(ElementTagNames[i], child.LocalName))
                 {
                     return i;
                 }
@@ -843,7 +843,6 @@ namespace DocumentFormat.OpenXml
                     //  1: there are more than 1 elements for a type?
                     //  2: there are more than 2 elements?
                     //  3. there are other elements other than allowed children?
-
                     break;
 
                 case OpenXmlCompositeType.OneChoice:
@@ -856,7 +855,7 @@ namespace DocumentFormat.OpenXml
                             child = child.NextSibling();
                         }
 
-                        // There should be only one valide child.
+                        // There should be only one valid child.
                         if (child != null)
                         {
                             Debug.Assert(OpenXmlElement.IsKnownElement(child));
@@ -877,7 +876,6 @@ namespace DocumentFormat.OpenXml
                     //  1: there are more than 1 elements for a type?
                     //  2: there are more than 2 elements?
                     //  3. there are other elements other than allowed children?
-
                     break;
 
                 case OpenXmlCompositeType.OneSequence:
@@ -924,9 +922,9 @@ namespace DocumentFormat.OpenXml
                     //  1: there are more than 1 elements for a type?
                     //  2: there are more than 2 elements?
                     //  3. there are other elements other than allowed children?
-
                     break;
             }
+
             return null;
         }
 
@@ -945,6 +943,7 @@ namespace DocumentFormat.OpenXml
                             // remove the old one
                             RemoveChild(child);
                         }
+
                         if (newChild != null)
                         {
                             AppendChild(newChild);
@@ -955,7 +954,6 @@ namespace DocumentFormat.OpenXml
                     //  1: there are more than 1 elements for a type?
                     //  2: there are more than 2 elements?
                     //  3. there are other elements other than allowed children?
-
                     break;
 
                 case OpenXmlCompositeType.OneChoice:
@@ -976,7 +974,7 @@ namespace DocumentFormat.OpenXml
                             next = child.NextSibling();
 
                             // remove all exist elements
-                            if (OpenXmlElement.IsKnownElement(child))
+                            if (IsKnownElement(child))
                             {
                                 RemoveChild(child);
                             }
@@ -994,7 +992,6 @@ namespace DocumentFormat.OpenXml
                     //  1: there are more than 1 elements for a type?
                     //  2: there are more than 2 elements?
                     //  3. there are other elements other than allowed children?
-
                     break;
 
                 case OpenXmlCompositeType.OneSequence:
@@ -1051,7 +1048,6 @@ namespace DocumentFormat.OpenXml
                     //  1: there are more than 1 elements for a type?
                     //  2: there are more than 2 elements?
                     //  3. there are other elements other than allowed children?
-
                     break;
             }
         }
@@ -1079,19 +1075,6 @@ namespace DocumentFormat.OpenXml
                 _lastChild = node;
             }
         }
-
-        //private void SetOwner(OpenXmlElement element)
-        //{
-        //    element.Owner = this.Owner;
-
-        //    if (element.XmlParsed)
-        //    {
-        //        foreach (OpenXmlElement child in element.ChildElements)
-        //        {
-        //            SetOwner(child);
-        //        }
-        //    }
-        //}
 
         #endregion
     }

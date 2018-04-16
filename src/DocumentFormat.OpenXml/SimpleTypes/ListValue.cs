@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (_list == null)
                 {
-                    if (!String.IsNullOrEmpty(TextValue))
+                    if (!string.IsNullOrEmpty(TextValue))
                     {
                         TryParse();
                     }
@@ -95,7 +95,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (_list == null)
                 {
-                    if (!String.IsNullOrEmpty(TextValue))
+                    if (!string.IsNullOrEmpty(TextValue))
                     {
                         Parse();
                     }
@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml
             _list = new ObservableCollection<T>();
             _list.CollectionChanged += CollectionChanged;
 
-            if (!String.IsNullOrEmpty(TextValue))
+            if (!string.IsNullOrEmpty(TextValue))
             {
                 // split the string by white-space characters as the delimiters.
                 string[] items = TextValue.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
@@ -128,7 +128,7 @@ namespace DocumentFormat.OpenXml
                 {
                     var itemValue = new T
                     {
-                        InnerText = item
+                        InnerText = item,
                     };
                     _list.Add(itemValue);
                 }
@@ -141,7 +141,7 @@ namespace DocumentFormat.OpenXml
         /// <returns></returns>
         private bool TryParse()
         {
-            if (!String.IsNullOrEmpty(TextValue))
+            if (!string.IsNullOrEmpty(TextValue))
             {
                 // split the string by white-space characters as the delimiters.
                 string[] items = TextValue.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
@@ -152,7 +152,7 @@ namespace DocumentFormat.OpenXml
                 {
                     var itemValue = new T
                     {
-                        InnerText = item
+                        InnerText = item,
                     };
                     list.Add(itemValue);
                 }
@@ -175,7 +175,7 @@ namespace DocumentFormat.OpenXml
                 if (TextValue == null && _list != null)
                 {
                     StringBuilder textString = new StringBuilder();
-                    string separator = String.Empty;
+                    string separator = string.Empty;
 
                     foreach (T value in _list)
                     {
@@ -186,8 +186,10 @@ namespace DocumentFormat.OpenXml
                             separator = _listSeparator;
                         }
                     }
+
                     TextValue = textString.ToString();
                 }
+
                 return TextValue;
             }
 
@@ -200,7 +202,7 @@ namespace DocumentFormat.OpenXml
 
         private protected override OpenXmlSimpleType CloneImpl() => new ListValue<T>(this);
 
-        private void CollectionChanged(Object sender, NotifyCollectionChangedEventArgs e)
+        private void CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
             // clear the TextValue when the collection is changed.
             TextValue = null;

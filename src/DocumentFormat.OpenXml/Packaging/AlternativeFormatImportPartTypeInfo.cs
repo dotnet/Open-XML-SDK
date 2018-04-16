@@ -13,7 +13,6 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 //case AlternativeFormatImportPartType.Text:
                 //    return "application/text/plain";
-
                 case AlternativeFormatImportPartType.Xhtml:
                     return "application/xhtml+xml";
 
@@ -25,7 +24,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 //case AlternativeFormatImportPartType.TextXml:
                 //    return "text/xml";
-
                 case AlternativeFormatImportPartType.TextPlain:
                     return "text/plain";
 
@@ -58,7 +56,6 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 //case AlternativeFormatImportPartType.Text:
                 //    return ".txt";
-
                 case AlternativeFormatImportPartType.Xhtml:
                     return ".xhtml";
 
@@ -70,7 +67,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 //case AlternativeFormatImportPartType.TextXml:
                 //    return ".xml";
-
                 case AlternativeFormatImportPartType.TextPlain:
                     return ".txt";
 

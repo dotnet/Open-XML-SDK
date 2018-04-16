@@ -158,7 +158,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             presentation1.AddNamespaceDeclaration("p", "http://schemas.openxmlformats.org/presentationml/2006/main");
 
             SlideMasterIdList slideMasterIdList1 = new SlideMasterIdList();
-            SlideMasterId slideMasterId1 = new SlideMasterId() { Id = (UInt32Value)2147483648U, RelationshipId = "rId1" };
+            SlideMasterId slideMasterId1 = new SlideMasterId() { Id = 2147483648U, RelationshipId = "rId1" };
 
             slideMasterIdList1.Append(slideMasterId1);
 
@@ -168,7 +168,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             notesMasterIdList1.Append(notesMasterId1);
 
             SlideIdList slideIdList1 = new SlideIdList();
-            SlideId slideId1 = new SlideId() { Id = (UInt32Value)256U, RelationshipId = "rId2" };
+            SlideId slideId1 = new SlideId() { Id = 256U, RelationshipId = "rId2" };
 
             slideIdList1.Append(slideId1);
             SlideSize slideSize1 = new SlideSize() { Cx = 9144000, Cy = 6858000, Type = SlideSizeValues.Screen4x3 };
@@ -370,7 +370,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             P15.SlideGuideList slideGuideList1 = new P15.SlideGuideList();
             slideGuideList1.AddNamespaceDeclaration("p15", "http://schemas.microsoft.com/office/powerpoint/2012/main");
 
-            P15.ExtendedGuide extendedGuide1 = new P15.ExtendedGuide() { Id = (UInt32Value)1U, Orientation = DirectionValues.Horizontal, Position = 2160 };
+            P15.ExtendedGuide extendedGuide1 = new P15.ExtendedGuide() { Id = 1U, Orientation = DirectionValues.Horizontal, Position = 2160 };
 
             P15.ColorType colorType1 = new P15.ColorType();
             A.RgbColorModelHex rgbColorModelHex1 = new A.RgbColorModelHex() { Val = "A4A3A4" };
@@ -379,7 +379,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
 
             extendedGuide1.Append(colorType1);
 
-            P15.ExtendedGuide extendedGuide2 = new P15.ExtendedGuide() { Id = (UInt32Value)2U, Position = 2880 };
+            P15.ExtendedGuide extendedGuide2 = new P15.ExtendedGuide() { Id = 2U, Position = 2880 };
 
             P15.ColorType colorType2 = new P15.ColorType();
             A.RgbColorModelHex rgbColorModelHex2 = new A.RgbColorModelHex() { Val = "A4A3A4" };
@@ -427,7 +427,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
 
             Background background1 = new Background();
 
-            BackgroundStyleReference backgroundStyleReference1 = new BackgroundStyleReference() { Index = (UInt32Value)1001U };
+            BackgroundStyleReference backgroundStyleReference1 = new BackgroundStyleReference() { Index = 1001U };
             A.SchemeColor schemeColor10 = new A.SchemeColor() { Val = A.SchemeColorValues.Background1 };
 
             backgroundStyleReference1.Append(schemeColor10);
@@ -437,7 +437,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             ShapeTree shapeTree1 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties1 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties1 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties1 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties1 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties1 = new ApplicationNonVisualDrawingProperties();
 
@@ -463,7 +463,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape1 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties1 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties2 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Header Placeholder 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties2 = new NonVisualDrawingProperties() { Id = 2U, Name = "Header Placeholder 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties1 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks1 = new A.ShapeLocks() { NoGrouping = true };
@@ -524,7 +524,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape2 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties2 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties3 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Date Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties3 = new NonVisualDrawingProperties() { Id = 3U, Name = "Date Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties2 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks2 = new A.ShapeLocks() { NoGrouping = true };
@@ -532,7 +532,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties2.Append(shapeLocks2);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties3 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape2 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape2 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Index = 1U };
 
             applicationNonVisualDrawingProperties3.Append(placeholderShape2);
 
@@ -574,7 +574,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field1 = new A.Field() { Id = "{7BA0CE7C-B0BC-4EE4-B285-0E85C794326B}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties1 = new A.RunProperties() { Language = "en-US" };
-            runProperties1.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties1.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text1 = new A.Text();
             text1.Text = "10/3/2012";
 
@@ -596,7 +596,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape3 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties3 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties4 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Slide Image Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties4 = new NonVisualDrawingProperties() { Id = 4U, Name = "Slide Image Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties3 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks3 = new A.ShapeLocks() { NoGrouping = true, NoRotation = true, NoChangeAspect = true };
@@ -604,7 +604,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties3.Append(shapeLocks3);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties4 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape3 = new PlaceholderShape() { Type = PlaceholderValues.SlideImage, Index = (UInt32Value)2U };
+            PlaceholderShape placeholderShape3 = new PlaceholderShape() { Type = PlaceholderValues.SlideImage, Index = 2U };
 
             applicationNonVisualDrawingProperties4.Append(placeholderShape3);
 
@@ -661,7 +661,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape4 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties4 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties5 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Notes Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties5 = new NonVisualDrawingProperties() { Id = 5U, Name = "Notes Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties4 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks4 = new A.ShapeLocks() { NoGrouping = true };
@@ -669,7 +669,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties4.Append(shapeLocks4);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties5 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape4 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)3U };
+            PlaceholderShape placeholderShape4 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Quarter, Index = 3U };
 
             applicationNonVisualDrawingProperties5.Append(placeholderShape4);
 
@@ -708,7 +708,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run1 = new A.Run();
 
             A.RunProperties runProperties2 = new A.RunProperties() { Language = "en-US" };
-            runProperties2.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties2.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text2 = new A.Text();
             text2.Text = "Click to edit Master text styles";
 
@@ -724,7 +724,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run2 = new A.Run();
 
             A.RunProperties runProperties3 = new A.RunProperties() { Language = "en-US" };
-            runProperties3.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties3.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text3 = new A.Text();
             text3.Text = "Second level";
 
@@ -740,7 +740,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run3 = new A.Run();
 
             A.RunProperties runProperties4 = new A.RunProperties() { Language = "en-US" };
-            runProperties4.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties4.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text4 = new A.Text();
             text4.Text = "Third level";
 
@@ -756,7 +756,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run4 = new A.Run();
 
             A.RunProperties runProperties5 = new A.RunProperties() { Language = "en-US" };
-            runProperties5.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties5.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text5 = new A.Text();
             text5.Text = "Fourth level";
 
@@ -772,7 +772,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run5 = new A.Run();
 
             A.RunProperties runProperties6 = new A.RunProperties() { Language = "en-US" };
-            runProperties6.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties6.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text6 = new A.Text();
             text6.Text = "Fifth level";
 
@@ -799,7 +799,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape5 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties5 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties6 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Footer Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties6 = new NonVisualDrawingProperties() { Id = 6U, Name = "Footer Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties5 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks5 = new A.ShapeLocks() { NoGrouping = true };
@@ -807,7 +807,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties5.Append(shapeLocks5);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties6 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape5 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)4U };
+            PlaceholderShape placeholderShape5 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 4U };
 
             applicationNonVisualDrawingProperties6.Append(placeholderShape5);
 
@@ -860,7 +860,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape6 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties6 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties7 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Slide Number Placeholder 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties7 = new NonVisualDrawingProperties() { Id = 7U, Name = "Slide Number Placeholder 6" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties6 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks6 = new A.ShapeLocks() { NoGrouping = true };
@@ -868,7 +868,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties6.Append(shapeLocks6);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties7 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape6 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)5U };
+            PlaceholderShape placeholderShape6 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 5U };
 
             applicationNonVisualDrawingProperties7.Append(placeholderShape6);
 
@@ -910,7 +910,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field2 = new A.Field() { Id = "{9C1765F9-762C-47B7-8E5E-B6B798E60338}", Type = "slidenum" };
 
             A.RunProperties runProperties7 = new A.RunProperties() { Language = "en-US" };
-            runProperties7.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties7.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text7 = new A.Text();
             text7.Text = "‹#›";
 
@@ -942,7 +942,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
 
             CommonSlideDataExtension commonSlideDataExtension1 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId1 = new P14.CreationId() { Val = (UInt32Value)4103524152U };
+            P14.CreationId creationId1 = new P14.CreationId() { Val = 4103524152U };
             creationId1.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension1.Append(creationId1);
@@ -1231,8 +1231,8 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
 
             A.MajorFont majorFont1 = new A.MajorFont();
             A.LatinFont latinFont19 = new A.LatinFont() { Typeface = "Calibri" };
-            A.EastAsianFont eastAsianFont19 = new A.EastAsianFont() { Typeface = "" };
-            A.ComplexScriptFont complexScriptFont19 = new A.ComplexScriptFont() { Typeface = "" };
+            A.EastAsianFont eastAsianFont19 = new A.EastAsianFont() { Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont19 = new A.ComplexScriptFont() { Typeface = string.Empty };
             A.SupplementalFont supplementalFont1 = new A.SupplementalFont() { Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
             A.SupplementalFont supplementalFont2 = new A.SupplementalFont() { Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont3 = new A.SupplementalFont() { Script = "Hans", Typeface = "宋体" };
@@ -1298,8 +1298,8 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
 
             A.MinorFont minorFont1 = new A.MinorFont();
             A.LatinFont latinFont20 = new A.LatinFont() { Typeface = "Calibri" };
-            A.EastAsianFont eastAsianFont20 = new A.EastAsianFont() { Typeface = "" };
-            A.ComplexScriptFont complexScriptFont20 = new A.ComplexScriptFont() { Typeface = "" };
+            A.EastAsianFont eastAsianFont20 = new A.EastAsianFont() { Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont20 = new A.ComplexScriptFont() { Typeface = string.Empty };
             A.SupplementalFont supplementalFont30 = new A.SupplementalFont() { Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
             A.SupplementalFont supplementalFont31 = new A.SupplementalFont() { Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont32 = new A.SupplementalFont() { Script = "Hans", Typeface = "宋体" };
@@ -1797,8 +1797,8 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
 
             A.MajorFont majorFont2 = new A.MajorFont();
             A.LatinFont latinFont21 = new A.LatinFont() { Typeface = "Calibri" };
-            A.EastAsianFont eastAsianFont21 = new A.EastAsianFont() { Typeface = "" };
-            A.ComplexScriptFont complexScriptFont21 = new A.ComplexScriptFont() { Typeface = "" };
+            A.EastAsianFont eastAsianFont21 = new A.EastAsianFont() { Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont21 = new A.ComplexScriptFont() { Typeface = string.Empty };
             A.SupplementalFont supplementalFont59 = new A.SupplementalFont() { Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
             A.SupplementalFont supplementalFont60 = new A.SupplementalFont() { Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont61 = new A.SupplementalFont() { Script = "Hans", Typeface = "宋体" };
@@ -1864,8 +1864,8 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
 
             A.MinorFont minorFont2 = new A.MinorFont();
             A.LatinFont latinFont22 = new A.LatinFont() { Typeface = "Calibri" };
-            A.EastAsianFont eastAsianFont22 = new A.EastAsianFont() { Typeface = "" };
-            A.ComplexScriptFont complexScriptFont22 = new A.ComplexScriptFont() { Typeface = "" };
+            A.EastAsianFont eastAsianFont22 = new A.EastAsianFont() { Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont22 = new A.ComplexScriptFont() { Typeface = string.Empty };
             A.SupplementalFont supplementalFont88 = new A.SupplementalFont() { Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
             A.SupplementalFont supplementalFont89 = new A.SupplementalFont() { Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont90 = new A.SupplementalFont() { Script = "Hans", Typeface = "宋体" };
@@ -2289,7 +2289,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             ShapeTree shapeTree2 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties2 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties8 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties8 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties2 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties8 = new ApplicationNonVisualDrawingProperties();
 
@@ -2315,7 +2315,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape7 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties7 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties9 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties9 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties7 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks7 = new A.ShapeLocks() { NoGrouping = true };
@@ -2352,7 +2352,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape8 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties8 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties10 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Subtitle 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties10 = new NonVisualDrawingProperties() { Id = 3U, Name = "Subtitle 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties8 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks8 = new A.ShapeLocks() { NoGrouping = true };
@@ -2360,7 +2360,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties8.Append(shapeLocks8);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties10 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape8 = new PlaceholderShape() { Type = PlaceholderValues.SubTitle, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape8 = new PlaceholderShape() { Type = PlaceholderValues.SubTitle, Index = 1U };
 
             applicationNonVisualDrawingProperties10.Append(placeholderShape8);
 
@@ -2412,7 +2412,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             commentList1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             commentList1.AddNamespaceDeclaration("p", "http://schemas.openxmlformats.org/presentationml/2006/main");
 
-            Comment comment1 = new Comment() { AuthorId = (UInt32Value)0U, DateTime = System.Xml.XmlConvert.ToDateTime("2008-01-03T13:29:23.575Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), Index = (UInt32Value)1U };
+            Comment comment1 = new Comment() { AuthorId = 0U, DateTime = System.Xml.XmlConvert.ToDateTime("2008-01-03T13:29:23.575Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), Index = 1U };
             Position position1 = new Position() { X = 10L, Y = 10L };
             Text text8 = new Text();
             text8.Text = "TEsting Comment";
@@ -2432,7 +2432,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             comment1.Append(text8);
             comment1.Append(commentExtensionList1);
 
-            Comment comment2 = new Comment() { AuthorId = (UInt32Value)0U, DateTime = System.Xml.XmlConvert.ToDateTime("2008-01-03T13:29:45.682Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), Index = (UInt32Value)2U };
+            Comment comment2 = new Comment() { AuthorId = 0U, DateTime = System.Xml.XmlConvert.ToDateTime("2008-01-03T13:29:45.682Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), Index = 2U };
             Position position2 = new Position() { X = 2721L, Y = 913L };
             Text text9 = new Text();
             text9.Text = "TEsting Comment";
@@ -2471,7 +2471,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             ShapeTree shapeTree3 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties3 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties11 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties11 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties3 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties11 = new ApplicationNonVisualDrawingProperties();
 
@@ -2497,7 +2497,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape9 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties9 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties12 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Slide Image Placeholder 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties12 = new NonVisualDrawingProperties() { Id = 2U, Name = "Slide Image Placeholder 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties9 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks9 = new A.ShapeLocks() { NoGrouping = true, NoRotation = true, NoChangeAspect = true };
@@ -2520,7 +2520,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape10 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties10 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties13 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Notes Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties13 = new NonVisualDrawingProperties() { Id = 3U, Name = "Notes Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties10 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks10 = new A.ShapeLocks() { NoGrouping = true };
@@ -2528,7 +2528,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties10.Append(shapeLocks10);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties13 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape10 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape10 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = 1U };
 
             applicationNonVisualDrawingProperties13.Append(placeholderShape10);
 
@@ -2561,7 +2561,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape11 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties11 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties14 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Slide Number Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties14 = new NonVisualDrawingProperties() { Id = 4U, Name = "Slide Number Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties11 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks11 = new A.ShapeLocks() { NoGrouping = true };
@@ -2569,7 +2569,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties11.Append(shapeLocks11);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties14 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape11 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape11 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 10U };
 
             applicationNonVisualDrawingProperties14.Append(placeholderShape11);
 
@@ -2587,7 +2587,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field3 = new A.Field() { Id = "{9C1765F9-762C-47B7-8E5E-B6B798E60338}", Type = "slidenum" };
 
             A.RunProperties runProperties8 = new A.RunProperties() { Language = "en-US" };
-            runProperties8.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties8.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text10 = new A.Text();
             text10.Text = "1";
 
@@ -2616,7 +2616,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
 
             CommonSlideDataExtension commonSlideDataExtension2 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId2 = new P14.CreationId() { Val = (UInt32Value)737924747U };
+            P14.CreationId creationId2 = new P14.CreationId() { Val = 737924747U };
             creationId2.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension2.Append(creationId2);
@@ -2650,7 +2650,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             ShapeTree shapeTree4 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties4 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties15 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties15 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties4 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties15 = new ApplicationNonVisualDrawingProperties();
 
@@ -2676,7 +2676,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape12 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties12 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties16 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties16 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties12 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks12 = new A.ShapeLocks() { NoGrouping = true };
@@ -2712,7 +2712,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run6 = new A.Run();
 
             A.RunProperties runProperties9 = new A.RunProperties() { Language = "en-US" };
-            runProperties9.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties9.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text11 = new A.Text();
             text11.Text = "Click to edit Master title style";
 
@@ -2734,7 +2734,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape13 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties13 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties17 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Subtitle 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties17 = new NonVisualDrawingProperties() { Id = 3U, Name = "Subtitle 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties13 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks13 = new A.ShapeLocks() { NoGrouping = true };
@@ -2742,7 +2742,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties13.Append(shapeLocks13);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties17 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape13 = new PlaceholderShape() { Type = PlaceholderValues.SubTitle, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape13 = new PlaceholderShape() { Type = PlaceholderValues.SubTitle, Index = 1U };
 
             applicationNonVisualDrawingProperties17.Append(placeholderShape13);
 
@@ -2952,7 +2952,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run7 = new A.Run();
 
             A.RunProperties runProperties10 = new A.RunProperties() { Language = "en-US" };
-            runProperties10.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties10.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text12 = new A.Text();
             text12.Text = "Click to edit Master subtitle style";
 
@@ -2974,7 +2974,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape14 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties14 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties18 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties18 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties14 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks14 = new A.ShapeLocks() { NoGrouping = true };
@@ -2982,7 +2982,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties14.Append(shapeLocks14);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties18 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape14 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape14 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties18.Append(placeholderShape14);
 
@@ -3000,7 +3000,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field4 = new A.Field() { Id = "{A29A93E5-9E1F-419D-9DD3-D0592495A35A}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties11 = new A.RunProperties() { Language = "en-US" };
-            runProperties11.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties11.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text13 = new A.Text();
             text13.Text = "10/3/2012";
 
@@ -3022,7 +3022,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape15 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties15 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties19 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties19 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties15 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks15 = new A.ShapeLocks() { NoGrouping = true };
@@ -3030,7 +3030,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties15.Append(shapeLocks15);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties19 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape15 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape15 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties19.Append(placeholderShape15);
 
@@ -3059,7 +3059,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape16 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties16 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties20 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties20 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties16 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks16 = new A.ShapeLocks() { NoGrouping = true };
@@ -3067,7 +3067,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties16.Append(shapeLocks16);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties20 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape16 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape16 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties20.Append(placeholderShape16);
 
@@ -3085,7 +3085,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field5 = new A.Field() { Id = "{B0769A03-5788-466A-8308-4F99412C63EA}", Type = "slidenum" };
 
             A.RunProperties runProperties12 = new A.RunProperties() { Language = "en-US" };
-            runProperties12.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties12.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text14 = new A.Text();
             text14.Text = "‹#›";
 
@@ -3137,7 +3137,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
 
             Background background2 = new Background();
 
-            BackgroundStyleReference backgroundStyleReference2 = new BackgroundStyleReference() { Index = (UInt32Value)1001U };
+            BackgroundStyleReference backgroundStyleReference2 = new BackgroundStyleReference() { Index = 1001U };
             A.SchemeColor schemeColor61 = new A.SchemeColor() { Val = A.SchemeColorValues.Background1 };
 
             backgroundStyleReference2.Append(schemeColor61);
@@ -3147,7 +3147,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             ShapeTree shapeTree5 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties5 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties21 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties21 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties5 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties21 = new ApplicationNonVisualDrawingProperties();
 
@@ -3173,7 +3173,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape17 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties17 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties22 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title Placeholder 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties22 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title Placeholder 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties17 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks17 = new A.ShapeLocks() { NoGrouping = true };
@@ -3219,7 +3219,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run8 = new A.Run();
 
             A.RunProperties runProperties13 = new A.RunProperties() { Language = "en-US" };
-            runProperties13.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties13.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text15 = new A.Text();
             text15.Text = "Click to edit Master title style";
 
@@ -3241,7 +3241,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape18 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties18 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties23 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties23 = new NonVisualDrawingProperties() { Id = 3U, Name = "Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties18 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks18 = new A.ShapeLocks() { NoGrouping = true };
@@ -3249,7 +3249,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties18.Append(shapeLocks18);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties23 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape18 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape18 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = 1U };
 
             applicationNonVisualDrawingProperties23.Append(placeholderShape18);
 
@@ -3288,7 +3288,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run9 = new A.Run();
 
             A.RunProperties runProperties14 = new A.RunProperties() { Language = "en-US" };
-            runProperties14.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties14.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text16 = new A.Text();
             text16.Text = "Click to edit Master text styles";
 
@@ -3304,7 +3304,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run10 = new A.Run();
 
             A.RunProperties runProperties15 = new A.RunProperties() { Language = "en-US" };
-            runProperties15.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties15.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text17 = new A.Text();
             text17.Text = "Second level";
 
@@ -3320,7 +3320,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run11 = new A.Run();
 
             A.RunProperties runProperties16 = new A.RunProperties() { Language = "en-US" };
-            runProperties16.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties16.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text18 = new A.Text();
             text18.Text = "Third level";
 
@@ -3336,7 +3336,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run12 = new A.Run();
 
             A.RunProperties runProperties17 = new A.RunProperties() { Language = "en-US" };
-            runProperties17.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties17.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text19 = new A.Text();
             text19.Text = "Fourth level";
 
@@ -3352,7 +3352,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run13 = new A.Run();
 
             A.RunProperties runProperties18 = new A.RunProperties() { Language = "en-US" };
-            runProperties18.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties18.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text20 = new A.Text();
             text20.Text = "Fifth level";
 
@@ -3379,7 +3379,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape19 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties19 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties24 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties24 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties19 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks19 = new A.ShapeLocks() { NoGrouping = true };
@@ -3387,7 +3387,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties19.Append(shapeLocks19);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties24 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape19 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)2U };
+            PlaceholderShape placeholderShape19 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 2U };
 
             applicationNonVisualDrawingProperties24.Append(placeholderShape19);
 
@@ -3441,7 +3441,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field6 = new A.Field() { Id = "{A29A93E5-9E1F-419D-9DD3-D0592495A35A}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties19 = new A.RunProperties() { Language = "en-US" };
-            runProperties19.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties19.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text21 = new A.Text();
             text21.Text = "10/3/2012";
 
@@ -3463,7 +3463,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape20 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties20 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties25 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties25 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties20 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks20 = new A.ShapeLocks() { NoGrouping = true };
@@ -3471,7 +3471,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties20.Append(shapeLocks20);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties25 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape20 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)3U };
+            PlaceholderShape placeholderShape20 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 3U };
 
             applicationNonVisualDrawingProperties25.Append(placeholderShape20);
 
@@ -3536,7 +3536,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape21 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties21 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties26 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties26 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties21 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks21 = new A.ShapeLocks() { NoGrouping = true };
@@ -3544,7 +3544,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties21.Append(shapeLocks21);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties26 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape21 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)4U };
+            PlaceholderShape placeholderShape21 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 4U };
 
             applicationNonVisualDrawingProperties26.Append(placeholderShape21);
 
@@ -3598,7 +3598,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field7 = new A.Field() { Id = "{B0769A03-5788-466A-8308-4F99412C63EA}", Type = "slidenum" };
 
             A.RunProperties runProperties20 = new A.RunProperties() { Language = "en-US" };
-            runProperties20.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties20.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text22 = new A.Text();
             text22.Text = "‹#›";
 
@@ -3629,7 +3629,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
 
             CommonSlideDataExtension commonSlideDataExtension3 = new CommonSlideDataExtension() { Uri = "{BB962C8B-B14F-4D97-AF65-F5344CB8AC3E}" };
 
-            P14.CreationId creationId3 = new P14.CreationId() { Val = (UInt32Value)4080174089U };
+            P14.CreationId creationId3 = new P14.CreationId() { Val = 4080174089U };
             creationId3.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             commonSlideDataExtension3.Append(creationId3);
@@ -3642,17 +3642,17 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             ColorMap colorMap2 = new ColorMap() { Background1 = A.ColorSchemeIndexValues.Light1, Text1 = A.ColorSchemeIndexValues.Dark1, Background2 = A.ColorSchemeIndexValues.Light2, Text2 = A.ColorSchemeIndexValues.Dark2, Accent1 = A.ColorSchemeIndexValues.Accent1, Accent2 = A.ColorSchemeIndexValues.Accent2, Accent3 = A.ColorSchemeIndexValues.Accent3, Accent4 = A.ColorSchemeIndexValues.Accent4, Accent5 = A.ColorSchemeIndexValues.Accent5, Accent6 = A.ColorSchemeIndexValues.Accent6, Hyperlink = A.ColorSchemeIndexValues.Hyperlink, FollowedHyperlink = A.ColorSchemeIndexValues.FollowedHyperlink };
 
             SlideLayoutIdList slideLayoutIdList1 = new SlideLayoutIdList();
-            SlideLayoutId slideLayoutId1 = new SlideLayoutId() { Id = (UInt32Value)2147483649U, RelationshipId = "rId1" };
-            SlideLayoutId slideLayoutId2 = new SlideLayoutId() { Id = (UInt32Value)2147483650U, RelationshipId = "rId2" };
-            SlideLayoutId slideLayoutId3 = new SlideLayoutId() { Id = (UInt32Value)2147483651U, RelationshipId = "rId3" };
-            SlideLayoutId slideLayoutId4 = new SlideLayoutId() { Id = (UInt32Value)2147483652U, RelationshipId = "rId4" };
-            SlideLayoutId slideLayoutId5 = new SlideLayoutId() { Id = (UInt32Value)2147483653U, RelationshipId = "rId5" };
-            SlideLayoutId slideLayoutId6 = new SlideLayoutId() { Id = (UInt32Value)2147483654U, RelationshipId = "rId6" };
-            SlideLayoutId slideLayoutId7 = new SlideLayoutId() { Id = (UInt32Value)2147483655U, RelationshipId = "rId7" };
-            SlideLayoutId slideLayoutId8 = new SlideLayoutId() { Id = (UInt32Value)2147483656U, RelationshipId = "rId8" };
-            SlideLayoutId slideLayoutId9 = new SlideLayoutId() { Id = (UInt32Value)2147483657U, RelationshipId = "rId9" };
-            SlideLayoutId slideLayoutId10 = new SlideLayoutId() { Id = (UInt32Value)2147483658U, RelationshipId = "rId10" };
-            SlideLayoutId slideLayoutId11 = new SlideLayoutId() { Id = (UInt32Value)2147483659U, RelationshipId = "rId11" };
+            SlideLayoutId slideLayoutId1 = new SlideLayoutId() { Id = 2147483649U, RelationshipId = "rId1" };
+            SlideLayoutId slideLayoutId2 = new SlideLayoutId() { Id = 2147483650U, RelationshipId = "rId2" };
+            SlideLayoutId slideLayoutId3 = new SlideLayoutId() { Id = 2147483651U, RelationshipId = "rId3" };
+            SlideLayoutId slideLayoutId4 = new SlideLayoutId() { Id = 2147483652U, RelationshipId = "rId4" };
+            SlideLayoutId slideLayoutId5 = new SlideLayoutId() { Id = 2147483653U, RelationshipId = "rId5" };
+            SlideLayoutId slideLayoutId6 = new SlideLayoutId() { Id = 2147483654U, RelationshipId = "rId6" };
+            SlideLayoutId slideLayoutId7 = new SlideLayoutId() { Id = 2147483655U, RelationshipId = "rId7" };
+            SlideLayoutId slideLayoutId8 = new SlideLayoutId() { Id = 2147483656U, RelationshipId = "rId8" };
+            SlideLayoutId slideLayoutId9 = new SlideLayoutId() { Id = 2147483657U, RelationshipId = "rId9" };
+            SlideLayoutId slideLayoutId10 = new SlideLayoutId() { Id = 2147483658U, RelationshipId = "rId10" };
+            SlideLayoutId slideLayoutId11 = new SlideLayoutId() { Id = 2147483659U, RelationshipId = "rId11" };
 
             slideLayoutIdList1.Append(slideLayoutId1);
             slideLayoutIdList1.Append(slideLayoutId2);
@@ -4186,7 +4186,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             ShapeTree shapeTree6 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties6 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties27 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties27 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties6 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties27 = new ApplicationNonVisualDrawingProperties();
 
@@ -4212,7 +4212,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape22 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties22 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties28 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties28 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties22 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks22 = new A.ShapeLocks() { NoGrouping = true };
@@ -4256,7 +4256,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run14 = new A.Run();
 
             A.RunProperties runProperties21 = new A.RunProperties() { Language = "en-US" };
-            runProperties21.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties21.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text23 = new A.Text();
             text23.Text = "Click to edit Master title style";
 
@@ -4278,7 +4278,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape23 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties23 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties29 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Content Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties29 = new NonVisualDrawingProperties() { Id = 3U, Name = "Content Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties23 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks23 = new A.ShapeLocks() { NoGrouping = true };
@@ -4286,7 +4286,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties23.Append(shapeLocks23);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties29 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape23 = new PlaceholderShape() { Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape23 = new PlaceholderShape() { Index = 1U };
 
             applicationNonVisualDrawingProperties29.Append(placeholderShape23);
 
@@ -4371,7 +4371,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run15 = new A.Run();
 
             A.RunProperties runProperties22 = new A.RunProperties() { Language = "en-US" };
-            runProperties22.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties22.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text24 = new A.Text();
             text24.Text = "Click to edit Master text styles";
 
@@ -4387,7 +4387,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run16 = new A.Run();
 
             A.RunProperties runProperties23 = new A.RunProperties() { Language = "en-US" };
-            runProperties23.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties23.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text25 = new A.Text();
             text25.Text = "Second level";
 
@@ -4403,7 +4403,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run17 = new A.Run();
 
             A.RunProperties runProperties24 = new A.RunProperties() { Language = "en-US" };
-            runProperties24.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties24.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text26 = new A.Text();
             text26.Text = "Third level";
 
@@ -4419,7 +4419,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run18 = new A.Run();
 
             A.RunProperties runProperties25 = new A.RunProperties() { Language = "en-US" };
-            runProperties25.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties25.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text27 = new A.Text();
             text27.Text = "Fourth level";
 
@@ -4435,7 +4435,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run19 = new A.Run();
 
             A.RunProperties runProperties26 = new A.RunProperties() { Language = "en-US" };
-            runProperties26.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties26.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text28 = new A.Text();
             text28.Text = "Fifth level";
 
@@ -4462,7 +4462,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape24 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties24 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties30 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Text Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties30 = new NonVisualDrawingProperties() { Id = 4U, Name = "Text Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties24 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks24 = new A.ShapeLocks() { NoGrouping = true };
@@ -4470,7 +4470,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties24.Append(shapeLocks24);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties30 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape24 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)2U };
+            PlaceholderShape placeholderShape24 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Half, Index = 2U };
 
             applicationNonVisualDrawingProperties30.Append(placeholderShape24);
 
@@ -4573,7 +4573,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run20 = new A.Run();
 
             A.RunProperties runProperties27 = new A.RunProperties() { Language = "en-US" };
-            runProperties27.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties27.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text29 = new A.Text();
             text29.Text = "Click to edit Master text styles";
 
@@ -4594,7 +4594,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape25 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties25 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties31 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Date Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties31 = new NonVisualDrawingProperties() { Id = 5U, Name = "Date Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties25 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks25 = new A.ShapeLocks() { NoGrouping = true };
@@ -4602,7 +4602,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties25.Append(shapeLocks25);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties31 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape25 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape25 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties31.Append(placeholderShape25);
 
@@ -4620,7 +4620,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field8 = new A.Field() { Id = "{A29A93E5-9E1F-419D-9DD3-D0592495A35A}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties28 = new A.RunProperties() { Language = "en-US" };
-            runProperties28.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties28.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text30 = new A.Text();
             text30.Text = "10/3/2012";
 
@@ -4642,7 +4642,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape26 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties26 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties32 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Footer Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties32 = new NonVisualDrawingProperties() { Id = 6U, Name = "Footer Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties26 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks26 = new A.ShapeLocks() { NoGrouping = true };
@@ -4650,7 +4650,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties26.Append(shapeLocks26);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties32 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape26 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape26 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties32.Append(placeholderShape26);
 
@@ -4679,7 +4679,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape27 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties27 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties33 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Slide Number Placeholder 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties33 = new NonVisualDrawingProperties() { Id = 7U, Name = "Slide Number Placeholder 6" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties27 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks27 = new A.ShapeLocks() { NoGrouping = true };
@@ -4687,7 +4687,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties27.Append(shapeLocks27);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties33 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape27 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape27 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties33.Append(placeholderShape27);
 
@@ -4705,7 +4705,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field9 = new A.Field() { Id = "{B0769A03-5788-466A-8308-4F99412C63EA}", Type = "slidenum" };
 
             A.RunProperties runProperties29 = new A.RunProperties() { Language = "en-US" };
-            runProperties29.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties29.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text31 = new A.Text();
             text31.Text = "‹#›";
 
@@ -4759,7 +4759,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             ShapeTree shapeTree7 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties7 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties34 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties34 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties7 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties34 = new ApplicationNonVisualDrawingProperties();
 
@@ -4785,7 +4785,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape28 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties28 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties35 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties35 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties28 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks28 = new A.ShapeLocks() { NoGrouping = true };
@@ -4829,7 +4829,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run21 = new A.Run();
 
             A.RunProperties runProperties30 = new A.RunProperties() { Language = "en-US" };
-            runProperties30.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties30.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text32 = new A.Text();
             text32.Text = "Click to edit Master title style";
 
@@ -4851,7 +4851,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape29 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties29 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties36 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties36 = new NonVisualDrawingProperties() { Id = 3U, Name = "Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties29 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks29 = new A.ShapeLocks() { NoGrouping = true };
@@ -4859,7 +4859,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties29.Append(shapeLocks29);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties36 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape29 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape29 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = 1U };
 
             applicationNonVisualDrawingProperties36.Append(placeholderShape29);
 
@@ -5070,7 +5070,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run22 = new A.Run();
 
             A.RunProperties runProperties31 = new A.RunProperties() { Language = "en-US" };
-            runProperties31.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties31.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text33 = new A.Text();
             text33.Text = "Click to edit Master text styles";
 
@@ -5091,7 +5091,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape30 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties30 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties37 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties37 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties30 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks30 = new A.ShapeLocks() { NoGrouping = true };
@@ -5099,7 +5099,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties30.Append(shapeLocks30);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties37 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape30 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape30 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties37.Append(placeholderShape30);
 
@@ -5117,7 +5117,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field10 = new A.Field() { Id = "{A29A93E5-9E1F-419D-9DD3-D0592495A35A}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties32 = new A.RunProperties() { Language = "en-US" };
-            runProperties32.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties32.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text34 = new A.Text();
             text34.Text = "10/3/2012";
 
@@ -5139,7 +5139,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape31 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties31 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties38 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties38 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties31 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks31 = new A.ShapeLocks() { NoGrouping = true };
@@ -5147,7 +5147,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties31.Append(shapeLocks31);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties38 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape31 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape31 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties38.Append(placeholderShape31);
 
@@ -5176,7 +5176,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape32 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties32 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties39 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties39 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties32 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks32 = new A.ShapeLocks() { NoGrouping = true };
@@ -5184,7 +5184,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties32.Append(shapeLocks32);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties39 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape32 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape32 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties39.Append(placeholderShape32);
 
@@ -5202,7 +5202,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field11 = new A.Field() { Id = "{B0769A03-5788-466A-8308-4F99412C63EA}", Type = "slidenum" };
 
             A.RunProperties runProperties33 = new A.RunProperties() { Language = "en-US" };
-            runProperties33.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties33.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text35 = new A.Text();
             text35.Text = "‹#›";
 
@@ -5255,7 +5255,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             ShapeTree shapeTree8 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties8 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties40 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties40 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties8 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties40 = new ApplicationNonVisualDrawingProperties();
 
@@ -5281,7 +5281,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape33 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties33 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties41 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Date Placeholder 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties41 = new NonVisualDrawingProperties() { Id = 2U, Name = "Date Placeholder 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties33 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks33 = new A.ShapeLocks() { NoGrouping = true };
@@ -5289,7 +5289,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties33.Append(shapeLocks33);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties41 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape33 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape33 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties41.Append(placeholderShape33);
 
@@ -5307,7 +5307,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field12 = new A.Field() { Id = "{A29A93E5-9E1F-419D-9DD3-D0592495A35A}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties34 = new A.RunProperties() { Language = "en-US" };
-            runProperties34.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties34.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text36 = new A.Text();
             text36.Text = "10/3/2012";
 
@@ -5329,7 +5329,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape34 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties34 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties42 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Footer Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties42 = new NonVisualDrawingProperties() { Id = 3U, Name = "Footer Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties34 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks34 = new A.ShapeLocks() { NoGrouping = true };
@@ -5337,7 +5337,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties34.Append(shapeLocks34);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties42 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape34 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape34 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties42.Append(placeholderShape34);
 
@@ -5366,7 +5366,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape35 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties35 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties43 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Slide Number Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties43 = new NonVisualDrawingProperties() { Id = 4U, Name = "Slide Number Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties35 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks35 = new A.ShapeLocks() { NoGrouping = true };
@@ -5374,7 +5374,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties35.Append(shapeLocks35);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties43 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape35 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape35 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties43.Append(placeholderShape35);
 
@@ -5392,7 +5392,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field13 = new A.Field() { Id = "{B0769A03-5788-466A-8308-4F99412C63EA}", Type = "slidenum" };
 
             A.RunProperties runProperties35 = new A.RunProperties() { Language = "en-US" };
-            runProperties35.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties35.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text37 = new A.Text();
             text37.Text = "‹#›";
 
@@ -5443,7 +5443,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             ShapeTree shapeTree9 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties9 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties44 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties44 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties9 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties44 = new ApplicationNonVisualDrawingProperties();
 
@@ -5469,7 +5469,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape36 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties36 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties45 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties45 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties36 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks36 = new A.ShapeLocks() { NoGrouping = true };
@@ -5495,7 +5495,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run23 = new A.Run();
 
             A.RunProperties runProperties36 = new A.RunProperties() { Language = "en-US" };
-            runProperties36.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties36.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text38 = new A.Text();
             text38.Text = "Click to edit Master title style";
 
@@ -5517,7 +5517,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape37 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties37 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties46 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Content Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties46 = new NonVisualDrawingProperties() { Id = 3U, Name = "Content Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties37 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks37 = new A.ShapeLocks() { NoGrouping = true };
@@ -5525,7 +5525,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties37.Append(shapeLocks37);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties46 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape37 = new PlaceholderShape() { Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape37 = new PlaceholderShape() { Index = 1U };
 
             applicationNonVisualDrawingProperties46.Append(placeholderShape37);
 
@@ -5544,7 +5544,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run24 = new A.Run();
 
             A.RunProperties runProperties37 = new A.RunProperties() { Language = "en-US" };
-            runProperties37.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties37.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text39 = new A.Text();
             text39.Text = "Click to edit Master text styles";
 
@@ -5560,7 +5560,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run25 = new A.Run();
 
             A.RunProperties runProperties38 = new A.RunProperties() { Language = "en-US" };
-            runProperties38.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties38.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text40 = new A.Text();
             text40.Text = "Second level";
 
@@ -5576,7 +5576,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run26 = new A.Run();
 
             A.RunProperties runProperties39 = new A.RunProperties() { Language = "en-US" };
-            runProperties39.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties39.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text41 = new A.Text();
             text41.Text = "Third level";
 
@@ -5592,7 +5592,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run27 = new A.Run();
 
             A.RunProperties runProperties40 = new A.RunProperties() { Language = "en-US" };
-            runProperties40.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties40.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text42 = new A.Text();
             text42.Text = "Fourth level";
 
@@ -5608,7 +5608,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run28 = new A.Run();
 
             A.RunProperties runProperties41 = new A.RunProperties() { Language = "en-US" };
-            runProperties41.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties41.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text43 = new A.Text();
             text43.Text = "Fifth level";
 
@@ -5635,7 +5635,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape38 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties38 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties47 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties47 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties38 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks38 = new A.ShapeLocks() { NoGrouping = true };
@@ -5643,7 +5643,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties38.Append(shapeLocks38);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties47 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape38 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape38 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties47.Append(placeholderShape38);
 
@@ -5661,7 +5661,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field14 = new A.Field() { Id = "{A29A93E5-9E1F-419D-9DD3-D0592495A35A}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties42 = new A.RunProperties() { Language = "en-US" };
-            runProperties42.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties42.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text44 = new A.Text();
             text44.Text = "10/3/2012";
 
@@ -5683,7 +5683,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape39 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties39 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties48 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties48 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties39 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks39 = new A.ShapeLocks() { NoGrouping = true };
@@ -5691,7 +5691,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties39.Append(shapeLocks39);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties48 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape39 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape39 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties48.Append(placeholderShape39);
 
@@ -5720,7 +5720,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape40 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties40 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties49 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties49 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties40 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks40 = new A.ShapeLocks() { NoGrouping = true };
@@ -5728,7 +5728,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties40.Append(shapeLocks40);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties49 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape40 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape40 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties49.Append(placeholderShape40);
 
@@ -5746,7 +5746,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field15 = new A.Field() { Id = "{B0769A03-5788-466A-8308-4F99412C63EA}", Type = "slidenum" };
 
             A.RunProperties runProperties43 = new A.RunProperties() { Language = "en-US" };
-            runProperties43.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties43.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text45 = new A.Text();
             text45.Text = "‹#›";
 
@@ -5799,7 +5799,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             ShapeTree shapeTree10 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties10 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties50 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties50 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties10 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties50 = new ApplicationNonVisualDrawingProperties();
 
@@ -5825,7 +5825,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape41 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties41 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties51 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties51 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties41 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks41 = new A.ShapeLocks() { NoGrouping = true };
@@ -5851,7 +5851,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run29 = new A.Run();
 
             A.RunProperties runProperties44 = new A.RunProperties() { Language = "en-US" };
-            runProperties44.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties44.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text46 = new A.Text();
             text46.Text = "Click to edit Master title style";
 
@@ -5873,7 +5873,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape42 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties42 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties52 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Date Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties52 = new NonVisualDrawingProperties() { Id = 3U, Name = "Date Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties42 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks42 = new A.ShapeLocks() { NoGrouping = true };
@@ -5881,7 +5881,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties42.Append(shapeLocks42);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties52 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape42 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape42 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties52.Append(placeholderShape42);
 
@@ -5899,7 +5899,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field16 = new A.Field() { Id = "{A29A93E5-9E1F-419D-9DD3-D0592495A35A}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties45 = new A.RunProperties() { Language = "en-US" };
-            runProperties45.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties45.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text47 = new A.Text();
             text47.Text = "10/3/2012";
 
@@ -5921,7 +5921,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape43 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties43 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties53 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Footer Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties53 = new NonVisualDrawingProperties() { Id = 4U, Name = "Footer Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties43 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks43 = new A.ShapeLocks() { NoGrouping = true };
@@ -5929,7 +5929,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties43.Append(shapeLocks43);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties53 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape43 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape43 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties53.Append(placeholderShape43);
 
@@ -5958,7 +5958,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape44 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties44 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties54 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Slide Number Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties54 = new NonVisualDrawingProperties() { Id = 5U, Name = "Slide Number Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties44 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks44 = new A.ShapeLocks() { NoGrouping = true };
@@ -5966,7 +5966,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties44.Append(shapeLocks44);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties54 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape44 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape44 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties54.Append(placeholderShape44);
 
@@ -5984,7 +5984,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field17 = new A.Field() { Id = "{B0769A03-5788-466A-8308-4F99412C63EA}", Type = "slidenum" };
 
             A.RunProperties runProperties46 = new A.RunProperties() { Language = "en-US" };
-            runProperties46.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties46.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text48 = new A.Text();
             text48.Text = "‹#›";
 
@@ -6036,7 +6036,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             ShapeTree shapeTree11 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties11 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties55 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties55 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties11 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties55 = new ApplicationNonVisualDrawingProperties();
 
@@ -6062,7 +6062,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape45 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties45 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties56 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Vertical Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties56 = new NonVisualDrawingProperties() { Id = 2U, Name = "Vertical Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties45 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks45 = new A.ShapeLocks() { NoGrouping = true };
@@ -6098,7 +6098,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run30 = new A.Run();
 
             A.RunProperties runProperties47 = new A.RunProperties() { Language = "en-US" };
-            runProperties47.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties47.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text49 = new A.Text();
             text49.Text = "Click to edit Master title style";
 
@@ -6120,7 +6120,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape46 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties46 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties57 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Vertical Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties57 = new NonVisualDrawingProperties() { Id = 3U, Name = "Vertical Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties46 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks46 = new A.ShapeLocks() { NoGrouping = true };
@@ -6128,7 +6128,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties46.Append(shapeLocks46);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties57 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape46 = new PlaceholderShape() { Type = PlaceholderValues.Body, Orientation = DirectionValues.Vertical, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape46 = new PlaceholderShape() { Type = PlaceholderValues.Body, Orientation = DirectionValues.Vertical, Index = 1U };
 
             applicationNonVisualDrawingProperties57.Append(placeholderShape46);
 
@@ -6157,7 +6157,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run31 = new A.Run();
 
             A.RunProperties runProperties48 = new A.RunProperties() { Language = "en-US" };
-            runProperties48.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties48.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text50 = new A.Text();
             text50.Text = "Click to edit Master text styles";
 
@@ -6173,7 +6173,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run32 = new A.Run();
 
             A.RunProperties runProperties49 = new A.RunProperties() { Language = "en-US" };
-            runProperties49.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties49.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text51 = new A.Text();
             text51.Text = "Second level";
 
@@ -6189,7 +6189,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run33 = new A.Run();
 
             A.RunProperties runProperties50 = new A.RunProperties() { Language = "en-US" };
-            runProperties50.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties50.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text52 = new A.Text();
             text52.Text = "Third level";
 
@@ -6205,7 +6205,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run34 = new A.Run();
 
             A.RunProperties runProperties51 = new A.RunProperties() { Language = "en-US" };
-            runProperties51.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties51.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text53 = new A.Text();
             text53.Text = "Fourth level";
 
@@ -6221,7 +6221,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run35 = new A.Run();
 
             A.RunProperties runProperties52 = new A.RunProperties() { Language = "en-US" };
-            runProperties52.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties52.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text54 = new A.Text();
             text54.Text = "Fifth level";
 
@@ -6248,7 +6248,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape47 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties47 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties58 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties58 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties47 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks47 = new A.ShapeLocks() { NoGrouping = true };
@@ -6256,7 +6256,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties47.Append(shapeLocks47);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties58 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape47 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape47 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties58.Append(placeholderShape47);
 
@@ -6274,7 +6274,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field18 = new A.Field() { Id = "{A29A93E5-9E1F-419D-9DD3-D0592495A35A}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties53 = new A.RunProperties() { Language = "en-US" };
-            runProperties53.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties53.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text55 = new A.Text();
             text55.Text = "10/3/2012";
 
@@ -6296,7 +6296,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape48 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties48 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties59 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties59 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties48 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks48 = new A.ShapeLocks() { NoGrouping = true };
@@ -6304,7 +6304,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties48.Append(shapeLocks48);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties59 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape48 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape48 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties59.Append(placeholderShape48);
 
@@ -6333,7 +6333,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape49 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties49 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties60 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties60 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties49 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks49 = new A.ShapeLocks() { NoGrouping = true };
@@ -6341,7 +6341,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties49.Append(shapeLocks49);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties60 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape49 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape49 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties60.Append(placeholderShape49);
 
@@ -6359,7 +6359,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field19 = new A.Field() { Id = "{B0769A03-5788-466A-8308-4F99412C63EA}", Type = "slidenum" };
 
             A.RunProperties runProperties54 = new A.RunProperties() { Language = "en-US" };
-            runProperties54.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties54.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text56 = new A.Text();
             text56.Text = "‹#›";
 
@@ -6412,7 +6412,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             ShapeTree shapeTree12 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties12 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties61 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties61 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties12 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties61 = new ApplicationNonVisualDrawingProperties();
 
@@ -6438,7 +6438,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape50 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties50 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties62 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties62 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties50 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks50 = new A.ShapeLocks() { NoGrouping = true };
@@ -6472,7 +6472,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run36 = new A.Run();
 
             A.RunProperties runProperties55 = new A.RunProperties() { Language = "en-US" };
-            runProperties55.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties55.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text57 = new A.Text();
             text57.Text = "Click to edit Master title style";
 
@@ -6494,7 +6494,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape51 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties51 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties63 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties63 = new NonVisualDrawingProperties() { Id = 3U, Name = "Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties51 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks51 = new A.ShapeLocks() { NoGrouping = true };
@@ -6502,7 +6502,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties51.Append(shapeLocks51);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties63 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape51 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape51 = new PlaceholderShape() { Type = PlaceholderValues.Body, Index = 1U };
 
             applicationNonVisualDrawingProperties63.Append(placeholderShape51);
 
@@ -6605,7 +6605,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run37 = new A.Run();
 
             A.RunProperties runProperties56 = new A.RunProperties() { Language = "en-US" };
-            runProperties56.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties56.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text58 = new A.Text();
             text58.Text = "Click to edit Master text styles";
 
@@ -6626,7 +6626,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape52 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties52 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties64 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Content Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties64 = new NonVisualDrawingProperties() { Id = 4U, Name = "Content Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties52 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks52 = new A.ShapeLocks() { NoGrouping = true };
@@ -6634,7 +6634,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties52.Append(shapeLocks52);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties64 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape52 = new PlaceholderShape() { Size = PlaceholderSizeValues.Half, Index = (UInt32Value)2U };
+            PlaceholderShape placeholderShape52 = new PlaceholderShape() { Size = PlaceholderSizeValues.Half, Index = 2U };
 
             applicationNonVisualDrawingProperties64.Append(placeholderShape52);
 
@@ -6719,7 +6719,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run38 = new A.Run();
 
             A.RunProperties runProperties57 = new A.RunProperties() { Language = "en-US" };
-            runProperties57.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties57.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text59 = new A.Text();
             text59.Text = "Click to edit Master text styles";
 
@@ -6735,7 +6735,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run39 = new A.Run();
 
             A.RunProperties runProperties58 = new A.RunProperties() { Language = "en-US" };
-            runProperties58.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties58.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text60 = new A.Text();
             text60.Text = "Second level";
 
@@ -6751,7 +6751,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run40 = new A.Run();
 
             A.RunProperties runProperties59 = new A.RunProperties() { Language = "en-US" };
-            runProperties59.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties59.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text61 = new A.Text();
             text61.Text = "Third level";
 
@@ -6767,7 +6767,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run41 = new A.Run();
 
             A.RunProperties runProperties60 = new A.RunProperties() { Language = "en-US" };
-            runProperties60.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties60.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text62 = new A.Text();
             text62.Text = "Fourth level";
 
@@ -6783,7 +6783,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run42 = new A.Run();
 
             A.RunProperties runProperties61 = new A.RunProperties() { Language = "en-US" };
-            runProperties61.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties61.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text63 = new A.Text();
             text63.Text = "Fifth level";
 
@@ -6810,7 +6810,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape53 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties53 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties65 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Text Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties65 = new NonVisualDrawingProperties() { Id = 5U, Name = "Text Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties53 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks53 = new A.ShapeLocks() { NoGrouping = true };
@@ -6818,7 +6818,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties53.Append(shapeLocks53);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties65 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape53 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)3U };
+            PlaceholderShape placeholderShape53 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Quarter, Index = 3U };
 
             applicationNonVisualDrawingProperties65.Append(placeholderShape53);
 
@@ -6921,7 +6921,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run43 = new A.Run();
 
             A.RunProperties runProperties62 = new A.RunProperties() { Language = "en-US" };
-            runProperties62.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties62.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text64 = new A.Text();
             text64.Text = "Click to edit Master text styles";
 
@@ -6942,7 +6942,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape54 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties54 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties66 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Content Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties66 = new NonVisualDrawingProperties() { Id = 6U, Name = "Content Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties54 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks54 = new A.ShapeLocks() { NoGrouping = true };
@@ -6950,7 +6950,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties54.Append(shapeLocks54);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties66 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape54 = new PlaceholderShape() { Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)4U };
+            PlaceholderShape placeholderShape54 = new PlaceholderShape() { Size = PlaceholderSizeValues.Quarter, Index = 4U };
 
             applicationNonVisualDrawingProperties66.Append(placeholderShape54);
 
@@ -7035,7 +7035,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run44 = new A.Run();
 
             A.RunProperties runProperties63 = new A.RunProperties() { Language = "en-US" };
-            runProperties63.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties63.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text65 = new A.Text();
             text65.Text = "Click to edit Master text styles";
 
@@ -7051,7 +7051,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run45 = new A.Run();
 
             A.RunProperties runProperties64 = new A.RunProperties() { Language = "en-US" };
-            runProperties64.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties64.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text66 = new A.Text();
             text66.Text = "Second level";
 
@@ -7067,7 +7067,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run46 = new A.Run();
 
             A.RunProperties runProperties65 = new A.RunProperties() { Language = "en-US" };
-            runProperties65.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties65.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text67 = new A.Text();
             text67.Text = "Third level";
 
@@ -7083,7 +7083,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run47 = new A.Run();
 
             A.RunProperties runProperties66 = new A.RunProperties() { Language = "en-US" };
-            runProperties66.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties66.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text68 = new A.Text();
             text68.Text = "Fourth level";
 
@@ -7099,7 +7099,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run48 = new A.Run();
 
             A.RunProperties runProperties67 = new A.RunProperties() { Language = "en-US" };
-            runProperties67.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties67.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text69 = new A.Text();
             text69.Text = "Fifth level";
 
@@ -7126,7 +7126,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape55 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties55 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties67 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Date Placeholder 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties67 = new NonVisualDrawingProperties() { Id = 7U, Name = "Date Placeholder 6" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties55 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks55 = new A.ShapeLocks() { NoGrouping = true };
@@ -7134,7 +7134,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties55.Append(shapeLocks55);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties67 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape55 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape55 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties67.Append(placeholderShape55);
 
@@ -7152,7 +7152,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field20 = new A.Field() { Id = "{A29A93E5-9E1F-419D-9DD3-D0592495A35A}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties68 = new A.RunProperties() { Language = "en-US" };
-            runProperties68.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties68.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text70 = new A.Text();
             text70.Text = "10/3/2012";
 
@@ -7174,7 +7174,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape56 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties56 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties68 = new NonVisualDrawingProperties() { Id = (UInt32Value)8U, Name = "Footer Placeholder 7" };
+            NonVisualDrawingProperties nonVisualDrawingProperties68 = new NonVisualDrawingProperties() { Id = 8U, Name = "Footer Placeholder 7" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties56 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks56 = new A.ShapeLocks() { NoGrouping = true };
@@ -7182,7 +7182,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties56.Append(shapeLocks56);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties68 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape56 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape56 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties68.Append(placeholderShape56);
 
@@ -7211,7 +7211,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape57 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties57 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties69 = new NonVisualDrawingProperties() { Id = (UInt32Value)9U, Name = "Slide Number Placeholder 8" };
+            NonVisualDrawingProperties nonVisualDrawingProperties69 = new NonVisualDrawingProperties() { Id = 9U, Name = "Slide Number Placeholder 8" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties57 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks57 = new A.ShapeLocks() { NoGrouping = true };
@@ -7219,7 +7219,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties57.Append(shapeLocks57);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties69 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape57 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape57 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties69.Append(placeholderShape57);
 
@@ -7237,7 +7237,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field21 = new A.Field() { Id = "{B0769A03-5788-466A-8308-4F99412C63EA}", Type = "slidenum" };
 
             A.RunProperties runProperties69 = new A.RunProperties() { Language = "en-US" };
-            runProperties69.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties69.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text71 = new A.Text();
             text71.Text = "‹#›";
 
@@ -7293,7 +7293,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             ShapeTree shapeTree13 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties13 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties70 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties70 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties13 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties70 = new ApplicationNonVisualDrawingProperties();
 
@@ -7319,7 +7319,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape58 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties58 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties71 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties71 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties58 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks58 = new A.ShapeLocks() { NoGrouping = true };
@@ -7345,7 +7345,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run49 = new A.Run();
 
             A.RunProperties runProperties70 = new A.RunProperties() { Language = "en-US" };
-            runProperties70.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties70.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text72 = new A.Text();
             text72.Text = "Click to edit Master title style";
 
@@ -7367,7 +7367,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape59 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties59 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties72 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Vertical Text Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties72 = new NonVisualDrawingProperties() { Id = 3U, Name = "Vertical Text Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties59 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks59 = new A.ShapeLocks() { NoGrouping = true };
@@ -7375,7 +7375,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties59.Append(shapeLocks59);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties72 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape59 = new PlaceholderShape() { Type = PlaceholderValues.Body, Orientation = DirectionValues.Vertical, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape59 = new PlaceholderShape() { Type = PlaceholderValues.Body, Orientation = DirectionValues.Vertical, Index = 1U };
 
             applicationNonVisualDrawingProperties72.Append(placeholderShape59);
 
@@ -7394,7 +7394,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run50 = new A.Run();
 
             A.RunProperties runProperties71 = new A.RunProperties() { Language = "en-US" };
-            runProperties71.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties71.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text73 = new A.Text();
             text73.Text = "Click to edit Master text styles";
 
@@ -7410,7 +7410,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run51 = new A.Run();
 
             A.RunProperties runProperties72 = new A.RunProperties() { Language = "en-US" };
-            runProperties72.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties72.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text74 = new A.Text();
             text74.Text = "Second level";
 
@@ -7426,7 +7426,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run52 = new A.Run();
 
             A.RunProperties runProperties73 = new A.RunProperties() { Language = "en-US" };
-            runProperties73.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties73.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text75 = new A.Text();
             text75.Text = "Third level";
 
@@ -7442,7 +7442,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run53 = new A.Run();
 
             A.RunProperties runProperties74 = new A.RunProperties() { Language = "en-US" };
-            runProperties74.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties74.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text76 = new A.Text();
             text76.Text = "Fourth level";
 
@@ -7458,7 +7458,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run54 = new A.Run();
 
             A.RunProperties runProperties75 = new A.RunProperties() { Language = "en-US" };
-            runProperties75.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties75.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text77 = new A.Text();
             text77.Text = "Fifth level";
 
@@ -7485,7 +7485,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape60 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties60 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties73 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Date Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties73 = new NonVisualDrawingProperties() { Id = 4U, Name = "Date Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties60 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks60 = new A.ShapeLocks() { NoGrouping = true };
@@ -7493,7 +7493,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties60.Append(shapeLocks60);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties73 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape60 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape60 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties73.Append(placeholderShape60);
 
@@ -7511,7 +7511,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field22 = new A.Field() { Id = "{A29A93E5-9E1F-419D-9DD3-D0592495A35A}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties76 = new A.RunProperties() { Language = "en-US" };
-            runProperties76.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties76.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text78 = new A.Text();
             text78.Text = "10/3/2012";
 
@@ -7533,7 +7533,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape61 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties61 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties74 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Footer Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties74 = new NonVisualDrawingProperties() { Id = 5U, Name = "Footer Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties61 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks61 = new A.ShapeLocks() { NoGrouping = true };
@@ -7541,7 +7541,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties61.Append(shapeLocks61);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties74 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape61 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape61 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties74.Append(placeholderShape61);
 
@@ -7570,7 +7570,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape62 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties62 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties75 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Slide Number Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties75 = new NonVisualDrawingProperties() { Id = 6U, Name = "Slide Number Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties62 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks62 = new A.ShapeLocks() { NoGrouping = true };
@@ -7578,7 +7578,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties62.Append(shapeLocks62);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties75 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape62 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape62 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties75.Append(placeholderShape62);
 
@@ -7596,7 +7596,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field23 = new A.Field() { Id = "{B0769A03-5788-466A-8308-4F99412C63EA}", Type = "slidenum" };
 
             A.RunProperties runProperties77 = new A.RunProperties() { Language = "en-US" };
-            runProperties77.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties77.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text79 = new A.Text();
             text79.Text = "‹#›";
 
@@ -7649,7 +7649,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             ShapeTree shapeTree14 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties14 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties76 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties76 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties14 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties76 = new ApplicationNonVisualDrawingProperties();
 
@@ -7675,7 +7675,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape63 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties63 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties77 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties77 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties63 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks63 = new A.ShapeLocks() { NoGrouping = true };
@@ -7701,7 +7701,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run55 = new A.Run();
 
             A.RunProperties runProperties78 = new A.RunProperties() { Language = "en-US" };
-            runProperties78.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties78.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text80 = new A.Text();
             text80.Text = "Click to edit Master title style";
 
@@ -7723,7 +7723,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape64 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties64 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties78 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Content Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties78 = new NonVisualDrawingProperties() { Id = 3U, Name = "Content Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties64 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks64 = new A.ShapeLocks() { NoGrouping = true };
@@ -7731,7 +7731,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties64.Append(shapeLocks64);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties78 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape64 = new PlaceholderShape() { Size = PlaceholderSizeValues.Half, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape64 = new PlaceholderShape() { Size = PlaceholderSizeValues.Half, Index = 1U };
 
             applicationNonVisualDrawingProperties78.Append(placeholderShape64);
 
@@ -7816,7 +7816,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run56 = new A.Run();
 
             A.RunProperties runProperties79 = new A.RunProperties() { Language = "en-US" };
-            runProperties79.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties79.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text81 = new A.Text();
             text81.Text = "Click to edit Master text styles";
 
@@ -7832,7 +7832,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run57 = new A.Run();
 
             A.RunProperties runProperties80 = new A.RunProperties() { Language = "en-US" };
-            runProperties80.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties80.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text82 = new A.Text();
             text82.Text = "Second level";
 
@@ -7848,7 +7848,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run58 = new A.Run();
 
             A.RunProperties runProperties81 = new A.RunProperties() { Language = "en-US" };
-            runProperties81.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties81.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text83 = new A.Text();
             text83.Text = "Third level";
 
@@ -7864,7 +7864,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run59 = new A.Run();
 
             A.RunProperties runProperties82 = new A.RunProperties() { Language = "en-US" };
-            runProperties82.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties82.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text84 = new A.Text();
             text84.Text = "Fourth level";
 
@@ -7880,7 +7880,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run60 = new A.Run();
 
             A.RunProperties runProperties83 = new A.RunProperties() { Language = "en-US" };
-            runProperties83.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties83.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text85 = new A.Text();
             text85.Text = "Fifth level";
 
@@ -7907,7 +7907,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape65 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties65 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties79 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Content Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties79 = new NonVisualDrawingProperties() { Id = 4U, Name = "Content Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties65 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks65 = new A.ShapeLocks() { NoGrouping = true };
@@ -7915,7 +7915,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties65.Append(shapeLocks65);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties79 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape65 = new PlaceholderShape() { Size = PlaceholderSizeValues.Half, Index = (UInt32Value)2U };
+            PlaceholderShape placeholderShape65 = new PlaceholderShape() { Size = PlaceholderSizeValues.Half, Index = 2U };
 
             applicationNonVisualDrawingProperties79.Append(placeholderShape65);
 
@@ -8000,7 +8000,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run61 = new A.Run();
 
             A.RunProperties runProperties84 = new A.RunProperties() { Language = "en-US" };
-            runProperties84.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties84.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text86 = new A.Text();
             text86.Text = "Click to edit Master text styles";
 
@@ -8016,7 +8016,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run62 = new A.Run();
 
             A.RunProperties runProperties85 = new A.RunProperties() { Language = "en-US" };
-            runProperties85.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties85.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text87 = new A.Text();
             text87.Text = "Second level";
 
@@ -8032,7 +8032,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run63 = new A.Run();
 
             A.RunProperties runProperties86 = new A.RunProperties() { Language = "en-US" };
-            runProperties86.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties86.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text88 = new A.Text();
             text88.Text = "Third level";
 
@@ -8048,7 +8048,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run64 = new A.Run();
 
             A.RunProperties runProperties87 = new A.RunProperties() { Language = "en-US" };
-            runProperties87.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties87.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text89 = new A.Text();
             text89.Text = "Fourth level";
 
@@ -8064,7 +8064,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run65 = new A.Run();
 
             A.RunProperties runProperties88 = new A.RunProperties() { Language = "en-US" };
-            runProperties88.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties88.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text90 = new A.Text();
             text90.Text = "Fifth level";
 
@@ -8091,7 +8091,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape66 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties66 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties80 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Date Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties80 = new NonVisualDrawingProperties() { Id = 5U, Name = "Date Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties66 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks66 = new A.ShapeLocks() { NoGrouping = true };
@@ -8099,7 +8099,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties66.Append(shapeLocks66);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties80 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape66 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape66 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties80.Append(placeholderShape66);
 
@@ -8117,7 +8117,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field24 = new A.Field() { Id = "{A29A93E5-9E1F-419D-9DD3-D0592495A35A}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties89 = new A.RunProperties() { Language = "en-US" };
-            runProperties89.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties89.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text91 = new A.Text();
             text91.Text = "10/3/2012";
 
@@ -8139,7 +8139,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape67 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties67 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties81 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Footer Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties81 = new NonVisualDrawingProperties() { Id = 6U, Name = "Footer Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties67 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks67 = new A.ShapeLocks() { NoGrouping = true };
@@ -8147,7 +8147,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties67.Append(shapeLocks67);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties81 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape67 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape67 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties81.Append(placeholderShape67);
 
@@ -8176,7 +8176,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape68 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties68 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties82 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Slide Number Placeholder 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties82 = new NonVisualDrawingProperties() { Id = 7U, Name = "Slide Number Placeholder 6" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties68 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks68 = new A.ShapeLocks() { NoGrouping = true };
@@ -8184,7 +8184,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties68.Append(shapeLocks68);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties82 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape68 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape68 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties82.Append(placeholderShape68);
 
@@ -8202,7 +8202,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field25 = new A.Field() { Id = "{B0769A03-5788-466A-8308-4F99412C63EA}", Type = "slidenum" };
 
             A.RunProperties runProperties90 = new A.RunProperties() { Language = "en-US" };
-            runProperties90.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties90.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text92 = new A.Text();
             text92.Text = "‹#›";
 
@@ -8256,7 +8256,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             ShapeTree shapeTree15 = new ShapeTree();
 
             NonVisualGroupShapeProperties nonVisualGroupShapeProperties15 = new NonVisualGroupShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties83 = new NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" };
+            NonVisualDrawingProperties nonVisualDrawingProperties83 = new NonVisualDrawingProperties() { Id = 1U, Name = string.Empty };
             NonVisualGroupShapeDrawingProperties nonVisualGroupShapeDrawingProperties15 = new NonVisualGroupShapeDrawingProperties();
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties83 = new ApplicationNonVisualDrawingProperties();
 
@@ -8282,7 +8282,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape69 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties69 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties84 = new NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" };
+            NonVisualDrawingProperties nonVisualDrawingProperties84 = new NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties69 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks69 = new A.ShapeLocks() { NoGrouping = true };
@@ -8326,7 +8326,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run66 = new A.Run();
 
             A.RunProperties runProperties91 = new A.RunProperties() { Language = "en-US" };
-            runProperties91.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties91.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text93 = new A.Text();
             text93.Text = "Click to edit Master title style";
 
@@ -8348,7 +8348,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape70 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties70 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties85 = new NonVisualDrawingProperties() { Id = (UInt32Value)3U, Name = "Picture Placeholder 2" };
+            NonVisualDrawingProperties nonVisualDrawingProperties85 = new NonVisualDrawingProperties() { Id = 3U, Name = "Picture Placeholder 2" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties70 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks70 = new A.ShapeLocks() { NoGrouping = true };
@@ -8356,7 +8356,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties70.Append(shapeLocks70);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties85 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape70 = new PlaceholderShape() { Type = PlaceholderValues.Picture, Index = (UInt32Value)1U };
+            PlaceholderShape placeholderShape70 = new PlaceholderShape() { Type = PlaceholderValues.Picture, Index = 1U };
 
             applicationNonVisualDrawingProperties85.Append(placeholderShape70);
 
@@ -8469,7 +8469,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape71 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties71 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties86 = new NonVisualDrawingProperties() { Id = (UInt32Value)4U, Name = "Text Placeholder 3" };
+            NonVisualDrawingProperties nonVisualDrawingProperties86 = new NonVisualDrawingProperties() { Id = 4U, Name = "Text Placeholder 3" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties71 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks71 = new A.ShapeLocks() { NoGrouping = true };
@@ -8477,7 +8477,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties71.Append(shapeLocks71);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties86 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape71 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)2U };
+            PlaceholderShape placeholderShape71 = new PlaceholderShape() { Type = PlaceholderValues.Body, Size = PlaceholderSizeValues.Half, Index = 2U };
 
             applicationNonVisualDrawingProperties86.Append(placeholderShape71);
 
@@ -8580,7 +8580,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Run run67 = new A.Run();
 
             A.RunProperties runProperties92 = new A.RunProperties() { Language = "en-US" };
-            runProperties92.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties92.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text94 = new A.Text();
             text94.Text = "Click to edit Master text styles";
 
@@ -8601,7 +8601,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape72 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties72 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties87 = new NonVisualDrawingProperties() { Id = (UInt32Value)5U, Name = "Date Placeholder 4" };
+            NonVisualDrawingProperties nonVisualDrawingProperties87 = new NonVisualDrawingProperties() { Id = 5U, Name = "Date Placeholder 4" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties72 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks72 = new A.ShapeLocks() { NoGrouping = true };
@@ -8609,7 +8609,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties72.Append(shapeLocks72);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties87 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape72 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = (UInt32Value)10U };
+            PlaceholderShape placeholderShape72 = new PlaceholderShape() { Type = PlaceholderValues.DateAndTime, Size = PlaceholderSizeValues.Half, Index = 10U };
 
             applicationNonVisualDrawingProperties87.Append(placeholderShape72);
 
@@ -8627,7 +8627,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field26 = new A.Field() { Id = "{A29A93E5-9E1F-419D-9DD3-D0592495A35A}", Type = "datetimeFigureOut" };
 
             A.RunProperties runProperties93 = new A.RunProperties() { Language = "en-US" };
-            runProperties93.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties93.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text95 = new A.Text();
             text95.Text = "10/3/2012";
 
@@ -8649,7 +8649,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape73 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties73 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties88 = new NonVisualDrawingProperties() { Id = (UInt32Value)6U, Name = "Footer Placeholder 5" };
+            NonVisualDrawingProperties nonVisualDrawingProperties88 = new NonVisualDrawingProperties() { Id = 6U, Name = "Footer Placeholder 5" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties73 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks73 = new A.ShapeLocks() { NoGrouping = true };
@@ -8657,7 +8657,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties73.Append(shapeLocks73);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties88 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape73 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)11U };
+            PlaceholderShape placeholderShape73 = new PlaceholderShape() { Type = PlaceholderValues.Footer, Size = PlaceholderSizeValues.Quarter, Index = 11U };
 
             applicationNonVisualDrawingProperties88.Append(placeholderShape73);
 
@@ -8686,7 +8686,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             Shape shape74 = new Shape();
 
             NonVisualShapeProperties nonVisualShapeProperties74 = new NonVisualShapeProperties();
-            NonVisualDrawingProperties nonVisualDrawingProperties89 = new NonVisualDrawingProperties() { Id = (UInt32Value)7U, Name = "Slide Number Placeholder 6" };
+            NonVisualDrawingProperties nonVisualDrawingProperties89 = new NonVisualDrawingProperties() { Id = 7U, Name = "Slide Number Placeholder 6" };
 
             NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties74 = new NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks74 = new A.ShapeLocks() { NoGrouping = true };
@@ -8694,7 +8694,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             nonVisualShapeDrawingProperties74.Append(shapeLocks74);
 
             ApplicationNonVisualDrawingProperties applicationNonVisualDrawingProperties89 = new ApplicationNonVisualDrawingProperties();
-            PlaceholderShape placeholderShape74 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = (UInt32Value)12U };
+            PlaceholderShape placeholderShape74 = new PlaceholderShape() { Type = PlaceholderValues.SlideNumber, Size = PlaceholderSizeValues.Quarter, Index = 12U };
 
             applicationNonVisualDrawingProperties89.Append(placeholderShape74);
 
@@ -8712,7 +8712,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             A.Field field27 = new A.Field() { Id = "{B0769A03-5788-466A-8308-4F99412C63EA}", Type = "slidenum" };
 
             A.RunProperties runProperties94 = new A.RunProperties() { Language = "en-US" };
-            runProperties94.SetAttribute(new OpenXmlAttribute("", "smtClean", "", "0"));
+            runProperties94.SetAttribute(new OpenXmlAttribute(string.Empty, "smtClean", string.Empty, "0"));
             A.Text text96 = new A.Text();
             text96.Text = "‹#›";
 
@@ -8842,7 +8842,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
 
             PresentationPropertiesExtension presentationPropertiesExtension2 = new PresentationPropertiesExtension() { Uri = "{D31A062A-798A-4329-ABDD-BBA856620510}" };
 
-            P14.DefaultImageDpi defaultImageDpi1 = new P14.DefaultImageDpi() { Val = (UInt32Value)220U };
+            P14.DefaultImageDpi defaultImageDpi1 = new P14.DefaultImageDpi() { Val = 220U };
             defaultImageDpi1.AddNamespaceDeclaration("p14", "http://schemas.microsoft.com/office/powerpoint/2010/main");
 
             presentationPropertiesExtension2.Append(defaultImageDpi1);
@@ -8870,7 +8870,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
             commentAuthorList1.AddNamespaceDeclaration("a", "http://schemas.openxmlformats.org/drawingml/2006/main");
             commentAuthorList1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             commentAuthorList1.AddNamespaceDeclaration("p", "http://schemas.openxmlformats.org/presentationml/2006/main");
-            CommentAuthor commentAuthor1 = new CommentAuthor() { Id = (UInt32Value)0U, Name = "aanchals", Initials = "a", LastIndex = (UInt32Value)2U, ColorIndex = (UInt32Value)0U };
+            CommentAuthor commentAuthor1 = new CommentAuthor() { Id = 0U, Name = "aanchals", Initials = "a", LastIndex = 2U, ColorIndex = 0U };
 
             commentAuthorList1.Append(commentAuthor1);
 
@@ -8905,7 +8905,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
 
             Ap.HeadingPairs headingPairs1 = new Ap.HeadingPairs();
 
-            Vt.VTVector vTVector1 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Variant, Size = (UInt32Value)6U };
+            Vt.VTVector vTVector1 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Variant, Size = 6U };
 
             Vt.Variant variant1 = new Vt.Variant();
             Vt.VTLPSTR vTLPSTR1 = new Vt.VTLPSTR();
@@ -8954,7 +8954,7 @@ namespace DocumentFormat.OpenXml.Tests.ChartTrackingRefBasedClass
 
             Ap.TitlesOfParts titlesOfParts1 = new Ap.TitlesOfParts();
 
-            Vt.VTVector vTVector2 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Lpstr, Size = (UInt32Value)4U };
+            Vt.VTVector vTVector2 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Lpstr, Size = 4U };
             Vt.VTLPSTR vTLPSTR4 = new Vt.VTLPSTR();
             vTLPSTR4.Text = "Arial";
             Vt.VTLPSTR vTLPSTR5 = new Vt.VTLPSTR();

@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml
         public OpenXmlMiscNode(XmlNodeType nodeType, string outerXml)
             : this(nodeType)
         {
-            if (String.IsNullOrEmpty(outerXml))
+            if (string.IsNullOrEmpty(outerXml))
             {
                 throw new ArgumentNullException(nameof(outerXml));
             }
@@ -145,9 +145,9 @@ namespace DocumentFormat.OpenXml
                             XmlReaderSettings settings = new XmlReaderSettings
                             {
 #if FEATURE_XML_PROHIBIT_DTD
-                                ProhibitDtd = true // set true explicitly for security fix
+                                ProhibitDtd = true,
 #else
-                                DtdProcessing = DtdProcessing.Prohibit, // set to prohibit explicitly for security fix
+                                DtdProcessing = DtdProcessing.Prohibit,
 #endif
                             };
 
@@ -157,6 +157,7 @@ namespace DocumentFormat.OpenXml
                                 localName = xmlReader.LocalName;
                             }
                         }
+
                         break;
 
                     case XmlNodeType.Text:
@@ -190,6 +191,7 @@ namespace DocumentFormat.OpenXml
                         Debug.Assert(false);
                         break;
                 }
+
                 return localName;
             }
         }
@@ -226,7 +228,7 @@ namespace DocumentFormat.OpenXml
         {
             get
             {
-                return String.Empty;
+                return string.Empty;
             }
 
             set
@@ -240,7 +242,7 @@ namespace DocumentFormat.OpenXml
         {
             return new OpenXmlMiscNode(XmlNodeType)
             {
-                OuterXml = OuterXml
+                OuterXml = OuterXml,
             };
         }
 
@@ -274,9 +276,8 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        internal override void ParseXml()
+        private protected override void ParseXml()
         {
-            // do nothing
         }
 
         /// <summary>
@@ -303,6 +304,7 @@ namespace DocumentFormat.OpenXml
 
                 case XmlNodeType.XmlDeclaration:
                     Debug.Assert(xmlReader.NodeType != XmlNodeType.XmlDeclaration);
+
                     // this.RawOuterXml = String.Format("<?xml version='1.0'?>");
                     Value = xmlReader.Value; // version='1.0'
                     break;
@@ -330,7 +332,7 @@ namespace DocumentFormat.OpenXml
 
                 case XmlNodeType.CDATA:
                     Value = xmlReader.Value;
-                    RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<![CDATA[{0}]]>", xmlReader.Value);
+                    RawOuterXml = string.Format(CultureInfo.InvariantCulture, "<![CDATA[{0}]]>", xmlReader.Value);
                     break;
 
                 case XmlNodeType.SignificantWhitespace:
@@ -343,12 +345,12 @@ namespace DocumentFormat.OpenXml
 
                 case XmlNodeType.ProcessingInstruction:
                     Value = xmlReader.Value;
-                    RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<?{0} {1}?>", xmlReader.Name, xmlReader.Value);
+                    RawOuterXml = string.Format(CultureInfo.InvariantCulture, "<?{0} {1}?>", xmlReader.Name, xmlReader.Value);
                     break;
 
                 case XmlNodeType.Comment:
                     Value = xmlReader.Value;
-                    RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<!--{0}-->", xmlReader.Value);
+                    RawOuterXml = string.Format(CultureInfo.InvariantCulture, "<!--{0}-->", xmlReader.Value);
                     break;
 
                 case XmlNodeType.Document:
@@ -415,7 +417,7 @@ namespace DocumentFormat.OpenXml
 
             var newMiscNode = new OpenXmlMiscNode(XmlNodeType.CDATA);
             newMiscNode.Value = value;
-            newMiscNode.RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<![CDATA[{0}]]>", value); ;
+            newMiscNode.RawOuterXml = string.Format(CultureInfo.InvariantCulture, "<![CDATA[{0}]]>", value);
             return newMiscNode;
         }
 

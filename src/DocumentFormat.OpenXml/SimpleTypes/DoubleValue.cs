@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the double value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class DoubleValue : OpenXmlSimpleValue<Double>
+    public class DoubleValue : OpenXmlSimpleValue<double>
     {
         /// <summary>
         /// Initializes a new instance of the DoubleValue class.
@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml
         /// Double value.
         /// </summary>
         /// <param name="value">The Double value.</param>
-        public DoubleValue(Double value)
+        public DoubleValue(double value)
             : base(value)
         {
         }
@@ -57,12 +57,13 @@ namespace DocumentFormat.OpenXml
         /// The converted Double value.
         /// </returns>
         /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
-        public static implicit operator Double(DoubleValue xmlAttribute)
+        public static implicit operator double(DoubleValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
+
             return ToDouble(xmlAttribute);
         }
 
@@ -74,7 +75,7 @@ namespace DocumentFormat.OpenXml
         /// The Double value.
         /// </param>
         /// <returns>A new DoubleValue instance with the value.</returns>
-        public static implicit operator DoubleValue(Double value)
+        public static implicit operator DoubleValue(double value)
         {
             return FromDouble(value);
         }
@@ -84,7 +85,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">A Double value to use to create a new DoubleValue object.</param>
         /// <returns>A DoubleValue object that corresponds to the value parameter.</returns>
-        public static DoubleValue FromDouble(Double value)
+        public static DoubleValue FromDouble(double value)
         {
             return new DoubleValue(value);
         }
@@ -96,7 +97,7 @@ namespace DocumentFormat.OpenXml
         /// A DoubleValue object used to retrieve a Double value representation.
         /// </param>
         /// <returns>A Double value that represents a DoubleValue object.</returns>
-        public static Double ToDouble(DoubleValue xmlAttribute)
+        public static double ToDouble(DoubleValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {

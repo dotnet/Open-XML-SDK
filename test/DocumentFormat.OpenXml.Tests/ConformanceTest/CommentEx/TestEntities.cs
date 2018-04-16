@@ -33,18 +33,18 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
                 Text text = comment.Descendants<Text>().First();
                 text.Text = CommentStrings.CommentChangeString1;
 
-                //2.2 Change commnet initials attribute
+                //2.2 Change comment initials attribute
                 comment = GetComment(commentPart, CommentIDs.CommentID1);
 
                 comment.Initials = CommentInitials.Initial2;
 
-                //2.2 Change commnet date attribute
+                //2.2 Change comment date attribute
                 comment.Date = new DateTimeValue(new DateTime(2015, 12, 24, 12, 34, 56, 77));
 
-                //2.2 Change commnet author attribute
+                //2.2 Change comment author attribute
                 comment.Author = CommentAuthors.Author2;
 
-                //2.3 Change comment parent-child relationship, Case of parent attribute deleteing.
+                //2.3 Change comment parent-child relationship, Case of parent attribute deletion.
                 commentEx = GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID2);
                 commentEx.ParaIdParent = null;
 
@@ -53,10 +53,10 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
                 W15.CommentEx comEx = GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID2);
                 commentEx.ParaIdParent = comEx.ParaId;
 
-                //2.4 Change CommnetEx done attribute, Case of value "1" setting.
+                //2.4 Change commentEx done attribute, Case of value "1" setting.
                 GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID1).Done = true;
 
-                //2.4 Change CommnetEx done attribute, Case of value "0" setting.
+                //2.4 Change commentEx done attribute, Case of value "0" setting.
                 GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID3).Done = false;
 
                 //2.5 Add comment and CommentEx.
@@ -135,11 +135,11 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
                 Text text = comment.Descendants<Text>().First();
                 Assert.Equal(text.Text, CommentStrings.CommentChangeString1);
 
-                //2.2 Verifying commnet initials attribute
+                //2.2 Verifying comment initials attribute
                 comment = GetComment(commentPart, CommentIDs.CommentID1);
                 Assert.Equal(comment.Initials, CommentInitials.Initial2);
 
-                //2.2 Verifying commnet date attribute
+                //2.2 Verifying comment date attribute
                 Assert.Equal(2015, comment.Date.Value.Year);
                 Assert.Equal(12, comment.Date.Value.Month);
                 Assert.Equal(24, comment.Date.Value.Day);
@@ -148,10 +148,10 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
                 Assert.Equal(56, comment.Date.Value.Second);
                 Assert.Equal(77, comment.Date.Value.Millisecond);
 
-                //2.2 Verifying commnet author attribute
+                //2.2 Verifying comment author attribute
                 Assert.Equal(comment.Author, CommentAuthors.Author2);
 
-                //2.3 Verifying comment parent-child relationship, Case of parent attribute deleteing.
+                //2.3 Verifying comment parent-child relationship, Case of parent attribute deletion.
                 commentEx = GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID2);
                 Assert.Null(commentEx.ParaIdParent);
 
@@ -160,10 +160,10 @@ namespace DocumentFormat.OpenXml.Tests.CommentEx
                 W15.CommentEx comEx = GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID2);
                 Assert.Equal(commentEx.ParaIdParent.Value, GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID2).ParaId.Value);
 
-                //2.4 Verifying CommnetEx done attribute, Case of value "1" setting.
+                //2.4 Verifying commentEx done attribute, Case of value "1" setting.
                 Assert.True(GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID1).Done);
 
-                //2.4 Verifying CommnetEx done attribute, Case of value "0" setting.
+                //2.4 Verifying commentEx done attribute, Case of value "0" setting.
                 Assert.False(GetCommentEx(commentPart, commentExPart, CommentIDs.CommentID3).Done);
 
                 //2.5 Verifying comment and CommentEx append.

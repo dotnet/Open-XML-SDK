@@ -1,95 +1,102 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-/**********************************************************
- * Define data struct for schema constraint binary database
- **********************************************************/
-
-using System;
-
-using SdbIndex = System.UInt16;
+using System.IO;
+using System.Runtime.InteropServices;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
-    /// <summary>
-    /// Base class for fixed size data.
-    /// </summary>
-    internal abstract class SdbData
+    internal static class SdbData
     {
-        public const SdbIndex InvalidId = SdbIndex.MaxValue;
-        public const int MaxSdbIndex = SdbIndex.MaxValue;
+        public const ushort InvalidId = ushort.MaxValue;
 
-        #region abstract methods
-
-        /// <summary>
-        /// Gets the size in bytes of this data structure.
-        /// </summary>
-        public abstract int DataSize { get; }
-
-        /// <summary>
-        /// Serialize the data into byte data.
-        /// </summary>
-        /// <returns>Byte data.</returns>
-        public abstract byte[] GetBytes();
-
-        /// <summary>
-        /// Deserialize the data from byte data.
-        /// </summary>
-        /// <param name="value">The byte data.</param>
-        /// <param name="startIndex">The offset the data begins at.</param>
-        public abstract void LoadFromBytes(byte[] value, int startIndex);
-
-        #endregion
-
-        /// <summary>
-        /// Helper function to be called by derived classes.
-        /// </summary>
-        /// <param name="fieldvalues"></param>
-        /// <returns></returns>
-        protected byte[] GetBytes(params byte[][] fieldvalues)
+        public static void Serialize<T>(T[] data, Stream stream)
+            where T : struct
         {
-            byte[] value = new byte[DataSize];
-            int index = 0;
+            var bytes = Serialize(data);
+            stream.Write(bytes, 0, bytes.Length);
+        }
 
-            foreach (var fieldvalue in fieldvalues)
+        public static void Serialize<T>(T instance, Stream stream)
+            where T : struct
+        {
+            Serialize(new[] { instance }, stream);
+        }
+
+        public static byte[] Serialize<T>(T[] data)
+            where T : struct
+        {
+            var size = Marshal.SizeOf<T>();
+            var length = size * data.Length;
+            var bytes = new byte[length];
+            var handle = GCHandle.Alloc(data, GCHandleType.Pinned);
+
+            try
             {
-                fieldvalue.CopyTo(value, index);
-                index += fieldvalue.Length;
+                Marshal.Copy(handle.AddrOfPinnedObject(), bytes, 0, length);
+                return bytes;
+            }
+            finally
+            {
+                handle.Free();
+            }
+        }
+
+        public static T Deserialize<T>(Stream stream)
+            where T : struct
+        {
+            var size = Marshal.SizeOf<T>();
+
+            var bytes = new byte[size];
+            var read = stream.Read(bytes, 0, size);
+
+            if (read != size)
+            {
+                throw new InvalidDataException();
             }
 
-            return value;
+            var ptr = Marshal.AllocHGlobal(size);
+
+            try
+            {
+                Marshal.Copy(bytes, 0, ptr, size);
+                return Marshal.PtrToStructure<T>(ptr);
+            }
+            finally
+            {
+                Marshal.FreeHGlobal(ptr);
+            }
         }
 
-        #region Deserialize helper functions
-        // deserialize helper functions
-
-        public static int LoadInt(byte[] bytes, ref int startIndex)
+        public static T[] Deserialize<T>(Stream stream, in SdbSpan span)
+            where T : struct
         {
-            int result = BitConverter.ToInt32(bytes, startIndex);
-            startIndex += sizeof(int);
-            return result;
-        }
+            if (span.Offset != stream.Position)
+            {
+                throw new InvalidDataException();
+            }
 
-        public static SdbIndex LoadSdbIndex(byte[] bytes, ref int startIndex)
-        {
-            SdbIndex result = BitConverter.ToUInt16(bytes, startIndex);
-            startIndex += sizeof(SdbIndex);
-            return result;
-        }
+            var bytes = new byte[span.Length];
+            var read = stream.Read(bytes, 0, span.Length);
 
-        public static ushort LoadUInt16(byte[] bytes, ref int startIndex)
-        {
-            ushort result = BitConverter.ToUInt16(bytes, startIndex);
-            startIndex += sizeof(ushort);
-            return result;
-        }
+            if (read != span.Length)
+            {
+                throw new InvalidDataException();
+            }
 
-        public static byte LoadByte(byte[] bytes, ref int startIndex)
-        {
-            startIndex++;
-            return bytes[startIndex - 1];
-        }
+            var size = Marshal.SizeOf<T>();
+            var array = new T[span.Count];
+            var handle = GCHandle.Alloc(array, GCHandleType.Pinned);
 
-        #endregion
+            try
+            {
+                Marshal.Copy(bytes, 0, handle.AddrOfPinnedObject(), span.Length);
+                return array;
+            }
+            finally
+            {
+                handle.Free();
+            }
+        }
     }
 }

@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Tests
             return false;
         }
 
-        public static Boolean IsBibliographyPart(this OpenXmlPart part)
+        public static bool IsBibliographyPart(this OpenXmlPart part)
         {
             if (part is CustomXmlPart)
             {
@@ -39,10 +39,11 @@ namespace DocumentFormat.OpenXml.Tests
                 if (PartRoot.Name.LocalName == "Sources")
                     return true;
             }
+
             return false;
         }
 
-        public static Boolean IsAdditionalCharacteristicsPart(this OpenXmlPart part)
+        public static bool IsAdditionalCharacteristicsPart(this OpenXmlPart part)
         {
             if (part is CustomXmlPart)
             {
@@ -54,10 +55,11 @@ namespace DocumentFormat.OpenXml.Tests
                 if (PartRoot.Name.LocalName == "additionalCharacteristics")
                     return true;
             }
+
             return false;
         }
 
-        public static Boolean IsInkPart(this OpenXmlPart part)
+        public static bool IsInkPart(this OpenXmlPart part)
         {
             if (part is CustomXmlPart)
             {
@@ -69,6 +71,7 @@ namespace DocumentFormat.OpenXml.Tests
                 if (PartRoot.Name.LocalName == "ink")
                     return true;
             }
+
             return false;
         }
 
@@ -188,35 +191,40 @@ namespace DocumentFormat.OpenXml.Tests
         /// <summary>
         /// compare two OpenXmlParts
         /// </summary>
-        /// <param name="sourcePart">the soruce part for comparison</param>
+        /// <param name="sourcePart">the source part for comparison</param>
         /// <param name="targetPart">the target part for comparison</param>
         /// <returns>TRUE, if two parts contains the same content. FALSE, if not</returns>
-        public static Boolean Compare(this OpenXmlPart sourcePart, OpenXmlPart targetPart)
+        public static bool Compare(this OpenXmlPart sourcePart, OpenXmlPart targetPart)
         {
             HashSet<Uri> ComparedParts = new HashSet<Uri>();
 
             return sourcePart.CompareDescendentsAndSelf(targetPart, ComparedParts);
         }
 
-        private static Boolean CompareDescendentsAndSelf(this OpenXmlPart sourcePart, OpenXmlPart targetPart, HashSet<Uri> ComparedPart)
+        private static bool CompareDescendentsAndSelf(this OpenXmlPart sourcePart, OpenXmlPart targetPart, HashSet<Uri> ComparedPart)
         {
             #region compare content of two parts
             // if two parts have the same reference, return true;
             if (sourcePart == targetPart)
                 return true;
+
             // if there is only one part is null, return false
             if ((targetPart == null && sourcePart != null) || (sourcePart == null && targetPart != null))
                 return false;
-            //if two parts have different contenttype, return false
+
+            //if two parts have different content type, return false
             if (sourcePart.ContentType != targetPart.ContentType)
                 return false;
-            //if two parts have different number of externalrelationships, return false
+
+            //if two parts have different number of external relationships, return false
             if (sourcePart.ExternalRelationships.Count() != targetPart.ExternalRelationships.Count())
                 return false;
-            // if two parts have different number of hyperlinkrelationships, return false
+
+            // if two parts have different number of hyperlink relationships, return false
             if (sourcePart.HyperlinkRelationships.Count() != targetPart.HyperlinkRelationships.Count())
                 return false;
-            // if two parts have diffent relationship type, return false
+
+            // if two parts have different relationship type, return false
             if (sourcePart.RelationshipType != targetPart.RelationshipType)
                 return false;
             //// if two parts have different URI, return false
@@ -225,13 +233,15 @@ namespace DocumentFormat.OpenXml.Tests
             // if two parts contains different number of parts, return false;
             if (sourcePart.Parts.Count() != targetPart.Parts.Count())
                 return false;
-            //compare each externalrelationship
+
+            //compare each external relationship
             foreach (var id in sourcePart.ExternalRelationships)
             {
                 if (targetPart.ExternalRelationships.Where(i => i.Id == id.Id && i.RelationshipType == id.RelationshipType && i.Uri == id.Uri).Count() != 1)
                     return false;
             }
-            //compare each hyperlinkrelationship
+
+            //compare each hyperlink relationship
             foreach (var id in sourcePart.HyperlinkRelationships)
             {
                 if (targetPart.HyperlinkRelationships.Where(i => i.Id == id.Id && i.IsExternal == id.IsExternal && i.Uri == id.Uri).Count() != 1)
@@ -259,6 +269,7 @@ namespace DocumentFormat.OpenXml.Tests
                         xmlCompareSuccess = false;
                     }
                 }
+
                 // else need to do binary compare
                 if (!xmlCompareSuccess)
                 {
@@ -297,6 +308,7 @@ namespace DocumentFormat.OpenXml.Tests
                         return false;
                 }
             }
+
             return true;
         }
 
@@ -315,6 +327,7 @@ namespace DocumentFormat.OpenXml.Tests
                 else
                     sb.Append(string.Empty);
             }
+
             return sb.ToString();
         }
     }

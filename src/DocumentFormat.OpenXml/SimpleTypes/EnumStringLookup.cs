@@ -141,7 +141,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        private struct EnumStringInfo
+        private readonly struct EnumStringInfo
         {
             public EnumStringInfo(FileFormatVersions versions, string name)
             {

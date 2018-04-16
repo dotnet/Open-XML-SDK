@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     {
         #region error building methods
 
-        // helper methods to compose a  ValidationErrorInfo for schema validtion error.
+        // helper methods to compose a  ValidationErrorInfo for schema validation error.
         internal static ValidationErrorInfo ComposeSchemaValidationError(this ValidationContext validationContext, OpenXmlElement element, OpenXmlElement child,
                                                        string messageId, params string[] args)
         {
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 Node = element,
                 Id = messageId,
                 RelatedNode = child,
-                Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.ResourceManager.GetString(messageId), args)
+                Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.ResourceManager.GetString(messageId), args),
             };
 
             return errorInfo;

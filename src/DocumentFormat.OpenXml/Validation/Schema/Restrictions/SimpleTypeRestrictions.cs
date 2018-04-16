@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// <summary>
     /// Holds all simple type constraints in array.
     /// </summary>
-    [DataContract]
+    [DataContract(Name = "root")]
     [KnownType(typeof(AnyUriRestriction))]
     [KnownType(typeof(Base64BinaryRestriction))]
     [KnownType(typeof(BooleanValueRestriction))]
@@ -45,10 +45,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     [KnownType(typeof(UnionValueRestriction))]
     internal class SimpleTypeRestrictions
     {
-        [DataMember]
-        public int SimpleTypeCount { get; set; }
-
-        [DataMember]
+        [DataMember(Name = "types")]
         public SimpleTypeRestriction[] SimpleTypes { get; set; }
 
         private static DataContractSerializer GetSerializer()
@@ -71,30 +68,41 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 #endif
         }
 
-        internal void Serialize(Stream stream)
+#if  FEATURE_SCHEMA_GENERATOR
+        /// <summary>
+        /// Serializes the current <see cref="SimpleTypeRestrictions"/> into an XML stream
+        /// </summary>
+        /// <remarks>
+        /// The serialization may produce different outputs on different platforms. All platforms
+        /// will deserialize with <see cref="Deserialize(Stream, FileFormatVersions)"/> into the
+        /// data structure.
+        /// </remarks>
+        /// <param name="stream">Stream to serialize the XML</param>
+        public void Serialize(Stream stream)
         {
             var settings = new XmlWriterSettings
             {
-                Indent = true
+                Indent = true,
+                Encoding = Encoding.UTF8,
+                IndentChars = "\t",
             };
 
-            using (var writer = new StreamWriter(stream, Encoding.UTF8))
-            using (var xml = XmlWriter.Create(writer, settings))
+            using (var xml = XmlWriter.Create(stream, settings))
             {
                 GetSerializer().WriteObject(xml, this);
             }
         }
+#endif
 
         /// <summary>
-        /// Deserialize the binary data into memory object.
+        /// Deserialize the XML stream into <see cref="SimpleTypeRestrictions"/>
         /// </summary>
-        /// <param name="stream">The data stream.</param>
-        /// <param name="fileFormat">The target file format version.</param>
+        /// <param name="stream">The XML stream</param>
+        /// <param name="fileFormat">The target file format version</param>
         /// <returns></returns>
-        internal static SimpleTypeRestrictions Deserialize(Stream stream, FileFormatVersions fileFormat)
+        public static SimpleTypeRestrictions Deserialize(Stream stream, FileFormatVersions fileFormat)
         {
-            using (var reader = new StreamReader(stream, Encoding.UTF8, false))
-            using (var xml = XmlReader.Create(reader))
+            using (var xml = XmlReader.Create(stream))
             {
                 var simpleTypeRestrictions = (SimpleTypeRestrictions)GetSerializer().ReadObject(xml);
 
@@ -108,7 +116,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         }
 
         /// <summary>
-        /// Indexer to retriver a specified data in the SimpleTypes.
+        /// Indexer to retrieve data in the SimpleTypes.
         /// </summary>
         /// <param name="index">The index of the data in the SimpleTypes array.</param>
         /// <returns>The simple type constraint data.</returns>

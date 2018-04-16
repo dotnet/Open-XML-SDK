@@ -206,7 +206,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <param name="id">The desired relationship ID. </param>
         /// <returns>An ExternalRelationship with the relationship ID. </returns>
         /// <exception cref="ArgumentNullException">Thrown when "relationshipType" or the "externalUri" is null reference.</exception>
-        /// <exception cref="InvalidOperationException">Thrown when the relatioship type is hyperlink relationship type (http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink). </exception>
+        /// <exception cref="InvalidOperationException">Thrown when the relationship type is hyperlink relationship type (http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink). </exception>
         public ExternalRelationship AddExternalRelationship(string relationshipType, Uri externalUri, string id)
         {
             ThrowIfObjectDisposed();
@@ -669,6 +669,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(id));
             }
+
             return (T)AddPartFrom(part, id);
         }
 
@@ -687,6 +688,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(targetPart));
             }
+
             if (!IsInSamePackage(targetPart))
             {
                 throw new InvalidOperationException(ExceptionMessages.PartNotInSamePackage);
@@ -714,10 +716,12 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(targetPart));
             }
+
             if (id == null)
             {
                 throw new ArgumentNullException(nameof(id));
             }
+
             if (!IsInSamePackage(targetPart))
             {
                 throw new InvalidOperationException(ExceptionMessages.PartNotInSamePackage);
@@ -759,7 +763,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <typeparam name="T">The class of the part.</typeparam>
         /// <param name="contentType">The content type of the part. Must match the defined content type if the part is fixed content type.</param>
-        /// <param name="id">The relationship id. The id will be automaticly generated if this param is null.</param>
+        /// <param name="id">The relationship id. The id will be automatically generated if this param is null.</param>
         /// <returns>The added part.</returns>
         /// <exception cref="OpenXmlPackageException">When the part is not allowed to be referenced by this part.</exception>
         /// <exception cref="ArgumentOutOfRangeException">When the part is fixed content type and the passed in contentType does not match the defined content type.</exception>
@@ -930,6 +934,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(annotation));
             }
+
             if (_annotations == null)
             {
                 _annotations = (annotation is object[]) ? new object[] { annotation } : annotation;
@@ -948,11 +953,13 @@ namespace DocumentFormat.OpenXml.Packaging
                     {
                         index++;
                     }
+
                     if (index == annotations.Length)
                     {
                         Array.Resize<object>(ref annotations, index * 2);
                         _annotations = annotations;
                     }
+
                     annotations[index] = annotation;
                 }
             }
@@ -999,7 +1006,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="type">The type of the annotation to retrieve.</param>
         /// <returns>The first annotation object of the specified type.</returns>
-        public Object Annotation(Type type)
+        public object Annotation(Type type)
         {
             if (type == null)
             {
@@ -1025,6 +1032,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         {
                             break;
                         }
+
                         if (type.GetTypeInfo().IsAssignableFrom(obj.GetType().GetTypeInfo()))
                         {
                             return obj;
@@ -1062,6 +1070,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         {
                             break;
                         }
+
                         if (obj is T)
                         {
                             yield return (T)obj;
@@ -1076,7 +1085,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <param name="type">The Type of the annotations to retrieve.</param>
         /// <returns>An IEnumerable(T) of object that contains the annotations for this PartContainer.</returns>
-        public IEnumerable<Object> Annotations(Type type)
+        public IEnumerable<object> Annotations(Type type)
         {
             if (type == null)
             {
@@ -1102,6 +1111,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         {
                             break;
                         }
+
                         if (type.GetTypeInfo().IsAssignableFrom(obj.GetType().GetTypeInfo()))
                         {
                             yield return obj;
@@ -1138,12 +1148,15 @@ namespace DocumentFormat.OpenXml.Packaging
                         {
                             break;
                         }
+
                         if (!(obj is T))
                         {
                             annotations[num++] = obj;
                         }
+
                         index++;
                     }
+
                     if (num != 0)
                     {
                         while (num < index)
@@ -1169,6 +1182,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(type));
             }
+
             if (_annotations != null)
             {
                 object[] annotations = _annotations as object[];
@@ -1190,12 +1204,15 @@ namespace DocumentFormat.OpenXml.Packaging
                         {
                             break;
                         }
+
                         if (!type.GetTypeInfo().IsAssignableFrom(o.GetType().GetTypeInfo()))
                         {
                             annotations[num++] = o;
                         }
+
                         index++;
                     }
+
                     if (num != 0)
                     {
                         while (num < index)
@@ -1264,7 +1281,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            // use reflection to create the instance. As the default contructor of part is not "public"
+            // use reflection to create the instance. As the default constructor of part is not "public"
             var part = PartActivator.CreateInstance<T>();
 
             try
@@ -1323,7 +1340,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new ArgumentException(ExceptionMessages.StringArgumentEmptyException, nameof(contentType));
             }
 
-            // use reflection to create the instance. As the default contructor of part is not "public"
+            // Use reflection to create the instance as the default constructor of part is not public
             var part = PartActivator.CreateInstance<T>();
 
             if (part is ExtendedPart)
@@ -1353,7 +1370,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Initilizes a new created part
+        /// Initializes a new created part
         /// </summary>
         /// <typeparam name="T">The type of the part, must be derived from OpenXmlPart.</typeparam>
         /// <param name="newPart">The part to be initialized.</param>
@@ -1364,7 +1381,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Initilizes a new created part
+        /// Initializes a new created part
         /// </summary>
         /// <typeparam name="T">The type of the part, must be derived from OpenXmlPart.</typeparam>
         /// <param name="newPart">The part to be initialized.</param>
@@ -1409,6 +1426,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 return;
             }
+
             //else if (newPart is ExtensionPart)
             //{
             //    newPart.CreateInternal(this.InternalOpenXmlPackage, this.ThisOpenXmlPart, contentType, null);
@@ -1525,7 +1543,6 @@ namespace DocumentFormat.OpenXml.Packaging
             //    // TODO: should we throw?
             //    this.DeletePart(child);
             //}
-
             return AddSubPart(part, rId);
         }
 
@@ -1586,7 +1603,6 @@ namespace DocumentFormat.OpenXml.Packaging
             if (partDictionary.TryGetValue(part, out var child))
             {
                 // already processed
-
                 string relationshipId;
 
                 relationshipId = AttachChild(child, rId);
@@ -1692,7 +1708,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Attachs the child to the package (create the relationship)
+        /// Attaches the child to the package (create the relationship)
         /// </summary>
         /// <param name="part">The part to be attached.</param>
         /// <returns>The relationship ID.</returns>
@@ -1702,7 +1718,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Attachs the child to the package (create the relationship)
+        /// Attaches the child to the package (create the relationship)
         /// </summary>
         /// <param name="part">The part to be attached.</param>
         /// <param name="rId">The desired relationship ID.</param>
@@ -1854,10 +1870,12 @@ namespace DocumentFormat.OpenXml.Packaging
                             }
                         }
                     }
+
                     // else, already processed, just delete the relationship
                     // TODO: is this necessary? Will Package.DeletePart also delete it's .rels?
                     DeleteRelationship(idPartPair.Key);
                 }
+
                 ChildrenRelationshipParts.Clear();
 
                 foreach (OpenXmlPart child in subPartsShouldBeDeleted)
@@ -1904,6 +1922,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 return part;
             }
+
             return null;
         }
 
@@ -1992,6 +2011,7 @@ namespace DocumentFormat.OpenXml.Packaging
                                 {
                                     throw new OpenXmlPackageException(ExceptionMessages.SamePartWithDifferentRelationshipType);
                                 }
+
                                 ChildrenRelationshipParts.Add(relationship.Id, child);
                             }
                             else if (DataPartReferenceRelationship.IsDataPartReferenceRelationship(relationship.RelationshipType))
@@ -2013,6 +2033,7 @@ namespace DocumentFormat.OpenXml.Packaging
                             {
                                 child = CreateOpenXmlPart(relationship.RelationshipType);
                                 child.MCSettings = openXmlPackage.MarkupCompatibilityProcessSettings;
+
                                 // add it to loaded part list
                                 loadedParts.Add(uriTarget, child);
 
@@ -2078,7 +2099,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         abstract internal PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, string relationshipType, string id);
 
-        // find all reachable parts from the package root, the dictionary also used for cycle reference defence
+        // find all reachable parts from the package root, the dictionary also used for cycle reference defense
         abstract internal void FindAllReachableParts(IDictionary<OpenXmlPart, bool> reachableParts);
 
         #endregion

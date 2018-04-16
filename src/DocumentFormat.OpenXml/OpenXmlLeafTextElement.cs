@@ -98,6 +98,7 @@ namespace DocumentFormat.OpenXml
                         {
                             WriteContentTo(writer2);
                         }
+
                         return w.ToString();
                     }
                 }
@@ -190,7 +191,6 @@ namespace DocumentFormat.OpenXml
 
                             // only load text when no text is loaded,
                             // for case "<foo/>Text1<bar/>Text2", only load "Text1", very rare case
-
                             RawInnerText = xmlReader.Value;
                             textNodePosition = unwanted;
                             textNodeType = xmlReader.NodeType;
@@ -202,7 +202,6 @@ namespace DocumentFormat.OpenXml
                             Debug.Assert(xmlReader.NodeType != XmlNodeType.EntityReference);
 
                             // Load unexpected children if there are any.
-
                             OpenXmlElement child = ElementFactory(xmlReader);
                             child.Load(xmlReader, OpenXmlLoadMode.Full);
                             unwanted++;
@@ -241,6 +240,7 @@ namespace DocumentFormat.OpenXml
                             textNode = OpenXmlMiscNode.CreateFromSignificantWhitespace(RawInnerText);
                             break;
                     }
+
                     ShadowElement.InsertAt(textNode, textNodePosition);
                 }
                 else

@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="value">The text value of the attribute.</param>
         public OpenXmlAttribute(string qualifiedName, string namespaceUri, string value)
         {
-            if (String.IsNullOrEmpty(qualifiedName))
+            if (string.IsNullOrEmpty(qualifiedName))
             {
                 throw new ArgumentNullException(nameof(qualifiedName));
             }
@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="value">The text value of the attribute.</param>
         public OpenXmlAttribute(string prefix, string localName, string namespaceUri, string value)
         {
-            if (String.IsNullOrEmpty(localName))
+            if (string.IsNullOrEmpty(localName))
             {
                 throw new ArgumentNullException(nameof(localName));
             }
@@ -66,6 +66,7 @@ namespace DocumentFormat.OpenXml
                 {
                     return string.Empty;
                 }
+
                 return _namespaceUri;
             }
 
@@ -187,6 +188,7 @@ namespace DocumentFormat.OpenXml
             {
                 return false;
             }
+
             OpenXmlAttribute attribute = (OpenXmlAttribute)obj;
             return Equals(attribute);
         }
@@ -205,14 +207,17 @@ namespace DocumentFormat.OpenXml
             {
                 hashCode ^= LocalName.GetHashCode();
             }
+
             if (NamespaceUri != null)
             {
                 hashCode ^= NamespaceUri.GetHashCode();
             }
+
             if (Prefix != null)
             {
                 hashCode ^= Prefix.GetHashCode();
             }
+
             if (Value != null)
             {
                 hashCode ^= Value.GetHashCode();

@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Tests
             Bug743591(validator);
         }
 
-        #region validator bugs resgression
+        #region validator bugs regression
 
         [System.Diagnostics.Conditional("DEBUG")]
         private void AssertValidationErrorCategory(string expected, ValidationErrorInfo targetErrorInfo)
@@ -87,7 +87,6 @@ namespace DocumentFormat.OpenXml.Tests
             //    <xsd:element name="color" type="x:CT_Color" minOccurs="2" maxOccurs="unbounded">
             //  </xsd:sequence>
             //</xsd:complexType>
-
             DocumentFormat.OpenXml.Spreadsheet.ColorScale colorScale = new DocumentFormat.OpenXml.Spreadsheet.ColorScale(
 "<x:colorScale xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\">" +
 "    <x:cfvo type=\"min\" val=\"0\" />" +
@@ -133,6 +132,7 @@ namespace DocumentFormat.OpenXml.Tests
             //</w:p>
             Paragraph p = new Paragraph();
             AlternateContent acb = p.AppendChild(new AlternateContent());
+
             // one error, w:rPr should before the w:t
             p.AppendChild(new Run(new DocumentFormat.OpenXml.Wordprocessing.Text() { Text = "Acb" },
                                   new RunProperties(new RunFonts() { Hint = FontTypeHintValues.EastAsia })
@@ -279,7 +279,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             TableCellMarginDefault tcmd = new TableCellMarginDefault();
             tcmd.AppendChild(new TopMargin());
-            var errorChild = tcmd.AppendChild(new LeftMargin()); // LeftMargin is wrong elemnt, it should be TableCellLeftMargin, but the two element has same element tag.
+            var errorChild = tcmd.AppendChild(new LeftMargin()); // LeftMargin is wrong element, it should be TableCellLeftMargin, but the two element has same element tag.
 
             var errors = validator.Validate(tcmd);
             Assert.Single(errors);
@@ -301,7 +301,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Single(errors);
             Assert.Equal(ValidationErrorType.Schema, errors.First().ErrorType);
             Assert.Equal("Sch_AttributeValueDataTypeDetailed", errors.First().Id);
-            Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:rsidR' has invalid value '0102'. The actual length according to datatype 'hexBinary' is not equal to the specified length. The expected length is 4.", errors.First().Description);
+            Assert.Equal("The attribute 'http://schemas.openxmlformats.org/wordprocessingml/2006/main:rsidR' has invalid value '0102'. The actual length according to data type 'hexBinary' is not equal to the specified length. The expected length is 4.", errors.First().Description);
         }
 
         private void Bug423988(OpenXmlValidator validator)
@@ -362,13 +362,12 @@ namespace DocumentFormat.OpenXml.Tests
 
         private void Bug424104(OpenXmlValidator validator)
         {
-            //
             // change <xsd:any > to <xsd:any minOccurs=0 in CT_OfficeArtExtension"
             DocumentFormat.OpenXml.Drawing.Extension ext = new DocumentFormat.OpenXml.Drawing.Extension() { Uri = "test" };
             var errors = validator.Validate(ext);
             Assert.Empty(errors);
 
-            // CT_Extension in PPT, <xsd:any > wihtout minOccurs
+            // CT_Extension in PPT, <xsd:any > without minOccurs
             var pext = new DocumentFormat.OpenXml.Presentation.Extension();
             pext.Uri = "http://www.live.com";
             errors = validator.Validate(pext);
@@ -491,7 +490,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var s = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
             };
 
             using (var stream = GetStream(TestFiles.animation, true))

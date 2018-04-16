@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues) target.Type);
 
             Assert.NotNull(target.Id);
-            Assert.Equal("1", (string)target.Id);
+            Assert.Equal("1", target.Id);
 
             // Remove the custom attribute
             target.RemoveAttribute(openXmlAttribute.LocalName, openXmlAttribute.NamespaceUri);
@@ -108,7 +108,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues) target.Type);
 
             Assert.NotNull(target.Id);
-            Assert.Equal("1", (string)target.Id);
+            Assert.Equal("1", target.Id);
 
             // remove the .Id
             openXmlAttribute = target.GetAttributes()[1];
@@ -269,7 +269,7 @@ namespace DocumentFormat.OpenXml.Tests
             p.InnerXml = paragraphInnerXml;
             p.RsidParagraphProperties = "001";
 
-            // make sure elements are fullly populated.
+            // make sure elements are fully populated.
             var r1 = p.FirstChild.FirstChild;
             var r2 = r1.NextSibling();
 
@@ -573,6 +573,7 @@ namespace DocumentFormat.OpenXml.Tests
                     {
                         Assert.Equal(curElem.Attributes.Length, elem.Attributes.Length);
                     }
+
                     Assert.Equal(curElem.ExtendedAttributes.Count(), elem.ExtendedAttributes.Count());
                     var a1 = curElem.ExtendedAttributes.ToArray();
                     var a2 = elem.ExtendedAttributes.ToArray();
@@ -589,6 +590,7 @@ namespace DocumentFormat.OpenXml.Tests
                         Assert.Equal(((OpenXmlLeafTextElement)curElem).Text, ((OpenXmlLeafTextElement)elem).Text);
                     }
                 }
+
                 // Deep clone the unknown element
                 var unknown = doc.MainDocumentPart.Document.Descendants<OpenXmlUnknownElement>().Where(e => e.LocalName == "wsp").First();
                 var clonedUnknown = unknown.CloneNode(true);
@@ -620,7 +622,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// A test for the OpenXmlElement contructor with an outerXml as parameter.
+        /// A test for the OpenXmlElement constructor with an outerXml as parameter.
         /// </summary>
         [Fact]
         public void OpenXmlElementConstructorOuterXmlTest()
@@ -642,10 +644,11 @@ namespace DocumentFormat.OpenXml.Tests
             DocumentFormat.OpenXml.Office.CustomUI.CustomUI cUi2 = new DocumentFormat.OpenXml.Office.CustomUI.CustomUI(validOuterXml);
             Assert.Equal(validOuterXml, cUi2.OuterXml);
 
-            // Valid outer xml but starting with whitespaces.
+            // Valid outer xml but starting with whitespace.
             string validOuterXmlWithWhitespaces = "     <customUI  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></customUI>";
             DocumentFormat.OpenXml.Office.CustomUI.CustomUI cUi3 = new DocumentFormat.OpenXml.Office.CustomUI.CustomUI(validOuterXmlWithWhitespaces);
-            // The whitespaces should be trimmed when getting OuterXml.
+
+            // The whitespace should be trimmed when getting OuterXml.
             Assert.Equal(validOuterXml, cUi2.OuterXml);
 
             // verify bug #671248
@@ -669,7 +672,7 @@ namespace DocumentFormat.OpenXml.Tests
             var unknown1 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(validOuterXml);
             Assert.Equal(validOuterXml, unknown1.OuterXml);
 
-            // Valid outer xml but starting with whitespaces.
+            // Valid outer xml but starting with whitespace.
             string validOuterXmlWithWhitespaces = "   <myElement  xmlns=\"http://schemas.microsoft.com/office/2006/01/customui\"></myElement>";
             var unknown2 = OpenXmlUnknownElement.CreateOpenXmlUnknownElement(validOuterXmlWithWhitespaces);
             Assert.Equal(validOuterXmlWithWhitespaces, unknown2.OuterXml);
@@ -768,6 +771,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var p = new Paragraph();
             p.ParagraphId = "123";
+
             //NamespaceDeclarations is not null
             Assert.Empty(p.NamespaceDeclarations);
 
@@ -857,6 +861,7 @@ namespace DocumentFormat.OpenXml.Tests
                     target.WriteEndElement();
                     target.Close();
                 }
+
                 memStream.Flush();
                 memStream.Seek(0, SeekOrigin.Begin);
 

@@ -20,6 +20,7 @@ namespace DocumentFormat.OpenXml.Tests
                 return chosenElement;
             chosenElement = source.FirstOrDefault();
             return chosenElement;
+
             // This used to return a random element.  Bad idea for a test suite.
             //int index = new Random ().Next(source.Count());
             //return source.ElementAtOrDefault(index);

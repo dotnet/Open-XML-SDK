@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
                 };
 
                 using (var doc = PresentationDocument.Open(package, openSettings))
@@ -42,7 +42,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var openSettings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
             };
 
             using (var stream = GetStream(TestFiles.Presentation))
@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 var openSettings = new OpenSettings
                 {
-                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
                 };
 
                 using (var doc = PresentationDocument.Open(package, openSettings))
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var openSettings = new OpenSettings
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2013),
             };
 
             using (var stream = GetStream(TestFiles.Presentation))
@@ -115,8 +115,8 @@ namespace DocumentFormat.OpenXml.Tests
 
         private static void CreatePresentationParts(PresentationPart presentationPart)
         {
-            P.SlideMasterIdList slideMasterIdList1 = new P.SlideMasterIdList(new P.SlideMasterId() { Id = (UInt32Value)2147483648U, RelationshipId = "rId1" });
-            P.SlideIdList slideIdList1 = new P.SlideIdList(new P.SlideId() { Id = (UInt32Value)256U, RelationshipId = "rId2" });
+            P.SlideMasterIdList slideMasterIdList1 = new P.SlideMasterIdList(new P.SlideMasterId() { Id = 2147483648U, RelationshipId = "rId1" });
+            P.SlideIdList slideIdList1 = new P.SlideIdList(new P.SlideId() { Id = 256U, RelationshipId = "rId2" });
             P.SlideSize slideSize1 = new P.SlideSize() { Cx = 9144000, Cy = 6858000, Type = P.SlideSizeValues.Screen4x3 };
             P.NotesSize notesSize1 = new P.NotesSize() { Cx = 6858000, Cy = 9144000 };
             P.DefaultTextStyle defaultTextStyle1 = new P.DefaultTextStyle();
@@ -145,13 +145,13 @@ namespace DocumentFormat.OpenXml.Tests
                     new P.CommonSlideData(
                         new P.ShapeTree(
                             new P.NonVisualGroupShapeProperties(
-                                new P.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" },
+                                new P.NonVisualDrawingProperties() { Id = 1U, Name = string.Empty },
                                 new P.NonVisualGroupShapeDrawingProperties(),
                                 new P.ApplicationNonVisualDrawingProperties()),
                             new P.GroupShapeProperties(new D.TransformGroup()),
                             new P.Shape(
                                 new P.NonVisualShapeProperties(
-                                    new P.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title 1" },
+                                    new P.NonVisualDrawingProperties() { Id = 2U, Name = "Title 1" },
                                     new P.NonVisualShapeDrawingProperties(new D.ShapeLocks() { NoGrouping = true }),
                                     new P.ApplicationNonVisualDrawingProperties(new P.PlaceholderShape())),
                                 new P.ShapeProperties(),
@@ -169,13 +169,13 @@ namespace DocumentFormat.OpenXml.Tests
             P.SlideLayout slideLayout = new P.SlideLayout(
             new P.CommonSlideData(new P.ShapeTree(
               new P.NonVisualGroupShapeProperties(
-              new P.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" },
+              new P.NonVisualDrawingProperties() { Id = 1U, Name = string.Empty },
               new P.NonVisualGroupShapeDrawingProperties(),
               new P.ApplicationNonVisualDrawingProperties()),
               new P.GroupShapeProperties(new D.TransformGroup()),
               new P.Shape(
               new P.NonVisualShapeProperties(
-                new P.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "" },
+                new P.NonVisualDrawingProperties() { Id = 2U, Name = string.Empty },
                 new P.NonVisualShapeDrawingProperties(new D.ShapeLocks() { NoGrouping = true }),
                 new P.ApplicationNonVisualDrawingProperties(new P.PlaceholderShape())),
               new P.ShapeProperties(),
@@ -194,13 +194,13 @@ namespace DocumentFormat.OpenXml.Tests
             P.SlideMaster slideMaster = new P.SlideMaster(
             new P.CommonSlideData(new P.ShapeTree(
               new P.NonVisualGroupShapeProperties(
-              new P.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "" },
+              new P.NonVisualDrawingProperties() { Id = 1U, Name = string.Empty },
               new P.NonVisualGroupShapeDrawingProperties(),
               new P.ApplicationNonVisualDrawingProperties()),
               new P.GroupShapeProperties(new D.TransformGroup()),
               new P.Shape(
               new P.NonVisualShapeProperties(
-                new P.NonVisualDrawingProperties() { Id = (UInt32Value)2U, Name = "Title Placeholder 1" },
+                new P.NonVisualDrawingProperties() { Id = 2U, Name = "Title Placeholder 1" },
                 new P.NonVisualShapeDrawingProperties(new D.ShapeLocks() { NoGrouping = true }),
                 new P.ApplicationNonVisualDrawingProperties(new P.PlaceholderShape() { Type = P.PlaceholderValues.Title })),
               new P.ShapeProperties(),
@@ -209,7 +209,7 @@ namespace DocumentFormat.OpenXml.Tests
                 new D.ListStyle(),
                 new D.Paragraph())))),
             new P.ColorMap() { Background1 = D.ColorSchemeIndexValues.Light1, Text1 = D.ColorSchemeIndexValues.Dark1, Background2 = D.ColorSchemeIndexValues.Light2, Text2 = D.ColorSchemeIndexValues.Dark2, Accent1 = D.ColorSchemeIndexValues.Accent1, Accent2 = D.ColorSchemeIndexValues.Accent2, Accent3 = D.ColorSchemeIndexValues.Accent3, Accent4 = D.ColorSchemeIndexValues.Accent4, Accent5 = D.ColorSchemeIndexValues.Accent5, Accent6 = D.ColorSchemeIndexValues.Accent6, Hyperlink = D.ColorSchemeIndexValues.Hyperlink, FollowedHyperlink = D.ColorSchemeIndexValues.FollowedHyperlink },
-            new P.SlideLayoutIdList(new P.SlideLayoutId() { Id = (UInt32Value)2147483649U, RelationshipId = "rId1" }),
+            new P.SlideLayoutIdList(new P.SlideLayoutId() { Id = 2147483649U, RelationshipId = "rId1" }),
             new P.TextStyles(new P.TitleStyle(), new P.BodyStyle(), new P.OtherStyle()));
             slideMasterPart1.SlideMaster = slideMaster;
 
@@ -236,17 +236,17 @@ namespace DocumentFormat.OpenXml.Tests
               new D.Hyperlink(new D.RgbColorModelHex() { Val = "0000FF" }),
               new D.FollowedHyperlinkColor(new D.RgbColorModelHex() { Val = "800080" }))
             { Name = "Office" },
-              new D.FontScheme(
+            new D.FontScheme(
               new D.MajorFont(
               new D.LatinFont() { Typeface = "Calibri" },
-              new D.EastAsianFont() { Typeface = "" },
-              new D.ComplexScriptFont() { Typeface = "" }),
+              new D.EastAsianFont() { Typeface = string.Empty },
+              new D.ComplexScriptFont() { Typeface = string.Empty }),
               new D.MinorFont(
               new D.LatinFont() { Typeface = "Calibri" },
-              new D.EastAsianFont() { Typeface = "" },
-              new D.ComplexScriptFont() { Typeface = "" }))
-              { Name = "Office" },
-              new D.FormatScheme(
+              new D.EastAsianFont() { Typeface = string.Empty },
+              new D.ComplexScriptFont() { Typeface = string.Empty }))
+            { Name = "Office" },
+            new D.FormatScheme(
               new D.FillStyleList(
               new D.SolidFill(new D.SchemeColor() { Val = D.SchemeColorValues.PhColor }),
               new D.GradientFill(
@@ -280,7 +280,7 @@ namespace DocumentFormat.OpenXml.Tests
                   Width = 9525,
                   CapType = D.LineCapValues.Flat,
                   CompoundLineType = D.CompoundLineValues.Single,
-                  Alignment = D.PenAlignmentValues.Center
+                  Alignment = D.PenAlignmentValues.Center,
               },
               new D.Outline(
                 new D.SolidFill(
@@ -293,7 +293,7 @@ namespace DocumentFormat.OpenXml.Tests
                   Width = 9525,
                   CapType = D.LineCapValues.Flat,
                   CompoundLineType = D.CompoundLineValues.Single,
-                  Alignment = D.PenAlignmentValues.Center
+                  Alignment = D.PenAlignmentValues.Center,
               },
               new D.Outline(
                 new D.SolidFill(
@@ -306,7 +306,7 @@ namespace DocumentFormat.OpenXml.Tests
                   Width = 9525,
                   CapType = D.LineCapValues.Flat,
                   CompoundLineType = D.CompoundLineValues.Single,
-                  Alignment = D.PenAlignmentValues.Center
+                  Alignment = D.PenAlignmentValues.Center,
               }),
               new D.EffectStyleList(
               new D.EffectStyle(
@@ -363,7 +363,7 @@ namespace DocumentFormat.OpenXml.Tests
                   { Val = D.SchemeColorValues.PhColor })
                 { Position = 0 }),
                 new D.LinearGradientFill() { Angle = 16200000, Scaled = true })))
-              { Name = "Office" });
+            { Name = "Office" });
 
             theme1.Append(themeElements1);
             theme1.Append(new D.ObjectDefaults());

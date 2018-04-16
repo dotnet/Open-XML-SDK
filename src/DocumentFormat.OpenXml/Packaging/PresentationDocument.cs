@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         { "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", PartConstraintRule.Create<QuickAccessToolbarCustomizationsPart>(false, false) },
                         { "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", PartConstraintRule.Create<RibbonExtensibilityPart>(false, false) },
                         { "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", PartConstraintRule.Create<RibbonAndBackstageCustomizationsPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", PartConstraintRule.Create<WebExTaskpanesPart>(false, false) }
+                        { "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", PartConstraintRule.Create<WebExTaskpanesPart>(false, false) },
                     };
                 }
 
@@ -75,6 +75,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                     _validMainPartContentType = tempData;
                 }
+
                 return _validMainPartContentType;
             }
         }
@@ -160,7 +161,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Created a new instance of the PresentationDocument class from the spcified package.
+        /// Created a new instance of the PresentationDocument class from the specified package.
         /// </summary>
         /// <param name="package">The specified OpenXml package.</param>
         /// <param name="type">The type of the PresentationDocument.</param>
@@ -186,6 +187,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(path);
             }
+
             PresentationDocument doc = new PresentationDocument();
             doc.DocumentType = type;
             doc.OpenSettings = new OpenSettings();
@@ -194,6 +196,7 @@ namespace DocumentFormat.OpenXml.Packaging
             doc.CreateCore(path);
             return doc;
         }
+
         /// <summary>
         /// Creates a new instance of the PresentationDocument class from the IO stream.
         /// </summary>
@@ -215,7 +218,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Creates a new instance of the PresentationDocument class from the spcified package.
+        /// Creates a new instance of the PresentationDocument class from the specified package.
         /// </summary>
         /// <param name="package">The specified OpenXml package.</param>
         /// <param name="type">The type of the PresentationDocument.</param>
@@ -298,7 +301,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Creates a new instance of the PresentationDocument class from the spcified package.
+        /// Creates a new instance of the PresentationDocument class from the specified package.
         /// </summary>
         /// <param name="package">The specified OpenXml package.</param>
         /// <returns>A new instance of PresentationDocument.</returns>
@@ -327,6 +330,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
+
             PresentationDocument doc = new PresentationDocument();
             doc.OpenSettings = new OpenSettings();
             doc.OpenSettings.AutoSave = openSettings.AutoSave;
@@ -338,6 +342,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 doc.UpdateDocumentTypeFromContentType();
             }
+
             return doc;
         }
 
@@ -359,6 +364,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
+
             PresentationDocument doc = new PresentationDocument();
             doc.OpenSettings = new OpenSettings();
             doc.OpenSettings.AutoSave = openSettings.AutoSave;
@@ -370,11 +376,12 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 doc.UpdateDocumentTypeFromContentType();
             }
+
             return doc;
         }
 
         /// <summary>
-        /// Creates a new instance of the PresentationDocument class from the spcified package.
+        /// Creates a new instance of the PresentationDocument class from the specified package.
         /// </summary>
         /// <param name="package">The specified OpenXml package.</param>
         /// <param name="openSettings">The advanced settings for opening a document.</param>
@@ -390,6 +397,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
+
             PresentationDocument doc = new PresentationDocument();
             doc.OpenSettings = new OpenSettings();
             doc.OpenSettings.AutoSave = openSettings.AutoSave;
@@ -401,6 +409,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 doc.UpdateDocumentTypeFromContentType();
             }
+
             return doc;
         }
 
@@ -445,6 +454,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     DocumentType = oldType;
                     MainPartContentType = MainPartContentTypes[oldType];
                 }
+
                 throw;
             }
         }
@@ -462,6 +472,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(relationshipType));
             }
+
             switch (relationshipType)
             {
                 case PresentationPart.RelationshipTypeConstant:
@@ -494,6 +505,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 case WebExTaskpanesPart.RelationshipTypeConstant:
                     return new WebExTaskpanesPart();
             }
+
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
@@ -563,6 +575,7 @@ namespace DocumentFormat.OpenXml.Packaging
             InitPart(childPart, contentType);
             return childPart;
         }
+
         /// <summary>
         /// Adds a ThumbnailPart to the PresentationDocument.
         /// </summary>
@@ -582,7 +595,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         /// <typeparam name="T">The class of the part.</typeparam>
         /// <param name="contentType">The content type of the part. Must match the defined content type if the part is fixed content type.</param>
-        /// <param name="id">The relationship id. The id will be automaticly generated if this param is null.</param>
+        /// <param name="id">The relationship id. The id will be automatically generated if this param is null.</param>
         /// <returns>The added part.</returns>
         /// <exception cref="OpenXmlPackageException">When the part is not allowed to be referenced by this part.</exception>
         /// <exception cref="ArgumentOutOfRangeException">When the part is fixed content type and the passed in contentType does not match the defined content type.</exception>

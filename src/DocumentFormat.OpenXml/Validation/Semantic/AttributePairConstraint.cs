@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
@@ -15,9 +14,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         public string _attribute1Namespace;
         public string _attribute2LocalName;
         public string _attribute2Namespace;
-
-        //string MissedAttribute { get; set; }
-        //string ExistAttribute { get; set; }
 
         public AttributePairConstraint(string attribute1Namespace, string attribute1LocalName, string attribute2Namespace, string attribute2LocalName)
             : base(SemanticValidationLevel.Element)
@@ -38,23 +34,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             bool attribute1Exist = context.Element.GetAttributeValueEx(_attribute1LocalName, _attribute1Namespace) != null;
             bool attribute2Exist = context.Element.GetAttributeValueEx(_attribute2LocalName, _attribute2Namespace) != null;
 
-            //if (attribute1Exist)
-            //{
-            //    this.MissedAttribute = this._attribute2LocalName;
-            //    this.ExistAttribute = this._attribute1LocalName;
-            //}
-            //else
-            //{
-            //    this.MissedAttribute = this._attribute1LocalName;
-            //    this.ExistAttribute = this._attribute2LocalName;
-            //}
-
             if (!(attribute1Exist ^ attribute2Exist))
             {
                 return null;
             }
 
-            return new ValidationErrorInfo() { Id = "", ErrorType = ValidationErrorType.Semantic, Node = context.Element, Description = "" };
+            return new ValidationErrorInfo() { Id = string.Empty, ErrorType = ValidationErrorType.Semantic, Node = context.Element, Description = string.Empty };
         }
     }
 }

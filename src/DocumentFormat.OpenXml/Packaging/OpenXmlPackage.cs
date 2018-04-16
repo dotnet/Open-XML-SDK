@@ -278,12 +278,25 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Gets or sets a value that indicates the maximum allowable number of characters in an Open XML part. A zero (0) value indicates that there are no limits on the size of the part. A non-zero value specifies the maximum size, in characters.
+        /// Gets or sets a value that indicates the maximum allowable number of characters in an Open XML part. A zero (0) value indicates that there are no limits on the size
+        /// of the part. A non-zero value specifies the maximum size, in characters.
         /// </summary>
         /// <remarks>
-        /// This property allows you to mitigate denial of service attacks where the attacker submits a package with an extremely large Open XML part. By limiting the size of a part, you can detect the attack and recover reliably.
+        /// This property allows you to mitigate denial of service attacks where the attacker submits a package with an extremely large Open XML part. By limiting the size of a
+        /// part, you can detect the attack and recover reliably.
         /// </remarks>
         public long MaxCharactersInPart { get; internal set; }
+
+        /// <summary>
+        /// Gets a value indicating whether saving the package is supported by calling <see cref="Save"/>. Some platforms (such as .NET Core), have limited support for saving.
+        /// If <c>false</c>, in order to save, the document and/or package needs to be fully closed and disposed and then reopened.
+        /// </summary>
+        public static bool CanSave { get; } =
+#if FEATURE_PACKAGE_FLUSH
+            true;
+#else
+            false;
+#endif
 
         /// <summary>
         /// Gets all the <see cref="DataPart"/> parts in the document package.
@@ -327,17 +340,6 @@ namespace DocumentFormat.OpenXml.Packaging
             ThrowIfObjectDisposed();
             DeletePartsRecursivelyOfTypeBase<T>();
         }
-
-        // Remove this method due to bug #18394
-        // User can call doc.Package.Flush( ) as a workaround.
-        ///// <summary>
-        ///// Saves the contents of all parts and relationships that are contained in the OpenXml package.
-        ///// </summary>
-        //public void Save()
-        //{
-        //    this.ThrowIfObjectDisposed();
-        //    this.Package.Flush();
-        //}
 
         /// <summary>
         /// Saves and closes the OpenXml package and all underlying part streams.
@@ -471,7 +473,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             ThrowIfObjectDisposed();
 
-            void DefaultValidationEventHandler(Object sender, OpenXmlPackageValidationEventArgs e)
+            void DefaultValidationEventHandler(object sender, OpenXmlPackageValidationEventArgs e)
             {
                 var exception = new OpenXmlPackageException(ExceptionMessages.ValidationException);
 
@@ -629,6 +631,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion
 
         #region MC Staffs
+
         /// <summary>
         /// Gets the markup compatibility settings applied at loading time.
         /// </summary>
@@ -666,6 +669,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #endregion
 
         #region Auto-Save functions
+
         /// <summary>
         /// Gets a value indicating whether the parts should be saved when disposed.
         /// </summary>
@@ -758,6 +762,7 @@ namespace DocumentFormat.OpenXml.Packaging
         private static bool IsPartContentChanged(OpenXmlPart part)
         {
             Debug.Assert(part != null);
+
             // If the root element of the part is loaded,
             // consider the part changed and should be saved.
             Debug.Assert(part.OpenXmlPackage != null);
@@ -778,6 +783,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             Debug.Assert(part != null);
             Debug.Assert(part.IsRootElementLoaded);
+
             // Save PartRootElement to the part stream.
             part.PartRootElement.Save();
         }
@@ -848,15 +854,15 @@ namespace DocumentFormat.OpenXml.Packaging
                 // read the content to local string
                 using (Stream mainPartStream = mainPart.GetStream())
                 {
-                    if (mainPartStream.Length > Int32.MaxValue)
+                    if (mainPartStream.Length > int.MaxValue)
                     {
                         throw new OpenXmlPackageException(ExceptionMessages.DocumentTooBig);
                     }
+
                     memoryStream = new MemoryStream(Convert.ToInt32(mainPartStream.Length));
                     mainPartStream.CopyTo(memoryStream);
                 }
 
-                //
                 tempPart = AddExtendedPart(@"http://temp", MainPartContentType, @".xml");
 
                 foreach (KeyValuePair<string, OpenXmlPart> idPartPair in mainPart.ChildrenRelationshipParts)
@@ -891,7 +897,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 T newMainPart = PartActivator.CreateInstance<T>();
 
                 // do not call this.InitPart( ).  copy the code here
-
                 newMainPart.CreateInternal2(this, null, MainPartContentType, uri);
 
                 // add it and get the id
@@ -953,7 +958,6 @@ namespace DocumentFormat.OpenXml.Packaging
         // cannot use generic, at it will emit error
         // Compiler Error CS0310
         // The type 'typename' must have a public parameter less constructor in order to use it as parameter 'parameter' in the generic type or method 'generic'
-
         internal sealed override OpenXmlPart NewPart(string relationshipType, string contentType)
         {
             ThrowIfObjectDisposed();
@@ -985,6 +989,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 return child;
             }
+
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
@@ -1085,13 +1090,12 @@ namespace DocumentFormat.OpenXml.Packaging
                         dataPartSet.Remove(dataPartReferenceRelationship.DataPart);
                         if (dataPartSet.Count == 0)
                         {
-                            // No more DataPart in the set. All DataParts are referenced somethwherr.
+                            // No more DataPart in the set. All DataParts are referenced somewhere.
                             return;
                         }
                     }
                 }
 
-                //
                 foreach (var dataPart in dataPartSet)
                 {
                     // delete the part from the package
@@ -1115,6 +1119,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     return dataPart;
                 }
             }
+
             return null;
         }
 
@@ -1133,8 +1138,9 @@ namespace DocumentFormat.OpenXml.Packaging
         private readonly object _saveAndCloneLock = new object();
 
         /// <summary>
-        /// Saves the contents of all parts and relationships that are contained
-        /// in the OpenXml package, if FileOpenAccess is ReadWrite.
+        /// Saves the contents of all parts and relationships that are contained in the OpenXml package, if <see cref="FileOpenAccess"/> is <see cref="FileAccess.ReadWrite"/>.
+        /// Some platforms do not support saving due to limitations in <see cref="System.IO.Packaging.Package"/>, so please query <see cref="CanSave"/> at runtime to know if
+        /// full saving will be supported without closing and disposing of the <see cref="OpenXmlPackage"/>.
         /// </summary>
         public void Save()
         {
@@ -1144,6 +1150,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 lock (_saveAndCloneLock)
                 {
                     SavePartContents(true);
+                    Package.Flush();
                 }
             }
         }
@@ -1251,6 +1258,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     foreach (var part in Parts)
                         clone.AddPart(part.OpenXmlPart, part.RelationshipId);
                 }
+
                 return OpenClone(stream, isEditable, openSettings);
             }
         }
@@ -1338,6 +1346,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     foreach (var part in Parts)
                         clone.AddPart(part.OpenXmlPart, part.RelationshipId);
                 }
+
                 return OpenClone(path, isEditable, openSettings);
             }
         }
@@ -1413,6 +1422,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     clone.AddPart(part.OpenXmlPart, part.RelationshipId);
                 }
+
                 // TODO: Revisit.
                 // package.Flush();
 

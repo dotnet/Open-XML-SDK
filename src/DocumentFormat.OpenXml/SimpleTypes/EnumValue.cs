@@ -60,6 +60,7 @@ namespace DocumentFormat.OpenXml
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
+
             return xmlAttribute.Value;
         }
 
@@ -79,7 +80,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The value to convert.</param>
         /// <returns>The converted string.</returns>
-        public static implicit operator String(EnumValue<T> value)
+        public static implicit operator string(EnumValue<T> value)
         {
             if (value == null)
                 return null;

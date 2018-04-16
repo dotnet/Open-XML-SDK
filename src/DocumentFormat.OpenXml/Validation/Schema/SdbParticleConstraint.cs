@@ -1,64 +1,71 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-/**********************************************************
- * Define data struct for schema constraint binary database
- **********************************************************/
-
 using System.Diagnostics;
-
-using SdbIndex = System.UInt16;
+using System.Runtime.InteropServices;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Particle constraint data.
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     [DebuggerDisplay("ParticleType={ParticleType}")]
-    internal class SdbParticleConstraint : SdbData
+    internal readonly struct SdbParticleConstraint
     {
-        /// <summary>
-        /// Represent maxOccurs="unbounded" by "0".
-        /// </summary>
-        public const ushort UnboundedMaxOccurs = 0;
+        public SdbParticleConstraint(
+            ParticleType particleType,
+            ushort elementTypeId,
+            ushort minOccurs,
+            int maxOccurs,
+            ushort childrenCount,
+            ushort childrenStartIndex)
+        {
+            ParticleType = particleType;
+            ElementTypeId = elementTypeId;
+            MinOccurs = minOccurs;
+            MaxOccurs = maxOccurs;
+            ChildrenCount = childrenCount;
+            ChildrenStartIndex = childrenStartIndex;
+        }
 
         /// <summary>
-        /// Gets or sets the particle type of this particle.
+        /// Gets the particle type of this particle.
         /// </summary>
-        public ParticleType ParticleType { get; set; }
+        public ParticleType ParticleType { get; }
 
         /// <summary>
-        /// Gets or sets the element type ID (class ID).
+        /// Gets the element type ID (class ID).
         /// </summary>
-        public SdbIndex ElementTypeId { get; set; }
+        public ushort ElementTypeId { get; }
 
         /// <summary>
-        /// Gets or sets the xsd:minOccurs value of this particle.
-        /// Just use ushort at now. throw exceptions if thera are numbers > ushort.MaxValue.
+        /// Gets the xsd:minOccurs value of this particle.
+        /// Just use ushort at now. throw exceptions if there are numbers > ushort.MaxValue.
         /// </summary>
-        public ushort MinOccurs { get; set; }
+        public ushort MinOccurs { get; }
 
         /// <summary>
-        /// Gets or sets the xsd:maxOccurs value of this particle.
+        /// Gets the xsd:maxOccurs value of this particle.
         /// ushort is not enough.
         /// </summary>
-        public int MaxOccurs { get; set; }
+        public int MaxOccurs { get; }
 
         /// <summary>
-        /// Gets or sets count of children particles.
+        /// Gets count of children particles.
         /// </summary>
-        public SdbIndex ChildrenCount { get; set; }
+        public ushort ChildrenCount { get; }
 
         /// <summary>
-        /// Gets or sets the index of the first child particle index in the SdbParticleChildrenIndex data array.
+        /// Gets the index of the first child particle index in the SdbParticleChildrenIndex data array.
         /// </summary>
-        public SdbIndex ChildrenStartIndex { get; set; }
+        public ushort ChildrenStartIndex { get; }
 
+#if DEBUG
         /// <summary>
-        /// Gets the namespace ID defiend in "xsd:any" when the particle type is ParticleType.Any or ParticleType.AnyWithUri
+        /// Gets the namespace ID defined in "xsd:any" when the particle type is ParticleType.Any or ParticleType.AnyWithUri
         /// </summary>
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        public SdbIndex XsdAnyNamespaceId
+        public ushort XsdAnyNamespaceId
         {
             get
             {
@@ -69,48 +76,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 return ElementTypeId;
             }
         }
-
-        /// <summary>
-        /// Gets the size in bytes of this data structure.
-        /// </summary>
-        public static int TypeSize
-        {
-            get
-            {
-                return sizeof(ParticleType) +
-                        sizeof(SdbIndex) +
-                        sizeof(ushort) +
-                        sizeof(int) +
-                        sizeof(SdbIndex) +
-                        sizeof(SdbIndex);
-            }
-        }
-
-        /// <inheritdoc/>
-        public override int DataSize => TypeSize;
-
-        /// <inheritdoc/>
-        public override byte[] GetBytes()
-        {
-            // !!!!Caution: keep the order of the following code lines!!!!
-            return GetBytes(ParticleType.Bytes(),
-                ElementTypeId.Bytes(),
-                MinOccurs.Bytes(),
-                MaxOccurs.Bytes(),
-                ChildrenCount.Bytes(),
-                ChildrenStartIndex.Bytes());
-        }
-
-        /// <inheritdoc/>
-        public override void LoadFromBytes(byte[] value, int startIndex)
-        {
-            // !!!!Caution: keep the order of the following code lines!!!!
-            ParticleType = (ParticleType)LoadByte(value, ref startIndex);
-            ElementTypeId = LoadSdbIndex(value, ref startIndex);
-            MinOccurs = LoadUInt16(value, ref startIndex);
-            MaxOccurs = LoadInt(value, ref startIndex);
-            ChildrenCount = LoadSdbIndex(value, ref startIndex);
-            ChildrenStartIndex = LoadSdbIndex(value, ref startIndex);
-        }
+#endif
     }
 }

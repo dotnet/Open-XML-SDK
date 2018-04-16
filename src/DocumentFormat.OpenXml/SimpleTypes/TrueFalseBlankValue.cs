@@ -7,7 +7,7 @@ using System.Diagnostics;
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Represents the datatype for attributes that have enum values that are Boolean values that represent 't' or 'f', or 'true' or 'false'.
+    /// Represents the data type for attributes that have enum values that are Boolean values that represent 't' or 'f', or 'true' or 'false'.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
     public class TrueFalseBlankValue : OpenXmlSimpleValue<bool>
@@ -39,25 +39,26 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Implicitly converts a TrueFalseBlankValue object to a <see cref="Boolean"/> value.
+        /// Implicitly converts a TrueFalseBlankValue object to a <see cref="bool"/> value.
         /// </summary>
         /// <param name="xmlAttribute">The source <see cref="TrueFalseBlankValue"/> to convert.</param>
-        /// <returns>The converted <see cref="Boolean"/> value.</returns>
-        public static implicit operator Boolean(TrueFalseBlankValue xmlAttribute)
+        /// <returns>The converted <see cref="bool"/> value.</returns>
+        public static implicit operator bool(TrueFalseBlankValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
+
             return ToBoolean(xmlAttribute);
         }
 
         /// <summary>
-        /// Implicitly converts a <see cref="Boolean"/> value to a TrueFalsBlankValue value.
+        /// Implicitly converts a <see cref="bool"/> value to a TrueFalsBlankValue value.
         /// </summary>
-        /// <param name="value">The source <see cref="Boolean"/> value to convert.</param>
+        /// <param name="value">The source <see cref="bool"/> value to convert.</param>
         /// <returns>The converted <see cref="TrueFalseBlankValue"/> value.</returns>
-        public static implicit operator TrueFalseBlankValue(Boolean value)
+        public static implicit operator TrueFalseBlankValue(bool value)
         {
             return FromBoolean(value);
         }
@@ -67,7 +68,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">A Boolean value to create a new TrueFalseBlankValue object from.</param>
         /// <returns>A TrueFalseBlankValue that corresponds to the value parameter.</returns>
-        public static TrueFalseBlankValue FromBoolean(Boolean value)
+        public static TrueFalseBlankValue FromBoolean(bool value)
         {
             return new TrueFalseBlankValue(value);
         }
@@ -77,7 +78,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="xmlAttribute">A TrueFalseBlankValue object to retrieve an internal Boolean representation.</param>
         /// <returns>A Boolean value that represents a TrueFalseBlankValue object.</returns>
-        public static Boolean ToBoolean(TrueFalseBlankValue xmlAttribute)
+        public static bool ToBoolean(TrueFalseBlankValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {
@@ -137,7 +138,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>"t" for True, "f" for false.</returns>
         private protected override string GetText(bool boolValue)
         {
-            // TODO : Define the defaul text value.
+            // TODO : Define the default text value.
             return boolValue ? "true" : "false";
         }
     }

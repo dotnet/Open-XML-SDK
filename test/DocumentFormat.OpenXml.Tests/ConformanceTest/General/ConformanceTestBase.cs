@@ -58,7 +58,7 @@ namespace DocumentFormat.OpenXml.Tests
             {
                 MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(
                         MarkupCompatibilityProcessMode.ProcessAllParts,
-                        DocumentFormat.OpenXml.FileFormatVersions.Office2013)
+                        DocumentFormat.OpenXml.FileFormatVersions.Office2013),
             };
 
             if (typeof(TPackage) == typeof(WordprocessingDocument))
@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Obtains elements in a documet package
+        /// Obtains elements in a document package
         /// </summary>
         /// <typeparam name="TElement">Element type</typeparam>
         /// <param name="package">Target document</param>

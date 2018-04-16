@@ -25,6 +25,7 @@ namespace DocumentFormat.OpenXml
                 {
                     _mcSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.NoProcess, FileFormatVersions.Office2007.AndLater());
                 }
+
                 return _mcSettings;
             }
 
@@ -69,7 +70,7 @@ namespace DocumentFormat.OpenXml
         {
             var nameTable = new NameTable();
 
-            // load predifined namespace to nametable
+            // load predefined namespace to nametable
             for (int i = 1; i < NamespaceIdMap.Count; i++)
             {
                 nameTable.Add(NamespaceIdMap.GetNamespaceUri((byte)i));
@@ -87,8 +88,8 @@ namespace DocumentFormat.OpenXml
                 NameTable = new NameTable(),
 
                 // Set IgnoreWhitespace to false for the SDK to handle the whitespace node type. We have to do this because
-                // PPT does not use the preserve attribute (xml:space="preserve") for non-ignorable whitespaces.
-                IgnoreWhitespace = false
+                // PPT does not use the preserve attribute (xml:space="preserve") for non-ignorable whitespace.
+                IgnoreWhitespace = false,
             };
         }
 

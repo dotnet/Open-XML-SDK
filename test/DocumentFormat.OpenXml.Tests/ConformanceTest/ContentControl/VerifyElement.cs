@@ -65,6 +65,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             {
                                 log.Verify(sdtBlock.SdtProperties.Descendants<W15.Appearance>().First().Val == W15.SdtAppearance.Tags, "Do not have the expected value element.Its values is \"Tags\".");
                             }
+
                             break;
 
                         //Tag is "Test1.2.2"
@@ -79,6 +80,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             {
                                 log.Verify(sdtBlock.SdtProperties.Descendants<W15.Appearance>().First().Val == W15.SdtAppearance.Hidden, "Do not have the expected value element.Its values is \"Hidden\".");
                             }
+
                             break;
 
                         //Tag is "Test1.2.3"
@@ -95,6 +97,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             {
                                 log.Pass("There is no element appearance. This is enabled by default.");
                             }
+
                             break;
 
                         //Tag is "Test1.3.1"
@@ -158,6 +161,7 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                             {
                                 log.Fail("SectionTitle is not detected.");
                             }
+
                             break;
 
                         //Tag is "Test1.5.1_1"

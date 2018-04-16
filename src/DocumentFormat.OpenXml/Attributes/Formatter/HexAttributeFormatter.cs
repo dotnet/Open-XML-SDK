@@ -33,7 +33,7 @@ namespace DocumentFormat.OpenXml.Attributes.Formatter
 
             try
             {
-                Int64.TryParse(strValue, NumberStyles.HexNumber, new CultureInfo("en-US"), out longValue);
+                long.TryParse(strValue, NumberStyles.HexNumber, new CultureInfo("en-US"), out longValue);
             }
             catch
             {

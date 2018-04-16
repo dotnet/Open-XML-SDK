@@ -118,7 +118,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// Open specified exsting package.
+        /// Open specified exciting package.
         /// </summary>
         /// <param name="file">File to be opened.</param>
         /// <param name="writable">Open package in read/write mode if true, false for readonly.</param>
@@ -139,7 +139,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var settings = new OpenSettings()
             {
-                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(mcProcessMode, format)
+                MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(mcProcessMode, format),
             };
 
             return OpenPackage(file, writable, settings);
@@ -177,11 +177,11 @@ namespace DocumentFormat.OpenXml.Tests
             }
         }
 
-        public static OpenXmlPackage CreatePackage(this FileInfo file, Boolean overwiteIfExist)
+        public static OpenXmlPackage CreatePackage(this FileInfo file, bool overwiteIfExist)
         {
             if (file.Exists)
             {
-                throw new InvalidOperationException(String.Format("The file {0} exists!!", file.FullName));
+                throw new InvalidOperationException(string.Format("The file {0} exists!!", file.FullName));
             }
 
             if (IsWordprocessingFile(file))

@@ -36,10 +36,10 @@
       </ItemGroup>
 
       <ItemGroup>
-        <Compile Include="System\Collections\Generic\IReadOnlyList.cs" />
         <Compile Include="System\Collections\Generic\IReadOnlyCollection.cs" />
         <Compile Include="System\Collections\Generic\IReadOnlyDictionary.cs" />
         <Compile Include="System\Reflection\TypeExtensions.cs" />
+        <Compile Include="System\Runtime\InteropServices\Marshal.cs" />
       </ItemGroup>
 
       <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">
@@ -86,6 +86,7 @@
   <!-- Include the constraint data that are stored in bin files -->
   <ItemGroup>
     <EmbeddedResource Include="GeneratedCode\*.constraints" />
+    <EmbeddedResource Include="GeneratedCode\*.restrictions.xml" />
   </ItemGroup>
 
   <ItemGroup>

@@ -49360,7 +49360,7 @@ public partial class ConditionalFormatting : OpenXmlCompositeElement
     }
     
     /// <summary>
-    /// <para> Sequence of Refernces.</para>
+    /// <para> Sequence of References.</para>
     /// <para>Represents the following attribute in the schema: sqref </para>
     /// </summary>
     [SchemaAttr(0, "sqref")]
@@ -64090,7 +64090,7 @@ None,
  
 }
 /// <summary>
-/// Text Field Datatype 
+/// Text Field Data Type 
 /// </summary> 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ExternalConnectionValues
@@ -66638,7 +66638,7 @@ SecondRowStripe,
 [EnumString("firstColumnStripe")]
 FirstColumnStripe,
 ///<summary>
-///Second Column Stipe Style.
+///Second Column Stripe Style.
 ///<para>When the item is serialized out as xml, its value is "secondColumnStripe".</para>
 ///</summary>
 [EnumString("secondColumnStripe")]

@@ -12,6 +12,6 @@ namespace DocumentFormat.OpenXml
         LeafEnd,
         LoadEnd,
         MiscNode,
-        EOF
+        EOF,
     }
 }

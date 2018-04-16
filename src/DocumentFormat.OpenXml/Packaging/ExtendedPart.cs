@@ -87,7 +87,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Init a new created part
+        /// Initialize a new created part
         /// </summary>
         /// <typeparam name="T">The type of the part, must be derived from OpenXmlPart.</typeparam>
         /// <param name="newPart">The part to be initialized.</param>

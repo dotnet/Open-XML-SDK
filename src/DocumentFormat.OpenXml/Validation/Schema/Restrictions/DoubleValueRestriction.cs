@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
 using System.Runtime.Serialization;
 
 namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
@@ -9,12 +8,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// <summary>
     /// Double (xsd:double) based value restriction.
     /// </summary>
-    [DataContract]
-    internal class DoubleValueRestriction : SimpleValueRestriction<Double, DoubleValue>
+    [DataContract(Name = "dbl")]
+    internal class DoubleValueRestriction : SimpleValueRestriction<double, DoubleValue>
     {
-        protected override Double MinValue => Double.MinValue;
+        protected override double MinValue => double.MinValue;
 
-        protected override Double MaxValue => Double.MaxValue;
+        protected override double MaxValue => double.MaxValue;
 
         /// <inheritdoc />
         public override XsdType XsdType => XsdType.Double;
@@ -30,6 +29,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
                 //double value = ((DoubleValue)attributeValue).Value;
                 //return !double.IsNaN(value);
             }
+
             return false;
         }
     }

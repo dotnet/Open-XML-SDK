@@ -37,6 +37,7 @@ namespace DocumentFormat.OpenXml
             {
                 return 1;
             }
+
             if (element is OpenXmlUnknownElement)
             {
                 foreach (var child in element.Parent.ChildElements)
@@ -45,6 +46,7 @@ namespace DocumentFormat.OpenXml
                     {
                         return count;
                     }
+
                     if (child is OpenXmlUnknownElement &&
                         child.NamespaceUri == element.NamespaceUri &&
                         child.LocalName == element.LocalName)
@@ -63,6 +65,7 @@ namespace DocumentFormat.OpenXml
                     {
                         return count;
                     }
+
                     if (type == child.GetType())
                     {
                         count++;
@@ -97,7 +100,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets the URI of the part the elementt is in.
+        /// Gets the URI of the part the element is in.
         /// </summary>
         /// <param name="element">The element.</param>
         /// <returns>The URI of the part the element is in. Returns null if not in a part.</returns>
@@ -206,11 +209,12 @@ namespace DocumentFormat.OpenXml
                     }
                 }
             }
+
             return false;
         }
 
         /// <summary>
-        /// Trys to create an OpenXmlElement from the specified namesapce URI and local name.
+        /// Trys to create an OpenXmlElement from the specified namespace URI and local name.
         /// </summary>
         /// <param name="parent">The parent element.</param>
         /// <param name="fileFormat">The specified file format version.</param>
@@ -227,6 +231,7 @@ namespace DocumentFormat.OpenXml
             {
                 return null;
             }
+
             return newElement;
         }
     }

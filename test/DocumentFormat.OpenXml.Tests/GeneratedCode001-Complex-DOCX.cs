@@ -204,7 +204,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Ap.HeadingPairs headingPairs1 = new Ap.HeadingPairs();
 
-            Vt.VTVector vTVector1 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Variant, Size = (UInt32Value)2U };
+            Vt.VTVector vTVector1 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Variant, Size = 2U };
 
             Vt.Variant variant1 = new Vt.Variant();
             Vt.VTLPSTR vTLPSTR1 = new Vt.VTLPSTR();
@@ -225,15 +225,15 @@ namespace DocumentFormat.OpenXml.Tests
 
             Ap.TitlesOfParts titlesOfParts1 = new Ap.TitlesOfParts();
 
-            Vt.VTVector vTVector2 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Lpstr, Size = (UInt32Value)1U };
+            Vt.VTVector vTVector2 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Lpstr, Size = 1U };
             Vt.VTLPSTR vTLPSTR2 = new Vt.VTLPSTR();
-            vTLPSTR2.Text = "";
+            vTLPSTR2.Text = string.Empty;
 
             vTVector2.Append(vTLPSTR2);
 
             titlesOfParts1.Append(vTVector2);
             Ap.Company company1 = new Ap.Company();
-            company1.Text = "";
+            company1.Text = string.Empty;
             Ap.LinksUpToDate linksUpToDate1 = new Ap.LinksUpToDate();
             linksUpToDate1.Text = "false";
             Ap.CharactersWithSpaces charactersWithSpaces1 = new Ap.CharactersWithSpaces();
@@ -307,7 +307,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             var drawing1 = new W.Drawing();
 
-            Wp.Anchor anchor1 = new Wp.Anchor() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)114300U, DistanceFromRight = (UInt32Value)114300U, SimplePos = false, RelativeHeight = (UInt32Value)251659776U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "51885242", AnchorId = "1EE8516C" };
+            Wp.Anchor anchor1 = new Wp.Anchor() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 114300U, DistanceFromRight = 114300U, SimplePos = false, RelativeHeight = 251659776U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "51885242", AnchorId = "1EE8516C" };
             Wp.SimplePosition simplePosition1 = new Wp.SimplePosition() { X = 0L, Y = 0L };
 
             Wp.HorizontalPosition horizontalPosition1 = new Wp.HorizontalPosition() { RelativeFrom = Wp.HorizontalRelativePositionValues.Column };
@@ -324,7 +324,7 @@ namespace DocumentFormat.OpenXml.Tests
             Wp.Extent extent1 = new Wp.Extent() { Cx = 2149522L, Cy = 1207827L };
             Wp.EffectExtent effectExtent1 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 79375L, BottomEdge = 87630L };
             Wp.WrapNone wrapNone1 = new Wp.WrapNone();
-            Wp.DocProperties docProperties1 = new Wp.DocProperties() { Id = (UInt32Value)1U, Name = "Elbow Connector 6" };
+            Wp.DocProperties docProperties1 = new Wp.DocProperties() { Id = 1U, Name = "Elbow Connector 6" };
             Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties1 = new Wp.NonVisualGraphicFrameDrawingProperties();
 
             A.Graphic graphic1 = new A.Graphic();
@@ -360,17 +360,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Wps.ShapeStyle shapeStyle1 = new Wps.ShapeStyle();
 
-            A.LineReference lineReference1 = new A.LineReference() { Index = (UInt32Value)1U };
+            A.LineReference lineReference1 = new A.LineReference() { Index = 1U };
             A.SchemeColor schemeColor1 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference1.Append(schemeColor1);
 
-            A.FillReference fillReference1 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference1 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor2 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference1.Append(schemeColor2);
 
-            A.EffectReference effectReference1 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference1 = new A.EffectReference() { Index = 0U };
             A.SchemeColor schemeColor3 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference1.Append(schemeColor3);
@@ -464,7 +464,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             W.Drawing drawing2 = new W.Drawing();
 
-            Wp.Anchor anchor2 = new Wp.Anchor() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)114300U, DistanceFromRight = (UInt32Value)114300U, SimplePos = false, RelativeHeight = (UInt32Value)251657728U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "28D8910E", AnchorId = "75C88664" };
+            Wp.Anchor anchor2 = new Wp.Anchor() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 114300U, DistanceFromRight = 114300U, SimplePos = false, RelativeHeight = 251657728U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "28D8910E", AnchorId = "75C88664" };
             Wp.SimplePosition simplePosition2 = new Wp.SimplePosition() { X = 0L, Y = 0L };
 
             Wp.HorizontalPosition horizontalPosition2 = new Wp.HorizontalPosition() { RelativeFrom = Wp.HorizontalRelativePositionValues.Column };
@@ -481,7 +481,7 @@ namespace DocumentFormat.OpenXml.Tests
             Wp.Extent extent2 = new Wp.Extent() { Cx = 2354239L, Cy = 962167L };
             Wp.EffectExtent effectExtent2 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 19050L, RightEdge = 27305L, BottomEdge = 28575L };
             Wp.WrapNone wrapNone2 = new Wp.WrapNone();
-            Wp.DocProperties docProperties2 = new Wp.DocProperties() { Id = (UInt32Value)2U, Name = "Curved Connector 5" };
+            Wp.DocProperties docProperties2 = new Wp.DocProperties() { Id = 2U, Name = "Curved Connector 5" };
             Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties2 = new Wp.NonVisualGraphicFrameDrawingProperties();
 
             A.Graphic graphic2 = new A.Graphic();
@@ -511,17 +511,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Wps.ShapeStyle shapeStyle2 = new Wps.ShapeStyle();
 
-            A.LineReference lineReference2 = new A.LineReference() { Index = (UInt32Value)1U };
+            A.LineReference lineReference2 = new A.LineReference() { Index = 1U };
             A.SchemeColor schemeColor5 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             lineReference2.Append(schemeColor5);
 
-            A.FillReference fillReference2 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference2 = new A.FillReference() { Index = 0U };
             A.SchemeColor schemeColor6 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference2.Append(schemeColor6);
 
-            A.EffectReference effectReference2 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference2 = new A.EffectReference() { Index = 0U };
             A.SchemeColor schemeColor7 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference2.Append(schemeColor7);
@@ -617,10 +617,10 @@ namespace DocumentFormat.OpenXml.Tests
 
             W.Drawing drawing3 = new W.Drawing();
 
-            Wp.Inline inline1 = new Wp.Inline() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)0U, DistanceFromRight = (UInt32Value)0U, AnchorId = "1741A120", EditId = "4BCF16B3" };
+            Wp.Inline inline1 = new Wp.Inline() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 0U, DistanceFromRight = 0U, AnchorId = "1741A120", EditId = "4BCF16B3" };
             Wp.Extent extent3 = new Wp.Extent() { Cx = 5104263L, Cy = 2122227L };
             Wp.EffectExtent effectExtent3 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 0L, BottomEdge = 0L };
-            Wp.DocProperties docProperties3 = new Wp.DocProperties() { Id = (UInt32Value)3U, Name = "Rectangle 3" };
+            Wp.DocProperties docProperties3 = new Wp.DocProperties() { Id = 3U, Name = "Rectangle 3" };
             Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties3 = new Wp.NonVisualGraphicFrameDrawingProperties();
 
             A.Graphic graphic3 = new A.Graphic();
@@ -658,7 +658,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Wps.ShapeStyle shapeStyle3 = new Wps.ShapeStyle();
 
-            A.LineReference lineReference3 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference3 = new A.LineReference() { Index = 2U };
 
             A.SchemeColor schemeColor9 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
             A.Shade shade1 = new A.Shade() { Val = 50000 };
@@ -667,12 +667,12 @@ namespace DocumentFormat.OpenXml.Tests
 
             lineReference3.Append(schemeColor9);
 
-            A.FillReference fillReference3 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference3 = new A.FillReference() { Index = 1U };
             A.SchemeColor schemeColor10 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference3.Append(schemeColor10);
 
-            A.EffectReference effectReference3 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference3 = new A.EffectReference() { Index = 0U };
             A.SchemeColor schemeColor11 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference3.Append(schemeColor11);
@@ -751,7 +751,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             W.Drawing drawing4 = new W.Drawing();
 
-            Wp.Anchor anchor3 = new Wp.Anchor() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)114300U, DistanceFromRight = (UInt32Value)114300U, SimplePos = false, RelativeHeight = (UInt32Value)251655680U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "30828679", AnchorId = "62A6B534" };
+            Wp.Anchor anchor3 = new Wp.Anchor() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 114300U, DistanceFromRight = 114300U, SimplePos = false, RelativeHeight = 251655680U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "30828679", AnchorId = "62A6B534" };
             Wp.SimplePosition simplePosition3 = new Wp.SimplePosition() { X = 0L, Y = 0L };
 
             Wp.HorizontalPosition horizontalPosition3 = new Wp.HorizontalPosition() { RelativeFrom = Wp.HorizontalRelativePositionValues.Column };
@@ -768,7 +768,7 @@ namespace DocumentFormat.OpenXml.Tests
             Wp.Extent extent4 = new Wp.Extent() { Cx = 1160060L, Cy = 320723L };
             Wp.EffectExtent effectExtent4 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 19050L, RightEdge = 40640L, BottomEdge = 41275L };
             Wp.WrapNone wrapNone3 = new Wp.WrapNone();
-            Wp.DocProperties docProperties4 = new Wp.DocProperties() { Id = (UInt32Value)4U, Name = "Right Arrow 2" };
+            Wp.DocProperties docProperties4 = new Wp.DocProperties() { Id = 4U, Name = "Right Arrow 2" };
             Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties4 = new Wp.NonVisualGraphicFrameDrawingProperties();
 
             A.Graphic graphic4 = new A.Graphic();
@@ -798,7 +798,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Wps.ShapeStyle shapeStyle4 = new Wps.ShapeStyle();
 
-            A.LineReference lineReference4 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference4 = new A.LineReference() { Index = 2U };
 
             A.SchemeColor schemeColor13 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
             A.Shade shade2 = new A.Shade() { Val = 50000 };
@@ -807,12 +807,12 @@ namespace DocumentFormat.OpenXml.Tests
 
             lineReference4.Append(schemeColor13);
 
-            A.FillReference fillReference4 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference4 = new A.FillReference() { Index = 1U };
             A.SchemeColor schemeColor14 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference4.Append(schemeColor14);
 
-            A.EffectReference effectReference4 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference4 = new A.EffectReference() { Index = 0U };
             A.SchemeColor schemeColor15 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference4.Append(schemeColor15);
@@ -922,7 +922,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             W.Drawing drawing5 = new W.Drawing();
 
-            Wp.Anchor anchor4 = new Wp.Anchor() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)114300U, DistanceFromRight = (UInt32Value)114300U, SimplePos = false, RelativeHeight = (UInt32Value)251652608U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "7D093DEA", AnchorId = "1A6DB018" };
+            Wp.Anchor anchor4 = new Wp.Anchor() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 114300U, DistanceFromRight = 114300U, SimplePos = false, RelativeHeight = 251652608U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "7D093DEA", AnchorId = "1A6DB018" };
             Wp.SimplePosition simplePosition4 = new Wp.SimplePosition() { X = 0L, Y = 0L };
 
             Wp.HorizontalPosition horizontalPosition4 = new Wp.HorizontalPosition() { RelativeFrom = Wp.HorizontalRelativePositionValues.Column };
@@ -939,7 +939,7 @@ namespace DocumentFormat.OpenXml.Tests
             Wp.Extent extent5 = new Wp.Extent() { Cx = 1692323L, Cy = 1030406L };
             Wp.EffectExtent effectExtent5 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 22225L, BottomEdge = 17780L };
             Wp.WrapNone wrapNone4 = new Wp.WrapNone();
-            Wp.DocProperties docProperties5 = new Wp.DocProperties() { Id = (UInt32Value)5U, Name = "Rectangle 1" };
+            Wp.DocProperties docProperties5 = new Wp.DocProperties() { Id = 5U, Name = "Rectangle 1" };
             Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties5 = new Wp.NonVisualGraphicFrameDrawingProperties();
 
             A.Graphic graphic5 = new A.Graphic();
@@ -969,7 +969,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Wps.ShapeStyle shapeStyle5 = new Wps.ShapeStyle();
 
-            A.LineReference lineReference5 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference5 = new A.LineReference() { Index = 2U };
 
             A.SchemeColor schemeColor17 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
             A.Shade shade3 = new A.Shade() { Val = 50000 };
@@ -978,12 +978,12 @@ namespace DocumentFormat.OpenXml.Tests
 
             lineReference5.Append(schemeColor17);
 
-            A.FillReference fillReference5 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference5 = new A.FillReference() { Index = 1U };
             A.SchemeColor schemeColor18 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference5.Append(schemeColor18);
 
-            A.EffectReference effectReference5 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference5 = new A.EffectReference() { Index = 0U };
             A.SchemeColor schemeColor19 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference5.Append(schemeColor19);
@@ -1069,10 +1069,10 @@ namespace DocumentFormat.OpenXml.Tests
 
             W.Drawing drawing6 = new W.Drawing();
 
-            Wp.Inline inline2 = new Wp.Inline() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)0U, DistanceFromRight = (UInt32Value)0U, AnchorId = "669938DC", EditId = "1F273DB2" };
+            Wp.Inline inline2 = new Wp.Inline() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 0U, DistanceFromRight = 0U, AnchorId = "669938DC", EditId = "1F273DB2" };
             Wp.Extent extent6 = new Wp.Extent() { Cx = 5486400L, Cy = 3200400L };
             Wp.EffectExtent effectExtent6 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 0L, BottomEdge = 0L };
-            Wp.DocProperties docProperties6 = new Wp.DocProperties() { Id = (UInt32Value)6U, Name = "Chart 1" };
+            Wp.DocProperties docProperties6 = new Wp.DocProperties() { Id = 6U, Name = "Chart 1" };
             Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties6 = new Wp.NonVisualGraphicFrameDrawingProperties();
 
             A.Graphic graphic6 = new A.Graphic();
@@ -1647,10 +1647,10 @@ namespace DocumentFormat.OpenXml.Tests
 
             W.Drawing drawing7 = new W.Drawing();
 
-            Wp.Inline inline3 = new Wp.Inline() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)0U, DistanceFromRight = (UInt32Value)0U, AnchorId = "3F768D1D", EditId = "421054E5" };
+            Wp.Inline inline3 = new Wp.Inline() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 0U, DistanceFromRight = 0U, AnchorId = "3F768D1D", EditId = "421054E5" };
             Wp.Extent extent7 = new Wp.Extent() { Cx = 1903730L, Cy = 1515822L };
             Wp.EffectExtent effectExtent7 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 1270L, BottomEdge = 8255L };
-            Wp.DocProperties docProperties7 = new Wp.DocProperties() { Id = (UInt32Value)7U, Name = "Picture 1" };
+            Wp.DocProperties docProperties7 = new Wp.DocProperties() { Id = 7U, Name = "Picture 1" };
 
             Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties7 = new Wp.NonVisualGraphicFrameDrawingProperties();
 
@@ -1668,7 +1668,7 @@ namespace DocumentFormat.OpenXml.Tests
             picture6.AddNamespaceDeclaration("pic", "http://schemas.openxmlformats.org/drawingml/2006/picture");
 
             Pic.NonVisualPictureProperties nonVisualPictureProperties1 = new Pic.NonVisualPictureProperties();
-            Pic.NonVisualDrawingProperties nonVisualDrawingProperties1 = new Pic.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "Picture 1" };
+            Pic.NonVisualDrawingProperties nonVisualDrawingProperties1 = new Pic.NonVisualDrawingProperties() { Id = 0U, Name = "Picture 1" };
 
             Pic.NonVisualPictureDrawingProperties nonVisualPictureDrawingProperties1 = new Pic.NonVisualPictureDrawingProperties();
             A.PictureLocks pictureLocks1 = new A.PictureLocks() { NoChangeAspect = true, NoChangeArrowheads = true };
@@ -1881,8 +1881,8 @@ namespace DocumentFormat.OpenXml.Tests
             FooterReference footerReference2 = new FooterReference() { Type = HeaderFooterValues.Default, Id = "rId15" };
             HeaderReference headerReference3 = new HeaderReference() { Type = HeaderFooterValues.First, Id = "rId16" };
             FooterReference footerReference3 = new FooterReference() { Type = HeaderFooterValues.First, Id = "rId17" };
-            PageSize pageSize1 = new PageSize() { Width = (UInt32Value)12240U, Height = (UInt32Value)15840U };
-            PageMargin pageMargin1 = new PageMargin() { Top = 1440, Right = (UInt32Value)1440U, Bottom = 1440, Left = (UInt32Value)1440U, Header = (UInt32Value)720U, Footer = (UInt32Value)720U, Gutter = (UInt32Value)0U };
+            PageSize pageSize1 = new PageSize() { Width = 12240U, Height = 15840U };
+            PageMargin pageMargin1 = new PageMargin() { Top = 1440, Right = 1440U, Bottom = 1440, Left = 1440U, Header = 720U, Footer = 720U, Gutter = 0U };
             Columns columns1 = new Columns() { Space = "720" };
             DocGrid docGrid1 = new DocGrid() { LinePitch = 360 };
 
@@ -1906,10 +1906,10 @@ namespace DocumentFormat.OpenXml.Tests
             ParagraphProperties paragraphProperties18 = new ParagraphProperties();
 
             ParagraphBorders paragraphBorders1 = new ParagraphBorders();
-            TopBorder topBorder1 = new TopBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)1U };
-            LeftBorder leftBorder1 = new LeftBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)4U };
-            BottomBorder bottomBorder1 = new BottomBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)1U };
-            RightBorder rightBorder1 = new RightBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)4U };
+            TopBorder topBorder1 = new TopBorder() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 1U };
+            LeftBorder leftBorder1 = new LeftBorder() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 4U };
+            BottomBorder bottomBorder1 = new BottomBorder() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 1U };
+            RightBorder rightBorder1 = new RightBorder() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 4U };
 
             paragraphBorders1.Append(topBorder1);
             paragraphBorders1.Append(leftBorder1);
@@ -2635,10 +2635,10 @@ namespace DocumentFormat.OpenXml.Tests
 
             W.Drawing drawing8 = new W.Drawing();
 
-            Wp.Inline inline4 = new Wp.Inline() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)0U, DistanceFromRight = (UInt32Value)0U, AnchorId = "0795BA59", EditId = "161AA40E" };
+            Wp.Inline inline4 = new Wp.Inline() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 0U, DistanceFromRight = 0U, AnchorId = "0795BA59", EditId = "161AA40E" };
             Wp.Extent extent8 = new Wp.Extent() { Cx = 1903730L, Cy = 1515822L };
             Wp.EffectExtent effectExtent8 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 1270L, BottomEdge = 8255L };
-            Wp.DocProperties docProperties8 = new Wp.DocProperties() { Id = (UInt32Value)8U, Name = "Picture 1" };
+            Wp.DocProperties docProperties8 = new Wp.DocProperties() { Id = 8U, Name = "Picture 1" };
 
             Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties8 = new Wp.NonVisualGraphicFrameDrawingProperties();
 
@@ -2656,7 +2656,7 @@ namespace DocumentFormat.OpenXml.Tests
             picture7.AddNamespaceDeclaration("pic", "http://schemas.openxmlformats.org/drawingml/2006/picture");
 
             Pic.NonVisualPictureProperties nonVisualPictureProperties2 = new Pic.NonVisualPictureProperties();
-            Pic.NonVisualDrawingProperties nonVisualDrawingProperties2 = new Pic.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "Picture 1" };
+            Pic.NonVisualDrawingProperties nonVisualDrawingProperties2 = new Pic.NonVisualDrawingProperties() { Id = 0U, Name = "Picture 1" };
 
             Pic.NonVisualPictureDrawingProperties nonVisualPictureDrawingProperties2 = new Pic.NonVisualPictureDrawingProperties();
             A.PictureLocks pictureLocks2 = new A.PictureLocks() { NoChangeAspect = true, NoChangeArrowheads = true };
@@ -2872,7 +2872,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             W.Drawing drawing9 = new W.Drawing();
 
-            Wp.Anchor anchor5 = new Wp.Anchor() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)114300U, DistanceFromRight = (UInt32Value)114300U, SimplePos = false, RelativeHeight = (UInt32Value)251662848U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "02733561", AnchorId = "171457A6" };
+            Wp.Anchor anchor5 = new Wp.Anchor() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 114300U, DistanceFromRight = 114300U, SimplePos = false, RelativeHeight = 251662848U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "02733561", AnchorId = "171457A6" };
             Wp.SimplePosition simplePosition5 = new Wp.SimplePosition() { X = 0L, Y = 0L };
 
             AlternateContent alternateContent7 = new AlternateContent();
@@ -2927,7 +2927,7 @@ namespace DocumentFormat.OpenXml.Tests
             Wp.Extent extent9 = new Wp.Extent() { Cx = 2797810L, Cy = 268605L };
             Wp.EffectExtent effectExtent9 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 0L, BottomEdge = 0L };
             Wp.WrapSquare wrapSquare1 = new Wp.WrapSquare() { WrapText = Wp.WrapTextValues.BothSides };
-            Wp.DocProperties docProperties9 = new Wp.DocProperties() { Id = (UInt32Value)9U, Name = "Text Box 465" };
+            Wp.DocProperties docProperties9 = new Wp.DocProperties() { Id = 9U, Name = "Text Box 465" };
             Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties9 = new Wp.NonVisualGraphicFrameDrawingProperties();
 
             A.Graphic graphic9 = new A.Graphic();
@@ -3195,7 +3195,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             W.Drawing drawing10 = new W.Drawing();
 
-            Wp.Anchor anchor6 = new Wp.Anchor() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)114300U, DistanceFromRight = (UInt32Value)114300U, SimplePos = false, RelativeHeight = (UInt32Value)251661824U, BehindDoc = true, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "033A564A", AnchorId = "18D374F3" };
+            Wp.Anchor anchor6 = new Wp.Anchor() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 114300U, DistanceFromRight = 114300U, SimplePos = false, RelativeHeight = 251661824U, BehindDoc = true, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "033A564A", AnchorId = "18D374F3" };
             Wp.SimplePosition simplePosition6 = new Wp.SimplePosition() { X = 0L, Y = 0L };
 
             Wp.HorizontalPosition horizontalPosition7 = new Wp.HorizontalPosition() { RelativeFrom = Wp.HorizontalRelativePositionValues.Page };
@@ -3212,7 +3212,7 @@ namespace DocumentFormat.OpenXml.Tests
             Wp.Extent extent10 = new Wp.Extent() { Cx = 7383780L, Cy = 9555480L };
             Wp.EffectExtent effectExtent10 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 7620L, BottomEdge = 7620L };
             Wp.WrapNone wrapNone5 = new Wp.WrapNone();
-            Wp.DocProperties docProperties10 = new Wp.DocProperties() { Id = (UInt32Value)10U, Name = "Rectangle 466" };
+            Wp.DocProperties docProperties10 = new Wp.DocProperties() { Id = 10U, Name = "Rectangle 466" };
 
             Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties10 = new Wp.NonVisualGraphicFrameDrawingProperties();
 
@@ -3290,7 +3290,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Wps.ShapeStyle shapeStyle6 = new Wps.ShapeStyle();
 
-            A.LineReference lineReference6 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference6 = new A.LineReference() { Index = 2U };
 
             A.SchemeColor schemeColor23 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
             A.Shade shade4 = new A.Shade() { Val = 50000 };
@@ -3299,12 +3299,12 @@ namespace DocumentFormat.OpenXml.Tests
 
             lineReference6.Append(schemeColor23);
 
-            A.FillReference fillReference6 = new A.FillReference() { Index = (UInt32Value)1003U };
+            A.FillReference fillReference6 = new A.FillReference() { Index = 1003U };
             A.SchemeColor schemeColor24 = new A.SchemeColor() { Val = A.SchemeColorValues.Light2 };
 
             fillReference6.Append(schemeColor24);
 
-            A.EffectReference effectReference6 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference6 = new A.EffectReference() { Index = 0U };
             A.SchemeColor schemeColor25 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference6.Append(schemeColor25);
@@ -3429,7 +3429,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             W.Drawing drawing11 = new W.Drawing();
 
-            Wp.Anchor anchor7 = new Wp.Anchor() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)114300U, DistanceFromRight = (UInt32Value)114300U, SimplePos = false, RelativeHeight = (UInt32Value)251656704U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "3FEC78C0", AnchorId = "700D0E5A" };
+            Wp.Anchor anchor7 = new Wp.Anchor() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 114300U, DistanceFromRight = 114300U, SimplePos = false, RelativeHeight = 251656704U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "3FEC78C0", AnchorId = "700D0E5A" };
             Wp.SimplePosition simplePosition7 = new Wp.SimplePosition() { X = 0L, Y = 0L };
 
             AlternateContent alternateContent11 = new AlternateContent();
@@ -3484,7 +3484,7 @@ namespace DocumentFormat.OpenXml.Tests
             Wp.Extent extent11 = new Wp.Extent() { Cx = 2875915L, Cy = 3017520L };
             Wp.EffectExtent effectExtent11 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 0L, BottomEdge = 0L };
             Wp.WrapNone wrapNone6 = new Wp.WrapNone();
-            Wp.DocProperties docProperties11 = new Wp.DocProperties() { Id = (UInt32Value)11U, Name = "Rectangle 467" };
+            Wp.DocProperties docProperties11 = new Wp.DocProperties() { Id = 11U, Name = "Rectangle 467" };
             Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties11 = new Wp.NonVisualGraphicFrameDrawingProperties();
 
             A.Graphic graphic11 = new A.Graphic();
@@ -3526,7 +3526,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Wps.ShapeStyle shapeStyle7 = new Wps.ShapeStyle();
 
-            A.LineReference lineReference7 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference7 = new A.LineReference() { Index = 2U };
 
             A.SchemeColor schemeColor28 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
             A.Shade shade5 = new A.Shade() { Val = 50000 };
@@ -3535,12 +3535,12 @@ namespace DocumentFormat.OpenXml.Tests
 
             lineReference7.Append(schemeColor28);
 
-            A.FillReference fillReference7 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference7 = new A.FillReference() { Index = 1U };
             A.SchemeColor schemeColor29 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference7.Append(schemeColor29);
 
-            A.EffectReference effectReference7 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference7 = new A.EffectReference() { Index = 0U };
             A.SchemeColor schemeColor30 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference7.Append(schemeColor30);
@@ -3797,7 +3797,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             W.Drawing drawing12 = new W.Drawing();
 
-            Wp.Anchor anchor8 = new Wp.Anchor() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)114300U, DistanceFromRight = (UInt32Value)114300U, SimplePos = false, RelativeHeight = (UInt32Value)251653632U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "7418ADC8", AnchorId = "6DE13770" };
+            Wp.Anchor anchor8 = new Wp.Anchor() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 114300U, DistanceFromRight = 114300U, SimplePos = false, RelativeHeight = 251653632U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "7418ADC8", AnchorId = "6DE13770" };
             Wp.SimplePosition simplePosition8 = new Wp.SimplePosition() { X = 0L, Y = 0L };
 
             AlternateContent alternateContent14 = new AlternateContent();
@@ -3852,7 +3852,7 @@ namespace DocumentFormat.OpenXml.Tests
             Wp.Extent extent12 = new Wp.Extent() { Cx = 3108960L, Cy = 7040880L };
             Wp.EffectExtent effectExtent12 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 0L, BottomEdge = 0L };
             Wp.WrapNone wrapNone7 = new Wp.WrapNone();
-            Wp.DocProperties docProperties12 = new Wp.DocProperties() { Id = (UInt32Value)12U, Name = "Rectangle 468" };
+            Wp.DocProperties docProperties12 = new Wp.DocProperties() { Id = 12U, Name = "Rectangle 468" };
             Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties12 = new Wp.NonVisualGraphicFrameDrawingProperties();
 
             A.Graphic graphic12 = new A.Graphic();
@@ -3902,7 +3902,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Wps.ShapeStyle shapeStyle8 = new Wps.ShapeStyle();
 
-            A.LineReference lineReference8 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference8 = new A.LineReference() { Index = 2U };
 
             A.SchemeColor schemeColor34 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
             A.Shade shade6 = new A.Shade() { Val = 50000 };
@@ -3911,12 +3911,12 @@ namespace DocumentFormat.OpenXml.Tests
 
             lineReference8.Append(schemeColor34);
 
-            A.FillReference fillReference8 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference8 = new A.FillReference() { Index = 1U };
             A.SchemeColor schemeColor35 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference8.Append(schemeColor35);
 
-            A.EffectReference effectReference8 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference8 = new A.EffectReference() { Index = 0U };
             A.SchemeColor schemeColor36 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference8.Append(schemeColor36);
@@ -4013,7 +4013,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             W.Drawing drawing13 = new W.Drawing();
 
-            Wp.Anchor anchor9 = new Wp.Anchor() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)114300U, DistanceFromRight = (UInt32Value)114300U, SimplePos = false, RelativeHeight = (UInt32Value)251660800U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "4DDDA938", AnchorId = "71CFD9A6" };
+            Wp.Anchor anchor9 = new Wp.Anchor() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 114300U, DistanceFromRight = 114300U, SimplePos = false, RelativeHeight = 251660800U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "4DDDA938", AnchorId = "71CFD9A6" };
             Wp.SimplePosition simplePosition9 = new Wp.SimplePosition() { X = 0L, Y = 0L };
 
             AlternateContent alternateContent17 = new AlternateContent();
@@ -4068,7 +4068,7 @@ namespace DocumentFormat.OpenXml.Tests
             Wp.Extent extent13 = new Wp.Extent() { Cx = 2875915L, Cy = 118745L };
             Wp.EffectExtent effectExtent13 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 0L, BottomEdge = 0L };
             Wp.WrapNone wrapNone8 = new Wp.WrapNone();
-            Wp.DocProperties docProperties13 = new Wp.DocProperties() { Id = (UInt32Value)13U, Name = "Rectangle 469" };
+            Wp.DocProperties docProperties13 = new Wp.DocProperties() { Id = 13U, Name = "Rectangle 469" };
             Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties13 = new Wp.NonVisualGraphicFrameDrawingProperties();
 
             A.Graphic graphic13 = new A.Graphic();
@@ -4104,7 +4104,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             Wps.ShapeStyle shapeStyle9 = new Wps.ShapeStyle();
 
-            A.LineReference lineReference9 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference9 = new A.LineReference() { Index = 2U };
 
             A.SchemeColor schemeColor38 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
             A.Shade shade7 = new A.Shade() { Val = 50000 };
@@ -4113,12 +4113,12 @@ namespace DocumentFormat.OpenXml.Tests
 
             lineReference9.Append(schemeColor38);
 
-            A.FillReference fillReference9 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference9 = new A.FillReference() { Index = 1U };
             A.SchemeColor schemeColor39 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             fillReference9.Append(schemeColor39);
 
-            A.EffectReference effectReference9 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference9 = new A.EffectReference() { Index = 0U };
             A.SchemeColor schemeColor40 = new A.SchemeColor() { Val = A.SchemeColorValues.Accent1 };
 
             effectReference9.Append(schemeColor40);
@@ -4215,7 +4215,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             W.Drawing drawing14 = new W.Drawing();
 
-            Wp.Anchor anchor10 = new Wp.Anchor() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)114300U, DistanceFromRight = (UInt32Value)114300U, SimplePos = false, RelativeHeight = (UInt32Value)251658752U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "78CE13BE", AnchorId = "4BB1A32F" };
+            Wp.Anchor anchor10 = new Wp.Anchor() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 114300U, DistanceFromRight = 114300U, SimplePos = false, RelativeHeight = 251658752U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "78CE13BE", AnchorId = "4BB1A32F" };
             Wp.SimplePosition simplePosition10 = new Wp.SimplePosition() { X = 0L, Y = 0L };
 
             AlternateContent alternateContent20 = new AlternateContent();
@@ -4270,7 +4270,7 @@ namespace DocumentFormat.OpenXml.Tests
             Wp.Extent extent14 = new Wp.Extent() { Cx = 2797810L, Cy = 2475230L };
             Wp.EffectExtent effectExtent14 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 0L, BottomEdge = 0L };
             Wp.WrapSquare wrapSquare2 = new Wp.WrapSquare() { WrapText = Wp.WrapTextValues.BothSides };
-            Wp.DocProperties docProperties14 = new Wp.DocProperties() { Id = (UInt32Value)14U, Name = "Text Box 470" };
+            Wp.DocProperties docProperties14 = new Wp.DocProperties() { Id = 14U, Name = "Text Box 470" };
             Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties14 = new Wp.NonVisualGraphicFrameDrawingProperties();
 
             A.Graphic graphic14 = new A.Graphic();
@@ -5773,7 +5773,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             W.Drawing drawing15 = new W.Drawing();
 
-            Wp.Anchor anchor11 = new Wp.Anchor() { DistanceFromTop = (UInt32Value)45720U, DistanceFromBottom = (UInt32Value)45720U, DistanceFromLeft = (UInt32Value)114300U, DistanceFromRight = (UInt32Value)114300U, SimplePos = false, RelativeHeight = (UInt32Value)251654656U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "4BDF2398", AnchorId = "14D85FC7" };
+            Wp.Anchor anchor11 = new Wp.Anchor() { DistanceFromTop = 45720U, DistanceFromBottom = 45720U, DistanceFromLeft = 114300U, DistanceFromRight = 114300U, SimplePos = false, RelativeHeight = 251654656U, BehindDoc = false, Locked = false, LayoutInCell = true, AllowOverlap = true, EditId = "4BDF2398", AnchorId = "14D85FC7" };
             Wp.SimplePosition simplePosition11 = new Wp.SimplePosition() { X = 0L, Y = 0L };
 
             Wp.HorizontalPosition horizontalPosition16 = new Wp.HorizontalPosition() { RelativeFrom = Wp.HorizontalRelativePositionValues.Column };
@@ -5790,7 +5790,7 @@ namespace DocumentFormat.OpenXml.Tests
             Wp.Extent extent15 = new Wp.Extent() { Cx = 2360930L, Cy = 1404620L };
             Wp.EffectExtent effectExtent15 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 22860L, BottomEdge = 11430L };
             Wp.WrapSquare wrapSquare3 = new Wp.WrapSquare() { WrapText = Wp.WrapTextValues.BothSides };
-            Wp.DocProperties docProperties15 = new Wp.DocProperties() { Id = (UInt32Value)15U, Name = "Text Box 2" };
+            Wp.DocProperties docProperties15 = new Wp.DocProperties() { Id = 15U, Name = "Text Box 2" };
 
             Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties15 = new Wp.NonVisualGraphicFrameDrawingProperties();
 
@@ -5997,7 +5997,7 @@ namespace DocumentFormat.OpenXml.Tests
             shapetype5.Append(lock3);
 
             V.Shape shape7 = new V.Shape() { Id = "_x0000_i1025", Style = "width:361.9pt;height:145.9pt", Ole = false, Type = "#_x0000_t75" };
-            V.ImageData imageData1 = new V.ImageData() { Title = "", RelationshipId = "rId18" };
+            V.ImageData imageData1 = new V.ImageData() { Title = string.Empty, RelationshipId = "rId18" };
 
             shape7.Append(imageData1);
             Ovml.OleObject oleObject1 = new Ovml.OleObject() { Type = Ovml.OleValues.Embed, ProgId = "Excel.Sheet.12", ShapeId = "_x0000_i1025", DrawAspect = Ovml.OleDrawAspectValues.Content, ObjectId = "_1509347722", Id = "rId19" };
@@ -6847,10 +6847,10 @@ namespace DocumentFormat.OpenXml.Tests
 
             W.Drawing drawing16 = new W.Drawing();
 
-            Wp.Inline inline5 = new Wp.Inline() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)0U, DistanceFromRight = (UInt32Value)0U, AnchorId = "2BDEF569", EditId = "2379780A" };
+            Wp.Inline inline5 = new Wp.Inline() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 0U, DistanceFromRight = 0U, AnchorId = "2BDEF569", EditId = "2379780A" };
             Wp.Extent extent16 = new Wp.Extent() { Cx = 5943600L, Cy = 4618990L };
             Wp.EffectExtent effectExtent16 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 0L, BottomEdge = 0L };
-            Wp.DocProperties docProperties16 = new Wp.DocProperties() { Id = (UInt32Value)16U, Name = "Picture 1" };
+            Wp.DocProperties docProperties16 = new Wp.DocProperties() { Id = 16U, Name = "Picture 1" };
 
             Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties16 = new Wp.NonVisualGraphicFrameDrawingProperties();
 
@@ -6868,7 +6868,7 @@ namespace DocumentFormat.OpenXml.Tests
             picture15.AddNamespaceDeclaration("pic", "http://schemas.openxmlformats.org/drawingml/2006/picture");
 
             Pic.NonVisualPictureProperties nonVisualPictureProperties3 = new Pic.NonVisualPictureProperties();
-            Pic.NonVisualDrawingProperties nonVisualDrawingProperties3 = new Pic.NonVisualDrawingProperties() { Id = (UInt32Value)1U, Name = "C8C7E21.tmp" };
+            Pic.NonVisualDrawingProperties nonVisualDrawingProperties3 = new Pic.NonVisualDrawingProperties() { Id = 1U, Name = "C8C7E21.tmp" };
             Pic.NonVisualPictureDrawingProperties nonVisualPictureDrawingProperties3 = new Pic.NonVisualPictureDrawingProperties();
 
             nonVisualPictureProperties3.Append(nonVisualDrawingProperties3);
@@ -6958,8 +6958,8 @@ namespace DocumentFormat.OpenXml.Tests
             FooterReference footerReference5 = new FooterReference() { Type = HeaderFooterValues.Default, Id = "rId24" };
             HeaderReference headerReference6 = new HeaderReference() { Type = HeaderFooterValues.First, Id = "rId25" };
             FooterReference footerReference6 = new FooterReference() { Type = HeaderFooterValues.First, Id = "rId26" };
-            PageSize pageSize2 = new PageSize() { Width = (UInt32Value)15840U, Height = (UInt32Value)12240U, Orient = PageOrientationValues.Landscape };
-            PageMargin pageMargin2 = new PageMargin() { Top = 1440, Right = (UInt32Value)1440U, Bottom = 1440, Left = (UInt32Value)1440U, Header = (UInt32Value)720U, Footer = (UInt32Value)720U, Gutter = (UInt32Value)0U };
+            PageSize pageSize2 = new PageSize() { Width = 15840U, Height = 12240U, Orient = PageOrientationValues.Landscape };
+            PageMargin pageMargin2 = new PageMargin() { Top = 1440, Right = 1440U, Bottom = 1440, Left = 1440U, Header = 720U, Footer = 720U, Gutter = 0U };
             Columns columns2 = new Columns() { Space = "720" };
             DocGrid docGrid2 = new DocGrid() { LinePitch = 360 };
 
@@ -6989,8 +6989,8 @@ namespace DocumentFormat.OpenXml.Tests
             FooterReference footerReference8 = new FooterReference() { Type = HeaderFooterValues.Default, Id = "rId30" };
             HeaderReference headerReference9 = new HeaderReference() { Type = HeaderFooterValues.First, Id = "rId31" };
             FooterReference footerReference9 = new FooterReference() { Type = HeaderFooterValues.First, Id = "rId32" };
-            PageSize pageSize3 = new PageSize() { Width = (UInt32Value)12240U, Height = (UInt32Value)15840U };
-            PageMargin pageMargin3 = new PageMargin() { Top = 1440, Right = (UInt32Value)1440U, Bottom = 1440, Left = (UInt32Value)1440U, Header = (UInt32Value)720U, Footer = (UInt32Value)720U, Gutter = (UInt32Value)0U };
+            PageSize pageSize3 = new PageSize() { Width = 12240U, Height = 15840U };
+            PageMargin pageMargin3 = new PageMargin() { Top = 1440, Right = 1440U, Bottom = 1440, Left = 1440U, Header = 720U, Footer = 720U, Gutter = 0U };
             Columns columns3 = new Columns() { Space = "720" };
             DocGrid docGrid3 = new DocGrid() { LinePitch = 360 };
 
@@ -8281,10 +8281,10 @@ namespace DocumentFormat.OpenXml.Tests
 
             W.Drawing drawing17 = new W.Drawing();
 
-            Wp.Inline inline6 = new Wp.Inline() { DistanceFromTop = (UInt32Value)0U, DistanceFromBottom = (UInt32Value)0U, DistanceFromLeft = (UInt32Value)0U, DistanceFromRight = (UInt32Value)0U, AnchorId = "05FEE8A2", EditId = "1F2F4FE4" };
+            Wp.Inline inline6 = new Wp.Inline() { DistanceFromTop = 0U, DistanceFromBottom = 0U, DistanceFromLeft = 0U, DistanceFromRight = 0U, AnchorId = "05FEE8A2", EditId = "1F2F4FE4" };
             Wp.Extent extent17 = new Wp.Extent() { Cx = 5486400L, Cy = 3200400L };
             Wp.EffectExtent effectExtent17 = new Wp.EffectExtent() { LeftEdge = 0L, TopEdge = 0L, RightEdge = 19050L, BottomEdge = 0L };
-            Wp.DocProperties docProperties17 = new Wp.DocProperties() { Id = (UInt32Value)17U, Name = "Diagram 1" };
+            Wp.DocProperties docProperties17 = new Wp.DocProperties() { Id = 17U, Name = "Diagram 1" };
             Wp.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties17 = new Wp.NonVisualGraphicFrameDrawingProperties();
 
             A.Graphic graphic17 = new A.Graphic();
@@ -8314,8 +8314,8 @@ namespace DocumentFormat.OpenXml.Tests
             paragraph161.Append(run220);
 
             SectionProperties sectionProperties4 = new SectionProperties() { RsidR = "0018060C" };
-            PageSize pageSize4 = new PageSize() { Width = (UInt32Value)12240U, Height = (UInt32Value)15840U };
-            PageMargin pageMargin4 = new PageMargin() { Top = 1440, Right = (UInt32Value)1440U, Bottom = 1440, Left = (UInt32Value)1440U, Header = (UInt32Value)720U, Footer = (UInt32Value)720U, Gutter = (UInt32Value)0U };
+            PageSize pageSize4 = new PageSize() { Width = 12240U, Height = 15840U };
+            PageMargin pageMargin4 = new PageMargin() { Top = 1440, Right = 1440U, Bottom = 1440, Left = 1440U, Header = 720U, Footer = 720U, Gutter = 0U };
             Columns columns4 = new Columns() { Space = "720" };
             DocGrid docGrid4 = new DocGrid() { LinePitch = 360 };
 
@@ -8550,8 +8550,8 @@ namespace DocumentFormat.OpenXml.Tests
             C.VaryColors varyColors1 = new C.VaryColors() { Val = false };
 
             C.BarChartSeries barChartSeries1 = new C.BarChartSeries();
-            C.Index index1 = new C.Index() { Val = (UInt32Value)0U };
-            C.Order order1 = new C.Order() { Val = (UInt32Value)0U };
+            C.Index index1 = new C.Index() { Val = 0U };
+            C.Order order1 = new C.Order() { Val = 0U };
 
             C.SeriesText seriesText1 = new C.SeriesText();
 
@@ -8560,9 +8560,9 @@ namespace DocumentFormat.OpenXml.Tests
             formula24.Text = "Sheet1!$B$1";
 
             C.StringCache stringCache1 = new C.StringCache();
-            C.PointCount pointCount1 = new C.PointCount() { Val = (UInt32Value)1U };
+            C.PointCount pointCount1 = new C.PointCount() { Val = 1U };
 
-            C.StringPoint stringPoint1 = new C.StringPoint() { Index = (UInt32Value)0U };
+            C.StringPoint stringPoint1 = new C.StringPoint() { Index = 0U };
             C.NumericValue numericValue1 = new C.NumericValue();
             numericValue1.Text = "Series 1";
 
@@ -8601,27 +8601,27 @@ namespace DocumentFormat.OpenXml.Tests
             formula25.Text = "Sheet1!$A$2:$A$5";
 
             C.StringCache stringCache2 = new C.StringCache();
-            C.PointCount pointCount2 = new C.PointCount() { Val = (UInt32Value)4U };
+            C.PointCount pointCount2 = new C.PointCount() { Val = 4U };
 
-            C.StringPoint stringPoint2 = new C.StringPoint() { Index = (UInt32Value)0U };
+            C.StringPoint stringPoint2 = new C.StringPoint() { Index = 0U };
             C.NumericValue numericValue2 = new C.NumericValue();
             numericValue2.Text = "Category 1";
 
             stringPoint2.Append(numericValue2);
 
-            C.StringPoint stringPoint3 = new C.StringPoint() { Index = (UInt32Value)1U };
+            C.StringPoint stringPoint3 = new C.StringPoint() { Index = 1U };
             C.NumericValue numericValue3 = new C.NumericValue();
             numericValue3.Text = "Category 2";
 
             stringPoint3.Append(numericValue3);
 
-            C.StringPoint stringPoint4 = new C.StringPoint() { Index = (UInt32Value)2U };
+            C.StringPoint stringPoint4 = new C.StringPoint() { Index = 2U };
             C.NumericValue numericValue4 = new C.NumericValue();
             numericValue4.Text = "Category 3";
 
             stringPoint4.Append(numericValue4);
 
-            C.StringPoint stringPoint5 = new C.StringPoint() { Index = (UInt32Value)3U };
+            C.StringPoint stringPoint5 = new C.StringPoint() { Index = 3U };
             C.NumericValue numericValue5 = new C.NumericValue();
             numericValue5.Text = "Category 4";
 
@@ -8647,27 +8647,27 @@ namespace DocumentFormat.OpenXml.Tests
             C.NumberingCache numberingCache1 = new C.NumberingCache();
             C.FormatCode formatCode1 = new C.FormatCode();
             formatCode1.Text = "General";
-            C.PointCount pointCount3 = new C.PointCount() { Val = (UInt32Value)4U };
+            C.PointCount pointCount3 = new C.PointCount() { Val = 4U };
 
-            C.NumericPoint numericPoint1 = new C.NumericPoint() { Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint1 = new C.NumericPoint() { Index = 0U };
             C.NumericValue numericValue6 = new C.NumericValue();
             numericValue6.Text = "4.3";
 
             numericPoint1.Append(numericValue6);
 
-            C.NumericPoint numericPoint2 = new C.NumericPoint() { Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint2 = new C.NumericPoint() { Index = 1U };
             C.NumericValue numericValue7 = new C.NumericValue();
             numericValue7.Text = "2.5";
 
             numericPoint2.Append(numericValue7);
 
-            C.NumericPoint numericPoint3 = new C.NumericPoint() { Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint3 = new C.NumericPoint() { Index = 2U };
             C.NumericValue numericValue8 = new C.NumericValue();
             numericValue8.Text = "3.5";
 
             numericPoint3.Append(numericValue8);
 
-            C.NumericPoint numericPoint4 = new C.NumericPoint() { Index = (UInt32Value)3U };
+            C.NumericPoint numericPoint4 = new C.NumericPoint() { Index = 3U };
             C.NumericValue numericValue9 = new C.NumericValue();
             numericValue9.Text = "4.5";
 
@@ -8694,8 +8694,8 @@ namespace DocumentFormat.OpenXml.Tests
             barChartSeries1.Append(values1);
 
             C.BarChartSeries barChartSeries2 = new C.BarChartSeries();
-            C.Index index2 = new C.Index() { Val = (UInt32Value)1U };
-            C.Order order2 = new C.Order() { Val = (UInt32Value)1U };
+            C.Index index2 = new C.Index() { Val = 1U };
+            C.Order order2 = new C.Order() { Val = 1U };
 
             C.SeriesText seriesText2 = new C.SeriesText();
 
@@ -8704,9 +8704,9 @@ namespace DocumentFormat.OpenXml.Tests
             formula27.Text = "Sheet1!$C$1";
 
             C.StringCache stringCache3 = new C.StringCache();
-            C.PointCount pointCount4 = new C.PointCount() { Val = (UInt32Value)1U };
+            C.PointCount pointCount4 = new C.PointCount() { Val = 1U };
 
-            C.StringPoint stringPoint6 = new C.StringPoint() { Index = (UInt32Value)0U };
+            C.StringPoint stringPoint6 = new C.StringPoint() { Index = 0U };
             C.NumericValue numericValue10 = new C.NumericValue();
             numericValue10.Text = "Series 2";
 
@@ -8745,27 +8745,27 @@ namespace DocumentFormat.OpenXml.Tests
             formula28.Text = "Sheet1!$A$2:$A$5";
 
             C.StringCache stringCache4 = new C.StringCache();
-            C.PointCount pointCount5 = new C.PointCount() { Val = (UInt32Value)4U };
+            C.PointCount pointCount5 = new C.PointCount() { Val = 4U };
 
-            C.StringPoint stringPoint7 = new C.StringPoint() { Index = (UInt32Value)0U };
+            C.StringPoint stringPoint7 = new C.StringPoint() { Index = 0U };
             C.NumericValue numericValue11 = new C.NumericValue();
             numericValue11.Text = "Category 1";
 
             stringPoint7.Append(numericValue11);
 
-            C.StringPoint stringPoint8 = new C.StringPoint() { Index = (UInt32Value)1U };
+            C.StringPoint stringPoint8 = new C.StringPoint() { Index = 1U };
             C.NumericValue numericValue12 = new C.NumericValue();
             numericValue12.Text = "Category 2";
 
             stringPoint8.Append(numericValue12);
 
-            C.StringPoint stringPoint9 = new C.StringPoint() { Index = (UInt32Value)2U };
+            C.StringPoint stringPoint9 = new C.StringPoint() { Index = 2U };
             C.NumericValue numericValue13 = new C.NumericValue();
             numericValue13.Text = "Category 3";
 
             stringPoint9.Append(numericValue13);
 
-            C.StringPoint stringPoint10 = new C.StringPoint() { Index = (UInt32Value)3U };
+            C.StringPoint stringPoint10 = new C.StringPoint() { Index = 3U };
             C.NumericValue numericValue14 = new C.NumericValue();
             numericValue14.Text = "Category 4";
 
@@ -8791,27 +8791,27 @@ namespace DocumentFormat.OpenXml.Tests
             C.NumberingCache numberingCache2 = new C.NumberingCache();
             C.FormatCode formatCode2 = new C.FormatCode();
             formatCode2.Text = "General";
-            C.PointCount pointCount6 = new C.PointCount() { Val = (UInt32Value)4U };
+            C.PointCount pointCount6 = new C.PointCount() { Val = 4U };
 
-            C.NumericPoint numericPoint5 = new C.NumericPoint() { Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint5 = new C.NumericPoint() { Index = 0U };
             C.NumericValue numericValue15 = new C.NumericValue();
             numericValue15.Text = "2.4";
 
             numericPoint5.Append(numericValue15);
 
-            C.NumericPoint numericPoint6 = new C.NumericPoint() { Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint6 = new C.NumericPoint() { Index = 1U };
             C.NumericValue numericValue16 = new C.NumericValue();
             numericValue16.Text = "4.4000000000000004";
 
             numericPoint6.Append(numericValue16);
 
-            C.NumericPoint numericPoint7 = new C.NumericPoint() { Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint7 = new C.NumericPoint() { Index = 2U };
             C.NumericValue numericValue17 = new C.NumericValue();
             numericValue17.Text = "1.8";
 
             numericPoint7.Append(numericValue17);
 
-            C.NumericPoint numericPoint8 = new C.NumericPoint() { Index = (UInt32Value)3U };
+            C.NumericPoint numericPoint8 = new C.NumericPoint() { Index = 3U };
             C.NumericValue numericValue18 = new C.NumericValue();
             numericValue18.Text = "2.8";
 
@@ -8838,8 +8838,8 @@ namespace DocumentFormat.OpenXml.Tests
             barChartSeries2.Append(values2);
 
             C.BarChartSeries barChartSeries3 = new C.BarChartSeries();
-            C.Index index3 = new C.Index() { Val = (UInt32Value)2U };
-            C.Order order3 = new C.Order() { Val = (UInt32Value)2U };
+            C.Index index3 = new C.Index() { Val = 2U };
+            C.Order order3 = new C.Order() { Val = 2U };
 
             C.SeriesText seriesText3 = new C.SeriesText();
 
@@ -8848,9 +8848,9 @@ namespace DocumentFormat.OpenXml.Tests
             formula30.Text = "Sheet1!$D$1";
 
             C.StringCache stringCache5 = new C.StringCache();
-            C.PointCount pointCount7 = new C.PointCount() { Val = (UInt32Value)1U };
+            C.PointCount pointCount7 = new C.PointCount() { Val = 1U };
 
-            C.StringPoint stringPoint11 = new C.StringPoint() { Index = (UInt32Value)0U };
+            C.StringPoint stringPoint11 = new C.StringPoint() { Index = 0U };
             C.NumericValue numericValue19 = new C.NumericValue();
             numericValue19.Text = "Series 3";
 
@@ -8889,27 +8889,27 @@ namespace DocumentFormat.OpenXml.Tests
             formula31.Text = "Sheet1!$A$2:$A$5";
 
             C.StringCache stringCache6 = new C.StringCache();
-            C.PointCount pointCount8 = new C.PointCount() { Val = (UInt32Value)4U };
+            C.PointCount pointCount8 = new C.PointCount() { Val = 4U };
 
-            C.StringPoint stringPoint12 = new C.StringPoint() { Index = (UInt32Value)0U };
+            C.StringPoint stringPoint12 = new C.StringPoint() { Index = 0U };
             C.NumericValue numericValue20 = new C.NumericValue();
             numericValue20.Text = "Category 1";
 
             stringPoint12.Append(numericValue20);
 
-            C.StringPoint stringPoint13 = new C.StringPoint() { Index = (UInt32Value)1U };
+            C.StringPoint stringPoint13 = new C.StringPoint() { Index = 1U };
             C.NumericValue numericValue21 = new C.NumericValue();
             numericValue21.Text = "Category 2";
 
             stringPoint13.Append(numericValue21);
 
-            C.StringPoint stringPoint14 = new C.StringPoint() { Index = (UInt32Value)2U };
+            C.StringPoint stringPoint14 = new C.StringPoint() { Index = 2U };
             C.NumericValue numericValue22 = new C.NumericValue();
             numericValue22.Text = "Category 3";
 
             stringPoint14.Append(numericValue22);
 
-            C.StringPoint stringPoint15 = new C.StringPoint() { Index = (UInt32Value)3U };
+            C.StringPoint stringPoint15 = new C.StringPoint() { Index = 3U };
             C.NumericValue numericValue23 = new C.NumericValue();
             numericValue23.Text = "Category 4";
 
@@ -8935,27 +8935,27 @@ namespace DocumentFormat.OpenXml.Tests
             C.NumberingCache numberingCache3 = new C.NumberingCache();
             C.FormatCode formatCode3 = new C.FormatCode();
             formatCode3.Text = "General";
-            C.PointCount pointCount9 = new C.PointCount() { Val = (UInt32Value)4U };
+            C.PointCount pointCount9 = new C.PointCount() { Val = 4U };
 
-            C.NumericPoint numericPoint9 = new C.NumericPoint() { Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint9 = new C.NumericPoint() { Index = 0U };
             C.NumericValue numericValue24 = new C.NumericValue();
             numericValue24.Text = "2";
 
             numericPoint9.Append(numericValue24);
 
-            C.NumericPoint numericPoint10 = new C.NumericPoint() { Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint10 = new C.NumericPoint() { Index = 1U };
             C.NumericValue numericValue25 = new C.NumericValue();
             numericValue25.Text = "2";
 
             numericPoint10.Append(numericValue25);
 
-            C.NumericPoint numericPoint11 = new C.NumericPoint() { Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint11 = new C.NumericPoint() { Index = 2U };
             C.NumericValue numericValue26 = new C.NumericValue();
             numericValue26.Text = "3";
 
             numericPoint11.Append(numericValue26);
 
-            C.NumericPoint numericPoint12 = new C.NumericPoint() { Index = (UInt32Value)3U };
+            C.NumericPoint numericPoint12 = new C.NumericPoint() { Index = 3U };
             C.NumericValue numericValue27 = new C.NumericValue();
             numericValue27.Text = "5";
 
@@ -8997,8 +8997,8 @@ namespace DocumentFormat.OpenXml.Tests
             dataLabels1.Append(showBubbleSize1);
             C.GapWidth gapWidth1 = new C.GapWidth() { Val = (UInt16Value)219U };
             C.Overlap overlap1 = new C.Overlap() { Val = -27 };
-            C.AxisId axisId1 = new C.AxisId() { Val = (UInt32Value)341353848U };
-            C.AxisId axisId2 = new C.AxisId() { Val = (UInt32Value)324852992U };
+            C.AxisId axisId1 = new C.AxisId() { Val = 341353848U };
+            C.AxisId axisId2 = new C.AxisId() { Val = 324852992U };
 
             barChart1.Append(barDirection1);
             barChart1.Append(barGrouping1);
@@ -9013,7 +9013,7 @@ namespace DocumentFormat.OpenXml.Tests
             barChart1.Append(axisId2);
 
             C.CategoryAxis categoryAxis1 = new C.CategoryAxis();
-            C.AxisId axisId3 = new C.AxisId() { Val = (UInt32Value)341353848U };
+            C.AxisId axisId3 = new C.AxisId() { Val = 341353848U };
 
             C.Scaling scaling1 = new C.Scaling();
             C.Orientation orientation1 = new C.Orientation() { Val = C.OrientationValues.MinMax };
@@ -9089,7 +9089,7 @@ namespace DocumentFormat.OpenXml.Tests
             textProperties2.Append(bodyProperties2);
             textProperties2.Append(listStyle2);
             textProperties2.Append(paragraph163);
-            C.CrossingAxis crossingAxis1 = new C.CrossingAxis() { Val = (UInt32Value)324852992U };
+            C.CrossingAxis crossingAxis1 = new C.CrossingAxis() { Val = 324852992U };
             C.Crosses crosses1 = new C.Crosses() { Val = C.CrossesValues.AutoZero };
             C.AutoLabeled autoLabeled1 = new C.AutoLabeled() { Val = true };
             C.LabelAlignment labelAlignment1 = new C.LabelAlignment() { Val = C.LabelAlignmentValues.Center };
@@ -9114,7 +9114,7 @@ namespace DocumentFormat.OpenXml.Tests
             categoryAxis1.Append(noMultiLevelLabels1);
 
             C.ValueAxis valueAxis1 = new C.ValueAxis();
-            C.AxisId axisId4 = new C.AxisId() { Val = (UInt32Value)324852992U };
+            C.AxisId axisId4 = new C.AxisId() { Val = 324852992U };
 
             C.Scaling scaling2 = new C.Scaling();
             C.Orientation orientation2 = new C.Orientation() { Val = C.OrientationValues.MinMax };
@@ -9205,7 +9205,7 @@ namespace DocumentFormat.OpenXml.Tests
             textProperties3.Append(bodyProperties3);
             textProperties3.Append(listStyle3);
             textProperties3.Append(paragraph164);
-            C.CrossingAxis crossingAxis2 = new C.CrossingAxis() { Val = (UInt32Value)341353848U };
+            C.CrossingAxis crossingAxis2 = new C.CrossingAxis() { Val = 341353848U };
             C.Crosses crosses2 = new C.Crosses() { Val = C.CrossesValues.AutoZero };
             C.CrossBetween crossBetween1 = new C.CrossBetween() { Val = C.CrossBetweenValues.Between };
 
@@ -10625,7 +10625,7 @@ namespace DocumentFormat.OpenXml.Tests
             StyleParagraphProperties styleParagraphProperties3 = new StyleParagraphProperties();
 
             ParagraphBorders paragraphBorders2 = new ParagraphBorders();
-            TopBorder topBorder2 = new TopBorder() { Val = BorderValues.Single, Color = "5B9BD5", ThemeColor = ThemeColorValues.Accent1, Size = (UInt32Value)6U, Space = (UInt32Value)2U };
+            TopBorder topBorder2 = new TopBorder() { Val = BorderValues.Single, Color = "5B9BD5", ThemeColor = ThemeColorValues.Accent1, Size = 6U, Space = 2U };
 
             paragraphBorders2.Append(topBorder2);
             SpacingBetweenLines spacingBetweenLines10 = new SpacingBetweenLines() { Before = "300", After = "0" };
@@ -10670,7 +10670,7 @@ namespace DocumentFormat.OpenXml.Tests
             StyleParagraphProperties styleParagraphProperties4 = new StyleParagraphProperties();
 
             ParagraphBorders paragraphBorders3 = new ParagraphBorders();
-            TopBorder topBorder3 = new TopBorder() { Val = BorderValues.Dotted, Color = "5B9BD5", ThemeColor = ThemeColorValues.Accent1, Size = (UInt32Value)6U, Space = (UInt32Value)2U };
+            TopBorder topBorder3 = new TopBorder() { Val = BorderValues.Dotted, Color = "5B9BD5", ThemeColor = ThemeColorValues.Accent1, Size = 6U, Space = 2U };
 
             paragraphBorders3.Append(topBorder3);
             SpacingBetweenLines spacingBetweenLines11 = new SpacingBetweenLines() { Before = "200", After = "0" };
@@ -10715,7 +10715,7 @@ namespace DocumentFormat.OpenXml.Tests
             StyleParagraphProperties styleParagraphProperties5 = new StyleParagraphProperties();
 
             ParagraphBorders paragraphBorders4 = new ParagraphBorders();
-            BottomBorder bottomBorder2 = new BottomBorder() { Val = BorderValues.Single, Color = "5B9BD5", ThemeColor = ThemeColorValues.Accent1, Size = (UInt32Value)6U, Space = (UInt32Value)1U };
+            BottomBorder bottomBorder2 = new BottomBorder() { Val = BorderValues.Single, Color = "5B9BD5", ThemeColor = ThemeColorValues.Accent1, Size = 6U, Space = 1U };
 
             paragraphBorders4.Append(bottomBorder2);
             SpacingBetweenLines spacingBetweenLines12 = new SpacingBetweenLines() { Before = "200", After = "0" };
@@ -10760,7 +10760,7 @@ namespace DocumentFormat.OpenXml.Tests
             StyleParagraphProperties styleParagraphProperties6 = new StyleParagraphProperties();
 
             ParagraphBorders paragraphBorders5 = new ParagraphBorders();
-            BottomBorder bottomBorder3 = new BottomBorder() { Val = BorderValues.Dotted, Color = "5B9BD5", ThemeColor = ThemeColorValues.Accent1, Size = (UInt32Value)6U, Space = (UInt32Value)1U };
+            BottomBorder bottomBorder3 = new BottomBorder() { Val = BorderValues.Dotted, Color = "5B9BD5", ThemeColor = ThemeColorValues.Accent1, Size = 6U, Space = 1U };
 
             paragraphBorders5.Append(bottomBorder3);
             SpacingBetweenLines spacingBetweenLines13 = new SpacingBetweenLines() { Before = "200", After = "0" };
@@ -11419,12 +11419,12 @@ namespace DocumentFormat.OpenXml.Tests
             StyleTableProperties styleTableProperties2 = new StyleTableProperties();
 
             TableBorders tableBorders1 = new TableBorders();
-            TopBorder topBorder4 = new TopBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            LeftBorder leftBorder2 = new LeftBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            BottomBorder bottomBorder4 = new BottomBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            RightBorder rightBorder2 = new RightBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            InsideHorizontalBorder insideHorizontalBorder1 = new InsideHorizontalBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            InsideVerticalBorder insideVerticalBorder1 = new InsideVerticalBorder() { Val = BorderValues.Single, Color = "auto", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+            TopBorder topBorder4 = new TopBorder() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 0U };
+            LeftBorder leftBorder2 = new LeftBorder() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 0U };
+            BottomBorder bottomBorder4 = new BottomBorder() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 0U };
+            RightBorder rightBorder2 = new RightBorder() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 0U };
+            InsideHorizontalBorder insideHorizontalBorder1 = new InsideHorizontalBorder() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 0U };
+            InsideVerticalBorder insideVerticalBorder1 = new InsideVerticalBorder() { Val = BorderValues.Single, Color = "auto", Size = 4U, Space = 0U };
 
             tableBorders1.Append(topBorder4);
             tableBorders1.Append(leftBorder2);
@@ -11458,12 +11458,12 @@ namespace DocumentFormat.OpenXml.Tests
             TableStyleColumnBandSize tableStyleColumnBandSize1 = new TableStyleColumnBandSize() { Val = 1 };
 
             TableBorders tableBorders2 = new TableBorders();
-            TopBorder topBorder5 = new TopBorder() { Val = BorderValues.Single, Color = "8EAADB", ThemeColor = ThemeColorValues.Accent5, ThemeTint = "99", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            LeftBorder leftBorder3 = new LeftBorder() { Val = BorderValues.Single, Color = "8EAADB", ThemeColor = ThemeColorValues.Accent5, ThemeTint = "99", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            BottomBorder bottomBorder5 = new BottomBorder() { Val = BorderValues.Single, Color = "8EAADB", ThemeColor = ThemeColorValues.Accent5, ThemeTint = "99", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            RightBorder rightBorder3 = new RightBorder() { Val = BorderValues.Single, Color = "8EAADB", ThemeColor = ThemeColorValues.Accent5, ThemeTint = "99", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            InsideHorizontalBorder insideHorizontalBorder2 = new InsideHorizontalBorder() { Val = BorderValues.Single, Color = "8EAADB", ThemeColor = ThemeColorValues.Accent5, ThemeTint = "99", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            InsideVerticalBorder insideVerticalBorder2 = new InsideVerticalBorder() { Val = BorderValues.Single, Color = "8EAADB", ThemeColor = ThemeColorValues.Accent5, ThemeTint = "99", Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+            TopBorder topBorder5 = new TopBorder() { Val = BorderValues.Single, Color = "8EAADB", ThemeColor = ThemeColorValues.Accent5, ThemeTint = "99", Size = 4U, Space = 0U };
+            LeftBorder leftBorder3 = new LeftBorder() { Val = BorderValues.Single, Color = "8EAADB", ThemeColor = ThemeColorValues.Accent5, ThemeTint = "99", Size = 4U, Space = 0U };
+            BottomBorder bottomBorder5 = new BottomBorder() { Val = BorderValues.Single, Color = "8EAADB", ThemeColor = ThemeColorValues.Accent5, ThemeTint = "99", Size = 4U, Space = 0U };
+            RightBorder rightBorder3 = new RightBorder() { Val = BorderValues.Single, Color = "8EAADB", ThemeColor = ThemeColorValues.Accent5, ThemeTint = "99", Size = 4U, Space = 0U };
+            InsideHorizontalBorder insideHorizontalBorder2 = new InsideHorizontalBorder() { Val = BorderValues.Single, Color = "8EAADB", ThemeColor = ThemeColorValues.Accent5, ThemeTint = "99", Size = 4U, Space = 0U };
+            InsideVerticalBorder insideVerticalBorder2 = new InsideVerticalBorder() { Val = BorderValues.Single, Color = "8EAADB", ThemeColor = ThemeColorValues.Accent5, ThemeTint = "99", Size = 4U, Space = 0U };
 
             tableBorders2.Append(topBorder5);
             tableBorders2.Append(leftBorder3);
@@ -11491,10 +11491,10 @@ namespace DocumentFormat.OpenXml.Tests
             TableStyleConditionalFormattingTableCellProperties tableStyleConditionalFormattingTableCellProperties1 = new TableStyleConditionalFormattingTableCellProperties();
 
             TableCellBorders tableCellBorders1 = new TableCellBorders();
-            TopBorder topBorder6 = new TopBorder() { Val = BorderValues.Single, Color = "4472C4", ThemeColor = ThemeColorValues.Accent5, Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            LeftBorder leftBorder4 = new LeftBorder() { Val = BorderValues.Single, Color = "4472C4", ThemeColor = ThemeColorValues.Accent5, Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            BottomBorder bottomBorder6 = new BottomBorder() { Val = BorderValues.Single, Color = "4472C4", ThemeColor = ThemeColorValues.Accent5, Size = (UInt32Value)4U, Space = (UInt32Value)0U };
-            RightBorder rightBorder4 = new RightBorder() { Val = BorderValues.Single, Color = "4472C4", ThemeColor = ThemeColorValues.Accent5, Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+            TopBorder topBorder6 = new TopBorder() { Val = BorderValues.Single, Color = "4472C4", ThemeColor = ThemeColorValues.Accent5, Size = 4U, Space = 0U };
+            LeftBorder leftBorder4 = new LeftBorder() { Val = BorderValues.Single, Color = "4472C4", ThemeColor = ThemeColorValues.Accent5, Size = 4U, Space = 0U };
+            BottomBorder bottomBorder6 = new BottomBorder() { Val = BorderValues.Single, Color = "4472C4", ThemeColor = ThemeColorValues.Accent5, Size = 4U, Space = 0U };
+            RightBorder rightBorder4 = new RightBorder() { Val = BorderValues.Single, Color = "4472C4", ThemeColor = ThemeColorValues.Accent5, Size = 4U, Space = 0U };
             InsideHorizontalBorder insideHorizontalBorder3 = new InsideHorizontalBorder() { Val = BorderValues.Nil };
             InsideVerticalBorder insideVerticalBorder3 = new InsideVerticalBorder() { Val = BorderValues.Nil };
 
@@ -11526,7 +11526,7 @@ namespace DocumentFormat.OpenXml.Tests
             TableStyleConditionalFormattingTableCellProperties tableStyleConditionalFormattingTableCellProperties2 = new TableStyleConditionalFormattingTableCellProperties();
 
             TableCellBorders tableCellBorders2 = new TableCellBorders();
-            TopBorder topBorder7 = new TopBorder() { Val = BorderValues.Double, Color = "4472C4", ThemeColor = ThemeColorValues.Accent5, Size = (UInt32Value)4U, Space = (UInt32Value)0U };
+            TopBorder topBorder7 = new TopBorder() { Val = BorderValues.Double, Color = "4472C4", ThemeColor = ThemeColorValues.Accent5, Size = 4U, Space = 0U };
 
             tableCellBorders2.Append(topBorder7);
 
@@ -13093,33 +13093,33 @@ namespace DocumentFormat.OpenXml.Tests
             pointList1.Append(point28);
 
             Dgm.ConnectionList connectionList1 = new Dgm.ConnectionList();
-            Dgm.Connection connection1 = new Dgm.Connection() { ModelId = "{0D540088-96BB-4126-8FD0-C20FC4B05131}", SourceId = "{F234BCEC-6073-447A-AE27-5A711EA9B02B}", DestinationId = "{4B6711F0-9784-4ECD-A01A-61C95ED41683}", SourcePosition = (UInt32Value)0U, DestinationPosition = (UInt32Value)0U, ParentTransitionId = "{B8A7512B-6B55-401D-917F-ED48EA840000}", SiblingTransitionId = "{ACF89A07-B067-459D-8648-8DC6675E2C24}" };
-            Dgm.Connection connection2 = new Dgm.Connection() { ModelId = "{EC877EB0-AB4C-4510-8AA5-E9E7AE9477DE}", SourceId = "{F234BCEC-6073-447A-AE27-5A711EA9B02B}", DestinationId = "{2233FC90-28FF-4E61-886E-4273680BB6D3}", SourcePosition = (UInt32Value)1U, DestinationPosition = (UInt32Value)0U, ParentTransitionId = "{803F5A71-6A7C-46F2-BDB0-5E8AD6371437}", SiblingTransitionId = "{FF7E39A4-2AE3-462D-8EB9-601EBFDD3943}" };
-            Dgm.Connection connection3 = new Dgm.Connection() { ModelId = "{885D6BCE-3B11-45BA-A90D-83BE4938BB9A}", Type = Dgm.ConnectionValues.PresentationOf, SourceId = "{4B6711F0-9784-4ECD-A01A-61C95ED41683}", DestinationId = "{BEDA8E25-BDC8-4169-BB3F-A5089091E57E}", SourcePosition = (UInt32Value)1U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection4 = new Dgm.Connection() { ModelId = "{658D6DED-EB5D-48B4-946D-940DEA18463A}", Type = Dgm.ConnectionValues.PresentationOf, SourceId = "{2233FC90-28FF-4E61-886E-4273680BB6D3}", DestinationId = "{729DC15F-8884-4D04-BE93-AD9A134C99A0}", SourcePosition = (UInt32Value)0U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection5 = new Dgm.Connection() { ModelId = "{7120595D-8385-49D2-8553-A4694CC2BEFE}", Type = Dgm.ConnectionValues.PresentationOf, SourceId = "{4B6711F0-9784-4ECD-A01A-61C95ED41683}", DestinationId = "{ABBFFC1D-C209-428E-A439-F29E8BD3626E}", SourcePosition = (UInt32Value)0U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection6 = new Dgm.Connection() { ModelId = "{6A69AF1C-E2A2-468D-9616-496EA7F68C32}", SourceId = "{F234BCEC-6073-447A-AE27-5A711EA9B02B}", DestinationId = "{C152DEE9-0C99-47F2-9D77-9C596C51F41B}", SourcePosition = (UInt32Value)2U, DestinationPosition = (UInt32Value)0U, ParentTransitionId = "{6E783AAD-C7CB-495F-A819-B60A42732337}", SiblingTransitionId = "{1858B730-3CAF-456D-9D67-8FE7D37DD423}" };
-            Dgm.Connection connection7 = new Dgm.Connection() { ModelId = "{49782E7B-865B-4622-BE4A-D4BCAC15B2E5}", Type = Dgm.ConnectionValues.PresentationOf, SourceId = "{C152DEE9-0C99-47F2-9D77-9C596C51F41B}", DestinationId = "{94C881B7-9C0B-4FEE-8CDB-EC9376DA67A3}", SourcePosition = (UInt32Value)0U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection8 = new Dgm.Connection() { ModelId = "{2348A891-4F99-4823-9004-761A1DF8BB3C}", Type = Dgm.ConnectionValues.PresentationOf, SourceId = "{C152DEE9-0C99-47F2-9D77-9C596C51F41B}", DestinationId = "{754D8052-5098-4050-BEE9-FA0490150674}", SourcePosition = (UInt32Value)1U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection9 = new Dgm.Connection() { ModelId = "{7CDCCC99-5370-4E20-A398-DFB1D17E3F69}", Type = Dgm.ConnectionValues.PresentationOf, SourceId = "{2233FC90-28FF-4E61-886E-4273680BB6D3}", DestinationId = "{F5A6B133-1EFE-4696-B2F5-83299B17DBDD}", SourcePosition = (UInt32Value)1U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection10 = new Dgm.Connection() { ModelId = "{0D81DEE1-4B9D-49AB-8938-8D6624603C56}", Type = Dgm.ConnectionValues.PresentationOf, SourceId = "{F234BCEC-6073-447A-AE27-5A711EA9B02B}", DestinationId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", SourcePosition = (UInt32Value)0U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection11 = new Dgm.Connection() { ModelId = "{F41F3461-5D31-4AFD-97C1-FB8EE406CC39}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{928A5A45-95B1-4D49-9D44-D226F93A92D7}", SourcePosition = (UInt32Value)0U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection12 = new Dgm.Connection() { ModelId = "{D27271B6-92B0-4B87-A147-63252A22031E}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{928A5A45-95B1-4D49-9D44-D226F93A92D7}", DestinationId = "{ABBFFC1D-C209-428E-A439-F29E8BD3626E}", SourcePosition = (UInt32Value)0U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection13 = new Dgm.Connection() { ModelId = "{D40CFE13-3F78-4365-9389-2AD66EF287D8}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{928A5A45-95B1-4D49-9D44-D226F93A92D7}", DestinationId = "{BEDA8E25-BDC8-4169-BB3F-A5089091E57E}", SourcePosition = (UInt32Value)1U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection14 = new Dgm.Connection() { ModelId = "{8785A8E3-0C82-470F-AC8E-4871483BAA8D}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{C1196124-FB41-4127-ACA1-E937855C994F}", SourcePosition = (UInt32Value)1U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection15 = new Dgm.Connection() { ModelId = "{1FCCA845-CDE8-4BFC-9E13-686430906C3C}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{E69C432B-90BC-4ABD-87CA-31144D9DEE3F}", SourcePosition = (UInt32Value)2U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection16 = new Dgm.Connection() { ModelId = "{97A1AEC0-6861-4CC1-8E62-DBA324F9D877}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{5B4D6D5B-FD54-40B7-B57D-5D5EF43F9E49}", SourcePosition = (UInt32Value)3U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection17 = new Dgm.Connection() { ModelId = "{53EDF7F4-9EB7-400E-98E9-DB8CFB3267DA}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{714E05C5-0C60-4C73-B9E9-9AD9615E5B5F}", SourcePosition = (UInt32Value)4U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection18 = new Dgm.Connection() { ModelId = "{B653C5A6-17B1-4C70-96E0-6664801DDCDE}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{714E05C5-0C60-4C73-B9E9-9AD9615E5B5F}", DestinationId = "{729DC15F-8884-4D04-BE93-AD9A134C99A0}", SourcePosition = (UInt32Value)0U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection19 = new Dgm.Connection() { ModelId = "{CCAAB5EB-F898-40D0-AF4C-BB34F08B86B2}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{714E05C5-0C60-4C73-B9E9-9AD9615E5B5F}", DestinationId = "{F5A6B133-1EFE-4696-B2F5-83299B17DBDD}", SourcePosition = (UInt32Value)1U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection20 = new Dgm.Connection() { ModelId = "{6DC13167-59D9-4569-A60E-DBDEAD4422AA}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{154EB3C3-8DDD-450D-8565-C1454672828E}", SourcePosition = (UInt32Value)5U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection21 = new Dgm.Connection() { ModelId = "{DB1B63A2-8217-4A67-AB30-D6D0152D8CAC}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{D228189E-4DE6-4C15-BA6B-580A06BBE021}", SourcePosition = (UInt32Value)6U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection22 = new Dgm.Connection() { ModelId = "{D55813C8-57A1-4F61-942E-84EAD16E9D17}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{E09E2836-3EF6-45E4-AE86-2CF466B355DF}", SourcePosition = (UInt32Value)7U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection23 = new Dgm.Connection() { ModelId = "{18FB7420-79CF-444A-A617-059C32D207B1}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{41AAB4C1-E472-4856-AA34-0E2326939948}", SourcePosition = (UInt32Value)8U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection24 = new Dgm.Connection() { ModelId = "{40036E5E-131E-4D3F-9A0D-9F083ED42FF2}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{41AAB4C1-E472-4856-AA34-0E2326939948}", DestinationId = "{94C881B7-9C0B-4FEE-8CDB-EC9376DA67A3}", SourcePosition = (UInt32Value)0U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection25 = new Dgm.Connection() { ModelId = "{8AC1B716-9B1B-4D58-8E3B-6520D5975C2D}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{41AAB4C1-E472-4856-AA34-0E2326939948}", DestinationId = "{754D8052-5098-4050-BEE9-FA0490150674}", SourcePosition = (UInt32Value)1U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection26 = new Dgm.Connection() { ModelId = "{170E69F7-4C18-4132-9165-34787E480862}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{1624522F-649F-4321-86F1-94846B88F337}", SourcePosition = (UInt32Value)9U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
-            Dgm.Connection connection27 = new Dgm.Connection() { ModelId = "{06E5372D-F2E7-4907-B3B1-BF8530E28BDD}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{F1365A1B-AEBD-4394-BB4A-4FD93ABEF638}", SourcePosition = (UInt32Value)10U, DestinationPosition = (UInt32Value)0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection1 = new Dgm.Connection() { ModelId = "{0D540088-96BB-4126-8FD0-C20FC4B05131}", SourceId = "{F234BCEC-6073-447A-AE27-5A711EA9B02B}", DestinationId = "{4B6711F0-9784-4ECD-A01A-61C95ED41683}", SourcePosition = 0U, DestinationPosition = 0U, ParentTransitionId = "{B8A7512B-6B55-401D-917F-ED48EA840000}", SiblingTransitionId = "{ACF89A07-B067-459D-8648-8DC6675E2C24}" };
+            Dgm.Connection connection2 = new Dgm.Connection() { ModelId = "{EC877EB0-AB4C-4510-8AA5-E9E7AE9477DE}", SourceId = "{F234BCEC-6073-447A-AE27-5A711EA9B02B}", DestinationId = "{2233FC90-28FF-4E61-886E-4273680BB6D3}", SourcePosition = 1U, DestinationPosition = 0U, ParentTransitionId = "{803F5A71-6A7C-46F2-BDB0-5E8AD6371437}", SiblingTransitionId = "{FF7E39A4-2AE3-462D-8EB9-601EBFDD3943}" };
+            Dgm.Connection connection3 = new Dgm.Connection() { ModelId = "{885D6BCE-3B11-45BA-A90D-83BE4938BB9A}", Type = Dgm.ConnectionValues.PresentationOf, SourceId = "{4B6711F0-9784-4ECD-A01A-61C95ED41683}", DestinationId = "{BEDA8E25-BDC8-4169-BB3F-A5089091E57E}", SourcePosition = 1U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection4 = new Dgm.Connection() { ModelId = "{658D6DED-EB5D-48B4-946D-940DEA18463A}", Type = Dgm.ConnectionValues.PresentationOf, SourceId = "{2233FC90-28FF-4E61-886E-4273680BB6D3}", DestinationId = "{729DC15F-8884-4D04-BE93-AD9A134C99A0}", SourcePosition = 0U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection5 = new Dgm.Connection() { ModelId = "{7120595D-8385-49D2-8553-A4694CC2BEFE}", Type = Dgm.ConnectionValues.PresentationOf, SourceId = "{4B6711F0-9784-4ECD-A01A-61C95ED41683}", DestinationId = "{ABBFFC1D-C209-428E-A439-F29E8BD3626E}", SourcePosition = 0U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection6 = new Dgm.Connection() { ModelId = "{6A69AF1C-E2A2-468D-9616-496EA7F68C32}", SourceId = "{F234BCEC-6073-447A-AE27-5A711EA9B02B}", DestinationId = "{C152DEE9-0C99-47F2-9D77-9C596C51F41B}", SourcePosition = 2U, DestinationPosition = 0U, ParentTransitionId = "{6E783AAD-C7CB-495F-A819-B60A42732337}", SiblingTransitionId = "{1858B730-3CAF-456D-9D67-8FE7D37DD423}" };
+            Dgm.Connection connection7 = new Dgm.Connection() { ModelId = "{49782E7B-865B-4622-BE4A-D4BCAC15B2E5}", Type = Dgm.ConnectionValues.PresentationOf, SourceId = "{C152DEE9-0C99-47F2-9D77-9C596C51F41B}", DestinationId = "{94C881B7-9C0B-4FEE-8CDB-EC9376DA67A3}", SourcePosition = 0U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection8 = new Dgm.Connection() { ModelId = "{2348A891-4F99-4823-9004-761A1DF8BB3C}", Type = Dgm.ConnectionValues.PresentationOf, SourceId = "{C152DEE9-0C99-47F2-9D77-9C596C51F41B}", DestinationId = "{754D8052-5098-4050-BEE9-FA0490150674}", SourcePosition = 1U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection9 = new Dgm.Connection() { ModelId = "{7CDCCC99-5370-4E20-A398-DFB1D17E3F69}", Type = Dgm.ConnectionValues.PresentationOf, SourceId = "{2233FC90-28FF-4E61-886E-4273680BB6D3}", DestinationId = "{F5A6B133-1EFE-4696-B2F5-83299B17DBDD}", SourcePosition = 1U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection10 = new Dgm.Connection() { ModelId = "{0D81DEE1-4B9D-49AB-8938-8D6624603C56}", Type = Dgm.ConnectionValues.PresentationOf, SourceId = "{F234BCEC-6073-447A-AE27-5A711EA9B02B}", DestinationId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", SourcePosition = 0U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection11 = new Dgm.Connection() { ModelId = "{F41F3461-5D31-4AFD-97C1-FB8EE406CC39}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{928A5A45-95B1-4D49-9D44-D226F93A92D7}", SourcePosition = 0U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection12 = new Dgm.Connection() { ModelId = "{D27271B6-92B0-4B87-A147-63252A22031E}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{928A5A45-95B1-4D49-9D44-D226F93A92D7}", DestinationId = "{ABBFFC1D-C209-428E-A439-F29E8BD3626E}", SourcePosition = 0U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection13 = new Dgm.Connection() { ModelId = "{D40CFE13-3F78-4365-9389-2AD66EF287D8}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{928A5A45-95B1-4D49-9D44-D226F93A92D7}", DestinationId = "{BEDA8E25-BDC8-4169-BB3F-A5089091E57E}", SourcePosition = 1U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection14 = new Dgm.Connection() { ModelId = "{8785A8E3-0C82-470F-AC8E-4871483BAA8D}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{C1196124-FB41-4127-ACA1-E937855C994F}", SourcePosition = 1U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection15 = new Dgm.Connection() { ModelId = "{1FCCA845-CDE8-4BFC-9E13-686430906C3C}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{E69C432B-90BC-4ABD-87CA-31144D9DEE3F}", SourcePosition = 2U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection16 = new Dgm.Connection() { ModelId = "{97A1AEC0-6861-4CC1-8E62-DBA324F9D877}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{5B4D6D5B-FD54-40B7-B57D-5D5EF43F9E49}", SourcePosition = 3U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection17 = new Dgm.Connection() { ModelId = "{53EDF7F4-9EB7-400E-98E9-DB8CFB3267DA}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{714E05C5-0C60-4C73-B9E9-9AD9615E5B5F}", SourcePosition = 4U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection18 = new Dgm.Connection() { ModelId = "{B653C5A6-17B1-4C70-96E0-6664801DDCDE}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{714E05C5-0C60-4C73-B9E9-9AD9615E5B5F}", DestinationId = "{729DC15F-8884-4D04-BE93-AD9A134C99A0}", SourcePosition = 0U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection19 = new Dgm.Connection() { ModelId = "{CCAAB5EB-F898-40D0-AF4C-BB34F08B86B2}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{714E05C5-0C60-4C73-B9E9-9AD9615E5B5F}", DestinationId = "{F5A6B133-1EFE-4696-B2F5-83299B17DBDD}", SourcePosition = 1U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection20 = new Dgm.Connection() { ModelId = "{6DC13167-59D9-4569-A60E-DBDEAD4422AA}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{154EB3C3-8DDD-450D-8565-C1454672828E}", SourcePosition = 5U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection21 = new Dgm.Connection() { ModelId = "{DB1B63A2-8217-4A67-AB30-D6D0152D8CAC}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{D228189E-4DE6-4C15-BA6B-580A06BBE021}", SourcePosition = 6U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection22 = new Dgm.Connection() { ModelId = "{D55813C8-57A1-4F61-942E-84EAD16E9D17}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{E09E2836-3EF6-45E4-AE86-2CF466B355DF}", SourcePosition = 7U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection23 = new Dgm.Connection() { ModelId = "{18FB7420-79CF-444A-A617-059C32D207B1}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{41AAB4C1-E472-4856-AA34-0E2326939948}", SourcePosition = 8U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection24 = new Dgm.Connection() { ModelId = "{40036E5E-131E-4D3F-9A0D-9F083ED42FF2}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{41AAB4C1-E472-4856-AA34-0E2326939948}", DestinationId = "{94C881B7-9C0B-4FEE-8CDB-EC9376DA67A3}", SourcePosition = 0U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection25 = new Dgm.Connection() { ModelId = "{8AC1B716-9B1B-4D58-8E3B-6520D5975C2D}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{41AAB4C1-E472-4856-AA34-0E2326939948}", DestinationId = "{754D8052-5098-4050-BEE9-FA0490150674}", SourcePosition = 1U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection26 = new Dgm.Connection() { ModelId = "{170E69F7-4C18-4132-9165-34787E480862}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{1624522F-649F-4321-86F1-94846B88F337}", SourcePosition = 9U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
+            Dgm.Connection connection27 = new Dgm.Connection() { ModelId = "{06E5372D-F2E7-4907-B3B1-BF8530E28BDD}", Type = Dgm.ConnectionValues.PresentationParentOf, SourceId = "{EBC89927-B953-4BAF-8E05-2A50C0B48C33}", DestinationId = "{F1365A1B-AEBD-4394-BB4A-4FD93ABEF638}", SourcePosition = 10U, DestinationPosition = 0U, PresentationId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
 
             connectionList1.Append(connection1);
             connectionList1.Append(connection2);
@@ -13385,7 +13385,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dsp.ShapeTree shapeTree1 = new Dsp.ShapeTree();
 
             Dsp.GroupShapeNonVisualProperties groupShapeNonVisualProperties1 = new Dsp.GroupShapeNonVisualProperties();
-            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties4 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "" };
+            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties4 = new Dsp.NonVisualDrawingProperties() { Id = 0U, Name = string.Empty };
             Dsp.NonVisualGroupDrawingShapeProperties nonVisualGroupDrawingShapeProperties1 = new Dsp.NonVisualGroupDrawingShapeProperties();
 
             groupShapeNonVisualProperties1.Append(nonVisualDrawingProperties4);
@@ -13395,7 +13395,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dsp.Shape shape9 = new Dsp.Shape() { ModelId = "{E69C432B-90BC-4ABD-87CA-31144D9DEE3F}" };
 
             Dsp.ShapeNonVisualProperties shapeNonVisualProperties1 = new Dsp.ShapeNonVisualProperties();
-            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties5 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "" };
+            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties5 = new Dsp.NonVisualDrawingProperties() { Id = 0U, Name = string.Empty };
             Dsp.NonVisualDrawingShapeProperties nonVisualDrawingShapeProperties11 = new Dsp.NonVisualDrawingShapeProperties();
 
             shapeNonVisualProperties1.Append(nonVisualDrawingProperties5);
@@ -13464,17 +13464,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dsp.ShapeStyle shapeStyle10 = new Dsp.ShapeStyle();
 
-            A.LineReference lineReference10 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference10 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage1 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference10.Append(rgbColorModelPercentage1);
 
-            A.FillReference fillReference10 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference10 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage2 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference10.Append(rgbColorModelPercentage2);
 
-            A.EffectReference effectReference10 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference10 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage3 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference10.Append(rgbColorModelPercentage3);
@@ -13492,7 +13492,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dsp.Shape shape10 = new Dsp.Shape() { ModelId = "{BEDA8E25-BDC8-4169-BB3F-A5089091E57E}" };
 
             Dsp.ShapeNonVisualProperties shapeNonVisualProperties2 = new Dsp.ShapeNonVisualProperties();
-            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties6 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "" };
+            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties6 = new Dsp.NonVisualDrawingProperties() { Id = 0U, Name = string.Empty };
             Dsp.NonVisualDrawingShapeProperties nonVisualDrawingShapeProperties12 = new Dsp.NonVisualDrawingShapeProperties();
 
             shapeNonVisualProperties2.Append(nonVisualDrawingProperties6);
@@ -13559,17 +13559,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dsp.ShapeStyle shapeStyle11 = new Dsp.ShapeStyle();
 
-            A.LineReference lineReference11 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference11 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage4 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference11.Append(rgbColorModelPercentage4);
 
-            A.FillReference fillReference11 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference11 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage5 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference11.Append(rgbColorModelPercentage5);
 
-            A.EffectReference effectReference11 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference11 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage6 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference11.Append(rgbColorModelPercentage6);
@@ -13646,7 +13646,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dsp.Shape shape11 = new Dsp.Shape() { ModelId = "{D228189E-4DE6-4C15-BA6B-580A06BBE021}" };
 
             Dsp.ShapeNonVisualProperties shapeNonVisualProperties3 = new Dsp.ShapeNonVisualProperties();
-            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties7 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "" };
+            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties7 = new Dsp.NonVisualDrawingProperties() { Id = 0U, Name = string.Empty };
             Dsp.NonVisualDrawingShapeProperties nonVisualDrawingShapeProperties13 = new Dsp.NonVisualDrawingShapeProperties();
 
             shapeNonVisualProperties3.Append(nonVisualDrawingProperties7);
@@ -13715,17 +13715,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dsp.ShapeStyle shapeStyle12 = new Dsp.ShapeStyle();
 
-            A.LineReference lineReference12 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference12 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage7 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference12.Append(rgbColorModelPercentage7);
 
-            A.FillReference fillReference12 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference12 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage8 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference12.Append(rgbColorModelPercentage8);
 
-            A.EffectReference effectReference12 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference12 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage9 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference12.Append(rgbColorModelPercentage9);
@@ -13743,7 +13743,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dsp.Shape shape12 = new Dsp.Shape() { ModelId = "{F5A6B133-1EFE-4696-B2F5-83299B17DBDD}" };
 
             Dsp.ShapeNonVisualProperties shapeNonVisualProperties4 = new Dsp.ShapeNonVisualProperties();
-            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties8 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "" };
+            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties8 = new Dsp.NonVisualDrawingProperties() { Id = 0U, Name = string.Empty };
             Dsp.NonVisualDrawingShapeProperties nonVisualDrawingShapeProperties14 = new Dsp.NonVisualDrawingShapeProperties();
 
             shapeNonVisualProperties4.Append(nonVisualDrawingProperties8);
@@ -13810,17 +13810,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dsp.ShapeStyle shapeStyle13 = new Dsp.ShapeStyle();
 
-            A.LineReference lineReference13 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference13 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage10 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference13.Append(rgbColorModelPercentage10);
 
-            A.FillReference fillReference13 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference13 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage11 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference13.Append(rgbColorModelPercentage11);
 
-            A.EffectReference effectReference13 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference13 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage12 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference13.Append(rgbColorModelPercentage12);
@@ -13897,7 +13897,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dsp.Shape shape13 = new Dsp.Shape() { ModelId = "{F1365A1B-AEBD-4394-BB4A-4FD93ABEF638}" };
 
             Dsp.ShapeNonVisualProperties shapeNonVisualProperties5 = new Dsp.ShapeNonVisualProperties();
-            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties9 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "" };
+            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties9 = new Dsp.NonVisualDrawingProperties() { Id = 0U, Name = string.Empty };
             Dsp.NonVisualDrawingShapeProperties nonVisualDrawingShapeProperties15 = new Dsp.NonVisualDrawingShapeProperties();
 
             shapeNonVisualProperties5.Append(nonVisualDrawingProperties9);
@@ -13966,17 +13966,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dsp.ShapeStyle shapeStyle14 = new Dsp.ShapeStyle();
 
-            A.LineReference lineReference14 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference14 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage13 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference14.Append(rgbColorModelPercentage13);
 
-            A.FillReference fillReference14 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference14 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage14 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference14.Append(rgbColorModelPercentage14);
 
-            A.EffectReference effectReference14 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference14 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage15 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference14.Append(rgbColorModelPercentage15);
@@ -13994,7 +13994,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dsp.Shape shape14 = new Dsp.Shape() { ModelId = "{754D8052-5098-4050-BEE9-FA0490150674}" };
 
             Dsp.ShapeNonVisualProperties shapeNonVisualProperties6 = new Dsp.ShapeNonVisualProperties();
-            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties10 = new Dsp.NonVisualDrawingProperties() { Id = (UInt32Value)0U, Name = "" };
+            Dsp.NonVisualDrawingProperties nonVisualDrawingProperties10 = new Dsp.NonVisualDrawingProperties() { Id = 0U, Name = string.Empty };
             Dsp.NonVisualDrawingShapeProperties nonVisualDrawingShapeProperties16 = new Dsp.NonVisualDrawingShapeProperties();
 
             shapeNonVisualProperties6.Append(nonVisualDrawingProperties10);
@@ -14061,17 +14061,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dsp.ShapeStyle shapeStyle15 = new Dsp.ShapeStyle();
 
-            A.LineReference lineReference15 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference15 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage16 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference15.Append(rgbColorModelPercentage16);
 
-            A.FillReference fillReference15 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference15 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage17 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference15.Append(rgbColorModelPercentage17);
 
-            A.EffectReference effectReference15 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference15 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage18 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference15.Append(rgbColorModelPercentage18);
@@ -15241,11 +15241,11 @@ namespace DocumentFormat.OpenXml.Tests
             Dgm.ColorsDefinition colorsDefinition1 = new Dgm.ColorsDefinition() { UniqueId = "urn:microsoft.com/office/officeart/2005/8/colors/accent1_2" };
             colorsDefinition1.AddNamespaceDeclaration("dgm", "http://schemas.openxmlformats.org/drawingml/2006/diagram");
             colorsDefinition1.AddNamespaceDeclaration("a", "http://schemas.openxmlformats.org/drawingml/2006/main");
-            Dgm.ColorDefinitionTitle colorDefinitionTitle1 = new Dgm.ColorDefinitionTitle() { Val = "" };
-            Dgm.ColorTransformDescription colorTransformDescription1 = new Dgm.ColorTransformDescription() { Val = "" };
+            Dgm.ColorDefinitionTitle colorDefinitionTitle1 = new Dgm.ColorDefinitionTitle() { Val = string.Empty };
+            Dgm.ColorTransformDescription colorTransformDescription1 = new Dgm.ColorTransformDescription() { Val = string.Empty };
 
             Dgm.ColorTransformCategories colorTransformCategories1 = new Dgm.ColorTransformCategories();
-            Dgm.ColorTransformCategory colorTransformCategory1 = new Dgm.ColorTransformCategory() { Type = "accent1", Priority = (UInt32Value)11200U };
+            Dgm.ColorTransformCategory colorTransformCategory1 = new Dgm.ColorTransformCategory() { Type = "accent1", Priority = 11200U };
 
             colorTransformCategories1.Append(colorTransformCategory1);
 
@@ -16817,8 +16817,8 @@ namespace DocumentFormat.OpenXml.Tests
 
             A.MajorFont majorFont1 = new A.MajorFont();
             A.LatinFont latinFont5 = new A.LatinFont() { Typeface = "Calibri Light", Panose = "020F0302020204030204" };
-            A.EastAsianFont eastAsianFont5 = new A.EastAsianFont() { Typeface = "" };
-            A.ComplexScriptFont complexScriptFont5 = new A.ComplexScriptFont() { Typeface = "" };
+            A.EastAsianFont eastAsianFont5 = new A.EastAsianFont() { Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont5 = new A.ComplexScriptFont() { Typeface = string.Empty };
             A.SupplementalFont supplementalFont1 = new A.SupplementalFont() { Script = "Jpan", Typeface = "ＭＳ ゴシック" };
             A.SupplementalFont supplementalFont2 = new A.SupplementalFont() { Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont3 = new A.SupplementalFont() { Script = "Hans", Typeface = "宋体" };
@@ -16886,8 +16886,8 @@ namespace DocumentFormat.OpenXml.Tests
 
             A.MinorFont minorFont1 = new A.MinorFont();
             A.LatinFont latinFont6 = new A.LatinFont() { Typeface = "Calibri", Panose = "020F0502020204030204" };
-            A.EastAsianFont eastAsianFont6 = new A.EastAsianFont() { Typeface = "" };
-            A.ComplexScriptFont complexScriptFont6 = new A.ComplexScriptFont() { Typeface = "" };
+            A.EastAsianFont eastAsianFont6 = new A.EastAsianFont() { Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont6 = new A.ComplexScriptFont() { Typeface = string.Empty };
             A.SupplementalFont supplementalFont31 = new A.SupplementalFont() { Script = "Jpan", Typeface = "ＭＳ 明朝" };
             A.SupplementalFont supplementalFont32 = new A.SupplementalFont() { Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont33 = new A.SupplementalFont() { Script = "Hans", Typeface = "宋体" };
@@ -17383,11 +17383,11 @@ namespace DocumentFormat.OpenXml.Tests
             Dgm.StyleDefinition styleDefinition1 = new Dgm.StyleDefinition() { UniqueId = "urn:microsoft.com/office/officeart/2005/8/quickstyle/simple1" };
             styleDefinition1.AddNamespaceDeclaration("dgm", "http://schemas.openxmlformats.org/drawingml/2006/diagram");
             styleDefinition1.AddNamespaceDeclaration("a", "http://schemas.openxmlformats.org/drawingml/2006/main");
-            Dgm.StyleDefinitionTitle styleDefinitionTitle1 = new Dgm.StyleDefinitionTitle() { Val = "" };
-            Dgm.StyleLabelDescription styleLabelDescription1 = new Dgm.StyleLabelDescription() { Val = "" };
+            Dgm.StyleDefinitionTitle styleDefinitionTitle1 = new Dgm.StyleDefinitionTitle() { Val = string.Empty };
+            Dgm.StyleLabelDescription styleLabelDescription1 = new Dgm.StyleLabelDescription() { Val = string.Empty };
 
             Dgm.StyleDisplayCategories styleDisplayCategories1 = new Dgm.StyleDisplayCategories();
-            Dgm.StyleDisplayCategory styleDisplayCategory1 = new Dgm.StyleDisplayCategory() { Type = "simple", Priority = (UInt32Value)10100U };
+            Dgm.StyleDisplayCategory styleDisplayCategory1 = new Dgm.StyleDisplayCategory() { Type = "simple", Priority = 10100U };
 
             styleDisplayCategories1.Append(styleDisplayCategory1);
 
@@ -17411,17 +17411,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style68 = new Dgm.Style();
 
-            A.LineReference lineReference16 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference16 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage19 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference16.Append(rgbColorModelPercentage19);
 
-            A.FillReference fillReference16 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference16 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage20 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference16.Append(rgbColorModelPercentage20);
 
-            A.EffectReference effectReference16 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference16 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage21 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference16.Append(rgbColorModelPercentage21);
@@ -17454,17 +17454,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style69 = new Dgm.Style();
 
-            A.LineReference lineReference17 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference17 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage22 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference17.Append(rgbColorModelPercentage22);
 
-            A.FillReference fillReference17 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference17 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage23 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference17.Append(rgbColorModelPercentage23);
 
-            A.EffectReference effectReference17 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference17 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage24 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference17.Append(rgbColorModelPercentage24);
@@ -17497,17 +17497,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style70 = new Dgm.Style();
 
-            A.LineReference lineReference18 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference18 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage25 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference18.Append(rgbColorModelPercentage25);
 
-            A.FillReference fillReference18 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference18 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage26 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference18.Append(rgbColorModelPercentage26);
 
-            A.EffectReference effectReference18 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference18 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage27 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference18.Append(rgbColorModelPercentage27);
@@ -17540,17 +17540,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style71 = new Dgm.Style();
 
-            A.LineReference lineReference19 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference19 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage28 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference19.Append(rgbColorModelPercentage28);
 
-            A.FillReference fillReference19 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference19 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage29 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference19.Append(rgbColorModelPercentage29);
 
-            A.EffectReference effectReference19 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference19 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage30 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference19.Append(rgbColorModelPercentage30);
@@ -17583,17 +17583,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style72 = new Dgm.Style();
 
-            A.LineReference lineReference20 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference20 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage31 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference20.Append(rgbColorModelPercentage31);
 
-            A.FillReference fillReference20 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference20 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage32 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference20.Append(rgbColorModelPercentage32);
 
-            A.EffectReference effectReference20 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference20 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage33 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference20.Append(rgbColorModelPercentage33);
@@ -17626,17 +17626,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style73 = new Dgm.Style();
 
-            A.LineReference lineReference21 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference21 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage34 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference21.Append(rgbColorModelPercentage34);
 
-            A.FillReference fillReference21 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference21 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage35 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference21.Append(rgbColorModelPercentage35);
 
-            A.EffectReference effectReference21 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference21 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage36 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference21.Append(rgbColorModelPercentage36);
@@ -17669,17 +17669,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style74 = new Dgm.Style();
 
-            A.LineReference lineReference22 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference22 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage37 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference22.Append(rgbColorModelPercentage37);
 
-            A.FillReference fillReference22 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference22 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage38 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference22.Append(rgbColorModelPercentage38);
 
-            A.EffectReference effectReference22 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference22 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage39 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference22.Append(rgbColorModelPercentage39);
@@ -17712,17 +17712,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style75 = new Dgm.Style();
 
-            A.LineReference lineReference23 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference23 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage40 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference23.Append(rgbColorModelPercentage40);
 
-            A.FillReference fillReference23 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference23 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage41 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference23.Append(rgbColorModelPercentage41);
 
-            A.EffectReference effectReference23 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference23 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage42 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference23.Append(rgbColorModelPercentage42);
@@ -17755,17 +17755,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style76 = new Dgm.Style();
 
-            A.LineReference lineReference24 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference24 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage43 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference24.Append(rgbColorModelPercentage43);
 
-            A.FillReference fillReference24 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference24 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage44 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference24.Append(rgbColorModelPercentage44);
 
-            A.EffectReference effectReference24 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference24 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage45 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference24.Append(rgbColorModelPercentage45);
@@ -17794,17 +17794,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style77 = new Dgm.Style();
 
-            A.LineReference lineReference25 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference25 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage46 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference25.Append(rgbColorModelPercentage46);
 
-            A.FillReference fillReference25 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference25 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage47 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference25.Append(rgbColorModelPercentage47);
 
-            A.EffectReference effectReference25 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference25 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage48 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference25.Append(rgbColorModelPercentage48);
@@ -17833,17 +17833,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style78 = new Dgm.Style();
 
-            A.LineReference lineReference26 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference26 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage49 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference26.Append(rgbColorModelPercentage49);
 
-            A.FillReference fillReference26 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference26 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage50 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference26.Append(rgbColorModelPercentage50);
 
-            A.EffectReference effectReference26 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference26 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage51 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference26.Append(rgbColorModelPercentage51);
@@ -17872,17 +17872,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style79 = new Dgm.Style();
 
-            A.LineReference lineReference27 = new A.LineReference() { Index = (UInt32Value)0U };
+            A.LineReference lineReference27 = new A.LineReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage52 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference27.Append(rgbColorModelPercentage52);
 
-            A.FillReference fillReference27 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference27 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage53 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference27.Append(rgbColorModelPercentage53);
 
-            A.EffectReference effectReference27 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference27 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage54 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference27.Append(rgbColorModelPercentage54);
@@ -17915,17 +17915,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style80 = new Dgm.Style();
 
-            A.LineReference lineReference28 = new A.LineReference() { Index = (UInt32Value)0U };
+            A.LineReference lineReference28 = new A.LineReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage55 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference28.Append(rgbColorModelPercentage55);
 
-            A.FillReference fillReference28 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference28 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage56 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference28.Append(rgbColorModelPercentage56);
 
-            A.EffectReference effectReference28 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference28 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage57 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference28.Append(rgbColorModelPercentage57);
@@ -17958,17 +17958,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style81 = new Dgm.Style();
 
-            A.LineReference lineReference29 = new A.LineReference() { Index = (UInt32Value)0U };
+            A.LineReference lineReference29 = new A.LineReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage58 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference29.Append(rgbColorModelPercentage58);
 
-            A.FillReference fillReference29 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference29 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage59 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference29.Append(rgbColorModelPercentage59);
 
-            A.EffectReference effectReference29 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference29 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage60 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference29.Append(rgbColorModelPercentage60);
@@ -18001,17 +18001,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style82 = new Dgm.Style();
 
-            A.LineReference lineReference30 = new A.LineReference() { Index = (UInt32Value)1U };
+            A.LineReference lineReference30 = new A.LineReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage61 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference30.Append(rgbColorModelPercentage61);
 
-            A.FillReference fillReference30 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference30 = new A.FillReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage62 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference30.Append(rgbColorModelPercentage62);
 
-            A.EffectReference effectReference30 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference30 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage63 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference30.Append(rgbColorModelPercentage63);
@@ -18040,17 +18040,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style83 = new Dgm.Style();
 
-            A.LineReference lineReference31 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference31 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage64 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference31.Append(rgbColorModelPercentage64);
 
-            A.FillReference fillReference31 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference31 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage65 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference31.Append(rgbColorModelPercentage65);
 
-            A.EffectReference effectReference31 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference31 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage66 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference31.Append(rgbColorModelPercentage66);
@@ -18079,17 +18079,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style84 = new Dgm.Style();
 
-            A.LineReference lineReference32 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference32 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage67 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference32.Append(rgbColorModelPercentage67);
 
-            A.FillReference fillReference32 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference32 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage68 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference32.Append(rgbColorModelPercentage68);
 
-            A.EffectReference effectReference32 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference32 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage69 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference32.Append(rgbColorModelPercentage69);
@@ -18122,17 +18122,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style85 = new Dgm.Style();
 
-            A.LineReference lineReference33 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference33 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage70 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference33.Append(rgbColorModelPercentage70);
 
-            A.FillReference fillReference33 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference33 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage71 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference33.Append(rgbColorModelPercentage71);
 
-            A.EffectReference effectReference33 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference33 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage72 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference33.Append(rgbColorModelPercentage72);
@@ -18165,17 +18165,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style86 = new Dgm.Style();
 
-            A.LineReference lineReference34 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference34 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage73 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference34.Append(rgbColorModelPercentage73);
 
-            A.FillReference fillReference34 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference34 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage74 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference34.Append(rgbColorModelPercentage74);
 
-            A.EffectReference effectReference34 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference34 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage75 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference34.Append(rgbColorModelPercentage75);
@@ -18208,17 +18208,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style87 = new Dgm.Style();
 
-            A.LineReference lineReference35 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference35 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage76 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference35.Append(rgbColorModelPercentage76);
 
-            A.FillReference fillReference35 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference35 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage77 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference35.Append(rgbColorModelPercentage77);
 
-            A.EffectReference effectReference35 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference35 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage78 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference35.Append(rgbColorModelPercentage78);
@@ -18251,17 +18251,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style88 = new Dgm.Style();
 
-            A.LineReference lineReference36 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference36 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage79 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference36.Append(rgbColorModelPercentage79);
 
-            A.FillReference fillReference36 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference36 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage80 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference36.Append(rgbColorModelPercentage80);
 
-            A.EffectReference effectReference36 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference36 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage81 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference36.Append(rgbColorModelPercentage81);
@@ -18294,17 +18294,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style89 = new Dgm.Style();
 
-            A.LineReference lineReference37 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference37 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage82 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference37.Append(rgbColorModelPercentage82);
 
-            A.FillReference fillReference37 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference37 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage83 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference37.Append(rgbColorModelPercentage83);
 
-            A.EffectReference effectReference37 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference37 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage84 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference37.Append(rgbColorModelPercentage84);
@@ -18337,17 +18337,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style90 = new Dgm.Style();
 
-            A.LineReference lineReference38 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference38 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage85 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference38.Append(rgbColorModelPercentage85);
 
-            A.FillReference fillReference38 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference38 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage86 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference38.Append(rgbColorModelPercentage86);
 
-            A.EffectReference effectReference38 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference38 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage87 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference38.Append(rgbColorModelPercentage87);
@@ -18380,17 +18380,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style91 = new Dgm.Style();
 
-            A.LineReference lineReference39 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference39 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage88 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference39.Append(rgbColorModelPercentage88);
 
-            A.FillReference fillReference39 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference39 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage89 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference39.Append(rgbColorModelPercentage89);
 
-            A.EffectReference effectReference39 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference39 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage90 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference39.Append(rgbColorModelPercentage90);
@@ -18423,17 +18423,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style92 = new Dgm.Style();
 
-            A.LineReference lineReference40 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference40 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage91 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference40.Append(rgbColorModelPercentage91);
 
-            A.FillReference fillReference40 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference40 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage92 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference40.Append(rgbColorModelPercentage92);
 
-            A.EffectReference effectReference40 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference40 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage93 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference40.Append(rgbColorModelPercentage93);
@@ -18466,17 +18466,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style93 = new Dgm.Style();
 
-            A.LineReference lineReference41 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference41 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage94 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference41.Append(rgbColorModelPercentage94);
 
-            A.FillReference fillReference41 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference41 = new A.FillReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage95 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference41.Append(rgbColorModelPercentage95);
 
-            A.EffectReference effectReference41 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference41 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage96 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference41.Append(rgbColorModelPercentage96);
@@ -18505,17 +18505,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style94 = new Dgm.Style();
 
-            A.LineReference lineReference42 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference42 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage97 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference42.Append(rgbColorModelPercentage97);
 
-            A.FillReference fillReference42 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference42 = new A.FillReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage98 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference42.Append(rgbColorModelPercentage98);
 
-            A.EffectReference effectReference42 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference42 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage99 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference42.Append(rgbColorModelPercentage99);
@@ -18544,17 +18544,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style95 = new Dgm.Style();
 
-            A.LineReference lineReference43 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference43 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage100 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference43.Append(rgbColorModelPercentage100);
 
-            A.FillReference fillReference43 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference43 = new A.FillReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage101 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference43.Append(rgbColorModelPercentage101);
 
-            A.EffectReference effectReference43 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference43 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage102 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference43.Append(rgbColorModelPercentage102);
@@ -18583,17 +18583,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style96 = new Dgm.Style();
 
-            A.LineReference lineReference44 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference44 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage103 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference44.Append(rgbColorModelPercentage103);
 
-            A.FillReference fillReference44 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference44 = new A.FillReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage104 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference44.Append(rgbColorModelPercentage104);
 
-            A.EffectReference effectReference44 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference44 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage105 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference44.Append(rgbColorModelPercentage105);
@@ -18622,17 +18622,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style97 = new Dgm.Style();
 
-            A.LineReference lineReference45 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference45 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage106 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference45.Append(rgbColorModelPercentage106);
 
-            A.FillReference fillReference45 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference45 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage107 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference45.Append(rgbColorModelPercentage107);
 
-            A.EffectReference effectReference45 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference45 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage108 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference45.Append(rgbColorModelPercentage108);
@@ -18661,17 +18661,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style98 = new Dgm.Style();
 
-            A.LineReference lineReference46 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference46 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage109 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference46.Append(rgbColorModelPercentage109);
 
-            A.FillReference fillReference46 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference46 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage110 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference46.Append(rgbColorModelPercentage110);
 
-            A.EffectReference effectReference46 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference46 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage111 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference46.Append(rgbColorModelPercentage111);
@@ -18700,17 +18700,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style99 = new Dgm.Style();
 
-            A.LineReference lineReference47 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference47 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage112 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference47.Append(rgbColorModelPercentage112);
 
-            A.FillReference fillReference47 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference47 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage113 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference47.Append(rgbColorModelPercentage113);
 
-            A.EffectReference effectReference47 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference47 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage114 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference47.Append(rgbColorModelPercentage114);
@@ -18739,17 +18739,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style100 = new Dgm.Style();
 
-            A.LineReference lineReference48 = new A.LineReference() { Index = (UInt32Value)1U };
+            A.LineReference lineReference48 = new A.LineReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage115 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference48.Append(rgbColorModelPercentage115);
 
-            A.FillReference fillReference48 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference48 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage116 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference48.Append(rgbColorModelPercentage116);
 
-            A.EffectReference effectReference48 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference48 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage117 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference48.Append(rgbColorModelPercentage117);
@@ -18778,17 +18778,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style101 = new Dgm.Style();
 
-            A.LineReference lineReference49 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference49 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage118 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference49.Append(rgbColorModelPercentage118);
 
-            A.FillReference fillReference49 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference49 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage119 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference49.Append(rgbColorModelPercentage119);
 
-            A.EffectReference effectReference49 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference49 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage120 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference49.Append(rgbColorModelPercentage120);
@@ -18817,17 +18817,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style102 = new Dgm.Style();
 
-            A.LineReference lineReference50 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference50 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage121 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference50.Append(rgbColorModelPercentage121);
 
-            A.FillReference fillReference50 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference50 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage122 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference50.Append(rgbColorModelPercentage122);
 
-            A.EffectReference effectReference50 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference50 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage123 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference50.Append(rgbColorModelPercentage123);
@@ -18856,17 +18856,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style103 = new Dgm.Style();
 
-            A.LineReference lineReference51 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference51 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage124 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference51.Append(rgbColorModelPercentage124);
 
-            A.FillReference fillReference51 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference51 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage125 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference51.Append(rgbColorModelPercentage125);
 
-            A.EffectReference effectReference51 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference51 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage126 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference51.Append(rgbColorModelPercentage126);
@@ -18895,17 +18895,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style104 = new Dgm.Style();
 
-            A.LineReference lineReference52 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference52 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage127 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference52.Append(rgbColorModelPercentage127);
 
-            A.FillReference fillReference52 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference52 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage128 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference52.Append(rgbColorModelPercentage128);
 
-            A.EffectReference effectReference52 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference52 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage129 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference52.Append(rgbColorModelPercentage129);
@@ -18934,17 +18934,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style105 = new Dgm.Style();
 
-            A.LineReference lineReference53 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference53 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage130 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference53.Append(rgbColorModelPercentage130);
 
-            A.FillReference fillReference53 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference53 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage131 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference53.Append(rgbColorModelPercentage131);
 
-            A.EffectReference effectReference53 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference53 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage132 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference53.Append(rgbColorModelPercentage132);
@@ -18973,17 +18973,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style106 = new Dgm.Style();
 
-            A.LineReference lineReference54 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference54 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage133 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference54.Append(rgbColorModelPercentage133);
 
-            A.FillReference fillReference54 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference54 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage134 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference54.Append(rgbColorModelPercentage134);
 
-            A.EffectReference effectReference54 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference54 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage135 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference54.Append(rgbColorModelPercentage135);
@@ -19012,17 +19012,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style107 = new Dgm.Style();
 
-            A.LineReference lineReference55 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference55 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage136 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference55.Append(rgbColorModelPercentage136);
 
-            A.FillReference fillReference55 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference55 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage137 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference55.Append(rgbColorModelPercentage137);
 
-            A.EffectReference effectReference55 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference55 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage138 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference55.Append(rgbColorModelPercentage138);
@@ -19051,17 +19051,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style108 = new Dgm.Style();
 
-            A.LineReference lineReference56 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference56 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage139 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference56.Append(rgbColorModelPercentage139);
 
-            A.FillReference fillReference56 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference56 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage140 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference56.Append(rgbColorModelPercentage140);
 
-            A.EffectReference effectReference56 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference56 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage141 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference56.Append(rgbColorModelPercentage141);
@@ -19090,17 +19090,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style109 = new Dgm.Style();
 
-            A.LineReference lineReference57 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference57 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage142 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference57.Append(rgbColorModelPercentage142);
 
-            A.FillReference fillReference57 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference57 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage143 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference57.Append(rgbColorModelPercentage143);
 
-            A.EffectReference effectReference57 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference57 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage144 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference57.Append(rgbColorModelPercentage144);
@@ -19129,17 +19129,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style110 = new Dgm.Style();
 
-            A.LineReference lineReference58 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference58 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage145 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference58.Append(rgbColorModelPercentage145);
 
-            A.FillReference fillReference58 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference58 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage146 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference58.Append(rgbColorModelPercentage146);
 
-            A.EffectReference effectReference58 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference58 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage147 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference58.Append(rgbColorModelPercentage147);
@@ -19168,17 +19168,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style111 = new Dgm.Style();
 
-            A.LineReference lineReference59 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference59 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage148 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference59.Append(rgbColorModelPercentage148);
 
-            A.FillReference fillReference59 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference59 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage149 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference59.Append(rgbColorModelPercentage149);
 
-            A.EffectReference effectReference59 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference59 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage150 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference59.Append(rgbColorModelPercentage150);
@@ -19207,17 +19207,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style112 = new Dgm.Style();
 
-            A.LineReference lineReference60 = new A.LineReference() { Index = (UInt32Value)0U };
+            A.LineReference lineReference60 = new A.LineReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage151 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference60.Append(rgbColorModelPercentage151);
 
-            A.FillReference fillReference60 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference60 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage152 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference60.Append(rgbColorModelPercentage152);
 
-            A.EffectReference effectReference60 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference60 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage153 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference60.Append(rgbColorModelPercentage153);
@@ -19246,17 +19246,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style113 = new Dgm.Style();
 
-            A.LineReference lineReference61 = new A.LineReference() { Index = (UInt32Value)0U };
+            A.LineReference lineReference61 = new A.LineReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage154 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference61.Append(rgbColorModelPercentage154);
 
-            A.FillReference fillReference61 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference61 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage155 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference61.Append(rgbColorModelPercentage155);
 
-            A.EffectReference effectReference61 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference61 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage156 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference61.Append(rgbColorModelPercentage156);
@@ -19285,17 +19285,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style114 = new Dgm.Style();
 
-            A.LineReference lineReference62 = new A.LineReference() { Index = (UInt32Value)0U };
+            A.LineReference lineReference62 = new A.LineReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage157 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference62.Append(rgbColorModelPercentage157);
 
-            A.FillReference fillReference62 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference62 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage158 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference62.Append(rgbColorModelPercentage158);
 
-            A.EffectReference effectReference62 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference62 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage159 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference62.Append(rgbColorModelPercentage159);
@@ -19324,17 +19324,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style115 = new Dgm.Style();
 
-            A.LineReference lineReference63 = new A.LineReference() { Index = (UInt32Value)2U };
+            A.LineReference lineReference63 = new A.LineReference() { Index = 2U };
             A.RgbColorModelPercentage rgbColorModelPercentage160 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference63.Append(rgbColorModelPercentage160);
 
-            A.FillReference fillReference63 = new A.FillReference() { Index = (UInt32Value)1U };
+            A.FillReference fillReference63 = new A.FillReference() { Index = 1U };
             A.RgbColorModelPercentage rgbColorModelPercentage161 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference63.Append(rgbColorModelPercentage161);
 
-            A.EffectReference effectReference63 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference63 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage162 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference63.Append(rgbColorModelPercentage162);
@@ -19363,17 +19363,17 @@ namespace DocumentFormat.OpenXml.Tests
 
             Dgm.Style style116 = new Dgm.Style();
 
-            A.LineReference lineReference64 = new A.LineReference() { Index = (UInt32Value)0U };
+            A.LineReference lineReference64 = new A.LineReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage163 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             lineReference64.Append(rgbColorModelPercentage163);
 
-            A.FillReference fillReference64 = new A.FillReference() { Index = (UInt32Value)0U };
+            A.FillReference fillReference64 = new A.FillReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage164 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             fillReference64.Append(rgbColorModelPercentage164);
 
-            A.EffectReference effectReference64 = new A.EffectReference() { Index = (UInt32Value)0U };
+            A.EffectReference effectReference64 = new A.EffectReference() { Index = 0U };
             A.RgbColorModelPercentage rgbColorModelPercentage165 = new A.RgbColorModelPercentage() { RedPortion = 0, GreenPortion = 0, BluePortion = 0 };
 
             effectReference64.Append(rgbColorModelPercentage165);
@@ -19605,10 +19605,10 @@ namespace DocumentFormat.OpenXml.Tests
             M.BreakBinarySubtraction breakBinarySubtraction1 = new M.BreakBinarySubtraction() { Val = M.BreakBinarySubtractionValues.MinusMinus };
             M.SmallFraction smallFraction1 = new M.SmallFraction() { Val = M.BooleanValues.Zero };
             M.DisplayDefaults displayDefaults1 = new M.DisplayDefaults();
-            M.LeftMargin leftMargin1 = new M.LeftMargin() { Val = (UInt32Value)0U };
-            M.RightMargin rightMargin1 = new M.RightMargin() { Val = (UInt32Value)0U };
+            M.LeftMargin leftMargin1 = new M.LeftMargin() { Val = 0U };
+            M.RightMargin rightMargin1 = new M.RightMargin() { Val = 0U };
             M.DefaultJustification defaultJustification1 = new M.DefaultJustification() { Val = M.JustificationValues.CenterGroup };
-            M.WrapIndent wrapIndent1 = new M.WrapIndent() { Val = (UInt32Value)1440U };
+            M.WrapIndent wrapIndent1 = new M.WrapIndent() { Val = 1440U };
             M.IntegralLimitLocation integralLimitLocation1 = new M.IntegralLimitLocation() { Val = M.LimitLocationValues.SubscriptSuperscript };
             M.NaryLimitLocation naryLimitLocation1 = new M.NaryLimitLocation() { Val = M.LimitLocationValues.UnderOver };
 
@@ -19868,11 +19868,11 @@ namespace DocumentFormat.OpenXml.Tests
             Dgm.LayoutDefinition layoutDefinition1 = new Dgm.LayoutDefinition() { UniqueId = "urn:microsoft.com/office/officeart/2005/8/layout/list1" };
             layoutDefinition1.AddNamespaceDeclaration("dgm", "http://schemas.openxmlformats.org/drawingml/2006/diagram");
             layoutDefinition1.AddNamespaceDeclaration("a", "http://schemas.openxmlformats.org/drawingml/2006/main");
-            Dgm.Title title2 = new Dgm.Title() { Val = "" };
-            Dgm.Description description1 = new Dgm.Description() { Val = "" };
+            Dgm.Title title2 = new Dgm.Title() { Val = string.Empty };
+            Dgm.Description description1 = new Dgm.Description() { Val = string.Empty };
 
             Dgm.CategoryList categoryList1 = new Dgm.CategoryList();
-            Dgm.Category category1 = new Dgm.Category() { Type = "list", Priority = (UInt32Value)4000U };
+            Dgm.Category category1 = new Dgm.Category() { Type = "list", Priority = 4000U };
 
             categoryList1.Append(category1);
 
@@ -19904,9 +19904,9 @@ namespace DocumentFormat.OpenXml.Tests
             pointList2.Append(point32);
 
             Dgm.ConnectionList connectionList2 = new Dgm.ConnectionList();
-            Dgm.Connection connection28 = new Dgm.Connection() { ModelId = "4", SourceId = "0", DestinationId = "1", SourcePosition = (UInt32Value)0U, DestinationPosition = (UInt32Value)0U };
-            Dgm.Connection connection29 = new Dgm.Connection() { ModelId = "5", SourceId = "0", DestinationId = "2", SourcePosition = (UInt32Value)1U, DestinationPosition = (UInt32Value)0U };
-            Dgm.Connection connection30 = new Dgm.Connection() { ModelId = "6", SourceId = "0", DestinationId = "3", SourcePosition = (UInt32Value)2U, DestinationPosition = (UInt32Value)0U };
+            Dgm.Connection connection28 = new Dgm.Connection() { ModelId = "4", SourceId = "0", DestinationId = "1", SourcePosition = 0U, DestinationPosition = 0U };
+            Dgm.Connection connection29 = new Dgm.Connection() { ModelId = "5", SourceId = "0", DestinationId = "2", SourcePosition = 1U, DestinationPosition = 0U };
+            Dgm.Connection connection30 = new Dgm.Connection() { ModelId = "6", SourceId = "0", DestinationId = "3", SourcePosition = 2U, DestinationPosition = 0U };
 
             connectionList2.Append(connection28);
             connectionList2.Append(connection29);
@@ -19935,8 +19935,8 @@ namespace DocumentFormat.OpenXml.Tests
             pointList3.Append(point35);
 
             Dgm.ConnectionList connectionList3 = new Dgm.ConnectionList();
-            Dgm.Connection connection31 = new Dgm.Connection() { ModelId = "4", SourceId = "0", DestinationId = "1", SourcePosition = (UInt32Value)0U, DestinationPosition = (UInt32Value)0U };
-            Dgm.Connection connection32 = new Dgm.Connection() { ModelId = "5", SourceId = "0", DestinationId = "2", SourcePosition = (UInt32Value)1U, DestinationPosition = (UInt32Value)0U };
+            Dgm.Connection connection31 = new Dgm.Connection() { ModelId = "4", SourceId = "0", DestinationId = "1", SourcePosition = 0U, DestinationPosition = 0U };
+            Dgm.Connection connection32 = new Dgm.Connection() { ModelId = "5", SourceId = "0", DestinationId = "2", SourcePosition = 1U, DestinationPosition = 0U };
 
             connectionList3.Append(connection31);
             connectionList3.Append(connection32);
@@ -19968,10 +19968,10 @@ namespace DocumentFormat.OpenXml.Tests
             pointList4.Append(point40);
 
             Dgm.ConnectionList connectionList4 = new Dgm.ConnectionList();
-            Dgm.Connection connection33 = new Dgm.Connection() { ModelId = "5", SourceId = "0", DestinationId = "1", SourcePosition = (UInt32Value)0U, DestinationPosition = (UInt32Value)0U };
-            Dgm.Connection connection34 = new Dgm.Connection() { ModelId = "6", SourceId = "0", DestinationId = "2", SourcePosition = (UInt32Value)1U, DestinationPosition = (UInt32Value)0U };
-            Dgm.Connection connection35 = new Dgm.Connection() { ModelId = "7", SourceId = "0", DestinationId = "3", SourcePosition = (UInt32Value)2U, DestinationPosition = (UInt32Value)0U };
-            Dgm.Connection connection36 = new Dgm.Connection() { ModelId = "8", SourceId = "0", DestinationId = "4", SourcePosition = (UInt32Value)3U, DestinationPosition = (UInt32Value)0U };
+            Dgm.Connection connection33 = new Dgm.Connection() { ModelId = "5", SourceId = "0", DestinationId = "1", SourcePosition = 0U, DestinationPosition = 0U };
+            Dgm.Connection connection34 = new Dgm.Connection() { ModelId = "6", SourceId = "0", DestinationId = "2", SourcePosition = 1U, DestinationPosition = 0U };
+            Dgm.Connection connection35 = new Dgm.Connection() { ModelId = "7", SourceId = "0", DestinationId = "3", SourcePosition = 2U, DestinationPosition = 0U };
+            Dgm.Connection connection36 = new Dgm.Connection() { ModelId = "8", SourceId = "0", DestinationId = "4", SourcePosition = 3U, DestinationPosition = 0U };
 
             connectionList4.Append(connection33);
             connectionList4.Append(connection34);
@@ -20033,7 +20033,7 @@ namespace DocumentFormat.OpenXml.Tests
             choose1.Append(diagramChooseIf1);
             choose1.Append(diagramChooseElse1);
 
-            Dgm.Shape shape15 = new Dgm.Shape() { Blip = "" };
+            Dgm.Shape shape15 = new Dgm.Shape() { Blip = string.Empty };
             shape15.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             Dgm.AdjustList adjustList1 = new Dgm.AdjustList();
 
@@ -20123,7 +20123,7 @@ namespace DocumentFormat.OpenXml.Tests
             choose2.Append(diagramChooseIf2);
             choose2.Append(diagramChooseElse2);
 
-            Dgm.Shape shape16 = new Dgm.Shape() { Blip = "" };
+            Dgm.Shape shape16 = new Dgm.Shape() { Blip = string.Empty };
             shape16.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             Dgm.AdjustList adjustList2 = new Dgm.AdjustList();
 
@@ -20135,7 +20135,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dgm.LayoutNode layoutNode3 = new Dgm.LayoutNode() { Name = "parentLeftMargin" };
             Dgm.Algorithm algorithm5 = new Dgm.Algorithm() { Type = Dgm.AlgorithmValues.Space };
 
-            Dgm.Shape shape17 = new Dgm.Shape() { Type = "rect", Blip = "", HideGeometry = true };
+            Dgm.Shape shape17 = new Dgm.Shape() { Type = "rect", Blip = string.Empty, HideGeometry = true };
             shape17.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             Dgm.AdjustList adjustList3 = new Dgm.AdjustList();
 
@@ -20190,7 +20190,7 @@ namespace DocumentFormat.OpenXml.Tests
             choose3.Append(diagramChooseIf3);
             choose3.Append(diagramChooseElse3);
 
-            Dgm.Shape shape18 = new Dgm.Shape() { Type = "roundRect", Blip = "" };
+            Dgm.Shape shape18 = new Dgm.Shape() { Type = "roundRect", Blip = string.Empty };
             shape18.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             Dgm.AdjustList adjustList4 = new Dgm.AdjustList();
 
@@ -20223,7 +20223,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dgm.LayoutNode layoutNode5 = new Dgm.LayoutNode() { Name = "negativeSpace" };
             Dgm.Algorithm algorithm8 = new Dgm.Algorithm() { Type = Dgm.AlgorithmValues.Space };
 
-            Dgm.Shape shape19 = new Dgm.Shape() { Blip = "" };
+            Dgm.Shape shape19 = new Dgm.Shape() { Blip = string.Empty };
             shape19.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             Dgm.AdjustList adjustList5 = new Dgm.AdjustList();
 
@@ -20250,7 +20250,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             algorithm9.Append(parameter19);
 
-            Dgm.Shape shape20 = new Dgm.Shape() { Type = "rect", Blip = "", ZOrderOffset = -2 };
+            Dgm.Shape shape20 = new Dgm.Shape() { Type = "rect", Blip = string.Empty, ZOrderOffset = -2 };
             shape20.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             Dgm.AdjustList adjustList6 = new Dgm.AdjustList();
 
@@ -20279,7 +20279,7 @@ namespace DocumentFormat.OpenXml.Tests
             Dgm.LayoutNode layoutNode7 = new Dgm.LayoutNode() { Name = "spaceBetweenRectangles" };
             Dgm.Algorithm algorithm10 = new Dgm.Algorithm() { Type = Dgm.AlgorithmValues.Space };
 
-            Dgm.Shape shape21 = new Dgm.Shape() { Blip = "" };
+            Dgm.Shape shape21 = new Dgm.Shape() { Blip = string.Empty };
             shape21.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             Dgm.AdjustList adjustList7 = new Dgm.AdjustList();
 
@@ -20323,10 +20323,10 @@ namespace DocumentFormat.OpenXml.Tests
         private void SetPackageProperties(OpenXmlPackage document)
         {
             document.PackageProperties.Creator = "Eric White";
-            document.PackageProperties.Title = "";
-            document.PackageProperties.Subject = "";
-            document.PackageProperties.Keywords = "";
-            document.PackageProperties.Description = "";
+            document.PackageProperties.Title = string.Empty;
+            document.PackageProperties.Subject = string.Empty;
+            document.PackageProperties.Keywords = string.Empty;
+            document.PackageProperties.Description = string.Empty;
             document.PackageProperties.Revision = "2";
             document.PackageProperties.Created = System.Xml.XmlConvert.ToDateTime("2015-11-18T04:59:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind);
             document.PackageProperties.Modified = System.Xml.XmlConvert.ToDateTime("2015-11-18T04:59:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind);

@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// <summary>
     /// Class for all list simple types.
     /// </summary>
-    [DataContract]
+    [DataContract(Name = "list")]
     internal class ListValueRestriction : SimpleTypeRestriction
     {
         /// <inheritdoc />
@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         /// <inheritdoc />
         public override bool IsList => true;
 
-        [DataMember]
+        [DataMember(Name = "item")]
         public SimpleTypeRestriction ListItemType { get; set; }
 
         /// <inheritdoc />
@@ -40,6 +40,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 
                 return true;
             }
+
             return false;
         }
     }

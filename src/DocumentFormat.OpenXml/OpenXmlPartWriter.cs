@@ -26,6 +26,7 @@ namespace DocumentFormat.OpenXml
                 {
                     _openXmlLeafTextElementClass = typeof(OpenXmlLeafTextElement);
                 }
+
                 return _openXmlLeafTextElementClass;
             }
         }
@@ -68,7 +69,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartWriter.
         /// </summary>
-        /// <param name="partStream">The givern part stream.</param>
+        /// <param name="partStream">The given part stream.</param>
         public OpenXmlPartWriter(Stream partStream)
             : this(partStream, Encoding.UTF8)
         {
@@ -77,7 +78,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Initializes a new instance of the OpenXmlPartWriter.
         /// </summary>
-        /// <param name="partStream">The givern part stream.</param>
+        /// <param name="partStream">The given part stream.</param>
         /// <param name="encoding">The encoding for the XML stream.</param>
         public OpenXmlPartWriter(Stream partStream, Encoding encoding)
         {
@@ -130,7 +131,7 @@ namespace DocumentFormat.OpenXml
         /// Writes out a start element tag of the current element of the OpenXmlReader. And write the attributes in attributes.
         /// </summary>
         /// <param name="elementReader">The OpenXmlReader to read from. </param>
-        /// <param name="attributes">The attributes to be writtern, can be null if no attrbutes.</param>
+        /// <param name="attributes">The attributes to be written, can be null if no attributes.</param>
         public override void WriteStartElement(OpenXmlReader elementReader, IEnumerable<OpenXmlAttribute> attributes)
         {
             WriteStartElement(elementReader, attributes, elementReader.NamespaceDeclarations);
@@ -140,7 +141,7 @@ namespace DocumentFormat.OpenXml
         /// Writes out a start element tag of the current element of the OpenXmlReader. And write the attributes in attributes.
         /// </summary>
         /// <param name="elementReader">The OpenXmlReader to read from. </param>
-        /// <param name="attributes">The attributes to be writtern, can be null if no attrbutes.</param>
+        /// <param name="attributes">The attributes to be written, can be null if no attributes.</param>
         /// <param name="namespaceDeclarations">The namespace declarations to be written, can be null if no namespace declarations.</param>
         public override void WriteStartElement(OpenXmlReader elementReader, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
         {
@@ -194,7 +195,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Writes out a start tag of the element and all the attributes of the element.
         /// </summary>
-        /// <param name="elementObject">The OpenXmlElement object to be writen.</param>
+        /// <param name="elementObject">The OpenXmlElement object to be written.</param>
         public override void WriteStartElement(OpenXmlElement elementObject)
         {
             if (elementObject == null)
@@ -233,8 +234,8 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Writes out a start tag of the element. And write the attributes in attributes. The attributes of the element will be omitted.
         /// </summary>
-        /// <param name="elementObject">The OpenXmlElement object to be writen.</param>
-        /// <param name="attributes">The attributes to be writtern.</param>
+        /// <param name="elementObject">The OpenXmlElement object to be written.</param>
+        /// <param name="attributes">The attributes to be written.</param>
         public override void WriteStartElement(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes)
         {
             WriteStartElement(elementObject, attributes, elementObject.NamespaceDeclarations);
@@ -243,8 +244,8 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Writes out a start tag of the element. And write the attributes in attributes. The attributes of the element will be omitted.
         /// </summary>
-        /// <param name="elementObject">The OpenXmlElement object to be writen.</param>
-        /// <param name="attributes">The attributes to be writtern.</param>
+        /// <param name="elementObject">The OpenXmlElement object to be written.</param>
+        /// <param name="attributes">The attributes to be written.</param>
         /// <param name="namespaceDeclarations">The namespace declarations to be written, can be null if no namespace declarations.</param>
         public override void WriteStartElement(OpenXmlElement elementObject, IEnumerable<OpenXmlAttribute> attributes, IEnumerable<KeyValuePair<string, string>> namespaceDeclarations)
         {
@@ -304,7 +305,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Writes the given text content.
         /// </summary>
-        /// <param name="text">The text to be writtern. </param>
+        /// <param name="text">The text to be written. </param>
         public override void WriteString(string text)
         {
             ThrowIfObjectDisposed();
@@ -324,7 +325,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Write the OpenXmlElement to the writer.
         /// </summary>
-        /// <param name="elementObject">The OpenXmlElement object to be writen.</param>
+        /// <param name="elementObject">The OpenXmlElement object to be written.</param>
         public override void WriteElement(OpenXmlElement elementObject)
         {
             if (elementObject == null)
@@ -347,9 +348,6 @@ namespace DocumentFormat.OpenXml
             if (_xmlWriter != null)
             {
 #if FEATURE_CLOSE
-                // the end tag of the root element
-                // this._xmlWriter.WriteEndElement();
-
                 _xmlWriter.Close();
 #else
                 _xmlWriter.Dispose();
@@ -368,7 +366,7 @@ namespace DocumentFormat.OpenXml
             XmlWriterSettings settings = new XmlWriterSettings
             {
                 CloseOutput = closeOutput,
-                Encoding = encoding
+                Encoding = encoding,
             };
 
             _xmlWriter = XmlWriter.Create(partStream, settings);

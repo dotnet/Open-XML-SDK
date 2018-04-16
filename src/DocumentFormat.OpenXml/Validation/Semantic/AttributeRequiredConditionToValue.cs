@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                         Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_AttributeRequiredConditionToValue,
                                                     GetAttributeQualifiedName(context.Element, _requiredAttribute),
                                                     GetAttributeQualifiedName(context.Element, _conditionAttribute),
-                                                    valueString)
+                                                    valueString),
                     };
                 }
             }

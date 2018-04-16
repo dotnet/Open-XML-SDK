@@ -7,7 +7,7 @@ using System.Diagnostics;
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Defines an OnOffValue datatype for attributes that have enum values that are Boolean values that represent: 'true' or 'false', 'on' or 'off', or '0' or '1'.
+    /// Defines an OnOffValue data type for attributes that have enum values that are Boolean values that represent: 'true' or 'false', 'on' or 'off', or '0' or '1'.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
     public class OnOffValue : OpenXmlSimpleValue<bool>
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="boolValue">The boolean value.</param>
         /// <returns>"1" for True, "0" for False.</returns>
-        private protected override string GetText(Boolean boolValue)
+        private protected override string GetText(bool boolValue)
         {
             // TODO : Defines the default text values.
             return boolValue ? "true" : "false";
@@ -95,11 +95,11 @@ namespace DocumentFormat.OpenXml
         private protected override OpenXmlSimpleType CloneImpl() => new OnOffValue(this);
 
         /// <summary>
-        /// Implicitly converts the specified OnOffValue object to a <see cref="Boolean"/> value.
+        /// Implicitly converts the specified OnOffValue object to a <see cref="bool"/> value.
         /// </summary>
         /// <param name="xmlAttribute">The <see cref="OnOffValue"/> object to convert.</param>
-        /// <returns>The converted <see cref="Boolean"/> value.</returns>
-        public static implicit operator Boolean(OnOffValue xmlAttribute)
+        /// <returns>The converted <see cref="bool"/> value.</returns>
+        public static implicit operator bool(OnOffValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {
@@ -110,11 +110,11 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Implicitly converts a <see cref="Boolean"/> value to an <see cref="OnOffValue"/> value.
+        /// Implicitly converts a <see cref="bool"/> value to an <see cref="OnOffValue"/> value.
         /// </summary>
-        /// <param name="value">The <see cref="Boolean"/> value to convert.</param>
+        /// <param name="value">The <see cref="bool"/> value to convert.</param>
         /// <returns>The converted <see cref="OnOffValue"/>.</returns>
-        public static implicit operator OnOffValue(Boolean value)
+        public static implicit operator OnOffValue(bool value)
         {
             return FromBoolean(value);
         }
@@ -124,7 +124,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">A Boolean value that is used to create a new OnOffValue object.</param>
         /// <returns>A OnOffValue that corresponds to the value parameter.</returns>
-        public static OnOffValue FromBoolean(Boolean value)
+        public static OnOffValue FromBoolean(bool value)
         {
             return new OnOffValue(value);
         }
@@ -134,7 +134,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="xmlAttribute">A OnOffValue object to retrieve an internal Boolean representation.</param>
         /// <returns>A Boolean value that represents a OnOffValue object.</returns>
-        public static Boolean ToBoolean(OnOffValue xmlAttribute)
+        public static bool ToBoolean(OnOffValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {

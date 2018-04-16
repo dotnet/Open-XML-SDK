@@ -68,6 +68,7 @@ namespace DocumentFormat.OpenXml
         {
             get { return tagName; }
         }
+
         /// <summary>
         /// Gets the local name of the Choice element.
         /// </summary>

@@ -577,7 +577,6 @@ namespace DocumentFormat.OpenXml.Tests
 
         //xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"
         //xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"
-
         [Fact]
         public void OpenXmlAttributeValueTypeTest()
         {
@@ -595,7 +594,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             wrsidP.LocalName = "rsidP";
             wrsidP.Value = "00EC35BB";
-            Log.Comment("Assgined new LocalName: {0} with ByValue: {1} and comparing it with original w:rsidR", wrsidP.LocalName, wrsidP.Value);
+            Log.Comment("Assigned new LocalName: {0} with ByValue: {1} and comparing it with original w:rsidR", wrsidP.LocalName, wrsidP.Value);
             Log.VerifyFalse(wrsidP == wrsidR, "The assigned OpenXmlAttribute variable IS equal to original one.");
             Log.VerifyFalse(object.ReferenceEquals(wrsidP, wrsidR), "The assigned OpenXmlAttribute variable IS reference equal to original one.");
         }
@@ -1991,7 +1990,6 @@ namespace DocumentFormat.OpenXml.Tests
         // Annotations<T>()
         // RemoveAnnotations(Type)
         // RemoveAnnotations<T>()
-
         [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.Wordprocessing.Paragraph.AdjustRightInd)]
         [Theory]
         public void AnnotationTest(string testPath)
@@ -2137,6 +2135,7 @@ namespace DocumentFormat.OpenXml.Tests
             using (var package = testfile.Open(false))
             {
                 var doc = (package as WordprocessingDocument).MainDocumentPart.Document;
+
                 // DocumentFormat.OpenXml.Drawing.LockedCanvas
                 var element = doc.Descendants().Where(e => e.LocalName == "lockedCanvas").FirstOrDefault();
                 if (element == null)
@@ -2144,6 +2143,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Log.Warning("No lockedCanvas element found in specified document.");
                     return;
                 }
+
                 if (element is OpenXmlUnknownElement)
                     Log.Fail("Element {0} is loaded as OpenXmlUnknownElement, instead of expected LockedCanvasElement.", element.Path());
                 else
@@ -2152,6 +2152,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact]
+
         // [Description("Office14: 687665")]
         public void Bug687665_NewElementFromOuterXmlWithACB()
         {
@@ -2181,6 +2182,7 @@ namespace DocumentFormat.OpenXml.Tests
 
         [InlineData(TestAssets.TestDataStorage.V2FxTestFiles.BugRegression._680607HelloO14)]
         [Theory]
+
         // [Description("Office14: 680607")]
         public void Bug680607_SaveOutWord14Beta2File(string path)
         {
@@ -2194,10 +2196,10 @@ namespace DocumentFormat.OpenXml.Tests
                     //xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" mc:Ignorable="w14">
                     //   ....
                     //</w:fonts>
-
                     var fontTablePart = (Package as WordprocessingDocument).MainDocumentPart.GetPartsOfType<FontTablePart>().First();
                     var fonts = fontTablePart.Fonts;
-                    // check if mc:Ignorable="w14" and if there're attribute named xmlns:w14
+
+                    // check if mc:Ignorable="w14" and if there is an attribute named xmlns:w14
                     var ignorable = fonts.GetAttributes().Where(a => a.LocalName == "Ignorable" && a.Value == "w14").FirstOrDefault();
                     if (ignorable == default(OpenXmlAttribute))
                         Log.Fail("No mc:Ignorable attribute with value {0} exists", "w14");
@@ -2218,7 +2220,8 @@ namespace DocumentFormat.OpenXml.Tests
                     //</w>
                     var fontTablePart = (Package as WordprocessingDocument).MainDocumentPart.GetPartsOfType<FontTablePart>().First();
                     var fonts = fontTablePart.Fonts;
-                    // check if mc:Ignorable="w14" and if there're attribute named xmlns:w14
+
+                    // check if mc:Ignorable="w14" and if there is an attribute named xmlns:w14
                     var ignorable = fonts.GetAttributes().Where(a => a.LocalName == "Ignorable" && a.Value == "w14").FirstOrDefault();
                     if (ignorable == default(OpenXmlAttribute))
                         Log.Fail("No mc:Ignorable attribute with value {0} exists", "w14");
@@ -2235,6 +2238,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact]
+
         // [Description("671248")]
         public void Bug671248_ExtendedAndMcAttributesAfterConstructingWithOuterXml()
         {

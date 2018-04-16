@@ -27,7 +27,7 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void CompositeParticleValidateTest()
         {
-            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
+            SdbSchemaData sdbSchemaDatas = SdbSchemaData.GetSchemaData(FileFormatVersions.Office2007);
 
             // TODO: unit test for some types
             ValidatePpr(sdbSchemaDatas);
@@ -35,7 +35,7 @@ namespace DocumentFormat.OpenXml.Tests
             ValidateBlip(sdbSchemaDatas);
         }
 
-        private void ValidatePpr(SdbSchemaDatas sdbSchemaDatas)
+        private void ValidatePpr(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
@@ -98,53 +98,45 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
 
-            // empty is ok
+            // empty is OK
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             pPr.AppendChild(new KeepLines());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             pPr.AppendChild(new Tabs());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             pPr.AppendChild(new Kinsoku());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             pPr.AppendChild(new OutlineLevel());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             pPr.AppendChild(new ConditionalFormatStyle());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             pPr.AppendChild(new ParagraphMarkRunProperties());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             pPr.AppendChild(new SectionProperties());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             pPr.AppendChild(new ParagraphPropertiesChange());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
             // ***** error case ******
 
-            // SectionProperties dup error
+            // SectionProperties duplicate error
             errorChild = pPr.AppendChild(new SectionProperties());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
@@ -156,6 +148,7 @@ namespace DocumentFormat.OpenXml.Tests
             pPr.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // SectionProperties order wrong
             errorChild = pPr.FirstChild;
             pPr.PrependChild(new SectionProperties());
@@ -170,7 +163,7 @@ namespace DocumentFormat.OpenXml.Tests
             pPr.RemoveChild(pPr.FirstChild);
         }
 
-        private void ValidateBody(SdbSchemaDatas sdbSchemaDatas)
+        private void ValidateBody(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
@@ -270,7 +263,6 @@ namespace DocumentFormat.OpenXml.Tests
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             body.AppendChild(new SectionProperties());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
@@ -323,6 +315,7 @@ namespace DocumentFormat.OpenXml.Tests
             body.RemoveChild(body.FirstChild);
 
             validationContext.Clear();
+
             // can only have one sectProperties at last
             errorChild = body.AppendChild(new SectionProperties());
             target.Validate(validationContext);
@@ -336,7 +329,8 @@ namespace DocumentFormat.OpenXml.Tests
             body.RemoveChild(errorChild);
 
             validationContext.Clear();
-            // paragrap can be after sectProperties at last
+
+            // paragraph can be after sectProperties at last
             errorChild = body.AppendChild(new Paragraph());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
@@ -349,6 +343,7 @@ namespace DocumentFormat.OpenXml.Tests
             body.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // first is invalid
             errorChild = body.PrependChild(new Run());
             target.Validate(validationContext);
@@ -362,6 +357,7 @@ namespace DocumentFormat.OpenXml.Tests
             body.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // invalid child in middle
             errorChild = body.InsertBefore(new Run(), body.LastChild);
             target.Validate(validationContext);
@@ -375,7 +371,7 @@ namespace DocumentFormat.OpenXml.Tests
             body.RemoveChild(errorChild);
         }
 
-        private void ValidateBlip(SdbSchemaDatas sdbSchemaDatas)
+        private void ValidateBlip(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
@@ -418,7 +414,6 @@ namespace DocumentFormat.OpenXml.Tests
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
-            //
             blip.AppendChild(new Drawing.LuminanceEffect());
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
@@ -458,6 +453,7 @@ namespace DocumentFormat.OpenXml.Tests
             blip.RemoveChild(blip.FirstChild);
 
             validationContext.Clear();
+
             // can only have one ExtensionList at last
             errorChild = blip.AppendChild(new Drawing.BlipExtensionList());
             target.Validate(validationContext);

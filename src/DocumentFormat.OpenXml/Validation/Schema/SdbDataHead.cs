@@ -3,160 +3,67 @@
 
 using System;
 using System.IO;
-using System.Text;
+using System.Runtime.InteropServices;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
-    // TODO: consider a hash verify for the data
-    // System.Security.Cryptography.MD5CryptoServiceProvider for MD5 hash
-    // or System.Security.Cryptography.SHA256 hash
-
-    internal class SdbDataHead : SdbData
+    /// <summary>
+    /// The data head of the binary schema constraint data
+    /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
+    internal readonly struct SdbDataHead
     {
-        public const int HeadSize = 128;
-        public const int SignatureSize = 16;
-        public const int LatestDataVersion = 0x00010000;
+        /// <summary>
+        /// This value must be changed if the layout of any of the structs contained within
+        /// <see cref="SdbSchemaData"/> are changed (ie those contained in the constructor
+        /// for <see cref="SdbDataHead"/>
+        /// </summary>
+        private static readonly Guid CurrentVersion = new Guid("06dd55b7-ef4d-46ee-a618-042af4c3904e");
 
-        public static byte[] SignatureConst
+        public SdbDataHead(
+            FileFormatVersions fileFormat,
+            SdbClassIdToSchemaTypeIndex[] classIdMap,
+            SdbSchemaType[] schemaTypes,
+            SdbParticleConstraint[] particles,
+            SdbParticleChildrenIndex[] particleIndexes,
+            SdbAttributeConstraint[] attributes)
         {
-            get
+            Version = CurrentVersion;
+            FileFormat = fileFormat;
+            ClassIds = SdbSpan.Create(Marshal.SizeOf<SdbDataHead>(), classIdMap);
+            SchemaType = SdbSpan.Create(ClassIds.End, schemaTypes);
+            Particles = SdbSpan.Create(SchemaType.End, particles);
+            ParticleChildren = SdbSpan.Create(Particles.End, particleIndexes);
+            Attributes = SdbSpan.Create(ParticleChildren.End, attributes);
+        }
+
+        public void Validate()
+        {
+            if (Version != CurrentVersion
+                || ClassIds.Size != Marshal.SizeOf<SdbClassIdToSchemaTypeIndex>()
+                || SchemaType.Size != Marshal.SizeOf<SdbSchemaType>()
+                || Particles.Size != Marshal.SizeOf<SdbParticleConstraint>()
+                || ParticleChildren.Size != Marshal.SizeOf<SdbParticleChildrenIndex>()
+                || Attributes.Size != Marshal.SizeOf<SdbAttributeConstraint>())
             {
-                byte[] signatureConst = Encoding.ASCII.GetBytes("OPENXML SCHM    ");
-                return signatureConst;
+                throw new InvalidDataException();
             }
         }
 
-        public byte[] Signature { get; set; }
+        public Guid Version { get; }
 
-        //public byte[]
-        public int DataVersion { get; set; }
+        public FileFormatVersions FileFormat { get; }
 
-        /// <summary>
-        /// Gets or sets size in byte of the schema constraint datas, exclude the DataHead.
-        /// </summary>
-        public int DataByteCount { get; set; }
+        public int End => Attributes.End;
 
-        /// <summary>
-        /// Gets or sets the first class ID.
-        /// </summary>
-        public int StartClassId { get; set; }
+        public SdbSpan ClassIds { get; }
 
-        public int ClassIdsCount { get; set; }
+        public SdbSpan SchemaType { get; }
 
-        public int ClassIdsDataOffset { get; set; }
+        public SdbSpan Particles { get; }
 
-        public int SchemaTypeCount { get; set; }
+        public SdbSpan ParticleChildren { get; }
 
-        public int SchemaTypeDataOffset { get; set; }
-
-        public int ParticleCount { get; set; }
-
-        public int ParticleDataOffset { get; set; }
-
-        public int ParticleChildrenIndexCount { get; set; }
-
-        public int ParticleChildrenIndexDataOffset { get; set; }
-
-        public int AttributeCount { get; set; }
-
-        public int AttributeDataOffset { get; set; }
-
-        public int SimpleTypeCount { get; set; }
-
-        public int SimpleTypeDataOffset { get; set; }
-
-        /// <summary>
-        /// Convert the data of this class (all fields) into byte data.
-        /// </summary>
-        /// <returns>Byte data.</returns>
-        public override byte[] GetBytes()
-        {
-            byte[] headbytes = new byte[HeadSize];
-
-            // !!!!Caution: keep the order of the following code lines!!!!
-            var data = GetBytes(Signature,
-                          DataVersion.Bytes(),
-                          DataByteCount.Bytes(),
-
-                          StartClassId.Bytes(),
-
-                          ClassIdsCount.Bytes(),
-                          ClassIdsDataOffset.Bytes(),
-
-                          SchemaTypeCount.Bytes(),
-                          SchemaTypeDataOffset.Bytes(),
-
-                          ParticleCount.Bytes(),
-                          ParticleDataOffset.Bytes(),
-
-                          ParticleChildrenIndexCount.Bytes(),
-                          ParticleChildrenIndexDataOffset.Bytes(),
-
-                          AttributeCount.Bytes(),
-                          AttributeDataOffset.Bytes(),
-
-                          SimpleTypeCount.Bytes(),
-                          SimpleTypeDataOffset.Bytes());
-
-            data.CopyTo(headbytes, 0);
-
-            return headbytes;
-        }
-
-        /// <summary>
-        /// Load the fields data from byte data.
-        /// </summary>
-        /// <param name="value">The byte data array.</param>
-        /// <param name="startIndex">The offset the data begins at.</param>
-        public override void LoadFromBytes(byte[] value, int startIndex)
-        {
-            Signature = new byte[SignatureSize];
-            Array.Copy(value, startIndex, Signature, 0, SignatureSize);
-            startIndex += SignatureSize;
-
-            for (int i = 0; i < SignatureSize; i++)
-            {
-                if (Signature[i] != SignatureConst[i])
-                {
-                    // TODO: change to resource string
-                    throw new InvalidDataException("Invalide schema constraint data.");
-                }
-            }
-
-            // !!!!Caution: keep the order of the following code lines!!!!
-            DataVersion = SdbData.LoadInt(value, ref startIndex);
-            DataByteCount = SdbData.LoadInt(value, ref startIndex);
-
-            if (DataVersion != LatestDataVersion)
-            {
-                // TODO: change to resource string
-                throw new InvalidDataException("Invalide schema constraint data.");
-            }
-
-            StartClassId = SdbData.LoadInt(value, ref startIndex);
-
-            ClassIdsCount = SdbData.LoadInt(value, ref startIndex);
-            ClassIdsDataOffset = SdbData.LoadInt(value, ref startIndex);
-
-            SchemaTypeCount = SdbData.LoadInt(value, ref startIndex);
-            SchemaTypeDataOffset = SdbData.LoadInt(value, ref startIndex);
-
-            ParticleCount = SdbData.LoadInt(value, ref startIndex);
-            ParticleDataOffset = SdbData.LoadInt(value, ref startIndex);
-
-            ParticleChildrenIndexCount = SdbData.LoadInt(value, ref startIndex);
-            ParticleChildrenIndexDataOffset = SdbData.LoadInt(value, ref startIndex);
-
-            AttributeCount = SdbData.LoadInt(value, ref startIndex);
-            AttributeDataOffset = SdbData.LoadInt(value, ref startIndex);
-
-            SimpleTypeCount = SdbData.LoadInt(value, ref startIndex);
-            SimpleTypeDataOffset = SdbData.LoadInt(value, ref startIndex);
-        }
-
-        public override int DataSize
-        {
-            get { return HeadSize; }
-        }
+        public SdbSpan Attributes { get; }
     }
 }
