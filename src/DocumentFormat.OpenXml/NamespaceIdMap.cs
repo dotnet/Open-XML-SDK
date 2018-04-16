@@ -222,6 +222,7 @@ namespace DocumentFormat.OpenXml
             "http://schemas.microsoft.com/office/word/2012/wordprocessingDrawing",
             "http://schemas.microsoft.com/office/powerpoint/2012/roamingSettings",
             "http://schemas.microsoft.com/office/drawing/2012/timeslicer",
+
             //o16 extension
             "http://schemas.microsoft.com/office/powerpoint/2015/main",
             "http://schemas.microsoft.com/office/drawing/2014/main",
@@ -335,6 +336,7 @@ namespace DocumentFormat.OpenXml
             "wp15",
             "pRoam",
             "tsle",
+
             // o16 extension
             "p16",
             "a16",
