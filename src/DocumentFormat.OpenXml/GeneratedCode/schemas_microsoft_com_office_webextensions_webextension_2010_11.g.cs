@@ -71,7 +71,7 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <para>Represents the following attribute in the schema: frozen </para>
     /// </summary>
     [SchemaAttr(0, "frozen")]
-    public BooleanValue Fronzen
+    public BooleanValue Frozen
     {
         get { return (BooleanValue)Attributes[1]; }
         set { Attributes[1] = value; }

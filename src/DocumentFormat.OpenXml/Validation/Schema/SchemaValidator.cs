@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class SchemaValidator
     {
-        private readonly SdbSchemaDatas _sdbSchemaDatas;
+        private readonly SdbSchemaData _sdbSchemaDatas;
         private readonly SchemaTypeValidator _schemaTypeValidator;
 
         /// <summary>
@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         /// <exception cref="ArgumentOutOfRangeException">Thrown when the "fileFormat" parameter is not FileFormat.Office2007, FileFormat.Office2010 or FileFormat.O15.</exception>
         public SchemaValidator(FileFormatVersions fileFormat)
         {
-            _sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(fileFormat);
+            _sdbSchemaDatas = SdbSchemaData.GetSchemaData(fileFormat);
             _schemaTypeValidator = new SchemaTypeValidator(_sdbSchemaDatas);
         }
 
@@ -44,7 +44,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             ValidationTraverser.ValidatingTraverse(validationContext, ValidateElement, null);
 
             // validationContext.Element = openxmlElement;
-
             return;
         }
 

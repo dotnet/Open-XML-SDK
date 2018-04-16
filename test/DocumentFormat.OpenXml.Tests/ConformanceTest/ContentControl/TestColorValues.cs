@@ -1,10 +1,10 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-namespace DocumentFormat.OpenXml
+namespace DocumentFormat.OpenXml.Tests.ContentControl.ConstantStrings
 {
-    internal interface IReadOnlyList<T> : IReadOnlyCollection<T>
+    public static class TestColorValues
     {
-        T this[int index] { get; }
+        public const string TestColor = "0000FF";
     }
 }

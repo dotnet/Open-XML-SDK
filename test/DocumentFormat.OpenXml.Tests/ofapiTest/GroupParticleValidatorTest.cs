@@ -20,13 +20,13 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void GroupParticleValidateTest()
         {
-            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
+            SdbSchemaData sdbSchemaDatas = SdbSchemaData.GetSchemaData(FileFormatVersions.Office2007);
 
             TestSimpleGroup(sdbSchemaDatas);
             TestSimpleGroup2(sdbSchemaDatas);
         }
 
-        private void TestSimpleGroup(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleGroup(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
@@ -79,7 +79,7 @@ namespace DocumentFormat.OpenXml.Tests
               //</xs:group>
 
             // ***** good case ******
-            // empty is ok
+            // empty is OK
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
@@ -133,6 +133,7 @@ namespace DocumentFormat.OpenXml.Tests
             header.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             //last is invalid
             errorChild = header.AppendChild(new Run());
             target.Validate(validationContext);
@@ -147,7 +148,7 @@ namespace DocumentFormat.OpenXml.Tests
             header.RemoveChild(errorChild);
         }
 
-        private void TestSimpleGroup2(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleGroup2(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
@@ -243,7 +244,6 @@ namespace DocumentFormat.OpenXml.Tests
             sectPr.Append(new HeaderReference(), new FooterReference(), new SectionType());
             Assert.True(validationContext.Valid);
 
-            //
             sectPr.AppendChild(new PaperSource());
             Assert.True(validationContext.Valid);
 
@@ -277,6 +277,7 @@ namespace DocumentFormat.OpenXml.Tests
             sectPr.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             //first is invalid
             errorChild = sectPr.PrependChild(new Paragraph());
             target.Validate(validationContext);
@@ -293,6 +294,7 @@ namespace DocumentFormat.OpenXml.Tests
             sectPr.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             //invalid child in middle
             errorChild = sectPr.InsertBefore(new Paragraph(), sectPr.LastChild);
             target.Validate(validationContext);
@@ -306,6 +308,7 @@ namespace DocumentFormat.OpenXml.Tests
             sectPr.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // order wrong
             errorChild = sectPr.FirstChild;
             sectPr.PrependChild(new SectionType());
@@ -319,6 +322,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.DoesNotContain(ValidationErrorStrings.Fmt_ListOfPossibleElements, validationContext.Errors[0].Description);
 
             validationContext.Clear();
+
             // dup error
             sectPr.RemoveAllChildren();
             sectPr.Append(new HeaderReference(), new PaperSource());
@@ -334,6 +338,7 @@ namespace DocumentFormat.OpenXml.Tests
             sectPr.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // out of order error
             errorChild = sectPr.AppendChild(new SectionType());
             target.Validate(validationContext);
@@ -347,6 +352,7 @@ namespace DocumentFormat.OpenXml.Tests
             sectPr.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // out of order error
             sectPr.AppendChild(new SectionPropertiesChange());
             errorChild = sectPr.AppendChild(new SectionType());

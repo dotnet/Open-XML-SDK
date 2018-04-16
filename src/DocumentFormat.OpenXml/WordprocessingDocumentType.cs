@@ -26,6 +26,6 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Word Macro-Enabled Template (*.dotm).
         /// </summary>
-        MacroEnabledTemplate
+        MacroEnabledTemplate,
     }
 }

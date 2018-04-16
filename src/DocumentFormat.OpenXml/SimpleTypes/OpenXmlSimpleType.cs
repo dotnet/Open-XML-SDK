@@ -105,7 +105,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="xmlAttribute">The OpenXmlSimpleType instance.</param>
         /// <returns>The converted string value.</returns>
-        public static implicit operator String(OpenXmlSimpleType xmlAttribute)
+        public static implicit operator string(OpenXmlSimpleType xmlAttribute)
         {
             if (xmlAttribute == null)
             {

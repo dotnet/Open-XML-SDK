@@ -13,7 +13,6 @@ namespace DocumentFormat.OpenXml
     {
         // When the strictTranslation flag is 'true', the XmlConvertingReader tries to search the incoming xml stream for any Strict namespace
         // that can be translated to Transitional. When the flag is 'false', the reader skips searching.
-
         public static XmlReader Create(Stream partStream, XmlReaderSettings settings)
         {
             return Create(partStream, settings, true);

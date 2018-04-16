@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml.Packaging
         OfficeWordMacroEnabledTemplate,
 
         /// <summary>
-        /// Rich Text Foramt (.rtf).
+        /// Rich Text Format (.rtf).
         /// </summary>
         Rtf,
 

@@ -12,7 +12,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     [System.CLSCompliant(false)]
     [DebuggerDisplay("{InnerText}")]
-    public class UInt16Value : OpenXmlSimpleValue<UInt16>
+    public class UInt16Value : OpenXmlSimpleValue<ushort>
     {
         /// <summary>
         /// Initializes a new instance of the UInt16Value class.
@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the UInt16Value class using the supplied UInt16 value.
         /// </summary>
         /// <param name="value">The UInt16 value.</param>
-        public UInt16Value(UInt16 value)
+        public UInt16Value(ushort value)
             : base(value)
         {
         }
@@ -50,12 +50,13 @@ namespace DocumentFormat.OpenXml
         /// <param name="xmlAttribute">The UInt16Value to convert.</param>
         /// <returns>The converted UInt16 value.</returns>
         /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
-        public static implicit operator UInt16(UInt16Value xmlAttribute)
+        public static implicit operator ushort(UInt16Value xmlAttribute)
         {
             if (xmlAttribute == null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
+
             return ToUInt16(xmlAttribute);
         }
 
@@ -64,7 +65,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The specified value.</param>
         /// <returns>A new UInt16Value instance with the value.</returns>
-        public static implicit operator UInt16Value(UInt16 value)
+        public static implicit operator UInt16Value(ushort value)
         {
             return FromUInt16(value);
         }
@@ -74,7 +75,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">A UInt16 value to use to create a new UInt16Value object.</param>
         /// <returns>A UInt16Value that corresponds to the value parameter.</returns>
-        public static UInt16Value FromUInt16(UInt16 value)
+        public static UInt16Value FromUInt16(ushort value)
         {
             return new UInt16Value(value);
         }
@@ -86,7 +87,7 @@ namespace DocumentFormat.OpenXml
         /// A UInt16Value object to retrieve a UInt16 representation.
         /// </param>
         /// <returns>A UInt16 value that represents a UInt16Value object.</returns>
-        public static UInt16 ToUInt16(UInt16Value xmlAttribute)
+        public static ushort ToUInt16(UInt16Value xmlAttribute)
         {
             if (xmlAttribute == null)
             {

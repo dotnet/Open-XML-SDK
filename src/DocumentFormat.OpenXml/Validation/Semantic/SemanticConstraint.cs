@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// <summary>
     /// OpenXML API will implement a class for each semantic constraint category.
     /// "SemanticConstraint" is base class of all these classes.
-    /// A semanticConstraint object will be used to validate a correspoding doc element to see if it meets the constraint or not.
+    /// A semanticConstraint object will be used to validate a corresponding doc element to see if it meets the constraint or not.
     /// </summary>
     internal abstract partial class SemanticConstraint
     {
@@ -193,6 +193,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 {
                     return null;
                 }
+
                 temp = s.First();
                 parts = temp.Parts;
             }

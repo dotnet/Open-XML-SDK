@@ -10,16 +10,16 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// </summary>
     /// <remarks>
     /// </remarks>
-    [DataContract]
+    [DataContract(Name = "red")]
     internal class RedirectedRestriction : SimpleTypeRestriction
     {
-        [DataMember]
+        [DataMember(Name = "tr")]
         public SimpleTypeRestriction TargetRestriction { get; set; }
 
         /// <summary>
         /// Gets or sets an ID for this type.
         /// </summary>
-        [DataMember]
+        [DataMember(Name = "aid")]
         public int AttributeId { get; set; }
 
         /// <inheritdoc />

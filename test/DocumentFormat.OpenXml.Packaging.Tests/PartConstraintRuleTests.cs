@@ -23,7 +23,7 @@ namespace DocumentFormat.OpenXml.Tests
             typeof(OpenXmlPart),
             typeof(ExtendedPart),
             typeof(StylesPart),
-            typeof(CustomUIPart)
+            typeof(CustomUIPart),
         };
 
         public PartConstraintRuleTests(ITestOutputHelper output)
@@ -203,7 +203,7 @@ namespace DocumentFormat.OpenXml.Tests
                     MaxOccursGreatThanOne = rule.MaxOccursGreatThanOne,
                     MinOccursIsNonZero = rule.MinOccursIsNonZero,
                     PartClassName = rule.PartClassName,
-                    PartContentType = rule.PartContentType
+                    PartContentType = rule.PartContentType,
                 };
             }
 

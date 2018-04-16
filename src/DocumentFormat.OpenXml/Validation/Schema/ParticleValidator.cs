@@ -1,9 +1,10 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
 using System;
 using System.Diagnostics;
+
+#pragma warning disable SA1402 // File may only contain a single type
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
@@ -148,7 +149,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 //case ParticleType.Any:
                 //    return new AnyParticleValidator(particleConstraint);
-
                 case ParticleType.Element:
                 default:
                     throw new InvalidOperationException();

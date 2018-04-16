@@ -158,7 +158,7 @@ namespace DocumentFormat.OpenXml.Tests
                         Assert.Equal(hyperlinksBefore[i].Uri, hyperlinksAfter[i].Uri);
                     }
 
-                    // all external relationships should be improted.
+                    // all external relationships should be imported.
                     Assert.Equal(externalRelsBefore.Length, externalRelsAfter.Length);
                 }
             }

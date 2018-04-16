@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.NotNull(target.Items);
             Assert.NotNull(target.InnerText);
             Assert.Equal("Item1", target.Items.First().ToString());
-            Assert.Equal("Item1", (string)target);
+            Assert.Equal("Item1", target);
 
             target.Items.Add(new StringValue("Item2"));
             Assert.NotNull(target.Items);

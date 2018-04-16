@@ -11,7 +11,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the Int64 value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class Int64Value : OpenXmlSimpleValue<Int64>
+    public class Int64Value : OpenXmlSimpleValue<long>
     {
         /// <summary>
         /// Initializes a new instance of the Int64Value class.
@@ -25,7 +25,7 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the Int64Value class using the supplied Int64 value.
         /// </summary>
         /// <param name="value">The Int64 value.</param>
-        public Int64Value(Int64 value)
+        public Int64Value(long value)
             : base(value)
         {
         }
@@ -41,7 +41,7 @@ namespace DocumentFormat.OpenXml
 
         private protected override string GetText(long input) => XmlConvert.ToString(input);
 
-        private protected override Int64 Parse(string input) => XmlConvert.ToInt64(input);
+        private protected override long Parse(string input) => XmlConvert.ToInt64(input);
 
         /// <summary>
         /// Implicitly converts the specified Int64Value to an Int64 value.
@@ -49,12 +49,13 @@ namespace DocumentFormat.OpenXml
         /// <param name="xmlAttribute">The Int64Value to convert.</param>
         /// <returns>The converted Int64 value.</returns>
         /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
-        public static implicit operator Int64(Int64Value xmlAttribute)
+        public static implicit operator long(Int64Value xmlAttribute)
         {
             if (xmlAttribute == null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
+
             return ToInt64(xmlAttribute);
         }
 
@@ -63,7 +64,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The specified value.</param>
         /// <returns>A new Int64Value instance with the value.</returns>
-        public static implicit operator Int64Value(Int64 value)
+        public static implicit operator Int64Value(long value)
         {
             return FromInt64(value);
         }
@@ -73,7 +74,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">An Int64 value to use to create a new Int64Value object.</param>
         /// <returns>An Int64Value that corresponds to the value parameter.</returns>
-        public static Int64Value FromInt64(Int64 value)
+        public static Int64Value FromInt64(long value)
         {
             return new Int64Value(value);
         }
@@ -85,7 +86,7 @@ namespace DocumentFormat.OpenXml
         /// An Int64Value object used to retrieve an Int64 representation.
         /// </param>
         /// <returns>An Int64 value that represents an Int64Value object.</returns>
-        public static Int64 ToInt64(Int64Value xmlAttribute)
+        public static long ToInt64(Int64Value xmlAttribute)
         {
             if (xmlAttribute == null)
             {

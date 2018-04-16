@@ -308,7 +308,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             Ap.HeadingPairs headingPairs1 = new Ap.HeadingPairs();
 
-            Vt.VTVector vTVector1 = new Vt.VTVector(){ BaseType = Vt.VectorBaseValues.Variant, Size = (UInt32Value)2U };
+            Vt.VTVector vTVector1 = new Vt.VTVector(){ BaseType = Vt.VectorBaseValues.Variant, Size = 2U };
 
             Vt.Variant variant1 = new Vt.Variant();
             Vt.VTLPSTR vTLPSTR1 = new Vt.VTLPSTR();
@@ -329,7 +329,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             Ap.TitlesOfParts titlesOfParts1 = new Ap.TitlesOfParts();
 
-            Vt.VTVector vTVector2 = new Vt.VTVector(){ BaseType = Vt.VectorBaseValues.Lpstr, Size = (UInt32Value)11U };
+            Vt.VTVector vTVector2 = new Vt.VTVector(){ BaseType = Vt.VectorBaseValues.Lpstr, Size = 11U };
             Vt.VTLPSTR vTLPSTR2 = new Vt.VTLPSTR();
             vTLPSTR2.Text = "data";
             Vt.VTLPSTR vTLPSTR3 = new Vt.VTLPSTR();
@@ -411,22 +411,22 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContent1.Append(alternateContentChoice1);
 
             BookViews bookViews1 = new BookViews();
-            WorkbookView workbookView1 = new WorkbookView(){ XWindow = 0, YWindow = 0, WindowWidth = (UInt32Value)26940U, WindowHeight = (UInt32Value)15120U };
+            WorkbookView workbookView1 = new WorkbookView(){ XWindow = 0, YWindow = 0, WindowWidth = 26940U, WindowHeight = 15120U };
 
             bookViews1.Append(workbookView1);
 
             Sheets sheets1 = new Sheets();
-            Sheet sheet1 = new Sheet(){ Name = "data", SheetId = (UInt32Value)1U, Id = "rId1" };
-            Sheet sheet2 = new Sheet(){ Name = "data2", SheetId = (UInt32Value)3U, Id = "rId2" };
-            Sheet sheet3 = new Sheet(){ Name = "Cache", SheetId = (UInt32Value)4U, Id = "rId3" };
-            Sheet sheet4 = new Sheet(){ Name = "Level", SheetId = (UInt32Value)2U, Id = "rId4" };
-            Sheet sheet5 = new Sheet(){ Name = "Caption", SheetId = (UInt32Value)5U, Id = "rId5" };
-            Sheet sheet6 = new Sheet(){ Name = "ShowHeader", SheetId = (UInt32Value)6U, Id = "rId6" };
-            Sheet sheet7 = new Sheet(){ Name = "ShowSelectionLabel", SheetId = (UInt32Value)7U, Id = "rId7" };
-            Sheet sheet8 = new Sheet(){ Name = "ShowTimeLevel", SheetId = (UInt32Value)8U, Id = "rId8" };
-            Sheet sheet9 = new Sheet(){ Name = "ShowHorizontalScrollbar", SheetId = (UInt32Value)9U, Id = "rId9" };
-            Sheet sheet10 = new Sheet(){ Name = "ScrollPosition", SheetId = (UInt32Value)10U, Id = "rId10" };
-            Sheet sheet11 = new Sheet(){ Name = "Style", SheetId = (UInt32Value)11U, Id = "rId11" };
+            Sheet sheet1 = new Sheet(){ Name = "data", SheetId = 1U, Id = "rId1" };
+            Sheet sheet2 = new Sheet(){ Name = "data2", SheetId = 3U, Id = "rId2" };
+            Sheet sheet3 = new Sheet(){ Name = "Cache", SheetId = 4U, Id = "rId3" };
+            Sheet sheet4 = new Sheet(){ Name = "Level", SheetId = 2U, Id = "rId4" };
+            Sheet sheet5 = new Sheet(){ Name = "Caption", SheetId = 5U, Id = "rId5" };
+            Sheet sheet6 = new Sheet(){ Name = "ShowHeader", SheetId = 6U, Id = "rId6" };
+            Sheet sheet7 = new Sheet(){ Name = "ShowSelectionLabel", SheetId = 7U, Id = "rId7" };
+            Sheet sheet8 = new Sheet(){ Name = "ShowTimeLevel", SheetId = 8U, Id = "rId8" };
+            Sheet sheet9 = new Sheet(){ Name = "ShowHorizontalScrollbar", SheetId = 9U, Id = "rId9" };
+            Sheet sheet10 = new Sheet(){ Name = "ScrollPosition", SheetId = 10U, Id = "rId10" };
+            Sheet sheet11 = new Sheet(){ Name = "Style", SheetId = 11U, Id = "rId11" };
 
             sheets1.Append(sheet1);
             sheets1.Append(sheet2);
@@ -469,11 +469,11 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             definedNames1.Append(definedName7);
             definedNames1.Append(definedName8);
             definedNames1.Append(definedName9);
-            CalculationProperties calculationProperties1 = new CalculationProperties(){ CalculationId = (UInt32Value)152511U };
+            CalculationProperties calculationProperties1 = new CalculationProperties(){ CalculationId = 152511U };
 
             PivotCaches pivotCaches1 = new PivotCaches();
-            PivotCache pivotCache1 = new PivotCache(){ CacheId = (UInt32Value)0U, Id = "rId12" };
-            PivotCache pivotCache2 = new PivotCache(){ CacheId = (UInt32Value)1U, Id = "rId13" };
+            PivotCache pivotCache1 = new PivotCache(){ CacheId = 0U, Id = "rId12" };
+            PivotCache pivotCache2 = new PivotCache(){ CacheId = 1U, Id = "rId13" };
 
             pivotCaches1.Append(pivotCache1);
             pivotCaches1.Append(pivotCache2);
@@ -545,19 +545,19 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             SheetDimension sheetDimension1 = new SheetDimension(){ Reference = "A1:B5" };
 
             SheetViews sheetViews1 = new SheetViews();
-            SheetView sheetView1 = new SheetView(){ WorkbookViewId = (UInt32Value)0U };
+            SheetView sheetView1 = new SheetView(){ WorkbookViewId = 0U };
 
             sheetViews1.Append(sheetView1);
             SheetFormatProperties sheetFormatProperties1 = new SheetFormatProperties(){ DefaultRowHeight = 15D };
 
             Columns columns1 = new Columns();
-            Column column1 = new Column(){ Min = (UInt32Value)1U, Max = (UInt32Value)1U, Width = 14.140625D, BestFit = true, CustomWidth = true };
-            Column column2 = new Column(){ Min = (UInt32Value)2U, Max = (UInt32Value)2U, Width = 17.42578125D, CustomWidth = true };
-            Column column3 = new Column(){ Min = (UInt32Value)3U, Max = (UInt32Value)3U, Width = 12.42578125D, CustomWidth = true };
-            Column column4 = new Column(){ Min = (UInt32Value)4U, Max = (UInt32Value)11U, Width = 13D, BestFit = true, CustomWidth = true };
-            Column column5 = new Column(){ Min = (UInt32Value)12U, Max = (UInt32Value)12U, Width = 13D, CustomWidth = true };
-            Column column6 = new Column(){ Min = (UInt32Value)13U, Max = (UInt32Value)20U, Width = 13D, BestFit = true, CustomWidth = true };
-            Column column7 = new Column(){ Min = (UInt32Value)21U, Max = (UInt32Value)23U, Width = 20.42578125D, BestFit = true, CustomWidth = true };
+            Column column1 = new Column(){ Min = 1U, Max = 1U, Width = 14.140625D, BestFit = true, CustomWidth = true };
+            Column column2 = new Column(){ Min = 2U, Max = 2U, Width = 17.42578125D, CustomWidth = true };
+            Column column3 = new Column(){ Min = 3U, Max = 3U, Width = 12.42578125D, CustomWidth = true };
+            Column column4 = new Column(){ Min = 4U, Max = 11U, Width = 13D, BestFit = true, CustomWidth = true };
+            Column column5 = new Column(){ Min = 12U, Max = 12U, Width = 13D, CustomWidth = true };
+            Column column6 = new Column(){ Min = 13U, Max = 20U, Width = 13D, BestFit = true, CustomWidth = true };
+            Column column7 = new Column(){ Min = 21U, Max = 23U, Width = 20.42578125D, BestFit = true, CustomWidth = true };
 
             columns1.Append(column1);
             columns1.Append(column2);
@@ -569,9 +569,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             SheetData sheetData1 = new SheetData();
 
-            Row row1 = new Row(){ RowIndex = (UInt32Value)1U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row1 = new Row(){ RowIndex = 1U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell1 = new Cell(){ CellReference = "A1", StyleIndex = (UInt32Value)5U, DataType = CellValues.SharedString };
+            Cell cell1 = new Cell(){ CellReference = "A1", StyleIndex = 5U, DataType = CellValues.SharedString };
             CellValue cellValue1 = new CellValue();
             cellValue1.Text = "29";
 
@@ -586,15 +586,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row1.Append(cell1);
             row1.Append(cell2);
 
-            Row row2 = new Row(){ RowIndex = (UInt32Value)2U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row2 = new Row(){ RowIndex = 2U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell3 = new Cell(){ CellReference = "A2", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell3 = new Cell(){ CellReference = "A2", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue3 = new CellValue();
             cellValue3.Text = "6";
 
             cell3.Append(cellValue3);
 
-            Cell cell4 = new Cell(){ CellReference = "B2", StyleIndex = (UInt32Value)7U };
+            Cell cell4 = new Cell(){ CellReference = "B2", StyleIndex = 7U };
             CellValue cellValue4 = new CellValue();
             cellValue4.Text = "19";
 
@@ -603,15 +603,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row2.Append(cell3);
             row2.Append(cell4);
 
-            Row row3 = new Row(){ RowIndex = (UInt32Value)3U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row3 = new Row(){ RowIndex = 3U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell5 = new Cell(){ CellReference = "A3", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell5 = new Cell(){ CellReference = "A3", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue5 = new CellValue();
             cellValue5.Text = "8";
 
             cell5.Append(cellValue5);
 
-            Cell cell6 = new Cell(){ CellReference = "B3", StyleIndex = (UInt32Value)7U };
+            Cell cell6 = new Cell(){ CellReference = "B3", StyleIndex = 7U };
             CellValue cellValue6 = new CellValue();
             cellValue6.Text = "13";
 
@@ -620,15 +620,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row3.Append(cell5);
             row3.Append(cell6);
 
-            Row row4 = new Row(){ RowIndex = (UInt32Value)4U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row4 = new Row(){ RowIndex = 4U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell7 = new Cell(){ CellReference = "A4", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell7 = new Cell(){ CellReference = "A4", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue7 = new CellValue();
             cellValue7.Text = "11";
 
             cell7.Append(cellValue7);
 
-            Cell cell8 = new Cell(){ CellReference = "B4", StyleIndex = (UInt32Value)7U };
+            Cell cell8 = new Cell(){ CellReference = "B4", StyleIndex = 7U };
             CellValue cellValue8 = new CellValue();
             cellValue8.Text = "33";
 
@@ -637,15 +637,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row4.Append(cell7);
             row4.Append(cell8);
 
-            Row row5 = new Row(){ RowIndex = (UInt32Value)5U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row5 = new Row(){ RowIndex = 5U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell9 = new Cell(){ CellReference = "A5", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell9 = new Cell(){ CellReference = "A5", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue9 = new CellValue();
             cellValue9.Text = "30";
 
             cell9.Append(cellValue9);
 
-            Cell cell10 = new Cell(){ CellReference = "B5", StyleIndex = (UInt32Value)7U };
+            Cell cell10 = new Cell(){ CellReference = "B5", StyleIndex = 7U };
             CellValue cellValue10 = new CellValue();
             cellValue10.Text = "65";
 
@@ -659,7 +659,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             sheetData1.Append(row3);
             sheetData1.Append(row4);
             sheetData1.Append(row5);
-            PhoneticProperties phoneticProperties1 = new PhoneticProperties(){ FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties1 = new PhoneticProperties(){ FontId = 1U };
             PageMargins pageMargins1 = new PageMargins(){ Left = 0.7D, Right = 0.7D, Top = 0.75D, Bottom = 0.75D, Header = 0.3D, Footer = 0.3D };
             S.Drawing drawing1 = new S.Drawing(){ Id = "rId2" };
 
@@ -696,8 +696,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             X15.Timelines timelines1 = new X15.Timelines(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x" }  };
             timelines1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             timelines1.AddNamespaceDeclaration("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main");
-            X15.Timeline timeline1 = new X15.Timeline(){ Name = "DeliveryDate 10", Cache = "NativeTimeline_DeliveryDate4", Caption = "ShowTimeLevel1", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
-            X15.Timeline timeline2 = new X15.Timeline(){ Name = "DeliveryDate 11", Cache = "NativeTimeline_DeliveryDate4", Caption = "ShowTimeLevel2", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-06T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline1 = new X15.Timeline(){ Name = "DeliveryDate 10", Cache = "NativeTimeline_DeliveryDate4", Caption = "ShowTimeLevel1", Level = 2U, SelectionLevel = 2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline2 = new X15.Timeline(){ Name = "DeliveryDate 11", Cache = "NativeTimeline_DeliveryDate4", Caption = "ShowTimeLevel2", Level = 2U, SelectionLevel = 2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-06T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
             timelines1.Append(timeline1);
             timelines1.Append(timeline2);
@@ -744,10 +744,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker1.Append(rowId2);
             toMarker1.Append(rowOffset2);
 
-            Xdr.GraphicFrame graphicFrame1 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame1 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties1 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties1 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)2U, Name = "Chart 1" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties1 = new Xdr.NonVisualDrawingProperties(){ Id = 2U, Name = "Chart 1" };
 
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties1 = new Xdr.NonVisualGraphicFrameDrawingProperties();
             A.GraphicFrameLocks graphicFrameLocks1 = new A.GraphicFrameLocks();
@@ -818,10 +818,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker2.Append(rowId4);
             toMarker2.Append(rowOffset4);
 
-            Xdr.GraphicFrame graphicFrame2 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame2 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties2 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties2 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)3U, Name = "グラフ 2" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties2 = new Xdr.NonVisualDrawingProperties(){ Id = 3U, Name = "グラフ 2" };
 
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties2 = new Xdr.NonVisualGraphicFrameDrawingProperties();
             A.GraphicFrameLocks graphicFrameLocks2 = new A.GraphicFrameLocks();
@@ -898,10 +898,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice2 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame3 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame3 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties3 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties3 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)4U, Name = "DeliveryDate 10" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties3 = new Xdr.NonVisualDrawingProperties(){ Id = 4U, Name = "DeliveryDate 10" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties3 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties3.Append(nonVisualDrawingProperties3);
@@ -935,10 +935,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback1.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape1 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape1 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties1 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties4 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties4 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties1 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks1 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -1054,10 +1054,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice3 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame4 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame4 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties4 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties5 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)5U, Name = "DeliveryDate 11" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties5 = new Xdr.NonVisualDrawingProperties(){ Id = 5U, Name = "DeliveryDate 11" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties4 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties4.Append(nonVisualDrawingProperties5);
@@ -1089,10 +1089,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentFallback alternateContentFallback2 = new AlternateContentFallback();
 
-            Xdr.Shape shape2 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape2 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties2 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties6 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties6 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties2 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks2 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -1209,7 +1209,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotSource pivotSource1 = new C.PivotSource();
             C.PivotTableName pivotTableName1 = new C.PivotTableName();
             pivotTableName1.Text = "[GeneratedDocument.xlsx]ShowTimeLevel!PivotTable1";
-            C.FormatId formatId1 = new C.FormatId(){ Val = (UInt32Value)14U };
+            C.FormatId formatId1 = new C.FormatId(){ Val = 14U };
 
             pivotSource1.Append(pivotTableName1);
             pivotSource1.Append(formatId1);
@@ -1225,7 +1225,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotFormats pivotFormats1 = new C.PivotFormats();
 
             C.PivotFormat pivotFormat1 = new C.PivotFormat();
-            C.Index index1 = new C.Index(){ Val = (UInt32Value)0U };
+            C.Index index1 = new C.Index(){ Val = 0U };
 
             C.Marker marker1 = new C.Marker();
             C.Symbol symbol1 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -1236,7 +1236,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat1.Append(marker1);
 
             C.PivotFormat pivotFormat2 = new C.PivotFormat();
-            C.Index index2 = new C.Index(){ Val = (UInt32Value)1U };
+            C.Index index2 = new C.Index(){ Val = 1U };
 
             C.Marker marker2 = new C.Marker();
             C.Symbol symbol2 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -1247,7 +1247,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat2.Append(marker2);
 
             C.PivotFormat pivotFormat3 = new C.PivotFormat();
-            C.Index index3 = new C.Index(){ Val = (UInt32Value)2U };
+            C.Index index3 = new C.Index(){ Val = 2U };
 
             C.Marker marker3 = new C.Marker();
             C.Symbol symbol3 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -1258,7 +1258,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat3.Append(marker3);
 
             C.PivotFormat pivotFormat4 = new C.PivotFormat();
-            C.Index index4 = new C.Index(){ Val = (UInt32Value)3U };
+            C.Index index4 = new C.Index(){ Val = 3U };
 
             C.Marker marker4 = new C.Marker();
             C.Symbol symbol4 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -1269,7 +1269,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat4.Append(marker4);
 
             C.PivotFormat pivotFormat5 = new C.PivotFormat();
-            C.Index index5 = new C.Index(){ Val = (UInt32Value)4U };
+            C.Index index5 = new C.Index(){ Val = 4U };
 
             C.Marker marker5 = new C.Marker();
             C.Symbol symbol5 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -1292,8 +1292,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.VaryColors varyColors1 = new C.VaryColors(){ Val = true };
 
             C.PieChartSeries pieChartSeries1 = new C.PieChartSeries();
-            C.Index index6 = new C.Index(){ Val = (UInt32Value)0U };
-            C.Order order1 = new C.Order(){ Val = (UInt32Value)0U };
+            C.Index index6 = new C.Index(){ Val = 0U };
+            C.Order order1 = new C.Order(){ Val = 0U };
 
             C.SeriesText seriesText1 = new C.SeriesText();
 
@@ -1302,9 +1302,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula1.Text = "ShowTimeLevel!$B$1";
 
             C.StringCache stringCache1 = new C.StringCache();
-            C.PointCount pointCount1 = new C.PointCount(){ Val = (UInt32Value)1U };
+            C.PointCount pointCount1 = new C.PointCount(){ Val = 1U };
 
-            C.StringPoint stringPoint1 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint1 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue1 = new C.NumericValue();
             numericValue1.Text = "Total";
 
@@ -1325,21 +1325,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula2.Text = "ShowTimeLevel!$A$2:$A$5";
 
             C.StringCache stringCache2 = new C.StringCache();
-            C.PointCount pointCount2 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount2 = new C.PointCount(){ Val = 3U };
 
-            C.StringPoint stringPoint2 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint2 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue2 = new C.NumericValue();
             numericValue2.Text = "product_A";
 
             stringPoint2.Append(numericValue2);
 
-            C.StringPoint stringPoint3 = new C.StringPoint(){ Index = (UInt32Value)1U };
+            C.StringPoint stringPoint3 = new C.StringPoint(){ Index = 1U };
             C.NumericValue numericValue3 = new C.NumericValue();
             numericValue3.Text = "product_D";
 
             stringPoint3.Append(numericValue3);
 
-            C.StringPoint stringPoint4 = new C.StringPoint(){ Index = (UInt32Value)2U };
+            C.StringPoint stringPoint4 = new C.StringPoint(){ Index = 2U };
             C.NumericValue numericValue4 = new C.NumericValue();
             numericValue4.Text = "product_E";
 
@@ -1364,21 +1364,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.NumberingCache numberingCache1 = new C.NumberingCache();
             C.FormatCode formatCode1 = new C.FormatCode();
             formatCode1.Text = "General";
-            C.PointCount pointCount3 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount3 = new C.PointCount(){ Val = 3U };
 
-            C.NumericPoint numericPoint1 = new C.NumericPoint(){ Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint1 = new C.NumericPoint(){ Index = 0U };
             C.NumericValue numericValue5 = new C.NumericValue();
             numericValue5.Text = "19";
 
             numericPoint1.Append(numericValue5);
 
-            C.NumericPoint numericPoint2 = new C.NumericPoint(){ Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint2 = new C.NumericPoint(){ Index = 1U };
             C.NumericValue numericValue6 = new C.NumericValue();
             numericValue6.Text = "13";
 
             numericPoint2.Append(numericValue6);
 
-            C.NumericPoint numericPoint3 = new C.NumericPoint(){ Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint3 = new C.NumericPoint(){ Index = 2U };
             C.NumericValue numericValue7 = new C.NumericValue();
             numericValue7.Text = "33";
 
@@ -1522,7 +1522,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotSource pivotSource2 = new C.PivotSource();
             C.PivotTableName pivotTableName2 = new C.PivotTableName();
             pivotTableName2.Text = "[GeneratedDocument.xlsx]ShowTimeLevel!PivotTable1";
-            C.FormatId formatId2 = new C.FormatId(){ Val = (UInt32Value)13U };
+            C.FormatId formatId2 = new C.FormatId(){ Val = 13U };
 
             pivotSource2.Append(pivotTableName2);
             pivotSource2.Append(formatId2);
@@ -1538,7 +1538,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotFormats pivotFormats2 = new C.PivotFormats();
 
             C.PivotFormat pivotFormat6 = new C.PivotFormat();
-            C.Index index7 = new C.Index(){ Val = (UInt32Value)0U };
+            C.Index index7 = new C.Index(){ Val = 0U };
 
             C.ShapeProperties shapeProperties3 = new C.ShapeProperties();
 
@@ -1571,7 +1571,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat6.Append(marker6);
 
             C.PivotFormat pivotFormat7 = new C.PivotFormat();
-            C.Index index8 = new C.Index(){ Val = (UInt32Value)1U };
+            C.Index index8 = new C.Index(){ Val = 1U };
 
             C.ShapeProperties shapeProperties4 = new C.ShapeProperties();
 
@@ -1604,7 +1604,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat7.Append(marker7);
 
             C.PivotFormat pivotFormat8 = new C.PivotFormat();
-            C.Index index9 = new C.Index(){ Val = (UInt32Value)2U };
+            C.Index index9 = new C.Index(){ Val = 2U };
 
             C.Marker marker8 = new C.Marker();
             C.Symbol symbol8 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -1615,7 +1615,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat8.Append(marker8);
 
             C.PivotFormat pivotFormat9 = new C.PivotFormat();
-            C.Index index10 = new C.Index(){ Val = (UInt32Value)3U };
+            C.Index index10 = new C.Index(){ Val = 3U };
 
             C.Marker marker9 = new C.Marker();
             C.Symbol symbol9 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -1626,7 +1626,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat9.Append(marker9);
 
             C.PivotFormat pivotFormat10 = new C.PivotFormat();
-            C.Index index11 = new C.Index(){ Val = (UInt32Value)4U };
+            C.Index index11 = new C.Index(){ Val = 4U };
 
             C.Marker marker10 = new C.Marker();
             C.Symbol symbol10 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -1637,7 +1637,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat10.Append(marker10);
 
             C.PivotFormat pivotFormat11 = new C.PivotFormat();
-            C.Index index12 = new C.Index(){ Val = (UInt32Value)5U };
+            C.Index index12 = new C.Index(){ Val = 5U };
 
             C.Marker marker11 = new C.Marker();
             C.Symbol symbol11 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -1648,7 +1648,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat11.Append(marker11);
 
             C.PivotFormat pivotFormat12 = new C.PivotFormat();
-            C.Index index13 = new C.Index(){ Val = (UInt32Value)6U };
+            C.Index index13 = new C.Index(){ Val = 6U };
 
             C.Marker marker12 = new C.Marker();
             C.Symbol symbol12 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -1659,7 +1659,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat12.Append(marker12);
 
             C.PivotFormat pivotFormat13 = new C.PivotFormat();
-            C.Index index14 = new C.Index(){ Val = (UInt32Value)7U };
+            C.Index index14 = new C.Index(){ Val = 7U };
 
             C.Marker marker13 = new C.Marker();
             C.Symbol symbol13 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -1670,7 +1670,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat13.Append(marker13);
 
             C.PivotFormat pivotFormat14 = new C.PivotFormat();
-            C.Index index15 = new C.Index(){ Val = (UInt32Value)8U };
+            C.Index index15 = new C.Index(){ Val = 8U };
 
             C.Marker marker14 = new C.Marker();
             C.Symbol symbol14 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -1681,7 +1681,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat14.Append(marker14);
 
             C.PivotFormat pivotFormat15 = new C.PivotFormat();
-            C.Index index16 = new C.Index(){ Val = (UInt32Value)9U };
+            C.Index index16 = new C.Index(){ Val = 9U };
 
             C.Marker marker15 = new C.Marker();
             C.Symbol symbol15 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -1692,7 +1692,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat15.Append(marker15);
 
             C.PivotFormat pivotFormat16 = new C.PivotFormat();
-            C.Index index17 = new C.Index(){ Val = (UInt32Value)10U };
+            C.Index index17 = new C.Index(){ Val = 10U };
 
             C.Marker marker16 = new C.Marker();
             C.Symbol symbol16 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -1703,7 +1703,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat16.Append(marker16);
 
             C.PivotFormat pivotFormat17 = new C.PivotFormat();
-            C.Index index18 = new C.Index(){ Val = (UInt32Value)11U };
+            C.Index index18 = new C.Index(){ Val = 11U };
 
             C.Marker marker17 = new C.Marker();
             C.Symbol symbol17 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -1714,7 +1714,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat17.Append(marker17);
 
             C.PivotFormat pivotFormat18 = new C.PivotFormat();
-            C.Index index19 = new C.Index(){ Val = (UInt32Value)12U };
+            C.Index index19 = new C.Index(){ Val = 12U };
 
             C.Marker marker18 = new C.Marker();
             C.Symbol symbol18 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -1725,7 +1725,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat18.Append(marker18);
 
             C.PivotFormat pivotFormat19 = new C.PivotFormat();
-            C.Index index20 = new C.Index(){ Val = (UInt32Value)13U };
+            C.Index index20 = new C.Index(){ Val = 13U };
 
             C.Marker marker19 = new C.Marker();
             C.Symbol symbol19 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -1736,7 +1736,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat19.Append(marker19);
 
             C.PivotFormat pivotFormat20 = new C.PivotFormat();
-            C.Index index21 = new C.Index(){ Val = (UInt32Value)14U };
+            C.Index index21 = new C.Index(){ Val = 14U };
 
             C.ShapeProperties shapeProperties5 = new C.ShapeProperties();
 
@@ -1769,7 +1769,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat20.Append(marker20);
 
             C.PivotFormat pivotFormat21 = new C.PivotFormat();
-            C.Index index22 = new C.Index(){ Val = (UInt32Value)15U };
+            C.Index index22 = new C.Index(){ Val = 15U };
 
             C.ShapeProperties shapeProperties6 = new C.ShapeProperties();
 
@@ -1802,7 +1802,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat21.Append(marker21);
 
             C.PivotFormat pivotFormat22 = new C.PivotFormat();
-            C.Index index23 = new C.Index(){ Val = (UInt32Value)16U };
+            C.Index index23 = new C.Index(){ Val = 16U };
 
             C.ShapeProperties shapeProperties7 = new C.ShapeProperties();
 
@@ -1835,7 +1835,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat22.Append(marker22);
 
             C.PivotFormat pivotFormat23 = new C.PivotFormat();
-            C.Index index24 = new C.Index(){ Val = (UInt32Value)17U };
+            C.Index index24 = new C.Index(){ Val = 17U };
 
             C.ShapeProperties shapeProperties8 = new C.ShapeProperties();
 
@@ -1895,8 +1895,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.VaryColors varyColors2 = new C.VaryColors(){ Val = false };
 
             C.BarChartSeries barChartSeries1 = new C.BarChartSeries();
-            C.Index index25 = new C.Index(){ Val = (UInt32Value)0U };
-            C.Order order2 = new C.Order(){ Val = (UInt32Value)0U };
+            C.Index index25 = new C.Index(){ Val = 0U };
+            C.Order order2 = new C.Order(){ Val = 0U };
 
             C.SeriesText seriesText2 = new C.SeriesText();
 
@@ -1905,9 +1905,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula4.Text = "ShowTimeLevel!$B$1";
 
             C.StringCache stringCache3 = new C.StringCache();
-            C.PointCount pointCount4 = new C.PointCount(){ Val = (UInt32Value)1U };
+            C.PointCount pointCount4 = new C.PointCount(){ Val = 1U };
 
-            C.StringPoint stringPoint5 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint5 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue8 = new C.NumericValue();
             numericValue8.Text = "Total";
 
@@ -1950,21 +1950,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula5.Text = "ShowTimeLevel!$A$2:$A$5";
 
             C.StringCache stringCache4 = new C.StringCache();
-            C.PointCount pointCount5 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount5 = new C.PointCount(){ Val = 3U };
 
-            C.StringPoint stringPoint6 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint6 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue9 = new C.NumericValue();
             numericValue9.Text = "product_A";
 
             stringPoint6.Append(numericValue9);
 
-            C.StringPoint stringPoint7 = new C.StringPoint(){ Index = (UInt32Value)1U };
+            C.StringPoint stringPoint7 = new C.StringPoint(){ Index = 1U };
             C.NumericValue numericValue10 = new C.NumericValue();
             numericValue10.Text = "product_D";
 
             stringPoint7.Append(numericValue10);
 
-            C.StringPoint stringPoint8 = new C.StringPoint(){ Index = (UInt32Value)2U };
+            C.StringPoint stringPoint8 = new C.StringPoint(){ Index = 2U };
             C.NumericValue numericValue11 = new C.NumericValue();
             numericValue11.Text = "product_E";
 
@@ -1989,21 +1989,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.NumberingCache numberingCache2 = new C.NumberingCache();
             C.FormatCode formatCode2 = new C.FormatCode();
             formatCode2.Text = "General";
-            C.PointCount pointCount6 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount6 = new C.PointCount(){ Val = 3U };
 
-            C.NumericPoint numericPoint4 = new C.NumericPoint(){ Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint4 = new C.NumericPoint(){ Index = 0U };
             C.NumericValue numericValue12 = new C.NumericValue();
             numericValue12.Text = "19";
 
             numericPoint4.Append(numericValue12);
 
-            C.NumericPoint numericPoint5 = new C.NumericPoint(){ Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint5 = new C.NumericPoint(){ Index = 1U };
             C.NumericValue numericValue13 = new C.NumericValue();
             numericValue13.Text = "13";
 
             numericPoint5.Append(numericValue13);
 
-            C.NumericPoint numericPoint6 = new C.NumericPoint(){ Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint6 = new C.NumericPoint(){ Index = 2U };
             C.NumericValue numericValue14 = new C.NumericValue();
             numericValue14.Text = "33";
 
@@ -2044,8 +2044,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             dataLabels2.Append(showBubbleSize2);
             C.GapWidth gapWidth1 = new C.GapWidth(){ Val = (UInt16Value)219U };
             C.Overlap overlap1 = new C.Overlap(){ Val = -27 };
-            C.AxisId axisId1 = new C.AxisId(){ Val = (UInt32Value)209981120U };
-            C.AxisId axisId2 = new C.AxisId(){ Val = (UInt32Value)209981512U };
+            C.AxisId axisId1 = new C.AxisId(){ Val = 209981120U };
+            C.AxisId axisId2 = new C.AxisId(){ Val = 209981512U };
 
             barChart1.Append(barDirection1);
             barChart1.Append(barGrouping1);
@@ -2058,7 +2058,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             barChart1.Append(axisId2);
 
             C.CategoryAxis categoryAxis1 = new C.CategoryAxis();
-            C.AxisId axisId3 = new C.AxisId(){ Val = (UInt32Value)209981120U };
+            C.AxisId axisId3 = new C.AxisId(){ Val = 209981120U };
 
             C.Scaling scaling1 = new C.Scaling();
             C.Orientation orientation1 = new C.Orientation(){ Val = C.OrientationValues.MinMax };
@@ -2122,7 +2122,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             textProperties1.Append(bodyProperties3);
             textProperties1.Append(listStyle3);
             textProperties1.Append(paragraph3);
-            C.CrossingAxis crossingAxis1 = new C.CrossingAxis(){ Val = (UInt32Value)209981512U };
+            C.CrossingAxis crossingAxis1 = new C.CrossingAxis(){ Val = 209981512U };
             C.Crosses crosses1 = new C.Crosses(){ Val = C.CrossesValues.AutoZero };
             C.AutoLabeled autoLabeled1 = new C.AutoLabeled(){ Val = true };
             C.LabelAlignment labelAlignment1 = new C.LabelAlignment(){ Val = C.LabelAlignmentValues.Center };
@@ -2147,7 +2147,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             categoryAxis1.Append(noMultiLevelLabels1);
 
             C.ValueAxis valueAxis1 = new C.ValueAxis();
-            C.AxisId axisId4 = new C.AxisId(){ Val = (UInt32Value)209981512U };
+            C.AxisId axisId4 = new C.AxisId(){ Val = 209981512U };
 
             C.Scaling scaling2 = new C.Scaling();
             C.Orientation orientation2 = new C.Orientation(){ Val = C.OrientationValues.MinMax };
@@ -2238,7 +2238,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             textProperties2.Append(bodyProperties4);
             textProperties2.Append(listStyle4);
             textProperties2.Append(paragraph4);
-            C.CrossingAxis crossingAxis2 = new C.CrossingAxis(){ Val = (UInt32Value)209981120U };
+            C.CrossingAxis crossingAxis2 = new C.CrossingAxis(){ Val = 209981120U };
             C.Crosses crosses2 = new C.Crosses(){ Val = C.CrossesValues.AutoZero };
             C.CrossBetween crossBetween1 = new C.CrossBetween(){ Val = C.CrossBetweenValues.Between };
 
@@ -2451,28 +2451,28 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of pivotTablePart1.
         private static void GeneratePivotTablePart1Content(PivotTablePart pivotTablePart1)
         {
-            PivotTableDefinition pivotTableDefinition1 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = (UInt32Value)15U };
-            Location location1 = new Location(){ Reference = "A1:B5", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)1U };
+            PivotTableDefinition pivotTableDefinition1 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = 1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = 0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = 15U };
+            Location location1 = new Location(){ Reference = "A1:B5", FirstHeaderRow = 1U, FirstDataRow = 1U, FirstDataColumn = 1U };
 
-            PivotFields pivotFields1 = new PivotFields(){ Count = (UInt32Value)7U };
+            PivotFields pivotFields1 = new PivotFields(){ Count = 7U };
 
-            PivotField pivotField1 = new PivotField(){ NumberFormatId = (UInt32Value)14U, ShowAll = false };
+            PivotField pivotField1 = new PivotField(){ NumberFormatId = 14U, ShowAll = false };
 
-            Items items1 = new Items(){ Count = (UInt32Value)15U };
-            Item item1 = new Item(){ Index = (UInt32Value)0U };
-            Item item2 = new Item(){ Index = (UInt32Value)1U };
-            Item item3 = new Item(){ Index = (UInt32Value)2U };
-            Item item4 = new Item(){ Index = (UInt32Value)3U };
-            Item item5 = new Item(){ Index = (UInt32Value)4U };
-            Item item6 = new Item(){ Index = (UInt32Value)5U };
-            Item item7 = new Item(){ Index = (UInt32Value)6U };
-            Item item8 = new Item(){ Index = (UInt32Value)7U };
-            Item item9 = new Item(){ Index = (UInt32Value)8U };
-            Item item10 = new Item(){ Index = (UInt32Value)9U };
-            Item item11 = new Item(){ Index = (UInt32Value)10U };
-            Item item12 = new Item(){ Index = (UInt32Value)11U };
-            Item item13 = new Item(){ Index = (UInt32Value)12U };
-            Item item14 = new Item(){ Index = (UInt32Value)13U };
+            Items items1 = new Items(){ Count = 15U };
+            Item item1 = new Item(){ Index = 0U };
+            Item item2 = new Item(){ Index = 1U };
+            Item item3 = new Item(){ Index = 2U };
+            Item item4 = new Item(){ Index = 3U };
+            Item item5 = new Item(){ Index = 4U };
+            Item item6 = new Item(){ Index = 5U };
+            Item item7 = new Item(){ Index = 6U };
+            Item item8 = new Item(){ Index = 7U };
+            Item item9 = new Item(){ Index = 8U };
+            Item item10 = new Item(){ Index = 9U };
+            Item item11 = new Item(){ Index = 10U };
+            Item item12 = new Item(){ Index = 11U };
+            Item item13 = new Item(){ Index = 12U };
+            Item item14 = new Item(){ Index = 13U };
             Item item15 = new Item(){ ItemType = ItemValues.Default };
 
             items1.Append(item1);
@@ -2495,17 +2495,17 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotField pivotField2 = new PivotField(){ Axis = PivotTableAxisValues.AxisRow, ShowAll = false };
 
-            Items items2 = new Items(){ Count = (UInt32Value)11U };
-            Item item16 = new Item(){ Index = (UInt32Value)0U };
-            Item item17 = new Item(){ Missing = true, Index = (UInt32Value)4U };
-            Item item18 = new Item(){ Missing = true, Index = (UInt32Value)3U };
-            Item item19 = new Item(){ Index = (UInt32Value)1U };
-            Item item20 = new Item(){ Index = (UInt32Value)2U };
-            Item item21 = new Item(){ Missing = true, Index = (UInt32Value)9U };
-            Item item22 = new Item(){ Missing = true, Index = (UInt32Value)8U };
-            Item item23 = new Item(){ Missing = true, Index = (UInt32Value)7U };
-            Item item24 = new Item(){ Missing = true, Index = (UInt32Value)6U };
-            Item item25 = new Item(){ Missing = true, Index = (UInt32Value)5U };
+            Items items2 = new Items(){ Count = 11U };
+            Item item16 = new Item(){ Index = 0U };
+            Item item17 = new Item(){ Missing = true, Index = 4U };
+            Item item18 = new Item(){ Missing = true, Index = 3U };
+            Item item19 = new Item(){ Index = 1U };
+            Item item20 = new Item(){ Index = 2U };
+            Item item21 = new Item(){ Missing = true, Index = 9U };
+            Item item22 = new Item(){ Missing = true, Index = 8U };
+            Item item23 = new Item(){ Missing = true, Index = 7U };
+            Item item24 = new Item(){ Missing = true, Index = 6U };
+            Item item25 = new Item(){ Missing = true, Index = 5U };
             Item item26 = new Item(){ ItemType = ItemValues.Default };
 
             items2.Append(item16);
@@ -2524,13 +2524,13 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             PivotField pivotField3 = new PivotField(){ DataField = true, ShowAll = false };
             PivotField pivotField4 = new PivotField(){ ShowAll = false };
 
-            PivotField pivotField5 = new PivotField(){ NumberFormatId = (UInt32Value)14U, ShowAll = false };
+            PivotField pivotField5 = new PivotField(){ NumberFormatId = 14U, ShowAll = false };
 
-            Items items3 = new Items(){ Count = (UInt32Value)5U };
-            Item item27 = new Item(){ Index = (UInt32Value)0U };
-            Item item28 = new Item(){ Index = (UInt32Value)1U };
-            Item item29 = new Item(){ Index = (UInt32Value)3U };
-            Item item30 = new Item(){ Index = (UInt32Value)2U };
+            Items items3 = new Items(){ Count = 5U };
+            Item item27 = new Item(){ Index = 0U };
+            Item item28 = new Item(){ Index = 1U };
+            Item item29 = new Item(){ Index = 3U };
+            Item item30 = new Item(){ Index = 2U };
             Item item31 = new Item(){ ItemType = ItemValues.Default };
 
             items3.Append(item27);
@@ -2544,12 +2544,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotField pivotField7 = new PivotField(){ ShowAll = false, DefaultSubtotal = false };
 
-            Items items4 = new Items(){ Count = (UInt32Value)5U };
-            Item item32 = new Item(){ Index = (UInt32Value)0U };
-            Item item33 = new Item(){ Index = (UInt32Value)1U };
-            Item item34 = new Item(){ Index = (UInt32Value)2U };
-            Item item35 = new Item(){ Index = (UInt32Value)3U };
-            Item item36 = new Item(){ Index = (UInt32Value)4U };
+            Items items4 = new Items(){ Count = 5U };
+            Item item32 = new Item(){ Index = 0U };
+            Item item33 = new Item(){ Index = 1U };
+            Item item34 = new Item(){ Index = 2U };
+            Item item35 = new Item(){ Index = 3U };
+            Item item36 = new Item(){ Index = 4U };
 
             items4.Append(item32);
             items4.Append(item33);
@@ -2567,12 +2567,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFields1.Append(pivotField6);
             pivotFields1.Append(pivotField7);
 
-            RowFields rowFields1 = new RowFields(){ Count = (UInt32Value)1U };
+            RowFields rowFields1 = new RowFields(){ Count = 1U };
             Field field1 = new Field(){ Index = 1 };
 
             rowFields1.Append(field1);
 
-            RowItems rowItems1 = new RowItems(){ Count = (UInt32Value)4U };
+            RowItems rowItems1 = new RowItems(){ Count = 4U };
 
             RowItem rowItem1 = new RowItem();
             MemberPropertyIndex memberPropertyIndex1 = new MemberPropertyIndex();
@@ -2599,26 +2599,26 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             rowItems1.Append(rowItem3);
             rowItems1.Append(rowItem4);
 
-            ColumnItems columnItems1 = new ColumnItems(){ Count = (UInt32Value)1U };
+            ColumnItems columnItems1 = new ColumnItems(){ Count = 1U };
             RowItem rowItem5 = new RowItem();
 
             columnItems1.Append(rowItem5);
 
-            DataFields dataFields1 = new DataFields(){ Count = (UInt32Value)1U };
-            DataField dataField1 = new DataField(){ Name = "Sum of Quantity", Field = (UInt32Value)2U, BaseField = 0, BaseItem = (UInt32Value)0U };
+            DataFields dataFields1 = new DataFields(){ Count = 1U };
+            DataField dataField1 = new DataField(){ Name = "Sum of Quantity", Field = 2U, BaseField = 0, BaseItem = 0U };
 
             dataFields1.Append(dataField1);
 
-            ChartFormats chartFormats1 = new ChartFormats(){ Count = (UInt32Value)11U };
+            ChartFormats chartFormats1 = new ChartFormats(){ Count = 11U };
 
-            ChartFormat chartFormat1 = new ChartFormat(){ Chart = (UInt32Value)4U, Format = (UInt32Value)0U, Series = true };
+            ChartFormat chartFormat1 = new ChartFormat(){ Chart = 4U, Format = 0U, Series = true };
 
-            PivotArea pivotArea1 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea1 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences1 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences1 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference1 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem1 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference1 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem1 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference1.Append(fieldItem1);
 
@@ -2628,14 +2628,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat1.Append(pivotArea1);
 
-            ChartFormat chartFormat2 = new ChartFormat(){ Chart = (UInt32Value)5U, Format = (UInt32Value)2U, Series = true };
+            ChartFormat chartFormat2 = new ChartFormat(){ Chart = 5U, Format = 2U, Series = true };
 
-            PivotArea pivotArea2 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea2 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences2 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences2 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference2 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem2 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference2 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem2 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference2.Append(fieldItem2);
 
@@ -2645,14 +2645,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat2.Append(pivotArea2);
 
-            ChartFormat chartFormat3 = new ChartFormat(){ Chart = (UInt32Value)6U, Format = (UInt32Value)0U, Series = true };
+            ChartFormat chartFormat3 = new ChartFormat(){ Chart = 6U, Format = 0U, Series = true };
 
-            PivotArea pivotArea3 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea3 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences3 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences3 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference3 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem3 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference3 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem3 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference3.Append(fieldItem3);
 
@@ -2662,14 +2662,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat3.Append(pivotArea3);
 
-            ChartFormat chartFormat4 = new ChartFormat(){ Chart = (UInt32Value)7U, Format = (UInt32Value)14U, Series = true };
+            ChartFormat chartFormat4 = new ChartFormat(){ Chart = 7U, Format = 14U, Series = true };
 
-            PivotArea pivotArea4 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea4 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences4 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences4 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference4 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem4 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference4 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem4 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference4.Append(fieldItem4);
 
@@ -2679,14 +2679,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat4.Append(pivotArea4);
 
-            ChartFormat chartFormat5 = new ChartFormat(){ Chart = (UInt32Value)8U, Format = (UInt32Value)1U, Series = true };
+            ChartFormat chartFormat5 = new ChartFormat(){ Chart = 8U, Format = 1U, Series = true };
 
-            PivotArea pivotArea5 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea5 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences5 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences5 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference5 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem5 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference5 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem5 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference5.Append(fieldItem5);
 
@@ -2696,14 +2696,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat5.Append(pivotArea5);
 
-            ChartFormat chartFormat6 = new ChartFormat(){ Chart = (UInt32Value)9U, Format = (UInt32Value)15U, Series = true };
+            ChartFormat chartFormat6 = new ChartFormat(){ Chart = 9U, Format = 15U, Series = true };
 
-            PivotArea pivotArea6 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea6 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences6 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences6 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference6 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem6 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference6 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem6 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference6.Append(fieldItem6);
 
@@ -2713,14 +2713,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat6.Append(pivotArea6);
 
-            ChartFormat chartFormat7 = new ChartFormat(){ Chart = (UInt32Value)10U, Format = (UInt32Value)2U, Series = true };
+            ChartFormat chartFormat7 = new ChartFormat(){ Chart = 10U, Format = 2U, Series = true };
 
-            PivotArea pivotArea7 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea7 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences7 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences7 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference7 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem7 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference7 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem7 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference7.Append(fieldItem7);
 
@@ -2730,14 +2730,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat7.Append(pivotArea7);
 
-            ChartFormat chartFormat8 = new ChartFormat(){ Chart = (UInt32Value)11U, Format = (UInt32Value)16U, Series = true };
+            ChartFormat chartFormat8 = new ChartFormat(){ Chart = 11U, Format = 16U, Series = true };
 
-            PivotArea pivotArea8 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea8 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences8 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences8 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference8 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem8 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference8 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem8 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference8.Append(fieldItem8);
 
@@ -2747,14 +2747,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat8.Append(pivotArea8);
 
-            ChartFormat chartFormat9 = new ChartFormat(){ Chart = (UInt32Value)12U, Format = (UInt32Value)3U, Series = true };
+            ChartFormat chartFormat9 = new ChartFormat(){ Chart = 12U, Format = 3U, Series = true };
 
-            PivotArea pivotArea9 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea9 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences9 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences9 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference9 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem9 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference9 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem9 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference9.Append(fieldItem9);
 
@@ -2764,14 +2764,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat9.Append(pivotArea9);
 
-            ChartFormat chartFormat10 = new ChartFormat(){ Chart = (UInt32Value)13U, Format = (UInt32Value)17U, Series = true };
+            ChartFormat chartFormat10 = new ChartFormat(){ Chart = 13U, Format = 17U, Series = true };
 
-            PivotArea pivotArea10 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea10 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences10 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences10 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference10 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem10 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference10 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem10 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference10.Append(fieldItem10);
 
@@ -2781,14 +2781,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat10.Append(pivotArea10);
 
-            ChartFormat chartFormat11 = new ChartFormat(){ Chart = (UInt32Value)14U, Format = (UInt32Value)4U, Series = true };
+            ChartFormat chartFormat11 = new ChartFormat(){ Chart = 14U, Format = 4U, Series = true };
 
-            PivotArea pivotArea11 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea11 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences11 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences11 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference11 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem11 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference11 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem11 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference11.Append(fieldItem11);
 
@@ -2839,7 +2839,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of pivotTableCacheDefinitionPart1.
         private static void GeneratePivotTableCacheDefinitionPart1Content(PivotTableCacheDefinitionPart pivotTableCacheDefinitionPart1)
         {
-            PivotCacheDefinition pivotCacheDefinition1 = new PivotCacheDefinition(){ Id = "rId1", RefreshedBy = "Masaki Tamura (Pasona Tech)", RefreshedDate = 40946.731165509256D, CreatedVersion = 4, RefreshedVersion = 5, MinRefreshableVersion = 3, RecordCount = (UInt32Value)4U };
+            PivotCacheDefinition pivotCacheDefinition1 = new PivotCacheDefinition(){ Id = "rId1", RefreshedBy = "Masaki Tamura (Pasona Tech)", RefreshedDate = 40946.731165509256D, CreatedVersion = 4, RefreshedVersion = 5, MinRefreshableVersion = 3, RecordCount = 4U };
             pivotCacheDefinition1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 
             CacheSource cacheSource1 = new CacheSource(){ Type = SourceValues.Worksheet };
@@ -2847,11 +2847,11 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             cacheSource1.Append(worksheetSource1);
 
-            CacheFields cacheFields1 = new CacheFields(){ Count = (UInt32Value)7U };
+            CacheFields cacheFields1 = new CacheFields(){ Count = 7U };
 
-            CacheField cacheField1 = new CacheField(){ Name = "Date", NumberFormatId = (UInt32Value)14U };
+            CacheField cacheField1 = new CacheField(){ Name = "Date", NumberFormatId = 14U };
 
-            SharedItems sharedItems1 = new SharedItems(){ ContainsSemiMixedTypes = false, ContainsNonDate = false, ContainsDate = true, ContainsString = false, MinDate = System.Xml.XmlConvert.ToDateTime("2000-01-01T15:40:41Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), MaxDate = System.Xml.XmlConvert.ToDateTime("2002-12-30T20:50:43Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), Count = (UInt32Value)4U };
+            SharedItems sharedItems1 = new SharedItems(){ ContainsSemiMixedTypes = false, ContainsNonDate = false, ContainsDate = true, ContainsString = false, MinDate = System.Xml.XmlConvert.ToDateTime("2000-01-01T15:40:41Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), MaxDate = System.Xml.XmlConvert.ToDateTime("2002-12-30T20:50:43Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), Count = 4U };
             DateTimeItem dateTimeItem1 = new DateTimeItem(){ Val = System.Xml.XmlConvert.ToDateTime("2000-01-01T15:40:41Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
             DateTimeItem dateTimeItem2 = new DateTimeItem(){ Val = System.Xml.XmlConvert.ToDateTime("2000-01-02T03:35:07Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
             DateTimeItem dateTimeItem3 = new DateTimeItem(){ Val = System.Xml.XmlConvert.ToDateTime("2002-12-30T06:43:15Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
@@ -2862,10 +2862,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             sharedItems1.Append(dateTimeItem3);
             sharedItems1.Append(dateTimeItem4);
 
-            FieldGroup fieldGroup1 = new FieldGroup(){ ParentId = (UInt32Value)6U, Base = (UInt32Value)0U };
+            FieldGroup fieldGroup1 = new FieldGroup(){ ParentId = 6U, Base = 0U };
             RangeProperties rangeProperties1 = new RangeProperties(){ GroupBy = GroupByValues.Months, StartDate = System.Xml.XmlConvert.ToDateTime("2000-01-01T15:40:41Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), EndDate = System.Xml.XmlConvert.ToDateTime("2002-12-30T20:50:43Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
-            GroupItems groupItems1 = new GroupItems(){ Count = (UInt32Value)14U };
+            GroupItems groupItems1 = new GroupItems(){ Count = 14U };
             StringItem stringItem1 = new StringItem(){ Val = "<2000/01/01" };
             StringItem stringItem2 = new StringItem(){ Val = "1月" };
             StringItem stringItem3 = new StringItem(){ Val = "2月" };
@@ -2902,9 +2902,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             cacheField1.Append(sharedItems1);
             cacheField1.Append(fieldGroup1);
 
-            CacheField cacheField2 = new CacheField(){ Name = "Product", NumberFormatId = (UInt32Value)0U };
+            CacheField cacheField2 = new CacheField(){ Name = "Product", NumberFormatId = 0U };
 
-            SharedItems sharedItems2 = new SharedItems(){ Count = (UInt32Value)10U };
+            SharedItems sharedItems2 = new SharedItems(){ Count = 10U };
             StringItem stringItem15 = new StringItem(){ Val = "product_A" };
             StringItem stringItem16 = new StringItem(){ Val = "product_D" };
             StringItem stringItem17 = new StringItem(){ Val = "product_E" };
@@ -2929,19 +2929,19 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             cacheField2.Append(sharedItems2);
 
-            CacheField cacheField3 = new CacheField(){ Name = "Quantity", NumberFormatId = (UInt32Value)0U };
+            CacheField cacheField3 = new CacheField(){ Name = "Quantity", NumberFormatId = 0U };
             SharedItems sharedItems3 = new SharedItems(){ ContainsSemiMixedTypes = false, ContainsString = false, ContainsNumber = true, ContainsInteger = true, MinValue = 4D, MaxValue = 29D };
 
             cacheField3.Append(sharedItems3);
 
-            CacheField cacheField4 = new CacheField(){ Name = "Price", NumberFormatId = (UInt32Value)0U };
+            CacheField cacheField4 = new CacheField(){ Name = "Price", NumberFormatId = 0U };
             SharedItems sharedItems4 = new SharedItems(){ ContainsSemiMixedTypes = false, ContainsString = false, ContainsNumber = true, ContainsInteger = true, MinValue = 312D, MaxValue = 15990D };
 
             cacheField4.Append(sharedItems4);
 
-            CacheField cacheField5 = new CacheField(){ Name = "DeliveryDate", NumberFormatId = (UInt32Value)14U };
+            CacheField cacheField5 = new CacheField(){ Name = "DeliveryDate", NumberFormatId = 14U };
 
-            SharedItems sharedItems5 = new SharedItems(){ ContainsSemiMixedTypes = false, ContainsNonDate = false, ContainsDate = true, ContainsString = false, MinDate = System.Xml.XmlConvert.ToDateTime("2000-01-06T15:40:41Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), MaxDate = System.Xml.XmlConvert.ToDateTime("2003-01-03T06:43:15Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), Count = (UInt32Value)4U };
+            SharedItems sharedItems5 = new SharedItems(){ ContainsSemiMixedTypes = false, ContainsNonDate = false, ContainsDate = true, ContainsString = false, MinDate = System.Xml.XmlConvert.ToDateTime("2000-01-06T15:40:41Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), MaxDate = System.Xml.XmlConvert.ToDateTime("2003-01-03T06:43:15Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), Count = 4U };
             DateTimeItem dateTimeItem5 = new DateTimeItem(){ Val = System.Xml.XmlConvert.ToDateTime("2000-01-06T15:40:41Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
             DateTimeItem dateTimeItem6 = new DateTimeItem(){ Val = System.Xml.XmlConvert.ToDateTime("2000-01-07T03:35:07Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
             DateTimeItem dateTimeItem7 = new DateTimeItem(){ Val = System.Xml.XmlConvert.ToDateTime("2003-01-03T06:43:15Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
@@ -2954,17 +2954,17 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             cacheField5.Append(sharedItems5);
 
-            CacheField cacheField6 = new CacheField(){ Name = "Employee", NumberFormatId = (UInt32Value)0U };
+            CacheField cacheField6 = new CacheField(){ Name = "Employee", NumberFormatId = 0U };
             SharedItems sharedItems6 = new SharedItems();
 
             cacheField6.Append(sharedItems6);
 
-            CacheField cacheField7 = new CacheField(){ Name = "Years", NumberFormatId = (UInt32Value)0U, DatabaseField = false };
+            CacheField cacheField7 = new CacheField(){ Name = "Years", NumberFormatId = 0U, DatabaseField = false };
 
-            FieldGroup fieldGroup2 = new FieldGroup(){ Base = (UInt32Value)0U };
+            FieldGroup fieldGroup2 = new FieldGroup(){ Base = 0U };
             RangeProperties rangeProperties2 = new RangeProperties(){ GroupBy = GroupByValues.Years, StartDate = System.Xml.XmlConvert.ToDateTime("2000-01-01T15:40:41Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), EndDate = System.Xml.XmlConvert.ToDateTime("2002-12-30T20:50:43Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
-            GroupItems groupItems2 = new GroupItems(){ Count = (UInt32Value)5U };
+            GroupItems groupItems2 = new GroupItems(){ Count = 5U };
             StringItem stringItem25 = new StringItem(){ Val = "<2000/01/01" };
             StringItem stringItem26 = new StringItem(){ Val = "2000年" };
             StringItem stringItem27 = new StringItem(){ Val = "2001年" };
@@ -2994,7 +2994,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotCacheDefinitionExtension pivotCacheDefinitionExtension1 = new PivotCacheDefinitionExtension(){ Uri = "{725AE2AE-9491-48be-B2B4-4EB974FC3084}" };
             pivotCacheDefinitionExtension1.AddNamespaceDeclaration("x14", "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
-            X14.PivotCacheDefinition pivotCacheDefinition2 = new X14.PivotCacheDefinition(){ PivotCacheId = (UInt32Value)2U };
+            X14.PivotCacheDefinition pivotCacheDefinition2 = new X14.PivotCacheDefinition(){ PivotCacheId = 2U };
 
             pivotCacheDefinitionExtension1.Append(pivotCacheDefinition2);
 
@@ -3010,15 +3010,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of pivotTableCacheRecordsPart1.
         private static void GeneratePivotTableCacheRecordsPart1Content(PivotTableCacheRecordsPart pivotTableCacheRecordsPart1)
         {
-            PivotCacheRecords pivotCacheRecords1 = new PivotCacheRecords(){ Count = (UInt32Value)4U };
+            PivotCacheRecords pivotCacheRecords1 = new PivotCacheRecords(){ Count = 4U };
             pivotCacheRecords1.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 
             PivotCacheRecord pivotCacheRecord1 = new PivotCacheRecord();
-            FieldItem fieldItem12 = new FieldItem(){ Val = (UInt32Value)0U };
-            FieldItem fieldItem13 = new FieldItem(){ Val = (UInt32Value)0U };
+            FieldItem fieldItem12 = new FieldItem(){ Val = 0U };
+            FieldItem fieldItem13 = new FieldItem(){ Val = 0U };
             NumberItem numberItem1 = new NumberItem(){ Val = 19D };
             NumberItem numberItem2 = new NumberItem(){ Val = 2375D };
-            FieldItem fieldItem14 = new FieldItem(){ Val = (UInt32Value)0U };
+            FieldItem fieldItem14 = new FieldItem(){ Val = 0U };
             StringItem stringItem30 = new StringItem(){ Val = "sales staff G" };
 
             pivotCacheRecord1.Append(fieldItem12);
@@ -3029,11 +3029,11 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotCacheRecord1.Append(stringItem30);
 
             PivotCacheRecord pivotCacheRecord2 = new PivotCacheRecord();
-            FieldItem fieldItem15 = new FieldItem(){ Val = (UInt32Value)1U };
-            FieldItem fieldItem16 = new FieldItem(){ Val = (UInt32Value)1U };
+            FieldItem fieldItem15 = new FieldItem(){ Val = 1U };
+            FieldItem fieldItem16 = new FieldItem(){ Val = 1U };
             NumberItem numberItem3 = new NumberItem(){ Val = 13D };
             NumberItem numberItem4 = new NumberItem(){ Val = 15990D };
-            FieldItem fieldItem17 = new FieldItem(){ Val = (UInt32Value)1U };
+            FieldItem fieldItem17 = new FieldItem(){ Val = 1U };
             StringItem stringItem31 = new StringItem(){ Val = "sales staff B" };
 
             pivotCacheRecord2.Append(fieldItem15);
@@ -3044,11 +3044,11 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotCacheRecord2.Append(stringItem31);
 
             PivotCacheRecord pivotCacheRecord3 = new PivotCacheRecord();
-            FieldItem fieldItem18 = new FieldItem(){ Val = (UInt32Value)2U };
-            FieldItem fieldItem19 = new FieldItem(){ Val = (UInt32Value)2U };
+            FieldItem fieldItem18 = new FieldItem(){ Val = 2U };
+            FieldItem fieldItem19 = new FieldItem(){ Val = 2U };
             NumberItem numberItem5 = new NumberItem(){ Val = 4D };
             NumberItem numberItem6 = new NumberItem(){ Val = 312D };
-            FieldItem fieldItem20 = new FieldItem(){ Val = (UInt32Value)2U };
+            FieldItem fieldItem20 = new FieldItem(){ Val = 2U };
             StringItem stringItem32 = new StringItem(){ Val = "sales staff E" };
 
             pivotCacheRecord3.Append(fieldItem18);
@@ -3059,11 +3059,11 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotCacheRecord3.Append(stringItem32);
 
             PivotCacheRecord pivotCacheRecord4 = new PivotCacheRecord();
-            FieldItem fieldItem21 = new FieldItem(){ Val = (UInt32Value)3U };
-            FieldItem fieldItem22 = new FieldItem(){ Val = (UInt32Value)2U };
+            FieldItem fieldItem21 = new FieldItem(){ Val = 3U };
+            FieldItem fieldItem22 = new FieldItem(){ Val = 2U };
             NumberItem numberItem7 = new NumberItem(){ Val = 29D };
             NumberItem numberItem8 = new NumberItem(){ Val = 2262D };
-            FieldItem fieldItem23 = new FieldItem(){ Val = (UInt32Value)3U };
+            FieldItem fieldItem23 = new FieldItem(){ Val = 3U };
             StringItem stringItem33 = new StringItem(){ Val = "sales staff E" };
 
             pivotCacheRecord4.Append(fieldItem21);
@@ -3088,11 +3088,11 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             timelineCacheDefinition1.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
 
             X15.TimelineCachePivotTables timelineCachePivotTables1 = new X15.TimelineCachePivotTables();
-            X15.TimelineCachePivotTable timelineCachePivotTable1 = new X15.TimelineCachePivotTable(){ TabId = (UInt32Value)7U, Name = "PivotTable1" };
+            X15.TimelineCachePivotTable timelineCachePivotTable1 = new X15.TimelineCachePivotTable(){ TabId = 7U, Name = "PivotTable1" };
 
             timelineCachePivotTables1.Append(timelineCachePivotTable1);
 
-            X15.TimelineState timelineState1 = new X15.TimelineState(){ MinimalRefreshVersion = (UInt32Value)6U, LastRefreshVersion = (UInt32Value)6U, PivotCacheId = (UInt32Value)2U, FilterType = PivotFilterValues.Unknown };
+            X15.TimelineState timelineState1 = new X15.TimelineState(){ MinimalRefreshVersion = 6U, LastRefreshVersion = 6U, PivotCacheId = 2U, FilterType = PivotFilterValues.Unknown };
             X15.BoundsTimelineRange boundsTimelineRange1 = new X15.BoundsTimelineRange(){ StartDate = System.Xml.XmlConvert.ToDateTime("2000-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), EndDate = System.Xml.XmlConvert.ToDateTime("2004-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
             timelineState1.Append(boundsTimelineRange1);
@@ -3113,21 +3113,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             SheetDimension sheetDimension2 = new SheetDimension(){ Reference = "A1:B5" };
 
             SheetViews sheetViews2 = new SheetViews();
-            SheetView sheetView2 = new SheetView(){ WorkbookViewId = (UInt32Value)0U };
+            SheetView sheetView2 = new SheetView(){ WorkbookViewId = 0U };
 
             sheetViews2.Append(sheetView2);
             SheetFormatProperties sheetFormatProperties2 = new SheetFormatProperties(){ DefaultRowHeight = 15D };
 
             Columns columns2 = new Columns();
-            Column column8 = new Column(){ Min = (UInt32Value)1U, Max = (UInt32Value)2U, Width = 14.140625D, BestFit = true, CustomWidth = true };
+            Column column8 = new Column(){ Min = 1U, Max = 2U, Width = 14.140625D, BestFit = true, CustomWidth = true };
 
             columns2.Append(column8);
 
             SheetData sheetData2 = new SheetData();
 
-            Row row6 = new Row(){ RowIndex = (UInt32Value)1U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row6 = new Row(){ RowIndex = 1U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell11 = new Cell(){ CellReference = "A1", StyleIndex = (UInt32Value)5U, DataType = CellValues.SharedString };
+            Cell cell11 = new Cell(){ CellReference = "A1", StyleIndex = 5U, DataType = CellValues.SharedString };
             CellValue cellValue11 = new CellValue();
             cellValue11.Text = "29";
 
@@ -3142,15 +3142,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row6.Append(cell11);
             row6.Append(cell12);
 
-            Row row7 = new Row(){ RowIndex = (UInt32Value)2U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row7 = new Row(){ RowIndex = 2U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell13 = new Cell(){ CellReference = "A2", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell13 = new Cell(){ CellReference = "A2", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue13 = new CellValue();
             cellValue13.Text = "16";
 
             cell13.Append(cellValue13);
 
-            Cell cell14 = new Cell(){ CellReference = "B2", StyleIndex = (UInt32Value)7U };
+            Cell cell14 = new Cell(){ CellReference = "B2", StyleIndex = 7U };
             CellValue cellValue14 = new CellValue();
             cellValue14.Text = "2050";
 
@@ -3159,15 +3159,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row7.Append(cell13);
             row7.Append(cell14);
 
-            Row row8 = new Row(){ RowIndex = (UInt32Value)3U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row8 = new Row(){ RowIndex = 3U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell15 = new Cell(){ CellReference = "A3", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell15 = new Cell(){ CellReference = "A3", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue15 = new CellValue();
             cellValue15.Text = "22";
 
             cell15.Append(cellValue15);
 
-            Cell cell16 = new Cell(){ CellReference = "B3", StyleIndex = (UInt32Value)7U };
+            Cell cell16 = new Cell(){ CellReference = "B3", StyleIndex = 7U };
             CellValue cellValue16 = new CellValue();
             cellValue16.Text = "3168";
 
@@ -3176,15 +3176,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row8.Append(cell15);
             row8.Append(cell16);
 
-            Row row9 = new Row(){ RowIndex = (UInt32Value)4U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row9 = new Row(){ RowIndex = 4U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell17 = new Cell(){ CellReference = "A4", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell17 = new Cell(){ CellReference = "A4", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue17 = new CellValue();
             cellValue17.Text = "23";
 
             cell17.Append(cellValue17);
 
-            Cell cell18 = new Cell(){ CellReference = "B4", StyleIndex = (UInt32Value)7U };
+            Cell cell18 = new Cell(){ CellReference = "B4", StyleIndex = 7U };
             CellValue cellValue18 = new CellValue();
             cellValue18.Text = "11529";
 
@@ -3193,15 +3193,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row9.Append(cell17);
             row9.Append(cell18);
 
-            Row row10 = new Row(){ RowIndex = (UInt32Value)5U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row10 = new Row(){ RowIndex = 5U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell19 = new Cell(){ CellReference = "A5", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell19 = new Cell(){ CellReference = "A5", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue19 = new CellValue();
             cellValue19.Text = "30";
 
             cell19.Append(cellValue19);
 
-            Cell cell20 = new Cell(){ CellReference = "B5", StyleIndex = (UInt32Value)7U };
+            Cell cell20 = new Cell(){ CellReference = "B5", StyleIndex = 7U };
             CellValue cellValue20 = new CellValue();
             cellValue20.Text = "16747";
 
@@ -3215,7 +3215,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             sheetData2.Append(row8);
             sheetData2.Append(row9);
             sheetData2.Append(row10);
-            PhoneticProperties phoneticProperties2 = new PhoneticProperties(){ FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties2 = new PhoneticProperties(){ FontId = 1U };
             PageMargins pageMargins4 = new PageMargins(){ Left = 0.7D, Right = 0.7D, Top = 0.75D, Bottom = 0.75D, Header = 0.3D, Footer = 0.3D };
             S.Drawing drawing2 = new S.Drawing(){ Id = "rId2" };
 
@@ -3252,8 +3252,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             X15.Timelines timelines2 = new X15.Timelines(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x" }  };
             timelines2.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             timelines2.AddNamespaceDeclaration("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main");
-            X15.Timeline timeline3 = new X15.Timeline(){ Name = "Date", Cache = "NativeTimeline_Date", Caption = "Cache1", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2002-03-15T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
-            X15.Timeline timeline4 = new X15.Timeline(){ Name = "Date 1", Cache = "NativeTimeline_Date", Caption = "Cache2", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2002-03-09T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline3 = new X15.Timeline(){ Name = "Date", Cache = "NativeTimeline_Date", Caption = "Cache1", Level = 2U, SelectionLevel = 2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2002-03-15T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline4 = new X15.Timeline(){ Name = "Date 1", Cache = "NativeTimeline_Date", Caption = "Cache2", Level = 2U, SelectionLevel = 2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2002-03-09T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
             timelines2.Append(timeline3);
             timelines2.Append(timeline4);
@@ -3300,10 +3300,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker5.Append(rowId10);
             toMarker5.Append(rowOffset10);
 
-            Xdr.GraphicFrame graphicFrame5 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame5 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties5 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties7 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)2U, Name = "グラフ 1" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties7 = new Xdr.NonVisualDrawingProperties(){ Id = 2U, Name = "グラフ 1" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties5 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties5.Append(nonVisualDrawingProperties7);
@@ -3370,10 +3370,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker6.Append(rowId12);
             toMarker6.Append(rowOffset12);
 
-            Xdr.GraphicFrame graphicFrame6 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame6 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties6 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties8 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)3U, Name = "グラフ 2" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties8 = new Xdr.NonVisualDrawingProperties(){ Id = 3U, Name = "グラフ 2" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties6 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties6.Append(nonVisualDrawingProperties8);
@@ -3446,10 +3446,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice6 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame7 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame7 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties7 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties9 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)4U, Name = "Date" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties9 = new Xdr.NonVisualDrawingProperties(){ Id = 4U, Name = "Date" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties7 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties7.Append(nonVisualDrawingProperties9);
@@ -3483,10 +3483,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback5.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback5.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape3 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape3 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties3 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties10 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties10 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties3 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks3 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -3602,10 +3602,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice7 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame8 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame8 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties8 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties11 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)7U, Name = "Date 1" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties11 = new Xdr.NonVisualDrawingProperties(){ Id = 7U, Name = "Date 1" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties8 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties8.Append(nonVisualDrawingProperties11);
@@ -3637,10 +3637,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentFallback alternateContentFallback6 = new AlternateContentFallback();
 
-            Xdr.Shape shape4 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape4 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties4 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties12 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties12 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties4 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks4 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -3757,7 +3757,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotSource pivotSource3 = new C.PivotSource();
             C.PivotTableName pivotTableName3 = new C.PivotTableName();
             pivotTableName3.Text = "[GeneratedDocument.xlsx]Cache!PivotTable1";
-            C.FormatId formatId3 = new C.FormatId(){ Val = (UInt32Value)1U };
+            C.FormatId formatId3 = new C.FormatId(){ Val = 1U };
 
             pivotSource3.Append(pivotTableName3);
             pivotSource3.Append(formatId3);
@@ -3773,7 +3773,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotFormats pivotFormats3 = new C.PivotFormats();
 
             C.PivotFormat pivotFormat24 = new C.PivotFormat();
-            C.Index index26 = new C.Index(){ Val = (UInt32Value)0U };
+            C.Index index26 = new C.Index(){ Val = 0U };
 
             C.Marker marker24 = new C.Marker();
             C.Symbol symbol24 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -3792,8 +3792,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.VaryColors varyColors3 = new C.VaryColors(){ Val = true };
 
             C.PieChartSeries pieChartSeries2 = new C.PieChartSeries();
-            C.Index index27 = new C.Index(){ Val = (UInt32Value)0U };
-            C.Order order3 = new C.Order(){ Val = (UInt32Value)0U };
+            C.Index index27 = new C.Index(){ Val = 0U };
+            C.Order order3 = new C.Order(){ Val = 0U };
 
             C.SeriesText seriesText3 = new C.SeriesText();
 
@@ -3802,9 +3802,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula7.Text = "Cache!$B$1";
 
             C.StringCache stringCache5 = new C.StringCache();
-            C.PointCount pointCount7 = new C.PointCount(){ Val = (UInt32Value)1U };
+            C.PointCount pointCount7 = new C.PointCount(){ Val = 1U };
 
-            C.StringPoint stringPoint9 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint9 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue15 = new C.NumericValue();
             numericValue15.Text = "Total";
 
@@ -3825,21 +3825,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula8.Text = "Cache!$A$2:$A$5";
 
             C.StringCache stringCache6 = new C.StringCache();
-            C.PointCount pointCount8 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount8 = new C.PointCount(){ Val = 3U };
 
-            C.StringPoint stringPoint10 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint10 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue16 = new C.NumericValue();
             numericValue16.Text = "product_C";
 
             stringPoint10.Append(numericValue16);
 
-            C.StringPoint stringPoint11 = new C.StringPoint(){ Index = (UInt32Value)1U };
+            C.StringPoint stringPoint11 = new C.StringPoint(){ Index = 1U };
             C.NumericValue numericValue17 = new C.NumericValue();
             numericValue17.Text = "product_F";
 
             stringPoint11.Append(numericValue17);
 
-            C.StringPoint stringPoint12 = new C.StringPoint(){ Index = (UInt32Value)2U };
+            C.StringPoint stringPoint12 = new C.StringPoint(){ Index = 2U };
             C.NumericValue numericValue18 = new C.NumericValue();
             numericValue18.Text = "product_G";
 
@@ -3864,21 +3864,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.NumberingCache numberingCache3 = new C.NumberingCache();
             C.FormatCode formatCode3 = new C.FormatCode();
             formatCode3.Text = "General";
-            C.PointCount pointCount9 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount9 = new C.PointCount(){ Val = 3U };
 
-            C.NumericPoint numericPoint7 = new C.NumericPoint(){ Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint7 = new C.NumericPoint(){ Index = 0U };
             C.NumericValue numericValue19 = new C.NumericValue();
             numericValue19.Text = "2050";
 
             numericPoint7.Append(numericValue19);
 
-            C.NumericPoint numericPoint8 = new C.NumericPoint(){ Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint8 = new C.NumericPoint(){ Index = 1U };
             C.NumericValue numericValue20 = new C.NumericValue();
             numericValue20.Text = "3168";
 
             numericPoint8.Append(numericValue20);
 
-            C.NumericPoint numericPoint9 = new C.NumericPoint(){ Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint9 = new C.NumericPoint(){ Index = 2U };
             C.NumericValue numericValue21 = new C.NumericValue();
             numericValue21.Text = "11529";
 
@@ -4022,7 +4022,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotSource pivotSource4 = new C.PivotSource();
             C.PivotTableName pivotTableName4 = new C.PivotTableName();
             pivotTableName4.Text = "[GeneratedDocument.xlsx]Cache!PivotTable1";
-            C.FormatId formatId4 = new C.FormatId(){ Val = (UInt32Value)0U };
+            C.FormatId formatId4 = new C.FormatId(){ Val = 0U };
 
             pivotSource4.Append(pivotTableName4);
             pivotSource4.Append(formatId4);
@@ -4038,7 +4038,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotFormats pivotFormats4 = new C.PivotFormats();
 
             C.PivotFormat pivotFormat25 = new C.PivotFormat();
-            C.Index index28 = new C.Index(){ Val = (UInt32Value)0U };
+            C.Index index28 = new C.Index(){ Val = 0U };
 
             C.Marker marker25 = new C.Marker();
             C.Symbol symbol25 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -4059,8 +4059,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.VaryColors varyColors4 = new C.VaryColors(){ Val = false };
 
             C.BarChartSeries barChartSeries2 = new C.BarChartSeries();
-            C.Index index29 = new C.Index(){ Val = (UInt32Value)0U };
-            C.Order order4 = new C.Order(){ Val = (UInt32Value)0U };
+            C.Index index29 = new C.Index(){ Val = 0U };
+            C.Order order4 = new C.Order(){ Val = 0U };
 
             C.SeriesText seriesText4 = new C.SeriesText();
 
@@ -4069,9 +4069,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula10.Text = "Cache!$B$1";
 
             C.StringCache stringCache7 = new C.StringCache();
-            C.PointCount pointCount10 = new C.PointCount(){ Val = (UInt32Value)1U };
+            C.PointCount pointCount10 = new C.PointCount(){ Val = 1U };
 
-            C.StringPoint stringPoint13 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint13 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue22 = new C.NumericValue();
             numericValue22.Text = "Total";
 
@@ -4093,21 +4093,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula11.Text = "Cache!$A$2:$A$5";
 
             C.StringCache stringCache8 = new C.StringCache();
-            C.PointCount pointCount11 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount11 = new C.PointCount(){ Val = 3U };
 
-            C.StringPoint stringPoint14 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint14 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue23 = new C.NumericValue();
             numericValue23.Text = "product_C";
 
             stringPoint14.Append(numericValue23);
 
-            C.StringPoint stringPoint15 = new C.StringPoint(){ Index = (UInt32Value)1U };
+            C.StringPoint stringPoint15 = new C.StringPoint(){ Index = 1U };
             C.NumericValue numericValue24 = new C.NumericValue();
             numericValue24.Text = "product_F";
 
             stringPoint15.Append(numericValue24);
 
-            C.StringPoint stringPoint16 = new C.StringPoint(){ Index = (UInt32Value)2U };
+            C.StringPoint stringPoint16 = new C.StringPoint(){ Index = 2U };
             C.NumericValue numericValue25 = new C.NumericValue();
             numericValue25.Text = "product_G";
 
@@ -4132,21 +4132,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.NumberingCache numberingCache4 = new C.NumberingCache();
             C.FormatCode formatCode4 = new C.FormatCode();
             formatCode4.Text = "General";
-            C.PointCount pointCount12 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount12 = new C.PointCount(){ Val = 3U };
 
-            C.NumericPoint numericPoint10 = new C.NumericPoint(){ Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint10 = new C.NumericPoint(){ Index = 0U };
             C.NumericValue numericValue26 = new C.NumericValue();
             numericValue26.Text = "2050";
 
             numericPoint10.Append(numericValue26);
 
-            C.NumericPoint numericPoint11 = new C.NumericPoint(){ Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint11 = new C.NumericPoint(){ Index = 1U };
             C.NumericValue numericValue27 = new C.NumericValue();
             numericValue27.Text = "3168";
 
             numericPoint11.Append(numericValue27);
 
-            C.NumericPoint numericPoint12 = new C.NumericPoint(){ Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint12 = new C.NumericPoint(){ Index = 2U };
             C.NumericValue numericValue28 = new C.NumericValue();
             numericValue28.Text = "11529";
 
@@ -4185,8 +4185,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             dataLabels4.Append(showPercent4);
             dataLabels4.Append(showBubbleSize4);
             C.GapWidth gapWidth2 = new C.GapWidth(){ Val = (UInt16Value)150U };
-            C.AxisId axisId5 = new C.AxisId(){ Val = (UInt32Value)164427248U };
-            C.AxisId axisId6 = new C.AxisId(){ Val = (UInt32Value)164427632U };
+            C.AxisId axisId5 = new C.AxisId(){ Val = 164427248U };
+            C.AxisId axisId6 = new C.AxisId(){ Val = 164427632U };
 
             barChart2.Append(barDirection2);
             barChart2.Append(barGrouping2);
@@ -4198,7 +4198,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             barChart2.Append(axisId6);
 
             C.CategoryAxis categoryAxis2 = new C.CategoryAxis();
-            C.AxisId axisId7 = new C.AxisId(){ Val = (UInt32Value)164427248U };
+            C.AxisId axisId7 = new C.AxisId(){ Val = 164427248U };
 
             C.Scaling scaling3 = new C.Scaling();
             C.Orientation orientation3 = new C.Orientation(){ Val = C.OrientationValues.MinMax };
@@ -4210,7 +4210,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.MajorTickMark majorTickMark3 = new C.MajorTickMark(){ Val = C.TickMarkValues.Outside };
             C.MinorTickMark minorTickMark3 = new C.MinorTickMark(){ Val = C.TickMarkValues.None };
             C.TickLabelPosition tickLabelPosition3 = new C.TickLabelPosition(){ Val = C.TickLabelPositionValues.NextTo };
-            C.CrossingAxis crossingAxis3 = new C.CrossingAxis(){ Val = (UInt32Value)164427632U };
+            C.CrossingAxis crossingAxis3 = new C.CrossingAxis(){ Val = 164427632U };
             C.Crosses crosses3 = new C.Crosses(){ Val = C.CrossesValues.AutoZero };
             C.AutoLabeled autoLabeled2 = new C.AutoLabeled(){ Val = true };
             C.LabelAlignment labelAlignment2 = new C.LabelAlignment(){ Val = C.LabelAlignmentValues.Center };
@@ -4233,7 +4233,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             categoryAxis2.Append(noMultiLevelLabels2);
 
             C.ValueAxis valueAxis2 = new C.ValueAxis();
-            C.AxisId axisId8 = new C.AxisId(){ Val = (UInt32Value)164427632U };
+            C.AxisId axisId8 = new C.AxisId(){ Val = 164427632U };
 
             C.Scaling scaling4 = new C.Scaling();
             C.Orientation orientation4 = new C.Orientation(){ Val = C.OrientationValues.MinMax };
@@ -4246,7 +4246,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.MajorTickMark majorTickMark4 = new C.MajorTickMark(){ Val = C.TickMarkValues.Outside };
             C.MinorTickMark minorTickMark4 = new C.MinorTickMark(){ Val = C.TickMarkValues.None };
             C.TickLabelPosition tickLabelPosition4 = new C.TickLabelPosition(){ Val = C.TickLabelPositionValues.NextTo };
-            C.CrossingAxis crossingAxis4 = new C.CrossingAxis(){ Val = (UInt32Value)164427248U };
+            C.CrossingAxis crossingAxis4 = new C.CrossingAxis(){ Val = 164427248U };
             C.Crosses crosses4 = new C.Crosses(){ Val = C.CrossesValues.AutoZero };
             C.CrossBetween crossBetween2 = new C.CrossBetween(){ Val = C.CrossBetweenValues.Between };
 
@@ -4335,19 +4335,19 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of pivotTablePart2.
         private static void GeneratePivotTablePart2Content(PivotTablePart pivotTablePart2)
         {
-            PivotTableDefinition pivotTableDefinition3 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)0U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "値", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = (UInt32Value)2U };
-            Location location2 = new Location(){ Reference = "A1:B5", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)1U };
+            PivotTableDefinition pivotTableDefinition3 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = 0U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "値", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = 0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = 2U };
+            Location location2 = new Location(){ Reference = "A1:B5", FirstHeaderRow = 1U, FirstDataRow = 1U, FirstDataColumn = 1U };
 
-            PivotFields pivotFields2 = new PivotFields(){ Count = (UInt32Value)6U };
+            PivotFields pivotFields2 = new PivotFields(){ Count = 6U };
 
-            PivotField pivotField8 = new PivotField(){ NumberFormatId = (UInt32Value)14U, ShowAll = false };
+            PivotField pivotField8 = new PivotField(){ NumberFormatId = 14U, ShowAll = false };
 
-            Items items5 = new Items(){ Count = (UInt32Value)6U };
-            Item item37 = new Item(){ Index = (UInt32Value)0U };
-            Item item38 = new Item(){ Index = (UInt32Value)1U };
-            Item item39 = new Item(){ Index = (UInt32Value)2U };
-            Item item40 = new Item(){ Index = (UInt32Value)3U };
-            Item item41 = new Item(){ Index = (UInt32Value)4U };
+            Items items5 = new Items(){ Count = 6U };
+            Item item37 = new Item(){ Index = 0U };
+            Item item38 = new Item(){ Index = 1U };
+            Item item39 = new Item(){ Index = 2U };
+            Item item40 = new Item(){ Index = 3U };
+            Item item41 = new Item(){ Index = 4U };
             Item item42 = new Item(){ ItemType = ItemValues.Default };
 
             items5.Append(item37);
@@ -4361,17 +4361,17 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotField pivotField9 = new PivotField(){ Axis = PivotTableAxisValues.AxisRow, ShowAll = false };
 
-            Items items6 = new Items(){ Count = (UInt32Value)11U };
-            Item item43 = new Item(){ Missing = true, Index = (UInt32Value)6U };
-            Item item44 = new Item(){ Missing = true, Index = (UInt32Value)5U };
-            Item item45 = new Item(){ Index = (UInt32Value)2U };
-            Item item46 = new Item(){ Missing = true, Index = (UInt32Value)4U };
-            Item item47 = new Item(){ Missing = true, Index = (UInt32Value)3U };
-            Item item48 = new Item(){ Index = (UInt32Value)0U };
-            Item item49 = new Item(){ Index = (UInt32Value)1U };
-            Item item50 = new Item(){ Missing = true, Index = (UInt32Value)9U };
-            Item item51 = new Item(){ Missing = true, Index = (UInt32Value)8U };
-            Item item52 = new Item(){ Missing = true, Index = (UInt32Value)7U };
+            Items items6 = new Items(){ Count = 11U };
+            Item item43 = new Item(){ Missing = true, Index = 6U };
+            Item item44 = new Item(){ Missing = true, Index = 5U };
+            Item item45 = new Item(){ Index = 2U };
+            Item item46 = new Item(){ Missing = true, Index = 4U };
+            Item item47 = new Item(){ Missing = true, Index = 3U };
+            Item item48 = new Item(){ Index = 0U };
+            Item item49 = new Item(){ Index = 1U };
+            Item item50 = new Item(){ Missing = true, Index = 9U };
+            Item item51 = new Item(){ Missing = true, Index = 8U };
+            Item item52 = new Item(){ Missing = true, Index = 7U };
             Item item53 = new Item(){ ItemType = ItemValues.Default };
 
             items6.Append(item43);
@@ -4389,7 +4389,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotField9.Append(items6);
             PivotField pivotField10 = new PivotField(){ ShowAll = false };
             PivotField pivotField11 = new PivotField(){ DataField = true, ShowAll = false };
-            PivotField pivotField12 = new PivotField(){ NumberFormatId = (UInt32Value)14U, ShowAll = false };
+            PivotField pivotField12 = new PivotField(){ NumberFormatId = 14U, ShowAll = false };
             PivotField pivotField13 = new PivotField(){ ShowAll = false };
 
             pivotFields2.Append(pivotField8);
@@ -4399,12 +4399,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFields2.Append(pivotField12);
             pivotFields2.Append(pivotField13);
 
-            RowFields rowFields2 = new RowFields(){ Count = (UInt32Value)1U };
+            RowFields rowFields2 = new RowFields(){ Count = 1U };
             Field field2 = new Field(){ Index = 1 };
 
             rowFields2.Append(field2);
 
-            RowItems rowItems2 = new RowItems(){ Count = (UInt32Value)4U };
+            RowItems rowItems2 = new RowItems(){ Count = 4U };
 
             RowItem rowItem6 = new RowItem();
             MemberPropertyIndex memberPropertyIndex5 = new MemberPropertyIndex(){ Val = 2 };
@@ -4431,26 +4431,26 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             rowItems2.Append(rowItem8);
             rowItems2.Append(rowItem9);
 
-            ColumnItems columnItems2 = new ColumnItems(){ Count = (UInt32Value)1U };
+            ColumnItems columnItems2 = new ColumnItems(){ Count = 1U };
             RowItem rowItem10 = new RowItem();
 
             columnItems2.Append(rowItem10);
 
-            DataFields dataFields2 = new DataFields(){ Count = (UInt32Value)1U };
-            DataField dataField2 = new DataField(){ Name = "Toral / Price", Field = (UInt32Value)3U, BaseField = 0, BaseItem = (UInt32Value)0U };
+            DataFields dataFields2 = new DataFields(){ Count = 1U };
+            DataField dataField2 = new DataField(){ Name = "Toral / Price", Field = 3U, BaseField = 0, BaseItem = 0U };
 
             dataFields2.Append(dataField2);
 
-            ChartFormats chartFormats2 = new ChartFormats(){ Count = (UInt32Value)2U };
+            ChartFormats chartFormats2 = new ChartFormats(){ Count = 2U };
 
-            ChartFormat chartFormat12 = new ChartFormat(){ Chart = (UInt32Value)0U, Format = (UInt32Value)0U, Series = true };
+            ChartFormat chartFormat12 = new ChartFormat(){ Chart = 0U, Format = 0U, Series = true };
 
-            PivotArea pivotArea12 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea12 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences12 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences12 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference12 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem24 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference12 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem24 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference12.Append(fieldItem24);
 
@@ -4460,14 +4460,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat12.Append(pivotArea12);
 
-            ChartFormat chartFormat13 = new ChartFormat(){ Chart = (UInt32Value)1U, Format = (UInt32Value)0U, Series = true };
+            ChartFormat chartFormat13 = new ChartFormat(){ Chart = 1U, Format = 0U, Series = true };
 
-            PivotArea pivotArea13 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea13 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences13 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences13 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference13 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem25 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference13 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem25 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference13.Append(fieldItem25);
 
@@ -4509,7 +4509,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of pivotTableCacheDefinitionPart2.
         private static void GeneratePivotTableCacheDefinitionPart2Content(PivotTableCacheDefinitionPart pivotTableCacheDefinitionPart2)
         {
-            PivotCacheDefinition pivotCacheDefinition3 = new PivotCacheDefinition(){ Id = "rId1", RefreshedBy = "Masaki Tamura (Pasona Tech)", RefreshedDate = 40946.730963773145D, CreatedVersion = 4, RefreshedVersion = 5, MinRefreshableVersion = 3, RecordCount = (UInt32Value)5U };
+            PivotCacheDefinition pivotCacheDefinition3 = new PivotCacheDefinition(){ Id = "rId1", RefreshedBy = "Masaki Tamura (Pasona Tech)", RefreshedDate = 40946.730963773145D, CreatedVersion = 4, RefreshedVersion = 5, MinRefreshableVersion = 3, RecordCount = 5U };
             pivotCacheDefinition3.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 
             CacheSource cacheSource2 = new CacheSource(){ Type = SourceValues.Worksheet };
@@ -4517,11 +4517,11 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             cacheSource2.Append(worksheetSource2);
 
-            CacheFields cacheFields2 = new CacheFields(){ Count = (UInt32Value)6U };
+            CacheFields cacheFields2 = new CacheFields(){ Count = 6U };
 
-            CacheField cacheField8 = new CacheField(){ Name = "Date", NumberFormatId = (UInt32Value)14U };
+            CacheField cacheField8 = new CacheField(){ Name = "Date", NumberFormatId = 14U };
 
-            SharedItems sharedItems7 = new SharedItems(){ ContainsSemiMixedTypes = false, ContainsNonDate = false, ContainsDate = true, ContainsString = false, MinDate = System.Xml.XmlConvert.ToDateTime("2000-01-01T13:54:32Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), MaxDate = System.Xml.XmlConvert.ToDateTime("2002-12-30T22:26:24Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), Count = (UInt32Value)5U };
+            SharedItems sharedItems7 = new SharedItems(){ ContainsSemiMixedTypes = false, ContainsNonDate = false, ContainsDate = true, ContainsString = false, MinDate = System.Xml.XmlConvert.ToDateTime("2000-01-01T13:54:32Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), MaxDate = System.Xml.XmlConvert.ToDateTime("2002-12-30T22:26:24Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), Count = 5U };
             DateTimeItem dateTimeItem9 = new DateTimeItem(){ Val = System.Xml.XmlConvert.ToDateTime("2000-01-01T13:54:32Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
             DateTimeItem dateTimeItem10 = new DateTimeItem(){ Val = System.Xml.XmlConvert.ToDateTime("2000-01-01T15:32:03Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
             DateTimeItem dateTimeItem11 = new DateTimeItem(){ Val = System.Xml.XmlConvert.ToDateTime("2000-01-01T16:56:19Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
@@ -4536,9 +4536,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             cacheField8.Append(sharedItems7);
 
-            CacheField cacheField9 = new CacheField(){ Name = "Product", NumberFormatId = (UInt32Value)0U };
+            CacheField cacheField9 = new CacheField(){ Name = "Product", NumberFormatId = 0U };
 
-            SharedItems sharedItems8 = new SharedItems(){ Count = (UInt32Value)10U };
+            SharedItems sharedItems8 = new SharedItems(){ Count = 10U };
             StringItem stringItem34 = new StringItem(){ Val = "product_F" };
             StringItem stringItem35 = new StringItem(){ Val = "product_G" };
             StringItem stringItem36 = new StringItem(){ Val = "product_C" };
@@ -4563,22 +4563,22 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             cacheField9.Append(sharedItems8);
 
-            CacheField cacheField10 = new CacheField(){ Name = "Quantity", NumberFormatId = (UInt32Value)0U };
+            CacheField cacheField10 = new CacheField(){ Name = "Quantity", NumberFormatId = 0U };
             SharedItems sharedItems9 = new SharedItems(){ ContainsSemiMixedTypes = false, ContainsString = false, ContainsNumber = true, ContainsInteger = true, MinValue = 13D, MaxValue = 27D };
 
             cacheField10.Append(sharedItems9);
 
-            CacheField cacheField11 = new CacheField(){ Name = "Price", NumberFormatId = (UInt32Value)0U };
+            CacheField cacheField11 = new CacheField(){ Name = "Price", NumberFormatId = 0U };
             SharedItems sharedItems10 = new SharedItems(){ ContainsSemiMixedTypes = false, ContainsString = false, ContainsNumber = true, ContainsInteger = true, MinValue = 800D, MaxValue = 11529D };
 
             cacheField11.Append(sharedItems10);
 
-            CacheField cacheField12 = new CacheField(){ Name = "DeliveryDate", NumberFormatId = (UInt32Value)14U };
+            CacheField cacheField12 = new CacheField(){ Name = "DeliveryDate", NumberFormatId = 14U };
             SharedItems sharedItems11 = new SharedItems(){ ContainsSemiMixedTypes = false, ContainsNonDate = false, ContainsDate = true, ContainsString = false, MinDate = System.Xml.XmlConvert.ToDateTime("2000-01-02T04:31:50Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), MaxDate = System.Xml.XmlConvert.ToDateTime("2003-01-01T04:01:28Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
             cacheField12.Append(sharedItems11);
 
-            CacheField cacheField13 = new CacheField(){ Name = "Employee", NumberFormatId = (UInt32Value)0U };
+            CacheField cacheField13 = new CacheField(){ Name = "Employee", NumberFormatId = 0U };
             SharedItems sharedItems12 = new SharedItems();
 
             cacheField13.Append(sharedItems12);
@@ -4594,7 +4594,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotCacheDefinitionExtension pivotCacheDefinitionExtension2 = new PivotCacheDefinitionExtension(){ Uri = "{725AE2AE-9491-48be-B2B4-4EB974FC3084}" };
             pivotCacheDefinitionExtension2.AddNamespaceDeclaration("x14", "http://schemas.microsoft.com/office/spreadsheetml/2009/9/main");
-            X14.PivotCacheDefinition pivotCacheDefinition4 = new X14.PivotCacheDefinition(){ PivotCacheId = (UInt32Value)1U };
+            X14.PivotCacheDefinition pivotCacheDefinition4 = new X14.PivotCacheDefinition(){ PivotCacheId = 1U };
 
             pivotCacheDefinitionExtension2.Append(pivotCacheDefinition4);
 
@@ -4610,12 +4610,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of pivotTableCacheRecordsPart2.
         private static void GeneratePivotTableCacheRecordsPart2Content(PivotTableCacheRecordsPart pivotTableCacheRecordsPart2)
         {
-            PivotCacheRecords pivotCacheRecords2 = new PivotCacheRecords(){ Count = (UInt32Value)5U };
+            PivotCacheRecords pivotCacheRecords2 = new PivotCacheRecords(){ Count = 5U };
             pivotCacheRecords2.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
 
             PivotCacheRecord pivotCacheRecord5 = new PivotCacheRecord();
-            FieldItem fieldItem26 = new FieldItem(){ Val = (UInt32Value)0U };
-            FieldItem fieldItem27 = new FieldItem(){ Val = (UInt32Value)0U };
+            FieldItem fieldItem26 = new FieldItem(){ Val = 0U };
+            FieldItem fieldItem27 = new FieldItem(){ Val = 0U };
             NumberItem numberItem9 = new NumberItem(){ Val = 13D };
             NumberItem numberItem10 = new NumberItem(){ Val = 1287D };
             DateTimeItem dateTimeItem14 = new DateTimeItem(){ Val = System.Xml.XmlConvert.ToDateTime("2000-01-02T04:31:50Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
@@ -4629,8 +4629,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotCacheRecord5.Append(stringItem44);
 
             PivotCacheRecord pivotCacheRecord6 = new PivotCacheRecord();
-            FieldItem fieldItem28 = new FieldItem(){ Val = (UInt32Value)1U };
-            FieldItem fieldItem29 = new FieldItem(){ Val = (UInt32Value)1U };
+            FieldItem fieldItem28 = new FieldItem(){ Val = 1U };
+            FieldItem fieldItem29 = new FieldItem(){ Val = 1U };
             NumberItem numberItem11 = new NumberItem(){ Val = 27D };
             NumberItem numberItem12 = new NumberItem(){ Val = 11529D };
             DateTimeItem dateTimeItem15 = new DateTimeItem(){ Val = System.Xml.XmlConvert.ToDateTime("2000-01-04T03:14:24Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
@@ -4644,8 +4644,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotCacheRecord6.Append(stringItem45);
 
             PivotCacheRecord pivotCacheRecord7 = new PivotCacheRecord();
-            FieldItem fieldItem30 = new FieldItem(){ Val = (UInt32Value)2U };
-            FieldItem fieldItem31 = new FieldItem(){ Val = (UInt32Value)0U };
+            FieldItem fieldItem30 = new FieldItem(){ Val = 2U };
+            FieldItem fieldItem31 = new FieldItem(){ Val = 0U };
             NumberItem numberItem13 = new NumberItem(){ Val = 19D };
             NumberItem numberItem14 = new NumberItem(){ Val = 1881D };
             DateTimeItem dateTimeItem16 = new DateTimeItem(){ Val = System.Xml.XmlConvert.ToDateTime("2000-01-03T11:10:19Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
@@ -4659,8 +4659,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotCacheRecord7.Append(stringItem46);
 
             PivotCacheRecord pivotCacheRecord8 = new PivotCacheRecord();
-            FieldItem fieldItem32 = new FieldItem(){ Val = (UInt32Value)3U };
-            FieldItem fieldItem33 = new FieldItem(){ Val = (UInt32Value)2U };
+            FieldItem fieldItem32 = new FieldItem(){ Val = 3U };
+            FieldItem fieldItem33 = new FieldItem(){ Val = 2U };
             NumberItem numberItem15 = new NumberItem(){ Val = 25D };
             NumberItem numberItem16 = new NumberItem(){ Val = 1250D };
             DateTimeItem dateTimeItem17 = new DateTimeItem(){ Val = System.Xml.XmlConvert.ToDateTime("2000-01-02T06:54:09Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
@@ -4674,8 +4674,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotCacheRecord8.Append(stringItem47);
 
             PivotCacheRecord pivotCacheRecord9 = new PivotCacheRecord();
-            FieldItem fieldItem34 = new FieldItem(){ Val = (UInt32Value)4U };
-            FieldItem fieldItem35 = new FieldItem(){ Val = (UInt32Value)2U };
+            FieldItem fieldItem34 = new FieldItem(){ Val = 4U };
+            FieldItem fieldItem35 = new FieldItem(){ Val = 2U };
             NumberItem numberItem17 = new NumberItem(){ Val = 16D };
             NumberItem numberItem18 = new NumberItem(){ Val = 800D };
             DateTimeItem dateTimeItem18 = new DateTimeItem(){ Val = System.Xml.XmlConvert.ToDateTime("2003-01-01T04:01:28Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
@@ -4704,11 +4704,11 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             timelineCacheDefinition2.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
 
             X15.TimelineCachePivotTables timelineCachePivotTables2 = new X15.TimelineCachePivotTables();
-            X15.TimelineCachePivotTable timelineCachePivotTable2 = new X15.TimelineCachePivotTable(){ TabId = (UInt32Value)10U, Name = "PivotTable1" };
+            X15.TimelineCachePivotTable timelineCachePivotTable2 = new X15.TimelineCachePivotTable(){ TabId = 10U, Name = "PivotTable1" };
 
             timelineCachePivotTables2.Append(timelineCachePivotTable2);
 
-            X15.TimelineState timelineState2 = new X15.TimelineState(){ MinimalRefreshVersion = (UInt32Value)6U, LastRefreshVersion = (UInt32Value)6U, PivotCacheId = (UInt32Value)2U, FilterType = PivotFilterValues.Unknown };
+            X15.TimelineState timelineState2 = new X15.TimelineState(){ MinimalRefreshVersion = 6U, LastRefreshVersion = 6U, PivotCacheId = 2U, FilterType = PivotFilterValues.Unknown };
             X15.BoundsTimelineRange boundsTimelineRange2 = new X15.BoundsTimelineRange(){ StartDate = System.Xml.XmlConvert.ToDateTime("2000-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), EndDate = System.Xml.XmlConvert.ToDateTime("2004-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
             timelineState2.Append(boundsTimelineRange2);
@@ -4729,19 +4729,19 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             SheetDimension sheetDimension3 = new SheetDimension(){ Reference = "A1:B5" };
 
             SheetViews sheetViews3 = new SheetViews();
-            SheetView sheetView3 = new SheetView(){ WorkbookViewId = (UInt32Value)0U };
+            SheetView sheetView3 = new SheetView(){ WorkbookViewId = 0U };
 
             sheetViews3.Append(sheetView3);
             SheetFormatProperties sheetFormatProperties3 = new SheetFormatProperties(){ DefaultRowHeight = 15D };
 
             Columns columns3 = new Columns();
-            Column column9 = new Column(){ Min = (UInt32Value)1U, Max = (UInt32Value)1U, Width = 14.140625D, BestFit = true, CustomWidth = true };
-            Column column10 = new Column(){ Min = (UInt32Value)2U, Max = (UInt32Value)2U, Width = 17.42578125D, CustomWidth = true };
-            Column column11 = new Column(){ Min = (UInt32Value)3U, Max = (UInt32Value)3U, Width = 12.42578125D, CustomWidth = true };
-            Column column12 = new Column(){ Min = (UInt32Value)4U, Max = (UInt32Value)11U, Width = 13D, BestFit = true, CustomWidth = true };
-            Column column13 = new Column(){ Min = (UInt32Value)12U, Max = (UInt32Value)12U, Width = 13D, CustomWidth = true };
-            Column column14 = new Column(){ Min = (UInt32Value)13U, Max = (UInt32Value)20U, Width = 13D, BestFit = true, CustomWidth = true };
-            Column column15 = new Column(){ Min = (UInt32Value)21U, Max = (UInt32Value)23U, Width = 20.42578125D, BestFit = true, CustomWidth = true };
+            Column column9 = new Column(){ Min = 1U, Max = 1U, Width = 14.140625D, BestFit = true, CustomWidth = true };
+            Column column10 = new Column(){ Min = 2U, Max = 2U, Width = 17.42578125D, CustomWidth = true };
+            Column column11 = new Column(){ Min = 3U, Max = 3U, Width = 12.42578125D, CustomWidth = true };
+            Column column12 = new Column(){ Min = 4U, Max = 11U, Width = 13D, BestFit = true, CustomWidth = true };
+            Column column13 = new Column(){ Min = 12U, Max = 12U, Width = 13D, CustomWidth = true };
+            Column column14 = new Column(){ Min = 13U, Max = 20U, Width = 13D, BestFit = true, CustomWidth = true };
+            Column column15 = new Column(){ Min = 21U, Max = 23U, Width = 20.42578125D, BestFit = true, CustomWidth = true };
 
             columns3.Append(column9);
             columns3.Append(column10);
@@ -4753,9 +4753,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             SheetData sheetData3 = new SheetData();
 
-            Row row11 = new Row(){ RowIndex = (UInt32Value)1U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row11 = new Row(){ RowIndex = 1U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell21 = new Cell(){ CellReference = "A1", StyleIndex = (UInt32Value)5U, DataType = CellValues.SharedString };
+            Cell cell21 = new Cell(){ CellReference = "A1", StyleIndex = 5U, DataType = CellValues.SharedString };
             CellValue cellValue21 = new CellValue();
             cellValue21.Text = "29";
 
@@ -4770,15 +4770,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row11.Append(cell21);
             row11.Append(cell22);
 
-            Row row12 = new Row(){ RowIndex = (UInt32Value)2U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row12 = new Row(){ RowIndex = 2U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell23 = new Cell(){ CellReference = "A2", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell23 = new Cell(){ CellReference = "A2", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue23 = new CellValue();
             cellValue23.Text = "6";
 
             cell23.Append(cellValue23);
 
-            Cell cell24 = new Cell(){ CellReference = "B2", StyleIndex = (UInt32Value)7U };
+            Cell cell24 = new Cell(){ CellReference = "B2", StyleIndex = 7U };
             CellValue cellValue24 = new CellValue();
             cellValue24.Text = "19";
 
@@ -4787,15 +4787,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row12.Append(cell23);
             row12.Append(cell24);
 
-            Row row13 = new Row(){ RowIndex = (UInt32Value)3U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row13 = new Row(){ RowIndex = 3U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell25 = new Cell(){ CellReference = "A3", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell25 = new Cell(){ CellReference = "A3", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue25 = new CellValue();
             cellValue25.Text = "8";
 
             cell25.Append(cellValue25);
 
-            Cell cell26 = new Cell(){ CellReference = "B3", StyleIndex = (UInt32Value)7U };
+            Cell cell26 = new Cell(){ CellReference = "B3", StyleIndex = 7U };
             CellValue cellValue26 = new CellValue();
             cellValue26.Text = "13";
 
@@ -4804,15 +4804,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row13.Append(cell25);
             row13.Append(cell26);
 
-            Row row14 = new Row(){ RowIndex = (UInt32Value)4U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row14 = new Row(){ RowIndex = 4U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell27 = new Cell(){ CellReference = "A4", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell27 = new Cell(){ CellReference = "A4", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue27 = new CellValue();
             cellValue27.Text = "11";
 
             cell27.Append(cellValue27);
 
-            Cell cell28 = new Cell(){ CellReference = "B4", StyleIndex = (UInt32Value)7U };
+            Cell cell28 = new Cell(){ CellReference = "B4", StyleIndex = 7U };
             CellValue cellValue28 = new CellValue();
             cellValue28.Text = "33";
 
@@ -4821,15 +4821,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row14.Append(cell27);
             row14.Append(cell28);
 
-            Row row15 = new Row(){ RowIndex = (UInt32Value)5U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row15 = new Row(){ RowIndex = 5U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell29 = new Cell(){ CellReference = "A5", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell29 = new Cell(){ CellReference = "A5", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue29 = new CellValue();
             cellValue29.Text = "30";
 
             cell29.Append(cellValue29);
 
-            Cell cell30 = new Cell(){ CellReference = "B5", StyleIndex = (UInt32Value)7U };
+            Cell cell30 = new Cell(){ CellReference = "B5", StyleIndex = 7U };
             CellValue cellValue30 = new CellValue();
             cellValue30.Text = "65";
 
@@ -4843,7 +4843,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             sheetData3.Append(row13);
             sheetData3.Append(row14);
             sheetData3.Append(row15);
-            PhoneticProperties phoneticProperties3 = new PhoneticProperties(){ FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties3 = new PhoneticProperties(){ FontId = 1U };
             PageMargins pageMargins7 = new PageMargins(){ Left = 0.7D, Right = 0.7D, Top = 0.75D, Bottom = 0.75D, Header = 0.3D, Footer = 0.3D };
             S.Drawing drawing3 = new S.Drawing(){ Id = "rId2" };
 
@@ -4880,8 +4880,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             X15.Timelines timelines3 = new X15.Timelines(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x" }  };
             timelines3.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             timelines3.AddNamespaceDeclaration("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main");
-            X15.Timeline timeline5 = new X15.Timeline(){ Name = "DeliveryDate 8", Cache = "NativeTimeline_DeliveryDate3", Caption = "ShowSelectionLabel1", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
-            X15.Timeline timeline6 = new X15.Timeline(){ Name = "DeliveryDate 9", Cache = "NativeTimeline_DeliveryDate3", Caption = "ShowSelectionLabel2", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline5 = new X15.Timeline(){ Name = "DeliveryDate 8", Cache = "NativeTimeline_DeliveryDate3", Caption = "ShowSelectionLabel1", Level = 2U, SelectionLevel = 2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline6 = new X15.Timeline(){ Name = "DeliveryDate 9", Cache = "NativeTimeline_DeliveryDate3", Caption = "ShowSelectionLabel2", Level = 2U, SelectionLevel = 2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
             timelines3.Append(timeline5);
             timelines3.Append(timeline6);
@@ -4928,10 +4928,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker9.Append(rowId18);
             toMarker9.Append(rowOffset18);
 
-            Xdr.GraphicFrame graphicFrame9 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame9 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties9 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties13 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)2U, Name = "Chart 1" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties13 = new Xdr.NonVisualDrawingProperties(){ Id = 2U, Name = "Chart 1" };
 
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties9 = new Xdr.NonVisualGraphicFrameDrawingProperties();
             A.GraphicFrameLocks graphicFrameLocks3 = new A.GraphicFrameLocks();
@@ -5002,10 +5002,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker10.Append(rowId20);
             toMarker10.Append(rowOffset20);
 
-            Xdr.GraphicFrame graphicFrame10 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame10 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties10 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties14 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)3U, Name = "グラフ 2" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties14 = new Xdr.NonVisualDrawingProperties(){ Id = 3U, Name = "グラフ 2" };
 
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties10 = new Xdr.NonVisualGraphicFrameDrawingProperties();
             A.GraphicFrameLocks graphicFrameLocks4 = new A.GraphicFrameLocks();
@@ -5082,10 +5082,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice10 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame11 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame11 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties11 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties15 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)4U, Name = "DeliveryDate 8" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties15 = new Xdr.NonVisualDrawingProperties(){ Id = 4U, Name = "DeliveryDate 8" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties11 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties11.Append(nonVisualDrawingProperties15);
@@ -5119,10 +5119,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback9.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback9.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape5 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape5 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties5 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties16 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties16 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties5 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks5 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -5238,10 +5238,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice11 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame12 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame12 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties12 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties17 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)5U, Name = "DeliveryDate 9" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties17 = new Xdr.NonVisualDrawingProperties(){ Id = 5U, Name = "DeliveryDate 9" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties12 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties12.Append(nonVisualDrawingProperties17);
@@ -5275,10 +5275,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback10.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback10.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape6 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape6 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties6 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties18 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties18 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties6 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks6 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -5395,7 +5395,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotSource pivotSource5 = new C.PivotSource();
             C.PivotTableName pivotTableName5 = new C.PivotTableName();
             pivotTableName5.Text = "[GeneratedDocument.xlsx]ShowSelectionLabel!PivotTable1";
-            C.FormatId formatId5 = new C.FormatId(){ Val = (UInt32Value)12U };
+            C.FormatId formatId5 = new C.FormatId(){ Val = 12U };
 
             pivotSource5.Append(pivotTableName5);
             pivotSource5.Append(formatId5);
@@ -5411,7 +5411,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotFormats pivotFormats5 = new C.PivotFormats();
 
             C.PivotFormat pivotFormat26 = new C.PivotFormat();
-            C.Index index30 = new C.Index(){ Val = (UInt32Value)0U };
+            C.Index index30 = new C.Index(){ Val = 0U };
 
             C.Marker marker26 = new C.Marker();
             C.Symbol symbol26 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -5422,7 +5422,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat26.Append(marker26);
 
             C.PivotFormat pivotFormat27 = new C.PivotFormat();
-            C.Index index31 = new C.Index(){ Val = (UInt32Value)1U };
+            C.Index index31 = new C.Index(){ Val = 1U };
 
             C.Marker marker27 = new C.Marker();
             C.Symbol symbol27 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -5433,7 +5433,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat27.Append(marker27);
 
             C.PivotFormat pivotFormat28 = new C.PivotFormat();
-            C.Index index32 = new C.Index(){ Val = (UInt32Value)2U };
+            C.Index index32 = new C.Index(){ Val = 2U };
 
             C.Marker marker28 = new C.Marker();
             C.Symbol symbol28 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -5444,7 +5444,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat28.Append(marker28);
 
             C.PivotFormat pivotFormat29 = new C.PivotFormat();
-            C.Index index33 = new C.Index(){ Val = (UInt32Value)3U };
+            C.Index index33 = new C.Index(){ Val = 3U };
 
             C.Marker marker29 = new C.Marker();
             C.Symbol symbol29 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -5466,8 +5466,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.VaryColors varyColors5 = new C.VaryColors(){ Val = true };
 
             C.PieChartSeries pieChartSeries3 = new C.PieChartSeries();
-            C.Index index34 = new C.Index(){ Val = (UInt32Value)0U };
-            C.Order order5 = new C.Order(){ Val = (UInt32Value)0U };
+            C.Index index34 = new C.Index(){ Val = 0U };
+            C.Order order5 = new C.Order(){ Val = 0U };
 
             C.SeriesText seriesText5 = new C.SeriesText();
 
@@ -5476,9 +5476,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula13.Text = "ShowSelectionLabel!$B$1";
 
             C.StringCache stringCache9 = new C.StringCache();
-            C.PointCount pointCount13 = new C.PointCount(){ Val = (UInt32Value)1U };
+            C.PointCount pointCount13 = new C.PointCount(){ Val = 1U };
 
-            C.StringPoint stringPoint17 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint17 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue29 = new C.NumericValue();
             numericValue29.Text = "Total";
 
@@ -5499,21 +5499,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula14.Text = "ShowSelectionLabel!$A$2:$A$5";
 
             C.StringCache stringCache10 = new C.StringCache();
-            C.PointCount pointCount14 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount14 = new C.PointCount(){ Val = 3U };
 
-            C.StringPoint stringPoint18 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint18 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue30 = new C.NumericValue();
             numericValue30.Text = "product_A";
 
             stringPoint18.Append(numericValue30);
 
-            C.StringPoint stringPoint19 = new C.StringPoint(){ Index = (UInt32Value)1U };
+            C.StringPoint stringPoint19 = new C.StringPoint(){ Index = 1U };
             C.NumericValue numericValue31 = new C.NumericValue();
             numericValue31.Text = "product_D";
 
             stringPoint19.Append(numericValue31);
 
-            C.StringPoint stringPoint20 = new C.StringPoint(){ Index = (UInt32Value)2U };
+            C.StringPoint stringPoint20 = new C.StringPoint(){ Index = 2U };
             C.NumericValue numericValue32 = new C.NumericValue();
             numericValue32.Text = "product_E";
 
@@ -5538,21 +5538,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.NumberingCache numberingCache5 = new C.NumberingCache();
             C.FormatCode formatCode5 = new C.FormatCode();
             formatCode5.Text = "General";
-            C.PointCount pointCount15 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount15 = new C.PointCount(){ Val = 3U };
 
-            C.NumericPoint numericPoint13 = new C.NumericPoint(){ Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint13 = new C.NumericPoint(){ Index = 0U };
             C.NumericValue numericValue33 = new C.NumericValue();
             numericValue33.Text = "19";
 
             numericPoint13.Append(numericValue33);
 
-            C.NumericPoint numericPoint14 = new C.NumericPoint(){ Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint14 = new C.NumericPoint(){ Index = 1U };
             C.NumericValue numericValue34 = new C.NumericValue();
             numericValue34.Text = "13";
 
             numericPoint14.Append(numericValue34);
 
-            C.NumericPoint numericPoint15 = new C.NumericPoint(){ Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint15 = new C.NumericPoint(){ Index = 2U };
             C.NumericValue numericValue35 = new C.NumericValue();
             numericValue35.Text = "33";
 
@@ -5696,7 +5696,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotSource pivotSource6 = new C.PivotSource();
             C.PivotTableName pivotTableName6 = new C.PivotTableName();
             pivotTableName6.Text = "[GeneratedDocument.xlsx]ShowSelectionLabel!PivotTable1";
-            C.FormatId formatId6 = new C.FormatId(){ Val = (UInt32Value)11U };
+            C.FormatId formatId6 = new C.FormatId(){ Val = 11U };
 
             pivotSource6.Append(pivotTableName6);
             pivotSource6.Append(formatId6);
@@ -5712,7 +5712,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotFormats pivotFormats6 = new C.PivotFormats();
 
             C.PivotFormat pivotFormat30 = new C.PivotFormat();
-            C.Index index35 = new C.Index(){ Val = (UInt32Value)0U };
+            C.Index index35 = new C.Index(){ Val = 0U };
 
             C.ShapeProperties shapeProperties15 = new C.ShapeProperties();
 
@@ -5745,7 +5745,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat30.Append(marker30);
 
             C.PivotFormat pivotFormat31 = new C.PivotFormat();
-            C.Index index36 = new C.Index(){ Val = (UInt32Value)1U };
+            C.Index index36 = new C.Index(){ Val = 1U };
 
             C.ShapeProperties shapeProperties16 = new C.ShapeProperties();
 
@@ -5778,7 +5778,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat31.Append(marker31);
 
             C.PivotFormat pivotFormat32 = new C.PivotFormat();
-            C.Index index37 = new C.Index(){ Val = (UInt32Value)2U };
+            C.Index index37 = new C.Index(){ Val = 2U };
 
             C.Marker marker32 = new C.Marker();
             C.Symbol symbol32 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -5789,7 +5789,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat32.Append(marker32);
 
             C.PivotFormat pivotFormat33 = new C.PivotFormat();
-            C.Index index38 = new C.Index(){ Val = (UInt32Value)3U };
+            C.Index index38 = new C.Index(){ Val = 3U };
 
             C.Marker marker33 = new C.Marker();
             C.Symbol symbol33 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -5800,7 +5800,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat33.Append(marker33);
 
             C.PivotFormat pivotFormat34 = new C.PivotFormat();
-            C.Index index39 = new C.Index(){ Val = (UInt32Value)4U };
+            C.Index index39 = new C.Index(){ Val = 4U };
 
             C.Marker marker34 = new C.Marker();
             C.Symbol symbol34 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -5811,7 +5811,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat34.Append(marker34);
 
             C.PivotFormat pivotFormat35 = new C.PivotFormat();
-            C.Index index40 = new C.Index(){ Val = (UInt32Value)5U };
+            C.Index index40 = new C.Index(){ Val = 5U };
 
             C.Marker marker35 = new C.Marker();
             C.Symbol symbol35 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -5822,7 +5822,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat35.Append(marker35);
 
             C.PivotFormat pivotFormat36 = new C.PivotFormat();
-            C.Index index41 = new C.Index(){ Val = (UInt32Value)6U };
+            C.Index index41 = new C.Index(){ Val = 6U };
 
             C.Marker marker36 = new C.Marker();
             C.Symbol symbol36 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -5833,7 +5833,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat36.Append(marker36);
 
             C.PivotFormat pivotFormat37 = new C.PivotFormat();
-            C.Index index42 = new C.Index(){ Val = (UInt32Value)7U };
+            C.Index index42 = new C.Index(){ Val = 7U };
 
             C.Marker marker37 = new C.Marker();
             C.Symbol symbol37 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -5844,7 +5844,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat37.Append(marker37);
 
             C.PivotFormat pivotFormat38 = new C.PivotFormat();
-            C.Index index43 = new C.Index(){ Val = (UInt32Value)8U };
+            C.Index index43 = new C.Index(){ Val = 8U };
 
             C.Marker marker38 = new C.Marker();
             C.Symbol symbol38 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -5855,7 +5855,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat38.Append(marker38);
 
             C.PivotFormat pivotFormat39 = new C.PivotFormat();
-            C.Index index44 = new C.Index(){ Val = (UInt32Value)9U };
+            C.Index index44 = new C.Index(){ Val = 9U };
 
             C.Marker marker39 = new C.Marker();
             C.Symbol symbol39 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -5866,7 +5866,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat39.Append(marker39);
 
             C.PivotFormat pivotFormat40 = new C.PivotFormat();
-            C.Index index45 = new C.Index(){ Val = (UInt32Value)10U };
+            C.Index index45 = new C.Index(){ Val = 10U };
 
             C.Marker marker40 = new C.Marker();
             C.Symbol symbol40 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -5877,7 +5877,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat40.Append(marker40);
 
             C.PivotFormat pivotFormat41 = new C.PivotFormat();
-            C.Index index46 = new C.Index(){ Val = (UInt32Value)11U };
+            C.Index index46 = new C.Index(){ Val = 11U };
 
             C.Marker marker41 = new C.Marker();
             C.Symbol symbol41 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -5888,7 +5888,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat41.Append(marker41);
 
             C.PivotFormat pivotFormat42 = new C.PivotFormat();
-            C.Index index47 = new C.Index(){ Val = (UInt32Value)12U };
+            C.Index index47 = new C.Index(){ Val = 12U };
 
             C.Marker marker42 = new C.Marker();
             C.Symbol symbol42 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -5899,7 +5899,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat42.Append(marker42);
 
             C.PivotFormat pivotFormat43 = new C.PivotFormat();
-            C.Index index48 = new C.Index(){ Val = (UInt32Value)13U };
+            C.Index index48 = new C.Index(){ Val = 13U };
 
             C.Marker marker43 = new C.Marker();
             C.Symbol symbol43 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -5910,7 +5910,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat43.Append(marker43);
 
             C.PivotFormat pivotFormat44 = new C.PivotFormat();
-            C.Index index49 = new C.Index(){ Val = (UInt32Value)14U };
+            C.Index index49 = new C.Index(){ Val = 14U };
 
             C.ShapeProperties shapeProperties17 = new C.ShapeProperties();
 
@@ -5943,7 +5943,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat44.Append(marker44);
 
             C.PivotFormat pivotFormat45 = new C.PivotFormat();
-            C.Index index50 = new C.Index(){ Val = (UInt32Value)15U };
+            C.Index index50 = new C.Index(){ Val = 15U };
 
             C.ShapeProperties shapeProperties18 = new C.ShapeProperties();
 
@@ -5976,7 +5976,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat45.Append(marker45);
 
             C.PivotFormat pivotFormat46 = new C.PivotFormat();
-            C.Index index51 = new C.Index(){ Val = (UInt32Value)16U };
+            C.Index index51 = new C.Index(){ Val = 16U };
 
             C.ShapeProperties shapeProperties19 = new C.ShapeProperties();
 
@@ -6035,8 +6035,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.VaryColors varyColors6 = new C.VaryColors(){ Val = false };
 
             C.BarChartSeries barChartSeries3 = new C.BarChartSeries();
-            C.Index index52 = new C.Index(){ Val = (UInt32Value)0U };
-            C.Order order6 = new C.Order(){ Val = (UInt32Value)0U };
+            C.Index index52 = new C.Index(){ Val = 0U };
+            C.Order order6 = new C.Order(){ Val = 0U };
 
             C.SeriesText seriesText6 = new C.SeriesText();
 
@@ -6045,9 +6045,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula16.Text = "ShowSelectionLabel!$B$1";
 
             C.StringCache stringCache11 = new C.StringCache();
-            C.PointCount pointCount16 = new C.PointCount(){ Val = (UInt32Value)1U };
+            C.PointCount pointCount16 = new C.PointCount(){ Val = 1U };
 
-            C.StringPoint stringPoint21 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint21 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue36 = new C.NumericValue();
             numericValue36.Text = "Total";
 
@@ -6090,21 +6090,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula17.Text = "ShowSelectionLabel!$A$2:$A$5";
 
             C.StringCache stringCache12 = new C.StringCache();
-            C.PointCount pointCount17 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount17 = new C.PointCount(){ Val = 3U };
 
-            C.StringPoint stringPoint22 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint22 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue37 = new C.NumericValue();
             numericValue37.Text = "product_A";
 
             stringPoint22.Append(numericValue37);
 
-            C.StringPoint stringPoint23 = new C.StringPoint(){ Index = (UInt32Value)1U };
+            C.StringPoint stringPoint23 = new C.StringPoint(){ Index = 1U };
             C.NumericValue numericValue38 = new C.NumericValue();
             numericValue38.Text = "product_D";
 
             stringPoint23.Append(numericValue38);
 
-            C.StringPoint stringPoint24 = new C.StringPoint(){ Index = (UInt32Value)2U };
+            C.StringPoint stringPoint24 = new C.StringPoint(){ Index = 2U };
             C.NumericValue numericValue39 = new C.NumericValue();
             numericValue39.Text = "product_E";
 
@@ -6129,21 +6129,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.NumberingCache numberingCache6 = new C.NumberingCache();
             C.FormatCode formatCode6 = new C.FormatCode();
             formatCode6.Text = "General";
-            C.PointCount pointCount18 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount18 = new C.PointCount(){ Val = 3U };
 
-            C.NumericPoint numericPoint16 = new C.NumericPoint(){ Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint16 = new C.NumericPoint(){ Index = 0U };
             C.NumericValue numericValue40 = new C.NumericValue();
             numericValue40.Text = "19";
 
             numericPoint16.Append(numericValue40);
 
-            C.NumericPoint numericPoint17 = new C.NumericPoint(){ Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint17 = new C.NumericPoint(){ Index = 1U };
             C.NumericValue numericValue41 = new C.NumericValue();
             numericValue41.Text = "13";
 
             numericPoint17.Append(numericValue41);
 
-            C.NumericPoint numericPoint18 = new C.NumericPoint(){ Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint18 = new C.NumericPoint(){ Index = 2U };
             C.NumericValue numericValue42 = new C.NumericValue();
             numericValue42.Text = "33";
 
@@ -6184,8 +6184,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             dataLabels6.Append(showBubbleSize6);
             C.GapWidth gapWidth3 = new C.GapWidth(){ Val = (UInt16Value)219U };
             C.Overlap overlap2 = new C.Overlap(){ Val = -27 };
-            C.AxisId axisId9 = new C.AxisId(){ Val = (UInt32Value)209979552U };
-            C.AxisId axisId10 = new C.AxisId(){ Val = (UInt32Value)209979944U };
+            C.AxisId axisId9 = new C.AxisId(){ Val = 209979552U };
+            C.AxisId axisId10 = new C.AxisId(){ Val = 209979944U };
 
             barChart3.Append(barDirection3);
             barChart3.Append(barGrouping3);
@@ -6198,7 +6198,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             barChart3.Append(axisId10);
 
             C.CategoryAxis categoryAxis3 = new C.CategoryAxis();
-            C.AxisId axisId11 = new C.AxisId(){ Val = (UInt32Value)209979552U };
+            C.AxisId axisId11 = new C.AxisId(){ Val = 209979552U };
 
             C.Scaling scaling5 = new C.Scaling();
             C.Orientation orientation5 = new C.Orientation(){ Val = C.OrientationValues.MinMax };
@@ -6262,7 +6262,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             textProperties5.Append(bodyProperties11);
             textProperties5.Append(listStyle11);
             textProperties5.Append(paragraph11);
-            C.CrossingAxis crossingAxis5 = new C.CrossingAxis(){ Val = (UInt32Value)209979944U };
+            C.CrossingAxis crossingAxis5 = new C.CrossingAxis(){ Val = 209979944U };
             C.Crosses crosses5 = new C.Crosses(){ Val = C.CrossesValues.AutoZero };
             C.AutoLabeled autoLabeled3 = new C.AutoLabeled(){ Val = true };
             C.LabelAlignment labelAlignment3 = new C.LabelAlignment(){ Val = C.LabelAlignmentValues.Center };
@@ -6287,7 +6287,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             categoryAxis3.Append(noMultiLevelLabels3);
 
             C.ValueAxis valueAxis3 = new C.ValueAxis();
-            C.AxisId axisId12 = new C.AxisId(){ Val = (UInt32Value)209979944U };
+            C.AxisId axisId12 = new C.AxisId(){ Val = 209979944U };
 
             C.Scaling scaling6 = new C.Scaling();
             C.Orientation orientation6 = new C.Orientation(){ Val = C.OrientationValues.MinMax };
@@ -6378,7 +6378,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             textProperties6.Append(bodyProperties12);
             textProperties6.Append(listStyle12);
             textProperties6.Append(paragraph12);
-            C.CrossingAxis crossingAxis6 = new C.CrossingAxis(){ Val = (UInt32Value)209979552U };
+            C.CrossingAxis crossingAxis6 = new C.CrossingAxis(){ Val = 209979552U };
             C.Crosses crosses6 = new C.Crosses(){ Val = C.CrossesValues.AutoZero };
             C.CrossBetween crossBetween3 = new C.CrossBetween(){ Val = C.CrossBetweenValues.Between };
 
@@ -6591,28 +6591,28 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of pivotTablePart3.
         private static void GeneratePivotTablePart3Content(PivotTablePart pivotTablePart3)
         {
-            PivotTableDefinition pivotTableDefinition5 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = (UInt32Value)13U };
-            Location location3 = new Location(){ Reference = "A1:B5", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)1U };
+            PivotTableDefinition pivotTableDefinition5 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = 1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = 0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = 13U };
+            Location location3 = new Location(){ Reference = "A1:B5", FirstHeaderRow = 1U, FirstDataRow = 1U, FirstDataColumn = 1U };
 
-            PivotFields pivotFields3 = new PivotFields(){ Count = (UInt32Value)7U };
+            PivotFields pivotFields3 = new PivotFields(){ Count = 7U };
 
-            PivotField pivotField14 = new PivotField(){ NumberFormatId = (UInt32Value)14U, ShowAll = false };
+            PivotField pivotField14 = new PivotField(){ NumberFormatId = 14U, ShowAll = false };
 
-            Items items7 = new Items(){ Count = (UInt32Value)15U };
-            Item item54 = new Item(){ Index = (UInt32Value)0U };
-            Item item55 = new Item(){ Index = (UInt32Value)1U };
-            Item item56 = new Item(){ Index = (UInt32Value)2U };
-            Item item57 = new Item(){ Index = (UInt32Value)3U };
-            Item item58 = new Item(){ Index = (UInt32Value)4U };
-            Item item59 = new Item(){ Index = (UInt32Value)5U };
-            Item item60 = new Item(){ Index = (UInt32Value)6U };
-            Item item61 = new Item(){ Index = (UInt32Value)7U };
-            Item item62 = new Item(){ Index = (UInt32Value)8U };
-            Item item63 = new Item(){ Index = (UInt32Value)9U };
-            Item item64 = new Item(){ Index = (UInt32Value)10U };
-            Item item65 = new Item(){ Index = (UInt32Value)11U };
-            Item item66 = new Item(){ Index = (UInt32Value)12U };
-            Item item67 = new Item(){ Index = (UInt32Value)13U };
+            Items items7 = new Items(){ Count = 15U };
+            Item item54 = new Item(){ Index = 0U };
+            Item item55 = new Item(){ Index = 1U };
+            Item item56 = new Item(){ Index = 2U };
+            Item item57 = new Item(){ Index = 3U };
+            Item item58 = new Item(){ Index = 4U };
+            Item item59 = new Item(){ Index = 5U };
+            Item item60 = new Item(){ Index = 6U };
+            Item item61 = new Item(){ Index = 7U };
+            Item item62 = new Item(){ Index = 8U };
+            Item item63 = new Item(){ Index = 9U };
+            Item item64 = new Item(){ Index = 10U };
+            Item item65 = new Item(){ Index = 11U };
+            Item item66 = new Item(){ Index = 12U };
+            Item item67 = new Item(){ Index = 13U };
             Item item68 = new Item(){ ItemType = ItemValues.Default };
 
             items7.Append(item54);
@@ -6635,17 +6635,17 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotField pivotField15 = new PivotField(){ Axis = PivotTableAxisValues.AxisRow, ShowAll = false };
 
-            Items items8 = new Items(){ Count = (UInt32Value)11U };
-            Item item69 = new Item(){ Index = (UInt32Value)0U };
-            Item item70 = new Item(){ Missing = true, Index = (UInt32Value)4U };
-            Item item71 = new Item(){ Missing = true, Index = (UInt32Value)3U };
-            Item item72 = new Item(){ Index = (UInt32Value)1U };
-            Item item73 = new Item(){ Index = (UInt32Value)2U };
-            Item item74 = new Item(){ Missing = true, Index = (UInt32Value)9U };
-            Item item75 = new Item(){ Missing = true, Index = (UInt32Value)8U };
-            Item item76 = new Item(){ Missing = true, Index = (UInt32Value)7U };
-            Item item77 = new Item(){ Missing = true, Index = (UInt32Value)6U };
-            Item item78 = new Item(){ Missing = true, Index = (UInt32Value)5U };
+            Items items8 = new Items(){ Count = 11U };
+            Item item69 = new Item(){ Index = 0U };
+            Item item70 = new Item(){ Missing = true, Index = 4U };
+            Item item71 = new Item(){ Missing = true, Index = 3U };
+            Item item72 = new Item(){ Index = 1U };
+            Item item73 = new Item(){ Index = 2U };
+            Item item74 = new Item(){ Missing = true, Index = 9U };
+            Item item75 = new Item(){ Missing = true, Index = 8U };
+            Item item76 = new Item(){ Missing = true, Index = 7U };
+            Item item77 = new Item(){ Missing = true, Index = 6U };
+            Item item78 = new Item(){ Missing = true, Index = 5U };
             Item item79 = new Item(){ ItemType = ItemValues.Default };
 
             items8.Append(item69);
@@ -6664,13 +6664,13 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             PivotField pivotField16 = new PivotField(){ DataField = true, ShowAll = false };
             PivotField pivotField17 = new PivotField(){ ShowAll = false };
 
-            PivotField pivotField18 = new PivotField(){ NumberFormatId = (UInt32Value)14U, ShowAll = false };
+            PivotField pivotField18 = new PivotField(){ NumberFormatId = 14U, ShowAll = false };
 
-            Items items9 = new Items(){ Count = (UInt32Value)5U };
-            Item item80 = new Item(){ Index = (UInt32Value)0U };
-            Item item81 = new Item(){ Index = (UInt32Value)1U };
-            Item item82 = new Item(){ Index = (UInt32Value)3U };
-            Item item83 = new Item(){ Index = (UInt32Value)2U };
+            Items items9 = new Items(){ Count = 5U };
+            Item item80 = new Item(){ Index = 0U };
+            Item item81 = new Item(){ Index = 1U };
+            Item item82 = new Item(){ Index = 3U };
+            Item item83 = new Item(){ Index = 2U };
             Item item84 = new Item(){ ItemType = ItemValues.Default };
 
             items9.Append(item80);
@@ -6684,12 +6684,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotField pivotField20 = new PivotField(){ ShowAll = false, DefaultSubtotal = false };
 
-            Items items10 = new Items(){ Count = (UInt32Value)5U };
-            Item item85 = new Item(){ Index = (UInt32Value)0U };
-            Item item86 = new Item(){ Index = (UInt32Value)1U };
-            Item item87 = new Item(){ Index = (UInt32Value)2U };
-            Item item88 = new Item(){ Index = (UInt32Value)3U };
-            Item item89 = new Item(){ Index = (UInt32Value)4U };
+            Items items10 = new Items(){ Count = 5U };
+            Item item85 = new Item(){ Index = 0U };
+            Item item86 = new Item(){ Index = 1U };
+            Item item87 = new Item(){ Index = 2U };
+            Item item88 = new Item(){ Index = 3U };
+            Item item89 = new Item(){ Index = 4U };
 
             items10.Append(item85);
             items10.Append(item86);
@@ -6707,12 +6707,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFields3.Append(pivotField19);
             pivotFields3.Append(pivotField20);
 
-            RowFields rowFields3 = new RowFields(){ Count = (UInt32Value)1U };
+            RowFields rowFields3 = new RowFields(){ Count = 1U };
             Field field3 = new Field(){ Index = 1 };
 
             rowFields3.Append(field3);
 
-            RowItems rowItems3 = new RowItems(){ Count = (UInt32Value)4U };
+            RowItems rowItems3 = new RowItems(){ Count = 4U };
 
             RowItem rowItem11 = new RowItem();
             MemberPropertyIndex memberPropertyIndex9 = new MemberPropertyIndex();
@@ -6739,26 +6739,26 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             rowItems3.Append(rowItem13);
             rowItems3.Append(rowItem14);
 
-            ColumnItems columnItems3 = new ColumnItems(){ Count = (UInt32Value)1U };
+            ColumnItems columnItems3 = new ColumnItems(){ Count = 1U };
             RowItem rowItem15 = new RowItem();
 
             columnItems3.Append(rowItem15);
 
-            DataFields dataFields3 = new DataFields(){ Count = (UInt32Value)1U };
-            DataField dataField3 = new DataField(){ Name = "Sum of Quantity", Field = (UInt32Value)2U, BaseField = 0, BaseItem = (UInt32Value)0U };
+            DataFields dataFields3 = new DataFields(){ Count = 1U };
+            DataField dataField3 = new DataField(){ Name = "Sum of Quantity", Field = 2U, BaseField = 0, BaseItem = 0U };
 
             dataFields3.Append(dataField3);
 
-            ChartFormats chartFormats3 = new ChartFormats(){ Count = (UInt32Value)9U };
+            ChartFormats chartFormats3 = new ChartFormats(){ Count = 9U };
 
-            ChartFormat chartFormat14 = new ChartFormat(){ Chart = (UInt32Value)4U, Format = (UInt32Value)0U, Series = true };
+            ChartFormat chartFormat14 = new ChartFormat(){ Chart = 4U, Format = 0U, Series = true };
 
-            PivotArea pivotArea14 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea14 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences14 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences14 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference14 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem36 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference14 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem36 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference14.Append(fieldItem36);
 
@@ -6768,14 +6768,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat14.Append(pivotArea14);
 
-            ChartFormat chartFormat15 = new ChartFormat(){ Chart = (UInt32Value)5U, Format = (UInt32Value)2U, Series = true };
+            ChartFormat chartFormat15 = new ChartFormat(){ Chart = 5U, Format = 2U, Series = true };
 
-            PivotArea pivotArea15 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea15 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences15 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences15 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference15 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem37 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference15 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem37 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference15.Append(fieldItem37);
 
@@ -6785,14 +6785,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat15.Append(pivotArea15);
 
-            ChartFormat chartFormat16 = new ChartFormat(){ Chart = (UInt32Value)6U, Format = (UInt32Value)0U, Series = true };
+            ChartFormat chartFormat16 = new ChartFormat(){ Chart = 6U, Format = 0U, Series = true };
 
-            PivotArea pivotArea16 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea16 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences16 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences16 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference16 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem38 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference16 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem38 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference16.Append(fieldItem38);
 
@@ -6802,14 +6802,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat16.Append(pivotArea16);
 
-            ChartFormat chartFormat17 = new ChartFormat(){ Chart = (UInt32Value)7U, Format = (UInt32Value)14U, Series = true };
+            ChartFormat chartFormat17 = new ChartFormat(){ Chart = 7U, Format = 14U, Series = true };
 
-            PivotArea pivotArea17 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea17 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences17 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences17 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference17 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem39 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference17 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem39 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference17.Append(fieldItem39);
 
@@ -6819,14 +6819,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat17.Append(pivotArea17);
 
-            ChartFormat chartFormat18 = new ChartFormat(){ Chart = (UInt32Value)8U, Format = (UInt32Value)1U, Series = true };
+            ChartFormat chartFormat18 = new ChartFormat(){ Chart = 8U, Format = 1U, Series = true };
 
-            PivotArea pivotArea18 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea18 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences18 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences18 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference18 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem40 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference18 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem40 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference18.Append(fieldItem40);
 
@@ -6836,14 +6836,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat18.Append(pivotArea18);
 
-            ChartFormat chartFormat19 = new ChartFormat(){ Chart = (UInt32Value)9U, Format = (UInt32Value)15U, Series = true };
+            ChartFormat chartFormat19 = new ChartFormat(){ Chart = 9U, Format = 15U, Series = true };
 
-            PivotArea pivotArea19 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea19 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences19 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences19 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference19 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem41 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference19 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem41 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference19.Append(fieldItem41);
 
@@ -6853,14 +6853,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat19.Append(pivotArea19);
 
-            ChartFormat chartFormat20 = new ChartFormat(){ Chart = (UInt32Value)10U, Format = (UInt32Value)2U, Series = true };
+            ChartFormat chartFormat20 = new ChartFormat(){ Chart = 10U, Format = 2U, Series = true };
 
-            PivotArea pivotArea20 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea20 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences20 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences20 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference20 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem42 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference20 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem42 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference20.Append(fieldItem42);
 
@@ -6870,14 +6870,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat20.Append(pivotArea20);
 
-            ChartFormat chartFormat21 = new ChartFormat(){ Chart = (UInt32Value)11U, Format = (UInt32Value)16U, Series = true };
+            ChartFormat chartFormat21 = new ChartFormat(){ Chart = 11U, Format = 16U, Series = true };
 
-            PivotArea pivotArea21 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea21 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences21 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences21 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference21 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem43 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference21 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem43 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference21.Append(fieldItem43);
 
@@ -6887,14 +6887,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat21.Append(pivotArea21);
 
-            ChartFormat chartFormat22 = new ChartFormat(){ Chart = (UInt32Value)12U, Format = (UInt32Value)3U, Series = true };
+            ChartFormat chartFormat22 = new ChartFormat(){ Chart = 12U, Format = 3U, Series = true };
 
-            PivotArea pivotArea22 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea22 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences22 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences22 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference22 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem44 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference22 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem44 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference22.Append(fieldItem44);
 
@@ -6947,11 +6947,11 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             timelineCacheDefinition3.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
 
             X15.TimelineCachePivotTables timelineCachePivotTables3 = new X15.TimelineCachePivotTables();
-            X15.TimelineCachePivotTable timelineCachePivotTable3 = new X15.TimelineCachePivotTable(){ TabId = (UInt32Value)6U, Name = "PivotTable1" };
+            X15.TimelineCachePivotTable timelineCachePivotTable3 = new X15.TimelineCachePivotTable(){ TabId = 6U, Name = "PivotTable1" };
 
             timelineCachePivotTables3.Append(timelineCachePivotTable3);
 
-            X15.TimelineState timelineState3 = new X15.TimelineState(){ MinimalRefreshVersion = (UInt32Value)6U, LastRefreshVersion = (UInt32Value)6U, PivotCacheId = (UInt32Value)2U, FilterType = PivotFilterValues.Unknown };
+            X15.TimelineState timelineState3 = new X15.TimelineState(){ MinimalRefreshVersion = 6U, LastRefreshVersion = 6U, PivotCacheId = 2U, FilterType = PivotFilterValues.Unknown };
             X15.BoundsTimelineRange boundsTimelineRange3 = new X15.BoundsTimelineRange(){ StartDate = System.Xml.XmlConvert.ToDateTime("2000-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), EndDate = System.Xml.XmlConvert.ToDateTime("2004-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
             timelineState3.Append(boundsTimelineRange3);
@@ -6965,18 +6965,18 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of sharedStringTablePart1.
         private static void GenerateSharedStringTablePart1Content(SharedStringTablePart sharedStringTablePart1)
         {
-            SharedStringTable sharedStringTable1 = new SharedStringTable(){ Count = (UInt32Value)130U, UniqueCount = (UInt32Value)32U };
+            SharedStringTable sharedStringTable1 = new SharedStringTable(){ Count = 130U, UniqueCount = 32U };
 
             SharedStringItem sharedStringItem1 = new SharedStringItem();
             Text text7 = new Text();
             text7.Text = "Date";
 
-            PhoneticRun phoneticRun1 = new PhoneticRun(){ BaseTextStartIndex = (UInt32Value)0U, EndingBaseIndex = (UInt32Value)0U };
+            PhoneticRun phoneticRun1 = new PhoneticRun(){ BaseTextStartIndex = 0U, EndingBaseIndex = 0U };
             Text text8 = new Text();
-            text8.Text = "";
+            text8.Text = string.Empty;
 
             phoneticRun1.Append(text8);
-            PhoneticProperties phoneticProperties4 = new PhoneticProperties(){ FontId = (UInt32Value)0U, Type = PhoneticValues.Hiragana };
+            PhoneticProperties phoneticProperties4 = new PhoneticProperties(){ FontId = 0U, Type = PhoneticValues.Hiragana };
 
             sharedStringItem1.Append(text7);
             sharedStringItem1.Append(phoneticRun1);
@@ -6986,12 +6986,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             Text text9 = new Text();
             text9.Text = "Product";
 
-            PhoneticRun phoneticRun2 = new PhoneticRun(){ BaseTextStartIndex = (UInt32Value)0U, EndingBaseIndex = (UInt32Value)0U };
+            PhoneticRun phoneticRun2 = new PhoneticRun(){ BaseTextStartIndex = 0U, EndingBaseIndex = 0U };
             Text text10 = new Text();
-            text10.Text = "";
+            text10.Text = string.Empty;
 
             phoneticRun2.Append(text10);
-            PhoneticProperties phoneticProperties5 = new PhoneticProperties(){ FontId = (UInt32Value)0U, Type = PhoneticValues.Hiragana };
+            PhoneticProperties phoneticProperties5 = new PhoneticProperties(){ FontId = 0U, Type = PhoneticValues.Hiragana };
 
             sharedStringItem2.Append(text9);
             sharedStringItem2.Append(phoneticRun2);
@@ -7001,12 +7001,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             Text text11 = new Text();
             text11.Text = "Quantity";
 
-            PhoneticRun phoneticRun3 = new PhoneticRun(){ BaseTextStartIndex = (UInt32Value)0U, EndingBaseIndex = (UInt32Value)0U };
+            PhoneticRun phoneticRun3 = new PhoneticRun(){ BaseTextStartIndex = 0U, EndingBaseIndex = 0U };
             Text text12 = new Text();
-            text12.Text = "";
+            text12.Text = string.Empty;
 
             phoneticRun3.Append(text12);
-            PhoneticProperties phoneticProperties6 = new PhoneticProperties(){ FontId = (UInt32Value)0U, Type = PhoneticValues.Hiragana };
+            PhoneticProperties phoneticProperties6 = new PhoneticProperties(){ FontId = 0U, Type = PhoneticValues.Hiragana };
 
             sharedStringItem3.Append(text11);
             sharedStringItem3.Append(phoneticRun3);
@@ -7016,12 +7016,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             Text text13 = new Text();
             text13.Text = "Price";
 
-            PhoneticRun phoneticRun4 = new PhoneticRun(){ BaseTextStartIndex = (UInt32Value)0U, EndingBaseIndex = (UInt32Value)0U };
+            PhoneticRun phoneticRun4 = new PhoneticRun(){ BaseTextStartIndex = 0U, EndingBaseIndex = 0U };
             Text text14 = new Text();
-            text14.Text = "";
+            text14.Text = string.Empty;
 
             phoneticRun4.Append(text14);
-            PhoneticProperties phoneticProperties7 = new PhoneticProperties(){ FontId = (UInt32Value)0U, Type = PhoneticValues.Hiragana };
+            PhoneticProperties phoneticProperties7 = new PhoneticProperties(){ FontId = 0U, Type = PhoneticValues.Hiragana };
 
             sharedStringItem4.Append(text13);
             sharedStringItem4.Append(phoneticRun4);
@@ -7037,12 +7037,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             Text text16 = new Text();
             text16.Text = "Employee";
 
-            PhoneticRun phoneticRun5 = new PhoneticRun(){ BaseTextStartIndex = (UInt32Value)0U, EndingBaseIndex = (UInt32Value)0U };
+            PhoneticRun phoneticRun5 = new PhoneticRun(){ BaseTextStartIndex = 0U, EndingBaseIndex = 0U };
             Text text17 = new Text();
-            text17.Text = "";
+            text17.Text = string.Empty;
 
             phoneticRun5.Append(text17);
-            PhoneticProperties phoneticProperties8 = new PhoneticProperties(){ FontId = (UInt32Value)0U, Type = PhoneticValues.Hiragana };
+            PhoneticProperties phoneticProperties8 = new PhoneticProperties(){ FontId = 0U, Type = PhoneticValues.Hiragana };
 
             sharedStringItem6.Append(text16);
             sharedStringItem6.Append(phoneticRun5);
@@ -7172,12 +7172,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             Text text38 = new Text();
             text38.Text = "ProductName";
 
-            PhoneticRun phoneticRun6 = new PhoneticRun(){ BaseTextStartIndex = (UInt32Value)0U, EndingBaseIndex = (UInt32Value)0U };
+            PhoneticRun phoneticRun6 = new PhoneticRun(){ BaseTextStartIndex = 0U, EndingBaseIndex = 0U };
             Text text39 = new Text();
-            text39.Text = "";
+            text39.Text = string.Empty;
 
             phoneticRun6.Append(text39);
-            PhoneticProperties phoneticProperties9 = new PhoneticProperties(){ FontId = (UInt32Value)0U, Type = PhoneticValues.Hiragana };
+            PhoneticProperties phoneticProperties9 = new PhoneticProperties(){ FontId = 0U, Type = PhoneticValues.Hiragana };
 
             sharedStringItem27.Append(text38);
             sharedStringItem27.Append(phoneticRun6);
@@ -7259,21 +7259,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             SheetDimension sheetDimension4 = new SheetDimension(){ Reference = "A1:K11" };
 
             SheetViews sheetViews4 = new SheetViews();
-            SheetView sheetView4 = new SheetView(){ WorkbookViewId = (UInt32Value)0U };
+            SheetView sheetView4 = new SheetView(){ WorkbookViewId = 0U };
 
             sheetViews4.Append(sheetView4);
             SheetFormatProperties sheetFormatProperties4 = new SheetFormatProperties(){ DefaultRowHeight = 15D };
 
             Columns columns4 = new Columns();
-            Column column16 = new Column(){ Min = (UInt32Value)1U, Max = (UInt32Value)1U, Width = 10.7109375D, BestFit = true, CustomWidth = true };
-            Column column17 = new Column(){ Min = (UInt32Value)2U, Max = (UInt32Value)2U, Width = 10.140625D, BestFit = true, CustomWidth = true };
-            Column column18 = new Column(){ Min = (UInt32Value)3U, Max = (UInt32Value)3U, Width = 8.140625D, BestFit = true, CustomWidth = true };
-            Column column19 = new Column(){ Min = (UInt32Value)4U, Max = (UInt32Value)4U, Width = 10.42578125D, BestFit = true, CustomWidth = true };
-            Column column20 = new Column(){ Min = (UInt32Value)5U, Max = (UInt32Value)5U, Width = 12.85546875D, BestFit = true, CustomWidth = true };
-            Column column21 = new Column(){ Min = (UInt32Value)6U, Max = (UInt32Value)6U, Width = 11.5703125D, BestFit = true, CustomWidth = true };
-            Column column22 = new Column(){ Min = (UInt32Value)8U, Max = (UInt32Value)8U, Width = 12.85546875D, BestFit = true, CustomWidth = true };
-            Column column23 = new Column(){ Min = (UInt32Value)9U, Max = (UInt32Value)9U, Width = 10.42578125D, BestFit = true, CustomWidth = true };
-            Column column24 = new Column(){ Min = (UInt32Value)11U, Max = (UInt32Value)11U, Width = 12.85546875D, BestFit = true, CustomWidth = true };
+            Column column16 = new Column(){ Min = 1U, Max = 1U, Width = 10.7109375D, BestFit = true, CustomWidth = true };
+            Column column17 = new Column(){ Min = 2U, Max = 2U, Width = 10.140625D, BestFit = true, CustomWidth = true };
+            Column column18 = new Column(){ Min = 3U, Max = 3U, Width = 8.140625D, BestFit = true, CustomWidth = true };
+            Column column19 = new Column(){ Min = 4U, Max = 4U, Width = 10.42578125D, BestFit = true, CustomWidth = true };
+            Column column20 = new Column(){ Min = 5U, Max = 5U, Width = 12.85546875D, BestFit = true, CustomWidth = true };
+            Column column21 = new Column(){ Min = 6U, Max = 6U, Width = 11.5703125D, BestFit = true, CustomWidth = true };
+            Column column22 = new Column(){ Min = 8U, Max = 8U, Width = 12.85546875D, BestFit = true, CustomWidth = true };
+            Column column23 = new Column(){ Min = 9U, Max = 9U, Width = 10.42578125D, BestFit = true, CustomWidth = true };
+            Column column24 = new Column(){ Min = 11U, Max = 11U, Width = 12.85546875D, BestFit = true, CustomWidth = true };
 
             columns4.Append(column16);
             columns4.Append(column17);
@@ -7287,57 +7287,57 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             SheetData sheetData4 = new SheetData();
 
-            Row row16 = new Row(){ RowIndex = (UInt32Value)1U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row16 = new Row(){ RowIndex = 1U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell31 = new Cell(){ CellReference = "A1", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell31 = new Cell(){ CellReference = "A1", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue31 = new CellValue();
             cellValue31.Text = "0";
 
             cell31.Append(cellValue31);
 
-            Cell cell32 = new Cell(){ CellReference = "B1", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell32 = new Cell(){ CellReference = "B1", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue32 = new CellValue();
             cellValue32.Text = "1";
 
             cell32.Append(cellValue32);
 
-            Cell cell33 = new Cell(){ CellReference = "C1", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell33 = new Cell(){ CellReference = "C1", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue33 = new CellValue();
             cellValue33.Text = "2";
 
             cell33.Append(cellValue33);
 
-            Cell cell34 = new Cell(){ CellReference = "D1", StyleIndex = (UInt32Value)2U, DataType = CellValues.SharedString };
+            Cell cell34 = new Cell(){ CellReference = "D1", StyleIndex = 2U, DataType = CellValues.SharedString };
             CellValue cellValue34 = new CellValue();
             cellValue34.Text = "3";
 
             cell34.Append(cellValue34);
 
-            Cell cell35 = new Cell(){ CellReference = "E1", StyleIndex = (UInt32Value)2U, DataType = CellValues.SharedString };
+            Cell cell35 = new Cell(){ CellReference = "E1", StyleIndex = 2U, DataType = CellValues.SharedString };
             CellValue cellValue35 = new CellValue();
             cellValue35.Text = "4";
 
             cell35.Append(cellValue35);
 
-            Cell cell36 = new Cell(){ CellReference = "F1", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell36 = new Cell(){ CellReference = "F1", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue36 = new CellValue();
             cellValue36.Text = "5";
 
             cell36.Append(cellValue36);
 
-            Cell cell37 = new Cell(){ CellReference = "H1", StyleIndex = (UInt32Value)2U, DataType = CellValues.SharedString };
+            Cell cell37 = new Cell(){ CellReference = "H1", StyleIndex = 2U, DataType = CellValues.SharedString };
             CellValue cellValue37 = new CellValue();
             cellValue37.Text = "26";
 
             cell37.Append(cellValue37);
 
-            Cell cell38 = new Cell(){ CellReference = "I1", StyleIndex = (UInt32Value)2U, DataType = CellValues.SharedString };
+            Cell cell38 = new Cell(){ CellReference = "I1", StyleIndex = 2U, DataType = CellValues.SharedString };
             CellValue cellValue38 = new CellValue();
             cellValue38.Text = "3";
 
             cell38.Append(cellValue38);
 
-            Cell cell39 = new Cell(){ CellReference = "K1", StyleIndex = (UInt32Value)2U, DataType = CellValues.SharedString };
+            Cell cell39 = new Cell(){ CellReference = "K1", StyleIndex = 2U, DataType = CellValues.SharedString };
             CellValue cellValue39 = new CellValue();
             cellValue39.Text = "27";
 
@@ -7353,57 +7353,57 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row16.Append(cell38);
             row16.Append(cell39);
 
-            Row row17 = new Row(){ RowIndex = (UInt32Value)2U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row17 = new Row(){ RowIndex = 2U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell40 = new Cell(){ CellReference = "A2", StyleIndex = (UInt32Value)3U };
+            Cell cell40 = new Cell(){ CellReference = "A2", StyleIndex = 3U };
             CellValue cellValue40 = new CellValue();
             cellValue40.Text = "36526.579536951103";
 
             cell40.Append(cellValue40);
 
-            Cell cell41 = new Cell(){ CellReference = "B2", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell41 = new Cell(){ CellReference = "B2", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue41 = new CellValue();
             cellValue41.Text = "22";
 
             cell41.Append(cellValue41);
 
-            Cell cell42 = new Cell(){ CellReference = "C2", StyleIndex = (UInt32Value)1U };
+            Cell cell42 = new Cell(){ CellReference = "C2", StyleIndex = 1U };
             CellValue cellValue42 = new CellValue();
             cellValue42.Text = "13";
 
             cell42.Append(cellValue42);
 
-            Cell cell43 = new Cell(){ CellReference = "D2", StyleIndex = (UInt32Value)1U };
+            Cell cell43 = new Cell(){ CellReference = "D2", StyleIndex = 1U };
             CellValue cellValue43 = new CellValue();
             cellValue43.Text = "1287";
 
             cell43.Append(cellValue43);
 
-            Cell cell44 = new Cell(){ CellReference = "E2", StyleIndex = (UInt32Value)3U };
+            Cell cell44 = new Cell(){ CellReference = "E2", StyleIndex = 3U };
             CellValue cellValue44 = new CellValue();
             cellValue44.Text = "36527.188771834619";
 
             cell44.Append(cellValue44);
 
-            Cell cell45 = new Cell(){ CellReference = "F2", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell45 = new Cell(){ CellReference = "F2", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue45 = new CellValue();
             cellValue45.Text = "19";
 
             cell45.Append(cellValue45);
 
-            Cell cell46 = new Cell(){ CellReference = "H2", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell46 = new Cell(){ CellReference = "H2", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue46 = new CellValue();
             cellValue46.Text = "6";
 
             cell46.Append(cellValue46);
 
-            Cell cell47 = new Cell(){ CellReference = "I2", StyleIndex = (UInt32Value)4U };
+            Cell cell47 = new Cell(){ CellReference = "I2", StyleIndex = 4U };
             CellValue cellValue47 = new CellValue();
             cellValue47.Text = "125";
 
             cell47.Append(cellValue47);
 
-            Cell cell48 = new Cell(){ CellReference = "K2", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell48 = new Cell(){ CellReference = "K2", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue48 = new CellValue();
             cellValue48.Text = "20";
 
@@ -7419,57 +7419,57 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row17.Append(cell47);
             row17.Append(cell48);
 
-            Row row18 = new Row(){ RowIndex = (UInt32Value)3U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row18 = new Row(){ RowIndex = 3U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell49 = new Cell(){ CellReference = "A3", StyleIndex = (UInt32Value)3U };
+            Cell cell49 = new Cell(){ CellReference = "A3", StyleIndex = 3U };
             CellValue cellValue49 = new CellValue();
             cellValue49.Text = "36526.64725983989";
 
             cell49.Append(cellValue49);
 
-            Cell cell50 = new Cell(){ CellReference = "B3", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell50 = new Cell(){ CellReference = "B3", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue50 = new CellValue();
             cellValue50.Text = "23";
 
             cell50.Append(cellValue50);
 
-            Cell cell51 = new Cell(){ CellReference = "C3", StyleIndex = (UInt32Value)1U };
+            Cell cell51 = new Cell(){ CellReference = "C3", StyleIndex = 1U };
             CellValue cellValue51 = new CellValue();
             cellValue51.Text = "27";
 
             cell51.Append(cellValue51);
 
-            Cell cell52 = new Cell(){ CellReference = "D3", StyleIndex = (UInt32Value)1U };
+            Cell cell52 = new Cell(){ CellReference = "D3", StyleIndex = 1U };
             CellValue cellValue52 = new CellValue();
             cellValue52.Text = "11529";
 
             cell52.Append(cellValue52);
 
-            Cell cell53 = new Cell(){ CellReference = "E3", StyleIndex = (UInt32Value)3U };
+            Cell cell53 = new Cell(){ CellReference = "E3", StyleIndex = 3U };
             CellValue cellValue53 = new CellValue();
             cellValue53.Text = "36529.135002922048";
 
             cell53.Append(cellValue53);
 
-            Cell cell54 = new Cell(){ CellReference = "F3", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell54 = new Cell(){ CellReference = "F3", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue54 = new CellValue();
             cellValue54.Text = "15";
 
             cell54.Append(cellValue54);
 
-            Cell cell55 = new Cell(){ CellReference = "H3", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell55 = new Cell(){ CellReference = "H3", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue55 = new CellValue();
             cellValue55.Text = "14";
 
             cell55.Append(cellValue55);
 
-            Cell cell56 = new Cell(){ CellReference = "I3", StyleIndex = (UInt32Value)4U };
+            Cell cell56 = new Cell(){ CellReference = "I3", StyleIndex = 4U };
             CellValue cellValue56 = new CellValue();
             cellValue56.Text = "250";
 
             cell56.Append(cellValue56);
 
-            Cell cell57 = new Cell(){ CellReference = "K3", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell57 = new Cell(){ CellReference = "K3", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue57 = new CellValue();
             cellValue57.Text = "9";
 
@@ -7485,57 +7485,57 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row18.Append(cell56);
             row18.Append(cell57);
 
-            Row row19 = new Row(){ RowIndex = (UInt32Value)4U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row19 = new Row(){ RowIndex = 4U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell58 = new Cell(){ CellReference = "A4", StyleIndex = (UInt32Value)3U };
+            Cell cell58 = new Cell(){ CellReference = "A4", StyleIndex = 3U };
             CellValue cellValue58 = new CellValue();
             cellValue58.Text = "36526.705772237176";
 
             cell58.Append(cellValue58);
 
-            Cell cell59 = new Cell(){ CellReference = "B4", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell59 = new Cell(){ CellReference = "B4", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue59 = new CellValue();
             cellValue59.Text = "22";
 
             cell59.Append(cellValue59);
 
-            Cell cell60 = new Cell(){ CellReference = "C4", StyleIndex = (UInt32Value)1U };
+            Cell cell60 = new Cell(){ CellReference = "C4", StyleIndex = 1U };
             CellValue cellValue60 = new CellValue();
             cellValue60.Text = "19";
 
             cell60.Append(cellValue60);
 
-            Cell cell61 = new Cell(){ CellReference = "D4", StyleIndex = (UInt32Value)1U };
+            Cell cell61 = new Cell(){ CellReference = "D4", StyleIndex = 1U };
             CellValue cellValue61 = new CellValue();
             cellValue61.Text = "1881";
 
             cell61.Append(cellValue61);
 
-            Cell cell62 = new Cell(){ CellReference = "E4", StyleIndex = (UInt32Value)3U };
+            Cell cell62 = new Cell(){ CellReference = "E4", StyleIndex = 3U };
             CellValue cellValue62 = new CellValue();
             cellValue62.Text = "36528.465495973578";
 
             cell62.Append(cellValue62);
 
-            Cell cell63 = new Cell(){ CellReference = "F4", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell63 = new Cell(){ CellReference = "F4", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue63 = new CellValue();
             cellValue63.Text = "13";
 
             cell63.Append(cellValue63);
 
-            Cell cell64 = new Cell(){ CellReference = "H4", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell64 = new Cell(){ CellReference = "H4", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue64 = new CellValue();
             cellValue64.Text = "16";
 
             cell64.Append(cellValue64);
 
-            Cell cell65 = new Cell(){ CellReference = "I4", StyleIndex = (UInt32Value)4U };
+            Cell cell65 = new Cell(){ CellReference = "I4", StyleIndex = 4U };
             CellValue cellValue65 = new CellValue();
             cellValue65.Text = "50";
 
             cell65.Append(cellValue65);
 
-            Cell cell66 = new Cell(){ CellReference = "K4", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell66 = new Cell(){ CellReference = "K4", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue66 = new CellValue();
             cellValue66.Text = "10";
 
@@ -7551,57 +7551,57 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row19.Append(cell65);
             row19.Append(cell66);
 
-            Row row20 = new Row(){ RowIndex = (UInt32Value)5U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row20 = new Row(){ RowIndex = 5U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell67 = new Cell(){ CellReference = "A5", StyleIndex = (UInt32Value)3U };
+            Cell cell67 = new Cell(){ CellReference = "A5", StyleIndex = 3U };
             CellValue cellValue67 = new CellValue();
             cellValue67.Text = "36526.753330643623";
 
             cell67.Append(cellValue67);
 
-            Cell cell68 = new Cell(){ CellReference = "B5", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell68 = new Cell(){ CellReference = "B5", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue68 = new CellValue();
             cellValue68.Text = "16";
 
             cell68.Append(cellValue68);
 
-            Cell cell69 = new Cell(){ CellReference = "C5", StyleIndex = (UInt32Value)1U };
+            Cell cell69 = new Cell(){ CellReference = "C5", StyleIndex = 1U };
             CellValue cellValue69 = new CellValue();
             cellValue69.Text = "25";
 
             cell69.Append(cellValue69);
 
-            Cell cell70 = new Cell(){ CellReference = "D5", StyleIndex = (UInt32Value)1U };
+            Cell cell70 = new Cell(){ CellReference = "D5", StyleIndex = 1U };
             CellValue cellValue70 = new CellValue();
             cellValue70.Text = "1250";
 
             cell70.Append(cellValue70);
 
-            Cell cell71 = new Cell(){ CellReference = "E5", StyleIndex = (UInt32Value)3U };
+            Cell cell71 = new Cell(){ CellReference = "E5", StyleIndex = 3U };
             CellValue cellValue71 = new CellValue();
             cellValue71.Text = "36527.287605233112";
 
             cell71.Append(cellValue71);
 
-            Cell cell72 = new Cell(){ CellReference = "F5", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell72 = new Cell(){ CellReference = "F5", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue72 = new CellValue();
             cellValue72.Text = "9";
 
             cell72.Append(cellValue72);
 
-            Cell cell73 = new Cell(){ CellReference = "H5", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell73 = new Cell(){ CellReference = "H5", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue73 = new CellValue();
             cellValue73.Text = "8";
 
             cell73.Append(cellValue73);
 
-            Cell cell74 = new Cell(){ CellReference = "I5", StyleIndex = (UInt32Value)4U };
+            Cell cell74 = new Cell(){ CellReference = "I5", StyleIndex = 4U };
             CellValue cellValue74 = new CellValue();
             cellValue74.Text = "1230";
 
             cell74.Append(cellValue74);
 
-            Cell cell75 = new Cell(){ CellReference = "K5", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell75 = new Cell(){ CellReference = "K5", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue75 = new CellValue();
             cellValue75.Text = "24";
 
@@ -7617,57 +7617,57 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row20.Append(cell74);
             row20.Append(cell75);
 
-            Row row21 = new Row(){ RowIndex = (UInt32Value)6U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row21 = new Row(){ RowIndex = 6U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell76 = new Cell(){ CellReference = "A6", StyleIndex = (UInt32Value)3U };
+            Cell cell76 = new Cell(){ CellReference = "A6", StyleIndex = 3U };
             CellValue cellValue76 = new CellValue();
             cellValue76.Text = "37620.934998271434";
 
             cell76.Append(cellValue76);
 
-            Cell cell77 = new Cell(){ CellReference = "B6", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell77 = new Cell(){ CellReference = "B6", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue77 = new CellValue();
             cellValue77.Text = "16";
 
             cell77.Append(cellValue77);
 
-            Cell cell78 = new Cell(){ CellReference = "C6", StyleIndex = (UInt32Value)1U };
+            Cell cell78 = new Cell(){ CellReference = "C6", StyleIndex = 1U };
             CellValue cellValue78 = new CellValue();
             cellValue78.Text = "16";
 
             cell78.Append(cellValue78);
 
-            Cell cell79 = new Cell(){ CellReference = "D6", StyleIndex = (UInt32Value)1U };
+            Cell cell79 = new Cell(){ CellReference = "D6", StyleIndex = 1U };
             CellValue cellValue79 = new CellValue();
             cellValue79.Text = "800";
 
             cell79.Append(cellValue79);
 
-            Cell cell80 = new Cell(){ CellReference = "E6", StyleIndex = (UInt32Value)3U };
+            Cell cell80 = new Cell(){ CellReference = "E6", StyleIndex = 3U };
             CellValue cellValue80 = new CellValue();
             cellValue80.Text = "37622.167683550928";
 
             cell80.Append(cellValue80);
 
-            Cell cell81 = new Cell(){ CellReference = "F6", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell81 = new Cell(){ CellReference = "F6", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue81 = new CellValue();
             cellValue81.Text = "21";
 
             cell81.Append(cellValue81);
 
-            Cell cell82 = new Cell(){ CellReference = "H6", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell82 = new Cell(){ CellReference = "H6", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue82 = new CellValue();
             cellValue82.Text = "11";
 
             cell82.Append(cellValue82);
 
-            Cell cell83 = new Cell(){ CellReference = "I6", StyleIndex = (UInt32Value)4U };
+            Cell cell83 = new Cell(){ CellReference = "I6", StyleIndex = 4U };
             CellValue cellValue83 = new CellValue();
             cellValue83.Text = "78";
 
             cell83.Append(cellValue83);
 
-            Cell cell84 = new Cell(){ CellReference = "K6", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell84 = new Cell(){ CellReference = "K6", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue84 = new CellValue();
             cellValue84.Text = "12";
 
@@ -7683,21 +7683,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row21.Append(cell83);
             row21.Append(cell84);
 
-            Row row22 = new Row(){ RowIndex = (UInt32Value)7U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row22 = new Row(){ RowIndex = 7U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell85 = new Cell(){ CellReference = "H7", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell85 = new Cell(){ CellReference = "H7", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue85 = new CellValue();
             cellValue85.Text = "22";
 
             cell85.Append(cellValue85);
 
-            Cell cell86 = new Cell(){ CellReference = "I7", StyleIndex = (UInt32Value)4U };
+            Cell cell86 = new Cell(){ CellReference = "I7", StyleIndex = 4U };
             CellValue cellValue86 = new CellValue();
             cellValue86.Text = "99";
 
             cell86.Append(cellValue86);
 
-            Cell cell87 = new Cell(){ CellReference = "K7", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell87 = new Cell(){ CellReference = "K7", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue87 = new CellValue();
             cellValue87.Text = "21";
 
@@ -7707,21 +7707,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row22.Append(cell86);
             row22.Append(cell87);
 
-            Row row23 = new Row(){ RowIndex = (UInt32Value)8U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row23 = new Row(){ RowIndex = 8U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell88 = new Cell(){ CellReference = "H8", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell88 = new Cell(){ CellReference = "H8", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue88 = new CellValue();
             cellValue88.Text = "23";
 
             cell88.Append(cellValue88);
 
-            Cell cell89 = new Cell(){ CellReference = "I8", StyleIndex = (UInt32Value)4U };
+            Cell cell89 = new Cell(){ CellReference = "I8", StyleIndex = 4U };
             CellValue cellValue89 = new CellValue();
             cellValue89.Text = "427";
 
             cell89.Append(cellValue89);
 
-            Cell cell90 = new Cell(){ CellReference = "K8", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell90 = new Cell(){ CellReference = "K8", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue90 = new CellValue();
             cellValue90.Text = "7";
 
@@ -7731,21 +7731,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row23.Append(cell89);
             row23.Append(cell90);
 
-            Row row24 = new Row(){ RowIndex = (UInt32Value)9U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row24 = new Row(){ RowIndex = 9U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell91 = new Cell(){ CellReference = "H9", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell91 = new Cell(){ CellReference = "H9", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue91 = new CellValue();
             cellValue91.Text = "17";
 
             cell91.Append(cellValue91);
 
-            Cell cell92 = new Cell(){ CellReference = "I9", StyleIndex = (UInt32Value)4U };
+            Cell cell92 = new Cell(){ CellReference = "I9", StyleIndex = 4U };
             CellValue cellValue92 = new CellValue();
             cellValue92.Text = "8127";
 
             cell92.Append(cellValue92);
 
-            Cell cell93 = new Cell(){ CellReference = "K9", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell93 = new Cell(){ CellReference = "K9", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue93 = new CellValue();
             cellValue93.Text = "19";
 
@@ -7755,21 +7755,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row24.Append(cell92);
             row24.Append(cell93);
 
-            Row row25 = new Row(){ RowIndex = (UInt32Value)10U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row25 = new Row(){ RowIndex = 10U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell94 = new Cell(){ CellReference = "H10", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell94 = new Cell(){ CellReference = "H10", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue94 = new CellValue();
             cellValue94.Text = "18";
 
             cell94.Append(cellValue94);
 
-            Cell cell95 = new Cell(){ CellReference = "I10", StyleIndex = (UInt32Value)4U };
+            Cell cell95 = new Cell(){ CellReference = "I10", StyleIndex = 4U };
             CellValue cellValue95 = new CellValue();
             cellValue95.Text = "777";
 
             cell95.Append(cellValue95);
 
-            Cell cell96 = new Cell(){ CellReference = "K10", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell96 = new Cell(){ CellReference = "K10", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue96 = new CellValue();
             cellValue96.Text = "15";
 
@@ -7779,21 +7779,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row25.Append(cell95);
             row25.Append(cell96);
 
-            Row row26 = new Row(){ RowIndex = (UInt32Value)11U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row26 = new Row(){ RowIndex = 11U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell97 = new Cell(){ CellReference = "H11", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell97 = new Cell(){ CellReference = "H11", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue97 = new CellValue();
             cellValue97.Text = "25";
 
             cell97.Append(cellValue97);
 
-            Cell cell98 = new Cell(){ CellReference = "I11", StyleIndex = (UInt32Value)4U };
+            Cell cell98 = new Cell(){ CellReference = "I11", StyleIndex = 4U };
             CellValue cellValue98 = new CellValue();
             cellValue98.Text = "262";
 
             cell98.Append(cellValue98);
 
-            Cell cell99 = new Cell(){ CellReference = "K11", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell99 = new Cell(){ CellReference = "K11", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue99 = new CellValue();
             cellValue99.Text = "13";
 
@@ -7814,10 +7814,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             sheetData4.Append(row24);
             sheetData4.Append(row25);
             sheetData4.Append(row26);
-            PhoneticProperties phoneticProperties10 = new PhoneticProperties(){ FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties10 = new PhoneticProperties(){ FontId = 1U };
             PageMargins pageMargins10 = new PageMargins(){ Left = 0.7D, Right = 0.7D, Top = 0.75D, Bottom = 0.75D, Header = 0.3D, Footer = 0.3D };
 
-            TableParts tableParts1 = new TableParts(){ Count = (UInt32Value)3U };
+            TableParts tableParts1 = new TableParts(){ Count = 3U };
             TablePart tablePart1 = new TablePart(){ Id = "rId1" };
             TablePart tablePart2 = new TablePart(){ Id = "rId2" };
             TablePart tablePart3 = new TablePart(){ Id = "rId3" };
@@ -7841,11 +7841,11 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of tableDefinitionPart1.
         private static void GenerateTableDefinitionPart1Content(TableDefinitionPart tableDefinitionPart1)
         {
-            Table table1 = new Table(){ Id = (UInt32Value)6U, Name = "SalesTable2", DisplayName = "SalesTable2", Reference = "K1:K11", TotalsRowShown = false, HeaderRowFormatId = (UInt32Value)0U };
+            Table table1 = new Table(){ Id = 6U, Name = "SalesTable2", DisplayName = "SalesTable2", Reference = "K1:K11", TotalsRowShown = false, HeaderRowFormatId = 0U };
             AutoFilter autoFilter1 = new AutoFilter(){ Reference = "K1:K11" };
 
-            TableColumns tableColumns1 = new TableColumns(){ Count = (UInt32Value)1U };
-            TableColumn tableColumn1 = new TableColumn(){ Id = (UInt32Value)1U, Name = "Employee" };
+            TableColumns tableColumns1 = new TableColumns(){ Count = 1U };
+            TableColumn tableColumn1 = new TableColumn(){ Id = 1U, Name = "Employee" };
 
             tableColumns1.Append(tableColumn1);
             TableStyleInfo tableStyleInfo1 = new TableStyleInfo(){ Name = "TableStyleMedium2", ShowFirstColumn = false, ShowLastColumn = false, ShowRowStripes = true, ShowColumnStripes = false };
@@ -7860,12 +7860,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of tableDefinitionPart2.
         private static void GenerateTableDefinitionPart2Content(TableDefinitionPart tableDefinitionPart2)
         {
-            Table table2 = new Table(){ Id = (UInt32Value)5U, Name = "ProductTable2", DisplayName = "ProductTable2", Reference = "H1:I11", TotalsRowShown = false, HeaderRowFormatId = (UInt32Value)2U };
+            Table table2 = new Table(){ Id = 5U, Name = "ProductTable2", DisplayName = "ProductTable2", Reference = "H1:I11", TotalsRowShown = false, HeaderRowFormatId = 2U };
             AutoFilter autoFilter2 = new AutoFilter(){ Reference = "H1:I11" };
 
-            TableColumns tableColumns2 = new TableColumns(){ Count = (UInt32Value)2U };
-            TableColumn tableColumn2 = new TableColumn(){ Id = (UInt32Value)1U, Name = "ProductName" };
-            TableColumn tableColumn3 = new TableColumn(){ Id = (UInt32Value)2U, Name = "Price", DataFormatId = (UInt32Value)1U };
+            TableColumns tableColumns2 = new TableColumns(){ Count = 2U };
+            TableColumn tableColumn2 = new TableColumn(){ Id = 1U, Name = "ProductName" };
+            TableColumn tableColumn3 = new TableColumn(){ Id = 2U, Name = "Price", DataFormatId = 1U };
 
             tableColumns2.Append(tableColumn2);
             tableColumns2.Append(tableColumn3);
@@ -7881,7 +7881,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of tableDefinitionPart3.
         private static void GenerateTableDefinitionPart3Content(TableDefinitionPart tableDefinitionPart3)
         {
-            Table table3 = new Table(){ Id = (UInt32Value)4U, Name = "DataTable2", DisplayName = "DataTable2", Reference = "A1:F6", TotalsRowShown = false };
+            Table table3 = new Table(){ Id = 4U, Name = "DataTable2", DisplayName = "DataTable2", Reference = "A1:F6", TotalsRowShown = false };
             AutoFilter autoFilter3 = new AutoFilter(){ Reference = "A1:F6" };
 
             SortState sortState1 = new SortState(){ Reference = "A2:F2001" };
@@ -7889,13 +7889,13 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             sortState1.Append(sortCondition1);
 
-            TableColumns tableColumns3 = new TableColumns(){ Count = (UInt32Value)6U };
-            TableColumn tableColumn4 = new TableColumn(){ Id = (UInt32Value)1U, Name = "Date", DataFormatId = (UInt32Value)8U };
-            TableColumn tableColumn5 = new TableColumn(){ Id = (UInt32Value)2U, Name = "Product", DataFormatId = (UInt32Value)7U };
-            TableColumn tableColumn6 = new TableColumn(){ Id = (UInt32Value)3U, Name = "Quantity", DataFormatId = (UInt32Value)6U };
-            TableColumn tableColumn7 = new TableColumn(){ Id = (UInt32Value)4U, Name = "Price", DataFormatId = (UInt32Value)5U };
-            TableColumn tableColumn8 = new TableColumn(){ Id = (UInt32Value)5U, Name = "DeliveryDate", DataFormatId = (UInt32Value)4U };
-            TableColumn tableColumn9 = new TableColumn(){ Id = (UInt32Value)6U, Name = "Employee", DataFormatId = (UInt32Value)3U };
+            TableColumns tableColumns3 = new TableColumns(){ Count = 6U };
+            TableColumn tableColumn4 = new TableColumn(){ Id = 1U, Name = "Date", DataFormatId = 8U };
+            TableColumn tableColumn5 = new TableColumn(){ Id = 2U, Name = "Product", DataFormatId = 7U };
+            TableColumn tableColumn6 = new TableColumn(){ Id = 3U, Name = "Quantity", DataFormatId = 6U };
+            TableColumn tableColumn7 = new TableColumn(){ Id = 4U, Name = "Price", DataFormatId = 5U };
+            TableColumn tableColumn8 = new TableColumn(){ Id = 5U, Name = "DeliveryDate", DataFormatId = 4U };
+            TableColumn tableColumn9 = new TableColumn(){ Id = 6U, Name = "Employee", DataFormatId = 3U };
 
             tableColumns3.Append(tableColumn4);
             tableColumns3.Append(tableColumn5);
@@ -7920,11 +7920,11 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             timelineCacheDefinition4.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
 
             X15.TimelineCachePivotTables timelineCachePivotTables4 = new X15.TimelineCachePivotTables();
-            X15.TimelineCachePivotTable timelineCachePivotTable4 = new X15.TimelineCachePivotTable(){ TabId = (UInt32Value)5U, Name = "PivotTable1" };
+            X15.TimelineCachePivotTable timelineCachePivotTable4 = new X15.TimelineCachePivotTable(){ TabId = 5U, Name = "PivotTable1" };
 
             timelineCachePivotTables4.Append(timelineCachePivotTable4);
 
-            X15.TimelineState timelineState4 = new X15.TimelineState(){ MinimalRefreshVersion = (UInt32Value)6U, LastRefreshVersion = (UInt32Value)6U, PivotCacheId = (UInt32Value)2U, FilterType = PivotFilterValues.Unknown };
+            X15.TimelineState timelineState4 = new X15.TimelineState(){ MinimalRefreshVersion = 6U, LastRefreshVersion = 6U, PivotCacheId = 2U, FilterType = PivotFilterValues.Unknown };
             X15.BoundsTimelineRange boundsTimelineRange4 = new X15.BoundsTimelineRange(){ StartDate = System.Xml.XmlConvert.ToDateTime("2000-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), EndDate = System.Xml.XmlConvert.ToDateTime("2004-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
             timelineState4.Append(boundsTimelineRange4);
@@ -7942,11 +7942,11 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             timelineCacheDefinition5.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
 
             X15.TimelineCachePivotTables timelineCachePivotTables5 = new X15.TimelineCachePivotTables();
-            X15.TimelineCachePivotTable timelineCachePivotTable5 = new X15.TimelineCachePivotTable(){ TabId = (UInt32Value)9U, Name = "PivotTable1" };
+            X15.TimelineCachePivotTable timelineCachePivotTable5 = new X15.TimelineCachePivotTable(){ TabId = 9U, Name = "PivotTable1" };
 
             timelineCachePivotTables5.Append(timelineCachePivotTable5);
 
-            X15.TimelineState timelineState5 = new X15.TimelineState(){ MinimalRefreshVersion = (UInt32Value)6U, LastRefreshVersion = (UInt32Value)6U, PivotCacheId = (UInt32Value)2U, FilterType = PivotFilterValues.DateBetween };
+            X15.TimelineState timelineState5 = new X15.TimelineState(){ MinimalRefreshVersion = 6U, LastRefreshVersion = 6U, PivotCacheId = 2U, FilterType = PivotFilterValues.DateBetween };
             X15.SelectionTimelineRange selectionTimelineRange1 = new X15.SelectionTimelineRange(){ StartDate = System.Xml.XmlConvert.ToDateTime("2000-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), EndDate = System.Xml.XmlConvert.ToDateTime("2003-12-31T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
             X15.BoundsTimelineRange boundsTimelineRange5 = new X15.BoundsTimelineRange(){ StartDate = System.Xml.XmlConvert.ToDateTime("2000-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), EndDate = System.Xml.XmlConvert.ToDateTime("2004-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
@@ -7969,21 +7969,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             SheetDimension sheetDimension5 = new SheetDimension(){ Reference = "A1:K11" };
 
             SheetViews sheetViews5 = new SheetViews();
-            SheetView sheetView5 = new SheetView(){ TabSelected = true, WorkbookViewId = (UInt32Value)0U };
+            SheetView sheetView5 = new SheetView(){ TabSelected = true, WorkbookViewId = 0U };
 
             sheetViews5.Append(sheetView5);
             SheetFormatProperties sheetFormatProperties5 = new SheetFormatProperties(){ DefaultRowHeight = 15D };
 
             Columns columns5 = new Columns();
-            Column column25 = new Column(){ Min = (UInt32Value)1U, Max = (UInt32Value)1U, Width = 10.7109375D, BestFit = true, CustomWidth = true };
-            Column column26 = new Column(){ Min = (UInt32Value)2U, Max = (UInt32Value)2U, Width = 10.140625D, BestFit = true, CustomWidth = true };
-            Column column27 = new Column(){ Min = (UInt32Value)3U, Max = (UInt32Value)3U, Width = 8.140625D, BestFit = true, CustomWidth = true };
-            Column column28 = new Column(){ Min = (UInt32Value)4U, Max = (UInt32Value)4U, Width = 10.42578125D, BestFit = true, CustomWidth = true };
-            Column column29 = new Column(){ Min = (UInt32Value)5U, Max = (UInt32Value)5U, Width = 12.85546875D, BestFit = true, CustomWidth = true };
-            Column column30 = new Column(){ Min = (UInt32Value)6U, Max = (UInt32Value)6U, Width = 11.5703125D, BestFit = true, CustomWidth = true };
-            Column column31 = new Column(){ Min = (UInt32Value)8U, Max = (UInt32Value)8U, Width = 12.85546875D, BestFit = true, CustomWidth = true };
-            Column column32 = new Column(){ Min = (UInt32Value)9U, Max = (UInt32Value)9U, Width = 10.42578125D, BestFit = true, CustomWidth = true };
-            Column column33 = new Column(){ Min = (UInt32Value)11U, Max = (UInt32Value)11U, Width = 12.85546875D, BestFit = true, CustomWidth = true };
+            Column column25 = new Column(){ Min = 1U, Max = 1U, Width = 10.7109375D, BestFit = true, CustomWidth = true };
+            Column column26 = new Column(){ Min = 2U, Max = 2U, Width = 10.140625D, BestFit = true, CustomWidth = true };
+            Column column27 = new Column(){ Min = 3U, Max = 3U, Width = 8.140625D, BestFit = true, CustomWidth = true };
+            Column column28 = new Column(){ Min = 4U, Max = 4U, Width = 10.42578125D, BestFit = true, CustomWidth = true };
+            Column column29 = new Column(){ Min = 5U, Max = 5U, Width = 12.85546875D, BestFit = true, CustomWidth = true };
+            Column column30 = new Column(){ Min = 6U, Max = 6U, Width = 11.5703125D, BestFit = true, CustomWidth = true };
+            Column column31 = new Column(){ Min = 8U, Max = 8U, Width = 12.85546875D, BestFit = true, CustomWidth = true };
+            Column column32 = new Column(){ Min = 9U, Max = 9U, Width = 10.42578125D, BestFit = true, CustomWidth = true };
+            Column column33 = new Column(){ Min = 11U, Max = 11U, Width = 12.85546875D, BestFit = true, CustomWidth = true };
 
             columns5.Append(column25);
             columns5.Append(column26);
@@ -7997,57 +7997,57 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             SheetData sheetData5 = new SheetData();
 
-            Row row27 = new Row(){ RowIndex = (UInt32Value)1U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row27 = new Row(){ RowIndex = 1U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell100 = new Cell(){ CellReference = "A1", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell100 = new Cell(){ CellReference = "A1", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue100 = new CellValue();
             cellValue100.Text = "0";
 
             cell100.Append(cellValue100);
 
-            Cell cell101 = new Cell(){ CellReference = "B1", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell101 = new Cell(){ CellReference = "B1", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue101 = new CellValue();
             cellValue101.Text = "1";
 
             cell101.Append(cellValue101);
 
-            Cell cell102 = new Cell(){ CellReference = "C1", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell102 = new Cell(){ CellReference = "C1", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue102 = new CellValue();
             cellValue102.Text = "2";
 
             cell102.Append(cellValue102);
 
-            Cell cell103 = new Cell(){ CellReference = "D1", StyleIndex = (UInt32Value)2U, DataType = CellValues.SharedString };
+            Cell cell103 = new Cell(){ CellReference = "D1", StyleIndex = 2U, DataType = CellValues.SharedString };
             CellValue cellValue103 = new CellValue();
             cellValue103.Text = "3";
 
             cell103.Append(cellValue103);
 
-            Cell cell104 = new Cell(){ CellReference = "E1", StyleIndex = (UInt32Value)2U, DataType = CellValues.SharedString };
+            Cell cell104 = new Cell(){ CellReference = "E1", StyleIndex = 2U, DataType = CellValues.SharedString };
             CellValue cellValue104 = new CellValue();
             cellValue104.Text = "4";
 
             cell104.Append(cellValue104);
 
-            Cell cell105 = new Cell(){ CellReference = "F1", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell105 = new Cell(){ CellReference = "F1", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue105 = new CellValue();
             cellValue105.Text = "5";
 
             cell105.Append(cellValue105);
 
-            Cell cell106 = new Cell(){ CellReference = "H1", StyleIndex = (UInt32Value)2U, DataType = CellValues.SharedString };
+            Cell cell106 = new Cell(){ CellReference = "H1", StyleIndex = 2U, DataType = CellValues.SharedString };
             CellValue cellValue106 = new CellValue();
             cellValue106.Text = "26";
 
             cell106.Append(cellValue106);
 
-            Cell cell107 = new Cell(){ CellReference = "I1", StyleIndex = (UInt32Value)2U, DataType = CellValues.SharedString };
+            Cell cell107 = new Cell(){ CellReference = "I1", StyleIndex = 2U, DataType = CellValues.SharedString };
             CellValue cellValue107 = new CellValue();
             cellValue107.Text = "3";
 
             cell107.Append(cellValue107);
 
-            Cell cell108 = new Cell(){ CellReference = "K1", StyleIndex = (UInt32Value)2U, DataType = CellValues.SharedString };
+            Cell cell108 = new Cell(){ CellReference = "K1", StyleIndex = 2U, DataType = CellValues.SharedString };
             CellValue cellValue108 = new CellValue();
             cellValue108.Text = "27";
 
@@ -8063,57 +8063,57 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row27.Append(cell107);
             row27.Append(cell108);
 
-            Row row28 = new Row(){ RowIndex = (UInt32Value)2U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row28 = new Row(){ RowIndex = 2U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell109 = new Cell(){ CellReference = "A2", StyleIndex = (UInt32Value)3U };
+            Cell cell109 = new Cell(){ CellReference = "A2", StyleIndex = 3U };
             CellValue cellValue109 = new CellValue();
             cellValue109.Text = "36526.653255014644";
 
             cell109.Append(cellValue109);
 
-            Cell cell110 = new Cell(){ CellReference = "B2", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell110 = new Cell(){ CellReference = "B2", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue110 = new CellValue();
             cellValue110.Text = "6";
 
             cell110.Append(cellValue110);
 
-            Cell cell111 = new Cell(){ CellReference = "C2", StyleIndex = (UInt32Value)1U };
+            Cell cell111 = new Cell(){ CellReference = "C2", StyleIndex = 1U };
             CellValue cellValue111 = new CellValue();
             cellValue111.Text = "19";
 
             cell111.Append(cellValue111);
 
-            Cell cell112 = new Cell(){ CellReference = "D2", StyleIndex = (UInt32Value)1U };
+            Cell cell112 = new Cell(){ CellReference = "D2", StyleIndex = 1U };
             CellValue cellValue112 = new CellValue();
             cellValue112.Text = "2375";
 
             cell112.Append(cellValue112);
 
-            Cell cell113 = new Cell(){ CellReference = "E2", StyleIndex = (UInt32Value)3U };
+            Cell cell113 = new Cell(){ CellReference = "E2", StyleIndex = 3U };
             CellValue cellValue113 = new CellValue();
             cellValue113.Text = "36531.653255014644";
 
             cell113.Append(cellValue113);
 
-            Cell cell114 = new Cell(){ CellReference = "F2", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell114 = new Cell(){ CellReference = "F2", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue114 = new CellValue();
             cellValue114.Text = "7";
 
             cell114.Append(cellValue114);
 
-            Cell cell115 = new Cell(){ CellReference = "H2", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell115 = new Cell(){ CellReference = "H2", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue115 = new CellValue();
             cellValue115.Text = "6";
 
             cell115.Append(cellValue115);
 
-            Cell cell116 = new Cell(){ CellReference = "I2", StyleIndex = (UInt32Value)4U };
+            Cell cell116 = new Cell(){ CellReference = "I2", StyleIndex = 4U };
             CellValue cellValue116 = new CellValue();
             cellValue116.Text = "125";
 
             cell116.Append(cellValue116);
 
-            Cell cell117 = new Cell(){ CellReference = "K2", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell117 = new Cell(){ CellReference = "K2", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue117 = new CellValue();
             cellValue117.Text = "20";
 
@@ -8129,57 +8129,57 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row28.Append(cell116);
             row28.Append(cell117);
 
-            Row row29 = new Row(){ RowIndex = (UInt32Value)3U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row29 = new Row(){ RowIndex = 3U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell118 = new Cell(){ CellReference = "A3", StyleIndex = (UInt32Value)3U };
+            Cell cell118 = new Cell(){ CellReference = "A3", StyleIndex = 3U };
             CellValue cellValue118 = new CellValue();
             cellValue118.Text = "36527.149391461739";
 
             cell118.Append(cellValue118);
 
-            Cell cell119 = new Cell(){ CellReference = "B3", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell119 = new Cell(){ CellReference = "B3", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue119 = new CellValue();
             cellValue119.Text = "8";
 
             cell119.Append(cellValue119);
 
-            Cell cell120 = new Cell(){ CellReference = "C3", StyleIndex = (UInt32Value)1U };
+            Cell cell120 = new Cell(){ CellReference = "C3", StyleIndex = 1U };
             CellValue cellValue120 = new CellValue();
             cellValue120.Text = "13";
 
             cell120.Append(cellValue120);
 
-            Cell cell121 = new Cell(){ CellReference = "D3", StyleIndex = (UInt32Value)1U };
+            Cell cell121 = new Cell(){ CellReference = "D3", StyleIndex = 1U };
             CellValue cellValue121 = new CellValue();
             cellValue121.Text = "15990";
 
             cell121.Append(cellValue121);
 
-            Cell cell122 = new Cell(){ CellReference = "E3", StyleIndex = (UInt32Value)3U };
+            Cell cell122 = new Cell(){ CellReference = "E3", StyleIndex = 3U };
             CellValue cellValue122 = new CellValue();
             cellValue122.Text = "36532.149391461739";
 
             cell122.Append(cellValue122);
 
-            Cell cell123 = new Cell(){ CellReference = "F3", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell123 = new Cell(){ CellReference = "F3", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue123 = new CellValue();
             cellValue123.Text = "9";
 
             cell123.Append(cellValue123);
 
-            Cell cell124 = new Cell(){ CellReference = "H3", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell124 = new Cell(){ CellReference = "H3", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue124 = new CellValue();
             cellValue124.Text = "14";
 
             cell124.Append(cellValue124);
 
-            Cell cell125 = new Cell(){ CellReference = "I3", StyleIndex = (UInt32Value)4U };
+            Cell cell125 = new Cell(){ CellReference = "I3", StyleIndex = 4U };
             CellValue cellValue125 = new CellValue();
             cellValue125.Text = "250";
 
             cell125.Append(cellValue125);
 
-            Cell cell126 = new Cell(){ CellReference = "K3", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell126 = new Cell(){ CellReference = "K3", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue126 = new CellValue();
             cellValue126.Text = "9";
 
@@ -8195,57 +8195,57 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row29.Append(cell125);
             row29.Append(cell126);
 
-            Row row30 = new Row(){ RowIndex = (UInt32Value)4U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row30 = new Row(){ RowIndex = 4U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell127 = new Cell(){ CellReference = "A4", StyleIndex = (UInt32Value)3U };
+            Cell cell127 = new Cell(){ CellReference = "A4", StyleIndex = 3U };
             CellValue cellValue127 = new CellValue();
             cellValue127.Text = "37620.280037325079";
 
             cell127.Append(cellValue127);
 
-            Cell cell128 = new Cell(){ CellReference = "B4", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell128 = new Cell(){ CellReference = "B4", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue128 = new CellValue();
             cellValue128.Text = "11";
 
             cell128.Append(cellValue128);
 
-            Cell cell129 = new Cell(){ CellReference = "C4", StyleIndex = (UInt32Value)1U };
+            Cell cell129 = new Cell(){ CellReference = "C4", StyleIndex = 1U };
             CellValue cellValue129 = new CellValue();
             cellValue129.Text = "4";
 
             cell129.Append(cellValue129);
 
-            Cell cell130 = new Cell(){ CellReference = "D4", StyleIndex = (UInt32Value)1U };
+            Cell cell130 = new Cell(){ CellReference = "D4", StyleIndex = 1U };
             CellValue cellValue130 = new CellValue();
             cellValue130.Text = "312";
 
             cell130.Append(cellValue130);
 
-            Cell cell131 = new Cell(){ CellReference = "E4", StyleIndex = (UInt32Value)3U };
+            Cell cell131 = new Cell(){ CellReference = "E4", StyleIndex = 3U };
             CellValue cellValue131 = new CellValue();
             cellValue131.Text = "37624.280037325079";
 
             cell131.Append(cellValue131);
 
-            Cell cell132 = new Cell(){ CellReference = "F4", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell132 = new Cell(){ CellReference = "F4", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue132 = new CellValue();
             cellValue132.Text = "12";
 
             cell132.Append(cellValue132);
 
-            Cell cell133 = new Cell(){ CellReference = "H4", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell133 = new Cell(){ CellReference = "H4", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue133 = new CellValue();
             cellValue133.Text = "16";
 
             cell133.Append(cellValue133);
 
-            Cell cell134 = new Cell(){ CellReference = "I4", StyleIndex = (UInt32Value)4U };
+            Cell cell134 = new Cell(){ CellReference = "I4", StyleIndex = 4U };
             CellValue cellValue134 = new CellValue();
             cellValue134.Text = "50";
 
             cell134.Append(cellValue134);
 
-            Cell cell135 = new Cell(){ CellReference = "K4", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell135 = new Cell(){ CellReference = "K4", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue135 = new CellValue();
             cellValue135.Text = "10";
 
@@ -8261,57 +8261,57 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row30.Append(cell134);
             row30.Append(cell135);
 
-            Row row31 = new Row(){ RowIndex = (UInt32Value)5U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row31 = new Row(){ RowIndex = 5U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell136 = new Cell(){ CellReference = "A5", StyleIndex = (UInt32Value)3U };
+            Cell cell136 = new Cell(){ CellReference = "A5", StyleIndex = 3U };
             CellValue cellValue136 = new CellValue();
             cellValue136.Text = "37620.86855653645";
 
             cell136.Append(cellValue136);
 
-            Cell cell137 = new Cell(){ CellReference = "B5", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell137 = new Cell(){ CellReference = "B5", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue137 = new CellValue();
             cellValue137.Text = "11";
 
             cell137.Append(cellValue137);
 
-            Cell cell138 = new Cell(){ CellReference = "C5", StyleIndex = (UInt32Value)1U };
+            Cell cell138 = new Cell(){ CellReference = "C5", StyleIndex = 1U };
             CellValue cellValue138 = new CellValue();
             cellValue138.Text = "29";
 
             cell138.Append(cellValue138);
 
-            Cell cell139 = new Cell(){ CellReference = "D5", StyleIndex = (UInt32Value)1U };
+            Cell cell139 = new Cell(){ CellReference = "D5", StyleIndex = 1U };
             CellValue cellValue139 = new CellValue();
             cellValue139.Text = "2262";
 
             cell139.Append(cellValue139);
 
-            Cell cell140 = new Cell(){ CellReference = "E5", StyleIndex = (UInt32Value)3U };
+            Cell cell140 = new Cell(){ CellReference = "E5", StyleIndex = 3U };
             CellValue cellValue140 = new CellValue();
             cellValue140.Text = "37621.86855653645";
 
             cell140.Append(cellValue140);
 
-            Cell cell141 = new Cell(){ CellReference = "F5", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell141 = new Cell(){ CellReference = "F5", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue141 = new CellValue();
             cellValue141.Text = "12";
 
             cell141.Append(cellValue141);
 
-            Cell cell142 = new Cell(){ CellReference = "H5", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell142 = new Cell(){ CellReference = "H5", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue142 = new CellValue();
             cellValue142.Text = "8";
 
             cell142.Append(cellValue142);
 
-            Cell cell143 = new Cell(){ CellReference = "I5", StyleIndex = (UInt32Value)4U };
+            Cell cell143 = new Cell(){ CellReference = "I5", StyleIndex = 4U };
             CellValue cellValue143 = new CellValue();
             cellValue143.Text = "1230";
 
             cell143.Append(cellValue143);
 
-            Cell cell144 = new Cell(){ CellReference = "K5", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell144 = new Cell(){ CellReference = "K5", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue144 = new CellValue();
             cellValue144.Text = "24";
 
@@ -8327,21 +8327,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row31.Append(cell143);
             row31.Append(cell144);
 
-            Row row32 = new Row(){ RowIndex = (UInt32Value)6U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row32 = new Row(){ RowIndex = 6U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell145 = new Cell(){ CellReference = "H6", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell145 = new Cell(){ CellReference = "H6", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue145 = new CellValue();
             cellValue145.Text = "11";
 
             cell145.Append(cellValue145);
 
-            Cell cell146 = new Cell(){ CellReference = "I6", StyleIndex = (UInt32Value)4U };
+            Cell cell146 = new Cell(){ CellReference = "I6", StyleIndex = 4U };
             CellValue cellValue146 = new CellValue();
             cellValue146.Text = "78";
 
             cell146.Append(cellValue146);
 
-            Cell cell147 = new Cell(){ CellReference = "K6", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell147 = new Cell(){ CellReference = "K6", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue147 = new CellValue();
             cellValue147.Text = "12";
 
@@ -8351,21 +8351,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row32.Append(cell146);
             row32.Append(cell147);
 
-            Row row33 = new Row(){ RowIndex = (UInt32Value)7U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row33 = new Row(){ RowIndex = 7U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell148 = new Cell(){ CellReference = "H7", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell148 = new Cell(){ CellReference = "H7", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue148 = new CellValue();
             cellValue148.Text = "22";
 
             cell148.Append(cellValue148);
 
-            Cell cell149 = new Cell(){ CellReference = "I7", StyleIndex = (UInt32Value)4U };
+            Cell cell149 = new Cell(){ CellReference = "I7", StyleIndex = 4U };
             CellValue cellValue149 = new CellValue();
             cellValue149.Text = "99";
 
             cell149.Append(cellValue149);
 
-            Cell cell150 = new Cell(){ CellReference = "K7", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell150 = new Cell(){ CellReference = "K7", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue150 = new CellValue();
             cellValue150.Text = "21";
 
@@ -8375,21 +8375,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row33.Append(cell149);
             row33.Append(cell150);
 
-            Row row34 = new Row(){ RowIndex = (UInt32Value)8U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row34 = new Row(){ RowIndex = 8U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell151 = new Cell(){ CellReference = "H8", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell151 = new Cell(){ CellReference = "H8", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue151 = new CellValue();
             cellValue151.Text = "23";
 
             cell151.Append(cellValue151);
 
-            Cell cell152 = new Cell(){ CellReference = "I8", StyleIndex = (UInt32Value)4U };
+            Cell cell152 = new Cell(){ CellReference = "I8", StyleIndex = 4U };
             CellValue cellValue152 = new CellValue();
             cellValue152.Text = "427";
 
             cell152.Append(cellValue152);
 
-            Cell cell153 = new Cell(){ CellReference = "K8", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell153 = new Cell(){ CellReference = "K8", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue153 = new CellValue();
             cellValue153.Text = "7";
 
@@ -8399,21 +8399,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row34.Append(cell152);
             row34.Append(cell153);
 
-            Row row35 = new Row(){ RowIndex = (UInt32Value)9U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row35 = new Row(){ RowIndex = 9U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell154 = new Cell(){ CellReference = "H9", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell154 = new Cell(){ CellReference = "H9", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue154 = new CellValue();
             cellValue154.Text = "17";
 
             cell154.Append(cellValue154);
 
-            Cell cell155 = new Cell(){ CellReference = "I9", StyleIndex = (UInt32Value)4U };
+            Cell cell155 = new Cell(){ CellReference = "I9", StyleIndex = 4U };
             CellValue cellValue155 = new CellValue();
             cellValue155.Text = "8127";
 
             cell155.Append(cellValue155);
 
-            Cell cell156 = new Cell(){ CellReference = "K9", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell156 = new Cell(){ CellReference = "K9", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue156 = new CellValue();
             cellValue156.Text = "19";
 
@@ -8423,21 +8423,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row35.Append(cell155);
             row35.Append(cell156);
 
-            Row row36 = new Row(){ RowIndex = (UInt32Value)10U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row36 = new Row(){ RowIndex = 10U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell157 = new Cell(){ CellReference = "H10", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell157 = new Cell(){ CellReference = "H10", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue157 = new CellValue();
             cellValue157.Text = "18";
 
             cell157.Append(cellValue157);
 
-            Cell cell158 = new Cell(){ CellReference = "I10", StyleIndex = (UInt32Value)4U };
+            Cell cell158 = new Cell(){ CellReference = "I10", StyleIndex = 4U };
             CellValue cellValue158 = new CellValue();
             cellValue158.Text = "777";
 
             cell158.Append(cellValue158);
 
-            Cell cell159 = new Cell(){ CellReference = "K10", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell159 = new Cell(){ CellReference = "K10", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue159 = new CellValue();
             cellValue159.Text = "15";
 
@@ -8447,21 +8447,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row36.Append(cell158);
             row36.Append(cell159);
 
-            Row row37 = new Row(){ RowIndex = (UInt32Value)11U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
+            Row row37 = new Row(){ RowIndex = 11U, Spans = new ListValue<StringValue>() { InnerText = "1:11" } };
 
-            Cell cell160 = new Cell(){ CellReference = "H11", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell160 = new Cell(){ CellReference = "H11", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue160 = new CellValue();
             cellValue160.Text = "25";
 
             cell160.Append(cellValue160);
 
-            Cell cell161 = new Cell(){ CellReference = "I11", StyleIndex = (UInt32Value)4U };
+            Cell cell161 = new Cell(){ CellReference = "I11", StyleIndex = 4U };
             CellValue cellValue161 = new CellValue();
             cellValue161.Text = "262";
 
             cell161.Append(cellValue161);
 
-            Cell cell162 = new Cell(){ CellReference = "K11", StyleIndex = (UInt32Value)1U, DataType = CellValues.SharedString };
+            Cell cell162 = new Cell(){ CellReference = "K11", StyleIndex = 1U, DataType = CellValues.SharedString };
             CellValue cellValue162 = new CellValue();
             cellValue162.Text = "13";
 
@@ -8482,10 +8482,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             sheetData5.Append(row35);
             sheetData5.Append(row36);
             sheetData5.Append(row37);
-            PhoneticProperties phoneticProperties11 = new PhoneticProperties(){ FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties11 = new PhoneticProperties(){ FontId = 1U };
             PageMargins pageMargins11 = new PageMargins(){ Left = 0.7D, Right = 0.7D, Top = 0.75D, Bottom = 0.75D, Header = 0.3D, Footer = 0.3D };
 
-            TableParts tableParts2 = new TableParts(){ Count = (UInt32Value)3U };
+            TableParts tableParts2 = new TableParts(){ Count = 3U };
             TablePart tablePart4 = new TablePart(){ Id = "rId1" };
             TablePart tablePart5 = new TablePart(){ Id = "rId2" };
             TablePart tablePart6 = new TablePart(){ Id = "rId3" };
@@ -8509,11 +8509,11 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of tableDefinitionPart4.
         private static void GenerateTableDefinitionPart4Content(TableDefinitionPart tableDefinitionPart4)
         {
-            Table table4 = new Table(){ Id = (UInt32Value)3U, Name = "SalesTable1", DisplayName = "SalesTable1", Reference = "K1:K11", TotalsRowShown = false, HeaderRowFormatId = (UInt32Value)9U };
+            Table table4 = new Table(){ Id = 3U, Name = "SalesTable1", DisplayName = "SalesTable1", Reference = "K1:K11", TotalsRowShown = false, HeaderRowFormatId = 9U };
             AutoFilter autoFilter4 = new AutoFilter(){ Reference = "K1:K11" };
 
-            TableColumns tableColumns4 = new TableColumns(){ Count = (UInt32Value)1U };
-            TableColumn tableColumn10 = new TableColumn(){ Id = (UInt32Value)1U, Name = "Employee" };
+            TableColumns tableColumns4 = new TableColumns(){ Count = 1U };
+            TableColumn tableColumn10 = new TableColumn(){ Id = 1U, Name = "Employee" };
 
             tableColumns4.Append(tableColumn10);
             TableStyleInfo tableStyleInfo4 = new TableStyleInfo(){ Name = "TableStyleMedium2", ShowFirstColumn = false, ShowLastColumn = false, ShowRowStripes = true, ShowColumnStripes = false };
@@ -8528,12 +8528,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of tableDefinitionPart5.
         private static void GenerateTableDefinitionPart5Content(TableDefinitionPart tableDefinitionPart5)
         {
-            Table table5 = new Table(){ Id = (UInt32Value)2U, Name = "ProductTable1", DisplayName = "ProductTable1", Reference = "H1:I11", TotalsRowShown = false, HeaderRowFormatId = (UInt32Value)11U };
+            Table table5 = new Table(){ Id = 2U, Name = "ProductTable1", DisplayName = "ProductTable1", Reference = "H1:I11", TotalsRowShown = false, HeaderRowFormatId = 11U };
             AutoFilter autoFilter5 = new AutoFilter(){ Reference = "H1:I11" };
 
-            TableColumns tableColumns5 = new TableColumns(){ Count = (UInt32Value)2U };
-            TableColumn tableColumn11 = new TableColumn(){ Id = (UInt32Value)1U, Name = "ProductName" };
-            TableColumn tableColumn12 = new TableColumn(){ Id = (UInt32Value)2U, Name = "Price", DataFormatId = (UInt32Value)10U };
+            TableColumns tableColumns5 = new TableColumns(){ Count = 2U };
+            TableColumn tableColumn11 = new TableColumn(){ Id = 1U, Name = "ProductName" };
+            TableColumn tableColumn12 = new TableColumn(){ Id = 2U, Name = "Price", DataFormatId = 10U };
 
             tableColumns5.Append(tableColumn11);
             tableColumns5.Append(tableColumn12);
@@ -8549,7 +8549,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of tableDefinitionPart6.
         private static void GenerateTableDefinitionPart6Content(TableDefinitionPart tableDefinitionPart6)
         {
-            Table table6 = new Table(){ Id = (UInt32Value)1U, Name = "DataTable1", DisplayName = "DataTable1", Reference = "A1:F5", TotalsRowShown = false };
+            Table table6 = new Table(){ Id = 1U, Name = "DataTable1", DisplayName = "DataTable1", Reference = "A1:F5", TotalsRowShown = false };
             AutoFilter autoFilter6 = new AutoFilter(){ Reference = "A1:F5" };
 
             SortState sortState2 = new SortState(){ Reference = "A2:F2001" };
@@ -8557,13 +8557,13 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             sortState2.Append(sortCondition2);
 
-            TableColumns tableColumns6 = new TableColumns(){ Count = (UInt32Value)6U };
-            TableColumn tableColumn13 = new TableColumn(){ Id = (UInt32Value)1U, Name = "Date", DataFormatId = (UInt32Value)13U };
-            TableColumn tableColumn14 = new TableColumn(){ Id = (UInt32Value)2U, Name = "Product" };
-            TableColumn tableColumn15 = new TableColumn(){ Id = (UInt32Value)3U, Name = "Quantity" };
-            TableColumn tableColumn16 = new TableColumn(){ Id = (UInt32Value)4U, Name = "Price" };
-            TableColumn tableColumn17 = new TableColumn(){ Id = (UInt32Value)5U, Name = "DeliveryDate", DataFormatId = (UInt32Value)12U };
-            TableColumn tableColumn18 = new TableColumn(){ Id = (UInt32Value)6U, Name = "Employee" };
+            TableColumns tableColumns6 = new TableColumns(){ Count = 6U };
+            TableColumn tableColumn13 = new TableColumn(){ Id = 1U, Name = "Date", DataFormatId = 13U };
+            TableColumn tableColumn14 = new TableColumn(){ Id = 2U, Name = "Product" };
+            TableColumn tableColumn15 = new TableColumn(){ Id = 3U, Name = "Quantity" };
+            TableColumn tableColumn16 = new TableColumn(){ Id = 4U, Name = "Price" };
+            TableColumn tableColumn17 = new TableColumn(){ Id = 5U, Name = "DeliveryDate", DataFormatId = 12U };
+            TableColumn tableColumn18 = new TableColumn(){ Id = 6U, Name = "Employee" };
 
             tableColumns6.Append(tableColumn13);
             tableColumns6.Append(tableColumn14);
@@ -8591,19 +8591,19 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             SheetDimension sheetDimension6 = new SheetDimension(){ Reference = "A1:B5" };
 
             SheetViews sheetViews6 = new SheetViews();
-            SheetView sheetView6 = new SheetView(){ WorkbookViewId = (UInt32Value)0U };
+            SheetView sheetView6 = new SheetView(){ WorkbookViewId = 0U };
 
             sheetViews6.Append(sheetView6);
             SheetFormatProperties sheetFormatProperties6 = new SheetFormatProperties(){ DefaultRowHeight = 15D };
 
             Columns columns6 = new Columns();
-            Column column34 = new Column(){ Min = (UInt32Value)1U, Max = (UInt32Value)1U, Width = 14.140625D, BestFit = true, CustomWidth = true };
-            Column column35 = new Column(){ Min = (UInt32Value)2U, Max = (UInt32Value)2U, Width = 17.42578125D, CustomWidth = true };
-            Column column36 = new Column(){ Min = (UInt32Value)3U, Max = (UInt32Value)3U, Width = 12.42578125D, CustomWidth = true };
-            Column column37 = new Column(){ Min = (UInt32Value)4U, Max = (UInt32Value)11U, Width = 13D, BestFit = true, CustomWidth = true };
-            Column column38 = new Column(){ Min = (UInt32Value)12U, Max = (UInt32Value)12U, Width = 13D, CustomWidth = true };
-            Column column39 = new Column(){ Min = (UInt32Value)13U, Max = (UInt32Value)20U, Width = 13D, BestFit = true, CustomWidth = true };
-            Column column40 = new Column(){ Min = (UInt32Value)21U, Max = (UInt32Value)23U, Width = 20.42578125D, BestFit = true, CustomWidth = true };
+            Column column34 = new Column(){ Min = 1U, Max = 1U, Width = 14.140625D, BestFit = true, CustomWidth = true };
+            Column column35 = new Column(){ Min = 2U, Max = 2U, Width = 17.42578125D, CustomWidth = true };
+            Column column36 = new Column(){ Min = 3U, Max = 3U, Width = 12.42578125D, CustomWidth = true };
+            Column column37 = new Column(){ Min = 4U, Max = 11U, Width = 13D, BestFit = true, CustomWidth = true };
+            Column column38 = new Column(){ Min = 12U, Max = 12U, Width = 13D, CustomWidth = true };
+            Column column39 = new Column(){ Min = 13U, Max = 20U, Width = 13D, BestFit = true, CustomWidth = true };
+            Column column40 = new Column(){ Min = 21U, Max = 23U, Width = 20.42578125D, BestFit = true, CustomWidth = true };
 
             columns6.Append(column34);
             columns6.Append(column35);
@@ -8615,9 +8615,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             SheetData sheetData6 = new SheetData();
 
-            Row row38 = new Row(){ RowIndex = (UInt32Value)1U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row38 = new Row(){ RowIndex = 1U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell163 = new Cell(){ CellReference = "A1", StyleIndex = (UInt32Value)5U, DataType = CellValues.SharedString };
+            Cell cell163 = new Cell(){ CellReference = "A1", StyleIndex = 5U, DataType = CellValues.SharedString };
             CellValue cellValue163 = new CellValue();
             cellValue163.Text = "29";
 
@@ -8632,15 +8632,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row38.Append(cell163);
             row38.Append(cell164);
 
-            Row row39 = new Row(){ RowIndex = (UInt32Value)2U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row39 = new Row(){ RowIndex = 2U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell165 = new Cell(){ CellReference = "A2", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell165 = new Cell(){ CellReference = "A2", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue165 = new CellValue();
             cellValue165.Text = "6";
 
             cell165.Append(cellValue165);
 
-            Cell cell166 = new Cell(){ CellReference = "B2", StyleIndex = (UInt32Value)7U };
+            Cell cell166 = new Cell(){ CellReference = "B2", StyleIndex = 7U };
             CellValue cellValue166 = new CellValue();
             cellValue166.Text = "19";
 
@@ -8649,15 +8649,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row39.Append(cell165);
             row39.Append(cell166);
 
-            Row row40 = new Row(){ RowIndex = (UInt32Value)3U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row40 = new Row(){ RowIndex = 3U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell167 = new Cell(){ CellReference = "A3", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell167 = new Cell(){ CellReference = "A3", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue167 = new CellValue();
             cellValue167.Text = "8";
 
             cell167.Append(cellValue167);
 
-            Cell cell168 = new Cell(){ CellReference = "B3", StyleIndex = (UInt32Value)7U };
+            Cell cell168 = new Cell(){ CellReference = "B3", StyleIndex = 7U };
             CellValue cellValue168 = new CellValue();
             cellValue168.Text = "13";
 
@@ -8666,15 +8666,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row40.Append(cell167);
             row40.Append(cell168);
 
-            Row row41 = new Row(){ RowIndex = (UInt32Value)4U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row41 = new Row(){ RowIndex = 4U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell169 = new Cell(){ CellReference = "A4", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell169 = new Cell(){ CellReference = "A4", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue169 = new CellValue();
             cellValue169.Text = "11";
 
             cell169.Append(cellValue169);
 
-            Cell cell170 = new Cell(){ CellReference = "B4", StyleIndex = (UInt32Value)7U };
+            Cell cell170 = new Cell(){ CellReference = "B4", StyleIndex = 7U };
             CellValue cellValue170 = new CellValue();
             cellValue170.Text = "33";
 
@@ -8683,15 +8683,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row41.Append(cell169);
             row41.Append(cell170);
 
-            Row row42 = new Row(){ RowIndex = (UInt32Value)5U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row42 = new Row(){ RowIndex = 5U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell171 = new Cell(){ CellReference = "A5", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell171 = new Cell(){ CellReference = "A5", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue171 = new CellValue();
             cellValue171.Text = "30";
 
             cell171.Append(cellValue171);
 
-            Cell cell172 = new Cell(){ CellReference = "B5", StyleIndex = (UInt32Value)7U };
+            Cell cell172 = new Cell(){ CellReference = "B5", StyleIndex = 7U };
             CellValue cellValue172 = new CellValue();
             cellValue172.Text = "65";
 
@@ -8705,7 +8705,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             sheetData6.Append(row40);
             sheetData6.Append(row41);
             sheetData6.Append(row42);
-            PhoneticProperties phoneticProperties12 = new PhoneticProperties(){ FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties12 = new PhoneticProperties(){ FontId = 1U };
             PageMargins pageMargins12 = new PageMargins(){ Left = 0.7D, Right = 0.7D, Top = 0.75D, Bottom = 0.75D, Header = 0.3D, Footer = 0.3D };
             S.Drawing drawing4 = new S.Drawing(){ Id = "rId2" };
 
@@ -8742,8 +8742,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             X15.Timelines timelines4 = new X15.Timelines(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x" }  };
             timelines4.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             timelines4.AddNamespaceDeclaration("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main");
-            X15.Timeline timeline7 = new X15.Timeline(){ Name = "DeliveryDate 6", Cache = "NativeTimeline_DeliveryDate2", Caption = "ShowHeader1", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
-            X15.Timeline timeline8 = new X15.Timeline(){ Name = "DeliveryDate 7", Cache = "NativeTimeline_DeliveryDate2", Caption = "ShowHeader2", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline7 = new X15.Timeline(){ Name = "DeliveryDate 6", Cache = "NativeTimeline_DeliveryDate2", Caption = "ShowHeader1", Level = 2U, SelectionLevel = 2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline8 = new X15.Timeline(){ Name = "DeliveryDate 7", Cache = "NativeTimeline_DeliveryDate2", Caption = "ShowHeader2", Level = 2U, SelectionLevel = 2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
             timelines4.Append(timeline7);
             timelines4.Append(timeline8);
@@ -8790,10 +8790,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker13.Append(rowId26);
             toMarker13.Append(rowOffset26);
 
-            Xdr.GraphicFrame graphicFrame13 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame13 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties13 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties19 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)2U, Name = "Chart 1" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties19 = new Xdr.NonVisualDrawingProperties(){ Id = 2U, Name = "Chart 1" };
 
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties13 = new Xdr.NonVisualGraphicFrameDrawingProperties();
             A.GraphicFrameLocks graphicFrameLocks5 = new A.GraphicFrameLocks();
@@ -8864,10 +8864,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker14.Append(rowId28);
             toMarker14.Append(rowOffset28);
 
-            Xdr.GraphicFrame graphicFrame14 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame14 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties14 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties20 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)3U, Name = "グラフ 2" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties20 = new Xdr.NonVisualDrawingProperties(){ Id = 3U, Name = "グラフ 2" };
 
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties14 = new Xdr.NonVisualGraphicFrameDrawingProperties();
             A.GraphicFrameLocks graphicFrameLocks6 = new A.GraphicFrameLocks();
@@ -8944,10 +8944,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice14 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame15 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame15 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties15 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties21 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)4U, Name = "DeliveryDate 6" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties21 = new Xdr.NonVisualDrawingProperties(){ Id = 4U, Name = "DeliveryDate 6" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties15 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties15.Append(nonVisualDrawingProperties21);
@@ -8981,10 +8981,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback13.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback13.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape7 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape7 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties7 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties22 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties22 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties7 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks7 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -9100,10 +9100,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice15 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame16 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame16 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties16 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties23 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)5U, Name = "DeliveryDate 7" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties23 = new Xdr.NonVisualDrawingProperties(){ Id = 5U, Name = "DeliveryDate 7" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties16 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties16.Append(nonVisualDrawingProperties23);
@@ -9137,10 +9137,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback14.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback14.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape8 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape8 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties8 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties24 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties24 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties8 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks8 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -9257,7 +9257,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotSource pivotSource7 = new C.PivotSource();
             C.PivotTableName pivotTableName7 = new C.PivotTableName();
             pivotTableName7.Text = "[GeneratedDocument.xlsx]ShowHeader!PivotTable1";
-            C.FormatId formatId7 = new C.FormatId(){ Val = (UInt32Value)10U };
+            C.FormatId formatId7 = new C.FormatId(){ Val = 10U };
 
             pivotSource7.Append(pivotTableName7);
             pivotSource7.Append(formatId7);
@@ -9273,7 +9273,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotFormats pivotFormats7 = new C.PivotFormats();
 
             C.PivotFormat pivotFormat47 = new C.PivotFormat();
-            C.Index index53 = new C.Index(){ Val = (UInt32Value)0U };
+            C.Index index53 = new C.Index(){ Val = 0U };
 
             C.Marker marker47 = new C.Marker();
             C.Symbol symbol47 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -9284,7 +9284,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat47.Append(marker47);
 
             C.PivotFormat pivotFormat48 = new C.PivotFormat();
-            C.Index index54 = new C.Index(){ Val = (UInt32Value)1U };
+            C.Index index54 = new C.Index(){ Val = 1U };
 
             C.Marker marker48 = new C.Marker();
             C.Symbol symbol48 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -9295,7 +9295,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat48.Append(marker48);
 
             C.PivotFormat pivotFormat49 = new C.PivotFormat();
-            C.Index index55 = new C.Index(){ Val = (UInt32Value)2U };
+            C.Index index55 = new C.Index(){ Val = 2U };
 
             C.Marker marker49 = new C.Marker();
             C.Symbol symbol49 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -9316,8 +9316,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.VaryColors varyColors7 = new C.VaryColors(){ Val = true };
 
             C.PieChartSeries pieChartSeries4 = new C.PieChartSeries();
-            C.Index index56 = new C.Index(){ Val = (UInt32Value)0U };
-            C.Order order7 = new C.Order(){ Val = (UInt32Value)0U };
+            C.Index index56 = new C.Index(){ Val = 0U };
+            C.Order order7 = new C.Order(){ Val = 0U };
 
             C.SeriesText seriesText7 = new C.SeriesText();
 
@@ -9326,9 +9326,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula19.Text = "ShowHeader!$B$1";
 
             C.StringCache stringCache13 = new C.StringCache();
-            C.PointCount pointCount19 = new C.PointCount(){ Val = (UInt32Value)1U };
+            C.PointCount pointCount19 = new C.PointCount(){ Val = 1U };
 
-            C.StringPoint stringPoint25 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint25 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue43 = new C.NumericValue();
             numericValue43.Text = "Total";
 
@@ -9349,21 +9349,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula20.Text = "ShowHeader!$A$2:$A$5";
 
             C.StringCache stringCache14 = new C.StringCache();
-            C.PointCount pointCount20 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount20 = new C.PointCount(){ Val = 3U };
 
-            C.StringPoint stringPoint26 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint26 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue44 = new C.NumericValue();
             numericValue44.Text = "product_A";
 
             stringPoint26.Append(numericValue44);
 
-            C.StringPoint stringPoint27 = new C.StringPoint(){ Index = (UInt32Value)1U };
+            C.StringPoint stringPoint27 = new C.StringPoint(){ Index = 1U };
             C.NumericValue numericValue45 = new C.NumericValue();
             numericValue45.Text = "product_D";
 
             stringPoint27.Append(numericValue45);
 
-            C.StringPoint stringPoint28 = new C.StringPoint(){ Index = (UInt32Value)2U };
+            C.StringPoint stringPoint28 = new C.StringPoint(){ Index = 2U };
             C.NumericValue numericValue46 = new C.NumericValue();
             numericValue46.Text = "product_E";
 
@@ -9388,21 +9388,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.NumberingCache numberingCache7 = new C.NumberingCache();
             C.FormatCode formatCode7 = new C.FormatCode();
             formatCode7.Text = "General";
-            C.PointCount pointCount21 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount21 = new C.PointCount(){ Val = 3U };
 
-            C.NumericPoint numericPoint19 = new C.NumericPoint(){ Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint19 = new C.NumericPoint(){ Index = 0U };
             C.NumericValue numericValue47 = new C.NumericValue();
             numericValue47.Text = "19";
 
             numericPoint19.Append(numericValue47);
 
-            C.NumericPoint numericPoint20 = new C.NumericPoint(){ Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint20 = new C.NumericPoint(){ Index = 1U };
             C.NumericValue numericValue48 = new C.NumericValue();
             numericValue48.Text = "13";
 
             numericPoint20.Append(numericValue48);
 
-            C.NumericPoint numericPoint21 = new C.NumericPoint(){ Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint21 = new C.NumericPoint(){ Index = 2U };
             C.NumericValue numericValue49 = new C.NumericValue();
             numericValue49.Text = "33";
 
@@ -9546,7 +9546,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotSource pivotSource8 = new C.PivotSource();
             C.PivotTableName pivotTableName8 = new C.PivotTableName();
             pivotTableName8.Text = "[GeneratedDocument.xlsx]ShowHeader!PivotTable1";
-            C.FormatId formatId8 = new C.FormatId(){ Val = (UInt32Value)9U };
+            C.FormatId formatId8 = new C.FormatId(){ Val = 9U };
 
             pivotSource8.Append(pivotTableName8);
             pivotSource8.Append(formatId8);
@@ -9562,7 +9562,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotFormats pivotFormats8 = new C.PivotFormats();
 
             C.PivotFormat pivotFormat50 = new C.PivotFormat();
-            C.Index index57 = new C.Index(){ Val = (UInt32Value)0U };
+            C.Index index57 = new C.Index(){ Val = 0U };
 
             C.ShapeProperties shapeProperties24 = new C.ShapeProperties();
 
@@ -9595,7 +9595,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat50.Append(marker50);
 
             C.PivotFormat pivotFormat51 = new C.PivotFormat();
-            C.Index index58 = new C.Index(){ Val = (UInt32Value)1U };
+            C.Index index58 = new C.Index(){ Val = 1U };
 
             C.ShapeProperties shapeProperties25 = new C.ShapeProperties();
 
@@ -9628,7 +9628,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat51.Append(marker51);
 
             C.PivotFormat pivotFormat52 = new C.PivotFormat();
-            C.Index index59 = new C.Index(){ Val = (UInt32Value)2U };
+            C.Index index59 = new C.Index(){ Val = 2U };
 
             C.Marker marker52 = new C.Marker();
             C.Symbol symbol52 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -9639,7 +9639,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat52.Append(marker52);
 
             C.PivotFormat pivotFormat53 = new C.PivotFormat();
-            C.Index index60 = new C.Index(){ Val = (UInt32Value)3U };
+            C.Index index60 = new C.Index(){ Val = 3U };
 
             C.Marker marker53 = new C.Marker();
             C.Symbol symbol53 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -9650,7 +9650,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat53.Append(marker53);
 
             C.PivotFormat pivotFormat54 = new C.PivotFormat();
-            C.Index index61 = new C.Index(){ Val = (UInt32Value)4U };
+            C.Index index61 = new C.Index(){ Val = 4U };
 
             C.Marker marker54 = new C.Marker();
             C.Symbol symbol54 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -9661,7 +9661,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat54.Append(marker54);
 
             C.PivotFormat pivotFormat55 = new C.PivotFormat();
-            C.Index index62 = new C.Index(){ Val = (UInt32Value)5U };
+            C.Index index62 = new C.Index(){ Val = 5U };
 
             C.Marker marker55 = new C.Marker();
             C.Symbol symbol55 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -9672,7 +9672,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat55.Append(marker55);
 
             C.PivotFormat pivotFormat56 = new C.PivotFormat();
-            C.Index index63 = new C.Index(){ Val = (UInt32Value)6U };
+            C.Index index63 = new C.Index(){ Val = 6U };
 
             C.Marker marker56 = new C.Marker();
             C.Symbol symbol56 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -9683,7 +9683,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat56.Append(marker56);
 
             C.PivotFormat pivotFormat57 = new C.PivotFormat();
-            C.Index index64 = new C.Index(){ Val = (UInt32Value)7U };
+            C.Index index64 = new C.Index(){ Val = 7U };
 
             C.Marker marker57 = new C.Marker();
             C.Symbol symbol57 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -9694,7 +9694,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat57.Append(marker57);
 
             C.PivotFormat pivotFormat58 = new C.PivotFormat();
-            C.Index index65 = new C.Index(){ Val = (UInt32Value)8U };
+            C.Index index65 = new C.Index(){ Val = 8U };
 
             C.Marker marker58 = new C.Marker();
             C.Symbol symbol58 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -9705,7 +9705,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat58.Append(marker58);
 
             C.PivotFormat pivotFormat59 = new C.PivotFormat();
-            C.Index index66 = new C.Index(){ Val = (UInt32Value)9U };
+            C.Index index66 = new C.Index(){ Val = 9U };
 
             C.Marker marker59 = new C.Marker();
             C.Symbol symbol59 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -9716,7 +9716,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat59.Append(marker59);
 
             C.PivotFormat pivotFormat60 = new C.PivotFormat();
-            C.Index index67 = new C.Index(){ Val = (UInt32Value)10U };
+            C.Index index67 = new C.Index(){ Val = 10U };
 
             C.Marker marker60 = new C.Marker();
             C.Symbol symbol60 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -9727,7 +9727,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat60.Append(marker60);
 
             C.PivotFormat pivotFormat61 = new C.PivotFormat();
-            C.Index index68 = new C.Index(){ Val = (UInt32Value)11U };
+            C.Index index68 = new C.Index(){ Val = 11U };
 
             C.Marker marker61 = new C.Marker();
             C.Symbol symbol61 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -9738,7 +9738,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat61.Append(marker61);
 
             C.PivotFormat pivotFormat62 = new C.PivotFormat();
-            C.Index index69 = new C.Index(){ Val = (UInt32Value)12U };
+            C.Index index69 = new C.Index(){ Val = 12U };
 
             C.Marker marker62 = new C.Marker();
             C.Symbol symbol62 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -9749,7 +9749,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat62.Append(marker62);
 
             C.PivotFormat pivotFormat63 = new C.PivotFormat();
-            C.Index index70 = new C.Index(){ Val = (UInt32Value)13U };
+            C.Index index70 = new C.Index(){ Val = 13U };
 
             C.Marker marker63 = new C.Marker();
             C.Symbol symbol63 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -9760,7 +9760,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat63.Append(marker63);
 
             C.PivotFormat pivotFormat64 = new C.PivotFormat();
-            C.Index index71 = new C.Index(){ Val = (UInt32Value)14U };
+            C.Index index71 = new C.Index(){ Val = 14U };
 
             C.ShapeProperties shapeProperties26 = new C.ShapeProperties();
 
@@ -9793,7 +9793,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat64.Append(marker64);
 
             C.PivotFormat pivotFormat65 = new C.PivotFormat();
-            C.Index index72 = new C.Index(){ Val = (UInt32Value)15U };
+            C.Index index72 = new C.Index(){ Val = 15U };
 
             C.ShapeProperties shapeProperties27 = new C.ShapeProperties();
 
@@ -9851,8 +9851,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.VaryColors varyColors8 = new C.VaryColors(){ Val = false };
 
             C.BarChartSeries barChartSeries4 = new C.BarChartSeries();
-            C.Index index73 = new C.Index(){ Val = (UInt32Value)0U };
-            C.Order order8 = new C.Order(){ Val = (UInt32Value)0U };
+            C.Index index73 = new C.Index(){ Val = 0U };
+            C.Order order8 = new C.Order(){ Val = 0U };
 
             C.SeriesText seriesText8 = new C.SeriesText();
 
@@ -9861,9 +9861,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula22.Text = "ShowHeader!$B$1";
 
             C.StringCache stringCache15 = new C.StringCache();
-            C.PointCount pointCount22 = new C.PointCount(){ Val = (UInt32Value)1U };
+            C.PointCount pointCount22 = new C.PointCount(){ Val = 1U };
 
-            C.StringPoint stringPoint29 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint29 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue50 = new C.NumericValue();
             numericValue50.Text = "Total";
 
@@ -9906,21 +9906,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula23.Text = "ShowHeader!$A$2:$A$5";
 
             C.StringCache stringCache16 = new C.StringCache();
-            C.PointCount pointCount23 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount23 = new C.PointCount(){ Val = 3U };
 
-            C.StringPoint stringPoint30 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint30 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue51 = new C.NumericValue();
             numericValue51.Text = "product_A";
 
             stringPoint30.Append(numericValue51);
 
-            C.StringPoint stringPoint31 = new C.StringPoint(){ Index = (UInt32Value)1U };
+            C.StringPoint stringPoint31 = new C.StringPoint(){ Index = 1U };
             C.NumericValue numericValue52 = new C.NumericValue();
             numericValue52.Text = "product_D";
 
             stringPoint31.Append(numericValue52);
 
-            C.StringPoint stringPoint32 = new C.StringPoint(){ Index = (UInt32Value)2U };
+            C.StringPoint stringPoint32 = new C.StringPoint(){ Index = 2U };
             C.NumericValue numericValue53 = new C.NumericValue();
             numericValue53.Text = "product_E";
 
@@ -9945,21 +9945,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.NumberingCache numberingCache8 = new C.NumberingCache();
             C.FormatCode formatCode8 = new C.FormatCode();
             formatCode8.Text = "General";
-            C.PointCount pointCount24 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount24 = new C.PointCount(){ Val = 3U };
 
-            C.NumericPoint numericPoint22 = new C.NumericPoint(){ Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint22 = new C.NumericPoint(){ Index = 0U };
             C.NumericValue numericValue54 = new C.NumericValue();
             numericValue54.Text = "19";
 
             numericPoint22.Append(numericValue54);
 
-            C.NumericPoint numericPoint23 = new C.NumericPoint(){ Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint23 = new C.NumericPoint(){ Index = 1U };
             C.NumericValue numericValue55 = new C.NumericValue();
             numericValue55.Text = "13";
 
             numericPoint23.Append(numericValue55);
 
-            C.NumericPoint numericPoint24 = new C.NumericPoint(){ Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint24 = new C.NumericPoint(){ Index = 2U };
             C.NumericValue numericValue56 = new C.NumericValue();
             numericValue56.Text = "33";
 
@@ -10000,8 +10000,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             dataLabels8.Append(showBubbleSize8);
             C.GapWidth gapWidth4 = new C.GapWidth(){ Val = (UInt16Value)219U };
             C.Overlap overlap3 = new C.Overlap(){ Val = -27 };
-            C.AxisId axisId13 = new C.AxisId(){ Val = (UInt32Value)209618640U };
-            C.AxisId axisId14 = new C.AxisId(){ Val = (UInt32Value)209382248U };
+            C.AxisId axisId13 = new C.AxisId(){ Val = 209618640U };
+            C.AxisId axisId14 = new C.AxisId(){ Val = 209382248U };
 
             barChart4.Append(barDirection4);
             barChart4.Append(barGrouping4);
@@ -10014,7 +10014,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             barChart4.Append(axisId14);
 
             C.CategoryAxis categoryAxis4 = new C.CategoryAxis();
-            C.AxisId axisId15 = new C.AxisId(){ Val = (UInt32Value)209618640U };
+            C.AxisId axisId15 = new C.AxisId(){ Val = 209618640U };
 
             C.Scaling scaling7 = new C.Scaling();
             C.Orientation orientation7 = new C.Orientation(){ Val = C.OrientationValues.MinMax };
@@ -10078,7 +10078,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             textProperties9.Append(bodyProperties17);
             textProperties9.Append(listStyle17);
             textProperties9.Append(paragraph17);
-            C.CrossingAxis crossingAxis7 = new C.CrossingAxis(){ Val = (UInt32Value)209382248U };
+            C.CrossingAxis crossingAxis7 = new C.CrossingAxis(){ Val = 209382248U };
             C.Crosses crosses7 = new C.Crosses(){ Val = C.CrossesValues.AutoZero };
             C.AutoLabeled autoLabeled4 = new C.AutoLabeled(){ Val = true };
             C.LabelAlignment labelAlignment4 = new C.LabelAlignment(){ Val = C.LabelAlignmentValues.Center };
@@ -10103,7 +10103,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             categoryAxis4.Append(noMultiLevelLabels4);
 
             C.ValueAxis valueAxis4 = new C.ValueAxis();
-            C.AxisId axisId16 = new C.AxisId(){ Val = (UInt32Value)209382248U };
+            C.AxisId axisId16 = new C.AxisId(){ Val = 209382248U };
 
             C.Scaling scaling8 = new C.Scaling();
             C.Orientation orientation8 = new C.Orientation(){ Val = C.OrientationValues.MinMax };
@@ -10194,7 +10194,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             textProperties10.Append(bodyProperties18);
             textProperties10.Append(listStyle18);
             textProperties10.Append(paragraph18);
-            C.CrossingAxis crossingAxis8 = new C.CrossingAxis(){ Val = (UInt32Value)209618640U };
+            C.CrossingAxis crossingAxis8 = new C.CrossingAxis(){ Val = 209618640U };
             C.Crosses crosses8 = new C.Crosses(){ Val = C.CrossesValues.AutoZero };
             C.CrossBetween crossBetween4 = new C.CrossBetween(){ Val = C.CrossBetweenValues.Between };
 
@@ -10407,28 +10407,28 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of pivotTablePart4.
         private static void GeneratePivotTablePart4Content(PivotTablePart pivotTablePart4)
         {
-            PivotTableDefinition pivotTableDefinition7 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = (UInt32Value)11U };
-            Location location4 = new Location(){ Reference = "A1:B5", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)1U };
+            PivotTableDefinition pivotTableDefinition7 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = 1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = 0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = 11U };
+            Location location4 = new Location(){ Reference = "A1:B5", FirstHeaderRow = 1U, FirstDataRow = 1U, FirstDataColumn = 1U };
 
-            PivotFields pivotFields4 = new PivotFields(){ Count = (UInt32Value)7U };
+            PivotFields pivotFields4 = new PivotFields(){ Count = 7U };
 
-            PivotField pivotField21 = new PivotField(){ NumberFormatId = (UInt32Value)14U, ShowAll = false };
+            PivotField pivotField21 = new PivotField(){ NumberFormatId = 14U, ShowAll = false };
 
-            Items items11 = new Items(){ Count = (UInt32Value)15U };
-            Item item90 = new Item(){ Index = (UInt32Value)0U };
-            Item item91 = new Item(){ Index = (UInt32Value)1U };
-            Item item92 = new Item(){ Index = (UInt32Value)2U };
-            Item item93 = new Item(){ Index = (UInt32Value)3U };
-            Item item94 = new Item(){ Index = (UInt32Value)4U };
-            Item item95 = new Item(){ Index = (UInt32Value)5U };
-            Item item96 = new Item(){ Index = (UInt32Value)6U };
-            Item item97 = new Item(){ Index = (UInt32Value)7U };
-            Item item98 = new Item(){ Index = (UInt32Value)8U };
-            Item item99 = new Item(){ Index = (UInt32Value)9U };
-            Item item100 = new Item(){ Index = (UInt32Value)10U };
-            Item item101 = new Item(){ Index = (UInt32Value)11U };
-            Item item102 = new Item(){ Index = (UInt32Value)12U };
-            Item item103 = new Item(){ Index = (UInt32Value)13U };
+            Items items11 = new Items(){ Count = 15U };
+            Item item90 = new Item(){ Index = 0U };
+            Item item91 = new Item(){ Index = 1U };
+            Item item92 = new Item(){ Index = 2U };
+            Item item93 = new Item(){ Index = 3U };
+            Item item94 = new Item(){ Index = 4U };
+            Item item95 = new Item(){ Index = 5U };
+            Item item96 = new Item(){ Index = 6U };
+            Item item97 = new Item(){ Index = 7U };
+            Item item98 = new Item(){ Index = 8U };
+            Item item99 = new Item(){ Index = 9U };
+            Item item100 = new Item(){ Index = 10U };
+            Item item101 = new Item(){ Index = 11U };
+            Item item102 = new Item(){ Index = 12U };
+            Item item103 = new Item(){ Index = 13U };
             Item item104 = new Item(){ ItemType = ItemValues.Default };
 
             items11.Append(item90);
@@ -10451,17 +10451,17 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotField pivotField22 = new PivotField(){ Axis = PivotTableAxisValues.AxisRow, ShowAll = false };
 
-            Items items12 = new Items(){ Count = (UInt32Value)11U };
-            Item item105 = new Item(){ Index = (UInt32Value)0U };
-            Item item106 = new Item(){ Missing = true, Index = (UInt32Value)4U };
-            Item item107 = new Item(){ Missing = true, Index = (UInt32Value)3U };
-            Item item108 = new Item(){ Index = (UInt32Value)1U };
-            Item item109 = new Item(){ Index = (UInt32Value)2U };
-            Item item110 = new Item(){ Missing = true, Index = (UInt32Value)9U };
-            Item item111 = new Item(){ Missing = true, Index = (UInt32Value)8U };
-            Item item112 = new Item(){ Missing = true, Index = (UInt32Value)7U };
-            Item item113 = new Item(){ Missing = true, Index = (UInt32Value)6U };
-            Item item114 = new Item(){ Missing = true, Index = (UInt32Value)5U };
+            Items items12 = new Items(){ Count = 11U };
+            Item item105 = new Item(){ Index = 0U };
+            Item item106 = new Item(){ Missing = true, Index = 4U };
+            Item item107 = new Item(){ Missing = true, Index = 3U };
+            Item item108 = new Item(){ Index = 1U };
+            Item item109 = new Item(){ Index = 2U };
+            Item item110 = new Item(){ Missing = true, Index = 9U };
+            Item item111 = new Item(){ Missing = true, Index = 8U };
+            Item item112 = new Item(){ Missing = true, Index = 7U };
+            Item item113 = new Item(){ Missing = true, Index = 6U };
+            Item item114 = new Item(){ Missing = true, Index = 5U };
             Item item115 = new Item(){ ItemType = ItemValues.Default };
 
             items12.Append(item105);
@@ -10480,13 +10480,13 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             PivotField pivotField23 = new PivotField(){ DataField = true, ShowAll = false };
             PivotField pivotField24 = new PivotField(){ ShowAll = false };
 
-            PivotField pivotField25 = new PivotField(){ NumberFormatId = (UInt32Value)14U, ShowAll = false };
+            PivotField pivotField25 = new PivotField(){ NumberFormatId = 14U, ShowAll = false };
 
-            Items items13 = new Items(){ Count = (UInt32Value)5U };
-            Item item116 = new Item(){ Index = (UInt32Value)0U };
-            Item item117 = new Item(){ Index = (UInt32Value)1U };
-            Item item118 = new Item(){ Index = (UInt32Value)3U };
-            Item item119 = new Item(){ Index = (UInt32Value)2U };
+            Items items13 = new Items(){ Count = 5U };
+            Item item116 = new Item(){ Index = 0U };
+            Item item117 = new Item(){ Index = 1U };
+            Item item118 = new Item(){ Index = 3U };
+            Item item119 = new Item(){ Index = 2U };
             Item item120 = new Item(){ ItemType = ItemValues.Default };
 
             items13.Append(item116);
@@ -10500,12 +10500,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotField pivotField27 = new PivotField(){ ShowAll = false, DefaultSubtotal = false };
 
-            Items items14 = new Items(){ Count = (UInt32Value)5U };
-            Item item121 = new Item(){ Index = (UInt32Value)0U };
-            Item item122 = new Item(){ Index = (UInt32Value)1U };
-            Item item123 = new Item(){ Index = (UInt32Value)2U };
-            Item item124 = new Item(){ Index = (UInt32Value)3U };
-            Item item125 = new Item(){ Index = (UInt32Value)4U };
+            Items items14 = new Items(){ Count = 5U };
+            Item item121 = new Item(){ Index = 0U };
+            Item item122 = new Item(){ Index = 1U };
+            Item item123 = new Item(){ Index = 2U };
+            Item item124 = new Item(){ Index = 3U };
+            Item item125 = new Item(){ Index = 4U };
 
             items14.Append(item121);
             items14.Append(item122);
@@ -10523,12 +10523,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFields4.Append(pivotField26);
             pivotFields4.Append(pivotField27);
 
-            RowFields rowFields4 = new RowFields(){ Count = (UInt32Value)1U };
+            RowFields rowFields4 = new RowFields(){ Count = 1U };
             Field field4 = new Field(){ Index = 1 };
 
             rowFields4.Append(field4);
 
-            RowItems rowItems4 = new RowItems(){ Count = (UInt32Value)4U };
+            RowItems rowItems4 = new RowItems(){ Count = 4U };
 
             RowItem rowItem16 = new RowItem();
             MemberPropertyIndex memberPropertyIndex13 = new MemberPropertyIndex();
@@ -10555,26 +10555,26 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             rowItems4.Append(rowItem18);
             rowItems4.Append(rowItem19);
 
-            ColumnItems columnItems4 = new ColumnItems(){ Count = (UInt32Value)1U };
+            ColumnItems columnItems4 = new ColumnItems(){ Count = 1U };
             RowItem rowItem20 = new RowItem();
 
             columnItems4.Append(rowItem20);
 
-            DataFields dataFields4 = new DataFields(){ Count = (UInt32Value)1U };
-            DataField dataField4 = new DataField(){ Name = "Sum of Quantity", Field = (UInt32Value)2U, BaseField = 0, BaseItem = (UInt32Value)0U };
+            DataFields dataFields4 = new DataFields(){ Count = 1U };
+            DataField dataField4 = new DataField(){ Name = "Sum of Quantity", Field = 2U, BaseField = 0, BaseItem = 0U };
 
             dataFields4.Append(dataField4);
 
-            ChartFormats chartFormats4 = new ChartFormats(){ Count = (UInt32Value)7U };
+            ChartFormats chartFormats4 = new ChartFormats(){ Count = 7U };
 
-            ChartFormat chartFormat23 = new ChartFormat(){ Chart = (UInt32Value)4U, Format = (UInt32Value)0U, Series = true };
+            ChartFormat chartFormat23 = new ChartFormat(){ Chart = 4U, Format = 0U, Series = true };
 
-            PivotArea pivotArea23 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea23 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences23 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences23 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference23 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem45 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference23 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem45 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference23.Append(fieldItem45);
 
@@ -10584,14 +10584,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat23.Append(pivotArea23);
 
-            ChartFormat chartFormat24 = new ChartFormat(){ Chart = (UInt32Value)5U, Format = (UInt32Value)2U, Series = true };
+            ChartFormat chartFormat24 = new ChartFormat(){ Chart = 5U, Format = 2U, Series = true };
 
-            PivotArea pivotArea24 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea24 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences24 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences24 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference24 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem46 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference24 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem46 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference24.Append(fieldItem46);
 
@@ -10601,14 +10601,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat24.Append(pivotArea24);
 
-            ChartFormat chartFormat25 = new ChartFormat(){ Chart = (UInt32Value)6U, Format = (UInt32Value)0U, Series = true };
+            ChartFormat chartFormat25 = new ChartFormat(){ Chart = 6U, Format = 0U, Series = true };
 
-            PivotArea pivotArea25 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea25 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences25 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences25 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference25 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem47 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference25 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem47 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference25.Append(fieldItem47);
 
@@ -10618,14 +10618,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat25.Append(pivotArea25);
 
-            ChartFormat chartFormat26 = new ChartFormat(){ Chart = (UInt32Value)7U, Format = (UInt32Value)14U, Series = true };
+            ChartFormat chartFormat26 = new ChartFormat(){ Chart = 7U, Format = 14U, Series = true };
 
-            PivotArea pivotArea26 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea26 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences26 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences26 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference26 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem48 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference26 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem48 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference26.Append(fieldItem48);
 
@@ -10635,14 +10635,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat26.Append(pivotArea26);
 
-            ChartFormat chartFormat27 = new ChartFormat(){ Chart = (UInt32Value)8U, Format = (UInt32Value)1U, Series = true };
+            ChartFormat chartFormat27 = new ChartFormat(){ Chart = 8U, Format = 1U, Series = true };
 
-            PivotArea pivotArea27 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea27 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences27 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences27 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference27 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem49 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference27 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem49 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference27.Append(fieldItem49);
 
@@ -10652,14 +10652,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat27.Append(pivotArea27);
 
-            ChartFormat chartFormat28 = new ChartFormat(){ Chart = (UInt32Value)9U, Format = (UInt32Value)15U, Series = true };
+            ChartFormat chartFormat28 = new ChartFormat(){ Chart = 9U, Format = 15U, Series = true };
 
-            PivotArea pivotArea28 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea28 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences28 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences28 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference28 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem50 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference28 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem50 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference28.Append(fieldItem50);
 
@@ -10669,14 +10669,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat28.Append(pivotArea28);
 
-            ChartFormat chartFormat29 = new ChartFormat(){ Chart = (UInt32Value)10U, Format = (UInt32Value)2U, Series = true };
+            ChartFormat chartFormat29 = new ChartFormat(){ Chart = 10U, Format = 2U, Series = true };
 
-            PivotArea pivotArea29 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea29 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences29 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences29 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference29 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem51 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference29 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem51 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference29.Append(fieldItem51);
 
@@ -10730,19 +10730,19 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             SheetDimension sheetDimension7 = new SheetDimension(){ Reference = "A1:B5" };
 
             SheetViews sheetViews7 = new SheetViews();
-            SheetView sheetView7 = new SheetView(){ WorkbookViewId = (UInt32Value)0U };
+            SheetView sheetView7 = new SheetView(){ WorkbookViewId = 0U };
 
             sheetViews7.Append(sheetView7);
             SheetFormatProperties sheetFormatProperties7 = new SheetFormatProperties(){ DefaultRowHeight = 15D };
 
             Columns columns7 = new Columns();
-            Column column41 = new Column(){ Min = (UInt32Value)1U, Max = (UInt32Value)1U, Width = 14.140625D, BestFit = true, CustomWidth = true };
-            Column column42 = new Column(){ Min = (UInt32Value)2U, Max = (UInt32Value)2U, Width = 17.42578125D, CustomWidth = true };
-            Column column43 = new Column(){ Min = (UInt32Value)3U, Max = (UInt32Value)3U, Width = 12.42578125D, CustomWidth = true };
-            Column column44 = new Column(){ Min = (UInt32Value)4U, Max = (UInt32Value)11U, Width = 13D, BestFit = true, CustomWidth = true };
-            Column column45 = new Column(){ Min = (UInt32Value)12U, Max = (UInt32Value)12U, Width = 13D, CustomWidth = true };
-            Column column46 = new Column(){ Min = (UInt32Value)13U, Max = (UInt32Value)20U, Width = 13D, BestFit = true, CustomWidth = true };
-            Column column47 = new Column(){ Min = (UInt32Value)21U, Max = (UInt32Value)23U, Width = 20.42578125D, BestFit = true, CustomWidth = true };
+            Column column41 = new Column(){ Min = 1U, Max = 1U, Width = 14.140625D, BestFit = true, CustomWidth = true };
+            Column column42 = new Column(){ Min = 2U, Max = 2U, Width = 17.42578125D, CustomWidth = true };
+            Column column43 = new Column(){ Min = 3U, Max = 3U, Width = 12.42578125D, CustomWidth = true };
+            Column column44 = new Column(){ Min = 4U, Max = 11U, Width = 13D, BestFit = true, CustomWidth = true };
+            Column column45 = new Column(){ Min = 12U, Max = 12U, Width = 13D, CustomWidth = true };
+            Column column46 = new Column(){ Min = 13U, Max = 20U, Width = 13D, BestFit = true, CustomWidth = true };
+            Column column47 = new Column(){ Min = 21U, Max = 23U, Width = 20.42578125D, BestFit = true, CustomWidth = true };
 
             columns7.Append(column41);
             columns7.Append(column42);
@@ -10754,9 +10754,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             SheetData sheetData7 = new SheetData();
 
-            Row row43 = new Row(){ RowIndex = (UInt32Value)1U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row43 = new Row(){ RowIndex = 1U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell173 = new Cell(){ CellReference = "A1", StyleIndex = (UInt32Value)5U, DataType = CellValues.SharedString };
+            Cell cell173 = new Cell(){ CellReference = "A1", StyleIndex = 5U, DataType = CellValues.SharedString };
             CellValue cellValue173 = new CellValue();
             cellValue173.Text = "29";
 
@@ -10771,15 +10771,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row43.Append(cell173);
             row43.Append(cell174);
 
-            Row row44 = new Row(){ RowIndex = (UInt32Value)2U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row44 = new Row(){ RowIndex = 2U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell175 = new Cell(){ CellReference = "A2", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell175 = new Cell(){ CellReference = "A2", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue175 = new CellValue();
             cellValue175.Text = "6";
 
             cell175.Append(cellValue175);
 
-            Cell cell176 = new Cell(){ CellReference = "B2", StyleIndex = (UInt32Value)7U };
+            Cell cell176 = new Cell(){ CellReference = "B2", StyleIndex = 7U };
             CellValue cellValue176 = new CellValue();
             cellValue176.Text = "19";
 
@@ -10788,15 +10788,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row44.Append(cell175);
             row44.Append(cell176);
 
-            Row row45 = new Row(){ RowIndex = (UInt32Value)3U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row45 = new Row(){ RowIndex = 3U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell177 = new Cell(){ CellReference = "A3", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell177 = new Cell(){ CellReference = "A3", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue177 = new CellValue();
             cellValue177.Text = "8";
 
             cell177.Append(cellValue177);
 
-            Cell cell178 = new Cell(){ CellReference = "B3", StyleIndex = (UInt32Value)7U };
+            Cell cell178 = new Cell(){ CellReference = "B3", StyleIndex = 7U };
             CellValue cellValue178 = new CellValue();
             cellValue178.Text = "13";
 
@@ -10805,15 +10805,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row45.Append(cell177);
             row45.Append(cell178);
 
-            Row row46 = new Row(){ RowIndex = (UInt32Value)4U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row46 = new Row(){ RowIndex = 4U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell179 = new Cell(){ CellReference = "A4", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell179 = new Cell(){ CellReference = "A4", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue179 = new CellValue();
             cellValue179.Text = "11";
 
             cell179.Append(cellValue179);
 
-            Cell cell180 = new Cell(){ CellReference = "B4", StyleIndex = (UInt32Value)7U };
+            Cell cell180 = new Cell(){ CellReference = "B4", StyleIndex = 7U };
             CellValue cellValue180 = new CellValue();
             cellValue180.Text = "33";
 
@@ -10822,15 +10822,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row46.Append(cell179);
             row46.Append(cell180);
 
-            Row row47 = new Row(){ RowIndex = (UInt32Value)5U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row47 = new Row(){ RowIndex = 5U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell181 = new Cell(){ CellReference = "A5", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell181 = new Cell(){ CellReference = "A5", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue181 = new CellValue();
             cellValue181.Text = "30";
 
             cell181.Append(cellValue181);
 
-            Cell cell182 = new Cell(){ CellReference = "B5", StyleIndex = (UInt32Value)7U };
+            Cell cell182 = new Cell(){ CellReference = "B5", StyleIndex = 7U };
             CellValue cellValue182 = new CellValue();
             cellValue182.Text = "65";
 
@@ -10844,7 +10844,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             sheetData7.Append(row45);
             sheetData7.Append(row46);
             sheetData7.Append(row47);
-            PhoneticProperties phoneticProperties13 = new PhoneticProperties(){ FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties13 = new PhoneticProperties(){ FontId = 1U };
             PageMargins pageMargins15 = new PageMargins(){ Left = 0.7D, Right = 0.7D, Top = 0.75D, Bottom = 0.75D, Header = 0.3D, Footer = 0.3D };
             S.Drawing drawing5 = new S.Drawing(){ Id = "rId2" };
 
@@ -10881,8 +10881,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             X15.Timelines timelines5 = new X15.Timelines(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x" }  };
             timelines5.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             timelines5.AddNamespaceDeclaration("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main");
-            X15.Timeline timeline9 = new X15.Timeline(){ Name = "DeliveryDate 16", Cache = "NativeTimeline_DeliveryDate7", Caption = "Style1", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
-            X15.Timeline timeline10 = new X15.Timeline(){ Name = "DeliveryDate 17", Cache = "NativeTimeline_DeliveryDate7", Caption = "Style2", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), Style = "TimeSlicerStyleLight2" };
+            X15.Timeline timeline9 = new X15.Timeline(){ Name = "DeliveryDate 16", Cache = "NativeTimeline_DeliveryDate7", Caption = "Style1", Level = 2U, SelectionLevel = 2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline10 = new X15.Timeline(){ Name = "DeliveryDate 17", Cache = "NativeTimeline_DeliveryDate7", Caption = "Style2", Level = 2U, SelectionLevel = 2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), Style = "TimeSlicerStyleLight2" };
 
             timelines5.Append(timeline9);
             timelines5.Append(timeline10);
@@ -10929,10 +10929,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker17.Append(rowId34);
             toMarker17.Append(rowOffset34);
 
-            Xdr.GraphicFrame graphicFrame17 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame17 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties17 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties25 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)2U, Name = "Chart 1" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties25 = new Xdr.NonVisualDrawingProperties(){ Id = 2U, Name = "Chart 1" };
 
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties17 = new Xdr.NonVisualGraphicFrameDrawingProperties();
             A.GraphicFrameLocks graphicFrameLocks7 = new A.GraphicFrameLocks();
@@ -11003,10 +11003,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker18.Append(rowId36);
             toMarker18.Append(rowOffset36);
 
-            Xdr.GraphicFrame graphicFrame18 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame18 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties18 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties26 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)3U, Name = "グラフ 2" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties26 = new Xdr.NonVisualDrawingProperties(){ Id = 3U, Name = "グラフ 2" };
 
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties18 = new Xdr.NonVisualGraphicFrameDrawingProperties();
             A.GraphicFrameLocks graphicFrameLocks8 = new A.GraphicFrameLocks();
@@ -11083,10 +11083,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice18 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame19 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame19 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties19 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties27 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)4U, Name = "DeliveryDate 16" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties27 = new Xdr.NonVisualDrawingProperties(){ Id = 4U, Name = "DeliveryDate 16" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties19 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties19.Append(nonVisualDrawingProperties27);
@@ -11120,10 +11120,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback17.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback17.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape9 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape9 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties9 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties28 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties28 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties9 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks9 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -11239,10 +11239,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice19 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame20 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame20 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties20 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties29 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)5U, Name = "DeliveryDate 17" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties29 = new Xdr.NonVisualDrawingProperties(){ Id = 5U, Name = "DeliveryDate 17" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties20 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties20.Append(nonVisualDrawingProperties29);
@@ -11276,10 +11276,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback18.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback18.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape10 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape10 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties10 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties30 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties30 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties10 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks10 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -11396,7 +11396,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotSource pivotSource9 = new C.PivotSource();
             C.PivotTableName pivotTableName9 = new C.PivotTableName();
             pivotTableName9.Text = "[GeneratedDocument.xlsx]Style!PivotTable1";
-            C.FormatId formatId9 = new C.FormatId(){ Val = (UInt32Value)20U };
+            C.FormatId formatId9 = new C.FormatId(){ Val = 20U };
 
             pivotSource9.Append(pivotTableName9);
             pivotSource9.Append(formatId9);
@@ -11412,7 +11412,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotFormats pivotFormats9 = new C.PivotFormats();
 
             C.PivotFormat pivotFormat66 = new C.PivotFormat();
-            C.Index index74 = new C.Index(){ Val = (UInt32Value)0U };
+            C.Index index74 = new C.Index(){ Val = 0U };
 
             C.Marker marker66 = new C.Marker();
             C.Symbol symbol66 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11423,7 +11423,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat66.Append(marker66);
 
             C.PivotFormat pivotFormat67 = new C.PivotFormat();
-            C.Index index75 = new C.Index(){ Val = (UInt32Value)1U };
+            C.Index index75 = new C.Index(){ Val = 1U };
 
             C.Marker marker67 = new C.Marker();
             C.Symbol symbol67 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11434,7 +11434,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat67.Append(marker67);
 
             C.PivotFormat pivotFormat68 = new C.PivotFormat();
-            C.Index index76 = new C.Index(){ Val = (UInt32Value)2U };
+            C.Index index76 = new C.Index(){ Val = 2U };
 
             C.Marker marker68 = new C.Marker();
             C.Symbol symbol68 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11445,7 +11445,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat68.Append(marker68);
 
             C.PivotFormat pivotFormat69 = new C.PivotFormat();
-            C.Index index77 = new C.Index(){ Val = (UInt32Value)3U };
+            C.Index index77 = new C.Index(){ Val = 3U };
 
             C.Marker marker69 = new C.Marker();
             C.Symbol symbol69 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11456,7 +11456,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat69.Append(marker69);
 
             C.PivotFormat pivotFormat70 = new C.PivotFormat();
-            C.Index index78 = new C.Index(){ Val = (UInt32Value)4U };
+            C.Index index78 = new C.Index(){ Val = 4U };
 
             C.Marker marker70 = new C.Marker();
             C.Symbol symbol70 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11467,7 +11467,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat70.Append(marker70);
 
             C.PivotFormat pivotFormat71 = new C.PivotFormat();
-            C.Index index79 = new C.Index(){ Val = (UInt32Value)5U };
+            C.Index index79 = new C.Index(){ Val = 5U };
 
             C.Marker marker71 = new C.Marker();
             C.Symbol symbol71 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11478,7 +11478,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat71.Append(marker71);
 
             C.PivotFormat pivotFormat72 = new C.PivotFormat();
-            C.Index index80 = new C.Index(){ Val = (UInt32Value)6U };
+            C.Index index80 = new C.Index(){ Val = 6U };
 
             C.Marker marker72 = new C.Marker();
             C.Symbol symbol72 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11489,7 +11489,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat72.Append(marker72);
 
             C.PivotFormat pivotFormat73 = new C.PivotFormat();
-            C.Index index81 = new C.Index(){ Val = (UInt32Value)7U };
+            C.Index index81 = new C.Index(){ Val = 7U };
 
             C.Marker marker73 = new C.Marker();
             C.Symbol symbol73 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11515,8 +11515,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.VaryColors varyColors9 = new C.VaryColors(){ Val = true };
 
             C.PieChartSeries pieChartSeries5 = new C.PieChartSeries();
-            C.Index index82 = new C.Index(){ Val = (UInt32Value)0U };
-            C.Order order9 = new C.Order(){ Val = (UInt32Value)0U };
+            C.Index index82 = new C.Index(){ Val = 0U };
+            C.Order order9 = new C.Order(){ Val = 0U };
 
             C.SeriesText seriesText9 = new C.SeriesText();
 
@@ -11525,9 +11525,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula25.Text = "Style!$B$1";
 
             C.StringCache stringCache17 = new C.StringCache();
-            C.PointCount pointCount25 = new C.PointCount(){ Val = (UInt32Value)1U };
+            C.PointCount pointCount25 = new C.PointCount(){ Val = 1U };
 
-            C.StringPoint stringPoint33 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint33 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue57 = new C.NumericValue();
             numericValue57.Text = "Total";
 
@@ -11548,21 +11548,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula26.Text = "Style!$A$2:$A$5";
 
             C.StringCache stringCache18 = new C.StringCache();
-            C.PointCount pointCount26 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount26 = new C.PointCount(){ Val = 3U };
 
-            C.StringPoint stringPoint34 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint34 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue58 = new C.NumericValue();
             numericValue58.Text = "product_A";
 
             stringPoint34.Append(numericValue58);
 
-            C.StringPoint stringPoint35 = new C.StringPoint(){ Index = (UInt32Value)1U };
+            C.StringPoint stringPoint35 = new C.StringPoint(){ Index = 1U };
             C.NumericValue numericValue59 = new C.NumericValue();
             numericValue59.Text = "product_D";
 
             stringPoint35.Append(numericValue59);
 
-            C.StringPoint stringPoint36 = new C.StringPoint(){ Index = (UInt32Value)2U };
+            C.StringPoint stringPoint36 = new C.StringPoint(){ Index = 2U };
             C.NumericValue numericValue60 = new C.NumericValue();
             numericValue60.Text = "product_E";
 
@@ -11587,21 +11587,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.NumberingCache numberingCache9 = new C.NumberingCache();
             C.FormatCode formatCode9 = new C.FormatCode();
             formatCode9.Text = "General";
-            C.PointCount pointCount27 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount27 = new C.PointCount(){ Val = 3U };
 
-            C.NumericPoint numericPoint25 = new C.NumericPoint(){ Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint25 = new C.NumericPoint(){ Index = 0U };
             C.NumericValue numericValue61 = new C.NumericValue();
             numericValue61.Text = "19";
 
             numericPoint25.Append(numericValue61);
 
-            C.NumericPoint numericPoint26 = new C.NumericPoint(){ Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint26 = new C.NumericPoint(){ Index = 1U };
             C.NumericValue numericValue62 = new C.NumericValue();
             numericValue62.Text = "13";
 
             numericPoint26.Append(numericValue62);
 
-            C.NumericPoint numericPoint27 = new C.NumericPoint(){ Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint27 = new C.NumericPoint(){ Index = 2U };
             C.NumericValue numericValue63 = new C.NumericValue();
             numericValue63.Text = "33";
 
@@ -11745,7 +11745,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotSource pivotSource10 = new C.PivotSource();
             C.PivotTableName pivotTableName10 = new C.PivotTableName();
             pivotTableName10.Text = "[GeneratedDocument.xlsx]Style!PivotTable1";
-            C.FormatId formatId10 = new C.FormatId(){ Val = (UInt32Value)19U };
+            C.FormatId formatId10 = new C.FormatId(){ Val = 19U };
 
             pivotSource10.Append(pivotTableName10);
             pivotSource10.Append(formatId10);
@@ -11761,7 +11761,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotFormats pivotFormats10 = new C.PivotFormats();
 
             C.PivotFormat pivotFormat74 = new C.PivotFormat();
-            C.Index index83 = new C.Index(){ Val = (UInt32Value)0U };
+            C.Index index83 = new C.Index(){ Val = 0U };
 
             C.ShapeProperties shapeProperties32 = new C.ShapeProperties();
 
@@ -11794,7 +11794,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat74.Append(marker74);
 
             C.PivotFormat pivotFormat75 = new C.PivotFormat();
-            C.Index index84 = new C.Index(){ Val = (UInt32Value)1U };
+            C.Index index84 = new C.Index(){ Val = 1U };
 
             C.ShapeProperties shapeProperties33 = new C.ShapeProperties();
 
@@ -11827,7 +11827,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat75.Append(marker75);
 
             C.PivotFormat pivotFormat76 = new C.PivotFormat();
-            C.Index index85 = new C.Index(){ Val = (UInt32Value)2U };
+            C.Index index85 = new C.Index(){ Val = 2U };
 
             C.Marker marker76 = new C.Marker();
             C.Symbol symbol76 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11838,7 +11838,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat76.Append(marker76);
 
             C.PivotFormat pivotFormat77 = new C.PivotFormat();
-            C.Index index86 = new C.Index(){ Val = (UInt32Value)3U };
+            C.Index index86 = new C.Index(){ Val = 3U };
 
             C.Marker marker77 = new C.Marker();
             C.Symbol symbol77 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11849,7 +11849,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat77.Append(marker77);
 
             C.PivotFormat pivotFormat78 = new C.PivotFormat();
-            C.Index index87 = new C.Index(){ Val = (UInt32Value)4U };
+            C.Index index87 = new C.Index(){ Val = 4U };
 
             C.Marker marker78 = new C.Marker();
             C.Symbol symbol78 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11860,7 +11860,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat78.Append(marker78);
 
             C.PivotFormat pivotFormat79 = new C.PivotFormat();
-            C.Index index88 = new C.Index(){ Val = (UInt32Value)5U };
+            C.Index index88 = new C.Index(){ Val = 5U };
 
             C.Marker marker79 = new C.Marker();
             C.Symbol symbol79 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11871,7 +11871,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat79.Append(marker79);
 
             C.PivotFormat pivotFormat80 = new C.PivotFormat();
-            C.Index index89 = new C.Index(){ Val = (UInt32Value)6U };
+            C.Index index89 = new C.Index(){ Val = 6U };
 
             C.Marker marker80 = new C.Marker();
             C.Symbol symbol80 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11882,7 +11882,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat80.Append(marker80);
 
             C.PivotFormat pivotFormat81 = new C.PivotFormat();
-            C.Index index90 = new C.Index(){ Val = (UInt32Value)7U };
+            C.Index index90 = new C.Index(){ Val = 7U };
 
             C.Marker marker81 = new C.Marker();
             C.Symbol symbol81 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11893,7 +11893,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat81.Append(marker81);
 
             C.PivotFormat pivotFormat82 = new C.PivotFormat();
-            C.Index index91 = new C.Index(){ Val = (UInt32Value)8U };
+            C.Index index91 = new C.Index(){ Val = 8U };
 
             C.Marker marker82 = new C.Marker();
             C.Symbol symbol82 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11904,7 +11904,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat82.Append(marker82);
 
             C.PivotFormat pivotFormat83 = new C.PivotFormat();
-            C.Index index92 = new C.Index(){ Val = (UInt32Value)9U };
+            C.Index index92 = new C.Index(){ Val = 9U };
 
             C.Marker marker83 = new C.Marker();
             C.Symbol symbol83 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11915,7 +11915,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat83.Append(marker83);
 
             C.PivotFormat pivotFormat84 = new C.PivotFormat();
-            C.Index index93 = new C.Index(){ Val = (UInt32Value)10U };
+            C.Index index93 = new C.Index(){ Val = 10U };
 
             C.Marker marker84 = new C.Marker();
             C.Symbol symbol84 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11926,7 +11926,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat84.Append(marker84);
 
             C.PivotFormat pivotFormat85 = new C.PivotFormat();
-            C.Index index94 = new C.Index(){ Val = (UInt32Value)11U };
+            C.Index index94 = new C.Index(){ Val = 11U };
 
             C.Marker marker85 = new C.Marker();
             C.Symbol symbol85 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11937,7 +11937,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat85.Append(marker85);
 
             C.PivotFormat pivotFormat86 = new C.PivotFormat();
-            C.Index index95 = new C.Index(){ Val = (UInt32Value)12U };
+            C.Index index95 = new C.Index(){ Val = 12U };
 
             C.Marker marker86 = new C.Marker();
             C.Symbol symbol86 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11948,7 +11948,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat86.Append(marker86);
 
             C.PivotFormat pivotFormat87 = new C.PivotFormat();
-            C.Index index96 = new C.Index(){ Val = (UInt32Value)13U };
+            C.Index index96 = new C.Index(){ Val = 13U };
 
             C.Marker marker87 = new C.Marker();
             C.Symbol symbol87 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -11959,7 +11959,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat87.Append(marker87);
 
             C.PivotFormat pivotFormat88 = new C.PivotFormat();
-            C.Index index97 = new C.Index(){ Val = (UInt32Value)14U };
+            C.Index index97 = new C.Index(){ Val = 14U };
 
             C.ShapeProperties shapeProperties34 = new C.ShapeProperties();
 
@@ -11992,7 +11992,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat88.Append(marker88);
 
             C.PivotFormat pivotFormat89 = new C.PivotFormat();
-            C.Index index98 = new C.Index(){ Val = (UInt32Value)15U };
+            C.Index index98 = new C.Index(){ Val = 15U };
 
             C.ShapeProperties shapeProperties35 = new C.ShapeProperties();
 
@@ -12025,7 +12025,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat89.Append(marker89);
 
             C.PivotFormat pivotFormat90 = new C.PivotFormat();
-            C.Index index99 = new C.Index(){ Val = (UInt32Value)16U };
+            C.Index index99 = new C.Index(){ Val = 16U };
 
             C.ShapeProperties shapeProperties36 = new C.ShapeProperties();
 
@@ -12058,7 +12058,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat90.Append(marker90);
 
             C.PivotFormat pivotFormat91 = new C.PivotFormat();
-            C.Index index100 = new C.Index(){ Val = (UInt32Value)17U };
+            C.Index index100 = new C.Index(){ Val = 17U };
 
             C.ShapeProperties shapeProperties37 = new C.ShapeProperties();
 
@@ -12091,7 +12091,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat91.Append(marker91);
 
             C.PivotFormat pivotFormat92 = new C.PivotFormat();
-            C.Index index101 = new C.Index(){ Val = (UInt32Value)18U };
+            C.Index index101 = new C.Index(){ Val = 18U };
 
             C.ShapeProperties shapeProperties38 = new C.ShapeProperties();
 
@@ -12124,7 +12124,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat92.Append(marker92);
 
             C.PivotFormat pivotFormat93 = new C.PivotFormat();
-            C.Index index102 = new C.Index(){ Val = (UInt32Value)19U };
+            C.Index index102 = new C.Index(){ Val = 19U };
 
             C.ShapeProperties shapeProperties39 = new C.ShapeProperties();
 
@@ -12157,7 +12157,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat93.Append(marker93);
 
             C.PivotFormat pivotFormat94 = new C.PivotFormat();
-            C.Index index103 = new C.Index(){ Val = (UInt32Value)20U };
+            C.Index index103 = new C.Index(){ Val = 20U };
 
             C.ShapeProperties shapeProperties40 = new C.ShapeProperties();
 
@@ -12220,8 +12220,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.VaryColors varyColors10 = new C.VaryColors(){ Val = false };
 
             C.BarChartSeries barChartSeries5 = new C.BarChartSeries();
-            C.Index index104 = new C.Index(){ Val = (UInt32Value)0U };
-            C.Order order10 = new C.Order(){ Val = (UInt32Value)0U };
+            C.Index index104 = new C.Index(){ Val = 0U };
+            C.Order order10 = new C.Order(){ Val = 0U };
 
             C.SeriesText seriesText10 = new C.SeriesText();
 
@@ -12230,9 +12230,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula28.Text = "Style!$B$1";
 
             C.StringCache stringCache19 = new C.StringCache();
-            C.PointCount pointCount28 = new C.PointCount(){ Val = (UInt32Value)1U };
+            C.PointCount pointCount28 = new C.PointCount(){ Val = 1U };
 
-            C.StringPoint stringPoint37 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint37 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue64 = new C.NumericValue();
             numericValue64.Text = "Total";
 
@@ -12275,21 +12275,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula29.Text = "Style!$A$2:$A$5";
 
             C.StringCache stringCache20 = new C.StringCache();
-            C.PointCount pointCount29 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount29 = new C.PointCount(){ Val = 3U };
 
-            C.StringPoint stringPoint38 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint38 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue65 = new C.NumericValue();
             numericValue65.Text = "product_A";
 
             stringPoint38.Append(numericValue65);
 
-            C.StringPoint stringPoint39 = new C.StringPoint(){ Index = (UInt32Value)1U };
+            C.StringPoint stringPoint39 = new C.StringPoint(){ Index = 1U };
             C.NumericValue numericValue66 = new C.NumericValue();
             numericValue66.Text = "product_D";
 
             stringPoint39.Append(numericValue66);
 
-            C.StringPoint stringPoint40 = new C.StringPoint(){ Index = (UInt32Value)2U };
+            C.StringPoint stringPoint40 = new C.StringPoint(){ Index = 2U };
             C.NumericValue numericValue67 = new C.NumericValue();
             numericValue67.Text = "product_E";
 
@@ -12314,21 +12314,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.NumberingCache numberingCache10 = new C.NumberingCache();
             C.FormatCode formatCode10 = new C.FormatCode();
             formatCode10.Text = "General";
-            C.PointCount pointCount30 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount30 = new C.PointCount(){ Val = 3U };
 
-            C.NumericPoint numericPoint28 = new C.NumericPoint(){ Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint28 = new C.NumericPoint(){ Index = 0U };
             C.NumericValue numericValue68 = new C.NumericValue();
             numericValue68.Text = "19";
 
             numericPoint28.Append(numericValue68);
 
-            C.NumericPoint numericPoint29 = new C.NumericPoint(){ Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint29 = new C.NumericPoint(){ Index = 1U };
             C.NumericValue numericValue69 = new C.NumericValue();
             numericValue69.Text = "13";
 
             numericPoint29.Append(numericValue69);
 
-            C.NumericPoint numericPoint30 = new C.NumericPoint(){ Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint30 = new C.NumericPoint(){ Index = 2U };
             C.NumericValue numericValue70 = new C.NumericValue();
             numericValue70.Text = "33";
 
@@ -12369,8 +12369,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             dataLabels10.Append(showBubbleSize10);
             C.GapWidth gapWidth5 = new C.GapWidth(){ Val = (UInt16Value)219U };
             C.Overlap overlap4 = new C.Overlap(){ Val = -27 };
-            C.AxisId axisId17 = new C.AxisId(){ Val = (UInt32Value)208842560U };
-            C.AxisId axisId18 = new C.AxisId(){ Val = (UInt32Value)208842952U };
+            C.AxisId axisId17 = new C.AxisId(){ Val = 208842560U };
+            C.AxisId axisId18 = new C.AxisId(){ Val = 208842952U };
 
             barChart5.Append(barDirection5);
             barChart5.Append(barGrouping5);
@@ -12383,7 +12383,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             barChart5.Append(axisId18);
 
             C.CategoryAxis categoryAxis5 = new C.CategoryAxis();
-            C.AxisId axisId19 = new C.AxisId(){ Val = (UInt32Value)208842560U };
+            C.AxisId axisId19 = new C.AxisId(){ Val = 208842560U };
 
             C.Scaling scaling9 = new C.Scaling();
             C.Orientation orientation9 = new C.Orientation(){ Val = C.OrientationValues.MinMax };
@@ -12447,7 +12447,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             textProperties13.Append(bodyProperties23);
             textProperties13.Append(listStyle23);
             textProperties13.Append(paragraph23);
-            C.CrossingAxis crossingAxis9 = new C.CrossingAxis(){ Val = (UInt32Value)208842952U };
+            C.CrossingAxis crossingAxis9 = new C.CrossingAxis(){ Val = 208842952U };
             C.Crosses crosses9 = new C.Crosses(){ Val = C.CrossesValues.AutoZero };
             C.AutoLabeled autoLabeled5 = new C.AutoLabeled(){ Val = true };
             C.LabelAlignment labelAlignment5 = new C.LabelAlignment(){ Val = C.LabelAlignmentValues.Center };
@@ -12472,7 +12472,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             categoryAxis5.Append(noMultiLevelLabels5);
 
             C.ValueAxis valueAxis5 = new C.ValueAxis();
-            C.AxisId axisId20 = new C.AxisId(){ Val = (UInt32Value)208842952U };
+            C.AxisId axisId20 = new C.AxisId(){ Val = 208842952U };
 
             C.Scaling scaling10 = new C.Scaling();
             C.Orientation orientation10 = new C.Orientation(){ Val = C.OrientationValues.MinMax };
@@ -12563,7 +12563,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             textProperties14.Append(bodyProperties24);
             textProperties14.Append(listStyle24);
             textProperties14.Append(paragraph24);
-            C.CrossingAxis crossingAxis10 = new C.CrossingAxis(){ Val = (UInt32Value)208842560U };
+            C.CrossingAxis crossingAxis10 = new C.CrossingAxis(){ Val = 208842560U };
             C.Crosses crosses10 = new C.Crosses(){ Val = C.CrossesValues.AutoZero };
             C.CrossBetween crossBetween5 = new C.CrossBetween(){ Val = C.CrossBetweenValues.Between };
 
@@ -12776,28 +12776,28 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of pivotTablePart5.
         private static void GeneratePivotTablePart5Content(PivotTablePart pivotTablePart5)
         {
-            PivotTableDefinition pivotTableDefinition9 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = (UInt32Value)21U };
-            Location location5 = new Location(){ Reference = "A1:B5", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)1U };
+            PivotTableDefinition pivotTableDefinition9 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = 1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = 0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = 21U };
+            Location location5 = new Location(){ Reference = "A1:B5", FirstHeaderRow = 1U, FirstDataRow = 1U, FirstDataColumn = 1U };
 
-            PivotFields pivotFields5 = new PivotFields(){ Count = (UInt32Value)7U };
+            PivotFields pivotFields5 = new PivotFields(){ Count = 7U };
 
-            PivotField pivotField28 = new PivotField(){ NumberFormatId = (UInt32Value)14U, ShowAll = false };
+            PivotField pivotField28 = new PivotField(){ NumberFormatId = 14U, ShowAll = false };
 
-            Items items15 = new Items(){ Count = (UInt32Value)15U };
-            Item item126 = new Item(){ Index = (UInt32Value)0U };
-            Item item127 = new Item(){ Index = (UInt32Value)1U };
-            Item item128 = new Item(){ Index = (UInt32Value)2U };
-            Item item129 = new Item(){ Index = (UInt32Value)3U };
-            Item item130 = new Item(){ Index = (UInt32Value)4U };
-            Item item131 = new Item(){ Index = (UInt32Value)5U };
-            Item item132 = new Item(){ Index = (UInt32Value)6U };
-            Item item133 = new Item(){ Index = (UInt32Value)7U };
-            Item item134 = new Item(){ Index = (UInt32Value)8U };
-            Item item135 = new Item(){ Index = (UInt32Value)9U };
-            Item item136 = new Item(){ Index = (UInt32Value)10U };
-            Item item137 = new Item(){ Index = (UInt32Value)11U };
-            Item item138 = new Item(){ Index = (UInt32Value)12U };
-            Item item139 = new Item(){ Index = (UInt32Value)13U };
+            Items items15 = new Items(){ Count = 15U };
+            Item item126 = new Item(){ Index = 0U };
+            Item item127 = new Item(){ Index = 1U };
+            Item item128 = new Item(){ Index = 2U };
+            Item item129 = new Item(){ Index = 3U };
+            Item item130 = new Item(){ Index = 4U };
+            Item item131 = new Item(){ Index = 5U };
+            Item item132 = new Item(){ Index = 6U };
+            Item item133 = new Item(){ Index = 7U };
+            Item item134 = new Item(){ Index = 8U };
+            Item item135 = new Item(){ Index = 9U };
+            Item item136 = new Item(){ Index = 10U };
+            Item item137 = new Item(){ Index = 11U };
+            Item item138 = new Item(){ Index = 12U };
+            Item item139 = new Item(){ Index = 13U };
             Item item140 = new Item(){ ItemType = ItemValues.Default };
 
             items15.Append(item126);
@@ -12820,17 +12820,17 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotField pivotField29 = new PivotField(){ Axis = PivotTableAxisValues.AxisRow, ShowAll = false };
 
-            Items items16 = new Items(){ Count = (UInt32Value)11U };
-            Item item141 = new Item(){ Index = (UInt32Value)0U };
-            Item item142 = new Item(){ Missing = true, Index = (UInt32Value)4U };
-            Item item143 = new Item(){ Missing = true, Index = (UInt32Value)3U };
-            Item item144 = new Item(){ Index = (UInt32Value)1U };
-            Item item145 = new Item(){ Index = (UInt32Value)2U };
-            Item item146 = new Item(){ Missing = true, Index = (UInt32Value)9U };
-            Item item147 = new Item(){ Missing = true, Index = (UInt32Value)8U };
-            Item item148 = new Item(){ Missing = true, Index = (UInt32Value)7U };
-            Item item149 = new Item(){ Missing = true, Index = (UInt32Value)6U };
-            Item item150 = new Item(){ Missing = true, Index = (UInt32Value)5U };
+            Items items16 = new Items(){ Count = 11U };
+            Item item141 = new Item(){ Index = 0U };
+            Item item142 = new Item(){ Missing = true, Index = 4U };
+            Item item143 = new Item(){ Missing = true, Index = 3U };
+            Item item144 = new Item(){ Index = 1U };
+            Item item145 = new Item(){ Index = 2U };
+            Item item146 = new Item(){ Missing = true, Index = 9U };
+            Item item147 = new Item(){ Missing = true, Index = 8U };
+            Item item148 = new Item(){ Missing = true, Index = 7U };
+            Item item149 = new Item(){ Missing = true, Index = 6U };
+            Item item150 = new Item(){ Missing = true, Index = 5U };
             Item item151 = new Item(){ ItemType = ItemValues.Default };
 
             items16.Append(item141);
@@ -12849,13 +12849,13 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             PivotField pivotField30 = new PivotField(){ DataField = true, ShowAll = false };
             PivotField pivotField31 = new PivotField(){ ShowAll = false };
 
-            PivotField pivotField32 = new PivotField(){ NumberFormatId = (UInt32Value)14U, ShowAll = false };
+            PivotField pivotField32 = new PivotField(){ NumberFormatId = 14U, ShowAll = false };
 
-            Items items17 = new Items(){ Count = (UInt32Value)5U };
-            Item item152 = new Item(){ Index = (UInt32Value)0U };
-            Item item153 = new Item(){ Index = (UInt32Value)1U };
-            Item item154 = new Item(){ Index = (UInt32Value)3U };
-            Item item155 = new Item(){ Index = (UInt32Value)2U };
+            Items items17 = new Items(){ Count = 5U };
+            Item item152 = new Item(){ Index = 0U };
+            Item item153 = new Item(){ Index = 1U };
+            Item item154 = new Item(){ Index = 3U };
+            Item item155 = new Item(){ Index = 2U };
             Item item156 = new Item(){ ItemType = ItemValues.Default };
 
             items17.Append(item152);
@@ -12869,12 +12869,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotField pivotField34 = new PivotField(){ ShowAll = false, DefaultSubtotal = false };
 
-            Items items18 = new Items(){ Count = (UInt32Value)5U };
-            Item item157 = new Item(){ Index = (UInt32Value)0U };
-            Item item158 = new Item(){ Index = (UInt32Value)1U };
-            Item item159 = new Item(){ Index = (UInt32Value)2U };
-            Item item160 = new Item(){ Index = (UInt32Value)3U };
-            Item item161 = new Item(){ Index = (UInt32Value)4U };
+            Items items18 = new Items(){ Count = 5U };
+            Item item157 = new Item(){ Index = 0U };
+            Item item158 = new Item(){ Index = 1U };
+            Item item159 = new Item(){ Index = 2U };
+            Item item160 = new Item(){ Index = 3U };
+            Item item161 = new Item(){ Index = 4U };
 
             items18.Append(item157);
             items18.Append(item158);
@@ -12892,12 +12892,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFields5.Append(pivotField33);
             pivotFields5.Append(pivotField34);
 
-            RowFields rowFields5 = new RowFields(){ Count = (UInt32Value)1U };
+            RowFields rowFields5 = new RowFields(){ Count = 1U };
             Field field5 = new Field(){ Index = 1 };
 
             rowFields5.Append(field5);
 
-            RowItems rowItems5 = new RowItems(){ Count = (UInt32Value)4U };
+            RowItems rowItems5 = new RowItems(){ Count = 4U };
 
             RowItem rowItem21 = new RowItem();
             MemberPropertyIndex memberPropertyIndex17 = new MemberPropertyIndex();
@@ -12924,26 +12924,26 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             rowItems5.Append(rowItem23);
             rowItems5.Append(rowItem24);
 
-            ColumnItems columnItems5 = new ColumnItems(){ Count = (UInt32Value)1U };
+            ColumnItems columnItems5 = new ColumnItems(){ Count = 1U };
             RowItem rowItem25 = new RowItem();
 
             columnItems5.Append(rowItem25);
 
-            DataFields dataFields5 = new DataFields(){ Count = (UInt32Value)1U };
-            DataField dataField5 = new DataField(){ Name = "Sum of Quantity", Field = (UInt32Value)2U, BaseField = 0, BaseItem = (UInt32Value)0U };
+            DataFields dataFields5 = new DataFields(){ Count = 1U };
+            DataField dataField5 = new DataField(){ Name = "Sum of Quantity", Field = 2U, BaseField = 0, BaseItem = 0U };
 
             dataFields5.Append(dataField5);
 
-            ChartFormats chartFormats5 = new ChartFormats(){ Count = (UInt32Value)17U };
+            ChartFormats chartFormats5 = new ChartFormats(){ Count = 17U };
 
-            ChartFormat chartFormat30 = new ChartFormat(){ Chart = (UInt32Value)4U, Format = (UInt32Value)0U, Series = true };
+            ChartFormat chartFormat30 = new ChartFormat(){ Chart = 4U, Format = 0U, Series = true };
 
-            PivotArea pivotArea30 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea30 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences30 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences30 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference30 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem52 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference30 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem52 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference30.Append(fieldItem52);
 
@@ -12953,14 +12953,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat30.Append(pivotArea30);
 
-            ChartFormat chartFormat31 = new ChartFormat(){ Chart = (UInt32Value)5U, Format = (UInt32Value)2U, Series = true };
+            ChartFormat chartFormat31 = new ChartFormat(){ Chart = 5U, Format = 2U, Series = true };
 
-            PivotArea pivotArea31 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea31 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences31 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences31 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference31 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem53 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference31 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem53 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference31.Append(fieldItem53);
 
@@ -12970,14 +12970,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat31.Append(pivotArea31);
 
-            ChartFormat chartFormat32 = new ChartFormat(){ Chart = (UInt32Value)6U, Format = (UInt32Value)0U, Series = true };
+            ChartFormat chartFormat32 = new ChartFormat(){ Chart = 6U, Format = 0U, Series = true };
 
-            PivotArea pivotArea32 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea32 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences32 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences32 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference32 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem54 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference32 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem54 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference32.Append(fieldItem54);
 
@@ -12987,14 +12987,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat32.Append(pivotArea32);
 
-            ChartFormat chartFormat33 = new ChartFormat(){ Chart = (UInt32Value)7U, Format = (UInt32Value)14U, Series = true };
+            ChartFormat chartFormat33 = new ChartFormat(){ Chart = 7U, Format = 14U, Series = true };
 
-            PivotArea pivotArea33 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea33 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences33 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences33 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference33 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem55 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference33 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem55 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference33.Append(fieldItem55);
 
@@ -13004,14 +13004,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat33.Append(pivotArea33);
 
-            ChartFormat chartFormat34 = new ChartFormat(){ Chart = (UInt32Value)8U, Format = (UInt32Value)1U, Series = true };
+            ChartFormat chartFormat34 = new ChartFormat(){ Chart = 8U, Format = 1U, Series = true };
 
-            PivotArea pivotArea34 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea34 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences34 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences34 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference34 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem56 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference34 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem56 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference34.Append(fieldItem56);
 
@@ -13021,14 +13021,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat34.Append(pivotArea34);
 
-            ChartFormat chartFormat35 = new ChartFormat(){ Chart = (UInt32Value)9U, Format = (UInt32Value)15U, Series = true };
+            ChartFormat chartFormat35 = new ChartFormat(){ Chart = 9U, Format = 15U, Series = true };
 
-            PivotArea pivotArea35 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea35 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences35 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences35 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference35 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem57 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference35 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem57 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference35.Append(fieldItem57);
 
@@ -13038,14 +13038,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat35.Append(pivotArea35);
 
-            ChartFormat chartFormat36 = new ChartFormat(){ Chart = (UInt32Value)10U, Format = (UInt32Value)2U, Series = true };
+            ChartFormat chartFormat36 = new ChartFormat(){ Chart = 10U, Format = 2U, Series = true };
 
-            PivotArea pivotArea36 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea36 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences36 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences36 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference36 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem58 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference36 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem58 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference36.Append(fieldItem58);
 
@@ -13055,14 +13055,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat36.Append(pivotArea36);
 
-            ChartFormat chartFormat37 = new ChartFormat(){ Chart = (UInt32Value)11U, Format = (UInt32Value)16U, Series = true };
+            ChartFormat chartFormat37 = new ChartFormat(){ Chart = 11U, Format = 16U, Series = true };
 
-            PivotArea pivotArea37 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea37 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences37 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences37 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference37 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem59 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference37 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem59 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference37.Append(fieldItem59);
 
@@ -13072,14 +13072,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat37.Append(pivotArea37);
 
-            ChartFormat chartFormat38 = new ChartFormat(){ Chart = (UInt32Value)12U, Format = (UInt32Value)3U, Series = true };
+            ChartFormat chartFormat38 = new ChartFormat(){ Chart = 12U, Format = 3U, Series = true };
 
-            PivotArea pivotArea38 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea38 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences38 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences38 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference38 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem60 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference38 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem60 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference38.Append(fieldItem60);
 
@@ -13089,14 +13089,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat38.Append(pivotArea38);
 
-            ChartFormat chartFormat39 = new ChartFormat(){ Chart = (UInt32Value)13U, Format = (UInt32Value)17U, Series = true };
+            ChartFormat chartFormat39 = new ChartFormat(){ Chart = 13U, Format = 17U, Series = true };
 
-            PivotArea pivotArea39 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea39 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences39 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences39 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference39 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem61 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference39 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem61 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference39.Append(fieldItem61);
 
@@ -13106,14 +13106,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat39.Append(pivotArea39);
 
-            ChartFormat chartFormat40 = new ChartFormat(){ Chart = (UInt32Value)14U, Format = (UInt32Value)4U, Series = true };
+            ChartFormat chartFormat40 = new ChartFormat(){ Chart = 14U, Format = 4U, Series = true };
 
-            PivotArea pivotArea40 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea40 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences40 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences40 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference40 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem62 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference40 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem62 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference40.Append(fieldItem62);
 
@@ -13123,14 +13123,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat40.Append(pivotArea40);
 
-            ChartFormat chartFormat41 = new ChartFormat(){ Chart = (UInt32Value)15U, Format = (UInt32Value)18U, Series = true };
+            ChartFormat chartFormat41 = new ChartFormat(){ Chart = 15U, Format = 18U, Series = true };
 
-            PivotArea pivotArea41 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea41 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences41 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences41 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference41 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem63 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference41 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem63 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference41.Append(fieldItem63);
 
@@ -13140,14 +13140,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat41.Append(pivotArea41);
 
-            ChartFormat chartFormat42 = new ChartFormat(){ Chart = (UInt32Value)16U, Format = (UInt32Value)5U, Series = true };
+            ChartFormat chartFormat42 = new ChartFormat(){ Chart = 16U, Format = 5U, Series = true };
 
-            PivotArea pivotArea42 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea42 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences42 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences42 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference42 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem64 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference42 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem64 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference42.Append(fieldItem64);
 
@@ -13157,14 +13157,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat42.Append(pivotArea42);
 
-            ChartFormat chartFormat43 = new ChartFormat(){ Chart = (UInt32Value)17U, Format = (UInt32Value)19U, Series = true };
+            ChartFormat chartFormat43 = new ChartFormat(){ Chart = 17U, Format = 19U, Series = true };
 
-            PivotArea pivotArea43 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea43 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences43 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences43 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference43 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem65 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference43 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem65 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference43.Append(fieldItem65);
 
@@ -13174,14 +13174,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat43.Append(pivotArea43);
 
-            ChartFormat chartFormat44 = new ChartFormat(){ Chart = (UInt32Value)18U, Format = (UInt32Value)6U, Series = true };
+            ChartFormat chartFormat44 = new ChartFormat(){ Chart = 18U, Format = 6U, Series = true };
 
-            PivotArea pivotArea44 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea44 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences44 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences44 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference44 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem66 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference44 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem66 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference44.Append(fieldItem66);
 
@@ -13191,14 +13191,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat44.Append(pivotArea44);
 
-            ChartFormat chartFormat45 = new ChartFormat(){ Chart = (UInt32Value)19U, Format = (UInt32Value)20U, Series = true };
+            ChartFormat chartFormat45 = new ChartFormat(){ Chart = 19U, Format = 20U, Series = true };
 
-            PivotArea pivotArea45 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea45 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences45 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences45 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference45 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem67 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference45 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem67 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference45.Append(fieldItem67);
 
@@ -13208,14 +13208,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat45.Append(pivotArea45);
 
-            ChartFormat chartFormat46 = new ChartFormat(){ Chart = (UInt32Value)20U, Format = (UInt32Value)7U, Series = true };
+            ChartFormat chartFormat46 = new ChartFormat(){ Chart = 20U, Format = 7U, Series = true };
 
-            PivotArea pivotArea46 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea46 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences46 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences46 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference46 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem68 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference46 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem68 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference46.Append(fieldItem68);
 
@@ -13276,16 +13276,16 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             stylesheet1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             stylesheet1.AddNamespaceDeclaration("x14ac", "http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac");
 
-            NumberingFormats numberingFormats1 = new NumberingFormats(){ Count = (UInt32Value)1U };
-            NumberingFormat numberingFormat11 = new NumberingFormat(){ NumberFormatId = (UInt32Value)164U, FormatCode = "\"¥\"#,##0" };
+            NumberingFormats numberingFormats1 = new NumberingFormats(){ Count = 1U };
+            NumberingFormat numberingFormat11 = new NumberingFormat(){ NumberFormatId = 164U, FormatCode = "\"¥\"#,##0" };
 
             numberingFormats1.Append(numberingFormat11);
 
-            Fonts fonts1 = new Fonts(){ Count = (UInt32Value)2U };
+            Fonts fonts1 = new Fonts(){ Count = 2U };
 
             Font font1 = new Font();
             FontSize fontSize1 = new FontSize(){ Val = 11D };
-            Color color1 = new Color(){ Theme = (UInt32Value)1U };
+            Color color1 = new Color(){ Theme = 1U };
             FontName fontName1 = new FontName(){ Val = "Calibri" };
             FontFamilyNumbering fontFamilyNumbering1 = new FontFamilyNumbering(){ Val = 2 };
             FontScheme fontScheme1 = new FontScheme(){ Val = FontSchemeValues.Minor };
@@ -13312,7 +13312,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             fonts1.Append(font1);
             fonts1.Append(font2);
 
-            Fills fills1 = new Fills(){ Count = (UInt32Value)2U };
+            Fills fills1 = new Fills(){ Count = 2U };
 
             Fill fill1 = new Fill();
             PatternFill patternFill1 = new PatternFill(){ PatternType = PatternValues.None };
@@ -13327,7 +13327,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             fills1.Append(fill1);
             fills1.Append(fill2);
 
-            Borders borders1 = new Borders(){ Count = (UInt32Value)1U };
+            Borders borders1 = new Borders(){ Count = 1U };
 
             Border border1 = new Border();
             LeftBorder leftBorder1 = new LeftBorder();
@@ -13344,40 +13344,40 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             borders1.Append(border1);
 
-            CellStyleFormats cellStyleFormats1 = new CellStyleFormats(){ Count = (UInt32Value)1U };
-            CellFormat cellFormat1 = new CellFormat(){ NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U };
+            CellStyleFormats cellStyleFormats1 = new CellStyleFormats(){ Count = 1U };
+            CellFormat cellFormat1 = new CellFormat(){ NumberFormatId = 0U, FontId = 0U, FillId = 0U, BorderId = 0U };
 
             cellStyleFormats1.Append(cellFormat1);
 
-            CellFormats cellFormats1 = new CellFormats(){ Count = (UInt32Value)8U };
-            CellFormat cellFormat2 = new CellFormat(){ NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U, FormatId = (UInt32Value)0U };
+            CellFormats cellFormats1 = new CellFormats(){ Count = 8U };
+            CellFormat cellFormat2 = new CellFormat(){ NumberFormatId = 0U, FontId = 0U, FillId = 0U, BorderId = 0U, FormatId = 0U };
 
-            CellFormat cellFormat3 = new CellFormat(){ NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U, FormatId = (UInt32Value)0U, ApplyAlignment = true };
+            CellFormat cellFormat3 = new CellFormat(){ NumberFormatId = 0U, FontId = 0U, FillId = 0U, BorderId = 0U, FormatId = 0U, ApplyAlignment = true };
             Alignment alignment1 = new Alignment(){ Vertical = VerticalAlignmentValues.Center };
 
             cellFormat3.Append(alignment1);
 
-            CellFormat cellFormat4 = new CellFormat(){ NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U, FormatId = (UInt32Value)0U, ApplyAlignment = true };
+            CellFormat cellFormat4 = new CellFormat(){ NumberFormatId = 0U, FontId = 0U, FillId = 0U, BorderId = 0U, FormatId = 0U, ApplyAlignment = true };
             Alignment alignment2 = new Alignment(){ Horizontal = HorizontalAlignmentValues.Center, Vertical = VerticalAlignmentValues.Center };
 
             cellFormat4.Append(alignment2);
 
-            CellFormat cellFormat5 = new CellFormat(){ NumberFormatId = (UInt32Value)14U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U, FormatId = (UInt32Value)0U, ApplyNumberFormat = true, ApplyAlignment = true };
+            CellFormat cellFormat5 = new CellFormat(){ NumberFormatId = 14U, FontId = 0U, FillId = 0U, BorderId = 0U, FormatId = 0U, ApplyNumberFormat = true, ApplyAlignment = true };
             Alignment alignment3 = new Alignment(){ Vertical = VerticalAlignmentValues.Center };
 
             cellFormat5.Append(alignment3);
 
-            CellFormat cellFormat6 = new CellFormat(){ NumberFormatId = (UInt32Value)164U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U, FormatId = (UInt32Value)0U, ApplyNumberFormat = true, ApplyAlignment = true };
+            CellFormat cellFormat6 = new CellFormat(){ NumberFormatId = 164U, FontId = 0U, FillId = 0U, BorderId = 0U, FormatId = 0U, ApplyNumberFormat = true, ApplyAlignment = true };
             Alignment alignment4 = new Alignment(){ Vertical = VerticalAlignmentValues.Center };
 
             cellFormat6.Append(alignment4);
-            CellFormat cellFormat7 = new CellFormat(){ NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U, FormatId = (UInt32Value)0U, PivotButton = true };
+            CellFormat cellFormat7 = new CellFormat(){ NumberFormatId = 0U, FontId = 0U, FillId = 0U, BorderId = 0U, FormatId = 0U, PivotButton = true };
 
-            CellFormat cellFormat8 = new CellFormat(){ NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U, FormatId = (UInt32Value)0U, ApplyAlignment = true };
+            CellFormat cellFormat8 = new CellFormat(){ NumberFormatId = 0U, FontId = 0U, FillId = 0U, BorderId = 0U, FormatId = 0U, ApplyAlignment = true };
             Alignment alignment5 = new Alignment(){ Horizontal = HorizontalAlignmentValues.Left };
 
             cellFormat8.Append(alignment5);
-            CellFormat cellFormat9 = new CellFormat(){ NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U, FormatId = (UInt32Value)0U, ApplyNumberFormat = true };
+            CellFormat cellFormat9 = new CellFormat(){ NumberFormatId = 0U, FontId = 0U, FillId = 0U, BorderId = 0U, FormatId = 0U, ApplyNumberFormat = true };
 
             cellFormats1.Append(cellFormat2);
             cellFormats1.Append(cellFormat3);
@@ -13388,80 +13388,80 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             cellFormats1.Append(cellFormat8);
             cellFormats1.Append(cellFormat9);
 
-            CellStyles cellStyles1 = new CellStyles(){ Count = (UInt32Value)1U };
-            CellStyle cellStyle1 = new CellStyle(){ Name = "Normal", FormatId = (UInt32Value)0U, BuiltinId = (UInt32Value)0U };
+            CellStyles cellStyles1 = new CellStyles(){ Count = 1U };
+            CellStyle cellStyle1 = new CellStyle(){ Name = "Normal", FormatId = 0U, BuiltinId = 0U };
 
             cellStyles1.Append(cellStyle1);
 
-            DifferentialFormats differentialFormats1 = new DifferentialFormats(){ Count = (UInt32Value)14U };
+            DifferentialFormats differentialFormats1 = new DifferentialFormats(){ Count = 14U };
 
             DifferentialFormat differentialFormat1 = new DifferentialFormat();
-            Alignment alignment6 = new Alignment(){ Horizontal = HorizontalAlignmentValues.Center, Vertical = VerticalAlignmentValues.Center, TextRotation = (UInt32Value)0U, WrapText = false, Indent = (UInt32Value)0U, JustifyLastLine = false, ShrinkToFit = false, ReadingOrder = (UInt32Value)0U };
+            Alignment alignment6 = new Alignment(){ Horizontal = HorizontalAlignmentValues.Center, Vertical = VerticalAlignmentValues.Center, TextRotation = 0U, WrapText = false, Indent = 0U, JustifyLastLine = false, ShrinkToFit = false, ReadingOrder = 0U };
 
             differentialFormat1.Append(alignment6);
 
             DifferentialFormat differentialFormat2 = new DifferentialFormat();
-            NumberingFormat numberingFormat12 = new NumberingFormat(){ NumberFormatId = (UInt32Value)164U, FormatCode = "\"¥\"#,##0" };
+            NumberingFormat numberingFormat12 = new NumberingFormat(){ NumberFormatId = 164U, FormatCode = "\"¥\"#,##0" };
 
             differentialFormat2.Append(numberingFormat12);
 
             DifferentialFormat differentialFormat3 = new DifferentialFormat();
-            Alignment alignment7 = new Alignment(){ Horizontal = HorizontalAlignmentValues.Center, Vertical = VerticalAlignmentValues.Center, TextRotation = (UInt32Value)0U, WrapText = false, Indent = (UInt32Value)0U, JustifyLastLine = false, ShrinkToFit = false, ReadingOrder = (UInt32Value)0U };
+            Alignment alignment7 = new Alignment(){ Horizontal = HorizontalAlignmentValues.Center, Vertical = VerticalAlignmentValues.Center, TextRotation = 0U, WrapText = false, Indent = 0U, JustifyLastLine = false, ShrinkToFit = false, ReadingOrder = 0U };
 
             differentialFormat3.Append(alignment7);
 
             DifferentialFormat differentialFormat4 = new DifferentialFormat();
-            NumberingFormat numberingFormat13 = new NumberingFormat(){ NumberFormatId = (UInt32Value)0U, FormatCode = "General" };
+            NumberingFormat numberingFormat13 = new NumberingFormat(){ NumberFormatId = 0U, FormatCode = "General" };
 
             differentialFormat4.Append(numberingFormat13);
 
             DifferentialFormat differentialFormat5 = new DifferentialFormat();
-            NumberingFormat numberingFormat14 = new NumberingFormat(){ NumberFormatId = (UInt32Value)165U, FormatCode = "yyyy/mm/dd" };
+            NumberingFormat numberingFormat14 = new NumberingFormat(){ NumberFormatId = 165U, FormatCode = "yyyy/mm/dd" };
 
             differentialFormat5.Append(numberingFormat14);
 
             DifferentialFormat differentialFormat6 = new DifferentialFormat();
-            NumberingFormat numberingFormat15 = new NumberingFormat(){ NumberFormatId = (UInt32Value)0U, FormatCode = "General" };
+            NumberingFormat numberingFormat15 = new NumberingFormat(){ NumberFormatId = 0U, FormatCode = "General" };
 
             differentialFormat6.Append(numberingFormat15);
 
             DifferentialFormat differentialFormat7 = new DifferentialFormat();
-            NumberingFormat numberingFormat16 = new NumberingFormat(){ NumberFormatId = (UInt32Value)0U, FormatCode = "General" };
+            NumberingFormat numberingFormat16 = new NumberingFormat(){ NumberFormatId = 0U, FormatCode = "General" };
 
             differentialFormat7.Append(numberingFormat16);
 
             DifferentialFormat differentialFormat8 = new DifferentialFormat();
-            NumberingFormat numberingFormat17 = new NumberingFormat(){ NumberFormatId = (UInt32Value)0U, FormatCode = "General" };
+            NumberingFormat numberingFormat17 = new NumberingFormat(){ NumberFormatId = 0U, FormatCode = "General" };
 
             differentialFormat8.Append(numberingFormat17);
 
             DifferentialFormat differentialFormat9 = new DifferentialFormat();
-            NumberingFormat numberingFormat18 = new NumberingFormat(){ NumberFormatId = (UInt32Value)165U, FormatCode = "yyyy/mm/dd" };
+            NumberingFormat numberingFormat18 = new NumberingFormat(){ NumberFormatId = 165U, FormatCode = "yyyy/mm/dd" };
 
             differentialFormat9.Append(numberingFormat18);
 
             DifferentialFormat differentialFormat10 = new DifferentialFormat();
-            Alignment alignment8 = new Alignment(){ Horizontal = HorizontalAlignmentValues.Center, Vertical = VerticalAlignmentValues.Center, TextRotation = (UInt32Value)0U, WrapText = false, Indent = (UInt32Value)0U, JustifyLastLine = false, ShrinkToFit = false, ReadingOrder = (UInt32Value)0U };
+            Alignment alignment8 = new Alignment(){ Horizontal = HorizontalAlignmentValues.Center, Vertical = VerticalAlignmentValues.Center, TextRotation = 0U, WrapText = false, Indent = 0U, JustifyLastLine = false, ShrinkToFit = false, ReadingOrder = 0U };
 
             differentialFormat10.Append(alignment8);
 
             DifferentialFormat differentialFormat11 = new DifferentialFormat();
-            NumberingFormat numberingFormat19 = new NumberingFormat(){ NumberFormatId = (UInt32Value)164U, FormatCode = "\"¥\"#,##0" };
+            NumberingFormat numberingFormat19 = new NumberingFormat(){ NumberFormatId = 164U, FormatCode = "\"¥\"#,##0" };
 
             differentialFormat11.Append(numberingFormat19);
 
             DifferentialFormat differentialFormat12 = new DifferentialFormat();
-            Alignment alignment9 = new Alignment(){ Horizontal = HorizontalAlignmentValues.Center, Vertical = VerticalAlignmentValues.Center, TextRotation = (UInt32Value)0U, WrapText = false, Indent = (UInt32Value)0U, JustifyLastLine = false, ShrinkToFit = false, ReadingOrder = (UInt32Value)0U };
+            Alignment alignment9 = new Alignment(){ Horizontal = HorizontalAlignmentValues.Center, Vertical = VerticalAlignmentValues.Center, TextRotation = 0U, WrapText = false, Indent = 0U, JustifyLastLine = false, ShrinkToFit = false, ReadingOrder = 0U };
 
             differentialFormat12.Append(alignment9);
 
             DifferentialFormat differentialFormat13 = new DifferentialFormat();
-            NumberingFormat numberingFormat20 = new NumberingFormat(){ NumberFormatId = (UInt32Value)165U, FormatCode = "yyyy/mm/dd" };
+            NumberingFormat numberingFormat20 = new NumberingFormat(){ NumberFormatId = 165U, FormatCode = "yyyy/mm/dd" };
 
             differentialFormat13.Append(numberingFormat20);
 
             DifferentialFormat differentialFormat14 = new DifferentialFormat();
-            NumberingFormat numberingFormat21 = new NumberingFormat(){ NumberFormatId = (UInt32Value)165U, FormatCode = "yyyy/mm/dd" };
+            NumberingFormat numberingFormat21 = new NumberingFormat(){ NumberFormatId = 165U, FormatCode = "yyyy/mm/dd" };
 
             differentialFormat14.Append(numberingFormat21);
 
@@ -13479,7 +13479,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             differentialFormats1.Append(differentialFormat12);
             differentialFormats1.Append(differentialFormat13);
             differentialFormats1.Append(differentialFormat14);
-            TableStyles tableStyles1 = new TableStyles(){ Count = (UInt32Value)0U, DefaultTableStyle = "TableStyleMedium2", DefaultPivotStyle = "PivotStyleLight16" };
+            TableStyles tableStyles1 = new TableStyles(){ Count = 0U, DefaultTableStyle = "TableStyleMedium2", DefaultPivotStyle = "PivotStyleLight16" };
 
             StylesheetExtensionList stylesheetExtensionList1 = new StylesheetExtensionList();
 
@@ -13522,19 +13522,19 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             SheetDimension sheetDimension8 = new SheetDimension(){ Reference = "A1:B5" };
 
             SheetViews sheetViews8 = new SheetViews();
-            SheetView sheetView8 = new SheetView(){ WorkbookViewId = (UInt32Value)0U };
+            SheetView sheetView8 = new SheetView(){ WorkbookViewId = 0U };
 
             sheetViews8.Append(sheetView8);
             SheetFormatProperties sheetFormatProperties8 = new SheetFormatProperties(){ DefaultRowHeight = 15D };
 
             Columns columns8 = new Columns();
-            Column column48 = new Column(){ Min = (UInt32Value)1U, Max = (UInt32Value)1U, Width = 14.140625D, BestFit = true, CustomWidth = true };
-            Column column49 = new Column(){ Min = (UInt32Value)2U, Max = (UInt32Value)2U, Width = 17.42578125D, CustomWidth = true };
-            Column column50 = new Column(){ Min = (UInt32Value)3U, Max = (UInt32Value)3U, Width = 12.42578125D, CustomWidth = true };
-            Column column51 = new Column(){ Min = (UInt32Value)4U, Max = (UInt32Value)11U, Width = 13D, BestFit = true, CustomWidth = true };
-            Column column52 = new Column(){ Min = (UInt32Value)12U, Max = (UInt32Value)12U, Width = 13D, CustomWidth = true };
-            Column column53 = new Column(){ Min = (UInt32Value)13U, Max = (UInt32Value)20U, Width = 13D, BestFit = true, CustomWidth = true };
-            Column column54 = new Column(){ Min = (UInt32Value)21U, Max = (UInt32Value)23U, Width = 20.42578125D, BestFit = true, CustomWidth = true };
+            Column column48 = new Column(){ Min = 1U, Max = 1U, Width = 14.140625D, BestFit = true, CustomWidth = true };
+            Column column49 = new Column(){ Min = 2U, Max = 2U, Width = 17.42578125D, CustomWidth = true };
+            Column column50 = new Column(){ Min = 3U, Max = 3U, Width = 12.42578125D, CustomWidth = true };
+            Column column51 = new Column(){ Min = 4U, Max = 11U, Width = 13D, BestFit = true, CustomWidth = true };
+            Column column52 = new Column(){ Min = 12U, Max = 12U, Width = 13D, CustomWidth = true };
+            Column column53 = new Column(){ Min = 13U, Max = 20U, Width = 13D, BestFit = true, CustomWidth = true };
+            Column column54 = new Column(){ Min = 21U, Max = 23U, Width = 20.42578125D, BestFit = true, CustomWidth = true };
 
             columns8.Append(column48);
             columns8.Append(column49);
@@ -13546,9 +13546,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             SheetData sheetData8 = new SheetData();
 
-            Row row48 = new Row(){ RowIndex = (UInt32Value)1U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row48 = new Row(){ RowIndex = 1U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell183 = new Cell(){ CellReference = "A1", StyleIndex = (UInt32Value)5U, DataType = CellValues.SharedString };
+            Cell cell183 = new Cell(){ CellReference = "A1", StyleIndex = 5U, DataType = CellValues.SharedString };
             CellValue cellValue183 = new CellValue();
             cellValue183.Text = "29";
 
@@ -13563,15 +13563,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row48.Append(cell183);
             row48.Append(cell184);
 
-            Row row49 = new Row(){ RowIndex = (UInt32Value)2U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row49 = new Row(){ RowIndex = 2U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell185 = new Cell(){ CellReference = "A2", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell185 = new Cell(){ CellReference = "A2", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue185 = new CellValue();
             cellValue185.Text = "6";
 
             cell185.Append(cellValue185);
 
-            Cell cell186 = new Cell(){ CellReference = "B2", StyleIndex = (UInt32Value)7U };
+            Cell cell186 = new Cell(){ CellReference = "B2", StyleIndex = 7U };
             CellValue cellValue186 = new CellValue();
             cellValue186.Text = "19";
 
@@ -13580,15 +13580,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row49.Append(cell185);
             row49.Append(cell186);
 
-            Row row50 = new Row(){ RowIndex = (UInt32Value)3U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row50 = new Row(){ RowIndex = 3U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell187 = new Cell(){ CellReference = "A3", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell187 = new Cell(){ CellReference = "A3", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue187 = new CellValue();
             cellValue187.Text = "8";
 
             cell187.Append(cellValue187);
 
-            Cell cell188 = new Cell(){ CellReference = "B3", StyleIndex = (UInt32Value)7U };
+            Cell cell188 = new Cell(){ CellReference = "B3", StyleIndex = 7U };
             CellValue cellValue188 = new CellValue();
             cellValue188.Text = "13";
 
@@ -13597,15 +13597,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row50.Append(cell187);
             row50.Append(cell188);
 
-            Row row51 = new Row(){ RowIndex = (UInt32Value)4U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row51 = new Row(){ RowIndex = 4U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell189 = new Cell(){ CellReference = "A4", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell189 = new Cell(){ CellReference = "A4", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue189 = new CellValue();
             cellValue189.Text = "11";
 
             cell189.Append(cellValue189);
 
-            Cell cell190 = new Cell(){ CellReference = "B4", StyleIndex = (UInt32Value)7U };
+            Cell cell190 = new Cell(){ CellReference = "B4", StyleIndex = 7U };
             CellValue cellValue190 = new CellValue();
             cellValue190.Text = "33";
 
@@ -13614,15 +13614,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row51.Append(cell189);
             row51.Append(cell190);
 
-            Row row52 = new Row(){ RowIndex = (UInt32Value)5U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row52 = new Row(){ RowIndex = 5U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell191 = new Cell(){ CellReference = "A5", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell191 = new Cell(){ CellReference = "A5", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue191 = new CellValue();
             cellValue191.Text = "30";
 
             cell191.Append(cellValue191);
 
-            Cell cell192 = new Cell(){ CellReference = "B5", StyleIndex = (UInt32Value)7U };
+            Cell cell192 = new Cell(){ CellReference = "B5", StyleIndex = 7U };
             CellValue cellValue192 = new CellValue();
             cellValue192.Text = "65";
 
@@ -13636,7 +13636,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             sheetData8.Append(row50);
             sheetData8.Append(row51);
             sheetData8.Append(row52);
-            PhoneticProperties phoneticProperties14 = new PhoneticProperties(){ FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties14 = new PhoneticProperties(){ FontId = 1U };
             PageMargins pageMargins18 = new PageMargins(){ Left = 0.7D, Right = 0.7D, Top = 0.75D, Bottom = 0.75D, Header = 0.3D, Footer = 0.3D };
             S.Drawing drawing6 = new S.Drawing(){ Id = "rId2" };
 
@@ -13673,8 +13673,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             X15.Timelines timelines6 = new X15.Timelines(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x" }  };
             timelines6.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             timelines6.AddNamespaceDeclaration("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main");
-            X15.Timeline timeline11 = new X15.Timeline(){ Name = "DeliveryDate 4", Cache = "NativeTimeline_DeliveryDate1", Caption = "Caption1", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
-            X15.Timeline timeline12 = new X15.Timeline(){ Name = "DeliveryDate 5", Cache = "NativeTimeline_DeliveryDate1", Caption = "Caption2", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline11 = new X15.Timeline(){ Name = "DeliveryDate 4", Cache = "NativeTimeline_DeliveryDate1", Caption = "Caption1", Level = 2U, SelectionLevel = 2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline12 = new X15.Timeline(){ Name = "DeliveryDate 5", Cache = "NativeTimeline_DeliveryDate1", Caption = "Caption2", Level = 2U, SelectionLevel = 2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
             timelines6.Append(timeline11);
             timelines6.Append(timeline12);
@@ -13721,10 +13721,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker21.Append(rowId42);
             toMarker21.Append(rowOffset42);
 
-            Xdr.GraphicFrame graphicFrame21 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame21 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties21 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties31 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)2U, Name = "Chart 1" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties31 = new Xdr.NonVisualDrawingProperties(){ Id = 2U, Name = "Chart 1" };
 
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties21 = new Xdr.NonVisualGraphicFrameDrawingProperties();
             A.GraphicFrameLocks graphicFrameLocks9 = new A.GraphicFrameLocks();
@@ -13795,10 +13795,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker22.Append(rowId44);
             toMarker22.Append(rowOffset44);
 
-            Xdr.GraphicFrame graphicFrame22 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame22 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties22 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties32 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)3U, Name = "グラフ 2" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties32 = new Xdr.NonVisualDrawingProperties(){ Id = 3U, Name = "グラフ 2" };
 
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties22 = new Xdr.NonVisualGraphicFrameDrawingProperties();
             A.GraphicFrameLocks graphicFrameLocks10 = new A.GraphicFrameLocks();
@@ -13875,10 +13875,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice22 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame23 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame23 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties23 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties33 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)4U, Name = "DeliveryDate 4" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties33 = new Xdr.NonVisualDrawingProperties(){ Id = 4U, Name = "DeliveryDate 4" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties23 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties23.Append(nonVisualDrawingProperties33);
@@ -13912,10 +13912,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback21.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback21.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape11 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape11 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties11 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties34 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties34 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties11 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks11 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -14031,10 +14031,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice23 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame24 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame24 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties24 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties35 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)5U, Name = "DeliveryDate 5" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties35 = new Xdr.NonVisualDrawingProperties(){ Id = 5U, Name = "DeliveryDate 5" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties24 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties24.Append(nonVisualDrawingProperties35);
@@ -14068,10 +14068,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback22.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback22.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape12 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape12 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties12 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties36 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties36 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties12 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks12 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -14188,7 +14188,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotSource pivotSource11 = new C.PivotSource();
             C.PivotTableName pivotTableName11 = new C.PivotTableName();
             pivotTableName11.Text = "[GeneratedDocument.xlsx]Caption!PivotTable1";
-            C.FormatId formatId11 = new C.FormatId(){ Val = (UInt32Value)8U };
+            C.FormatId formatId11 = new C.FormatId(){ Val = 8U };
 
             pivotSource11.Append(pivotTableName11);
             pivotSource11.Append(formatId11);
@@ -14204,7 +14204,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotFormats pivotFormats11 = new C.PivotFormats();
 
             C.PivotFormat pivotFormat95 = new C.PivotFormat();
-            C.Index index105 = new C.Index(){ Val = (UInt32Value)0U };
+            C.Index index105 = new C.Index(){ Val = 0U };
 
             C.Marker marker95 = new C.Marker();
             C.Symbol symbol95 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -14215,7 +14215,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat95.Append(marker95);
 
             C.PivotFormat pivotFormat96 = new C.PivotFormat();
-            C.Index index106 = new C.Index(){ Val = (UInt32Value)1U };
+            C.Index index106 = new C.Index(){ Val = 1U };
 
             C.Marker marker96 = new C.Marker();
             C.Symbol symbol96 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -14235,8 +14235,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.VaryColors varyColors11 = new C.VaryColors(){ Val = true };
 
             C.PieChartSeries pieChartSeries6 = new C.PieChartSeries();
-            C.Index index107 = new C.Index(){ Val = (UInt32Value)0U };
-            C.Order order11 = new C.Order(){ Val = (UInt32Value)0U };
+            C.Index index107 = new C.Index(){ Val = 0U };
+            C.Order order11 = new C.Order(){ Val = 0U };
 
             C.SeriesText seriesText11 = new C.SeriesText();
 
@@ -14245,9 +14245,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula31.Text = "Caption!$B$1";
 
             C.StringCache stringCache21 = new C.StringCache();
-            C.PointCount pointCount31 = new C.PointCount(){ Val = (UInt32Value)1U };
+            C.PointCount pointCount31 = new C.PointCount(){ Val = 1U };
 
-            C.StringPoint stringPoint41 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint41 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue71 = new C.NumericValue();
             numericValue71.Text = "Total";
 
@@ -14268,21 +14268,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula32.Text = "Caption!$A$2:$A$5";
 
             C.StringCache stringCache22 = new C.StringCache();
-            C.PointCount pointCount32 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount32 = new C.PointCount(){ Val = 3U };
 
-            C.StringPoint stringPoint42 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint42 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue72 = new C.NumericValue();
             numericValue72.Text = "product_A";
 
             stringPoint42.Append(numericValue72);
 
-            C.StringPoint stringPoint43 = new C.StringPoint(){ Index = (UInt32Value)1U };
+            C.StringPoint stringPoint43 = new C.StringPoint(){ Index = 1U };
             C.NumericValue numericValue73 = new C.NumericValue();
             numericValue73.Text = "product_D";
 
             stringPoint43.Append(numericValue73);
 
-            C.StringPoint stringPoint44 = new C.StringPoint(){ Index = (UInt32Value)2U };
+            C.StringPoint stringPoint44 = new C.StringPoint(){ Index = 2U };
             C.NumericValue numericValue74 = new C.NumericValue();
             numericValue74.Text = "product_E";
 
@@ -14307,21 +14307,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.NumberingCache numberingCache11 = new C.NumberingCache();
             C.FormatCode formatCode11 = new C.FormatCode();
             formatCode11.Text = "General";
-            C.PointCount pointCount33 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount33 = new C.PointCount(){ Val = 3U };
 
-            C.NumericPoint numericPoint31 = new C.NumericPoint(){ Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint31 = new C.NumericPoint(){ Index = 0U };
             C.NumericValue numericValue75 = new C.NumericValue();
             numericValue75.Text = "19";
 
             numericPoint31.Append(numericValue75);
 
-            C.NumericPoint numericPoint32 = new C.NumericPoint(){ Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint32 = new C.NumericPoint(){ Index = 1U };
             C.NumericValue numericValue76 = new C.NumericValue();
             numericValue76.Text = "13";
 
             numericPoint32.Append(numericValue76);
 
-            C.NumericPoint numericPoint33 = new C.NumericPoint(){ Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint33 = new C.NumericPoint(){ Index = 2U };
             C.NumericValue numericValue77 = new C.NumericValue();
             numericValue77.Text = "33";
 
@@ -14465,7 +14465,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotSource pivotSource12 = new C.PivotSource();
             C.PivotTableName pivotTableName12 = new C.PivotTableName();
             pivotTableName12.Text = "[GeneratedDocument.xlsx]Caption!PivotTable1";
-            C.FormatId formatId12 = new C.FormatId(){ Val = (UInt32Value)7U };
+            C.FormatId formatId12 = new C.FormatId(){ Val = 7U };
 
             pivotSource12.Append(pivotTableName12);
             pivotSource12.Append(formatId12);
@@ -14481,7 +14481,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotFormats pivotFormats12 = new C.PivotFormats();
 
             C.PivotFormat pivotFormat97 = new C.PivotFormat();
-            C.Index index108 = new C.Index(){ Val = (UInt32Value)0U };
+            C.Index index108 = new C.Index(){ Val = 0U };
 
             C.ShapeProperties shapeProperties45 = new C.ShapeProperties();
 
@@ -14514,7 +14514,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat97.Append(marker97);
 
             C.PivotFormat pivotFormat98 = new C.PivotFormat();
-            C.Index index109 = new C.Index(){ Val = (UInt32Value)1U };
+            C.Index index109 = new C.Index(){ Val = 1U };
 
             C.ShapeProperties shapeProperties46 = new C.ShapeProperties();
 
@@ -14547,7 +14547,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat98.Append(marker98);
 
             C.PivotFormat pivotFormat99 = new C.PivotFormat();
-            C.Index index110 = new C.Index(){ Val = (UInt32Value)2U };
+            C.Index index110 = new C.Index(){ Val = 2U };
 
             C.Marker marker99 = new C.Marker();
             C.Symbol symbol99 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -14558,7 +14558,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat99.Append(marker99);
 
             C.PivotFormat pivotFormat100 = new C.PivotFormat();
-            C.Index index111 = new C.Index(){ Val = (UInt32Value)3U };
+            C.Index index111 = new C.Index(){ Val = 3U };
 
             C.Marker marker100 = new C.Marker();
             C.Symbol symbol100 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -14569,7 +14569,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat100.Append(marker100);
 
             C.PivotFormat pivotFormat101 = new C.PivotFormat();
-            C.Index index112 = new C.Index(){ Val = (UInt32Value)4U };
+            C.Index index112 = new C.Index(){ Val = 4U };
 
             C.Marker marker101 = new C.Marker();
             C.Symbol symbol101 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -14580,7 +14580,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat101.Append(marker101);
 
             C.PivotFormat pivotFormat102 = new C.PivotFormat();
-            C.Index index113 = new C.Index(){ Val = (UInt32Value)5U };
+            C.Index index113 = new C.Index(){ Val = 5U };
 
             C.Marker marker102 = new C.Marker();
             C.Symbol symbol102 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -14591,7 +14591,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat102.Append(marker102);
 
             C.PivotFormat pivotFormat103 = new C.PivotFormat();
-            C.Index index114 = new C.Index(){ Val = (UInt32Value)6U };
+            C.Index index114 = new C.Index(){ Val = 6U };
 
             C.Marker marker103 = new C.Marker();
             C.Symbol symbol103 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -14602,7 +14602,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat103.Append(marker103);
 
             C.PivotFormat pivotFormat104 = new C.PivotFormat();
-            C.Index index115 = new C.Index(){ Val = (UInt32Value)7U };
+            C.Index index115 = new C.Index(){ Val = 7U };
 
             C.Marker marker104 = new C.Marker();
             C.Symbol symbol104 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -14613,7 +14613,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat104.Append(marker104);
 
             C.PivotFormat pivotFormat105 = new C.PivotFormat();
-            C.Index index116 = new C.Index(){ Val = (UInt32Value)8U };
+            C.Index index116 = new C.Index(){ Val = 8U };
 
             C.Marker marker105 = new C.Marker();
             C.Symbol symbol105 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -14624,7 +14624,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat105.Append(marker105);
 
             C.PivotFormat pivotFormat106 = new C.PivotFormat();
-            C.Index index117 = new C.Index(){ Val = (UInt32Value)9U };
+            C.Index index117 = new C.Index(){ Val = 9U };
 
             C.Marker marker106 = new C.Marker();
             C.Symbol symbol106 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -14635,7 +14635,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat106.Append(marker106);
 
             C.PivotFormat pivotFormat107 = new C.PivotFormat();
-            C.Index index118 = new C.Index(){ Val = (UInt32Value)10U };
+            C.Index index118 = new C.Index(){ Val = 10U };
 
             C.Marker marker107 = new C.Marker();
             C.Symbol symbol107 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -14646,7 +14646,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat107.Append(marker107);
 
             C.PivotFormat pivotFormat108 = new C.PivotFormat();
-            C.Index index119 = new C.Index(){ Val = (UInt32Value)11U };
+            C.Index index119 = new C.Index(){ Val = 11U };
 
             C.Marker marker108 = new C.Marker();
             C.Symbol symbol108 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -14657,7 +14657,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat108.Append(marker108);
 
             C.PivotFormat pivotFormat109 = new C.PivotFormat();
-            C.Index index120 = new C.Index(){ Val = (UInt32Value)12U };
+            C.Index index120 = new C.Index(){ Val = 12U };
 
             C.Marker marker109 = new C.Marker();
             C.Symbol symbol109 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -14668,7 +14668,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat109.Append(marker109);
 
             C.PivotFormat pivotFormat110 = new C.PivotFormat();
-            C.Index index121 = new C.Index(){ Val = (UInt32Value)13U };
+            C.Index index121 = new C.Index(){ Val = 13U };
 
             C.Marker marker110 = new C.Marker();
             C.Symbol symbol110 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -14679,7 +14679,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat110.Append(marker110);
 
             C.PivotFormat pivotFormat111 = new C.PivotFormat();
-            C.Index index122 = new C.Index(){ Val = (UInt32Value)14U };
+            C.Index index122 = new C.Index(){ Val = 14U };
 
             C.ShapeProperties shapeProperties47 = new C.ShapeProperties();
 
@@ -14736,8 +14736,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.VaryColors varyColors12 = new C.VaryColors(){ Val = false };
 
             C.BarChartSeries barChartSeries6 = new C.BarChartSeries();
-            C.Index index123 = new C.Index(){ Val = (UInt32Value)0U };
-            C.Order order12 = new C.Order(){ Val = (UInt32Value)0U };
+            C.Index index123 = new C.Index(){ Val = 0U };
+            C.Order order12 = new C.Order(){ Val = 0U };
 
             C.SeriesText seriesText12 = new C.SeriesText();
 
@@ -14746,9 +14746,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula34.Text = "Caption!$B$1";
 
             C.StringCache stringCache23 = new C.StringCache();
-            C.PointCount pointCount34 = new C.PointCount(){ Val = (UInt32Value)1U };
+            C.PointCount pointCount34 = new C.PointCount(){ Val = 1U };
 
-            C.StringPoint stringPoint45 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint45 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue78 = new C.NumericValue();
             numericValue78.Text = "Total";
 
@@ -14791,21 +14791,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula35.Text = "Caption!$A$2:$A$5";
 
             C.StringCache stringCache24 = new C.StringCache();
-            C.PointCount pointCount35 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount35 = new C.PointCount(){ Val = 3U };
 
-            C.StringPoint stringPoint46 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint46 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue79 = new C.NumericValue();
             numericValue79.Text = "product_A";
 
             stringPoint46.Append(numericValue79);
 
-            C.StringPoint stringPoint47 = new C.StringPoint(){ Index = (UInt32Value)1U };
+            C.StringPoint stringPoint47 = new C.StringPoint(){ Index = 1U };
             C.NumericValue numericValue80 = new C.NumericValue();
             numericValue80.Text = "product_D";
 
             stringPoint47.Append(numericValue80);
 
-            C.StringPoint stringPoint48 = new C.StringPoint(){ Index = (UInt32Value)2U };
+            C.StringPoint stringPoint48 = new C.StringPoint(){ Index = 2U };
             C.NumericValue numericValue81 = new C.NumericValue();
             numericValue81.Text = "product_E";
 
@@ -14830,21 +14830,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.NumberingCache numberingCache12 = new C.NumberingCache();
             C.FormatCode formatCode12 = new C.FormatCode();
             formatCode12.Text = "General";
-            C.PointCount pointCount36 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount36 = new C.PointCount(){ Val = 3U };
 
-            C.NumericPoint numericPoint34 = new C.NumericPoint(){ Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint34 = new C.NumericPoint(){ Index = 0U };
             C.NumericValue numericValue82 = new C.NumericValue();
             numericValue82.Text = "19";
 
             numericPoint34.Append(numericValue82);
 
-            C.NumericPoint numericPoint35 = new C.NumericPoint(){ Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint35 = new C.NumericPoint(){ Index = 1U };
             C.NumericValue numericValue83 = new C.NumericValue();
             numericValue83.Text = "13";
 
             numericPoint35.Append(numericValue83);
 
-            C.NumericPoint numericPoint36 = new C.NumericPoint(){ Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint36 = new C.NumericPoint(){ Index = 2U };
             C.NumericValue numericValue84 = new C.NumericValue();
             numericValue84.Text = "33";
 
@@ -14885,8 +14885,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             dataLabels12.Append(showBubbleSize12);
             C.GapWidth gapWidth6 = new C.GapWidth(){ Val = (UInt16Value)219U };
             C.Overlap overlap5 = new C.Overlap(){ Val = -27 };
-            C.AxisId axisId21 = new C.AxisId(){ Val = (UInt32Value)164321080U };
-            C.AxisId axisId22 = new C.AxisId(){ Val = (UInt32Value)209664384U };
+            C.AxisId axisId21 = new C.AxisId(){ Val = 164321080U };
+            C.AxisId axisId22 = new C.AxisId(){ Val = 209664384U };
 
             barChart6.Append(barDirection6);
             barChart6.Append(barGrouping6);
@@ -14899,7 +14899,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             barChart6.Append(axisId22);
 
             C.CategoryAxis categoryAxis6 = new C.CategoryAxis();
-            C.AxisId axisId23 = new C.AxisId(){ Val = (UInt32Value)164321080U };
+            C.AxisId axisId23 = new C.AxisId(){ Val = 164321080U };
 
             C.Scaling scaling11 = new C.Scaling();
             C.Orientation orientation11 = new C.Orientation(){ Val = C.OrientationValues.MinMax };
@@ -14963,7 +14963,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             textProperties17.Append(bodyProperties29);
             textProperties17.Append(listStyle29);
             textProperties17.Append(paragraph29);
-            C.CrossingAxis crossingAxis11 = new C.CrossingAxis(){ Val = (UInt32Value)209664384U };
+            C.CrossingAxis crossingAxis11 = new C.CrossingAxis(){ Val = 209664384U };
             C.Crosses crosses11 = new C.Crosses(){ Val = C.CrossesValues.AutoZero };
             C.AutoLabeled autoLabeled6 = new C.AutoLabeled(){ Val = true };
             C.LabelAlignment labelAlignment6 = new C.LabelAlignment(){ Val = C.LabelAlignmentValues.Center };
@@ -14988,7 +14988,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             categoryAxis6.Append(noMultiLevelLabels6);
 
             C.ValueAxis valueAxis6 = new C.ValueAxis();
-            C.AxisId axisId24 = new C.AxisId(){ Val = (UInt32Value)209664384U };
+            C.AxisId axisId24 = new C.AxisId(){ Val = 209664384U };
 
             C.Scaling scaling12 = new C.Scaling();
             C.Orientation orientation12 = new C.Orientation(){ Val = C.OrientationValues.MinMax };
@@ -15079,7 +15079,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             textProperties18.Append(bodyProperties30);
             textProperties18.Append(listStyle30);
             textProperties18.Append(paragraph30);
-            C.CrossingAxis crossingAxis12 = new C.CrossingAxis(){ Val = (UInt32Value)164321080U };
+            C.CrossingAxis crossingAxis12 = new C.CrossingAxis(){ Val = 164321080U };
             C.Crosses crosses12 = new C.Crosses(){ Val = C.CrossesValues.AutoZero };
             C.CrossBetween crossBetween6 = new C.CrossBetween(){ Val = C.CrossBetweenValues.Between };
 
@@ -15292,28 +15292,28 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of pivotTablePart6.
         private static void GeneratePivotTablePart6Content(PivotTablePart pivotTablePart6)
         {
-            PivotTableDefinition pivotTableDefinition11 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = (UInt32Value)9U };
-            Location location6 = new Location(){ Reference = "A1:B5", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)1U };
+            PivotTableDefinition pivotTableDefinition11 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = 1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = 0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = 9U };
+            Location location6 = new Location(){ Reference = "A1:B5", FirstHeaderRow = 1U, FirstDataRow = 1U, FirstDataColumn = 1U };
 
-            PivotFields pivotFields6 = new PivotFields(){ Count = (UInt32Value)7U };
+            PivotFields pivotFields6 = new PivotFields(){ Count = 7U };
 
-            PivotField pivotField35 = new PivotField(){ NumberFormatId = (UInt32Value)14U, ShowAll = false };
+            PivotField pivotField35 = new PivotField(){ NumberFormatId = 14U, ShowAll = false };
 
-            Items items19 = new Items(){ Count = (UInt32Value)15U };
-            Item item162 = new Item(){ Index = (UInt32Value)0U };
-            Item item163 = new Item(){ Index = (UInt32Value)1U };
-            Item item164 = new Item(){ Index = (UInt32Value)2U };
-            Item item165 = new Item(){ Index = (UInt32Value)3U };
-            Item item166 = new Item(){ Index = (UInt32Value)4U };
-            Item item167 = new Item(){ Index = (UInt32Value)5U };
-            Item item168 = new Item(){ Index = (UInt32Value)6U };
-            Item item169 = new Item(){ Index = (UInt32Value)7U };
-            Item item170 = new Item(){ Index = (UInt32Value)8U };
-            Item item171 = new Item(){ Index = (UInt32Value)9U };
-            Item item172 = new Item(){ Index = (UInt32Value)10U };
-            Item item173 = new Item(){ Index = (UInt32Value)11U };
-            Item item174 = new Item(){ Index = (UInt32Value)12U };
-            Item item175 = new Item(){ Index = (UInt32Value)13U };
+            Items items19 = new Items(){ Count = 15U };
+            Item item162 = new Item(){ Index = 0U };
+            Item item163 = new Item(){ Index = 1U };
+            Item item164 = new Item(){ Index = 2U };
+            Item item165 = new Item(){ Index = 3U };
+            Item item166 = new Item(){ Index = 4U };
+            Item item167 = new Item(){ Index = 5U };
+            Item item168 = new Item(){ Index = 6U };
+            Item item169 = new Item(){ Index = 7U };
+            Item item170 = new Item(){ Index = 8U };
+            Item item171 = new Item(){ Index = 9U };
+            Item item172 = new Item(){ Index = 10U };
+            Item item173 = new Item(){ Index = 11U };
+            Item item174 = new Item(){ Index = 12U };
+            Item item175 = new Item(){ Index = 13U };
             Item item176 = new Item(){ ItemType = ItemValues.Default };
 
             items19.Append(item162);
@@ -15336,17 +15336,17 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotField pivotField36 = new PivotField(){ Axis = PivotTableAxisValues.AxisRow, ShowAll = false };
 
-            Items items20 = new Items(){ Count = (UInt32Value)11U };
-            Item item177 = new Item(){ Index = (UInt32Value)0U };
-            Item item178 = new Item(){ Missing = true, Index = (UInt32Value)4U };
-            Item item179 = new Item(){ Missing = true, Index = (UInt32Value)3U };
-            Item item180 = new Item(){ Index = (UInt32Value)1U };
-            Item item181 = new Item(){ Index = (UInt32Value)2U };
-            Item item182 = new Item(){ Missing = true, Index = (UInt32Value)9U };
-            Item item183 = new Item(){ Missing = true, Index = (UInt32Value)8U };
-            Item item184 = new Item(){ Missing = true, Index = (UInt32Value)7U };
-            Item item185 = new Item(){ Missing = true, Index = (UInt32Value)6U };
-            Item item186 = new Item(){ Missing = true, Index = (UInt32Value)5U };
+            Items items20 = new Items(){ Count = 11U };
+            Item item177 = new Item(){ Index = 0U };
+            Item item178 = new Item(){ Missing = true, Index = 4U };
+            Item item179 = new Item(){ Missing = true, Index = 3U };
+            Item item180 = new Item(){ Index = 1U };
+            Item item181 = new Item(){ Index = 2U };
+            Item item182 = new Item(){ Missing = true, Index = 9U };
+            Item item183 = new Item(){ Missing = true, Index = 8U };
+            Item item184 = new Item(){ Missing = true, Index = 7U };
+            Item item185 = new Item(){ Missing = true, Index = 6U };
+            Item item186 = new Item(){ Missing = true, Index = 5U };
             Item item187 = new Item(){ ItemType = ItemValues.Default };
 
             items20.Append(item177);
@@ -15365,13 +15365,13 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             PivotField pivotField37 = new PivotField(){ DataField = true, ShowAll = false };
             PivotField pivotField38 = new PivotField(){ ShowAll = false };
 
-            PivotField pivotField39 = new PivotField(){ NumberFormatId = (UInt32Value)14U, ShowAll = false };
+            PivotField pivotField39 = new PivotField(){ NumberFormatId = 14U, ShowAll = false };
 
-            Items items21 = new Items(){ Count = (UInt32Value)5U };
-            Item item188 = new Item(){ Index = (UInt32Value)0U };
-            Item item189 = new Item(){ Index = (UInt32Value)1U };
-            Item item190 = new Item(){ Index = (UInt32Value)3U };
-            Item item191 = new Item(){ Index = (UInt32Value)2U };
+            Items items21 = new Items(){ Count = 5U };
+            Item item188 = new Item(){ Index = 0U };
+            Item item189 = new Item(){ Index = 1U };
+            Item item190 = new Item(){ Index = 3U };
+            Item item191 = new Item(){ Index = 2U };
             Item item192 = new Item(){ ItemType = ItemValues.Default };
 
             items21.Append(item188);
@@ -15385,12 +15385,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotField pivotField41 = new PivotField(){ ShowAll = false, DefaultSubtotal = false };
 
-            Items items22 = new Items(){ Count = (UInt32Value)5U };
-            Item item193 = new Item(){ Index = (UInt32Value)0U };
-            Item item194 = new Item(){ Index = (UInt32Value)1U };
-            Item item195 = new Item(){ Index = (UInt32Value)2U };
-            Item item196 = new Item(){ Index = (UInt32Value)3U };
-            Item item197 = new Item(){ Index = (UInt32Value)4U };
+            Items items22 = new Items(){ Count = 5U };
+            Item item193 = new Item(){ Index = 0U };
+            Item item194 = new Item(){ Index = 1U };
+            Item item195 = new Item(){ Index = 2U };
+            Item item196 = new Item(){ Index = 3U };
+            Item item197 = new Item(){ Index = 4U };
 
             items22.Append(item193);
             items22.Append(item194);
@@ -15408,12 +15408,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFields6.Append(pivotField40);
             pivotFields6.Append(pivotField41);
 
-            RowFields rowFields6 = new RowFields(){ Count = (UInt32Value)1U };
+            RowFields rowFields6 = new RowFields(){ Count = 1U };
             Field field6 = new Field(){ Index = 1 };
 
             rowFields6.Append(field6);
 
-            RowItems rowItems6 = new RowItems(){ Count = (UInt32Value)4U };
+            RowItems rowItems6 = new RowItems(){ Count = 4U };
 
             RowItem rowItem26 = new RowItem();
             MemberPropertyIndex memberPropertyIndex21 = new MemberPropertyIndex();
@@ -15440,26 +15440,26 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             rowItems6.Append(rowItem28);
             rowItems6.Append(rowItem29);
 
-            ColumnItems columnItems6 = new ColumnItems(){ Count = (UInt32Value)1U };
+            ColumnItems columnItems6 = new ColumnItems(){ Count = 1U };
             RowItem rowItem30 = new RowItem();
 
             columnItems6.Append(rowItem30);
 
-            DataFields dataFields6 = new DataFields(){ Count = (UInt32Value)1U };
-            DataField dataField6 = new DataField(){ Name = "Sum of Quantity", Field = (UInt32Value)2U, BaseField = 0, BaseItem = (UInt32Value)0U };
+            DataFields dataFields6 = new DataFields(){ Count = 1U };
+            DataField dataField6 = new DataField(){ Name = "Sum of Quantity", Field = 2U, BaseField = 0, BaseItem = 0U };
 
             dataFields6.Append(dataField6);
 
-            ChartFormats chartFormats6 = new ChartFormats(){ Count = (UInt32Value)5U };
+            ChartFormats chartFormats6 = new ChartFormats(){ Count = 5U };
 
-            ChartFormat chartFormat47 = new ChartFormat(){ Chart = (UInt32Value)4U, Format = (UInt32Value)0U, Series = true };
+            ChartFormat chartFormat47 = new ChartFormat(){ Chart = 4U, Format = 0U, Series = true };
 
-            PivotArea pivotArea47 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea47 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences47 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences47 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference47 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem69 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference47 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem69 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference47.Append(fieldItem69);
 
@@ -15469,14 +15469,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat47.Append(pivotArea47);
 
-            ChartFormat chartFormat48 = new ChartFormat(){ Chart = (UInt32Value)5U, Format = (UInt32Value)2U, Series = true };
+            ChartFormat chartFormat48 = new ChartFormat(){ Chart = 5U, Format = 2U, Series = true };
 
-            PivotArea pivotArea48 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea48 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences48 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences48 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference48 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem70 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference48 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem70 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference48.Append(fieldItem70);
 
@@ -15486,14 +15486,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat48.Append(pivotArea48);
 
-            ChartFormat chartFormat49 = new ChartFormat(){ Chart = (UInt32Value)6U, Format = (UInt32Value)0U, Series = true };
+            ChartFormat chartFormat49 = new ChartFormat(){ Chart = 6U, Format = 0U, Series = true };
 
-            PivotArea pivotArea49 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea49 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences49 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences49 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference49 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem71 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference49 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem71 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference49.Append(fieldItem71);
 
@@ -15503,14 +15503,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat49.Append(pivotArea49);
 
-            ChartFormat chartFormat50 = new ChartFormat(){ Chart = (UInt32Value)7U, Format = (UInt32Value)14U, Series = true };
+            ChartFormat chartFormat50 = new ChartFormat(){ Chart = 7U, Format = 14U, Series = true };
 
-            PivotArea pivotArea50 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea50 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences50 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences50 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference50 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem72 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference50 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem72 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference50.Append(fieldItem72);
 
@@ -15520,14 +15520,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat50.Append(pivotArea50);
 
-            ChartFormat chartFormat51 = new ChartFormat(){ Chart = (UInt32Value)8U, Format = (UInt32Value)1U, Series = true };
+            ChartFormat chartFormat51 = new ChartFormat(){ Chart = 8U, Format = 1U, Series = true };
 
-            PivotArea pivotArea51 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea51 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences51 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences51 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference51 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem73 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference51 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem73 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference51.Append(fieldItem73);
 
@@ -15576,11 +15576,11 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             timelineCacheDefinition6.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
 
             X15.TimelineCachePivotTables timelineCachePivotTables6 = new X15.TimelineCachePivotTables();
-            X15.TimelineCachePivotTable timelineCachePivotTable6 = new X15.TimelineCachePivotTable(){ TabId = (UInt32Value)2U, Name = "PivotTable1" };
+            X15.TimelineCachePivotTable timelineCachePivotTable6 = new X15.TimelineCachePivotTable(){ TabId = 2U, Name = "PivotTable1" };
 
             timelineCachePivotTables6.Append(timelineCachePivotTable6);
 
-            X15.TimelineState timelineState6 = new X15.TimelineState(){ MinimalRefreshVersion = (UInt32Value)6U, LastRefreshVersion = (UInt32Value)6U, PivotCacheId = (UInt32Value)2U, FilterType = PivotFilterValues.Unknown };
+            X15.TimelineState timelineState6 = new X15.TimelineState(){ MinimalRefreshVersion = 6U, LastRefreshVersion = 6U, PivotCacheId = 2U, FilterType = PivotFilterValues.Unknown };
             X15.BoundsTimelineRange boundsTimelineRange6 = new X15.BoundsTimelineRange(){ StartDate = System.Xml.XmlConvert.ToDateTime("2000-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), EndDate = System.Xml.XmlConvert.ToDateTime("2004-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
             timelineState6.Append(boundsTimelineRange6);
@@ -15678,8 +15678,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             A.MajorFont majorFont1 = new A.MajorFont();
             A.LatinFont latinFont16 = new A.LatinFont(){ Typeface = "Cambria" };
-            A.EastAsianFont eastAsianFont16 = new A.EastAsianFont(){ Typeface = "" };
-            A.ComplexScriptFont complexScriptFont16 = new A.ComplexScriptFont(){ Typeface = "" };
+            A.EastAsianFont eastAsianFont16 = new A.EastAsianFont(){ Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont16 = new A.ComplexScriptFont(){ Typeface = string.Empty };
             A.SupplementalFont supplementalFont1 = new A.SupplementalFont(){ Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
             A.SupplementalFont supplementalFont2 = new A.SupplementalFont(){ Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont3 = new A.SupplementalFont(){ Script = "Hans", Typeface = "宋体" };
@@ -15747,8 +15747,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             A.MinorFont minorFont1 = new A.MinorFont();
             A.LatinFont latinFont17 = new A.LatinFont(){ Typeface = "Calibri" };
-            A.EastAsianFont eastAsianFont17 = new A.EastAsianFont(){ Typeface = "" };
-            A.ComplexScriptFont complexScriptFont17 = new A.ComplexScriptFont(){ Typeface = "" };
+            A.EastAsianFont eastAsianFont17 = new A.EastAsianFont(){ Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont17 = new A.ComplexScriptFont(){ Typeface = string.Empty };
             A.SupplementalFont supplementalFont31 = new A.SupplementalFont(){ Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
             A.SupplementalFont supplementalFont32 = new A.SupplementalFont(){ Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont33 = new A.SupplementalFont(){ Script = "Hans", Typeface = "宋体" };
@@ -16107,19 +16107,19 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             SheetDimension sheetDimension9 = new SheetDimension(){ Reference = "A1:B5" };
 
             SheetViews sheetViews9 = new SheetViews();
-            SheetView sheetView9 = new SheetView(){ WorkbookViewId = (UInt32Value)0U };
+            SheetView sheetView9 = new SheetView(){ WorkbookViewId = 0U };
 
             sheetViews9.Append(sheetView9);
             SheetFormatProperties sheetFormatProperties9 = new SheetFormatProperties(){ DefaultRowHeight = 15D };
 
             Columns columns9 = new Columns();
-            Column column55 = new Column(){ Min = (UInt32Value)1U, Max = (UInt32Value)1U, Width = 14.140625D, BestFit = true, CustomWidth = true };
-            Column column56 = new Column(){ Min = (UInt32Value)2U, Max = (UInt32Value)2U, Width = 17.42578125D, CustomWidth = true };
-            Column column57 = new Column(){ Min = (UInt32Value)3U, Max = (UInt32Value)3U, Width = 12.42578125D, CustomWidth = true };
-            Column column58 = new Column(){ Min = (UInt32Value)4U, Max = (UInt32Value)11U, Width = 13D, BestFit = true, CustomWidth = true };
-            Column column59 = new Column(){ Min = (UInt32Value)12U, Max = (UInt32Value)12U, Width = 13D, CustomWidth = true };
-            Column column60 = new Column(){ Min = (UInt32Value)13U, Max = (UInt32Value)20U, Width = 13D, BestFit = true, CustomWidth = true };
-            Column column61 = new Column(){ Min = (UInt32Value)21U, Max = (UInt32Value)23U, Width = 20.42578125D, BestFit = true, CustomWidth = true };
+            Column column55 = new Column(){ Min = 1U, Max = 1U, Width = 14.140625D, BestFit = true, CustomWidth = true };
+            Column column56 = new Column(){ Min = 2U, Max = 2U, Width = 17.42578125D, CustomWidth = true };
+            Column column57 = new Column(){ Min = 3U, Max = 3U, Width = 12.42578125D, CustomWidth = true };
+            Column column58 = new Column(){ Min = 4U, Max = 11U, Width = 13D, BestFit = true, CustomWidth = true };
+            Column column59 = new Column(){ Min = 12U, Max = 12U, Width = 13D, CustomWidth = true };
+            Column column60 = new Column(){ Min = 13U, Max = 20U, Width = 13D, BestFit = true, CustomWidth = true };
+            Column column61 = new Column(){ Min = 21U, Max = 23U, Width = 20.42578125D, BestFit = true, CustomWidth = true };
 
             columns9.Append(column55);
             columns9.Append(column56);
@@ -16131,9 +16131,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             SheetData sheetData9 = new SheetData();
 
-            Row row53 = new Row(){ RowIndex = (UInt32Value)1U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row53 = new Row(){ RowIndex = 1U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell193 = new Cell(){ CellReference = "A1", StyleIndex = (UInt32Value)5U, DataType = CellValues.SharedString };
+            Cell cell193 = new Cell(){ CellReference = "A1", StyleIndex = 5U, DataType = CellValues.SharedString };
             CellValue cellValue193 = new CellValue();
             cellValue193.Text = "29";
 
@@ -16148,15 +16148,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row53.Append(cell193);
             row53.Append(cell194);
 
-            Row row54 = new Row(){ RowIndex = (UInt32Value)2U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row54 = new Row(){ RowIndex = 2U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell195 = new Cell(){ CellReference = "A2", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell195 = new Cell(){ CellReference = "A2", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue195 = new CellValue();
             cellValue195.Text = "6";
 
             cell195.Append(cellValue195);
 
-            Cell cell196 = new Cell(){ CellReference = "B2", StyleIndex = (UInt32Value)7U };
+            Cell cell196 = new Cell(){ CellReference = "B2", StyleIndex = 7U };
             CellValue cellValue196 = new CellValue();
             cellValue196.Text = "19";
 
@@ -16165,15 +16165,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row54.Append(cell195);
             row54.Append(cell196);
 
-            Row row55 = new Row(){ RowIndex = (UInt32Value)3U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row55 = new Row(){ RowIndex = 3U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell197 = new Cell(){ CellReference = "A3", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell197 = new Cell(){ CellReference = "A3", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue197 = new CellValue();
             cellValue197.Text = "8";
 
             cell197.Append(cellValue197);
 
-            Cell cell198 = new Cell(){ CellReference = "B3", StyleIndex = (UInt32Value)7U };
+            Cell cell198 = new Cell(){ CellReference = "B3", StyleIndex = 7U };
             CellValue cellValue198 = new CellValue();
             cellValue198.Text = "13";
 
@@ -16182,15 +16182,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row55.Append(cell197);
             row55.Append(cell198);
 
-            Row row56 = new Row(){ RowIndex = (UInt32Value)4U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row56 = new Row(){ RowIndex = 4U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell199 = new Cell(){ CellReference = "A4", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell199 = new Cell(){ CellReference = "A4", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue199 = new CellValue();
             cellValue199.Text = "11";
 
             cell199.Append(cellValue199);
 
-            Cell cell200 = new Cell(){ CellReference = "B4", StyleIndex = (UInt32Value)7U };
+            Cell cell200 = new Cell(){ CellReference = "B4", StyleIndex = 7U };
             CellValue cellValue200 = new CellValue();
             cellValue200.Text = "33";
 
@@ -16199,15 +16199,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row56.Append(cell199);
             row56.Append(cell200);
 
-            Row row57 = new Row(){ RowIndex = (UInt32Value)5U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row57 = new Row(){ RowIndex = 5U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell201 = new Cell(){ CellReference = "A5", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell201 = new Cell(){ CellReference = "A5", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue201 = new CellValue();
             cellValue201.Text = "30";
 
             cell201.Append(cellValue201);
 
-            Cell cell202 = new Cell(){ CellReference = "B5", StyleIndex = (UInt32Value)7U };
+            Cell cell202 = new Cell(){ CellReference = "B5", StyleIndex = 7U };
             CellValue cellValue202 = new CellValue();
             cellValue202.Text = "65";
 
@@ -16221,7 +16221,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             sheetData9.Append(row55);
             sheetData9.Append(row56);
             sheetData9.Append(row57);
-            PhoneticProperties phoneticProperties15 = new PhoneticProperties(){ FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties15 = new PhoneticProperties(){ FontId = 1U };
             PageMargins pageMargins21 = new PageMargins(){ Left = 0.7D, Right = 0.7D, Top = 0.75D, Bottom = 0.75D, Header = 0.3D, Footer = 0.3D };
             S.Drawing drawing7 = new S.Drawing(){ Id = "rId2" };
 
@@ -16258,8 +16258,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             X15.Timelines timelines7 = new X15.Timelines(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x" }  };
             timelines7.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             timelines7.AddNamespaceDeclaration("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main");
-            X15.Timeline timeline13 = new X15.Timeline(){ Name = "DeliveryDate 14", Cache = "NativeTimeline_DeliveryDate6", Caption = "ScrollPosition1", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
-            X15.Timeline timeline14 = new X15.Timeline(){ Name = "DeliveryDate 15", Cache = "NativeTimeline_DeliveryDate6", Caption = "ScrollPosition2", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline13 = new X15.Timeline(){ Name = "DeliveryDate 14", Cache = "NativeTimeline_DeliveryDate6", Caption = "ScrollPosition1", Level = 2U, SelectionLevel = 2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline14 = new X15.Timeline(){ Name = "DeliveryDate 15", Cache = "NativeTimeline_DeliveryDate6", Caption = "ScrollPosition2", Level = 2U, SelectionLevel = 2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
             timelines7.Append(timeline13);
             timelines7.Append(timeline14);
@@ -16306,10 +16306,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker25.Append(rowId50);
             toMarker25.Append(rowOffset50);
 
-            Xdr.GraphicFrame graphicFrame25 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame25 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties25 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties37 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)2U, Name = "Chart 1" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties37 = new Xdr.NonVisualDrawingProperties(){ Id = 2U, Name = "Chart 1" };
 
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties25 = new Xdr.NonVisualGraphicFrameDrawingProperties();
             A.GraphicFrameLocks graphicFrameLocks11 = new A.GraphicFrameLocks();
@@ -16380,10 +16380,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker26.Append(rowId52);
             toMarker26.Append(rowOffset52);
 
-            Xdr.GraphicFrame graphicFrame26 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame26 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties26 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties38 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)3U, Name = "グラフ 2" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties38 = new Xdr.NonVisualDrawingProperties(){ Id = 3U, Name = "グラフ 2" };
 
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties26 = new Xdr.NonVisualGraphicFrameDrawingProperties();
             A.GraphicFrameLocks graphicFrameLocks12 = new A.GraphicFrameLocks();
@@ -16460,10 +16460,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice26 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame27 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame27 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties27 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties39 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)4U, Name = "DeliveryDate 14" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties39 = new Xdr.NonVisualDrawingProperties(){ Id = 4U, Name = "DeliveryDate 14" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties27 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties27.Append(nonVisualDrawingProperties39);
@@ -16497,10 +16497,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback25.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback25.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape13 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape13 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties13 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties40 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties40 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties13 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks13 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -16616,10 +16616,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice27 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame28 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame28 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties28 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties41 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)5U, Name = "DeliveryDate 15" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties41 = new Xdr.NonVisualDrawingProperties(){ Id = 5U, Name = "DeliveryDate 15" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties28 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties28.Append(nonVisualDrawingProperties41);
@@ -16653,10 +16653,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback26.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback26.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape14 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape14 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties14 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties42 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties42 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties14 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks14 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -16773,7 +16773,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotSource pivotSource13 = new C.PivotSource();
             C.PivotTableName pivotTableName13 = new C.PivotTableName();
             pivotTableName13.Text = "[GeneratedDocument.xlsx]ScrollPosition!PivotTable1";
-            C.FormatId formatId13 = new C.FormatId(){ Val = (UInt32Value)18U };
+            C.FormatId formatId13 = new C.FormatId(){ Val = 18U };
 
             pivotSource13.Append(pivotTableName13);
             pivotSource13.Append(formatId13);
@@ -16789,7 +16789,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotFormats pivotFormats13 = new C.PivotFormats();
 
             C.PivotFormat pivotFormat112 = new C.PivotFormat();
-            C.Index index124 = new C.Index(){ Val = (UInt32Value)0U };
+            C.Index index124 = new C.Index(){ Val = 0U };
 
             C.Marker marker112 = new C.Marker();
             C.Symbol symbol112 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -16800,7 +16800,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat112.Append(marker112);
 
             C.PivotFormat pivotFormat113 = new C.PivotFormat();
-            C.Index index125 = new C.Index(){ Val = (UInt32Value)1U };
+            C.Index index125 = new C.Index(){ Val = 1U };
 
             C.Marker marker113 = new C.Marker();
             C.Symbol symbol113 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -16811,7 +16811,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat113.Append(marker113);
 
             C.PivotFormat pivotFormat114 = new C.PivotFormat();
-            C.Index index126 = new C.Index(){ Val = (UInt32Value)2U };
+            C.Index index126 = new C.Index(){ Val = 2U };
 
             C.Marker marker114 = new C.Marker();
             C.Symbol symbol114 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -16822,7 +16822,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat114.Append(marker114);
 
             C.PivotFormat pivotFormat115 = new C.PivotFormat();
-            C.Index index127 = new C.Index(){ Val = (UInt32Value)3U };
+            C.Index index127 = new C.Index(){ Val = 3U };
 
             C.Marker marker115 = new C.Marker();
             C.Symbol symbol115 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -16833,7 +16833,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat115.Append(marker115);
 
             C.PivotFormat pivotFormat116 = new C.PivotFormat();
-            C.Index index128 = new C.Index(){ Val = (UInt32Value)4U };
+            C.Index index128 = new C.Index(){ Val = 4U };
 
             C.Marker marker116 = new C.Marker();
             C.Symbol symbol116 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -16844,7 +16844,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat116.Append(marker116);
 
             C.PivotFormat pivotFormat117 = new C.PivotFormat();
-            C.Index index129 = new C.Index(){ Val = (UInt32Value)5U };
+            C.Index index129 = new C.Index(){ Val = 5U };
 
             C.Marker marker117 = new C.Marker();
             C.Symbol symbol117 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -16855,7 +16855,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat117.Append(marker117);
 
             C.PivotFormat pivotFormat118 = new C.PivotFormat();
-            C.Index index130 = new C.Index(){ Val = (UInt32Value)6U };
+            C.Index index130 = new C.Index(){ Val = 6U };
 
             C.Marker marker118 = new C.Marker();
             C.Symbol symbol118 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -16880,8 +16880,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.VaryColors varyColors13 = new C.VaryColors(){ Val = true };
 
             C.PieChartSeries pieChartSeries7 = new C.PieChartSeries();
-            C.Index index131 = new C.Index(){ Val = (UInt32Value)0U };
-            C.Order order13 = new C.Order(){ Val = (UInt32Value)0U };
+            C.Index index131 = new C.Index(){ Val = 0U };
+            C.Order order13 = new C.Order(){ Val = 0U };
 
             C.SeriesText seriesText13 = new C.SeriesText();
 
@@ -16890,9 +16890,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula37.Text = "ScrollPosition!$B$1";
 
             C.StringCache stringCache25 = new C.StringCache();
-            C.PointCount pointCount37 = new C.PointCount(){ Val = (UInt32Value)1U };
+            C.PointCount pointCount37 = new C.PointCount(){ Val = 1U };
 
-            C.StringPoint stringPoint49 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint49 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue85 = new C.NumericValue();
             numericValue85.Text = "Total";
 
@@ -16913,21 +16913,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula38.Text = "ScrollPosition!$A$2:$A$5";
 
             C.StringCache stringCache26 = new C.StringCache();
-            C.PointCount pointCount38 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount38 = new C.PointCount(){ Val = 3U };
 
-            C.StringPoint stringPoint50 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint50 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue86 = new C.NumericValue();
             numericValue86.Text = "product_A";
 
             stringPoint50.Append(numericValue86);
 
-            C.StringPoint stringPoint51 = new C.StringPoint(){ Index = (UInt32Value)1U };
+            C.StringPoint stringPoint51 = new C.StringPoint(){ Index = 1U };
             C.NumericValue numericValue87 = new C.NumericValue();
             numericValue87.Text = "product_D";
 
             stringPoint51.Append(numericValue87);
 
-            C.StringPoint stringPoint52 = new C.StringPoint(){ Index = (UInt32Value)2U };
+            C.StringPoint stringPoint52 = new C.StringPoint(){ Index = 2U };
             C.NumericValue numericValue88 = new C.NumericValue();
             numericValue88.Text = "product_E";
 
@@ -16952,21 +16952,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.NumberingCache numberingCache13 = new C.NumberingCache();
             C.FormatCode formatCode13 = new C.FormatCode();
             formatCode13.Text = "General";
-            C.PointCount pointCount39 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount39 = new C.PointCount(){ Val = 3U };
 
-            C.NumericPoint numericPoint37 = new C.NumericPoint(){ Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint37 = new C.NumericPoint(){ Index = 0U };
             C.NumericValue numericValue89 = new C.NumericValue();
             numericValue89.Text = "19";
 
             numericPoint37.Append(numericValue89);
 
-            C.NumericPoint numericPoint38 = new C.NumericPoint(){ Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint38 = new C.NumericPoint(){ Index = 1U };
             C.NumericValue numericValue90 = new C.NumericValue();
             numericValue90.Text = "13";
 
             numericPoint38.Append(numericValue90);
 
-            C.NumericPoint numericPoint39 = new C.NumericPoint(){ Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint39 = new C.NumericPoint(){ Index = 2U };
             C.NumericValue numericValue91 = new C.NumericValue();
             numericValue91.Text = "33";
 
@@ -17110,7 +17110,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotSource pivotSource14 = new C.PivotSource();
             C.PivotTableName pivotTableName14 = new C.PivotTableName();
             pivotTableName14.Text = "[GeneratedDocument.xlsx]ScrollPosition!PivotTable1";
-            C.FormatId formatId14 = new C.FormatId(){ Val = (UInt32Value)17U };
+            C.FormatId formatId14 = new C.FormatId(){ Val = 17U };
 
             pivotSource14.Append(pivotTableName14);
             pivotSource14.Append(formatId14);
@@ -17126,7 +17126,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotFormats pivotFormats14 = new C.PivotFormats();
 
             C.PivotFormat pivotFormat119 = new C.PivotFormat();
-            C.Index index132 = new C.Index(){ Val = (UInt32Value)0U };
+            C.Index index132 = new C.Index(){ Val = 0U };
 
             C.ShapeProperties shapeProperties52 = new C.ShapeProperties();
 
@@ -17159,7 +17159,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat119.Append(marker119);
 
             C.PivotFormat pivotFormat120 = new C.PivotFormat();
-            C.Index index133 = new C.Index(){ Val = (UInt32Value)1U };
+            C.Index index133 = new C.Index(){ Val = 1U };
 
             C.ShapeProperties shapeProperties53 = new C.ShapeProperties();
 
@@ -17192,7 +17192,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat120.Append(marker120);
 
             C.PivotFormat pivotFormat121 = new C.PivotFormat();
-            C.Index index134 = new C.Index(){ Val = (UInt32Value)2U };
+            C.Index index134 = new C.Index(){ Val = 2U };
 
             C.Marker marker121 = new C.Marker();
             C.Symbol symbol121 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -17203,7 +17203,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat121.Append(marker121);
 
             C.PivotFormat pivotFormat122 = new C.PivotFormat();
-            C.Index index135 = new C.Index(){ Val = (UInt32Value)3U };
+            C.Index index135 = new C.Index(){ Val = 3U };
 
             C.Marker marker122 = new C.Marker();
             C.Symbol symbol122 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -17214,7 +17214,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat122.Append(marker122);
 
             C.PivotFormat pivotFormat123 = new C.PivotFormat();
-            C.Index index136 = new C.Index(){ Val = (UInt32Value)4U };
+            C.Index index136 = new C.Index(){ Val = 4U };
 
             C.Marker marker123 = new C.Marker();
             C.Symbol symbol123 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -17225,7 +17225,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat123.Append(marker123);
 
             C.PivotFormat pivotFormat124 = new C.PivotFormat();
-            C.Index index137 = new C.Index(){ Val = (UInt32Value)5U };
+            C.Index index137 = new C.Index(){ Val = 5U };
 
             C.Marker marker124 = new C.Marker();
             C.Symbol symbol124 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -17236,7 +17236,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat124.Append(marker124);
 
             C.PivotFormat pivotFormat125 = new C.PivotFormat();
-            C.Index index138 = new C.Index(){ Val = (UInt32Value)6U };
+            C.Index index138 = new C.Index(){ Val = 6U };
 
             C.Marker marker125 = new C.Marker();
             C.Symbol symbol125 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -17247,7 +17247,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat125.Append(marker125);
 
             C.PivotFormat pivotFormat126 = new C.PivotFormat();
-            C.Index index139 = new C.Index(){ Val = (UInt32Value)7U };
+            C.Index index139 = new C.Index(){ Val = 7U };
 
             C.Marker marker126 = new C.Marker();
             C.Symbol symbol126 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -17258,7 +17258,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat126.Append(marker126);
 
             C.PivotFormat pivotFormat127 = new C.PivotFormat();
-            C.Index index140 = new C.Index(){ Val = (UInt32Value)8U };
+            C.Index index140 = new C.Index(){ Val = 8U };
 
             C.Marker marker127 = new C.Marker();
             C.Symbol symbol127 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -17269,7 +17269,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat127.Append(marker127);
 
             C.PivotFormat pivotFormat128 = new C.PivotFormat();
-            C.Index index141 = new C.Index(){ Val = (UInt32Value)9U };
+            C.Index index141 = new C.Index(){ Val = 9U };
 
             C.Marker marker128 = new C.Marker();
             C.Symbol symbol128 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -17280,7 +17280,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat128.Append(marker128);
 
             C.PivotFormat pivotFormat129 = new C.PivotFormat();
-            C.Index index142 = new C.Index(){ Val = (UInt32Value)10U };
+            C.Index index142 = new C.Index(){ Val = 10U };
 
             C.Marker marker129 = new C.Marker();
             C.Symbol symbol129 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -17291,7 +17291,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat129.Append(marker129);
 
             C.PivotFormat pivotFormat130 = new C.PivotFormat();
-            C.Index index143 = new C.Index(){ Val = (UInt32Value)11U };
+            C.Index index143 = new C.Index(){ Val = 11U };
 
             C.Marker marker130 = new C.Marker();
             C.Symbol symbol130 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -17302,7 +17302,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat130.Append(marker130);
 
             C.PivotFormat pivotFormat131 = new C.PivotFormat();
-            C.Index index144 = new C.Index(){ Val = (UInt32Value)12U };
+            C.Index index144 = new C.Index(){ Val = 12U };
 
             C.Marker marker131 = new C.Marker();
             C.Symbol symbol131 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -17313,7 +17313,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat131.Append(marker131);
 
             C.PivotFormat pivotFormat132 = new C.PivotFormat();
-            C.Index index145 = new C.Index(){ Val = (UInt32Value)13U };
+            C.Index index145 = new C.Index(){ Val = 13U };
 
             C.Marker marker132 = new C.Marker();
             C.Symbol symbol132 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -17324,7 +17324,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat132.Append(marker132);
 
             C.PivotFormat pivotFormat133 = new C.PivotFormat();
-            C.Index index146 = new C.Index(){ Val = (UInt32Value)14U };
+            C.Index index146 = new C.Index(){ Val = 14U };
 
             C.ShapeProperties shapeProperties54 = new C.ShapeProperties();
 
@@ -17357,7 +17357,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat133.Append(marker133);
 
             C.PivotFormat pivotFormat134 = new C.PivotFormat();
-            C.Index index147 = new C.Index(){ Val = (UInt32Value)15U };
+            C.Index index147 = new C.Index(){ Val = 15U };
 
             C.ShapeProperties shapeProperties55 = new C.ShapeProperties();
 
@@ -17390,7 +17390,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat134.Append(marker134);
 
             C.PivotFormat pivotFormat135 = new C.PivotFormat();
-            C.Index index148 = new C.Index(){ Val = (UInt32Value)16U };
+            C.Index index148 = new C.Index(){ Val = 16U };
 
             C.ShapeProperties shapeProperties56 = new C.ShapeProperties();
 
@@ -17423,7 +17423,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat135.Append(marker135);
 
             C.PivotFormat pivotFormat136 = new C.PivotFormat();
-            C.Index index149 = new C.Index(){ Val = (UInt32Value)17U };
+            C.Index index149 = new C.Index(){ Val = 17U };
 
             C.ShapeProperties shapeProperties57 = new C.ShapeProperties();
 
@@ -17456,7 +17456,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat136.Append(marker136);
 
             C.PivotFormat pivotFormat137 = new C.PivotFormat();
-            C.Index index150 = new C.Index(){ Val = (UInt32Value)18U };
+            C.Index index150 = new C.Index(){ Val = 18U };
 
             C.ShapeProperties shapeProperties58 = new C.ShapeProperties();
 
@@ -17489,7 +17489,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat137.Append(marker137);
 
             C.PivotFormat pivotFormat138 = new C.PivotFormat();
-            C.Index index151 = new C.Index(){ Val = (UInt32Value)19U };
+            C.Index index151 = new C.Index(){ Val = 19U };
 
             C.ShapeProperties shapeProperties59 = new C.ShapeProperties();
 
@@ -17551,8 +17551,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.VaryColors varyColors14 = new C.VaryColors(){ Val = false };
 
             C.BarChartSeries barChartSeries7 = new C.BarChartSeries();
-            C.Index index152 = new C.Index(){ Val = (UInt32Value)0U };
-            C.Order order14 = new C.Order(){ Val = (UInt32Value)0U };
+            C.Index index152 = new C.Index(){ Val = 0U };
+            C.Order order14 = new C.Order(){ Val = 0U };
 
             C.SeriesText seriesText14 = new C.SeriesText();
 
@@ -17561,9 +17561,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula40.Text = "ScrollPosition!$B$1";
 
             C.StringCache stringCache27 = new C.StringCache();
-            C.PointCount pointCount40 = new C.PointCount(){ Val = (UInt32Value)1U };
+            C.PointCount pointCount40 = new C.PointCount(){ Val = 1U };
 
-            C.StringPoint stringPoint53 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint53 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue92 = new C.NumericValue();
             numericValue92.Text = "Total";
 
@@ -17606,21 +17606,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula41.Text = "ScrollPosition!$A$2:$A$5";
 
             C.StringCache stringCache28 = new C.StringCache();
-            C.PointCount pointCount41 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount41 = new C.PointCount(){ Val = 3U };
 
-            C.StringPoint stringPoint54 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint54 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue93 = new C.NumericValue();
             numericValue93.Text = "product_A";
 
             stringPoint54.Append(numericValue93);
 
-            C.StringPoint stringPoint55 = new C.StringPoint(){ Index = (UInt32Value)1U };
+            C.StringPoint stringPoint55 = new C.StringPoint(){ Index = 1U };
             C.NumericValue numericValue94 = new C.NumericValue();
             numericValue94.Text = "product_D";
 
             stringPoint55.Append(numericValue94);
 
-            C.StringPoint stringPoint56 = new C.StringPoint(){ Index = (UInt32Value)2U };
+            C.StringPoint stringPoint56 = new C.StringPoint(){ Index = 2U };
             C.NumericValue numericValue95 = new C.NumericValue();
             numericValue95.Text = "product_E";
 
@@ -17645,21 +17645,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.NumberingCache numberingCache14 = new C.NumberingCache();
             C.FormatCode formatCode14 = new C.FormatCode();
             formatCode14.Text = "General";
-            C.PointCount pointCount42 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount42 = new C.PointCount(){ Val = 3U };
 
-            C.NumericPoint numericPoint40 = new C.NumericPoint(){ Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint40 = new C.NumericPoint(){ Index = 0U };
             C.NumericValue numericValue96 = new C.NumericValue();
             numericValue96.Text = "19";
 
             numericPoint40.Append(numericValue96);
 
-            C.NumericPoint numericPoint41 = new C.NumericPoint(){ Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint41 = new C.NumericPoint(){ Index = 1U };
             C.NumericValue numericValue97 = new C.NumericValue();
             numericValue97.Text = "13";
 
             numericPoint41.Append(numericValue97);
 
-            C.NumericPoint numericPoint42 = new C.NumericPoint(){ Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint42 = new C.NumericPoint(){ Index = 2U };
             C.NumericValue numericValue98 = new C.NumericValue();
             numericValue98.Text = "33";
 
@@ -17700,8 +17700,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             dataLabels14.Append(showBubbleSize14);
             C.GapWidth gapWidth7 = new C.GapWidth(){ Val = (UInt16Value)219U };
             C.Overlap overlap6 = new C.Overlap(){ Val = -27 };
-            C.AxisId axisId25 = new C.AxisId(){ Val = (UInt32Value)208840992U };
-            C.AxisId axisId26 = new C.AxisId(){ Val = (UInt32Value)208841384U };
+            C.AxisId axisId25 = new C.AxisId(){ Val = 208840992U };
+            C.AxisId axisId26 = new C.AxisId(){ Val = 208841384U };
 
             barChart7.Append(barDirection7);
             barChart7.Append(barGrouping7);
@@ -17714,7 +17714,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             barChart7.Append(axisId26);
 
             C.CategoryAxis categoryAxis7 = new C.CategoryAxis();
-            C.AxisId axisId27 = new C.AxisId(){ Val = (UInt32Value)208840992U };
+            C.AxisId axisId27 = new C.AxisId(){ Val = 208840992U };
 
             C.Scaling scaling13 = new C.Scaling();
             C.Orientation orientation13 = new C.Orientation(){ Val = C.OrientationValues.MinMax };
@@ -17778,7 +17778,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             textProperties21.Append(bodyProperties35);
             textProperties21.Append(listStyle35);
             textProperties21.Append(paragraph35);
-            C.CrossingAxis crossingAxis13 = new C.CrossingAxis(){ Val = (UInt32Value)208841384U };
+            C.CrossingAxis crossingAxis13 = new C.CrossingAxis(){ Val = 208841384U };
             C.Crosses crosses13 = new C.Crosses(){ Val = C.CrossesValues.AutoZero };
             C.AutoLabeled autoLabeled7 = new C.AutoLabeled(){ Val = true };
             C.LabelAlignment labelAlignment7 = new C.LabelAlignment(){ Val = C.LabelAlignmentValues.Center };
@@ -17803,7 +17803,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             categoryAxis7.Append(noMultiLevelLabels7);
 
             C.ValueAxis valueAxis7 = new C.ValueAxis();
-            C.AxisId axisId28 = new C.AxisId(){ Val = (UInt32Value)208841384U };
+            C.AxisId axisId28 = new C.AxisId(){ Val = 208841384U };
 
             C.Scaling scaling14 = new C.Scaling();
             C.Orientation orientation14 = new C.Orientation(){ Val = C.OrientationValues.MinMax };
@@ -17894,7 +17894,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             textProperties22.Append(bodyProperties36);
             textProperties22.Append(listStyle36);
             textProperties22.Append(paragraph36);
-            C.CrossingAxis crossingAxis14 = new C.CrossingAxis(){ Val = (UInt32Value)208840992U };
+            C.CrossingAxis crossingAxis14 = new C.CrossingAxis(){ Val = 208840992U };
             C.Crosses crosses14 = new C.Crosses(){ Val = C.CrossesValues.AutoZero };
             C.CrossBetween crossBetween7 = new C.CrossBetween(){ Val = C.CrossBetweenValues.Between };
 
@@ -18107,28 +18107,28 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of pivotTablePart7.
         private static void GeneratePivotTablePart7Content(PivotTablePart pivotTablePart7)
         {
-            PivotTableDefinition pivotTableDefinition13 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = (UInt32Value)19U };
-            Location location7 = new Location(){ Reference = "A1:B5", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)1U };
+            PivotTableDefinition pivotTableDefinition13 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = 1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = 0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = 19U };
+            Location location7 = new Location(){ Reference = "A1:B5", FirstHeaderRow = 1U, FirstDataRow = 1U, FirstDataColumn = 1U };
 
-            PivotFields pivotFields7 = new PivotFields(){ Count = (UInt32Value)7U };
+            PivotFields pivotFields7 = new PivotFields(){ Count = 7U };
 
-            PivotField pivotField42 = new PivotField(){ NumberFormatId = (UInt32Value)14U, ShowAll = false };
+            PivotField pivotField42 = new PivotField(){ NumberFormatId = 14U, ShowAll = false };
 
-            Items items23 = new Items(){ Count = (UInt32Value)15U };
-            Item item198 = new Item(){ Index = (UInt32Value)0U };
-            Item item199 = new Item(){ Index = (UInt32Value)1U };
-            Item item200 = new Item(){ Index = (UInt32Value)2U };
-            Item item201 = new Item(){ Index = (UInt32Value)3U };
-            Item item202 = new Item(){ Index = (UInt32Value)4U };
-            Item item203 = new Item(){ Index = (UInt32Value)5U };
-            Item item204 = new Item(){ Index = (UInt32Value)6U };
-            Item item205 = new Item(){ Index = (UInt32Value)7U };
-            Item item206 = new Item(){ Index = (UInt32Value)8U };
-            Item item207 = new Item(){ Index = (UInt32Value)9U };
-            Item item208 = new Item(){ Index = (UInt32Value)10U };
-            Item item209 = new Item(){ Index = (UInt32Value)11U };
-            Item item210 = new Item(){ Index = (UInt32Value)12U };
-            Item item211 = new Item(){ Index = (UInt32Value)13U };
+            Items items23 = new Items(){ Count = 15U };
+            Item item198 = new Item(){ Index = 0U };
+            Item item199 = new Item(){ Index = 1U };
+            Item item200 = new Item(){ Index = 2U };
+            Item item201 = new Item(){ Index = 3U };
+            Item item202 = new Item(){ Index = 4U };
+            Item item203 = new Item(){ Index = 5U };
+            Item item204 = new Item(){ Index = 6U };
+            Item item205 = new Item(){ Index = 7U };
+            Item item206 = new Item(){ Index = 8U };
+            Item item207 = new Item(){ Index = 9U };
+            Item item208 = new Item(){ Index = 10U };
+            Item item209 = new Item(){ Index = 11U };
+            Item item210 = new Item(){ Index = 12U };
+            Item item211 = new Item(){ Index = 13U };
             Item item212 = new Item(){ ItemType = ItemValues.Default };
 
             items23.Append(item198);
@@ -18151,17 +18151,17 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotField pivotField43 = new PivotField(){ Axis = PivotTableAxisValues.AxisRow, ShowAll = false };
 
-            Items items24 = new Items(){ Count = (UInt32Value)11U };
-            Item item213 = new Item(){ Index = (UInt32Value)0U };
-            Item item214 = new Item(){ Missing = true, Index = (UInt32Value)4U };
-            Item item215 = new Item(){ Missing = true, Index = (UInt32Value)3U };
-            Item item216 = new Item(){ Index = (UInt32Value)1U };
-            Item item217 = new Item(){ Index = (UInt32Value)2U };
-            Item item218 = new Item(){ Missing = true, Index = (UInt32Value)9U };
-            Item item219 = new Item(){ Missing = true, Index = (UInt32Value)8U };
-            Item item220 = new Item(){ Missing = true, Index = (UInt32Value)7U };
-            Item item221 = new Item(){ Missing = true, Index = (UInt32Value)6U };
-            Item item222 = new Item(){ Missing = true, Index = (UInt32Value)5U };
+            Items items24 = new Items(){ Count = 11U };
+            Item item213 = new Item(){ Index = 0U };
+            Item item214 = new Item(){ Missing = true, Index = 4U };
+            Item item215 = new Item(){ Missing = true, Index = 3U };
+            Item item216 = new Item(){ Index = 1U };
+            Item item217 = new Item(){ Index = 2U };
+            Item item218 = new Item(){ Missing = true, Index = 9U };
+            Item item219 = new Item(){ Missing = true, Index = 8U };
+            Item item220 = new Item(){ Missing = true, Index = 7U };
+            Item item221 = new Item(){ Missing = true, Index = 6U };
+            Item item222 = new Item(){ Missing = true, Index = 5U };
             Item item223 = new Item(){ ItemType = ItemValues.Default };
 
             items24.Append(item213);
@@ -18180,13 +18180,13 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             PivotField pivotField44 = new PivotField(){ DataField = true, ShowAll = false };
             PivotField pivotField45 = new PivotField(){ ShowAll = false };
 
-            PivotField pivotField46 = new PivotField(){ NumberFormatId = (UInt32Value)14U, ShowAll = false };
+            PivotField pivotField46 = new PivotField(){ NumberFormatId = 14U, ShowAll = false };
 
-            Items items25 = new Items(){ Count = (UInt32Value)5U };
-            Item item224 = new Item(){ Index = (UInt32Value)0U };
-            Item item225 = new Item(){ Index = (UInt32Value)1U };
-            Item item226 = new Item(){ Index = (UInt32Value)3U };
-            Item item227 = new Item(){ Index = (UInt32Value)2U };
+            Items items25 = new Items(){ Count = 5U };
+            Item item224 = new Item(){ Index = 0U };
+            Item item225 = new Item(){ Index = 1U };
+            Item item226 = new Item(){ Index = 3U };
+            Item item227 = new Item(){ Index = 2U };
             Item item228 = new Item(){ ItemType = ItemValues.Default };
 
             items25.Append(item224);
@@ -18200,12 +18200,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotField pivotField48 = new PivotField(){ ShowAll = false, DefaultSubtotal = false };
 
-            Items items26 = new Items(){ Count = (UInt32Value)5U };
-            Item item229 = new Item(){ Index = (UInt32Value)0U };
-            Item item230 = new Item(){ Index = (UInt32Value)1U };
-            Item item231 = new Item(){ Index = (UInt32Value)2U };
-            Item item232 = new Item(){ Index = (UInt32Value)3U };
-            Item item233 = new Item(){ Index = (UInt32Value)4U };
+            Items items26 = new Items(){ Count = 5U };
+            Item item229 = new Item(){ Index = 0U };
+            Item item230 = new Item(){ Index = 1U };
+            Item item231 = new Item(){ Index = 2U };
+            Item item232 = new Item(){ Index = 3U };
+            Item item233 = new Item(){ Index = 4U };
 
             items26.Append(item229);
             items26.Append(item230);
@@ -18223,12 +18223,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFields7.Append(pivotField47);
             pivotFields7.Append(pivotField48);
 
-            RowFields rowFields7 = new RowFields(){ Count = (UInt32Value)1U };
+            RowFields rowFields7 = new RowFields(){ Count = 1U };
             Field field7 = new Field(){ Index = 1 };
 
             rowFields7.Append(field7);
 
-            RowItems rowItems7 = new RowItems(){ Count = (UInt32Value)4U };
+            RowItems rowItems7 = new RowItems(){ Count = 4U };
 
             RowItem rowItem31 = new RowItem();
             MemberPropertyIndex memberPropertyIndex25 = new MemberPropertyIndex();
@@ -18255,26 +18255,26 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             rowItems7.Append(rowItem33);
             rowItems7.Append(rowItem34);
 
-            ColumnItems columnItems7 = new ColumnItems(){ Count = (UInt32Value)1U };
+            ColumnItems columnItems7 = new ColumnItems(){ Count = 1U };
             RowItem rowItem35 = new RowItem();
 
             columnItems7.Append(rowItem35);
 
-            DataFields dataFields7 = new DataFields(){ Count = (UInt32Value)1U };
-            DataField dataField7 = new DataField(){ Name = "Sum of Quantity", Field = (UInt32Value)2U, BaseField = 0, BaseItem = (UInt32Value)0U };
+            DataFields dataFields7 = new DataFields(){ Count = 1U };
+            DataField dataField7 = new DataField(){ Name = "Sum of Quantity", Field = 2U, BaseField = 0, BaseItem = 0U };
 
             dataFields7.Append(dataField7);
 
-            ChartFormats chartFormats7 = new ChartFormats(){ Count = (UInt32Value)15U };
+            ChartFormats chartFormats7 = new ChartFormats(){ Count = 15U };
 
-            ChartFormat chartFormat52 = new ChartFormat(){ Chart = (UInt32Value)4U, Format = (UInt32Value)0U, Series = true };
+            ChartFormat chartFormat52 = new ChartFormat(){ Chart = 4U, Format = 0U, Series = true };
 
-            PivotArea pivotArea52 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea52 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences52 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences52 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference52 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem74 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference52 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem74 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference52.Append(fieldItem74);
 
@@ -18284,14 +18284,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat52.Append(pivotArea52);
 
-            ChartFormat chartFormat53 = new ChartFormat(){ Chart = (UInt32Value)5U, Format = (UInt32Value)2U, Series = true };
+            ChartFormat chartFormat53 = new ChartFormat(){ Chart = 5U, Format = 2U, Series = true };
 
-            PivotArea pivotArea53 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea53 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences53 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences53 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference53 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem75 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference53 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem75 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference53.Append(fieldItem75);
 
@@ -18301,14 +18301,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat53.Append(pivotArea53);
 
-            ChartFormat chartFormat54 = new ChartFormat(){ Chart = (UInt32Value)6U, Format = (UInt32Value)0U, Series = true };
+            ChartFormat chartFormat54 = new ChartFormat(){ Chart = 6U, Format = 0U, Series = true };
 
-            PivotArea pivotArea54 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea54 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences54 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences54 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference54 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem76 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference54 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem76 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference54.Append(fieldItem76);
 
@@ -18318,14 +18318,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat54.Append(pivotArea54);
 
-            ChartFormat chartFormat55 = new ChartFormat(){ Chart = (UInt32Value)7U, Format = (UInt32Value)14U, Series = true };
+            ChartFormat chartFormat55 = new ChartFormat(){ Chart = 7U, Format = 14U, Series = true };
 
-            PivotArea pivotArea55 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea55 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences55 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences55 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference55 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem77 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference55 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem77 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference55.Append(fieldItem77);
 
@@ -18335,14 +18335,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat55.Append(pivotArea55);
 
-            ChartFormat chartFormat56 = new ChartFormat(){ Chart = (UInt32Value)8U, Format = (UInt32Value)1U, Series = true };
+            ChartFormat chartFormat56 = new ChartFormat(){ Chart = 8U, Format = 1U, Series = true };
 
-            PivotArea pivotArea56 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea56 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences56 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences56 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference56 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem78 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference56 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem78 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference56.Append(fieldItem78);
 
@@ -18352,14 +18352,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat56.Append(pivotArea56);
 
-            ChartFormat chartFormat57 = new ChartFormat(){ Chart = (UInt32Value)9U, Format = (UInt32Value)15U, Series = true };
+            ChartFormat chartFormat57 = new ChartFormat(){ Chart = 9U, Format = 15U, Series = true };
 
-            PivotArea pivotArea57 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea57 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences57 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences57 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference57 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem79 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference57 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem79 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference57.Append(fieldItem79);
 
@@ -18369,14 +18369,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat57.Append(pivotArea57);
 
-            ChartFormat chartFormat58 = new ChartFormat(){ Chart = (UInt32Value)10U, Format = (UInt32Value)2U, Series = true };
+            ChartFormat chartFormat58 = new ChartFormat(){ Chart = 10U, Format = 2U, Series = true };
 
-            PivotArea pivotArea58 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea58 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences58 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences58 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference58 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem80 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference58 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem80 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference58.Append(fieldItem80);
 
@@ -18386,14 +18386,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat58.Append(pivotArea58);
 
-            ChartFormat chartFormat59 = new ChartFormat(){ Chart = (UInt32Value)11U, Format = (UInt32Value)16U, Series = true };
+            ChartFormat chartFormat59 = new ChartFormat(){ Chart = 11U, Format = 16U, Series = true };
 
-            PivotArea pivotArea59 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea59 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences59 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences59 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference59 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem81 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference59 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem81 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference59.Append(fieldItem81);
 
@@ -18403,14 +18403,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat59.Append(pivotArea59);
 
-            ChartFormat chartFormat60 = new ChartFormat(){ Chart = (UInt32Value)12U, Format = (UInt32Value)3U, Series = true };
+            ChartFormat chartFormat60 = new ChartFormat(){ Chart = 12U, Format = 3U, Series = true };
 
-            PivotArea pivotArea60 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea60 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences60 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences60 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference60 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem82 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference60 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem82 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference60.Append(fieldItem82);
 
@@ -18420,14 +18420,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat60.Append(pivotArea60);
 
-            ChartFormat chartFormat61 = new ChartFormat(){ Chart = (UInt32Value)13U, Format = (UInt32Value)17U, Series = true };
+            ChartFormat chartFormat61 = new ChartFormat(){ Chart = 13U, Format = 17U, Series = true };
 
-            PivotArea pivotArea61 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea61 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences61 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences61 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference61 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem83 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference61 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem83 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference61.Append(fieldItem83);
 
@@ -18437,14 +18437,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat61.Append(pivotArea61);
 
-            ChartFormat chartFormat62 = new ChartFormat(){ Chart = (UInt32Value)14U, Format = (UInt32Value)4U, Series = true };
+            ChartFormat chartFormat62 = new ChartFormat(){ Chart = 14U, Format = 4U, Series = true };
 
-            PivotArea pivotArea62 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea62 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences62 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences62 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference62 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem84 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference62 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem84 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference62.Append(fieldItem84);
 
@@ -18454,14 +18454,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat62.Append(pivotArea62);
 
-            ChartFormat chartFormat63 = new ChartFormat(){ Chart = (UInt32Value)15U, Format = (UInt32Value)18U, Series = true };
+            ChartFormat chartFormat63 = new ChartFormat(){ Chart = 15U, Format = 18U, Series = true };
 
-            PivotArea pivotArea63 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea63 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences63 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences63 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference63 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem85 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference63 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem85 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference63.Append(fieldItem85);
 
@@ -18471,14 +18471,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat63.Append(pivotArea63);
 
-            ChartFormat chartFormat64 = new ChartFormat(){ Chart = (UInt32Value)16U, Format = (UInt32Value)5U, Series = true };
+            ChartFormat chartFormat64 = new ChartFormat(){ Chart = 16U, Format = 5U, Series = true };
 
-            PivotArea pivotArea64 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea64 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences64 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences64 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference64 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem86 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference64 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem86 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference64.Append(fieldItem86);
 
@@ -18488,14 +18488,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat64.Append(pivotArea64);
 
-            ChartFormat chartFormat65 = new ChartFormat(){ Chart = (UInt32Value)17U, Format = (UInt32Value)19U, Series = true };
+            ChartFormat chartFormat65 = new ChartFormat(){ Chart = 17U, Format = 19U, Series = true };
 
-            PivotArea pivotArea65 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea65 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences65 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences65 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference65 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem87 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference65 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem87 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference65.Append(fieldItem87);
 
@@ -18505,14 +18505,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat65.Append(pivotArea65);
 
-            ChartFormat chartFormat66 = new ChartFormat(){ Chart = (UInt32Value)18U, Format = (UInt32Value)6U, Series = true };
+            ChartFormat chartFormat66 = new ChartFormat(){ Chart = 18U, Format = 6U, Series = true };
 
-            PivotArea pivotArea66 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea66 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences66 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences66 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference66 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem88 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference66 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem88 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference66.Append(fieldItem88);
 
@@ -18571,11 +18571,11 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             timelineCacheDefinition7.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
 
             X15.TimelineCachePivotTables timelineCachePivotTables7 = new X15.TimelineCachePivotTables();
-            X15.TimelineCachePivotTable timelineCachePivotTable7 = new X15.TimelineCachePivotTable(){ TabId = (UInt32Value)8U, Name = "PivotTable1" };
+            X15.TimelineCachePivotTable timelineCachePivotTable7 = new X15.TimelineCachePivotTable(){ TabId = 8U, Name = "PivotTable1" };
 
             timelineCachePivotTables7.Append(timelineCachePivotTable7);
 
-            X15.TimelineState timelineState7 = new X15.TimelineState(){ MinimalRefreshVersion = (UInt32Value)6U, LastRefreshVersion = (UInt32Value)6U, PivotCacheId = (UInt32Value)2U, FilterType = PivotFilterValues.Unknown };
+            X15.TimelineState timelineState7 = new X15.TimelineState(){ MinimalRefreshVersion = 6U, LastRefreshVersion = 6U, PivotCacheId = 2U, FilterType = PivotFilterValues.Unknown };
             X15.BoundsTimelineRange boundsTimelineRange7 = new X15.BoundsTimelineRange(){ StartDate = System.Xml.XmlConvert.ToDateTime("2000-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), EndDate = System.Xml.XmlConvert.ToDateTime("2004-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
             timelineState7.Append(boundsTimelineRange7);
@@ -18596,19 +18596,19 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             SheetDimension sheetDimension10 = new SheetDimension(){ Reference = "A1:B5" };
 
             SheetViews sheetViews10 = new SheetViews();
-            SheetView sheetView10 = new SheetView(){ WorkbookViewId = (UInt32Value)0U };
+            SheetView sheetView10 = new SheetView(){ WorkbookViewId = 0U };
 
             sheetViews10.Append(sheetView10);
             SheetFormatProperties sheetFormatProperties10 = new SheetFormatProperties(){ DefaultRowHeight = 15D };
 
             Columns columns10 = new Columns();
-            Column column62 = new Column(){ Min = (UInt32Value)1U, Max = (UInt32Value)1U, Width = 14.140625D, BestFit = true, CustomWidth = true };
-            Column column63 = new Column(){ Min = (UInt32Value)2U, Max = (UInt32Value)2U, Width = 17.42578125D, CustomWidth = true };
-            Column column64 = new Column(){ Min = (UInt32Value)3U, Max = (UInt32Value)3U, Width = 12.42578125D, CustomWidth = true };
-            Column column65 = new Column(){ Min = (UInt32Value)4U, Max = (UInt32Value)11U, Width = 13D, BestFit = true, CustomWidth = true };
-            Column column66 = new Column(){ Min = (UInt32Value)12U, Max = (UInt32Value)12U, Width = 13D, CustomWidth = true };
-            Column column67 = new Column(){ Min = (UInt32Value)13U, Max = (UInt32Value)20U, Width = 13D, BestFit = true, CustomWidth = true };
-            Column column68 = new Column(){ Min = (UInt32Value)21U, Max = (UInt32Value)23U, Width = 20.42578125D, BestFit = true, CustomWidth = true };
+            Column column62 = new Column(){ Min = 1U, Max = 1U, Width = 14.140625D, BestFit = true, CustomWidth = true };
+            Column column63 = new Column(){ Min = 2U, Max = 2U, Width = 17.42578125D, CustomWidth = true };
+            Column column64 = new Column(){ Min = 3U, Max = 3U, Width = 12.42578125D, CustomWidth = true };
+            Column column65 = new Column(){ Min = 4U, Max = 11U, Width = 13D, BestFit = true, CustomWidth = true };
+            Column column66 = new Column(){ Min = 12U, Max = 12U, Width = 13D, CustomWidth = true };
+            Column column67 = new Column(){ Min = 13U, Max = 20U, Width = 13D, BestFit = true, CustomWidth = true };
+            Column column68 = new Column(){ Min = 21U, Max = 23U, Width = 20.42578125D, BestFit = true, CustomWidth = true };
 
             columns10.Append(column62);
             columns10.Append(column63);
@@ -18620,9 +18620,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             SheetData sheetData10 = new SheetData();
 
-            Row row58 = new Row(){ RowIndex = (UInt32Value)1U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row58 = new Row(){ RowIndex = 1U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell203 = new Cell(){ CellReference = "A1", StyleIndex = (UInt32Value)5U, DataType = CellValues.SharedString };
+            Cell cell203 = new Cell(){ CellReference = "A1", StyleIndex = 5U, DataType = CellValues.SharedString };
             CellValue cellValue203 = new CellValue();
             cellValue203.Text = "29";
 
@@ -18637,15 +18637,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row58.Append(cell203);
             row58.Append(cell204);
 
-            Row row59 = new Row(){ RowIndex = (UInt32Value)2U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row59 = new Row(){ RowIndex = 2U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell205 = new Cell(){ CellReference = "A2", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell205 = new Cell(){ CellReference = "A2", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue205 = new CellValue();
             cellValue205.Text = "6";
 
             cell205.Append(cellValue205);
 
-            Cell cell206 = new Cell(){ CellReference = "B2", StyleIndex = (UInt32Value)7U };
+            Cell cell206 = new Cell(){ CellReference = "B2", StyleIndex = 7U };
             CellValue cellValue206 = new CellValue();
             cellValue206.Text = "19";
 
@@ -18654,15 +18654,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row59.Append(cell205);
             row59.Append(cell206);
 
-            Row row60 = new Row(){ RowIndex = (UInt32Value)3U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row60 = new Row(){ RowIndex = 3U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell207 = new Cell(){ CellReference = "A3", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell207 = new Cell(){ CellReference = "A3", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue207 = new CellValue();
             cellValue207.Text = "8";
 
             cell207.Append(cellValue207);
 
-            Cell cell208 = new Cell(){ CellReference = "B3", StyleIndex = (UInt32Value)7U };
+            Cell cell208 = new Cell(){ CellReference = "B3", StyleIndex = 7U };
             CellValue cellValue208 = new CellValue();
             cellValue208.Text = "13";
 
@@ -18671,15 +18671,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row60.Append(cell207);
             row60.Append(cell208);
 
-            Row row61 = new Row(){ RowIndex = (UInt32Value)4U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row61 = new Row(){ RowIndex = 4U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell209 = new Cell(){ CellReference = "A4", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell209 = new Cell(){ CellReference = "A4", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue209 = new CellValue();
             cellValue209.Text = "11";
 
             cell209.Append(cellValue209);
 
-            Cell cell210 = new Cell(){ CellReference = "B4", StyleIndex = (UInt32Value)7U };
+            Cell cell210 = new Cell(){ CellReference = "B4", StyleIndex = 7U };
             CellValue cellValue210 = new CellValue();
             cellValue210.Text = "33";
 
@@ -18688,15 +18688,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row61.Append(cell209);
             row61.Append(cell210);
 
-            Row row62 = new Row(){ RowIndex = (UInt32Value)5U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row62 = new Row(){ RowIndex = 5U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell211 = new Cell(){ CellReference = "A5", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell211 = new Cell(){ CellReference = "A5", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue211 = new CellValue();
             cellValue211.Text = "30";
 
             cell211.Append(cellValue211);
 
-            Cell cell212 = new Cell(){ CellReference = "B5", StyleIndex = (UInt32Value)7U };
+            Cell cell212 = new Cell(){ CellReference = "B5", StyleIndex = 7U };
             CellValue cellValue212 = new CellValue();
             cellValue212.Text = "65";
 
@@ -18710,7 +18710,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             sheetData10.Append(row60);
             sheetData10.Append(row61);
             sheetData10.Append(row62);
-            PhoneticProperties phoneticProperties16 = new PhoneticProperties(){ FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties16 = new PhoneticProperties(){ FontId = 1U };
             PageMargins pageMargins24 = new PageMargins(){ Left = 0.7D, Right = 0.7D, Top = 0.75D, Bottom = 0.75D, Header = 0.3D, Footer = 0.3D };
             S.Drawing drawing8 = new S.Drawing(){ Id = "rId2" };
 
@@ -18747,10 +18747,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             X15.Timelines timelines8 = new X15.Timelines(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x" }  };
             timelines8.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             timelines8.AddNamespaceDeclaration("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main");
-            X15.Timeline timeline15 = new X15.Timeline(){ Name = "DeliveryDate", Cache = "NativeTimeline_DeliveryDate", Caption = "Level1", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
-            X15.Timeline timeline16 = new X15.Timeline(){ Name = "DeliveryDate 1", Cache = "NativeTimeline_DeliveryDate", Caption = "Level2", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-06T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
-            X15.Timeline timeline17 = new X15.Timeline(){ Name = "DeliveryDate 2", Cache = "NativeTimeline_DeliveryDate", Caption = "Level3", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
-            X15.Timeline timeline18 = new X15.Timeline(){ Name = "DeliveryDate 3", Cache = "NativeTimeline_DeliveryDate", Caption = "Level4", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline15 = new X15.Timeline(){ Name = "DeliveryDate", Cache = "NativeTimeline_DeliveryDate", Caption = "Level1", Level = 2U, SelectionLevel = 2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline16 = new X15.Timeline(){ Name = "DeliveryDate 1", Cache = "NativeTimeline_DeliveryDate", Caption = "Level2", Level = 2U, SelectionLevel = 2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-06T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline17 = new X15.Timeline(){ Name = "DeliveryDate 2", Cache = "NativeTimeline_DeliveryDate", Caption = "Level3", Level = 2U, SelectionLevel = 2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline18 = new X15.Timeline(){ Name = "DeliveryDate 3", Cache = "NativeTimeline_DeliveryDate", Caption = "Level4", Level = 2U, SelectionLevel = 2U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
             timelines8.Append(timeline15);
             timelines8.Append(timeline16);
@@ -18799,10 +18799,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker29.Append(rowId58);
             toMarker29.Append(rowOffset58);
 
-            Xdr.GraphicFrame graphicFrame29 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame29 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties29 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties43 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)2U, Name = "Chart 1" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties43 = new Xdr.NonVisualDrawingProperties(){ Id = 2U, Name = "Chart 1" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties29 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties29.Append(nonVisualDrawingProperties43);
@@ -18869,10 +18869,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker30.Append(rowId60);
             toMarker30.Append(rowOffset60);
 
-            Xdr.GraphicFrame graphicFrame30 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame30 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties30 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties44 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)3U, Name = "グラフ 2" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties44 = new Xdr.NonVisualDrawingProperties(){ Id = 3U, Name = "グラフ 2" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties30 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties30.Append(nonVisualDrawingProperties44);
@@ -18945,10 +18945,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice30 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame31 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame31 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties31 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties45 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)5U, Name = "DeliveryDate" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties45 = new Xdr.NonVisualDrawingProperties(){ Id = 5U, Name = "DeliveryDate" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties31 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties31.Append(nonVisualDrawingProperties45);
@@ -18982,10 +18982,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback29.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback29.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape15 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape15 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties15 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties46 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties46 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties15 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks15 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -19101,10 +19101,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice31 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame32 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame32 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties32 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties47 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)6U, Name = "DeliveryDate 1" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties47 = new Xdr.NonVisualDrawingProperties(){ Id = 6U, Name = "DeliveryDate 1" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties32 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties32.Append(nonVisualDrawingProperties47);
@@ -19138,10 +19138,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback30.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback30.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape16 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape16 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties16 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties48 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties48 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties16 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks16 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -19257,10 +19257,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice32 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame33 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame33 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties33 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties49 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)7U, Name = "DeliveryDate 2" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties49 = new Xdr.NonVisualDrawingProperties(){ Id = 7U, Name = "DeliveryDate 2" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties33 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties33.Append(nonVisualDrawingProperties49);
@@ -19294,10 +19294,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback31.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback31.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape17 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape17 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties17 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties50 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties50 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties17 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks17 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -19413,10 +19413,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice33 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame34 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame34 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties34 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties51 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)8U, Name = "DeliveryDate 3" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties51 = new Xdr.NonVisualDrawingProperties(){ Id = 8U, Name = "DeliveryDate 3" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties34 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties34.Append(nonVisualDrawingProperties51);
@@ -19450,10 +19450,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback32.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback32.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape18 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape18 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties18 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties52 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties52 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties18 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks18 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -19572,7 +19572,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotSource pivotSource15 = new C.PivotSource();
             C.PivotTableName pivotTableName15 = new C.PivotTableName();
             pivotTableName15.Text = "[GeneratedDocument.xlsx]Level!PivotTable1";
-            C.FormatId formatId15 = new C.FormatId(){ Val = (UInt32Value)6U };
+            C.FormatId formatId15 = new C.FormatId(){ Val = 6U };
 
             pivotSource15.Append(pivotTableName15);
             pivotSource15.Append(formatId15);
@@ -19588,7 +19588,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotFormats pivotFormats15 = new C.PivotFormats();
 
             C.PivotFormat pivotFormat139 = new C.PivotFormat();
-            C.Index index153 = new C.Index(){ Val = (UInt32Value)0U };
+            C.Index index153 = new C.Index(){ Val = 0U };
 
             C.Marker marker139 = new C.Marker();
             C.Symbol symbol139 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -19607,8 +19607,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.VaryColors varyColors15 = new C.VaryColors(){ Val = true };
 
             C.PieChartSeries pieChartSeries8 = new C.PieChartSeries();
-            C.Index index154 = new C.Index(){ Val = (UInt32Value)0U };
-            C.Order order15 = new C.Order(){ Val = (UInt32Value)0U };
+            C.Index index154 = new C.Index(){ Val = 0U };
+            C.Order order15 = new C.Order(){ Val = 0U };
 
             C.SeriesText seriesText15 = new C.SeriesText();
 
@@ -19617,9 +19617,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula43.Text = "Level!$B$1";
 
             C.StringCache stringCache29 = new C.StringCache();
-            C.PointCount pointCount43 = new C.PointCount(){ Val = (UInt32Value)1U };
+            C.PointCount pointCount43 = new C.PointCount(){ Val = 1U };
 
-            C.StringPoint stringPoint57 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint57 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue99 = new C.NumericValue();
             numericValue99.Text = "Total";
 
@@ -19640,21 +19640,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula44.Text = "Level!$A$2:$A$5";
 
             C.StringCache stringCache30 = new C.StringCache();
-            C.PointCount pointCount44 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount44 = new C.PointCount(){ Val = 3U };
 
-            C.StringPoint stringPoint58 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint58 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue100 = new C.NumericValue();
             numericValue100.Text = "product_A";
 
             stringPoint58.Append(numericValue100);
 
-            C.StringPoint stringPoint59 = new C.StringPoint(){ Index = (UInt32Value)1U };
+            C.StringPoint stringPoint59 = new C.StringPoint(){ Index = 1U };
             C.NumericValue numericValue101 = new C.NumericValue();
             numericValue101.Text = "product_D";
 
             stringPoint59.Append(numericValue101);
 
-            C.StringPoint stringPoint60 = new C.StringPoint(){ Index = (UInt32Value)2U };
+            C.StringPoint stringPoint60 = new C.StringPoint(){ Index = 2U };
             C.NumericValue numericValue102 = new C.NumericValue();
             numericValue102.Text = "product_E";
 
@@ -19679,21 +19679,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.NumberingCache numberingCache15 = new C.NumberingCache();
             C.FormatCode formatCode15 = new C.FormatCode();
             formatCode15.Text = "General";
-            C.PointCount pointCount45 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount45 = new C.PointCount(){ Val = 3U };
 
-            C.NumericPoint numericPoint43 = new C.NumericPoint(){ Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint43 = new C.NumericPoint(){ Index = 0U };
             C.NumericValue numericValue103 = new C.NumericValue();
             numericValue103.Text = "19";
 
             numericPoint43.Append(numericValue103);
 
-            C.NumericPoint numericPoint44 = new C.NumericPoint(){ Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint44 = new C.NumericPoint(){ Index = 1U };
             C.NumericValue numericValue104 = new C.NumericValue();
             numericValue104.Text = "13";
 
             numericPoint44.Append(numericValue104);
 
-            C.NumericPoint numericPoint45 = new C.NumericPoint(){ Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint45 = new C.NumericPoint(){ Index = 2U };
             C.NumericValue numericValue105 = new C.NumericValue();
             numericValue105.Text = "33";
 
@@ -19821,7 +19821,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotSource pivotSource16 = new C.PivotSource();
             C.PivotTableName pivotTableName16 = new C.PivotTableName();
             pivotTableName16.Text = "[GeneratedDocument.xlsx]Level!PivotTable1";
-            C.FormatId formatId16 = new C.FormatId(){ Val = (UInt32Value)4U };
+            C.FormatId formatId16 = new C.FormatId(){ Val = 4U };
 
             pivotSource16.Append(pivotTableName16);
             pivotSource16.Append(formatId16);
@@ -19837,7 +19837,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotFormats pivotFormats16 = new C.PivotFormats();
 
             C.PivotFormat pivotFormat140 = new C.PivotFormat();
-            C.Index index155 = new C.Index(){ Val = (UInt32Value)0U };
+            C.Index index155 = new C.Index(){ Val = 0U };
 
             C.ShapeProperties shapeProperties66 = new C.ShapeProperties();
 
@@ -19870,7 +19870,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat140.Append(marker140);
 
             C.PivotFormat pivotFormat141 = new C.PivotFormat();
-            C.Index index156 = new C.Index(){ Val = (UInt32Value)1U };
+            C.Index index156 = new C.Index(){ Val = 1U };
 
             C.ShapeProperties shapeProperties67 = new C.ShapeProperties();
 
@@ -19903,7 +19903,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat141.Append(marker141);
 
             C.PivotFormat pivotFormat142 = new C.PivotFormat();
-            C.Index index157 = new C.Index(){ Val = (UInt32Value)2U };
+            C.Index index157 = new C.Index(){ Val = 2U };
 
             C.Marker marker142 = new C.Marker();
             C.Symbol symbol142 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -19914,7 +19914,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat142.Append(marker142);
 
             C.PivotFormat pivotFormat143 = new C.PivotFormat();
-            C.Index index158 = new C.Index(){ Val = (UInt32Value)3U };
+            C.Index index158 = new C.Index(){ Val = 3U };
 
             C.Marker marker143 = new C.Marker();
             C.Symbol symbol143 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -19925,7 +19925,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat143.Append(marker143);
 
             C.PivotFormat pivotFormat144 = new C.PivotFormat();
-            C.Index index159 = new C.Index(){ Val = (UInt32Value)4U };
+            C.Index index159 = new C.Index(){ Val = 4U };
 
             C.Marker marker144 = new C.Marker();
             C.Symbol symbol144 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -19936,7 +19936,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat144.Append(marker144);
 
             C.PivotFormat pivotFormat145 = new C.PivotFormat();
-            C.Index index160 = new C.Index(){ Val = (UInt32Value)5U };
+            C.Index index160 = new C.Index(){ Val = 5U };
 
             C.Marker marker145 = new C.Marker();
             C.Symbol symbol145 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -19947,7 +19947,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat145.Append(marker145);
 
             C.PivotFormat pivotFormat146 = new C.PivotFormat();
-            C.Index index161 = new C.Index(){ Val = (UInt32Value)6U };
+            C.Index index161 = new C.Index(){ Val = 6U };
 
             C.Marker marker146 = new C.Marker();
             C.Symbol symbol146 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -19958,7 +19958,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat146.Append(marker146);
 
             C.PivotFormat pivotFormat147 = new C.PivotFormat();
-            C.Index index162 = new C.Index(){ Val = (UInt32Value)7U };
+            C.Index index162 = new C.Index(){ Val = 7U };
 
             C.Marker marker147 = new C.Marker();
             C.Symbol symbol147 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -19969,7 +19969,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat147.Append(marker147);
 
             C.PivotFormat pivotFormat148 = new C.PivotFormat();
-            C.Index index163 = new C.Index(){ Val = (UInt32Value)8U };
+            C.Index index163 = new C.Index(){ Val = 8U };
 
             C.Marker marker148 = new C.Marker();
             C.Symbol symbol148 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -19980,7 +19980,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat148.Append(marker148);
 
             C.PivotFormat pivotFormat149 = new C.PivotFormat();
-            C.Index index164 = new C.Index(){ Val = (UInt32Value)9U };
+            C.Index index164 = new C.Index(){ Val = 9U };
 
             C.Marker marker149 = new C.Marker();
             C.Symbol symbol149 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -19991,7 +19991,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat149.Append(marker149);
 
             C.PivotFormat pivotFormat150 = new C.PivotFormat();
-            C.Index index165 = new C.Index(){ Val = (UInt32Value)10U };
+            C.Index index165 = new C.Index(){ Val = 10U };
 
             C.Marker marker150 = new C.Marker();
             C.Symbol symbol150 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -20002,7 +20002,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat150.Append(marker150);
 
             C.PivotFormat pivotFormat151 = new C.PivotFormat();
-            C.Index index166 = new C.Index(){ Val = (UInt32Value)11U };
+            C.Index index166 = new C.Index(){ Val = 11U };
 
             C.Marker marker151 = new C.Marker();
             C.Symbol symbol151 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -20013,7 +20013,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat151.Append(marker151);
 
             C.PivotFormat pivotFormat152 = new C.PivotFormat();
-            C.Index index167 = new C.Index(){ Val = (UInt32Value)12U };
+            C.Index index167 = new C.Index(){ Val = 12U };
 
             C.Marker marker152 = new C.Marker();
             C.Symbol symbol152 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -20024,7 +20024,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat152.Append(marker152);
 
             C.PivotFormat pivotFormat153 = new C.PivotFormat();
-            C.Index index168 = new C.Index(){ Val = (UInt32Value)13U };
+            C.Index index168 = new C.Index(){ Val = 13U };
 
             C.Marker marker153 = new C.Marker();
             C.Symbol symbol153 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -20058,8 +20058,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.VaryColors varyColors16 = new C.VaryColors(){ Val = false };
 
             C.BarChartSeries barChartSeries8 = new C.BarChartSeries();
-            C.Index index169 = new C.Index(){ Val = (UInt32Value)0U };
-            C.Order order16 = new C.Order(){ Val = (UInt32Value)0U };
+            C.Index index169 = new C.Index(){ Val = 0U };
+            C.Order order16 = new C.Order(){ Val = 0U };
 
             C.SeriesText seriesText16 = new C.SeriesText();
 
@@ -20068,9 +20068,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula46.Text = "Level!$B$1";
 
             C.StringCache stringCache31 = new C.StringCache();
-            C.PointCount pointCount46 = new C.PointCount(){ Val = (UInt32Value)1U };
+            C.PointCount pointCount46 = new C.PointCount(){ Val = 1U };
 
-            C.StringPoint stringPoint61 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint61 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue106 = new C.NumericValue();
             numericValue106.Text = "Total";
 
@@ -20113,21 +20113,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula47.Text = "Level!$A$2:$A$5";
 
             C.StringCache stringCache32 = new C.StringCache();
-            C.PointCount pointCount47 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount47 = new C.PointCount(){ Val = 3U };
 
-            C.StringPoint stringPoint62 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint62 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue107 = new C.NumericValue();
             numericValue107.Text = "product_A";
 
             stringPoint62.Append(numericValue107);
 
-            C.StringPoint stringPoint63 = new C.StringPoint(){ Index = (UInt32Value)1U };
+            C.StringPoint stringPoint63 = new C.StringPoint(){ Index = 1U };
             C.NumericValue numericValue108 = new C.NumericValue();
             numericValue108.Text = "product_D";
 
             stringPoint63.Append(numericValue108);
 
-            C.StringPoint stringPoint64 = new C.StringPoint(){ Index = (UInt32Value)2U };
+            C.StringPoint stringPoint64 = new C.StringPoint(){ Index = 2U };
             C.NumericValue numericValue109 = new C.NumericValue();
             numericValue109.Text = "product_E";
 
@@ -20152,21 +20152,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.NumberingCache numberingCache16 = new C.NumberingCache();
             C.FormatCode formatCode16 = new C.FormatCode();
             formatCode16.Text = "General";
-            C.PointCount pointCount48 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount48 = new C.PointCount(){ Val = 3U };
 
-            C.NumericPoint numericPoint46 = new C.NumericPoint(){ Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint46 = new C.NumericPoint(){ Index = 0U };
             C.NumericValue numericValue110 = new C.NumericValue();
             numericValue110.Text = "19";
 
             numericPoint46.Append(numericValue110);
 
-            C.NumericPoint numericPoint47 = new C.NumericPoint(){ Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint47 = new C.NumericPoint(){ Index = 1U };
             C.NumericValue numericValue111 = new C.NumericValue();
             numericValue111.Text = "13";
 
             numericPoint47.Append(numericValue111);
 
-            C.NumericPoint numericPoint48 = new C.NumericPoint(){ Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint48 = new C.NumericPoint(){ Index = 2U };
             C.NumericValue numericValue112 = new C.NumericValue();
             numericValue112.Text = "33";
 
@@ -20207,8 +20207,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             dataLabels16.Append(showBubbleSize16);
             C.GapWidth gapWidth8 = new C.GapWidth(){ Val = (UInt16Value)219U };
             C.Overlap overlap7 = new C.Overlap(){ Val = -27 };
-            C.AxisId axisId29 = new C.AxisId(){ Val = (UInt32Value)209240832U };
-            C.AxisId axisId30 = new C.AxisId(){ Val = (UInt32Value)209693768U };
+            C.AxisId axisId29 = new C.AxisId(){ Val = 209240832U };
+            C.AxisId axisId30 = new C.AxisId(){ Val = 209693768U };
 
             barChart8.Append(barDirection8);
             barChart8.Append(barGrouping8);
@@ -20221,7 +20221,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             barChart8.Append(axisId30);
 
             C.CategoryAxis categoryAxis8 = new C.CategoryAxis();
-            C.AxisId axisId31 = new C.AxisId(){ Val = (UInt32Value)209240832U };
+            C.AxisId axisId31 = new C.AxisId(){ Val = 209240832U };
 
             C.Scaling scaling15 = new C.Scaling();
             C.Orientation orientation15 = new C.Orientation(){ Val = C.OrientationValues.MinMax };
@@ -20285,7 +20285,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             textProperties25.Append(bodyProperties43);
             textProperties25.Append(listStyle43);
             textProperties25.Append(paragraph43);
-            C.CrossingAxis crossingAxis15 = new C.CrossingAxis(){ Val = (UInt32Value)209693768U };
+            C.CrossingAxis crossingAxis15 = new C.CrossingAxis(){ Val = 209693768U };
             C.Crosses crosses15 = new C.Crosses(){ Val = C.CrossesValues.AutoZero };
             C.AutoLabeled autoLabeled8 = new C.AutoLabeled(){ Val = true };
             C.LabelAlignment labelAlignment8 = new C.LabelAlignment(){ Val = C.LabelAlignmentValues.Center };
@@ -20310,7 +20310,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             categoryAxis8.Append(noMultiLevelLabels8);
 
             C.ValueAxis valueAxis8 = new C.ValueAxis();
-            C.AxisId axisId32 = new C.AxisId(){ Val = (UInt32Value)209693768U };
+            C.AxisId axisId32 = new C.AxisId(){ Val = 209693768U };
 
             C.Scaling scaling16 = new C.Scaling();
             C.Orientation orientation16 = new C.Orientation(){ Val = C.OrientationValues.MinMax };
@@ -20401,7 +20401,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             textProperties26.Append(bodyProperties44);
             textProperties26.Append(listStyle44);
             textProperties26.Append(paragraph44);
-            C.CrossingAxis crossingAxis16 = new C.CrossingAxis(){ Val = (UInt32Value)209240832U };
+            C.CrossingAxis crossingAxis16 = new C.CrossingAxis(){ Val = 209240832U };
             C.Crosses crosses16 = new C.Crosses(){ Val = C.CrossesValues.AutoZero };
             C.CrossBetween crossBetween8 = new C.CrossBetween(){ Val = C.CrossBetweenValues.Between };
 
@@ -20613,28 +20613,28 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of pivotTablePart8.
         private static void GeneratePivotTablePart8Content(PivotTablePart pivotTablePart8)
         {
-            PivotTableDefinition pivotTableDefinition15 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = (UInt32Value)7U };
-            Location location8 = new Location(){ Reference = "A1:B5", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)1U };
+            PivotTableDefinition pivotTableDefinition15 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = 1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = 0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = 7U };
+            Location location8 = new Location(){ Reference = "A1:B5", FirstHeaderRow = 1U, FirstDataRow = 1U, FirstDataColumn = 1U };
 
-            PivotFields pivotFields8 = new PivotFields(){ Count = (UInt32Value)7U };
+            PivotFields pivotFields8 = new PivotFields(){ Count = 7U };
 
-            PivotField pivotField49 = new PivotField(){ NumberFormatId = (UInt32Value)14U, ShowAll = false };
+            PivotField pivotField49 = new PivotField(){ NumberFormatId = 14U, ShowAll = false };
 
-            Items items27 = new Items(){ Count = (UInt32Value)15U };
-            Item item234 = new Item(){ Index = (UInt32Value)0U };
-            Item item235 = new Item(){ Index = (UInt32Value)1U };
-            Item item236 = new Item(){ Index = (UInt32Value)2U };
-            Item item237 = new Item(){ Index = (UInt32Value)3U };
-            Item item238 = new Item(){ Index = (UInt32Value)4U };
-            Item item239 = new Item(){ Index = (UInt32Value)5U };
-            Item item240 = new Item(){ Index = (UInt32Value)6U };
-            Item item241 = new Item(){ Index = (UInt32Value)7U };
-            Item item242 = new Item(){ Index = (UInt32Value)8U };
-            Item item243 = new Item(){ Index = (UInt32Value)9U };
-            Item item244 = new Item(){ Index = (UInt32Value)10U };
-            Item item245 = new Item(){ Index = (UInt32Value)11U };
-            Item item246 = new Item(){ Index = (UInt32Value)12U };
-            Item item247 = new Item(){ Index = (UInt32Value)13U };
+            Items items27 = new Items(){ Count = 15U };
+            Item item234 = new Item(){ Index = 0U };
+            Item item235 = new Item(){ Index = 1U };
+            Item item236 = new Item(){ Index = 2U };
+            Item item237 = new Item(){ Index = 3U };
+            Item item238 = new Item(){ Index = 4U };
+            Item item239 = new Item(){ Index = 5U };
+            Item item240 = new Item(){ Index = 6U };
+            Item item241 = new Item(){ Index = 7U };
+            Item item242 = new Item(){ Index = 8U };
+            Item item243 = new Item(){ Index = 9U };
+            Item item244 = new Item(){ Index = 10U };
+            Item item245 = new Item(){ Index = 11U };
+            Item item246 = new Item(){ Index = 12U };
+            Item item247 = new Item(){ Index = 13U };
             Item item248 = new Item(){ ItemType = ItemValues.Default };
 
             items27.Append(item234);
@@ -20657,17 +20657,17 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotField pivotField50 = new PivotField(){ Axis = PivotTableAxisValues.AxisRow, ShowAll = false };
 
-            Items items28 = new Items(){ Count = (UInt32Value)11U };
-            Item item249 = new Item(){ Index = (UInt32Value)0U };
-            Item item250 = new Item(){ Missing = true, Index = (UInt32Value)4U };
-            Item item251 = new Item(){ Missing = true, Index = (UInt32Value)3U };
-            Item item252 = new Item(){ Index = (UInt32Value)1U };
-            Item item253 = new Item(){ Index = (UInt32Value)2U };
-            Item item254 = new Item(){ Missing = true, Index = (UInt32Value)9U };
-            Item item255 = new Item(){ Missing = true, Index = (UInt32Value)8U };
-            Item item256 = new Item(){ Missing = true, Index = (UInt32Value)7U };
-            Item item257 = new Item(){ Missing = true, Index = (UInt32Value)6U };
-            Item item258 = new Item(){ Missing = true, Index = (UInt32Value)5U };
+            Items items28 = new Items(){ Count = 11U };
+            Item item249 = new Item(){ Index = 0U };
+            Item item250 = new Item(){ Missing = true, Index = 4U };
+            Item item251 = new Item(){ Missing = true, Index = 3U };
+            Item item252 = new Item(){ Index = 1U };
+            Item item253 = new Item(){ Index = 2U };
+            Item item254 = new Item(){ Missing = true, Index = 9U };
+            Item item255 = new Item(){ Missing = true, Index = 8U };
+            Item item256 = new Item(){ Missing = true, Index = 7U };
+            Item item257 = new Item(){ Missing = true, Index = 6U };
+            Item item258 = new Item(){ Missing = true, Index = 5U };
             Item item259 = new Item(){ ItemType = ItemValues.Default };
 
             items28.Append(item249);
@@ -20686,13 +20686,13 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             PivotField pivotField51 = new PivotField(){ DataField = true, ShowAll = false };
             PivotField pivotField52 = new PivotField(){ ShowAll = false };
 
-            PivotField pivotField53 = new PivotField(){ NumberFormatId = (UInt32Value)14U, ShowAll = false };
+            PivotField pivotField53 = new PivotField(){ NumberFormatId = 14U, ShowAll = false };
 
-            Items items29 = new Items(){ Count = (UInt32Value)5U };
-            Item item260 = new Item(){ Index = (UInt32Value)0U };
-            Item item261 = new Item(){ Index = (UInt32Value)1U };
-            Item item262 = new Item(){ Index = (UInt32Value)3U };
-            Item item263 = new Item(){ Index = (UInt32Value)2U };
+            Items items29 = new Items(){ Count = 5U };
+            Item item260 = new Item(){ Index = 0U };
+            Item item261 = new Item(){ Index = 1U };
+            Item item262 = new Item(){ Index = 3U };
+            Item item263 = new Item(){ Index = 2U };
             Item item264 = new Item(){ ItemType = ItemValues.Default };
 
             items29.Append(item260);
@@ -20706,12 +20706,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotField pivotField55 = new PivotField(){ ShowAll = false, DefaultSubtotal = false };
 
-            Items items30 = new Items(){ Count = (UInt32Value)5U };
-            Item item265 = new Item(){ Index = (UInt32Value)0U };
-            Item item266 = new Item(){ Index = (UInt32Value)1U };
-            Item item267 = new Item(){ Index = (UInt32Value)2U };
-            Item item268 = new Item(){ Index = (UInt32Value)3U };
-            Item item269 = new Item(){ Index = (UInt32Value)4U };
+            Items items30 = new Items(){ Count = 5U };
+            Item item265 = new Item(){ Index = 0U };
+            Item item266 = new Item(){ Index = 1U };
+            Item item267 = new Item(){ Index = 2U };
+            Item item268 = new Item(){ Index = 3U };
+            Item item269 = new Item(){ Index = 4U };
 
             items30.Append(item265);
             items30.Append(item266);
@@ -20729,12 +20729,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFields8.Append(pivotField54);
             pivotFields8.Append(pivotField55);
 
-            RowFields rowFields8 = new RowFields(){ Count = (UInt32Value)1U };
+            RowFields rowFields8 = new RowFields(){ Count = 1U };
             Field field8 = new Field(){ Index = 1 };
 
             rowFields8.Append(field8);
 
-            RowItems rowItems8 = new RowItems(){ Count = (UInt32Value)4U };
+            RowItems rowItems8 = new RowItems(){ Count = 4U };
 
             RowItem rowItem36 = new RowItem();
             MemberPropertyIndex memberPropertyIndex29 = new MemberPropertyIndex();
@@ -20761,26 +20761,26 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             rowItems8.Append(rowItem38);
             rowItems8.Append(rowItem39);
 
-            ColumnItems columnItems8 = new ColumnItems(){ Count = (UInt32Value)1U };
+            ColumnItems columnItems8 = new ColumnItems(){ Count = 1U };
             RowItem rowItem40 = new RowItem();
 
             columnItems8.Append(rowItem40);
 
-            DataFields dataFields8 = new DataFields(){ Count = (UInt32Value)1U };
-            DataField dataField8 = new DataField(){ Name = "Sum of Quantity", Field = (UInt32Value)2U, BaseField = 0, BaseItem = (UInt32Value)0U };
+            DataFields dataFields8 = new DataFields(){ Count = 1U };
+            DataField dataField8 = new DataField(){ Name = "Sum of Quantity", Field = 2U, BaseField = 0, BaseItem = 0U };
 
             dataFields8.Append(dataField8);
 
-            ChartFormats chartFormats8 = new ChartFormats(){ Count = (UInt32Value)3U };
+            ChartFormats chartFormats8 = new ChartFormats(){ Count = 3U };
 
-            ChartFormat chartFormat67 = new ChartFormat(){ Chart = (UInt32Value)4U, Format = (UInt32Value)0U, Series = true };
+            ChartFormat chartFormat67 = new ChartFormat(){ Chart = 4U, Format = 0U, Series = true };
 
-            PivotArea pivotArea67 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea67 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences67 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences67 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference67 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem89 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference67 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem89 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference67.Append(fieldItem89);
 
@@ -20790,14 +20790,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat67.Append(pivotArea67);
 
-            ChartFormat chartFormat68 = new ChartFormat(){ Chart = (UInt32Value)5U, Format = (UInt32Value)2U, Series = true };
+            ChartFormat chartFormat68 = new ChartFormat(){ Chart = 5U, Format = 2U, Series = true };
 
-            PivotArea pivotArea68 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea68 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences68 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences68 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference68 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem90 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference68 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem90 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference68.Append(fieldItem90);
 
@@ -20807,14 +20807,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat68.Append(pivotArea68);
 
-            ChartFormat chartFormat69 = new ChartFormat(){ Chart = (UInt32Value)6U, Format = (UInt32Value)0U, Series = true };
+            ChartFormat chartFormat69 = new ChartFormat(){ Chart = 6U, Format = 0U, Series = true };
 
-            PivotArea pivotArea69 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea69 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences69 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences69 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference69 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem91 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference69 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem91 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference69.Append(fieldItem91);
 
@@ -20864,19 +20864,19 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             SheetDimension sheetDimension11 = new SheetDimension(){ Reference = "A1:B5" };
 
             SheetViews sheetViews11 = new SheetViews();
-            SheetView sheetView11 = new SheetView(){ WorkbookViewId = (UInt32Value)0U };
+            SheetView sheetView11 = new SheetView(){ WorkbookViewId = 0U };
 
             sheetViews11.Append(sheetView11);
             SheetFormatProperties sheetFormatProperties11 = new SheetFormatProperties(){ DefaultRowHeight = 15D };
 
             Columns columns11 = new Columns();
-            Column column69 = new Column(){ Min = (UInt32Value)1U, Max = (UInt32Value)1U, Width = 14.140625D, BestFit = true, CustomWidth = true };
-            Column column70 = new Column(){ Min = (UInt32Value)2U, Max = (UInt32Value)2U, Width = 17.42578125D, CustomWidth = true };
-            Column column71 = new Column(){ Min = (UInt32Value)3U, Max = (UInt32Value)3U, Width = 12.42578125D, CustomWidth = true };
-            Column column72 = new Column(){ Min = (UInt32Value)4U, Max = (UInt32Value)11U, Width = 13D, BestFit = true, CustomWidth = true };
-            Column column73 = new Column(){ Min = (UInt32Value)12U, Max = (UInt32Value)12U, Width = 13D, CustomWidth = true };
-            Column column74 = new Column(){ Min = (UInt32Value)13U, Max = (UInt32Value)20U, Width = 13D, BestFit = true, CustomWidth = true };
-            Column column75 = new Column(){ Min = (UInt32Value)21U, Max = (UInt32Value)23U, Width = 20.42578125D, BestFit = true, CustomWidth = true };
+            Column column69 = new Column(){ Min = 1U, Max = 1U, Width = 14.140625D, BestFit = true, CustomWidth = true };
+            Column column70 = new Column(){ Min = 2U, Max = 2U, Width = 17.42578125D, CustomWidth = true };
+            Column column71 = new Column(){ Min = 3U, Max = 3U, Width = 12.42578125D, CustomWidth = true };
+            Column column72 = new Column(){ Min = 4U, Max = 11U, Width = 13D, BestFit = true, CustomWidth = true };
+            Column column73 = new Column(){ Min = 12U, Max = 12U, Width = 13D, CustomWidth = true };
+            Column column74 = new Column(){ Min = 13U, Max = 20U, Width = 13D, BestFit = true, CustomWidth = true };
+            Column column75 = new Column(){ Min = 21U, Max = 23U, Width = 20.42578125D, BestFit = true, CustomWidth = true };
 
             columns11.Append(column69);
             columns11.Append(column70);
@@ -20888,9 +20888,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             SheetData sheetData11 = new SheetData();
 
-            Row row63 = new Row(){ RowIndex = (UInt32Value)1U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row63 = new Row(){ RowIndex = 1U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell213 = new Cell(){ CellReference = "A1", StyleIndex = (UInt32Value)5U, DataType = CellValues.SharedString };
+            Cell cell213 = new Cell(){ CellReference = "A1", StyleIndex = 5U, DataType = CellValues.SharedString };
             CellValue cellValue213 = new CellValue();
             cellValue213.Text = "29";
 
@@ -20905,15 +20905,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row63.Append(cell213);
             row63.Append(cell214);
 
-            Row row64 = new Row(){ RowIndex = (UInt32Value)2U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row64 = new Row(){ RowIndex = 2U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell215 = new Cell(){ CellReference = "A2", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell215 = new Cell(){ CellReference = "A2", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue215 = new CellValue();
             cellValue215.Text = "6";
 
             cell215.Append(cellValue215);
 
-            Cell cell216 = new Cell(){ CellReference = "B2", StyleIndex = (UInt32Value)7U };
+            Cell cell216 = new Cell(){ CellReference = "B2", StyleIndex = 7U };
             CellValue cellValue216 = new CellValue();
             cellValue216.Text = "19";
 
@@ -20922,15 +20922,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row64.Append(cell215);
             row64.Append(cell216);
 
-            Row row65 = new Row(){ RowIndex = (UInt32Value)3U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row65 = new Row(){ RowIndex = 3U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell217 = new Cell(){ CellReference = "A3", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell217 = new Cell(){ CellReference = "A3", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue217 = new CellValue();
             cellValue217.Text = "8";
 
             cell217.Append(cellValue217);
 
-            Cell cell218 = new Cell(){ CellReference = "B3", StyleIndex = (UInt32Value)7U };
+            Cell cell218 = new Cell(){ CellReference = "B3", StyleIndex = 7U };
             CellValue cellValue218 = new CellValue();
             cellValue218.Text = "13";
 
@@ -20939,15 +20939,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row65.Append(cell217);
             row65.Append(cell218);
 
-            Row row66 = new Row(){ RowIndex = (UInt32Value)4U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row66 = new Row(){ RowIndex = 4U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell219 = new Cell(){ CellReference = "A4", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell219 = new Cell(){ CellReference = "A4", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue219 = new CellValue();
             cellValue219.Text = "11";
 
             cell219.Append(cellValue219);
 
-            Cell cell220 = new Cell(){ CellReference = "B4", StyleIndex = (UInt32Value)7U };
+            Cell cell220 = new Cell(){ CellReference = "B4", StyleIndex = 7U };
             CellValue cellValue220 = new CellValue();
             cellValue220.Text = "33";
 
@@ -20956,15 +20956,15 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             row66.Append(cell219);
             row66.Append(cell220);
 
-            Row row67 = new Row(){ RowIndex = (UInt32Value)5U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
+            Row row67 = new Row(){ RowIndex = 5U, Spans = new ListValue<StringValue>() { InnerText = "1:2" } };
 
-            Cell cell221 = new Cell(){ CellReference = "A5", StyleIndex = (UInt32Value)6U, DataType = CellValues.SharedString };
+            Cell cell221 = new Cell(){ CellReference = "A5", StyleIndex = 6U, DataType = CellValues.SharedString };
             CellValue cellValue221 = new CellValue();
             cellValue221.Text = "30";
 
             cell221.Append(cellValue221);
 
-            Cell cell222 = new Cell(){ CellReference = "B5", StyleIndex = (UInt32Value)7U };
+            Cell cell222 = new Cell(){ CellReference = "B5", StyleIndex = 7U };
             CellValue cellValue222 = new CellValue();
             cellValue222.Text = "65";
 
@@ -20978,7 +20978,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             sheetData11.Append(row65);
             sheetData11.Append(row66);
             sheetData11.Append(row67);
-            PhoneticProperties phoneticProperties17 = new PhoneticProperties(){ FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties17 = new PhoneticProperties(){ FontId = 1U };
             PageMargins pageMargins27 = new PageMargins(){ Left = 0.7D, Right = 0.7D, Top = 0.75D, Bottom = 0.75D, Header = 0.3D, Footer = 0.3D };
             S.Drawing drawing9 = new S.Drawing(){ Id = "rId2" };
 
@@ -21015,8 +21015,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             X15.Timelines timelines9 = new X15.Timelines(){ MCAttributes = new MarkupCompatibilityAttributes(){ Ignorable = "x" }  };
             timelines9.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             timelines9.AddNamespaceDeclaration("x", "http://schemas.openxmlformats.org/spreadsheetml/2006/main");
-            X15.Timeline timeline19 = new X15.Timeline(){ Name = "DeliveryDate 12", Cache = "NativeTimeline_DeliveryDate5", Caption = "ShowHorizontalScrollbar1", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)0U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-06T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
-            X15.Timeline timeline20 = new X15.Timeline(){ Name = "DeliveryDate 13", Cache = "NativeTimeline_DeliveryDate5", Caption = "ShowHorizontalScrollbar2", Level = (UInt32Value)2U, SelectionLevel = (UInt32Value)0U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline19 = new X15.Timeline(){ Name = "DeliveryDate 12", Cache = "NativeTimeline_DeliveryDate5", Caption = "ShowHorizontalScrollbar1", Level = 2U, SelectionLevel = 0U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-06T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
+            X15.Timeline timeline20 = new X15.Timeline(){ Name = "DeliveryDate 13", Cache = "NativeTimeline_DeliveryDate5", Caption = "ShowHorizontalScrollbar2", Level = 2U, SelectionLevel = 0U, ScrollPosition = System.Xml.XmlConvert.ToDateTime("2003-03-16T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
             timelines9.Append(timeline19);
             timelines9.Append(timeline20);
@@ -21063,10 +21063,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker35.Append(rowId70);
             toMarker35.Append(rowOffset70);
 
-            Xdr.GraphicFrame graphicFrame35 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame35 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties35 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties53 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)2U, Name = "Chart 1" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties53 = new Xdr.NonVisualDrawingProperties(){ Id = 2U, Name = "Chart 1" };
 
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties35 = new Xdr.NonVisualGraphicFrameDrawingProperties();
             A.GraphicFrameLocks graphicFrameLocks13 = new A.GraphicFrameLocks();
@@ -21137,10 +21137,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             toMarker36.Append(rowId72);
             toMarker36.Append(rowOffset72);
 
-            Xdr.GraphicFrame graphicFrame36 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame36 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties36 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties54 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)3U, Name = "グラフ 2" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties54 = new Xdr.NonVisualDrawingProperties(){ Id = 3U, Name = "グラフ 2" };
 
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties36 = new Xdr.NonVisualGraphicFrameDrawingProperties();
             A.GraphicFrameLocks graphicFrameLocks14 = new A.GraphicFrameLocks();
@@ -21217,10 +21217,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice35 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame37 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame37 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties37 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties55 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)4U, Name = "DeliveryDate 12" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties55 = new Xdr.NonVisualDrawingProperties(){ Id = 4U, Name = "DeliveryDate 12" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties37 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties37.Append(nonVisualDrawingProperties55);
@@ -21254,10 +21254,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             alternateContentFallback34.AddNamespaceDeclaration("r", "http://schemas.openxmlformats.org/officeDocument/2006/relationships");
             alternateContentFallback34.AddNamespaceDeclaration("c", "http://schemas.openxmlformats.org/drawingml/2006/chart");
 
-            Xdr.Shape shape19 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape19 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties19 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties56 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties56 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties19 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks19 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -21373,10 +21373,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentChoice alternateContentChoice36 = new AlternateContentChoice(){ Requires = "a15" };
 
-            Xdr.GraphicFrame graphicFrame38 = new Xdr.GraphicFrame(){ Macro = "" };
+            Xdr.GraphicFrame graphicFrame38 = new Xdr.GraphicFrame(){ Macro = string.Empty };
 
             Xdr.NonVisualGraphicFrameProperties nonVisualGraphicFrameProperties38 = new Xdr.NonVisualGraphicFrameProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties57 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)5U, Name = "DeliveryDate 13" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties57 = new Xdr.NonVisualDrawingProperties(){ Id = 5U, Name = "DeliveryDate 13" };
             Xdr.NonVisualGraphicFrameDrawingProperties nonVisualGraphicFrameDrawingProperties38 = new Xdr.NonVisualGraphicFrameDrawingProperties();
 
             nonVisualGraphicFrameProperties38.Append(nonVisualDrawingProperties57);
@@ -21408,10 +21408,10 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             AlternateContentFallback alternateContentFallback35 = new AlternateContentFallback();
 
-            Xdr.Shape shape20 = new Xdr.Shape(){ Macro = "", TextLink = "" };
+            Xdr.Shape shape20 = new Xdr.Shape(){ Macro = string.Empty, TextLink = string.Empty };
 
             Xdr.NonVisualShapeProperties nonVisualShapeProperties20 = new Xdr.NonVisualShapeProperties();
-            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties58 = new Xdr.NonVisualDrawingProperties(){ Id = (UInt32Value)0U, Name = "" };
+            Xdr.NonVisualDrawingProperties nonVisualDrawingProperties58 = new Xdr.NonVisualDrawingProperties(){ Id = 0U, Name = string.Empty };
 
             Xdr.NonVisualShapeDrawingProperties nonVisualShapeDrawingProperties20 = new Xdr.NonVisualShapeDrawingProperties();
             A.ShapeLocks shapeLocks20 = new A.ShapeLocks(){ NoTextEdit = true };
@@ -21528,7 +21528,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotSource pivotSource17 = new C.PivotSource();
             C.PivotTableName pivotTableName17 = new C.PivotTableName();
             pivotTableName17.Text = "[GeneratedDocument.xlsx]ShowHorizontalScrollbar!PivotTable1";
-            C.FormatId formatId17 = new C.FormatId(){ Val = (UInt32Value)16U };
+            C.FormatId formatId17 = new C.FormatId(){ Val = 16U };
 
             pivotSource17.Append(pivotTableName17);
             pivotSource17.Append(formatId17);
@@ -21544,7 +21544,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotFormats pivotFormats17 = new C.PivotFormats();
 
             C.PivotFormat pivotFormat154 = new C.PivotFormat();
-            C.Index index170 = new C.Index(){ Val = (UInt32Value)0U };
+            C.Index index170 = new C.Index(){ Val = 0U };
 
             C.Marker marker154 = new C.Marker();
             C.Symbol symbol154 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -21555,7 +21555,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat154.Append(marker154);
 
             C.PivotFormat pivotFormat155 = new C.PivotFormat();
-            C.Index index171 = new C.Index(){ Val = (UInt32Value)1U };
+            C.Index index171 = new C.Index(){ Val = 1U };
 
             C.Marker marker155 = new C.Marker();
             C.Symbol symbol155 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -21566,7 +21566,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat155.Append(marker155);
 
             C.PivotFormat pivotFormat156 = new C.PivotFormat();
-            C.Index index172 = new C.Index(){ Val = (UInt32Value)2U };
+            C.Index index172 = new C.Index(){ Val = 2U };
 
             C.Marker marker156 = new C.Marker();
             C.Symbol symbol156 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -21577,7 +21577,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat156.Append(marker156);
 
             C.PivotFormat pivotFormat157 = new C.PivotFormat();
-            C.Index index173 = new C.Index(){ Val = (UInt32Value)3U };
+            C.Index index173 = new C.Index(){ Val = 3U };
 
             C.Marker marker157 = new C.Marker();
             C.Symbol symbol157 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -21588,7 +21588,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat157.Append(marker157);
 
             C.PivotFormat pivotFormat158 = new C.PivotFormat();
-            C.Index index174 = new C.Index(){ Val = (UInt32Value)4U };
+            C.Index index174 = new C.Index(){ Val = 4U };
 
             C.Marker marker158 = new C.Marker();
             C.Symbol symbol158 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -21599,7 +21599,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat158.Append(marker158);
 
             C.PivotFormat pivotFormat159 = new C.PivotFormat();
-            C.Index index175 = new C.Index(){ Val = (UInt32Value)5U };
+            C.Index index175 = new C.Index(){ Val = 5U };
 
             C.Marker marker159 = new C.Marker();
             C.Symbol symbol159 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -21623,8 +21623,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.VaryColors varyColors17 = new C.VaryColors(){ Val = true };
 
             C.PieChartSeries pieChartSeries9 = new C.PieChartSeries();
-            C.Index index176 = new C.Index(){ Val = (UInt32Value)0U };
-            C.Order order17 = new C.Order(){ Val = (UInt32Value)0U };
+            C.Index index176 = new C.Index(){ Val = 0U };
+            C.Order order17 = new C.Order(){ Val = 0U };
 
             C.SeriesText seriesText17 = new C.SeriesText();
 
@@ -21633,9 +21633,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula49.Text = "ShowHorizontalScrollbar!$B$1";
 
             C.StringCache stringCache33 = new C.StringCache();
-            C.PointCount pointCount49 = new C.PointCount(){ Val = (UInt32Value)1U };
+            C.PointCount pointCount49 = new C.PointCount(){ Val = 1U };
 
-            C.StringPoint stringPoint65 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint65 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue113 = new C.NumericValue();
             numericValue113.Text = "Total";
 
@@ -21656,21 +21656,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula50.Text = "ShowHorizontalScrollbar!$A$2:$A$5";
 
             C.StringCache stringCache34 = new C.StringCache();
-            C.PointCount pointCount50 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount50 = new C.PointCount(){ Val = 3U };
 
-            C.StringPoint stringPoint66 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint66 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue114 = new C.NumericValue();
             numericValue114.Text = "product_A";
 
             stringPoint66.Append(numericValue114);
 
-            C.StringPoint stringPoint67 = new C.StringPoint(){ Index = (UInt32Value)1U };
+            C.StringPoint stringPoint67 = new C.StringPoint(){ Index = 1U };
             C.NumericValue numericValue115 = new C.NumericValue();
             numericValue115.Text = "product_D";
 
             stringPoint67.Append(numericValue115);
 
-            C.StringPoint stringPoint68 = new C.StringPoint(){ Index = (UInt32Value)2U };
+            C.StringPoint stringPoint68 = new C.StringPoint(){ Index = 2U };
             C.NumericValue numericValue116 = new C.NumericValue();
             numericValue116.Text = "product_E";
 
@@ -21695,21 +21695,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.NumberingCache numberingCache17 = new C.NumberingCache();
             C.FormatCode formatCode17 = new C.FormatCode();
             formatCode17.Text = "General";
-            C.PointCount pointCount51 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount51 = new C.PointCount(){ Val = 3U };
 
-            C.NumericPoint numericPoint49 = new C.NumericPoint(){ Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint49 = new C.NumericPoint(){ Index = 0U };
             C.NumericValue numericValue117 = new C.NumericValue();
             numericValue117.Text = "19";
 
             numericPoint49.Append(numericValue117);
 
-            C.NumericPoint numericPoint50 = new C.NumericPoint(){ Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint50 = new C.NumericPoint(){ Index = 1U };
             C.NumericValue numericValue118 = new C.NumericValue();
             numericValue118.Text = "13";
 
             numericPoint50.Append(numericValue118);
 
-            C.NumericPoint numericPoint51 = new C.NumericPoint(){ Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint51 = new C.NumericPoint(){ Index = 2U };
             C.NumericValue numericValue119 = new C.NumericValue();
             numericValue119.Text = "33";
 
@@ -21853,7 +21853,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotSource pivotSource18 = new C.PivotSource();
             C.PivotTableName pivotTableName18 = new C.PivotTableName();
             pivotTableName18.Text = "[GeneratedDocument.xlsx]ShowHorizontalScrollbar!PivotTable1";
-            C.FormatId formatId18 = new C.FormatId(){ Val = (UInt32Value)15U };
+            C.FormatId formatId18 = new C.FormatId(){ Val = 15U };
 
             pivotSource18.Append(pivotTableName18);
             pivotSource18.Append(formatId18);
@@ -21869,7 +21869,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.PivotFormats pivotFormats18 = new C.PivotFormats();
 
             C.PivotFormat pivotFormat160 = new C.PivotFormat();
-            C.Index index177 = new C.Index(){ Val = (UInt32Value)0U };
+            C.Index index177 = new C.Index(){ Val = 0U };
 
             C.ShapeProperties shapeProperties72 = new C.ShapeProperties();
 
@@ -21902,7 +21902,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat160.Append(marker160);
 
             C.PivotFormat pivotFormat161 = new C.PivotFormat();
-            C.Index index178 = new C.Index(){ Val = (UInt32Value)1U };
+            C.Index index178 = new C.Index(){ Val = 1U };
 
             C.ShapeProperties shapeProperties73 = new C.ShapeProperties();
 
@@ -21935,7 +21935,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat161.Append(marker161);
 
             C.PivotFormat pivotFormat162 = new C.PivotFormat();
-            C.Index index179 = new C.Index(){ Val = (UInt32Value)2U };
+            C.Index index179 = new C.Index(){ Val = 2U };
 
             C.Marker marker162 = new C.Marker();
             C.Symbol symbol162 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -21946,7 +21946,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat162.Append(marker162);
 
             C.PivotFormat pivotFormat163 = new C.PivotFormat();
-            C.Index index180 = new C.Index(){ Val = (UInt32Value)3U };
+            C.Index index180 = new C.Index(){ Val = 3U };
 
             C.Marker marker163 = new C.Marker();
             C.Symbol symbol163 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -21957,7 +21957,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat163.Append(marker163);
 
             C.PivotFormat pivotFormat164 = new C.PivotFormat();
-            C.Index index181 = new C.Index(){ Val = (UInt32Value)4U };
+            C.Index index181 = new C.Index(){ Val = 4U };
 
             C.Marker marker164 = new C.Marker();
             C.Symbol symbol164 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -21968,7 +21968,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat164.Append(marker164);
 
             C.PivotFormat pivotFormat165 = new C.PivotFormat();
-            C.Index index182 = new C.Index(){ Val = (UInt32Value)5U };
+            C.Index index182 = new C.Index(){ Val = 5U };
 
             C.Marker marker165 = new C.Marker();
             C.Symbol symbol165 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -21979,7 +21979,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat165.Append(marker165);
 
             C.PivotFormat pivotFormat166 = new C.PivotFormat();
-            C.Index index183 = new C.Index(){ Val = (UInt32Value)6U };
+            C.Index index183 = new C.Index(){ Val = 6U };
 
             C.Marker marker166 = new C.Marker();
             C.Symbol symbol166 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -21990,7 +21990,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat166.Append(marker166);
 
             C.PivotFormat pivotFormat167 = new C.PivotFormat();
-            C.Index index184 = new C.Index(){ Val = (UInt32Value)7U };
+            C.Index index184 = new C.Index(){ Val = 7U };
 
             C.Marker marker167 = new C.Marker();
             C.Symbol symbol167 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -22001,7 +22001,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat167.Append(marker167);
 
             C.PivotFormat pivotFormat168 = new C.PivotFormat();
-            C.Index index185 = new C.Index(){ Val = (UInt32Value)8U };
+            C.Index index185 = new C.Index(){ Val = 8U };
 
             C.Marker marker168 = new C.Marker();
             C.Symbol symbol168 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -22012,7 +22012,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat168.Append(marker168);
 
             C.PivotFormat pivotFormat169 = new C.PivotFormat();
-            C.Index index186 = new C.Index(){ Val = (UInt32Value)9U };
+            C.Index index186 = new C.Index(){ Val = 9U };
 
             C.Marker marker169 = new C.Marker();
             C.Symbol symbol169 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -22023,7 +22023,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat169.Append(marker169);
 
             C.PivotFormat pivotFormat170 = new C.PivotFormat();
-            C.Index index187 = new C.Index(){ Val = (UInt32Value)10U };
+            C.Index index187 = new C.Index(){ Val = 10U };
 
             C.Marker marker170 = new C.Marker();
             C.Symbol symbol170 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -22034,7 +22034,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat170.Append(marker170);
 
             C.PivotFormat pivotFormat171 = new C.PivotFormat();
-            C.Index index188 = new C.Index(){ Val = (UInt32Value)11U };
+            C.Index index188 = new C.Index(){ Val = 11U };
 
             C.Marker marker171 = new C.Marker();
             C.Symbol symbol171 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -22045,7 +22045,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat171.Append(marker171);
 
             C.PivotFormat pivotFormat172 = new C.PivotFormat();
-            C.Index index189 = new C.Index(){ Val = (UInt32Value)12U };
+            C.Index index189 = new C.Index(){ Val = 12U };
 
             C.Marker marker172 = new C.Marker();
             C.Symbol symbol172 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -22056,7 +22056,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat172.Append(marker172);
 
             C.PivotFormat pivotFormat173 = new C.PivotFormat();
-            C.Index index190 = new C.Index(){ Val = (UInt32Value)13U };
+            C.Index index190 = new C.Index(){ Val = 13U };
 
             C.Marker marker173 = new C.Marker();
             C.Symbol symbol173 = new C.Symbol(){ Val = C.MarkerStyleValues.None };
@@ -22067,7 +22067,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat173.Append(marker173);
 
             C.PivotFormat pivotFormat174 = new C.PivotFormat();
-            C.Index index191 = new C.Index(){ Val = (UInt32Value)14U };
+            C.Index index191 = new C.Index(){ Val = 14U };
 
             C.ShapeProperties shapeProperties74 = new C.ShapeProperties();
 
@@ -22100,7 +22100,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat174.Append(marker174);
 
             C.PivotFormat pivotFormat175 = new C.PivotFormat();
-            C.Index index192 = new C.Index(){ Val = (UInt32Value)15U };
+            C.Index index192 = new C.Index(){ Val = 15U };
 
             C.ShapeProperties shapeProperties75 = new C.ShapeProperties();
 
@@ -22133,7 +22133,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat175.Append(marker175);
 
             C.PivotFormat pivotFormat176 = new C.PivotFormat();
-            C.Index index193 = new C.Index(){ Val = (UInt32Value)16U };
+            C.Index index193 = new C.Index(){ Val = 16U };
 
             C.ShapeProperties shapeProperties76 = new C.ShapeProperties();
 
@@ -22166,7 +22166,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat176.Append(marker176);
 
             C.PivotFormat pivotFormat177 = new C.PivotFormat();
-            C.Index index194 = new C.Index(){ Val = (UInt32Value)17U };
+            C.Index index194 = new C.Index(){ Val = 17U };
 
             C.ShapeProperties shapeProperties77 = new C.ShapeProperties();
 
@@ -22199,7 +22199,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFormat177.Append(marker177);
 
             C.PivotFormat pivotFormat178 = new C.PivotFormat();
-            C.Index index195 = new C.Index(){ Val = (UInt32Value)18U };
+            C.Index index195 = new C.Index(){ Val = 18U };
 
             C.ShapeProperties shapeProperties78 = new C.ShapeProperties();
 
@@ -22260,8 +22260,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.VaryColors varyColors18 = new C.VaryColors(){ Val = false };
 
             C.BarChartSeries barChartSeries9 = new C.BarChartSeries();
-            C.Index index196 = new C.Index(){ Val = (UInt32Value)0U };
-            C.Order order18 = new C.Order(){ Val = (UInt32Value)0U };
+            C.Index index196 = new C.Index(){ Val = 0U };
+            C.Order order18 = new C.Order(){ Val = 0U };
 
             C.SeriesText seriesText18 = new C.SeriesText();
 
@@ -22270,9 +22270,9 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula52.Text = "ShowHorizontalScrollbar!$B$1";
 
             C.StringCache stringCache35 = new C.StringCache();
-            C.PointCount pointCount52 = new C.PointCount(){ Val = (UInt32Value)1U };
+            C.PointCount pointCount52 = new C.PointCount(){ Val = 1U };
 
-            C.StringPoint stringPoint69 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint69 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue120 = new C.NumericValue();
             numericValue120.Text = "Total";
 
@@ -22315,21 +22315,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             formula53.Text = "ShowHorizontalScrollbar!$A$2:$A$5";
 
             C.StringCache stringCache36 = new C.StringCache();
-            C.PointCount pointCount53 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount53 = new C.PointCount(){ Val = 3U };
 
-            C.StringPoint stringPoint70 = new C.StringPoint(){ Index = (UInt32Value)0U };
+            C.StringPoint stringPoint70 = new C.StringPoint(){ Index = 0U };
             C.NumericValue numericValue121 = new C.NumericValue();
             numericValue121.Text = "product_A";
 
             stringPoint70.Append(numericValue121);
 
-            C.StringPoint stringPoint71 = new C.StringPoint(){ Index = (UInt32Value)1U };
+            C.StringPoint stringPoint71 = new C.StringPoint(){ Index = 1U };
             C.NumericValue numericValue122 = new C.NumericValue();
             numericValue122.Text = "product_D";
 
             stringPoint71.Append(numericValue122);
 
-            C.StringPoint stringPoint72 = new C.StringPoint(){ Index = (UInt32Value)2U };
+            C.StringPoint stringPoint72 = new C.StringPoint(){ Index = 2U };
             C.NumericValue numericValue123 = new C.NumericValue();
             numericValue123.Text = "product_E";
 
@@ -22354,21 +22354,21 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             C.NumberingCache numberingCache18 = new C.NumberingCache();
             C.FormatCode formatCode18 = new C.FormatCode();
             formatCode18.Text = "General";
-            C.PointCount pointCount54 = new C.PointCount(){ Val = (UInt32Value)3U };
+            C.PointCount pointCount54 = new C.PointCount(){ Val = 3U };
 
-            C.NumericPoint numericPoint52 = new C.NumericPoint(){ Index = (UInt32Value)0U };
+            C.NumericPoint numericPoint52 = new C.NumericPoint(){ Index = 0U };
             C.NumericValue numericValue124 = new C.NumericValue();
             numericValue124.Text = "19";
 
             numericPoint52.Append(numericValue124);
 
-            C.NumericPoint numericPoint53 = new C.NumericPoint(){ Index = (UInt32Value)1U };
+            C.NumericPoint numericPoint53 = new C.NumericPoint(){ Index = 1U };
             C.NumericValue numericValue125 = new C.NumericValue();
             numericValue125.Text = "13";
 
             numericPoint53.Append(numericValue125);
 
-            C.NumericPoint numericPoint54 = new C.NumericPoint(){ Index = (UInt32Value)2U };
+            C.NumericPoint numericPoint54 = new C.NumericPoint(){ Index = 2U };
             C.NumericValue numericValue126 = new C.NumericValue();
             numericValue126.Text = "33";
 
@@ -22409,8 +22409,8 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             dataLabels18.Append(showBubbleSize18);
             C.GapWidth gapWidth9 = new C.GapWidth(){ Val = (UInt16Value)219U };
             C.Overlap overlap8 = new C.Overlap(){ Val = -27 };
-            C.AxisId axisId33 = new C.AxisId(){ Val = (UInt32Value)209982688U };
-            C.AxisId axisId34 = new C.AxisId(){ Val = (UInt32Value)208839816U };
+            C.AxisId axisId33 = new C.AxisId(){ Val = 209982688U };
+            C.AxisId axisId34 = new C.AxisId(){ Val = 208839816U };
 
             barChart9.Append(barDirection9);
             barChart9.Append(barGrouping9);
@@ -22423,7 +22423,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             barChart9.Append(axisId34);
 
             C.CategoryAxis categoryAxis9 = new C.CategoryAxis();
-            C.AxisId axisId35 = new C.AxisId(){ Val = (UInt32Value)209982688U };
+            C.AxisId axisId35 = new C.AxisId(){ Val = 209982688U };
 
             C.Scaling scaling17 = new C.Scaling();
             C.Orientation orientation17 = new C.Orientation(){ Val = C.OrientationValues.MinMax };
@@ -22487,7 +22487,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             textProperties29.Append(bodyProperties49);
             textProperties29.Append(listStyle49);
             textProperties29.Append(paragraph49);
-            C.CrossingAxis crossingAxis17 = new C.CrossingAxis(){ Val = (UInt32Value)208839816U };
+            C.CrossingAxis crossingAxis17 = new C.CrossingAxis(){ Val = 208839816U };
             C.Crosses crosses17 = new C.Crosses(){ Val = C.CrossesValues.AutoZero };
             C.AutoLabeled autoLabeled9 = new C.AutoLabeled(){ Val = true };
             C.LabelAlignment labelAlignment9 = new C.LabelAlignment(){ Val = C.LabelAlignmentValues.Center };
@@ -22512,7 +22512,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             categoryAxis9.Append(noMultiLevelLabels9);
 
             C.ValueAxis valueAxis9 = new C.ValueAxis();
-            C.AxisId axisId36 = new C.AxisId(){ Val = (UInt32Value)208839816U };
+            C.AxisId axisId36 = new C.AxisId(){ Val = 208839816U };
 
             C.Scaling scaling18 = new C.Scaling();
             C.Orientation orientation18 = new C.Orientation(){ Val = C.OrientationValues.MinMax };
@@ -22603,7 +22603,7 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             textProperties30.Append(bodyProperties50);
             textProperties30.Append(listStyle50);
             textProperties30.Append(paragraph50);
-            C.CrossingAxis crossingAxis18 = new C.CrossingAxis(){ Val = (UInt32Value)209982688U };
+            C.CrossingAxis crossingAxis18 = new C.CrossingAxis(){ Val = 209982688U };
             C.Crosses crosses18 = new C.Crosses(){ Val = C.CrossesValues.AutoZero };
             C.CrossBetween crossBetween9 = new C.CrossBetween(){ Val = C.CrossBetweenValues.Between };
 
@@ -22816,28 +22816,28 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
         // Generates content of pivotTablePart9.
         private static void GeneratePivotTablePart9Content(PivotTablePart pivotTablePart9)
         {
-            PivotTableDefinition pivotTableDefinition17 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = (UInt32Value)1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = (UInt32Value)0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = (UInt32Value)17U };
-            Location location9 = new Location(){ Reference = "A1:B5", FirstHeaderRow = (UInt32Value)1U, FirstDataRow = (UInt32Value)1U, FirstDataColumn = (UInt32Value)1U };
+            PivotTableDefinition pivotTableDefinition17 = new PivotTableDefinition(){ Name = "PivotTable1", CacheId = 1U, ApplyNumberFormats = false, ApplyBorderFormats = false, ApplyFontFormats = false, ApplyPatternFormats = false, ApplyAlignmentFormats = false, ApplyWidthHeightFormats = true, DataCaption = "Values", UpdatedVersion = 5, MinRefreshableVersion = 5, UseAutoFormatting = true, ItemPrintTitles = true, CreatedVersion = 4, Indent = 0U, Outline = true, OutlineData = true, MultipleFieldFilters = false, ChartFormat = 17U };
+            Location location9 = new Location(){ Reference = "A1:B5", FirstHeaderRow = 1U, FirstDataRow = 1U, FirstDataColumn = 1U };
 
-            PivotFields pivotFields9 = new PivotFields(){ Count = (UInt32Value)7U };
+            PivotFields pivotFields9 = new PivotFields(){ Count = 7U };
 
-            PivotField pivotField56 = new PivotField(){ NumberFormatId = (UInt32Value)14U, ShowAll = false };
+            PivotField pivotField56 = new PivotField(){ NumberFormatId = 14U, ShowAll = false };
 
-            Items items31 = new Items(){ Count = (UInt32Value)15U };
-            Item item270 = new Item(){ Index = (UInt32Value)0U };
-            Item item271 = new Item(){ Index = (UInt32Value)1U };
-            Item item272 = new Item(){ Index = (UInt32Value)2U };
-            Item item273 = new Item(){ Index = (UInt32Value)3U };
-            Item item274 = new Item(){ Index = (UInt32Value)4U };
-            Item item275 = new Item(){ Index = (UInt32Value)5U };
-            Item item276 = new Item(){ Index = (UInt32Value)6U };
-            Item item277 = new Item(){ Index = (UInt32Value)7U };
-            Item item278 = new Item(){ Index = (UInt32Value)8U };
-            Item item279 = new Item(){ Index = (UInt32Value)9U };
-            Item item280 = new Item(){ Index = (UInt32Value)10U };
-            Item item281 = new Item(){ Index = (UInt32Value)11U };
-            Item item282 = new Item(){ Index = (UInt32Value)12U };
-            Item item283 = new Item(){ Index = (UInt32Value)13U };
+            Items items31 = new Items(){ Count = 15U };
+            Item item270 = new Item(){ Index = 0U };
+            Item item271 = new Item(){ Index = 1U };
+            Item item272 = new Item(){ Index = 2U };
+            Item item273 = new Item(){ Index = 3U };
+            Item item274 = new Item(){ Index = 4U };
+            Item item275 = new Item(){ Index = 5U };
+            Item item276 = new Item(){ Index = 6U };
+            Item item277 = new Item(){ Index = 7U };
+            Item item278 = new Item(){ Index = 8U };
+            Item item279 = new Item(){ Index = 9U };
+            Item item280 = new Item(){ Index = 10U };
+            Item item281 = new Item(){ Index = 11U };
+            Item item282 = new Item(){ Index = 12U };
+            Item item283 = new Item(){ Index = 13U };
             Item item284 = new Item(){ ItemType = ItemValues.Default };
 
             items31.Append(item270);
@@ -22860,17 +22860,17 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotField pivotField57 = new PivotField(){ Axis = PivotTableAxisValues.AxisRow, ShowAll = false };
 
-            Items items32 = new Items(){ Count = (UInt32Value)11U };
-            Item item285 = new Item(){ Index = (UInt32Value)0U };
-            Item item286 = new Item(){ Missing = true, Index = (UInt32Value)4U };
-            Item item287 = new Item(){ Missing = true, Index = (UInt32Value)3U };
-            Item item288 = new Item(){ Index = (UInt32Value)1U };
-            Item item289 = new Item(){ Index = (UInt32Value)2U };
-            Item item290 = new Item(){ Missing = true, Index = (UInt32Value)9U };
-            Item item291 = new Item(){ Missing = true, Index = (UInt32Value)8U };
-            Item item292 = new Item(){ Missing = true, Index = (UInt32Value)7U };
-            Item item293 = new Item(){ Missing = true, Index = (UInt32Value)6U };
-            Item item294 = new Item(){ Missing = true, Index = (UInt32Value)5U };
+            Items items32 = new Items(){ Count = 11U };
+            Item item285 = new Item(){ Index = 0U };
+            Item item286 = new Item(){ Missing = true, Index = 4U };
+            Item item287 = new Item(){ Missing = true, Index = 3U };
+            Item item288 = new Item(){ Index = 1U };
+            Item item289 = new Item(){ Index = 2U };
+            Item item290 = new Item(){ Missing = true, Index = 9U };
+            Item item291 = new Item(){ Missing = true, Index = 8U };
+            Item item292 = new Item(){ Missing = true, Index = 7U };
+            Item item293 = new Item(){ Missing = true, Index = 6U };
+            Item item294 = new Item(){ Missing = true, Index = 5U };
             Item item295 = new Item(){ ItemType = ItemValues.Default };
 
             items32.Append(item285);
@@ -22889,13 +22889,13 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             PivotField pivotField58 = new PivotField(){ DataField = true, ShowAll = false };
             PivotField pivotField59 = new PivotField(){ ShowAll = false };
 
-            PivotField pivotField60 = new PivotField(){ NumberFormatId = (UInt32Value)14U, ShowAll = false };
+            PivotField pivotField60 = new PivotField(){ NumberFormatId = 14U, ShowAll = false };
 
-            Items items33 = new Items(){ Count = (UInt32Value)5U };
-            Item item296 = new Item(){ Index = (UInt32Value)0U };
-            Item item297 = new Item(){ Index = (UInt32Value)1U };
-            Item item298 = new Item(){ Index = (UInt32Value)3U };
-            Item item299 = new Item(){ Index = (UInt32Value)2U };
+            Items items33 = new Items(){ Count = 5U };
+            Item item296 = new Item(){ Index = 0U };
+            Item item297 = new Item(){ Index = 1U };
+            Item item298 = new Item(){ Index = 3U };
+            Item item299 = new Item(){ Index = 2U };
             Item item300 = new Item(){ ItemType = ItemValues.Default };
 
             items33.Append(item296);
@@ -22909,12 +22909,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             PivotField pivotField62 = new PivotField(){ ShowAll = false, DefaultSubtotal = false };
 
-            Items items34 = new Items(){ Count = (UInt32Value)5U };
-            Item item301 = new Item(){ Index = (UInt32Value)0U };
-            Item item302 = new Item(){ Index = (UInt32Value)1U };
-            Item item303 = new Item(){ Index = (UInt32Value)2U };
-            Item item304 = new Item(){ Index = (UInt32Value)3U };
-            Item item305 = new Item(){ Index = (UInt32Value)4U };
+            Items items34 = new Items(){ Count = 5U };
+            Item item301 = new Item(){ Index = 0U };
+            Item item302 = new Item(){ Index = 1U };
+            Item item303 = new Item(){ Index = 2U };
+            Item item304 = new Item(){ Index = 3U };
+            Item item305 = new Item(){ Index = 4U };
 
             items34.Append(item301);
             items34.Append(item302);
@@ -22932,12 +22932,12 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             pivotFields9.Append(pivotField61);
             pivotFields9.Append(pivotField62);
 
-            RowFields rowFields9 = new RowFields(){ Count = (UInt32Value)1U };
+            RowFields rowFields9 = new RowFields(){ Count = 1U };
             Field field9 = new Field(){ Index = 1 };
 
             rowFields9.Append(field9);
 
-            RowItems rowItems9 = new RowItems(){ Count = (UInt32Value)4U };
+            RowItems rowItems9 = new RowItems(){ Count = 4U };
 
             RowItem rowItem41 = new RowItem();
             MemberPropertyIndex memberPropertyIndex33 = new MemberPropertyIndex();
@@ -22964,26 +22964,26 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             rowItems9.Append(rowItem43);
             rowItems9.Append(rowItem44);
 
-            ColumnItems columnItems9 = new ColumnItems(){ Count = (UInt32Value)1U };
+            ColumnItems columnItems9 = new ColumnItems(){ Count = 1U };
             RowItem rowItem45 = new RowItem();
 
             columnItems9.Append(rowItem45);
 
-            DataFields dataFields9 = new DataFields(){ Count = (UInt32Value)1U };
-            DataField dataField9 = new DataField(){ Name = "Sum of Quantity", Field = (UInt32Value)2U, BaseField = 0, BaseItem = (UInt32Value)0U };
+            DataFields dataFields9 = new DataFields(){ Count = 1U };
+            DataField dataField9 = new DataField(){ Name = "Sum of Quantity", Field = 2U, BaseField = 0, BaseItem = 0U };
 
             dataFields9.Append(dataField9);
 
-            ChartFormats chartFormats9 = new ChartFormats(){ Count = (UInt32Value)13U };
+            ChartFormats chartFormats9 = new ChartFormats(){ Count = 13U };
 
-            ChartFormat chartFormat70 = new ChartFormat(){ Chart = (UInt32Value)4U, Format = (UInt32Value)0U, Series = true };
+            ChartFormat chartFormat70 = new ChartFormat(){ Chart = 4U, Format = 0U, Series = true };
 
-            PivotArea pivotArea70 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea70 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences70 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences70 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference70 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem92 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference70 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem92 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference70.Append(fieldItem92);
 
@@ -22993,14 +22993,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat70.Append(pivotArea70);
 
-            ChartFormat chartFormat71 = new ChartFormat(){ Chart = (UInt32Value)5U, Format = (UInt32Value)2U, Series = true };
+            ChartFormat chartFormat71 = new ChartFormat(){ Chart = 5U, Format = 2U, Series = true };
 
-            PivotArea pivotArea71 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea71 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences71 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences71 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference71 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem93 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference71 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem93 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference71.Append(fieldItem93);
 
@@ -23010,14 +23010,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat71.Append(pivotArea71);
 
-            ChartFormat chartFormat72 = new ChartFormat(){ Chart = (UInt32Value)6U, Format = (UInt32Value)0U, Series = true };
+            ChartFormat chartFormat72 = new ChartFormat(){ Chart = 6U, Format = 0U, Series = true };
 
-            PivotArea pivotArea72 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea72 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences72 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences72 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference72 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem94 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference72 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem94 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference72.Append(fieldItem94);
 
@@ -23027,14 +23027,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat72.Append(pivotArea72);
 
-            ChartFormat chartFormat73 = new ChartFormat(){ Chart = (UInt32Value)7U, Format = (UInt32Value)14U, Series = true };
+            ChartFormat chartFormat73 = new ChartFormat(){ Chart = 7U, Format = 14U, Series = true };
 
-            PivotArea pivotArea73 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea73 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences73 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences73 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference73 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem95 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference73 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem95 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference73.Append(fieldItem95);
 
@@ -23044,14 +23044,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat73.Append(pivotArea73);
 
-            ChartFormat chartFormat74 = new ChartFormat(){ Chart = (UInt32Value)8U, Format = (UInt32Value)1U, Series = true };
+            ChartFormat chartFormat74 = new ChartFormat(){ Chart = 8U, Format = 1U, Series = true };
 
-            PivotArea pivotArea74 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea74 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences74 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences74 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference74 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem96 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference74 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem96 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference74.Append(fieldItem96);
 
@@ -23061,14 +23061,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat74.Append(pivotArea74);
 
-            ChartFormat chartFormat75 = new ChartFormat(){ Chart = (UInt32Value)9U, Format = (UInt32Value)15U, Series = true };
+            ChartFormat chartFormat75 = new ChartFormat(){ Chart = 9U, Format = 15U, Series = true };
 
-            PivotArea pivotArea75 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea75 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences75 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences75 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference75 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem97 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference75 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem97 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference75.Append(fieldItem97);
 
@@ -23078,14 +23078,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat75.Append(pivotArea75);
 
-            ChartFormat chartFormat76 = new ChartFormat(){ Chart = (UInt32Value)10U, Format = (UInt32Value)2U, Series = true };
+            ChartFormat chartFormat76 = new ChartFormat(){ Chart = 10U, Format = 2U, Series = true };
 
-            PivotArea pivotArea76 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea76 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences76 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences76 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference76 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem98 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference76 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem98 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference76.Append(fieldItem98);
 
@@ -23095,14 +23095,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat76.Append(pivotArea76);
 
-            ChartFormat chartFormat77 = new ChartFormat(){ Chart = (UInt32Value)11U, Format = (UInt32Value)16U, Series = true };
+            ChartFormat chartFormat77 = new ChartFormat(){ Chart = 11U, Format = 16U, Series = true };
 
-            PivotArea pivotArea77 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea77 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences77 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences77 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference77 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem99 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference77 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem99 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference77.Append(fieldItem99);
 
@@ -23112,14 +23112,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat77.Append(pivotArea77);
 
-            ChartFormat chartFormat78 = new ChartFormat(){ Chart = (UInt32Value)12U, Format = (UInt32Value)3U, Series = true };
+            ChartFormat chartFormat78 = new ChartFormat(){ Chart = 12U, Format = 3U, Series = true };
 
-            PivotArea pivotArea78 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea78 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences78 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences78 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference78 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem100 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference78 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem100 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference78.Append(fieldItem100);
 
@@ -23129,14 +23129,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat78.Append(pivotArea78);
 
-            ChartFormat chartFormat79 = new ChartFormat(){ Chart = (UInt32Value)13U, Format = (UInt32Value)17U, Series = true };
+            ChartFormat chartFormat79 = new ChartFormat(){ Chart = 13U, Format = 17U, Series = true };
 
-            PivotArea pivotArea79 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea79 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences79 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences79 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference79 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem101 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference79 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem101 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference79.Append(fieldItem101);
 
@@ -23146,14 +23146,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat79.Append(pivotArea79);
 
-            ChartFormat chartFormat80 = new ChartFormat(){ Chart = (UInt32Value)14U, Format = (UInt32Value)4U, Series = true };
+            ChartFormat chartFormat80 = new ChartFormat(){ Chart = 14U, Format = 4U, Series = true };
 
-            PivotArea pivotArea80 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea80 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences80 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences80 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference80 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem102 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference80 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem102 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference80.Append(fieldItem102);
 
@@ -23163,14 +23163,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat80.Append(pivotArea80);
 
-            ChartFormat chartFormat81 = new ChartFormat(){ Chart = (UInt32Value)15U, Format = (UInt32Value)18U, Series = true };
+            ChartFormat chartFormat81 = new ChartFormat(){ Chart = 15U, Format = 18U, Series = true };
 
-            PivotArea pivotArea81 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea81 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences81 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences81 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference81 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem103 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference81 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem103 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference81.Append(fieldItem103);
 
@@ -23180,14 +23180,14 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
 
             chartFormat81.Append(pivotArea81);
 
-            ChartFormat chartFormat82 = new ChartFormat(){ Chart = (UInt32Value)16U, Format = (UInt32Value)5U, Series = true };
+            ChartFormat chartFormat82 = new ChartFormat(){ Chart = 16U, Format = 5U, Series = true };
 
-            PivotArea pivotArea82 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = (UInt32Value)0U };
+            PivotArea pivotArea82 = new PivotArea(){ Type = PivotAreaValues.Data, Outline = false, FieldPosition = 0U };
 
-            PivotAreaReferences pivotAreaReferences82 = new PivotAreaReferences(){ Count = (UInt32Value)1U };
+            PivotAreaReferences pivotAreaReferences82 = new PivotAreaReferences(){ Count = 1U };
 
-            PivotAreaReference pivotAreaReference82 = new PivotAreaReference(){ Field = (UInt32Value)4294967294U, Count = (UInt32Value)1U, Selected = false };
-            FieldItem fieldItem104 = new FieldItem(){ Val = (UInt32Value)0U };
+            PivotAreaReference pivotAreaReference82 = new PivotAreaReference(){ Field = 4294967294U, Count = 1U, Selected = false };
+            FieldItem fieldItem104 = new FieldItem(){ Val = 0U };
 
             pivotAreaReference82.Append(fieldItem104);
 
@@ -23212,13 +23212,13 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             chartFormats9.Append(chartFormat82);
             PivotTableStyle pivotTableStyle9 = new PivotTableStyle(){ Name = "PivotStyleLight16", ShowRowHeaders = true, ShowColumnHeaders = true, ShowRowStripes = false, ShowColumnStripes = false, ShowLastColumn = true };
 
-            PivotFilters pivotFilters1 = new PivotFilters(){ Count = (UInt32Value)1U };
+            PivotFilters pivotFilters1 = new PivotFilters(){ Count = 1U };
 
-            PivotFilter pivotFilter1 = new PivotFilter(){ Field = (UInt32Value)4U, Type = PivotFilterValues.DateBetween, EvaluationOrder = -1, Id = (UInt32Value)6U, Name = "DeliveryDate" };
+            PivotFilter pivotFilter1 = new PivotFilter(){ Field = 4U, Type = PivotFilterValues.DateBetween, EvaluationOrder = -1, Id = 6U, Name = "DeliveryDate" };
 
             AutoFilter autoFilter7 = new AutoFilter(){ Reference = "A1" };
 
-            FilterColumn filterColumn1 = new FilterColumn(){ ColumnId = (UInt32Value)0U };
+            FilterColumn filterColumn1 = new FilterColumn(){ ColumnId = 0U };
 
             CustomFilters customFilters1 = new CustomFilters(){ And = true };
             CustomFilter customFilter1 = new CustomFilter(){ Operator = FilterOperatorValues.GreaterThanOrEqual, Val = "36526" };
@@ -23279,11 +23279,11 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             timelineCacheDefinition8.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
 
             X15.TimelineCachePivotTables timelineCachePivotTables8 = new X15.TimelineCachePivotTables();
-            X15.TimelineCachePivotTable timelineCachePivotTable8 = new X15.TimelineCachePivotTable(){ TabId = (UInt32Value)4U, Name = "PivotTable1" };
+            X15.TimelineCachePivotTable timelineCachePivotTable8 = new X15.TimelineCachePivotTable(){ TabId = 4U, Name = "PivotTable1" };
 
             timelineCachePivotTables8.Append(timelineCachePivotTable8);
 
-            X15.TimelineState timelineState8 = new X15.TimelineState(){ MinimalRefreshVersion = (UInt32Value)6U, LastRefreshVersion = (UInt32Value)6U, PivotCacheId = (UInt32Value)1U, FilterType = PivotFilterValues.Unknown };
+            X15.TimelineState timelineState8 = new X15.TimelineState(){ MinimalRefreshVersion = 6U, LastRefreshVersion = 6U, PivotCacheId = 1U, FilterType = PivotFilterValues.Unknown };
             X15.BoundsTimelineRange boundsTimelineRange8 = new X15.BoundsTimelineRange(){ StartDate = System.Xml.XmlConvert.ToDateTime("2000-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), EndDate = System.Xml.XmlConvert.ToDateTime("2003-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
             timelineState8.Append(boundsTimelineRange8);
@@ -23301,11 +23301,11 @@ namespace DocumentFormat.OpenXml.Tests.TimelineClass
             timelineCacheDefinition9.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
 
             X15.TimelineCachePivotTables timelineCachePivotTables9 = new X15.TimelineCachePivotTables();
-            X15.TimelineCachePivotTable timelineCachePivotTable9 = new X15.TimelineCachePivotTable(){ TabId = (UInt32Value)11U, Name = "PivotTable1" };
+            X15.TimelineCachePivotTable timelineCachePivotTable9 = new X15.TimelineCachePivotTable(){ TabId = 11U, Name = "PivotTable1" };
 
             timelineCachePivotTables9.Append(timelineCachePivotTable9);
 
-            X15.TimelineState timelineState9 = new X15.TimelineState(){ MinimalRefreshVersion = (UInt32Value)6U, LastRefreshVersion = (UInt32Value)6U, PivotCacheId = (UInt32Value)2U, FilterType = PivotFilterValues.Unknown };
+            X15.TimelineState timelineState9 = new X15.TimelineState(){ MinimalRefreshVersion = 6U, LastRefreshVersion = 6U, PivotCacheId = 2U, FilterType = PivotFilterValues.Unknown };
             X15.BoundsTimelineRange boundsTimelineRange9 = new X15.BoundsTimelineRange(){ StartDate = System.Xml.XmlConvert.ToDateTime("2000-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind), EndDate = System.Xml.XmlConvert.ToDateTime("2004-01-01T00:00:00Z", System.Xml.XmlDateTimeSerializationMode.RoundtripKind) };
 
             timelineState9.Append(boundsTimelineRange9);

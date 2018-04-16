@@ -69253,7 +69253,7 @@ Text,
 [EnumString("email")]
 Email,
 ///<summary>
-///Native Data Souce.
+///Native Data Source.
 ///<para>When the item is serialized out as xml, its value is "native".</para>
 ///</summary>
 [EnumString("native")]

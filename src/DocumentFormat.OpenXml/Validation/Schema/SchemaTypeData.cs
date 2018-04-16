@@ -20,6 +20,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal SchemaTypeData(int openxmlTypeId, AttributeConstraint[] attributeConstraints)
         {
             OpenXmlTypeId = openxmlTypeId;
+
             // Use ReadOnlyCollection<T> as the return type in debug version.
 #if DEBUG
             if (attributeConstraints != null)
@@ -113,6 +114,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     return AttributeConstraints.Count;
                 }
+
                 return 0;
             }
         }

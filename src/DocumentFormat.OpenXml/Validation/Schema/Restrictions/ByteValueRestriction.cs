@@ -9,12 +9,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// <summary>
     /// Byte ( xsd:unsignedByte ) based value restriction.
     /// </summary>
-    [DataContract]
-    internal class ByteValueRestriction : SimpleValueRestriction<Byte, ByteValue>
+    [DataContract(Name = "b")]
+    internal class ByteValueRestriction : SimpleValueRestriction<byte, ByteValue>
     {
-        protected override Byte MinValue => Byte.MinValue;
+        protected override byte MinValue => byte.MinValue;
 
-        protected override Byte MaxValue => Byte.MaxValue;
+        protected override byte MaxValue => byte.MaxValue;
 
         /// <inheritdoc />
         public override XsdType XsdType => XsdType.UnsignedByte;

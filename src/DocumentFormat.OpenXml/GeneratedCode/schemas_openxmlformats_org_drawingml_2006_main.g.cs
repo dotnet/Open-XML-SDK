@@ -40139,7 +40139,7 @@ public enum AnimationChartOnlyBuildValues
 [EnumString("series")]
 Series,
 ///<summary>
-///Catefory.
+///Category.
 ///<para>When the item is serialized out as xml, its value is "category".</para>
 ///</summary>
 [EnumString("category")]

@@ -51,7 +51,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// </summary>
         /// <param name="element">the element need to calculate</param>
         /// <returns>the path of the passed-in element</returns>
-        private static String GetElementPath(OpenXmlElement element)
+        private static string GetElementPath(OpenXmlElement element)
         {
             // Log.Comment("get the current element position path");
             if (element == null)
@@ -91,6 +91,7 @@ namespace DocumentFormat.OpenXml.Tests
                 position++;
                 walker = walker.PreviousSibling();
             }
+
             path.Insert(0, "/" + element.LocalName + "@" + position);
         }
 
@@ -99,12 +100,12 @@ namespace DocumentFormat.OpenXml.Tests
         /// </summary>
         /// <param name="element">the root </param>
         /// <param name="Path">the path used to find the target element</param>
-        /// <returns>the Xelement retrieved from the path</returns>
-        private static XElement GetXmlElement(String path, OpenXmlPart part)
+        /// <returns>The <see cref="XElement"/> retrieved from the path</returns>
+        private static XElement GetXmlElement(string path, OpenXmlPart part)
         {
             if (part == null)
                 throw new ArgumentNullException(nameof(part));
-            if (String.IsNullOrEmpty(path))
+            if (string.IsNullOrEmpty(path))
                 throw new ArgumentNullException(nameof(path));
 
             XElement element = null;
@@ -115,17 +116,18 @@ namespace DocumentFormat.OpenXml.Tests
             if (element == null)
                 throw new Exception("Failed to load element from specified part.");
 
-            List<String> elementTypeList = new List<string>();
-            List<String> elementPositionList = new List<string>();
+            List<string> elementTypeList = new List<string>();
+            List<string> elementPositionList = new List<string>();
             char[] separator = { '/' };
 
-            foreach (String level in path.Split(separator, StringSplitOptions.RemoveEmptyEntries))
+            foreach (string level in path.Split(separator, StringSplitOptions.RemoveEmptyEntries))
             {
                 string[] ele = level.Split('@');
                 if (ele.Length <= 0 || ele.Length > 2)
                 {
                     throw new ArgumentException("The path is invalid!!");
                 }
+
                 elementTypeList.Add(ele[0]);
                 elementPositionList.Add(ele[1]);
             }
@@ -141,6 +143,7 @@ namespace DocumentFormat.OpenXml.Tests
                     throw new ArgumentException("The path contains invalid data");
                 }
             }
+
             return targetElement;
         }
 
@@ -150,13 +153,13 @@ namespace DocumentFormat.OpenXml.Tests
         /// </summary>
         /// <param name="part">the part that the OpenXmlElement exists in</param>
         /// <param name="element">the OpenXmlElement need to be converted</param>
-        /// <returns>the corresponding Xelement</returns>
+        /// <returns>the corresponding <see cref="XElement"/></returns>
         internal static XElement ConvertToXElement(OpenXmlPart part, OpenXmlElement element)
         {
             if (part == null || element == null)
                 throw new ArgumentNullException("part | element");
 
-            String path = GetElementPath(element);
+            string path = GetElementPath(element);
 
             return GetXmlElement(path, part);
         }
@@ -164,6 +167,7 @@ namespace DocumentFormat.OpenXml.Tests
         #endregion
 
         #region Find Part
+
         /// <summary> get any reflectable part in given package. </summary>
         internal GetTargetPart getAnyOpenXmlPart =
             p => p.DescendantParts()
@@ -367,14 +371,13 @@ namespace DocumentFormat.OpenXml.Tests
 
         #endregion Find Element
 
-        #region Contructing
-        internal enum ConstructorOptions { Default, OuterXml, IEnumberable, IEnumberableGeneric, Params, Part };
-
-        #endregion Constructing
-
         #region Append Collection
 
-        internal enum AppendCollectionType { IEnumerable, Array };
+        internal enum AppendCollectionType
+        {
+            IEnumerable,
+            Array,
+        }
 
         internal void AppendCollectionOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHostElement,
             IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, AppendCollectionType operationType)
@@ -418,7 +421,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var originalElementCount = hostElement.ChildElements.Count;
                     var importElementsCount = importHost.ChildElements.Count;
                     var childPosition = originalElementCount;
-                    String importElementOuterXml = null;
+                    string importElementOuterXml = null;
 
                     switch (operationType)
                     {
@@ -461,7 +464,11 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Pend Operations
 
-        internal enum PendType { Append, Prepend };
+        internal enum PendType
+        {
+            Append,
+            Prepend,
+        }
 
         private protected void PendTestOnFile(IFile testFile, GetTargetPart getHostPart, GetTargetElement getHostElement,
             IFile sourceFile, GetTargetPart getSourcePart, GetTargetElement getSourceHost, PendType pendType)
@@ -485,7 +492,7 @@ namespace DocumentFormat.OpenXml.Tests
         /// Ap/Pre- pend OpenXmlElement found through getImportee on srcPart to OpenXmlElement found through getTarget on hostPart.
         /// </summary>
         /// <param name="hostPart">Hosting Part</param>
-        /// <param name="getTarget">Delegate method to find specifc OpenXmlElement in host part</param>
+        /// <param name="getTarget">Delegate method to find specific OpenXmlElement in host part</param>
         /// <param name="srcPart">Source Part to import content from</param>
         /// <param name="getImportee">Delegate method to find specific OpenXmlElment in source part</param>
         /// <param name="operationType">Append or Prepend</param>
@@ -513,7 +520,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     int? childPosition = null;
                     OpenXmlElement result = null;
-                    String importElementOuterXml = importElement.OuterXml;
+                    string importElementOuterXml = importElement.OuterXml;
 
                     switch (operationType)
                     {
@@ -559,7 +566,7 @@ namespace DocumentFormat.OpenXml.Tests
         internal OpenXmlElement PendOperation(PendChild<OpenXmlElement> pendOp, OpenXmlElement pendee)
         {
             if (pendOp == null)
-                throw new ArgumentNullException("pender");
+                throw new ArgumentNullException(nameof(pendOp));
 
             Log.Comment("Pending child with {0}...", pendOp.GetMethodInfo().Name);
             OpenXmlElement result = pendOp(pendee);
@@ -574,7 +581,11 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Insert Before/After
 
-        internal enum InsertType { Before, After };
+        internal enum InsertType
+        {
+            Before,
+            After,
+        }
 
         private protected void InsertTestOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHostElement,
                 IFile sourceFile, GetTargetPart getSourcePart, GetTargetElement getSourceHost, GetTargetElement getRef, InsertType insertType)
@@ -632,7 +643,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                         OpenXmlElement result = null;
                         int? expectPos = null;
-                        String InsertElement = importElement.OuterXml;
+                        string InsertElement = importElement.OuterXml;
 
                         switch (type)
                         {
@@ -702,7 +713,14 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region InsertAt
 
-        internal enum InsertAtPosition { AsFirst, NextToFirst, AnyValid, NextToLast, AsLast };
+        internal enum InsertAtPosition
+        {
+            AsFirst,
+            NextToFirst,
+            AnyValid,
+            NextToLast,
+            AsLast,
+        }
 
         private protected void InsertAtOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost,
                  IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, InsertAtPosition posType)
@@ -746,7 +764,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     int expectPos;
                     OpenXmlElement result = null;
-                    String InsertElement = importElement.OuterXml;
+                    string InsertElement = importElement.OuterXml;
 
                     switch (posType)
                     {
@@ -769,6 +787,7 @@ namespace DocumentFormat.OpenXml.Tests
                         default:
                             throw new InvalidOperationException("Operation specified is invalid!!");
                     }
+
                     result = hostElement.InsertAt<OpenXmlElement>(importElement.Clone() as OpenXmlElement, expectPos);
 
                     Log.Comment("Saving changes...");
@@ -797,7 +816,11 @@ namespace DocumentFormat.OpenXml.Tests
 
         #region Insert Before/After Self
 
-        internal enum InsertRel { BeforeSelf, AfterSelf };
+        internal enum InsertRel
+        {
+            BeforeSelf,
+            AfterSelf,
+        }
 
         private protected void InsertRelativeOnFile(IFile testfile, GetTargetPart getHostPart, GetTargetElement getHost,
             IFile sourceFile, GetTargetPart getSrcPart, GetTargetElement getImportee, InsertRel posType)
@@ -841,7 +864,7 @@ namespace DocumentFormat.OpenXml.Tests
 
                     int expectPos;
                     OpenXmlElement result = null;
-                    String InsertElement = importElement.OuterXml;
+                    string InsertElement = importElement.OuterXml;
 
                     switch (posType)
                     {
@@ -1416,9 +1439,9 @@ namespace DocumentFormat.OpenXml.Tests
                         main.Save();
 
                         XElement XAfter = ConvertToXElement(hostPart, hostElement);
-                        Log.Comment("Verifying element: {0} was set to exptected value: {1}", attribute.GetFullName(), attribute.Value);
+                        Log.Comment("Verifying element: {0} was set to expected value: {1}", attribute.GetFullName(), attribute.Value);
                         Log.VerifyValue(XAfter.Attribute(attribute.GetXName()).Value, attribute.Value,
-                            "Attribute {0} was set to {1} instead of exptected value: {2}", attribute.GetFullName(), XAfter.Attribute(attribute.GetXName()).Value, attribute.Value);
+                            "Attribute {0} was set to {1} instead of expected value: {2}", attribute.GetFullName(), XAfter.Attribute(attribute.GetXName()).Value, attribute.Value);
                     }
                     else
                     {
@@ -1998,7 +2021,7 @@ namespace DocumentFormat.OpenXml.Tests
                     if (result)
                         Log.Comment("Verified same attribute {0}={1}", ca.GetFullName(), ca.Value);
                     else
-                        Log.Fail("attriute {0} not found with expected value {1}", ca.GetFullName(), ca.Value);
+                        Log.Fail("attribute {0} not found with expected value {1}", ca.GetFullName(), ca.Value);
                 }
             }
             else
@@ -2118,7 +2141,7 @@ namespace DocumentFormat.OpenXml.Tests
                         if (result)
                             Log.Comment("Verified same attribute {0}={1}", ca.GetFullName(), ca.Value);
                         else
-                            Log.Fail("attriute {0} not found with expected value {1}", ca.GetFullName(), ca.Value);
+                            Log.Fail("attribute {0} not found with expected value {1}", ca.GetFullName(), ca.Value);
                     }
 
                     Log.Comment("Checking if children element are set onto host...");
@@ -2347,7 +2370,6 @@ namespace DocumentFormat.OpenXml.Tests
         // Annotations<T>()
         // RemoveAnnotations(Type)
         // RemoveAnnotations<T>()
-
         internal void AnnotationType(OpenXmlPart hostPart, GetTargetElement getHost)
         {
             Log.Comment("Loading root element from hosting part...");
@@ -2552,7 +2574,7 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         /// <summary>
-        /// verify if <paramref name="originalElement"/> euqals to <paramref name="resultElement"/>'s child at <paramref name="targetPosition"/>.
+        /// verify if <paramref name="originalElement"/> equals to <paramref name="resultElement"/>'s child at <paramref name="targetPosition"/>.
         /// </summary>
         /// <param name="resultElement">the element after modifying</param>
         /// <param name="originalElement">the element before modifying</param>
@@ -2599,7 +2621,7 @@ namespace DocumentFormat.OpenXml.Tests
                 pass = false;
             }
             else if (XElement.Count() == 0)
-                Log.Warning("0 element is encounted");
+                Log.Warning("0 element is encountered");
 
             if (pass)
             {

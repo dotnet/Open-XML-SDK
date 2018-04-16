@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml
     /// TODO: Should decimal be used as the internal type?
     /// </remarks>
     [DebuggerDisplay("{InnerText}")]
-    public class IntegerValue : OpenXmlSimpleValue<Int64>
+    public class IntegerValue : OpenXmlSimpleValue<long>
     {
         /// <summary>
         /// Initializes a new instance of the IntegerValue class.
@@ -32,7 +32,7 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the IntegerValue class using the supplied Int64 value.
         /// </summary>
         /// <param name="value">The Int64 value.</param>
-        public IntegerValue(Int64 value)
+        public IntegerValue(long value)
             : base(value)
         {
         }
@@ -58,12 +58,13 @@ namespace DocumentFormat.OpenXml
         /// The converted Int64 value.
         /// </returns>
         /// <exception cref="InvalidOperationException">Thrown when xmlAttribute is null.</exception>
-        public static implicit operator Int64(IntegerValue xmlAttribute)
+        public static implicit operator long(IntegerValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {
                 throw new InvalidOperationException(ExceptionMessages.ImplicitConversionExceptionOnNull);
             }
+
             return ToInt64(xmlAttribute);
         }
 
@@ -72,7 +73,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The specified value.</param>
         /// <returns>A new IntegerValue instance with the value.</returns>
-        public static implicit operator IntegerValue(Int64 value)
+        public static implicit operator IntegerValue(long value)
         {
             return FromInt64(value);
         }
@@ -82,7 +83,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">An Int64 value to use to create a new IntegerValue object.</param>
         /// <returns>An IntegerValue that corresponds to the value parameter.</returns>
-        public static IntegerValue FromInt64(Int64 value)
+        public static IntegerValue FromInt64(long value)
         {
             return new IntegerValue(value);
         }
@@ -94,7 +95,7 @@ namespace DocumentFormat.OpenXml
         /// An IntegerValue object used to retrieve an Int64 representation.
         /// </param>
         /// <returns>An Int64 value that represents an IntegerValue object.</returns>
-        public static Int64 ToInt64(IntegerValue xmlAttribute)
+        public static long ToInt64(IntegerValue xmlAttribute)
         {
             if (xmlAttribute == null)
             {

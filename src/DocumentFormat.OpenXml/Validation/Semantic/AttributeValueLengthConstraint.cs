@@ -31,7 +31,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
         {
             OpenXmlSimpleType attribute = context.Element.Attributes[_attribute];
 
-            //if the attribute is omited, semantic validation will do nothing
+            //if the attribute is omitted, semantic validation will do nothing
             if (attribute == null)
             {
                 return null;
@@ -61,7 +61,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 ErrorType = ValidationErrorType.Schema,
                 Node = context.Element,
                 Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_AttributeValueDataTypeDetailed,
-                                            GetAttributeQualifiedName(context.Element, _attribute), attributeValue, subMsg)
+                                            GetAttributeQualifiedName(context.Element, _attribute), attributeValue, subMsg),
             };
         }
     }

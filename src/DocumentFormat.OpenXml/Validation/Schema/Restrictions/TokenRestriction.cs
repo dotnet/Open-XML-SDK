@@ -21,9 +21,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     ///
     /// In Ecma376, most token are enumerations.
     /// </remarks>
-    [DataContract]
+    [DataContract(Name = "tkn")]
     internal class TokenRestriction : StringRestriction
     {
+        private static char[] crt = { '\n', '\r', '\t' };
+
         /// <inheritdoc />
         public override XsdType XsdType => XsdType.Token;
 
@@ -33,40 +35,25 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
         /// <inheritdoc />
         public override bool ValidateValueType(OpenXmlSimpleType attributeValue)
         {
-            try
+            return VerifyTOKEN(attributeValue.InnerText);
+        }
+
+        /// <summary>
+        /// An implementation of XmlConvert.VerifyTOKEN(string) as it is not available cross platform and throws if fails
+        /// </summary>
+        public static bool VerifyTOKEN(string token)
+        {
+            if (token == null || token.Length == 0)
             {
-                VerifyTOKEN(attributeValue.InnerText);
+                return true;
             }
-            catch (XmlException)
+
+            if (token[0] == ' ' || token[token.Length - 1] == ' ' || token.IndexOfAny(crt) != -1 || token.IndexOf("  ", StringComparison.Ordinal) != -1)
             {
                 return false;
             }
 
             return true;
         }
-
-#if FEATURE_XML_VERIFYTOKEN
-        protected static string VerifyTOKEN(string token)
-        {
-            return XmlConvert.VerifyTOKEN(token);
-        }
-#else
-        private static char[] crt = new char[] { '\n', '\r', '\t' };
-
-        protected static string VerifyTOKEN(string token)
-        {
-            if (token == null || token.Length == 0)
-            {
-                return token;
-            }
-
-            if (token[0] == ' ' || token[token.Length - 1] == ' ' || token.IndexOfAny(crt) != -1 || token.IndexOf("  ", StringComparison.Ordinal) != -1)
-            {
-                throw new System.Xml.XmlException($"Not a valid token: '{token}'");
-            }
-
-            return token;
-        }
-#endif
     }
 }

@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPrClass
 
             Ap.HeadingPairs headingPairs1 = new Ap.HeadingPairs();
 
-            Vt.VTVector vTVector1 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Variant, Size = (UInt32Value)2U };
+            Vt.VTVector vTVector1 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Variant, Size = 2U };
 
             Vt.Variant variant1 = new Vt.Variant();
             Vt.VTLPSTR vTLPSTR1 = new Vt.VTLPSTR();
@@ -86,7 +86,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPrClass
 
             Ap.TitlesOfParts titlesOfParts1 = new Ap.TitlesOfParts();
 
-            Vt.VTVector vTVector2 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Lpstr, Size = (UInt32Value)1U };
+            Vt.VTVector vTVector2 = new Vt.VTVector() { BaseType = Vt.VectorBaseValues.Lpstr, Size = 1U };
             Vt.VTLPSTR vTLPSTR2 = new Vt.VTLPSTR();
             vTLPSTR2.Text = "Sheet1";
 
@@ -123,7 +123,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPrClass
             workbook1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             workbook1.AddNamespaceDeclaration("x15", "http://schemas.microsoft.com/office/spreadsheetml/2010/11/main");
             FileVersion fileVersion1 = new FileVersion() { ApplicationName = "xl", LastEdited = "6", LowestEdited = "6", BuildVersion = "14420" };
-            WorkbookProperties workbookProperties1 = new WorkbookProperties() { DefaultThemeVersion = (UInt32Value)153222U };
+            WorkbookProperties workbookProperties1 = new WorkbookProperties() { DefaultThemeVersion = 153222U };
 
             AlternateContent alternateContent1 = new AlternateContent();
             alternateContent1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
@@ -138,15 +138,15 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPrClass
             alternateContent1.Append(alternateContentChoice1);
 
             BookViews bookViews1 = new BookViews();
-            WorkbookView workbookView1 = new WorkbookView() { XWindow = 0, YWindow = 0, WindowWidth = (UInt32Value)26940U, WindowHeight = (UInt32Value)15120U };
+            WorkbookView workbookView1 = new WorkbookView() { XWindow = 0, YWindow = 0, WindowWidth = 26940U, WindowHeight = 15120U };
 
             bookViews1.Append(workbookView1);
 
             Sheets sheets1 = new Sheets();
-            Sheet sheet1 = new Sheet() { Name = "Sheet1", SheetId = (UInt32Value)1U, Id = "rId1" };
+            Sheet sheet1 = new Sheet() { Name = "Sheet1", SheetId = 1U, Id = "rId1" };
 
             sheets1.Append(sheet1);
-            CalculationProperties calculationProperties1 = new CalculationProperties() { CalculationId = (UInt32Value)152511U };
+            CalculationProperties calculationProperties1 = new CalculationProperties() { CalculationId = 152511U };
 
             WorkbookExtensionList workbookExtensionList1 = new WorkbookExtensionList();
 
@@ -176,11 +176,11 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPrClass
             stylesheet1.AddNamespaceDeclaration("mc", "http://schemas.openxmlformats.org/markup-compatibility/2006");
             stylesheet1.AddNamespaceDeclaration("x14ac", "http://schemas.microsoft.com/office/spreadsheetml/2009/9/ac");
 
-            Fonts fonts1 = new Fonts() { Count = (UInt32Value)2U };
+            Fonts fonts1 = new Fonts() { Count = 2U };
 
             Font font1 = new Font();
             FontSize fontSize1 = new FontSize() { Val = 11D };
-            Color color1 = new Color() { Theme = (UInt32Value)1U };
+            Color color1 = new Color() { Theme = 1U };
             FontName fontName1 = new FontName() { Val = "Calibri" };
             FontFamilyNumbering fontFamilyNumbering1 = new FontFamilyNumbering() { Val = 2 };
             FontCharSet fontCharSet1 = new FontCharSet() { Val = 128 };
@@ -209,7 +209,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPrClass
             fonts1.Append(font1);
             fonts1.Append(font2);
 
-            Fills fills1 = new Fills() { Count = (UInt32Value)2U };
+            Fills fills1 = new Fills() { Count = 2U };
 
             Fill fill1 = new Fill();
             PatternFill patternFill1 = new PatternFill() { PatternType = PatternValues.None };
@@ -224,7 +224,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPrClass
             fills1.Append(fill1);
             fills1.Append(fill2);
 
-            Borders borders1 = new Borders() { Count = (UInt32Value)1U };
+            Borders borders1 = new Borders() { Count = 1U };
 
             Border border1 = new Border();
             LeftBorder leftBorder1 = new LeftBorder();
@@ -241,30 +241,30 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPrClass
 
             borders1.Append(border1);
 
-            CellStyleFormats cellStyleFormats1 = new CellStyleFormats() { Count = (UInt32Value)1U };
+            CellStyleFormats cellStyleFormats1 = new CellStyleFormats() { Count = 1U };
 
-            CellFormat cellFormat1 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U };
+            CellFormat cellFormat1 = new CellFormat() { NumberFormatId = 0U, FontId = 0U, FillId = 0U, BorderId = 0U };
             Alignment alignment1 = new Alignment() { Vertical = VerticalAlignmentValues.Center };
 
             cellFormat1.Append(alignment1);
 
             cellStyleFormats1.Append(cellFormat1);
 
-            CellFormats cellFormats1 = new CellFormats() { Count = (UInt32Value)1U };
+            CellFormats cellFormats1 = new CellFormats() { Count = 1U };
 
-            CellFormat cellFormat2 = new CellFormat() { NumberFormatId = (UInt32Value)0U, FontId = (UInt32Value)0U, FillId = (UInt32Value)0U, BorderId = (UInt32Value)0U, FormatId = (UInt32Value)0U };
+            CellFormat cellFormat2 = new CellFormat() { NumberFormatId = 0U, FontId = 0U, FillId = 0U, BorderId = 0U, FormatId = 0U };
             Alignment alignment2 = new Alignment() { Vertical = VerticalAlignmentValues.Center };
 
             cellFormat2.Append(alignment2);
 
             cellFormats1.Append(cellFormat2);
 
-            CellStyles cellStyles1 = new CellStyles() { Count = (UInt32Value)1U };
-            CellStyle cellStyle1 = new CellStyle() { Name = "Normal", FormatId = (UInt32Value)0U, BuiltinId = (UInt32Value)0U };
+            CellStyles cellStyles1 = new CellStyles() { Count = 1U };
+            CellStyle cellStyle1 = new CellStyle() { Name = "Normal", FormatId = 0U, BuiltinId = 0U };
 
             cellStyles1.Append(cellStyle1);
-            DifferentialFormats differentialFormats1 = new DifferentialFormats() { Count = (UInt32Value)0U };
-            TableStyles tableStyles1 = new TableStyles() { Count = (UInt32Value)0U, DefaultTableStyle = "TableStyleMedium2", DefaultPivotStyle = "PivotStyleLight16" };
+            DifferentialFormats differentialFormats1 = new DifferentialFormats() { Count = 0U };
+            TableStyles tableStyles1 = new TableStyles() { Count = 0U, DefaultTableStyle = "TableStyleMedium2", DefaultPivotStyle = "PivotStyleLight16" };
 
             StylesheetExtensionList stylesheetExtensionList1 = new StylesheetExtensionList();
 
@@ -383,8 +383,8 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPrClass
 
             A.MajorFont majorFont1 = new A.MajorFont();
             A.LatinFont latinFont1 = new A.LatinFont() { Typeface = "Calibri Light", Panose = "020F0302020204030204" };
-            A.EastAsianFont eastAsianFont1 = new A.EastAsianFont() { Typeface = "" };
-            A.ComplexScriptFont complexScriptFont1 = new A.ComplexScriptFont() { Typeface = "" };
+            A.EastAsianFont eastAsianFont1 = new A.EastAsianFont() { Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont1 = new A.ComplexScriptFont() { Typeface = string.Empty };
             A.SupplementalFont supplementalFont1 = new A.SupplementalFont() { Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
             A.SupplementalFont supplementalFont2 = new A.SupplementalFont() { Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont3 = new A.SupplementalFont() { Script = "Hans", Typeface = "宋体" };
@@ -452,8 +452,8 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPrClass
 
             A.MinorFont minorFont1 = new A.MinorFont();
             A.LatinFont latinFont2 = new A.LatinFont() { Typeface = "Calibri", Panose = "020F0502020204030204" };
-            A.EastAsianFont eastAsianFont2 = new A.EastAsianFont() { Typeface = "" };
-            A.ComplexScriptFont complexScriptFont2 = new A.ComplexScriptFont() { Typeface = "" };
+            A.EastAsianFont eastAsianFont2 = new A.EastAsianFont() { Typeface = string.Empty };
+            A.ComplexScriptFont complexScriptFont2 = new A.ComplexScriptFont() { Typeface = string.Empty };
             A.SupplementalFont supplementalFont31 = new A.SupplementalFont() { Script = "Jpan", Typeface = "ＭＳ Ｐゴシック" };
             A.SupplementalFont supplementalFont32 = new A.SupplementalFont() { Script = "Hang", Typeface = "맑은 고딕" };
             A.SupplementalFont supplementalFont33 = new A.SupplementalFont() { Script = "Hans", Typeface = "宋体" };
@@ -830,12 +830,12 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPrClass
             SheetDimension sheetDimension1 = new SheetDimension() { Reference = "A1" };
 
             SheetViews sheetViews1 = new SheetViews();
-            SheetView sheetView1 = new SheetView() { TabSelected = true, WorkbookViewId = (UInt32Value)0U };
+            SheetView sheetView1 = new SheetView() { TabSelected = true, WorkbookViewId = 0U };
 
             sheetViews1.Append(sheetView1);
             SheetFormatProperties sheetFormatProperties1 = new SheetFormatProperties() { DefaultRowHeight = 15D };
             SheetData sheetData1 = new SheetData();
-            PhoneticProperties phoneticProperties1 = new PhoneticProperties() { FontId = (UInt32Value)1U };
+            PhoneticProperties phoneticProperties1 = new PhoneticProperties() { FontId = 1U };
             PageMargins pageMargins1 = new PageMargins() { Left = 0.7D, Right = 0.7D, Top = 0.75D, Bottom = 0.75D, Header = 0.3D, Footer = 0.3D };
 
             worksheet1.Append(sheetDimension1);

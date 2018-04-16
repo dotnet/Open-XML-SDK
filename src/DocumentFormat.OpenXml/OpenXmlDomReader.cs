@@ -90,6 +90,7 @@ namespace DocumentFormat.OpenXml
                     {
                         _emptyReadOnlyList = new ReadOnlyCollection<OpenXmlAttribute>(new List<OpenXmlAttribute>());
                     }
+
                     return _emptyReadOnlyList;
                 }
             }
@@ -126,7 +127,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public override Type ElementType
         {
-           get
+            get
             {
                 ThrowIfObjectDisposed();
                 ThrowIfNull();
@@ -170,6 +171,7 @@ namespace DocumentFormat.OpenXml
                         return true;
                     }
                 }
+
                 return false;
             }
         }
@@ -190,6 +192,7 @@ namespace DocumentFormat.OpenXml
                         return true;
                     }
                 }
+
                 return false;
             }
         }
@@ -214,7 +217,6 @@ namespace DocumentFormat.OpenXml
             get
             {
                 ThrowIfObjectDisposed();
-                //Debug.Assert(this._elementStack.Count == 0);
 
                 return _elementState == ElementState.EOF;
             }
@@ -326,7 +328,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-#region private methods
+        #region private methods
 
         /// <summary>
         /// Move to next element
@@ -367,6 +369,7 @@ namespace DocumentFormat.OpenXml
                             _elementState = ElementState.End;
                         }
                     }
+
                     break;
 
                 case ElementState.End:
@@ -399,11 +402,13 @@ namespace DocumentFormat.OpenXml
                         else
                         {
                             Debug.Assert(element == _rootElement);
+
                             // no more elements
                             _elementState = ElementState.EOF;
                             return false;
                         }
                     }
+
                     break;
 
                 default:
@@ -412,6 +417,7 @@ namespace DocumentFormat.OpenXml
                         _elementState == ElementState.EOF);
                     return false;
             }
+
             return true;
         }
 
@@ -441,6 +447,7 @@ namespace DocumentFormat.OpenXml
                 {
                     _elementState = ElementState.Start;
                 }
+
                 return true;
             }
             else
@@ -492,6 +499,7 @@ namespace DocumentFormat.OpenXml
                 {
                     _elementState = ElementState.Start;
                 }
+
                 return true;
             }
             else
@@ -505,6 +513,7 @@ namespace DocumentFormat.OpenXml
                     // no more element, EOF
                     _elementState = ElementState.EOF;
                 }
+
                 return false;
             }
         }
@@ -530,7 +539,7 @@ namespace DocumentFormat.OpenXml
 
                 case ElementState.Start:
                     MoveToNextSibling();
-                   return;
+                    return;
 
                 default:
                     Debug.Assert(_elementState == ElementState.Start ||
@@ -590,7 +599,8 @@ namespace DocumentFormat.OpenXml
                     return textElement.Text;
                 }
             }
-            return String.Empty;
+
+            return string.Empty;
         }
 
         /// <inheritdoc/>
@@ -602,7 +612,7 @@ namespace DocumentFormat.OpenXml
             _rootElement = null;
         }
 
-#region private methods
+        #region private methods
 
         private void Init(OpenXmlElement openXmlElement)
         {
@@ -621,6 +631,7 @@ namespace DocumentFormat.OpenXml
             {
                 _elementState = ElementState.Start;
             }
+
             return true;
         }
 
@@ -640,6 +651,6 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-#endregion
+        #endregion
     }
 }

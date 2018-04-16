@@ -217,7 +217,7 @@
     <value>The element has child element '{0}' of invalid type '{1}'.</value>
   </data>
   <data name="Sch_LengthConstraintFailed" xml:space="preserve">
-    <value> The actual length according to datatype '{0}' is not equal to the specified length. The expected length is {1}.</value>
+    <value> The actual length according to data type '{0}' is not equal to the specified length. The expected length is {1}.</value>
   </data>
   <data name="Sch_MaxExclusiveConstraintFailed" xml:space="preserve">
     <value> The MaxExclusive constraint failed. The value must be less than {0}.</value>
@@ -226,7 +226,7 @@
     <value> The MaxInclusive constraint failed. The value must be less than or equal to {0}.</value>
   </data>
   <data name="Sch_MaxLengthConstraintFailed" xml:space="preserve">
-    <value> The actual length according to datatype '{0}' is greater than the MaxLength value. The length must be smaller than or equal to {1}.</value>
+    <value> The actual length according to data type '{0}' is greater than the MaxLength value. The length must be smaller than or equal to {1}.</value>
   </data>
   <data name="Sch_MinExclusiveConstraintFailed" xml:space="preserve">
     <value> The MinExclusive constraint failed. The value must be greater than {0}.</value>
@@ -235,7 +235,7 @@
     <value> The MinInclusive constraint failed. The value must be greater than or equal to {0}.</value>
   </data>
   <data name="Sch_MinLengthConstraintFailed" xml:space="preserve">
-    <value> The actual length according to datatype '{0}' is less than the MinLength value. The length must be bigger than or equal to {1}.</value>
+    <value> The actual length according to data type '{0}' is less than the MinLength value. The length must be bigger than or equal to {1}.</value>
   </data>
   <data name="Sch_MissRequiredAttribute" xml:space="preserve">
     <value>The required attribute '{0}' is missing.</value>

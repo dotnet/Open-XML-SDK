@@ -9,14 +9,13 @@ using System.Xml;
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
-    /// Represents elements that are not defined in the Ecma Office Open XML.
+    /// Represents elements that are not defined in the Office Open XML ECMA standard.
     /// </summary>
     public class OpenXmlUnknownElement : OpenXmlCompositeElement
     {
         private string _namespaceUri;
         private string _tagName;
         private string _prefix;
-        // int _attributeTotal;
         private string _text;
 
         /// <summary>
@@ -29,11 +28,6 @@ namespace DocumentFormat.OpenXml
             _prefix = string.Empty;
             _namespaceUri = string.Empty;
         }
-
-        //protected OpenXmlUnknownElement(string innerXml)
-        //    : base(innerXml)
-        //{
-        //}
 
         /// <summary>
         /// Initializes a new instance of the OpenXmlUnknownElement class using
@@ -60,7 +54,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="qualifiedName">The qualified element name.</param>
         /// <param name="namespaceUri">The namespace URI of the element.</param>
         public OpenXmlUnknownElement(string qualifiedName, string namespaceUri)
-            : this( )
+            : this()
         {
             if (qualifiedName == null)
             {
@@ -80,7 +74,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="localName">The local name of the element.</param>
         /// <param name="namespaceUri">The namespace URI of the element.</param>
         public OpenXmlUnknownElement(string prefix, string localName, string namespaceUri)
-            : this( )
+            : this()
         {
             if (localName == null)
             {
@@ -109,7 +103,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>A new OpenXmlUnknownElement class.</returns>
         public static OpenXmlUnknownElement CreateOpenXmlUnknownElement(string outerXml)
         {
-            if (String.IsNullOrEmpty(outerXml))
+            if (string.IsNullOrEmpty(outerXml))
             {
                 throw new ArgumentNullException(nameof(outerXml));
             }
@@ -117,9 +111,9 @@ namespace DocumentFormat.OpenXml
             TextReader stringReader = new StringReader(outerXml);
             using (XmlReader xmlReader = XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.CreateDefaultXmlReaderSettings()))
             {
-                do // O15:#3024890, Skip the leading whitespaces. OpenXmUnknownlElement ignores the Whitespace NodeType.
+                // Skip the leading whitespace as OpenXmUnknownlElement ignores the Whitespace NodeType.
+                do
                 {
-                    // Fix bug #484153.
                     if (xmlReader.Read() && xmlReader.NodeType == XmlNodeType.Element)
                     {
                         OpenXmlUnknownElement newElement = new OpenXmlUnknownElement(xmlReader.Prefix, xmlReader.LocalName, xmlReader.NamespaceURI);
@@ -185,12 +179,12 @@ namespace DocumentFormat.OpenXml
         {
             OpenXmlUnknownElement element = new OpenXmlUnknownElement(_prefix, _tagName, _namespaceUri)
             {
-                _text = Text
+                _text = Text,
             };
 
             element.CopyAttributes(this);
 
-            if(deep)
+            if (deep)
             {
                 element.CopyChilden(this, deep);
             }
@@ -248,7 +242,7 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         internal override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
         {
-            if (String.IsNullOrEmpty(_tagName))
+            if (string.IsNullOrEmpty(_tagName))
             {
                 _tagName = xmlReader.LocalName;
                 _prefix = xmlReader.Prefix;
@@ -256,9 +250,9 @@ namespace DocumentFormat.OpenXml
             }
             else
             {
-                Debug.Assert(String.Equals(_tagName, xmlReader.LocalName));
-                Debug.Assert(String.Equals(_prefix, xmlReader.Prefix));
-                Debug.Assert(String.Equals(_namespaceUri, xmlReader.NamespaceURI));
+                Debug.Assert(string.Equals(_tagName, xmlReader.LocalName));
+                Debug.Assert(string.Equals(_prefix, xmlReader.Prefix));
+                Debug.Assert(string.Equals(_namespaceUri, xmlReader.NamespaceURI));
             }
 
             // load children elements

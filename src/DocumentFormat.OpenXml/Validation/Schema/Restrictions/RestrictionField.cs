@@ -2,47 +2,54 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Runtime.Serialization;
 
 namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
 {
     /// <summary>
-    /// Schema simple type restrictin facets.
+    /// Schema simple type restriction facets.
     /// </summary>
+    [DataContract]
     [Flags]
     internal enum RestrictionField : byte
     {
-        None = 0x0,
+        [EnumMember(Value = "n")]
+        None = 0,
 
-        Length = 0x1,
-        MinLength = 0x2,
-        MaxLength = 0x4,
+        [EnumMember(Value = "l")]
+        Length = 1,
 
-        MinInclusive = 0x8,
-        MaxInclusive = 0x10,
+        [EnumMember(Value = "nl")]
+        MinLength = 1 << 1,
 
-        MinExclusive = 0x20,
-        MaxExclusive = 0x40,
+        [EnumMember(Value = "xl")]
+        MaxLength = 1 << 2,
 
-        Pattern = 0x80,
+        [EnumMember(Value = "ni")]
+        MinInclusive = 1 << 3,
 
-        /// <summary>
-        /// MinInclusive | MaxInclusive
-        /// </summary>
+        [EnumMember(Value = "xi")]
+        MaxInclusive = 1 << 4,
+
+        [EnumMember(Value = "ne")]
+        MinExclusive = 1 << 5,
+
+        [EnumMember(Value = "xe")]
+        MaxExclusive = 1 << 6,
+
+        [EnumMember(Value = "p")]
+        Pattern = 1 << 7,
+
+        [EnumMember(Value = "nxi")]
         MinMaxInclusive = MinInclusive | MaxInclusive,
 
-        /// <summary>
-        /// MinExclusive | MaxExclusive
-        /// </summary>
+        [EnumMember(Value = "nxe")]
         MinMaxExclusive = MinExclusive | MaxExclusive,
 
-        /// <summary>
-        /// MinInclusive | MaxInclusive | MinExclusive | MaxExclusive
-        /// </summary>
+        [EnumMember(Value = "nxie")]
         MinMaxRestriction = MinMaxInclusive | MinMaxExclusive,
 
-        /// <summary>
-        /// Length | MinLength | MaxLength
-        /// </summary>
+        [EnumMember(Value = "lnxl")]
         LengthRestriction = Length | MinLength | MaxLength,
     }
 }

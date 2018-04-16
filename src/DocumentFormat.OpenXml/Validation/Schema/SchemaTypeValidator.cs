@@ -12,13 +12,13 @@ namespace DocumentFormat.OpenXml.Validation.Schema
     /// </summary>
     internal class SchemaTypeValidator
     {
-        private readonly SdbSchemaDatas _sdbSchemaDatas;
+        private readonly SdbSchemaData _sdbSchemaDatas;
 
         /// <summary>
         /// Initializes a new instance of the SchemaTypeValidator.
         /// </summary>
         /// <param name="sdbSchemaDatas"></param>
-        internal SchemaTypeValidator(SdbSchemaDatas sdbSchemaDatas)
+        internal SchemaTypeValidator(SdbSchemaData sdbSchemaDatas)
         {
             _sdbSchemaDatas = sdbSchemaDatas;
         }
@@ -52,7 +52,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 return;
             }
 
-            // validte Inorable, ProcessContent, etc. compatibility-rule attributes
+            // validate Inorable, ProcessContent, etc. compatibility-rule attributes
             CompatibilityRuleAttributesValidator.ValidateMcAttributes(validationContext);
 
             SchemaTypeData schemaTypeData = _sdbSchemaDatas.GetSchemaTypeData(theElement);
@@ -60,7 +60,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             ValidateAttributes(validationContext, schemaTypeData);
 
             // validate particles
-
             if (theElement is OpenXmlLeafTextElement)
             {
                 SimpleContentComplexTypeValidator.Validate(validationContext, schemaTypeData.SimpleTypeConstraint);
@@ -113,18 +112,19 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 if (attributeConstraint.SupportedVersion.Includes(validationContext.FileFormat))
                 {
                     // only check the attribute constraints defined in the specified file format version.
-
                     switch (attributeConstraint.XsdAttributeUse)
                     {
                         case XsdAttributeUse.Required:
                             if (element.Attributes[i] == null)
                             {
                                 string attributeQname = element.GetFixedAttributeQname(i).ToString();
+
                                 // error: miss required attribute
                                 errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_MissRequiredAttribute", attributeQname);
                                 errorInfo.SetDebugField(attributeQname, "Sch_MissRequiredAttribute");
                                 validationContext.AddError(errorInfo);
                             }
+
                             break;
 
                         case XsdAttributeUse.None: // none, so use default "optional"
@@ -158,7 +158,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         else
                         {
                             // emit error
-                            string attributeQname = element.GetFixedAttributeQname(i).ToString(); ;
+                            string attributeQname = element.GetFixedAttributeQname(i).ToString();
                             errorInfo = validationContext.ComposeSchemaValidationError(element, null, "Sch_UndeclaredAttribute", attributeQname);
                             errorInfo.SetDebugField(attributeQname, "Sch_UndeclaredAttribute");
                             validationContext.AddError(errorInfo);
@@ -175,6 +175,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     // Ignorable attribute, no error.
                 }
+
                 // xml:space is always allowed
                 else if ("http://www.w3.org/XML/1998/namespace" == extendedAttribute.NamespaceUri)
                 {
@@ -191,7 +192,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         }
 
         /// <summary>
-        /// Validate the value accoding to the simpleTypeConstraint.
+        /// Validate the value according to the simpleTypeConstraint.
         /// </summary>
         /// <param name="validationContext">The validation context.</param>
         /// <param name="simpleTypeConstraint">The constraint data of the simple type.</param>
@@ -223,7 +224,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 errorMessageResourceId = "Sch_ElementValueDataTypeDetailed";
             }
 
-            // first, check whether the string is valid accoding the primitive type
+            // first, check whether the string is valid according the primitive type
             if (!simpleTypeConstraint.ValidateValueType(value))
             {
                 if (simpleTypeConstraint.IsEnum)
@@ -260,6 +261,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     errorInfo = validationContext.ComposeSchemaValidationError(element, null, errorMessageResourceId, qname, value.InnerText, subMessage);
                     errorInfo.SetDebugField(isAttribute? qname : null, "Sch_StringIsNotValidValue");
                 }
+
                 validationContext.AddError(errorInfo);
             }
             else
@@ -368,6 +370,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                             errorInfo.SetDebugField(isAttribute? qname : null, "Sch_MaxExclusiveConstraintFailed");
                             validationContext.AddError(errorInfo);
                         }
+
                         if ((errorRestriction & RestrictionField.Length) == RestrictionField.Length)
                         {
                             // length is not ok.

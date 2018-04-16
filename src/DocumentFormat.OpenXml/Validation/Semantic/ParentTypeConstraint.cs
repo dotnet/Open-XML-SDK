@@ -33,12 +33,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            if (parent.GetType() == _parentType ^ !_isValid) //TODO: (junzha) need to take ac-block into account.
+            if (parent.GetType() == _parentType ^ !_isValid) // TODO: Need to take ac-block into account.
             {
                 return null;
             }
 
-            return new ValidationErrorInfo() { Id = "", ErrorType = ValidationErrorType.Semantic, Node = context.Element, Description = "" };
+            return new ValidationErrorInfo() { Id = string.Empty, ErrorType = ValidationErrorType.Semantic, Node = context.Element, Description = string.Empty };
         }
     }
 }

@@ -20,6 +20,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         {
             get { return _nsAnyParticleConstraint; }
         }
+
         /// <summary>
         /// Initializes a new instance of the AnyParticleValidator.
         /// </summary>
@@ -55,6 +56,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 particleMatchInfo.Match = ParticleMatch.Nomatch;
             }
+
             return;
         }
 
@@ -74,6 +76,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
                 return true;
             }
+
             return false;
         }
 

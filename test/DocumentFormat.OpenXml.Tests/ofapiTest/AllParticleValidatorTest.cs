@@ -17,13 +17,13 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void AllParticleValidateTest()
         {
-            SdbSchemaDatas sdbSchemaDatas = SdbSchemaDatas.GetSchemaDatas(FileFormatVersions.Office2007);
+            SdbSchemaData sdbSchemaDatas = SdbSchemaData.GetSchemaData(FileFormatVersions.Office2007);
 
             TestSimpleAll(sdbSchemaDatas);
             TestSimpleAll2(sdbSchemaDatas);
         }
 
-        private void TestSimpleAll(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleAll(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
@@ -68,7 +68,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** good case ******
 
-            // empty is ok
+            // empty is OK
             target.Validate(validationContext);
             Assert.True(validationContext.Valid);
 
@@ -94,7 +94,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** error case ******
 
-            // first is invlaid
+            // first is invalid
             errorChild = properties.PrependChild(new Properties());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
@@ -108,6 +108,7 @@ namespace DocumentFormat.OpenXml.Tests
             properties.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             //invalid child in middle
             errorChild = properties.InsertBefore(new Properties(), properties.LastChild);
             target.Validate(validationContext);
@@ -122,6 +123,7 @@ namespace DocumentFormat.OpenXml.Tests
             properties.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // dup
             errorChild = properties.FirstChild;
             properties.PrependChild(new Company());
@@ -136,7 +138,7 @@ namespace DocumentFormat.OpenXml.Tests
             properties.RemoveChild(errorChild);
         }
 
-        private void TestSimpleAll2(SdbSchemaDatas sdbSchemaDatas)
+        private void TestSimpleAll2(SdbSchemaData sdbSchemaDatas)
         {
             ValidationContext validationContext = new ValidationContext();
             OpenXmlElement errorChild;
@@ -179,7 +181,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             // ***** error case ******
 
-            // first is invlaid
+            // first is invalid
             errorChild = shapeLayout.PrependChild(new Paragraphs());
             target.Validate(validationContext);
             Assert.False(validationContext.Valid);
@@ -193,6 +195,7 @@ namespace DocumentFormat.OpenXml.Tests
             shapeLayout.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             //invalid child in middle
             errorChild = shapeLayout.InsertBefore(new Paragraphs(), shapeLayout.LastChild);
             target.Validate(validationContext);
@@ -206,6 +209,7 @@ namespace DocumentFormat.OpenXml.Tests
             shapeLayout.RemoveChild(errorChild);
 
             validationContext.Clear();
+
             // dup
             errorChild = shapeLayout.FirstChild;
             shapeLayout.PrependChild(new RegroupTable());

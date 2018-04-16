@@ -18,7 +18,7 @@ namespace DocumentFormat.OpenXml.Tests
             Excel.Column column = new Excel.Column();
             ValidationContext context = new ValidationContext() { Element = column };
 
-            AttributeMinMaxConstraint constraint = new AttributeMinMaxConstraint("", "min", "", "max") ;
+            AttributeMinMaxConstraint constraint = new AttributeMinMaxConstraint(string.Empty, "min", string.Empty, "max") ;
 
             column.Max = 2;
             column.Min = 1;

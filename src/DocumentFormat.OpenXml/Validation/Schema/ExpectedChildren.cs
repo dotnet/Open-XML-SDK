@@ -40,6 +40,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 _elementTypeIds = new List<int>();
             }
+
             _elementTypeIds.Add(elementTypeId);
         }
 
@@ -54,6 +55,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
             {
                 _xsdanyNamespaces = new List<string>();
             }
+
             _xsdanyNamespaces.Add(namesapceForXsdany);
         }
 
@@ -106,10 +108,12 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 {
                     count = _elementTypeIds.Count;
                 }
+
                 if (_xsdanyNamespaces != null)
                 {
                     count += _xsdanyNamespaces.Count;
                 }
+
                 return count;
             }
         }
@@ -137,6 +141,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     foreach (var childElement in parent.CreateChildrenElementsByIds(_elementTypeIds))
                     {
                         childrenNames.Append(separator);
+
                         // <namespace:localname>, use InvariantCulture
                         childrenNames.Append(string.Format(CultureInfo.CurrentUICulture, ValidationResources.Fmt_ElementName, childElement.NamespaceUri, childElement.LocalName));
 

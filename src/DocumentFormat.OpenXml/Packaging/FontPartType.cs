@@ -12,13 +12,15 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Font Data (.fntdata).
         /// </summary>
         FontData,
+
         /// <summary>
         /// TrueType Font (.ttf).
         /// </summary>
         FontTtf,
+
         /// <summary>
         /// Obfuscated TTF Font (.odttf).
         /// </summary>
-        FontOdttf
+        FontOdttf,
     }
 }

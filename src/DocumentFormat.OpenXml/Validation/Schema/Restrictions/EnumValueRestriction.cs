@@ -10,9 +10,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
     /// </summary>
     /// <remarks>
     /// We do not save the enums in the database. Instead we reuse the generated enum class in the generated code.
-    /// For attributes, the type of the enum is known through the code-gen'ed data.
+    /// For attributes, the type of the enum is known through the code generated data.
     /// </remarks>
-    [DataContract]
+    [DataContract(Name = "e")]
     internal class EnumValueRestriction : SimpleTypeRestriction
     {
         /// <inheritdoc />
@@ -28,9 +28,9 @@ namespace DocumentFormat.OpenXml.Validation.Schema.Restrictions
             {
                 // Items in the enum are merged from both Office2007 and Office2010.
                 // So, we should report error when the item is not defined in the specified version.
-
                 return attributeValue.IsInVersion(FileFormat);
             }
+
             return false;
         }
     }

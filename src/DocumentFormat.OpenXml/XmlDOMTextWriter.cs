@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml
             {
                 Encoding = w.Encoding,
                 OmitXmlDeclaration = true,
-                ConformanceLevel = ConformanceLevel.Fragment
+                ConformanceLevel = ConformanceLevel.Fragment,
             };
 
             _writer = Create(w, xwSettings);

@@ -1,79 +1,26 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-/**********************************************************
- * Define data struct for schema constraint binary database
- **********************************************************/
-
-using System;
 using System.Diagnostics;
-
-using SdbIndex = System.UInt16;
+using System.Runtime.InteropServices;
 
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
     /// <summary>
     /// Particle children index data.
     /// </summary>
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
     [DebuggerDisplay("ParticleIndex={ParticleIndex}")]
-    internal class SdbParticleChildrenIndex : SdbData
+    internal readonly struct SdbParticleChildrenIndex
     {
-        /// <summary>
-        /// Gets or sets the index of the particle in the SdbParticleConstraint data array.
-        /// </summary>
-        public SdbIndex ParticleIndex { get; set; }
-
-        public SdbParticleChildrenIndex()
+        public SdbParticleChildrenIndex(ushort particleIndex)
         {
-            ParticleIndex = SdbData.InvalidId;
-        }
-
-        public SdbParticleChildrenIndex(SdbIndex index)
-        {
-            ParticleIndex = index;
-        }
-
-        public SdbParticleChildrenIndex(int index)
-        {
-            if (index >= SdbData.MaxSdbIndex)
-            {
-                throw new ArgumentOutOfRangeException(nameof(index));
-            }
-
-            ParticleIndex = (SdbIndex)index;
+            ParticleIndex = particleIndex;
         }
 
         /// <summary>
-        /// Gets the size in bytes of this data structure.
+        /// Gets the index of the particle in the SdbParticleConstraint data array.
         /// </summary>
-        public static int TypeSize => sizeof(SdbIndex);
-
-        #region Override SdbData Members
-
-        /// <summary>
-        /// Gets the size in bytes of this data structure.
-        /// </summary>
-        public override int DataSize => TypeSize;
-
-        /// <summary>
-        /// Serialize the data into byte data.
-        /// </summary>
-        /// <returns>Byte data.</returns>
-        public override byte[] GetBytes()
-        {
-            return ParticleIndex.Bytes();
-        }
-
-        /// <summary>
-        /// Deserialize the data from byte data.
-        /// </summary>
-        /// <param name="value">The byte data.</param>
-        /// <param name="startIndex">The offset the data begins at.</param>
-        public override void LoadFromBytes(byte[] value, int startIndex)
-        {
-            ParticleIndex = LoadSdbIndex(value, ref startIndex);
-        }
-
-        #endregion
+        public ushort ParticleIndex { get; }
     }
 }

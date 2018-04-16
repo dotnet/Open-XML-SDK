@@ -37,7 +37,7 @@ namespace DocumentFormat.OpenXml.Packaging
                         { "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", PartConstraintRule.Create<QuickAccessToolbarCustomizationsPart>(false, false) },
                         { "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", PartConstraintRule.Create<RibbonExtensibilityPart>(false, false) },
                         { "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", PartConstraintRule.Create<RibbonAndBackstageCustomizationsPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", PartConstraintRule.Create<WebExTaskpanesPart>(false, false) }
+                        { "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", PartConstraintRule.Create<WebExTaskpanesPart>(false, false) },
                     };
                 }
 
@@ -73,6 +73,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                     _validMainPartContentType = tempData;
                 }
+
                 return _validMainPartContentType;
             }
         }
@@ -97,6 +98,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         private SpreadsheetDocumentType _documentType;
+
         /// <summary>
         /// Gets the type of the SpreadsheetDocument.
         /// </summary>
@@ -157,7 +159,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Creates a new instance of the SpreadsheetDocument class from the spcified package.
+        /// Creates a new instance of the SpreadsheetDocument class from the specified package.
         /// </summary>
         /// <param name="package">The specified OpenXml package.</param>
         /// <param name="type">The type of the SpreadsheetDocument.</param>
@@ -183,6 +185,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(path));
             }
+
             SpreadsheetDocument doc = new SpreadsheetDocument();
             doc.DocumentType = type;
             doc.OpenSettings = new OpenSettings();
@@ -213,7 +216,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Creates a new instance of the SpreadsheetDocument class from the spcified package.
+        /// Creates a new instance of the SpreadsheetDocument class from the specified package.
         /// </summary>
         /// <param name="package">The specified OpenXml package.</param>
         /// <param name="type">The type of the SpreadsheetDocument.</param>
@@ -289,6 +292,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
+
             SpreadsheetDocument doc = new SpreadsheetDocument();
             doc.OpenSettings = new OpenSettings();
             doc.OpenSettings.AutoSave = openSettings.AutoSave;
@@ -300,6 +304,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 doc.UpdateDocumentTypeFromContentType();
             }
+
             return doc;
         }
 
@@ -321,6 +326,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
+
             SpreadsheetDocument doc = new SpreadsheetDocument();
             doc.OpenSettings = new OpenSettings();
             doc.OpenSettings.AutoSave = openSettings.AutoSave;
@@ -332,11 +338,12 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 doc.UpdateDocumentTypeFromContentType();
             }
+
             return doc;
         }
 
         /// <summary>
-        /// Creates a new instance of the SpreadsheetDocument class from the spcified package.
+        /// Creates a new instance of the SpreadsheetDocument class from the specified package.
         /// </summary>
         /// <param name="package">The specified OpenXml package.</param>
         /// <param name="openSettings">The advanced settings for opening a document.</param>
@@ -352,6 +359,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentException(ExceptionMessages.InvalidMCMode);
             }
+
             SpreadsheetDocument doc = new SpreadsheetDocument();
             doc.OpenSettings = new OpenSettings();
             doc.OpenSettings.AutoSave = openSettings.AutoSave;
@@ -363,8 +371,10 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 doc.UpdateDocumentTypeFromContentType();
             }
+
             return doc;
         }
+
         /// <summary>
         /// Creates a new instance of the SpreadsheetDocument class from the specified file.
         /// </summary>
@@ -393,7 +403,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Creates a new instance of the SpreadsheetDocument class from the spcified package.
+        /// Creates a new instance of the SpreadsheetDocument class from the specified package.
         /// </summary>
         /// <param name="package">The specified OpenXml package.</param>
         /// <returns>A new instance of SpreadsheetDocument.</returns>
@@ -446,6 +456,7 @@ namespace DocumentFormat.OpenXml.Packaging
                     DocumentType = oldType;
                     MainPartContentType = MainPartContentTypes[oldType];
                 }
+
                 throw;
             }
         }
@@ -463,6 +474,7 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 throw new ArgumentNullException(nameof(relationshipType));
             }
+
             switch (relationshipType)
             {
                 case WorkbookPart.RelationshipTypeConstant:
@@ -495,6 +507,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 case WebExTaskpanesPart.RelationshipTypeConstant:
                     return new WebExTaskpanesPart();
             }
+
             throw new ArgumentOutOfRangeException(nameof(relationshipType));
         }
 
@@ -536,7 +549,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Addd a CoreFilePropertiesPart to the SpreadsheetDocument.
+        /// Add a CoreFilePropertiesPart to the SpreadsheetDocument.
         /// </summary>
         /// <returns>The newly added CoreFilePropertiesPart.</returns>
         public CoreFilePropertiesPart AddCoreFilePropertiesPart()
@@ -547,7 +560,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Addd a ExtendedFilePropertiesPart to the SpreadsheetDocument.
+        /// Add a ExtendedFilePropertiesPart to the SpreadsheetDocument.
         /// </summary>
         /// <returns>The newly added ExtendedFilePropertiesPart.</returns>
         public ExtendedFilePropertiesPart AddExtendedFilePropertiesPart()
@@ -558,7 +571,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Addd a CustomFilePropertiesPart to the SpreadsheetDocument.
+        /// Add a CustomFilePropertiesPart to the SpreadsheetDocument.
         /// </summary>
         /// <returns>The newly added CustomFilePropertiesPart.</returns>
         public CustomFilePropertiesPart AddCustomFilePropertiesPart()
@@ -569,7 +582,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Addd a DigitalSignatureOriginPart to the SpreadsheetDocument.
+        /// Add a DigitalSignatureOriginPart to the SpreadsheetDocument.
         /// </summary>
         /// <returns>The newly added DigitalSignatureOriginPart.</returns>
         public DigitalSignatureOriginPart AddDigitalSignatureOriginPart()
@@ -580,7 +593,7 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
-        /// Addd a ThumbnailPart to the SpreadsheetDocument.
+        /// Add a ThumbnailPart to the SpreadsheetDocument.
         /// </summary>
         /// <param name="contentType">The content type of the ThumbnailPart.</param>
         /// <returns>The newly added ThumbnailPart.</returns>
@@ -590,6 +603,7 @@ namespace DocumentFormat.OpenXml.Packaging
             InitPart(childPart, contentType);
             return childPart;
         }
+
         /// <summary>
         /// Adds a ThumbnailPart to the SpreadsheetDocument.
         /// </summary>
@@ -655,6 +669,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get { return GetSubPartOfType<WorkbookPart>(); }
         }
+
         /// <summary>
         /// Gets the CoreFilePropertiesPart of the SpreadsheetDocument.
         /// </summary>
@@ -662,6 +677,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get { return GetSubPartOfType<CoreFilePropertiesPart>(); }
         }
+
         /// <summary>
         /// Gets the ExtendedFilePropertiesPart of the SpreadsheetDocument.
         /// </summary>
@@ -669,6 +685,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get { return GetSubPartOfType<ExtendedFilePropertiesPart>(); }
         }
+
         /// <summary>
         /// Gets the CustomFilePropertiesPart of the SpreadsheetDocument.
         /// </summary>
@@ -676,6 +693,7 @@ namespace DocumentFormat.OpenXml.Packaging
         {
             get { return GetSubPartOfType<CustomFilePropertiesPart>(); }
         }
+
         /// <summary>
         /// Gets the ThumbnailPart of the SpreadsheetDocument.
         /// </summary>

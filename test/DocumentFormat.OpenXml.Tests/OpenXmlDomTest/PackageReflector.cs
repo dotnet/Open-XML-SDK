@@ -103,6 +103,7 @@ namespace DocumentFormat.OpenXml.Tests
         #endregion Constructors
 
         #region PackageOperations
+
         /// <summary>
         /// Open an existing OpenXmlPackage at specified location.
         /// </summary>
@@ -197,6 +198,7 @@ namespace DocumentFormat.OpenXml.Tests
         #endregion PackageOperations
 
         #region PartOperations
+
         /// <summary>
         /// Check if the pass-in type of part is reflectable or not by checking it's IFixedContentTypePart or main part of package.
         /// </summary>
@@ -243,6 +245,7 @@ namespace DocumentFormat.OpenXml.Tests
                     throw new Exception(string.Format("AddNewPart() does not exist for {0}.", partType));
                 return addNewPartMethod.Invoke(parent, new string[] { srcIdPartPair.OpenXmlPart.ContentType, srcIdPartPair.RelationshipId }) as OpenXmlPart;
             }
+
             // MainParts
             else if (parent is WordprocessingDocument && partType == typeof(MainDocumentPart))
             {
@@ -312,7 +315,7 @@ namespace DocumentFormat.OpenXml.Tests
             var mg = GetMethodInfo(parentType, prefix, matchMethod, matchParams, matchReturn);
             if (null == mg)
             {
-                Log.Warning("Specifed method: {0} NOT found on {1}", prefix, parentType);
+                Log.Warning("Specified method: {0} NOT found on {1}", prefix, parentType);
                 return null;
             }
             else
@@ -344,7 +347,7 @@ namespace DocumentFormat.OpenXml.Tests
             var mng = GetMethodInfo(parentType, prefix, matchMethod, matchParams, matchReturn);
             if (null == mng)
             {
-                Log.Warning("Specifed method: {0} NOT found on {1}", prefix, parentType);
+                Log.Warning("Specified method: {0} NOT found on {1}", prefix, parentType);
                 return null;
             }
             else
@@ -374,12 +377,14 @@ namespace DocumentFormat.OpenXml.Tests
                     PartRootElementMap.Add(method.GetParameters()[0].ParameterType, rootType);
                 }
             }
+
             Log.Comment("Initialized Part-PartRootElement Map Sucessfully.");
         }
 
         #endregion PartOperations
 
         #region PackageReflectors
+
         /// <summary>
         /// Clone source package into destination package.
         /// </summary>
@@ -400,6 +405,7 @@ namespace DocumentFormat.OpenXml.Tests
                 OpenXmlPart newPart = BuildPart(pair, destPackage);
                 ReflectPart(pair.OpenXmlPart, newPart, srcPackage, destPackage);
             }
+
             Log.Comment("Reflected {0} sucessfully!", srcPackage);
         }
 
@@ -446,7 +452,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var loader = rootType.GetMethod("Load", new Type[] { srcPartType });
                 var ctor = rootType.GetConstructor(Cached.Array<Type>());
                 OpenXmlElement srcRoot = ctor.Invoke(null) as OpenXmlElement;
-                loader.Invoke(srcRoot, new Object[] { srcPart });
+                loader.Invoke(srcRoot, new object[] { srcPart });
 
                 // Construct a new root element for destination part with default constructor
                 OpenXmlElement destRoot = ctor.Invoke(null) as OpenXmlElement;
@@ -454,9 +460,10 @@ namespace DocumentFormat.OpenXml.Tests
                 ReflectElement(srcRoot, destRoot, null, null);
 
                 Log.Comment("Saving {0} by Calling Save() on {1}", destPart, destRoot);
+
                 // Call Save(OpenXmlPart parentPart) to save the changes
                 var saver = rootType.GetMethod("Save", new Type[] { srcPartType });
-                saver.Invoke(destRoot, new Object[] { destPart });
+                saver.Invoke(destRoot, new object[] { destPart });
                 Log.Comment("Saved {0} by calling Save() on {1}", destPart, destRoot);
             }
             else
@@ -465,6 +472,7 @@ namespace DocumentFormat.OpenXml.Tests
                 destPart.FeedData(srcPart.GetStream());
                 Log.Comment("{0} feed data completely.", srcPart);
             }
+
             Log.Comment("Reflected {0} sucessfully.", srcPart);
         }
 
@@ -488,7 +496,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var inserter = GetInsertChildMethod(srcElement.GetType(), parentType, "AppendChild");
                 if (null == inserter)
                     throw new Exception(string.Format("Specified InsertChild method: {0} NOT found for {1}", "AppendChild", parentType));
-                inserter.Invoke(destParent, new Object[] { destElement });
+                inserter.Invoke(destParent, new object[] { destElement });
             }
 
             ReflectAttributes(srcElement, destElement);
@@ -510,6 +518,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var destChild = ctor.Invoke(null) as OpenXmlElement;
                 ReflectElement(srcChild, destChild, srcElement, destElement);
             }
+
             Log.Comment("Reflected {0} sucessfully.", srcElement);
         }
 
@@ -528,13 +537,14 @@ namespace DocumentFormat.OpenXml.Tests
                 if (method.Name.StartsWith(methodName) && method.GetParameters().Count() == 1)
                     return method.MakeGenericMethod(srcElementType);
             }
+
             return null;
         }
 
         /// <summary>
         /// Get attributes value of source element and set them on destination element by calling Attribute Property's setter.
         /// </summary>
-        /// <param name="srcElement">source elment</param>
+        /// <param name="srcElement">source element</param>
         /// <param name="destElement">destination element</param>
         internal void ReflectAttributes(OpenXmlElement srcElement, OpenXmlElement destElement)
         {
@@ -551,6 +561,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var val = property.GetValue(srcElement, null);
                     property.SetValue(destElement, val, null);
                 }
+
             Log.Comment("Reflected attributes of {0} sucessfully.", srcElement);
         }
         #endregion PackageReflector
@@ -563,7 +574,7 @@ namespace DocumentFormat.OpenXml.Tests
         {
             var prefix = "AddAnnotation";
             Predicate<ParameterInfo[]> matchParams =
-                ps => ps.Count() == 1 && ps[0].ParameterType == typeof(Object);
+                ps => ps.Count() == 1 && ps[0].ParameterType == typeof(object);
             return GetMethodInfo(hostType, prefix, null, matchParams, null);
         }
 
@@ -587,7 +598,7 @@ namespace DocumentFormat.OpenXml.Tests
             Predicate<ParameterInfo[]> matchParams =
                 ps => ps.Count() == 1 && ps[0].ParameterType == typeof(Type);
             Predicate<ParameterInfo> matchReturn =
-                r => r.ParameterType == typeof(Object);
+                r => r.ParameterType == typeof(object);
             return GetMethodInfo(hostType, prefix, matchMethod, matchParams, matchReturn);
         }
 
@@ -646,6 +657,7 @@ namespace DocumentFormat.OpenXml.Tests
             Predicate<ParameterInfo[]> matchParams =
                 ps => ps.Count() == 0;
             Predicate<ParameterInfo> matchReturn = null;
+
             //r => r.ParameterType.GetInterface("IList`1");
             return GetMethodInfo(hostType, prefix, matchMethod, matchParams, matchReturn);
         }
@@ -937,7 +949,7 @@ namespace DocumentFormat.OpenXml.Tests
             Predicate<ParameterInfo[]> matchParams =
                 ps => ps.Count() == 0;
             Predicate<ParameterInfo> matchReturn =
-                r => r.ParameterType == typeof(Object);
+                r => r.ParameterType == typeof(object);
             return GetMethodInfo(hostType, prefix, matchMethod, matchParams, matchReturn);
         }
 
@@ -1034,7 +1046,8 @@ namespace DocumentFormat.OpenXml.Tests
         */
         #endregion Properties
 
-        #region Refelction Helpers
+        #region Reflection Helpers
+
         /// <summary>
         /// Get MethodInfo that meet specified conditions by reflection.
         /// </summary>
@@ -1060,6 +1073,7 @@ namespace DocumentFormat.OpenXml.Tests
                     return m;
                 }
             }
+
             Log.Comment("Specified method: {0} NOT found on {1}.", prefix, hostType);
             return null;
         }
@@ -1077,7 +1091,7 @@ namespace DocumentFormat.OpenXml.Tests
 
             if (properties.Count() > 1)
             {
-                Log.Warning("Found {0} Property:{1} on {2}. Please Doubel Check IT!", properties.Count(), prefix, hostType);
+                Log.Warning("Found {0} Property:{1} on {2}. Please Double Check IT!", properties.Count(), prefix, hostType);
                 return properties.First();
             }
             else if (properties.Count() == 0)

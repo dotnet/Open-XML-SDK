@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Tests.WorkBookPr
 
                 X15ac.AbsolutePath absolutePath = package.WorkbookPart.Workbook.AbsolutePath;
                 log.Verify(absolutePath != null, "Unable to obtain the X15ac.AbsolutePath.");
-                absolutePath.Url = "";
+                absolutePath.Url = string.Empty;
             }
         }
 

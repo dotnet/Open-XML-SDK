@@ -34,6 +34,6 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Represents Microsoft Office 2016.
         /// </summary>
-        Office2016 = 0x8
+        Office2016 = 0x8,
     }
 }
