@@ -10,14 +10,13 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents the Boolean value for attributes.
     /// </summary>
-    [DebuggerDisplay("{InnerText}")]
-    public class BooleanValue : OpenXmlSimpleValue<bool>
+    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    public class BooleanValue : OpenXmlComparableValueType<bool>
     {
         /// <summary>
         /// Initializes a new instance of the BooleanValue class.
         /// </summary>
         public BooleanValue()
-            : base()
         {
         }
 

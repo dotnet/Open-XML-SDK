@@ -11,14 +11,13 @@ namespace DocumentFormat.OpenXml
     /// Represents the SByte value for attributes.
     /// </summary>
     [System.CLSCompliant(false)]
-    [DebuggerDisplay("{InnerText}")]
-    public class SByteValue : OpenXmlSimpleValue<sbyte>
+    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    public class SByteValue : OpenXmlComparableValueType<sbyte>
     {
         /// <summary>
         /// Initializes a new instance of the SByteValue class.
         /// </summary>
         public SByteValue()
-            : base()
         {
         }
 

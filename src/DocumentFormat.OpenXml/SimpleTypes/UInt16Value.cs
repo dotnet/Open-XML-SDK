@@ -10,15 +10,14 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents the UInt16 value for attributes.
     /// </summary>
-    [System.CLSCompliant(false)]
-    [DebuggerDisplay("{InnerText}")]
-    public class UInt16Value : OpenXmlSimpleValue<ushort>
+    [CLSCompliant(false)]
+    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    public class UInt16Value : OpenXmlComparableValueType<ushort>
     {
         /// <summary>
         /// Initializes a new instance of the UInt16Value class.
         /// </summary>
         public UInt16Value()
-            : base()
         {
         }
 

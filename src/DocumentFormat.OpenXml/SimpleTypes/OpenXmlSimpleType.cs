@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml
 {
@@ -11,13 +10,10 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public abstract class OpenXmlSimpleType : ICloneable
     {
-        private string _textValue;
-
         /// <summary>
         /// Initializes a new instance of the OpenXmlSimpleType class.
         /// </summary>
         protected OpenXmlSimpleType()
-            : base()
         {
         }
 
@@ -26,7 +22,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="source">The source OpenXmlSimpleType.</param>
         protected OpenXmlSimpleType(OpenXmlSimpleType source)
-            : base()
         {
             if (source == null)
             {
@@ -40,44 +35,21 @@ namespace DocumentFormat.OpenXml
         /// Gets or sets the internal raw text value.
         /// DO NOT use this property. Only for OpenXmlSimpleType.cs internal use.
         /// </summary>
-        protected string TextValue
-        {
-            get
-            {
-                return _textValue;
-            }
-
-            set
-            {
-                _textValue = value;
-            }
-        }
+        protected string TextValue { get; set; }
 
         /// <summary>
         /// Gets a value indicating whether the underneath text value is a valid value.
         /// </summary>
-        public virtual bool HasValue
-        {
-            get
-            {
-                return _textValue != null;
-            }
-        }
+        public virtual bool HasValue => TextValue != null;
 
         /// <summary>
         /// Gets or sets the inner XML text.
         /// </summary>
         public virtual string InnerText
         {
-            get
-            {
-                return _textValue;
-            }
+            get => TextValue;
 
-            set
-            {
-                _textValue = value;
-            }
+            set => TextValue = value;
         }
 
         /// <summary>
@@ -107,12 +79,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>The converted string value.</returns>
         public static implicit operator string(OpenXmlSimpleType xmlAttribute)
         {
-            if (xmlAttribute == null)
-            {
-                return null;
-            }
-
-            return xmlAttribute.InnerText;
+            return xmlAttribute?.InnerText;
         }
 
         /// <summary>

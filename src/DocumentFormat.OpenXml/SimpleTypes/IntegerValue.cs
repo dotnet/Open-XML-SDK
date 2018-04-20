@@ -17,14 +17,13 @@ namespace DocumentFormat.OpenXml
     /// Use Int64 as the internal type for now.
     /// TODO: Should decimal be used as the internal type?
     /// </remarks>
-    [DebuggerDisplay("{InnerText}")]
-    public class IntegerValue : OpenXmlSimpleValue<long>
+    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    public class IntegerValue : OpenXmlComparableValueType<long>
     {
         /// <summary>
         /// Initializes a new instance of the IntegerValue class.
         /// </summary>
         public IntegerValue()
-            : base()
         {
         }
 

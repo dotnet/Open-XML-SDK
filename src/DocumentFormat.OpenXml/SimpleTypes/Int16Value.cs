@@ -10,14 +10,13 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents the Int16 value for attributes.
     /// </summary>
-    [DebuggerDisplay("{InnerText}")]
-    public class Int16Value : OpenXmlSimpleValue<short>
+    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    public class Int16Value : OpenXmlComparableValueType<short>
     {
         /// <summary>
         /// Initializes a new instance of the Int16Value class.
         /// </summary>
         public Int16Value()
-            : base()
         {
         }
 

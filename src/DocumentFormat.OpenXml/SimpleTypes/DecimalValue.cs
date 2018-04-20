@@ -10,14 +10,13 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents the decimal value for attributes.
     /// </summary>
-    [DebuggerDisplay("{InnerText}")]
-    public class DecimalValue : OpenXmlSimpleValue<decimal>
+    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    public class DecimalValue : OpenXmlComparableValueType<decimal>
     {
         /// <summary>
         /// Initializes a new instance of the DecimalValue class.
         /// </summary>
         public DecimalValue()
-            : base()
         {
         }
 

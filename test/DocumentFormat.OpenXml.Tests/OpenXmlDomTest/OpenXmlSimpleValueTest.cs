@@ -84,7 +84,13 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new BooleanValue(validValue);
             objB = new BooleanValue(validValue);
-            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the previous assertion, which fails due to the proposed change:
+            // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the changed assertion, which passes based on the proposed change:
+            Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+
             objA = new BooleanValue(validValue);
             objB = objA;
             Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
@@ -192,7 +198,13 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new ByteValue(validValue);
             objB = new ByteValue(validValue);
-            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the previous assertion, which fails due to the proposed change:
+            // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the changed assertion, which passes based on the proposed change:
+            Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+
             objA = new ByteValue(validValue);
             objB = objA;
             Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
@@ -259,7 +271,13 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new SByteValue(validValue);
             objB = new SByteValue(validValue);
-            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the previous assertion, which fails due to the proposed change:
+            // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the changed assertion, which passes based on the proposed change:
+            Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+
             objA = new SByteValue(validValue);
             objB = objA;
             Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
@@ -326,7 +344,13 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new UInt16Value(validValue);
             objB = new UInt16Value(validValue);
-            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the previous assertion, which fails due to the proposed change:
+            // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the changed assertion, which passes based on the proposed change:
+            Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+
             objA = new UInt16Value(validValue);
             objB = objA;
             Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
@@ -393,7 +417,13 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new UInt32Value(validValue);
             objB = new UInt32Value(validValue);
-            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the previous assertion, which fails due to the proposed change:
+            // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the changed assertion, which passes based on the proposed change:
+            Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+
             objA = new UInt32Value(validValue);
             objB = objA;
             Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
@@ -460,7 +490,13 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new Int32Value(validValue);
             objB = new Int32Value(validValue);
-            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the previous assertion, which fails due to the proposed change:
+            // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the changed assertion, which passes based on the proposed change:
+            Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+
             objA = new Int32Value(validValue);
             objB = objA;
             Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
@@ -527,7 +563,13 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new UInt64Value(validValue);
             objB = new UInt64Value(validValue);
-            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the previous assertion, which fails due to the proposed change:
+            // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the changed assertion, which passes based on the proposed change:
+            Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+
             objA = new UInt64Value(validValue);
             objB = objA;
             Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
@@ -596,7 +638,13 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment("Verifying reference type behavior...");
                 objA = new Int64Value(testValue);
                 objB = new Int64Value(testValue);
-                Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+                // This is the previous assertion, which fails due to the proposed change:
+                // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+                // This is the changed assertion, which passes based on the proposed change:
+                Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+
                 objA = new Int64Value(testValue);
                 objB = objA;
                 Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
@@ -666,7 +714,13 @@ namespace DocumentFormat.OpenXml.Tests
                 Log.Comment("Verifying reference type behavior...");
                 objA = new IntegerValue(testValue);
                 objB = new IntegerValue(testValue);
-                Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+                // This is the previous assertion, which fails due to the proposed change:
+                // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+                // This is the changed assertion, which passes based on the proposed change:
+                Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+
                 objA = new IntegerValue(testValue);
                 objB = objA;
                 Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
@@ -748,7 +802,13 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new DecimalValue(validValue);
             objB = new DecimalValue(validValue);
-            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the previous assertion, which fails due to the proposed change:
+            // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the changed assertion, which passes based on the proposed change:
+            Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+
             objA = new DecimalValue(validValue);
             objB = objA;
             Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
@@ -1086,7 +1146,13 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new DateTimeValue(validValue);
             objB = new DateTimeValue(validValue);
-            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the previous assertion, which fails due to the proposed change:
+            // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the changed assertion, which passes based on the proposed change:
+            Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+
             objA = new DateTimeValue(validValue);
             objB = objA;
             Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");

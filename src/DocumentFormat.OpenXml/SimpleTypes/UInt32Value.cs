@@ -10,15 +10,14 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents the UInt32 value for attributes.
     /// </summary>
-    [System.CLSCompliant(false)]
-    [DebuggerDisplay("{InnerText}")]
-    public class UInt32Value : OpenXmlSimpleValue<uint>
+    [CLSCompliant(false)]
+    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    public class UInt32Value : OpenXmlComparableValueType<uint>
     {
         /// <summary>
         /// Initializes a new instance of the UInt32Value class.
         /// </summary>
         public UInt32Value()
-            : base()
         {
         }
 

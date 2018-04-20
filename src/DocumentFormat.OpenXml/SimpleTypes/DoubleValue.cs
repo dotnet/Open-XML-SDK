@@ -10,14 +10,13 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents the double value for attributes.
     /// </summary>
-    [DebuggerDisplay("{InnerText}")]
-    public class DoubleValue : OpenXmlSimpleValue<double>
+    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    public class DoubleValue : OpenXmlComparableValueType<double>
     {
         /// <summary>
         /// Initializes a new instance of the DoubleValue class.
         /// </summary>
         public DoubleValue()
-            : base()
         {
         }
 

@@ -10,15 +10,14 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents the UInt64 value for attributes.
     /// </summary>
-    [System.CLSCompliant(false)]
-    [DebuggerDisplay("{InnerText}")]
-    public class UInt64Value : OpenXmlSimpleValue<ulong>
+    [CLSCompliant(false)]
+    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    public class UInt64Value : OpenXmlComparableValueType<ulong>
     {
         /// <summary>
         /// Initializes a new instance of the UInt64Value class.
         /// </summary>
         public UInt64Value()
-            : base()
         {
         }
 

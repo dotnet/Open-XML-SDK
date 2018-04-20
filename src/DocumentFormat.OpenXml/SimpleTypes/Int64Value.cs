@@ -10,14 +10,13 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents the Int64 value for attributes.
     /// </summary>
-    [DebuggerDisplay("{InnerText}")]
-    public class Int64Value : OpenXmlSimpleValue<long>
+    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    public class Int64Value : OpenXmlComparableValueType<long>
     {
         /// <summary>
         /// Initializes a new instance of the Int64Value class.
         /// </summary>
         public Int64Value()
-            : base()
         {
         }
 

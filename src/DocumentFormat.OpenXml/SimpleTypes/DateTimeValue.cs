@@ -10,8 +10,8 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents the DateTime value for attributes.
     /// </summary>
-    [DebuggerDisplay("{InnerText}")]
-    public class DateTimeValue : OpenXmlSimpleValue<DateTime>
+    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    public class DateTimeValue : OpenXmlComparableValueType<DateTime>
     {
         //the following format string is copied from System.IO.Packaging.PartBasedPackageProperties()
         //We use the XmlConvert.ToDateTime(string s, XmlDateTimeSerializationMode dateTimeOption)
@@ -38,7 +38,6 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the DateTimeValue class.
         /// </summary>
         public DateTimeValue()
-            : base()
         {
         }
 

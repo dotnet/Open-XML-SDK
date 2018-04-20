@@ -10,14 +10,13 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents the Single value for attributes.
     /// </summary>
-    [DebuggerDisplay("{InnerText}")]
-    public class SingleValue : OpenXmlSimpleValue<float>
+    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    public class SingleValue : OpenXmlComparableValueType<float>
     {
         /// <summary>
         /// Initializes a new instance of the SingleValue class.
         /// </summary>
         public SingleValue()
-            : base()
         {
         }
 

@@ -9,14 +9,13 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents the xsd:base64Binary value for attributes.
     /// </summary>
-    [DebuggerDisplay("{InnerText}")]
-    public class Base64BinaryValue : OpenXmlSimpleType
+    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    public class Base64BinaryValue : OpenXmlComparableReferenceType<string>
     {
         /// <summary>
         /// Initializes a new instance of the Base64BinaryValue class.
         /// </summary>
         public Base64BinaryValue()
-            : base()
         {
         }
 
@@ -28,7 +27,6 @@ namespace DocumentFormat.OpenXml
         /// The String value.
         /// </param>
         public Base64BinaryValue(string base64Binary)
-            : base()
         {
             TextValue = base64Binary;
         }
@@ -48,10 +46,10 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets or sets the Base64 binary string value.
         /// </summary>
-        public string Value
+        public override string Value
         {
-            get { return TextValue; }
-            set { TextValue = value; }
+            get => TextValue;
+            set => TextValue = value;
         }
 
         /// <summary>

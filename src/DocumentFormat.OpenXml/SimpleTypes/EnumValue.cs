@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the enum value for attributes.
     /// </summary>
     /// <typeparam name="T">Every enum value must be an enum with the EnumStringValueAttribute object.</typeparam>
-    [DebuggerDisplay("{InnerText}")]
+    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
     public class EnumValue<T> : OpenXmlSimpleValue<T>
         where T : struct
     {
@@ -18,7 +18,6 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the EnumValue class.
         /// </summary>
         public EnumValue()
-            : base()
         {
         }
 

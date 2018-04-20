@@ -10,13 +10,12 @@ namespace DocumentFormat.OpenXml
     /// Represent the xsd:hexBinary value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class HexBinaryValue : OpenXmlSimpleType
+    public class HexBinaryValue : OpenXmlComparableReferenceType<string>
     {
         /// <summary>
         /// Initializes a new instance of the HexBinaryValue class.
         /// </summary>
         public HexBinaryValue()
-            : base()
         {
         }
 
@@ -25,7 +24,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="hexBinary">The string value.</param>
         public HexBinaryValue(string hexBinary)
-            : base()
         {
             TextValue = hexBinary;
         }
@@ -42,7 +40,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets or sets the hex binary value
         /// </summary>
-        public string Value
+        public override string Value
         {
             get { return TextValue; }
             set { TextValue = value; }

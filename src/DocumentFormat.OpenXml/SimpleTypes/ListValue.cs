@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Represents the list value attributes (xsd:list).
     /// </summary>
-    [DebuggerDisplay("{InnerText}")]
+    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
     public class ListValue<T> : OpenXmlSimpleType, IEnumerable<T>
         where T : OpenXmlSimpleType, new()
     {
