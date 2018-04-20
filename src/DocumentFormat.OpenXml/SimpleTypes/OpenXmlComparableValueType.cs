@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml
     /// <typeparam name="T">The type of the value.</typeparam>
     public abstract class OpenXmlComparableValueType<T> : OpenXmlSimpleValue<T>,
         IComparable, IComparable<OpenXmlComparableValueType<T>>, IEquatable<OpenXmlComparableValueType<T>>
-        where T : struct, IComparable, IComparable<T>, IEquatable<T>, IConvertible
+        where T : struct, IComparable, IComparable<T>, IEquatable<T>
     {
         /// <summary>
         /// Creates a new instance of <see cref="OpenXmlComparableValueType{T}"/>.
