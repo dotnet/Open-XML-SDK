@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Globalization;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -758,29 +759,29 @@ namespace DocumentFormat.OpenXml.Tests
             string invalidValue = "Invalid String!";
 
             Log.Comment("Testing default value...");
-            string expectedText = defaultValue.ToString();
+            string expectedText = defaultValue.ToString(CultureInfo.InvariantCulture);
             DecimalValue defaultObj = default(DecimalValue);
             Log.VerifyNull(defaultObj, "default(DecimalValue) returns reference other than NULL");
 
             Log.Comment("Constructing with Max value and testing...");
-            simpleValueValidTest(new DecimalValue(maxValue), maxValue, maxValue.ToString());
+            simpleValueValidTest(new DecimalValue(maxValue), maxValue, maxValue.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with Max value and testing with Clone()...");
-            simpleValueValidTest(new DecimalValue(maxValue).Clone() as DecimalValue, maxValue, maxValue.ToString());
+            simpleValueValidTest(new DecimalValue(maxValue).Clone() as DecimalValue, maxValue, maxValue.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Set Value with Min value and testing...");
             DecimalValue objA = new DecimalValue();
             objA.Value = minValue;
-            simpleValueValidTest(objA, minValue, minValue.ToString());
+            simpleValueValidTest(objA, minValue, minValue.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Set InnerText with Min value and testing...");
             DecimalValue objB = new DecimalValue();
             objB.InnerText = minValue.ToString();
-            simpleValueValidTest(objB, minValue, minValue.ToString());
+            simpleValueValidTest(objB, minValue, minValue.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Implicit Int Operator with Min value and testing...");
             objB = minValue;
-            simpleValueValidTest(objB, minValue, minValue.ToString());
+            simpleValueValidTest(objB, minValue, minValue.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Explicit decimal conversion with value {0} and testing", validValue);
             objB = DecimalValue.FromDecimal(validValue);
@@ -788,16 +789,16 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Constructing with another instance with valid value...");
             objA = new DecimalValue(validValue);
-            simpleValueValidTest(new DecimalValue(objA), validValue, validValue.ToString());
+            simpleValueValidTest(new DecimalValue(objA), validValue, validValue.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialValue1);
-            simpleValueValidTest(new DecimalValue(specialValue1), specialValue1, specialValue1.ToString());
+            simpleValueValidTest(new DecimalValue(specialValue1), specialValue1, specialValue1.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialValue2);
-            simpleValueValidTest(new DecimalValue(specialValue2), specialValue2, specialValue2.ToString());
+            simpleValueValidTest(new DecimalValue(specialValue2), specialValue2, specialValue2.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialValue3);
-            simpleValueValidTest(new DecimalValue(specialValue3), specialValue3, specialValue3.ToString());
+            simpleValueValidTest(new DecimalValue(specialValue3), specialValue3, specialValue3.ToString(CultureInfo.InvariantCulture));
 
             Log.Comment("Verifying reference type behavior...");
             objA = new DecimalValue(validValue);
@@ -859,24 +860,24 @@ namespace DocumentFormat.OpenXml.Tests
             Log.VerifyNull(defaultObj, "default(SingleValue) returns reference other than NULL");
 
             Log.Comment("Constructing with Max value and testing...");
-            simpleValueValidTest(new SingleValue(maxValue), maxValue, maxValue.ToString("R"));
+            simpleValueValidTest(new SingleValue(maxValue), maxValue, maxValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with Max value and testing with Clone()...");
-            simpleValueValidTest(new SingleValue(maxValue).Clone() as SingleValue, maxValue, maxValue.ToString("R"));
+            simpleValueValidTest(new SingleValue(maxValue).Clone() as SingleValue, maxValue, maxValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Set Value with Min value and testing...");
             SingleValue objA = new SingleValue();
             objA.Value = minValue;
-            simpleValueValidTest(objA, minValue, minValue.ToString("R"));
+            simpleValueValidTest(objA, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Set InnerText with Min value and testing...");
             SingleValue objB = new SingleValue();
-            objB.InnerText = minValue.ToString("R");
-            simpleValueValidTest(objB, minValue, minValue.ToString("R"));
+            objB.InnerText = minValue.ToString("R", CultureInfo.InvariantCulture);
+            simpleValueValidTest(objB, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Implicit Int Operator with Min value and testing...");
             objB = minValue;
-            simpleValueValidTest(objB, minValue, minValue.ToString("R"));
+            simpleValueValidTest(objB, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Explicit SingleValue conversion with value {0} and testing", validValue);
             objB = SingleValue.FromSingle(validValue);
@@ -884,10 +885,10 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Constructing with another instance with valid value...");
             objA = new SingleValue(validValue);
-            simpleValueValidTest(new SingleValue(objA), validValue, validValue.ToString("R"));
+            simpleValueValidTest(new SingleValue(objA), validValue, validValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialEpsilon);
-            simpleValueValidTest(new SingleValue(specialEpsilon), specialEpsilon, specialEpsilon.ToString("R"));
+            simpleValueValidTest(new SingleValue(specialEpsilon), specialEpsilon, specialEpsilon.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialPositiveInfinity);
             simpleValueValidTest(new SingleValue(specialPositiveInfinity), specialPositiveInfinity, PositiveInfinity);
@@ -896,7 +897,7 @@ namespace DocumentFormat.OpenXml.Tests
             simpleValueValidTest(new SingleValue(specialNegativeInfinity), specialNegativeInfinity, NegativeInfinity);
 
             Log.Comment("Constructing with special value {0} and testing...", specialNaN);
-            simpleValueValidTest(new SingleValue(specialNaN), specialNaN, specialNaN.ToString("R"));
+            simpleValueValidTest(new SingleValue(specialNaN), specialNaN, specialNaN.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Set InnerText with special value {0} and testing...", specialStringINF);
             objA = new SingleValue();
@@ -921,7 +922,13 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new SingleValue(validValue);
             objB = new SingleValue(validValue);
-            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the previous assertion, which fails due to the proposed change:
+            // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the changed assertion, which passes based on the proposed change:
+            Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+
             objA = new SingleValue(validValue);
             objB = objA;
             Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
@@ -974,8 +981,8 @@ namespace DocumentFormat.OpenXml.Tests
             double specialPositiveInfinity = double.PositiveInfinity;
             double specialNegativeInfinity = double.NegativeInfinity;
             double specialNaN = double.NaN;
-            const string NegativeInfinity = "-INF";
-            const string PositiveInfinity = "INF";
+            const string negativeInfinity = "-INF";
+            const string positiveInfinity = "INF";
             string specialStringINF = "INF";
             string specialStringNINF = "-INF";
             string specialStringInfinity = "Infinity";
@@ -987,29 +994,29 @@ namespace DocumentFormat.OpenXml.Tests
             string invalidStringValue = "Invalid String!";
 
             Log.Comment("Testing default value...");
-            string expectedText = defaultValue.ToString();
+            string expectedText = defaultValue.ToString(CultureInfo.InvariantCulture);
             DoubleValue defaultObj = default(DoubleValue);
             Log.VerifyNull(defaultObj, "default(DoubleValue) returns reference other than NULL");
 
             Log.Comment("Constructing with Max value and testing...");
-            simpleValueValidTest(new DoubleValue(maxValue), maxValue, maxValue.ToString("R"));
+            simpleValueValidTest(new DoubleValue(maxValue), maxValue, maxValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with Max value and testing with Clone()...");
-            simpleValueValidTest(new DoubleValue(maxValue).Clone() as DoubleValue, maxValue, maxValue.ToString("R"));
+            simpleValueValidTest(new DoubleValue(maxValue).Clone() as DoubleValue, maxValue, maxValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Set Value with Min value and testing...");
             DoubleValue objA = new DoubleValue();
             objA.Value = minValue;
-            simpleValueValidTest(objA, minValue, minValue.ToString("R"));
+            simpleValueValidTest(objA, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Set InnerText with Min value and testing...");
             DoubleValue objB = new DoubleValue();
-            objB.InnerText = minValue.ToString("R");
-            simpleValueValidTest(objB, minValue, minValue.ToString("R"));
+            objB.InnerText = minValue.ToString("R", CultureInfo.InvariantCulture);
+            simpleValueValidTest(objB, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Implicit Int Operator with Min value and testing...");
             objB = minValue;
-            simpleValueValidTest(objB, minValue, minValue.ToString("R"));
+            simpleValueValidTest(objB, minValue, minValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Explicit Double conversion with value {0} and testing", validValue);
             objB = DoubleValue.FromDouble(validValue);
@@ -1017,19 +1024,19 @@ namespace DocumentFormat.OpenXml.Tests
 
             Log.Comment("Constructing with another instance with valid value...");
             objA = new DoubleValue(validValue);
-            simpleValueValidTest(new DoubleValue(objA), validValue, validValue.ToString("R"));
+            simpleValueValidTest(new DoubleValue(objA), validValue, validValue.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialEpsilon);
-            simpleValueValidTest(new DoubleValue(specialEpsilon), specialEpsilon, specialEpsilon.ToString("R"));
+            simpleValueValidTest(new DoubleValue(specialEpsilon), specialEpsilon, specialEpsilon.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Constructing with special value {0} and testing...", specialPositiveInfinity);
-            simpleValueValidTest(new DoubleValue(specialPositiveInfinity), specialPositiveInfinity, PositiveInfinity);
+            simpleValueValidTest(new DoubleValue(specialPositiveInfinity), specialPositiveInfinity, positiveInfinity);
 
             Log.Comment("Constructing with special value {0} and testing...", specialNegativeInfinity);
-            simpleValueValidTest(new DoubleValue(specialNegativeInfinity), specialNegativeInfinity, NegativeInfinity);
+            simpleValueValidTest(new DoubleValue(specialNegativeInfinity), specialNegativeInfinity, negativeInfinity);
 
             Log.Comment("Constructing with special value {0} and testing...", specialNaN);
-            simpleValueValidTest(new DoubleValue(specialNaN), specialNaN, specialNaN.ToString("R"));
+            simpleValueValidTest(new DoubleValue(specialNaN), specialNaN, specialNaN.ToString("R", CultureInfo.InvariantCulture));
 
             Log.Comment("Set InnerText with special value {0} and testing...", specialStringINF);
             objA = new DoubleValue();
@@ -1054,7 +1061,13 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Verifying reference type behavior...");
             objA = new DoubleValue(validValue);
             objB = new DoubleValue(validValue);
-            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the previous assertion, which fails due to the proposed change:
+            // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+
+            // This is the changed assertion, which passes based on the proposed change:
+            Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+
             objA = new DoubleValue(validValue);
             objB = objA;
             Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
