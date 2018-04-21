@@ -4,12 +4,15 @@
 using System;
 using System.Diagnostics;
 
+// See https://github.com/dotnet/roslyn-analyzers/issues/1671
+#pragma warning disable CA1036
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Defines an OnOffValue data type for attributes that have enum values that are Boolean values that represent: 'true' or 'false', 'on' or 'off', or '0' or '1'.
     /// </summary>
-    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    [DebuggerDisplay("{InnerText}")]
     public class OnOffValue : OpenXmlComparableValueType<bool>
     {
         /// <summary>

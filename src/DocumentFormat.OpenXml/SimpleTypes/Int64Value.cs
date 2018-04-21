@@ -5,12 +5,15 @@ using System;
 using System.Diagnostics;
 using System.Xml;
 
+// See https://github.com/dotnet/roslyn-analyzers/issues/1671
+#pragma warning disable CA1036
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents the Int64 value for attributes.
     /// </summary>
-    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    [DebuggerDisplay("{InnerText}")]
     public class Int64Value : OpenXmlComparableValueType<long>
     {
         /// <summary>

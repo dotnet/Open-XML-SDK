@@ -5,13 +5,16 @@ using System;
 using System.Diagnostics;
 using System.Xml;
 
+// See https://github.com/dotnet/roslyn-analyzers/issues/1671
+#pragma warning disable CA1036
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents the SByte value for attributes.
     /// </summary>
-    [System.CLSCompliant(false)]
-    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    [CLSCompliant(false)]
+    [DebuggerDisplay("{InnerText}")]
     public class SByteValue : OpenXmlComparableValueType<sbyte>
     {
         /// <summary>

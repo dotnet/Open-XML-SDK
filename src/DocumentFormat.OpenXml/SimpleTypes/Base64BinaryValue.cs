@@ -4,12 +4,15 @@
 using System;
 using System.Diagnostics;
 
+// See https://github.com/dotnet/roslyn-analyzers/issues/1671
+#pragma warning disable CA1036
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents the xsd:base64Binary value for attributes.
     /// </summary>
-    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    [DebuggerDisplay("{InnerText}")]
     public class Base64BinaryValue : OpenXmlComparableReferenceType<string>
     {
         /// <summary>

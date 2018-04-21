@@ -5,12 +5,15 @@ using System;
 using System.Diagnostics;
 using System.Xml;
 
+// See https://github.com/dotnet/roslyn-analyzers/issues/1671
+#pragma warning disable CA1036
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents the Boolean value for attributes.
     /// </summary>
-    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    [DebuggerDisplay("{InnerText}")]
     public class BooleanValue : OpenXmlComparableValueType<bool>
     {
         /// <summary>

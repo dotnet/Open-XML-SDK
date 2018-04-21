@@ -5,13 +5,16 @@ using System;
 using System.Diagnostics;
 using System.Xml;
 
+// See https://github.com/dotnet/roslyn-analyzers/issues/1671
+#pragma warning disable CA1036
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents the UInt32 value for attributes.
     /// </summary>
     [CLSCompliant(false)]
-    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    [DebuggerDisplay("{InnerText}")]
     public class UInt32Value : OpenXmlComparableValueType<uint>
     {
         /// <summary>

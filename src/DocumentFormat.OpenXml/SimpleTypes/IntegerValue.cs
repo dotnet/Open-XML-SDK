@@ -5,6 +5,9 @@ using System;
 using System.Diagnostics;
 using System.Xml;
 
+// See https://github.com/dotnet/roslyn-analyzers/issues/1671
+#pragma warning disable CA1036
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
@@ -17,7 +20,7 @@ namespace DocumentFormat.OpenXml
     /// Use Int64 as the internal type for now.
     /// TODO: Should decimal be used as the internal type?
     /// </remarks>
-    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    [DebuggerDisplay("{InnerText}")]
     public class IntegerValue : OpenXmlComparableValueType<long>
     {
         /// <summary>

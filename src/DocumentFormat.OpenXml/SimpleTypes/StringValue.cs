@@ -4,12 +4,15 @@
 using System;
 using System.Diagnostics;
 
+// See https://github.com/dotnet/roslyn-analyzers/issues/1671
+#pragma warning disable CA1036
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents the string value for attributes.
     /// </summary>
-    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    [DebuggerDisplay("{InnerText}")]
     public class StringValue : OpenXmlComparableReferenceType<string>
     {
         /// <summary>

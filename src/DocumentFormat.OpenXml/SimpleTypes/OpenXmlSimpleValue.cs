@@ -10,7 +10,7 @@ namespace DocumentFormat.OpenXml
     /// Represents a generic value for simple value types (Int32, UInt32, Byte, struct, etc).
     /// </summary>
     /// <typeparam name="T">The type of the value.</typeparam>
-    [DebuggerDisplay("{" + nameof(InnerText) + "}")]
+    [DebuggerDisplay("{InnerText}")]
     public abstract class OpenXmlSimpleValue<T> : OpenXmlSimpleType
         where T : struct
     {
