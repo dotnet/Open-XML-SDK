@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Creates a new instance of <see cref="OpenXmlComparableValueType{T}"/>.
         /// </summary>
-        protected OpenXmlComparableValueType()
+        private protected OpenXmlComparableValueType()
         {
         }
 
@@ -24,7 +24,7 @@ namespace DocumentFormat.OpenXml
         /// Creates a new instance of <see cref="OpenXmlComparableValueType{T}"/>.
         /// </summary>
         /// <param name="value">The value in type T.</param>
-        protected OpenXmlComparableValueType(T value) : base(value)
+        private protected OpenXmlComparableValueType(T value) : base(value)
         {
         }
 
@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml
         /// value.
         /// </summary>
         /// <param name="source">The source <see cref="OpenXmlComparableValueType{T}"/> instance.</param>
-        protected OpenXmlComparableValueType(OpenXmlComparableValueType<T> source) : base(source)
+        private protected OpenXmlComparableValueType(OpenXmlComparableValueType<T> source) : base(source)
         {
         }
 

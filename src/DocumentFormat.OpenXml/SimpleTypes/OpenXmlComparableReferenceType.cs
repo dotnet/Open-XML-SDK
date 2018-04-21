@@ -16,7 +16,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Creates a new instance of <see cref="OpenXmlComparableReferenceType{T}"/>.
         /// </summary>
-        protected OpenXmlComparableReferenceType()
+        private protected OpenXmlComparableReferenceType()
         {
         }
 
@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml
         /// value.
         /// </summary>
         /// <param name="source">The source <see cref="OpenXmlComparableReferenceType{T}"/> instance.</param>
-        protected OpenXmlComparableReferenceType(OpenXmlComparableReferenceType<T> source) : base(source)
+        private protected OpenXmlComparableReferenceType(OpenXmlComparableReferenceType<T> source) : base(source)
         {
         }
 
