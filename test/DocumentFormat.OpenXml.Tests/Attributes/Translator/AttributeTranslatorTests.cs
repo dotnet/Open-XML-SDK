@@ -72,7 +72,7 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         // Negative tests
         [InlineData("document", null, null, null, null, null, 0, null)]
         [Theory]
-        public void RetrieveTranslator(string strTag, string strLocalName, string strValue, Type expected, string localName, string value, long trait, Type formatter)
+        public void RetrieveTranslator(string strTag, string strLocalName, string strValue, Type expected, string localName, string value, long trait, Type converter)
         {
             var translator = AttributeTranslator.Translate(strTag, strLocalName, strValue);
 
@@ -82,14 +82,18 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
             }
             else
             {
-                //Assert.IsType(expected, translator);
+                Assert.IsType(expected, translator);
                 Assert.Equal(localName, translator.LocalName);
                 Assert.Equal(value, translator.Value);
                 Assert.Equal(trait, translator.Trait);
 
                 if (translator.Converter != null)
                 {
-                    Assert.IsType(formatter, translator.Converter);
+                    Assert.IsType(converter, translator.Converter);
+                }
+                else
+                {
+                    Assert.Null(converter);
                 }
             }
         }
