@@ -16,7 +16,6 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
             arrayOfOrigAttrValues = null;
             arrayOfNewAttrValues = null;
             arrayOfAttrTraits = arrayOfTagAttrTraits;
-            formatter = null;
         }
 
         /// <inheritdoc/>

@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Attributes.Formatter;
-
 namespace DocumentFormat.OpenXml.Attributes.Translator
 {
     /// <summary>
@@ -25,7 +23,6 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         protected string[] arrayOfOrigAttrValues;
         protected string[] arrayOfNewAttrValues;
         protected long[] arrayOfAttrTraits;
-        protected AttributeFormatter formatter;
 
         internal TagAttributeTranslator()
         {
@@ -139,9 +136,6 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
         /// <summary>
         /// Gets the formatter.
         /// </summary>
-        internal virtual AttributeFormatter Formatter
-        {
-            get { return formatter; }
-        }
+        public virtual IValueConverter Converter { get; }
     }
 }
