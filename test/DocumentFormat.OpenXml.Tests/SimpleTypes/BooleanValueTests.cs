@@ -3,7 +3,7 @@
 
 namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 {
-    public class BooleanValueTests : OpenXmlComparableValueTypeTests<bool>
+    public class BooleanValueTests : OpenXmlComparableSimpleValueTests<bool>
     {
         public BooleanValueTests()
         {

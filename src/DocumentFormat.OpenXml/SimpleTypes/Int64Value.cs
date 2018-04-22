@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the Int64 value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class Int64Value : OpenXmlComparableValueType<long>
+    public class Int64Value : OpenXmlComparableSimpleValue<long>
     {
         /// <summary>
         /// Initializes a new instance of the Int64Value class.

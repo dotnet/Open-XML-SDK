@@ -5,7 +5,7 @@ using System;
 
 namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 {
-    public class DateTimeValueTests : OpenXmlComparableValueTypeTests<DateTime>
+    public class DateTimeValueTests : OpenXmlComparableSimpleValueTests<DateTime>
     {
         public DateTimeValueTests()
         {

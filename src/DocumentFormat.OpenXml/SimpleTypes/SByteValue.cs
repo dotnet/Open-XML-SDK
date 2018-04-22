@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     [CLSCompliant(false)]
     [DebuggerDisplay("{InnerText}")]
-    public class SByteValue : OpenXmlComparableValueType<sbyte>
+    public class SByteValue : OpenXmlComparableSimpleValue<sbyte>
     {
         /// <summary>
         /// Initializes a new instance of the SByteValue class.

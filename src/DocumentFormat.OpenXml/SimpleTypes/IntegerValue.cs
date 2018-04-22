@@ -21,7 +21,7 @@ namespace DocumentFormat.OpenXml
     /// TODO: Should decimal be used as the internal type?
     /// </remarks>
     [DebuggerDisplay("{InnerText}")]
-    public class IntegerValue : OpenXmlComparableValueType<long>
+    public class IntegerValue : OpenXmlComparableSimpleValue<long>
     {
         /// <summary>
         /// Initializes a new instance of the IntegerValue class.

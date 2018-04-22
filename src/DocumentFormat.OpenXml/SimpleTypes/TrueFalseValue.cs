@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the data type for attributes that have enum values that are Boolean values that represent 't' or 'f', or 'true' or 'false'.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class TrueFalseValue : OpenXmlComparableValueType<bool>
+    public class TrueFalseValue : OpenXmlComparableSimpleValue<bool>
     {
         /// <summary>
         /// Initializes a new instance of <see cref="TrueFalseValue"/> class.

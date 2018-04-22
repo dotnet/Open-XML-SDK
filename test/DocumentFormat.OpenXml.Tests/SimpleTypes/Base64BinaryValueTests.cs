@@ -6,7 +6,7 @@ using Xunit.Abstractions;
 
 namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 {
-    public class Base64BinaryValueTests : OpenXmlComparableReferenceTypeTests<string>
+    public class Base64BinaryValueTests : OpenXmlComparableSimpleReferenceTests<string>
     {
         private static readonly string SmallString = Convert.ToBase64String(new byte[] { 31, 32, 33, 34, 35, 36 });
         private static readonly string LargeString = Convert.ToBase64String(new byte[] { 41, 42, 43, 44, 45, 46 });

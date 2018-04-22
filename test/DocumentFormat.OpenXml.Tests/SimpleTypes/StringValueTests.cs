@@ -3,7 +3,7 @@
 
 namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 {
-    public class StringValueTests : OpenXmlComparableReferenceTypeTests<string>
+    public class StringValueTests : OpenXmlComparableSimpleReferenceTests<string>
     {
         private const string SmallString = "abcdef";
         private const string LargeString = "uvwxyz";

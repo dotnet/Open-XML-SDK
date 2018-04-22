@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the Boolean value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class BooleanValue : OpenXmlComparableValueType<bool>
+    public class BooleanValue : OpenXmlComparableSimpleValue<bool>
     {
         /// <summary>
         /// Initializes a new instance of the BooleanValue class.

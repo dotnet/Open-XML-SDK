@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the DateTime value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class DateTimeValue : OpenXmlComparableValueType<DateTime>
+    public class DateTimeValue : OpenXmlComparableSimpleValue<DateTime>
     {
         //the following format string is copied from System.IO.Packaging.PartBasedPackageProperties()
         //We use the XmlConvert.ToDateTime(string s, XmlDateTimeSerializationMode dateTimeOption)

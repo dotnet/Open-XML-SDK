@@ -3,7 +3,7 @@
 
 namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 {
-    public class HexBinaryValueTests : OpenXmlComparableReferenceTypeTests<string>
+    public class HexBinaryValueTests : OpenXmlComparableSimpleReferenceTests<string>
     {
         private const string SmallHexBinary = "12345678";
         private const string LargeHexBinary = "FEDCBA98";

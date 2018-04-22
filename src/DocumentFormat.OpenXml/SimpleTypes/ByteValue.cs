@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the byte value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class ByteValue : OpenXmlComparableValueType<byte>
+    public class ByteValue : OpenXmlComparableSimpleValue<byte>
     {
         /// <summary>
         /// Initializes a new instance of the ByteValue class.

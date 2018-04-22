@@ -3,7 +3,7 @@
 
 namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 {
-    public class DoubleValueTests : OpenXmlComparableValueTypeTests<double>
+    public class DoubleValueTests : OpenXmlComparableSimpleValueTests<double>
     {
         public DoubleValueTests()
         {

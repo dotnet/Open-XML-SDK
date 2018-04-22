@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     [CLSCompliant(false)]
     [DebuggerDisplay("{InnerText}")]
-    public class UInt16Value : OpenXmlComparableValueType<ushort>
+    public class UInt16Value : OpenXmlComparableSimpleValue<ushort>
     {
         /// <summary>
         /// Initializes a new instance of the UInt16Value class.

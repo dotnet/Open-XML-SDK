@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the string value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class StringValue : OpenXmlComparableReferenceType<string>
+    public class StringValue : OpenXmlComparableSimpleReference<string>
     {
         /// <summary>
         /// Initializes a new instance of the StringValue class.

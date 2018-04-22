@@ -9,24 +9,24 @@ namespace DocumentFormat.OpenXml
     /// Represents a comparable and equatable reference.
     /// </summary>
     /// <typeparam name="T">The type of the value.</typeparam>
-    public abstract class OpenXmlComparableReferenceType<T> : OpenXmlSimpleType,
-        IComparable, IComparable<OpenXmlComparableReferenceType<T>>, IEquatable<OpenXmlComparableReferenceType<T>>
+    public abstract class OpenXmlComparableSimpleReference<T> : OpenXmlSimpleType,
+        IComparable, IComparable<OpenXmlComparableSimpleReference<T>>, IEquatable<OpenXmlComparableSimpleReference<T>>
         where T : class, IComparable, IComparable<T>, IEquatable<T>
     {
         /// <summary>
-        /// Creates a new instance of <see cref="OpenXmlComparableReferenceType{T}"/>.
+        /// Creates a new instance of <see cref="OpenXmlComparableSimpleReference{T}"/>.
         /// </summary>
-        private protected OpenXmlComparableReferenceType()
+        private protected OpenXmlComparableSimpleReference()
         {
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OpenXmlComparableReferenceType{T}"/>
-        /// class by deep copying the supplied <see cref="OpenXmlComparableReferenceType{T}"/>
+        /// Initializes a new instance of the <see cref="OpenXmlComparableSimpleReference{T}"/>
+        /// class by deep copying the supplied <see cref="OpenXmlComparableSimpleReference{T}"/>
         /// value.
         /// </summary>
-        /// <param name="source">The source <see cref="OpenXmlComparableReferenceType{T}"/> instance.</param>
-        private protected OpenXmlComparableReferenceType(OpenXmlComparableReferenceType<T> source) : base(source)
+        /// <param name="source">The source <see cref="OpenXmlComparableSimpleReference{T}"/> instance.</param>
+        private protected OpenXmlComparableSimpleReference(OpenXmlComparableSimpleReference<T> source) : base(source)
         {
         }
 
@@ -38,16 +38,21 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc />
         public int CompareTo(object obj)
         {
-            if (obj is OpenXmlComparableReferenceType<T> other)
+            switch (obj)
             {
-                return CompareTo(other);
+                case null:
+                    return 1;
+
+                case OpenXmlComparableSimpleReference<T> other:
+                    return CompareTo(other);
             }
 
-            throw new ArgumentException();
+            string message = string.Format(ExceptionMessages.IncompatibleArgumentType, obj.GetType().FullName);
+            throw new ArgumentException(message);
         }
 
         /// <inheritdoc />
-        public int CompareTo(OpenXmlComparableReferenceType<T> other)
+        public int CompareTo(OpenXmlComparableSimpleReference<T> other)
         {
             if (other is null)
             {
@@ -63,40 +68,28 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc />
-        public bool Equals(OpenXmlComparableReferenceType<T> other)
+        public bool Equals(OpenXmlComparableSimpleReference<T> other)
         {
-            if (other is null)
-            {
-                return false;
-            }
-
-            if (Value == null)
-            {
-                return other.Value == null;
-            }
-
-            return Value.Equals(other.Value);
+            return !(other is null) && Equals(Value, other.Value);
         }
 
         /// <inheritdoc />
         public override bool Equals(object obj)
         {
-            if (obj is null)
+            switch (obj)
             {
-                return false;
-            }
+                case null:
+                    return false;
 
-            if (obj is OpenXmlComparableReferenceType<T> other)
-            {
-                return Equals(other);
-            }
+                case OpenXmlComparableSimpleReference<T> other:
+                    return Equals(other);
 
-            if (obj is T otherValue)
-            {
-                return otherValue.Equals(Value);
-            }
+                case T otherValue:
+                    return otherValue.Equals(Value);
 
-            return false;
+                default:
+                    return false;
+            }
         }
 
         /// <inheritdoc />
@@ -111,7 +104,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="left"></param>
         /// <param name="right"></param>
         /// <returns></returns>
-        public static bool operator ==(OpenXmlComparableReferenceType<T> left, OpenXmlComparableReferenceType<T> right)
+        public static bool operator ==(OpenXmlComparableSimpleReference<T> left, OpenXmlComparableSimpleReference<T> right)
         {
             if (left is null)
             {
@@ -127,7 +120,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="left"></param>
         /// <param name="right"></param>
         /// <returns></returns>
-        public static bool operator !=(OpenXmlComparableReferenceType<T> left, OpenXmlComparableReferenceType<T> right)
+        public static bool operator !=(OpenXmlComparableSimpleReference<T> left, OpenXmlComparableSimpleReference<T> right)
         {
             return !(left == right);
         }
@@ -138,7 +131,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="left"></param>
         /// <param name="right"></param>
         /// <returns></returns>
-        public static bool operator <(OpenXmlComparableReferenceType<T> left, OpenXmlComparableReferenceType<T> right)
+        public static bool operator <(OpenXmlComparableSimpleReference<T> left, OpenXmlComparableSimpleReference<T> right)
         {
             return left is null ? !(right is null) : left.CompareTo(right) < 0;
         }
@@ -149,7 +142,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="left"></param>
         /// <param name="right"></param>
         /// <returns></returns>
-        public static bool operator <=(OpenXmlComparableReferenceType<T> left, OpenXmlComparableReferenceType<T> right)
+        public static bool operator <=(OpenXmlComparableSimpleReference<T> left, OpenXmlComparableSimpleReference<T> right)
         {
             return left is null || left.CompareTo(right) <= 0;
         }
@@ -160,7 +153,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="left"></param>
         /// <param name="right"></param>
         /// <returns></returns>
-        public static bool operator >(OpenXmlComparableReferenceType<T> left, OpenXmlComparableReferenceType<T> right)
+        public static bool operator >(OpenXmlComparableSimpleReference<T> left, OpenXmlComparableSimpleReference<T> right)
         {
             return !(left is null) && left.CompareTo(right) > 0;
         }
@@ -171,7 +164,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="left"></param>
         /// <param name="right"></param>
         /// <returns></returns>
-        public static bool operator >=(OpenXmlComparableReferenceType<T> left, OpenXmlComparableReferenceType<T> right)
+        public static bool operator >=(OpenXmlComparableSimpleReference<T> left, OpenXmlComparableSimpleReference<T> right)
         {
             return left is null ? right is null : left.CompareTo(right) >= 0;
         }

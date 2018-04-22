@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the decimal value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class DecimalValue : OpenXmlComparableValueType<decimal>
+    public class DecimalValue : OpenXmlComparableSimpleValue<decimal>
     {
         /// <summary>
         /// Initializes a new instance of the DecimalValue class.

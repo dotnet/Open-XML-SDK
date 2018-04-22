@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     [CLSCompliant(false)]
     [DebuggerDisplay("{InnerText}")]
-    public class UInt32Value : OpenXmlComparableValueType<uint>
+    public class UInt32Value : OpenXmlComparableSimpleValue<uint>
     {
         /// <summary>
         /// Initializes a new instance of the UInt32Value class.

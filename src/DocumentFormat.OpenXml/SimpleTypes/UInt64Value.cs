@@ -15,7 +15,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     [CLSCompliant(false)]
     [DebuggerDisplay("{InnerText}")]
-    public class UInt64Value : OpenXmlComparableValueType<ulong>
+    public class UInt64Value : OpenXmlComparableSimpleValue<ulong>
     {
         /// <summary>
         /// Initializes a new instance of the UInt64Value class.

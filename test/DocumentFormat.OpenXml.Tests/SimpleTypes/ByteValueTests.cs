@@ -3,7 +3,7 @@
 
 namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 {
-    public class ByteValueTests : OpenXmlComparableValueTypeTests<byte>
+    public class ByteValueTests : OpenXmlComparableSimpleValueTests<byte>
     {
         public ByteValueTests()
         {

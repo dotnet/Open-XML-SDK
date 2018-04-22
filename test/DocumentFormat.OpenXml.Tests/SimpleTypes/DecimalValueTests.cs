@@ -3,7 +3,7 @@
 
 namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 {
-    public class DecimalValueTests : OpenXmlComparableValueTypeTests<decimal>
+    public class DecimalValueTests : OpenXmlComparableSimpleValueTests<decimal>
     {
         public DecimalValueTests()
         {

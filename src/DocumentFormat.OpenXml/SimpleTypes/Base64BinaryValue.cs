@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the xsd:base64Binary value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class Base64BinaryValue : OpenXmlComparableReferenceType<string>
+    public class Base64BinaryValue : OpenXmlComparableSimpleReference<string>
     {
         /// <summary>
         /// Initializes a new instance of the Base64BinaryValue class.

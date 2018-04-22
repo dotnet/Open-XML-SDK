@@ -13,7 +13,7 @@ namespace DocumentFormat.OpenXml
     /// Defines an OnOffValue data type for attributes that have enum values that are Boolean values that represent: 'true' or 'false', 'on' or 'off', or '0' or '1'.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class OnOffValue : OpenXmlComparableValueType<bool>
+    public class OnOffValue : OpenXmlComparableSimpleValue<bool>
     {
         /// <summary>
         /// Initializes a new instance of <see cref="OnOffValue"/> class.

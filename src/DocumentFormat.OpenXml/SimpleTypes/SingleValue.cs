@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml
     /// Represents the Single value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class SingleValue : OpenXmlComparableValueType<float>
+    public class SingleValue : OpenXmlComparableSimpleValue<float>
     {
         /// <summary>
         /// Initializes a new instance of the SingleValue class.
