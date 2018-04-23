@@ -99,11 +99,11 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        ///
+        /// Determines whether the specified operands are equal.
         /// </summary>
-        /// <param name="left"></param>
-        /// <param name="right"></param>
-        /// <returns></returns>
+        /// <param name="left">The left operand, or null.</param>
+        /// <param name="right">The right operand, or null.</param>
+        /// <returns>True if the operands are equal; otherwise, false.</returns>
         public static bool operator ==(OpenXmlComparableSimpleReference<T> left, OpenXmlComparableSimpleReference<T> right)
         {
             if (left is null)
@@ -115,55 +115,55 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        ///
+        /// Determines whether the specified operands are not equal.
         /// </summary>
-        /// <param name="left"></param>
-        /// <param name="right"></param>
-        /// <returns></returns>
+        /// <param name="left">The left operand, or null.</param>
+        /// <param name="right">The right operand, or null.</param>
+        /// <returns>True if the operands are not equal; otherwise, false.</returns>
         public static bool operator !=(OpenXmlComparableSimpleReference<T> left, OpenXmlComparableSimpleReference<T> right)
         {
             return !(left == right);
         }
 
         /// <summary>
-        ///
+        /// Determines whether the left operand is less than the right operand.
         /// </summary>
-        /// <param name="left"></param>
-        /// <param name="right"></param>
-        /// <returns></returns>
+        /// <param name="left">The left operand, or null.</param>
+        /// <param name="right">The right operand, or null.</param>
+        /// <returns>True if the left operand is less than the right operand; otherwise, false.</returns>
         public static bool operator <(OpenXmlComparableSimpleReference<T> left, OpenXmlComparableSimpleReference<T> right)
         {
             return left is null ? !(right is null) : left.CompareTo(right) < 0;
         }
 
         /// <summary>
-        ///
+        /// Determines whether the left operand is less than or equal to the right operand.
         /// </summary>
-        /// <param name="left"></param>
-        /// <param name="right"></param>
-        /// <returns></returns>
+        /// <param name="left">The left operand, or null.</param>
+        /// <param name="right">The right operand, or null.</param>
+        /// <returns>True if the left operand is less than or equal to the right operand; otherwise, false.</returns>
         public static bool operator <=(OpenXmlComparableSimpleReference<T> left, OpenXmlComparableSimpleReference<T> right)
         {
             return left is null || left.CompareTo(right) <= 0;
         }
 
         /// <summary>
-        ///
+        /// Determines whether the left operand is greater than the right operand.
         /// </summary>
-        /// <param name="left"></param>
-        /// <param name="right"></param>
-        /// <returns></returns>
+        /// <param name="left">The left operand, or null.</param>
+        /// <param name="right">The right operand, or null.</param>
+        /// <returns>True if the left operand is greater than the right operand; otherwise, false.</returns>
         public static bool operator >(OpenXmlComparableSimpleReference<T> left, OpenXmlComparableSimpleReference<T> right)
         {
             return !(left is null) && left.CompareTo(right) > 0;
         }
 
         /// <summary>
-        ///
+        /// Determines whether the left operand is greater than or equal to the right operand.
         /// </summary>
-        /// <param name="left"></param>
-        /// <param name="right"></param>
-        /// <returns></returns>
+        /// <param name="left">The left operand, or null.</param>
+        /// <param name="right">The right operand, or null.</param>
+        /// <returns>True if the left operand is greater than or equal to the right operand; otherwise, false.</returns>
         public static bool operator >=(OpenXmlComparableSimpleReference<T> left, OpenXmlComparableSimpleReference<T> right)
         {
             return left is null ? right is null : left.CompareTo(right) >= 0;
