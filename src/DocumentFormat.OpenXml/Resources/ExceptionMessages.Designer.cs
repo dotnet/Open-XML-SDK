@@ -704,6 +704,15 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The reader is currently at a {0} but {1} was specified..
+        /// </summary>
+        internal static string ReaderIncorrectTypeOnLoad {
+            get {
+                return ResourceManager.GetString("ReaderIncorrectTypeOnLoad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The reader is now positioned at the end element tag..
         /// </summary>
         internal static string ReaderInEndState {

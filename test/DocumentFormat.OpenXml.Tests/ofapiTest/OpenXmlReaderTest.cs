@@ -2,6 +2,7 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Wordprocessing;
+using System;
 using System.IO;
 using System.Text;
 using Xunit;
@@ -537,6 +538,67 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.False(targetReader.IsMiscNode);
             Assert.Equal(typeof(Paragraph), targetReader.ElementType);
             Assert.True(string.IsNullOrEmpty(targetReader.GetText()));
+        }
+
+        ///<summary>
+        ///  A test for the LoadElement generic method.
+        ///</summary>
+        [Fact]
+        public void SuccessfulLoadElementGeneric()
+        {
+            string paragraphOuterXml = "<w:p w:rsidP=\"001\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:r><w:t>Run Text.</w:t><w:t>Run 2.</w:t></w:r></w:p>";
+            Paragraph para = new Paragraph(paragraphOuterXml);
+
+            OpenXmlReader targetReader = OpenXmlReader.Create(para);
+            targetReader.Read();
+
+            Paragraph readPara = targetReader.LoadElement<Paragraph>();
+
+            Assert.NotNull(readPara);
+            Assert.IsType<Paragraph>(readPara);
+            Assert.True(para.Equals(readPara));
+
+            targetReader.Close();
+        }
+
+        ///<summary>
+        ///  A test for the LoadElement generic method.
+        ///</summary>
+        [Fact]
+        public void ThrowingLoadElementGeneric()
+        {
+            string paragraphOuterXml = "<w:p w:rsidP=\"001\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:r><w:t>Run Text.</w:t><w:t>Run 2.</w:t></w:r></w:p>";
+            Paragraph para = new Paragraph(paragraphOuterXml);
+
+            OpenXmlReader targetReader = OpenXmlReader.Create(para);
+            targetReader.Read();
+
+            Assert.Throws<InvalidOperationException>(() => targetReader.LoadElement<Picture>());
+
+            targetReader.Close();
+        }
+
+        ///<summary>
+        ///  A test for the TryLoadElement generic method.
+        ///</summary>
+        [Fact]
+        public void TryLoadElementGeneric()
+        {
+            string paragraphOuterXml = "<w:p w:rsidP=\"001\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\"><w:r><w:t>Run Text.</w:t><w:t>Run 2.</w:t></w:r></w:p>";
+            Paragraph para = new Paragraph(paragraphOuterXml);
+
+            OpenXmlReader targetReader = OpenXmlReader.Create(para);
+            targetReader.Read();
+
+            Assert.False(targetReader.TryLoadElement(out Picture fakePicture));
+            Assert.Null(fakePicture);
+
+            Assert.True(targetReader.TryLoadElement(out Paragraph readPara));
+            Assert.NotNull(readPara);
+            Assert.IsType<Paragraph>(readPara);
+            Assert.True(para.Equals(readPara));
+
+            targetReader.Close();
         }
     }
 }
