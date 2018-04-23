@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Attributes.Formatter;
-
 namespace DocumentFormat.OpenXml.Attributes.Translator
 {
     internal class CnfStyleTagAttributeTranslator : TagAttributeTranslator
@@ -18,8 +16,9 @@ namespace DocumentFormat.OpenXml.Attributes.Translator
             arrayOfOrigAttrValues = null;
             arrayOfNewAttrValues = null;
             arrayOfAttrTraits = arrayOfTagAttrTraits;
-            formatter = new BinAttributeFormatter(arrayOfTagAttrTraits.Length);
         }
+
+        public override IValueConverter Converter { get; } = new BinaryValueConverter(arrayOfTagAttrTraits.Length);
 
         /// <summary>
         /// Set the index to specify the attribute name to translate.
