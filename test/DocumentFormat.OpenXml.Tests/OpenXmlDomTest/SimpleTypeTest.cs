@@ -106,15 +106,10 @@ namespace DocumentFormat.OpenXml.Tests
             objA = new EnumValue<HeaderFooterValues>(validValue);
             simpleValueValidTest(new EnumValue<HeaderFooterValues>(objA), validValue, validString0); // O14: 253871
 
-            Log.Comment("Verifying reference type behavior...");
+            Log.Comment("Verifying equality...");
             objA = new EnumValue<HeaderFooterValues>(validValue);
             objB = new EnumValue<HeaderFooterValues>(validValue);
-
-            // This is the previous assertion, which fails due to the proposed change:
-            // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
-
-            // This is the changed assertion, which passes based on the proposed change:
-            Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+            Assert.True(objA.Equals(objB));
 
             objA = new EnumValue<HeaderFooterValues>(validValue);
             objB = objA;
@@ -429,15 +424,10 @@ namespace DocumentFormat.OpenXml.Tests
             objA = new StringValue(validValue);
             simpleValueValidTest(new StringValue(objA), validValue, validValue.ToString());
 
-            Log.Comment("Verifying reference type behavior...");
+            Log.Comment("Verifying equality...");
             objA = new StringValue(validValue);
             objB = new StringValue(validValue);
-
-            // This is the previous assertion, which fails due to the proposed change:
-            // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
-
-            // This is the changed assertion, which passes based on the proposed change:
-            Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+            Assert.True(objA.Equals(objB));
 
             objA = new StringValue(validValue);
             objB = objA;
@@ -561,15 +551,10 @@ namespace DocumentFormat.OpenXml.Tests
             objA = new Base64BinaryValue(validValue);
             simpleValueValidTest(new Base64BinaryValue(objA), validValue, validValue.ToString());
 
-            Log.Comment("Verifying reference type behavior...");
+            Log.Comment("Verifying equality...");
             objA = new Base64BinaryValue(validValue);
             objB = new Base64BinaryValue(validValue);
-
-            // This is the previous assertion, which fails due to the proposed change:
-            // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
-
-            // This is the changed assertion, which passes based on the proposed change:
-            Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+            Assert.True(objA.Equals(objB));
 
             objA = new Base64BinaryValue(validValue);
             objB = objA;
@@ -689,15 +674,10 @@ namespace DocumentFormat.OpenXml.Tests
             objA = new HexBinaryValue(validValue);
             simpleValueValidTest(new HexBinaryValue(objA), validValue, validValue.ToString());
 
-            Log.Comment("Verifying reference type behavior...");
+            Log.Comment("Verifying equality...");
             objA = new HexBinaryValue(validValue);
             objB = new HexBinaryValue(validValue);
-
-            // This is the previous assertion, which fails due to the proposed change:
-            // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
-
-            // This is the changed assertion, which passes based on the proposed change:
-            Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+            Assert.True(objA.Equals(objB));
 
             objA = new HexBinaryValue(validValue);
             objB = objA;
@@ -808,15 +788,10 @@ namespace DocumentFormat.OpenXml.Tests
             objA = new OnOffValue(validValue);
             simpleTypeValueValidTest(new OnOffValue(objA), validValue, validValue == true ? validValueTrue : validValueFalse);
 
-            Log.Comment("Verifying reference type behavior...");
+            Log.Comment("Verifying equality...");
             objA = new OnOffValue(validValue);
             objB = new OnOffValue(validValue);
-
-            // This is the previous assertion, which fails due to the proposed change:
-            // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
-
-            // This is the changed assertion, which passes based on the proposed change:
-            Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+            Assert.True(objA.Equals(objB));
 
             objA = new OnOffValue(validValue);
             objB = objA;
@@ -923,15 +898,10 @@ namespace DocumentFormat.OpenXml.Tests
             objA = new TrueFalseBlankValue(validValue);
             simpleTypeValueValidTest(new TrueFalseBlankValue(objA), validValue, validValue == true ? validValueTrue : validValueFalse);
 
-            Log.Comment("Verifying reference type behavior...");
+            Log.Comment("Verifying equality...");
             objA = new TrueFalseBlankValue(validValue);
             objB = new TrueFalseBlankValue(validValue);
-
-            // This is the previous assertion, which fails due to the proposed change:
-            // Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
-
-            // This is the changed assertion, which passes based on the proposed change:
-            Log.VerifyTrue(object.Equals(objA, objB), "Two instances with same value but constructed separated are NOT equal.");
+            Assert.True(objA.Equals(objB));
 
             objA = new TrueFalseBlankValue(validValue);
             objB = objA;
