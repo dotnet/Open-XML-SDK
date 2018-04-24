@@ -4,19 +4,21 @@
 using System;
 using System.Diagnostics;
 
+// See https://github.com/dotnet/roslyn-analyzers/issues/1671
+#pragma warning disable CA1036
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents the data type for attributes that have enum values that are Boolean values that represent 't' or 'f', or 'true' or 'false'.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class TrueFalseBlankValue : OpenXmlSimpleValue<bool>
+    public class TrueFalseBlankValue : OpenXmlComparableSimpleValue<bool>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="TrueFalseBlankValue"/> class.
         /// </summary>
         public TrueFalseBlankValue()
-            : base()
         {
         }
 

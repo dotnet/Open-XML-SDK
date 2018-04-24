@@ -5,19 +5,21 @@ using System;
 using System.Diagnostics;
 using System.Xml;
 
+// See https://github.com/dotnet/roslyn-analyzers/issues/1671
+#pragma warning disable CA1036
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents the decimal value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class DecimalValue : OpenXmlSimpleValue<decimal>
+    public class DecimalValue : OpenXmlComparableSimpleValue<decimal>
     {
         /// <summary>
         /// Initializes a new instance of the DecimalValue class.
         /// </summary>
         public DecimalValue()
-            : base()
         {
         }
 

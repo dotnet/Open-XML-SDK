@@ -4,19 +4,21 @@
 using System;
 using System.Diagnostics;
 
+// See https://github.com/dotnet/roslyn-analyzers/issues/1671
+#pragma warning disable CA1036
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents the string value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class StringValue : OpenXmlSimpleType
+    public class StringValue : OpenXmlComparableSimpleReference<string>
     {
         /// <summary>
         /// Initializes a new instance of the StringValue class.
         /// </summary>
         public StringValue()
-            : base()
         {
         }
 
@@ -25,7 +27,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The string value.</param>
         public StringValue(string value)
-            : base()
         {
             TextValue = value;
         }
@@ -42,10 +43,10 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets or sets the string value.
         /// </summary>
-        public string Value
+        public override string Value
         {
-            get { return TextValue; }
-            set { TextValue = value; }
+            get => TextValue;
+            set => TextValue = value;
         }
 
         /// <summary>

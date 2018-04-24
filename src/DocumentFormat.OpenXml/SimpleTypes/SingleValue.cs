@@ -5,19 +5,21 @@ using System;
 using System.Diagnostics;
 using System.Xml;
 
+// See https://github.com/dotnet/roslyn-analyzers/issues/1671
+#pragma warning disable CA1036
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents the Single value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class SingleValue : OpenXmlSimpleValue<float>
+    public class SingleValue : OpenXmlComparableSimpleValue<float>
     {
         /// <summary>
         /// Initializes a new instance of the SingleValue class.
         /// </summary>
         public SingleValue()
-            : base()
         {
         }
 

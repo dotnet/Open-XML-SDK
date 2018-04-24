@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace DocumentFormat.OpenXml.Packaging.Tests
+namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 {
     public class EnumStringLookupTests
     {
@@ -23,12 +23,12 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         [Fact]
         public void SingleItemWithNameTest()
         {
-            const string Name = "name";
+            const string name = "name";
 
-            Assert.True(EnumStringLookup<SingleItemWithName>.TryParse(Name, out var item));
+            Assert.True(EnumStringLookup<SingleItemWithName>.TryParse(name, out var item));
             Assert.Equal(SingleItemWithName.Item, item);
 
-            Assert.Equal(Name, EnumStringLookup<SingleItemWithName>.ToString(SingleItemWithName.Item));
+            Assert.Equal(name, EnumStringLookup<SingleItemWithName>.ToString(SingleItemWithName.Item));
             Assert.Equal(FileFormatVersions.Office2007.AndLater(), EnumStringLookup<SingleItemWithName>.GetVersion(SingleItemWithName.Item));
         }
 

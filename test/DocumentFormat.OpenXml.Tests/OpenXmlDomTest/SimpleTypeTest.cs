@@ -106,10 +106,11 @@ namespace DocumentFormat.OpenXml.Tests
             objA = new EnumValue<HeaderFooterValues>(validValue);
             simpleValueValidTest(new EnumValue<HeaderFooterValues>(objA), validValue, validString0); // O14: 253871
 
-            Log.Comment("Verifying reference type behavior...");
+            Log.Comment("Verifying equality...");
             objA = new EnumValue<HeaderFooterValues>(validValue);
             objB = new EnumValue<HeaderFooterValues>(validValue);
-            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Assert.True(objA.Equals(objB));
+
             objA = new EnumValue<HeaderFooterValues>(validValue);
             objB = objA;
             Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
@@ -423,10 +424,11 @@ namespace DocumentFormat.OpenXml.Tests
             objA = new StringValue(validValue);
             simpleValueValidTest(new StringValue(objA), validValue, validValue.ToString());
 
-            Log.Comment("Verifying reference type behavior...");
+            Log.Comment("Verifying equality...");
             objA = new StringValue(validValue);
             objB = new StringValue(validValue);
-            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Assert.True(objA.Equals(objB));
+
             objA = new StringValue(validValue);
             objB = objA;
             Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
@@ -549,10 +551,11 @@ namespace DocumentFormat.OpenXml.Tests
             objA = new Base64BinaryValue(validValue);
             simpleValueValidTest(new Base64BinaryValue(objA), validValue, validValue.ToString());
 
-            Log.Comment("Verifying reference type behavior...");
+            Log.Comment("Verifying equality...");
             objA = new Base64BinaryValue(validValue);
             objB = new Base64BinaryValue(validValue);
-            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Assert.True(objA.Equals(objB));
+
             objA = new Base64BinaryValue(validValue);
             objB = objA;
             Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
@@ -671,10 +674,11 @@ namespace DocumentFormat.OpenXml.Tests
             objA = new HexBinaryValue(validValue);
             simpleValueValidTest(new HexBinaryValue(objA), validValue, validValue.ToString());
 
-            Log.Comment("Verifying reference type behavior...");
+            Log.Comment("Verifying equality...");
             objA = new HexBinaryValue(validValue);
             objB = new HexBinaryValue(validValue);
-            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Assert.True(objA.Equals(objB));
+
             objA = new HexBinaryValue(validValue);
             objB = objA;
             Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
@@ -784,10 +788,11 @@ namespace DocumentFormat.OpenXml.Tests
             objA = new OnOffValue(validValue);
             simpleTypeValueValidTest(new OnOffValue(objA), validValue, validValue == true ? validValueTrue : validValueFalse);
 
-            Log.Comment("Verifying reference type behavior...");
+            Log.Comment("Verifying equality...");
             objA = new OnOffValue(validValue);
             objB = new OnOffValue(validValue);
-            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Assert.True(objA.Equals(objB));
+
             objA = new OnOffValue(validValue);
             objB = objA;
             Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");
@@ -893,10 +898,11 @@ namespace DocumentFormat.OpenXml.Tests
             objA = new TrueFalseBlankValue(validValue);
             simpleTypeValueValidTest(new TrueFalseBlankValue(objA), validValue, validValue == true ? validValueTrue : validValueFalse);
 
-            Log.Comment("Verifying reference type behavior...");
+            Log.Comment("Verifying equality...");
             objA = new TrueFalseBlankValue(validValue);
             objB = new TrueFalseBlankValue(validValue);
-            Log.VerifyFalse(object.Equals(objA, objB), "Two instances with same value but constructed separated are Equal.");
+            Assert.True(objA.Equals(objB));
+
             objA = new TrueFalseBlankValue(validValue);
             objB = objA;
             Log.VerifyTrue(object.ReferenceEquals(objA, objB), "Assigned instance is NOT reference equal to original one.");

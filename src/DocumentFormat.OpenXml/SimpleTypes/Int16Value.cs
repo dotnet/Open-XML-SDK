@@ -5,19 +5,21 @@ using System;
 using System.Diagnostics;
 using System.Xml;
 
+// See https://github.com/dotnet/roslyn-analyzers/issues/1671
+#pragma warning disable CA1036
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents the Int16 value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class Int16Value : OpenXmlSimpleValue<short>
+    public class Int16Value : OpenXmlComparableSimpleValue<short>
     {
         /// <summary>
         /// Initializes a new instance of the Int16Value class.
         /// </summary>
         public Int16Value()
-            : base()
         {
         }
 

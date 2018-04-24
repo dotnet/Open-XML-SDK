@@ -5,19 +5,21 @@ using System;
 using System.Diagnostics;
 using System.Xml;
 
+// See https://github.com/dotnet/roslyn-analyzers/issues/1671
+#pragma warning disable CA1036
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents the byte value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class ByteValue : OpenXmlSimpleValue<byte>
+    public class ByteValue : OpenXmlComparableSimpleValue<byte>
     {
         /// <summary>
         /// Initializes a new instance of the ByteValue class.
         /// </summary>
         public ByteValue()
-            : base()
         {
         }
 
