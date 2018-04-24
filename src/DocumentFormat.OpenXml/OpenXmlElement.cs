@@ -1791,11 +1791,11 @@ namespace DocumentFormat.OpenXml
                             {
                                 // If the attributes array are not null, we need to get the bitField.
                                 string strValue = FixedAttributesArray[index].InnerText;
-                                bitField = translator.Formatter.StringToValue(strValue);
+                                bitField = translator.Converter.StringToValue(strValue);
                             }
 
                             bitField = (value == "true" || value == "1") ? (bitField | translator.Trait) : (bitField & ~translator.Trait);
-                            value = translator.Formatter.ValueToString(bitField);
+                            value = translator.Converter.ValueToString(bitField);
                         }
 
                         // If attributeValue for the index is not available, create and set it.
