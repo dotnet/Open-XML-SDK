@@ -6,16 +6,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## Version 2.9.0 - [vNext]
 ### Added
-- ListValue now implements IEnumerable<T> (#385)
-- Added a WebExtension.Frozen and obsoleted misspelled `Fronzen` property (#460)
-- Added an OpenXmlPackage.CanSave property that indicates whether a platform supports saving without closing the package (#468)
-- Simple types (except EnumValue and ListValue) now implement IComparable and IEquatable (#487)
+- `ListValue` now implements `IEnumerable<T>` (#385)
+- Added a `WebExtension.Frozen` and obsoleted misspelled `Fronzen` property (#460)
+- Added an `OpenXmlPackage.CanSave` property that indicates whether a platform supports saving without closing the package (#468)
+- Simple types (except `EnumValue` and `ListValue`) now implement `IComparable<T>` and `IEquatable<T>` (#487)
 
 ### Changed
 - Removed state that was carried in validators that would hold onto packages when not in use (#390)
-- EnumSimpleType parsing was improved and uses less allocations and caches for future use (#408)
+- `EnumSimpleType` parsing was improved and uses less allocations and caches for future use (#408)
 - Fixed a number of spelling mistakes in documentation (#462)
-- When calling OpenXmlPackage.Save on .NET Framework, the package is now flushed to the stream (#468)
+- When calling `OpenXmlPackage.Save` on .NET Framework, the package is now flushed to the stream (#468)
 - Schema data for validation uses a more compact format leading to a reduction in dll size and performance improvements for loading (#482, #483)
 - A number of APIs are marked as obsolete as they have simple workarounds and will be removed in the next major change
 
