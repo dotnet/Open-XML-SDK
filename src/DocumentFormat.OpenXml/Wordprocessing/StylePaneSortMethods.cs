@@ -20,6 +20,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             { "type", "0005" },
         };
 
+        /// <remarks>
+        /// See §14.11.5 of ISO/IEC 29500-4 for details on this translation
+        /// </remarks>
         private protected override bool StrictTranslateAttribute(string namespaceUri, string localName, string value)
         {
             if (string.Equals(StrictTranslationLocalName, localName, StringComparison.Ordinal) && s_attributeMap.TryGetValue(value, out var result))

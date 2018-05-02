@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Attributes;
 using System;
 using System.Collections.Generic;
 
@@ -21,6 +20,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             { "noVBand", 0x400},
         };
 
+        /// <remarks>
+        /// See §14.4.11 of ISO/IEC 29500-4 for details on this translation
+        /// </remarks>
         private protected override bool StrictTranslateAttribute(string namespaceUri, string localName, string value)
         {
             if (s_attributeMap.TryGetValue(localName, out var result))
@@ -32,18 +34,36 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 
                 if (index >= 0 && FixedAttributesArray[index] is OpenXmlSimpleType simpleType)
                 {
-                    var current = HexValueConverter.Instance.StringToValue(simpleType.InnerText);
+                    var current = StringToValue(simpleType.InnerText);
                     var combined = isValueTrue ? (current | result) : (current & ~result);
 
-                    value = HexValueConverter.Instance.ValueToString(combined);
+                    value = ValueToString(combined);
                 }
                 else
                 {
-                    value = HexValueConverter.Instance.ValueToString(isValueTrue ? result : 0);
+                    value = ValueToString(isValueTrue ? result : 0);
                 }
             }
 
             return base.StrictTranslateAttribute(namespaceUri, localName, value);
+        }
+
+        /// <remarks>
+        /// According to §14.4.11 of ISO/IEC 29500-4, the string representation of the value must conform to ST_ShortHexNumber as described in §17.18.79 of ISO/IEC 29500-1
+        /// </remarks>
+        private static string ValueToString(long value) => Convert.ToString(value, 16).PadLeft(4, '0');
+
+        private static long StringToValue(string str)
+        {
+            try
+            {
+                return Convert.ToInt64(str);
+            }
+            catch (Exception)
+            {
+                // TODO: Log or allow user to handle in some way?
+                return 0;
+            }
         }
     }
 }

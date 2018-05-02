@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Attributes;
 using System;
 using System.Collections.Generic;
 
@@ -9,7 +8,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 {
     public partial class ConditionalFormatStyle
     {
-        private static readonly BinaryValueConverter s_converter = new BinaryValueConverter(12);
         private static readonly Dictionary<string, long> s_attributeMap = new Dictionary<string, long>(StringComparer.Ordinal)
         {
             { "firstRow", 0x800 },
@@ -26,6 +24,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             { "lastRowLastColumn", 0x001 },
         };
 
+        /// <remarks>
+        /// See §14.4.9/§14.11.9 of ISO/IEC 29500-4 for details on this translation
+        /// </remarks>
         private protected override bool StrictTranslateAttribute(string namespaceUri, string localName, string value)
         {
             if (s_attributeMap.TryGetValue(localName, out var result))
@@ -37,18 +38,36 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 
                 if (index >= 0 && FixedAttributesArray[index] is OpenXmlSimpleType simpleType)
                 {
-                    var current = s_converter.StringToValue(simpleType.InnerText);
+                    var current = StringToValue(simpleType.InnerText);
                     var combined = isValueTrue ? (current | result) : (current & ~result);
 
-                    value = s_converter.ValueToString(combined);
+                    value = ValueToString(combined);
                 }
                 else
                 {
-                    value = s_converter.ValueToString(isValueTrue ? result : 0);
+                    value = ValueToString(isValueTrue ? result : 0);
                 }
             }
 
             return base.StrictTranslateAttribute(namespaceUri, localName, value);
+        }
+
+        /// <remarks>
+        /// §14.11.9 of ISO/IEC 29500-4 specifies that this must be 12 characters, so it is padded with 0 on the left
+        /// </remarks>
+        private static string ValueToString(long value) => Convert.ToString(value, 2).PadLeft(12, '0');
+
+        private static long StringToValue(string str)
+        {
+            try
+            {
+                return Convert.ToInt64(str, 2);
+            }
+            catch (Exception)
+            {
+                // TODO: Log or allow user to handle in some way?
+                return 0;
+            }
         }
     }
 }

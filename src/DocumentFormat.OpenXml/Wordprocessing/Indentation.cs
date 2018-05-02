@@ -16,6 +16,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
             { "rightChars", "endChars" },
         };
 
+        /// <remarks>
+        /// See §14.3.1.2 of ISO/IEC 29500-4 for details on this translation
+        /// </remarks>
         private protected override bool StrictTranslateAttribute(string namespaceUri, string localName, string value)
         {
             if (s_attributeMap.TryGetValue(localName, out var result))
