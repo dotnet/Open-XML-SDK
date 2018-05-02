@@ -6,14 +6,19 @@ using DocumentFormat.OpenXml.Validation.Schema;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using Xunit;
 
 namespace DocumentFormat.OpenXml.Benchmarks
 {
-    public partial class Tests
+    public class SchemaData
     {
         private List<OpenXmlElement> _types;
-        private FileFormatVersions _version;
+
+        [ParamsSource(nameof(AllVersions))]
+        public FileFormatVersions Version { get; set; }
+
+        public IEnumerable<FileFormatVersions> AllVersions => Enum.GetValues(typeof(FileFormatVersions)).Cast<FileFormatVersions>().Where(f => f != FileFormatVersions.None);
 
         private static readonly HashSet<Type> _excludedTypes = new HashSet<Type>
         {
@@ -24,26 +29,26 @@ namespace DocumentFormat.OpenXml.Benchmarks
             typeof(AlternateContentFallback),
         };
 
+        [GlobalSetup]
         public void SetupSchemaData()
         {
             _types = typeof(OpenXmlElement)
+                .GetTypeInfo()
                 .Assembly
                 .GetTypes()
-                .Where(typeof(OpenXmlElement).IsAssignableFrom)
-                .Where(type => !type.IsAbstract && !_excludedTypes.Contains(type))
+                .Where(t => typeof(OpenXmlElement).IsAssignableFrom(t))
+                .Where(type => !type.GetTypeInfo().IsAbstract && !_excludedTypes.Contains(type))
                 .Select(type => Activator.CreateInstance(type, true))
                 .Cast<OpenXmlElement>()
                 .Where(o => o != null)
+                .Where(o=>o.IsInVersion(Version))
                 .ToList();
-            _version = (FileFormatVersions)Enum.GetValues(typeof(FileFormatVersions))
-                .Cast<int>()
-                .Max();
         }
 
         [Benchmark]
         public void LoadData()
         {
-            var data = SdbSchemaData.GetSchemaData(_version);
+            var data = SdbSchemaData.GetSchemaData(Version);
 
             foreach (var type in _types)
             {
