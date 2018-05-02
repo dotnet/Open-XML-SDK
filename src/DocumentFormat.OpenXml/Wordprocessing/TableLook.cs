@@ -57,7 +57,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
             try
             {
-                return Convert.ToInt64(str);
+                return Convert.ToInt64(str, 16);
             }
             catch (Exception)
             {
