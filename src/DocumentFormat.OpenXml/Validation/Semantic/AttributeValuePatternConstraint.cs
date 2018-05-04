@@ -33,15 +33,15 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            OpenXmlSimpleType attributeValue = context.Element.Attributes[_attribute];
+            var attribute = context.Element.Attributes[_attribute];
 
             //if the attribute is omitted, semantic validation will do nothing
-            if (attributeValue == null || string.IsNullOrEmpty(attributeValue.InnerText))
+            if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
                 return null;
             }
 
-            if (_pattern.IsMatch(attributeValue.InnerText))
+            if (_pattern.IsMatch(attribute.Value.InnerText))
             {
                 return null;
             }
@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 ErrorType = ValidationErrorType.Schema,
                 Node = context.Element,
                 Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_AttributeValueDataTypeDetailed,
-                                            GetAttributeQualifiedName(context.Element, _attribute), attributeValue.InnerText, subMsg),
+                                            GetAttributeQualifiedName(context.Element, _attribute), attribute.Value.InnerText, subMsg),
             };
         }
     }

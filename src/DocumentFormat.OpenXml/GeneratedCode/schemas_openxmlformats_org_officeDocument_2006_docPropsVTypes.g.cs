@@ -682,7 +682,6 @@ if( 5 == namespaceId && "cf" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Variant>(deep);
 
@@ -755,13 +754,12 @@ public partial class VTVector : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "baseType","size" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues>>(0, "baseType"),
+		AttributeTag.Create<UInt32Value>(0, "size")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -771,8 +769,8 @@ public partial class VTVector : OpenXmlCompositeElement
     [SchemaAttr(0, "baseType")]
     public EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues> BaseType
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -782,8 +780,8 @@ public partial class VTVector : OpenXmlCompositeElement
     [SchemaAttr(0, "size")]
     public UInt32Value Size
     {
-        get { return (UInt32Value)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (UInt32Value)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
@@ -891,19 +889,6 @@ if( 5 == namespaceId && "cf" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "baseType" == name)
-    return new EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues>();
-    
-if( 0 == namespaceId && "size" == name)
-    return new UInt32Value();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTVector>(deep);
 
@@ -968,13 +953,13 @@ public partial class VTArray : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "lBound","uBound","baseType" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<Int32Value>(0, "lBound"),
+		AttributeTag.Create<Int32Value>(0, "uBound"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues>>(0, "baseType")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -984,8 +969,8 @@ public partial class VTArray : OpenXmlCompositeElement
     [SchemaAttr(0, "lBound")]
     public Int32Value LowerBounds
     {
-        get { return (Int32Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (Int32Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -995,8 +980,8 @@ public partial class VTArray : OpenXmlCompositeElement
     [SchemaAttr(0, "uBound")]
     public Int32Value UpperBounds
     {
-        get { return (Int32Value)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (Int32Value)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -1006,8 +991,8 @@ public partial class VTArray : OpenXmlCompositeElement
     [SchemaAttr(0, "baseType")]
     public EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues> BaseType
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
 
@@ -1103,22 +1088,6 @@ if( 5 == namespaceId && "cy" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "lBound" == name)
-    return new Int32Value();
-    
-if( 0 == namespaceId && "uBound" == name)
-    return new Int32Value();
-    
-if( 0 == namespaceId && "baseType" == name)
-    return new EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTArray>(deep);
 
@@ -1421,7 +1390,6 @@ public partial class VTEmpty : OpenXmlLeafElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTEmpty>(deep);
 
@@ -1457,7 +1425,6 @@ public partial class VTNull : OpenXmlLeafElement
     
       
      
-    
     
     
     
@@ -1512,7 +1479,6 @@ public partial class VTByte : OpenXmlLeafTextElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTByte>(deep);
 
@@ -1561,7 +1527,6 @@ public partial class VTShort : OpenXmlLeafTextElement
     }
     
  
-    
     
     
     
@@ -1704,7 +1669,6 @@ public partial class VTInt64 : OpenXmlLeafTextElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTInt64>(deep);
 
@@ -1756,7 +1720,6 @@ public partial class VTUnsignedByte : OpenXmlLeafTextElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedByte>(deep);
 
@@ -1805,7 +1768,6 @@ public partial class VTUnsignedShort : OpenXmlLeafTextElement
     }
     
  
-    
     
     
     
@@ -1948,7 +1910,6 @@ public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedInt64>(deep);
 
@@ -1997,7 +1958,6 @@ public partial class VTFloat : OpenXmlLeafTextElement
     }
     
  
-    
     
     
     
@@ -2052,7 +2012,6 @@ public partial class VTDouble : OpenXmlLeafTextElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTDouble>(deep);
 
@@ -2101,7 +2060,6 @@ public partial class VTDecimal : OpenXmlLeafTextElement
     }
     
  
-    
     
     
     
@@ -2376,7 +2334,6 @@ public partial class VTBool : OpenXmlLeafTextElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTBool>(deep);
 
@@ -2425,7 +2382,6 @@ public partial class VTCurrency : OpenXmlLeafTextElement
     }
     
  
-    
     
     
     
@@ -2480,7 +2436,6 @@ public partial class VTError : OpenXmlLeafTextElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTError>(deep);
 
@@ -2506,13 +2461,11 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "version" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "version")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -2522,8 +2475,8 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
     [SchemaAttr(0, "version")]
     public StringValue Version
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -2550,16 +2503,6 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "version" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTVStreamData>(deep);
 
@@ -2611,7 +2554,6 @@ public partial class VTClassId : OpenXmlLeafTextElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTClassId>(deep);
 
@@ -2637,13 +2579,12 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "format","size" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<Int32Value>(0, "format"),
+		AttributeTag.Create<UInt32Value>(0, "size")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -2653,8 +2594,8 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
     [SchemaAttr(0, "format")]
     public Int32Value Format
     {
-        get { return (Int32Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (Int32Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -2664,8 +2605,8 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
     [SchemaAttr(0, "size")]
     public UInt32Value Size
     {
-        get { return (UInt32Value)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (UInt32Value)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
@@ -2692,19 +2633,6 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "format" == name)
-    return new Int32Value();
-    
-if( 0 == namespaceId && "size" == name)
-    return new UInt32Value();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTClipboardData>(deep);
 

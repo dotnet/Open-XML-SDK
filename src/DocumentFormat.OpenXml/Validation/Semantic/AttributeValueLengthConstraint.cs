@@ -29,15 +29,15 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            OpenXmlSimpleType attribute = context.Element.Attributes[_attribute];
+            var attribute = context.Element.Attributes[_attribute];
 
             //if the attribute is omitted, semantic validation will do nothing
-            if (attribute == null)
+            if (!attribute.HasValue)
             {
                 return null;
             }
 
-            string attributeValue = attribute.InnerText == null ? string.Empty : attribute.InnerText;
+            string attributeValue = attribute.Value.InnerText ?? string.Empty;
 
             string subMsg = null;
 

@@ -29,13 +29,36 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "idQ","idMso","tag","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -45,8 +68,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -56,8 +79,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -67,8 +90,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -78,8 +101,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -89,8 +112,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -100,8 +123,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -111,8 +134,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -122,8 +145,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -133,8 +156,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -144,8 +167,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -155,8 +178,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (BooleanValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -166,8 +189,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -177,8 +200,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -188,8 +211,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -199,8 +222,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -210,8 +233,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -221,8 +244,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -232,8 +255,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -243,8 +266,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (BooleanValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -254,8 +277,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -265,8 +288,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -276,8 +299,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -287,8 +310,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (BooleanValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -298,8 +321,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -309,8 +332,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (BooleanValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -320,8 +343,8 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
 
@@ -335,91 +358,6 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnsizedControlClone>(deep);
 
@@ -445,13 +383,40 @@ public partial class UnsizedButton : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","idMso","tag","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "onAction"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "description"),
+		AttributeTag.Create<StringValue>(0, "getDescription"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -461,8 +426,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -472,8 +437,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (BooleanValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -483,8 +448,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -494,8 +459,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "description")]
     public StringValue Description
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -505,8 +470,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -516,8 +481,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -527,8 +492,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -538,8 +503,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -549,8 +514,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -560,8 +525,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -571,8 +536,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -582,8 +547,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -593,8 +558,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -604,8 +569,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -615,8 +580,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -626,8 +591,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -637,8 +602,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -648,8 +613,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -659,8 +624,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -670,8 +635,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -681,8 +646,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -692,8 +657,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -703,8 +668,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (BooleanValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -714,8 +679,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -725,8 +690,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (StringValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -736,8 +701,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -747,8 +712,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (BooleanValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -758,8 +723,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -769,8 +734,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (BooleanValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -780,8 +745,8 @@ public partial class UnsizedButton : OpenXmlLeafElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (StringValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
 
@@ -795,103 +760,6 @@ public partial class UnsizedButton : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnsizedButton>(deep);
 
@@ -917,13 +785,34 @@ public partial class CheckBox : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "getPressed","onAction","enabled","getEnabled","description","getDescription","id","idQ","idMso","tag","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "getPressed"),
+		AttributeTag.Create<StringValue>(0, "onAction"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "description"),
+		AttributeTag.Create<StringValue>(0, "getDescription"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -933,8 +822,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "getPressed")]
     public StringValue GetPressed
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -944,8 +833,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -955,8 +844,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (BooleanValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -966,8 +855,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -977,8 +866,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "description")]
     public StringValue Description
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -988,8 +877,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -999,8 +888,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -1010,8 +899,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -1021,8 +910,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -1032,8 +921,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -1043,8 +932,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -1054,8 +943,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -1065,8 +954,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -1076,8 +965,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -1087,8 +976,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -1098,8 +987,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -1109,8 +998,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -1120,8 +1009,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -1131,8 +1020,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -1142,8 +1031,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -1153,8 +1042,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (BooleanValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -1164,8 +1053,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -1175,8 +1064,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -1186,8 +1075,8 @@ public partial class CheckBox : OpenXmlLeafElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
 
@@ -1201,85 +1090,6 @@ public partial class CheckBox : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "getPressed" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CheckBox>(deep);
 
@@ -1314,13 +1124,58 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "description","getDescription","invalidateContentOnDrop","columns","rows","itemWidth","itemHeight","getItemWidth","getItemHeight","showItemLabel","onAction","enabled","getEnabled","image","imageMso","getImage","showItemImage","getItemCount","getItemLabel","getItemScreentip","getItemSupertip","getItemImage","getItemID","sizeString","getSelectedItemID","getSelectedItemIndex","id","idQ","idMso","tag","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "description"),
+		AttributeTag.Create<StringValue>(0, "getDescription"),
+		AttributeTag.Create<BooleanValue>(0, "invalidateContentOnDrop"),
+		AttributeTag.Create<IntegerValue>(0, "columns"),
+		AttributeTag.Create<IntegerValue>(0, "rows"),
+		AttributeTag.Create<IntegerValue>(0, "itemWidth"),
+		AttributeTag.Create<IntegerValue>(0, "itemHeight"),
+		AttributeTag.Create<StringValue>(0, "getItemWidth"),
+		AttributeTag.Create<StringValue>(0, "getItemHeight"),
+		AttributeTag.Create<BooleanValue>(0, "showItemLabel"),
+		AttributeTag.Create<StringValue>(0, "onAction"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<BooleanValue>(0, "showItemImage"),
+		AttributeTag.Create<StringValue>(0, "getItemCount"),
+		AttributeTag.Create<StringValue>(0, "getItemLabel"),
+		AttributeTag.Create<StringValue>(0, "getItemScreentip"),
+		AttributeTag.Create<StringValue>(0, "getItemSupertip"),
+		AttributeTag.Create<StringValue>(0, "getItemImage"),
+		AttributeTag.Create<StringValue>(0, "getItemID"),
+		AttributeTag.Create<StringValue>(0, "sizeString"),
+		AttributeTag.Create<StringValue>(0, "getSelectedItemID"),
+		AttributeTag.Create<StringValue>(0, "getSelectedItemIndex"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -1330,8 +1185,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "description")]
     public StringValue Description
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -1341,8 +1196,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -1352,8 +1207,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "invalidateContentOnDrop")]
     public BooleanValue InvalidateContentOnDrop
     {
-        get { return (BooleanValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (BooleanValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -1363,8 +1218,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "columns")]
     public IntegerValue Columns
     {
-        get { return (IntegerValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (IntegerValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -1374,8 +1229,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "rows")]
     public IntegerValue Rows
     {
-        get { return (IntegerValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (IntegerValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -1385,8 +1240,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "itemWidth")]
     public IntegerValue ItemWidth
     {
-        get { return (IntegerValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (IntegerValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -1396,8 +1251,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "itemHeight")]
     public IntegerValue ItemHeight
     {
-        get { return (IntegerValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (IntegerValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -1407,8 +1262,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemWidth")]
     public StringValue GetItemWidth
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -1418,8 +1273,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemHeight")]
     public StringValue GetItemHeight
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -1429,8 +1284,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "showItemLabel")]
     public BooleanValue ShowItemLabel
     {
-        get { return (BooleanValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (BooleanValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -1440,8 +1295,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -1451,8 +1306,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (BooleanValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -1462,8 +1317,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -1473,8 +1328,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -1484,8 +1339,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -1495,8 +1350,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -1506,8 +1361,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "showItemImage")]
     public BooleanValue ShowItemImage
     {
-        get { return (BooleanValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (BooleanValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -1517,8 +1372,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemCount")]
     public StringValue GetItemCount
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -1528,8 +1383,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemLabel")]
     public StringValue GetItemLabel
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -1539,8 +1394,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemScreentip")]
     public StringValue GetItemScreentip
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -1550,8 +1405,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemSupertip")]
     public StringValue GetItemSupertip
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -1561,8 +1416,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemImage")]
     public StringValue GetItemImage
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -1572,8 +1427,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemID")]
     public StringValue GetItemID
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -1583,8 +1438,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "sizeString")]
     public StringValue SizeString
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -1594,8 +1449,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getSelectedItemID")]
     public StringValue GetSelectedItemID
     {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (StringValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -1605,8 +1460,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getSelectedItemIndex")]
     public StringValue GetSelectedItemIndex
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -1616,8 +1471,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -1627,8 +1482,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -1638,8 +1493,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -1649,8 +1504,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (StringValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -1660,8 +1515,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (StringValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -1671,8 +1526,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (StringValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
     /// <summary>
@@ -1682,8 +1537,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[32]; }
-        set { Attributes[32] = value; }
+        get { return (StringValue)Attributes[32].Value; }
+        set { Attributes[32].Value = value; }
     }
     
     /// <summary>
@@ -1693,8 +1548,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[33]; }
-        set { Attributes[33] = value; }
+        get { return (StringValue)Attributes[33].Value; }
+        set { Attributes[33].Value = value; }
     }
     
     /// <summary>
@@ -1704,8 +1559,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[34]; }
-        set { Attributes[34] = value; }
+        get { return (StringValue)Attributes[34].Value; }
+        set { Attributes[34].Value = value; }
     }
     
     /// <summary>
@@ -1715,8 +1570,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[35]; }
-        set { Attributes[35] = value; }
+        get { return (StringValue)Attributes[35].Value; }
+        set { Attributes[35].Value = value; }
     }
     
     /// <summary>
@@ -1726,8 +1581,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[36]; }
-        set { Attributes[36] = value; }
+        get { return (StringValue)Attributes[36].Value; }
+        set { Attributes[36].Value = value; }
     }
     
     /// <summary>
@@ -1737,8 +1592,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[37]; }
-        set { Attributes[37] = value; }
+        get { return (StringValue)Attributes[37].Value; }
+        set { Attributes[37].Value = value; }
     }
     
     /// <summary>
@@ -1748,8 +1603,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[38]; }
-        set { Attributes[38] = value; }
+        get { return (StringValue)Attributes[38].Value; }
+        set { Attributes[38].Value = value; }
     }
     
     /// <summary>
@@ -1759,8 +1614,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[39]; }
-        set { Attributes[39] = value; }
+        get { return (StringValue)Attributes[39].Value; }
+        set { Attributes[39].Value = value; }
     }
     
     /// <summary>
@@ -1770,8 +1625,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[40]; }
-        set { Attributes[40] = value; }
+        get { return (BooleanValue)Attributes[40].Value; }
+        set { Attributes[40].Value = value; }
     }
     
     /// <summary>
@@ -1781,8 +1636,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[41]; }
-        set { Attributes[41] = value; }
+        get { return (StringValue)Attributes[41].Value; }
+        set { Attributes[41].Value = value; }
     }
     
     /// <summary>
@@ -1792,8 +1647,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[42]; }
-        set { Attributes[42] = value; }
+        get { return (StringValue)Attributes[42].Value; }
+        set { Attributes[42].Value = value; }
     }
     
     /// <summary>
@@ -1803,8 +1658,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[43]; }
-        set { Attributes[43] = value; }
+        get { return (StringValue)Attributes[43].Value; }
+        set { Attributes[43].Value = value; }
     }
     
     /// <summary>
@@ -1814,8 +1669,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[44]; }
-        set { Attributes[44] = value; }
+        get { return (BooleanValue)Attributes[44].Value; }
+        set { Attributes[44].Value = value; }
     }
     
     /// <summary>
@@ -1825,8 +1680,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[45]; }
-        set { Attributes[45] = value; }
+        get { return (StringValue)Attributes[45].Value; }
+        set { Attributes[45].Value = value; }
     }
     
     /// <summary>
@@ -1836,8 +1691,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[46]; }
-        set { Attributes[46] = value; }
+        get { return (BooleanValue)Attributes[46].Value; }
+        set { Attributes[46].Value = value; }
     }
     
     /// <summary>
@@ -1847,8 +1702,8 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[47]; }
-        set { Attributes[47] = value; }
+        get { return (StringValue)Attributes[47].Value; }
+        set { Attributes[47].Value = value; }
     }
     
 
@@ -1899,157 +1754,6 @@ if( 34 == namespaceId && "button" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "invalidateContentOnDrop" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "columns" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "rows" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "itemWidth" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "itemHeight" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "getItemWidth" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemHeight" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showItemLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showItemImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getItemCount" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemID" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sizeString" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSelectedItemID" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSelectedItemIndex" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnsizedGallery>(deep);
 
@@ -2075,13 +1779,41 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "getPressed","onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","idMso","tag","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "getPressed"),
+		AttributeTag.Create<StringValue>(0, "onAction"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "description"),
+		AttributeTag.Create<StringValue>(0, "getDescription"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -2091,8 +1823,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getPressed")]
     public StringValue GetPressed
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -2102,8 +1834,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -2113,8 +1845,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (BooleanValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -2124,8 +1856,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -2135,8 +1867,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "description")]
     public StringValue Description
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -2146,8 +1878,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -2157,8 +1889,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -2168,8 +1900,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -2179,8 +1911,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -2190,8 +1922,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -2201,8 +1933,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -2212,8 +1944,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -2223,8 +1955,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -2234,8 +1966,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -2245,8 +1977,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -2256,8 +1988,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -2267,8 +1999,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -2278,8 +2010,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -2289,8 +2021,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -2300,8 +2032,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -2311,8 +2043,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -2322,8 +2054,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -2333,8 +2065,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -2344,8 +2076,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (BooleanValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -2355,8 +2087,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (StringValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -2366,8 +2098,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -2377,8 +2109,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -2388,8 +2120,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (BooleanValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -2399,8 +2131,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -2410,8 +2142,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (BooleanValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -2421,8 +2153,8 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (StringValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
 
@@ -2436,106 +2168,6 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "getPressed" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnsizedToggleButton>(deep);
 
@@ -2561,13 +2193,18 @@ public partial class MenuSeparator : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","title","getTitle" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<StringValue>(0, "title"),
+		AttributeTag.Create<StringValue>(0, "getTitle")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -2577,8 +2214,8 @@ public partial class MenuSeparator : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -2588,8 +2225,8 @@ public partial class MenuSeparator : OpenXmlLeafElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -2599,8 +2236,8 @@ public partial class MenuSeparator : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -2610,8 +2247,8 @@ public partial class MenuSeparator : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -2621,8 +2258,8 @@ public partial class MenuSeparator : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -2632,8 +2269,8 @@ public partial class MenuSeparator : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -2643,8 +2280,8 @@ public partial class MenuSeparator : OpenXmlLeafElement
     [SchemaAttr(0, "title")]
     public StringValue Title
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -2654,8 +2291,8 @@ public partial class MenuSeparator : OpenXmlLeafElement
     [SchemaAttr(0, "getTitle")]
     public StringValue GetTitle
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
 
@@ -2669,37 +2306,6 @@ public partial class MenuSeparator : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getTitle" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MenuSeparator>(deep);
 
@@ -2736,13 +2342,26 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "enabled","getEnabled","id","idQ","idMso","tag","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -2752,8 +2371,8 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (BooleanValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -2763,8 +2382,8 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -2774,8 +2393,8 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -2785,8 +2404,8 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -2796,8 +2415,8 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -2807,8 +2426,8 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -2818,8 +2437,8 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -2829,8 +2448,8 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -2840,8 +2459,8 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -2851,8 +2470,8 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -2862,8 +2481,8 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (BooleanValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -2873,8 +2492,8 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -2884,8 +2503,8 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -2895,8 +2514,8 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -2906,8 +2525,8 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (BooleanValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -2917,8 +2536,8 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
 
@@ -2972,61 +2591,6 @@ if( 34 == namespaceId && "menu" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnsizedSplitButton>(deep);
 
@@ -3075,13 +2639,40 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "itemSize","description","getDescription","id","idQ","idMso","tag","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>(0, "itemSize"),
+		AttributeTag.Create<StringValue>(0, "description"),
+		AttributeTag.Create<StringValue>(0, "getDescription"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -3091,8 +2682,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "itemSize")]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -3102,8 +2693,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "description")]
     public StringValue Description
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -3113,8 +2704,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -3124,8 +2715,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -3135,8 +2726,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -3146,8 +2737,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -3157,8 +2748,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -3168,8 +2759,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -3179,8 +2770,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -3190,8 +2781,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -3201,8 +2792,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -3212,8 +2803,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -3223,8 +2814,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -3234,8 +2825,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -3245,8 +2836,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (BooleanValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -3256,8 +2847,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -3267,8 +2858,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -3278,8 +2869,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -3289,8 +2880,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -3300,8 +2891,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -3311,8 +2902,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -3322,8 +2913,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -3333,8 +2924,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (BooleanValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -3344,8 +2935,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -3355,8 +2946,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (StringValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -3366,8 +2957,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -3377,8 +2968,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (BooleanValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -3388,8 +2979,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -3399,8 +2990,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (BooleanValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -3410,8 +3001,8 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (StringValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
 
@@ -3483,103 +3074,6 @@ if( 34 == namespaceId && "dynamicMenu" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "itemSize" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnsizedMenu>(deep);
 
@@ -3605,13 +3099,41 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "description","getDescription","id","idQ","idMso","tag","getContent","invalidateContentOnDrop","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "description"),
+		AttributeTag.Create<StringValue>(0, "getDescription"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "getContent"),
+		AttributeTag.Create<BooleanValue>(0, "invalidateContentOnDrop"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -3621,8 +3143,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "description")]
     public StringValue Description
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -3632,8 +3154,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -3643,8 +3165,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -3654,8 +3176,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -3665,8 +3187,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -3676,8 +3198,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -3687,8 +3209,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getContent")]
     public StringValue GetContent
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -3698,8 +3220,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "invalidateContentOnDrop")]
     public BooleanValue InvalidateContentOnDrop
     {
-        get { return (BooleanValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (BooleanValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -3709,8 +3231,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -3720,8 +3242,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -3731,8 +3253,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -3742,8 +3264,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -3753,8 +3275,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -3764,8 +3286,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -3775,8 +3297,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -3786,8 +3308,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (BooleanValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -3797,8 +3319,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -3808,8 +3330,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -3819,8 +3341,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -3830,8 +3352,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -3841,8 +3363,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -3852,8 +3374,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -3863,8 +3385,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -3874,8 +3396,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (BooleanValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -3885,8 +3407,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (StringValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -3896,8 +3418,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -3907,8 +3429,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -3918,8 +3440,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (BooleanValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -3929,8 +3451,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -3940,8 +3462,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (BooleanValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -3951,8 +3473,8 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (StringValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
 
@@ -3966,106 +3488,6 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getContent" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "invalidateContentOnDrop" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UnsizedDynamicMenu>(deep);
 
@@ -4102,13 +3524,26 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "enabled","getEnabled","id","idQ","idMso","tag","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -4118,8 +3553,8 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (BooleanValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -4129,8 +3564,8 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -4140,8 +3575,8 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -4151,8 +3586,8 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -4162,8 +3597,8 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -4173,8 +3608,8 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -4184,8 +3619,8 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -4195,8 +3630,8 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -4206,8 +3641,8 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -4217,8 +3652,8 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -4228,8 +3663,8 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (BooleanValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -4239,8 +3674,8 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -4250,8 +3685,8 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -4261,8 +3696,8 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -4272,8 +3707,8 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (BooleanValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -4283,8 +3718,8 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
 
@@ -4338,61 +3773,6 @@ if( 34 == namespaceId && "menu" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SplitButtonWithTitle>(deep);
 
@@ -4441,13 +3821,40 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","idMso","tag","itemSize","title","getTitle","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>(0, "itemSize"),
+		AttributeTag.Create<StringValue>(0, "title"),
+		AttributeTag.Create<StringValue>(0, "getTitle"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -4457,8 +3864,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -4468,8 +3875,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -4479,8 +3886,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -4490,8 +3897,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -4501,8 +3908,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "itemSize")]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -4512,8 +3919,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     public StringValue Title
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -4523,8 +3930,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "getTitle")]
     public StringValue GetTitle
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -4534,8 +3941,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -4545,8 +3952,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -4556,8 +3963,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -4567,8 +3974,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -4578,8 +3985,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -4589,8 +3996,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -4600,8 +4007,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -4611,8 +4018,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (BooleanValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -4622,8 +4029,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -4633,8 +4040,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -4644,8 +4051,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -4655,8 +4062,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -4666,8 +4073,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -4677,8 +4084,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -4688,8 +4095,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -4699,8 +4106,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (BooleanValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -4710,8 +4117,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -4721,8 +4128,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (StringValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -4732,8 +4139,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -4743,8 +4150,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (BooleanValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -4754,8 +4161,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -4765,8 +4172,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (BooleanValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -4776,8 +4183,8 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (StringValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
 
@@ -4849,103 +4256,6 @@ if( 34 == namespaceId && "dynamicMenu" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "itemSize" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>();
-    
-if( 0 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getTitle" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MenuWithTitle>(deep);
 
@@ -4971,13 +4281,40 @@ public partial class ControlClone : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "size","getSize","enabled","getEnabled","description","getDescription","image","imageMso","getImage","idQ","idMso","tag","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(0, "size"),
+		AttributeTag.Create<StringValue>(0, "getSize"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "description"),
+		AttributeTag.Create<StringValue>(0, "getDescription"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -4987,8 +4324,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "size")]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -4998,8 +4335,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getSize")]
     public StringValue GetSize
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -5009,8 +4346,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (BooleanValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -5020,8 +4357,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -5031,8 +4368,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "description")]
     public StringValue Description
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -5042,8 +4379,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -5053,8 +4390,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -5064,8 +4401,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -5075,8 +4412,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -5086,8 +4423,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -5097,8 +4434,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -5108,8 +4445,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -5119,8 +4456,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -5130,8 +4467,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -5141,8 +4478,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -5152,8 +4489,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -5163,8 +4500,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -5174,8 +4511,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -5185,8 +4522,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -5196,8 +4533,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -5207,8 +4544,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -5218,8 +4555,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -5229,8 +4566,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (BooleanValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -5240,8 +4577,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -5251,8 +4588,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (StringValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -5262,8 +4599,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -5273,8 +4610,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (BooleanValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -5284,8 +4621,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -5295,8 +4632,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (BooleanValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -5306,8 +4643,8 @@ public partial class ControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (StringValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
 
@@ -5321,103 +4658,6 @@ public partial class ControlClone : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "size" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>();
-    
-if( 0 == namespaceId && "getSize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ControlClone>(deep);
 
@@ -5443,13 +4683,30 @@ public partial class TextLabel : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","idMso","tag","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","showLabel","getShowLabel" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -5459,8 +4716,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -5470,8 +4727,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -5481,8 +4738,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -5492,8 +4749,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -5503,8 +4760,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -5514,8 +4771,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -5525,8 +4782,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -5536,8 +4793,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -5547,8 +4804,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (BooleanValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -5558,8 +4815,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -5569,8 +4826,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -5580,8 +4837,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -5591,8 +4848,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -5602,8 +4859,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -5613,8 +4870,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -5624,8 +4881,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -5635,8 +4892,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (BooleanValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -5646,8 +4903,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -5657,8 +4914,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (BooleanValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -5668,8 +4925,8 @@ public partial class TextLabel : OpenXmlLeafElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
 
@@ -5683,73 +4940,6 @@ public partial class TextLabel : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextLabel>(deep);
 
@@ -5775,13 +4965,42 @@ public partial class Button : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "size","getSize","onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","idMso","tag","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(0, "size"),
+		AttributeTag.Create<StringValue>(0, "getSize"),
+		AttributeTag.Create<StringValue>(0, "onAction"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "description"),
+		AttributeTag.Create<StringValue>(0, "getDescription"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -5791,8 +5010,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "size")]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -5802,8 +5021,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "getSize")]
     public StringValue GetSize
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -5813,8 +5032,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -5824,8 +5043,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (BooleanValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -5835,8 +5054,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -5846,8 +5065,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "description")]
     public StringValue Description
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -5857,8 +5076,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -5868,8 +5087,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -5879,8 +5098,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -5890,8 +5109,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -5901,8 +5120,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -5912,8 +5131,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -5923,8 +5142,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -5934,8 +5153,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -5945,8 +5164,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -5956,8 +5175,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -5967,8 +5186,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -5978,8 +5197,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -5989,8 +5208,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -6000,8 +5219,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -6011,8 +5230,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -6022,8 +5241,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -6033,8 +5252,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -6044,8 +5263,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -6055,8 +5274,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (BooleanValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -6066,8 +5285,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -6077,8 +5296,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -6088,8 +5307,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -6099,8 +5318,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (BooleanValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -6110,8 +5329,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (StringValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -6121,8 +5340,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (BooleanValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -6132,8 +5351,8 @@ public partial class Button : OpenXmlLeafElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (StringValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
 
@@ -6147,109 +5366,6 @@ public partial class Button : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "size" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>();
-    
-if( 0 == namespaceId && "getSize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Button>(deep);
 
@@ -6275,13 +5391,43 @@ public partial class ToggleButton : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "size","getSize","getPressed","onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","idMso","tag","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(0, "size"),
+		AttributeTag.Create<StringValue>(0, "getSize"),
+		AttributeTag.Create<StringValue>(0, "getPressed"),
+		AttributeTag.Create<StringValue>(0, "onAction"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "description"),
+		AttributeTag.Create<StringValue>(0, "getDescription"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -6291,8 +5437,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "size")]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -6302,8 +5448,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getSize")]
     public StringValue GetSize
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -6313,8 +5459,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getPressed")]
     public StringValue GetPressed
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -6324,8 +5470,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -6335,8 +5481,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (BooleanValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -6346,8 +5492,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -6357,8 +5503,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "description")]
     public StringValue Description
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -6368,8 +5514,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -6379,8 +5525,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -6390,8 +5536,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -6401,8 +5547,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -6412,8 +5558,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -6423,8 +5569,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -6434,8 +5580,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -6445,8 +5591,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -6456,8 +5602,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -6467,8 +5613,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -6478,8 +5624,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -6489,8 +5635,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -6500,8 +5646,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -6511,8 +5657,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -6522,8 +5668,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -6533,8 +5679,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -6544,8 +5690,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -6555,8 +5701,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (StringValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -6566,8 +5712,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (BooleanValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -6577,8 +5723,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -6588,8 +5734,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -6599,8 +5745,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -6610,8 +5756,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (BooleanValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -6621,8 +5767,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (StringValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -6632,8 +5778,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (BooleanValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
     /// <summary>
@@ -6643,8 +5789,8 @@ public partial class ToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[32]; }
-        set { Attributes[32] = value; }
+        get { return (StringValue)Attributes[32].Value; }
+        set { Attributes[32].Value = value; }
     }
     
 
@@ -6658,112 +5804,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "size" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>();
-    
-if( 0 == namespaceId && "getSize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getPressed" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ToggleButton>(deep);
 
@@ -6789,13 +5829,41 @@ public partial class EditBox : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "enabled","getEnabled","image","imageMso","getImage","maxLength","getText","onChange","sizeString","id","idQ","idMso","tag","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<IntegerValue>(0, "maxLength"),
+		AttributeTag.Create<StringValue>(0, "getText"),
+		AttributeTag.Create<StringValue>(0, "onChange"),
+		AttributeTag.Create<StringValue>(0, "sizeString"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -6805,8 +5873,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (BooleanValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -6816,8 +5884,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -6827,8 +5895,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -6838,8 +5906,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -6849,8 +5917,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -6860,8 +5928,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "maxLength")]
     public IntegerValue MaxLength
     {
-        get { return (IntegerValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (IntegerValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -6871,8 +5939,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "getText")]
     public StringValue GetText
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -6882,8 +5950,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "onChange")]
     public StringValue OnChange
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -6893,8 +5961,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "sizeString")]
     public StringValue SizeString
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -6904,8 +5972,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -6915,8 +5983,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -6926,8 +5994,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -6937,8 +6005,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -6948,8 +6016,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -6959,8 +6027,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -6970,8 +6038,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -6981,8 +6049,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -6992,8 +6060,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -7003,8 +6071,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -7014,8 +6082,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -7025,8 +6093,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -7036,8 +6104,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -7047,8 +6115,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -7058,8 +6126,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (BooleanValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -7069,8 +6137,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (StringValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -7080,8 +6148,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -7091,8 +6159,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -7102,8 +6170,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (BooleanValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -7113,8 +6181,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -7124,8 +6192,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (BooleanValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -7135,8 +6203,8 @@ public partial class EditBox : OpenXmlLeafElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (StringValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
 
@@ -7150,106 +6218,6 @@ public partial class EditBox : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "maxLength" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "getText" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onChange" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sizeString" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EditBox>(deep);
 
@@ -7282,13 +6250,49 @@ public partial class ComboBox : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "showItemImage","getItemCount","getItemLabel","getItemScreentip","getItemSupertip","getItemImage","getItemID","sizeString","invalidateContentOnDrop","enabled","getEnabled","image","imageMso","getImage","maxLength","getText","onChange","id","idQ","idMso","tag","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<BooleanValue>(0, "showItemImage"),
+		AttributeTag.Create<StringValue>(0, "getItemCount"),
+		AttributeTag.Create<StringValue>(0, "getItemLabel"),
+		AttributeTag.Create<StringValue>(0, "getItemScreentip"),
+		AttributeTag.Create<StringValue>(0, "getItemSupertip"),
+		AttributeTag.Create<StringValue>(0, "getItemImage"),
+		AttributeTag.Create<StringValue>(0, "getItemID"),
+		AttributeTag.Create<StringValue>(0, "sizeString"),
+		AttributeTag.Create<BooleanValue>(0, "invalidateContentOnDrop"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<IntegerValue>(0, "maxLength"),
+		AttributeTag.Create<StringValue>(0, "getText"),
+		AttributeTag.Create<StringValue>(0, "onChange"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -7298,8 +6302,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "showItemImage")]
     public BooleanValue ShowItemImage
     {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (BooleanValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -7309,8 +6313,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemCount")]
     public StringValue GetItemCount
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -7320,8 +6324,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemLabel")]
     public StringValue GetItemLabel
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -7331,8 +6335,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemScreentip")]
     public StringValue GetItemScreentip
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -7342,8 +6346,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemSupertip")]
     public StringValue GetItemSupertip
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -7353,8 +6357,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemImage")]
     public StringValue GetItemImage
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -7364,8 +6368,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemID")]
     public StringValue GetItemID
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -7375,8 +6379,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "sizeString")]
     public StringValue SizeString
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -7386,8 +6390,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "invalidateContentOnDrop")]
     public BooleanValue InvalidateContentOnDrop
     {
-        get { return (BooleanValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (BooleanValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -7397,8 +6401,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (BooleanValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -7408,8 +6412,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -7419,8 +6423,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -7430,8 +6434,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -7441,8 +6445,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -7452,8 +6456,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "maxLength")]
     public IntegerValue MaxLength
     {
-        get { return (IntegerValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (IntegerValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -7463,8 +6467,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "getText")]
     public StringValue GetText
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -7474,8 +6478,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "onChange")]
     public StringValue OnChange
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -7485,8 +6489,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -7496,8 +6500,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -7507,8 +6511,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -7518,8 +6522,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -7529,8 +6533,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -7540,8 +6544,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -7551,8 +6555,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -7562,8 +6566,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (StringValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -7573,8 +6577,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -7584,8 +6588,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -7595,8 +6599,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -7606,8 +6610,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -7617,8 +6621,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (StringValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -7628,8 +6632,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (StringValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -7639,8 +6643,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (BooleanValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
     /// <summary>
@@ -7650,8 +6654,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[32]; }
-        set { Attributes[32] = value; }
+        get { return (StringValue)Attributes[32].Value; }
+        set { Attributes[32].Value = value; }
     }
     
     /// <summary>
@@ -7661,8 +6665,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[33]; }
-        set { Attributes[33] = value; }
+        get { return (StringValue)Attributes[33].Value; }
+        set { Attributes[33].Value = value; }
     }
     
     /// <summary>
@@ -7672,8 +6676,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[34]; }
-        set { Attributes[34] = value; }
+        get { return (StringValue)Attributes[34].Value; }
+        set { Attributes[34].Value = value; }
     }
     
     /// <summary>
@@ -7683,8 +6687,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[35]; }
-        set { Attributes[35] = value; }
+        get { return (BooleanValue)Attributes[35].Value; }
+        set { Attributes[35].Value = value; }
     }
     
     /// <summary>
@@ -7694,8 +6698,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[36]; }
-        set { Attributes[36] = value; }
+        get { return (StringValue)Attributes[36].Value; }
+        set { Attributes[36].Value = value; }
     }
     
     /// <summary>
@@ -7705,8 +6709,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[37]; }
-        set { Attributes[37] = value; }
+        get { return (BooleanValue)Attributes[37].Value; }
+        set { Attributes[37].Value = value; }
     }
     
     /// <summary>
@@ -7716,8 +6720,8 @@ public partial class ComboBox : OpenXmlCompositeElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[38]; }
-        set { Attributes[38] = value; }
+        get { return (StringValue)Attributes[38].Value; }
+        set { Attributes[38].Value = value; }
     }
     
 
@@ -7765,130 +6769,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "showItemImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getItemCount" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemID" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sizeString" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "invalidateContentOnDrop" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "maxLength" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "getText" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onChange" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ComboBox>(deep);
 
@@ -7923,13 +6803,49 @@ public partial class DropDown : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "onAction","enabled","getEnabled","image","imageMso","getImage","showItemImage","getItemCount","getItemLabel","getItemScreentip","getItemSupertip","getItemImage","getItemID","sizeString","getSelectedItemID","getSelectedItemIndex","showItemLabel","id","idQ","idMso","tag","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "onAction"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<BooleanValue>(0, "showItemImage"),
+		AttributeTag.Create<StringValue>(0, "getItemCount"),
+		AttributeTag.Create<StringValue>(0, "getItemLabel"),
+		AttributeTag.Create<StringValue>(0, "getItemScreentip"),
+		AttributeTag.Create<StringValue>(0, "getItemSupertip"),
+		AttributeTag.Create<StringValue>(0, "getItemImage"),
+		AttributeTag.Create<StringValue>(0, "getItemID"),
+		AttributeTag.Create<StringValue>(0, "sizeString"),
+		AttributeTag.Create<StringValue>(0, "getSelectedItemID"),
+		AttributeTag.Create<StringValue>(0, "getSelectedItemIndex"),
+		AttributeTag.Create<BooleanValue>(0, "showItemLabel"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -7939,8 +6855,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -7950,8 +6866,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (BooleanValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -7961,8 +6877,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -7972,8 +6888,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -7983,8 +6899,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -7994,8 +6910,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -8005,8 +6921,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "showItemImage")]
     public BooleanValue ShowItemImage
     {
-        get { return (BooleanValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (BooleanValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -8016,8 +6932,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemCount")]
     public StringValue GetItemCount
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -8027,8 +6943,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemLabel")]
     public StringValue GetItemLabel
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -8038,8 +6954,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemScreentip")]
     public StringValue GetItemScreentip
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -8049,8 +6965,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemSupertip")]
     public StringValue GetItemSupertip
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -8060,8 +6976,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemImage")]
     public StringValue GetItemImage
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -8071,8 +6987,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemID")]
     public StringValue GetItemID
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -8082,8 +6998,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "sizeString")]
     public StringValue SizeString
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -8093,8 +7009,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "getSelectedItemID")]
     public StringValue GetSelectedItemID
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -8104,8 +7020,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "getSelectedItemIndex")]
     public StringValue GetSelectedItemIndex
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -8115,8 +7031,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "showItemLabel")]
     public BooleanValue ShowItemLabel
     {
-        get { return (BooleanValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (BooleanValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -8126,8 +7042,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -8137,8 +7053,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -8148,8 +7064,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -8159,8 +7075,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -8170,8 +7086,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -8181,8 +7097,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -8192,8 +7108,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -8203,8 +7119,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (StringValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -8214,8 +7130,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -8225,8 +7141,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -8236,8 +7152,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -8247,8 +7163,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -8258,8 +7174,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (StringValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -8269,8 +7185,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (StringValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -8280,8 +7196,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (BooleanValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
     /// <summary>
@@ -8291,8 +7207,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[32]; }
-        set { Attributes[32] = value; }
+        get { return (StringValue)Attributes[32].Value; }
+        set { Attributes[32].Value = value; }
     }
     
     /// <summary>
@@ -8302,8 +7218,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[33]; }
-        set { Attributes[33] = value; }
+        get { return (StringValue)Attributes[33].Value; }
+        set { Attributes[33].Value = value; }
     }
     
     /// <summary>
@@ -8313,8 +7229,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[34]; }
-        set { Attributes[34] = value; }
+        get { return (StringValue)Attributes[34].Value; }
+        set { Attributes[34].Value = value; }
     }
     
     /// <summary>
@@ -8324,8 +7240,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[35]; }
-        set { Attributes[35] = value; }
+        get { return (BooleanValue)Attributes[35].Value; }
+        set { Attributes[35].Value = value; }
     }
     
     /// <summary>
@@ -8335,8 +7251,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[36]; }
-        set { Attributes[36] = value; }
+        get { return (StringValue)Attributes[36].Value; }
+        set { Attributes[36].Value = value; }
     }
     
     /// <summary>
@@ -8346,8 +7262,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[37]; }
-        set { Attributes[37] = value; }
+        get { return (BooleanValue)Attributes[37].Value; }
+        set { Attributes[37].Value = value; }
     }
     
     /// <summary>
@@ -8357,8 +7273,8 @@ public partial class DropDown : OpenXmlCompositeElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[38]; }
-        set { Attributes[38] = value; }
+        get { return (StringValue)Attributes[38].Value; }
+        set { Attributes[38].Value = value; }
     }
     
 
@@ -8409,130 +7325,6 @@ if( 34 == namespaceId && "button" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showItemImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getItemCount" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemID" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sizeString" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSelectedItemID" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSelectedItemIndex" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showItemLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropDown>(deep);
 
@@ -8567,13 +7359,60 @@ public partial class Gallery : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "size","getSize","description","getDescription","invalidateContentOnDrop","columns","rows","itemWidth","itemHeight","getItemWidth","getItemHeight","showItemLabel","onAction","enabled","getEnabled","image","imageMso","getImage","showItemImage","getItemCount","getItemLabel","getItemScreentip","getItemSupertip","getItemImage","getItemID","sizeString","getSelectedItemID","getSelectedItemIndex","id","idQ","idMso","tag","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(0, "size"),
+		AttributeTag.Create<StringValue>(0, "getSize"),
+		AttributeTag.Create<StringValue>(0, "description"),
+		AttributeTag.Create<StringValue>(0, "getDescription"),
+		AttributeTag.Create<BooleanValue>(0, "invalidateContentOnDrop"),
+		AttributeTag.Create<IntegerValue>(0, "columns"),
+		AttributeTag.Create<IntegerValue>(0, "rows"),
+		AttributeTag.Create<IntegerValue>(0, "itemWidth"),
+		AttributeTag.Create<IntegerValue>(0, "itemHeight"),
+		AttributeTag.Create<StringValue>(0, "getItemWidth"),
+		AttributeTag.Create<StringValue>(0, "getItemHeight"),
+		AttributeTag.Create<BooleanValue>(0, "showItemLabel"),
+		AttributeTag.Create<StringValue>(0, "onAction"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<BooleanValue>(0, "showItemImage"),
+		AttributeTag.Create<StringValue>(0, "getItemCount"),
+		AttributeTag.Create<StringValue>(0, "getItemLabel"),
+		AttributeTag.Create<StringValue>(0, "getItemScreentip"),
+		AttributeTag.Create<StringValue>(0, "getItemSupertip"),
+		AttributeTag.Create<StringValue>(0, "getItemImage"),
+		AttributeTag.Create<StringValue>(0, "getItemID"),
+		AttributeTag.Create<StringValue>(0, "sizeString"),
+		AttributeTag.Create<StringValue>(0, "getSelectedItemID"),
+		AttributeTag.Create<StringValue>(0, "getSelectedItemIndex"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -8583,8 +7422,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "size")]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -8594,8 +7433,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getSize")]
     public StringValue GetSize
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -8605,8 +7444,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "description")]
     public StringValue Description
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -8616,8 +7455,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -8627,8 +7466,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "invalidateContentOnDrop")]
     public BooleanValue InvalidateContentOnDrop
     {
-        get { return (BooleanValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (BooleanValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -8638,8 +7477,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "columns")]
     public IntegerValue Columns
     {
-        get { return (IntegerValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (IntegerValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -8649,8 +7488,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "rows")]
     public IntegerValue Rows
     {
-        get { return (IntegerValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (IntegerValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -8660,8 +7499,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "itemWidth")]
     public IntegerValue ItemWidth
     {
-        get { return (IntegerValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (IntegerValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -8671,8 +7510,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "itemHeight")]
     public IntegerValue ItemHeight
     {
-        get { return (IntegerValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (IntegerValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -8682,8 +7521,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemWidth")]
     public StringValue GetItemWidth
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -8693,8 +7532,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemHeight")]
     public StringValue GetItemHeight
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -8704,8 +7543,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "showItemLabel")]
     public BooleanValue ShowItemLabel
     {
-        get { return (BooleanValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (BooleanValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -8715,8 +7554,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -8726,8 +7565,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (BooleanValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -8737,8 +7576,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -8748,8 +7587,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -8759,8 +7598,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -8770,8 +7609,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -8781,8 +7620,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "showItemImage")]
     public BooleanValue ShowItemImage
     {
-        get { return (BooleanValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (BooleanValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -8792,8 +7631,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemCount")]
     public StringValue GetItemCount
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -8803,8 +7642,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemLabel")]
     public StringValue GetItemLabel
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -8814,8 +7653,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemScreentip")]
     public StringValue GetItemScreentip
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -8825,8 +7664,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemSupertip")]
     public StringValue GetItemSupertip
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -8836,8 +7675,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemImage")]
     public StringValue GetItemImage
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -8847,8 +7686,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getItemID")]
     public StringValue GetItemID
     {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (StringValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -8858,8 +7697,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "sizeString")]
     public StringValue SizeString
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -8869,8 +7708,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getSelectedItemID")]
     public StringValue GetSelectedItemID
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -8880,8 +7719,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getSelectedItemIndex")]
     public StringValue GetSelectedItemIndex
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -8891,8 +7730,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -8902,8 +7741,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (StringValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -8913,8 +7752,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (StringValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -8924,8 +7763,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (StringValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
     /// <summary>
@@ -8935,8 +7774,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[32]; }
-        set { Attributes[32] = value; }
+        get { return (StringValue)Attributes[32].Value; }
+        set { Attributes[32].Value = value; }
     }
     
     /// <summary>
@@ -8946,8 +7785,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[33]; }
-        set { Attributes[33] = value; }
+        get { return (StringValue)Attributes[33].Value; }
+        set { Attributes[33].Value = value; }
     }
     
     /// <summary>
@@ -8957,8 +7796,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[34]; }
-        set { Attributes[34] = value; }
+        get { return (StringValue)Attributes[34].Value; }
+        set { Attributes[34].Value = value; }
     }
     
     /// <summary>
@@ -8968,8 +7807,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[35]; }
-        set { Attributes[35] = value; }
+        get { return (StringValue)Attributes[35].Value; }
+        set { Attributes[35].Value = value; }
     }
     
     /// <summary>
@@ -8979,8 +7818,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[36]; }
-        set { Attributes[36] = value; }
+        get { return (StringValue)Attributes[36].Value; }
+        set { Attributes[36].Value = value; }
     }
     
     /// <summary>
@@ -8990,8 +7829,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[37]; }
-        set { Attributes[37] = value; }
+        get { return (StringValue)Attributes[37].Value; }
+        set { Attributes[37].Value = value; }
     }
     
     /// <summary>
@@ -9001,8 +7840,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[38]; }
-        set { Attributes[38] = value; }
+        get { return (StringValue)Attributes[38].Value; }
+        set { Attributes[38].Value = value; }
     }
     
     /// <summary>
@@ -9012,8 +7851,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[39]; }
-        set { Attributes[39] = value; }
+        get { return (StringValue)Attributes[39].Value; }
+        set { Attributes[39].Value = value; }
     }
     
     /// <summary>
@@ -9023,8 +7862,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[40]; }
-        set { Attributes[40] = value; }
+        get { return (StringValue)Attributes[40].Value; }
+        set { Attributes[40].Value = value; }
     }
     
     /// <summary>
@@ -9034,8 +7873,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[41]; }
-        set { Attributes[41] = value; }
+        get { return (StringValue)Attributes[41].Value; }
+        set { Attributes[41].Value = value; }
     }
     
     /// <summary>
@@ -9045,8 +7884,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[42]; }
-        set { Attributes[42] = value; }
+        get { return (BooleanValue)Attributes[42].Value; }
+        set { Attributes[42].Value = value; }
     }
     
     /// <summary>
@@ -9056,8 +7895,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[43]; }
-        set { Attributes[43] = value; }
+        get { return (StringValue)Attributes[43].Value; }
+        set { Attributes[43].Value = value; }
     }
     
     /// <summary>
@@ -9067,8 +7906,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[44]; }
-        set { Attributes[44] = value; }
+        get { return (StringValue)Attributes[44].Value; }
+        set { Attributes[44].Value = value; }
     }
     
     /// <summary>
@@ -9078,8 +7917,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[45]; }
-        set { Attributes[45] = value; }
+        get { return (StringValue)Attributes[45].Value; }
+        set { Attributes[45].Value = value; }
     }
     
     /// <summary>
@@ -9089,8 +7928,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[46]; }
-        set { Attributes[46] = value; }
+        get { return (BooleanValue)Attributes[46].Value; }
+        set { Attributes[46].Value = value; }
     }
     
     /// <summary>
@@ -9100,8 +7939,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[47]; }
-        set { Attributes[47] = value; }
+        get { return (StringValue)Attributes[47].Value; }
+        set { Attributes[47].Value = value; }
     }
     
     /// <summary>
@@ -9111,8 +7950,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[48]; }
-        set { Attributes[48] = value; }
+        get { return (BooleanValue)Attributes[48].Value; }
+        set { Attributes[48].Value = value; }
     }
     
     /// <summary>
@@ -9122,8 +7961,8 @@ public partial class Gallery : OpenXmlCompositeElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[49]; }
-        set { Attributes[49] = value; }
+        get { return (StringValue)Attributes[49].Value; }
+        set { Attributes[49].Value = value; }
     }
     
 
@@ -9174,163 +8013,6 @@ if( 34 == namespaceId && "button" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "size" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>();
-    
-if( 0 == namespaceId && "getSize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "invalidateContentOnDrop" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "columns" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "rows" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "itemWidth" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "itemHeight" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "getItemWidth" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemHeight" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showItemLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showItemImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getItemCount" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemID" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sizeString" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSelectedItemID" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSelectedItemIndex" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Gallery>(deep);
 
@@ -9379,13 +8061,42 @@ public partial class Menu : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "size","getSize","itemSize","description","getDescription","id","idQ","idMso","tag","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(0, "size"),
+		AttributeTag.Create<StringValue>(0, "getSize"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>(0, "itemSize"),
+		AttributeTag.Create<StringValue>(0, "description"),
+		AttributeTag.Create<StringValue>(0, "getDescription"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -9395,8 +8106,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "size")]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -9406,8 +8117,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "getSize")]
     public StringValue GetSize
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -9417,8 +8128,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "itemSize")]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -9428,8 +8139,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "description")]
     public StringValue Description
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -9439,8 +8150,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -9450,8 +8161,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -9461,8 +8172,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -9472,8 +8183,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -9483,8 +8194,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -9494,8 +8205,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -9505,8 +8216,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -9516,8 +8227,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -9527,8 +8238,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -9538,8 +8249,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -9549,8 +8260,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -9560,8 +8271,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -9571,8 +8282,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (BooleanValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -9582,8 +8293,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -9593,8 +8304,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -9604,8 +8315,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -9615,8 +8326,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -9626,8 +8337,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -9637,8 +8348,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -9648,8 +8359,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -9659,8 +8370,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (BooleanValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -9670,8 +8381,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -9681,8 +8392,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -9692,8 +8403,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -9703,8 +8414,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (BooleanValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -9714,8 +8425,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (StringValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -9725,8 +8436,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (BooleanValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -9736,8 +8447,8 @@ public partial class Menu : OpenXmlCompositeElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (StringValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
 
@@ -9809,109 +8520,6 @@ if( 34 == namespaceId && "dynamicMenu" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "size" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>();
-    
-if( 0 == namespaceId && "getSize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "itemSize" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Menu>(deep);
 
@@ -9937,13 +8545,43 @@ public partial class DynamicMenu : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "size","getSize","description","getDescription","id","idQ","idMso","tag","getContent","invalidateContentOnDrop","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(0, "size"),
+		AttributeTag.Create<StringValue>(0, "getSize"),
+		AttributeTag.Create<StringValue>(0, "description"),
+		AttributeTag.Create<StringValue>(0, "getDescription"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "getContent"),
+		AttributeTag.Create<BooleanValue>(0, "invalidateContentOnDrop"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -9953,8 +8591,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "size")]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -9964,8 +8602,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getSize")]
     public StringValue GetSize
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -9975,8 +8613,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "description")]
     public StringValue Description
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -9986,8 +8624,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -9997,8 +8635,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -10008,8 +8646,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -10019,8 +8657,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -10030,8 +8668,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -10041,8 +8679,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getContent")]
     public StringValue GetContent
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -10052,8 +8690,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "invalidateContentOnDrop")]
     public BooleanValue InvalidateContentOnDrop
     {
-        get { return (BooleanValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (BooleanValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -10063,8 +8701,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -10074,8 +8712,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -10085,8 +8723,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -10096,8 +8734,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -10107,8 +8745,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -10118,8 +8756,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -10129,8 +8767,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -10140,8 +8778,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (BooleanValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -10151,8 +8789,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -10162,8 +8800,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -10173,8 +8811,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -10184,8 +8822,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -10195,8 +8833,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -10206,8 +8844,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -10217,8 +8855,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (StringValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -10228,8 +8866,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (BooleanValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -10239,8 +8877,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -10250,8 +8888,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -10261,8 +8899,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -10272,8 +8910,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (BooleanValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -10283,8 +8921,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (StringValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -10294,8 +8932,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (BooleanValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
     /// <summary>
@@ -10305,8 +8943,8 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[32]; }
-        set { Attributes[32] = value; }
+        get { return (StringValue)Attributes[32].Value; }
+        set { Attributes[32].Value = value; }
     }
     
 
@@ -10320,112 +8958,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "size" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>();
-    
-if( 0 == namespaceId && "getSize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getContent" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "invalidateContentOnDrop" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DynamicMenu>(deep);
 
@@ -10462,13 +8994,28 @@ public partial class SplitButton : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "size","getSize","enabled","getEnabled","id","idQ","idMso","tag","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(0, "size"),
+		AttributeTag.Create<StringValue>(0, "getSize"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -10478,8 +9025,8 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "size")]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -10489,8 +9036,8 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "getSize")]
     public StringValue GetSize
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -10500,8 +9047,8 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (BooleanValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -10511,8 +9058,8 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -10522,8 +9069,8 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -10533,8 +9080,8 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -10544,8 +9091,8 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -10555,8 +9102,8 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -10566,8 +9113,8 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -10577,8 +9124,8 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -10588,8 +9135,8 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -10599,8 +9146,8 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -10610,8 +9157,8 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (BooleanValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -10621,8 +9168,8 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -10632,8 +9179,8 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -10643,8 +9190,8 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -10654,8 +9201,8 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (BooleanValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -10665,8 +9212,8 @@ public partial class SplitButton : OpenXmlCompositeElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
 
@@ -10720,67 +9267,6 @@ if( 34 == namespaceId && "menu" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "size" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>();
-    
-if( 0 == namespaceId && "getSize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SplitButton>(deep);
 
@@ -10839,13 +9325,19 @@ public partial class Box : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","visible","getVisible","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","boxStyle" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.BoxStyleValues>>(0, "boxStyle")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -10855,8 +9347,8 @@ public partial class Box : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -10866,8 +9358,8 @@ public partial class Box : OpenXmlCompositeElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -10877,8 +9369,8 @@ public partial class Box : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (BooleanValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -10888,8 +9380,8 @@ public partial class Box : OpenXmlCompositeElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -10899,8 +9391,8 @@ public partial class Box : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -10910,8 +9402,8 @@ public partial class Box : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -10921,8 +9413,8 @@ public partial class Box : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -10932,8 +9424,8 @@ public partial class Box : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -10943,8 +9435,8 @@ public partial class Box : OpenXmlCompositeElement
     [SchemaAttr(0, "boxStyle")]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.BoxStyleValues> BoxStyle
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.BoxStyleValues>)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.BoxStyleValues>)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
 
@@ -11031,40 +9523,6 @@ if( 34 == namespaceId && "buttonGroup" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "boxStyle" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office.CustomUI.BoxStyleValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Box>(deep);
 
@@ -11109,13 +9567,18 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","visible","getVisible","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -11125,8 +9588,8 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -11136,8 +9599,8 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -11147,8 +9610,8 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (BooleanValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -11158,8 +9621,8 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -11169,8 +9632,8 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -11180,8 +9643,8 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -11191,8 +9654,8 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -11202,8 +9665,8 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
 
@@ -11269,37 +9732,6 @@ if( 34 == namespaceId && "splitButton" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ButtonGroup>(deep);
 
@@ -11348,13 +9780,13 @@ public partial class MenuRoot : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "title","getTitle","itemSize" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "title"),
+		AttributeTag.Create<StringValue>(0, "getTitle"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>>(0, "itemSize")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -11364,8 +9796,8 @@ public partial class MenuRoot : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     public StringValue Title
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -11375,8 +9807,8 @@ public partial class MenuRoot : OpenXmlCompositeElement
     [SchemaAttr(0, "getTitle")]
     public StringValue GetTitle
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -11386,8 +9818,8 @@ public partial class MenuRoot : OpenXmlCompositeElement
     [SchemaAttr(0, "itemSize")]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues> ItemSize
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
 
@@ -11459,22 +9891,6 @@ if( 34 == namespaceId && "dynamicMenu" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getTitle" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "itemSize" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office.CustomUI.ItemSizeValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MenuRoot>(deep);
 
@@ -11509,13 +9925,12 @@ public partial class CustomUI : OpenXmlPartRootElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "onLoad","loadImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "onLoad"),
+		AttributeTag.Create<StringValue>(0, "loadImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -11525,8 +9940,8 @@ public partial class CustomUI : OpenXmlPartRootElement
     [SchemaAttr(0, "onLoad")]
     public StringValue OnLoad
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -11536,8 +9951,8 @@ public partial class CustomUI : OpenXmlPartRootElement
     [SchemaAttr(0, "loadImage")]
     public StringValue LoadImage
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
@@ -11621,19 +10036,6 @@ if( 34 == namespaceId && "ribbon" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "onLoad" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "loadImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomUI>(deep);
 
@@ -11659,13 +10061,16 @@ public partial class Item : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","label","image","imageMso","screentip","supertip" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "supertip")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -11675,8 +10080,8 @@ public partial class Item : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -11686,8 +10091,8 @@ public partial class Item : OpenXmlLeafElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -11697,8 +10102,8 @@ public partial class Item : OpenXmlLeafElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -11708,8 +10113,8 @@ public partial class Item : OpenXmlLeafElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -11719,8 +10124,8 @@ public partial class Item : OpenXmlLeafElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -11730,8 +10135,8 @@ public partial class Item : OpenXmlLeafElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
 
@@ -11745,31 +10150,6 @@ public partial class Item : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Item>(deep);
 
@@ -11795,13 +10175,38 @@ public partial class VisibleButton : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","idMso","tag","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "onAction"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "description"),
+		AttributeTag.Create<StringValue>(0, "getDescription"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -11811,8 +10216,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -11822,8 +10227,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (BooleanValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -11833,8 +10238,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -11844,8 +10249,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "description")]
     public StringValue Description
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -11855,8 +10260,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -11866,8 +10271,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -11877,8 +10282,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -11888,8 +10293,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -11899,8 +10304,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -11910,8 +10315,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -11921,8 +10326,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -11932,8 +10337,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -11943,8 +10348,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -11954,8 +10359,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -11965,8 +10370,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -11976,8 +10381,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -11987,8 +10392,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -11998,8 +10403,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -12009,8 +10414,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -12020,8 +10425,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -12031,8 +10436,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -12042,8 +10447,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -12053,8 +10458,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -12064,8 +10469,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -12075,8 +10480,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (BooleanValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -12086,8 +10491,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -12097,8 +10502,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (BooleanValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -12108,8 +10513,8 @@ public partial class VisibleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
 
@@ -12123,97 +10528,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VisibleButton>(deep);
 
@@ -12239,13 +10553,39 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "getPressed","onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","idMso","tag","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "getPressed"),
+		AttributeTag.Create<StringValue>(0, "onAction"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "description"),
+		AttributeTag.Create<StringValue>(0, "getDescription"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -12255,8 +10595,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getPressed")]
     public StringValue GetPressed
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -12266,8 +10606,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -12277,8 +10617,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (BooleanValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -12288,8 +10628,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -12299,8 +10639,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "description")]
     public StringValue Description
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -12310,8 +10650,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -12321,8 +10661,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -12332,8 +10672,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -12343,8 +10683,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -12354,8 +10694,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -12365,8 +10705,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -12376,8 +10716,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -12387,8 +10727,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -12398,8 +10738,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -12409,8 +10749,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -12420,8 +10760,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -12431,8 +10771,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -12442,8 +10782,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -12453,8 +10793,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -12464,8 +10804,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -12475,8 +10815,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -12486,8 +10826,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -12497,8 +10837,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -12508,8 +10848,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -12519,8 +10859,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (StringValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -12530,8 +10870,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (BooleanValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -12541,8 +10881,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -12552,8 +10892,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (BooleanValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -12563,8 +10903,8 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
 
@@ -12578,100 +10918,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "getPressed" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VisibleToggleButton>(deep);
 
@@ -12697,13 +10943,18 @@ public partial class VerticalSeparator : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","visible","getVisible","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -12713,8 +10964,8 @@ public partial class VerticalSeparator : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -12724,8 +10975,8 @@ public partial class VerticalSeparator : OpenXmlLeafElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -12735,8 +10986,8 @@ public partial class VerticalSeparator : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (BooleanValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -12746,8 +10997,8 @@ public partial class VerticalSeparator : OpenXmlLeafElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -12757,8 +11008,8 @@ public partial class VerticalSeparator : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -12768,8 +11019,8 @@ public partial class VerticalSeparator : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -12779,8 +11030,8 @@ public partial class VerticalSeparator : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -12790,8 +11041,8 @@ public partial class VerticalSeparator : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
 
@@ -12805,37 +11056,6 @@ public partial class VerticalSeparator : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalSeparator>(deep);
 
@@ -12936,7 +11156,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DialogBoxLauncher>(deep);
 
@@ -12999,13 +11218,31 @@ public partial class Group : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","idMso","tag","label","getLabel","image","imageMso","getImage","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","screentip","getScreentip","supertip","getSupertip","visible","getVisible","keytip","getKeytip" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -13015,8 +11252,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -13026,8 +11263,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -13037,8 +11274,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -13048,8 +11285,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -13059,8 +11296,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -13070,8 +11307,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -13081,8 +11318,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -13092,8 +11329,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -13103,8 +11340,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -13114,8 +11351,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -13125,8 +11362,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -13136,8 +11373,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -13147,8 +11384,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -13158,8 +11395,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -13169,8 +11406,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -13180,8 +11417,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -13191,8 +11428,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -13202,8 +11439,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (BooleanValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -13213,8 +11450,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -13224,8 +11461,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -13235,8 +11472,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
 
@@ -13329,76 +11566,6 @@ if( 34 == namespaceId && "dialogBoxLauncher" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Group>(deep);
 
@@ -13424,13 +11591,40 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","idMso","description","getDescription","size","getSize","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "description"),
+		AttributeTag.Create<StringValue>(0, "getDescription"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>>(0, "size"),
+		AttributeTag.Create<StringValue>(0, "getSize"),
+		AttributeTag.Create<StringValue>(0, "image"),
+		AttributeTag.Create<StringValue>(0, "imageMso"),
+		AttributeTag.Create<StringValue>(0, "getImage"),
+		AttributeTag.Create<StringValue>(0, "screentip"),
+		AttributeTag.Create<StringValue>(0, "getScreentip"),
+		AttributeTag.Create<StringValue>(0, "supertip"),
+		AttributeTag.Create<StringValue>(0, "getSupertip"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip"),
+		AttributeTag.Create<BooleanValue>(0, "showLabel"),
+		AttributeTag.Create<StringValue>(0, "getShowLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showImage"),
+		AttributeTag.Create<StringValue>(0, "getShowImage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -13440,8 +11634,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -13451,8 +11645,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -13462,8 +11656,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -13473,8 +11667,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "description")]
     public StringValue Description
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -13484,8 +11678,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -13495,8 +11689,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "size")]
     public EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues> Size
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -13506,8 +11700,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getSize")]
     public StringValue GetSize
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -13517,8 +11711,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "image")]
     public StringValue Image
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -13528,8 +11722,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -13539,8 +11733,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -13550,8 +11744,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -13561,8 +11755,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -13572,8 +11766,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -13583,8 +11777,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -13594,8 +11788,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (BooleanValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -13605,8 +11799,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -13616,8 +11810,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -13627,8 +11821,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -13638,8 +11832,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -13649,8 +11843,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -13660,8 +11854,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -13671,8 +11865,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -13682,8 +11876,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (BooleanValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -13693,8 +11887,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -13704,8 +11898,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (StringValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -13715,8 +11909,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -13726,8 +11920,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
-        get { return (BooleanValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (BooleanValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -13737,8 +11931,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -13748,8 +11942,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
-        get { return (BooleanValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (BooleanValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -13759,8 +11953,8 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (StringValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
 
@@ -13774,103 +11968,6 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "size" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office.CustomUI.SizeValues>();
-    
-if( 0 == namespaceId && "getSize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<QuickAccessToolbarControlClone>(deep);
 
@@ -14041,7 +12138,6 @@ if( 34 == namespaceId && "separator" == name)
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the QatItemsType class.
     /// </summary>
@@ -14103,13 +12199,24 @@ public partial class Tab : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","idMso","tag","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "idQ"),
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<StringValue>(0, "label"),
+		AttributeTag.Create<StringValue>(0, "getLabel"),
+		AttributeTag.Create<StringValue>(0, "insertAfterMso"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeMso"),
+		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
+		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible"),
+		AttributeTag.Create<StringValue>(0, "keytip"),
+		AttributeTag.Create<StringValue>(0, "getKeytip")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -14119,8 +12226,8 @@ public partial class Tab : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -14130,8 +12237,8 @@ public partial class Tab : OpenXmlCompositeElement
     [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -14141,8 +12248,8 @@ public partial class Tab : OpenXmlCompositeElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -14152,8 +12259,8 @@ public partial class Tab : OpenXmlCompositeElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -14163,8 +12270,8 @@ public partial class Tab : OpenXmlCompositeElement
     [SchemaAttr(0, "label")]
     public StringValue Label
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -14174,8 +12281,8 @@ public partial class Tab : OpenXmlCompositeElement
     [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -14185,8 +12292,8 @@ public partial class Tab : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -14196,8 +12303,8 @@ public partial class Tab : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -14207,8 +12314,8 @@ public partial class Tab : OpenXmlCompositeElement
     [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQ
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -14218,8 +12325,8 @@ public partial class Tab : OpenXmlCompositeElement
     [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQ
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -14229,8 +12336,8 @@ public partial class Tab : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (BooleanValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -14240,8 +12347,8 @@ public partial class Tab : OpenXmlCompositeElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -14251,8 +12358,8 @@ public partial class Tab : OpenXmlCompositeElement
     [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -14262,8 +12369,8 @@ public partial class Tab : OpenXmlCompositeElement
     [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
 
@@ -14311,55 +12418,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tab>(deep);
 
@@ -14392,13 +12450,13 @@ public partial class ContextualTabSet : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "idMso","visible","getVisible" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "idMso"),
+		AttributeTag.Create<BooleanValue>(0, "visible"),
+		AttributeTag.Create<StringValue>(0, "getVisible")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -14408,8 +12466,8 @@ public partial class ContextualTabSet : OpenXmlCompositeElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -14419,8 +12477,8 @@ public partial class ContextualTabSet : OpenXmlCompositeElement
     [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (BooleanValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -14430,8 +12488,8 @@ public partial class ContextualTabSet : OpenXmlCompositeElement
     [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
 
@@ -14479,22 +12537,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContextualTabSet>(deep);
 
@@ -14520,13 +12562,14 @@ public partial class RepurposedCommand : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "onAction","enabled","getEnabled","idMso" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "onAction"),
+		AttributeTag.Create<BooleanValue>(0, "enabled"),
+		AttributeTag.Create<StringValue>(0, "getEnabled"),
+		AttributeTag.Create<StringValue>(0, "idMso")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -14536,8 +12579,8 @@ public partial class RepurposedCommand : OpenXmlLeafElement
     [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -14547,8 +12590,8 @@ public partial class RepurposedCommand : OpenXmlLeafElement
     [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (BooleanValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -14558,8 +12601,8 @@ public partial class RepurposedCommand : OpenXmlLeafElement
     [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -14569,8 +12612,8 @@ public partial class RepurposedCommand : OpenXmlLeafElement
     [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
 
@@ -14584,25 +12627,6 @@ public partial class RepurposedCommand : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RepurposedCommand>(deep);
 
@@ -14722,7 +12746,6 @@ if( 34 == namespaceId && "dynamicMenu" == name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeMenu>(deep);
 
@@ -14840,7 +12863,6 @@ if( 34 == namespaceId && "documentControls" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<QuickAccessToolbar>(deep);
 
@@ -14919,7 +12941,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     return null;
 }
 
-    
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tabs>(deep);
@@ -15000,7 +13021,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContextualTabSets>(deep);
 
@@ -15080,7 +13100,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RepurposedCommands>(deep);
 
@@ -15119,13 +13138,11 @@ public partial class Ribbon : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "startFromScratch" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<BooleanValue>(0, "startFromScratch")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -15135,8 +13152,8 @@ public partial class Ribbon : OpenXmlCompositeElement
     [SchemaAttr(0, "startFromScratch")]
     public BooleanValue StartFromScratch
     {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (BooleanValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -15249,16 +13266,6 @@ if( 34 == namespaceId && "contextualTabs" == name)
         set => SetElement(3, value);
     }
 
-
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "startFromScratch" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Ribbon>(deep);

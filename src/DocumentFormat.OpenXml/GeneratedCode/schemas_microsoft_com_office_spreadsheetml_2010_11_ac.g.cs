@@ -30,13 +30,11 @@ public partial class AbsolutePath : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
-    	private static readonly string[] attributeTagNames = { "url" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "url")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -46,8 +44,8 @@ public partial class AbsolutePath : OpenXmlLeafElement
     [SchemaAttr(0, "url")]
     public StringValue Url
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -61,16 +59,6 @@ public partial class AbsolutePath : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "url" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AbsolutePath>(deep);
 

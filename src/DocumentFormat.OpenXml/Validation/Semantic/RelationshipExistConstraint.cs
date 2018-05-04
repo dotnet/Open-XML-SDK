@@ -17,22 +17,22 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            OpenXmlSimpleType attributeValue = context.Element.Attributes[_rIdAttribute];
+            var attribute = context.Element.Attributes[_rIdAttribute];
 
             //if the attribute is omitted, semantic validation will do nothing
-            if (attributeValue == null || string.IsNullOrEmpty(attributeValue.InnerText))
+            if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
                 return null;
             }
 
-            if (context.Part.PackagePart.RelationshipExists(attributeValue.InnerText))
+            if (context.Part.PackagePart.RelationshipExists(attribute.Value.InnerText))
             {
                 return null;
             }
             else
             {
                 string errorDescription = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_InvalidRelationshipId,
-                                                        attributeValue, GetAttributeQualifiedName(context.Element, _rIdAttribute));
+                                                        attribute.Value, GetAttributeQualifiedName(context.Element, _rIdAttribute));
 
                 return new ValidationErrorInfo()
                 {

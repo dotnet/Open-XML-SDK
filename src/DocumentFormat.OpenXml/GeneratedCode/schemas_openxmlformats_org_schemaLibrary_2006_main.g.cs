@@ -83,7 +83,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SchemaLibrary>(deep);
 
@@ -109,13 +108,13 @@ public partial class Schema : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "uri","manifestLocation","schemaLocation" };
-    private static readonly byte[] attributeNamespaceIds = { 25,25,25 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(25, "uri"),
+		AttributeTag.Create<StringValue>(25, "manifestLocation"),
+		AttributeTag.Create<StringValue>(25, "schemaLocation")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -127,8 +126,8 @@ public partial class Schema : OpenXmlLeafElement
     [SchemaAttr(25, "uri")]
     public StringValue Uri
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -140,8 +139,8 @@ public partial class Schema : OpenXmlLeafElement
     [SchemaAttr(25, "manifestLocation")]
     public StringValue ManifestLocation
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -153,8 +152,8 @@ public partial class Schema : OpenXmlLeafElement
     [SchemaAttr(25, "schemaLocation")]
     public StringValue SchemaLocation
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
 
@@ -168,22 +167,6 @@ public partial class Schema : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 25 == namespaceId && "uri" == name)
-    return new StringValue();
-    
-if( 25 == namespaceId && "manifestLocation" == name)
-    return new StringValue();
-    
-if( 25 == namespaceId && "schemaLocation" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Schema>(deep);
 

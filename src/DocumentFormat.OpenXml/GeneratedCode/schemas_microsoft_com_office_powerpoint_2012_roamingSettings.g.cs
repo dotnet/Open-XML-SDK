@@ -209,7 +209,6 @@ if( 76 == namespaceId && "value" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RoamingProperty>(deep);
 

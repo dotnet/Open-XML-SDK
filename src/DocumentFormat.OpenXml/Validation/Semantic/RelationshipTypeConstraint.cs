@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Validation;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -25,20 +24,21 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            OpenXmlSimpleType attributeValue = context.Element.Attributes[_attribute];
+            var attribute = context.Element.Attributes[_attribute];
 
-            if (attributeValue == null || string.IsNullOrEmpty(attributeValue.InnerText))
+            if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
                 return null;
             }
 
             string actualType = _type;
 
-            IEnumerable<ExternalRelationship> rels = context.Part.ExternalRelationships.Where(r => r.Id == attributeValue.InnerText);
+            IEnumerable<ExternalRelationship> rels = context.Part.ExternalRelationships.Where(r => r.Id == attribute.Value.InnerText);
 
             if (rels.Count() == 0)
             {
-                IEnumerable<IdPartPair> pairs = context.Part.Parts.Where(p => p.RelationshipId == attributeValue.InnerText);
+                IEnumerable<IdPartPair> pairs = context.Part.Parts.Where(p => p.RelationshipId == attribute.Value.InnerText);
+
                 if (pairs.Count() != 0)
                 {
                     Debug.Assert(pairs.Count() == 1);

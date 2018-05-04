@@ -40,13 +40,31 @@ public partial class ContextNode : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","type","rotatedBoundingBox","alignmentLevel","contentType","ascender","descender","baseline","midline","customRecognizerId","mathML","mathStruct","mathSymbol","beginModifierType","endModifierType","rotationAngle","hotPoints","centroid","semanticType","shapeName","shapeGeometry" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "type"),
+		AttributeTag.Create<ListValue<StringValue>>(0, "rotatedBoundingBox"),
+		AttributeTag.Create<Int32Value>(0, "alignmentLevel"),
+		AttributeTag.Create<Int32Value>(0, "contentType"),
+		AttributeTag.Create<StringValue>(0, "ascender"),
+		AttributeTag.Create<StringValue>(0, "descender"),
+		AttributeTag.Create<StringValue>(0, "baseline"),
+		AttributeTag.Create<StringValue>(0, "midline"),
+		AttributeTag.Create<StringValue>(0, "customRecognizerId"),
+		AttributeTag.Create<StringValue>(0, "mathML"),
+		AttributeTag.Create<StringValue>(0, "mathStruct"),
+		AttributeTag.Create<StringValue>(0, "mathSymbol"),
+		AttributeTag.Create<StringValue>(0, "beginModifierType"),
+		AttributeTag.Create<StringValue>(0, "endModifierType"),
+		AttributeTag.Create<Int32Value>(0, "rotationAngle"),
+		AttributeTag.Create<ListValue<StringValue>>(0, "hotPoints"),
+		AttributeTag.Create<StringValue>(0, "centroid"),
+		AttributeTag.Create<StringValue>(0, "semanticType"),
+		AttributeTag.Create<StringValue>(0, "shapeName"),
+		AttributeTag.Create<ListValue<StringValue>>(0, "shapeGeometry")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -56,8 +74,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -67,8 +85,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "type")]
     public StringValue Type
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -78,8 +96,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "rotatedBoundingBox")]
     public ListValue<StringValue> RotatedBoundingBox
     {
-        get { return (ListValue<StringValue>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (ListValue<StringValue>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -89,8 +107,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "alignmentLevel")]
     public Int32Value AlignmentLevel
     {
-        get { return (Int32Value)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (Int32Value)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -100,8 +118,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "contentType")]
     public Int32Value ContentType
     {
-        get { return (Int32Value)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (Int32Value)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -111,8 +129,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "ascender")]
     public StringValue Ascender
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -122,8 +140,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "descender")]
     public StringValue Descender
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -133,8 +151,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "baseline")]
     public StringValue Baseline
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -144,8 +162,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "midline")]
     public StringValue Midline
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -155,8 +173,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "customRecognizerId")]
     public StringValue CustomRecognizerId
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -166,8 +184,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "mathML")]
     public StringValue MathML
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -177,8 +195,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "mathStruct")]
     public StringValue MathStruct
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -188,8 +206,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "mathSymbol")]
     public StringValue MathSymbol
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -199,8 +217,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "beginModifierType")]
     public StringValue BeginModifierType
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -210,8 +228,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "endModifierType")]
     public StringValue EndModifierType
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -221,8 +239,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "rotationAngle")]
     public Int32Value RotationAngle
     {
-        get { return (Int32Value)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (Int32Value)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -232,8 +250,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "hotPoints")]
     public ListValue<StringValue> HotPoints
     {
-        get { return (ListValue<StringValue>)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (ListValue<StringValue>)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -243,8 +261,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "centroid")]
     public StringValue Centroid
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -254,8 +272,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "semanticType")]
     public StringValue SemanticType
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -265,8 +283,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "shapeName")]
     public StringValue ShapeName
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -276,8 +294,8 @@ public partial class ContextNode : OpenXmlCompositeElement
     [SchemaAttr(0, "shapeGeometry")]
     public ListValue<StringValue> ShapeGeometry
     {
-        get { return (ListValue<StringValue>)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (ListValue<StringValue>)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
 
@@ -331,76 +349,6 @@ if( 45 == namespaceId && "destinationLink" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "type" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "rotatedBoundingBox" == name)
-    return new ListValue<StringValue>();
-    
-if( 0 == namespaceId && "alignmentLevel" == name)
-    return new Int32Value();
-    
-if( 0 == namespaceId && "contentType" == name)
-    return new Int32Value();
-    
-if( 0 == namespaceId && "ascender" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "descender" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "baseline" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "midline" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "customRecognizerId" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "mathML" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "mathStruct" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "mathSymbol" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "beginModifierType" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "endModifierType" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "rotationAngle" == name)
-    return new Int32Value();
-    
-if( 0 == namespaceId && "hotPoints" == name)
-    return new ListValue<StringValue>();
-    
-if( 0 == namespaceId && "centroid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "semanticType" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "shapeName" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "shapeGeometry" == name)
-    return new ListValue<StringValue>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContextNode>(deep);
 
@@ -426,13 +374,11 @@ public partial class ContextNodeProperty : OpenXmlLeafTextElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "type" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "type")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -442,8 +388,8 @@ public partial class ContextNodeProperty : OpenXmlLeafTextElement
     [SchemaAttr(0, "type")]
     public StringValue Type
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -470,16 +416,6 @@ public partial class ContextNodeProperty : OpenXmlLeafTextElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "type" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContextNodeProperty>(deep);
 
@@ -553,13 +489,12 @@ public partial class DestinationLink : ContextLinkType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class ContextLinkType : OpenXmlLeafElement
 {
-    	private static readonly string[] attributeTagNames = { "direction","ref" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues>>(0, "direction"),
+		AttributeTag.Create<StringValue>(0, "ref")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
     
         /// <summary>
     /// <para> direction.</para>
@@ -568,8 +503,8 @@ public abstract partial class ContextLinkType : OpenXmlLeafElement
     [SchemaAttr(0, "direction")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues> Direction
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -579,26 +514,13 @@ public abstract partial class ContextLinkType : OpenXmlLeafElement
     [SchemaAttr(0, "ref")]
     public StringValue Reference
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "direction" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues>();
-    
-if( 0 == namespaceId && "ref" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the ContextLinkType class.

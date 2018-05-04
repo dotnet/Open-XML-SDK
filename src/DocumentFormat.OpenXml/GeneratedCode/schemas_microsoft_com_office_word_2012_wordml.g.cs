@@ -30,13 +30,14 @@ public partial class Color : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
-    	private static readonly string[] attributeTagNames = { "val","themeColor","themeTint","themeShade" };
-    private static readonly byte[] attributeNamespaceIds = { 23,23,23,23 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(23, "val"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(23, "themeColor"),
+		AttributeTag.Create<StringValue>(23, "themeTint"),
+		AttributeTag.Create<StringValue>(23, "themeShade")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -48,8 +49,8 @@ public partial class Color : OpenXmlLeafElement
     [SchemaAttr(23, "val")]
     public StringValue Val
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -61,8 +62,8 @@ public partial class Color : OpenXmlLeafElement
     [SchemaAttr(23, "themeColor")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -74,8 +75,8 @@ public partial class Color : OpenXmlLeafElement
     [SchemaAttr(23, "themeTint")]
     public StringValue ThemeTint
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -87,8 +88,8 @@ public partial class Color : OpenXmlLeafElement
     [SchemaAttr(23, "themeShade")]
     public StringValue ThemeShade
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
 
@@ -102,25 +103,6 @@ public partial class Color : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "val" == name)
-    return new StringValue();
-    
-if( 23 == namespaceId && "themeColor" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>();
-    
-if( 23 == namespaceId && "themeTint" == name)
-    return new StringValue();
-    
-if( 23 == namespaceId && "themeShade" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Color>(deep);
 
@@ -146,13 +128,13 @@ public partial class DataBinding : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
-    	private static readonly string[] attributeTagNames = { "prefixMappings","xpath","storeItemID" };
-    private static readonly byte[] attributeNamespaceIds = { 23,23,23 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(23, "prefixMappings"),
+		AttributeTag.Create<StringValue>(23, "xpath"),
+		AttributeTag.Create<StringValue>(23, "storeItemID")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -164,8 +146,8 @@ public partial class DataBinding : OpenXmlLeafElement
     [SchemaAttr(23, "prefixMappings")]
     public StringValue PrefixMappings
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -177,8 +159,8 @@ public partial class DataBinding : OpenXmlLeafElement
     [SchemaAttr(23, "xpath")]
     public StringValue XPath
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -190,8 +172,8 @@ public partial class DataBinding : OpenXmlLeafElement
     [SchemaAttr(23, "storeItemID")]
     public StringValue StoreItemId
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
 
@@ -205,22 +187,6 @@ public partial class DataBinding : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "prefixMappings" == name)
-    return new StringValue();
-    
-if( 23 == namespaceId && "xpath" == name)
-    return new StringValue();
-    
-if( 23 == namespaceId && "storeItemID" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataBinding>(deep);
 
@@ -246,13 +212,11 @@ public partial class Appearance : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 69 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>>(69, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -264,8 +228,8 @@ public partial class Appearance : OpenXmlLeafElement
     [SchemaAttr(69, "val")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance> Val
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -279,16 +243,6 @@ public partial class Appearance : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 69 == namespaceId && "val" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Appearance>(deep);
 
@@ -396,7 +350,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentsEx>(deep);
 
@@ -503,7 +456,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     return null;
 }
 
-    
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<People>(deep);
@@ -622,7 +574,6 @@ if( 69 == namespaceId && "doNotAllowInsertDeleteSection" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtRepeatedSection>(deep);
 
@@ -658,7 +609,6 @@ public partial class SdtRepeatedSectionItem : OpenXmlLeafElement
     
       
      
-    
     
     
     
@@ -828,13 +778,11 @@ public partial class DoNotAllowInsertDeleteSection : OnOffType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OnOffType : OpenXmlLeafElement
 {
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 23 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<OnOffValue>(23, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
     
         /// <summary>
     /// <para> On/Off Value.</para>
@@ -845,23 +793,13 @@ public abstract partial class OnOffType : OpenXmlLeafElement
     [SchemaAttr(23, "val")]
     public OnOffValue Val
     {
-        get { return (OnOffValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (OnOffValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "val" == name)
-    return new OnOffValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the OnOffType class.
@@ -892,13 +830,11 @@ public partial class PersistentDocumentId : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 69 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(69, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -910,8 +846,8 @@ public partial class PersistentDocumentId : OpenXmlLeafElement
     [SchemaAttr(69, "val")]
     public StringValue Val
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -925,16 +861,6 @@ public partial class PersistentDocumentId : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 69 == namespaceId && "val" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PersistentDocumentId>(deep);
 
@@ -960,13 +886,11 @@ public partial class FootnoteColumns : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 23 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<Int32Value>(23, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -978,8 +902,8 @@ public partial class FootnoteColumns : OpenXmlLeafElement
     [SchemaAttr(23, "val")]
     public Int32Value Val
     {
-        get { return (Int32Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (Int32Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -993,16 +917,6 @@ public partial class FootnoteColumns : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "val" == name)
-    return new Int32Value();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FootnoteColumns>(deep);
 
@@ -1028,13 +942,13 @@ public partial class CommentEx : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
-    	private static readonly string[] attributeTagNames = { "paraId","paraIdParent","done" };
-    private static readonly byte[] attributeNamespaceIds = { 69,69,69 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<HexBinaryValue>(69, "paraId"),
+		AttributeTag.Create<HexBinaryValue>(69, "paraIdParent"),
+		AttributeTag.Create<OnOffValue>(69, "done")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -1046,8 +960,8 @@ public partial class CommentEx : OpenXmlLeafElement
     [SchemaAttr(69, "paraId")]
     public HexBinaryValue ParaId
     {
-        get { return (HexBinaryValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (HexBinaryValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -1059,8 +973,8 @@ public partial class CommentEx : OpenXmlLeafElement
     [SchemaAttr(69, "paraIdParent")]
     public HexBinaryValue ParaIdParent
     {
-        get { return (HexBinaryValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (HexBinaryValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -1072,8 +986,8 @@ public partial class CommentEx : OpenXmlLeafElement
     [SchemaAttr(69, "done")]
     public OnOffValue Done
     {
-        get { return (OnOffValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (OnOffValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
 
@@ -1087,22 +1001,6 @@ public partial class CommentEx : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 69 == namespaceId && "paraId" == name)
-    return new HexBinaryValue();
-    
-if( 69 == namespaceId && "paraIdParent" == name)
-    return new HexBinaryValue();
-    
-if( 69 == namespaceId && "done" == name)
-    return new OnOffValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentEx>(deep);
 
@@ -1135,13 +1033,12 @@ public partial class Person : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
-    	private static readonly string[] attributeTagNames = { "author","contact" };
-    private static readonly byte[] attributeNamespaceIds = { 69,69 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(69, "author"),
+		AttributeTag.Create<StringValue>(69, "contact")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -1153,8 +1050,8 @@ public partial class Person : OpenXmlCompositeElement
     [SchemaAttr(69, "author")]
     public StringValue Author
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -1166,8 +1063,8 @@ public partial class Person : OpenXmlCompositeElement
     [SchemaAttr(69, "contact")]
     public StringValue Contact
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
@@ -1236,19 +1133,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 69 == namespaceId && "author" == name)
-    return new StringValue();
-    
-if( 69 == namespaceId && "contact" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Person>(deep);
 
@@ -1274,13 +1158,12 @@ public partial class PresenceInfo : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
-    	private static readonly string[] attributeTagNames = { "providerId","userId" };
-    private static readonly byte[] attributeNamespaceIds = { 69,69 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(69, "providerId"),
+		AttributeTag.Create<StringValue>(69, "userId")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -1292,8 +1175,8 @@ public partial class PresenceInfo : OpenXmlLeafElement
     [SchemaAttr(69, "providerId")]
     public StringValue ProviderId
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -1305,8 +1188,8 @@ public partial class PresenceInfo : OpenXmlLeafElement
     [SchemaAttr(69, "userId")]
     public StringValue UserId
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
@@ -1320,19 +1203,6 @@ public partial class PresenceInfo : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 69 == namespaceId && "providerId" == name)
-    return new StringValue();
-    
-if( 69 == namespaceId && "userId" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresenceInfo>(deep);
 
@@ -1358,13 +1228,11 @@ public partial class SectionTitle : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 23 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(23, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -1376,8 +1244,8 @@ public partial class SectionTitle : OpenXmlLeafElement
     [SchemaAttr(23, "val")]
     public StringValue Val
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -1391,16 +1259,6 @@ public partial class SectionTitle : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "val" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SectionTitle>(deep);
 

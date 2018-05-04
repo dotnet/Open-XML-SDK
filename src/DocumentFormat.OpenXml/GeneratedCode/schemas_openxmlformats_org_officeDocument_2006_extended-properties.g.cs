@@ -575,7 +575,6 @@ if( 3 == namespaceId && "DocSecurity" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Properties>(deep);
 
@@ -1765,7 +1764,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 
     
-    
     /// <summary>
     /// Initializes a new instance of the VectorVariantType class.
     /// </summary>
@@ -1895,7 +1893,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TitlesOfParts>(deep);
 
@@ -1996,7 +1993,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DigitalSignature>(deep);
 

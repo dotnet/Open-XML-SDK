@@ -34,13 +34,25 @@ public partial class Path : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","v","limo","textboxrect","fillok","strokeok","shadowok","arrowok","gradientshapeok","textpathok","insetpenok","connecttype","connectlocs","connectangles","extrusionok" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,27,27,27,27 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "v"),
+		AttributeTag.Create<StringValue>(0, "limo"),
+		AttributeTag.Create<StringValue>(0, "textboxrect"),
+		AttributeTag.Create<TrueFalseValue>(0, "fillok"),
+		AttributeTag.Create<TrueFalseValue>(0, "strokeok"),
+		AttributeTag.Create<TrueFalseValue>(0, "shadowok"),
+		AttributeTag.Create<TrueFalseValue>(0, "arrowok"),
+		AttributeTag.Create<TrueFalseValue>(0, "gradientshapeok"),
+		AttributeTag.Create<TrueFalseValue>(0, "textpathok"),
+		AttributeTag.Create<TrueFalseValue>(0, "insetpenok"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectValues>>(27, "connecttype"),
+		AttributeTag.Create<StringValue>(27, "connectlocs"),
+		AttributeTag.Create<StringValue>(27, "connectangles"),
+		AttributeTag.Create<TrueFalseValue>(27, "extrusionok")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -50,8 +62,8 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -61,8 +73,8 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "v")]
     public StringValue Value
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -72,8 +84,8 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "limo")]
     public StringValue Limo
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -83,8 +95,8 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "textboxrect")]
     public StringValue TextboxRectangle
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -94,8 +106,8 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "fillok")]
     public TrueFalseValue AllowFill
     {
-        get { return (TrueFalseValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (TrueFalseValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -105,8 +117,8 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "strokeok")]
     public TrueFalseValue AllowStroke
     {
-        get { return (TrueFalseValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (TrueFalseValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -116,8 +128,8 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "shadowok")]
     public TrueFalseValue AllowShading
     {
-        get { return (TrueFalseValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (TrueFalseValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -127,8 +139,8 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "arrowok")]
     public TrueFalseValue ShowArrowhead
     {
-        get { return (TrueFalseValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (TrueFalseValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -138,8 +150,8 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "gradientshapeok")]
     public TrueFalseValue AllowGradientShape
     {
-        get { return (TrueFalseValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (TrueFalseValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -149,8 +161,8 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "textpathok")]
     public TrueFalseValue AllowTextPath
     {
-        get { return (TrueFalseValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (TrueFalseValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -160,8 +172,8 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(0, "insetpenok")]
     public TrueFalseValue AllowInsetPen
     {
-        get { return (TrueFalseValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (TrueFalseValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -173,8 +185,8 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(27, "connecttype")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectValues> ConnectionPointType
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectValues>)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectValues>)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -186,8 +198,8 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(27, "connectlocs")]
     public StringValue ConnectionPoints
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -199,8 +211,8 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(27, "connectangles")]
     public StringValue ConnectAngles
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -212,8 +224,8 @@ public partial class Path : OpenXmlLeafElement
     [SchemaAttr(27, "extrusionok")]
     public TrueFalseValue AllowExtrusion
     {
-        get { return (TrueFalseValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (TrueFalseValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
 
@@ -227,58 +239,6 @@ public partial class Path : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "v" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "limo" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "textboxrect" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "fillok" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "strokeok" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "shadowok" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "arrowok" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "gradientshapeok" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "textpathok" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "insetpenok" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "connecttype" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectValues>();
-    
-if( 27 == namespaceId && "connectlocs" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "connectangles" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "extrusionok" == name)
-    return new TrueFalseValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Path>(deep);
 
@@ -357,7 +317,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     return null;
 }
 
-    
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formulas>(deep);
@@ -438,7 +397,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeHandles>(deep);
 
@@ -471,13 +429,36 @@ public partial class Fill : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","type","on","color","opacity","color2","src","href","althref","size","origin","position","aspect","colors","angle","alignshape","focus","focussize","focusposition","method","detectmouseclick","title","opacity2","recolor","rotate","id" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,27,27,0,0,0,0,0,0,0,0,0,0,0,27,27,27,0,0,19 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues>>(0, "type"),
+		AttributeTag.Create<TrueFalseValue>(0, "on"),
+		AttributeTag.Create<StringValue>(0, "color"),
+		AttributeTag.Create<StringValue>(0, "opacity"),
+		AttributeTag.Create<StringValue>(0, "color2"),
+		AttributeTag.Create<StringValue>(0, "src"),
+		AttributeTag.Create<StringValue>(27, "href"),
+		AttributeTag.Create<StringValue>(27, "althref"),
+		AttributeTag.Create<StringValue>(0, "size"),
+		AttributeTag.Create<StringValue>(0, "origin"),
+		AttributeTag.Create<StringValue>(0, "position"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>>(0, "aspect"),
+		AttributeTag.Create<StringValue>(0, "colors"),
+		AttributeTag.Create<DecimalValue>(0, "angle"),
+		AttributeTag.Create<TrueFalseValue>(0, "alignshape"),
+		AttributeTag.Create<StringValue>(0, "focus"),
+		AttributeTag.Create<StringValue>(0, "focussize"),
+		AttributeTag.Create<StringValue>(0, "focusposition"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.FillMethodValues>>(0, "method"),
+		AttributeTag.Create<TrueFalseValue>(27, "detectmouseclick"),
+		AttributeTag.Create<StringValue>(27, "title"),
+		AttributeTag.Create<StringValue>(27, "opacity2"),
+		AttributeTag.Create<TrueFalseValue>(0, "recolor"),
+		AttributeTag.Create<TrueFalseValue>(0, "rotate"),
+		AttributeTag.Create<StringValue>(19, "id")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -487,8 +468,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -498,8 +479,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "type")]
     public EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues> Type
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -509,8 +490,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "on")]
     public TrueFalseValue On
     {
-        get { return (TrueFalseValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (TrueFalseValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -520,8 +501,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "color")]
     public StringValue Color
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -531,8 +512,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "opacity")]
     public StringValue Opacity
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -542,8 +523,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "color2")]
     public StringValue Color2
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -553,8 +534,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "src")]
     public StringValue Source
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -566,8 +547,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(27, "href")]
     public StringValue Href
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -579,8 +560,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(27, "althref")]
     public StringValue AlternateImageReference
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -590,8 +571,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "size")]
     public StringValue Size
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -601,8 +582,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "origin")]
     public StringValue Origin
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -612,8 +593,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "position")]
     public StringValue Position
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -623,8 +604,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "aspect")]
     public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues> Aspect
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -634,8 +615,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "colors")]
     public StringValue Colors
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -645,8 +626,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "angle")]
     public DecimalValue Angle
     {
-        get { return (DecimalValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (DecimalValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -656,8 +637,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "alignshape")]
     public TrueFalseValue AlignShape
     {
-        get { return (TrueFalseValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (TrueFalseValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -667,8 +648,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "focus")]
     public StringValue Focus
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -678,8 +659,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "focussize")]
     public StringValue FocusSize
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -689,8 +670,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "focusposition")]
     public StringValue FocusPosition
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -700,8 +681,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "method")]
     public EnumValue<DocumentFormat.OpenXml.Vml.FillMethodValues> Method
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.FillMethodValues>)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.FillMethodValues>)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -713,8 +694,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(27, "detectmouseclick")]
     public TrueFalseValue DetectMouseClick
     {
-        get { return (TrueFalseValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (TrueFalseValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -726,8 +707,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(27, "title")]
     public StringValue Title
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -739,8 +720,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(27, "opacity2")]
     public StringValue Opacity2
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -750,8 +731,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "recolor")]
     public TrueFalseValue Recolor
     {
-        get { return (TrueFalseValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (TrueFalseValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -761,8 +742,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(0, "rotate")]
     public TrueFalseValue Rotate
     {
-        get { return (TrueFalseValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (TrueFalseValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -774,8 +755,8 @@ public partial class Fill : OpenXmlCompositeElement
     [SchemaAttr(19, "id")]
     public StringValue RelationshipId
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
 
@@ -844,91 +825,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "type" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.FillTypeValues>();
-    
-if( 0 == namespaceId && "on" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "color" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "opacity" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "color2" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "src" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "href" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "althref" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "size" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "origin" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "position" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "aspect" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>();
-    
-if( 0 == namespaceId && "colors" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "angle" == name)
-    return new DecimalValue();
-    
-if( 0 == namespaceId && "alignshape" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "focus" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "focussize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "focusposition" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "method" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.FillMethodValues>();
-    
-if( 27 == namespaceId && "detectmouseclick" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "opacity2" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "recolor" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "rotate" == name)
-    return new TrueFalseValue();
-    
-if( 19 == namespaceId && "id" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Fill>(deep);
 
@@ -969,13 +865,38 @@ public partial class Stroke : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","on","weight","color","opacity","linestyle","miterlimit","joinstyle","endcap","dashstyle","filltype","src","imageaspect","imagesize","imagealignshape","color2","startarrow","startarrowwidth","startarrowlength","endarrow","endarrowwidth","endarrowlength","href","althref","title","forcedash","id","insetpen" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,27,27,27,27,19,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<TrueFalseValue>(0, "on"),
+		AttributeTag.Create<StringValue>(0, "weight"),
+		AttributeTag.Create<StringValue>(0, "color"),
+		AttributeTag.Create<StringValue>(0, "opacity"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues>>(0, "linestyle"),
+		AttributeTag.Create<StringValue>(0, "miterlimit"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues>>(0, "joinstyle"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues>>(0, "endcap"),
+		AttributeTag.Create<StringValue>(0, "dashstyle"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.StrokeFillTypeValues>>(0, "filltype"),
+		AttributeTag.Create<StringValue>(0, "src"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>>(0, "imageaspect"),
+		AttributeTag.Create<StringValue>(0, "imagesize"),
+		AttributeTag.Create<TrueFalseValue>(0, "imagealignshape"),
+		AttributeTag.Create<StringValue>(0, "color2"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>>(0, "startarrow"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>>(0, "startarrowwidth"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>>(0, "startarrowlength"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>>(0, "endarrow"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>>(0, "endarrowwidth"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>>(0, "endarrowlength"),
+		AttributeTag.Create<StringValue>(27, "href"),
+		AttributeTag.Create<StringValue>(27, "althref"),
+		AttributeTag.Create<StringValue>(27, "title"),
+		AttributeTag.Create<TrueFalseValue>(27, "forcedash"),
+		AttributeTag.Create<StringValue>(19, "id"),
+		AttributeTag.Create<TrueFalseValue>(0, "insetpen")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -985,8 +906,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -996,8 +917,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "on")]
     public TrueFalseValue On
     {
-        get { return (TrueFalseValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (TrueFalseValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -1007,8 +928,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "weight")]
     public StringValue Weight
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -1018,8 +939,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "color")]
     public StringValue Color
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -1029,8 +950,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "opacity")]
     public StringValue Opacity
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -1040,8 +961,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "linestyle")]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues> LineStyle
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues>)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues>)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -1051,8 +972,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "miterlimit")]
     public StringValue Miterlimit
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -1062,8 +983,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "joinstyle")]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues> JoinStyle
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues>)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues>)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -1073,8 +994,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "endcap")]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues> EndCap
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues>)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues>)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -1084,8 +1005,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "dashstyle")]
     public StringValue DashStyle
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -1095,8 +1016,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "filltype")]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeFillTypeValues> FillType
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeFillTypeValues>)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeFillTypeValues>)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -1106,8 +1027,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "src")]
     public StringValue Source
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -1117,8 +1038,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "imageaspect")]
     public EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues> ImageAspect
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -1128,8 +1049,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "imagesize")]
     public StringValue ImageSize
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -1139,8 +1060,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "imagealignshape")]
     public TrueFalseValue ImageAlignShape
     {
-        get { return (TrueFalseValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (TrueFalseValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -1150,8 +1071,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "color2")]
     public StringValue Color2
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -1161,8 +1082,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "startarrow")]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> StartArrow
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -1172,8 +1093,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "startarrowwidth")]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> StartArrowWidth
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -1183,8 +1104,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "startarrowlength")]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> StartArrowLength
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -1194,8 +1115,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "endarrow")]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues> EndArrow
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -1205,8 +1126,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "endarrowwidth")]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues> EndArrowWidth
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -1216,8 +1137,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "endarrowlength")]
     public EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues> EndArrowLength
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -1229,8 +1150,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(27, "href")]
     public StringValue Href
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -1242,8 +1163,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(27, "althref")]
     public StringValue AlternateImageReference
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -1255,8 +1176,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(27, "title")]
     public StringValue Title
     {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (StringValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -1268,8 +1189,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     public TrueFalseValue ForceDash
     {
-        get { return (TrueFalseValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (TrueFalseValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -1281,8 +1202,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(19, "id")]
     public StringValue RelationshipId
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -1292,8 +1213,8 @@ public partial class Stroke : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     public TrueFalseValue Insetpen
     {
-        get { return (TrueFalseValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (TrueFalseValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
 
@@ -1422,97 +1343,6 @@ if( 27 == namespaceId && "column" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "on" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "weight" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "color" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "opacity" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "linestyle" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.StrokeLineStyleValues>();
-    
-if( 0 == namespaceId && "miterlimit" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "joinstyle" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.StrokeJoinStyleValues>();
-    
-if( 0 == namespaceId && "endcap" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.StrokeEndCapValues>();
-    
-if( 0 == namespaceId && "dashstyle" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "filltype" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.StrokeFillTypeValues>();
-    
-if( 0 == namespaceId && "src" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageaspect" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.ImageAspectValues>();
-    
-if( 0 == namespaceId && "imagesize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imagealignshape" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "color2" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "startarrow" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>();
-    
-if( 0 == namespaceId && "startarrowwidth" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>();
-    
-if( 0 == namespaceId && "startarrowlength" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>();
-    
-if( 0 == namespaceId && "endarrow" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowValues>();
-    
-if( 0 == namespaceId && "endarrowwidth" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowWidthValues>();
-    
-if( 0 == namespaceId && "endarrowlength" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.StrokeArrowLengthValues>();
-    
-if( 27 == namespaceId && "href" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "althref" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "forcedash" == name)
-    return new TrueFalseValue();
-    
-if( 19 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insetpen" == name)
-    return new TrueFalseValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Stroke>(deep);
 
@@ -1538,13 +1368,21 @@ public partial class Shadow : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","on","type","obscured","color","opacity","offset","color2","offset2","origin","matrix" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<TrueFalseValue>(0, "on"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.ShadowValues>>(0, "type"),
+		AttributeTag.Create<TrueFalseValue>(0, "obscured"),
+		AttributeTag.Create<StringValue>(0, "color"),
+		AttributeTag.Create<StringValue>(0, "opacity"),
+		AttributeTag.Create<StringValue>(0, "offset"),
+		AttributeTag.Create<StringValue>(0, "color2"),
+		AttributeTag.Create<StringValue>(0, "offset2"),
+		AttributeTag.Create<StringValue>(0, "origin"),
+		AttributeTag.Create<StringValue>(0, "matrix")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -1554,8 +1392,8 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -1565,8 +1403,8 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "on")]
     public TrueFalseValue On
     {
-        get { return (TrueFalseValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (TrueFalseValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -1576,8 +1414,8 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "type")]
     public EnumValue<DocumentFormat.OpenXml.Vml.ShadowValues> Type
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.ShadowValues>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.ShadowValues>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -1587,8 +1425,8 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "obscured")]
     public TrueFalseValue Obscured
     {
-        get { return (TrueFalseValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (TrueFalseValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -1598,8 +1436,8 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "color")]
     public StringValue Color
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -1609,8 +1447,8 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "opacity")]
     public StringValue Opacity
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -1620,8 +1458,8 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "offset")]
     public StringValue Offset
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -1631,8 +1469,8 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "color2")]
     public StringValue Color2
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -1642,8 +1480,8 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "offset2")]
     public StringValue Offset2
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -1653,8 +1491,8 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "origin")]
     public StringValue Origin
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -1664,8 +1502,8 @@ public partial class Shadow : OpenXmlLeafElement
     [SchemaAttr(0, "matrix")]
     public StringValue Matrix
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
 
@@ -1679,46 +1517,6 @@ public partial class Shadow : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "on" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "type" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.ShadowValues>();
-    
-if( 0 == namespaceId && "obscured" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "color" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "opacity" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "offset" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "color2" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "offset2" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "origin" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "matrix" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shadow>(deep);
 
@@ -1751,13 +1549,14 @@ public partial class TextBox : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","style","inset","singleclick" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,27 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "style"),
+		AttributeTag.Create<StringValue>(0, "inset"),
+		AttributeTag.Create<TrueFalseValue>(27, "singleclick")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -1767,8 +1566,8 @@ public partial class TextBox : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -1778,8 +1577,8 @@ public partial class TextBox : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     public StringValue Style
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -1789,8 +1588,8 @@ public partial class TextBox : OpenXmlCompositeElement
     [SchemaAttr(0, "inset")]
     public StringValue Inset
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -1802,8 +1601,8 @@ public partial class TextBox : OpenXmlCompositeElement
     [SchemaAttr(27, "singleclick")]
     public TrueFalseValue SingleClick
     {
-        get { return (TrueFalseValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (TrueFalseValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
 
@@ -1851,25 +1650,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "style" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "inset" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "singleclick" == name)
-    return new TrueFalseValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextBox>(deep);
 
@@ -1895,13 +1675,18 @@ public partial class TextPath : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","style","on","fitshape","fitpath","trim","xscale","string" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "style"),
+		AttributeTag.Create<TrueFalseValue>(0, "on"),
+		AttributeTag.Create<TrueFalseValue>(0, "fitshape"),
+		AttributeTag.Create<TrueFalseValue>(0, "fitpath"),
+		AttributeTag.Create<TrueFalseValue>(0, "trim"),
+		AttributeTag.Create<TrueFalseValue>(0, "xscale"),
+		AttributeTag.Create<StringValue>(0, "string")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -1911,8 +1696,8 @@ public partial class TextPath : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -1922,8 +1707,8 @@ public partial class TextPath : OpenXmlLeafElement
     [SchemaAttr(0, "style")]
     public StringValue Style
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -1933,8 +1718,8 @@ public partial class TextPath : OpenXmlLeafElement
     [SchemaAttr(0, "on")]
     public TrueFalseValue On
     {
-        get { return (TrueFalseValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (TrueFalseValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -1944,8 +1729,8 @@ public partial class TextPath : OpenXmlLeafElement
     [SchemaAttr(0, "fitshape")]
     public TrueFalseValue FitShape
     {
-        get { return (TrueFalseValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (TrueFalseValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -1955,8 +1740,8 @@ public partial class TextPath : OpenXmlLeafElement
     [SchemaAttr(0, "fitpath")]
     public TrueFalseValue FitPath
     {
-        get { return (TrueFalseValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (TrueFalseValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -1966,8 +1751,8 @@ public partial class TextPath : OpenXmlLeafElement
     [SchemaAttr(0, "trim")]
     public TrueFalseValue Trim
     {
-        get { return (TrueFalseValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (TrueFalseValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -1977,8 +1762,8 @@ public partial class TextPath : OpenXmlLeafElement
     [SchemaAttr(0, "xscale")]
     public TrueFalseValue XScale
     {
-        get { return (TrueFalseValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (TrueFalseValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -1988,8 +1773,8 @@ public partial class TextPath : OpenXmlLeafElement
     [SchemaAttr(0, "string")]
     public StringValue String
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
 
@@ -2003,37 +1788,6 @@ public partial class TextPath : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "style" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "on" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "fitshape" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "fitpath" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "trim" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "xscale" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "string" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextPath>(deep);
 
@@ -2059,13 +1813,29 @@ public partial class ImageData : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","chromakey","cropleft","croptop","cropright","cropbottom","gain","blacklevel","gamma","grayscale","bilevel","embosscolor","recolortarget","title","detectmouseclick","relid","id","pict","href" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,27,27,27,19,19,19 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "chromakey"),
+		AttributeTag.Create<StringValue>(0, "cropleft"),
+		AttributeTag.Create<StringValue>(0, "croptop"),
+		AttributeTag.Create<StringValue>(0, "cropright"),
+		AttributeTag.Create<StringValue>(0, "cropbottom"),
+		AttributeTag.Create<StringValue>(0, "gain"),
+		AttributeTag.Create<StringValue>(0, "blacklevel"),
+		AttributeTag.Create<StringValue>(0, "gamma"),
+		AttributeTag.Create<TrueFalseValue>(0, "grayscale"),
+		AttributeTag.Create<TrueFalseValue>(0, "bilevel"),
+		AttributeTag.Create<StringValue>(0, "embosscolor"),
+		AttributeTag.Create<StringValue>(0, "recolortarget"),
+		AttributeTag.Create<StringValue>(27, "title"),
+		AttributeTag.Create<TrueFalseValue>(27, "detectmouseclick"),
+		AttributeTag.Create<StringValue>(27, "relid"),
+		AttributeTag.Create<StringValue>(19, "id"),
+		AttributeTag.Create<StringValue>(19, "pict"),
+		AttributeTag.Create<StringValue>(19, "href")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -2075,8 +1845,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -2086,8 +1856,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "chromakey")]
     public StringValue ChromAKey
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -2097,8 +1867,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "cropleft")]
     public StringValue CropLeft
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -2108,8 +1878,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "croptop")]
     public StringValue CropTop
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -2119,8 +1889,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "cropright")]
     public StringValue CropRight
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -2130,8 +1900,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "cropbottom")]
     public StringValue CropBottom
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -2141,8 +1911,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "gain")]
     public StringValue Gain
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -2152,8 +1922,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "blacklevel")]
     public StringValue BlackLevel
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -2163,8 +1933,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "gamma")]
     public StringValue Gamma
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -2174,8 +1944,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "grayscale")]
     public TrueFalseValue Grayscale
     {
-        get { return (TrueFalseValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (TrueFalseValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -2185,8 +1955,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "bilevel")]
     public TrueFalseValue BiLevel
     {
-        get { return (TrueFalseValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (TrueFalseValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -2196,8 +1966,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "embosscolor")]
     public StringValue EmbossColor
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -2207,8 +1977,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(0, "recolortarget")]
     public StringValue RecolorTarget
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -2220,8 +1990,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(27, "title")]
     public StringValue Title
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -2233,8 +2003,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(27, "detectmouseclick")]
     public TrueFalseValue DetectMouseClick
     {
-        get { return (TrueFalseValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (TrueFalseValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -2246,8 +2016,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(27, "relid")]
     public StringValue RelId
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -2259,8 +2029,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(19, "id")]
     public StringValue RelationshipId
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -2272,8 +2042,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(19, "pict")]
     public StringValue Picture
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -2285,8 +2055,8 @@ public partial class ImageData : OpenXmlLeafElement
     [SchemaAttr(19, "href")]
     public StringValue RelHref
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
 
@@ -2300,70 +2070,6 @@ public partial class ImageData : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "chromakey" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "cropleft" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "croptop" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "cropright" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "cropbottom" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "gain" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "blacklevel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "gamma" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "grayscale" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "bilevel" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "embosscolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "recolortarget" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "detectmouseclick" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "relid" == name)
-    return new StringValue();
-    
-if( 19 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 19 == namespaceId && "pict" == name)
-    return new StringValue();
-    
-if( 19 == namespaceId && "href" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ImageData>(deep);
 
@@ -2444,13 +2150,66 @@ public partial class Shape : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","coordorigin","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip","type","adj","path","gfxdata","equationxml" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27,0,0,0,27,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "style"),
+		AttributeTag.Create<StringValue>(0, "href"),
+		AttributeTag.Create<StringValue>(0, "target"),
+		AttributeTag.Create<StringValue>(0, "class"),
+		AttributeTag.Create<StringValue>(0, "title"),
+		AttributeTag.Create<StringValue>(0, "alt"),
+		AttributeTag.Create<StringValue>(0, "coordsize"),
+		AttributeTag.Create<StringValue>(0, "coordorigin"),
+		AttributeTag.Create<StringValue>(0, "wrapcoords"),
+		AttributeTag.Create<TrueFalseValue>(0, "print"),
+		AttributeTag.Create<StringValue>(27, "spid"),
+		AttributeTag.Create<TrueFalseValue>(27, "oned"),
+		AttributeTag.Create<IntegerValue>(27, "regroupid"),
+		AttributeTag.Create<TrueFalseValue>(27, "doubleclicknotify"),
+		AttributeTag.Create<TrueFalseValue>(27, "button"),
+		AttributeTag.Create<TrueFalseValue>(27, "userhidden"),
+		AttributeTag.Create<TrueFalseValue>(27, "bullet"),
+		AttributeTag.Create<TrueFalseValue>(27, "hr"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrstd"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrnoshade"),
+		AttributeTag.Create<SingleValue>(27, "hrpct"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>(27, "hralign"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowincell"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowoverlap"),
+		AttributeTag.Create<TrueFalseValue>(27, "userdrawn"),
+		AttributeTag.Create<StringValue>(27, "bordertopcolor"),
+		AttributeTag.Create<StringValue>(27, "borderleftcolor"),
+		AttributeTag.Create<StringValue>(27, "borderbottomcolor"),
+		AttributeTag.Create<StringValue>(27, "borderrightcolor"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayout"),
+		AttributeTag.Create<IntegerValue>(27, "dgmnodekind"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayoutmru"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>(27, "insetmode"),
+		AttributeTag.Create<TrueFalseValue>(0, "filled"),
+		AttributeTag.Create<StringValue>(0, "fillcolor"),
+		AttributeTag.Create<TrueFalseValue>(0, "stroked"),
+		AttributeTag.Create<StringValue>(0, "strokecolor"),
+		AttributeTag.Create<StringValue>(0, "strokeweight"),
+		AttributeTag.Create<TrueFalseValue>(0, "insetpen"),
+		AttributeTag.Create<Int32Value>(27, "spt"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>(27, "connectortype"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwmode"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwpure"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwnormal"),
+		AttributeTag.Create<TrueFalseValue>(27, "forcedash"),
+		AttributeTag.Create<TrueFalseValue>(27, "oleicon"),
+		AttributeTag.Create<TrueFalseBlankValue>(27, "ole"),
+		AttributeTag.Create<TrueFalseValue>(27, "preferrelative"),
+		AttributeTag.Create<TrueFalseValue>(27, "cliptowrap"),
+		AttributeTag.Create<TrueFalseValue>(27, "clip"),
+		AttributeTag.Create<StringValue>(0, "type"),
+		AttributeTag.Create<StringValue>(0, "adj"),
+		AttributeTag.Create<StringValue>(0, "path"),
+		AttributeTag.Create<Base64BinaryValue>(27, "gfxdata"),
+		AttributeTag.Create<StringValue>(0, "equationxml")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -2460,8 +2219,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -2471,8 +2230,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     public StringValue Style
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -2482,8 +2241,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     public StringValue Href
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -2493,8 +2252,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     public StringValue Target
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -2504,8 +2263,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     public StringValue Class
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -2515,8 +2274,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     public StringValue Title
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -2526,8 +2285,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     public StringValue Alternate
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -2537,8 +2296,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     public StringValue CoordinateSize
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -2548,8 +2307,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "coordorigin")]
     public StringValue CoordinateOrigin
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -2559,8 +2318,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     public StringValue WrapCoordinates
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -2570,8 +2329,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     public TrueFalseValue Print
     {
-        get { return (TrueFalseValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (TrueFalseValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -2583,8 +2342,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     public StringValue OptionalString
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -2596,8 +2355,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     public TrueFalseValue Oned
     {
-        get { return (TrueFalseValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (TrueFalseValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -2609,8 +2368,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     public IntegerValue RegroupId
     {
-        get { return (IntegerValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (IntegerValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -2622,8 +2381,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     public TrueFalseValue DoubleClickNotify
     {
-        get { return (TrueFalseValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (TrueFalseValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -2635,8 +2394,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     public TrueFalseValue Button
     {
-        get { return (TrueFalseValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (TrueFalseValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -2648,8 +2407,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     public TrueFalseValue UserHidden
     {
-        get { return (TrueFalseValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (TrueFalseValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -2661,8 +2420,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     public TrueFalseValue Bullet
     {
-        get { return (TrueFalseValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (TrueFalseValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -2674,8 +2433,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     public TrueFalseValue Horizontal
     {
-        get { return (TrueFalseValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (TrueFalseValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -2687,8 +2446,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     public TrueFalseValue HorizontalStandard
     {
-        get { return (TrueFalseValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (TrueFalseValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -2700,8 +2459,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     public TrueFalseValue HorizontalNoShade
     {
-        get { return (TrueFalseValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (TrueFalseValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -2713,8 +2472,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     public SingleValue HorizontalPercentage
     {
-        get { return (SingleValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (SingleValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -2726,8 +2485,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -2739,8 +2498,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     public TrueFalseValue AllowInCell
     {
-        get { return (TrueFalseValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (TrueFalseValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -2752,8 +2511,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     public TrueFalseValue AllowOverlap
     {
-        get { return (TrueFalseValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (TrueFalseValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -2765,8 +2524,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     public TrueFalseValue UserDrawn
     {
-        get { return (TrueFalseValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (TrueFalseValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -2778,8 +2537,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     public StringValue BorderTopColor
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -2791,8 +2550,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     public StringValue BorderLeftColor
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -2804,8 +2563,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     public StringValue BorderBottomColor
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -2817,8 +2576,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     public StringValue BorderRightColor
     {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (StringValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -2830,8 +2589,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     public IntegerValue DiagramLayout
     {
-        get { return (IntegerValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (IntegerValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -2843,8 +2602,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     public IntegerValue DiagramNodeKind
     {
-        get { return (IntegerValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (IntegerValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
     /// <summary>
@@ -2856,8 +2615,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     public IntegerValue DiagramLayoutMostRecentUsed
     {
-        get { return (IntegerValue)Attributes[32]; }
-        set { Attributes[32] = value; }
+        get { return (IntegerValue)Attributes[32].Value; }
+        set { Attributes[32].Value = value; }
     }
     
     /// <summary>
@@ -2869,8 +2628,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[33]; }
-        set { Attributes[33] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[33].Value; }
+        set { Attributes[33].Value = value; }
     }
     
     /// <summary>
@@ -2880,8 +2639,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     public TrueFalseValue Filled
     {
-        get { return (TrueFalseValue)Attributes[34]; }
-        set { Attributes[34] = value; }
+        get { return (TrueFalseValue)Attributes[34].Value; }
+        set { Attributes[34].Value = value; }
     }
     
     /// <summary>
@@ -2891,8 +2650,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     public StringValue FillColor
     {
-        get { return (StringValue)Attributes[35]; }
-        set { Attributes[35] = value; }
+        get { return (StringValue)Attributes[35].Value; }
+        set { Attributes[35].Value = value; }
     }
     
     /// <summary>
@@ -2902,8 +2661,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     public TrueFalseValue Stroked
     {
-        get { return (TrueFalseValue)Attributes[36]; }
-        set { Attributes[36] = value; }
+        get { return (TrueFalseValue)Attributes[36].Value; }
+        set { Attributes[36].Value = value; }
     }
     
     /// <summary>
@@ -2913,8 +2672,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     public StringValue StrokeColor
     {
-        get { return (StringValue)Attributes[37]; }
-        set { Attributes[37] = value; }
+        get { return (StringValue)Attributes[37].Value; }
+        set { Attributes[37].Value = value; }
     }
     
     /// <summary>
@@ -2924,8 +2683,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     public StringValue StrokeWeight
     {
-        get { return (StringValue)Attributes[38]; }
-        set { Attributes[38] = value; }
+        get { return (StringValue)Attributes[38].Value; }
+        set { Attributes[38].Value = value; }
     }
     
     /// <summary>
@@ -2935,8 +2694,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     public TrueFalseValue InsetPen
     {
-        get { return (TrueFalseValue)Attributes[39]; }
-        set { Attributes[39] = value; }
+        get { return (TrueFalseValue)Attributes[39].Value; }
+        set { Attributes[39].Value = value; }
     }
     
     /// <summary>
@@ -2948,8 +2707,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     public Int32Value OptionalNumber
     {
-        get { return (Int32Value)Attributes[40]; }
-        set { Attributes[40] = value; }
+        get { return (Int32Value)Attributes[40].Value; }
+        set { Attributes[40].Value = value; }
     }
     
     /// <summary>
@@ -2961,8 +2720,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[41]; }
-        set { Attributes[41] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[41].Value; }
+        set { Attributes[41].Value = value; }
     }
     
     /// <summary>
@@ -2974,8 +2733,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[42]; }
-        set { Attributes[42] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[42].Value; }
+        set { Attributes[42].Value = value; }
     }
     
     /// <summary>
@@ -2987,8 +2746,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[43]; }
-        set { Attributes[43] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[43].Value; }
+        set { Attributes[43].Value = value; }
     }
     
     /// <summary>
@@ -3000,8 +2759,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[44]; }
-        set { Attributes[44] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[44].Value; }
+        set { Attributes[44].Value = value; }
     }
     
     /// <summary>
@@ -3013,8 +2772,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     public TrueFalseValue ForceDash
     {
-        get { return (TrueFalseValue)Attributes[45]; }
-        set { Attributes[45] = value; }
+        get { return (TrueFalseValue)Attributes[45].Value; }
+        set { Attributes[45].Value = value; }
     }
     
     /// <summary>
@@ -3026,8 +2785,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     public TrueFalseValue OleIcon
     {
-        get { return (TrueFalseValue)Attributes[46]; }
-        set { Attributes[46] = value; }
+        get { return (TrueFalseValue)Attributes[46].Value; }
+        set { Attributes[46].Value = value; }
     }
     
     /// <summary>
@@ -3039,8 +2798,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     public TrueFalseBlankValue Ole
     {
-        get { return (TrueFalseBlankValue)Attributes[47]; }
-        set { Attributes[47] = value; }
+        get { return (TrueFalseBlankValue)Attributes[47].Value; }
+        set { Attributes[47].Value = value; }
     }
     
     /// <summary>
@@ -3052,8 +2811,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     public TrueFalseValue PreferRelative
     {
-        get { return (TrueFalseValue)Attributes[48]; }
-        set { Attributes[48] = value; }
+        get { return (TrueFalseValue)Attributes[48].Value; }
+        set { Attributes[48].Value = value; }
     }
     
     /// <summary>
@@ -3065,8 +2824,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     public TrueFalseValue ClipToWrap
     {
-        get { return (TrueFalseValue)Attributes[49]; }
-        set { Attributes[49] = value; }
+        get { return (TrueFalseValue)Attributes[49].Value; }
+        set { Attributes[49].Value = value; }
     }
     
     /// <summary>
@@ -3078,8 +2837,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     public TrueFalseValue Clip
     {
-        get { return (TrueFalseValue)Attributes[50]; }
-        set { Attributes[50] = value; }
+        get { return (TrueFalseValue)Attributes[50].Value; }
+        set { Attributes[50].Value = value; }
     }
     
     /// <summary>
@@ -3089,8 +2848,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "type")]
     public StringValue Type
     {
-        get { return (StringValue)Attributes[51]; }
-        set { Attributes[51] = value; }
+        get { return (StringValue)Attributes[51].Value; }
+        set { Attributes[51].Value = value; }
     }
     
     /// <summary>
@@ -3100,8 +2859,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "adj")]
     public StringValue Adjustment
     {
-        get { return (StringValue)Attributes[52]; }
-        set { Attributes[52] = value; }
+        get { return (StringValue)Attributes[52].Value; }
+        set { Attributes[52].Value = value; }
     }
     
     /// <summary>
@@ -3111,8 +2870,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "path")]
     public StringValue EdgePath
     {
-        get { return (StringValue)Attributes[53]; }
-        set { Attributes[53] = value; }
+        get { return (StringValue)Attributes[53].Value; }
+        set { Attributes[53].Value = value; }
     }
     
     /// <summary>
@@ -3124,8 +2883,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(27, "gfxdata")]
     public Base64BinaryValue EncodedPackage
     {
-        get { return (Base64BinaryValue)Attributes[54]; }
-        set { Attributes[54] = value; }
+        get { return (Base64BinaryValue)Attributes[54].Value; }
+        set { Attributes[54].Value = value; }
     }
     
     /// <summary>
@@ -3135,8 +2894,8 @@ public partial class Shape : OpenXmlCompositeElement
     [SchemaAttr(0, "equationxml")]
     public StringValue EquationXml
     {
-        get { return (StringValue)Attributes[55]; }
-        set { Attributes[55] = value; }
+        get { return (StringValue)Attributes[55].Value; }
+        set { Attributes[55].Value = value; }
     }
     
 
@@ -3256,181 +3015,6 @@ if( 30 == namespaceId && "iscomment" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "style" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "href" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "target" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "class" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "alt" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordsize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordorigin" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "wrapcoords" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "print" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spid" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "oned" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "regroupid" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "doubleclicknotify" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "button" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userhidden" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bullet" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hr" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrstd" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrnoshade" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrpct" == name)
-    return new SingleValue();
-    
-if( 27 == namespaceId && "hralign" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>();
-    
-if( 27 == namespaceId && "allowincell" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "allowoverlap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userdrawn" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bordertopcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderleftcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderbottomcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderrightcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "dgmlayout" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmnodekind" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmlayoutmru" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "insetmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>();
-    
-if( 0 == namespaceId && "filled" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "fillcolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "stroked" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "strokecolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "strokeweight" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insetpen" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spt" == name)
-    return new Int32Value();
-    
-if( 27 == namespaceId && "connectortype" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>();
-    
-if( 27 == namespaceId && "bwmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwpure" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwnormal" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "forcedash" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "oleicon" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "ole" == name)
-    return new TrueFalseBlankValue();
-    
-if( 27 == namespaceId && "preferrelative" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "cliptowrap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "clip" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "type" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "adj" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "path" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "gfxdata" == name)
-    return new Base64BinaryValue();
-    
-if( 0 == namespaceId && "equationxml" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shape>(deep);
 
@@ -3509,13 +3093,64 @@ public partial class Shapetype : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","coordorigin","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip","adj","path","master" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27,0,0,27 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "style"),
+		AttributeTag.Create<StringValue>(0, "href"),
+		AttributeTag.Create<StringValue>(0, "target"),
+		AttributeTag.Create<StringValue>(0, "class"),
+		AttributeTag.Create<StringValue>(0, "title"),
+		AttributeTag.Create<StringValue>(0, "alt"),
+		AttributeTag.Create<StringValue>(0, "coordsize"),
+		AttributeTag.Create<StringValue>(0, "coordorigin"),
+		AttributeTag.Create<StringValue>(0, "wrapcoords"),
+		AttributeTag.Create<TrueFalseValue>(0, "print"),
+		AttributeTag.Create<StringValue>(27, "spid"),
+		AttributeTag.Create<TrueFalseValue>(27, "oned"),
+		AttributeTag.Create<IntegerValue>(27, "regroupid"),
+		AttributeTag.Create<TrueFalseValue>(27, "doubleclicknotify"),
+		AttributeTag.Create<TrueFalseValue>(27, "button"),
+		AttributeTag.Create<TrueFalseValue>(27, "userhidden"),
+		AttributeTag.Create<TrueFalseValue>(27, "bullet"),
+		AttributeTag.Create<TrueFalseValue>(27, "hr"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrstd"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrnoshade"),
+		AttributeTag.Create<SingleValue>(27, "hrpct"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>(27, "hralign"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowincell"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowoverlap"),
+		AttributeTag.Create<TrueFalseValue>(27, "userdrawn"),
+		AttributeTag.Create<StringValue>(27, "bordertopcolor"),
+		AttributeTag.Create<StringValue>(27, "borderleftcolor"),
+		AttributeTag.Create<StringValue>(27, "borderbottomcolor"),
+		AttributeTag.Create<StringValue>(27, "borderrightcolor"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayout"),
+		AttributeTag.Create<IntegerValue>(27, "dgmnodekind"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayoutmru"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>(27, "insetmode"),
+		AttributeTag.Create<TrueFalseValue>(0, "filled"),
+		AttributeTag.Create<StringValue>(0, "fillcolor"),
+		AttributeTag.Create<TrueFalseValue>(0, "stroked"),
+		AttributeTag.Create<StringValue>(0, "strokecolor"),
+		AttributeTag.Create<StringValue>(0, "strokeweight"),
+		AttributeTag.Create<TrueFalseValue>(0, "insetpen"),
+		AttributeTag.Create<Int32Value>(27, "spt"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>(27, "connectortype"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwmode"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwpure"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwnormal"),
+		AttributeTag.Create<TrueFalseValue>(27, "forcedash"),
+		AttributeTag.Create<TrueFalseValue>(27, "oleicon"),
+		AttributeTag.Create<TrueFalseBlankValue>(27, "ole"),
+		AttributeTag.Create<TrueFalseValue>(27, "preferrelative"),
+		AttributeTag.Create<TrueFalseValue>(27, "cliptowrap"),
+		AttributeTag.Create<TrueFalseValue>(27, "clip"),
+		AttributeTag.Create<StringValue>(0, "adj"),
+		AttributeTag.Create<StringValue>(0, "path"),
+		AttributeTag.Create<StringValue>(27, "master")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -3525,8 +3160,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -3536,8 +3171,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     public StringValue Style
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -3547,8 +3182,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     public StringValue Href
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -3558,8 +3193,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     public StringValue Target
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -3569,8 +3204,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     public StringValue Class
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -3580,8 +3215,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     public StringValue Title
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -3591,8 +3226,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     public StringValue Alternate
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -3602,8 +3237,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     public StringValue CoordinateSize
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -3613,8 +3248,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "coordorigin")]
     public StringValue CoordinateOrigin
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -3624,8 +3259,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     public StringValue WrapCoordinates
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -3635,8 +3270,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     public TrueFalseValue Print
     {
-        get { return (TrueFalseValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (TrueFalseValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -3648,8 +3283,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     public StringValue OptionalString
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -3661,8 +3296,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     public TrueFalseValue Oned
     {
-        get { return (TrueFalseValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (TrueFalseValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -3674,8 +3309,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     public IntegerValue RegroupId
     {
-        get { return (IntegerValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (IntegerValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -3687,8 +3322,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     public TrueFalseValue DoubleClickNotify
     {
-        get { return (TrueFalseValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (TrueFalseValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -3700,8 +3335,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     public TrueFalseValue Button
     {
-        get { return (TrueFalseValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (TrueFalseValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -3713,8 +3348,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     public TrueFalseValue UserHidden
     {
-        get { return (TrueFalseValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (TrueFalseValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -3726,8 +3361,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     public TrueFalseValue Bullet
     {
-        get { return (TrueFalseValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (TrueFalseValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -3739,8 +3374,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     public TrueFalseValue Horizontal
     {
-        get { return (TrueFalseValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (TrueFalseValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -3752,8 +3387,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     public TrueFalseValue HorizontalStandard
     {
-        get { return (TrueFalseValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (TrueFalseValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -3765,8 +3400,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     public TrueFalseValue HorizontalNoShade
     {
-        get { return (TrueFalseValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (TrueFalseValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -3778,8 +3413,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     public SingleValue HorizontalPercentage
     {
-        get { return (SingleValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (SingleValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -3791,8 +3426,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -3804,8 +3439,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     public TrueFalseValue AllowInCell
     {
-        get { return (TrueFalseValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (TrueFalseValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -3817,8 +3452,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     public TrueFalseValue AllowOverlap
     {
-        get { return (TrueFalseValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (TrueFalseValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -3830,8 +3465,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     public TrueFalseValue UserDrawn
     {
-        get { return (TrueFalseValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (TrueFalseValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -3843,8 +3478,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     public StringValue BorderTopColor
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -3856,8 +3491,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     public StringValue BorderLeftColor
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -3869,8 +3504,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     public StringValue BorderBottomColor
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -3882,8 +3517,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     public StringValue BorderRightColor
     {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (StringValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -3895,8 +3530,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     public IntegerValue DiagramLayout
     {
-        get { return (IntegerValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (IntegerValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -3908,8 +3543,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     public IntegerValue DiagramNodeKind
     {
-        get { return (IntegerValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (IntegerValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
     /// <summary>
@@ -3921,8 +3556,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     public IntegerValue DiagramLayoutMostRecentUsed
     {
-        get { return (IntegerValue)Attributes[32]; }
-        set { Attributes[32] = value; }
+        get { return (IntegerValue)Attributes[32].Value; }
+        set { Attributes[32].Value = value; }
     }
     
     /// <summary>
@@ -3934,8 +3569,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[33]; }
-        set { Attributes[33] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[33].Value; }
+        set { Attributes[33].Value = value; }
     }
     
     /// <summary>
@@ -3945,8 +3580,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     public TrueFalseValue Filled
     {
-        get { return (TrueFalseValue)Attributes[34]; }
-        set { Attributes[34] = value; }
+        get { return (TrueFalseValue)Attributes[34].Value; }
+        set { Attributes[34].Value = value; }
     }
     
     /// <summary>
@@ -3956,8 +3591,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     public StringValue FillColor
     {
-        get { return (StringValue)Attributes[35]; }
-        set { Attributes[35] = value; }
+        get { return (StringValue)Attributes[35].Value; }
+        set { Attributes[35].Value = value; }
     }
     
     /// <summary>
@@ -3967,8 +3602,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     public TrueFalseValue Stroked
     {
-        get { return (TrueFalseValue)Attributes[36]; }
-        set { Attributes[36] = value; }
+        get { return (TrueFalseValue)Attributes[36].Value; }
+        set { Attributes[36].Value = value; }
     }
     
     /// <summary>
@@ -3978,8 +3613,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     public StringValue StrokeColor
     {
-        get { return (StringValue)Attributes[37]; }
-        set { Attributes[37] = value; }
+        get { return (StringValue)Attributes[37].Value; }
+        set { Attributes[37].Value = value; }
     }
     
     /// <summary>
@@ -3989,8 +3624,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     public StringValue StrokeWeight
     {
-        get { return (StringValue)Attributes[38]; }
-        set { Attributes[38] = value; }
+        get { return (StringValue)Attributes[38].Value; }
+        set { Attributes[38].Value = value; }
     }
     
     /// <summary>
@@ -4000,8 +3635,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     public TrueFalseValue InsetPen
     {
-        get { return (TrueFalseValue)Attributes[39]; }
-        set { Attributes[39] = value; }
+        get { return (TrueFalseValue)Attributes[39].Value; }
+        set { Attributes[39].Value = value; }
     }
     
     /// <summary>
@@ -4013,8 +3648,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     public Int32Value OptionalNumber
     {
-        get { return (Int32Value)Attributes[40]; }
-        set { Attributes[40] = value; }
+        get { return (Int32Value)Attributes[40].Value; }
+        set { Attributes[40].Value = value; }
     }
     
     /// <summary>
@@ -4026,8 +3661,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[41]; }
-        set { Attributes[41] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[41].Value; }
+        set { Attributes[41].Value = value; }
     }
     
     /// <summary>
@@ -4039,8 +3674,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[42]; }
-        set { Attributes[42] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[42].Value; }
+        set { Attributes[42].Value = value; }
     }
     
     /// <summary>
@@ -4052,8 +3687,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[43]; }
-        set { Attributes[43] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[43].Value; }
+        set { Attributes[43].Value = value; }
     }
     
     /// <summary>
@@ -4065,8 +3700,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[44]; }
-        set { Attributes[44] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[44].Value; }
+        set { Attributes[44].Value = value; }
     }
     
     /// <summary>
@@ -4078,8 +3713,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     public TrueFalseValue ForceDash
     {
-        get { return (TrueFalseValue)Attributes[45]; }
-        set { Attributes[45] = value; }
+        get { return (TrueFalseValue)Attributes[45].Value; }
+        set { Attributes[45].Value = value; }
     }
     
     /// <summary>
@@ -4091,8 +3726,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     public TrueFalseValue OleIcon
     {
-        get { return (TrueFalseValue)Attributes[46]; }
-        set { Attributes[46] = value; }
+        get { return (TrueFalseValue)Attributes[46].Value; }
+        set { Attributes[46].Value = value; }
     }
     
     /// <summary>
@@ -4104,8 +3739,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     public TrueFalseBlankValue Ole
     {
-        get { return (TrueFalseBlankValue)Attributes[47]; }
-        set { Attributes[47] = value; }
+        get { return (TrueFalseBlankValue)Attributes[47].Value; }
+        set { Attributes[47].Value = value; }
     }
     
     /// <summary>
@@ -4117,8 +3752,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     public TrueFalseValue PreferRelative
     {
-        get { return (TrueFalseValue)Attributes[48]; }
-        set { Attributes[48] = value; }
+        get { return (TrueFalseValue)Attributes[48].Value; }
+        set { Attributes[48].Value = value; }
     }
     
     /// <summary>
@@ -4130,8 +3765,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     public TrueFalseValue ClipToWrap
     {
-        get { return (TrueFalseValue)Attributes[49]; }
-        set { Attributes[49] = value; }
+        get { return (TrueFalseValue)Attributes[49].Value; }
+        set { Attributes[49].Value = value; }
     }
     
     /// <summary>
@@ -4143,8 +3778,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     public TrueFalseValue Clip
     {
-        get { return (TrueFalseValue)Attributes[50]; }
-        set { Attributes[50] = value; }
+        get { return (TrueFalseValue)Attributes[50].Value; }
+        set { Attributes[50].Value = value; }
     }
     
     /// <summary>
@@ -4154,8 +3789,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "adj")]
     public StringValue Adjustment
     {
-        get { return (StringValue)Attributes[51]; }
-        set { Attributes[51] = value; }
+        get { return (StringValue)Attributes[51].Value; }
+        set { Attributes[51].Value = value; }
     }
     
     /// <summary>
@@ -4165,8 +3800,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(0, "path")]
     public StringValue EdgePath
     {
-        get { return (StringValue)Attributes[52]; }
-        set { Attributes[52] = value; }
+        get { return (StringValue)Attributes[52].Value; }
+        set { Attributes[52].Value = value; }
     }
     
     /// <summary>
@@ -4178,8 +3813,8 @@ public partial class Shapetype : OpenXmlCompositeElement
     [SchemaAttr(27, "master")]
     public StringValue Master
     {
-        get { return (StringValue)Attributes[53]; }
-        set { Attributes[53] = value; }
+        get { return (StringValue)Attributes[53].Value; }
+        set { Attributes[53].Value = value; }
     }
     
 
@@ -4296,175 +3931,6 @@ if( 27 == namespaceId && "complex" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "style" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "href" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "target" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "class" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "alt" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordsize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordorigin" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "wrapcoords" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "print" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spid" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "oned" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "regroupid" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "doubleclicknotify" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "button" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userhidden" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bullet" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hr" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrstd" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrnoshade" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrpct" == name)
-    return new SingleValue();
-    
-if( 27 == namespaceId && "hralign" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>();
-    
-if( 27 == namespaceId && "allowincell" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "allowoverlap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userdrawn" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bordertopcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderleftcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderbottomcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderrightcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "dgmlayout" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmnodekind" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmlayoutmru" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "insetmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>();
-    
-if( 0 == namespaceId && "filled" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "fillcolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "stroked" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "strokecolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "strokeweight" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insetpen" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spt" == name)
-    return new Int32Value();
-    
-if( 27 == namespaceId && "connectortype" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>();
-    
-if( 27 == namespaceId && "bwmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwpure" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwnormal" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "forcedash" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "oleicon" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "ole" == name)
-    return new TrueFalseBlankValue();
-    
-if( 27 == namespaceId && "preferrelative" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "cliptowrap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "clip" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "adj" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "path" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "master" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shapetype>(deep);
 
@@ -4529,13 +3995,43 @@ public partial class Group : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","coordorigin","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","editas","tableproperties","tablelimits" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,0,27,27 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "style"),
+		AttributeTag.Create<StringValue>(0, "href"),
+		AttributeTag.Create<StringValue>(0, "target"),
+		AttributeTag.Create<StringValue>(0, "class"),
+		AttributeTag.Create<StringValue>(0, "title"),
+		AttributeTag.Create<StringValue>(0, "alt"),
+		AttributeTag.Create<StringValue>(0, "coordsize"),
+		AttributeTag.Create<StringValue>(0, "coordorigin"),
+		AttributeTag.Create<StringValue>(0, "wrapcoords"),
+		AttributeTag.Create<TrueFalseValue>(0, "print"),
+		AttributeTag.Create<StringValue>(27, "spid"),
+		AttributeTag.Create<TrueFalseValue>(27, "oned"),
+		AttributeTag.Create<IntegerValue>(27, "regroupid"),
+		AttributeTag.Create<TrueFalseValue>(27, "doubleclicknotify"),
+		AttributeTag.Create<TrueFalseValue>(27, "button"),
+		AttributeTag.Create<TrueFalseValue>(27, "userhidden"),
+		AttributeTag.Create<TrueFalseValue>(27, "bullet"),
+		AttributeTag.Create<TrueFalseValue>(27, "hr"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrstd"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrnoshade"),
+		AttributeTag.Create<SingleValue>(27, "hrpct"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>(27, "hralign"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowincell"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowoverlap"),
+		AttributeTag.Create<TrueFalseValue>(27, "userdrawn"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayout"),
+		AttributeTag.Create<IntegerValue>(27, "dgmnodekind"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayoutmru"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>(27, "insetmode"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.EditAsValues>>(0, "editas"),
+		AttributeTag.Create<StringValue>(27, "tableproperties"),
+		AttributeTag.Create<StringValue>(27, "tablelimits")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -4545,8 +4041,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -4556,8 +4052,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     public StringValue Style
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -4567,8 +4063,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     public StringValue Href
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -4578,8 +4074,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     public StringValue Target
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -4589,8 +4085,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     public StringValue Class
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -4600,8 +4096,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     public StringValue Title
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -4611,8 +4107,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     public StringValue Alternate
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -4622,8 +4118,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     public StringValue CoordinateSize
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -4633,8 +4129,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "coordorigin")]
     public StringValue CoordinateOrigin
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -4644,8 +4140,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     public StringValue WrapCoordinates
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -4655,8 +4151,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     public TrueFalseValue Print
     {
-        get { return (TrueFalseValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (TrueFalseValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -4668,8 +4164,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     public StringValue OptionalString
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -4681,8 +4177,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     public TrueFalseValue Oned
     {
-        get { return (TrueFalseValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (TrueFalseValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -4694,8 +4190,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     public IntegerValue RegroupId
     {
-        get { return (IntegerValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (IntegerValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -4707,8 +4203,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     public TrueFalseValue DoubleClickNotify
     {
-        get { return (TrueFalseValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (TrueFalseValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -4720,8 +4216,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     public TrueFalseValue Button
     {
-        get { return (TrueFalseValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (TrueFalseValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -4733,8 +4229,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     public TrueFalseValue UserHidden
     {
-        get { return (TrueFalseValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (TrueFalseValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -4746,8 +4242,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     public TrueFalseValue Bullet
     {
-        get { return (TrueFalseValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (TrueFalseValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -4759,8 +4255,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     public TrueFalseValue Horizontal
     {
-        get { return (TrueFalseValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (TrueFalseValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -4772,8 +4268,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     public TrueFalseValue HorizontalStandard
     {
-        get { return (TrueFalseValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (TrueFalseValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -4785,8 +4281,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     public TrueFalseValue HorizontalNoShade
     {
-        get { return (TrueFalseValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (TrueFalseValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -4798,8 +4294,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     public SingleValue HorizontalPercentage
     {
-        get { return (SingleValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (SingleValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -4811,8 +4307,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -4824,8 +4320,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     public TrueFalseValue AllowInCell
     {
-        get { return (TrueFalseValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (TrueFalseValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -4837,8 +4333,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     public TrueFalseValue AllowOverlap
     {
-        get { return (TrueFalseValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (TrueFalseValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -4850,8 +4346,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     public TrueFalseValue UserDrawn
     {
-        get { return (TrueFalseValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (TrueFalseValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -4863,8 +4359,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     public IntegerValue DiagramLayout
     {
-        get { return (IntegerValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (IntegerValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -4876,8 +4372,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     public IntegerValue DiagramNodeKind
     {
-        get { return (IntegerValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (IntegerValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -4889,8 +4385,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     public IntegerValue DiagramLayoutMostRecentUsed
     {
-        get { return (IntegerValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (IntegerValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -4902,8 +4398,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -4913,8 +4409,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "editas")]
     public EnumValue<DocumentFormat.OpenXml.Vml.EditAsValues> EditAs
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.EditAsValues>)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.EditAsValues>)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -4926,8 +4422,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "tableproperties")]
     public StringValue TableProperties
     {
-        get { return (StringValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (StringValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
     /// <summary>
@@ -4939,8 +4435,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(27, "tablelimits")]
     public StringValue TableLimits
     {
-        get { return (StringValue)Attributes[32]; }
-        set { Attributes[32] = value; }
+        get { return (StringValue)Attributes[32].Value; }
+        set { Attributes[32].Value = value; }
     }
     
 
@@ -5036,112 +4532,6 @@ if( 29 == namespaceId && "ClientData" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "style" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "href" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "target" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "class" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "alt" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordsize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordorigin" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "wrapcoords" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "print" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spid" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "oned" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "regroupid" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "doubleclicknotify" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "button" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userhidden" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bullet" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hr" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrstd" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrnoshade" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrpct" == name)
-    return new SingleValue();
-    
-if( 27 == namespaceId && "hralign" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>();
-    
-if( 27 == namespaceId && "allowincell" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "allowoverlap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userdrawn" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "dgmlayout" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmnodekind" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmlayoutmru" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "insetmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>();
-    
-if( 0 == namespaceId && "editas" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.EditAsValues>();
-    
-if( 27 == namespaceId && "tableproperties" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "tablelimits" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Group>(deep);
 
@@ -5174,13 +4564,17 @@ public partial class Background : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","fill","fillcolor","bwmode","bwpure","bwnormal","targetscreensize" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,27,27,27,27 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<TrueFalseValue>(0, "fill"),
+		AttributeTag.Create<StringValue>(0, "fillcolor"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwmode"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwpure"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwnormal"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.ScreenSizeValues>>(27, "targetscreensize")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -5190,8 +4584,8 @@ public partial class Background : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -5201,8 +4595,8 @@ public partial class Background : OpenXmlCompositeElement
     [SchemaAttr(0, "fill")]
     public TrueFalseValue Filled
     {
-        get { return (TrueFalseValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (TrueFalseValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -5212,8 +4606,8 @@ public partial class Background : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     public StringValue Fillcolor
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -5225,8 +4619,8 @@ public partial class Background : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -5238,8 +4632,8 @@ public partial class Background : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -5251,8 +4645,8 @@ public partial class Background : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -5264,8 +4658,8 @@ public partial class Background : OpenXmlCompositeElement
     [SchemaAttr(27, "targetscreensize")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ScreenSizeValues> TargetScreenSize
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ScreenSizeValues>)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ScreenSizeValues>)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
 
@@ -5333,34 +4727,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         set => SetElement(0, value);
     }
 
-
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "fill" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "fillcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "bwmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwpure" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwnormal" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "targetscreensize" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.ScreenSizeValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Background>(deep);
@@ -5438,13 +4804,62 @@ public partial class Arc : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip","id","style","href","target","title","alt","coordsize","coordorigin","wrapcoords","print","startangle","endangle" };
-    private static readonly byte[] attributeNamespaceIds = { 27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(27, "spid"),
+		AttributeTag.Create<TrueFalseValue>(27, "oned"),
+		AttributeTag.Create<IntegerValue>(27, "regroupid"),
+		AttributeTag.Create<TrueFalseValue>(27, "doubleclicknotify"),
+		AttributeTag.Create<TrueFalseValue>(27, "button"),
+		AttributeTag.Create<TrueFalseValue>(27, "userhidden"),
+		AttributeTag.Create<TrueFalseValue>(27, "bullet"),
+		AttributeTag.Create<TrueFalseValue>(27, "hr"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrstd"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrnoshade"),
+		AttributeTag.Create<SingleValue>(27, "hrpct"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>(27, "hralign"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowincell"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowoverlap"),
+		AttributeTag.Create<TrueFalseValue>(27, "userdrawn"),
+		AttributeTag.Create<StringValue>(27, "bordertopcolor"),
+		AttributeTag.Create<StringValue>(27, "borderleftcolor"),
+		AttributeTag.Create<StringValue>(27, "borderbottomcolor"),
+		AttributeTag.Create<StringValue>(27, "borderrightcolor"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayout"),
+		AttributeTag.Create<IntegerValue>(27, "dgmnodekind"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayoutmru"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>(27, "insetmode"),
+		AttributeTag.Create<TrueFalseValue>(0, "filled"),
+		AttributeTag.Create<StringValue>(0, "fillcolor"),
+		AttributeTag.Create<TrueFalseValue>(0, "stroked"),
+		AttributeTag.Create<StringValue>(0, "strokecolor"),
+		AttributeTag.Create<StringValue>(0, "strokeweight"),
+		AttributeTag.Create<TrueFalseValue>(0, "insetpen"),
+		AttributeTag.Create<Int32Value>(27, "spt"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>(27, "connectortype"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwmode"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwpure"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwnormal"),
+		AttributeTag.Create<TrueFalseValue>(27, "forcedash"),
+		AttributeTag.Create<TrueFalseValue>(27, "oleicon"),
+		AttributeTag.Create<TrueFalseBlankValue>(27, "ole"),
+		AttributeTag.Create<TrueFalseValue>(27, "preferrelative"),
+		AttributeTag.Create<TrueFalseValue>(27, "cliptowrap"),
+		AttributeTag.Create<TrueFalseValue>(27, "clip"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "style"),
+		AttributeTag.Create<StringValue>(0, "href"),
+		AttributeTag.Create<StringValue>(0, "target"),
+		AttributeTag.Create<StringValue>(0, "title"),
+		AttributeTag.Create<StringValue>(0, "alt"),
+		AttributeTag.Create<StringValue>(0, "coordsize"),
+		AttributeTag.Create<StringValue>(0, "coordorigin"),
+		AttributeTag.Create<StringValue>(0, "wrapcoords"),
+		AttributeTag.Create<TrueFalseValue>(0, "print"),
+		AttributeTag.Create<DecimalValue>(0, "startangle"),
+		AttributeTag.Create<DecimalValue>(0, "endangle")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -5456,8 +4871,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     public StringValue OptionalString
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -5469,8 +4884,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     public TrueFalseValue Oned
     {
-        get { return (TrueFalseValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (TrueFalseValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -5482,8 +4897,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     public IntegerValue RegroupId
     {
-        get { return (IntegerValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (IntegerValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -5495,8 +4910,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     public TrueFalseValue DoubleClickNotify
     {
-        get { return (TrueFalseValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (TrueFalseValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -5508,8 +4923,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     public TrueFalseValue Button
     {
-        get { return (TrueFalseValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (TrueFalseValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -5521,8 +4936,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     public TrueFalseValue UserHidden
     {
-        get { return (TrueFalseValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (TrueFalseValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -5534,8 +4949,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     public TrueFalseValue Bullet
     {
-        get { return (TrueFalseValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (TrueFalseValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -5547,8 +4962,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     public TrueFalseValue Horizontal
     {
-        get { return (TrueFalseValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (TrueFalseValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -5560,8 +4975,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     public TrueFalseValue HorizontalStandard
     {
-        get { return (TrueFalseValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (TrueFalseValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -5573,8 +4988,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     public TrueFalseValue HorizontalNoShade
     {
-        get { return (TrueFalseValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (TrueFalseValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -5586,8 +5001,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     public SingleValue HorizontalPercentage
     {
-        get { return (SingleValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (SingleValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -5599,8 +5014,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -5612,8 +5027,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     public TrueFalseValue AllowInCell
     {
-        get { return (TrueFalseValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (TrueFalseValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -5625,8 +5040,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     public TrueFalseValue AllowOverlap
     {
-        get { return (TrueFalseValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (TrueFalseValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -5638,8 +5053,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     public TrueFalseValue UserDrawn
     {
-        get { return (TrueFalseValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (TrueFalseValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -5651,8 +5066,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     public StringValue BorderTopColor
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -5664,8 +5079,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     public StringValue BorderLeftColor
     {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -5677,8 +5092,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     public StringValue BorderBottomColor
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -5690,8 +5105,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     public StringValue BorderRightColor
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -5703,8 +5118,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     public IntegerValue DiagramLayout
     {
-        get { return (IntegerValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (IntegerValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -5716,8 +5131,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     public IntegerValue DiagramNodeKind
     {
-        get { return (IntegerValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (IntegerValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -5729,8 +5144,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     public IntegerValue DiagramLayoutMostRecentUsed
     {
-        get { return (IntegerValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (IntegerValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -5742,8 +5157,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -5753,8 +5168,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     public TrueFalseValue Filled
     {
-        get { return (TrueFalseValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (TrueFalseValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -5764,8 +5179,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     public StringValue FillColor
     {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (StringValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -5775,8 +5190,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     public TrueFalseValue Stroked
     {
-        get { return (TrueFalseValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (TrueFalseValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -5786,8 +5201,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     public StringValue StrokeColor
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -5797,8 +5212,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     public StringValue StrokeWeight
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -5808,8 +5223,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     public TrueFalseValue InsetPen
     {
-        get { return (TrueFalseValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (TrueFalseValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -5821,8 +5236,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     public Int32Value OptionalNumber
     {
-        get { return (Int32Value)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (Int32Value)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -5834,8 +5249,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -5847,8 +5262,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
     /// <summary>
@@ -5860,8 +5275,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[32]; }
-        set { Attributes[32] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[32].Value; }
+        set { Attributes[32].Value = value; }
     }
     
     /// <summary>
@@ -5873,8 +5288,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[33]; }
-        set { Attributes[33] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[33].Value; }
+        set { Attributes[33].Value = value; }
     }
     
     /// <summary>
@@ -5886,8 +5301,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     public TrueFalseValue ForceDash
     {
-        get { return (TrueFalseValue)Attributes[34]; }
-        set { Attributes[34] = value; }
+        get { return (TrueFalseValue)Attributes[34].Value; }
+        set { Attributes[34].Value = value; }
     }
     
     /// <summary>
@@ -5899,8 +5314,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     public TrueFalseValue OleIcon
     {
-        get { return (TrueFalseValue)Attributes[35]; }
-        set { Attributes[35] = value; }
+        get { return (TrueFalseValue)Attributes[35].Value; }
+        set { Attributes[35].Value = value; }
     }
     
     /// <summary>
@@ -5912,8 +5327,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     public TrueFalseBlankValue Ole
     {
-        get { return (TrueFalseBlankValue)Attributes[36]; }
-        set { Attributes[36] = value; }
+        get { return (TrueFalseBlankValue)Attributes[36].Value; }
+        set { Attributes[36].Value = value; }
     }
     
     /// <summary>
@@ -5925,8 +5340,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     public TrueFalseValue PreferRelative
     {
-        get { return (TrueFalseValue)Attributes[37]; }
-        set { Attributes[37] = value; }
+        get { return (TrueFalseValue)Attributes[37].Value; }
+        set { Attributes[37].Value = value; }
     }
     
     /// <summary>
@@ -5938,8 +5353,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     public TrueFalseValue ClipToWrap
     {
-        get { return (TrueFalseValue)Attributes[38]; }
-        set { Attributes[38] = value; }
+        get { return (TrueFalseValue)Attributes[38].Value; }
+        set { Attributes[38].Value = value; }
     }
     
     /// <summary>
@@ -5951,8 +5366,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     public TrueFalseValue Clip
     {
-        get { return (TrueFalseValue)Attributes[39]; }
-        set { Attributes[39] = value; }
+        get { return (TrueFalseValue)Attributes[39].Value; }
+        set { Attributes[39].Value = value; }
     }
     
     /// <summary>
@@ -5962,8 +5377,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[40]; }
-        set { Attributes[40] = value; }
+        get { return (StringValue)Attributes[40].Value; }
+        set { Attributes[40].Value = value; }
     }
     
     /// <summary>
@@ -5973,8 +5388,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     public StringValue Style
     {
-        get { return (StringValue)Attributes[41]; }
-        set { Attributes[41] = value; }
+        get { return (StringValue)Attributes[41].Value; }
+        set { Attributes[41].Value = value; }
     }
     
     /// <summary>
@@ -5984,8 +5399,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     public StringValue Href
     {
-        get { return (StringValue)Attributes[42]; }
-        set { Attributes[42] = value; }
+        get { return (StringValue)Attributes[42].Value; }
+        set { Attributes[42].Value = value; }
     }
     
     /// <summary>
@@ -5995,8 +5410,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     public StringValue Target
     {
-        get { return (StringValue)Attributes[43]; }
-        set { Attributes[43] = value; }
+        get { return (StringValue)Attributes[43].Value; }
+        set { Attributes[43].Value = value; }
     }
     
     /// <summary>
@@ -6006,8 +5421,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     public StringValue Title
     {
-        get { return (StringValue)Attributes[44]; }
-        set { Attributes[44] = value; }
+        get { return (StringValue)Attributes[44].Value; }
+        set { Attributes[44].Value = value; }
     }
     
     /// <summary>
@@ -6017,8 +5432,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     public StringValue Alternate
     {
-        get { return (StringValue)Attributes[45]; }
-        set { Attributes[45] = value; }
+        get { return (StringValue)Attributes[45].Value; }
+        set { Attributes[45].Value = value; }
     }
     
     /// <summary>
@@ -6028,8 +5443,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     public StringValue CoordinateSize
     {
-        get { return (StringValue)Attributes[46]; }
-        set { Attributes[46] = value; }
+        get { return (StringValue)Attributes[46].Value; }
+        set { Attributes[46].Value = value; }
     }
     
     /// <summary>
@@ -6039,8 +5454,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "coordorigin")]
     public StringValue CoordinateOrigin
     {
-        get { return (StringValue)Attributes[47]; }
-        set { Attributes[47] = value; }
+        get { return (StringValue)Attributes[47].Value; }
+        set { Attributes[47].Value = value; }
     }
     
     /// <summary>
@@ -6050,8 +5465,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     public StringValue Wrapcoords
     {
-        get { return (StringValue)Attributes[48]; }
-        set { Attributes[48] = value; }
+        get { return (StringValue)Attributes[48].Value; }
+        set { Attributes[48].Value = value; }
     }
     
     /// <summary>
@@ -6061,8 +5476,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     public TrueFalseValue Print
     {
-        get { return (TrueFalseValue)Attributes[49]; }
-        set { Attributes[49] = value; }
+        get { return (TrueFalseValue)Attributes[49].Value; }
+        set { Attributes[49].Value = value; }
     }
     
     /// <summary>
@@ -6072,8 +5487,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "startangle")]
     public DecimalValue StartAngle
     {
-        get { return (DecimalValue)Attributes[50]; }
-        set { Attributes[50] = value; }
+        get { return (DecimalValue)Attributes[50].Value; }
+        set { Attributes[50].Value = value; }
     }
     
     /// <summary>
@@ -6083,8 +5498,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "endangle")]
     public DecimalValue EndAngle
     {
-        get { return (DecimalValue)Attributes[51]; }
-        set { Attributes[51] = value; }
+        get { return (DecimalValue)Attributes[51].Value; }
+        set { Attributes[51].Value = value; }
     }
     
 
@@ -6198,169 +5613,6 @@ if( 30 == namespaceId && "textdata" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 27 == namespaceId && "spid" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "oned" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "regroupid" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "doubleclicknotify" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "button" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userhidden" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bullet" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hr" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrstd" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrnoshade" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrpct" == name)
-    return new SingleValue();
-    
-if( 27 == namespaceId && "hralign" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>();
-    
-if( 27 == namespaceId && "allowincell" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "allowoverlap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userdrawn" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bordertopcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderleftcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderbottomcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderrightcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "dgmlayout" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmnodekind" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmlayoutmru" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "insetmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>();
-    
-if( 0 == namespaceId && "filled" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "fillcolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "stroked" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "strokecolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "strokeweight" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insetpen" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spt" == name)
-    return new Int32Value();
-    
-if( 27 == namespaceId && "connectortype" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>();
-    
-if( 27 == namespaceId && "bwmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwpure" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwnormal" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "forcedash" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "oleicon" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "ole" == name)
-    return new TrueFalseBlankValue();
-    
-if( 27 == namespaceId && "preferrelative" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "cliptowrap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "clip" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "style" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "href" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "target" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "alt" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordsize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordorigin" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "wrapcoords" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "print" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "startangle" == name)
-    return new DecimalValue();
-    
-if( 0 == namespaceId && "endangle" == name)
-    return new DecimalValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Arc>(deep);
 
@@ -6437,13 +5689,65 @@ public partial class Curve : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","coordorigin","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip","from","control1","control2","to" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "style"),
+		AttributeTag.Create<StringValue>(0, "href"),
+		AttributeTag.Create<StringValue>(0, "target"),
+		AttributeTag.Create<StringValue>(0, "class"),
+		AttributeTag.Create<StringValue>(0, "title"),
+		AttributeTag.Create<StringValue>(0, "alt"),
+		AttributeTag.Create<StringValue>(0, "coordsize"),
+		AttributeTag.Create<StringValue>(0, "coordorigin"),
+		AttributeTag.Create<StringValue>(0, "wrapcoords"),
+		AttributeTag.Create<TrueFalseValue>(0, "print"),
+		AttributeTag.Create<StringValue>(27, "spid"),
+		AttributeTag.Create<TrueFalseValue>(27, "oned"),
+		AttributeTag.Create<IntegerValue>(27, "regroupid"),
+		AttributeTag.Create<TrueFalseValue>(27, "doubleclicknotify"),
+		AttributeTag.Create<TrueFalseValue>(27, "button"),
+		AttributeTag.Create<TrueFalseValue>(27, "userhidden"),
+		AttributeTag.Create<TrueFalseValue>(27, "bullet"),
+		AttributeTag.Create<TrueFalseValue>(27, "hr"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrstd"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrnoshade"),
+		AttributeTag.Create<SingleValue>(27, "hrpct"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>(27, "hralign"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowincell"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowoverlap"),
+		AttributeTag.Create<TrueFalseValue>(27, "userdrawn"),
+		AttributeTag.Create<StringValue>(27, "bordertopcolor"),
+		AttributeTag.Create<StringValue>(27, "borderleftcolor"),
+		AttributeTag.Create<StringValue>(27, "borderbottomcolor"),
+		AttributeTag.Create<StringValue>(27, "borderrightcolor"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayout"),
+		AttributeTag.Create<IntegerValue>(27, "dgmnodekind"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayoutmru"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>(27, "insetmode"),
+		AttributeTag.Create<TrueFalseValue>(0, "filled"),
+		AttributeTag.Create<StringValue>(0, "fillcolor"),
+		AttributeTag.Create<TrueFalseValue>(0, "stroked"),
+		AttributeTag.Create<StringValue>(0, "strokecolor"),
+		AttributeTag.Create<StringValue>(0, "strokeweight"),
+		AttributeTag.Create<TrueFalseValue>(0, "insetpen"),
+		AttributeTag.Create<Int32Value>(27, "spt"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>(27, "connectortype"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwmode"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwpure"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwnormal"),
+		AttributeTag.Create<TrueFalseValue>(27, "forcedash"),
+		AttributeTag.Create<TrueFalseValue>(27, "oleicon"),
+		AttributeTag.Create<TrueFalseBlankValue>(27, "ole"),
+		AttributeTag.Create<TrueFalseValue>(27, "preferrelative"),
+		AttributeTag.Create<TrueFalseValue>(27, "cliptowrap"),
+		AttributeTag.Create<TrueFalseValue>(27, "clip"),
+		AttributeTag.Create<StringValue>(0, "from"),
+		AttributeTag.Create<StringValue>(0, "control1"),
+		AttributeTag.Create<StringValue>(0, "control2"),
+		AttributeTag.Create<StringValue>(0, "to")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -6453,8 +5757,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -6464,8 +5768,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     public StringValue Style
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -6475,8 +5779,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     public StringValue Href
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -6486,8 +5790,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     public StringValue Target
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -6497,8 +5801,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     public StringValue Class
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -6508,8 +5812,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     public StringValue Title
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -6519,8 +5823,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     public StringValue Alternate
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -6530,8 +5834,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     public StringValue CoordinateSize
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -6541,8 +5845,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "coordorigin")]
     public StringValue CoordinateOrigin
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -6552,8 +5856,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     public StringValue WrapCoordinates
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -6563,8 +5867,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     public TrueFalseValue Print
     {
-        get { return (TrueFalseValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (TrueFalseValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -6576,8 +5880,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     public StringValue OptionalString
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -6589,8 +5893,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     public TrueFalseValue Oned
     {
-        get { return (TrueFalseValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (TrueFalseValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -6602,8 +5906,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     public IntegerValue RegroupId
     {
-        get { return (IntegerValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (IntegerValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -6615,8 +5919,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     public TrueFalseValue DoubleClickNotify
     {
-        get { return (TrueFalseValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (TrueFalseValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -6628,8 +5932,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     public TrueFalseValue Button
     {
-        get { return (TrueFalseValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (TrueFalseValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -6641,8 +5945,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     public TrueFalseValue UserHidden
     {
-        get { return (TrueFalseValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (TrueFalseValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -6654,8 +5958,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     public TrueFalseValue Bullet
     {
-        get { return (TrueFalseValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (TrueFalseValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -6667,8 +5971,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     public TrueFalseValue Horizontal
     {
-        get { return (TrueFalseValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (TrueFalseValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -6680,8 +5984,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     public TrueFalseValue HorizontalStandard
     {
-        get { return (TrueFalseValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (TrueFalseValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -6693,8 +5997,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     public TrueFalseValue HorizontalNoShade
     {
-        get { return (TrueFalseValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (TrueFalseValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -6706,8 +6010,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     public SingleValue HorizontalPercentage
     {
-        get { return (SingleValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (SingleValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -6719,8 +6023,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -6732,8 +6036,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     public TrueFalseValue AllowInCell
     {
-        get { return (TrueFalseValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (TrueFalseValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -6745,8 +6049,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     public TrueFalseValue AllowOverlap
     {
-        get { return (TrueFalseValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (TrueFalseValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -6758,8 +6062,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     public TrueFalseValue UserDrawn
     {
-        get { return (TrueFalseValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (TrueFalseValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -6771,8 +6075,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     public StringValue BorderTopColor
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -6784,8 +6088,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     public StringValue BorderLeftColor
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -6797,8 +6101,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     public StringValue BorderBottomColor
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -6810,8 +6114,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     public StringValue BorderRightColor
     {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (StringValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -6823,8 +6127,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     public IntegerValue DiagramLayout
     {
-        get { return (IntegerValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (IntegerValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -6836,8 +6140,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     public IntegerValue DiagramNodeKind
     {
-        get { return (IntegerValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (IntegerValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
     /// <summary>
@@ -6849,8 +6153,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     public IntegerValue DiagramLayoutMostRecentUsed
     {
-        get { return (IntegerValue)Attributes[32]; }
-        set { Attributes[32] = value; }
+        get { return (IntegerValue)Attributes[32].Value; }
+        set { Attributes[32].Value = value; }
     }
     
     /// <summary>
@@ -6862,8 +6166,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[33]; }
-        set { Attributes[33] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[33].Value; }
+        set { Attributes[33].Value = value; }
     }
     
     /// <summary>
@@ -6873,8 +6177,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     public TrueFalseValue Filled
     {
-        get { return (TrueFalseValue)Attributes[34]; }
-        set { Attributes[34] = value; }
+        get { return (TrueFalseValue)Attributes[34].Value; }
+        set { Attributes[34].Value = value; }
     }
     
     /// <summary>
@@ -6884,8 +6188,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     public StringValue FillColor
     {
-        get { return (StringValue)Attributes[35]; }
-        set { Attributes[35] = value; }
+        get { return (StringValue)Attributes[35].Value; }
+        set { Attributes[35].Value = value; }
     }
     
     /// <summary>
@@ -6895,8 +6199,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     public TrueFalseValue Stroked
     {
-        get { return (TrueFalseValue)Attributes[36]; }
-        set { Attributes[36] = value; }
+        get { return (TrueFalseValue)Attributes[36].Value; }
+        set { Attributes[36].Value = value; }
     }
     
     /// <summary>
@@ -6906,8 +6210,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     public StringValue StrokeColor
     {
-        get { return (StringValue)Attributes[37]; }
-        set { Attributes[37] = value; }
+        get { return (StringValue)Attributes[37].Value; }
+        set { Attributes[37].Value = value; }
     }
     
     /// <summary>
@@ -6917,8 +6221,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     public StringValue StrokeWeight
     {
-        get { return (StringValue)Attributes[38]; }
-        set { Attributes[38] = value; }
+        get { return (StringValue)Attributes[38].Value; }
+        set { Attributes[38].Value = value; }
     }
     
     /// <summary>
@@ -6928,8 +6232,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     public TrueFalseValue InsetPen
     {
-        get { return (TrueFalseValue)Attributes[39]; }
-        set { Attributes[39] = value; }
+        get { return (TrueFalseValue)Attributes[39].Value; }
+        set { Attributes[39].Value = value; }
     }
     
     /// <summary>
@@ -6941,8 +6245,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     public Int32Value OptionalNumber
     {
-        get { return (Int32Value)Attributes[40]; }
-        set { Attributes[40] = value; }
+        get { return (Int32Value)Attributes[40].Value; }
+        set { Attributes[40].Value = value; }
     }
     
     /// <summary>
@@ -6954,8 +6258,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[41]; }
-        set { Attributes[41] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[41].Value; }
+        set { Attributes[41].Value = value; }
     }
     
     /// <summary>
@@ -6967,8 +6271,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[42]; }
-        set { Attributes[42] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[42].Value; }
+        set { Attributes[42].Value = value; }
     }
     
     /// <summary>
@@ -6980,8 +6284,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[43]; }
-        set { Attributes[43] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[43].Value; }
+        set { Attributes[43].Value = value; }
     }
     
     /// <summary>
@@ -6993,8 +6297,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[44]; }
-        set { Attributes[44] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[44].Value; }
+        set { Attributes[44].Value = value; }
     }
     
     /// <summary>
@@ -7006,8 +6310,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     public TrueFalseValue ForceDash
     {
-        get { return (TrueFalseValue)Attributes[45]; }
-        set { Attributes[45] = value; }
+        get { return (TrueFalseValue)Attributes[45].Value; }
+        set { Attributes[45].Value = value; }
     }
     
     /// <summary>
@@ -7019,8 +6323,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     public TrueFalseValue OleIcon
     {
-        get { return (TrueFalseValue)Attributes[46]; }
-        set { Attributes[46] = value; }
+        get { return (TrueFalseValue)Attributes[46].Value; }
+        set { Attributes[46].Value = value; }
     }
     
     /// <summary>
@@ -7032,8 +6336,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     public TrueFalseBlankValue Ole
     {
-        get { return (TrueFalseBlankValue)Attributes[47]; }
-        set { Attributes[47] = value; }
+        get { return (TrueFalseBlankValue)Attributes[47].Value; }
+        set { Attributes[47].Value = value; }
     }
     
     /// <summary>
@@ -7045,8 +6349,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     public TrueFalseValue PreferRelative
     {
-        get { return (TrueFalseValue)Attributes[48]; }
-        set { Attributes[48] = value; }
+        get { return (TrueFalseValue)Attributes[48].Value; }
+        set { Attributes[48].Value = value; }
     }
     
     /// <summary>
@@ -7058,8 +6362,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     public TrueFalseValue ClipToWrap
     {
-        get { return (TrueFalseValue)Attributes[49]; }
-        set { Attributes[49] = value; }
+        get { return (TrueFalseValue)Attributes[49].Value; }
+        set { Attributes[49].Value = value; }
     }
     
     /// <summary>
@@ -7071,8 +6375,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     public TrueFalseValue Clip
     {
-        get { return (TrueFalseValue)Attributes[50]; }
-        set { Attributes[50] = value; }
+        get { return (TrueFalseValue)Attributes[50].Value; }
+        set { Attributes[50].Value = value; }
     }
     
     /// <summary>
@@ -7082,8 +6386,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "from")]
     public StringValue From
     {
-        get { return (StringValue)Attributes[51]; }
-        set { Attributes[51] = value; }
+        get { return (StringValue)Attributes[51].Value; }
+        set { Attributes[51].Value = value; }
     }
     
     /// <summary>
@@ -7093,8 +6397,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "control1")]
     public StringValue Control1
     {
-        get { return (StringValue)Attributes[52]; }
-        set { Attributes[52] = value; }
+        get { return (StringValue)Attributes[52].Value; }
+        set { Attributes[52].Value = value; }
     }
     
     /// <summary>
@@ -7104,8 +6408,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "control2")]
     public StringValue Control2
     {
-        get { return (StringValue)Attributes[53]; }
-        set { Attributes[53] = value; }
+        get { return (StringValue)Attributes[53].Value; }
+        set { Attributes[53].Value = value; }
     }
     
     /// <summary>
@@ -7115,8 +6419,8 @@ public partial class Curve : OpenXmlCompositeElement
     [SchemaAttr(0, "to")]
     public StringValue To
     {
-        get { return (StringValue)Attributes[54]; }
-        set { Attributes[54] = value; }
+        get { return (StringValue)Attributes[54].Value; }
+        set { Attributes[54].Value = value; }
     }
     
 
@@ -7230,178 +6534,6 @@ if( 30 == namespaceId && "textdata" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "style" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "href" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "target" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "class" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "alt" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordsize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordorigin" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "wrapcoords" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "print" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spid" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "oned" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "regroupid" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "doubleclicknotify" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "button" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userhidden" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bullet" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hr" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrstd" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrnoshade" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrpct" == name)
-    return new SingleValue();
-    
-if( 27 == namespaceId && "hralign" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>();
-    
-if( 27 == namespaceId && "allowincell" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "allowoverlap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userdrawn" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bordertopcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderleftcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderbottomcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderrightcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "dgmlayout" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmnodekind" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmlayoutmru" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "insetmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>();
-    
-if( 0 == namespaceId && "filled" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "fillcolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "stroked" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "strokecolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "strokeweight" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insetpen" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spt" == name)
-    return new Int32Value();
-    
-if( 27 == namespaceId && "connectortype" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>();
-    
-if( 27 == namespaceId && "bwmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwpure" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwnormal" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "forcedash" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "oleicon" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "ole" == name)
-    return new TrueFalseBlankValue();
-    
-if( 27 == namespaceId && "preferrelative" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "cliptowrap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "clip" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "from" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "control1" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "control2" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "to" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Curve>(deep);
 
@@ -7478,13 +6610,70 @@ public partial class ImageFile : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip","src","cropleft","croptop","cropright","cropbottom","gain","blacklevel","gamma","grayscale","bilevel" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "style"),
+		AttributeTag.Create<StringValue>(0, "href"),
+		AttributeTag.Create<StringValue>(0, "target"),
+		AttributeTag.Create<StringValue>(0, "class"),
+		AttributeTag.Create<StringValue>(0, "title"),
+		AttributeTag.Create<StringValue>(0, "alt"),
+		AttributeTag.Create<StringValue>(0, "coordsize"),
+		AttributeTag.Create<StringValue>(0, "wrapcoords"),
+		AttributeTag.Create<TrueFalseValue>(0, "print"),
+		AttributeTag.Create<StringValue>(27, "spid"),
+		AttributeTag.Create<TrueFalseValue>(27, "oned"),
+		AttributeTag.Create<IntegerValue>(27, "regroupid"),
+		AttributeTag.Create<TrueFalseValue>(27, "doubleclicknotify"),
+		AttributeTag.Create<TrueFalseValue>(27, "button"),
+		AttributeTag.Create<TrueFalseValue>(27, "userhidden"),
+		AttributeTag.Create<TrueFalseValue>(27, "bullet"),
+		AttributeTag.Create<TrueFalseValue>(27, "hr"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrstd"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrnoshade"),
+		AttributeTag.Create<SingleValue>(27, "hrpct"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>(27, "hralign"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowincell"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowoverlap"),
+		AttributeTag.Create<TrueFalseValue>(27, "userdrawn"),
+		AttributeTag.Create<StringValue>(27, "bordertopcolor"),
+		AttributeTag.Create<StringValue>(27, "borderleftcolor"),
+		AttributeTag.Create<StringValue>(27, "borderbottomcolor"),
+		AttributeTag.Create<StringValue>(27, "borderrightcolor"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayout"),
+		AttributeTag.Create<IntegerValue>(27, "dgmnodekind"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayoutmru"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>(27, "insetmode"),
+		AttributeTag.Create<TrueFalseValue>(0, "filled"),
+		AttributeTag.Create<StringValue>(0, "fillcolor"),
+		AttributeTag.Create<TrueFalseValue>(0, "stroked"),
+		AttributeTag.Create<StringValue>(0, "strokecolor"),
+		AttributeTag.Create<StringValue>(0, "strokeweight"),
+		AttributeTag.Create<TrueFalseValue>(0, "insetpen"),
+		AttributeTag.Create<Int32Value>(27, "spt"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>(27, "connectortype"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwmode"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwpure"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwnormal"),
+		AttributeTag.Create<TrueFalseValue>(27, "forcedash"),
+		AttributeTag.Create<TrueFalseValue>(27, "oleicon"),
+		AttributeTag.Create<TrueFalseBlankValue>(27, "ole"),
+		AttributeTag.Create<TrueFalseValue>(27, "preferrelative"),
+		AttributeTag.Create<TrueFalseValue>(27, "cliptowrap"),
+		AttributeTag.Create<TrueFalseValue>(27, "clip"),
+		AttributeTag.Create<StringValue>(0, "src"),
+		AttributeTag.Create<StringValue>(0, "cropleft"),
+		AttributeTag.Create<StringValue>(0, "croptop"),
+		AttributeTag.Create<StringValue>(0, "cropright"),
+		AttributeTag.Create<StringValue>(0, "cropbottom"),
+		AttributeTag.Create<StringValue>(0, "gain"),
+		AttributeTag.Create<StringValue>(0, "blacklevel"),
+		AttributeTag.Create<StringValue>(0, "gamma"),
+		AttributeTag.Create<TrueFalseValue>(0, "grayscale"),
+		AttributeTag.Create<TrueFalseValue>(0, "bilevel")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -7494,8 +6683,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -7505,8 +6694,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     public StringValue Style
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -7516,8 +6705,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     public StringValue Href
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -7527,8 +6716,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     public StringValue Target
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -7538,8 +6727,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     public StringValue Class
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -7549,8 +6738,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     public StringValue Title
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -7560,8 +6749,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     public StringValue Alternate
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -7571,8 +6760,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     public StringValue CoordinateSize
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -7582,8 +6771,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     public StringValue WrapCoordinates
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -7593,8 +6782,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     public TrueFalseValue Print
     {
-        get { return (TrueFalseValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (TrueFalseValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -7606,8 +6795,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     public StringValue OptionalString
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -7619,8 +6808,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     public TrueFalseValue Oned
     {
-        get { return (TrueFalseValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (TrueFalseValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -7632,8 +6821,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     public IntegerValue RegroupId
     {
-        get { return (IntegerValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (IntegerValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -7645,8 +6834,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     public TrueFalseValue DoubleClickNotify
     {
-        get { return (TrueFalseValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (TrueFalseValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -7658,8 +6847,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     public TrueFalseValue Button
     {
-        get { return (TrueFalseValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (TrueFalseValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -7671,8 +6860,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     public TrueFalseValue UserHidden
     {
-        get { return (TrueFalseValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (TrueFalseValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -7684,8 +6873,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     public TrueFalseValue Bullet
     {
-        get { return (TrueFalseValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (TrueFalseValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -7697,8 +6886,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     public TrueFalseValue Horizontal
     {
-        get { return (TrueFalseValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (TrueFalseValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -7710,8 +6899,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     public TrueFalseValue HorizontalStandard
     {
-        get { return (TrueFalseValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (TrueFalseValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -7723,8 +6912,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     public TrueFalseValue HorizontalNoShade
     {
-        get { return (TrueFalseValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (TrueFalseValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -7736,8 +6925,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     public SingleValue HorizontalPercentage
     {
-        get { return (SingleValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (SingleValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -7749,8 +6938,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -7762,8 +6951,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     public TrueFalseValue AllowInCell
     {
-        get { return (TrueFalseValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (TrueFalseValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -7775,8 +6964,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     public TrueFalseValue AllowOverlap
     {
-        get { return (TrueFalseValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (TrueFalseValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -7788,8 +6977,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     public TrueFalseValue UserDrawn
     {
-        get { return (TrueFalseValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (TrueFalseValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -7801,8 +6990,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     public StringValue BorderTopColor
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -7814,8 +7003,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     public StringValue BorderLeftColor
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -7827,8 +7016,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     public StringValue BorderBottomColor
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -7840,8 +7029,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     public StringValue BorderRightColor
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -7853,8 +7042,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     public IntegerValue DiagramLayout
     {
-        get { return (IntegerValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (IntegerValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -7866,8 +7055,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     public IntegerValue DiagramNodeKind
     {
-        get { return (IntegerValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (IntegerValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -7879,8 +7068,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     public IntegerValue DiagramLayoutMostRecentUsed
     {
-        get { return (IntegerValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (IntegerValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
     /// <summary>
@@ -7892,8 +7081,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[32]; }
-        set { Attributes[32] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[32].Value; }
+        set { Attributes[32].Value = value; }
     }
     
     /// <summary>
@@ -7903,8 +7092,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     public TrueFalseValue Filled
     {
-        get { return (TrueFalseValue)Attributes[33]; }
-        set { Attributes[33] = value; }
+        get { return (TrueFalseValue)Attributes[33].Value; }
+        set { Attributes[33].Value = value; }
     }
     
     /// <summary>
@@ -7914,8 +7103,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     public StringValue FillColor
     {
-        get { return (StringValue)Attributes[34]; }
-        set { Attributes[34] = value; }
+        get { return (StringValue)Attributes[34].Value; }
+        set { Attributes[34].Value = value; }
     }
     
     /// <summary>
@@ -7925,8 +7114,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     public TrueFalseValue Stroked
     {
-        get { return (TrueFalseValue)Attributes[35]; }
-        set { Attributes[35] = value; }
+        get { return (TrueFalseValue)Attributes[35].Value; }
+        set { Attributes[35].Value = value; }
     }
     
     /// <summary>
@@ -7936,8 +7125,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     public StringValue StrokeColor
     {
-        get { return (StringValue)Attributes[36]; }
-        set { Attributes[36] = value; }
+        get { return (StringValue)Attributes[36].Value; }
+        set { Attributes[36].Value = value; }
     }
     
     /// <summary>
@@ -7947,8 +7136,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     public StringValue StrokeWeight
     {
-        get { return (StringValue)Attributes[37]; }
-        set { Attributes[37] = value; }
+        get { return (StringValue)Attributes[37].Value; }
+        set { Attributes[37].Value = value; }
     }
     
     /// <summary>
@@ -7958,8 +7147,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     public TrueFalseValue InsetPen
     {
-        get { return (TrueFalseValue)Attributes[38]; }
-        set { Attributes[38] = value; }
+        get { return (TrueFalseValue)Attributes[38].Value; }
+        set { Attributes[38].Value = value; }
     }
     
     /// <summary>
@@ -7971,8 +7160,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     public Int32Value OptionalNumber
     {
-        get { return (Int32Value)Attributes[39]; }
-        set { Attributes[39] = value; }
+        get { return (Int32Value)Attributes[39].Value; }
+        set { Attributes[39].Value = value; }
     }
     
     /// <summary>
@@ -7984,8 +7173,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[40]; }
-        set { Attributes[40] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[40].Value; }
+        set { Attributes[40].Value = value; }
     }
     
     /// <summary>
@@ -7997,8 +7186,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[41]; }
-        set { Attributes[41] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[41].Value; }
+        set { Attributes[41].Value = value; }
     }
     
     /// <summary>
@@ -8010,8 +7199,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[42]; }
-        set { Attributes[42] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[42].Value; }
+        set { Attributes[42].Value = value; }
     }
     
     /// <summary>
@@ -8023,8 +7212,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[43]; }
-        set { Attributes[43] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[43].Value; }
+        set { Attributes[43].Value = value; }
     }
     
     /// <summary>
@@ -8036,8 +7225,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     public TrueFalseValue ForceDash
     {
-        get { return (TrueFalseValue)Attributes[44]; }
-        set { Attributes[44] = value; }
+        get { return (TrueFalseValue)Attributes[44].Value; }
+        set { Attributes[44].Value = value; }
     }
     
     /// <summary>
@@ -8049,8 +7238,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     public TrueFalseValue OleIcon
     {
-        get { return (TrueFalseValue)Attributes[45]; }
-        set { Attributes[45] = value; }
+        get { return (TrueFalseValue)Attributes[45].Value; }
+        set { Attributes[45].Value = value; }
     }
     
     /// <summary>
@@ -8062,8 +7251,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     public TrueFalseBlankValue Ole
     {
-        get { return (TrueFalseBlankValue)Attributes[46]; }
-        set { Attributes[46] = value; }
+        get { return (TrueFalseBlankValue)Attributes[46].Value; }
+        set { Attributes[46].Value = value; }
     }
     
     /// <summary>
@@ -8075,8 +7264,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     public TrueFalseValue PreferRelative
     {
-        get { return (TrueFalseValue)Attributes[47]; }
-        set { Attributes[47] = value; }
+        get { return (TrueFalseValue)Attributes[47].Value; }
+        set { Attributes[47].Value = value; }
     }
     
     /// <summary>
@@ -8088,8 +7277,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     public TrueFalseValue ClipToWrap
     {
-        get { return (TrueFalseValue)Attributes[48]; }
-        set { Attributes[48] = value; }
+        get { return (TrueFalseValue)Attributes[48].Value; }
+        set { Attributes[48].Value = value; }
     }
     
     /// <summary>
@@ -8101,8 +7290,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     public TrueFalseValue Clip
     {
-        get { return (TrueFalseValue)Attributes[49]; }
-        set { Attributes[49] = value; }
+        get { return (TrueFalseValue)Attributes[49].Value; }
+        set { Attributes[49].Value = value; }
     }
     
     /// <summary>
@@ -8112,8 +7301,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "src")]
     public StringValue Source
     {
-        get { return (StringValue)Attributes[50]; }
-        set { Attributes[50] = value; }
+        get { return (StringValue)Attributes[50].Value; }
+        set { Attributes[50].Value = value; }
     }
     
     /// <summary>
@@ -8123,8 +7312,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "cropleft")]
     public StringValue CropLeft
     {
-        get { return (StringValue)Attributes[51]; }
-        set { Attributes[51] = value; }
+        get { return (StringValue)Attributes[51].Value; }
+        set { Attributes[51].Value = value; }
     }
     
     /// <summary>
@@ -8134,8 +7323,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "croptop")]
     public StringValue CropTop
     {
-        get { return (StringValue)Attributes[52]; }
-        set { Attributes[52] = value; }
+        get { return (StringValue)Attributes[52].Value; }
+        set { Attributes[52].Value = value; }
     }
     
     /// <summary>
@@ -8145,8 +7334,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "cropright")]
     public StringValue CropRight
     {
-        get { return (StringValue)Attributes[53]; }
-        set { Attributes[53] = value; }
+        get { return (StringValue)Attributes[53].Value; }
+        set { Attributes[53].Value = value; }
     }
     
     /// <summary>
@@ -8156,8 +7345,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "cropbottom")]
     public StringValue CropBottom
     {
-        get { return (StringValue)Attributes[54]; }
-        set { Attributes[54] = value; }
+        get { return (StringValue)Attributes[54].Value; }
+        set { Attributes[54].Value = value; }
     }
     
     /// <summary>
@@ -8167,8 +7356,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "gain")]
     public StringValue Gain
     {
-        get { return (StringValue)Attributes[55]; }
-        set { Attributes[55] = value; }
+        get { return (StringValue)Attributes[55].Value; }
+        set { Attributes[55].Value = value; }
     }
     
     /// <summary>
@@ -8178,8 +7367,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "blacklevel")]
     public StringValue BlackLevel
     {
-        get { return (StringValue)Attributes[56]; }
-        set { Attributes[56] = value; }
+        get { return (StringValue)Attributes[56].Value; }
+        set { Attributes[56].Value = value; }
     }
     
     /// <summary>
@@ -8189,8 +7378,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "gamma")]
     public StringValue Gamma
     {
-        get { return (StringValue)Attributes[57]; }
-        set { Attributes[57] = value; }
+        get { return (StringValue)Attributes[57].Value; }
+        set { Attributes[57].Value = value; }
     }
     
     /// <summary>
@@ -8200,8 +7389,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "grayscale")]
     public TrueFalseValue GrayScale
     {
-        get { return (TrueFalseValue)Attributes[58]; }
-        set { Attributes[58] = value; }
+        get { return (TrueFalseValue)Attributes[58].Value; }
+        set { Attributes[58].Value = value; }
     }
     
     /// <summary>
@@ -8211,8 +7400,8 @@ public partial class ImageFile : OpenXmlCompositeElement
     [SchemaAttr(0, "bilevel")]
     public TrueFalseValue BiLevel
     {
-        get { return (TrueFalseValue)Attributes[59]; }
-        set { Attributes[59] = value; }
+        get { return (TrueFalseValue)Attributes[59].Value; }
+        set { Attributes[59].Value = value; }
     }
     
 
@@ -8326,193 +7515,6 @@ if( 30 == namespaceId && "textdata" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "style" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "href" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "target" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "class" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "alt" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordsize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "wrapcoords" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "print" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spid" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "oned" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "regroupid" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "doubleclicknotify" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "button" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userhidden" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bullet" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hr" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrstd" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrnoshade" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrpct" == name)
-    return new SingleValue();
-    
-if( 27 == namespaceId && "hralign" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>();
-    
-if( 27 == namespaceId && "allowincell" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "allowoverlap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userdrawn" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bordertopcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderleftcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderbottomcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderrightcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "dgmlayout" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmnodekind" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmlayoutmru" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "insetmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>();
-    
-if( 0 == namespaceId && "filled" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "fillcolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "stroked" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "strokecolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "strokeweight" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insetpen" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spt" == name)
-    return new Int32Value();
-    
-if( 27 == namespaceId && "connectortype" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>();
-    
-if( 27 == namespaceId && "bwmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwpure" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwnormal" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "forcedash" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "oleicon" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "ole" == name)
-    return new TrueFalseBlankValue();
-    
-if( 27 == namespaceId && "preferrelative" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "cliptowrap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "clip" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "src" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "cropleft" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "croptop" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "cropright" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "cropbottom" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "gain" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "blacklevel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "gamma" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "grayscale" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "bilevel" == name)
-    return new TrueFalseValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ImageFile>(deep);
 
@@ -8589,13 +7591,63 @@ public partial class Line : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","coordorigin","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip","from","to" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "style"),
+		AttributeTag.Create<StringValue>(0, "href"),
+		AttributeTag.Create<StringValue>(0, "target"),
+		AttributeTag.Create<StringValue>(0, "class"),
+		AttributeTag.Create<StringValue>(0, "title"),
+		AttributeTag.Create<StringValue>(0, "alt"),
+		AttributeTag.Create<StringValue>(0, "coordsize"),
+		AttributeTag.Create<StringValue>(0, "coordorigin"),
+		AttributeTag.Create<StringValue>(0, "wrapcoords"),
+		AttributeTag.Create<TrueFalseValue>(0, "print"),
+		AttributeTag.Create<StringValue>(27, "spid"),
+		AttributeTag.Create<TrueFalseValue>(27, "oned"),
+		AttributeTag.Create<IntegerValue>(27, "regroupid"),
+		AttributeTag.Create<TrueFalseValue>(27, "doubleclicknotify"),
+		AttributeTag.Create<TrueFalseValue>(27, "button"),
+		AttributeTag.Create<TrueFalseValue>(27, "userhidden"),
+		AttributeTag.Create<TrueFalseValue>(27, "bullet"),
+		AttributeTag.Create<TrueFalseValue>(27, "hr"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrstd"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrnoshade"),
+		AttributeTag.Create<SingleValue>(27, "hrpct"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>(27, "hralign"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowincell"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowoverlap"),
+		AttributeTag.Create<TrueFalseValue>(27, "userdrawn"),
+		AttributeTag.Create<StringValue>(27, "bordertopcolor"),
+		AttributeTag.Create<StringValue>(27, "borderleftcolor"),
+		AttributeTag.Create<StringValue>(27, "borderbottomcolor"),
+		AttributeTag.Create<StringValue>(27, "borderrightcolor"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayout"),
+		AttributeTag.Create<IntegerValue>(27, "dgmnodekind"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayoutmru"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>(27, "insetmode"),
+		AttributeTag.Create<TrueFalseValue>(0, "filled"),
+		AttributeTag.Create<StringValue>(0, "fillcolor"),
+		AttributeTag.Create<TrueFalseValue>(0, "stroked"),
+		AttributeTag.Create<StringValue>(0, "strokecolor"),
+		AttributeTag.Create<StringValue>(0, "strokeweight"),
+		AttributeTag.Create<TrueFalseValue>(0, "insetpen"),
+		AttributeTag.Create<Int32Value>(27, "spt"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>(27, "connectortype"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwmode"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwpure"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwnormal"),
+		AttributeTag.Create<TrueFalseValue>(27, "forcedash"),
+		AttributeTag.Create<TrueFalseValue>(27, "oleicon"),
+		AttributeTag.Create<TrueFalseBlankValue>(27, "ole"),
+		AttributeTag.Create<TrueFalseValue>(27, "preferrelative"),
+		AttributeTag.Create<TrueFalseValue>(27, "cliptowrap"),
+		AttributeTag.Create<TrueFalseValue>(27, "clip"),
+		AttributeTag.Create<StringValue>(0, "from"),
+		AttributeTag.Create<StringValue>(0, "to")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -8605,8 +7657,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -8616,8 +7668,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     public StringValue Style
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -8627,8 +7679,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     public StringValue Href
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -8638,8 +7690,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     public StringValue Target
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -8649,8 +7701,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     public StringValue Class
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -8660,8 +7712,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     public StringValue Title
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -8671,8 +7723,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     public StringValue Alternate
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -8682,8 +7734,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     public StringValue CoordinateSize
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -8693,8 +7745,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "coordorigin")]
     public StringValue CoordinateOrigin
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -8704,8 +7756,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     public StringValue WrapCoordinates
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -8715,8 +7767,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     public TrueFalseValue Print
     {
-        get { return (TrueFalseValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (TrueFalseValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -8728,8 +7780,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     public StringValue OptionalString
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -8741,8 +7793,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     public TrueFalseValue Oned
     {
-        get { return (TrueFalseValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (TrueFalseValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -8754,8 +7806,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     public IntegerValue RegroupId
     {
-        get { return (IntegerValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (IntegerValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -8767,8 +7819,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     public TrueFalseValue DoubleClickNotify
     {
-        get { return (TrueFalseValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (TrueFalseValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -8780,8 +7832,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     public TrueFalseValue Button
     {
-        get { return (TrueFalseValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (TrueFalseValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -8793,8 +7845,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     public TrueFalseValue UserHidden
     {
-        get { return (TrueFalseValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (TrueFalseValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -8806,8 +7858,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     public TrueFalseValue Bullet
     {
-        get { return (TrueFalseValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (TrueFalseValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -8819,8 +7871,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     public TrueFalseValue Horizontal
     {
-        get { return (TrueFalseValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (TrueFalseValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -8832,8 +7884,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     public TrueFalseValue HorizontalStandard
     {
-        get { return (TrueFalseValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (TrueFalseValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -8845,8 +7897,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     public TrueFalseValue HorizontalNoShade
     {
-        get { return (TrueFalseValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (TrueFalseValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -8858,8 +7910,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     public SingleValue HorizontalPercentage
     {
-        get { return (SingleValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (SingleValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -8871,8 +7923,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -8884,8 +7936,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     public TrueFalseValue AllowInCell
     {
-        get { return (TrueFalseValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (TrueFalseValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -8897,8 +7949,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     public TrueFalseValue AllowOverlap
     {
-        get { return (TrueFalseValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (TrueFalseValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -8910,8 +7962,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     public TrueFalseValue UserDrawn
     {
-        get { return (TrueFalseValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (TrueFalseValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -8923,8 +7975,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     public StringValue BorderTopColor
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -8936,8 +7988,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     public StringValue BorderLeftColor
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -8949,8 +8001,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     public StringValue BorderBottomColor
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -8962,8 +8014,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     public StringValue BorderRightColor
     {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (StringValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -8975,8 +8027,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     public IntegerValue DiagramLayout
     {
-        get { return (IntegerValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (IntegerValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -8988,8 +8040,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     public IntegerValue DiagramNodeKind
     {
-        get { return (IntegerValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (IntegerValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
     /// <summary>
@@ -9001,8 +8053,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     public IntegerValue DiagramLayoutMostRecentUsed
     {
-        get { return (IntegerValue)Attributes[32]; }
-        set { Attributes[32] = value; }
+        get { return (IntegerValue)Attributes[32].Value; }
+        set { Attributes[32].Value = value; }
     }
     
     /// <summary>
@@ -9014,8 +8066,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[33]; }
-        set { Attributes[33] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[33].Value; }
+        set { Attributes[33].Value = value; }
     }
     
     /// <summary>
@@ -9025,8 +8077,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     public TrueFalseValue Filled
     {
-        get { return (TrueFalseValue)Attributes[34]; }
-        set { Attributes[34] = value; }
+        get { return (TrueFalseValue)Attributes[34].Value; }
+        set { Attributes[34].Value = value; }
     }
     
     /// <summary>
@@ -9036,8 +8088,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     public StringValue FillColor
     {
-        get { return (StringValue)Attributes[35]; }
-        set { Attributes[35] = value; }
+        get { return (StringValue)Attributes[35].Value; }
+        set { Attributes[35].Value = value; }
     }
     
     /// <summary>
@@ -9047,8 +8099,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     public TrueFalseValue Stroked
     {
-        get { return (TrueFalseValue)Attributes[36]; }
-        set { Attributes[36] = value; }
+        get { return (TrueFalseValue)Attributes[36].Value; }
+        set { Attributes[36].Value = value; }
     }
     
     /// <summary>
@@ -9058,8 +8110,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     public StringValue StrokeColor
     {
-        get { return (StringValue)Attributes[37]; }
-        set { Attributes[37] = value; }
+        get { return (StringValue)Attributes[37].Value; }
+        set { Attributes[37].Value = value; }
     }
     
     /// <summary>
@@ -9069,8 +8121,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     public StringValue StrokeWeight
     {
-        get { return (StringValue)Attributes[38]; }
-        set { Attributes[38] = value; }
+        get { return (StringValue)Attributes[38].Value; }
+        set { Attributes[38].Value = value; }
     }
     
     /// <summary>
@@ -9080,8 +8132,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     public TrueFalseValue InsetPen
     {
-        get { return (TrueFalseValue)Attributes[39]; }
-        set { Attributes[39] = value; }
+        get { return (TrueFalseValue)Attributes[39].Value; }
+        set { Attributes[39].Value = value; }
     }
     
     /// <summary>
@@ -9093,8 +8145,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     public Int32Value OptionalNumber
     {
-        get { return (Int32Value)Attributes[40]; }
-        set { Attributes[40] = value; }
+        get { return (Int32Value)Attributes[40].Value; }
+        set { Attributes[40].Value = value; }
     }
     
     /// <summary>
@@ -9106,8 +8158,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[41]; }
-        set { Attributes[41] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[41].Value; }
+        set { Attributes[41].Value = value; }
     }
     
     /// <summary>
@@ -9119,8 +8171,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[42]; }
-        set { Attributes[42] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[42].Value; }
+        set { Attributes[42].Value = value; }
     }
     
     /// <summary>
@@ -9132,8 +8184,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[43]; }
-        set { Attributes[43] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[43].Value; }
+        set { Attributes[43].Value = value; }
     }
     
     /// <summary>
@@ -9145,8 +8197,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[44]; }
-        set { Attributes[44] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[44].Value; }
+        set { Attributes[44].Value = value; }
     }
     
     /// <summary>
@@ -9158,8 +8210,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     public TrueFalseValue ForceDash
     {
-        get { return (TrueFalseValue)Attributes[45]; }
-        set { Attributes[45] = value; }
+        get { return (TrueFalseValue)Attributes[45].Value; }
+        set { Attributes[45].Value = value; }
     }
     
     /// <summary>
@@ -9171,8 +8223,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     public TrueFalseValue OleIcon
     {
-        get { return (TrueFalseValue)Attributes[46]; }
-        set { Attributes[46] = value; }
+        get { return (TrueFalseValue)Attributes[46].Value; }
+        set { Attributes[46].Value = value; }
     }
     
     /// <summary>
@@ -9184,8 +8236,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     public TrueFalseBlankValue Ole
     {
-        get { return (TrueFalseBlankValue)Attributes[47]; }
-        set { Attributes[47] = value; }
+        get { return (TrueFalseBlankValue)Attributes[47].Value; }
+        set { Attributes[47].Value = value; }
     }
     
     /// <summary>
@@ -9197,8 +8249,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     public TrueFalseValue PreferRelative
     {
-        get { return (TrueFalseValue)Attributes[48]; }
-        set { Attributes[48] = value; }
+        get { return (TrueFalseValue)Attributes[48].Value; }
+        set { Attributes[48].Value = value; }
     }
     
     /// <summary>
@@ -9210,8 +8262,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     public TrueFalseValue ClipToWrap
     {
-        get { return (TrueFalseValue)Attributes[49]; }
-        set { Attributes[49] = value; }
+        get { return (TrueFalseValue)Attributes[49].Value; }
+        set { Attributes[49].Value = value; }
     }
     
     /// <summary>
@@ -9223,8 +8275,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     public TrueFalseValue Clip
     {
-        get { return (TrueFalseValue)Attributes[50]; }
-        set { Attributes[50] = value; }
+        get { return (TrueFalseValue)Attributes[50].Value; }
+        set { Attributes[50].Value = value; }
     }
     
     /// <summary>
@@ -9234,8 +8286,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "from")]
     public StringValue From
     {
-        get { return (StringValue)Attributes[51]; }
-        set { Attributes[51] = value; }
+        get { return (StringValue)Attributes[51].Value; }
+        set { Attributes[51].Value = value; }
     }
     
     /// <summary>
@@ -9245,8 +8297,8 @@ public partial class Line : OpenXmlCompositeElement
     [SchemaAttr(0, "to")]
     public StringValue To
     {
-        get { return (StringValue)Attributes[52]; }
-        set { Attributes[52] = value; }
+        get { return (StringValue)Attributes[52].Value; }
+        set { Attributes[52].Value = value; }
     }
     
 
@@ -9360,172 +8412,6 @@ if( 30 == namespaceId && "textdata" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "style" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "href" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "target" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "class" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "alt" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordsize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordorigin" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "wrapcoords" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "print" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spid" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "oned" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "regroupid" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "doubleclicknotify" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "button" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userhidden" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bullet" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hr" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrstd" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrnoshade" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrpct" == name)
-    return new SingleValue();
-    
-if( 27 == namespaceId && "hralign" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>();
-    
-if( 27 == namespaceId && "allowincell" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "allowoverlap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userdrawn" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bordertopcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderleftcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderbottomcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderrightcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "dgmlayout" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmnodekind" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmlayoutmru" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "insetmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>();
-    
-if( 0 == namespaceId && "filled" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "fillcolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "stroked" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "strokecolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "strokeweight" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insetpen" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spt" == name)
-    return new Int32Value();
-    
-if( 27 == namespaceId && "connectortype" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>();
-    
-if( 27 == namespaceId && "bwmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwpure" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwnormal" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "forcedash" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "oleicon" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "ole" == name)
-    return new TrueFalseBlankValue();
-    
-if( 27 == namespaceId && "preferrelative" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "cliptowrap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "clip" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "from" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "to" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Line>(deep);
 
@@ -9602,13 +8488,61 @@ public partial class Oval : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","coordorigin","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "style"),
+		AttributeTag.Create<StringValue>(0, "href"),
+		AttributeTag.Create<StringValue>(0, "target"),
+		AttributeTag.Create<StringValue>(0, "class"),
+		AttributeTag.Create<StringValue>(0, "title"),
+		AttributeTag.Create<StringValue>(0, "alt"),
+		AttributeTag.Create<StringValue>(0, "coordsize"),
+		AttributeTag.Create<StringValue>(0, "coordorigin"),
+		AttributeTag.Create<StringValue>(0, "wrapcoords"),
+		AttributeTag.Create<TrueFalseValue>(0, "print"),
+		AttributeTag.Create<StringValue>(27, "spid"),
+		AttributeTag.Create<TrueFalseValue>(27, "oned"),
+		AttributeTag.Create<IntegerValue>(27, "regroupid"),
+		AttributeTag.Create<TrueFalseValue>(27, "doubleclicknotify"),
+		AttributeTag.Create<TrueFalseValue>(27, "button"),
+		AttributeTag.Create<TrueFalseValue>(27, "userhidden"),
+		AttributeTag.Create<TrueFalseValue>(27, "bullet"),
+		AttributeTag.Create<TrueFalseValue>(27, "hr"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrstd"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrnoshade"),
+		AttributeTag.Create<SingleValue>(27, "hrpct"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>(27, "hralign"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowincell"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowoverlap"),
+		AttributeTag.Create<TrueFalseValue>(27, "userdrawn"),
+		AttributeTag.Create<StringValue>(27, "bordertopcolor"),
+		AttributeTag.Create<StringValue>(27, "borderleftcolor"),
+		AttributeTag.Create<StringValue>(27, "borderbottomcolor"),
+		AttributeTag.Create<StringValue>(27, "borderrightcolor"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayout"),
+		AttributeTag.Create<IntegerValue>(27, "dgmnodekind"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayoutmru"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>(27, "insetmode"),
+		AttributeTag.Create<TrueFalseValue>(0, "filled"),
+		AttributeTag.Create<StringValue>(0, "fillcolor"),
+		AttributeTag.Create<TrueFalseValue>(0, "stroked"),
+		AttributeTag.Create<StringValue>(0, "strokecolor"),
+		AttributeTag.Create<StringValue>(0, "strokeweight"),
+		AttributeTag.Create<TrueFalseValue>(0, "insetpen"),
+		AttributeTag.Create<Int32Value>(27, "spt"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>(27, "connectortype"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwmode"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwpure"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwnormal"),
+		AttributeTag.Create<TrueFalseValue>(27, "forcedash"),
+		AttributeTag.Create<TrueFalseValue>(27, "oleicon"),
+		AttributeTag.Create<TrueFalseBlankValue>(27, "ole"),
+		AttributeTag.Create<TrueFalseValue>(27, "preferrelative"),
+		AttributeTag.Create<TrueFalseValue>(27, "cliptowrap"),
+		AttributeTag.Create<TrueFalseValue>(27, "clip")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -9618,8 +8552,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -9629,8 +8563,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     public StringValue Style
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -9640,8 +8574,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     public StringValue Href
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -9651,8 +8585,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     public StringValue Target
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -9662,8 +8596,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     public StringValue Class
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -9673,8 +8607,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     public StringValue Title
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -9684,8 +8618,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     public StringValue Alternate
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -9695,8 +8629,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     public StringValue CoordinateSize
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -9706,8 +8640,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "coordorigin")]
     public StringValue CoordinateOrigin
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -9717,8 +8651,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     public StringValue WrapCoordinates
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -9728,8 +8662,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     public TrueFalseValue Print
     {
-        get { return (TrueFalseValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (TrueFalseValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -9741,8 +8675,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     public StringValue OptionalString
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -9754,8 +8688,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     public TrueFalseValue Oned
     {
-        get { return (TrueFalseValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (TrueFalseValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -9767,8 +8701,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     public IntegerValue RegroupId
     {
-        get { return (IntegerValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (IntegerValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -9780,8 +8714,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     public TrueFalseValue DoubleClickNotify
     {
-        get { return (TrueFalseValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (TrueFalseValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -9793,8 +8727,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     public TrueFalseValue Button
     {
-        get { return (TrueFalseValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (TrueFalseValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -9806,8 +8740,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     public TrueFalseValue UserHidden
     {
-        get { return (TrueFalseValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (TrueFalseValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -9819,8 +8753,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     public TrueFalseValue Bullet
     {
-        get { return (TrueFalseValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (TrueFalseValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -9832,8 +8766,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     public TrueFalseValue Horizontal
     {
-        get { return (TrueFalseValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (TrueFalseValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -9845,8 +8779,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     public TrueFalseValue HorizontalStandard
     {
-        get { return (TrueFalseValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (TrueFalseValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -9858,8 +8792,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     public TrueFalseValue HorizontalNoShade
     {
-        get { return (TrueFalseValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (TrueFalseValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -9871,8 +8805,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     public SingleValue HorizontalPercentage
     {
-        get { return (SingleValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (SingleValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -9884,8 +8818,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -9897,8 +8831,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     public TrueFalseValue AllowInCell
     {
-        get { return (TrueFalseValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (TrueFalseValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -9910,8 +8844,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     public TrueFalseValue AllowOverlap
     {
-        get { return (TrueFalseValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (TrueFalseValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -9923,8 +8857,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     public TrueFalseValue UserDrawn
     {
-        get { return (TrueFalseValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (TrueFalseValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -9936,8 +8870,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     public StringValue BorderTopColor
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -9949,8 +8883,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     public StringValue BorderLeftColor
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -9962,8 +8896,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     public StringValue BorderBottomColor
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -9975,8 +8909,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     public StringValue BorderRightColor
     {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (StringValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -9988,8 +8922,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     public IntegerValue DiagramLayout
     {
-        get { return (IntegerValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (IntegerValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -10001,8 +8935,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     public IntegerValue DiagramNodeKind
     {
-        get { return (IntegerValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (IntegerValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
     /// <summary>
@@ -10014,8 +8948,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     public IntegerValue DiagramLayoutMostRecentUsed
     {
-        get { return (IntegerValue)Attributes[32]; }
-        set { Attributes[32] = value; }
+        get { return (IntegerValue)Attributes[32].Value; }
+        set { Attributes[32].Value = value; }
     }
     
     /// <summary>
@@ -10027,8 +8961,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[33]; }
-        set { Attributes[33] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[33].Value; }
+        set { Attributes[33].Value = value; }
     }
     
     /// <summary>
@@ -10038,8 +8972,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     public TrueFalseValue Filled
     {
-        get { return (TrueFalseValue)Attributes[34]; }
-        set { Attributes[34] = value; }
+        get { return (TrueFalseValue)Attributes[34].Value; }
+        set { Attributes[34].Value = value; }
     }
     
     /// <summary>
@@ -10049,8 +8983,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     public StringValue FillColor
     {
-        get { return (StringValue)Attributes[35]; }
-        set { Attributes[35] = value; }
+        get { return (StringValue)Attributes[35].Value; }
+        set { Attributes[35].Value = value; }
     }
     
     /// <summary>
@@ -10060,8 +8994,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     public TrueFalseValue Stroked
     {
-        get { return (TrueFalseValue)Attributes[36]; }
-        set { Attributes[36] = value; }
+        get { return (TrueFalseValue)Attributes[36].Value; }
+        set { Attributes[36].Value = value; }
     }
     
     /// <summary>
@@ -10071,8 +9005,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     public StringValue StrokeColor
     {
-        get { return (StringValue)Attributes[37]; }
-        set { Attributes[37] = value; }
+        get { return (StringValue)Attributes[37].Value; }
+        set { Attributes[37].Value = value; }
     }
     
     /// <summary>
@@ -10082,8 +9016,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     public StringValue StrokeWeight
     {
-        get { return (StringValue)Attributes[38]; }
-        set { Attributes[38] = value; }
+        get { return (StringValue)Attributes[38].Value; }
+        set { Attributes[38].Value = value; }
     }
     
     /// <summary>
@@ -10093,8 +9027,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     public TrueFalseValue InsetPen
     {
-        get { return (TrueFalseValue)Attributes[39]; }
-        set { Attributes[39] = value; }
+        get { return (TrueFalseValue)Attributes[39].Value; }
+        set { Attributes[39].Value = value; }
     }
     
     /// <summary>
@@ -10106,8 +9040,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     public Int32Value OptionalNumber
     {
-        get { return (Int32Value)Attributes[40]; }
-        set { Attributes[40] = value; }
+        get { return (Int32Value)Attributes[40].Value; }
+        set { Attributes[40].Value = value; }
     }
     
     /// <summary>
@@ -10119,8 +9053,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[41]; }
-        set { Attributes[41] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[41].Value; }
+        set { Attributes[41].Value = value; }
     }
     
     /// <summary>
@@ -10132,8 +9066,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[42]; }
-        set { Attributes[42] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[42].Value; }
+        set { Attributes[42].Value = value; }
     }
     
     /// <summary>
@@ -10145,8 +9079,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[43]; }
-        set { Attributes[43] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[43].Value; }
+        set { Attributes[43].Value = value; }
     }
     
     /// <summary>
@@ -10158,8 +9092,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[44]; }
-        set { Attributes[44] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[44].Value; }
+        set { Attributes[44].Value = value; }
     }
     
     /// <summary>
@@ -10171,8 +9105,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     public TrueFalseValue ForceDash
     {
-        get { return (TrueFalseValue)Attributes[45]; }
-        set { Attributes[45] = value; }
+        get { return (TrueFalseValue)Attributes[45].Value; }
+        set { Attributes[45].Value = value; }
     }
     
     /// <summary>
@@ -10184,8 +9118,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     public TrueFalseValue OleIcon
     {
-        get { return (TrueFalseValue)Attributes[46]; }
-        set { Attributes[46] = value; }
+        get { return (TrueFalseValue)Attributes[46].Value; }
+        set { Attributes[46].Value = value; }
     }
     
     /// <summary>
@@ -10197,8 +9131,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     public TrueFalseBlankValue Ole
     {
-        get { return (TrueFalseBlankValue)Attributes[47]; }
-        set { Attributes[47] = value; }
+        get { return (TrueFalseBlankValue)Attributes[47].Value; }
+        set { Attributes[47].Value = value; }
     }
     
     /// <summary>
@@ -10210,8 +9144,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     public TrueFalseValue PreferRelative
     {
-        get { return (TrueFalseValue)Attributes[48]; }
-        set { Attributes[48] = value; }
+        get { return (TrueFalseValue)Attributes[48].Value; }
+        set { Attributes[48].Value = value; }
     }
     
     /// <summary>
@@ -10223,8 +9157,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     public TrueFalseValue ClipToWrap
     {
-        get { return (TrueFalseValue)Attributes[49]; }
-        set { Attributes[49] = value; }
+        get { return (TrueFalseValue)Attributes[49].Value; }
+        set { Attributes[49].Value = value; }
     }
     
     /// <summary>
@@ -10236,8 +9170,8 @@ public partial class Oval : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     public TrueFalseValue Clip
     {
-        get { return (TrueFalseValue)Attributes[50]; }
-        set { Attributes[50] = value; }
+        get { return (TrueFalseValue)Attributes[50].Value; }
+        set { Attributes[50].Value = value; }
     }
     
 
@@ -10351,166 +9285,6 @@ if( 30 == namespaceId && "textdata" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "style" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "href" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "target" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "class" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "alt" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordsize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordorigin" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "wrapcoords" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "print" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spid" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "oned" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "regroupid" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "doubleclicknotify" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "button" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userhidden" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bullet" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hr" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrstd" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrnoshade" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrpct" == name)
-    return new SingleValue();
-    
-if( 27 == namespaceId && "hralign" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>();
-    
-if( 27 == namespaceId && "allowincell" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "allowoverlap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userdrawn" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bordertopcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderleftcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderbottomcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderrightcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "dgmlayout" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmnodekind" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmlayoutmru" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "insetmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>();
-    
-if( 0 == namespaceId && "filled" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "fillcolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "stroked" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "strokecolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "strokeweight" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insetpen" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spt" == name)
-    return new Int32Value();
-    
-if( 27 == namespaceId && "connectortype" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>();
-    
-if( 27 == namespaceId && "bwmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwpure" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwnormal" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "forcedash" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "oleicon" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "ole" == name)
-    return new TrueFalseBlankValue();
-    
-if( 27 == namespaceId && "preferrelative" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "cliptowrap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "clip" == name)
-    return new TrueFalseValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Oval>(deep);
 
@@ -10589,13 +9363,62 @@ public partial class PolyLine : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","coordorigin","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip","points" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "style"),
+		AttributeTag.Create<StringValue>(0, "href"),
+		AttributeTag.Create<StringValue>(0, "target"),
+		AttributeTag.Create<StringValue>(0, "class"),
+		AttributeTag.Create<StringValue>(0, "title"),
+		AttributeTag.Create<StringValue>(0, "alt"),
+		AttributeTag.Create<StringValue>(0, "coordsize"),
+		AttributeTag.Create<StringValue>(0, "coordorigin"),
+		AttributeTag.Create<StringValue>(0, "wrapcoords"),
+		AttributeTag.Create<TrueFalseValue>(0, "print"),
+		AttributeTag.Create<StringValue>(27, "spid"),
+		AttributeTag.Create<TrueFalseValue>(27, "oned"),
+		AttributeTag.Create<IntegerValue>(27, "regroupid"),
+		AttributeTag.Create<TrueFalseValue>(27, "doubleclicknotify"),
+		AttributeTag.Create<TrueFalseValue>(27, "button"),
+		AttributeTag.Create<TrueFalseValue>(27, "userhidden"),
+		AttributeTag.Create<TrueFalseValue>(27, "bullet"),
+		AttributeTag.Create<TrueFalseValue>(27, "hr"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrstd"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrnoshade"),
+		AttributeTag.Create<SingleValue>(27, "hrpct"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>(27, "hralign"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowincell"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowoverlap"),
+		AttributeTag.Create<TrueFalseValue>(27, "userdrawn"),
+		AttributeTag.Create<StringValue>(27, "bordertopcolor"),
+		AttributeTag.Create<StringValue>(27, "borderleftcolor"),
+		AttributeTag.Create<StringValue>(27, "borderbottomcolor"),
+		AttributeTag.Create<StringValue>(27, "borderrightcolor"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayout"),
+		AttributeTag.Create<IntegerValue>(27, "dgmnodekind"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayoutmru"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>(27, "insetmode"),
+		AttributeTag.Create<TrueFalseValue>(0, "filled"),
+		AttributeTag.Create<StringValue>(0, "fillcolor"),
+		AttributeTag.Create<TrueFalseValue>(0, "stroked"),
+		AttributeTag.Create<StringValue>(0, "strokecolor"),
+		AttributeTag.Create<StringValue>(0, "strokeweight"),
+		AttributeTag.Create<TrueFalseValue>(0, "insetpen"),
+		AttributeTag.Create<Int32Value>(27, "spt"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>(27, "connectortype"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwmode"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwpure"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwnormal"),
+		AttributeTag.Create<TrueFalseValue>(27, "forcedash"),
+		AttributeTag.Create<TrueFalseValue>(27, "oleicon"),
+		AttributeTag.Create<TrueFalseBlankValue>(27, "ole"),
+		AttributeTag.Create<TrueFalseValue>(27, "preferrelative"),
+		AttributeTag.Create<TrueFalseValue>(27, "cliptowrap"),
+		AttributeTag.Create<TrueFalseValue>(27, "clip"),
+		AttributeTag.Create<StringValue>(0, "points")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -10605,8 +9428,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -10616,8 +9439,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     public StringValue Style
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -10627,8 +9450,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     public StringValue Href
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -10638,8 +9461,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     public StringValue Target
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -10649,8 +9472,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     public StringValue Class
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -10660,8 +9483,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     public StringValue Title
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -10671,8 +9494,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     public StringValue Alternate
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -10682,8 +9505,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     public StringValue CoordinateSize
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -10693,8 +9516,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "coordorigin")]
     public StringValue CoordinateOrigin
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -10704,8 +9527,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     public StringValue WrapCoordinates
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -10715,8 +9538,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     public TrueFalseValue Print
     {
-        get { return (TrueFalseValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (TrueFalseValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -10728,8 +9551,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     public StringValue OptionalString
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -10741,8 +9564,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     public TrueFalseValue Oned
     {
-        get { return (TrueFalseValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (TrueFalseValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -10754,8 +9577,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     public IntegerValue RegroupId
     {
-        get { return (IntegerValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (IntegerValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -10767,8 +9590,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     public TrueFalseValue DoubleClickNotify
     {
-        get { return (TrueFalseValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (TrueFalseValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -10780,8 +9603,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     public TrueFalseValue Button
     {
-        get { return (TrueFalseValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (TrueFalseValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -10793,8 +9616,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     public TrueFalseValue UserHidden
     {
-        get { return (TrueFalseValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (TrueFalseValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -10806,8 +9629,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     public TrueFalseValue Bullet
     {
-        get { return (TrueFalseValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (TrueFalseValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -10819,8 +9642,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     public TrueFalseValue Horizontal
     {
-        get { return (TrueFalseValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (TrueFalseValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -10832,8 +9655,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     public TrueFalseValue HorizontalStandard
     {
-        get { return (TrueFalseValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (TrueFalseValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -10845,8 +9668,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     public TrueFalseValue HorizontalNoShade
     {
-        get { return (TrueFalseValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (TrueFalseValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -10858,8 +9681,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     public SingleValue HorizontalPercentage
     {
-        get { return (SingleValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (SingleValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -10871,8 +9694,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -10884,8 +9707,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     public TrueFalseValue AllowInCell
     {
-        get { return (TrueFalseValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (TrueFalseValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -10897,8 +9720,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     public TrueFalseValue AllowOverlap
     {
-        get { return (TrueFalseValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (TrueFalseValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -10910,8 +9733,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     public TrueFalseValue UserDrawn
     {
-        get { return (TrueFalseValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (TrueFalseValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -10923,8 +9746,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     public StringValue BorderTopColor
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -10936,8 +9759,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     public StringValue BorderLeftColor
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -10949,8 +9772,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     public StringValue BorderBottomColor
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -10962,8 +9785,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     public StringValue BorderRightColor
     {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (StringValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -10975,8 +9798,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     public IntegerValue DiagramLayout
     {
-        get { return (IntegerValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (IntegerValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -10988,8 +9811,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     public IntegerValue DiagramNodeKind
     {
-        get { return (IntegerValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (IntegerValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
     /// <summary>
@@ -11001,8 +9824,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     public IntegerValue DiagramLayoutMostRecentUsed
     {
-        get { return (IntegerValue)Attributes[32]; }
-        set { Attributes[32] = value; }
+        get { return (IntegerValue)Attributes[32].Value; }
+        set { Attributes[32].Value = value; }
     }
     
     /// <summary>
@@ -11014,8 +9837,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[33]; }
-        set { Attributes[33] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[33].Value; }
+        set { Attributes[33].Value = value; }
     }
     
     /// <summary>
@@ -11025,8 +9848,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     public TrueFalseValue Filled
     {
-        get { return (TrueFalseValue)Attributes[34]; }
-        set { Attributes[34] = value; }
+        get { return (TrueFalseValue)Attributes[34].Value; }
+        set { Attributes[34].Value = value; }
     }
     
     /// <summary>
@@ -11036,8 +9859,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     public StringValue FillColor
     {
-        get { return (StringValue)Attributes[35]; }
-        set { Attributes[35] = value; }
+        get { return (StringValue)Attributes[35].Value; }
+        set { Attributes[35].Value = value; }
     }
     
     /// <summary>
@@ -11047,8 +9870,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     public TrueFalseValue Stroked
     {
-        get { return (TrueFalseValue)Attributes[36]; }
-        set { Attributes[36] = value; }
+        get { return (TrueFalseValue)Attributes[36].Value; }
+        set { Attributes[36].Value = value; }
     }
     
     /// <summary>
@@ -11058,8 +9881,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     public StringValue StrokeColor
     {
-        get { return (StringValue)Attributes[37]; }
-        set { Attributes[37] = value; }
+        get { return (StringValue)Attributes[37].Value; }
+        set { Attributes[37].Value = value; }
     }
     
     /// <summary>
@@ -11069,8 +9892,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     public StringValue StrokeWeight
     {
-        get { return (StringValue)Attributes[38]; }
-        set { Attributes[38] = value; }
+        get { return (StringValue)Attributes[38].Value; }
+        set { Attributes[38].Value = value; }
     }
     
     /// <summary>
@@ -11080,8 +9903,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     public TrueFalseValue InsetPen
     {
-        get { return (TrueFalseValue)Attributes[39]; }
-        set { Attributes[39] = value; }
+        get { return (TrueFalseValue)Attributes[39].Value; }
+        set { Attributes[39].Value = value; }
     }
     
     /// <summary>
@@ -11093,8 +9916,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     public Int32Value OptionalNumber
     {
-        get { return (Int32Value)Attributes[40]; }
-        set { Attributes[40] = value; }
+        get { return (Int32Value)Attributes[40].Value; }
+        set { Attributes[40].Value = value; }
     }
     
     /// <summary>
@@ -11106,8 +9929,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[41]; }
-        set { Attributes[41] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[41].Value; }
+        set { Attributes[41].Value = value; }
     }
     
     /// <summary>
@@ -11119,8 +9942,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[42]; }
-        set { Attributes[42] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[42].Value; }
+        set { Attributes[42].Value = value; }
     }
     
     /// <summary>
@@ -11132,8 +9955,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[43]; }
-        set { Attributes[43] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[43].Value; }
+        set { Attributes[43].Value = value; }
     }
     
     /// <summary>
@@ -11145,8 +9968,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[44]; }
-        set { Attributes[44] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[44].Value; }
+        set { Attributes[44].Value = value; }
     }
     
     /// <summary>
@@ -11158,8 +9981,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     public TrueFalseValue ForceDash
     {
-        get { return (TrueFalseValue)Attributes[45]; }
-        set { Attributes[45] = value; }
+        get { return (TrueFalseValue)Attributes[45].Value; }
+        set { Attributes[45].Value = value; }
     }
     
     /// <summary>
@@ -11171,8 +9994,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     public TrueFalseValue OleIcon
     {
-        get { return (TrueFalseValue)Attributes[46]; }
-        set { Attributes[46] = value; }
+        get { return (TrueFalseValue)Attributes[46].Value; }
+        set { Attributes[46].Value = value; }
     }
     
     /// <summary>
@@ -11184,8 +10007,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     public TrueFalseBlankValue Ole
     {
-        get { return (TrueFalseBlankValue)Attributes[47]; }
-        set { Attributes[47] = value; }
+        get { return (TrueFalseBlankValue)Attributes[47].Value; }
+        set { Attributes[47].Value = value; }
     }
     
     /// <summary>
@@ -11197,8 +10020,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     public TrueFalseValue PreferRelative
     {
-        get { return (TrueFalseValue)Attributes[48]; }
-        set { Attributes[48] = value; }
+        get { return (TrueFalseValue)Attributes[48].Value; }
+        set { Attributes[48].Value = value; }
     }
     
     /// <summary>
@@ -11210,8 +10033,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     public TrueFalseValue ClipToWrap
     {
-        get { return (TrueFalseValue)Attributes[49]; }
-        set { Attributes[49] = value; }
+        get { return (TrueFalseValue)Attributes[49].Value; }
+        set { Attributes[49].Value = value; }
     }
     
     /// <summary>
@@ -11223,8 +10046,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     public TrueFalseValue Clip
     {
-        get { return (TrueFalseValue)Attributes[50]; }
-        set { Attributes[50] = value; }
+        get { return (TrueFalseValue)Attributes[50].Value; }
+        set { Attributes[50].Value = value; }
     }
     
     /// <summary>
@@ -11234,8 +10057,8 @@ public partial class PolyLine : OpenXmlCompositeElement
     [SchemaAttr(0, "points")]
     public StringValue Points
     {
-        get { return (StringValue)Attributes[51]; }
-        set { Attributes[51] = value; }
+        get { return (StringValue)Attributes[51].Value; }
+        set { Attributes[51].Value = value; }
     }
     
 
@@ -11352,169 +10175,6 @@ if( 27 == namespaceId && "ink" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "style" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "href" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "target" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "class" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "alt" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordsize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordorigin" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "wrapcoords" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "print" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spid" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "oned" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "regroupid" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "doubleclicknotify" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "button" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userhidden" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bullet" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hr" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrstd" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrnoshade" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrpct" == name)
-    return new SingleValue();
-    
-if( 27 == namespaceId && "hralign" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>();
-    
-if( 27 == namespaceId && "allowincell" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "allowoverlap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userdrawn" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bordertopcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderleftcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderbottomcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderrightcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "dgmlayout" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmnodekind" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmlayoutmru" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "insetmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>();
-    
-if( 0 == namespaceId && "filled" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "fillcolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "stroked" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "strokecolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "strokeweight" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insetpen" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spt" == name)
-    return new Int32Value();
-    
-if( 27 == namespaceId && "connectortype" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>();
-    
-if( 27 == namespaceId && "bwmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwpure" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwnormal" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "forcedash" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "oleicon" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "ole" == name)
-    return new TrueFalseBlankValue();
-    
-if( 27 == namespaceId && "preferrelative" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "cliptowrap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "clip" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "points" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PolyLine>(deep);
 
@@ -11591,13 +10251,61 @@ public partial class Rectangle : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","coordorigin","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "style"),
+		AttributeTag.Create<StringValue>(0, "href"),
+		AttributeTag.Create<StringValue>(0, "target"),
+		AttributeTag.Create<StringValue>(0, "class"),
+		AttributeTag.Create<StringValue>(0, "title"),
+		AttributeTag.Create<StringValue>(0, "alt"),
+		AttributeTag.Create<StringValue>(0, "coordsize"),
+		AttributeTag.Create<StringValue>(0, "coordorigin"),
+		AttributeTag.Create<StringValue>(0, "wrapcoords"),
+		AttributeTag.Create<TrueFalseValue>(0, "print"),
+		AttributeTag.Create<StringValue>(27, "spid"),
+		AttributeTag.Create<TrueFalseValue>(27, "oned"),
+		AttributeTag.Create<IntegerValue>(27, "regroupid"),
+		AttributeTag.Create<TrueFalseValue>(27, "doubleclicknotify"),
+		AttributeTag.Create<TrueFalseValue>(27, "button"),
+		AttributeTag.Create<TrueFalseValue>(27, "userhidden"),
+		AttributeTag.Create<TrueFalseValue>(27, "bullet"),
+		AttributeTag.Create<TrueFalseValue>(27, "hr"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrstd"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrnoshade"),
+		AttributeTag.Create<SingleValue>(27, "hrpct"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>(27, "hralign"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowincell"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowoverlap"),
+		AttributeTag.Create<TrueFalseValue>(27, "userdrawn"),
+		AttributeTag.Create<StringValue>(27, "bordertopcolor"),
+		AttributeTag.Create<StringValue>(27, "borderleftcolor"),
+		AttributeTag.Create<StringValue>(27, "borderbottomcolor"),
+		AttributeTag.Create<StringValue>(27, "borderrightcolor"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayout"),
+		AttributeTag.Create<IntegerValue>(27, "dgmnodekind"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayoutmru"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>(27, "insetmode"),
+		AttributeTag.Create<TrueFalseValue>(0, "filled"),
+		AttributeTag.Create<StringValue>(0, "fillcolor"),
+		AttributeTag.Create<TrueFalseValue>(0, "stroked"),
+		AttributeTag.Create<StringValue>(0, "strokecolor"),
+		AttributeTag.Create<StringValue>(0, "strokeweight"),
+		AttributeTag.Create<TrueFalseValue>(0, "insetpen"),
+		AttributeTag.Create<Int32Value>(27, "spt"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>(27, "connectortype"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwmode"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwpure"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwnormal"),
+		AttributeTag.Create<TrueFalseValue>(27, "forcedash"),
+		AttributeTag.Create<TrueFalseValue>(27, "oleicon"),
+		AttributeTag.Create<TrueFalseBlankValue>(27, "ole"),
+		AttributeTag.Create<TrueFalseValue>(27, "preferrelative"),
+		AttributeTag.Create<TrueFalseValue>(27, "cliptowrap"),
+		AttributeTag.Create<TrueFalseValue>(27, "clip")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -11607,8 +10315,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -11618,8 +10326,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     public StringValue Style
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -11629,8 +10337,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     public StringValue Href
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -11640,8 +10348,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     public StringValue Target
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -11651,8 +10359,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     public StringValue Class
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -11662,8 +10370,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     public StringValue Title
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -11673,8 +10381,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     public StringValue Alternate
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -11684,8 +10392,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     public StringValue CoordinateSize
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -11695,8 +10403,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "coordorigin")]
     public StringValue CoordinateOrigin
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -11706,8 +10414,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     public StringValue WrapCoordinates
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -11717,8 +10425,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     public TrueFalseValue Print
     {
-        get { return (TrueFalseValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (TrueFalseValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -11730,8 +10438,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     public StringValue OptionalString
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -11743,8 +10451,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     public TrueFalseValue Oned
     {
-        get { return (TrueFalseValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (TrueFalseValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -11756,8 +10464,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     public IntegerValue RegroupId
     {
-        get { return (IntegerValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (IntegerValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -11769,8 +10477,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     public TrueFalseValue DoubleClickNotify
     {
-        get { return (TrueFalseValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (TrueFalseValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -11782,8 +10490,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     public TrueFalseValue Button
     {
-        get { return (TrueFalseValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (TrueFalseValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -11795,8 +10503,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     public TrueFalseValue UserHidden
     {
-        get { return (TrueFalseValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (TrueFalseValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -11808,8 +10516,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     public TrueFalseValue Bullet
     {
-        get { return (TrueFalseValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (TrueFalseValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -11821,8 +10529,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     public TrueFalseValue Horizontal
     {
-        get { return (TrueFalseValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (TrueFalseValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -11834,8 +10542,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     public TrueFalseValue HorizontalStandard
     {
-        get { return (TrueFalseValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (TrueFalseValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -11847,8 +10555,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     public TrueFalseValue HorizontalNoShade
     {
-        get { return (TrueFalseValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (TrueFalseValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -11860,8 +10568,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     public SingleValue HorizontalPercentage
     {
-        get { return (SingleValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (SingleValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -11873,8 +10581,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -11886,8 +10594,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     public TrueFalseValue AllowInCell
     {
-        get { return (TrueFalseValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (TrueFalseValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -11899,8 +10607,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     public TrueFalseValue AllowOverlap
     {
-        get { return (TrueFalseValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (TrueFalseValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -11912,8 +10620,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     public TrueFalseValue UserDrawn
     {
-        get { return (TrueFalseValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (TrueFalseValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -11925,8 +10633,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     public StringValue BorderTopColor
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -11938,8 +10646,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     public StringValue BorderLeftColor
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -11951,8 +10659,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     public StringValue BorderBottomColor
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -11964,8 +10672,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     public StringValue BorderRightColor
     {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (StringValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -11977,8 +10685,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     public IntegerValue DiagramLayout
     {
-        get { return (IntegerValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (IntegerValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -11990,8 +10698,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     public IntegerValue DiagramNodeKind
     {
-        get { return (IntegerValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (IntegerValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
     /// <summary>
@@ -12003,8 +10711,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     public IntegerValue DiagramLayoutMostRecentUsed
     {
-        get { return (IntegerValue)Attributes[32]; }
-        set { Attributes[32] = value; }
+        get { return (IntegerValue)Attributes[32].Value; }
+        set { Attributes[32].Value = value; }
     }
     
     /// <summary>
@@ -12016,8 +10724,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[33]; }
-        set { Attributes[33] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[33].Value; }
+        set { Attributes[33].Value = value; }
     }
     
     /// <summary>
@@ -12027,8 +10735,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     public TrueFalseValue Filled
     {
-        get { return (TrueFalseValue)Attributes[34]; }
-        set { Attributes[34] = value; }
+        get { return (TrueFalseValue)Attributes[34].Value; }
+        set { Attributes[34].Value = value; }
     }
     
     /// <summary>
@@ -12038,8 +10746,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     public StringValue FillColor
     {
-        get { return (StringValue)Attributes[35]; }
-        set { Attributes[35] = value; }
+        get { return (StringValue)Attributes[35].Value; }
+        set { Attributes[35].Value = value; }
     }
     
     /// <summary>
@@ -12049,8 +10757,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     public TrueFalseValue Stroked
     {
-        get { return (TrueFalseValue)Attributes[36]; }
-        set { Attributes[36] = value; }
+        get { return (TrueFalseValue)Attributes[36].Value; }
+        set { Attributes[36].Value = value; }
     }
     
     /// <summary>
@@ -12060,8 +10768,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     public StringValue StrokeColor
     {
-        get { return (StringValue)Attributes[37]; }
-        set { Attributes[37] = value; }
+        get { return (StringValue)Attributes[37].Value; }
+        set { Attributes[37].Value = value; }
     }
     
     /// <summary>
@@ -12071,8 +10779,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     public StringValue StrokeWeight
     {
-        get { return (StringValue)Attributes[38]; }
-        set { Attributes[38] = value; }
+        get { return (StringValue)Attributes[38].Value; }
+        set { Attributes[38].Value = value; }
     }
     
     /// <summary>
@@ -12082,8 +10790,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     public TrueFalseValue InsetPen
     {
-        get { return (TrueFalseValue)Attributes[39]; }
-        set { Attributes[39] = value; }
+        get { return (TrueFalseValue)Attributes[39].Value; }
+        set { Attributes[39].Value = value; }
     }
     
     /// <summary>
@@ -12095,8 +10803,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     public Int32Value OptionalNumber
     {
-        get { return (Int32Value)Attributes[40]; }
-        set { Attributes[40] = value; }
+        get { return (Int32Value)Attributes[40].Value; }
+        set { Attributes[40].Value = value; }
     }
     
     /// <summary>
@@ -12108,8 +10816,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[41]; }
-        set { Attributes[41] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[41].Value; }
+        set { Attributes[41].Value = value; }
     }
     
     /// <summary>
@@ -12121,8 +10829,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[42]; }
-        set { Attributes[42] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[42].Value; }
+        set { Attributes[42].Value = value; }
     }
     
     /// <summary>
@@ -12134,8 +10842,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[43]; }
-        set { Attributes[43] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[43].Value; }
+        set { Attributes[43].Value = value; }
     }
     
     /// <summary>
@@ -12147,8 +10855,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[44]; }
-        set { Attributes[44] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[44].Value; }
+        set { Attributes[44].Value = value; }
     }
     
     /// <summary>
@@ -12160,8 +10868,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     public TrueFalseValue ForceDash
     {
-        get { return (TrueFalseValue)Attributes[45]; }
-        set { Attributes[45] = value; }
+        get { return (TrueFalseValue)Attributes[45].Value; }
+        set { Attributes[45].Value = value; }
     }
     
     /// <summary>
@@ -12173,8 +10881,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     public TrueFalseValue OleIcon
     {
-        get { return (TrueFalseValue)Attributes[46]; }
-        set { Attributes[46] = value; }
+        get { return (TrueFalseValue)Attributes[46].Value; }
+        set { Attributes[46].Value = value; }
     }
     
     /// <summary>
@@ -12186,8 +10894,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     public TrueFalseBlankValue Ole
     {
-        get { return (TrueFalseBlankValue)Attributes[47]; }
-        set { Attributes[47] = value; }
+        get { return (TrueFalseBlankValue)Attributes[47].Value; }
+        set { Attributes[47].Value = value; }
     }
     
     /// <summary>
@@ -12199,8 +10907,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     public TrueFalseValue PreferRelative
     {
-        get { return (TrueFalseValue)Attributes[48]; }
-        set { Attributes[48] = value; }
+        get { return (TrueFalseValue)Attributes[48].Value; }
+        set { Attributes[48].Value = value; }
     }
     
     /// <summary>
@@ -12212,8 +10920,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     public TrueFalseValue ClipToWrap
     {
-        get { return (TrueFalseValue)Attributes[49]; }
-        set { Attributes[49] = value; }
+        get { return (TrueFalseValue)Attributes[49].Value; }
+        set { Attributes[49].Value = value; }
     }
     
     /// <summary>
@@ -12225,8 +10933,8 @@ public partial class Rectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     public TrueFalseValue Clip
     {
-        get { return (TrueFalseValue)Attributes[50]; }
-        set { Attributes[50] = value; }
+        get { return (TrueFalseValue)Attributes[50].Value; }
+        set { Attributes[50].Value = value; }
     }
     
 
@@ -12340,166 +11048,6 @@ if( 30 == namespaceId && "textdata" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "style" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "href" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "target" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "class" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "alt" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordsize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordorigin" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "wrapcoords" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "print" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spid" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "oned" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "regroupid" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "doubleclicknotify" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "button" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userhidden" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bullet" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hr" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrstd" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrnoshade" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrpct" == name)
-    return new SingleValue();
-    
-if( 27 == namespaceId && "hralign" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>();
-    
-if( 27 == namespaceId && "allowincell" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "allowoverlap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userdrawn" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bordertopcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderleftcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderbottomcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderrightcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "dgmlayout" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmnodekind" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmlayoutmru" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "insetmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>();
-    
-if( 0 == namespaceId && "filled" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "fillcolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "stroked" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "strokecolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "strokeweight" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insetpen" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spt" == name)
-    return new Int32Value();
-    
-if( 27 == namespaceId && "connectortype" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>();
-    
-if( 27 == namespaceId && "bwmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwpure" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwnormal" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "forcedash" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "oleicon" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "ole" == name)
-    return new TrueFalseBlankValue();
-    
-if( 27 == namespaceId && "preferrelative" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "cliptowrap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "clip" == name)
-    return new TrueFalseValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Rectangle>(deep);
 
@@ -12576,13 +11124,61 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip","arcsize" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,0,0,0,0,0,0,27,27,27,27,27,27,27,27,27,27,27,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "style"),
+		AttributeTag.Create<StringValue>(0, "href"),
+		AttributeTag.Create<StringValue>(0, "target"),
+		AttributeTag.Create<StringValue>(0, "class"),
+		AttributeTag.Create<StringValue>(0, "title"),
+		AttributeTag.Create<StringValue>(0, "alt"),
+		AttributeTag.Create<StringValue>(0, "coordsize"),
+		AttributeTag.Create<StringValue>(0, "wrapcoords"),
+		AttributeTag.Create<TrueFalseValue>(0, "print"),
+		AttributeTag.Create<StringValue>(27, "spid"),
+		AttributeTag.Create<TrueFalseValue>(27, "oned"),
+		AttributeTag.Create<IntegerValue>(27, "regroupid"),
+		AttributeTag.Create<TrueFalseValue>(27, "doubleclicknotify"),
+		AttributeTag.Create<TrueFalseValue>(27, "button"),
+		AttributeTag.Create<TrueFalseValue>(27, "userhidden"),
+		AttributeTag.Create<TrueFalseValue>(27, "bullet"),
+		AttributeTag.Create<TrueFalseValue>(27, "hr"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrstd"),
+		AttributeTag.Create<TrueFalseValue>(27, "hrnoshade"),
+		AttributeTag.Create<SingleValue>(27, "hrpct"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>>(27, "hralign"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowincell"),
+		AttributeTag.Create<TrueFalseValue>(27, "allowoverlap"),
+		AttributeTag.Create<TrueFalseValue>(27, "userdrawn"),
+		AttributeTag.Create<StringValue>(27, "bordertopcolor"),
+		AttributeTag.Create<StringValue>(27, "borderleftcolor"),
+		AttributeTag.Create<StringValue>(27, "borderbottomcolor"),
+		AttributeTag.Create<StringValue>(27, "borderrightcolor"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayout"),
+		AttributeTag.Create<IntegerValue>(27, "dgmnodekind"),
+		AttributeTag.Create<IntegerValue>(27, "dgmlayoutmru"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>>(27, "insetmode"),
+		AttributeTag.Create<TrueFalseValue>(0, "filled"),
+		AttributeTag.Create<StringValue>(0, "fillcolor"),
+		AttributeTag.Create<TrueFalseValue>(0, "stroked"),
+		AttributeTag.Create<StringValue>(0, "strokecolor"),
+		AttributeTag.Create<StringValue>(0, "strokeweight"),
+		AttributeTag.Create<TrueFalseValue>(0, "insetpen"),
+		AttributeTag.Create<Int32Value>(27, "spt"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>>(27, "connectortype"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwmode"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwpure"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>>(27, "bwnormal"),
+		AttributeTag.Create<TrueFalseValue>(27, "forcedash"),
+		AttributeTag.Create<TrueFalseValue>(27, "oleicon"),
+		AttributeTag.Create<TrueFalseBlankValue>(27, "ole"),
+		AttributeTag.Create<TrueFalseValue>(27, "preferrelative"),
+		AttributeTag.Create<TrueFalseValue>(27, "cliptowrap"),
+		AttributeTag.Create<TrueFalseValue>(27, "clip"),
+		AttributeTag.Create<StringValue>(0, "arcsize")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -12592,8 +11188,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -12603,8 +11199,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     public StringValue Style
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -12614,8 +11210,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "href")]
     public StringValue Href
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -12625,8 +11221,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "target")]
     public StringValue Target
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -12636,8 +11232,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "class")]
     public StringValue Class
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -12647,8 +11243,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "title")]
     public StringValue Title
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -12658,8 +11254,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "alt")]
     public StringValue Alternate
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -12669,8 +11265,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "coordsize")]
     public StringValue CoordinateSize
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -12680,8 +11276,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "wrapcoords")]
     public StringValue WrapCoordinates
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -12691,8 +11287,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "print")]
     public TrueFalseValue Print
     {
-        get { return (TrueFalseValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (TrueFalseValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -12704,8 +11300,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "spid")]
     public StringValue OptionalString
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -12717,8 +11313,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "oned")]
     public TrueFalseValue Oned
     {
-        get { return (TrueFalseValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (TrueFalseValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -12730,8 +11326,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "regroupid")]
     public IntegerValue RegroupId
     {
-        get { return (IntegerValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (IntegerValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -12743,8 +11339,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "doubleclicknotify")]
     public TrueFalseValue DoubleClickNotify
     {
-        get { return (TrueFalseValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (TrueFalseValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -12756,8 +11352,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "button")]
     public TrueFalseValue Button
     {
-        get { return (TrueFalseValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (TrueFalseValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -12769,8 +11365,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "userhidden")]
     public TrueFalseValue UserHidden
     {
-        get { return (TrueFalseValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (TrueFalseValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -12782,8 +11378,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bullet")]
     public TrueFalseValue Bullet
     {
-        get { return (TrueFalseValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (TrueFalseValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -12795,8 +11391,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hr")]
     public TrueFalseValue Horizontal
     {
-        get { return (TrueFalseValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (TrueFalseValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -12808,8 +11404,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hrstd")]
     public TrueFalseValue HorizontalStandard
     {
-        get { return (TrueFalseValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (TrueFalseValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -12821,8 +11417,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hrnoshade")]
     public TrueFalseValue HorizontalNoShade
     {
-        get { return (TrueFalseValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (TrueFalseValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -12834,8 +11430,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hrpct")]
     public SingleValue HorizontalPercentage
     {
-        get { return (SingleValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (SingleValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -12847,8 +11443,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "hralign")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues> HorizontalAlignment
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -12860,8 +11456,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "allowincell")]
     public TrueFalseValue AllowInCell
     {
-        get { return (TrueFalseValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (TrueFalseValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -12873,8 +11469,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "allowoverlap")]
     public TrueFalseValue AllowOverlap
     {
-        get { return (TrueFalseValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (TrueFalseValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -12886,8 +11482,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "userdrawn")]
     public TrueFalseValue UserDrawn
     {
-        get { return (TrueFalseValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (TrueFalseValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -12899,8 +11495,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bordertopcolor")]
     public StringValue BorderTopColor
     {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (StringValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -12912,8 +11508,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "borderleftcolor")]
     public StringValue BorderLeftColor
     {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (StringValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -12925,8 +11521,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "borderbottomcolor")]
     public StringValue BorderBottomColor
     {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (StringValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -12938,8 +11534,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "borderrightcolor")]
     public StringValue BorderRightColor
     {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (StringValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -12951,8 +11547,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayout")]
     public IntegerValue DiagramLayout
     {
-        get { return (IntegerValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (IntegerValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -12964,8 +11560,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmnodekind")]
     public IntegerValue DiagramNodeKind
     {
-        get { return (IntegerValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (IntegerValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -12977,8 +11573,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "dgmlayoutmru")]
     public IntegerValue DiagramLayoutMostRecentUsed
     {
-        get { return (IntegerValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (IntegerValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
     /// <summary>
@@ -12990,8 +11586,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "insetmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues> InsetMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[32]; }
-        set { Attributes[32] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>)Attributes[32].Value; }
+        set { Attributes[32].Value = value; }
     }
     
     /// <summary>
@@ -13001,8 +11597,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "filled")]
     public TrueFalseValue Filled
     {
-        get { return (TrueFalseValue)Attributes[33]; }
-        set { Attributes[33] = value; }
+        get { return (TrueFalseValue)Attributes[33].Value; }
+        set { Attributes[33].Value = value; }
     }
     
     /// <summary>
@@ -13012,8 +11608,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "fillcolor")]
     public StringValue FillColor
     {
-        get { return (StringValue)Attributes[34]; }
-        set { Attributes[34] = value; }
+        get { return (StringValue)Attributes[34].Value; }
+        set { Attributes[34].Value = value; }
     }
     
     /// <summary>
@@ -13023,8 +11619,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "stroked")]
     public TrueFalseValue Stroked
     {
-        get { return (TrueFalseValue)Attributes[35]; }
-        set { Attributes[35] = value; }
+        get { return (TrueFalseValue)Attributes[35].Value; }
+        set { Attributes[35].Value = value; }
     }
     
     /// <summary>
@@ -13034,8 +11630,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "strokecolor")]
     public StringValue StrokeColor
     {
-        get { return (StringValue)Attributes[36]; }
-        set { Attributes[36] = value; }
+        get { return (StringValue)Attributes[36].Value; }
+        set { Attributes[36].Value = value; }
     }
     
     /// <summary>
@@ -13045,8 +11641,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "strokeweight")]
     public StringValue StrokeWeight
     {
-        get { return (StringValue)Attributes[37]; }
-        set { Attributes[37] = value; }
+        get { return (StringValue)Attributes[37].Value; }
+        set { Attributes[37].Value = value; }
     }
     
     /// <summary>
@@ -13056,8 +11652,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "insetpen")]
     public TrueFalseValue InsetPen
     {
-        get { return (TrueFalseValue)Attributes[38]; }
-        set { Attributes[38] = value; }
+        get { return (TrueFalseValue)Attributes[38].Value; }
+        set { Attributes[38].Value = value; }
     }
     
     /// <summary>
@@ -13069,8 +11665,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "spt")]
     public Int32Value OptionalNumber
     {
-        get { return (Int32Value)Attributes[39]; }
-        set { Attributes[39] = value; }
+        get { return (Int32Value)Attributes[39].Value; }
+        set { Attributes[39].Value = value; }
     }
     
     /// <summary>
@@ -13082,8 +11678,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "connectortype")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues> ConnectorType
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[40]; }
-        set { Attributes[40] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>)Attributes[40].Value; }
+        set { Attributes[40].Value = value; }
     }
     
     /// <summary>
@@ -13095,8 +11691,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bwmode")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> BlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[41]; }
-        set { Attributes[41] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[41].Value; }
+        set { Attributes[41].Value = value; }
     }
     
     /// <summary>
@@ -13108,8 +11704,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bwpure")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> PureBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[42]; }
-        set { Attributes[42] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[42].Value; }
+        set { Attributes[42].Value = value; }
     }
     
     /// <summary>
@@ -13121,8 +11717,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "bwnormal")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues> NormalBlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[43]; }
-        set { Attributes[43] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>)Attributes[43].Value; }
+        set { Attributes[43].Value = value; }
     }
     
     /// <summary>
@@ -13134,8 +11730,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "forcedash")]
     public TrueFalseValue ForceDash
     {
-        get { return (TrueFalseValue)Attributes[44]; }
-        set { Attributes[44] = value; }
+        get { return (TrueFalseValue)Attributes[44].Value; }
+        set { Attributes[44].Value = value; }
     }
     
     /// <summary>
@@ -13147,8 +11743,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "oleicon")]
     public TrueFalseValue OleIcon
     {
-        get { return (TrueFalseValue)Attributes[45]; }
-        set { Attributes[45] = value; }
+        get { return (TrueFalseValue)Attributes[45].Value; }
+        set { Attributes[45].Value = value; }
     }
     
     /// <summary>
@@ -13160,8 +11756,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "ole")]
     public TrueFalseBlankValue Ole
     {
-        get { return (TrueFalseBlankValue)Attributes[46]; }
-        set { Attributes[46] = value; }
+        get { return (TrueFalseBlankValue)Attributes[46].Value; }
+        set { Attributes[46].Value = value; }
     }
     
     /// <summary>
@@ -13173,8 +11769,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "preferrelative")]
     public TrueFalseValue PreferRelative
     {
-        get { return (TrueFalseValue)Attributes[47]; }
-        set { Attributes[47] = value; }
+        get { return (TrueFalseValue)Attributes[47].Value; }
+        set { Attributes[47].Value = value; }
     }
     
     /// <summary>
@@ -13186,8 +11782,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "cliptowrap")]
     public TrueFalseValue ClipToWrap
     {
-        get { return (TrueFalseValue)Attributes[48]; }
-        set { Attributes[48] = value; }
+        get { return (TrueFalseValue)Attributes[48].Value; }
+        set { Attributes[48].Value = value; }
     }
     
     /// <summary>
@@ -13199,8 +11795,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(27, "clip")]
     public TrueFalseValue Clip
     {
-        get { return (TrueFalseValue)Attributes[49]; }
-        set { Attributes[49] = value; }
+        get { return (TrueFalseValue)Attributes[49].Value; }
+        set { Attributes[49].Value = value; }
     }
     
     /// <summary>
@@ -13210,8 +11806,8 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     [SchemaAttr(0, "arcsize")]
     public StringValue ArcSize
     {
-        get { return (StringValue)Attributes[50]; }
-        set { Attributes[50] = value; }
+        get { return (StringValue)Attributes[50].Value; }
+        set { Attributes[50].Value = value; }
     }
     
 
@@ -13325,166 +11921,6 @@ if( 30 == namespaceId && "textdata" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "style" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "href" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "target" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "class" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "alt" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "coordsize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "wrapcoords" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "print" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spid" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "oned" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "regroupid" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "doubleclicknotify" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "button" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userhidden" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bullet" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hr" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrstd" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrnoshade" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "hrpct" == name)
-    return new SingleValue();
-    
-if( 27 == namespaceId && "hralign" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.HorizontalRuleAlignmentValues>();
-    
-if( 27 == namespaceId && "allowincell" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "allowoverlap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "userdrawn" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "bordertopcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderleftcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderbottomcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "borderrightcolor" == name)
-    return new StringValue();
-    
-if( 27 == namespaceId && "dgmlayout" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmnodekind" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "dgmlayoutmru" == name)
-    return new IntegerValue();
-    
-if( 27 == namespaceId && "insetmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.InsetMarginValues>();
-    
-if( 0 == namespaceId && "filled" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "fillcolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "stroked" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "strokecolor" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "strokeweight" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insetpen" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "spt" == name)
-    return new Int32Value();
-    
-if( 27 == namespaceId && "connectortype" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.ConnectorValues>();
-    
-if( 27 == namespaceId && "bwmode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwpure" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "bwnormal" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Office.BlackAndWhiteModeValues>();
-    
-if( 27 == namespaceId && "forcedash" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "oleicon" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "ole" == name)
-    return new TrueFalseBlankValue();
-    
-if( 27 == namespaceId && "preferrelative" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "cliptowrap" == name)
-    return new TrueFalseValue();
-    
-if( 27 == namespaceId && "clip" == name)
-    return new TrueFalseValue();
-    
-if( 0 == namespaceId && "arcsize" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RoundRectangle>(deep);
 
@@ -13510,13 +11946,19 @@ public partial class ShapeHandle : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "position","polar","map","invx","invy","switch","xrange","yrange","radiusrange" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "position"),
+		AttributeTag.Create<StringValue>(0, "polar"),
+		AttributeTag.Create<StringValue>(0, "map"),
+		AttributeTag.Create<TrueFalseBlankValue>(0, "invx"),
+		AttributeTag.Create<TrueFalseBlankValue>(0, "invy"),
+		AttributeTag.Create<TrueFalseBlankValue>(0, "switch"),
+		AttributeTag.Create<StringValue>(0, "xrange"),
+		AttributeTag.Create<StringValue>(0, "yrange"),
+		AttributeTag.Create<StringValue>(0, "radiusrange")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -13526,8 +11968,8 @@ public partial class ShapeHandle : OpenXmlLeafElement
     [SchemaAttr(0, "position")]
     public StringValue Position
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -13537,8 +11979,8 @@ public partial class ShapeHandle : OpenXmlLeafElement
     [SchemaAttr(0, "polar")]
     public StringValue Polar
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -13548,8 +11990,8 @@ public partial class ShapeHandle : OpenXmlLeafElement
     [SchemaAttr(0, "map")]
     public StringValue Map
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -13559,8 +12001,8 @@ public partial class ShapeHandle : OpenXmlLeafElement
     [SchemaAttr(0, "invx")]
     public TrueFalseBlankValue InvertX
     {
-        get { return (TrueFalseBlankValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (TrueFalseBlankValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -13570,8 +12012,8 @@ public partial class ShapeHandle : OpenXmlLeafElement
     [SchemaAttr(0, "invy")]
     public TrueFalseBlankValue InvertY
     {
-        get { return (TrueFalseBlankValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (TrueFalseBlankValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -13581,8 +12023,8 @@ public partial class ShapeHandle : OpenXmlLeafElement
     [SchemaAttr(0, "switch")]
     public TrueFalseBlankValue Switch
     {
-        get { return (TrueFalseBlankValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (TrueFalseBlankValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -13592,8 +12034,8 @@ public partial class ShapeHandle : OpenXmlLeafElement
     [SchemaAttr(0, "xrange")]
     public StringValue XRange
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -13603,8 +12045,8 @@ public partial class ShapeHandle : OpenXmlLeafElement
     [SchemaAttr(0, "yrange")]
     public StringValue YRange
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -13614,8 +12056,8 @@ public partial class ShapeHandle : OpenXmlLeafElement
     [SchemaAttr(0, "radiusrange")]
     public StringValue RadiusRange
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
 
@@ -13629,40 +12071,6 @@ public partial class ShapeHandle : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "position" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "polar" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "map" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "invx" == name)
-    return new TrueFalseBlankValue();
-    
-if( 0 == namespaceId && "invy" == name)
-    return new TrueFalseBlankValue();
-    
-if( 0 == namespaceId && "switch" == name)
-    return new TrueFalseBlankValue();
-    
-if( 0 == namespaceId && "xrange" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "yrange" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "radiusrange" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeHandle>(deep);
 
@@ -13688,13 +12096,11 @@ public partial class Formula : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "eqn" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "eqn")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -13704,8 +12110,8 @@ public partial class Formula : OpenXmlLeafElement
     [SchemaAttr(0, "eqn")]
     public StringValue Equation
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -13719,16 +12125,6 @@ public partial class Formula : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "eqn" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula>(deep);
 

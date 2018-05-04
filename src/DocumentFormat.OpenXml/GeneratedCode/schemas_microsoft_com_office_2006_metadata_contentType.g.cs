@@ -35,13 +35,18 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "_","_","contentTypeName","contentTypeID","contentTypeVersion","contentTypeDescription","contentTypeScope","versionID" };
-    private static readonly byte[] attributeNamespaceIds = { 38,41,41,41,41,41,41,41 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(38, "_"),
+		AttributeTag.Create<StringValue>(41, "_"),
+		AttributeTag.Create<StringValue>(41, "contentTypeName"),
+		AttributeTag.Create<StringValue>(41, "contentTypeID"),
+		AttributeTag.Create<Int32Value>(41, "contentTypeVersion"),
+		AttributeTag.Create<StringValue>(41, "contentTypeDescription"),
+		AttributeTag.Create<StringValue>(41, "contentTypeScope"),
+		AttributeTag.Create<StringValue>(41, "versionID")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -53,8 +58,8 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     [SchemaAttr(38, "_")]
     public StringValue UnderScore
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -66,8 +71,8 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     [SchemaAttr(41, "_")]
     public StringValue ReservedAttributeString
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -79,8 +84,8 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     [SchemaAttr(41, "contentTypeName")]
     public StringValue ContentTypeName
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -92,8 +97,8 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     [SchemaAttr(41, "contentTypeID")]
     public StringValue ContentTypeID
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -105,8 +110,8 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     [SchemaAttr(41, "contentTypeVersion")]
     public Int32Value ContentTypeVersion
     {
-        get { return (Int32Value)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (Int32Value)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -118,8 +123,8 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     [SchemaAttr(41, "contentTypeDescription")]
     public StringValue ContentTypeDescription
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -131,8 +136,8 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     [SchemaAttr(41, "contentTypeScope")]
     public StringValue ContentTypeScope
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -144,8 +149,8 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     [SchemaAttr(41, "versionID")]
     public StringValue VersionID
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
 
@@ -190,37 +195,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 38 == namespaceId && "_" == name)
-    return new StringValue();
-    
-if( 41 == namespaceId && "_" == name)
-    return new StringValue();
-    
-if( 41 == namespaceId && "contentTypeName" == name)
-    return new StringValue();
-    
-if( 41 == namespaceId && "contentTypeID" == name)
-    return new StringValue();
-    
-if( 41 == namespaceId && "contentTypeVersion" == name)
-    return new Int32Value();
-    
-if( 41 == namespaceId && "contentTypeDescription" == name)
-    return new StringValue();
-    
-if( 41 == namespaceId && "contentTypeScope" == name)
-    return new StringValue();
-    
-if( 41 == namespaceId && "versionID" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContentTypeSchema>(deep);
 

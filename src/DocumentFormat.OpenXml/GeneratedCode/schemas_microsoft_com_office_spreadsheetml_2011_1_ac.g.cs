@@ -56,7 +56,6 @@ public partial class List : OpenXmlLeafTextElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<List>(deep);
 

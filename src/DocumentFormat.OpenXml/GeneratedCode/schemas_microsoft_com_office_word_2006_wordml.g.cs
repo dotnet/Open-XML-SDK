@@ -126,7 +126,6 @@ if( 33 == namespaceId && "acds" == name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TemplateCommandGroup>(deep);
 
@@ -205,7 +204,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     return null;
 }
 
-    
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Mcds>(deep);
@@ -352,7 +350,6 @@ if( 33 == namespaceId && "mcds" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VbaSuppData>(deep);
 
@@ -432,7 +429,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MailMergeRecipients>(deep);
 
@@ -458,13 +454,13 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "fciName","fciIndex","swArg" };
-    private static readonly byte[] attributeNamespaceIds = { 33,33,33 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(33, "fciName"),
+		AttributeTag.Create<HexBinaryValue>(33, "fciIndex"),
+		AttributeTag.Create<HexBinaryValue>(33, "swArg")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -476,8 +472,8 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     [SchemaAttr(33, "fciName")]
     public StringValue CommandName
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -489,8 +485,8 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     [SchemaAttr(33, "fciIndex")]
     public HexBinaryValue CommandIndex
     {
-        get { return (HexBinaryValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (HexBinaryValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -502,8 +498,8 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     [SchemaAttr(33, "swArg")]
     public HexBinaryValue Argument
     {
-        get { return (HexBinaryValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (HexBinaryValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
 
@@ -517,22 +513,6 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "fciName" == name)
-    return new StringValue();
-    
-if( 33 == namespaceId && "fciIndex" == name)
-    return new HexBinaryValue();
-    
-if( 33 == namespaceId && "swArg" == name)
-    return new HexBinaryValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FixedCommandKeyboardCustomization>(deep);
 
@@ -606,13 +586,11 @@ public partial class WllMacroKeyboardCustomization : MacroWllType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class MacroWllType : OpenXmlLeafElement
 {
-    	private static readonly string[] attributeTagNames = { "macroName" };
-    private static readonly byte[] attributeNamespaceIds = { 33 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(33, "macroName")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
     
         /// <summary>
     /// <para> macroName.</para>
@@ -623,23 +601,13 @@ public abstract partial class MacroWllType : OpenXmlLeafElement
     [SchemaAttr(33, "macroName")]
     public StringValue MacroName
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "macroName" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the MacroWllType class.
@@ -718,13 +686,11 @@ public partial class AllocatedCommandManifestEntry : AcceleratorKeymapType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class AcceleratorKeymapType : OpenXmlLeafElement
 {
-    	private static readonly string[] attributeTagNames = { "acdName" };
-    private static readonly byte[] attributeNamespaceIds = { 33 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(33, "acdName")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
     
         /// <summary>
     /// <para> acdName.</para>
@@ -735,23 +701,13 @@ public abstract partial class AcceleratorKeymapType : OpenXmlLeafElement
     [SchemaAttr(33, "acdName")]
     public StringValue AcceleratorName
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "acdName" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the AcceleratorKeymapType class.
@@ -782,13 +738,11 @@ public partial class CharacterInsertion : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 33 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<HexBinaryValue>(33, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -800,8 +754,8 @@ public partial class CharacterInsertion : OpenXmlLeafElement
     [SchemaAttr(33, "val")]
     public HexBinaryValue Val
     {
-        get { return (HexBinaryValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (HexBinaryValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -815,16 +769,6 @@ public partial class CharacterInsertion : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "val" == name)
-    return new HexBinaryValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CharacterInsertion>(deep);
 
@@ -865,13 +809,15 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "chmPrimary","chmSecondary","kcmPrimary","kcmSecondary","mask" };
-    private static readonly byte[] attributeNamespaceIds = { 33,33,33,33,33 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<HexBinaryValue>(33, "chmPrimary"),
+		AttributeTag.Create<HexBinaryValue>(33, "chmSecondary"),
+		AttributeTag.Create<HexBinaryValue>(33, "kcmPrimary"),
+		AttributeTag.Create<HexBinaryValue>(33, "kcmSecondary"),
+		AttributeTag.Create<OnOffValue>(33, "mask")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -883,8 +829,8 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     [SchemaAttr(33, "chmPrimary")]
     public HexBinaryValue CharacterMapPrimary
     {
-        get { return (HexBinaryValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (HexBinaryValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -896,8 +842,8 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     [SchemaAttr(33, "chmSecondary")]
     public HexBinaryValue CharacterMapSecondary
     {
-        get { return (HexBinaryValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (HexBinaryValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -909,8 +855,8 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     [SchemaAttr(33, "kcmPrimary")]
     public HexBinaryValue KeyCodePrimary
     {
-        get { return (HexBinaryValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (HexBinaryValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -922,8 +868,8 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     [SchemaAttr(33, "kcmSecondary")]
     public HexBinaryValue KeyCodeSecondary
     {
-        get { return (HexBinaryValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (HexBinaryValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -935,8 +881,8 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     [SchemaAttr(33, "mask")]
     public OnOffValue Mask
     {
-        get { return (OnOffValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (OnOffValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
 
@@ -1065,28 +1011,6 @@ if( 33 == namespaceId && "wch" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "chmPrimary" == name)
-    return new HexBinaryValue();
-    
-if( 33 == namespaceId && "chmSecondary" == name)
-    return new HexBinaryValue();
-    
-if( 33 == namespaceId && "kcmPrimary" == name)
-    return new HexBinaryValue();
-    
-if( 33 == namespaceId && "kcmSecondary" == name)
-    return new HexBinaryValue();
-    
-if( 33 == namespaceId && "mask" == name)
-    return new OnOffValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<KeyMapEntry>(deep);
 
@@ -1112,13 +1036,14 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "argValue","fciBasedOn","fciIndexBasedOn","acdName" };
-    private static readonly byte[] attributeNamespaceIds = { 33,33,33,33 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(33, "argValue"),
+		AttributeTag.Create<StringValue>(33, "fciBasedOn"),
+		AttributeTag.Create<HexBinaryValue>(33, "fciIndexBasedOn"),
+		AttributeTag.Create<StringValue>(33, "acdName")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -1130,8 +1055,8 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     [SchemaAttr(33, "argValue")]
     public StringValue ArgumentValue
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -1143,8 +1068,8 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     [SchemaAttr(33, "fciBasedOn")]
     public StringValue CommandBasedOn
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -1156,8 +1081,8 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     [SchemaAttr(33, "fciIndexBasedOn")]
     public HexBinaryValue CommandIndexBasedOn
     {
-        get { return (HexBinaryValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (HexBinaryValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -1169,8 +1094,8 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     [SchemaAttr(33, "acdName")]
     public StringValue AcceleratorName
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
 
@@ -1184,25 +1109,6 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "argValue" == name)
-    return new StringValue();
-    
-if( 33 == namespaceId && "fciBasedOn" == name)
-    return new StringValue();
-    
-if( 33 == namespaceId && "fciIndexBasedOn" == name)
-    return new HexBinaryValue();
-    
-if( 33 == namespaceId && "acdName" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AllocatedCommand>(deep);
 
@@ -1228,13 +1134,15 @@ public partial class Mcd : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "macroName","name","menuHelp","bEncrypt","cmg" };
-    private static readonly byte[] attributeNamespaceIds = { 33,33,33,33,33 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(33, "macroName"),
+		AttributeTag.Create<StringValue>(33, "name"),
+		AttributeTag.Create<StringValue>(33, "menuHelp"),
+		AttributeTag.Create<HexBinaryValue>(33, "bEncrypt"),
+		AttributeTag.Create<HexBinaryValue>(33, "cmg")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -1246,8 +1154,8 @@ public partial class Mcd : OpenXmlLeafElement
     [SchemaAttr(33, "macroName")]
     public StringValue MacroName
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -1259,8 +1167,8 @@ public partial class Mcd : OpenXmlLeafElement
     [SchemaAttr(33, "name")]
     public StringValue Name
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -1272,8 +1180,8 @@ public partial class Mcd : OpenXmlLeafElement
     [SchemaAttr(33, "menuHelp")]
     public StringValue MenuHelp
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -1285,8 +1193,8 @@ public partial class Mcd : OpenXmlLeafElement
     [SchemaAttr(33, "bEncrypt")]
     public HexBinaryValue BEncrypt
     {
-        get { return (HexBinaryValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (HexBinaryValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -1298,8 +1206,8 @@ public partial class Mcd : OpenXmlLeafElement
     [SchemaAttr(33, "cmg")]
     public HexBinaryValue Cmg
     {
-        get { return (HexBinaryValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (HexBinaryValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
 
@@ -1313,28 +1221,6 @@ public partial class Mcd : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "macroName" == name)
-    return new StringValue();
-    
-if( 33 == namespaceId && "name" == name)
-    return new StringValue();
-    
-if( 33 == namespaceId && "menuHelp" == name)
-    return new StringValue();
-    
-if( 33 == namespaceId && "bEncrypt" == name)
-    return new HexBinaryValue();
-    
-if( 33 == namespaceId && "cmg" == name)
-    return new HexBinaryValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Mcd>(deep);
 
@@ -2211,7 +2097,6 @@ if( 33 == namespaceId && "eventDocBuildingBlockAfterInsert" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocEvents>(deep);
 
@@ -2291,7 +2176,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AllocatedCommandManifest>(deep);
 
@@ -2317,13 +2201,11 @@ public partial class ToolbarData : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "id" };
-    private static readonly byte[] attributeNamespaceIds = { 19 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(19, "id")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -2335,8 +2217,8 @@ public partial class ToolbarData : OpenXmlLeafElement
     [SchemaAttr(19, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -2350,16 +2232,6 @@ public partial class ToolbarData : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 19 == namespaceId && "id" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ToolbarData>(deep);
 
@@ -2516,7 +2388,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the KeymapsType class.
     /// </summary>
@@ -2630,7 +2501,6 @@ if( 33 == namespaceId && "toolbarData" == name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Toolbars>(deep);
 
@@ -2710,7 +2580,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AllocatedCommands>(deep);
 
@@ -2736,13 +2605,11 @@ public partial class RecordIncluded : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 33 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<OnOffValue>(33, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -2754,8 +2621,8 @@ public partial class RecordIncluded : OpenXmlLeafElement
     [SchemaAttr(33, "val")]
     public OnOffValue Val
     {
-        get { return (OnOffValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (OnOffValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -2769,16 +2636,6 @@ public partial class RecordIncluded : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "val" == name)
-    return new OnOffValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RecordIncluded>(deep);
 
@@ -2804,13 +2661,11 @@ public partial class RecordHashCode : OpenXmlLeafElement
     internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 33 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<IntegerValue>(33, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
 
     
         /// <summary>
@@ -2822,8 +2677,8 @@ public partial class RecordHashCode : OpenXmlLeafElement
     [SchemaAttr(33, "val")]
     public IntegerValue Val
     {
-        get { return (IntegerValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (IntegerValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -2837,16 +2692,6 @@ public partial class RecordHashCode : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "val" == name)
-    return new IntegerValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RecordHashCode>(deep);
 
@@ -2964,7 +2809,6 @@ if( 33 == namespaceId && "hash" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SingleDataSourceRecord>(deep);
 
