@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `EnumSimpleType` parsing was improved and uses less allocations and caches for future use (#408)
 - Fixed a number of spelling mistakes in documentation (#462)
 - When calling `OpenXmlPackage.Save` on .NET Framework, the package is now flushed to the stream (#468)
+- Fixed race condition while performing strict translation of attributes (#480)
 - Schema data for validation uses a more compact format leading to a reduction in dll size and performance improvements for loading (#482, #483)
 - A number of APIs are marked as obsolete as they have simple workarounds and will be removed in the next major change
 

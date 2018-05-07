@@ -4,7 +4,6 @@
 using DocumentFormat.OpenXml.Packaging;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Xml;
@@ -16,9 +15,6 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public abstract class OpenXmlPartRootElement : OpenXmlCompositeElement
     {
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private OpenXmlElementContext _elementContext;
-
         private bool? _standaloneDeclaration = null;
 
         /// <summary>
@@ -26,7 +22,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         protected OpenXmlPartRootElement()
         {
-            _elementContext = new OpenXmlElementContext();
+            RootElementContext = new OpenXmlElementContext();
         }
 
         /// <summary>
@@ -40,7 +36,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(openXmlPart));
             }
 
-            _elementContext = new OpenXmlElementContext();
+            RootElementContext = new OpenXmlElementContext();
             LoadFromPart(openXmlPart);
         }
 
@@ -51,7 +47,7 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlPartRootElement(string outerXml)
             : base(outerXml)
         {
-            _elementContext = new OpenXmlElementContext();
+            RootElementContext = new OpenXmlElementContext();
         }
 
         /// <summary>
@@ -61,7 +57,7 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlPartRootElement(IEnumerable<OpenXmlElement> childElements)
             : base(childElements)
         {
-            _elementContext = new OpenXmlElementContext();
+            RootElementContext = new OpenXmlElementContext();
         }
 
         /// <summary>
@@ -71,16 +67,13 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlPartRootElement(params OpenXmlElement[] childElements)
             : base(childElements)
         {
-            _elementContext = new OpenXmlElementContext();
+            RootElementContext = new OpenXmlElementContext();
         }
 
         /// <summary>
         /// Gets the OpenXmlEementContext.
         /// </summary>
-        internal override OpenXmlElementContext RootElementContext
-        {
-            get { return _elementContext; }
-        }
+        internal override OpenXmlElementContext RootElementContext { get; }
 
         /// <summary>
         /// Load the DOM tree from the Open XML part.
