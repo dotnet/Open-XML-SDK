@@ -183,7 +183,7 @@ namespace DocumentFormat.OpenXml
         /// Gets an array of fixed attributes (attributes that are defined in the schema) without forcing any parsing of the element.
         /// If parsing is required, please use <see cref="Attributes"/>
         /// </summary>
-        internal virtual AttributeTagCollection RawAttributes => Cached.Array<AttributeTag>();
+        internal virtual AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(Cached.Array<AttributeTag>());
 
         /// <summary>
         /// Gets an array of fixed attributes which will be parsed out if they are not yet parsed. If parsing is not requried, please

@@ -49,7 +49,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "hidden"),
 		AttributeTag.Create<StringValue>(0, "title")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -232,7 +232,7 @@ public partial class RecolorImages : OpenXmlLeafElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

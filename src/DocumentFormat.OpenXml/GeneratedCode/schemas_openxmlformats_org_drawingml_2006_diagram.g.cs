@@ -49,7 +49,7 @@ public partial class ColorsDefinition : OpenXmlPartRootElement
 		AttributeTag.Create<StringValue>(0, "uniqueId"),
 		AttributeTag.Create<StringValue>(0, "minVer")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -204,7 +204,7 @@ public partial class ColorsDefinitionHeader : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "minVer"),
 		AttributeTag.Create<Int32Value>(0, "resId")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -620,7 +620,7 @@ public partial class LayoutDefinition : OpenXmlPartRootElement
 		AttributeTag.Create<StringValue>(0, "minVer"),
 		AttributeTag.Create<StringValue>(0, "defStyle")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -796,7 +796,7 @@ public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "defStyle"),
 		AttributeTag.Create<Int32Value>(0, "resId")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1008,7 +1008,7 @@ public partial class RelationshipIds : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(19, "qs"),
 		AttributeTag.Create<StringValue>(19, "cs")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1120,7 +1120,7 @@ public partial class StyleDefinition : OpenXmlPartRootElement
 		AttributeTag.Create<StringValue>(0, "uniqueId"),
 		AttributeTag.Create<StringValue>(0, "minVer")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1278,7 +1278,7 @@ public partial class StyleDefinitionHeader : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "minVer"),
 		AttributeTag.Create<Int32Value>(0, "resId")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1477,7 +1477,7 @@ public partial class ColorTransformCategory : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "type"),
 		AttributeTag.Create<UInt32Value>(0, "pri")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1948,7 +1948,7 @@ public abstract partial class ColorsType : OpenXmlCompositeElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ColorApplicationMethodValues>>(0, "meth"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HueDirectionValues>>(0, "hueDir")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> Color Application Method Type.</para>
@@ -2138,7 +2138,7 @@ public partial class ColorDefinitionTitle : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "lang"),
 		AttributeTag.Create<StringValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2204,7 +2204,7 @@ public partial class ColorTransformDescription : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "lang"),
 		AttributeTag.Create<StringValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2367,7 +2367,7 @@ public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<StringValue>(0, "name")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2581,7 +2581,7 @@ public partial class Point : OpenXmlCompositeElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.PointValues>>(0, "type"),
 		AttributeTag.Create<StringValue>(0, "cxnId")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2772,7 +2772,7 @@ public partial class Connection : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "sibTransId"),
 		AttributeTag.Create<StringValue>(0, "presId")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2986,7 +2986,7 @@ public partial class Constraint : OpenXmlCompositeElement
 		AttributeTag.Create<DoubleValue>(0, "val"),
 		AttributeTag.Create<DoubleValue>(0, "fact")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3218,7 +3218,7 @@ public partial class Rule : OpenXmlCompositeElement
 		AttributeTag.Create<DoubleValue>(0, "fact"),
 		AttributeTag.Create<DoubleValue>(0, "max")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3394,7 +3394,7 @@ public partial class Adjust : OpenXmlLeafElement
 		AttributeTag.Create<UInt32Value>(0, "idx"),
 		AttributeTag.Create<DoubleValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3539,7 +3539,7 @@ public partial class Parameter : OpenXmlLeafElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ParameterIdValues>>(0, "type"),
 		AttributeTag.Create<StringValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3614,7 +3614,7 @@ public partial class Algorithm : OpenXmlCompositeElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AlgorithmValues>>(0, "type"),
 		AttributeTag.Create<UInt32Value>(0, "rev")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3731,7 +3731,7 @@ public partial class Shape : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "lkTxEntry"),
 		AttributeTag.Create<BooleanValue>(0, "blipPhldr")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3935,7 +3935,7 @@ public partial class PresentationOf : OpenXmlCompositeElement
 		AttributeTag.Create<ListValue<UInt32Value>>(0, "cnt"),
 		AttributeTag.Create<ListValue<Int32Value>>(0, "step")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4645,7 +4645,7 @@ public partial class ForEach : OpenXmlCompositeElement
 		AttributeTag.Create<ListValue<UInt32Value>>(0, "cnt"),
 		AttributeTag.Create<ListValue<Int32Value>>(0, "step")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4862,7 +4862,7 @@ public partial class LayoutNode : OpenXmlCompositeElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ChildOrderValues>>(0, "chOrder"),
 		AttributeTag.Create<StringValue>(0, "moveWith")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5019,7 +5019,7 @@ public partial class Choose : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<StringValue>(0, "name")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5143,7 +5143,7 @@ public partial class DiagramChooseIf : OpenXmlCompositeElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.FunctionOperatorValues>>(0, "op"),
 		AttributeTag.Create<StringValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5388,7 +5388,7 @@ public partial class DiagramChooseElse : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<StringValue>(0, "name")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5669,7 +5669,7 @@ public partial class Category : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "type"),
 		AttributeTag.Create<UInt32Value>(0, "pri")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5735,7 +5735,7 @@ public partial class Title : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "lang"),
 		AttributeTag.Create<StringValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5801,7 +5801,7 @@ public partial class Description : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "lang"),
 		AttributeTag.Create<StringValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6124,7 +6124,7 @@ public abstract partial class SampleDataType : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "useDef")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> Use Default.</para>
@@ -6380,7 +6380,7 @@ public partial class OrganizationChart : OpenXmlLeafElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6434,7 +6434,7 @@ public partial class MaxNumberOfChildren : OpenXmlLeafElement
 	{
 		AttributeTag.Create<Int32Value>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6488,7 +6488,7 @@ public partial class PreferredNumberOfChildren : OpenXmlLeafElement
 	{
 		AttributeTag.Create<Int32Value>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6542,7 +6542,7 @@ public partial class BulletEnabled : OpenXmlLeafElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6596,7 +6596,7 @@ public partial class Direction : OpenXmlLeafElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.DirectionValues>>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6650,7 +6650,7 @@ public partial class HierarchyBranch : OpenXmlLeafElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.HierarchyBranchStyleValues>>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6704,7 +6704,7 @@ public partial class AnimateOneByOne : OpenXmlLeafElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimateOneByOneValues>>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6758,7 +6758,7 @@ public partial class AnimationLevel : OpenXmlLeafElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.AnimationLevelStringValues>>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6812,7 +6812,7 @@ public partial class ResizeHandles : OpenXmlLeafElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Diagrams.ResizeHandlesStringValues>>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6867,7 +6867,7 @@ public partial class StyleDisplayCategory : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "type"),
 		AttributeTag.Create<UInt32Value>(0, "pri")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -7101,7 +7101,7 @@ public partial class Shape3D : OpenXmlCompositeElement
 		AttributeTag.Create<Int64Value>(0, "contourW"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues>>(0, "prstMaterial")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -7421,7 +7421,7 @@ public partial class StyleDefinitionTitle : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "lang"),
 		AttributeTag.Create<StringValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -7487,7 +7487,7 @@ public partial class StyleLabelDescription : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "lang"),
 		AttributeTag.Create<StringValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -7646,7 +7646,7 @@ public partial class StyleLabel : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<StringValue>(0, "name")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -8312,7 +8312,7 @@ public partial class PropertySet : OpenXmlCompositeElement
 		AttributeTag.Create<Int32Value>(0, "custRadScaleRad"),
 		AttributeTag.Create<Int32Value>(0, "custRadScaleInc")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -8768,7 +8768,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwMode")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

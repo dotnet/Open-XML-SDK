@@ -172,7 +172,7 @@ public partial class ClientData : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>>(0, "ObjectType")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

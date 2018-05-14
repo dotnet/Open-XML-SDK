@@ -759,7 +759,7 @@ public partial class VTVector : OpenXmlCompositeElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues>>(0, "baseType"),
 		AttributeTag.Create<UInt32Value>(0, "size")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -959,7 +959,7 @@ public partial class VTArray : OpenXmlCompositeElement
 		AttributeTag.Create<Int32Value>(0, "uBound"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues>>(0, "baseType")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2465,7 +2465,7 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
 	{
 		AttributeTag.Create<StringValue>(0, "version")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2584,7 +2584,7 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
 		AttributeTag.Create<Int32Value>(0, "format"),
 		AttributeTag.Create<UInt32Value>(0, "size")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

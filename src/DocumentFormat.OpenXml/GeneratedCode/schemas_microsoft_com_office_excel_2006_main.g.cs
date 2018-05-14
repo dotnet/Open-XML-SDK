@@ -583,7 +583,7 @@ public partial class RowSortMap : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "ref"),
 		AttributeTag.Create<UInt32Value>(0, "count")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -690,7 +690,7 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "ref"),
 		AttributeTag.Create<UInt32Value>(0, "count")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -838,7 +838,7 @@ public abstract partial class SortMapItemType : OpenXmlLeafElement
 		AttributeTag.Create<UInt32Value>(0, "newVal"),
 		AttributeTag.Create<UInt32Value>(0, "oldVal")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> New Value.</para>

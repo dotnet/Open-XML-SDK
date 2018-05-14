@@ -124,7 +124,7 @@ public partial class DataValidations : OpenXmlCompositeElement
 		AttributeTag.Create<UInt32Value>(0, "yWindow"),
 		AttributeTag.Create<UInt32Value>(0, "count")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -805,7 +805,7 @@ public partial class WorkbookProperties : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "discardImageEditData"),
 		AttributeTag.Create<UInt32Value>(0, "accuracyVersion")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -892,7 +892,7 @@ public partial class CalculatedMember : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "hierarchizeDistinct"),
 		AttributeTag.Create<StringValue>(0, "mdxLong")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1055,7 +1055,7 @@ public partial class CacheHierarchy : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "hierarchizeDistinct"),
 		AttributeTag.Create<BooleanValue>(0, "ignore")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1199,7 +1199,7 @@ public partial class DataField : OpenXmlLeafElement
 		AttributeTag.Create<UInt32Value>(0, "sourceField"),
 		AttributeTag.Create<StringValue>(0, "uniqueName")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1276,7 +1276,7 @@ public partial class PivotField : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "fillDownLabels"),
 		AttributeTag.Create<BooleanValue>(0, "ignore")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1361,7 +1361,7 @@ public partial class PivotTableDefinition : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "weightExpression"),
 		AttributeTag.Create<BooleanValue>(0, "hideValuesRow")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1603,7 +1603,7 @@ public partial class PivotCacheDefinition : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "supportSubqueryCalcMem"),
 		AttributeTag.Create<BooleanValue>(0, "supportAddCalcMems")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1709,7 +1709,7 @@ public partial class Connection : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "culture"),
 		AttributeTag.Create<StringValue>(0, "embeddedDataId")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1830,7 +1830,7 @@ public partial class Table : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "altText"),
 		AttributeTag.Create<StringValue>(0, "altTextSummary")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1902,7 +1902,7 @@ public partial class SlicerStyles : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<StringValue>(0, "defaultSlicerStyle")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1997,7 +1997,7 @@ public partial class DifferentialFormats : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<UInt32Value>(0, "count")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2095,7 +2095,7 @@ public partial class OleItem : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "advise"),
 		AttributeTag.Create<BooleanValue>(0, "preferPic")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2237,7 +2237,7 @@ public partial class PivotHierarchy : OpenXmlLeafElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "ignore")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2291,7 +2291,7 @@ public partial class CacheField : OpenXmlLeafElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "ignore")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2397,7 +2397,7 @@ public partial class IconFilter : OpenXmlLeafElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>(0, "iconSet"),
 		AttributeTag.Create<UInt32Value>(0, "iconId")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2462,7 +2462,7 @@ public partial class Filter : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2523,7 +2523,7 @@ public partial class CustomFilters : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "and")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2617,7 +2617,7 @@ public partial class SortCondition : OpenXmlLeafElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>(0, "iconSet"),
 		AttributeTag.Create<UInt32Value>(0, "iconId")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2737,7 +2737,7 @@ public partial class SourceConnection : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(0, "name")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2797,7 +2797,7 @@ public partial class DatastoreItem : OpenXmlPartRootElement
 	{
 		AttributeTag.Create<StringValue>(0, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2973,7 +2973,7 @@ public partial class FormControlProperties : OpenXmlPartRootElement
 		AttributeTag.Create<BooleanValue>(0, "verticalBar"),
 		AttributeTag.Create<BooleanValue>(0, "passwordEdit")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3574,7 +3574,7 @@ public partial class SlicerCacheDefinition : OpenXmlPartRootElement
 		AttributeTag.Create<StringValue>(0, "name"),
 		AttributeTag.Create<StringValue>(0, "sourceName")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3764,7 +3764,7 @@ public partial class ConditionalFormatting : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "pivot")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3888,7 +3888,7 @@ public partial class ConditionalFormattingRule : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "activePresent"),
 		AttributeTag.Create<StringValue>(0, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4235,7 +4235,7 @@ public partial class DataValidation : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "promptTitle"),
 		AttributeTag.Create<StringValue>(0, "prompt")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4742,7 +4742,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>>(0, "maxAxisType"),
 		AttributeTag.Create<BooleanValue>(0, "rightToLeft")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5586,7 +5586,7 @@ public abstract partial class ColorType : OpenXmlLeafElement
 		AttributeTag.Create<UInt32Value>(0, "theme"),
 		AttributeTag.Create<DoubleValue>(0, "tint")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> Automatic.</para>
@@ -5876,7 +5876,7 @@ public partial class SlicerRef : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(19, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5932,7 +5932,7 @@ public partial class SlicerCache : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(19, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5995,7 +5995,7 @@ public partial class DefinedName : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<StringValue>(0, "name")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6111,7 +6111,7 @@ public partial class ArgumentDescriptions : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<UInt32Value>(0, "count")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6199,7 +6199,7 @@ public partial class ArgumentDescription : OpenXmlLeafTextElement
 	{
 		AttributeTag.Create<UInt32Value>(0, "index")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6276,7 +6276,7 @@ public partial class TupleSet : OpenXmlCompositeElement
 		AttributeTag.Create<UInt32Value>(0, "rowCount"),
 		AttributeTag.Create<UInt32Value>(0, "columnCount")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6570,7 +6570,7 @@ public partial class TupleSetHeader : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "uniqueName"),
 		AttributeTag.Create<StringValue>(0, "hierarchyName")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6715,7 +6715,7 @@ public partial class TupleSetRowItem : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "u"),
 		AttributeTag.Create<StringValue>(0, "d")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6780,7 +6780,7 @@ public partial class SetLevel : OpenXmlLeafElement
 	{
 		AttributeTag.Create<Int32Value>(0, "hierarchy")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6841,7 +6841,7 @@ public partial class SetLevels : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<UInt32Value>(0, "count")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -7038,7 +7038,7 @@ public partial class DataBar : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "negativeBarBorderColorSameAsPositive"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DataBarAxisPositionValues>>(0, "axisPosition")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -7242,7 +7242,7 @@ public partial class IconSet : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "reverse"),
 		AttributeTag.Create<BooleanValue>(0, "custom")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -7589,7 +7589,7 @@ public partial class ConditionalFormattingValueObject : OpenXmlCompositeElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattingValueObjectTypeValues>>(0, "type"),
 		AttributeTag.Create<BooleanValue>(0, "gte")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -7725,7 +7725,7 @@ public partial class ConditionalFormattingIcon : OpenXmlLeafElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.IconSetTypeValues>>(0, "iconSet"),
 		AttributeTag.Create<UInt32Value>(0, "iconId")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -7955,7 +7955,7 @@ public partial class ConditionalFormats : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<UInt32Value>(0, "count")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -8050,7 +8050,7 @@ public partial class CalculatedMembers : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<UInt32Value>(0, "count")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -8505,7 +8505,7 @@ public partial class PivotArea : OpenXmlCompositeElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Spreadsheet.PivotTableAxisValues>>(0, "axis"),
 		AttributeTag.Create<UInt32Value>(0, "fieldPosition")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -8762,7 +8762,7 @@ public partial class PivotChange : OpenXmlCompositeElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.AllocationMethodValues>>(0, "allocationMethod"),
 		AttributeTag.Create<StringValue>(0, "weightExpression")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -8912,7 +8912,7 @@ public partial class PivotEditValue : OpenXmlLeafTextElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.PivotEditValueTypeValues>>(0, "valueType")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -9117,7 +9117,7 @@ public partial class DdeValues : OpenXmlCompositeElement
 		AttributeTag.Create<UInt32Value>(0, "rows"),
 		AttributeTag.Create<UInt32Value>(0, "cols")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -9228,7 +9228,7 @@ public partial class ConditionalFormat : OpenXmlCompositeElement
 		AttributeTag.Create<UInt32Value>(0, "priority"),
 		AttributeTag.Create<StringValue>(0, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -9392,7 +9392,7 @@ public partial class PivotAreas : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<UInt32Value>(0, "count")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -9487,7 +9487,7 @@ public partial class SlicerStyle : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<StringValue>(0, "name")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -9597,7 +9597,7 @@ public partial class SlicerStyleElement : OpenXmlLeafElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerStyleTypeValues>>(0, "type"),
 		AttributeTag.Create<UInt32Value>(0, "dxfId")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -9677,7 +9677,7 @@ public partial class IgnoredError : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "listDataValidation"),
 		AttributeTag.Create<BooleanValue>(0, "calculatedColumn")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -9887,7 +9887,7 @@ public partial class ProtectedRange : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "name"),
 		AttributeTag.Create<StringValue>(0, "securityDescriptor")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -10063,7 +10063,7 @@ public partial class CustomFilter : OpenXmlLeafElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Spreadsheet.FilterOperatorValues>>(0, "operator"),
 		AttributeTag.Create<StringValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -10128,7 +10128,7 @@ public partial class ListItem : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -10282,7 +10282,7 @@ public partial class Slicer : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "lockedPosition"),
 		AttributeTag.Create<UInt32Value>(0, "rowHeight")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -10501,7 +10501,7 @@ public partial class OlapSlicerCache : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<UInt32Value>(0, "pivotCacheId")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -10653,7 +10653,7 @@ public partial class TabularSlicerCache : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "showMissing"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues>>(0, "crossFilter")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -10822,7 +10822,7 @@ public partial class SlicerCachePivotTable : OpenXmlLeafElement
 		AttributeTag.Create<UInt32Value>(0, "tabId"),
 		AttributeTag.Create<StringValue>(0, "name")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -10887,7 +10887,7 @@ public partial class OlapSlicerCacheItemParent : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(0, "n")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -10950,7 +10950,7 @@ public partial class OlapSlicerCacheItem : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "c"),
 		AttributeTag.Create<BooleanValue>(0, "nd")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -11067,7 +11067,7 @@ public partial class OlapSlicerCacheRange : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<UInt32Value>(0, "startItem")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -11245,7 +11245,7 @@ public partial class OlapSlicerCacheLevelData : OpenXmlCompositeElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.OlapSlicerCacheSortOrderValues>>(0, "sortOrder"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SlicerCacheCrossFilterValues>>(0, "crossFilter")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -11405,7 +11405,7 @@ public partial class OlapSlicerCacheLevelsData : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<UInt32Value>(0, "count")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -11500,7 +11500,7 @@ public partial class OlapSlicerCacheSelections : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<UInt32Value>(0, "count")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -11595,7 +11595,7 @@ public partial class OlapSlicerCacheSelection : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<StringValue>(0, "n")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -11690,7 +11690,7 @@ public partial class TabularSlicerCacheItems : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<UInt32Value>(0, "count")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -11780,7 +11780,7 @@ public partial class TabularSlicerCacheItem : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "s"),
 		AttributeTag.Create<BooleanValue>(0, "nd")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

@@ -37,7 +37,7 @@ public partial class PresetTransition : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "invX"),
 		AttributeTag.Create<BooleanValue>(0, "invY")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -114,7 +114,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "userId"),
 		AttributeTag.Create<StringValue>(0, "providerId")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -186,7 +186,7 @@ public partial class ThreadingInfo : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<Int32Value>(0, "timeZoneBias")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -487,7 +487,7 @@ public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -542,7 +542,7 @@ public partial class ParentCommentIdentifier : OpenXmlLeafElement
 		AttributeTag.Create<UInt32Value>(0, "authorId"),
 		AttributeTag.Create<UInt32Value>(0, "idx")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -884,7 +884,7 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
 		AttributeTag.Create<Int32Value>(0, "pos"),
 		AttributeTag.Create<BooleanValue>(0, "userDrawn")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

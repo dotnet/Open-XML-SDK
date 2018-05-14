@@ -36,7 +36,7 @@ public partial class WebVideoProperty : OpenXmlLeafElement
 		AttributeTag.Create<UInt32Value>(0, "h"),
 		AttributeTag.Create<UInt32Value>(0, "w")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

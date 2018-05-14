@@ -114,7 +114,7 @@ public partial class Schema : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(25, "manifestLocation"),
 		AttributeTag.Create<StringValue>(25, "schemaLocation")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

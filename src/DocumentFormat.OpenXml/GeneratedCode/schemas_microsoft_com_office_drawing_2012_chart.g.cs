@@ -170,7 +170,7 @@ public partial class NumberingFormat : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "formatCode"),
 		AttributeTag.Create<BooleanValue>(0, "sourceLinked")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -270,7 +270,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwMode")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2285,7 +2285,7 @@ public abstract partial class BooleanType : OpenXmlLeafElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> Boolean Value.</para>
@@ -4836,7 +4836,7 @@ public partial class Explosion : OpenXmlLeafElement
 	{
 		AttributeTag.Create<UInt32Value>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

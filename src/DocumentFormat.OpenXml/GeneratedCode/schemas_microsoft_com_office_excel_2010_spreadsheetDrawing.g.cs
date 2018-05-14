@@ -49,7 +49,7 @@ public partial class ContentPart : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(19, "id"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwMode")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -231,7 +231,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "hidden"),
 		AttributeTag.Create<StringValue>(0, "title")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -423,7 +423,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "isComment")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -665,7 +665,7 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "macro"),
 		AttributeTag.Create<BooleanValue>(0, "fPublished")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -741,7 +741,7 @@ public partial class Transform2D : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "flipH"),
 		AttributeTag.Create<BooleanValue>(0, "flipV")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

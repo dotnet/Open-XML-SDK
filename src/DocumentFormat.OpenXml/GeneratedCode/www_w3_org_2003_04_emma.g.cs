@@ -35,7 +35,7 @@ public partial class DerivedFrom : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "resource"),
 		AttributeTag.Create<BooleanValue>(0, "composite")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -105,7 +105,7 @@ public partial class Info : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<StringValue>(0, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -202,7 +202,7 @@ public partial class Lattice : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(44, "time-ref-uri"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>(44, "time-ref-anchor-point")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -421,7 +421,7 @@ public partial class Interpretation : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(44, "no-input"),
 		AttributeTag.Create<BooleanValue>(44, "uninterpreted")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -887,7 +887,7 @@ public partial class OneOf : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(44, "model-ref"),
 		AttributeTag.Create<StringValue>(44, "dialog-turn")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1342,7 +1342,7 @@ public partial class Group : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(44, "model-ref"),
 		AttributeTag.Create<StringValue>(44, "dialog-turn")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1787,7 +1787,7 @@ public partial class Sequence : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(44, "model-ref"),
 		AttributeTag.Create<StringValue>(44, "dialog-turn")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2194,7 +2194,7 @@ public partial class GroupInfo : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<StringValue>(0, "ref")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2374,7 +2374,7 @@ public partial class Grammar : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "id"),
 		AttributeTag.Create<StringValue>(0, "ref")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2445,7 +2445,7 @@ public partial class Model : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "id"),
 		AttributeTag.Create<StringValue>(0, "ref")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2548,7 +2548,7 @@ public partial class EndPointInfo : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<StringValue>(0, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2651,7 +2651,7 @@ public partial class EndPoint : OpenXmlCompositeElement
 		AttributeTag.Create<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(44, "medium"),
 		AttributeTag.Create<ListValue<StringValue>>(44, "mode")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2875,7 +2875,7 @@ public partial class Node : OpenXmlCompositeElement
 		AttributeTag.Create<DecimalValue>(44, "confidence"),
 		AttributeTag.Create<DecimalValue>(44, "cost")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3007,7 +3007,7 @@ public partial class Arc : OpenXmlCompositeElement
 		AttributeTag.Create<ListValue<StringValue>>(44, "mode"),
 		AttributeTag.Create<StringValue>(44, "source")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3259,7 +3259,7 @@ public partial class Emma : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<StringValue>(0, "version")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

@@ -2,9 +2,12 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml
 {
+    [DebuggerDisplay("Length = {Length}")]
+    [DebuggerTypeProxy(typeof(AttributeTagCollectionDebugView))]
     internal readonly struct AttributeTagCollection
     {
         private readonly ReadOnlyArray<AttributeTag> _tags;
@@ -52,6 +55,18 @@ namespace DocumentFormat.OpenXml
             return -1;
         }
 
+        public AttributeEntry[] ToArray()
+        {
+            var array = new AttributeEntry[Length];
+
+            for (var i = 0; i < Length; i++)
+            {
+                array[i] = this[i];
+            }
+
+            return array;
+        }
+
         public struct Enumerator
         {
             private readonly AttributeTagCollection _collection;
@@ -68,9 +83,13 @@ namespace DocumentFormat.OpenXml
             public bool MoveNext() => ++_index < _collection.Length;
         }
 
+        [DebuggerDisplay("{Tag}: {Value}")]
         public readonly struct AttributeEntry
         {
+            [DebuggerBrowsable(DebuggerBrowsableState.Never)]
             private readonly AttributeTagCollection _collection;
+
+            [DebuggerBrowsable(DebuggerBrowsableState.Never)]
             private readonly int _index;
 
             public AttributeEntry(in AttributeTagCollection collection, int index)
@@ -88,8 +107,17 @@ namespace DocumentFormat.OpenXml
             public bool HasValue => Value != null;
         }
 
-        public static implicit operator AttributeTagCollection(in ReadOnlyArray<AttributeTag> array) => new AttributeTagCollection(array);
+        internal sealed class AttributeTagCollectionDebugView
+        {
+            private readonly AttributeTagCollection _collection;
 
-        public static implicit operator AttributeTagCollection(AttributeTag[] array) => new AttributeTagCollection(array);
+            public AttributeTagCollectionDebugView(AttributeTagCollection collection)
+            {
+                _collection = collection;
+            }
+
+            [DebuggerBrowsable(DebuggerBrowsableState.RootHidden)]
+            public AttributeEntry[] Items => _collection.ToArray();
+        }
     }
 }

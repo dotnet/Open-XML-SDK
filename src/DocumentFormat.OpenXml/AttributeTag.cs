@@ -2,10 +2,12 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Diagnostics;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
 {
+    [DebuggerDisplay("{Namespace,nq}:{Name,nq}")]
     internal readonly struct AttributeTag
     {
         private readonly Func<OpenXmlSimpleType> _factory;

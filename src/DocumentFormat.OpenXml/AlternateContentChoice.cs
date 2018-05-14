@@ -71,10 +71,12 @@ namespace DocumentFormat.OpenXml
 
         internal override byte NamespaceId => AlternateContent.MarkupCompatibilityNamespaceId;
 
-        internal override AttributeTagCollection RawAttributes { get; } = new[]
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new[]
         {
             AttributeTag.Create<StringValue>(0, "Requires"),
         };
+
+        internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
         /// <summary>
         /// Gets or sets a whitespace-delimited list of namespace prefixes that identify the

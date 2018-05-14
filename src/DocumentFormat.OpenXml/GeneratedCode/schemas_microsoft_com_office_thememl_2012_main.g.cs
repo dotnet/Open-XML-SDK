@@ -43,7 +43,7 @@ public partial class ThemeFamily : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "id"),
 		AttributeTag.Create<StringValue>(0, "vid")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -264,7 +264,7 @@ public partial class ThemeVariant : OpenXmlCompositeElement
 		AttributeTag.Create<Int64Value>(0, "cy"),
 		AttributeTag.Create<StringValue>(19, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

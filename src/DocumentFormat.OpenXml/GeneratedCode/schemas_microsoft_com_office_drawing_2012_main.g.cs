@@ -37,7 +37,7 @@ public partial class BackgroundProperties : OpenXmlLeafElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwNormal"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize>>(0, "targetScreenSize")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -124,7 +124,7 @@ public partial class NonVisualGroupProperties : OpenXmlLeafElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "isLegacyGroup")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -180,7 +180,7 @@ public partial class ObjectProperties : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "isActiveX"),
 		AttributeTag.Create<StringValue>(0, "linkType")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -267,7 +267,7 @@ public partial class SignatureLine : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "addlXml"),
 		AttributeTag.Create<StringValue>(0, "sigProvUrl")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

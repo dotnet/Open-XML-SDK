@@ -39,7 +39,7 @@ public partial class DataStoreItem : OpenXmlPartRootElement
 	{
 		AttributeTag.Create<StringValue>(20, "itemID")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -179,7 +179,7 @@ public partial class SchemaReference : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(20, "uri")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

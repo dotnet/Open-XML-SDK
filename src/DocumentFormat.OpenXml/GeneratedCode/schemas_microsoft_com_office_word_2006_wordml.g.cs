@@ -460,7 +460,7 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
 		AttributeTag.Create<HexBinaryValue>(33, "fciIndex"),
 		AttributeTag.Create<HexBinaryValue>(33, "swArg")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -590,7 +590,7 @@ public abstract partial class MacroWllType : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(33, "macroName")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> macroName.</para>
@@ -690,7 +690,7 @@ public abstract partial class AcceleratorKeymapType : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(33, "acdName")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> acdName.</para>
@@ -742,7 +742,7 @@ public partial class CharacterInsertion : OpenXmlLeafElement
 	{
 		AttributeTag.Create<HexBinaryValue>(33, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -817,7 +817,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
 		AttributeTag.Create<HexBinaryValue>(33, "kcmSecondary"),
 		AttributeTag.Create<OnOffValue>(33, "mask")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1043,7 +1043,7 @@ public partial class AllocatedCommand : OpenXmlLeafElement
 		AttributeTag.Create<HexBinaryValue>(33, "fciIndexBasedOn"),
 		AttributeTag.Create<StringValue>(33, "acdName")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1142,7 +1142,7 @@ public partial class Mcd : OpenXmlLeafElement
 		AttributeTag.Create<HexBinaryValue>(33, "bEncrypt"),
 		AttributeTag.Create<HexBinaryValue>(33, "cmg")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2205,7 +2205,7 @@ public partial class ToolbarData : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(19, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2609,7 +2609,7 @@ public partial class RecordIncluded : OpenXmlLeafElement
 	{
 		AttributeTag.Create<OnOffValue>(33, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2665,7 +2665,7 @@ public partial class RecordHashCode : OpenXmlLeafElement
 	{
 		AttributeTag.Create<IntegerValue>(33, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

@@ -58,7 +58,7 @@ public partial class TwoCellAnchor : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Spreadsheet.EditAsValues>>(0, "editAs")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -523,7 +523,7 @@ public partial class Shape : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "fLocksText"),
 		AttributeTag.Create<BooleanValue>(0, "fPublished")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -869,7 +869,7 @@ public partial class GraphicFrame : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "macro"),
 		AttributeTag.Create<BooleanValue>(0, "fPublished")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1031,7 +1031,7 @@ public partial class ConnectionShape : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "macro"),
 		AttributeTag.Create<BooleanValue>(0, "fPublished")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1195,7 +1195,7 @@ public partial class Picture : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "macro"),
 		AttributeTag.Create<BooleanValue>(0, "fPublished")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1374,7 +1374,7 @@ public partial class ContentPart : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(19, "id"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwMode")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1810,7 +1810,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwMode")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2481,7 +2481,7 @@ public partial class BlipFill : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "rotWithShape")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2739,7 +2739,7 @@ public partial class Transform : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "flipH"),
 		AttributeTag.Create<BooleanValue>(0, "flipV")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3339,7 +3339,7 @@ public partial class ClientData : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "fLocksWithSheet"),
 		AttributeTag.Create<BooleanValue>(0, "fPrintsWithSheet")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3405,7 +3405,7 @@ public partial class Extent : OpenXmlLeafElement
 		AttributeTag.Create<Int64Value>(0, "cx"),
 		AttributeTag.Create<Int64Value>(0, "cy")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3471,7 +3471,7 @@ public partial class Position : OpenXmlLeafElement
 		AttributeTag.Create<Int64Value>(0, "x"),
 		AttributeTag.Create<Int64Value>(0, "y")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3551,7 +3551,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "hidden"),
 		AttributeTag.Create<StringValue>(0, "title")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3743,7 +3743,7 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "txBox")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4027,7 +4027,7 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "preferRelativeResize")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4529,7 +4529,7 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwMode")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

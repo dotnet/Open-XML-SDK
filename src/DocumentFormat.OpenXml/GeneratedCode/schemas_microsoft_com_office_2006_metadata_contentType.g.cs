@@ -46,7 +46,7 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(41, "contentTypeScope"),
 		AttributeTag.Create<StringValue>(41, "versionID")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

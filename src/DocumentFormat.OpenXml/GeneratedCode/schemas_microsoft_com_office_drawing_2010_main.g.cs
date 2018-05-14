@@ -35,7 +35,7 @@ public partial class CameraTool : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "cellRange"),
 		AttributeTag.Create<StringValue>(0, "spid")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -100,7 +100,7 @@ public partial class CompatExtension : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(0, "spid")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -154,7 +154,7 @@ public partial class IsCanvas : OpenXmlLeafElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -220,7 +220,7 @@ public partial class GvmlContentPart : OpenXmlCompositeElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwMode"),
 		AttributeTag.Create<StringValue>(19, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -372,7 +372,7 @@ public partial class ShadowObscured : OpenXmlLeafElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -643,7 +643,7 @@ public partial class HiddenLineProperties : OpenXmlCompositeElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.CompoundLineValues>>(0, "cmpd"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.PenAlignmentValues>>(0, "algn")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1083,7 +1083,7 @@ public partial class HiddenShape3D : OpenXmlCompositeElement
 		AttributeTag.Create<Int64Value>(0, "contourW"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.PresetMaterialTypeValues>>(0, "prstMaterial")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1385,7 +1385,7 @@ public partial class UseLocalDpi : OpenXmlLeafElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1572,7 +1572,7 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "noChangeArrowheads"),
 		AttributeTag.Create<BooleanValue>(0, "noChangeShapeType")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1783,7 +1783,7 @@ public partial class ForegroundMark : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "x2"),
 		AttributeTag.Create<Int32Value>(0, "y2")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1873,7 +1873,7 @@ public partial class BackgroundMark : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "x2"),
 		AttributeTag.Create<Int32Value>(0, "y2")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1960,7 +1960,7 @@ public partial class ArtisticBlur : OpenXmlLeafElement
 	{
 		AttributeTag.Create<Int32Value>(0, "radius")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2015,7 +2015,7 @@ public partial class ArtisticCement : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "crackSpacing")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2081,7 +2081,7 @@ public partial class ArtisticChalkSketch : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "pressure")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2147,7 +2147,7 @@ public partial class ArtisticCrisscrossEtching : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "pressure")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2213,7 +2213,7 @@ public partial class ArtisticCutout : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "numberOfShades")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2279,7 +2279,7 @@ public partial class ArtisticFilmGrain : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "grainSize")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2345,7 +2345,7 @@ public partial class ArtisticGlass : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "scaling")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2411,7 +2411,7 @@ public partial class ArtisticGlowDiffused : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "intensity")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2477,7 +2477,7 @@ public partial class ArtisticGlowEdges : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "smoothness")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2543,7 +2543,7 @@ public partial class ArtisticLightScreen : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "gridSize")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2609,7 +2609,7 @@ public partial class ArtisticLineDrawing : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "pencilSize")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2675,7 +2675,7 @@ public partial class ArtisticMarker : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "size")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2741,7 +2741,7 @@ public partial class ArtisticMosaicBubbles : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "pressure")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2807,7 +2807,7 @@ public partial class ArtisticPaintStrokes : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "intensity")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2873,7 +2873,7 @@ public partial class ArtisticPaintBrush : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "brushSize")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2939,7 +2939,7 @@ public partial class ArtisticPastelsSmooth : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "scaling")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3005,7 +3005,7 @@ public partial class ArtisticPencilGrayscale : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "pencilSize")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3071,7 +3071,7 @@ public partial class ArtisticPencilSketch : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "pressure")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3137,7 +3137,7 @@ public partial class ArtisticPhotocopy : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "detail")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3203,7 +3203,7 @@ public partial class ArtisticPlasticWrap : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "smoothness")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3269,7 +3269,7 @@ public partial class ArtisticTexturizer : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "scaling")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3335,7 +3335,7 @@ public partial class ArtisticWatercolorSponge : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "trans"),
 		AttributeTag.Create<Int32Value>(0, "brushSize")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3412,7 +3412,7 @@ public partial class BackgroundRemoval : OpenXmlCompositeElement
 		AttributeTag.Create<Int32Value>(0, "l"),
 		AttributeTag.Create<Int32Value>(0, "r")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3537,7 +3537,7 @@ public partial class BrightnessContrast : OpenXmlLeafElement
 		AttributeTag.Create<Int32Value>(0, "bright"),
 		AttributeTag.Create<Int32Value>(0, "contrast")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3602,7 +3602,7 @@ public partial class ColorTemperature : OpenXmlLeafElement
 	{
 		AttributeTag.Create<Int32Value>(0, "colorTemp")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3656,7 +3656,7 @@ public partial class Saturation : OpenXmlLeafElement
 	{
 		AttributeTag.Create<Int32Value>(0, "sat")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3710,7 +3710,7 @@ public partial class SharpenSoften : OpenXmlLeafElement
 	{
 		AttributeTag.Create<Int32Value>(0, "amount")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3823,7 +3823,7 @@ public partial class ImageEffect : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "visible")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4329,7 +4329,7 @@ public partial class ImageLayer : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<StringValue>(19, "embed")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4434,7 +4434,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "hidden"),
 		AttributeTag.Create<StringValue>(0, "title")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4626,7 +4626,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "isComment")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4878,7 +4878,7 @@ public partial class Transform2D : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "flipH"),
 		AttributeTag.Create<BooleanValue>(0, "flipV")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

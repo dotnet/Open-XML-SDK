@@ -49,7 +49,7 @@ public partial class Dummy : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "showField"),
 		AttributeTag.Create<StringValue>(0, "web")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

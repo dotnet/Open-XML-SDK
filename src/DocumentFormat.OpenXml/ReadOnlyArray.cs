@@ -1,10 +1,14 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System.Diagnostics;
+
 namespace DocumentFormat.OpenXml
 {
+    [DebuggerDisplay("Length = {Length}")]
     internal readonly struct ReadOnlyArray<T>
     {
+        [DebuggerBrowsable(DebuggerBrowsableState.RootHidden)]
         private readonly T[] _array;
 
         private ReadOnlyArray(T[] array)

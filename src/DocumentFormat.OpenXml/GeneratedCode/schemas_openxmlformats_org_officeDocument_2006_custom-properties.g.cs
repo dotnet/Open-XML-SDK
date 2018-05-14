@@ -217,7 +217,7 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "name"),
 		AttributeTag.Create<StringValue>(0, "linkTarget")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

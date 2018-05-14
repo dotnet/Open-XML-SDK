@@ -51,7 +51,7 @@ public partial class WebExtension : OpenXmlPartRootElement
 		AttributeTag.Create<StringValue>(0, "id"),
 		AttributeTag.Create<BooleanValue>(0, "frozen")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -275,7 +275,7 @@ public partial class WebExtensionReference : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(19, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -332,7 +332,7 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "name"),
 		AttributeTag.Create<StringValue>(0, "value")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -485,7 +485,7 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "type"),
 		AttributeTag.Create<StringValue>(0, "appref")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -626,7 +626,7 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "store"),
 		AttributeTag.Create<StringValue>(0, "storeType")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1048,7 +1048,7 @@ public partial class Snapshot : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(19, "link"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>>(0, "cstate")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

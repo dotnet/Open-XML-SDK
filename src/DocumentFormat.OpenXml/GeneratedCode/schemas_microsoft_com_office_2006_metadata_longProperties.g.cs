@@ -112,7 +112,7 @@ public partial class LongProperty : OpenXmlLeafTextElement
 	{
 		AttributeTag.Create<StringValue>(0, "name")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

@@ -58,7 +58,7 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -416,7 +416,7 @@ public partial class ButtonRegular : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -812,7 +812,7 @@ public partial class CheckBox : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "keytip"),
 		AttributeTag.Create<StringValue>(0, "getKeytip")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1176,7 +1176,7 @@ public partial class GalleryRegular : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1825,7 +1825,7 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2217,7 +2217,7 @@ public partial class MenuSeparator : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "title"),
 		AttributeTag.Create<StringValue>(0, "getTitle")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2385,7 +2385,7 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "showLabel"),
 		AttributeTag.Create<StringValue>(0, "getShowLabel")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2696,7 +2696,7 @@ public partial class MenuRegular : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3157,7 +3157,7 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3567,7 +3567,7 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "showLabel"),
 		AttributeTag.Create<StringValue>(0, "getShowLabel")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3878,7 +3878,7 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4315,7 +4315,7 @@ public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
 		AttributeTag.Create<StringValue>(0, "insertBeforeQ")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4464,7 +4464,7 @@ public partial class ControlClone : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4856,7 +4856,7 @@ public partial class LabelControl : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "showLabel"),
 		AttributeTag.Create<StringValue>(0, "getShowLabel")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5150,7 +5150,7 @@ public partial class Button : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5577,7 +5577,7 @@ public partial class ToggleButton : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6013,7 +6013,7 @@ public partial class EditBox : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6442,7 +6442,7 @@ public partial class ComboBox : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6995,7 +6995,7 @@ public partial class DropDownRegular : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -7563,7 +7563,7 @@ public partial class Gallery : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -8258,7 +8258,7 @@ public partial class Menu : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -8743,7 +8743,7 @@ public partial class DynamicMenu : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -9177,7 +9177,7 @@ public partial class SplitButton : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "showLabel"),
 		AttributeTag.Create<StringValue>(0, "getShowLabel")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -9500,7 +9500,7 @@ public partial class Box : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "insertBeforeQ"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues>>(0, "boxStyle")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -9755,7 +9755,7 @@ public partial class ButtonGroup : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
 		AttributeTag.Create<StringValue>(0, "insertBeforeQ")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -9969,7 +9969,7 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "imageMso"),
 		AttributeTag.Create<StringValue>(0, "getImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -10224,7 +10224,7 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "keytip"),
 		AttributeTag.Create<StringValue>(0, "getKeytip")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -10454,7 +10454,7 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "keytip"),
 		AttributeTag.Create<StringValue>(0, "getKeytip")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -10724,7 +10724,7 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "keytip"),
 		AttributeTag.Create<StringValue>(0, "getKeytip")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -10986,7 +10986,7 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "imageMso"),
 		AttributeTag.Create<StringValue>(0, "getImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -11290,7 +11290,7 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "keytip"),
 		AttributeTag.Create<StringValue>(0, "getKeytip")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -11569,7 +11569,7 @@ public partial class BackstageEditBox : OpenXmlLeafElement
 		AttributeTag.Create<IntegerValue>(0, "maxLength"),
 		AttributeTag.Create<StringValue>(0, "sizeString")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -11828,7 +11828,7 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "getItemLabel"),
 		AttributeTag.Create<StringValue>(0, "getItemID")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -12182,7 +12182,7 @@ public partial class RadioGroup : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "getItemLabel"),
 		AttributeTag.Create<StringValue>(0, "getItemID")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -12482,7 +12482,7 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "getItemLabel"),
 		AttributeTag.Create<StringValue>(0, "getItemID")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -12790,7 +12790,7 @@ public partial class Hyperlink : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "target"),
 		AttributeTag.Create<StringValue>(0, "getTarget")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -13097,7 +13097,7 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "getVisible"),
 		AttributeTag.Create<BooleanValue>(0, "noWrap")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -13304,7 +13304,7 @@ public partial class GroupBox : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "label"),
 		AttributeTag.Create<StringValue>(0, "getLabel")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -13509,7 +13509,7 @@ public partial class LayoutContainer : OpenXmlCompositeElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>>(0, "expand"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues>>(0, "layoutChildren")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -13693,7 +13693,7 @@ public partial class ImageControl : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "altText"),
 		AttributeTag.Create<StringValue>(0, "getAltText")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -13896,7 +13896,7 @@ public partial class BackstageGroup : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "showLabel"),
 		AttributeTag.Create<StringValue>(0, "getShowLabel")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -14200,7 +14200,7 @@ public partial class TaskGroup : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "getShowLabel"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>>(0, "allowedTaskSizes")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -14489,7 +14489,7 @@ public partial class MenuRoot : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "getTitle"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>(0, "itemSize")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -14636,7 +14636,7 @@ public partial class CustomUI : OpenXmlPartRootElement
 		AttributeTag.Create<StringValue>(0, "onLoad"),
 		AttributeTag.Create<StringValue>(0, "loadImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -14835,7 +14835,7 @@ public partial class Item : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "screentip"),
 		AttributeTag.Create<StringValue>(0, "supertip")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -14971,7 +14971,7 @@ public partial class VisibleButton : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -15350,7 +15350,7 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -15720,7 +15720,7 @@ public partial class Separator : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "insertAfterQ"),
 		AttributeTag.Create<StringValue>(0, "insertBeforeQ")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -16021,7 +16021,7 @@ public partial class Group : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "autoScale"),
 		AttributeTag.Create<BooleanValue>(0, "centerVertically")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -16425,7 +16425,7 @@ public partial class ControlCloneQat : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "showImage"),
 		AttributeTag.Create<StringValue>(0, "getShowImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -17017,7 +17017,7 @@ public partial class Tab : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "keytip"),
 		AttributeTag.Create<StringValue>(0, "getKeytip")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -17257,7 +17257,7 @@ public partial class TabSet : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "visible"),
 		AttributeTag.Create<StringValue>(0, "getVisible")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -17370,7 +17370,7 @@ public partial class Command : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "getEnabled"),
 		AttributeTag.Create<StringValue>(0, "idMso")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -17755,7 +17755,7 @@ public partial class ContextMenu : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<StringValue>(0, "idMso")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -17917,7 +17917,7 @@ public abstract partial class BackstageItemType : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "label"),
 		AttributeTag.Create<StringValue>(0, "getLabel")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> id.</para>
@@ -18008,7 +18008,7 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "imageMso"),
 		AttributeTag.Create<StringValue>(0, "getImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -18295,7 +18295,7 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "keytip"),
 		AttributeTag.Create<StringValue>(0, "getKeytip")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -18588,7 +18588,7 @@ public partial class BackstageMenuGroup : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "getLabel"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>>(0, "itemSize")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -19130,7 +19130,7 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "label"),
 		AttributeTag.Create<StringValue>(0, "getLabel")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -19361,7 +19361,7 @@ public partial class TaskGroupTask : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "keytip"),
 		AttributeTag.Create<StringValue>(0, "getKeytip")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -19675,7 +19675,7 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "label"),
 		AttributeTag.Create<StringValue>(0, "getLabel")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -19911,7 +19911,7 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "keytip"),
 		AttributeTag.Create<StringValue>(0, "getKeytip")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -20238,7 +20238,7 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "getShowLabel"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>>(0, "allowedTaskSizes")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -20662,7 +20662,7 @@ public partial class BackstageTab : OpenXmlCompositeElement
 		AttributeTag.Create<IntegerValue>(0, "secondColumnMinWidth"),
 		AttributeTag.Create<IntegerValue>(0, "secondColumnMaxWidth")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -21048,7 +21048,7 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "imageMso"),
 		AttributeTag.Create<StringValue>(0, "getImage")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -21412,7 +21412,7 @@ public partial class Ribbon : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "startFromScratch")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -21561,7 +21561,7 @@ public partial class Backstage : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "onShow"),
 		AttributeTag.Create<StringValue>(0, "onHide")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

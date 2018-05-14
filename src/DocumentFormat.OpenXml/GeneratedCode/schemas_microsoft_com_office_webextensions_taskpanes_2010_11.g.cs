@@ -142,7 +142,7 @@ public partial class WebExtensionPartReference : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(19, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -290,7 +290,7 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
 		AttributeTag.Create<UInt32Value>(0, "row"),
 		AttributeTag.Create<BooleanValue>(0, "locked")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

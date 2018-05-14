@@ -34,7 +34,7 @@ public partial class LegacyDrawing : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(0, "spid")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

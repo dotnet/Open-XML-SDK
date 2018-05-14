@@ -71,7 +71,7 @@ public partial class TextData : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(0, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

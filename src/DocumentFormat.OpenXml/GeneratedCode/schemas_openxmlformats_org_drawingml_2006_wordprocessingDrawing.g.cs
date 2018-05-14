@@ -84,7 +84,7 @@ public partial class WrapSquare : OpenXmlCompositeElement
 		AttributeTag.Create<UInt32Value>(0, "distL"),
 		AttributeTag.Create<UInt32Value>(0, "distR")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -246,7 +246,7 @@ public partial class WrapTight : OpenXmlCompositeElement
 		AttributeTag.Create<UInt32Value>(0, "distL"),
 		AttributeTag.Create<UInt32Value>(0, "distR")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -386,7 +386,7 @@ public partial class WrapThrough : OpenXmlCompositeElement
 		AttributeTag.Create<UInt32Value>(0, "distL"),
 		AttributeTag.Create<UInt32Value>(0, "distR")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -525,7 +525,7 @@ public partial class WrapTopBottom : OpenXmlCompositeElement
 		AttributeTag.Create<UInt32Value>(0, "distT"),
 		AttributeTag.Create<UInt32Value>(0, "distB")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -665,7 +665,7 @@ public partial class Inline : OpenXmlCompositeElement
 		AttributeTag.Create<HexBinaryValue>(51, "anchorId"),
 		AttributeTag.Create<HexBinaryValue>(51, "editId")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -940,7 +940,7 @@ public partial class Anchor : OpenXmlCompositeElement
 		AttributeTag.Create<HexBinaryValue>(51, "editId"),
 		AttributeTag.Create<HexBinaryValue>(51, "anchorId")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1355,7 +1355,7 @@ public abstract partial class Point2DType : OpenXmlLeafElement
 		AttributeTag.Create<Int64Value>(0, "x"),
 		AttributeTag.Create<Int64Value>(0, "y")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> X-Axis Coordinate.</para>
@@ -1419,7 +1419,7 @@ public partial class EffectExtent : OpenXmlLeafElement
 		AttributeTag.Create<Int64Value>(0, "r"),
 		AttributeTag.Create<Int64Value>(0, "b")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1515,7 +1515,7 @@ public partial class WrapPolygon : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "edited")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1638,7 +1638,7 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues>>(0, "relativeFrom")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1788,7 +1788,7 @@ public partial class VerticalPosition : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues>>(0, "relativeFrom")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1928,7 +1928,7 @@ public partial class Extent : OpenXmlLeafElement
 		AttributeTag.Create<Int64Value>(0, "cx"),
 		AttributeTag.Create<Int64Value>(0, "cy")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2008,7 +2008,7 @@ public partial class DocProperties : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "hidden"),
 		AttributeTag.Create<StringValue>(0, "title")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

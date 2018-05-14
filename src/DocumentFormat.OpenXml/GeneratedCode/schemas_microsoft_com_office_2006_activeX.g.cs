@@ -43,7 +43,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(19, "id"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>(35, "persistence")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -182,7 +182,7 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(35, "name"),
 		AttributeTag.Create<StringValue>(35, "value")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -329,7 +329,7 @@ public partial class SharedComFont : OpenXmlCompositeElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>(35, "persistence"),
 		AttributeTag.Create<StringValue>(19, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -432,7 +432,7 @@ public partial class SharedComPicture : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(19, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

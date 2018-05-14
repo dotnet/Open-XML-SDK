@@ -181,7 +181,7 @@ public partial class Transform2D : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "flipH"),
 		AttributeTag.Create<BooleanValue>(0, "flipV")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -334,7 +334,7 @@ public partial class ExtensionListModify : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "mod")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -436,7 +436,7 @@ public partial class Media : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(19, "embed"),
 		AttributeTag.Create<StringValue>(19, "link")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -653,7 +653,7 @@ public abstract partial class SideDirectionTransitionType : OpenXmlLeafElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>(0, "dir")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> Direction.</para>
@@ -844,7 +844,7 @@ public abstract partial class LeftRightDirectionTransitionType : OpenXmlLeafElem
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues>>(0, "dir")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> dir.</para>
@@ -894,7 +894,7 @@ public partial class RippleTransition : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(0, "dir")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1032,7 +1032,7 @@ public partial class PrismTransition : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "isContent"),
 		AttributeTag.Create<BooleanValue>(0, "isInverted")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1156,7 +1156,7 @@ public abstract partial class OrientationTransitionType : OpenXmlLeafElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>>(0, "dir")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> Transition Direction.</para>
@@ -1207,7 +1207,7 @@ public partial class GlitterTransition : OpenXmlLeafElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>(0, "dir"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues>>(0, "pattern")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1272,7 +1272,7 @@ public partial class WarpTransition : OpenXmlLeafElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>(0, "dir")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1327,7 +1327,7 @@ public partial class FlythroughTransition : OpenXmlLeafElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>(0, "dir"),
 		AttributeTag.Create<BooleanValue>(0, "hasBounce")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1393,7 +1393,7 @@ public partial class ShredTransition : OpenXmlLeafElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues>>(0, "pattern"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>(0, "dir")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1459,7 +1459,7 @@ public partial class RevealTransition : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "thruBlk"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues>>(0, "dir")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1524,7 +1524,7 @@ public partial class WheelReverseTransition : OpenXmlLeafElement
 	{
 		AttributeTag.Create<UInt32Value>(0, "spokes")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1579,7 +1579,7 @@ public partial class BookmarkTarget : OpenXmlLeafElement
 		AttributeTag.Create<UInt32Value>(0, "spid"),
 		AttributeTag.Create<StringValue>(0, "bmkName")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1802,7 +1802,7 @@ public partial class BrowseMode : OpenXmlLeafElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "showStatus")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2041,7 +2041,7 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
 	{
 		AttributeTag.Create<UInt32Value>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2095,7 +2095,7 @@ public partial class DiscardImageEditData : OpenXmlLeafElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2149,7 +2149,7 @@ public partial class ShowMediaControls : OpenXmlLeafElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2330,7 +2330,7 @@ public abstract partial class RandomIdType : OpenXmlLeafElement
 	{
 		AttributeTag.Create<UInt32Value>(0, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> val.</para>
@@ -2597,7 +2597,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "hidden"),
 		AttributeTag.Create<StringValue>(0, "title")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2789,7 +2789,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "isComment")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2935,7 +2935,7 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeEle
 		AttributeTag.Create<BooleanValue>(0, "isPhoto"),
 		AttributeTag.Create<BooleanValue>(0, "userDrawn")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3077,7 +3077,7 @@ public partial class MediaBookmark : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "name"),
 		AttributeTag.Create<StringValue>(0, "time")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3143,7 +3143,7 @@ public partial class MediaTrim : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "st"),
 		AttributeTag.Create<StringValue>(0, "end")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3209,7 +3209,7 @@ public partial class MediaFade : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "in"),
 		AttributeTag.Create<StringValue>(0, "out")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3441,7 +3441,7 @@ public partial class SectionOld : OpenXmlCompositeElement
 		AttributeTag.Create<ListValue<UInt32Value>>(0, "slideIdLst"),
 		AttributeTag.Create<StringValue>(0, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3572,7 +3572,7 @@ public partial class SectionSlideIdListEntry : OpenXmlLeafElement
 	{
 		AttributeTag.Create<UInt32Value>(0, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3715,7 +3715,7 @@ public partial class Section : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "name"),
 		AttributeTag.Create<StringValue>(0, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3852,7 +3852,7 @@ public partial class TracePoint : OpenXmlLeafElement
 		AttributeTag.Create<Int64Value>(0, "x"),
 		AttributeTag.Create<Int64Value>(0, "y")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4009,7 +4009,7 @@ public partial class TriggerEventRecord : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "time"),
 		AttributeTag.Create<UInt32Value>(0, "objId")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4196,7 +4196,7 @@ public abstract partial class MediaPlaybackEventRecordType : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "time"),
 		AttributeTag.Create<UInt32Value>(0, "objId")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> time.</para>
@@ -4259,7 +4259,7 @@ public partial class SeekEventRecord : OpenXmlLeafElement
 		AttributeTag.Create<UInt32Value>(0, "objId"),
 		AttributeTag.Create<StringValue>(0, "seek")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4336,7 +4336,7 @@ public partial class NullEventRecord : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "time"),
 		AttributeTag.Create<UInt32Value>(0, "objId")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

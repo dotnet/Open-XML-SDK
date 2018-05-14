@@ -145,7 +145,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
 		AttributeTag.Create<IntegerValue>(0, "width"),
 		AttributeTag.Create<TrueFalseValue>(0, "shadow")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> Border Style.</para>
@@ -220,7 +220,7 @@ public partial class TextWrap : OpenXmlLeafElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues>>(0, "anchorx"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues>>(0, "anchory")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

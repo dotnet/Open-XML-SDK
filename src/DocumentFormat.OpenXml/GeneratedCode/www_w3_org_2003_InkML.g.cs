@@ -52,7 +52,7 @@ public partial class Ink : OpenXmlPartRootElement
 	{
 		AttributeTag.Create<StringValue>(0, "documentID")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -161,7 +161,7 @@ public partial class Bind : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(0, "column"),
 		AttributeTag.Create<StringValue>(0, "variable")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -250,7 +250,7 @@ public partial class Table : OpenXmlLeafTextElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues>>(0, "apply"),
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues>>(0, "interpolation")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -341,7 +341,7 @@ public partial class Matrix : OpenXmlLeafTextElement
 	{
 		AttributeTag.Create<StringValue>(1, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -425,7 +425,7 @@ public partial class Mapping : OpenXmlCompositeElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues>>(0, "type"),
 		AttributeTag.Create<StringValue>(0, "mappingRef")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -561,7 +561,7 @@ public partial class Channel : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "respectTo"),
 		AttributeTag.Create<StringValue>(0, "units")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -821,7 +821,7 @@ public partial class ChannelProperty : OpenXmlLeafElement
 		AttributeTag.Create<DecimalValue>(0, "value"),
 		AttributeTag.Create<StringValue>(0, "units")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -917,7 +917,7 @@ public partial class TraceFormat : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<StringValue>(1, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1011,7 +1011,7 @@ public partial class SampleRate : OpenXmlLeafElement
 		AttributeTag.Create<BooleanValue>(0, "uniform"),
 		AttributeTag.Create<DecimalValue>(0, "value")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1076,7 +1076,7 @@ public partial class Latency : OpenXmlLeafElement
 	{
 		AttributeTag.Create<DecimalValue>(0, "value")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1133,7 +1133,7 @@ public partial class ActiveArea : OpenXmlLeafElement
 		AttributeTag.Create<DecimalValue>(0, "width"),
 		AttributeTag.Create<StringValue>(0, "units")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1222,7 +1222,7 @@ public partial class SourceProperty : OpenXmlLeafElement
 		AttributeTag.Create<DecimalValue>(0, "value"),
 		AttributeTag.Create<StringValue>(0, "units")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1378,7 +1378,7 @@ public partial class Annotation : OpenXmlLeafTextElement
 		AttributeTag.Create<StringValue>(0, "type"),
 		AttributeTag.Create<StringValue>(0, "encoding")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1465,7 +1465,7 @@ public partial class AnnotationXml : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "encoding"),
 		AttributeTag.Create<StringValue>(0, "href")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1607,7 +1607,7 @@ public partial class BrushProperty : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "value"),
 		AttributeTag.Create<StringValue>(0, "units")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1728,7 +1728,7 @@ public partial class Canvas : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(1, "id"),
 		AttributeTag.Create<StringValue>(0, "traceFormatRef")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1858,7 +1858,7 @@ public partial class CanvasTransform : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(1, "id"),
 		AttributeTag.Create<BooleanValue>(0, "invertible")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1981,7 +1981,7 @@ public partial class InkSource : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "specificationRef"),
 		AttributeTag.Create<StringValue>(0, "description")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2210,7 +2210,7 @@ public partial class Brush : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(1, "id"),
 		AttributeTag.Create<StringValue>(0, "brushRef")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2321,7 +2321,7 @@ public partial class Timestamp : OpenXmlLeafElement
 		AttributeTag.Create<DateTimeValue>(0, "timeString"),
 		AttributeTag.Create<DecimalValue>(0, "timeOffset")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2428,7 +2428,7 @@ public partial class Trace : OpenXmlLeafTextElement
 		AttributeTag.Create<DecimalValue>(0, "duration"),
 		AttributeTag.Create<DecimalValue>(0, "timeOffset")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2589,7 +2589,7 @@ public partial class TraceGroup : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "contextRef"),
 		AttributeTag.Create<StringValue>(0, "brushRef")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2725,7 +2725,7 @@ public partial class TraceView : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "from"),
 		AttributeTag.Create<StringValue>(0, "to")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2889,7 +2889,7 @@ public partial class Context : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "brushRef"),
 		AttributeTag.Create<StringValue>(0, "timestampRef")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

@@ -37,7 +37,7 @@ public partial class Color : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(23, "themeTint"),
 		AttributeTag.Create<StringValue>(23, "themeShade")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -134,7 +134,7 @@ public partial class DataBinding : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(23, "xpath"),
 		AttributeTag.Create<StringValue>(23, "storeItemID")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -216,7 +216,7 @@ public partial class Appearance : OpenXmlLeafElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>>(69, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -782,7 +782,7 @@ public abstract partial class OnOffType : OpenXmlLeafElement
 	{
 		AttributeTag.Create<OnOffValue>(23, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> On/Off Value.</para>
@@ -834,7 +834,7 @@ public partial class PersistentDocumentId : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(69, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -890,7 +890,7 @@ public partial class FootnoteColumns : OpenXmlLeafElement
 	{
 		AttributeTag.Create<Int32Value>(23, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -948,7 +948,7 @@ public partial class CommentEx : OpenXmlLeafElement
 		AttributeTag.Create<HexBinaryValue>(69, "paraIdParent"),
 		AttributeTag.Create<OnOffValue>(69, "done")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1038,7 +1038,7 @@ public partial class Person : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(69, "author"),
 		AttributeTag.Create<StringValue>(69, "contact")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1163,7 +1163,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
 		AttributeTag.Create<StringValue>(69, "providerId"),
 		AttributeTag.Create<StringValue>(69, "userId")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1232,7 +1232,7 @@ public partial class SectionTitle : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(23, "val")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

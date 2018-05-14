@@ -58,7 +58,7 @@ public partial class WordprocessingShape : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "normalEastAsianFlow")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -285,7 +285,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "hidden"),
 		AttributeTag.Create<StringValue>(0, "title")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -477,7 +477,7 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<BooleanValue>(0, "txBox")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -787,7 +787,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwMode")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1098,7 +1098,7 @@ public partial class TextBoxInfo2 : OpenXmlCompositeElement
 	{
 		AttributeTag.Create<UInt16Value>(0, "id")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1230,7 +1230,7 @@ public partial class LinkedTextBox : OpenXmlCompositeElement
 		AttributeTag.Create<UInt16Value>(0, "id"),
 		AttributeTag.Create<UInt16Value>(0, "seq")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1389,7 +1389,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
 		AttributeTag.Create<BooleanValue>(0, "upright"),
 		AttributeTag.Create<BooleanValue>(0, "compatLnSpc")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

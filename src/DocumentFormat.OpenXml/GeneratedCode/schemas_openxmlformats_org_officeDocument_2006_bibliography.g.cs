@@ -42,7 +42,7 @@ public partial class Sources : OpenXmlPartRootElement
 		AttributeTag.Create<StringValue>(0, "StyleName"),
 		AttributeTag.Create<StringValue>(0, "URI")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

@@ -34,7 +34,7 @@ public partial class AbsolutePath : OpenXmlLeafElement
 	{
 		AttributeTag.Create<StringValue>(0, "url")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>

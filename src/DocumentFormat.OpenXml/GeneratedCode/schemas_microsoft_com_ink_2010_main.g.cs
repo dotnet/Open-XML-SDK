@@ -64,7 +64,7 @@ public partial class ContextNode : OpenXmlCompositeElement
 		AttributeTag.Create<StringValue>(0, "shapeName"),
 		AttributeTag.Create<ListValue<StringValue>>(0, "shapeGeometry")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -378,7 +378,7 @@ public partial class ContextNodeProperty : OpenXmlLeafTextElement
 	{
 		AttributeTag.Create<StringValue>(0, "type")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -494,7 +494,7 @@ public abstract partial class ContextLinkType : OpenXmlLeafElement
 		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues>>(0, "direction"),
 		AttributeTag.Create<StringValue>(0, "ref")
 	};
-    internal override AttributeTagCollection RawAttributes { get; } = s_attributeTags;
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> direction.</para>

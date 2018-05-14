@@ -35,11 +35,13 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        internal override AttributeTagCollection RawAttributes { get; } = new[]
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new[]
         {
             AttributeTag.Create<StringValue>(23, "uri"),
             AttributeTag.Create<StringValue>(23, "element"),
         };
+
+        internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
         /// <summary>
         /// Gets or sets the custom XML Markup Namespace.
