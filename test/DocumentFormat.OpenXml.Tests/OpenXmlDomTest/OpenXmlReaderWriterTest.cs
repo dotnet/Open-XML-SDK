@@ -3,7 +3,6 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
-using OxTest;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -92,75 +91,51 @@ namespace DocumentFormat.OpenXml.Tests
         #region Writer Test ...
 
         [Fact]
-
         public void WriteStartDocumentTest()
         {
             TestWriteStartDocument(WConstrWithPart, WriteStartD, null);
         }
 
         [Fact]
-
         public void WriteStartDocumentWithStandalone()
         {
             TestWriteStartDocument(WConstrWithPartEnc, WriteStartD, true);
         }
 
         [Fact]
-
         public void WriteStartDocumentMultiple()
         {
-            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", string.Empty) + ".docx");
-
-            using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
+            using (var stream = new MemoryStream())
+            using (var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
-                MainDocumentPart part = newDoc.AddMainDocumentPart();
-                try
+                var part = newDoc.AddMainDocumentPart();
+
+                using (var writer = PWCosntrWithPart(part))
                 {
-                    using (OpenXmlWriter writer = PWCosntrWithPart(part))
-                    {
-                        writer.WriteStartDocument();
-                        writer.WriteStartDocument();
-                        Log.VerifyShouldNotReachHere("InvalidOperationException is not thrown");
-                    }
-                }
-                catch (InvalidOperationException)
-                {
-                    Log.Pass("InvalidOperationException is thrown as expected");
+                    writer.WriteStartDocument();
+                    Assert.Throws<InvalidOperationException>(() => writer.WriteStartDocument());
                 }
             }
-
-            File.Delete(file);
         }
 
         [Fact]
-
         public void WriteStartDocumentOtherPlace()
         {
-            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", string.Empty) + ".docx");
-            using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
+            using (var stream = new MemoryStream())
+            using (var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
-                MainDocumentPart part = newDoc.AddMainDocumentPart();
-                Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
-                try
+                var part = newDoc.AddMainDocumentPart();
+                var p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
+
+                using (var writer = PWCosntrWithPart(part))
                 {
-                    using (OpenXmlWriter writer = PWCosntrWithPart(part))
-                    {
-                        writer.WriteElement(p);
-                        writer.WriteStartDocument();
-                        Log.VerifyShouldNotReachHere("InvalidOperationException is not thrown");
-                    }
-                }
-                catch (InvalidOperationException)
-                {
-                    Log.Pass("InvalidOperationException is thrown as expected");
+                    writer.WriteElement(p);
+                    Assert.Throws<InvalidOperationException>(() => writer.WriteStartDocument());
                 }
             }
-
-            File.Delete(file);
         }
 
         [Fact]
-
         public void WriteStartElementWithOpenXmlReaderAttr()
         {
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
@@ -171,7 +146,6 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact]
-
         public void WriteStartElementWithOpenXmlReader()
         {
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
@@ -182,7 +156,6 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact]
-
         public void WriteStartElementWithEndElementReader()
         {
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
@@ -202,7 +175,6 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact]
-
         public void WriteStartElementWithOpenXmlElementAttr()
         {
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
@@ -211,7 +183,6 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact]
-
         public void WriteStartElementWithOpenXmlElement()
         {
             Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
@@ -220,86 +191,65 @@ namespace DocumentFormat.OpenXml.Tests
         }
 
         [Fact]
-
         public void WriteStringAndEndElement()
         {
-            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", string.Empty) + ".docx");
-
-            Text t = new Text();
-            using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
+            using (var stream = new MemoryStream())
+            using (var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
-                MainDocumentPart part = newDoc.AddMainDocumentPart();
-                using (OpenXmlWriter writer = WConstrWithPart(part))
+                var t = new Text();
+                var part = newDoc.AddMainDocumentPart();
+
+                using (var writer = WConstrWithPart(part))
                 {
                     writer.WriteStartElement(t);
                     writer.WriteString("test");
                     writer.WriteEndElement();
                 }
 
-                XmlReader reader = XmlReader.Create(part.GetStream());
-                reader.Read();
-                reader.Read();
-                reader.Read();
-                Log.VerifyTrue(reader.Value == "test", "Expected: test <> actual: {0}", reader.Value);
+                using (var reader = XmlReader.Create(part.GetStream()))
+                {
+                    Assert.True(reader.Read());
+                    Assert.True(reader.Read());
+                    Assert.True(reader.Read());
+                    Assert.Equal("test", reader.Value);
 
-                reader.Read();
-
-                Log.Comment("check if the endElement is written successfully");
-                Log.VerifyTrue(reader.NodeType == XmlNodeType.EndElement, "Expected: true <> actual: false");
-
-                Log.VerifyTrue(reader.LocalName == t.LocalName, "expected: {0} <> actual: {1}", t.LocalName, reader.LocalName);
+                    Assert.True(reader.Read());
+                    Assert.Equal(XmlNodeType.EndElement, reader.NodeType);
+                    Assert.Equal(t.LocalName, reader.LocalName);
+                }
             }
-
-            File.Delete(file);
         }
 
         [Fact]
-
         public void WriteEndElementWithoutStart()
         {
-            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", string.Empty) + ".docx");
-            Text t = new Text();
-            using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
+            using (var stream = new MemoryStream())
+            using (var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
-                MainDocumentPart part = newDoc.AddMainDocumentPart();
-                using (OpenXmlWriter writer = WConstrWithPart(part))
+                var t = new Text();
+                var part = newDoc.AddMainDocumentPart();
+
+                using (var writer = WConstrWithPart(part))
                 {
-                    try
-                    {
-                        writer.WriteEndElement();
-                        Log.VerifyShouldNotReachHere("Expected InvalidOperationException is not thrown");
-                    }
-                    catch (InvalidOperationException)
-                    {
-                        Log.Pass("expected InvalidOperationException is thrown");
-                    }
+                    Assert.Throws<InvalidOperationException>(() => writer.WriteEndElement());
                 }
             }
-
-            File.Delete(file);
         }
 
         // Comment out as the result of bug 2352836
         [Fact]
         public void WriteStringWithNonLeafText()
         {
-            Paragraph p = new Paragraph() { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
-            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
-            using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
+            using (var stream = new MemoryStream())
+            using (var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
-                MainDocumentPart part = newDoc.AddMainDocumentPart();
+                var p = new Paragraph() { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
+                var part = newDoc.AddMainDocumentPart();
+
                 using (OpenXmlWriter writer = WConstrWithPart(part))
                 {
                     writer.WriteStartElement(p);
-                    try
-                    {
-                        writer.WriteString("test");
-                        Log.VerifyShouldNotReachHere("Expected InvalidOperationException is not thrown");
-                    }
-                    catch (InvalidOperationException)
-                    {
-                        Log.Pass("Expected InvalidOperationException is thrown");
-                    }
+                    Assert.Throws<InvalidOperationException>(() => writer.WriteString("test"));
                 }
             }
         }
@@ -307,19 +257,23 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void WriteElement()
         {
-            Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
-            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
-            using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
+            using (var stream = new MemoryStream())
+            using (var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
+                Paragraph p = new Paragraph(new Run(new Text("test"))) { RsidParagraphAddition = "00000000", RsidRunAdditionDefault = "00B27B3B" };
                 MainDocumentPart part = newDoc.AddMainDocumentPart();
                 OpenXmlWriter writer = WConstrWithPart(part);
+
                 writer.WriteElement(p);
                 writer.Close();
 
                 XElement XEle = null;
-                using (Stream stream = part.GetStream())
-                using (XmlReader reader = XmlReader.Create(stream))
+                using (Stream partStream = part.GetStream())
+                using (XmlReader reader = XmlReader.Create(partStream))
+                {
                     XEle = XElement.Load(reader);
+                }
+
                 VerifyEqual(XEle, p, part);
             }
         }
@@ -327,37 +281,28 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void WriteStartElementWithMisc()
         {
-            OpenXmlMiscNode node = new OpenXmlMiscNode(XmlNodeType.Comment);
-
-            OpenXmlReader miscReader = OpenXmlReader.Create(node, true);
-            miscReader.Read();
-
-            try
+            var node = new OpenXmlMiscNode(XmlNodeType.Comment);
+            using (var miscReader = OpenXmlReader.Create(node, true))
             {
-                TestWriteStartElement(WConstrWithStream, WriteStartE, miscReader, null, null);
-                Log.VerifyShouldNotReachHere("ArgumentOutOfRangeException is not thrown");
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                Log.Pass("ArgumentOutOfRangeException is thrown");
+                Assert.True(miscReader.Read());
+                Assert.Throws<ArgumentOutOfRangeException>(() => TestWriteStartElement(WConstrWithStream, WriteStartE, miscReader, null, null));
             }
         }
 
         private void TestWriteStartDocument(ConstrWriter writerConstr, WriteStartDoc write, bool? standalone)
         {
-            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString().Replace("-", string.Empty) + ".docx");
-            using (WordprocessingDocument newDoc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
+            using (var stream = new MemoryStream())
+            using (var newDoc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
-                MainDocumentPart part = newDoc.AddMainDocumentPart();
-                using (OpenXmlWriter writer = writerConstr(part))
+                var part = newDoc.AddMainDocumentPart();
+
+                using (var writer = writerConstr(part))
                 {
                     write(writer, standalone);
                 }
 
                 VerifyDocumentStart(part, standalone);
             }
-
-            File.Delete(file);
         }
 
         private void VerifyDocumentStart(OpenXmlPart part, bool? standalone)
@@ -1284,8 +1229,8 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug253893_Write2Declaration()
         {
-            string file = Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
-            using (WordprocessingDocument doc = WordprocessingDocument.Create(file, WordprocessingDocumentType.Document))
+            using (var stream = new MemoryStream())
+            using (WordprocessingDocument doc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
                 MainDocumentPart mainpart = doc.AddMainDocumentPart();
 
@@ -1299,8 +1244,6 @@ namespace DocumentFormat.OpenXml.Tests
 
                 writer.Close();
             }
-
-            Log.Pass("Completed");
         }
     }
 }
