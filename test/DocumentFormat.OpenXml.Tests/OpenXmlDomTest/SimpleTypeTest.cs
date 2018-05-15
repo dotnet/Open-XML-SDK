@@ -219,7 +219,7 @@ namespace DocumentFormat.OpenXml.Tests
             Log.Comment("Entering Non-Generic Test Method...");
 
             string stringValue = oxObj.InnerText;
-            Log.VerifyNotNull(stringValue, "Null returned by .InnerText!");
+            Assert.NotNull(stringValue);
             Log.VerifyValue(stringValue, expectedText,
                 "Property InnerText {0} does NOT equal to expected {1}.", stringValue, expectedText);
 

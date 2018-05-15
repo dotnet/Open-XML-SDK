@@ -6,7 +6,7 @@ using DocumentFormat.OpenXml.Wordprocessing;
 using LogUtil;
 using System.IO;
 using System.Linq;
-
+using Xunit;
 using ConstStr = DocumentFormat.OpenXml.Tests.ContentControl.ConstantStrings;
 using W15 = DocumentFormat.OpenXml.Office2013.Word;
 
@@ -149,18 +149,9 @@ namespace DocumentFormat.OpenXml.Tests.ContentControl
                         //Tag is "Test1.4.4"
                         case ConstStr.TestTagStrings.TagContent11:
                             sdtBlock = tag.Ancestors<SdtBlock>().First();
-                            var sectionTitles = sdtBlock.Descendants<W15.SectionTitle>();
-                            if (sectionTitles.Count() > 0)
-                            {
-                                log.VerifySubString(
-                                    sectionTitles.First().Val,
-                                    "TEST_TEST",
-                                    "SectionTitle is detected and updated");
-                            }
-                            else
-                            {
-                                log.Fail("SectionTitle is not detected.");
-                            }
+
+                            var sectionTitle = Assert.Single(sdtBlock.Descendants<W15.SectionTitle>());
+                            Assert.Contains(sectionTitle.Val, "TEST_TEST");
 
                             break;
 

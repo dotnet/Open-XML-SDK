@@ -17,15 +17,6 @@ namespace LogUtil
         }
 
         /// <summary>
-        /// Start logical group in "script" category.
-        /// </summary>
-        /// <param name="groupName">User provided name for the group</param>
-        public void BeginGroup(string groupName)
-        {
-            _output.WriteLine($"BeginGroup: {groupName}");
-        }
-
-        /// <summary>
         /// Produce a comment in "script" category
         /// </summary>
         /// <param name="message">Message containing zero or more format specifications</param>
@@ -33,15 +24,6 @@ namespace LogUtil
         public void Comment(string message, params object[] arguments)
         {
             _output.WriteLine(string.Format(message, arguments));
-        }
-
-        /// <summary>
-        /// Ends logical group name in "script" category
-        /// </summary>
-        /// <param name="groupName">name of the logical group</param>
-        public void EndGroup(string groupName)
-        {
-            _output.WriteLine($"EndGroup: {groupName}");
         }
 
         /// <summary>
@@ -132,86 +114,9 @@ namespace LogUtil
                 Pass(message);
         }
 
-        /// <summary>
-        /// Tests whether the input reference is not null. This helper method is the logical inverse of the VerifyNull method. The test succeeds if the
-        /// input parameter is not null and fails if it is null.
-        /// </summary>
-        /// <param name="test">The object that should not be null</param>
-        /// <param name="message">Exception message to display if the test fails</param>
-        /// <param name="arguments">List of objects to be formatted</param>
-        public void VerifyNotNull(object test, string message, params object[] arguments)
-        {
-            VerifyNotValue(test, null, message, arguments);
-        }
-
-        public void VerifyNotNull(object test, string message)
-        {
-            VerifyNotValue(test, null, message);
-        }
-
-        public void VerifyNotReference(object actualObjectReference, object expectedNotToBeReference, string message)
-        {
-            VerifyFalse( object.ReferenceEquals(actualObjectReference, expectedNotToBeReference), message);
-        }
-
-        public void VerifyNotValue(object actualValue, object expectedNotValue, string message, params object[] arguments)
-        {
-            var messageModified = string.Format("{0} [Actual: {1}, Expected Not: {2}]", message, actualValue, expectedNotValue);
-            VerifyFalse(object.Equals(actualValue, expectedNotValue), messageModified, arguments);
-        }
-
-        public void VerifyNotValue(object actualValue, object expectedNotValue, string message)
-        {
-            var messageModified = string.Format("{0} [Actual: {1}, Expected Not: {2}]", message, actualValue, expectedNotValue);
-            VerifyFalse(object.Equals(actualValue, expectedNotValue), messageModified);
-        }
-
-        /// <summary>
-        /// Tests whether the input reference is null
-        /// </summary>
-        /// <param name="test">The object that should be null</param>
-        /// <param name="message">Exception message to display if the test fails</param>
-        /// <param name="arguments">List of objects to be formatted</param>
-        public void VerifyNull(object test, string message, params object[] arguments)
-        {
-            VerifyValue(test, null, message, arguments);
-        }
-
         public void VerifyNull(object test, string message)
         {
             VerifyValue(test, null, message);
-        }
-
-        public void VerifyReference(object actualObjectReference, object expectedObjectReference, string message)
-        {
-            VerifyTrue(object.ReferenceEquals(actualObjectReference, expectedObjectReference), message);
-        }
-
-        /// <summary>
-        /// VerifyShouldNotReachHere Method Fails the test
-        /// </summary>
-        /// <param name="message">Exception message to display</param>
-        /// <param name="arguments">List of objects to be formatted</param>
-        public void VerifyShouldNotReachHere(string message, params object[] arguments)
-        {
-            var m = string.Format(message, arguments);
-
-            _output.WriteLine($"VerifyShouldNotReachHere: {m}");
-
-            Assert.True(false, m);
-        }
-
-        /// <summary>
-        /// VerifySubString Method Tests whether the input parameter contains a specific substring. If the actual value contains the substring,
-        /// the test is considered a success. If the actual value does not contain the substring, the test is considered to fail.
-        /// </summary>
-        /// <param name="actualFullString">The actual value returned by the test subject</param>
-        /// <param name="expectedSubString">The substring that the test subject is supposed to contain.</param>
-        /// <param name="message">Message to associate with the Verify if the test fails</param>
-        /// <param name="arguments">List of objects to be formatted</param>
-        public void VerifySubString(string actualFullString, string expectedSubString, string message, params object[] arguments)
-        {
-            VerifyTrue(actualFullString.Contains(expectedSubString), message, arguments);
         }
 
         /// <summary>
@@ -254,12 +159,6 @@ namespace LogUtil
         {
             var messageModified = string.Format("{0} [Actual: {1}, Expected: {2}]", message, actualValue, expectedValue);
             VerifyTrue(object.Equals(actualValue, expectedValue), messageModified);
-        }
-
-        public void VerifyValue(object actualValue, object expectedValue, string message, params object[] arguments)
-        {
-            var messageModified = string.Format("{0} [Actual: {1}, Expected: {2}]", message, actualValue, expectedValue);
-            VerifyTrue(object.Equals(actualValue, expectedValue), messageModified, arguments);
         }
 
         public void VerifyValue(object actualValue, object expectedValue, string message)

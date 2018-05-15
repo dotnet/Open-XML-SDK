@@ -1178,7 +1178,7 @@ namespace DocumentFormat.OpenXml.Tests
                     var replaceChild = hostElement.GetType().GetMethods(flag)
                         .Where(m => m.IsGenericMethod && m.Name.StartsWith("ReplaceChild"))
                         .First();
-                    Log.VerifyNotNull(replaceChild, "ReplaceChild<T>() NOT found for {0}!", hostElement.GetFullName());
+                    Assert.NotNull(replaceChild);
 
                     XElement xBefore = ConvertToXElement(hostPart, hostElement);
                     XElement xImport = ConvertToXElement(srcPart, importElement);
@@ -1515,10 +1515,9 @@ namespace DocumentFormat.OpenXml.Tests
                     foreach (var a in attributes)
                     {
                         var xa = xAfter.Attribute(a.GetXName());
-                        Log.VerifyNotNull(xa, "Attribute {0} was NOT set correctly.", a.GetFullName());
-                        if (null != xa)
-                            Log.VerifyValue(xa.Value, a.Value,
-                                "Attribute {0}={1} was NOT set to expected {2}", a.GetFullName(), xa.Value, a.Value);
+
+                        Assert.NotNull(xa);
+                        Assert.Equal(xa.Value, a.Value);
                     }
                 }
                 else
@@ -1588,9 +1587,7 @@ namespace DocumentFormat.OpenXml.Tests
                         "Different attributes count by (XAttribute vs OpenXmlAttribute): ({0}:{1})",
                         xAfter.Attributes().Where(xa => !xa.IsNamespaceDeclaration).Count(), hostElement.GetAttributes().Count);
 
-                    Log.Comment("Checking if attribute removed correctly...");
-                    XAttribute a = xAfter.Attribute(remove.GetXName());
-                    Log.VerifyNull(a, "Attribute {0} was NOT removed as expected.", remove.GetFullName());
+                    Assert.Null(xAfter.Attribute(remove.GetXName()));
                 }
                 else
                 {
@@ -1651,8 +1648,7 @@ namespace DocumentFormat.OpenXml.Tests
                 foreach (var a in attributes)
                 {
                     XNamespace xns = a.NamespaceUri;
-                    Log.VerifyNull(xAfter.Attribute(a.GetXName()),
-                        "Attribute {0} is NOT removed as expected!", a.GetFullName());
+                    Assert.Null(xAfter.Attribute(a.GetXName()));
                 }
             }
             else
@@ -2261,102 +2257,98 @@ namespace DocumentFormat.OpenXml.Tests
         {
             Log.Pass("ElementInserting event caught.");
             Log.Comment("[ElementInserting] Inserting {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
-            Log.VerifyNull(args.Element.Parent, "New child element has Non-Null parent before inserting.");
-            Log.VerifyNotNull(args.ParentElement, "ParentElement is Null before inserting.");
+            Assert.Null(args.Element.Parent);
+            Assert.NotNull(args.ParentElement);
 
-            Log.VerifyTrue(sender is OpenXmlElementContext, "Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name);
-            Log.VerifyReference(args.ParentElement.OpenXmlElementContext, sender, "ParentElement has different OpenXmlElementContext before inserting!");
-            Log.VerifyNotReference(args.Element.OpenXmlElementContext, sender, "New element has same OpenXmlElementContext before inserting!");
+            Assert.IsType<OpenXmlElementContext>(sender);
+            Assert.NotSame(args.ParentElement.OpenXmlElementContext, sender);
+            Assert.NotSame(args.Element.OpenXmlElementContext, sender);
         }
 
         private void surprisingElementInserting(object sender, ElementEventArgs args)
         {
             Log.Fail("ElementInserting event caught.");
             Log.Comment("[ElementInserting] Inserting {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
-            Log.VerifyNull(args.Element.Parent, "New child element has Non-Null parent before inserting.");
-            Log.VerifyNotNull(args.ParentElement, "ParentElement is Null before inserting.");
+            Assert.Null(args.Element.Parent);
+            Assert.NotNull(args.ParentElement);
 
-            Log.VerifyTrue(sender is OpenXmlElementContext, "Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name);
-            Log.VerifyReference(args.ParentElement.OpenXmlElementContext, sender, "ParentElement has different OpenXmlElementContext before inserting!");
-            Log.VerifyNotReference(args.Element.OpenXmlElementContext, sender, "New element has same OpenXmlElementContext before inserting!");
+            Assert.IsType<OpenXmlElementContext>(sender);
+            Assert.Same(args.ParentElement.OpenXmlElementContext, sender);
+            Assert.NotSame(args.Element.OpenXmlElementContext, sender);
         }
 
         private void expectedElementInserted(object sender, ElementEventArgs args)
         {
             Log.Pass("ElementInserted event caught.");
             Log.Comment("[ElementInserted] Inserted {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
-            Log.VerifyNotNull(args.Element.Parent, "New child element has Null parent after been inserted.");
-            Log.Verify(args.ParentElement == args.Element.Parent,
-                "Element inserted {0} has different parent from expected {1}.", args.Element.GetFullName(), args.ParentElement.GetFullName());
+            Assert.NotNull(args.Element.Parent);
+            Assert.Equal(args.ParentElement, args.Element.Parent);
 
-            Log.VerifyTrue(sender is OpenXmlElementContext, "Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name);
-            Log.VerifyReference(args.ParentElement.OpenXmlElementContext, sender, "ParentElement has different OpenXmlElementContext after inserting!");
-            Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "New child element still has different OpenXmlElementContext after been inserted!");
+            Assert.IsType<OpenXmlElementContext>(sender);
+            Assert.NotSame(args.ParentElement.OpenXmlElementContext, sender);
+            Assert.Same(args.Element.OpenXmlElementContext, sender);
         }
 
         private void surprisingElementInserted(object sender, ElementEventArgs args)
         {
             Log.Fail("ElementInserted event caught.");
             Log.Comment("[ElementInserted] Inserted {0} to {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
-            Log.VerifyNotNull(args.Element.Parent, "New child element has Null parent after been inserted.");
-            Log.Verify(args.ParentElement == args.Element.Parent,
-                "Element inserted {0} has different parent from expected {1}.", args.Element.GetFullName(), args.ParentElement.GetFullName());
+            Assert.NotNull(args.Element.Parent);
+            Assert.Equal(args.ParentElement, args.Element.Parent);
 
-            Log.VerifyTrue(sender is OpenXmlElementContext, "Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name);
-            Log.VerifyReference(args.ParentElement.OpenXmlElementContext, sender, "ParentElement has different OpenXmlElementContext after inserting!");
-            Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "New child element still has different OpenXmlElementContext after been inserted!");
+            Assert.IsType<OpenXmlElementContext>(sender);
+            Assert.Same(args.ParentElement.OpenXmlElementContext, sender);
+            Assert.Same(args.Element.OpenXmlElementContext, sender);
         }
 
         private void expectedElementRemoving(object sender, ElementEventArgs args)
         {
             Log.Pass("ElementRemoving event caught.");
             Log.Comment("[ElementRemoving] Removing {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
-            Log.VerifyNotNull(args.Element.Parent, "Child element has Null parent before removing.");
-            Log.VerifyNotNull(args.ParentElement, "Parent element is Null before removing.");
-            Log.Verify(args.ParentElement == args.Element.Parent,
-                "Element to be removed {0} has different parent from expected {1}.", args.Element.GetFullName(), args.ParentElement.GetFullName());
+            Assert.NotNull(args.Element.Parent);
+            Assert.NotNull(args.ParentElement);
+            Assert.Equal(args.ParentElement, args.Element.Parent);
 
-            Log.VerifyTrue(sender is OpenXmlElementContext, "Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name);
-            Log.VerifyReference(args.ParentElement.OpenXmlElementContext, sender, "ParentElement has different OpenXmlElementContext before removing!");
-            Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "Child element has different OpenXmlElementContext before removing!");
+            Assert.IsType<OpenXmlElementContext>(sender);
+            Assert.Same(args.ParentElement.OpenXmlElementContext, sender);
+            Assert.Same(args.Element.OpenXmlElementContext, sender);
         }
 
         private void surprisingElementRemoving(object sender, ElementEventArgs args)
         {
             Log.Fail("ElementRemoving event caught.");
             Log.Comment("[ElementRemoving] Removing {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
-            Log.VerifyNotNull(args.Element.Parent, "Child element has Null parent before removing.");
-            Log.VerifyNotNull(args.ParentElement, "Parent element is Null before removing.");
-            Log.Verify(args.ParentElement == args.Element.Parent,
-                "Element to be removed {0} has different parent from expected {1}.", args.Element.GetFullName(), args.ParentElement.GetFullName());
+            Assert.NotNull(args.Element.Parent);
+            Assert.NotNull(args.ParentElement);
+            Assert.Equal(args.ParentElement, args.Element.Parent);
 
-            Log.VerifyTrue(sender is OpenXmlElementContext, "Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name);
-            Log.VerifyReference(args.ParentElement.OpenXmlElementContext, sender, "ParentElement has different OpenXmlElementContext before removing!");
-            Log.VerifyReference(args.Element.OpenXmlElementContext, sender, "Child element has different OpenXmlElementContext before removing!");
+            Assert.IsType<OpenXmlElementContext>(sender);
+            Assert.Same(args.ParentElement.OpenXmlElementContext, sender);
+            Assert.Same(args.Element.OpenXmlElementContext, sender);
         }
 
         private void expectedElementRemoved(object sender, ElementEventArgs args)
         {
             Log.Pass("ElementRemoved event caught.");
             Log.Comment("[ElementRemoved] Removed {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
-            Log.VerifyNull(args.Element.Parent, "Child element to be removed has Non-Null parent after removing.");
-            Log.VerifyNotNull(args.ParentElement, "Parent element is Null after removing.");
+            Assert.Null(args.Element.Parent);
+            Assert.NotNull(args.ParentElement);
 
-            Log.VerifyTrue(sender is OpenXmlElementContext, "Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name);
-            Log.VerifyReference(args.ParentElement.OpenXmlElementContext, sender, "ParentElement has different OpenXmlElementContext after removing!");
-            Log.VerifyNotReference(args.Element.OpenXmlElementContext, sender, "Child element still has same OpenXmlElementContext after removing!");
+            Assert.IsType<OpenXmlElementContext>(sender);
+            Assert.Same(args.ParentElement.OpenXmlElementContext, sender);
+            Assert.NotSame(args.Element.OpenXmlElementContext, sender);
         }
 
         private void surprisingElementRemoved(object sender, ElementEventArgs args)
         {
             Log.Fail("ElementRemoved event caught.");
             Log.Comment("[ElementRemoved] Removed {0} from {1}...", args.Element.GetFullName(), args.ParentElement.GetFullName());
-            Log.VerifyNull(args.Element.Parent, "Child element to be removed has Non-Null parent after removing.");
-            Log.VerifyNotNull(args.ParentElement, "Parent element is Null after removing.");
+            Assert.Null(args.Element.Parent);
+            Assert.NotNull(args.ParentElement);
 
-            Log.VerifyTrue(sender is OpenXmlElementContext, "Sender is {0}, NOT OpenXmlElementContext!", sender.GetType().Name);
-            Log.VerifyReference(args.ParentElement.OpenXmlElementContext, sender, "ParentElement has different OpenXmlElementContext after removing!");
-            Log.VerifyNotReference(args.Element.OpenXmlElementContext, sender, "Child element still has same OpenXmlElementContext after removing!");
+            Assert.IsType<OpenXmlElementContext>(sender);
+            Assert.Same(args.ParentElement.OpenXmlElementContext, sender);
+            Assert.NotSame(args.Element.OpenXmlElementContext, sender);
         }
 
         #endregion EventHandlers
