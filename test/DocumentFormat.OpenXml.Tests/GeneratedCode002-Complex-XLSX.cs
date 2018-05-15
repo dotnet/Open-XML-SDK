@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
+using System.IO;
 using System.Xml;
 
 using A = DocumentFormat.OpenXml.Drawing;
@@ -24,9 +25,9 @@ namespace DocumentFormat.OpenXml.Tests
     public class GeneratedClass002
     {
         // Creates a SpreadsheetDocument.
-        public void CreatePackage(string filePath)
+        public void CreatePackage(Stream stream)
         {
-            using (SpreadsheetDocument package = SpreadsheetDocument.Create(filePath, SpreadsheetDocumentType.Workbook))
+            using (SpreadsheetDocument package = SpreadsheetDocument.Create(stream, SpreadsheetDocumentType.Workbook))
             {
                 CreateParts(package);
             }
