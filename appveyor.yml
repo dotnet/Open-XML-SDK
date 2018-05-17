@@ -16,7 +16,7 @@ install:
   - ps:  Invoke-WebRequest https://packagecompatstorage.blob.core.windows.net/tools/compat-agent.exe -o compat-agent.exe
 
 build_script:
-  - cmd: msbuild /t:restore;build /m .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+  - cmd: msbuild /t:restore;build /v:m /m .\Open-Xml-SDK.sln /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
 after_build:
   - cmd: msbuild /t:pack /m .\src\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
