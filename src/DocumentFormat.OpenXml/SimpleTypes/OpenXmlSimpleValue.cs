@@ -14,13 +14,10 @@ namespace DocumentFormat.OpenXml
     public abstract class OpenXmlSimpleValue<T> : OpenXmlSimpleType
         where T : struct
     {
-        private protected T? InnerValue { get; set; }
-
         /// <summary>
         /// Initializes a new instance of the OpenXmlSimpleValue class.
         /// </summary>
         protected OpenXmlSimpleValue()
-            : base()
         {
         }
 
@@ -29,7 +26,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="value">The value in type T.</param>
         protected OpenXmlSimpleValue(T value)
-            : base()
         {
             Value = value;
         }
@@ -44,13 +40,9 @@ namespace DocumentFormat.OpenXml
             InnerText = source.InnerText;
         }
 
-        private protected virtual bool ShouldParse(string value) => !string.IsNullOrEmpty(value);
+        private protected T? InnerValue { get; set; }
 
-        private protected virtual void ValidateSet(T value)
-        {
-        }
-
-        /// <inheritdoc/>
+        /// <inheritdoc />
         public override bool HasValue
         {
             get
@@ -61,30 +53,6 @@ namespace DocumentFormat.OpenXml
                 }
 
                 return InnerValue.HasValue;
-            }
-        }
-
-        private protected abstract string GetText(T input);
-
-        /// <summary>
-        /// Convert the text to meaningful value.
-        /// </summary>
-        private protected abstract T Parse(string input);
-
-        /// <summary>
-        /// Convert the text to meaningful value with no exceptions
-        /// </summary>
-        private protected virtual bool TryParse(string input, out T value)
-        {
-            try
-            {
-                value = Parse(input);
-                return true;
-            }
-            catch (Exception)
-            {
-                value = default;
-                return false;
             }
         }
 
@@ -112,7 +80,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <inheritdoc/>
+        /// <inheritdoc />
         public override string InnerText
         {
             get
@@ -132,6 +100,39 @@ namespace DocumentFormat.OpenXml
             }
         }
 
+        private protected virtual bool ShouldParse(string value)
+        {
+            return !string.IsNullOrEmpty(value);
+        }
+
+        private protected virtual void ValidateSet(T value)
+        {
+        }
+
+        private protected abstract string GetText(T input);
+
+        /// <summary>
+        /// Convert the text to meaningful value.
+        /// </summary>
+        private protected abstract T Parse(string input);
+
+        /// <summary>
+        /// Convert the text to meaningful value with no exceptions
+        /// </summary>
+        private protected virtual bool TryParse(string input, out T value)
+        {
+            try
+            {
+                value = Parse(input);
+                return true;
+            }
+            catch (Exception)
+            {
+                value = default;
+                return false;
+            }
+        }
+
         /// <summary>
         /// Implicitly converts the specified value to T.
         /// </summary>
@@ -146,6 +147,28 @@ namespace DocumentFormat.OpenXml
             }
 
             return xmlAttribute.Value;
+        }
+
+        /// <inheritdoc />
+        public override bool Equals(object obj)
+        {
+            if (obj is OpenXmlSimpleValue<T> openXmlSimpleValue)
+            {
+                return Value.Equals(openXmlSimpleValue.Value);
+            }
+
+            if (obj is T value)
+            {
+                return Value.Equals(value);
+            }
+
+            return false;
+        }
+
+        /// <inheritdoc />
+        public override int GetHashCode()
+        {
+            return Value.GetHashCode();
         }
     }
 }

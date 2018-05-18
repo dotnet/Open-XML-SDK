@@ -3,9 +3,9 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
-using OxTest;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Xunit;
 
@@ -15,17 +15,6 @@ namespace DocumentFormat.OpenXml.Tests
 {
     public class MCSupport
     {
-        private void CopyFileStream(byte[] srcBuffer, string fileName)
-        {
-            using (var target = System.IO.File.Create(fileName))
-            {
-                using (var src = new System.IO.MemoryStream(srcBuffer, false))
-                {
-                    src.WriteTo(target);
-                }
-            }
-        }
-
         /// <summary>
         ///Load MC attribute
         ///set attributes
@@ -449,23 +438,26 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug718314()
         {
-            string testFile = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
-            using (WordprocessingDocument doc = WordprocessingDocument.Create(testFile, WordprocessingDocumentType.Document))
+            using (var stream = new MemoryStream())
             {
-                var mpart = doc.AddMainDocumentPart();
-                mpart.Document = new Document();
-                mpart.Document.Body = new Body();
-                mpart.Document.Body.Append(new AlternateContent());
-            }
+                using (var doc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+                {
+                    var mpart = doc.AddMainDocumentPart();
+                    mpart.Document = new Document();
+                    mpart.Document.Body = new Body();
+                    mpart.Document.Body.Append(new AlternateContent());
+                }
 
-            OpenSettings s = new OpenSettings();
-            s.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007);
-            using (var doc = WordprocessingDocument.Open(testFile, true, s))
-            {
-                Assert.Null(doc.MainDocumentPart.Document.Body.FirstChild);
-            }
+                var s = new OpenSettings
+                {
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
+                };
 
-            System.IO.File.Delete(testFile);
+                using (var doc = WordprocessingDocument.Open(stream, true, s))
+                {
+                    Assert.Null(doc.MainDocumentPart.Document.Body.FirstChild);
+                }
+            }
         }
 
         ///<summary>
@@ -474,28 +466,31 @@ namespace DocumentFormat.OpenXml.Tests
         [Fact]
         public void Bug718316()
         {
-            string testFile = System.IO.Path.Combine(TestUtil.TestResultsDirectory, Guid.NewGuid().ToString() + ".docx");
-            using (WordprocessingDocument doc = WordprocessingDocument.Create(testFile, WordprocessingDocumentType.Document))
+            using (var stream = new MemoryStream())
             {
-                var mpart = doc.AddMainDocumentPart();
-                mpart.Document = new Document();
-                mpart.Document.Body = new Body();
-                var ac = new AlternateContent();
-                mpart.Document.Body.Append(ac);
-                var c = new AlternateContentChoice();
-                c.AddNamespaceDeclaration("w13", "http://w13");
-                c.Requires = "w13";
-                ac.Append(c);
-            }
+                using (var doc = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
+                {
+                    var mpart = doc.AddMainDocumentPart();
+                    mpart.Document = new Document();
+                    mpart.Document.Body = new Body();
+                    var ac = new AlternateContent();
+                    mpart.Document.Body.Append(ac);
+                    var c = new AlternateContentChoice();
+                    c.AddNamespaceDeclaration("w13", "http://w13");
+                    c.Requires = "w13";
+                    ac.Append(c);
+                }
 
-            OpenSettings s = new OpenSettings();
-            s.MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007);
-            using (var doc = WordprocessingDocument.Open(testFile, true, s))
-            {
-                Assert.Null(doc.MainDocumentPart.Document.Body.FirstChild);
-            }
+                var s = new OpenSettings
+                {
+                    MarkupCompatibilityProcessSettings = new MarkupCompatibilityProcessSettings(MarkupCompatibilityProcessMode.ProcessAllParts, FileFormatVersions.Office2007),
+                };
 
-            System.IO.File.Delete(testFile);
+                using (var doc = WordprocessingDocument.Open(stream, true, s))
+                {
+                    Assert.Null(doc.MainDocumentPart.Document.Body.FirstChild);
+                }
+            }
         }
     }
 }

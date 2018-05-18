@@ -3,6 +3,7 @@
 
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+using System.IO;
 using System.Xml;
 
 using A = DocumentFormat.OpenXml.Drawing;
@@ -32,9 +33,9 @@ namespace DocumentFormat.OpenXml.Tests
     public class GeneratedClass001
     {
         // Creates a WordprocessingDocument.
-        public void CreatePackage(string filePath)
+        public void CreatePackage(Stream stream)
         {
-            using (WordprocessingDocument package = WordprocessingDocument.Create(filePath, WordprocessingDocumentType.Document))
+            using (WordprocessingDocument package = WordprocessingDocument.Create(stream, WordprocessingDocumentType.Document))
             {
                 CreateParts(package);
             }

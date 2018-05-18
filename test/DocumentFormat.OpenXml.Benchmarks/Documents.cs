@@ -4,16 +4,16 @@
 using BenchmarkDotNet.Attributes;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Tests;
-using DocumentFormat.OpenXml.Validation;
 using DocumentFormat.OpenXml.Wordprocessing;
 using System.IO;
 
 namespace DocumentFormat.OpenXml.Benchmarks
 {
-    public partial class Tests
+    public class Documents
     {
         private byte[] _file;
 
+        [GlobalSetup]
         public void SetupFile()
         {
             using (var stream = TestAssets.GetStream(TestAssets.TestFiles.complex0docx))
@@ -50,17 +50,6 @@ namespace DocumentFormat.OpenXml.Benchmarks
             using (var stream = new MemoryStream(_file))
             using (var doc = WordprocessingDocument.Open(stream, false))
             {
-            }
-        }
-
-        [Benchmark]
-        public void Validation()
-        {
-            using (var stream = new MemoryStream(_file))
-            using (var doc = WordprocessingDocument.Open(stream, false))
-            {
-                var validator = new OpenXmlValidator();
-                validator.Validate(doc);
             }
         }
     }

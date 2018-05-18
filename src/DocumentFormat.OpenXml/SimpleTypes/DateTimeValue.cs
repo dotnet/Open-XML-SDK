@@ -5,13 +5,16 @@ using System;
 using System.Diagnostics;
 using System.Xml;
 
+// See https://github.com/dotnet/roslyn-analyzers/issues/1671
+#pragma warning disable CA1036
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents the DateTime value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class DateTimeValue : OpenXmlSimpleValue<DateTime>
+    public class DateTimeValue : OpenXmlComparableSimpleValue<DateTime>
     {
         //the following format string is copied from System.IO.Packaging.PartBasedPackageProperties()
         //We use the XmlConvert.ToDateTime(string s, XmlDateTimeSerializationMode dateTimeOption)
@@ -38,7 +41,6 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the DateTimeValue class.
         /// </summary>
         public DateTimeValue()
-            : base()
         {
         }
 

@@ -18,7 +18,6 @@ namespace DocumentFormat.OpenXml
         /// Initializes a new instance of the EnumValue class.
         /// </summary>
         public EnumValue()
-            : base()
         {
         }
 

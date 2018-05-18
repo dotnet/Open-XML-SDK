@@ -5,20 +5,22 @@ using System;
 using System.Diagnostics;
 using System.Xml;
 
+// See https://github.com/dotnet/roslyn-analyzers/issues/1671
+#pragma warning disable CA1036
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents the UInt32 value for attributes.
     /// </summary>
-    [System.CLSCompliant(false)]
+    [CLSCompliant(false)]
     [DebuggerDisplay("{InnerText}")]
-    public class UInt32Value : OpenXmlSimpleValue<uint>
+    public class UInt32Value : OpenXmlComparableSimpleValue<uint>
     {
         /// <summary>
         /// Initializes a new instance of the UInt32Value class.
         /// </summary>
         public UInt32Value()
-            : base()
         {
         }
 

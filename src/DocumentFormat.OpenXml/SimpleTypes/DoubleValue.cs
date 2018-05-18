@@ -5,19 +5,21 @@ using System;
 using System.Diagnostics;
 using System.Xml;
 
+// See https://github.com/dotnet/roslyn-analyzers/issues/1671
+#pragma warning disable CA1036
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents the double value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class DoubleValue : OpenXmlSimpleValue<double>
+    public class DoubleValue : OpenXmlComparableSimpleValue<double>
     {
         /// <summary>
         /// Initializes a new instance of the DoubleValue class.
         /// </summary>
         public DoubleValue()
-            : base()
         {
         }
 

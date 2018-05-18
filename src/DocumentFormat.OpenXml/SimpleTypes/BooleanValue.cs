@@ -5,19 +5,21 @@ using System;
 using System.Diagnostics;
 using System.Xml;
 
+// See https://github.com/dotnet/roslyn-analyzers/issues/1671
+#pragma warning disable CA1036
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
     /// Represents the Boolean value for attributes.
     /// </summary>
     [DebuggerDisplay("{InnerText}")]
-    public class BooleanValue : OpenXmlSimpleValue<bool>
+    public class BooleanValue : OpenXmlComparableSimpleValue<bool>
     {
         /// <summary>
         /// Initializes a new instance of the BooleanValue class.
         /// </summary>
         public BooleanValue()
-            : base()
         {
         }
 
