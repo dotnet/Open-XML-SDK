@@ -26,7 +26,7 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -380,7 +380,7 @@ public partial class UnsizedButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -782,7 +782,7 @@ public partial class CheckBox : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -1121,7 +1121,7 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -1776,7 +1776,7 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -2190,7 +2190,7 @@ public partial class MenuSeparator : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -2339,7 +2339,7 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -2636,7 +2636,7 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -3096,7 +3096,7 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -3521,7 +3521,7 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -3818,7 +3818,7 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -4278,7 +4278,7 @@ public partial class ControlClone : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -4680,7 +4680,7 @@ public partial class TextLabel : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -4962,7 +4962,7 @@ public partial class Button : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -5388,7 +5388,7 @@ public partial class ToggleButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -5826,7 +5826,7 @@ public partial class EditBox : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -6247,7 +6247,7 @@ public partial class ComboBox : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -6800,7 +6800,7 @@ public partial class DropDown : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -7356,7 +7356,7 @@ public partial class Gallery : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -8058,7 +8058,7 @@ public partial class Menu : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -8542,7 +8542,7 @@ public partial class DynamicMenu : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -8991,7 +8991,7 @@ public partial class SplitButton : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -9322,7 +9322,7 @@ public partial class Box : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -9564,7 +9564,7 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -9777,7 +9777,7 @@ public partial class MenuRoot : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -9922,7 +9922,7 @@ public partial class CustomUI : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -10058,7 +10058,7 @@ public partial class Item : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -10172,7 +10172,7 @@ public partial class VisibleButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -10550,7 +10550,7 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -10940,7 +10940,7 @@ public partial class VerticalSeparator : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -11085,7 +11085,7 @@ public partial class DialogBoxLauncher : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -11215,7 +11215,7 @@ public partial class Group : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -11588,7 +11588,7 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -11998,7 +11998,7 @@ public partial class SharedQatControls : QatItemsType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     /// <summary>
@@ -12062,7 +12062,7 @@ public partial class DocumentSpecificQuickAccessToolbarControls : QatItemsType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     /// <summary>
@@ -12196,7 +12196,7 @@ public partial class Tab : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -12447,7 +12447,7 @@ public partial class ContextualTabSet : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -12559,7 +12559,7 @@ public partial class RepurposedCommand : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
@@ -12672,7 +12672,7 @@ public partial class OfficeMenu : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -12777,7 +12777,7 @@ public partial class QuickAccessToolbar : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -12892,7 +12892,7 @@ public partial class Tabs : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -12971,7 +12971,7 @@ public partial class ContextualTabSets : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -13050,7 +13050,7 @@ public partial class RepurposedCommands : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -13135,7 +13135,7 @@ public partial class Ribbon : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
         private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []

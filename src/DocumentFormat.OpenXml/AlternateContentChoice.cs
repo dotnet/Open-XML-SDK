@@ -129,12 +129,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         internal override int ElementTypeId => ReservedElementTypeIds.AlternateContentChoiceId;
 
-        /// <summary>
-        /// Indicates whether this element is available in a specific version of an Office Application.
-        /// This method always returns true since AlternateContentFallback is available in every version.
-        /// </summary>
-        /// <param name="version">The Office file format version.</param>
-        /// <returns>Returns true if the element is defined in the specified version.</returns>
-        internal override bool IsInVersion(FileFormatVersions version) => true;
+        internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     }
 }

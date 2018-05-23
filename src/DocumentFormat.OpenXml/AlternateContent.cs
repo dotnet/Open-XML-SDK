@@ -140,6 +140,6 @@ namespace DocumentFormat.OpenXml
         internal override int ElementTypeId => ReservedElementTypeIds.AlternateContentId;
 
         /// <inheritdoc/>
-        internal override bool IsInVersion(FileFormatVersions version) => true;
+        internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     }
 }

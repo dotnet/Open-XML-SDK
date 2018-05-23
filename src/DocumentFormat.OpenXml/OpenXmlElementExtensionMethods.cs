@@ -216,5 +216,15 @@ namespace DocumentFormat.OpenXml
 
             return newElement;
         }
+
+        internal static bool IsInVersion(this OpenXmlElement element, FileFormatVersions version)
+        {
+            if (element.InitialVersion == FileFormatVersions.None)
+            {
+                return false;
+            }
+
+            return version.AtLeast(element.InitialVersion);
+        }
     }
 }
