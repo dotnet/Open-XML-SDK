@@ -44,7 +44,7 @@ public partial class PivotOptions : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -207,7 +207,7 @@ public partial class SketchOptions : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -323,7 +323,7 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -417,7 +417,7 @@ public partial class Style : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "val" };
@@ -518,7 +518,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "bwMode" };
@@ -681,7 +681,7 @@ public partial class DropZoneFilter : BooleanFalseType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -712,7 +712,7 @@ public partial class DropZoneCategories : BooleanFalseType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -743,7 +743,7 @@ public partial class DropZoneData : BooleanFalseType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -774,7 +774,7 @@ public partial class DropZoneSeries : BooleanFalseType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -805,7 +805,7 @@ public partial class DropZonesVisible : BooleanFalseType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -836,7 +836,7 @@ public partial class InSketchMode : BooleanFalseType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -915,7 +915,7 @@ public partial class ShowSketchButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "val" };

@@ -35,7 +35,7 @@ public partial class ConditionalFormattings : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -115,7 +115,7 @@ public partial class DataValidations : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "disablePrompts","xWindow","yWindow","count" };
@@ -264,7 +264,7 @@ public partial class SparklineGroups : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -344,7 +344,7 @@ public partial class SlicerList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -424,7 +424,7 @@ public partial class ProtectedRanges : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -506,7 +506,7 @@ public partial class IgnoredErrors : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -589,7 +589,7 @@ public partial class DefinedNames : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -669,7 +669,7 @@ public partial class PivotCaches : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -749,7 +749,7 @@ public partial class SlicerCaches : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -822,7 +822,7 @@ public partial class WorkbookProperties : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "defaultImageDpi","discardImageEditData","accuracyVersion" };
@@ -923,7 +923,7 @@ public partial class CalculatedMember : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "displayFolder","flattenHierarchies","dynamicSet","hierarchizeDistinct","mdxLong" };
@@ -1107,7 +1107,7 @@ public partial class CacheHierarchy : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "flattenHierarchies","measuresSet","hierarchizeDistinct","ignore" };
@@ -1270,7 +1270,7 @@ public partial class DataField : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "pivotShowAs","sourceField","uniqueName" };
@@ -1364,7 +1364,7 @@ public partial class PivotField : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "fillDownLabels","ignore" };
@@ -1455,7 +1455,7 @@ public partial class PivotTableDefinition : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "fillDownLabelsDefault","visualTotalsForSets","calculatedMembersInFilters","altText","altTextSummary","enableEdit","autoApply","allocationMethod","weightExpression","hideValuesRow" };
@@ -1732,7 +1732,7 @@ public partial class PivotCacheDefinition : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "slicerData","pivotCacheId","supportSubqueryNonVisual","supportSubqueryCalcMem","supportAddCalcMems" };
@@ -1861,7 +1861,7 @@ public partial class Connection : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "culture","embeddedDataId" };
@@ -1996,7 +1996,7 @@ public partial class Table : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "altText","altTextSummary" };
@@ -2083,7 +2083,7 @@ public partial class SlicerStyles : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "defaultSlicerStyle" };
@@ -2190,7 +2190,7 @@ public partial class DifferentialFormats : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "count" };
@@ -2297,7 +2297,7 @@ public partial class OleItem : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "name","icon","advise","preferPic" };
@@ -2460,7 +2460,7 @@ public partial class PivotHierarchy : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "ignore" };
@@ -2526,7 +2526,7 @@ public partial class CacheField : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "ignore" };
@@ -2592,7 +2592,7 @@ public partial class Id : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -2644,7 +2644,7 @@ public partial class IconFilter : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "iconSet","iconId" };
@@ -2724,7 +2724,7 @@ public partial class Filter : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "val" };
@@ -2797,7 +2797,7 @@ public partial class CustomFilters : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "and" };
@@ -2897,7 +2897,7 @@ public partial class SortCondition : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "descending","sortBy","ref","customList","dxfId","iconSet","iconId" };
@@ -3047,7 +3047,7 @@ public partial class SourceConnection : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "name" };
@@ -3119,7 +3119,7 @@ public partial class DatastoreItem : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id" };
@@ -3277,7 +3277,7 @@ public partial class FormControlProperties : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "objectType","checked","colored","dropLines","dropStyle","dx","firstButton","fmlaGroup","fmlaLink","fmlaRange","fmlaTxbx","horiz","inc","justLastX","lockText","max","min","multiSel","noThreeD","noThreeD2","page","sel","seltype","textHAlign","textVAlign","val","widthMin","editVal","multiLine","verticalBar","passwordEdit" };
@@ -3868,7 +3868,7 @@ public partial class Slicers : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -3980,7 +3980,7 @@ public partial class SlicerCacheDefinition : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "name","sourceName" };
@@ -4185,7 +4185,7 @@ public partial class ConditionalFormatting : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "pivot" };
@@ -4308,7 +4308,7 @@ public partial class ConditionalFormattingRule : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "type","priority","stopIfTrue","aboveAverage","percent","bottom","operator","text","timePeriod","rank","stdDev","equalAverage","activePresent","id" };
@@ -4612,7 +4612,7 @@ public partial class ExtensionList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -4696,7 +4696,7 @@ public partial class DataValidation : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "type","errorStyle","imeMode","operator","allowBlank","showDropDown","showInputMessage","showErrorMessage","errorTitle","error","promptTitle","prompt" };
@@ -5007,7 +5007,7 @@ public partial class DataValidationForumla1 : DataValidationFormulaType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -5069,7 +5069,7 @@ public partial class DataValidationForumla2 : DataValidationFormulaType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -5233,7 +5233,7 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "manualMax","manualMin","lineWeight","type","dateAxis","displayEmptyCellsAs","markers","high","low","first","last","negative","displayXAxis","displayHidden","minAxisType","maxAxisType","rightToLeft" };
@@ -5713,7 +5713,7 @@ public partial class SeriesColor : ColorType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -5744,7 +5744,7 @@ public partial class NegativeColor : ColorType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -5775,7 +5775,7 @@ public partial class AxisColor : ColorType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -5806,7 +5806,7 @@ public partial class MarkersColor : ColorType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -5837,7 +5837,7 @@ public partial class FirstMarkerColor : ColorType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -5868,7 +5868,7 @@ public partial class LastMarkerColor : ColorType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -5899,7 +5899,7 @@ public partial class HighMarkerColor : ColorType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -5930,7 +5930,7 @@ public partial class LowMarkerColor : ColorType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -5961,7 +5961,7 @@ public partial class Color : ColorType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -5992,7 +5992,7 @@ public partial class FillColor : ColorType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -6023,7 +6023,7 @@ public partial class BorderColor : ColorType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -6054,7 +6054,7 @@ public partial class NegativeFillColor : ColorType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -6085,7 +6085,7 @@ public partial class NegativeBorderColor : ColorType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -6116,7 +6116,7 @@ public partial class BarAxisColor : ColorType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -6258,7 +6258,7 @@ public partial class Sparklines : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -6340,7 +6340,7 @@ public partial class Sparkline : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -6449,7 +6449,7 @@ public partial class SlicerRef : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id" };
@@ -6517,7 +6517,7 @@ public partial class SlicerCache : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id" };
@@ -6592,7 +6592,7 @@ public partial class DefinedName : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "name" };
@@ -6720,7 +6720,7 @@ public partial class ArgumentDescriptions : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "count" };
@@ -6820,7 +6820,7 @@ public partial class ArgumentDescription : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "index" };
@@ -6908,7 +6908,7 @@ public partial class TupleSet : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "rowCount","columnCount" };
@@ -7065,7 +7065,7 @@ public partial class TupleSetHeaders : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -7145,7 +7145,7 @@ public partial class TupleSetRows : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -7218,7 +7218,7 @@ public partial class TupleSetHeader : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "uniqueName","hierarchyName" };
@@ -7305,7 +7305,7 @@ public partial class TupleSetRow : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -7378,7 +7378,7 @@ public partial class TupleSetRowItem : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "u","d" };
@@ -7458,7 +7458,7 @@ public partial class SetLevel : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "hierarchy" };
@@ -7531,7 +7531,7 @@ public partial class SetLevels : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "count" };
@@ -7640,7 +7640,7 @@ public partial class ColorScale : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -7733,7 +7733,7 @@ public partial class DataBar : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "minLength","maxLength","showValue","border","gradient","direction","negativeBarColorSameAsPositive","negativeBarBorderColorSameAsPositive","axisPosition" };
@@ -7969,7 +7969,7 @@ public partial class IconSet : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "iconSet","showValue","percent","reverse","custom" };
@@ -8147,7 +8147,7 @@ public partial class DifferentialType : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -8340,7 +8340,7 @@ public partial class ConditionalFormattingValueObject : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "type","gte" };
@@ -8490,7 +8490,7 @@ public partial class ConditionalFormattingIcon : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "iconSet","iconId" };
@@ -8577,7 +8577,7 @@ public partial class PivotEdits : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -8657,7 +8657,7 @@ public partial class PivotChanges : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -8737,7 +8737,7 @@ public partial class ConditionalFormats : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "count" };
@@ -8844,7 +8844,7 @@ public partial class CalculatedMembers : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "count" };
@@ -8957,7 +8957,7 @@ public partial class PivotEdit : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -9105,7 +9105,7 @@ public partial class PivotUserEdit : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -9221,7 +9221,7 @@ public partial class TupleItems : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -9303,7 +9303,7 @@ public partial class PivotArea : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "field","type","dataOnly","labelOnly","grandRow","grandCol","cacheIndex","outline","offset","collapsedLevelsAreSubtotals","axis","fieldPosition" };
@@ -9604,7 +9604,7 @@ public partial class PivotChange : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "allocationMethod","weightExpression" };
@@ -9769,7 +9769,7 @@ public partial class PivotEditValue : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "valueType" };
@@ -9848,7 +9848,7 @@ public partial class Xstring : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -9907,7 +9907,7 @@ public partial class SlicerStyleElements : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -9987,7 +9987,7 @@ public partial class DdeValues : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "rows","cols" };
@@ -10110,7 +10110,7 @@ public partial class ConditionalFormat : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "scope","type","priority","id" };
@@ -10295,7 +10295,7 @@ public partial class PivotAreas : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "count" };
@@ -10402,7 +10402,7 @@ public partial class SlicerStyle : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "name" };
@@ -10523,7 +10523,7 @@ public partial class SlicerStyleElement : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "type","dxfId" };
@@ -10610,7 +10610,7 @@ public partial class IgnoredError : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "evalError","twoDigitTextYear","numberStoredAsText","formula","formulaRange","unlockedFormula","emptyCellReference","listDataValidation","calculatedColumn" };
@@ -10850,7 +10850,7 @@ public partial class ProtectedRange : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "password","algorithmName","hashValue","saltValue","spinCount","name","securityDescriptor" };
@@ -11055,7 +11055,7 @@ public partial class CustomFilter : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "operator","val" };
@@ -11135,7 +11135,7 @@ public partial class ListItem : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "val" };
@@ -11210,7 +11210,7 @@ public partial class ListItems : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -11293,7 +11293,7 @@ public partial class Slicer : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "name","cache","caption","startItem","columnCount","showCaption","level","style","lockedPosition","rowHeight" };
@@ -11551,7 +11551,7 @@ public partial class OlapSlicerCache : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "pivotCacheId" };
@@ -11711,7 +11711,7 @@ public partial class TabularSlicerCache : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "pivotCacheId","sortOrder","customListSort","showMissing","crossFilter" };
@@ -11903,7 +11903,7 @@ public partial class SlicerCachePivotTable : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "tabId","name" };
@@ -11983,7 +11983,7 @@ public partial class OlapSlicerCacheItemParent : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "n" };
@@ -12056,7 +12056,7 @@ public partial class OlapSlicerCacheItem : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "n","c","nd" };
@@ -12191,7 +12191,7 @@ public partial class OlapSlicerCacheRange : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "startItem" };
@@ -12298,7 +12298,7 @@ public partial class OlapSlicerCacheRanges : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -12378,7 +12378,7 @@ public partial class OlapSlicerCacheLevelData : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "uniqueName","sourceCaption","count","sortOrder","crossFilter" };
@@ -12562,7 +12562,7 @@ public partial class OlapSlicerCacheLevelsData : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "count" };
@@ -12669,7 +12669,7 @@ public partial class OlapSlicerCacheSelections : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "count" };
@@ -12776,7 +12776,7 @@ public partial class OlapSlicerCacheSelection : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "n" };
@@ -12883,7 +12883,7 @@ public partial class TabularSlicerCacheItems : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "count" };
@@ -12983,7 +12983,7 @@ public partial class TabularSlicerCacheItem : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "x","s","nd" };
@@ -13084,7 +13084,7 @@ public partial class SlicerCachePivotTables : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -13166,7 +13166,7 @@ public partial class SlicerCacheData : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -13282,7 +13282,7 @@ public partial class SlicerCacheDefinitionExtensionList : OpenXmlCompositeElemen
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     

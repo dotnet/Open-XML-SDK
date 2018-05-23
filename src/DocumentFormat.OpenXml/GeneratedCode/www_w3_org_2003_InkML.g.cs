@@ -45,7 +45,7 @@ public partial class Ink : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "documentID" };
@@ -163,7 +163,7 @@ public partial class Bind : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "source","target","column","variable" };
@@ -271,7 +271,7 @@ public partial class Table : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","apply","interpolation" };
@@ -380,7 +380,7 @@ public partial class Matrix : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id" };
@@ -474,7 +474,7 @@ public partial class Mapping : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","type","mappingRef" };
@@ -620,7 +620,7 @@ public partial class Channel : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","name","type","default","min","max","orientation","respectTo","units" };
@@ -841,7 +841,7 @@ public partial class IntermittentChannels : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -914,7 +914,7 @@ public partial class ChannelProperty : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "channel","name","value","units" };
@@ -1031,7 +1031,7 @@ public partial class TraceFormat : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id" };
@@ -1136,7 +1136,7 @@ public partial class SampleRate : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "uniform","value" };
@@ -1216,7 +1216,7 @@ public partial class Latency : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "value" };
@@ -1282,7 +1282,7 @@ public partial class ActiveArea : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "size","height","width","units" };
@@ -1390,7 +1390,7 @@ public partial class SourceProperty : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "name","value","units" };
@@ -1491,7 +1491,7 @@ public partial class ChannelProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -1564,7 +1564,7 @@ public partial class Annotation : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "type","encoding" };
@@ -1664,7 +1664,7 @@ public partial class AnnotationXml : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "type","encoding","href" };
@@ -1822,7 +1822,7 @@ public partial class BrushProperty : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "name","value","units" };
@@ -1960,7 +1960,7 @@ public partial class Canvas : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","traceFormatRef" };
@@ -2104,7 +2104,7 @@ public partial class CanvasTransform : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","invertible" };
@@ -2237,7 +2237,7 @@ public partial class InkSource : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","manufacturer","model","serialNo","specificationRef","description" };
@@ -2492,7 +2492,7 @@ public partial class Brush : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","brushRef" };
@@ -2614,7 +2614,7 @@ public partial class Timestamp : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","time","timestampRef","timeString","timeOffset" };
@@ -2738,7 +2738,7 @@ public partial class Trace : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","type","continuation","priorRef","contextRef","brushRef","duration","timeOffset" };
@@ -2930,7 +2930,7 @@ public partial class TraceGroup : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","contextRef","brushRef" };
@@ -3080,7 +3080,7 @@ public partial class TraceView : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","contextRef","traceDataRef","from","to" };
@@ -3261,7 +3261,7 @@ public partial class Context : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","contextRef","canvasRef","canvasTransformRef","traceFormatRef","inkSourceRef","brushRef","timestampRef" };
@@ -3584,7 +3584,7 @@ public partial class Definitions : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     

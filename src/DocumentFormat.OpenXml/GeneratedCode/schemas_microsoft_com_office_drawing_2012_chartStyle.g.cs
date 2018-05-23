@@ -47,7 +47,7 @@ public partial class ColorStyle : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "meth","id" };
@@ -279,7 +279,7 @@ public partial class ChartStyle : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "id" };
@@ -955,7 +955,7 @@ public partial class ColorStyleVariation : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1116,7 +1116,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1250,7 +1250,7 @@ public partial class StyleColor : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "val" };
@@ -1443,7 +1443,7 @@ public partial class LineReference : StyleReference
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -1511,7 +1511,7 @@ public partial class FillReference : StyleReference
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -1579,7 +1579,7 @@ public partial class EffectReference : StyleReference
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -1768,7 +1768,7 @@ public partial class LineWidthScale : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1839,7 +1839,7 @@ public partial class FontReference : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "idx","mods" };
@@ -2006,7 +2006,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "bwMode" };
@@ -2218,7 +2218,7 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "kumimoji","lang","altLang","sz","b","i","u","strike","kern","cap","spc","normalizeH","baseline","noProof","dirty","err","bmk" };
@@ -2647,7 +2647,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "rot","spcFirstLastPara","vertOverflow","horzOverflow","vert","wrap","lIns","tIns","rIns","bIns","numCol","spcCol","rtlCol","fromWordArt","anchor","anchorCtr","forceAA","upright","compatLnSpc" };
@@ -3041,7 +3041,7 @@ public partial class CategoryAxisProperties : AxisProperties
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -3072,7 +3072,7 @@ public partial class SeriesAxisProperties : AxisProperties
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -3103,7 +3103,7 @@ public partial class ValueAxisProperties : AxisProperties
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -3266,7 +3266,7 @@ public partial class DataSeries : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "overlap","gapWidth","gapDepth","doughnutHoleSize","markerVisible","hiloLines","dropLines","seriesLines" };
@@ -3430,7 +3430,7 @@ public partial class DataLabels : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "position","value","seriesName","categoryName","legendKey","percentage" };
@@ -3566,7 +3566,7 @@ public partial class DataTable : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "legendKeys","horizontalBorder","verticalBorder","outlineBorder" };
@@ -3674,7 +3674,7 @@ public partial class Legend : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "visible","includeInLayout","position" };
@@ -3768,7 +3768,7 @@ public partial class Title : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "position" };
@@ -3834,7 +3834,7 @@ public partial class Trendline : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "add","equation","rsquared" };
@@ -3928,7 +3928,7 @@ public partial class View3DProperties : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "rotX","rotY","rAngAx","perspective","heightPercent","depthPercent" };
@@ -4078,7 +4078,7 @@ public partial class AxisTitle : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4148,7 +4148,7 @@ public partial class CategoryAxis : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4218,7 +4218,7 @@ public partial class ChartArea : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4288,7 +4288,7 @@ public partial class DataLabel : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4358,7 +4358,7 @@ public partial class DataLabelCallout : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4428,7 +4428,7 @@ public partial class DataPoint : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4498,7 +4498,7 @@ public partial class DataPoint3D : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4568,7 +4568,7 @@ public partial class DataPointLine : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4638,7 +4638,7 @@ public partial class DataPointMarker : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4708,7 +4708,7 @@ public partial class DataPointWireframe : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4778,7 +4778,7 @@ public partial class DataTableStyle : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4848,7 +4848,7 @@ public partial class DownBar : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4918,7 +4918,7 @@ public partial class DropLine : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4988,7 +4988,7 @@ public partial class ErrorBar : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5058,7 +5058,7 @@ public partial class Floor : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5128,7 +5128,7 @@ public partial class GridlineMajor : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5198,7 +5198,7 @@ public partial class GridlineMinor : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5268,7 +5268,7 @@ public partial class HiLoLine : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5338,7 +5338,7 @@ public partial class LeaderLine : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5408,7 +5408,7 @@ public partial class LegendStyle : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5478,7 +5478,7 @@ public partial class PlotArea : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5548,7 +5548,7 @@ public partial class PlotArea3D : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5618,7 +5618,7 @@ public partial class SeriesAxis : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5688,7 +5688,7 @@ public partial class SeriesLine : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5758,7 +5758,7 @@ public partial class TitleStyle : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5828,7 +5828,7 @@ public partial class TrendlineStyle : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5898,7 +5898,7 @@ public partial class TrendlineLabel : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5968,7 +5968,7 @@ public partial class UpBar : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -6038,7 +6038,7 @@ public partial class ValueAxis : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -6108,7 +6108,7 @@ public partial class Wall : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -6410,7 +6410,7 @@ public partial class MarkerLayoutProperties : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "symbol","size" };

@@ -35,7 +35,7 @@ public partial class PivotCaches : OpenXmlPivotCachesElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -97,7 +97,7 @@ public partial class TimelineCachePivotCaches : OpenXmlPivotCachesElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -222,7 +222,7 @@ public partial class PivotTableReferences : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -295,7 +295,7 @@ public partial class QueryTable : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "clipped","sourceDataName","drillThrough" };
@@ -396,7 +396,7 @@ public partial class WebExtensions : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -476,7 +476,7 @@ public partial class TimelineCacheReferences : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -556,7 +556,7 @@ public partial class TimelineReferences : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -629,7 +629,7 @@ public partial class WorkbookProperties : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "chartTrackingRefBase" };
@@ -702,7 +702,7 @@ public partial class TimelineStyles : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "defaultTimelineStyle" };
@@ -809,7 +809,7 @@ public partial class DifferentialFormats : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "count" };
@@ -924,7 +924,7 @@ public partial class Connection : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "id","model","excludeFromRefreshAll","autoDelete","usedByAddin" };
@@ -1161,7 +1161,7 @@ public partial class CalculatedMember : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "measureGroup","numberFormat","measure" };
@@ -1264,7 +1264,7 @@ public partial class PivotTableUISettings : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "sourceDataName","relNeededHidden" };
@@ -1381,7 +1381,7 @@ public partial class PivotFilter : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "useWholeDay" };
@@ -1454,7 +1454,7 @@ public partial class CachedUniqueNames : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1527,7 +1527,7 @@ public partial class CacheHierarchy : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "aggregatedColumn" };
@@ -1593,7 +1593,7 @@ public partial class TimelinePivotCacheDefinition : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "timelineData" };
@@ -1659,7 +1659,7 @@ public partial class PivotCacheIdVersion : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "cacheIdSupportedVersion","cacheIdCreatedVersion" };
@@ -1750,7 +1750,7 @@ public partial class DataModel : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "minVersionLoad" };
@@ -1908,7 +1908,7 @@ public partial class PivotTableData : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "rowCount","columnCount","cacheId" };
@@ -2036,7 +2036,7 @@ public partial class PivotCacheDecoupled : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "decoupled" };
@@ -2102,7 +2102,7 @@ public partial class DataField : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "isCountDistinct" };
@@ -2168,7 +2168,7 @@ public partial class MovingPeriodState : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "referenceDateBegin","referencePeriod","referenceMultiple","movingPeriod","movingMultiple" };
@@ -2297,7 +2297,7 @@ public partial class SlicerCaches : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -2377,7 +2377,7 @@ public partial class TableSlicerCache : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "tableId","column","sortOrder","customListSort","crossFilter" };
@@ -2561,7 +2561,7 @@ public partial class SlicerCacheHideItemsWithNoData : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "count" };
@@ -2668,7 +2668,7 @@ public partial class SlicerCachePivotTables : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -2756,7 +2756,7 @@ public partial class Survey : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "id","guid","title","description" };
@@ -2985,7 +2985,7 @@ public partial class Timelines : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -3097,7 +3097,7 @@ public partial class TimelineCacheDefinition : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "name","sourceName" };
@@ -3291,7 +3291,7 @@ public partial class PivotTableReference : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "id" };
@@ -3366,7 +3366,7 @@ public partial class WebExtension : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "appRef" };
@@ -3487,7 +3487,7 @@ public partial class TimelineCacheReference : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "id" };
@@ -3555,7 +3555,7 @@ public partial class TimelineReference : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "id" };
@@ -3630,7 +3630,7 @@ public partial class TimelineStyle : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "name" };
@@ -3751,7 +3751,7 @@ public partial class TimelineStyleElement : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "type","dxfId" };
@@ -3838,7 +3838,7 @@ public partial class TimelineStyleElements : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -3911,7 +3911,7 @@ public partial class DbTable : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "name" };
@@ -3984,7 +3984,7 @@ public partial class DbTables : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -4057,7 +4057,7 @@ public partial class DbCommand : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "text" };
@@ -4130,7 +4130,7 @@ public partial class TextProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "prompt","fileType","codePage","characterSet","firstRow","sourceFile","delimited","decimal","thousands","tab","space","comma","semicolon","consecutive","qualifier","delimiter" };
@@ -4461,7 +4461,7 @@ public partial class ModelTextProperties : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "headers" };
@@ -4527,7 +4527,7 @@ public partial class RangeProperties : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "sourceName" };
@@ -4602,7 +4602,7 @@ public partial class OleDbPrpoperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "connection" };
@@ -4745,7 +4745,7 @@ public partial class DataFeedProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "connection" };
@@ -4866,7 +4866,7 @@ public partial class FieldListActiveTabTopLevelEntity : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "name","type" };
@@ -4953,7 +4953,7 @@ public partial class ExtensionList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -5026,7 +5026,7 @@ public partial class CachedUniqueName : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "index","name" };
@@ -5106,7 +5106,7 @@ public partial class ModelTable : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "id","name","connection" };
@@ -5200,7 +5200,7 @@ public partial class ModelRelationship : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "fromTable","fromColumn","toTable","toColumn" };
@@ -5315,7 +5315,7 @@ public partial class ModelTables : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -5395,7 +5395,7 @@ public partial class ModelRelationships : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -5477,7 +5477,7 @@ public partial class PivotValueCell : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "i","t" };
@@ -5627,7 +5627,7 @@ public partial class Xstring : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -5679,7 +5679,7 @@ public partial class PivotValueCellExtra : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "in","bc","fc","i","un","st","b" };
@@ -5836,7 +5836,7 @@ public partial class PivotTableServerFormats : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "count" };
@@ -5936,7 +5936,7 @@ public partial class ServerFormat : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "culture","format" };
@@ -6016,7 +6016,7 @@ public partial class SlicerCacheOlapLevelName : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "uniqueName","count" };
@@ -6102,7 +6102,7 @@ public partial class SurveyPrSurveyElementPr : OpenXmlSurveyElementPrElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -6164,7 +6164,7 @@ public partial class TitlePrSurveyElementPr : OpenXmlSurveyElementPrElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -6226,7 +6226,7 @@ public partial class DescriptionPrSurveyElementPr : OpenXmlSurveyElementPrElemen
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -6288,7 +6288,7 @@ public partial class QuestionsPrSurveyElementPr : OpenXmlSurveyElementPrElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -6350,7 +6350,7 @@ public partial class QuestionPrSurveyElementPr : OpenXmlSurveyElementPrElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -6623,7 +6623,7 @@ public partial class SurveyQuestions : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -6729,7 +6729,7 @@ public partial class SurveyQuestion : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "binding","text","type","format","helpText","required","defaultValue","decimalPlaces","rowSource" };
@@ -6984,7 +6984,7 @@ public partial class Timeline : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "name","cache","caption","showHeader","showSelectionLabel","showTimeLevel","showHorizontalScrollbar","level","selectionLevel","scrollPosition","style" };
@@ -7245,7 +7245,7 @@ public partial class TimelineCachePivotTable : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "tabId","name" };
@@ -7325,7 +7325,7 @@ public partial class SelectionTimelineRange : TimelineRange
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -7356,7 +7356,7 @@ public partial class BoundsTimelineRange : TimelineRange
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -7460,7 +7460,7 @@ public partial class AutoFilter : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "ref" };
@@ -7573,7 +7573,7 @@ public partial class TimelineCachePivotTables : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -7659,7 +7659,7 @@ public partial class TimelineState : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "singleRangeFilterState","minimalRefreshVersion","lastRefreshVersion","pivotCacheId","filterType","filterId","filterTabId","filterPivotName" };
@@ -7930,7 +7930,7 @@ public partial class PivotRow : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "r","count" };

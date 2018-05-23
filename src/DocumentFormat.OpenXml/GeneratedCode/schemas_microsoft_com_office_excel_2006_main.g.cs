@@ -85,7 +85,7 @@ public partial class Macrosheet : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -330,7 +330,7 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -468,7 +468,7 @@ public partial class ReferenceSequence : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -520,7 +520,7 @@ public partial class Formula : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -579,7 +579,7 @@ public partial class RowSortMap : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "ref","count" };
@@ -700,7 +700,7 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "ref","count" };
@@ -814,7 +814,7 @@ public partial class RowSortMapItem : SortMapItemType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     /// <summary>
@@ -845,7 +845,7 @@ public partial class ColumnSortMapItem : SortMapItemType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     /// <summary>

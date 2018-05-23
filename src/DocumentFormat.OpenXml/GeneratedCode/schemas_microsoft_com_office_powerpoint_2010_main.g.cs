@@ -40,7 +40,7 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -173,7 +173,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "rot","flipH","flipV" };
@@ -344,7 +344,7 @@ public partial class ExtensionListModify : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "mod" };
@@ -457,7 +457,7 @@ public partial class Media : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "embed","link" };
@@ -641,7 +641,7 @@ public partial class VortexTransition : SideDirectionTransitionType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -672,7 +672,7 @@ public partial class PanTransition : SideDirectionTransitionType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -751,7 +751,7 @@ public partial class SwitchTransition : LeftRightDirectionTransitionType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -782,7 +782,7 @@ public partial class FlipTransition : LeftRightDirectionTransitionType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -813,7 +813,7 @@ public partial class FerrisTransition : LeftRightDirectionTransitionType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -844,7 +844,7 @@ public partial class GalleryTransition : LeftRightDirectionTransitionType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -875,7 +875,7 @@ public partial class ConveyorTransition : LeftRightDirectionTransitionType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -954,7 +954,7 @@ public partial class RippleTransition : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "dir" };
@@ -1020,7 +1020,7 @@ public partial class HoneycombTransition : EmptyType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -1051,7 +1051,7 @@ public partial class FlashTransition : EmptyType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -1103,7 +1103,7 @@ public partial class PrismTransition : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "dir","isContent","isInverted" };
@@ -1197,7 +1197,7 @@ public partial class DoorsTransition : OrientationTransitionType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -1228,7 +1228,7 @@ public partial class WindowTransition : OrientationTransitionType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -1307,7 +1307,7 @@ public partial class GlitterTransition : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "dir","pattern" };
@@ -1387,7 +1387,7 @@ public partial class WarpTransition : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "dir" };
@@ -1453,7 +1453,7 @@ public partial class FlythroughTransition : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "dir","hasBounce" };
@@ -1533,7 +1533,7 @@ public partial class ShredTransition : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "pattern","dir" };
@@ -1613,7 +1613,7 @@ public partial class RevealTransition : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "thruBlk","dir" };
@@ -1693,7 +1693,7 @@ public partial class WheelReverseTransition : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "spokes" };
@@ -1759,7 +1759,7 @@ public partial class BookmarkTarget : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "spid","bmkName" };
@@ -1846,7 +1846,7 @@ public partial class SectionProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -1926,7 +1926,7 @@ public partial class SectionList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -1999,7 +1999,7 @@ public partial class BrowseMode : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "showStatus" };
@@ -2082,7 +2082,7 @@ public partial class LaserColor : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -2251,7 +2251,7 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "val" };
@@ -2317,7 +2317,7 @@ public partial class DiscardImageEditData : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "val" };
@@ -2383,7 +2383,7 @@ public partial class ShowMediaControls : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "val" };
@@ -2456,7 +2456,7 @@ public partial class LaserTraceList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -2529,7 +2529,7 @@ public partial class CreationId : RandomIdType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -2560,7 +2560,7 @@ public partial class ModificationId : RandomIdType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -2658,7 +2658,7 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -2853,7 +2853,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","name","descr","hidden","title" };
@@ -3069,7 +3069,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "isComment" };
@@ -3226,7 +3226,7 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeEle
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "isPhoto","userDrawn" };
@@ -3382,7 +3382,7 @@ public partial class MediaBookmark : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "name","time" };
@@ -3462,7 +3462,7 @@ public partial class MediaTrim : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "st","end" };
@@ -3542,7 +3542,7 @@ public partial class MediaFade : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "in","out" };
@@ -3629,7 +3629,7 @@ public partial class MediaBookmarkList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -3709,7 +3709,7 @@ public partial class ExtensionList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -3789,7 +3789,7 @@ public partial class SectionOld : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "name","slideIdLst","id" };
@@ -3938,7 +3938,7 @@ public partial class SectionSlideIdListEntry : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id" };
@@ -4011,7 +4011,7 @@ public partial class SectionSlideIdList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -4093,7 +4093,7 @@ public partial class Section : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "name","id" };
@@ -4243,7 +4243,7 @@ public partial class TracePoint : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "t","x","y" };
@@ -4344,7 +4344,7 @@ public partial class TracePointList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -4417,7 +4417,7 @@ public partial class TriggerEventRecord : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "type","time","objId" };
@@ -4511,7 +4511,7 @@ public partial class PlayEventRecord : MediaPlaybackEventRecordType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -4542,7 +4542,7 @@ public partial class StopEventRecord : MediaPlaybackEventRecordType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -4573,7 +4573,7 @@ public partial class PauseEventRecord : MediaPlaybackEventRecordType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -4604,7 +4604,7 @@ public partial class ResumeEventRecord : MediaPlaybackEventRecordType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -4697,7 +4697,7 @@ public partial class SeekEventRecord : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "time","objId","seek" };
@@ -4791,7 +4791,7 @@ public partial class NullEventRecord : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "time","objId" };

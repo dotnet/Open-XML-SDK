@@ -37,7 +37,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","type","rotatedBoundingBox","alignmentLevel","contentType","ascender","descender","baseline","midline","customRecognizerId","mathML","mathStruct","mathSymbol","beginModifierType","endModifierType","rotationAngle","hotPoints","centroid","semanticType","shapeName","shapeGeometry" };
@@ -423,7 +423,7 @@ public partial class ContextNodeProperty : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "type" };
@@ -502,7 +502,7 @@ public partial class SourceLink : ContextLinkType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     /// <summary>
@@ -533,7 +533,7 @@ public partial class DestinationLink : ContextLinkType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     /// <summary>

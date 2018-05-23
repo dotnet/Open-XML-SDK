@@ -33,7 +33,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "classid","license","id","persistence" };
@@ -192,7 +192,7 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "name","value" };
@@ -353,7 +353,7 @@ public partial class SharedComFont : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "persistence","id" };
@@ -471,7 +471,7 @@ public partial class SharedComPicture : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id" };

@@ -43,7 +43,7 @@ public partial class WebExtension : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "id","frozen" };
@@ -282,7 +282,7 @@ public partial class WebExtensionReference : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "id" };
@@ -350,7 +350,7 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "name","value" };
@@ -437,7 +437,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -517,7 +517,7 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "id","type","appref" };
@@ -673,7 +673,7 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "id","version","store","storeType" };
@@ -843,7 +843,7 @@ public partial class WebExtensionReferenceList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -923,7 +923,7 @@ public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1003,7 +1003,7 @@ public partial class WebExtensionBindingList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1117,7 +1117,7 @@ public partial class Snapshot : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "embed","link","cstate" };

@@ -34,7 +34,7 @@ public partial class Drawing : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -157,7 +157,7 @@ public partial class DataModelExtensionBlock : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "relId","minVer" };
@@ -248,7 +248,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","name","descr","hidden","title" };
@@ -464,7 +464,7 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "txBox" };
@@ -609,7 +609,7 @@ public partial class ShapeNonVisualProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -753,7 +753,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "bwMode" };
@@ -929,7 +929,7 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -1079,7 +1079,7 @@ public partial class TextBody : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -1200,7 +1200,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "rot","flipH","flipV" };
@@ -1371,7 +1371,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -1453,7 +1453,7 @@ public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElem
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -1571,7 +1571,7 @@ public partial class GroupShapeNonVisualProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -1707,7 +1707,7 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "bwMode" };
@@ -1875,7 +1875,7 @@ public partial class Shape : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "modelId" };
@@ -2081,7 +2081,7 @@ public partial class GroupShape : GroupShapeType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     /// <summary>
@@ -2147,7 +2147,7 @@ public partial class ShapeTree : GroupShapeType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     /// <summary>

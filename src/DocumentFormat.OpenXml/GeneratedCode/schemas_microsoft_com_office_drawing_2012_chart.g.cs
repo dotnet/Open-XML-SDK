@@ -39,7 +39,7 @@ public partial class PivotSource : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -163,7 +163,7 @@ public partial class NumberingFormat : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "formatCode","sourceLinked" };
@@ -278,7 +278,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "bwMode" };
@@ -450,7 +450,7 @@ public partial class Layout : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -566,7 +566,7 @@ public partial class FullReference : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -667,7 +667,7 @@ public partial class LevelReference : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -768,7 +768,7 @@ public partial class FormulaReference : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -869,7 +869,7 @@ public partial class FilteredSeriesTitle : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -970,7 +970,7 @@ public partial class FilteredCategoryTitle : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1071,7 +1071,7 @@ public partial class FilteredAreaSeries : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1172,7 +1172,7 @@ public partial class FilteredBarSeries : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1273,7 +1273,7 @@ public partial class FilteredBubbleSeries : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1374,7 +1374,7 @@ public partial class FilteredLineSeriesExtension : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1475,7 +1475,7 @@ public partial class FilteredPieSeries : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1576,7 +1576,7 @@ public partial class FilteredRadarSeries : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1677,7 +1677,7 @@ public partial class FilteredScatterSeries : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1778,7 +1778,7 @@ public partial class FilteredSurfaceSeries : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1881,7 +1881,7 @@ public partial class DataLabelsRange : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1997,7 +1997,7 @@ public partial class CategoryFilterExceptions : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -2077,7 +2077,7 @@ public partial class DataLabelFieldTable : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -2150,7 +2150,7 @@ public partial class ExceptionForSave : BooleanType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -2181,7 +2181,7 @@ public partial class ShowDataLabelsRange : BooleanType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -2212,7 +2212,7 @@ public partial class ShowLeaderLines : BooleanType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -2243,7 +2243,7 @@ public partial class AutoGeneneratedCategories : BooleanType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -2274,7 +2274,7 @@ public partial class InvertIfNegativeBoolean : BooleanType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -2305,7 +2305,7 @@ public partial class Bubble3D : BooleanType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -2395,7 +2395,7 @@ public partial class ChartText : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -2526,7 +2526,7 @@ public partial class LeaderLines : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -2620,7 +2620,7 @@ public partial class SequenceOfReferences : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -2664,7 +2664,7 @@ public partial class Formula : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -2708,7 +2708,7 @@ public partial class TextFieldGuid : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -2767,7 +2767,7 @@ public partial class AxisDataSourceType : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -2954,7 +2954,7 @@ public partial class BarChartSeries : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -3180,7 +3180,7 @@ public partial class LineChartSeries : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -3404,7 +3404,7 @@ public partial class ScatterChartSeries : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -3611,7 +3611,7 @@ public partial class AreaChartSeries : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -3813,7 +3813,7 @@ public partial class PieChartSeries : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -4032,7 +4032,7 @@ public partial class BubbleChartSeries : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -4255,7 +4255,7 @@ public partial class RadarChartSeries : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -4462,7 +4462,7 @@ public partial class SurfaceChartSeries : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -4684,7 +4684,7 @@ public partial class DataLabelsRangeChache : StringDataType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4748,7 +4748,7 @@ public partial class DataLabelFieldTableCache : StringDataType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4897,7 +4897,7 @@ public partial class Explosion : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "val" };
@@ -4976,7 +4976,7 @@ public partial class Marker : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -5152,7 +5152,7 @@ public partial class DataLabel : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -5310,7 +5310,7 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -5505,7 +5505,7 @@ public partial class DataLabelFieldTableEntry : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     

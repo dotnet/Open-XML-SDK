@@ -26,7 +26,7 @@ public partial class Key : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -70,7 +70,7 @@ public partial class Value : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -123,7 +123,7 @@ public partial class RoamingProperty : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     

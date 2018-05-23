@@ -51,7 +51,7 @@ public partial class WordprocessingShape : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "normalEastAsianFlow" };
@@ -203,7 +203,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -287,7 +287,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","name","descr","hidden","title" };
@@ -503,7 +503,7 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "txBox" };
@@ -652,7 +652,7 @@ public partial class NonVisualConnectorProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -826,7 +826,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "bwMode" };
@@ -1002,7 +1002,7 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -1150,7 +1150,7 @@ public partial class TextBoxInfo2 : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id" };
@@ -1293,7 +1293,7 @@ public partial class LinkedTextBox : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","seq" };
@@ -1449,7 +1449,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "rot","spcFirstLastPara","vertOverflow","horzOverflow","vert","wrap","lIns","tIns","rIns","bIns","numCol","spcCol","rtlCol","fromWordArt","anchor","anchorCtr","forceAA","upright","compatLnSpc" };

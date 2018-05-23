@@ -2167,14 +2167,12 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Indicates whether the current element is available in a specific version of Office Application.
+        /// Gets a value that indicates the version in which the current element was introduced.
         /// For strong typed element, the return value will be generated according to the schema.
-        /// For OpenXmlUnknownElement element, always returns false, no matter what the version is.
-        /// For OpenXmlMiscNode element, always returns true, no matter what the version is.
+        /// For <see cref="OpenXmlUnknownElement"/>, always returns <c>false</c>
+        /// For <see cref="OpenXmlMiscNode"/>, always returns <c>true</c>
         /// </summary>
-        /// <param name="version">The Office file format version.</param>
-        /// <returns>Returns true if the element is defined in the specified version.</returns>
-        internal abstract bool IsInVersion(FileFormatVersions version);
+        internal abstract FileFormatVersions InitialVersion { get; }
 
         #endregion
 
