@@ -27,7 +27,7 @@ public partial class BackgroundProperties : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "bwMode","bwPure","bwNormal","targetScreenSize" };
@@ -135,7 +135,7 @@ public partial class NonVisualGroupProperties : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "isLegacyGroup" };
@@ -201,7 +201,7 @@ public partial class ObjectProperties : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "objectId","isActiveX","linkType" };
@@ -295,7 +295,7 @@ public partial class SignatureLine : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     	private static readonly string[] attributeTagNames = { "isSignatureLine","id","provId","signingInstructionsSet","allowComments","showSignDate","suggestedSigner","suggestedSigner2","suggestedSignerEmail","signingInstructions","addlXml","sigProvUrl" };

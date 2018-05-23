@@ -184,10 +184,6 @@ namespace DocumentFormat.OpenXml
             get { return ReservedElementTypeIds.AlternateContentId; }
         }
 
-        /// <inheritdoc/>
-        internal override bool IsInVersion(FileFormatVersions version)
-        {
-            return true;
-        }
+        internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     }
 }

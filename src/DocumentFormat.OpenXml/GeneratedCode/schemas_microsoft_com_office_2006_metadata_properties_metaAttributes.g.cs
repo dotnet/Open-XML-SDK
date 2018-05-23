@@ -26,7 +26,7 @@ public partial class Dummy : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "decimals","default","description","displayName","fieldsID","format","hidden","index","internalName","LCID","list","percentage","readOnly","requiredMultiChoice","root","showField","web" };

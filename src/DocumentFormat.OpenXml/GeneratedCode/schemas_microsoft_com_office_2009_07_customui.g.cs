@@ -26,7 +26,7 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "idQ","tag","idMso","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -442,7 +442,7 @@ public partial class ButtonRegular : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -914,7 +914,7 @@ public partial class CheckBox : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "getPressed","onAction","enabled","getEnabled","description","getDescription","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip" };
@@ -1311,7 +1311,7 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "description","getDescription","invalidateContentOnDrop","columns","rows","itemWidth","itemHeight","getItemWidth","getItemHeight","showItemLabel","showInRibbon","onAction","enabled","getEnabled","image","imageMso","getImage","showItemImage","getItemCount","getItemLabel","getItemScreentip","getItemSupertip","getItemImage","getItemID","sizeString","getSelectedItemID","getSelectedItemIndex","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -2086,7 +2086,7 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "getPressed","onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -2572,7 +2572,7 @@ public partial class MenuSeparator : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","title","getTitle" };
@@ -2761,7 +2761,7 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "enabled","getEnabled","id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel" };
@@ -3100,7 +3100,7 @@ public partial class MenuRegular : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "itemSize","description","getDescription","id","idQ","tag","idMso","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -3630,7 +3630,7 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "description","getDescription","id","idQ","tag","idMso","getContent","invalidateContentOnDrop","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -4127,7 +4127,7 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "enabled","getEnabled","id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel" };
@@ -4466,7 +4466,7 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","itemSize","title","getTitle","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -4996,7 +4996,7 @@ public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ" };
@@ -5146,7 +5146,7 @@ public partial class ControlClone : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "size","getSize","enabled","getEnabled","description","getDescription","image","imageMso","getImage","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -5618,7 +5618,7 @@ public partial class LabelControl : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","showLabel","getShowLabel" };
@@ -5950,7 +5950,7 @@ public partial class Button : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "size","getSize","onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -6450,7 +6450,7 @@ public partial class ToggleButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "size","getSize","getPressed","onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -6964,7 +6964,7 @@ public partial class EditBox : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "enabled","getEnabled","image","imageMso","getImage","maxLength","getText","onChange","sizeString","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -7457,7 +7457,7 @@ public partial class ComboBox : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "showItemImage","getItemCount","getItemLabel","getItemScreentip","getItemSupertip","getItemImage","getItemID","sizeString","invalidateContentOnDrop","enabled","getEnabled","image","imageMso","getImage","maxLength","getText","onChange","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -8098,7 +8098,7 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "onAction","enabled","getEnabled","image","imageMso","getImage","showItemImage","getItemCount","getItemLabel","getItemScreentip","getItemSupertip","getItemImage","getItemID","sizeString","getSelectedItemID","getSelectedItemIndex","showItemLabel","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -8742,7 +8742,7 @@ public partial class Gallery : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "size","getSize","description","getDescription","invalidateContentOnDrop","columns","rows","itemWidth","itemHeight","getItemWidth","getItemHeight","showItemLabel","showInRibbon","onAction","enabled","getEnabled","image","imageMso","getImage","showItemImage","getItemCount","getItemLabel","getItemScreentip","getItemSupertip","getItemImage","getItemID","sizeString","getSelectedItemID","getSelectedItemIndex","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -9568,7 +9568,7 @@ public partial class Menu : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "size","getSize","itemSize","description","getDescription","id","idQ","tag","idMso","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -10126,7 +10126,7 @@ public partial class DynamicMenu : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "size","getSize","description","getDescription","id","idQ","tag","idMso","getContent","invalidateContentOnDrop","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -10651,7 +10651,7 @@ public partial class SplitButton : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "size","getSize","enabled","getEnabled","id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel" };
@@ -11028,7 +11028,7 @@ public partial class Box : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","visible","getVisible","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","boxStyle" };
@@ -11314,7 +11314,7 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","visible","getVisible","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ" };
@@ -11547,7 +11547,7 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "description","getDescription","id","idQ","tag","onAction","isDefinitive","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","image","imageMso","getImage" };
@@ -11851,7 +11851,7 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "description","getDescription","id","idQ","tag","onAction","getPressed","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip" };
@@ -12120,7 +12120,7 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "description","getDescription","id","idQ","tag","enabled","getEnabled","label","getLabel","visible","getVisible","image","imageMso","getImage","keytip","getKeytip" };
@@ -12430,7 +12430,7 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "image","imageMso","getImage","description","getDescription","id","idQ","tag","onAction","getPressed","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip" };
@@ -12734,7 +12734,7 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "expand","style","screentip","getScreentip","supertip","getSupertip","id","idQ","tag","onAction","isDefinitive","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","image","imageMso","getImage" };
@@ -13094,7 +13094,7 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "expand","description","getDescription","screentip","getScreentip","supertip","getSupertip","id","idQ","tag","onAction","getPressed","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip" };
@@ -13426,7 +13426,7 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","alignLabel","expand","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","getText","onChange","maxLength","sizeString" };
@@ -13723,7 +13723,7 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","alignLabel","expand","enabled","getEnabled","label","getLabel","visible","getVisible","onAction","screentip","getScreentip","supertip","getSupertip","keytip","getKeytip","getSelectedItemIndex","sizeString","getItemCount","getItemLabel","getItemID" };
@@ -14138,7 +14138,7 @@ public partial class RadioGroup : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","alignLabel","expand","enabled","getEnabled","label","getLabel","visible","getVisible","onAction","keytip","getKeytip","getSelectedItemIndex","getItemCount","getItemLabel","getItemID" };
@@ -14483,7 +14483,7 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","alignLabel","expand","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","getText","onChange","sizeString","getItemCount","getItemLabel","getItemID" };
@@ -14835,7 +14835,7 @@ public partial class Hyperlink : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","alignLabel","expand","enabled","getEnabled","visible","getVisible","keytip","getKeytip","label","getLabel","onAction","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","target","getTarget" };
@@ -15209,7 +15209,7 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","alignLabel","expand","enabled","getEnabled","label","getLabel","visible","getVisible","noWrap" };
@@ -15456,7 +15456,7 @@ public partial class GroupBox : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","expand","label","getLabel" };
@@ -15683,7 +15683,7 @@ public partial class LayoutContainer : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","align","expand","layoutChildren" };
@@ -15883,7 +15883,7 @@ public partial class ImageControl : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","enabled","getEnabled","visible","getVisible","image","imageMso","getImage","altText","getAltText" };
@@ -16114,7 +16114,7 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","label","getLabel","visible","getVisible","style","getStyle","helperText","getHelperText","showLabel","getShowLabel" };
@@ -16465,7 +16465,7 @@ public partial class TaskGroup : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","label","getLabel","visible","getVisible","helperText","getHelperText","showLabel","getShowLabel","allowedTaskSizes" };
@@ -16812,7 +16812,7 @@ public partial class MenuRoot : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "title","getTitle","itemSize" };
@@ -16976,7 +16976,7 @@ public partial class CustomUI : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "onLoad","loadImage" };
@@ -17185,7 +17185,7 @@ public partial class Item : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","label","image","imageMso","screentip","supertip" };
@@ -17321,7 +17321,7 @@ public partial class VisibleButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -17765,7 +17765,7 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "getPressed","onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -18223,7 +18223,7 @@ public partial class Separator : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","visible","getVisible","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ" };
@@ -18408,7 +18408,7 @@ public partial class DialogBoxLauncher : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -18539,7 +18539,7 @@ public partial class Group : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","label","getLabel","image","imageMso","getImage","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","screentip","getScreentip","supertip","getSupertip","visible","getVisible","keytip","getKeytip","autoScale","centerVertically" };
@@ -18992,7 +18992,7 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","idMso","description","getDescription","size","getSize","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
@@ -19472,7 +19472,7 @@ public partial class SharedControlsQatItems : QatItemsType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -19536,7 +19536,7 @@ public partial class DocumentControlsQatItems : QatItemsType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -19671,7 +19671,7 @@ public partial class Tab : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip" };
@@ -19960,7 +19960,7 @@ public partial class TabSet : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "idMso","visible","getVisible" };
@@ -20088,7 +20088,7 @@ public partial class Command : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "onAction","enabled","getEnabled","idMso" };
@@ -20205,7 +20205,7 @@ public partial class QuickAccessToolbar : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -20321,7 +20321,7 @@ public partial class Tabs : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -20401,7 +20401,7 @@ public partial class ContextualTabs : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -20497,7 +20497,7 @@ public partial class ContextMenu : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "idMso" };
@@ -20621,7 +20621,7 @@ public partial class ItemBackstageItem : BackstageItemType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -20652,7 +20652,7 @@ public partial class RadioButtonBackstageItem : BackstageItemType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -20759,7 +20759,7 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "screentip","getScreentip","supertip","getSupertip","id","idQ","tag","onAction","isDefinitive","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","image","imageMso","getImage" };
@@ -21098,7 +21098,7 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "screentip","getScreentip","supertip","getSupertip","id","idQ","tag","enabled","getEnabled","label","getLabel","visible","getVisible","image","imageMso","getImage","keytip","getKeytip" };
@@ -21449,7 +21449,7 @@ public partial class BackstageMenuGroup : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","label","getLabel","itemSize" };
@@ -21637,7 +21637,7 @@ public partial class PrimaryItem : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -21762,7 +21762,7 @@ public partial class TopItemsGroupControls : GroupControlsType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -21834,7 +21834,7 @@ public partial class BottomItemsGroupControls : GroupControlsType
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     /// <summary>
@@ -22009,7 +22009,7 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","label","getLabel" };
@@ -22263,7 +22263,7 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","onAction","isDefinitive","image","imageMso","getImage","enabled","getEnabled","label","getLabel","visible","getVisible","description","getDescription","keytip","getKeytip" };
@@ -22644,7 +22644,7 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","label","getLabel" };
@@ -22905,7 +22905,7 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","image","imageMso","getImage","enabled","getEnabled","label","getLabel","visible","getVisible","description","getDescription","keytip","getKeytip" };
@@ -23292,7 +23292,7 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","label","getLabel","visible","getVisible","helperText","getHelperText","showLabel","getShowLabel","allowedTaskSizes" };
@@ -23571,7 +23571,7 @@ public partial class BackstageGroups : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -23659,7 +23659,7 @@ public partial class SimpleGroups : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -23744,7 +23744,7 @@ public partial class BackstageTab : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","title","getTitle","columnWidthPercent","firstColumnMinWidth","firstColumnMaxWidth","secondColumnMinWidth","secondColumnMaxWidth" };
@@ -24188,7 +24188,7 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","id","idQ","tag","onAction","isDefinitive","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","image","imageMso","getImage" };
@@ -24541,7 +24541,7 @@ public partial class Commands : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     
@@ -24625,7 +24625,7 @@ public partial class Ribbon : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "startFromScratch" };
@@ -24785,7 +24785,7 @@ public partial class Backstage : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     	private static readonly string[] attributeTagNames = { "onShow","onHide" };
@@ -24909,7 +24909,7 @@ public partial class ContextMenus : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
     

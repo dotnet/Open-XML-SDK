@@ -394,12 +394,7 @@ namespace DocumentFormat.OpenXml
             // this.RawOuterXml = xmlReader.ReadOuterXml();
         }
 
-        /// <inheritdoc/>
-        internal override bool IsInVersion(FileFormatVersions version)
-        {
-            // For OpenXmlMiscNode, always return true, no matter what the version is.
-            return true;
-        }
+        internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
         internal static OpenXmlMiscNode CreateFromText(string text)
         {

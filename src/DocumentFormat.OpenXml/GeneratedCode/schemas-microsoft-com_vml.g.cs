@@ -31,7 +31,7 @@ public partial class Path : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","v","limo","textboxrect","fillok","strokeok","shadowok","arrowok","gradientshapeok","textpathok","insetpenok","connecttype","connectlocs","connectangles","extrusionok" };
@@ -308,7 +308,7 @@ public partial class Formulas : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -388,7 +388,7 @@ public partial class ShapeHandles : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     
@@ -468,7 +468,7 @@ public partial class Fill : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","type","on","color","opacity","color2","src","href","althref","size","origin","position","aspect","colors","angle","alignshape","focus","focussize","focusposition","method","detectmouseclick","title","opacity2","recolor","rotate","id" };
@@ -966,7 +966,7 @@ public partial class Stroke : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","on","weight","color","opacity","linestyle","miterlimit","joinstyle","endcap","dashstyle","filltype","src","imageaspect","imagesize","imagealignshape","color2","startarrow","startarrowwidth","startarrowlength","endarrow","endarrowwidth","endarrowlength","href","althref","title","forcedash","id","insetpen" };
@@ -1535,7 +1535,7 @@ public partial class Shadow : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","on","type","obscured","color","opacity","offset","color2","offset2","origin","matrix" };
@@ -1748,7 +1748,7 @@ public partial class TextBox : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","style","inset","singleclick" };
@@ -1892,7 +1892,7 @@ public partial class TextPath : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","style","on","fitshape","fitpath","trim","xscale","string" };
@@ -2056,7 +2056,7 @@ public partial class ImageData : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","chromakey","cropleft","croptop","cropright","cropbottom","gain","blacklevel","gamma","grayscale","bilevel","embosscolor","recolortarget","title","detectmouseclick","relid","id","pict","href" };
@@ -2441,7 +2441,7 @@ public partial class Shape : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","coordorigin","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip","type","adj","path","gfxdata","equationxml" };
@@ -3506,7 +3506,7 @@ public partial class Shapetype : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","coordorigin","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip","adj","path","master" };
@@ -4526,7 +4526,7 @@ public partial class Group : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","coordorigin","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","editas","tableproperties","tablelimits" };
@@ -5171,7 +5171,7 @@ public partial class Background : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","fill","fillcolor","bwmode","bwpure","bwnormal","targetscreensize" };
@@ -5435,7 +5435,7 @@ public partial class Arc : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip","id","style","href","target","title","alt","coordsize","coordorigin","wrapcoords","print","startangle","endangle" };
@@ -6434,7 +6434,7 @@ public partial class Curve : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","coordorigin","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip","from","control1","control2","to" };
@@ -7475,7 +7475,7 @@ public partial class ImageFile : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip","src","cropleft","croptop","cropright","cropbottom","gain","blacklevel","gamma","grayscale","bilevel" };
@@ -8586,7 +8586,7 @@ public partial class Line : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","coordorigin","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip","from","to" };
@@ -9599,7 +9599,7 @@ public partial class Oval : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","coordorigin","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip" };
@@ -10586,7 +10586,7 @@ public partial class PolyLine : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","coordorigin","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip","points" };
@@ -11588,7 +11588,7 @@ public partial class Rectangle : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","coordorigin","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip" };
@@ -12573,7 +12573,7 @@ public partial class RoundRectangle : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "id","style","href","target","class","title","alt","coordsize","wrapcoords","print","spid","oned","regroupid","doubleclicknotify","button","userhidden","bullet","hr","hrstd","hrnoshade","hrpct","hralign","allowincell","allowoverlap","userdrawn","bordertopcolor","borderleftcolor","borderbottomcolor","borderrightcolor","dgmlayout","dgmnodekind","dgmlayoutmru","insetmode","filled","fillcolor","stroked","strokecolor","strokeweight","insetpen","spt","connectortype","bwmode","bwpure","bwnormal","forcedash","oleicon","ole","preferrelative","cliptowrap","clip","arcsize" };
@@ -13507,7 +13507,7 @@ public partial class ShapeHandle : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "position","polar","map","invx","invy","switch","xrange","yrange","radiusrange" };
@@ -13685,7 +13685,7 @@ public partial class Formula : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
     	private static readonly string[] attributeTagNames = { "eqn" };
