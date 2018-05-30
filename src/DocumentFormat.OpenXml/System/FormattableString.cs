@@ -16,7 +16,7 @@ namespace System
             _arguments = arguments;
         }
 
-        public string ToString(string _, IFormatProvider formatProvider) => ToString(formatProvider);
+        string IFormattable.ToString(string _, IFormatProvider formatProvider) => ToString(formatProvider);
 
         public string ToString(IFormatProvider formatProvider) => string.Format(formatProvider, _format, _arguments);
 
@@ -30,9 +30,6 @@ namespace System
             return formattable.ToString(CultureInfo.InvariantCulture);
         }
 
-        public override string ToString()
-        {
-            return ToString(CultureInfo.CurrentCulture);
-        }
+        public override string ToString() => ToString(CultureInfo.CurrentCulture);
     }
 }
