@@ -27,8 +27,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Id = "Sem_MissRequiredAttribute",
                 ErrorType = ValidationErrorType.Schema,
                 Node = context.Element,
-                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sch_MissRequiredAttribute,
-                                            GetAttributeQualifiedName(context.Element, _attribute)),
+                Description = SR.Format(ValidationResources.Sch_MissRequiredAttribute, GetAttributeQualifiedName(context.Element, _attribute)),
             };
         }
     }

@@ -51,9 +51,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            string subMsg = ValidationResources.Sch_EnumerationConstraintFailed;
-            string errorDescription = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_AttributeValueDataTypeDetailed,
-                                                    GetAttributeQualifiedName(context.Element, _attribute), attributeValue, subMsg);
+            var errorDescription = SR.Format(
+                ValidationResources.Sem_AttributeValueDataTypeDetailed,
+                GetAttributeQualifiedName(context.Element, _attribute),
+                attributeValue,
+                ValidationResources.Sch_EnumerationConstraintFailed);
 
             return new ValidationErrorInfo()
             {

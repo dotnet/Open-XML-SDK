@@ -211,9 +211,10 @@ namespace DocumentFormat.OpenXml.Validation
             if (openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess &&
                 openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormat)
             {
-                string exceptionMessage = string.Format(System.Globalization.CultureInfo.CurrentUICulture,
+                var exceptionMessage = SR.Format(
                     ExceptionMessages.DocumentFileFormatVersionMismatch,
-                    openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions, FileFormat);
+                    openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions,
+                    FileFormat);
 
                 throw new InvalidOperationException(exceptionMessage);
             }
@@ -239,9 +240,10 @@ namespace DocumentFormat.OpenXml.Validation
             if (openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.ProcessMode != MarkupCompatibilityProcessMode.NoProcess &&
                 openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions != FileFormat)
             {
-                string exceptionMessage = string.Format(System.Globalization.CultureInfo.CurrentUICulture,
+                var exceptionMessage = SR.Format(
                     ExceptionMessages.DocumentFileFormatVersionMismatch,
-                    openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions, FileFormat);
+                    openXmlPackage.OpenSettings.MarkupCompatibilityProcessSettings.TargetFileFormatVersions,
+                    FileFormat);
 
                 throw new InvalidOperationException(exceptionMessage);
             }

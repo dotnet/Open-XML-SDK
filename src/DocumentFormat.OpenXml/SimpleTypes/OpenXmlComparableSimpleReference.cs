@@ -47,8 +47,7 @@ namespace DocumentFormat.OpenXml
                     return CompareTo(other);
             }
 
-            string message = string.Format(ExceptionMessages.IncompatibleArgumentType, obj.GetType().FullName);
-            throw new ArgumentException(message);
+            throw new ArgumentException(SR.Format(ExceptionMessages.IncompatibleArgumentType, obj.GetType().FullName));
         }
 
         /// <inheritdoc />

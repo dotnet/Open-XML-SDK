@@ -132,7 +132,6 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                 Debug.Assert(_elementTypeIds != null && _elementTypeIds.Count > 0 ||
                              _xsdanyNamespaces != null && _xsdanyNamespaces.Count > 0);
 
-                string expectedChildren = null;
                 StringBuilder childrenNames = new StringBuilder();
                 string separator = string.Empty;
 
@@ -143,7 +142,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                         childrenNames.Append(separator);
 
                         // <namespace:localname>, use InvariantCulture
-                        childrenNames.Append(string.Format(CultureInfo.CurrentUICulture, ValidationResources.Fmt_ElementName, childElement.NamespaceUri, childElement.LocalName));
+                        childrenNames.Append(SR.Format(ValidationResources.Fmt_ElementName, childElement.NamespaceUri, childElement.LocalName));
 
                         separator = ValidationResources.Fmt_ElementNameSeparator;
                     }
@@ -154,13 +153,11 @@ namespace DocumentFormat.OpenXml.Validation.Schema
                     foreach (var namespaceForXsdany in _xsdanyNamespaces)
                     {
                         childrenNames.Append(separator);
-                        childrenNames.Append(string.Format(CultureInfo.CurrentUICulture, ValidationResources.Fmt_AnyElementInNamespace, namespaceForXsdany));
+                        childrenNames.Append(SR.Format(ValidationResources.Fmt_AnyElementInNamespace, namespaceForXsdany));
                     }
                 }
 
-                expectedChildren = string.Format(CultureInfo.CurrentUICulture, ValidationResources.Fmt_ListOfPossibleElements, childrenNames.ToString());
-
-                return expectedChildren;
+                return SR.Format(ValidationResources.Fmt_ListOfPossibleElements, childrenNames.ToString());
             }
 
             return string.Empty;

@@ -70,9 +70,7 @@ namespace DocumentFormat.OpenXml
 
             if (!part.IsInVersion(version))
             {
-                var message = string.Format(CultureInfo.CurrentCulture, ExceptionMessages.PartIsNotInOfficeVersion, version.GetOfficeYear());
-
-                throw new InvalidOperationException(message);
+                throw new InvalidOperationException(SR.Format(ExceptionMessages.PartIsNotInOfficeVersion, version.GetOfficeYear()));
             }
         }
 
@@ -87,9 +85,7 @@ namespace DocumentFormat.OpenXml
 
             if (!element.IsInVersion(version))
             {
-                var message = string.Format(CultureInfo.CurrentCulture, ExceptionMessages.ElementIsNotInOfficeVersion, version.GetOfficeYear());
-
-                throw new InvalidOperationException(message);
+                throw new InvalidOperationException(SR.Format(ExceptionMessages.ElementIsNotInOfficeVersion, version.GetOfficeYear()));
             }
         }
 
@@ -151,9 +147,7 @@ namespace DocumentFormat.OpenXml
         {
             if (!fileFormat.Any())
             {
-                var message = string.Format(CultureInfo.CurrentUICulture, ExceptionMessages.FileFormatNotSupported, fileFormat);
-
-                throw new ArgumentOutOfRangeException(parameterName, message);
+                throw new ArgumentOutOfRangeException(parameterName, SR.Format(ExceptionMessages.FileFormatNotSupported, fileFormat));
             }
         }
 
