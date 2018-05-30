@@ -31,15 +31,15 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
             else
             {
-                string errorDescription = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_InvalidRelationshipId,
-                                                        attributeValue, GetAttributeQualifiedName(context.Element, _rIdAttribute));
-
                 return new ValidationErrorInfo()
                 {
                     Id = "Sem_InvalidRelationshipId",
                     ErrorType = ValidationErrorType.Semantic,
                     Node = context.Element,
-                    Description = errorDescription,
+                    Description = SR.Format(
+                        ValidationResources.Sem_InvalidRelationshipId,
+                        attributeValue,
+                        GetAttributeQualifiedName(context.Element, _rIdAttribute)),
                 };
             }
         }

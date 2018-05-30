@@ -53,7 +53,7 @@ namespace DocumentFormat.OpenXml.Packaging
             get
             {
                 TryLoadRootElement();
-                return _rootEle as DocumentFormat.OpenXml.Wordprocessing.Recipients;
+                return _rootEle as Wordprocessing.Recipients;
             }
 
             set
@@ -65,7 +65,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 if (MailMergeRecipients != null)
                 {
-                    throw new InvalidOperationException(string.Format(System.Globalization.CultureInfo.CurrentCulture, ExceptionMessages.PropertyMutualExclusive, "Recipients", "MailMergeRecipients"));
+                    throw new InvalidOperationException(SR.Format(ExceptionMessages.PropertyMutualExclusive, "Recipients", "MailMergeRecipients"));
                 }
 
                 SetDomTree(value);
@@ -93,7 +93,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
                 if (Recipients != null)
                 {
-                    throw new InvalidOperationException(string.Format(System.Globalization.CultureInfo.CurrentCulture, ExceptionMessages.PropertyMutualExclusive, "MailMergeRecipients", "Recipients"));
+                    throw new InvalidOperationException(SR.Format(ExceptionMessages.PropertyMutualExclusive, "MailMergeRecipients", "Recipients"));
                 }
 
                 SetDomTree(value);

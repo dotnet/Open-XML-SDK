@@ -124,11 +124,7 @@ namespace DocumentFormat.OpenXml.Validation.Schema
 
             if (schema == null)
             {
-                var message = string.Format(System.Globalization.CultureInfo.CurrentUICulture,
-                    ExceptionMessages.FileFormatNotSupported,
-                    fileFormat);
-
-                throw new ArgumentOutOfRangeException(nameof(fileFormat), message);
+                throw new ArgumentOutOfRangeException(nameof(fileFormat), SR.Format(ExceptionMessages.FileFormatNotSupported, fileFormat));
             }
 
             return schema;
