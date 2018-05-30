@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
+using System.Text;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml.Validation.Semantic
@@ -18,17 +19,24 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal abstract partial class SemanticConstraint
     {
-        public readonly SemanticValidationLevel SemanticValidationLevel;
+        private readonly Lazy<string> _valuesString;
+
+        public SemanticValidationLevel SemanticValidationLevel { get; }
 
         public virtual SemanticValidationLevel StateScope => SemanticValidationLevel;
 
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        public SemanticConstraint(SemanticValidationLevel level)
+        protected SemanticConstraint(SemanticValidationLevel level)
         {
             SemanticValidationLevel = level;
         }
+
+        protected SemanticConstraint(SemanticValidationLevel level, IEnumerable<string> values)
+        {
+            SemanticValidationLevel = level;
+            _valuesString = new Lazy<string>(() => GetValueString(values));
+        }
+
+        protected string ValuesString => _valuesString.Value;
 
         /// <summary>
         /// Some semantic constraint classes will hold state at runtime,
@@ -199,6 +207,32 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
 
             return temp;
+        }
+
+        private static string GetValueString(IEnumerable<string> values)
+        {
+            const char Quote = '\'';
+
+            var initial = true;
+            var sb = new StringBuilder();
+
+            foreach (var value in values)
+            {
+                if (!initial)
+                {
+                    sb.Append(", ");
+                }
+                else
+                {
+                    initial = false;
+                }
+
+                sb.Append(Quote);
+                sb.Append(value);
+                sb.Append(Quote);
+            }
+
+            return sb.ToString();
         }
     }
 }

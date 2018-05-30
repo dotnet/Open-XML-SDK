@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
-
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
@@ -10,12 +8,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class AttributeRequiredConditionToValue : SemanticConstraint
     {
-        private string[] _values;
-        private byte _requiredAttribute;
-        private byte _conditionAttribute;
+        private readonly string[] _values;
+        private readonly byte _requiredAttribute;
+        private readonly byte _conditionAttribute;
 
         public AttributeRequiredConditionToValue(byte requiredAttribute, byte conditionAttribute, params string[] values)
-            : base(SemanticValidationLevel.Element)
+            : base(SemanticValidationLevel.Element, values)
         {
             _requiredAttribute = requiredAttribute;
             _conditionAttribute = conditionAttribute;
@@ -42,18 +40,6 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 if (AttributeValueEquals(conditionAttributeValue, value, false))
                 {
-                    string valueString = "'" + _values[0] + "'";
-
-                    if (_values.Length > 1)
-                    {
-                        for (int i = 1; i < _values.Length - 1; i++)
-                        {
-                            valueString += ", '" + _values[i] + "'";
-                        }
-
-                        valueString += " or '" + _values[_values.Length - 1] + "'";
-                    }
-
                     return new ValidationErrorInfo()
                     {
                         Id = "Sem_AttributeRequiredConditionToValue",
@@ -63,7 +49,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                             ValidationResources.Sem_AttributeRequiredConditionToValue,
                             GetAttributeQualifiedName(context.Element, _requiredAttribute),
                             GetAttributeQualifiedName(context.Element, _conditionAttribute),
-                            valueString),
+                            ValuesString),
                     };
                 }
             }

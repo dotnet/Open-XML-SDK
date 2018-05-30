@@ -1,8 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
-
 namespace DocumentFormat.OpenXml.Validation.Semantic
 {
     /// <summary>
@@ -10,7 +8,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
     /// </summary>
     internal class AttributeMutualExclusive : SemanticConstraint
     {
-        private byte[] _attributes;
+        private readonly byte[] _attributes;
 
         public AttributeMutualExclusive(params byte[] attributes)
             : base(SemanticValidationLevel.Element)
