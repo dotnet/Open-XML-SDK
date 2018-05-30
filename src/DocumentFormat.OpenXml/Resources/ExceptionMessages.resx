@@ -123,9 +123,6 @@
   <data name="CannotChangeDocumentType" xml:space="preserve">
     <value>Cannot change the document type.</value>
   </data>
-  <data name="CannotChangeDocumentTypeSerious" xml:space="preserve">
-    <value>Cannot change the document type. The document may be corrupt.</value>
-  </data>
   <data name="CannotFindAttribute" xml:space="preserve">
     <value>The element does not allow the specified attribute.</value>
   </data>
@@ -147,9 +144,6 @@
   <data name="CannotValidateUnknownElement" xml:space="preserve">
     <value>The OpenXmlValidator cannot validate against OpenXmlUnknownElement.</value>
   </data>
-  <data name="CycleReference" xml:space="preserve">
-    <value>A circular reference has been detected.</value>
-  </data>
   <data name="DocumentTooBig" xml:space="preserve">
     <value>The document has exceeded the size limit. Its type cannot be changed.</value>
   </data>
@@ -162,17 +156,8 @@
   <data name="ElementIsPartOfTree" xml:space="preserve">
     <value>Cannot insert the OpenXmlElement "newChild" because it is part of a tree. </value>
   </data>
-  <data name="EmptyCollection" xml:space="preserve">
-    <value>Empty collection.</value>
-  </data>
   <data name="ErrorContentType" xml:space="preserve">
     <value>The contentType parameter has incorrect value.</value>
-  </data>
-  <data name="ExtendedPartIsOpenXmlPart" xml:space="preserve">
-    <value>An ExtendedPart was encountered with a relationship type that starts with "http://schemas.openxmlformats.org". Expected a defined part instead based on the relationship type.</value>
-  </data>
-  <data name="ExtendedPartNotAllowed" xml:space="preserve">
-    <value>ExtendedPart must be added by AddExtendedPart( ).</value>
   </data>
   <data name="ExternalRelationshipIsNotReferenced" xml:space="preserve">
     <value>The specified ExternalRelationship is not referenced by this part.</value>
@@ -182,9 +167,6 @@
   </data>
   <data name="Fmt_PartRootIsInvalid" xml:space="preserve">
     <value>The root XML element "{0}" in the part is incorrect. The expected root XML element is: "{1}".</value>
-  </data>
-  <data name="HyperlinkRelationshipIsNotReferenced" xml:space="preserve">
-    <value>The specified ExternalRelationship is not referenced by this part.</value>
   </data>
   <data name="ImplicitConversionExceptionOnNull" xml:space="preserve">
     <value>Error in implicit conversion. Cannot convert null object.</value>
@@ -212,9 +194,6 @@
   </data>
   <data name="InvalidPackageType" xml:space="preserve">
     <value>The specified package is not valid.</value>
-  </data>
-  <data name="StrictReadOnly" xml:space="preserve">
-    <value>ISO 29500 Strict formatted document can't be opened while edit operation is enabled.</value>
   </data>
   <data name="InvalidPartContentType" xml:space="preserve">
     <value>The document cannot be opened because there is an invalid part with an unexpected content type. 
@@ -252,9 +231,6 @@
   <data name="NoSpecifiedExternalRelationship" xml:space="preserve">
     <value>No external relationship with the specified ID was found.</value>
   </data>
-  <data name="NoSpecifiedHyperlinkRelationship" xml:space="preserve">
-    <value>No hyperlink relationship with the specified ID was found.</value>
-  </data>
   <data name="NsNotUnderStand" xml:space="preserve">
     <value>Current Markup Compatibility mode does not understand namespace prefix "{0}".</value>
   </data>
@@ -282,9 +258,6 @@
   <data name="PartIsEmpty" xml:space="preserve">
     <value>The XML content is empty.</value>
   </data>
-  <data name="PartIsNotAllowed" xml:space="preserve">
-    <value>The specified part is not allowed with this parent.</value>
-  </data>
   <data name="PartIsNotInOfficeVersion" xml:space="preserve">
     <value>The validator is set to validate content based on Microsoft Office {0} rules. The passed in part is not defined in Microsoft Office {0}.</value>
   </data>
@@ -311,9 +284,6 @@
   </data>
   <data name="RelationshipIdConflict" xml:space="preserve">
     <value>Id conflicts with the Id of an existing relationship.</value>
-  </data>
-  <data name="RequiredPartDoNotExist" xml:space="preserve">
-    <value>A required part is missing. The class name is stored in the PartClassName property.</value>
   </data>
   <data name="SamePartWithDifferentRelationshipType" xml:space="preserve">
     <value>A shared part is referenced by multiple source parts with a different relationship type.</value>
@@ -368,9 +338,6 @@
   </data>
   <data name="MediaDataPartShouldNotReferenceOtherParts" xml:space="preserve">
     <value>An Audio / Video part shall not have implicit or explicit relationships to other parts defined by Open XML Standard.</value>
-  </data>
-  <data name="DataPartReferenceIsNotAllowed" xml:space="preserve">
-    <value>The specified DataPartReferenceRelationship is not allowed with this parent.</value>
   </data>
   <data name="ForeignMediaDataPart" xml:space="preserve">
     <value>The specified MediaDataPart is not in this document.</value>

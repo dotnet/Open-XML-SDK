@@ -80,15 +80,6 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot change the document type. The document may be corrupt..
-        /// </summary>
-        internal static string CannotChangeDocumentTypeSerious {
-            get {
-                return ResourceManager.GetString("CannotChangeDocumentTypeSerious", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The element does not allow the specified attribute..
         /// </summary>
         internal static string CannotFindAttribute {
@@ -161,29 +152,11 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A circular reference has been detected..
-        /// </summary>
-        internal static string CycleReference {
-            get {
-                return ResourceManager.GetString("CycleReference", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The specified DataPart is referenced by other parts..
         /// </summary>
         internal static string DataPartIsInUse {
             get {
                 return ResourceManager.GetString("DataPartIsInUse", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The specified DataPartReferenceRelationship is not allowed with this parent..
-        /// </summary>
-        internal static string DataPartReferenceIsNotAllowed {
-            get {
-                return ResourceManager.GetString("DataPartReferenceIsNotAllowed", resourceCulture);
             }
         }
         
@@ -242,38 +215,11 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Empty collection..
-        /// </summary>
-        internal static string EmptyCollection {
-            get {
-                return ResourceManager.GetString("EmptyCollection", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The contentType parameter has incorrect value..
         /// </summary>
         internal static string ErrorContentType {
             get {
                 return ResourceManager.GetString("ErrorContentType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An ExtendedPart was encountered with a relationship type that starts with &quot;http://schemas.openxmlformats.org&quot;. Expected a defined part instead based on the relationship type..
-        /// </summary>
-        internal static string ExtendedPartIsOpenXmlPart {
-            get {
-                return ResourceManager.GetString("ExtendedPartIsOpenXmlPart", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ExtendedPart must be added by AddExtendedPart( )..
-        /// </summary>
-        internal static string ExtendedPartNotAllowed {
-            get {
-                return ResourceManager.GetString("ExtendedPartNotAllowed", resourceCulture);
             }
         }
         
@@ -337,15 +283,6 @@ namespace DocumentFormat.OpenXml {
         internal static string ForeignOpenXmlPart {
             get {
                 return ResourceManager.GetString("ForeignOpenXmlPart", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The specified ExternalRelationship is not referenced by this part..
-        /// </summary>
-        internal static string HyperlinkRelationshipIsNotReferenced {
-            get {
-                return ResourceManager.GetString("HyperlinkRelationshipIsNotReferenced", resourceCulture);
             }
         }
         
@@ -560,15 +497,6 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No hyperlink relationship with the specified ID was found..
-        /// </summary>
-        internal static string NoSpecifiedHyperlinkRelationship {
-            get {
-                return ResourceManager.GetString("NoSpecifiedHyperlinkRelationship", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to No ReferenceRelationship with the specified ID was found..
         /// </summary>
         internal static string NoSpecifiedReferenceRelationship {
@@ -655,15 +583,6 @@ namespace DocumentFormat.OpenXml {
         internal static string PartIsEmpty {
             get {
                 return ResourceManager.GetString("PartIsEmpty", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The specified part is not allowed with this parent..
-        /// </summary>
-        internal static string PartIsNotAllowed {
-            get {
-                return ResourceManager.GetString("PartIsNotAllowed", resourceCulture);
             }
         }
         
@@ -758,15 +677,6 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A required part is missing. The class name is stored in the PartClassName property..
-        /// </summary>
-        internal static string RequiredPartDoNotExist {
-            get {
-                return ResourceManager.GetString("RequiredPartDoNotExist", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to A shared part is referenced by multiple source parts with a different relationship type..
         /// </summary>
         internal static string SamePartWithDifferentRelationshipType {
@@ -790,15 +700,6 @@ namespace DocumentFormat.OpenXml {
         internal static string StreamAccessModeShouldRead {
             get {
                 return ResourceManager.GetString("StreamAccessModeShouldRead", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ISO 29500 Strict formatted document can&apos;t be opened while edit operation is enabled..
-        /// </summary>
-        internal static string StrictReadOnly {
-            get {
-                return ResourceManager.GetString("StrictReadOnly", resourceCulture);
             }
         }
         

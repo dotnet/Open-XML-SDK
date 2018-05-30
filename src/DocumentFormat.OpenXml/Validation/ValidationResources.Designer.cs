@@ -107,96 +107,6 @@ namespace DocumentFormat.OpenXml.Validation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The attribute &apos;{0}&apos; needs to specify a proper prefix when defined on an AlternateContent element..
-        /// </summary>
-        internal static string MC_ErrorOnUnprefixedAttributeName {
-            get {
-                return ResourceManager.GetString("MC_ErrorOnUnprefixedAttributeName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The Ignorable attribute is invalid - The value &apos;{0}&apos; contains an invalid prefix that is not defined..
-        /// </summary>
-        internal static string MC_InvalidIgnorableAttribute {
-            get {
-                return ResourceManager.GetString("MC_InvalidIgnorableAttribute", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The MustUnderstand attribute is invalid - The value &apos;{0}&apos; contains an invalid prefix that is not defined..
-        /// </summary>
-        internal static string MC_InvalidMustUnderstandAttribute {
-            get {
-                return ResourceManager.GetString("MC_InvalidMustUnderstandAttribute", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The PreserveAttributes attribute is invalid - The value &apos;{0}&apos; contains invalid qualified names. The ProcessAttributes attribute value cannot reference any attribute name that does not belong to a namespace that is identified by the Ignorable attribute of the same element..
-        /// </summary>
-        internal static string MC_InvalidPreserveAttributesAttribute {
-            get {
-                return ResourceManager.GetString("MC_InvalidPreserveAttributesAttribute", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The PreserveElements attribute is invalid - The value &apos;{0}&apos; contains invalid qualified names. The PreserveElements attribute value cannot reference any element name that does not belong to a namespace that is identified by the Ignorable attribute of the same element..
-        /// </summary>
-        internal static string MC_InvalidPreserveElementsAttribute {
-            get {
-                return ResourceManager.GetString("MC_InvalidPreserveElementsAttribute", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The ProcessContent attribute is invalid - The value &apos;{0}&apos; contains invalid qualified names. The ProcessContent attribute value cannot reference any element name that does not belong to a namespace that is identified by the Ignorable attribute of the same element..
-        /// </summary>
-        internal static string MC_InvalidProcessContentAttribute {
-            get {
-                return ResourceManager.GetString("MC_InvalidProcessContentAttribute", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The Requires attribute is invalid - The value &apos;{0}&apos; contains an invalid prefix that is not defined..
-        /// </summary>
-        internal static string MC_InvalidRequiresAttribute {
-            get {
-                return ResourceManager.GetString("MC_InvalidRequiresAttribute", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The {0} element should not have an xml:lang or xml:space attribute..
-        /// </summary>
-        internal static string MC_InvalidXmlAttribute {
-            get {
-                return ResourceManager.GetString("MC_InvalidXmlAttribute", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An element should not have an xml:lang or xml:space attribute and also be identified by a ProcessContent attribute..
-        /// </summary>
-        internal static string MC_InvalidXmlAttributeWithProcessContent {
-            get {
-                return ResourceManager.GetString("MC_InvalidXmlAttributeWithProcessContent", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to All Choice elements must have a Requires attribute whose value contains a whitespace delimited list of namespace prefixes..
-        /// </summary>
-        internal static string MC_MissedRequiresAttribute {
-            get {
-                return ResourceManager.GetString("MC_MissedRequiresAttribute", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to An AlternateContent element must contain one or more Choice child elements, optionally followed by a Fallback child element..
         /// </summary>
         internal static string MC_ShallContainChoice {
@@ -211,15 +121,6 @@ namespace DocumentFormat.OpenXml.Validation {
         internal static string MC_ShallNotContainAlternateContent {
             get {
                 return ResourceManager.GetString("MC_ShallNotContainAlternateContent", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The package/part &apos;{0}&apos; cannot have a relationship that targets &apos;{1}&apos;..
-        /// </summary>
-        internal static string Pkg_DataPartReferenceIsNotAllowed {
-            get {
-                return ResourceManager.GetString("Pkg_DataPartReferenceIsNotAllowed", resourceCulture);
             }
         }
         
@@ -260,51 +161,6 @@ namespace DocumentFormat.OpenXml.Validation {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Element &apos;{0}&apos; cannot appear more than once if content model type is &quot;all&quot;..
-        /// </summary>
-        internal static string Sch_AllElement {
-            get {
-                return ResourceManager.GetString("Sch_AllElement", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The &apos;{0}&apos; attribute is invalid - The value &apos;{1}&apos; is not valid according to any of the memberTypes of the union..
-        /// </summary>
-        internal static string Sch_AttributeUnionFailedEx {
-            get {
-                return ResourceManager.GetString("Sch_AttributeUnionFailedEx", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The attribute &apos;{0}&apos; has invalid value &apos;{1}&apos;.{2}.
-        /// </summary>
-        internal static string Sch_AttributeValueDataTypeDetailed {
-            get {
-                return ResourceManager.GetString("Sch_AttributeValueDataTypeDetailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The &apos;{0}&apos; element is invalid - The value &apos;{1}&apos; is not valid according to any of the memberTypes of the union..
-        /// </summary>
-        internal static string Sch_ElementUnionFailedEx {
-            get {
-                return ResourceManager.GetString("Sch_ElementUnionFailedEx", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The element &apos;{0}&apos; has invalid value &apos;{1}&apos;.{2}.
-        /// </summary>
-        internal static string Sch_ElementValueDataTypeDetailed {
-            get {
-                return ResourceManager.GetString("Sch_ElementValueDataTypeDetailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to  The attribute value cannot be empty..
         /// </summary>
         internal static string Sch_EmptyAttributeValue {
@@ -328,42 +184,6 @@ namespace DocumentFormat.OpenXml.Validation {
         internal static string Sch_EnumerationConstraintFailed {
             get {
                 return ResourceManager.GetString("Sch_EnumerationConstraintFailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The element has incomplete content.{0}.
-        /// </summary>
-        internal static string Sch_IncompleteContentExpectingComplex {
-            get {
-                return ResourceManager.GetString("Sch_IncompleteContentExpectingComplex", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The element &apos;{0}&apos; is a leaf element and cannot contain children..
-        /// </summary>
-        internal static string Sch_InvalidChildinLeafElement {
-            get {
-                return ResourceManager.GetString("Sch_InvalidChildinLeafElement", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The element has invalid child element &apos;{0}&apos;.{1}.
-        /// </summary>
-        internal static string Sch_InvalidElementContentExpectingComplex {
-            get {
-                return ResourceManager.GetString("Sch_InvalidElementContentExpectingComplex", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The element has child element &apos;{0}&apos; of invalid type &apos;{1}&apos;..
-        /// </summary>
-        internal static string Sch_InvalidElementContentWrongType {
-            get {
-                return ResourceManager.GetString("Sch_InvalidElementContentWrongType", resourceCulture);
             }
         }
         
@@ -454,33 +274,6 @@ namespace DocumentFormat.OpenXml.Validation {
         internal static string Sch_StringIsNotValidValue {
             get {
                 return ResourceManager.GetString("Sch_StringIsNotValidValue", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to  The TotalDigits constraint failed. The expected number of digits is {0}..
-        /// </summary>
-        internal static string Sch_TotalDigitsConstraintFailed {
-            get {
-                return ResourceManager.GetString("Sch_TotalDigitsConstraintFailed", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The &apos;{0}&apos; attribute is not declared..
-        /// </summary>
-        internal static string Sch_UndeclaredAttribute {
-            get {
-                return ResourceManager.GetString("Sch_UndeclaredAttribute", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The element has unexpected child element &apos;{0}&apos;.{1}.
-        /// </summary>
-        internal static string Sch_UnexpectedElementContentExpectingComplex {
-            get {
-                return ResourceManager.GetString("Sch_UnexpectedElementContentExpectingComplex", resourceCulture);
             }
         }
         
