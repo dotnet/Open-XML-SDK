@@ -49,8 +49,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Id = "Sem_AttributeMutualExclusive",
                 ErrorType = ValidationErrorType.Semantic,
                 Node = context.Element,
-                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_AttributeMutualExclusive,
-                                                        existAttribute.Substring(1), existAttribute2, attributes.Substring(1)),
+                Description = SR.Format(
+                    ValidationResources.Sem_AttributeMutualExclusive,
+                    existAttribute.Substring(1),
+                    existAttribute2,
+                    attributes.Substring(1)),
             };
         }
     }

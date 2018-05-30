@@ -63,9 +63,13 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Node = context.Element,
                 RelatedPart = _relatedPart,
                 RelatedNode = null,
-                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture,
-                                            ValidationResources.Sem_MissingReferenceElement, _elementName, context.Element.LocalName,
-                                            GetAttributeQualifiedName(context.Element, _refAttribute), _relatedPart == null ? _partPath : _relatedPart.PackagePart.Uri.ToString(), attributeValue.InnerText),
+                Description = SR.Format(
+                    ValidationResources.Sem_MissingReferenceElement,
+                    _elementName,
+                    context.Element.LocalName,
+                    GetAttributeQualifiedName(context.Element, _refAttribute),
+                    _relatedPart == null ? _partPath : _relatedPart.PackagePart.Uri.ToString(),
+                    attributeValue.InnerText),
             };
         }
 

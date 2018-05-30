@@ -31,8 +31,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            double val;
-            if (!GetAttrNumVal(attributeValue, out val))
+            if (!GetAttrNumVal(attributeValue, out double val))
             {
                 return null;
             }
@@ -44,8 +43,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            double otherVal;
-            if (!GetAttrNumVal(otherAttributeValue, out otherVal))
+            if (!GetAttrNumVal(otherAttributeValue, out double otherVal))
             {
                 return null;
             }
@@ -62,9 +60,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Id = "Sem_AttributeValueLessEqualToAnother",
                 ErrorType = ValidationErrorType.Semantic,
                 Node = context.Element,
-                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, format,
-                                            GetAttributeQualifiedName(context.Element, _attribute), attributeValue.InnerText,
-                                            GetAttributeQualifiedName(context.Element, _otherAttribute), otherAttributeValue.InnerText),
+                Description = SR.Format(
+                    format,
+                    GetAttributeQualifiedName(context.Element, _attribute),
+                    attributeValue.InnerText,
+                    GetAttributeQualifiedName(context.Element, _otherAttribute),
+                    otherAttributeValue.InnerText),
             };
         }
     }

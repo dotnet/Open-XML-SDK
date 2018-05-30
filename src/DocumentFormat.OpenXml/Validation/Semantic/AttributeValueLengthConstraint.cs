@@ -37,17 +37,16 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            string attributeValue = attribute.InnerText == null ? string.Empty : attribute.InnerText;
-
+            string attributeValue = attribute.InnerText ?? string.Empty;
             string subMsg = null;
 
             if (attributeValue.Length < _minLength)
             {
-                subMsg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_MinLengthConstraintFailed, _minLength);
+                subMsg = SR.Format(ValidationResources.Sem_MinLengthConstraintFailed, _minLength);
             }
             else if (attributeValue.Length > _maxLength)
             {
-                subMsg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_MaxLengthConstraintFailed, _maxLength);
+                subMsg = SR.Format(ValidationResources.Sem_MaxLengthConstraintFailed, _maxLength);
             }
 
             if (subMsg == null)
@@ -60,8 +59,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Id = "Sem_AttributeValueDataTypeDetailed",
                 ErrorType = ValidationErrorType.Schema,
                 Node = context.Element,
-                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_AttributeValueDataTypeDetailed,
-                                            GetAttributeQualifiedName(context.Element, _attribute), attributeValue, subMsg),
+                Description = SR.Format(
+                    ValidationResources.Sem_AttributeValueDataTypeDetailed,
+                    GetAttributeQualifiedName(context.Element, _attribute),
+                    attributeValue,
+                    subMsg),
             };
         }
     }
