@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Schema data for validation uses a more compact format leading to a reduction in dll size and performance improvements for loading (#482, #483)
 - A number of APIs are marked as obsolete as they have simple workarounds and will be removed in the next major change
 - Fixed some constraint values for validation that contained Office 2007, even when it was only supported in later versions
+- Updated `System.IO.Packaging` to 4.5.0 which fixes some issues on Xamarin platforms as well as minimizes dependencies on .NET Framework
 
 ## Version 2.8.1 - 2018-01-03
 ### Changed

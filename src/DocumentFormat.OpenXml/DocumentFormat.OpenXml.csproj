@@ -58,13 +58,13 @@
       </ItemGroup>
 
       <ItemGroup>
-        <PackageReference Include="System.IO.Packaging" Version="4.4.0" />
+        <PackageReference Include="System.IO.Packaging" Version="4.5.0" />
       </ItemGroup>
     </When>
 
     <When Condition=" '$(TargetFramework)' == 'netstandard1.3' ">
       <ItemGroup>
-        <PackageReference Include="System.IO.Packaging" Version="4.4.0" />
+        <PackageReference Include="System.IO.Packaging" Version="4.5.0" />
         <PackageReference Include="System.Runtime.Serialization.Xml" Version="4.3.0" />
       </ItemGroup>
 
