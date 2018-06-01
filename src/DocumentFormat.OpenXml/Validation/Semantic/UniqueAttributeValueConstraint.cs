@@ -55,8 +55,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Id = "Sem_UniqueAttributeValue",
                 ErrorType = ValidationErrorType.Semantic,
                 Node = context.Element,
-                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_UniqueAttributeValue,
-                                            GetAttributeQualifiedName(context.Element, _attribute), attribute.Value.InnerText),
+                Description = SR.Format(
+                    ValidationResources.Sem_UniqueAttributeValue,
+                    GetAttributeQualifiedName(context.Element, _attribute),
+                    attribute.Value.InnerText),
             };
         }
 

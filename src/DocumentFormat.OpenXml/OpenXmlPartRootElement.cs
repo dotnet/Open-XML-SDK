@@ -147,8 +147,9 @@ namespace DocumentFormat.OpenXml
                     nsId != NamespaceId ||
                     xmlReader.LocalName != LocalName)
                 {
-                    string elementQName = new XmlQualifiedName(xmlReader.LocalName, xmlReader.NamespaceURI).ToString();
-                    string msg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ExceptionMessages.Fmt_PartRootIsInvalid, elementQName, XmlQualifiedName.ToString());
+                    var elementQName = new XmlQualifiedName(xmlReader.LocalName, xmlReader.NamespaceURI).ToString();
+                    var msg = SR.Format(ExceptionMessages.Fmt_PartRootIsInvalid, elementQName, XmlQualifiedName.ToString());
+
                     throw new InvalidDataException(msg);
                 }
 

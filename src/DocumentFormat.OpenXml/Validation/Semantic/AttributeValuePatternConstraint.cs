@@ -46,14 +46,16 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            string subMsg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sch_PatternConstraintFailed, _pattern);
             return new ValidationErrorInfo()
             {
                 Id = "Sem_AttributeValueDataTypeDetailed",
                 ErrorType = ValidationErrorType.Schema,
                 Node = context.Element,
-                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_AttributeValueDataTypeDetailed,
-                                            GetAttributeQualifiedName(context.Element, _attribute), attribute.Value.InnerText, subMsg),
+                Description = SR.Format(
+                    ValidationResources.Sem_AttributeValueDataTypeDetailed,
+                    GetAttributeQualifiedName(context.Element, _attribute),
+                    attribute.Value.InnerText,
+                    SR.Format(ValidationResources.Sch_PatternConstraintFailed, _pattern)),
             };
         }
     }

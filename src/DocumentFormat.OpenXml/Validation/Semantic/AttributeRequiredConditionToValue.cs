@@ -59,10 +59,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                         Id = "Sem_AttributeRequiredConditionToValue",
                         ErrorType = ValidationErrorType.Semantic,
                         Node = context.Element,
-                        Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_AttributeRequiredConditionToValue,
-                                                    GetAttributeQualifiedName(context.Element, _requiredAttribute),
-                                                    GetAttributeQualifiedName(context.Element, _conditionAttribute),
-                                                    valueString),
+                        Description = SR.Format(
+                            ValidationResources.Sem_AttributeRequiredConditionToValue,
+                            GetAttributeQualifiedName(context.Element, _requiredAttribute),
+                            GetAttributeQualifiedName(context.Element, _conditionAttribute),
+                            valueString),
                     };
                 }
             }

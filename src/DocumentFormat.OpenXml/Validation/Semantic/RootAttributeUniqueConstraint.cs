@@ -43,15 +43,15 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             if (err)
             {
-                string errorDescription = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_AttributeValueUniqueInDocument,
-                                                        GetAttributeQualifiedName(context.Element, _attribute), attribute.Value);
-
                 return new ValidationErrorInfo()
                 {
                     Id = "Sem_AttributeValueUniqueInDocument",
                     ErrorType = ValidationErrorType.Semantic,
                     Node = context.Element,
-                    Description = errorDescription,
+                    Description = SR.Format(
+                        ValidationResources.Sem_AttributeValueUniqueInDocument,
+                        GetAttributeQualifiedName(context.Element, _attribute),
+                        attribute.Value),
                 };
             }
             else

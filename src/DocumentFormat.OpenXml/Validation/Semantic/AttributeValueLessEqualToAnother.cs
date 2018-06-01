@@ -58,9 +58,12 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Id = "Sem_AttributeValueLessEqualToAnother",
                 ErrorType = ValidationErrorType.Semantic,
                 Node = context.Element,
-                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, format,
-                                            GetAttributeQualifiedName(context.Element, _attribute), attribute.Value.InnerText,
-                                            GetAttributeQualifiedName(context.Element, _otherAttribute), other.Value.InnerText),
+                Description = SR.Format(
+                    format,
+                    GetAttributeQualifiedName(context.Element, _attribute),
+                    attribute.Value.InnerText,
+                    GetAttributeQualifiedName(context.Element, _otherAttribute),
+                    other.Value.InnerText),
             };
         }
     }

@@ -755,8 +755,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (item.Key == prefix)
                 {
-                    var msg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ExceptionMessages.DuplicatedPrefix, prefix);
-                    throw new InvalidOperationException(msg);
+                    throw new InvalidOperationException(SR.Format(ExceptionMessages.DuplicatedPrefix, prefix));
                 }
             }
 
@@ -1678,8 +1677,7 @@ namespace DocumentFormat.OpenXml
                     var ns = reader.LookupNamespace(prefix);
                     if (string.IsNullOrEmpty(ns))
                     {
-                        var msg = string.Format(System.Globalization.CultureInfo.CurrentCulture, ExceptionMessages.UnknowMCContent, mcAttributes.MustUnderstand.Value);
-                        throw new InvalidMCContentException(msg);
+                        throw new InvalidMCContentException(SR.Format(ExceptionMessages.UnknowMCContent, mcAttributes.MustUnderstand.Value));
                     }
 
                     if (NamespaceIdMap.IsInFileFormat(ns, mcSettings.TargetFileFormatVersions))
@@ -1687,8 +1685,7 @@ namespace DocumentFormat.OpenXml
                         continue;
                     }
 
-                    var error = string.Format(System.Globalization.CultureInfo.CurrentCulture, ExceptionMessages.NsNotUnderStand, prefix);
-                    throw new NamespaceNotUnderstandException(error);
+                    throw new NamespaceNotUnderstandException(SR.Format(ExceptionMessages.NsNotUnderStand, prefix));
                 }
             }
         }
@@ -1711,8 +1708,7 @@ namespace DocumentFormat.OpenXml
                     var ns = LookupNamespace(prefix);
                     if (string.IsNullOrEmpty(ns))
                     {
-                        var msg = string.Format(System.Globalization.CultureInfo.CurrentCulture, ExceptionMessages.UnknowMCContent, MCAttributes.MustUnderstand.Value);
-                        throw new InvalidMCContentException(msg);
+                        throw new InvalidMCContentException(SR.Format(ExceptionMessages.UnknowMCContent, MCAttributes.MustUnderstand.Value));
                     }
 
                     if (NamespaceIdMap.IsInFileFormat(ns, OpenXmlElementContext.MCSettings.TargetFileFormatVersions))
@@ -1720,8 +1716,7 @@ namespace DocumentFormat.OpenXml
                         continue;
                     }
 
-                    var error = string.Format(System.Globalization.CultureInfo.CurrentCulture, ExceptionMessages.NsNotUnderStand, prefix);
-                    throw new NamespaceNotUnderstandException(error);
+                    throw new NamespaceNotUnderstandException(SR.Format(ExceptionMessages.NsNotUnderStand, prefix));
                 }
             }
 

@@ -62,10 +62,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Id = "Sem_AttributeAbsentConditionToNonValue",
                 ErrorType = ValidationErrorType.Semantic,
                 Node = context.Element,
-                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_AttributeAbsentConditionToNonValue,
-                                            GetAttributeQualifiedName(context.Element, _absentAttribute),
-                                            GetAttributeQualifiedName(context.Element, _conditionAttribute),
-                                            valueString),
+                Description = SR.Format(
+                    ValidationResources.Sem_AttributeAbsentConditionToNonValue,
+                    GetAttributeQualifiedName(context.Element, _absentAttribute),
+                    GetAttributeQualifiedName(context.Element, _conditionAttribute),
+                    valueString),
             };
         }
     }

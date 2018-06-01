@@ -53,8 +53,8 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             if (attribute.Value is HexBinaryValue)
             {
-                minValueString = string.Format(System.Globalization.CultureInfo.CurrentUICulture, "{0:X}", (long)_minValue);
-                maxValueString = string.Format(System.Globalization.CultureInfo.CurrentUICulture, "{0:X}", (long)_maxValue);
+                minValueString = SR.Format("{0:X}", (long)_minValue);
+                maxValueString = SR.Format("{0:X}", (long)_maxValue);
             }
             else
             {
@@ -68,14 +68,14 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 if (!(_minValue <= value))
                 {
-                    subMsg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sch_MinInclusiveConstraintFailed, minValueString);
+                    subMsg = SR.Format(ValidationResources.Sch_MinInclusiveConstraintFailed, minValueString);
                 }
             }
             else
             {
                 if (!(_minValue < value))
                 {
-                    subMsg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sch_MinExclusiveConstraintFailed, minValueString);
+                    subMsg = SR.Format(ValidationResources.Sch_MinExclusiveConstraintFailed, minValueString);
                 }
             }
 
@@ -83,14 +83,14 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             {
                 if (!(value <= _maxValue))
                 {
-                    subMsg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sch_MaxInclusiveConstraintFailed, maxValueString);
+                    subMsg = SR.Format(ValidationResources.Sch_MaxInclusiveConstraintFailed, maxValueString);
                 }
             }
             else
             {
                 if (!(value < _maxValue))
                 {
-                    subMsg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sch_MaxExclusiveConstraintFailed, maxValueString);
+                    subMsg = SR.Format(ValidationResources.Sch_MaxExclusiveConstraintFailed, maxValueString);
                 }
             }
 
@@ -105,8 +105,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                     Id = "Sem_AttributeValueDataTypeDetailed",
                     ErrorType = ValidationErrorType.Schema,
                     Node = context.Element,
-                    Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_AttributeValueDataTypeDetailed,
-                                                GetAttributeQualifiedName(context.Element, _attribute), attribute.Value, subMsg),
+                    Description = SR.Format(
+                        ValidationResources.Sem_AttributeValueDataTypeDetailed,
+                        GetAttributeQualifiedName(context.Element, _attribute),
+                        attribute.Value,
+                        subMsg),
                 };
             }
         }
