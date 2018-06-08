@@ -10,7 +10,7 @@ environment:
   ProjectLoadStyle: All
 
 install:
-  - ps: nuget install -ExcludeVersion SignClient -Version 1.0.3 -OutputDirectory .\build\
+  - ps: dotnet tool install --version 1.0.3 --tool-path ./build/ SignClient
   - cmd: choco install gitversion.portable
   - cmd: gitversion /output buildserver
   - ps:  Invoke-WebRequest https://packagecompatstorage.blob.core.windows.net/tools/compat-agent.exe -o compat-agent.exe
