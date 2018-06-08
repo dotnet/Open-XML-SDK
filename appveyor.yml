@@ -3,14 +3,14 @@ os: Visual Studio 2017
 environment:
   image: Visual Studio 2017
   SignClientSecret:
-    secure: zO+vuYp34bSBjrqwaKPwUz+ENjMsA1Z9bsMPfU+75Ts=
+    secure: mFGn2231Q1q2i0Ov227oDN/5cxwx4qRr2FOEnvMJNzk=
   SignClientUser:
     secure: wPNGuPyt7pAx9YDKurysk5polnxcGU7GiWmJ70r4tpyDUgGEqxRSZhZ8lWvBhwuC
   Configuration: Release
   ProjectLoadStyle: All
 
 install:
-  - ps: nuget install -ExcludeVersion SignClient -Version 0.9.0 -OutputDirectory .\build\
+  - ps: dotnet tool install --version 1.0.3 --tool-path ./build/ SignClient
   - cmd: choco install gitversion.portable
   - cmd: gitversion /output buildserver
   - ps:  Invoke-WebRequest https://packagecompatstorage.blob.core.windows.net/tools/compat-agent.exe -o compat-agent.exe
