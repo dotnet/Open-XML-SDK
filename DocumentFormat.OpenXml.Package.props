@@ -13,7 +13,7 @@
 - Updating cached data and embedded spreadsheets for charts in Word/PowerPoint.
 - Document modification, such as removing tracked revisions or removing unacceptable content from documents.]]></Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Copyright>Copyright 2017 (c) Microsoft Corporation. All rights reserved.</Copyright>
+    <Copyright>© Microsoft Corporation. All rights reserved.</Copyright>
     <PackageTags>openxml office</PackageTags>
     <ChangelogFile>$(MSBuildThisFileDirectory)\CHANGELOG.md</ChangelogFile>
     <PackageReleaseNotes>$([System.IO.File]::ReadAllText($(ChangelogFile)))</PackageReleaseNotes>
