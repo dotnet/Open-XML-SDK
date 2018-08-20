@@ -33,9 +33,6 @@ namespace DocumentFormat.OpenXml
 
         private string _rawOuterXml = string.Empty;
 
-        // known attributes - attributes defined in schema
-        private OpenXmlSimpleType[] _fixedAttributes;
-
         internal MiscAttrContainer MiscAttrContainer { get; set; }
 
         // attributes not defined in schema
@@ -183,32 +180,21 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Gets an array of fixed attributes (attributes that are defined in the schema).
+        /// Gets an array of fixed attributes (attributes that are defined in the schema) without forcing any parsing of the element.
+        /// If parsing is required, please use <see cref="Attributes"/>
         /// </summary>
-        protected private OpenXmlSimpleType[] FixedAttributesArray
-        {
-            get
-            {
-                if (_fixedAttributes == null && FixedAttributeTotal > 0)
-                {
-                    _fixedAttributes = new OpenXmlSimpleType[FixedAttributeTotal];
-                }
-
-                return _fixedAttributes;
-            }
-        }
+        internal virtual AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(Cached.Array<AttributeTag>());
 
         /// <summary>
-        /// Gets an array of fixed attributes.
-        /// The attributes will be parsed out if they are not yet parsed.
+        /// Gets an array of fixed attributes which will be parsed out if they are not yet parsed. If parsing is not requried, please
+        /// use <see cref="RawAttributes"/>
         /// </summary>
-        internal OpenXmlSimpleType[] Attributes
+        internal AttributeTagCollection Attributes
         {
             get
             {
                 MakeSureParsed();
-                Debug.Assert(FixedAttributesArray == null && FixedAttributeTotal == 0 || FixedAttributesArray != null);
-                return FixedAttributesArray;
+                return RawAttributes;
             }
         }
 
@@ -222,39 +208,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the namespace ID of the current element.
         /// </summary>
-        internal abstract byte NamespaceId
-        {
-            get;
-        }
-
-        internal int FixedAttributeTotal
-        {
-            get
-            {
-                if (AttributeTagNames != null)
-                {
-                    return AttributeTagNames.Length;
-                }
-
-                return 0;
-            }
-        }
-
-        /// <summary>
-        /// Gets the tag names of each attribute.
-        /// </summary>
-        internal virtual string[] AttributeTagNames
-        {
-            get { return null; }
-        }
-
-        /// <summary>
-        /// Gets the namespace IDs of each attribute.
-        /// </summary>
-        internal virtual byte[] AttributeNamespaceIds
-        {
-            get { return null; }
-        }
+        internal abstract byte NamespaceId { get; }
 
         #endregion
 
@@ -300,14 +254,11 @@ namespace DocumentFormat.OpenXml
                     return true;
                 }
 
-                if (Attributes != null)
+                foreach (var value in Attributes)
                 {
-                    foreach (OpenXmlSimpleType value in Attributes)
+                    if (value.HasValue)
                     {
-                        if (value != null)
-                        {
-                            return true;
-                        }
+                        return true;
                     }
                 }
 
@@ -504,12 +455,10 @@ namespace DocumentFormat.OpenXml
                     RemoveAllChildren();
                     NamespaceDeclField = null;
                     ExtendedAttributesField = null;
-                    if (FixedAttributesArray != null)
+
+                    foreach (var attribute in RawAttributes)
                     {
-                        for (int i = 0; i < FixedAttributesArray.Length; i++)
-                        {
-                            FixedAttributesArray[i] = null;
-                        }
+                        attribute.Value = null;
                     }
 
                     MCAttributes = null;
@@ -529,11 +478,6 @@ namespace DocumentFormat.OpenXml
         #endregion
 
         #region public methods
-
-        //public override IEnumerable<OpenXmlAttribute<T>> Attributes
-        //{
-        //    get { throw new NotImplementedException(ExceptionMessages.NonImplemented); }
-        //}
 
         /// <summary>
         /// Gets an Open XML attribute with the specified tag name and namespace URI.
@@ -563,22 +507,15 @@ namespace DocumentFormat.OpenXml
 
             if (HasAttributes)
             {
-                int index = 0;
-                OpenXmlAttribute attribute;
-
-                if (Attributes != null && namespaceUri != null)
+                if (namespaceUri != null)
                 {
-                    for (index = 0; index < Attributes.Length; index++)
+                    foreach (var attribute in Attributes)
                     {
-                        if (Attributes[index] != null &&
-                            AttributeTagNames[index] == localName &&
-                            NamespaceIdMap.GetNamespaceUri(AttributeNamespaceIds[index]) == namespaceUri)
+                        if (attribute.HasValue &&
+                            attribute.Tag.Name == localName &&
+                            attribute.Tag.Namespace == namespaceUri)
                         {
-                            attribute = new OpenXmlAttribute(NamespaceIdMap.GetNamespacePrefix(AttributeNamespaceIds[index]),
-                                                              AttributeTagNames[index],
-                                                              NamespaceIdMap.GetNamespaceUri(AttributeNamespaceIds[index]),
-                                                              Attributes[index].ToString());
-                            return attribute;
+                            return new OpenXmlAttribute(attribute);
                         }
                     }
                 }
@@ -588,8 +525,7 @@ namespace DocumentFormat.OpenXml
                     if (extendedAttribute.LocalName == localName && extendedAttribute.NamespaceUri == namespaceUri)
                     {
                         // clone a copy
-                        attribute = new OpenXmlAttribute(extendedAttribute.Prefix, extendedAttribute.LocalName, extendedAttribute.NamespaceUri, extendedAttribute.Value);
-                        return attribute;
+                        return new OpenXmlAttribute(extendedAttribute.Prefix, extendedAttribute.LocalName, extendedAttribute.NamespaceUri, extendedAttribute.Value);
                     }
                 }
 
@@ -611,57 +547,28 @@ namespace DocumentFormat.OpenXml
         {
             if (HasAttributes)
             {
-                List<OpenXmlAttribute> attributes = new List<OpenXmlAttribute>();
-                GetAttributes(attributes);
+                var attributes = new List<OpenXmlAttribute>();
+
+                foreach (var attribute in Attributes)
+                {
+                    if (attribute.HasValue)
+                    {
+                        attributes.Add(new OpenXmlAttribute(attribute));
+                    }
+                }
+
+                attributes.AddRange(ExtendedAttributes);
+
+                if (MCAttributes != null)
+                {
+                    AddMCAttributes(attributes);
+                }
+
                 return attributes;
             }
             else
             {
-                return new List<OpenXmlAttribute>();
-            }
-        }
-
-        /// <summary>
-        /// Gets a collection that contains a copy of all the attributes.
-        /// </summary>
-        /// <param name="attributes">The collection to hold the copy of the attributes.</param>
-        /// <remarks>The returned collection is a non-live copy.</remarks>
-        private void GetAttributes(ICollection<OpenXmlAttribute> attributes)
-        {
-            if (attributes == null)
-            {
-                throw new ArgumentNullException(nameof(attributes));
-            }
-
-            Debug.Assert(HasAttributes);
-
-            if (Attributes != null)
-            {
-                for (int index = 0; index < Attributes.Length; index++)
-                {
-                    if (Attributes[index] != null)
-                    {
-                        var attribute = new OpenXmlAttribute(
-                            NamespaceIdMap.GetNamespacePrefix(AttributeNamespaceIds[index]),
-                            AttributeTagNames[index],
-                            NamespaceIdMap.GetNamespaceUri(AttributeNamespaceIds[index]),
-                            Attributes[index].ToString());
-                        attributes.Add(attribute);
-                    }
-                }
-            }
-
-            // append extended attributes
-            foreach (OpenXmlAttribute extendedAttribute in ExtendedAttributes)
-            {
-                // clone a copy
-                var attribute = new OpenXmlAttribute(extendedAttribute.Prefix, extendedAttribute.LocalName, extendedAttribute.NamespaceUri, extendedAttribute.Value);
-                attributes.Add(attribute);
-            }
-
-            if (MCAttributes != null)
-            {
-                AddMCAttributes(attributes);
+                return Cached.Array<OpenXmlAttribute>();
             }
         }
 
@@ -750,21 +657,13 @@ namespace DocumentFormat.OpenXml
 
             if (HasAttributes)
             {
-                bool removed = false;
-                if (FixedAttributeTotal > 0)
+                // get attribute namespace ID
+                var attribute = RawAttributes[namespaceUri, localName];
+                if (!attribute.IsNil)
                 {
-                    // get attribute namespace ID
-                    int index = FindAttributeIndex(namespaceUri, localName);
-
-                    if (index >= 0)
-                    {
-                        // remove
-                        FixedAttributesArray[index] = null;
-                        removed = true;
-                    }
+                    attribute.Value = null;
                 }
-
-                if (!removed)
+                else
                 {
                     int index = 0;
                     if (ExtendedAttributesField != null)
@@ -817,12 +716,9 @@ namespace DocumentFormat.OpenXml
             MakeSureParsed();
 
             // clear known attributes defined in schema
-            if (FixedAttributesArray != null)
+            foreach (var attribute in RawAttributes)
             {
-                for (int i = 0; i < FixedAttributeTotal; i++)
-                {
-                    FixedAttributesArray[i] = null;
-                }
+                attribute.Value = null;
             }
 
             // clear extended attributes
@@ -1579,36 +1475,29 @@ namespace DocumentFormat.OpenXml
 
             if (XmlParsed && HasAttributes)
             {
-                int i = 0;
-
-                if (Attributes != null)
+                foreach (var attribute in Attributes)
                 {
-                    foreach (OpenXmlSimpleType attribute in Attributes)
+                    if (attribute.HasValue)
                     {
-                        if (attribute != null)
-                        {
-                            //string prefix = NamespaceIdMap.GetNamespacePrefix(AttributeNamespaceIds[i]);
-                            string ns = NamespaceIdMap.GetNamespaceUri(AttributeNamespaceIds[i]);
-                            string prefix = string.Empty;
-                            if (!string.IsNullOrEmpty(ns))
-                            {
-                                prefix = xmlWriter.LookupPrefix(ns);
-                                if (string.IsNullOrEmpty(prefix))
-                                {
-                                    prefix = NamespaceIdMap.GetNamespacePrefix(AttributeNamespaceIds[i]);
-                                }
-                            }
+                        string ns = attribute.Tag.Namespace;
+                        string prefix = string.Empty;
 
-                            xmlWriter.WriteStartAttribute(prefix, AttributeTagNames[i], ns);
-                            xmlWriter.WriteString(attribute.InnerText);
-                            xmlWriter.WriteEndAttribute();
+                        if (!string.IsNullOrEmpty(ns))
+                        {
+                            prefix = xmlWriter.LookupPrefix(ns);
+                            if (string.IsNullOrEmpty(prefix))
+                            {
+                                prefix = attribute.Tag.NamespacePrefix;
+                            }
                         }
 
-                        i++;
+                        xmlWriter.WriteStartAttribute(prefix, attribute.Tag.Name, ns);
+                        xmlWriter.WriteString(attribute.Value.InnerText);
+                        xmlWriter.WriteEndAttribute();
                     }
                 }
 
-                foreach (OpenXmlAttribute attribute in ExtendedAttributes)
+                foreach (var attribute in ExtendedAttributes)
                 {
                     xmlWriter.WriteAttributeString(attribute.Prefix, attribute.LocalName, attribute.NamespaceUri, attribute.Value);
                 }
@@ -1622,28 +1511,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="w">The XmlWriter at which to save the child nodes. </param>
         internal abstract void WriteContentTo(XmlWriter w);
-
-        protected private int FindAttributeIndex(string namespaceUri, string tagName)
-        {
-            Debug.Assert(!string.IsNullOrEmpty(tagName));
-            Debug.Assert(FixedAttributeTotal > 0);
-
-            if (namespaceUri != null && NamespaceIdMap.TryGetNamespaceId(namespaceUri, out byte nsId))
-            {
-                for (int i = 0; i < AttributeTagNames.Length; i++)
-                {
-                    string name = AttributeTagNames[i];
-
-                    if (name.Equals(tagName) && AttributeNamespaceIds[i] == nsId)
-                    {
-                        return i;
-                    }
-                }
-            }
-
-            // no throw, just return -1.
-            return -1;
-        }
 
         private protected virtual bool StrictTranslateAttribute(string namespaceUri, string localName, string value)
         {
@@ -1660,28 +1527,23 @@ namespace DocumentFormat.OpenXml
         /// <returns>true if the attribute is a known attribute.</returns>
         internal bool TrySetFixedAttribute(string namespaceUri, string localName, string value, bool strictTranslation)
         {
-            if (FixedAttributeTotal > 0)
+            if (RawAttributes.Any())
             {
                 if (strictTranslation)
                 {
                     return StrictTranslateAttribute(namespaceUri, localName, value);
                 }
 
-                var index = FindAttributeIndex(namespaceUri, localName);
+                var attribute = RawAttributes[namespaceUri, localName];
 
-                if (index >= 0)
+                if (!attribute.IsNil)
                 {
-                    if (FixedAttributesArray[index] is OpenXmlSimpleType attributeSimpleType)
+                    if (!attribute.HasValue)
                     {
-                        attributeSimpleType.InnerText = value;
-                    }
-                    else
-                    {
-                        var attribute = AttributeFactory(namespaceUri, localName);
-                        attribute.InnerText = value;
-                        FixedAttributesArray[index] = attribute;
+                        attribute.Value = attribute.Tag.CreateNew();
                     }
 
+                    attribute.Value.InnerText = value;
                     return true;
                 }
             }
@@ -1966,32 +1828,6 @@ namespace DocumentFormat.OpenXml
             return xmlReader;
         }
 
-        internal virtual OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-        {
-            return null;
-        }
-
-        internal virtual OpenXmlSimpleType AttributeFactory(string namespaceUri, string name)
-        {
-            Debug.Assert(!string.IsNullOrEmpty(name));
-
-            OpenXmlSimpleType simpleType = null;
-            byte nsId;
-
-            if (namespaceUri != null && NamespaceIdMap.TryGetNamespaceId(namespaceUri, out nsId))
-            {
-                simpleType = AttributeFactory(nsId, name);
-            }
-
-            if (simpleType == null)
-            {
-                // TODO: should we throw?
-                simpleType = new StringValue();
-            }
-
-            return simpleType;
-        }
-
         internal OpenXmlElement ElementFactory(XmlReader xmlReader)
         {
             switch (xmlReader.NodeType)
@@ -2089,16 +1925,14 @@ namespace DocumentFormat.OpenXml
                 }
 
                 // Copy Attributes.
-                if (container.Attributes != null)
+                Debug.Assert(container.RawAttributes.Length == container.RawAttributes.Length);
+                for (int i = 0; i < container.Attributes.Length; i++)
                 {
-                    Debug.Assert(container.FixedAttributesArray.Length == container.FixedAttributesArray.Length);
-                    for (int i = 0; i < container.Attributes.Length; i++)
+                    var attribute = container.Attributes[i];
+
+                    if (attribute.HasValue)
                     {
-                        OpenXmlSimpleType attr = container.Attributes[i];
-                        if (attr != null)
-                        {
-                            FixedAttributesArray[i] = (OpenXmlSimpleType)attr.Clone();
-                        }
+                        RawAttributes[i].Value = (OpenXmlSimpleType)attribute.Value.Clone();
                     }
                 }
 
@@ -2945,30 +2779,24 @@ namespace DocumentFormat.OpenXml
                 return;
             }
 
-            if (FixedAttributesArray != null)
+            foreach (var attribute in RawAttributes)
             {
-                int i = 0;
-                foreach (OpenXmlSimpleType attribute in FixedAttributesArray)
+                if (attribute.HasValue)
                 {
-                    if (attribute != null)
+                    var action = OpenXmlElementContext.MCContext.GetAttributeAction(attribute.Tag.Namespace, attribute.Tag.Name, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
+
+                    if (action == AttributeAction.Ignore)
                     {
-                        string ns = NamespaceIdMap.GetNamespaceUri(AttributeNamespaceIds[i]);
-
-                        var action = OpenXmlElementContext.MCContext.GetAttributeAction(ns, AttributeTagNames[i], OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
-                        if (action == AttributeAction.Ignore)
-                        {
-                            FixedAttributesArray[i] = null;
-                        }
+                        attribute.Value = null;
                     }
-
-                    i++;
                 }
             }
 
             if (ExtendedAttributesField != null)
             {
-                List<OpenXmlAttribute> tobeRemoved = new List<OpenXmlAttribute>();
-                foreach (OpenXmlAttribute attribute in ExtendedAttributesField)
+                var tobeRemoved = new List<OpenXmlAttribute>();
+
+                foreach (var attribute in ExtendedAttributesField)
                 {
                     var action = OpenXmlElementContext.MCContext.GetAttributeAction(attribute.NamespaceUri, attribute.LocalName, OpenXmlElementContext.MCSettings.TargetFileFormatVersions);
                     if (action == AttributeAction.Ignore)

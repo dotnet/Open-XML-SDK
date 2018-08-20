@@ -168,13 +168,11 @@ public partial class ClientData : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "ObjectType" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>>(0, "ObjectType")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -184,8 +182,8 @@ public partial class ClientData : OpenXmlCompositeElement
     [SchemaAttr(0, "ObjectType")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues> ObjectType
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -431,16 +429,6 @@ if( 29 == namespaceId && "FmlaTxbx" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "ObjectType" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ClientData>(deep);
 
@@ -2604,7 +2592,6 @@ public partial class FormulaMacro : OpenXmlLeafTextElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaMacro>(deep);
 
@@ -3313,7 +3300,6 @@ public partial class ClipboardFormat : OpenXmlLeafTextElement
     }
     
  
-    
     
     
     

@@ -34,18 +34,16 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            OpenXmlSimpleType attributeValue = context.Element.Attributes[_attribute];
+            var attribute = context.Element.Attributes[_attribute];
 
-            if (attributeValue == null || !attributeValue.HasValue || string.IsNullOrEmpty(attributeValue.InnerText))
+            if (!attribute.HasValue || !attribute.Value.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
                 return null;
             }
 
-            double value;
-
             //If value cannot be converted into double, that means attribute type is not correct.
             //That's job of schema validation, semantic validation will do nothing to avoid throw duplicated error.
-            if (!GetAttrNumVal(attributeValue, out value))
+            if (!GetAttrNumVal(attribute.Value, out double value))
             {
                 return null;
             }
@@ -53,7 +51,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             string minValueString;
             string maxValueString;
 
-            if (attributeValue is HexBinaryValue)
+            if (attribute.Value is HexBinaryValue)
             {
                 minValueString = SR.Format("{0:X}", (long)_minValue);
                 maxValueString = SR.Format("{0:X}", (long)_maxValue);
@@ -110,7 +108,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                     Description = SR.Format(
                         ValidationResources.Sem_AttributeValueDataTypeDetailed,
                         GetAttributeQualifiedName(context.Element, _attribute),
-                        attributeValue,
+                        attribute.Value,
                         subMsg),
                 };
             }

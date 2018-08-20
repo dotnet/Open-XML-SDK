@@ -42,7 +42,6 @@ public partial class InkAnnotationFlag : OpenXmlLeafElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InkAnnotationFlag>(deep);
 
@@ -68,13 +67,11 @@ public partial class TextData : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "id" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -84,8 +81,8 @@ public partial class TextData : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -99,16 +96,6 @@ public partial class TextData : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextData>(deep);
 

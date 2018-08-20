@@ -30,13 +30,14 @@ public partial class BackgroundProperties : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "bwMode","bwPure","bwNormal","targetScreenSize" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwMode"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwPure"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwNormal"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize>>(0, "targetScreenSize")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -46,8 +47,8 @@ public partial class BackgroundProperties : OpenXmlLeafElement
     [SchemaAttr(0, "bwMode")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Mode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -57,8 +58,8 @@ public partial class BackgroundProperties : OpenXmlLeafElement
     [SchemaAttr(0, "bwPure")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Pure
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -68,8 +69,8 @@ public partial class BackgroundProperties : OpenXmlLeafElement
     [SchemaAttr(0, "bwNormal")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Normal
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -79,8 +80,8 @@ public partial class BackgroundProperties : OpenXmlLeafElement
     [SchemaAttr(0, "targetScreenSize")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize> TargetScreenSize
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize>)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize>)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
 
@@ -94,25 +95,6 @@ public partial class BackgroundProperties : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "bwMode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>();
-    
-if( 0 == namespaceId && "bwPure" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>();
-    
-if( 0 == namespaceId && "bwNormal" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>();
-    
-if( 0 == namespaceId && "targetScreenSize" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackgroundProperties>(deep);
 
@@ -138,13 +120,11 @@ public partial class NonVisualGroupProperties : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "isLegacyGroup" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<BooleanValue>(0, "isLegacyGroup")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -154,8 +134,8 @@ public partial class NonVisualGroupProperties : OpenXmlLeafElement
     [SchemaAttr(0, "isLegacyGroup")]
     public BooleanValue IsLegacyGroup
     {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (BooleanValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -169,16 +149,6 @@ public partial class NonVisualGroupProperties : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "isLegacyGroup" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualGroupProperties>(deep);
 
@@ -204,13 +174,13 @@ public partial class ObjectProperties : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "objectId","isActiveX","linkType" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "objectId"),
+		AttributeTag.Create<BooleanValue>(0, "isActiveX"),
+		AttributeTag.Create<StringValue>(0, "linkType")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -220,8 +190,8 @@ public partial class ObjectProperties : OpenXmlLeafElement
     [SchemaAttr(0, "objectId")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -231,8 +201,8 @@ public partial class ObjectProperties : OpenXmlLeafElement
     [SchemaAttr(0, "isActiveX")]
     public BooleanValue IsActiveX
     {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (BooleanValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -242,8 +212,8 @@ public partial class ObjectProperties : OpenXmlLeafElement
     [SchemaAttr(0, "linkType")]
     public StringValue LinkType
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
 
@@ -257,22 +227,6 @@ public partial class ObjectProperties : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "objectId" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "isActiveX" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "linkType" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ObjectProperties>(deep);
 
@@ -298,13 +252,22 @@ public partial class SignatureLine : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "isSignatureLine","id","provId","signingInstructionsSet","allowComments","showSignDate","suggestedSigner","suggestedSigner2","suggestedSignerEmail","signingInstructions","addlXml","sigProvUrl" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<BooleanValue>(0, "isSignatureLine"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "provId"),
+		AttributeTag.Create<BooleanValue>(0, "signingInstructionsSet"),
+		AttributeTag.Create<BooleanValue>(0, "allowComments"),
+		AttributeTag.Create<BooleanValue>(0, "showSignDate"),
+		AttributeTag.Create<StringValue>(0, "suggestedSigner"),
+		AttributeTag.Create<StringValue>(0, "suggestedSigner2"),
+		AttributeTag.Create<StringValue>(0, "suggestedSignerEmail"),
+		AttributeTag.Create<StringValue>(0, "signingInstructions"),
+		AttributeTag.Create<StringValue>(0, "addlXml"),
+		AttributeTag.Create<StringValue>(0, "sigProvUrl")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -314,8 +277,8 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "isSignatureLine")]
     public BooleanValue IsSignatureLine
     {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (BooleanValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -325,8 +288,8 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -336,8 +299,8 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "provId")]
     public StringValue ProviderId
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -347,8 +310,8 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "signingInstructionsSet")]
     public BooleanValue SigningInstructionsSet
     {
-        get { return (BooleanValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (BooleanValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -358,8 +321,8 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "allowComments")]
     public BooleanValue AllowComments
     {
-        get { return (BooleanValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (BooleanValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -369,8 +332,8 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "showSignDate")]
     public BooleanValue ShowSignDate
     {
-        get { return (BooleanValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (BooleanValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -380,8 +343,8 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "suggestedSigner")]
     public StringValue SuggestedSigner
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -391,8 +354,8 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "suggestedSigner2")]
     public StringValue SuggestedSigner2
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -402,8 +365,8 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "suggestedSignerEmail")]
     public StringValue SuggestedSignerEmail
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -413,8 +376,8 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "signingInstructions")]
     public StringValue SigningInstructions
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -424,8 +387,8 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "addlXml")]
     public StringValue AdditionalXml
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -435,8 +398,8 @@ public partial class SignatureLine : OpenXmlLeafElement
     [SchemaAttr(0, "sigProvUrl")]
     public StringValue SignatureProviderUrl
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
 
@@ -450,49 +413,6 @@ public partial class SignatureLine : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "isSignatureLine" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "provId" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "signingInstructionsSet" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "allowComments" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "showSignDate" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "suggestedSigner" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "suggestedSigner2" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "suggestedSignerEmail" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "signingInstructions" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "addlXml" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sigProvUrl" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SignatureLine>(deep);
 

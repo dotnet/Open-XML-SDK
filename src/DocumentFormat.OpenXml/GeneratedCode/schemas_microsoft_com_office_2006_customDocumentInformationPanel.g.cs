@@ -126,7 +126,6 @@ if( 37 == namespaceId && "customPropertyEditor" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomPropertyEditors>(deep);
 
@@ -266,7 +265,6 @@ public partial class XsnFileLocation : OpenXmlLeafTextElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<XsnFileLocation>(deep);
 
@@ -315,7 +313,6 @@ public partial class ShowOnOpen : OpenXmlLeafTextElement
     }
     
  
-    
     
     
     
@@ -436,7 +433,6 @@ if( 37 == namespaceId && "XSNLocation" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomPropertyEditor>(deep);
 

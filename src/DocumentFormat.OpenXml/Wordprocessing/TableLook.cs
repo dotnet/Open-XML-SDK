@@ -30,11 +30,11 @@ namespace DocumentFormat.OpenXml.Wordprocessing
                 localName = StrictTranslationLocalName;
 
                 var isValueTrue = value == "true" || value == "1";
-                var index = FindAttributeIndex(namespaceUri, localName);
+                var attribute = RawAttributes[namespaceUri, localName];
 
-                if (index >= 0 && FixedAttributesArray[index] is OpenXmlSimpleType simpleType)
+                if (attribute.HasValue)
                 {
-                    var current = StringToValue(simpleType.InnerText);
+                    var current = StringToValue(attribute.Value.InnerText);
                     var combined = isValueTrue ? (current | result) : (current & ~result);
 
                     value = ValueToString(combined);

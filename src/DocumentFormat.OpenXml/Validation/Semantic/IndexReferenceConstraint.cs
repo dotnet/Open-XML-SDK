@@ -43,15 +43,15 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            OpenXmlSimpleType attributeValue = context.Element.Attributes[_attribute];
+            var attribute = context.Element.Attributes[_attribute];
 
             //if the attribute is omitted, semantic validation will do nothing
-            if (attributeValue == null || string.IsNullOrEmpty(attributeValue.InnerText))
+            if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
                 return null;
             }
 
-            if (!int.TryParse(attributeValue, out var index))
+            if (!int.TryParse(attribute.Value, out var index))
             {
                 return null; //if attribute is not int, schema validation will cover this error.
             }

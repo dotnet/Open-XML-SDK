@@ -36,13 +36,13 @@ public partial class Sources : OpenXmlPartRootElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "SelectedStyle","StyleName","URI" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "SelectedStyle"),
+		AttributeTag.Create<StringValue>(0, "StyleName"),
+		AttributeTag.Create<StringValue>(0, "URI")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -52,8 +52,8 @@ public partial class Sources : OpenXmlPartRootElement
     [SchemaAttr(0, "SelectedStyle")]
     public StringValue SelectedStyle
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -63,8 +63,8 @@ public partial class Sources : OpenXmlPartRootElement
     [SchemaAttr(0, "StyleName")]
     public StringValue StyleName
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -74,8 +74,8 @@ public partial class Sources : OpenXmlPartRootElement
     [SchemaAttr(0, "URI")]
     public StringValue Uri
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
 
@@ -123,22 +123,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "SelectedStyle" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "StyleName" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "URI" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Sources>(deep);
 
@@ -227,7 +211,6 @@ if( 9 == namespaceId && "Middle" == name)
     return null;
 }
 
-    
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Person>(deep);
@@ -2684,7 +2667,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NameList>(deep);
 
@@ -3606,7 +3588,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 
     
-    
     /// <summary>
     /// Initializes a new instance of the NameType class.
     /// </summary>
@@ -3831,7 +3812,6 @@ if( 9 == namespaceId && "Corporate" == name)
     }
 
 
-    
     
     /// <summary>
     /// Initializes a new instance of the NameOrCorporateType class.
@@ -4217,7 +4197,6 @@ if( 9 == namespaceId && "Writer" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AuthorList>(deep);
 
@@ -4266,7 +4245,6 @@ public partial class SourceType : OpenXmlLeafTextElement
     }
     
  
-    
     
     
     
@@ -5237,7 +5215,6 @@ if( 9 == namespaceId && "YearAccessed" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Source>(deep);
 

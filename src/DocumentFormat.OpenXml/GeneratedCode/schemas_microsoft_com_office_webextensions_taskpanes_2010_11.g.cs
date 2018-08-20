@@ -113,7 +113,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Taskpanes>(deep);
 
@@ -139,13 +138,11 @@ public partial class WebExtensionPartReference : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "id" };
-    private static readonly byte[] attributeNamespaceIds = { 19 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(19, "id")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -157,8 +154,8 @@ public partial class WebExtensionPartReference : OpenXmlLeafElement
     [SchemaAttr(19, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -172,16 +169,6 @@ public partial class WebExtensionPartReference : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 19 == namespaceId && "id" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtensionPartReference>(deep);
 
@@ -261,7 +248,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeArtExtensionList>(deep);
 
@@ -296,13 +282,15 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "dockstate","visibility","width","row","locked" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "dockstate"),
+		AttributeTag.Create<BooleanValue>(0, "visibility"),
+		AttributeTag.Create<DoubleValue>(0, "width"),
+		AttributeTag.Create<UInt32Value>(0, "row"),
+		AttributeTag.Create<BooleanValue>(0, "locked")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -312,8 +300,8 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     [SchemaAttr(0, "dockstate")]
     public StringValue DockState
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -323,8 +311,8 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     [SchemaAttr(0, "visibility")]
     public BooleanValue Visibility
     {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (BooleanValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -334,8 +322,8 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     [SchemaAttr(0, "width")]
     public DoubleValue Width
     {
-        get { return (DoubleValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (DoubleValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -345,8 +333,8 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     [SchemaAttr(0, "row")]
     public UInt32Value Row
     {
-        get { return (UInt32Value)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (UInt32Value)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -356,8 +344,8 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     [SchemaAttr(0, "locked")]
     public BooleanValue Locked
     {
-        get { return (BooleanValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (BooleanValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
 
@@ -440,28 +428,6 @@ if( 70 == namespaceId && "extLst" == name)
         set => SetElement(1, value);
     }
 
-
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "dockstate" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visibility" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "width" == name)
-    return new DoubleValue();
-    
-if( 0 == namespaceId && "row" == name)
-    return new UInt32Value();
-    
-if( 0 == namespaceId && "locked" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtensionTaskpane>(deep);

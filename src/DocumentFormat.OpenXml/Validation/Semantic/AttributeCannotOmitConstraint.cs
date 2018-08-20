@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            if (context.Element.Attributes[_attribute] != null)
+            if (context.Element.Attributes[_attribute].HasValue)
             {
                 return null;
             }

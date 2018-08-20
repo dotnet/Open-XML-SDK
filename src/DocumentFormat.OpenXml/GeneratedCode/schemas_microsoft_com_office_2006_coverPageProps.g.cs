@@ -189,7 +189,6 @@ if( 36 == namespaceId && "CompanyEmail" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CoverPageProperties>(deep);
 
@@ -238,7 +237,6 @@ public partial class PublishDate : OpenXmlLeafTextElement
     }
     
  
-    
     
     
     

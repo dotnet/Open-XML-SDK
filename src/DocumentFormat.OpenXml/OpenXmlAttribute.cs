@@ -17,6 +17,11 @@ namespace DocumentFormat.OpenXml
         private string _prefix;
         private string _value;
 
+        internal OpenXmlAttribute(in AttributeTagCollection.AttributeEntry entry)
+            : this(entry.Tag.NamespacePrefix, entry.Tag.Name, entry.Tag.Namespace, entry.Value?.ToString())
+        {
+        }
+
         /// <summary>
         /// Initializes a new instance of the OpenXmlAttribute structure using the supplied qualified name, namespace URI, and text value.
         /// </summary>
@@ -150,7 +155,7 @@ namespace DocumentFormat.OpenXml
         /// <returns>Returns true if all corresponding members are equal; otherwise, returns false.</returns>
         public static bool operator ==(OpenXmlAttribute attribute1, OpenXmlAttribute attribute2)
         {
-            return attribute1.Equals( attribute2 );
+            return attribute1.Equals(attribute2);
         }
 
         /// <summary>

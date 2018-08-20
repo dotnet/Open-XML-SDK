@@ -30,13 +30,11 @@ public partial class Script : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -48,8 +46,8 @@ public partial class Script : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues> Val
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -63,16 +61,6 @@ public partial class Script : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Script>(deep);
 
@@ -98,13 +86,11 @@ public partial class Style : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.StyleValues>>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -116,8 +102,8 @@ public partial class Style : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.StyleValues> Val
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.StyleValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Math.StyleValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -131,16 +117,6 @@ public partial class Style : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Math.StyleValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Style>(deep);
 
@@ -423,7 +399,6 @@ if( 21 == namespaceId && "t" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Run>(deep);
 
@@ -541,7 +516,6 @@ if( 21 == namespaceId && "e" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Accent>(deep);
 
@@ -659,7 +633,6 @@ if( 21 == namespaceId && "e" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Bar>(deep);
 
@@ -777,7 +750,6 @@ if( 21 == namespaceId && "e" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Box>(deep);
 
@@ -895,7 +867,6 @@ if( 21 == namespaceId && "e" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BorderBox>(deep);
 
@@ -1001,7 +972,6 @@ if( 21 == namespaceId && "e" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Delimiter>(deep);
 
@@ -1107,7 +1077,6 @@ if( 21 == namespaceId && "e" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EquationArray>(deep);
 
@@ -1242,7 +1211,6 @@ if( 21 == namespaceId && "den" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Fraction>(deep);
 
@@ -1377,7 +1345,6 @@ if( 21 == namespaceId && "e" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MathFunction>(deep);
 
@@ -1495,7 +1462,6 @@ if( 21 == namespaceId && "e" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupChar>(deep);
 
@@ -1630,7 +1596,6 @@ if( 21 == namespaceId && "lim" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LimitLower>(deep);
 
@@ -1765,7 +1730,6 @@ if( 21 == namespaceId && "lim" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LimitUpper>(deep);
 
@@ -1871,7 +1835,6 @@ if( 21 == namespaceId && "mr" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Matrix>(deep);
 
@@ -2023,7 +1986,6 @@ if( 21 == namespaceId && "e" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Nary>(deep);
 
@@ -2141,7 +2103,6 @@ if( 21 == namespaceId && "e" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Phantom>(deep);
 
@@ -2276,7 +2237,6 @@ if( 21 == namespaceId && "e" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Radical>(deep);
 
@@ -2428,7 +2388,6 @@ if( 21 == namespaceId && "e" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PreSubSuper>(deep);
 
@@ -2563,7 +2522,6 @@ if( 21 == namespaceId && "sub" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Subscript>(deep);
 
@@ -2715,7 +2673,6 @@ if( 21 == namespaceId && "sup" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SubSuperscript>(deep);
 
@@ -2850,7 +2807,6 @@ if( 21 == namespaceId && "sup" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Superscript>(deep);
 
@@ -3116,7 +3072,6 @@ if( 23 == namespaceId && "r" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Paragraph>(deep);
 
@@ -3471,7 +3426,6 @@ if( 21 == namespaceId && "oMath" == name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeMath>(deep);
 
@@ -3779,7 +3733,6 @@ if( 21 == namespaceId && "naryLim" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MathProperties>(deep);
 
@@ -4721,13 +4674,11 @@ public partial class WrapRight : OnOffType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OnOffType : OpenXmlLeafElement
 {
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> value.</para>
@@ -4738,23 +4689,13 @@ public abstract partial class OnOffType : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues> Val
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the OnOffType class.
@@ -4785,13 +4726,12 @@ public partial class Break : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "alnAt","val" };
-    private static readonly byte[] attributeNamespaceIds = { 21,21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<IntegerValue>(21, "alnAt"),
+		AttributeTag.Create<IntegerValue>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4803,8 +4743,8 @@ public partial class Break : OpenXmlLeafElement
     [SchemaAttr(21, "alnAt")]
     public IntegerValue AlignAt
     {
-        get { return (IntegerValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (IntegerValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -4816,8 +4756,8 @@ public partial class Break : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public IntegerValue Val
     {
-        get { return (IntegerValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (IntegerValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
@@ -4831,19 +4771,6 @@ public partial class Break : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "alnAt" == name)
-    return new IntegerValue();
-    
-if( 21 == namespaceId && "val" == name)
-    return new IntegerValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Break>(deep);
 
@@ -4969,7 +4896,6 @@ if( 21 == namespaceId && "aln" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RunProperties>(deep);
 
@@ -4995,13 +4921,11 @@ public partial class Text : OpenXmlLeafTextElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "space" };
-    private static readonly byte[] attributeNamespaceIds = { 1 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>(1, "space")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5013,8 +4937,8 @@ public partial class Text : OpenXmlLeafTextElement
     [SchemaAttr(1, "space")]
     public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -5041,16 +4965,6 @@ public partial class Text : OpenXmlLeafTextElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 1 == namespaceId && "space" == name)
-    return new EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Text>(deep);
 
@@ -5186,13 +5100,11 @@ public partial class EndChar : CharType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class CharType : OpenXmlLeafElement
 {
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> value.</para>
@@ -5203,23 +5115,13 @@ public abstract partial class CharType : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public StringValue Val
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the CharType class.
@@ -5323,7 +5225,6 @@ if( 23 == namespaceId && "moveTo" == name)
     return null;
 }
 
-    
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ControlProperties>(deep);
@@ -5442,7 +5343,6 @@ if( 21 == namespaceId && "ctrlPr" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AccentProperties>(deep);
 
@@ -6733,7 +6633,6 @@ if( 21 == namespaceId && "ctrlPr" == name)
 
 
     
-    
     /// <summary>
     /// Initializes a new instance of the OfficeMathArgumentType class.
     /// </summary>
@@ -6836,13 +6735,11 @@ public partial class VerticalJustification : TopBottomType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class TopBottomType : OpenXmlLeafElement
 {
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> Value.</para>
@@ -6853,23 +6750,13 @@ public abstract partial class TopBottomType : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues> Val
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the TopBottomType class.
@@ -6992,7 +6879,6 @@ if( 21 == namespaceId && "ctrlPr" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BarProperties>(deep);
 
@@ -7178,7 +7064,6 @@ if( 21 == namespaceId && "ctrlPr" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BoxProperties>(deep);
 
@@ -7415,7 +7300,6 @@ if( 21 == namespaceId && "ctrlPr" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BorderBoxProperties>(deep);
 
@@ -7441,13 +7325,11 @@ public partial class Shape : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -7459,8 +7341,8 @@ public partial class Shape : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues> Val
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -7474,16 +7356,6 @@ public partial class Shape : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shape>(deep);
 
@@ -7669,7 +7541,6 @@ if( 21 == namespaceId && "ctrlPr" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DelimiterProperties>(deep);
 
@@ -7695,13 +7566,11 @@ public partial class BaseJustification : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -7713,8 +7582,8 @@ public partial class BaseJustification : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues> Val
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -7728,16 +7597,6 @@ public partial class BaseJustification : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BaseJustification>(deep);
 
@@ -7811,13 +7670,11 @@ public partial class ColumnGapRule : SpacingRuleType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class SpacingRuleType : OpenXmlLeafElement
 {
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<IntegerValue>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> Value.</para>
@@ -7828,23 +7685,13 @@ public abstract partial class SpacingRuleType : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public IntegerValue Val
     {
-        get { return (IntegerValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (IntegerValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new IntegerValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the SpacingRuleType class.
@@ -7923,13 +7770,11 @@ public partial class ColumnGap : UnsignedShortType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class UnsignedShortType : OpenXmlLeafElement
 {
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt16Value>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> val.</para>
@@ -7940,23 +7785,13 @@ public abstract partial class UnsignedShortType : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public UInt16Value Val
     {
-        get { return (UInt16Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt16Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new UInt16Value();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the UnsignedShortType class.
@@ -8147,7 +7982,6 @@ if( 21 == namespaceId && "ctrlPr" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EquationArrayProperties>(deep);
 
@@ -8173,13 +8007,11 @@ public partial class FractionType : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -8191,8 +8023,8 @@ public partial class FractionType : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues> Val
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -8206,16 +8038,6 @@ public partial class FractionType : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FractionType>(deep);
 
@@ -8333,7 +8155,6 @@ if( 21 == namespaceId && "ctrlPr" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FractionProperties>(deep);
 
@@ -8434,7 +8255,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FunctionProperties>(deep);
 
@@ -8586,7 +8406,6 @@ if( 21 == namespaceId && "ctrlPr" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupCharProperties>(deep);
 
@@ -8687,7 +8506,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LimitLowerProperties>(deep);
 
@@ -8788,7 +8606,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LimitUpperProperties>(deep);
 
@@ -8814,13 +8631,11 @@ public partial class MatrixColumnCount : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<IntegerValue>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -8832,8 +8647,8 @@ public partial class MatrixColumnCount : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public IntegerValue Val
     {
-        get { return (IntegerValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (IntegerValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -8847,16 +8662,6 @@ public partial class MatrixColumnCount : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new IntegerValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MatrixColumnCount>(deep);
 
@@ -8882,13 +8687,11 @@ public partial class MatrixColumnJustification : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -8900,8 +8703,8 @@ public partial class MatrixColumnJustification : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues> Val
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -8915,16 +8718,6 @@ public partial class MatrixColumnJustification : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MatrixColumnJustification>(deep);
 
@@ -9042,7 +8835,6 @@ if( 21 == namespaceId && "mcJc" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MatrixColumnProperties>(deep);
 
@@ -9143,7 +8935,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MatrixColumn>(deep);
 
@@ -9403,13 +9194,11 @@ public partial class WrapIndent : TwipsMeasureType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class TwipsMeasureType : OpenXmlLeafElement
 {
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt32Value>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> Value.</para>
@@ -9420,23 +9209,13 @@ public abstract partial class TwipsMeasureType : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public UInt32Value Val
     {
-        get { return (UInt32Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt32Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new UInt32Value();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the TwipsMeasureType class.
@@ -9520,7 +9299,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     return null;
 }
 
-    
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MatrixColumns>(deep);
@@ -9758,7 +9536,6 @@ if( 21 == namespaceId && "ctrlPr" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MatrixProperties>(deep);
 
@@ -9837,7 +9614,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     return null;
 }
 
-    
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MatrixRow>(deep);
@@ -9943,13 +9719,11 @@ public partial class NaryLimitLocation : LimitLocationType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class LimitLocationType : OpenXmlLeafElement
 {
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> Value.</para>
@@ -9960,23 +9734,13 @@ public abstract partial class LimitLocationType : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues> Val
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the LimitLocationType class.
@@ -10167,7 +9931,6 @@ if( 21 == namespaceId && "ctrlPr" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NaryProperties>(deep);
 
@@ -10353,7 +10116,6 @@ if( 21 == namespaceId && "ctrlPr" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PhantomProperties>(deep);
 
@@ -10471,7 +10233,6 @@ if( 21 == namespaceId && "ctrlPr" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RadicalProperties>(deep);
 
@@ -10572,7 +10333,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PreSubSuperProperties>(deep);
 
@@ -10673,7 +10433,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SubscriptProperties>(deep);
 
@@ -10791,7 +10550,6 @@ if( 21 == namespaceId && "ctrlPr" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SubSuperscriptProperties>(deep);
 
@@ -10892,7 +10650,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SuperscriptProperties>(deep);
 
@@ -10918,13 +10675,11 @@ public partial class ArgumentSize : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<IntegerValue>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -10936,8 +10691,8 @@ public partial class ArgumentSize : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public IntegerValue Val
     {
-        get { return (IntegerValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (IntegerValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -10951,16 +10706,6 @@ public partial class ArgumentSize : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new IntegerValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArgumentSize>(deep);
 
@@ -11061,7 +10806,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ArgumentProperties>(deep);
 
@@ -11135,13 +10879,11 @@ public partial class DefaultJustification : OfficeMathJustificationType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OfficeMathJustificationType : OpenXmlLeafElement
 {
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> Value.</para>
@@ -11152,23 +10894,13 @@ public abstract partial class OfficeMathJustificationType : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues> Val
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the OfficeMathJustificationType class.
@@ -11199,13 +10931,11 @@ public partial class MathFont : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -11217,8 +10947,8 @@ public partial class MathFont : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public StringValue Val
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -11232,16 +10962,6 @@ public partial class MathFont : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MathFont>(deep);
 
@@ -11267,13 +10987,11 @@ public partial class BreakBinary : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -11285,8 +11003,8 @@ public partial class BreakBinary : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues> Val
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -11300,16 +11018,6 @@ public partial class BreakBinary : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BreakBinary>(deep);
 
@@ -11335,13 +11043,11 @@ public partial class BreakBinarySubtraction : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 21 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>>(21, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -11353,8 +11059,8 @@ public partial class BreakBinarySubtraction : OpenXmlLeafElement
     [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues> Val
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -11368,16 +11074,6 @@ public partial class BreakBinarySubtraction : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "val" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BreakBinarySubtraction>(deep);
 
@@ -11478,7 +11174,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ParagraphProperties>(deep);
 

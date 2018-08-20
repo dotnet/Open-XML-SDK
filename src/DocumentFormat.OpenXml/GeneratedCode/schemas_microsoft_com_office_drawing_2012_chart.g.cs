@@ -140,7 +140,6 @@ if( 11 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotSource>(deep);
 
@@ -166,13 +165,12 @@ public partial class NumberingFormat : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "formatCode","sourceLinked" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "formatCode"),
+		AttributeTag.Create<BooleanValue>(0, "sourceLinked")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -182,8 +180,8 @@ public partial class NumberingFormat : OpenXmlLeafElement
     [SchemaAttr(0, "formatCode")]
     public StringValue FormatCode
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -193,8 +191,8 @@ public partial class NumberingFormat : OpenXmlLeafElement
     [SchemaAttr(0, "sourceLinked")]
     public BooleanValue SourceLinked
     {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (BooleanValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
@@ -208,19 +206,6 @@ public partial class NumberingFormat : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "formatCode" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sourceLinked" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingFormat>(deep);
 
@@ -281,13 +266,11 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "bwMode" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwMode")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -297,8 +280,8 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "bwMode")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -408,16 +391,6 @@ if( 10 == namespaceId && "extLst" == name)
         set => SetElement(0, value);
     }
 
-
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "bwMode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeProperties>(deep);
@@ -536,7 +509,6 @@ if( 11 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Layout>(deep);
 
@@ -637,7 +609,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FullReference>(deep);
 
@@ -738,7 +709,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LevelReference>(deep);
 
@@ -839,7 +809,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaReference>(deep);
 
@@ -940,7 +909,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredSeriesTitle>(deep);
 
@@ -1041,7 +1009,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredCategoryTitle>(deep);
 
@@ -1142,7 +1109,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredAreaSeries>(deep);
 
@@ -1243,7 +1209,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredBarSeries>(deep);
 
@@ -1344,7 +1309,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredBubbleSeries>(deep);
 
@@ -1445,7 +1409,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredLineSeriesExtension>(deep);
 
@@ -1546,7 +1509,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredPieSeries>(deep);
 
@@ -1647,7 +1609,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredRadarSeries>(deep);
 
@@ -1748,7 +1709,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredScatterSeries>(deep);
 
@@ -1849,7 +1809,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FilteredSurfaceSeries>(deep);
 
@@ -1967,7 +1926,6 @@ if( 64 == namespaceId && "dlblRangeCache" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataLabelsRange>(deep);
 
@@ -2047,7 +2005,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CategoryFilterExceptions>(deep);
 
@@ -2126,7 +2083,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     return null;
 }
 
-    
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataLabelFieldTable>(deep);
@@ -2325,13 +2281,11 @@ public partial class Bubble3D : BooleanType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class BooleanType : OpenXmlLeafElement
 {
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<BooleanValue>(0, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> Boolean Value.</para>
@@ -2340,23 +2294,13 @@ public abstract partial class BooleanType : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     public BooleanValue Val
     {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (BooleanValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "val" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the BooleanType class.
@@ -2496,7 +2440,6 @@ if( 11 == namespaceId && "strLit" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartText>(deep);
 
@@ -2597,7 +2540,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LeaderLines>(deep);
 
@@ -2898,7 +2840,6 @@ if( 11 == namespaceId && "strLit" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AxisDataSourceType>(deep);
 
@@ -3124,7 +3065,6 @@ if( 11 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BarChartSeries>(deep);
 
@@ -3350,7 +3290,6 @@ if( 11 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LineChartSeries>(deep);
 
@@ -3559,7 +3498,6 @@ if( 11 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScatterChartSeries>(deep);
 
@@ -3763,7 +3701,6 @@ if( 11 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AreaChartSeries>(deep);
 
@@ -3974,7 +3911,6 @@ if( 11 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PieChartSeries>(deep);
 
@@ -4205,7 +4141,6 @@ if( 11 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BubbleChartSeries>(deep);
 
@@ -4416,7 +4351,6 @@ if( 11 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RadarChartSeries>(deep);
 
@@ -4653,7 +4587,6 @@ if( 11 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SurfaceChartSeries>(deep);
 
@@ -4845,7 +4778,6 @@ if( 11 == namespaceId && "extLst" == name)
 
 
     
-    
     /// <summary>
     /// Initializes a new instance of the StringDataType class.
     /// </summary>
@@ -4900,13 +4832,11 @@ public partial class Explosion : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt32Value>(0, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4916,8 +4846,8 @@ public partial class Explosion : OpenXmlLeafElement
     [SchemaAttr(0, "val")]
     public UInt32Value Val
     {
-        get { return (UInt32Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt32Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -4931,16 +4861,6 @@ public partial class Explosion : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "val" == name)
-    return new UInt32Value();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Explosion>(deep);
 
@@ -5092,7 +5012,6 @@ if( 11 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Marker>(deep);
 
@@ -5268,7 +5187,6 @@ if( 11 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataLabel>(deep);
 
@@ -5471,7 +5389,6 @@ if( 64 == namespaceId && "dLbl" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CategoryFilterException>(deep);
 
@@ -5606,7 +5523,6 @@ if( 64 == namespaceId && "dlblFieldTableCache" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataLabelFieldTableEntry>(deep);
 

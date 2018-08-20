@@ -10,8 +10,6 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class AlternateContentChoice : OpenXmlCompositeElement
     {
-        private static string tagName = "Choice";
-
         /// <summary>
         /// Initializes a new instance of the
         /// AlternateContentChoice class.
@@ -64,49 +62,21 @@ namespace DocumentFormat.OpenXml
         /// Gets a value that represents the tag name of the
         /// Choice element.
         /// </summary>
-        public static string TagName
-        {
-            get { return tagName; }
-        }
+        public static string TagName { get; } = "Choice";
 
         /// <summary>
         /// Gets the local name of the Choice element.
         /// </summary>
-        public override string LocalName
-        {
-            get { return tagName; }
-        }
+        public override string LocalName => TagName;
 
-        internal override byte NamespaceId
-        {
-            get { return AlternateContent.MarkupCompatibilityNamespaceId; }
-        }
+        internal override byte NamespaceId => AlternateContent.MarkupCompatibilityNamespaceId;
 
-        private static string[] attributeTagNames = { "Requires" };
-        private static byte[] attributeNamespaceIds = { 0 };
-
-        internal override string[] AttributeTagNames
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new[]
         {
-            get
-            {
-                return attributeTagNames;
-            }
-        }
+            AttributeTag.Create<StringValue>(0, "Requires"),
+        };
 
-        internal override byte[] AttributeNamespaceIds
-        {
-            get
-            {
-                return attributeNamespaceIds;
-            }
-        }
-
-        internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-        {
-            if (0 == namespaceId && "Requires" == name)
-                return new StringValue();
-            return null;
-        }
+        internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
         /// <summary>
         /// Gets or sets a whitespace-delimited list of namespace prefixes that identify the
@@ -115,8 +85,8 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public StringValue Requires
         {
-            get { return (StringValue)Attributes[0]; }
-            set { Attributes[0] = value; }
+            get { return (StringValue)Attributes[0].Value; }
+            set { Attributes[0].Value = value; }
         }
 
         internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
@@ -157,10 +127,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the type ID of the element.
         /// </summary>
-        internal override int ElementTypeId
-        {
-            get { return ReservedElementTypeIds.AlternateContentChoiceId; }
-        }
+        internal override int ElementTypeId => ReservedElementTypeIds.AlternateContentChoiceId;
 
         internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     }

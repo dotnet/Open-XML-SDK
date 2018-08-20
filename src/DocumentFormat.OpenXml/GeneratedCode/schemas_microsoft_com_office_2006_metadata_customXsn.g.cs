@@ -155,7 +155,6 @@ if( 39 == namespaceId && "xsnScope" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomXsn>(deep);
 

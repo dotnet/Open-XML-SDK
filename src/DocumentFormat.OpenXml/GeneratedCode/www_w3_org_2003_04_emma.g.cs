@@ -30,13 +30,12 @@ public partial class DerivedFrom : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "resource","composite" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "resource"),
+		AttributeTag.Create<BooleanValue>(0, "composite")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -46,8 +45,8 @@ public partial class DerivedFrom : OpenXmlLeafElement
     [SchemaAttr(0, "resource")]
     public StringValue Resource
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -57,8 +56,8 @@ public partial class DerivedFrom : OpenXmlLeafElement
     [SchemaAttr(0, "composite")]
     public BooleanValue Composite
     {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (BooleanValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
@@ -72,19 +71,6 @@ public partial class DerivedFrom : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "resource" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "composite" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DerivedFrom>(deep);
 
@@ -115,13 +101,11 @@ public partial class Info : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "id" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -131,8 +115,8 @@ public partial class Info : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -177,16 +161,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Info>(deep);
 
@@ -221,13 +195,14 @@ public partial class Lattice : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "initial","final","time-ref-uri","time-ref-anchor-point" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,44,44 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<IntegerValue>(0, "initial"),
+		AttributeTag.Create<ListValue<DecimalValue>>(0, "final"),
+		AttributeTag.Create<StringValue>(44, "time-ref-uri"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>(44, "time-ref-anchor-point")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -237,8 +212,8 @@ public partial class Lattice : OpenXmlCompositeElement
     [SchemaAttr(0, "initial")]
     public IntegerValue Initial
     {
-        get { return (IntegerValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (IntegerValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -248,8 +223,8 @@ public partial class Lattice : OpenXmlCompositeElement
     [SchemaAttr(0, "final")]
     public ListValue<DecimalValue> Final
     {
-        get { return (ListValue<DecimalValue>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (ListValue<DecimalValue>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -261,8 +236,8 @@ public partial class Lattice : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-uri")]
     public StringValue TimeReference
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -274,8 +249,8 @@ public partial class Lattice : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-anchor-point")]
     public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
 
@@ -326,25 +301,6 @@ if( 44 == namespaceId && "node" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "initial" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "final" == name)
-    return new ListValue<DecimalValue>();
-    
-if( 44 == namespaceId && "time-ref-uri" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "time-ref-anchor-point" == name)
-    return new EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Lattice>(deep);
 
@@ -396,7 +352,6 @@ public partial class Literal : OpenXmlLeafTextElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Literal>(deep);
 
@@ -437,13 +392,36 @@ public partial class Interpretation : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "id","tokens","process","lang","signal","signal-size","media-type","confidence","source","start","end","time-ref-uri","time-ref-anchor-point","offset-to-start","duration","medium","mode","function","verbal","cost","grammar-ref","endpoint-info-ref","model-ref","dialog-turn","no-input","uninterpreted" };
-    private static readonly byte[] attributeNamespaceIds = { 0,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(44, "tokens"),
+		AttributeTag.Create<StringValue>(44, "process"),
+		AttributeTag.Create<StringValue>(44, "lang"),
+		AttributeTag.Create<StringValue>(44, "signal"),
+		AttributeTag.Create<IntegerValue>(44, "signal-size"),
+		AttributeTag.Create<StringValue>(44, "media-type"),
+		AttributeTag.Create<DecimalValue>(44, "confidence"),
+		AttributeTag.Create<StringValue>(44, "source"),
+		AttributeTag.Create<UInt64Value>(44, "start"),
+		AttributeTag.Create<UInt64Value>(44, "end"),
+		AttributeTag.Create<StringValue>(44, "time-ref-uri"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>(44, "time-ref-anchor-point"),
+		AttributeTag.Create<IntegerValue>(44, "offset-to-start"),
+		AttributeTag.Create<IntegerValue>(44, "duration"),
+		AttributeTag.Create<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(44, "medium"),
+		AttributeTag.Create<ListValue<StringValue>>(44, "mode"),
+		AttributeTag.Create<StringValue>(44, "function"),
+		AttributeTag.Create<BooleanValue>(44, "verbal"),
+		AttributeTag.Create<DecimalValue>(44, "cost"),
+		AttributeTag.Create<StringValue>(44, "grammar-ref"),
+		AttributeTag.Create<StringValue>(44, "endpoint-info-ref"),
+		AttributeTag.Create<StringValue>(44, "model-ref"),
+		AttributeTag.Create<StringValue>(44, "dialog-turn"),
+		AttributeTag.Create<BooleanValue>(44, "no-input"),
+		AttributeTag.Create<BooleanValue>(44, "uninterpreted")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -453,8 +431,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -466,8 +444,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "tokens")]
     public StringValue Tokens
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -479,8 +457,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "process")]
     public StringValue Process
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -492,8 +470,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "lang")]
     public StringValue Language
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -505,8 +483,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "signal")]
     public StringValue Signal
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -518,8 +496,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "signal-size")]
     public IntegerValue SignalSize
     {
-        get { return (IntegerValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (IntegerValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -531,8 +509,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "media-type")]
     public StringValue MediaType
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -544,8 +522,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "confidence")]
     public DecimalValue Confidence
     {
-        get { return (DecimalValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (DecimalValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -557,8 +535,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "source")]
     public StringValue Source
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -570,8 +548,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "start")]
     public UInt64Value Start
     {
-        get { return (UInt64Value)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (UInt64Value)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -583,8 +561,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "end")]
     public UInt64Value End
     {
-        get { return (UInt64Value)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (UInt64Value)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -596,8 +574,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-uri")]
     public StringValue TimeReference
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -609,8 +587,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-anchor-point")]
     public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -622,8 +600,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "offset-to-start")]
     public IntegerValue OffsetToStart
     {
-        get { return (IntegerValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (IntegerValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -635,8 +613,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "duration")]
     public IntegerValue Duration
     {
-        get { return (IntegerValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (IntegerValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -648,8 +626,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "medium")]
     public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
     {
-        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -661,8 +639,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "mode")]
     public ListValue<StringValue> Mode
     {
-        get { return (ListValue<StringValue>)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (ListValue<StringValue>)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -674,8 +652,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "function")]
     public StringValue Function
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -687,8 +665,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "verbal")]
     public BooleanValue Verbal
     {
-        get { return (BooleanValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (BooleanValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -700,8 +678,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "cost")]
     public DecimalValue Cost
     {
-        get { return (DecimalValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (DecimalValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -713,8 +691,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "grammar-ref")]
     public StringValue GrammarRef
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -726,8 +704,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "endpoint-info-ref")]
     public StringValue EndpointInfoRef
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -739,8 +717,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "model-ref")]
     public StringValue ModelRef
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -752,8 +730,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "dialog-turn")]
     public StringValue DialogTurn
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -765,8 +743,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "no-input")]
     public BooleanValue NoInput
     {
-        get { return (BooleanValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (BooleanValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -778,8 +756,8 @@ public partial class Interpretation : OpenXmlCompositeElement
     [SchemaAttr(44, "uninterpreted")]
     public BooleanValue Uninterpreted
     {
-        get { return (BooleanValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (BooleanValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
 
@@ -839,91 +817,6 @@ if( 45 == namespaceId && "context" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "tokens" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "process" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "lang" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "signal" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "signal-size" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "media-type" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "confidence" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "source" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "start" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "end" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "time-ref-uri" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "time-ref-anchor-point" == name)
-    return new EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>();
-    
-if( 44 == namespaceId && "offset-to-start" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "duration" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "medium" == name)
-    return new ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>();
-    
-if( 44 == namespaceId && "mode" == name)
-    return new ListValue<StringValue>();
-    
-if( 44 == namespaceId && "function" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "verbal" == name)
-    return new BooleanValue();
-    
-if( 44 == namespaceId && "cost" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "grammar-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "endpoint-info-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "model-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "dialog-turn" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "no-input" == name)
-    return new BooleanValue();
-    
-if( 44 == namespaceId && "uninterpreted" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Interpretation>(deep);
 
@@ -966,13 +859,35 @@ public partial class OneOf : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "disjunction-type","id","tokens","process","lang","signal","signal-size","media-type","confidence","source","start","end","time-ref-uri","time-ref-anchor-point","offset-to-start","duration","medium","mode","function","verbal","cost","grammar-ref","endpoint-info-ref","model-ref","dialog-turn" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues>>(0, "disjunction-type"),
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(44, "tokens"),
+		AttributeTag.Create<StringValue>(44, "process"),
+		AttributeTag.Create<StringValue>(44, "lang"),
+		AttributeTag.Create<StringValue>(44, "signal"),
+		AttributeTag.Create<IntegerValue>(44, "signal-size"),
+		AttributeTag.Create<StringValue>(44, "media-type"),
+		AttributeTag.Create<DecimalValue>(44, "confidence"),
+		AttributeTag.Create<StringValue>(44, "source"),
+		AttributeTag.Create<UInt64Value>(44, "start"),
+		AttributeTag.Create<UInt64Value>(44, "end"),
+		AttributeTag.Create<StringValue>(44, "time-ref-uri"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>(44, "time-ref-anchor-point"),
+		AttributeTag.Create<IntegerValue>(44, "offset-to-start"),
+		AttributeTag.Create<IntegerValue>(44, "duration"),
+		AttributeTag.Create<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(44, "medium"),
+		AttributeTag.Create<ListValue<StringValue>>(44, "mode"),
+		AttributeTag.Create<StringValue>(44, "function"),
+		AttributeTag.Create<BooleanValue>(44, "verbal"),
+		AttributeTag.Create<DecimalValue>(44, "cost"),
+		AttributeTag.Create<StringValue>(44, "grammar-ref"),
+		AttributeTag.Create<StringValue>(44, "endpoint-info-ref"),
+		AttributeTag.Create<StringValue>(44, "model-ref"),
+		AttributeTag.Create<StringValue>(44, "dialog-turn")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -982,8 +897,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(0, "disjunction-type")]
     public EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues> DisjunctionType
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -993,8 +908,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -1006,8 +921,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "tokens")]
     public StringValue Tokens
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -1019,8 +934,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "process")]
     public StringValue Process
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -1032,8 +947,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "lang")]
     public StringValue Language
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -1045,8 +960,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "signal")]
     public StringValue Signal
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -1058,8 +973,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "signal-size")]
     public IntegerValue SignalSize
     {
-        get { return (IntegerValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (IntegerValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -1071,8 +986,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "media-type")]
     public StringValue MediaType
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -1084,8 +999,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "confidence")]
     public DecimalValue Confidence
     {
-        get { return (DecimalValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (DecimalValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -1097,8 +1012,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "source")]
     public StringValue Source
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -1110,8 +1025,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "start")]
     public UInt64Value Start
     {
-        get { return (UInt64Value)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (UInt64Value)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -1123,8 +1038,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "end")]
     public UInt64Value End
     {
-        get { return (UInt64Value)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (UInt64Value)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -1136,8 +1051,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-uri")]
     public StringValue TimeReference
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -1149,8 +1064,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-anchor-point")]
     public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -1162,8 +1077,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "offset-to-start")]
     public IntegerValue OffsetToStart
     {
-        get { return (IntegerValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (IntegerValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -1175,8 +1090,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "duration")]
     public IntegerValue Duration
     {
-        get { return (IntegerValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (IntegerValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -1188,8 +1103,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "medium")]
     public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
     {
-        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -1201,8 +1116,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "mode")]
     public ListValue<StringValue> Mode
     {
-        get { return (ListValue<StringValue>)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (ListValue<StringValue>)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -1214,8 +1129,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "function")]
     public StringValue Function
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -1227,8 +1142,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "verbal")]
     public BooleanValue Verbal
     {
-        get { return (BooleanValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (BooleanValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -1240,8 +1155,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "cost")]
     public DecimalValue Cost
     {
-        get { return (DecimalValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (DecimalValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -1253,8 +1168,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "grammar-ref")]
     public StringValue GrammarRef
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -1266,8 +1181,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "endpoint-info-ref")]
     public StringValue EndpointInfoRef
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -1279,8 +1194,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "model-ref")]
     public StringValue ModelRef
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -1292,8 +1207,8 @@ public partial class OneOf : OpenXmlCompositeElement
     [SchemaAttr(44, "dialog-turn")]
     public StringValue DialogTurn
     {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (StringValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
 
@@ -1356,88 +1271,6 @@ if( 44 == namespaceId && "sequence" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "disjunction-type" == name)
-    return new EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues>();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "tokens" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "process" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "lang" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "signal" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "signal-size" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "media-type" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "confidence" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "source" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "start" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "end" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "time-ref-uri" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "time-ref-anchor-point" == name)
-    return new EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>();
-    
-if( 44 == namespaceId && "offset-to-start" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "duration" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "medium" == name)
-    return new ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>();
-    
-if( 44 == namespaceId && "mode" == name)
-    return new ListValue<StringValue>();
-    
-if( 44 == namespaceId && "function" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "verbal" == name)
-    return new BooleanValue();
-    
-if( 44 == namespaceId && "cost" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "grammar-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "endpoint-info-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "model-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "dialog-turn" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OneOf>(deep);
 
@@ -1482,13 +1315,34 @@ public partial class Group : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "id","tokens","process","lang","signal","signal-size","media-type","confidence","source","start","end","time-ref-uri","time-ref-anchor-point","offset-to-start","duration","medium","mode","function","verbal","cost","grammar-ref","endpoint-info-ref","model-ref","dialog-turn" };
-    private static readonly byte[] attributeNamespaceIds = { 0,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(44, "tokens"),
+		AttributeTag.Create<StringValue>(44, "process"),
+		AttributeTag.Create<StringValue>(44, "lang"),
+		AttributeTag.Create<StringValue>(44, "signal"),
+		AttributeTag.Create<IntegerValue>(44, "signal-size"),
+		AttributeTag.Create<StringValue>(44, "media-type"),
+		AttributeTag.Create<DecimalValue>(44, "confidence"),
+		AttributeTag.Create<StringValue>(44, "source"),
+		AttributeTag.Create<UInt64Value>(44, "start"),
+		AttributeTag.Create<UInt64Value>(44, "end"),
+		AttributeTag.Create<StringValue>(44, "time-ref-uri"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>(44, "time-ref-anchor-point"),
+		AttributeTag.Create<IntegerValue>(44, "offset-to-start"),
+		AttributeTag.Create<IntegerValue>(44, "duration"),
+		AttributeTag.Create<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(44, "medium"),
+		AttributeTag.Create<ListValue<StringValue>>(44, "mode"),
+		AttributeTag.Create<StringValue>(44, "function"),
+		AttributeTag.Create<BooleanValue>(44, "verbal"),
+		AttributeTag.Create<DecimalValue>(44, "cost"),
+		AttributeTag.Create<StringValue>(44, "grammar-ref"),
+		AttributeTag.Create<StringValue>(44, "endpoint-info-ref"),
+		AttributeTag.Create<StringValue>(44, "model-ref"),
+		AttributeTag.Create<StringValue>(44, "dialog-turn")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1498,8 +1352,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -1511,8 +1365,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "tokens")]
     public StringValue Tokens
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -1524,8 +1378,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "process")]
     public StringValue Process
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -1537,8 +1391,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "lang")]
     public StringValue Language
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -1550,8 +1404,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "signal")]
     public StringValue Signal
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -1563,8 +1417,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "signal-size")]
     public IntegerValue SignalSize
     {
-        get { return (IntegerValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (IntegerValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -1576,8 +1430,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "media-type")]
     public StringValue MediaType
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -1589,8 +1443,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "confidence")]
     public DecimalValue Confidence
     {
-        get { return (DecimalValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (DecimalValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -1602,8 +1456,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "source")]
     public StringValue Source
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -1615,8 +1469,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "start")]
     public UInt64Value Start
     {
-        get { return (UInt64Value)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (UInt64Value)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -1628,8 +1482,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "end")]
     public UInt64Value End
     {
-        get { return (UInt64Value)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (UInt64Value)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -1641,8 +1495,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-uri")]
     public StringValue TimeReference
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -1654,8 +1508,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-anchor-point")]
     public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -1667,8 +1521,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "offset-to-start")]
     public IntegerValue OffsetToStart
     {
-        get { return (IntegerValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (IntegerValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -1680,8 +1534,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "duration")]
     public IntegerValue Duration
     {
-        get { return (IntegerValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (IntegerValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -1693,8 +1547,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "medium")]
     public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
     {
-        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -1706,8 +1560,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "mode")]
     public ListValue<StringValue> Mode
     {
-        get { return (ListValue<StringValue>)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (ListValue<StringValue>)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -1719,8 +1573,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "function")]
     public StringValue Function
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -1732,8 +1586,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "verbal")]
     public BooleanValue Verbal
     {
-        get { return (BooleanValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (BooleanValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -1745,8 +1599,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "cost")]
     public DecimalValue Cost
     {
-        get { return (DecimalValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (DecimalValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -1758,8 +1612,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "grammar-ref")]
     public StringValue GrammarRef
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -1771,8 +1625,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "endpoint-info-ref")]
     public StringValue EndpointInfoRef
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -1784,8 +1638,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "model-ref")]
     public StringValue ModelRef
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -1797,8 +1651,8 @@ public partial class Group : OpenXmlCompositeElement
     [SchemaAttr(44, "dialog-turn")]
     public StringValue DialogTurn
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
 
@@ -1864,85 +1718,6 @@ if( 44 == namespaceId && "sequence" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "tokens" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "process" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "lang" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "signal" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "signal-size" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "media-type" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "confidence" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "source" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "start" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "end" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "time-ref-uri" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "time-ref-anchor-point" == name)
-    return new EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>();
-    
-if( 44 == namespaceId && "offset-to-start" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "duration" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "medium" == name)
-    return new ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>();
-    
-if( 44 == namespaceId && "mode" == name)
-    return new ListValue<StringValue>();
-    
-if( 44 == namespaceId && "function" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "verbal" == name)
-    return new BooleanValue();
-    
-if( 44 == namespaceId && "cost" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "grammar-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "endpoint-info-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "model-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "dialog-turn" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Group>(deep);
 
@@ -1985,13 +1760,34 @@ public partial class Sequence : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "id","tokens","process","lang","signal","signal-size","media-type","confidence","source","start","end","time-ref-uri","time-ref-anchor-point","offset-to-start","duration","medium","mode","function","verbal","cost","grammar-ref","endpoint-info-ref","model-ref","dialog-turn" };
-    private static readonly byte[] attributeNamespaceIds = { 0,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(44, "tokens"),
+		AttributeTag.Create<StringValue>(44, "process"),
+		AttributeTag.Create<StringValue>(44, "lang"),
+		AttributeTag.Create<StringValue>(44, "signal"),
+		AttributeTag.Create<IntegerValue>(44, "signal-size"),
+		AttributeTag.Create<StringValue>(44, "media-type"),
+		AttributeTag.Create<DecimalValue>(44, "confidence"),
+		AttributeTag.Create<StringValue>(44, "source"),
+		AttributeTag.Create<UInt64Value>(44, "start"),
+		AttributeTag.Create<UInt64Value>(44, "end"),
+		AttributeTag.Create<StringValue>(44, "time-ref-uri"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>(44, "time-ref-anchor-point"),
+		AttributeTag.Create<IntegerValue>(44, "offset-to-start"),
+		AttributeTag.Create<IntegerValue>(44, "duration"),
+		AttributeTag.Create<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(44, "medium"),
+		AttributeTag.Create<ListValue<StringValue>>(44, "mode"),
+		AttributeTag.Create<StringValue>(44, "function"),
+		AttributeTag.Create<BooleanValue>(44, "verbal"),
+		AttributeTag.Create<DecimalValue>(44, "cost"),
+		AttributeTag.Create<StringValue>(44, "grammar-ref"),
+		AttributeTag.Create<StringValue>(44, "endpoint-info-ref"),
+		AttributeTag.Create<StringValue>(44, "model-ref"),
+		AttributeTag.Create<StringValue>(44, "dialog-turn")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2001,8 +1797,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -2014,8 +1810,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "tokens")]
     public StringValue Tokens
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -2027,8 +1823,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "process")]
     public StringValue Process
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -2040,8 +1836,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "lang")]
     public StringValue Language
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -2053,8 +1849,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "signal")]
     public StringValue Signal
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -2066,8 +1862,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "signal-size")]
     public IntegerValue SignalSize
     {
-        get { return (IntegerValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (IntegerValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -2079,8 +1875,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "media-type")]
     public StringValue MediaType
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -2092,8 +1888,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "confidence")]
     public DecimalValue Confidence
     {
-        get { return (DecimalValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (DecimalValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -2105,8 +1901,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "source")]
     public StringValue Source
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -2118,8 +1914,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "start")]
     public UInt64Value Start
     {
-        get { return (UInt64Value)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (UInt64Value)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -2131,8 +1927,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "end")]
     public UInt64Value End
     {
-        get { return (UInt64Value)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (UInt64Value)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -2144,8 +1940,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-uri")]
     public StringValue TimeReference
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -2157,8 +1953,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "time-ref-anchor-point")]
     public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -2170,8 +1966,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "offset-to-start")]
     public IntegerValue OffsetToStart
     {
-        get { return (IntegerValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (IntegerValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -2183,8 +1979,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "duration")]
     public IntegerValue Duration
     {
-        get { return (IntegerValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (IntegerValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -2196,8 +1992,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "medium")]
     public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
     {
-        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -2209,8 +2005,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "mode")]
     public ListValue<StringValue> Mode
     {
-        get { return (ListValue<StringValue>)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (ListValue<StringValue>)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -2222,8 +2018,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "function")]
     public StringValue Function
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -2235,8 +2031,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "verbal")]
     public BooleanValue Verbal
     {
-        get { return (BooleanValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (BooleanValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -2248,8 +2044,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "cost")]
     public DecimalValue Cost
     {
-        get { return (DecimalValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (DecimalValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -2261,8 +2057,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "grammar-ref")]
     public StringValue GrammarRef
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -2274,8 +2070,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "endpoint-info-ref")]
     public StringValue EndpointInfoRef
     {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (StringValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -2287,8 +2083,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "model-ref")]
     public StringValue ModelRef
     {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (StringValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -2300,8 +2096,8 @@ public partial class Sequence : OpenXmlCompositeElement
     [SchemaAttr(44, "dialog-turn")]
     public StringValue DialogTurn
     {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (StringValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
 
@@ -2364,85 +2160,6 @@ if( 44 == namespaceId && "sequence" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "tokens" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "process" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "lang" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "signal" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "signal-size" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "media-type" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "confidence" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "source" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "start" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "end" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "time-ref-uri" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "time-ref-anchor-point" == name)
-    return new EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>();
-    
-if( 44 == namespaceId && "offset-to-start" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "duration" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "medium" == name)
-    return new ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>();
-    
-if( 44 == namespaceId && "mode" == name)
-    return new ListValue<StringValue>();
-    
-if( 44 == namespaceId && "function" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "verbal" == name)
-    return new BooleanValue();
-    
-if( 44 == namespaceId && "cost" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "grammar-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "endpoint-info-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "model-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "dialog-turn" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Sequence>(deep);
 
@@ -2473,13 +2190,11 @@ public partial class GroupInfo : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "ref" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "ref")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2489,8 +2204,8 @@ public partial class GroupInfo : OpenXmlCompositeElement
     [SchemaAttr(0, "ref")]
     public StringValue Reference
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -2535,16 +2250,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "ref" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupInfo>(deep);
 
@@ -2639,7 +2344,6 @@ if( 44 == namespaceId && "group" == name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Derivation>(deep);
 
@@ -2665,13 +2369,12 @@ public partial class Grammar : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "id","ref" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "ref")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2681,8 +2384,8 @@ public partial class Grammar : OpenXmlLeafElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -2692,8 +2395,8 @@ public partial class Grammar : OpenXmlLeafElement
     [SchemaAttr(0, "ref")]
     public StringValue Reference
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
@@ -2707,19 +2410,6 @@ public partial class Grammar : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ref" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Grammar>(deep);
 
@@ -2750,13 +2440,12 @@ public partial class Model : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "id","ref" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<StringValue>(0, "ref")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2766,8 +2455,8 @@ public partial class Model : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -2777,8 +2466,8 @@ public partial class Model : OpenXmlCompositeElement
     [SchemaAttr(0, "ref")]
     public StringValue Reference
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
@@ -2823,19 +2512,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ref" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Model>(deep);
 
@@ -2868,13 +2544,11 @@ public partial class EndPointInfo : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "id" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2884,8 +2558,8 @@ public partial class EndPointInfo : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -2933,16 +2607,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndPointInfo>(deep);
 
@@ -2973,13 +2637,21 @@ public partial class EndPoint : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "id","endpoint-role","endpoint-address","message-id","port-num","port-type","endpoint-pair-ref","service-name","media-type","medium","mode" };
-    private static readonly byte[] attributeNamespaceIds = { 0,44,44,44,44,44,44,44,44,44,44 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "id"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues>>(44, "endpoint-role"),
+		AttributeTag.Create<StringValue>(44, "endpoint-address"),
+		AttributeTag.Create<StringValue>(44, "message-id"),
+		AttributeTag.Create<IntegerValue>(44, "port-num"),
+		AttributeTag.Create<StringValue>(44, "port-type"),
+		AttributeTag.Create<StringValue>(44, "endpoint-pair-ref"),
+		AttributeTag.Create<StringValue>(44, "service-name"),
+		AttributeTag.Create<StringValue>(44, "media-type"),
+		AttributeTag.Create<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(44, "medium"),
+		AttributeTag.Create<ListValue<StringValue>>(44, "mode")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2989,8 +2661,8 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(0, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -3002,8 +2674,8 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "endpoint-role")]
     public EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues> EndpointRole
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -3015,8 +2687,8 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "endpoint-address")]
     public StringValue EndPointAddress
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -3028,8 +2700,8 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "message-id")]
     public StringValue MessageId
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -3041,8 +2713,8 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "port-num")]
     public IntegerValue PortNumber
     {
-        get { return (IntegerValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (IntegerValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -3054,8 +2726,8 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "port-type")]
     public StringValue PortType
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -3067,8 +2739,8 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "endpoint-pair-ref")]
     public StringValue EndpointPairRef
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -3080,8 +2752,8 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "service-name")]
     public StringValue ServiceName
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -3093,8 +2765,8 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "media-type")]
     public StringValue MediaType
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -3106,8 +2778,8 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "medium")]
     public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
     {
-        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -3119,8 +2791,8 @@ public partial class EndPoint : OpenXmlCompositeElement
     [SchemaAttr(44, "mode")]
     public ListValue<StringValue> Mode
     {
-        get { return (ListValue<StringValue>)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (ListValue<StringValue>)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
 
@@ -3165,46 +2837,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "endpoint-role" == name)
-    return new EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues>();
-    
-if( 44 == namespaceId && "endpoint-address" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "message-id" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "port-num" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "port-type" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "endpoint-pair-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "service-name" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "media-type" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "medium" == name)
-    return new ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>();
-    
-if( 44 == namespaceId && "mode" == name)
-    return new ListValue<StringValue>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndPoint>(deep);
 
@@ -3237,13 +2869,13 @@ public partial class Node : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "node-number","confidence","cost" };
-    private static readonly byte[] attributeNamespaceIds = { 0,44,44 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<IntegerValue>(0, "node-number"),
+		AttributeTag.Create<DecimalValue>(44, "confidence"),
+		AttributeTag.Create<DecimalValue>(44, "cost")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3253,8 +2885,8 @@ public partial class Node : OpenXmlCompositeElement
     [SchemaAttr(0, "node-number")]
     public IntegerValue NodeNumber
     {
-        get { return (IntegerValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (IntegerValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -3266,8 +2898,8 @@ public partial class Node : OpenXmlCompositeElement
     [SchemaAttr(44, "confidence")]
     public DecimalValue Confidence
     {
-        get { return (DecimalValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (DecimalValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -3279,8 +2911,8 @@ public partial class Node : OpenXmlCompositeElement
     [SchemaAttr(44, "cost")]
     public DecimalValue Cost
     {
-        get { return (DecimalValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (DecimalValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
 
@@ -3328,22 +2960,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "node-number" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "confidence" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "cost" == name)
-    return new DecimalValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Node>(deep);
 
@@ -3376,13 +2992,22 @@ public partial class Arc : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "from","to","start","end","offset-to-start","duration","confidence","cost","lang","medium","mode","source" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,44,44,44,44,44,44,44,44,44,44 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<IntegerValue>(0, "from"),
+		AttributeTag.Create<IntegerValue>(0, "to"),
+		AttributeTag.Create<UInt64Value>(44, "start"),
+		AttributeTag.Create<UInt64Value>(44, "end"),
+		AttributeTag.Create<IntegerValue>(44, "offset-to-start"),
+		AttributeTag.Create<IntegerValue>(44, "duration"),
+		AttributeTag.Create<DecimalValue>(44, "confidence"),
+		AttributeTag.Create<DecimalValue>(44, "cost"),
+		AttributeTag.Create<StringValue>(44, "lang"),
+		AttributeTag.Create<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(44, "medium"),
+		AttributeTag.Create<ListValue<StringValue>>(44, "mode"),
+		AttributeTag.Create<StringValue>(44, "source")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3392,8 +3017,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "from")]
     public IntegerValue From
     {
-        get { return (IntegerValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (IntegerValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -3403,8 +3028,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(0, "to")]
     public IntegerValue To
     {
-        get { return (IntegerValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (IntegerValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -3416,8 +3041,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "start")]
     public UInt64Value Start
     {
-        get { return (UInt64Value)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (UInt64Value)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -3429,8 +3054,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "end")]
     public UInt64Value End
     {
-        get { return (UInt64Value)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (UInt64Value)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -3442,8 +3067,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "offset-to-start")]
     public IntegerValue OffsetToStart
     {
-        get { return (IntegerValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (IntegerValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -3455,8 +3080,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "duration")]
     public IntegerValue Duration
     {
-        get { return (IntegerValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (IntegerValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -3468,8 +3093,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "confidence")]
     public DecimalValue Confidence
     {
-        get { return (DecimalValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (DecimalValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -3481,8 +3106,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "cost")]
     public DecimalValue Cost
     {
-        get { return (DecimalValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (DecimalValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -3494,8 +3119,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "lang")]
     public StringValue Language
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -3507,8 +3132,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "medium")]
     public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
     {
-        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -3520,8 +3145,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "mode")]
     public ListValue<StringValue> Mode
     {
-        get { return (ListValue<StringValue>)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (ListValue<StringValue>)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -3533,8 +3158,8 @@ public partial class Arc : OpenXmlCompositeElement
     [SchemaAttr(44, "source")]
     public StringValue Source
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
 
@@ -3582,49 +3207,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "from" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "to" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "start" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "end" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "offset-to-start" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "duration" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "confidence" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "cost" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "lang" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "medium" == name)
-    return new ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>();
-    
-if( 44 == namespaceId && "mode" == name)
-    return new ListValue<StringValue>();
-    
-if( 44 == namespaceId && "source" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Arc>(deep);
 
@@ -3673,13 +3255,11 @@ public partial class Emma : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-    	private static readonly string[] attributeTagNames = { "version" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "version")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3689,8 +3269,8 @@ public partial class Emma : OpenXmlCompositeElement
     [SchemaAttr(0, "version")]
     public StringValue Version
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -3762,16 +3342,6 @@ if( 44 == namespaceId && "sequence" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "version" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Emma>(deep);
 

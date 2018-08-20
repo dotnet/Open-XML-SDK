@@ -156,7 +156,6 @@ if( 59 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WordprocessingCanvas>(deep);
 
@@ -271,7 +270,6 @@ if( 10 == namespaceId && "effectDag" == name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackgroundFormatting>(deep);
 
@@ -382,7 +380,6 @@ if( 10 == namespaceId && "effectDag" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WholeFormatting>(deep);
 
@@ -551,7 +548,6 @@ if( 60 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GraphicFrameType>(deep);
 
@@ -630,7 +626,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     return null;
 }
 
-    
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeArtExtensionList>(deep);
