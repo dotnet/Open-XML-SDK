@@ -35,6 +35,14 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new[]
+        {
+            AttributeTag.Create<StringValue>(23, "uri"),
+            AttributeTag.Create<StringValue>(23, "element"),
+        };
+
+        internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
+
         /// <summary>
         /// Gets or sets the custom XML Markup Namespace.
         /// </summary>
@@ -45,8 +53,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         [SchemaAttr(23, "uri")]
         public StringValue Uri
         {
-            get { return (StringValue)Attributes[0]; }
-            set { Attributes[0] = value; }
+            get { return (StringValue)Attributes[0].Value; }
+            set { Attributes[0].Value = value; }
         }
 
         /// <summary>
@@ -59,19 +67,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         [SchemaAttr(23, "element")]
         public StringValue Element
         {
-            get { return (StringValue)Attributes[1]; }
-            set { Attributes[1] = value; }
-        }
-
-        internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-        {
-            if (23 == namespaceId && "uri" == name)
-                return new StringValue();
-
-            if (23 == namespaceId && "element" == name)
-                return new StringValue();
-
-            return null;
+            get { return (StringValue)Attributes[1].Value; }
+            set { Attributes[1].Value = value; }
         }
 
         /// <summary>
@@ -82,15 +79,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// </remark>
         public CustomXmlProperties CustomXmlProperties
         {
-            get
-            {
-                return GetElement<CustomXmlProperties>(0);
-            }
-
-            set
-            {
-                SetElement(0, value);
-            }
+            get => GetElement<CustomXmlProperties>(0);
+            set => SetElement(0, value);
         }
     }
 }

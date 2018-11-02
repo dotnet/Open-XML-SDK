@@ -26,36 +26,36 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            OpenXmlSimpleType attributeValue = context.Element.Attributes[_attribute];
+            var attribute = context.Element.Attributes[_attribute];
 
-            if (attributeValue == null)
+            if (!attribute.HasValue)
             {
                 return null;
             }
 
             foreach (string value in _values)
             {
-                if (AttributeValueEquals(attributeValue, value, false))
+                if (AttributeValueEquals(attribute.Value, value, false))
                 {
                     return null;
                 }
             }
 
-            OpenXmlSimpleType conditionAttributeValue = context.Element.Attributes[_conditionAttribute];
+            var conditionAttribute = context.Element.Attributes[_conditionAttribute];
 
-            if (conditionAttributeValue == null)
+            if (!conditionAttribute.HasValue)
             {
                 return null;
             }
 
             foreach (string value in _otherValues)
             {
-                if (AttributeValueEquals(conditionAttributeValue, value, false))
+                if (AttributeValueEquals(conditionAttribute.Value, value, false))
                 {
                     string attributeValueString = "'" + _values[0] + "'";
                     if (_values.Length > 1)
                     {
-                        for (int i = 1; i < _values.Length -1; i++)
+                        for (int i = 1; i < _values.Length - 1; i++)
                         {
                             attributeValueString += ", '" + _values[i] + "'";
                         }
@@ -66,7 +66,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                     string otherAttributeValueString = "'" + _otherValues[0] + "'";
                     if (_otherValues.Length > 1)
                     {
-                        for (int i = 1; i < _otherValues.Length -1 ; i++)
+                        for (int i = 1; i < _otherValues.Length - 1; i++)
                         {
                             otherAttributeValueString += ", '" + _otherValues[i] + "'";
                         }
@@ -79,10 +79,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                         Id = "Sem_AttributeValueConditionToAnother",
                         ErrorType = ValidationErrorType.Semantic,
                         Node = context.Element,
-                        Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_AttributeValueConditionToAnother,
-                                                    GetAttributeQualifiedName(context.Element, _attribute), attributeValueString,
-                                                    GetAttributeQualifiedName(context.Element, _conditionAttribute), otherAttributeValueString,
-                                                    GetAttributeQualifiedName(context.Element, _attribute), attributeValue),
+                        Description = SR.Format(
+                            ValidationResources.Sem_AttributeValueConditionToAnother,
+                            GetAttributeQualifiedName(context.Element, _attribute), attributeValueString,
+                            GetAttributeQualifiedName(context.Element, _conditionAttribute), otherAttributeValueString,
+                            GetAttributeQualifiedName(context.Element, _attribute), attribute.Value),
                     };
                 }
             }

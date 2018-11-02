@@ -117,16 +117,6 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <summary>
-        /// Create an object of the specified type.
-        /// </summary>
-        /// <param name="typeName">The name of the type.</param>
-        /// <returns>An object instance of the specified type.</returns>
-        internal static object CreateInstance(string typeName)
-        {
-            return System.Activator.CreateInstance(null, typeName);
-        }
-
-        /// <summary>
         /// Get attribute value of the specified attribute.
         /// </summary>
         /// <param name="element"></param>
@@ -144,14 +134,6 @@ namespace DocumentFormat.OpenXml
             {
                 return null;
             }
-        }
-
-        internal static XmlQualifiedName GetFixedAttributeQname(this OpenXmlElement element, int attriuteIndex)
-        {
-            var localName = element.AttributeTagNames[attriuteIndex];
-            var attributeNamespace = NamespaceIdMap.GetNamespaceUri(element.AttributeNamespaceIds[attriuteIndex]);
-
-            return new XmlQualifiedName(localName, attributeNamespace);
         }
 
         /// <summary>
@@ -233,6 +215,16 @@ namespace DocumentFormat.OpenXml
             }
 
             return newElement;
+        }
+
+        internal static bool IsInVersion(this OpenXmlElement element, FileFormatVersions version)
+        {
+            if (element.InitialVersion == FileFormatVersions.None)
+            {
+                return false;
+            }
+
+            return version.AtLeast(element.InitialVersion);
         }
     }
 }

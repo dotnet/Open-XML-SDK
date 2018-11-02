@@ -314,8 +314,7 @@ namespace DocumentFormat.OpenXml
             }
             else
             {
-                var msg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ExceptionMessages.UnknowMCContent, value);
-                throw new InvalidMCContentException(msg);
+                throw new InvalidMCContentException(SR.Format(ExceptionMessages.UnknowMCContent, value));
             }
         }
 
@@ -451,8 +450,7 @@ namespace DocumentFormat.OpenXml
                         }
                         else
                         {
-                            var msg = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ExceptionMessages.UnknowMCContent, req);
-                            throw new InvalidMCContentException(msg);
+                            throw new InvalidMCContentException(SR.Format(ExceptionMessages.UnknowMCContent, req));
                         }
                     }
 

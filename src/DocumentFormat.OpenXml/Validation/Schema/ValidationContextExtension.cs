@@ -1,15 +1,10 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using DocumentFormat.OpenXml.Validation;
-using System.Globalization;
-
 namespace DocumentFormat.OpenXml.Validation.Schema
 {
     internal static class ValidationContextExtension
     {
-        #region error building methods
-
         // helper methods to compose a  ValidationErrorInfo for schema validation error.
         internal static ValidationErrorInfo ComposeSchemaValidationError(this ValidationContext validationContext, OpenXmlElement element, OpenXmlElement child,
                                                        string messageId, params string[] args)
@@ -27,19 +22,15 @@ namespace DocumentFormat.OpenXml.Validation.Schema
         internal static ValidationErrorInfo ComposeValidationError(this ValidationContext validationContext, ValidationErrorType errorType, OpenXmlElement element, OpenXmlElement child,
                                                        string messageId, params string[] args)
         {
-            ValidationErrorInfo errorInfo = new ValidationErrorInfo()
+            return new ValidationErrorInfo()
             {
                 ErrorType = errorType,
                 Part = validationContext.Part,
                 Node = element,
                 Id = messageId,
                 RelatedNode = child,
-                Description = string.Format(CultureInfo.CurrentUICulture, ValidationResources.ResourceManager.GetString(messageId), args),
+                Description = SR.Format(ValidationResources.ResourceManager.GetString(messageId), args),
             };
-
-            return errorInfo;
         }
-
-        #endregion
     }
 }

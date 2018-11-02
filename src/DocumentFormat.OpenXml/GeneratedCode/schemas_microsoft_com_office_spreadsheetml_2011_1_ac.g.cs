@@ -27,7 +27,7 @@ public partial class List : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -53,7 +53,6 @@ public partial class List : OpenXmlLeafTextElement
     }
     
  
-    
     
     
     

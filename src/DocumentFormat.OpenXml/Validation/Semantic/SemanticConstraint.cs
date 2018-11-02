@@ -75,10 +75,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             }
         }
 
-        protected static XmlQualifiedName GetAttributeQualifiedName(OpenXmlElement element, byte attributeID)
-        {
-            return new XmlQualifiedName(element.AttributeTagNames[attributeID], NamespaceIdMap.GetNamespaceUri(element.AttributeNamespaceIds[attributeID]));
-        }
+        protected static XmlQualifiedName GetAttributeQualifiedName(OpenXmlElement element, byte attributeID) => element.Attributes[attributeID].Tag.GetQName();
 
         private static bool CompareBooleanValue(bool value1, string value2)
         {

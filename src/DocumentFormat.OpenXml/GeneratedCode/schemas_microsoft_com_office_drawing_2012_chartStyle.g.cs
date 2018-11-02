@@ -47,16 +47,15 @@ public partial class ColorStyle : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "meth","id" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "meth"),
+		AttributeTag.Create<UInt32Value>(0, "id")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -66,8 +65,8 @@ public partial class ColorStyle : OpenXmlPartRootElement
     [SchemaAttr(0, "meth")]
     public StringValue Method
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -77,8 +76,8 @@ public partial class ColorStyle : OpenXmlPartRootElement
     [SchemaAttr(0, "id")]
     public UInt32Value Id
     {
-        get { return (UInt32Value)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (UInt32Value)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
@@ -176,19 +175,6 @@ if( 65 == namespaceId && "extLst" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "meth" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new UInt32Value();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorStyle>(deep);
 
@@ -279,16 +265,14 @@ public partial class ChartStyle : OpenXmlPartRootElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "id" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt32Value>(0, "id")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -298,8 +282,8 @@ public partial class ChartStyle : OpenXmlPartRootElement
     [SchemaAttr(0, "id")]
     public UInt32Value Id
     {
-        get { return (UInt32Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt32Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -862,16 +846,6 @@ if( 65 == namespaceId && "extLst" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new UInt32Value();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartStyle>(deep);
 
@@ -955,7 +929,7 @@ public partial class ColorStyleVariation : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1086,7 +1060,6 @@ if( 10 == namespaceId && "invGamma" == name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorStyleVariation>(deep);
 
@@ -1116,7 +1089,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1165,7 +1138,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     return null;
 }
 
-    
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeArtExtensionList>(deep);
@@ -1250,16 +1222,14 @@ public partial class StyleColor : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "val")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1269,8 +1239,8 @@ public partial class StyleColor : OpenXmlCompositeElement
     [SchemaAttr(0, "val")]
     public StringValue Val
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -1399,16 +1369,6 @@ if( 10 == namespaceId && "invGamma" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "val" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleColor>(deep);
 
@@ -1443,7 +1403,7 @@ public partial class LineReference : StyleReference
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -1511,7 +1471,7 @@ public partial class FillReference : StyleReference
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -1579,7 +1539,7 @@ public partial class EffectReference : StyleReference
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -1643,13 +1603,12 @@ public partial class EffectReference : StyleReference
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class StyleReference : OpenXmlCompositeElement
 {
-    	private static readonly string[] attributeTagNames = { "idx","mods" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt32Value>(0, "idx"),
+		AttributeTag.Create<ListValue<StringValue>>(0, "mods")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> idx.</para>
@@ -1658,8 +1617,8 @@ public abstract partial class StyleReference : OpenXmlCompositeElement
     [SchemaAttr(0, "idx")]
     public UInt32Value Index
     {
-        get { return (UInt32Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt32Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -1669,8 +1628,8 @@ public abstract partial class StyleReference : OpenXmlCompositeElement
     [SchemaAttr(0, "mods")]
     public ListValue<StringValue> Modifiers
     {
-        get { return (ListValue<StringValue>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (ListValue<StringValue>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
@@ -1703,19 +1662,6 @@ if( 65 == namespaceId && "styleClr" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "idx" == name)
-    return new UInt32Value();
-    
-if( 0 == namespaceId && "mods" == name)
-    return new ListValue<StringValue>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the StyleReference class.
@@ -1768,7 +1714,7 @@ public partial class LineWidthScale : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     
@@ -1794,7 +1740,6 @@ public partial class LineWidthScale : OpenXmlLeafTextElement
     }
     
  
-    
     
     
     
@@ -1839,16 +1784,15 @@ public partial class FontReference : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "idx","mods" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues>>(0, "idx"),
+		AttributeTag.Create<ListValue<StringValue>>(0, "mods")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1858,8 +1802,8 @@ public partial class FontReference : OpenXmlCompositeElement
     [SchemaAttr(0, "idx")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues> Index
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -1869,8 +1813,8 @@ public partial class FontReference : OpenXmlCompositeElement
     [SchemaAttr(0, "mods")]
     public ListValue<StringValue> Modifiers
     {
-        get { return (ListValue<StringValue>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (ListValue<StringValue>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
@@ -1936,19 +1880,6 @@ if( 65 == namespaceId && "styleClr" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "idx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.FontCollectionIndexValues>();
-    
-if( 0 == namespaceId && "mods" == name)
-    return new ListValue<StringValue>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FontReference>(deep);
 
@@ -2006,16 +1937,14 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "bwMode" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwMode")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2025,8 +1954,8 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "bwMode")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -2137,16 +2066,6 @@ if( 10 == namespaceId && "extLst" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "bwMode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeProperties>(deep);
 
@@ -2218,16 +2137,30 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "kumimoji","lang","altLang","sz","b","i","u","strike","kern","cap","spc","normalizeH","baseline","noProof","dirty","err","smtClean","smtId","bmk" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<BooleanValue>(0, "kumimoji"),
+		AttributeTag.Create<StringValue>(0, "lang"),
+		AttributeTag.Create<StringValue>(0, "altLang"),
+		AttributeTag.Create<Int32Value>(0, "sz"),
+		AttributeTag.Create<BooleanValue>(0, "b"),
+		AttributeTag.Create<BooleanValue>(0, "i"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues>>(0, "u"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues>>(0, "strike"),
+		AttributeTag.Create<Int32Value>(0, "kern"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues>>(0, "cap"),
+		AttributeTag.Create<Int32Value>(0, "spc"),
+		AttributeTag.Create<BooleanValue>(0, "normalizeH"),
+		AttributeTag.Create<Int32Value>(0, "baseline"),
+		AttributeTag.Create<BooleanValue>(0, "noProof"),
+		AttributeTag.Create<BooleanValue>(0, "dirty"),
+		AttributeTag.Create<BooleanValue>(0, "err"),
+		AttributeTag.Create<StringValue>(0, "bmk")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2237,8 +2170,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     [SchemaAttr(0, "kumimoji")]
     public BooleanValue Kumimoji
     {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (BooleanValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -2248,8 +2181,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     [SchemaAttr(0, "lang")]
     public StringValue Language
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -2259,8 +2192,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     [SchemaAttr(0, "altLang")]
     public StringValue AlternativeLanguage
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -2270,8 +2203,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     [SchemaAttr(0, "sz")]
     public Int32Value FontSize
     {
-        get { return (Int32Value)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (Int32Value)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -2281,8 +2214,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     [SchemaAttr(0, "b")]
     public BooleanValue Bold
     {
-        get { return (BooleanValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (BooleanValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -2292,8 +2225,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     [SchemaAttr(0, "i")]
     public BooleanValue Italic
     {
-        get { return (BooleanValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (BooleanValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -2303,8 +2236,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     [SchemaAttr(0, "u")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues> Underline
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues>)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues>)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -2314,8 +2247,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     [SchemaAttr(0, "strike")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues> Strike
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues>)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues>)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -2325,8 +2258,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     [SchemaAttr(0, "kern")]
     public Int32Value Kerning
     {
-        get { return (Int32Value)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (Int32Value)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -2336,8 +2269,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     [SchemaAttr(0, "cap")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues> Capital
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues>)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues>)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -2347,8 +2280,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     [SchemaAttr(0, "spc")]
     public Int32Value Spacing
     {
-        get { return (Int32Value)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (Int32Value)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -2358,8 +2291,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     [SchemaAttr(0, "normalizeH")]
     public BooleanValue NormalizeHeight
     {
-        get { return (BooleanValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (BooleanValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -2369,8 +2302,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     [SchemaAttr(0, "baseline")]
     public Int32Value Baseline
     {
-        get { return (Int32Value)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (Int32Value)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -2380,8 +2313,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     [SchemaAttr(0, "noProof")]
     public BooleanValue NoProof
     {
-        get { return (BooleanValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (BooleanValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -2391,8 +2324,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     [SchemaAttr(0, "dirty")]
     public BooleanValue Dirty
     {
-        get { return (BooleanValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (BooleanValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -2402,30 +2335,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     [SchemaAttr(0, "err")]
     public BooleanValue SpellingError
     {
-        get { return (BooleanValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
-    /// <summary>
-    /// <para> smtClean.</para>
-    /// <para>Represents the following attribute in the schema: smtClean </para>
-    /// </summary>
-    [SchemaAttr(0, "smtClean")]
-    public BooleanValue SmtClean
-    {
-        get { return (BooleanValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
-    /// <summary>
-    /// <para> smtId.</para>
-    /// <para>Represents the following attribute in the schema: smtId </para>
-    /// </summary>
-    [SchemaAttr(0, "smtId")]
-    public UInt32Value SmtId
-    {
-        get { return (UInt32Value)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (BooleanValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -2435,8 +2346,8 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
     [SchemaAttr(0, "bmk")]
     public StringValue Bookmark
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
 
@@ -2568,70 +2479,6 @@ if( 10 == namespaceId && "extLst" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "kumimoji" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "lang" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "altLang" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sz" == name)
-    return new Int32Value();
-    
-if( 0 == namespaceId && "b" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "i" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "u" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.TextUnderlineValues>();
-    
-if( 0 == namespaceId && "strike" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.TextStrikeValues>();
-    
-if( 0 == namespaceId && "kern" == name)
-    return new Int32Value();
-    
-if( 0 == namespaceId && "cap" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.TextCapsValues>();
-    
-if( 0 == namespaceId && "spc" == name)
-    return new Int32Value();
-    
-if( 0 == namespaceId && "normalizeH" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "baseline" == name)
-    return new Int32Value();
-    
-if( 0 == namespaceId && "noProof" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "dirty" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "err" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "smtClean" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "smtId" == name)
-    return new UInt32Value();
-    
-if( 0 == namespaceId && "bmk" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextCharacterPropertiesType>(deep);
 
@@ -2675,16 +2522,32 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "rot","spcFirstLastPara","vertOverflow","horzOverflow","vert","wrap","lIns","tIns","rIns","bIns","numCol","spcCol","rtlCol","fromWordArt","anchor","anchorCtr","forceAA","upright","compatLnSpc" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<Int32Value>(0, "rot"),
+		AttributeTag.Create<BooleanValue>(0, "spcFirstLastPara"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>>(0, "vertOverflow"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>>(0, "horzOverflow"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>>(0, "vert"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>>(0, "wrap"),
+		AttributeTag.Create<Int32Value>(0, "lIns"),
+		AttributeTag.Create<Int32Value>(0, "tIns"),
+		AttributeTag.Create<Int32Value>(0, "rIns"),
+		AttributeTag.Create<Int32Value>(0, "bIns"),
+		AttributeTag.Create<Int32Value>(0, "numCol"),
+		AttributeTag.Create<Int32Value>(0, "spcCol"),
+		AttributeTag.Create<BooleanValue>(0, "rtlCol"),
+		AttributeTag.Create<BooleanValue>(0, "fromWordArt"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>>(0, "anchor"),
+		AttributeTag.Create<BooleanValue>(0, "anchorCtr"),
+		AttributeTag.Create<BooleanValue>(0, "forceAA"),
+		AttributeTag.Create<BooleanValue>(0, "upright"),
+		AttributeTag.Create<BooleanValue>(0, "compatLnSpc")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2694,8 +2557,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "rot")]
     public Int32Value Rotation
     {
-        get { return (Int32Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (Int32Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -2705,8 +2568,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "spcFirstLastPara")]
     public BooleanValue UseParagraphSpacing
     {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (BooleanValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -2716,8 +2579,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "vertOverflow")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues> VerticalOverflow
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -2727,8 +2590,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "horzOverflow")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues> HorizontalOverflow
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -2738,8 +2601,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "vert")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues> Vertical
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -2749,8 +2612,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "wrap")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues> Wrap
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -2760,8 +2623,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "lIns")]
     public Int32Value LeftInset
     {
-        get { return (Int32Value)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (Int32Value)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -2771,8 +2634,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "tIns")]
     public Int32Value TopInset
     {
-        get { return (Int32Value)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (Int32Value)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -2782,8 +2645,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "rIns")]
     public Int32Value RightInset
     {
-        get { return (Int32Value)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (Int32Value)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -2793,8 +2656,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "bIns")]
     public Int32Value BottomInset
     {
-        get { return (Int32Value)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (Int32Value)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -2804,8 +2667,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "numCol")]
     public Int32Value ColumnCount
     {
-        get { return (Int32Value)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (Int32Value)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -2815,8 +2678,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "spcCol")]
     public Int32Value ColumnSpacing
     {
-        get { return (Int32Value)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (Int32Value)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -2826,8 +2689,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "rtlCol")]
     public BooleanValue RightToLeftColumns
     {
-        get { return (BooleanValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (BooleanValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -2837,8 +2700,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "fromWordArt")]
     public BooleanValue FromWordArt
     {
-        get { return (BooleanValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (BooleanValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -2848,8 +2711,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "anchor")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues> Anchor
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -2859,8 +2722,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "anchorCtr")]
     public BooleanValue AnchorCenter
     {
-        get { return (BooleanValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (BooleanValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -2870,8 +2733,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "forceAA")]
     public BooleanValue ForceAntiAlias
     {
-        get { return (BooleanValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (BooleanValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -2881,8 +2744,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "upright")]
     public BooleanValue UpRight
     {
-        get { return (BooleanValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (BooleanValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -2892,8 +2755,8 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     [SchemaAttr(0, "compatLnSpc")]
     public BooleanValue CompatibleLineSpacing
     {
-        get { return (BooleanValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (BooleanValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
 
@@ -2983,70 +2846,6 @@ if( 10 == namespaceId && "extLst" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "rot" == name)
-    return new Int32Value();
-    
-if( 0 == namespaceId && "spcFirstLastPara" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "vertOverflow" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>();
-    
-if( 0 == namespaceId && "horzOverflow" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>();
-    
-if( 0 == namespaceId && "vert" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>();
-    
-if( 0 == namespaceId && "wrap" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>();
-    
-if( 0 == namespaceId && "lIns" == name)
-    return new Int32Value();
-    
-if( 0 == namespaceId && "tIns" == name)
-    return new Int32Value();
-    
-if( 0 == namespaceId && "rIns" == name)
-    return new Int32Value();
-    
-if( 0 == namespaceId && "bIns" == name)
-    return new Int32Value();
-    
-if( 0 == namespaceId && "numCol" == name)
-    return new Int32Value();
-    
-if( 0 == namespaceId && "spcCol" == name)
-    return new Int32Value();
-    
-if( 0 == namespaceId && "rtlCol" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "fromWordArt" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "anchor" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>();
-    
-if( 0 == namespaceId && "anchorCtr" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "forceAA" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "upright" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "compatLnSpc" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextBodyProperties>(deep);
 
@@ -3069,7 +2868,7 @@ public partial class CategoryAxisProperties : AxisProperties
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -3100,7 +2899,7 @@ public partial class SeriesAxisProperties : AxisProperties
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -3131,7 +2930,7 @@ public partial class ValueAxisProperties : AxisProperties
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -3151,13 +2950,17 @@ public partial class ValueAxisProperties : AxisProperties
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class AxisProperties : OpenXmlLeafElement
 {
-    	private static readonly string[] attributeTagNames = { "visible","majorTick","minorTick","labelPosition","majorGridlines","minorGridlines","title" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "visible"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>>(0, "majorTick"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>>(0, "minorTick"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickLabelPositionNinch>>(0, "labelPosition"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "majorGridlines"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "minorGridlines"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "title")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> visible.</para>
@@ -3166,8 +2969,8 @@ public abstract partial class AxisProperties : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Visible
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -3177,8 +2980,8 @@ public abstract partial class AxisProperties : OpenXmlLeafElement
     [SchemaAttr(0, "majorTick")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch> MajorTick
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -3188,8 +2991,8 @@ public abstract partial class AxisProperties : OpenXmlLeafElement
     [SchemaAttr(0, "minorTick")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch> MinorTickProp
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -3199,8 +3002,8 @@ public abstract partial class AxisProperties : OpenXmlLeafElement
     [SchemaAttr(0, "labelPosition")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickLabelPositionNinch> LabelPosition
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickLabelPositionNinch>)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickLabelPositionNinch>)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -3210,8 +3013,8 @@ public abstract partial class AxisProperties : OpenXmlLeafElement
     [SchemaAttr(0, "majorGridlines")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> MajorGridlines
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -3221,8 +3024,8 @@ public abstract partial class AxisProperties : OpenXmlLeafElement
     [SchemaAttr(0, "minorGridlines")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> MinorGridlinesProp
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -3232,41 +3035,13 @@ public abstract partial class AxisProperties : OpenXmlLeafElement
     [SchemaAttr(0, "title")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> TitleProp
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
 
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "visible" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-if( 0 == namespaceId && "majorTick" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>();
-    
-if( 0 == namespaceId && "minorTick" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickMarkNinch>();
-    
-if( 0 == namespaceId && "labelPosition" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TickLabelPositionNinch>();
-    
-if( 0 == namespaceId && "majorGridlines" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-if( 0 == namespaceId && "minorGridlines" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-if( 0 == namespaceId && "title" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the AxisProperties class.
@@ -3294,16 +3069,21 @@ public partial class DataSeries : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "overlap","gapWidth","gapDepth","doughnutHoleSize","markerVisible","hiloLines","dropLines","seriesLines" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<SByteValue>(0, "overlap"),
+		AttributeTag.Create<UInt16Value>(0, "gapWidth"),
+		AttributeTag.Create<UInt16Value>(0, "gapDepth"),
+		AttributeTag.Create<ByteValue>(0, "doughnutHoleSize"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "markerVisible"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "hiloLines"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "dropLines"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "seriesLines")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3313,8 +3093,8 @@ public partial class DataSeries : OpenXmlLeafElement
     [SchemaAttr(0, "overlap")]
     public SByteValue Overlap
     {
-        get { return (SByteValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (SByteValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -3324,8 +3104,8 @@ public partial class DataSeries : OpenXmlLeafElement
     [SchemaAttr(0, "gapWidth")]
     public UInt16Value GapWidth
     {
-        get { return (UInt16Value)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (UInt16Value)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -3335,8 +3115,8 @@ public partial class DataSeries : OpenXmlLeafElement
     [SchemaAttr(0, "gapDepth")]
     public UInt16Value GapDepth
     {
-        get { return (UInt16Value)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (UInt16Value)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -3346,8 +3126,8 @@ public partial class DataSeries : OpenXmlLeafElement
     [SchemaAttr(0, "doughnutHoleSize")]
     public ByteValue DoughnutHoleSize
     {
-        get { return (ByteValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (ByteValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -3357,8 +3137,8 @@ public partial class DataSeries : OpenXmlLeafElement
     [SchemaAttr(0, "markerVisible")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> MarkerVisible
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -3368,8 +3148,8 @@ public partial class DataSeries : OpenXmlLeafElement
     [SchemaAttr(0, "hiloLines")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> HiloLines
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -3379,8 +3159,8 @@ public partial class DataSeries : OpenXmlLeafElement
     [SchemaAttr(0, "dropLines")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> DropLines
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -3390,8 +3170,8 @@ public partial class DataSeries : OpenXmlLeafElement
     [SchemaAttr(0, "seriesLines")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> SeriesLines
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
 
@@ -3405,37 +3185,6 @@ public partial class DataSeries : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "overlap" == name)
-    return new SByteValue();
-    
-if( 0 == namespaceId && "gapWidth" == name)
-    return new UInt16Value();
-    
-if( 0 == namespaceId && "gapDepth" == name)
-    return new UInt16Value();
-    
-if( 0 == namespaceId && "doughnutHoleSize" == name)
-    return new ByteValue();
-    
-if( 0 == namespaceId && "markerVisible" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-if( 0 == namespaceId && "hiloLines" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-if( 0 == namespaceId && "dropLines" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-if( 0 == namespaceId && "seriesLines" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataSeries>(deep);
 
@@ -3458,16 +3207,19 @@ public partial class DataLabels : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "position","value","seriesName","categoryName","legendKey","percentage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelsPosition>>(0, "position"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "value"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "seriesName"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "categoryName"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "legendKey"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "percentage")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3477,8 +3229,8 @@ public partial class DataLabels : OpenXmlLeafElement
     [SchemaAttr(0, "position")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelsPosition> Position
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelsPosition>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelsPosition>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -3488,8 +3240,8 @@ public partial class DataLabels : OpenXmlLeafElement
     [SchemaAttr(0, "value")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Value
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -3499,8 +3251,8 @@ public partial class DataLabels : OpenXmlLeafElement
     [SchemaAttr(0, "seriesName")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> SeriesName
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -3510,8 +3262,8 @@ public partial class DataLabels : OpenXmlLeafElement
     [SchemaAttr(0, "categoryName")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> CategoryName
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -3521,8 +3273,8 @@ public partial class DataLabels : OpenXmlLeafElement
     [SchemaAttr(0, "legendKey")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> LegendKey
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -3532,8 +3284,8 @@ public partial class DataLabels : OpenXmlLeafElement
     [SchemaAttr(0, "percentage")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Percentage
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
 
@@ -3547,31 +3299,6 @@ public partial class DataLabels : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "position" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.DataLabelsPosition>();
-    
-if( 0 == namespaceId && "value" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-if( 0 == namespaceId && "seriesName" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-if( 0 == namespaceId && "categoryName" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-if( 0 == namespaceId && "legendKey" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-if( 0 == namespaceId && "percentage" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataLabels>(deep);
 
@@ -3594,16 +3321,17 @@ public partial class DataTable : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "legendKeys","horizontalBorder","verticalBorder","outlineBorder" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "legendKeys"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "horizontalBorder"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "verticalBorder"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "outlineBorder")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3613,8 +3341,8 @@ public partial class DataTable : OpenXmlLeafElement
     [SchemaAttr(0, "legendKeys")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> LegendKeys
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -3624,8 +3352,8 @@ public partial class DataTable : OpenXmlLeafElement
     [SchemaAttr(0, "horizontalBorder")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> HorizontalBorder
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -3635,8 +3363,8 @@ public partial class DataTable : OpenXmlLeafElement
     [SchemaAttr(0, "verticalBorder")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> VerticalBorder
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -3646,8 +3374,8 @@ public partial class DataTable : OpenXmlLeafElement
     [SchemaAttr(0, "outlineBorder")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> OutlineBorder
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
 
@@ -3661,25 +3389,6 @@ public partial class DataTable : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "legendKeys" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-if( 0 == namespaceId && "horizontalBorder" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-if( 0 == namespaceId && "verticalBorder" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-if( 0 == namespaceId && "outlineBorder" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataTable>(deep);
 
@@ -3702,16 +3411,16 @@ public partial class Legend : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "visible","includeInLayout","position" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "visible"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "includeInLayout"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendPosition>>(0, "position")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3721,8 +3430,8 @@ public partial class Legend : OpenXmlLeafElement
     [SchemaAttr(0, "visible")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Visible
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -3732,8 +3441,8 @@ public partial class Legend : OpenXmlLeafElement
     [SchemaAttr(0, "includeInLayout")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> IncludeInLayout
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -3743,8 +3452,8 @@ public partial class Legend : OpenXmlLeafElement
     [SchemaAttr(0, "position")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendPosition> Position
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendPosition>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendPosition>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
 
@@ -3758,22 +3467,6 @@ public partial class Legend : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "visible" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-if( 0 == namespaceId && "includeInLayout" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-if( 0 == namespaceId && "position" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.LegendPosition>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Legend>(deep);
 
@@ -3796,16 +3489,14 @@ public partial class Title : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "position" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitlePosition>>(0, "position")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3815,8 +3506,8 @@ public partial class Title : OpenXmlLeafElement
     [SchemaAttr(0, "position")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitlePosition> Position
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitlePosition>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitlePosition>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -3830,16 +3521,6 @@ public partial class Title : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "position" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.TitlePosition>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Title>(deep);
 
@@ -3862,16 +3543,16 @@ public partial class Trendline : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "add","equation","rsquared" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "add"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "equation"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "rsquared")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3881,8 +3562,8 @@ public partial class Trendline : OpenXmlLeafElement
     [SchemaAttr(0, "add")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Add
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -3892,8 +3573,8 @@ public partial class Trendline : OpenXmlLeafElement
     [SchemaAttr(0, "equation")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> Equation
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -3903,8 +3584,8 @@ public partial class Trendline : OpenXmlLeafElement
     [SchemaAttr(0, "rsquared")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> RSquared
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
 
@@ -3918,22 +3599,6 @@ public partial class Trendline : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "add" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-if( 0 == namespaceId && "equation" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-if( 0 == namespaceId && "rsquared" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Trendline>(deep);
 
@@ -3956,16 +3621,19 @@ public partial class View3DProperties : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "rotX","rotY","rAngAx","perspective","heightPercent","depthPercent" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<SByteValue>(0, "rotX"),
+		AttributeTag.Create<UInt16Value>(0, "rotY"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>>(0, "rAngAx"),
+		AttributeTag.Create<ByteValue>(0, "perspective"),
+		AttributeTag.Create<UInt16Value>(0, "heightPercent"),
+		AttributeTag.Create<UInt16Value>(0, "depthPercent")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3975,8 +3643,8 @@ public partial class View3DProperties : OpenXmlLeafElement
     [SchemaAttr(0, "rotX")]
     public SByteValue RotX
     {
-        get { return (SByteValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (SByteValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -3986,8 +3654,8 @@ public partial class View3DProperties : OpenXmlLeafElement
     [SchemaAttr(0, "rotY")]
     public UInt16Value RotY
     {
-        get { return (UInt16Value)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (UInt16Value)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -3997,8 +3665,8 @@ public partial class View3DProperties : OpenXmlLeafElement
     [SchemaAttr(0, "rAngAx")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean> RightAngleAxes
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -4008,8 +3676,8 @@ public partial class View3DProperties : OpenXmlLeafElement
     [SchemaAttr(0, "perspective")]
     public ByteValue Perspective
     {
-        get { return (ByteValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (ByteValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -4019,8 +3687,8 @@ public partial class View3DProperties : OpenXmlLeafElement
     [SchemaAttr(0, "heightPercent")]
     public UInt16Value HeightPercent
     {
-        get { return (UInt16Value)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (UInt16Value)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -4030,8 +3698,8 @@ public partial class View3DProperties : OpenXmlLeafElement
     [SchemaAttr(0, "depthPercent")]
     public UInt16Value DepthPercent
     {
-        get { return (UInt16Value)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (UInt16Value)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
 
@@ -4045,31 +3713,6 @@ public partial class View3DProperties : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "rotX" == name)
-    return new SByteValue();
-    
-if( 0 == namespaceId && "rotY" == name)
-    return new UInt16Value();
-    
-if( 0 == namespaceId && "rAngAx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.Boolean>();
-    
-if( 0 == namespaceId && "perspective" == name)
-    return new ByteValue();
-    
-if( 0 == namespaceId && "heightPercent" == name)
-    return new UInt16Value();
-    
-if( 0 == namespaceId && "depthPercent" == name)
-    return new UInt16Value();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<View3DProperties>(deep);
 
@@ -4106,7 +3749,7 @@ public partial class AxisTitle : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4176,7 +3819,7 @@ public partial class CategoryAxis : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4246,7 +3889,7 @@ public partial class ChartArea : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4316,7 +3959,7 @@ public partial class DataLabel : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4386,7 +4029,7 @@ public partial class DataLabelCallout : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4456,7 +4099,7 @@ public partial class DataPoint : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4526,7 +4169,7 @@ public partial class DataPoint3D : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4596,7 +4239,7 @@ public partial class DataPointLine : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4666,7 +4309,7 @@ public partial class DataPointMarker : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4736,7 +4379,7 @@ public partial class DataPointWireframe : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4806,7 +4449,7 @@ public partial class DataTableStyle : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4876,7 +4519,7 @@ public partial class DownBar : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -4946,7 +4589,7 @@ public partial class DropLine : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5016,7 +4659,7 @@ public partial class ErrorBar : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5086,7 +4729,7 @@ public partial class Floor : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5156,7 +4799,7 @@ public partial class GridlineMajor : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5226,7 +4869,7 @@ public partial class GridlineMinor : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5296,7 +4939,7 @@ public partial class HiLoLine : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5366,7 +5009,7 @@ public partial class LeaderLine : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5436,7 +5079,7 @@ public partial class LegendStyle : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5506,7 +5149,7 @@ public partial class PlotArea : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5576,7 +5219,7 @@ public partial class PlotArea3D : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5646,7 +5289,7 @@ public partial class SeriesAxis : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5716,7 +5359,7 @@ public partial class SeriesLine : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5786,7 +5429,7 @@ public partial class TitleStyle : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5856,7 +5499,7 @@ public partial class TrendlineStyle : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5926,7 +5569,7 @@ public partial class TrendlineLabel : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -5996,7 +5639,7 @@ public partial class UpBar : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -6066,7 +5709,7 @@ public partial class ValueAxis : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -6136,7 +5779,7 @@ public partial class Wall : StyleEntry
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
     /// <summary>
@@ -6204,13 +5847,11 @@ public partial class Wall : StyleEntry
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class StyleEntry : OpenXmlCompositeElement
 {
-    	private static readonly string[] attributeTagNames = { "mods" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<ListValue<StringValue>>(0, "mods")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> mods.</para>
@@ -6219,8 +5860,8 @@ public abstract partial class StyleEntry : OpenXmlCompositeElement
     [SchemaAttr(0, "mods")]
     public ListValue<StringValue> Modifiers
     {
-        get { return (ListValue<StringValue>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (ListValue<StringValue>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -6376,16 +6017,6 @@ if( 65 == namespaceId && "extLst" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "mods" == name)
-    return new ListValue<StringValue>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the StyleEntry class.
@@ -6438,16 +6069,15 @@ public partial class MarkerLayoutProperties : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "symbol","size" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerStyle>>(0, "symbol"),
+		AttributeTag.Create<ByteValue>(0, "size")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6457,8 +6087,8 @@ public partial class MarkerLayoutProperties : OpenXmlLeafElement
     [SchemaAttr(0, "symbol")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerStyle> Symbol
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerStyle>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerStyle>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -6468,8 +6098,8 @@ public partial class MarkerLayoutProperties : OpenXmlLeafElement
     [SchemaAttr(0, "size")]
     public ByteValue Size
     {
-        get { return (ByteValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (ByteValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
@@ -6483,19 +6113,6 @@ public partial class MarkerLayoutProperties : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "symbol" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle.MarkerStyle>();
-    
-if( 0 == namespaceId && "size" == name)
-    return new ByteValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MarkerLayoutProperties>(deep);
 
