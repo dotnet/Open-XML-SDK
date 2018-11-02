@@ -38,16 +38,17 @@ public partial class RevExHeaders : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "minRev","maxRev","docId","endpointId" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt64Value>(0, "minRev"),
+		AttributeTag.Create<UInt64Value>(0, "maxRev"),
+		AttributeTag.Create<StringValue>(0, "docId"),
+		AttributeTag.Create<StringValue>(0, "endpointId")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -57,8 +58,8 @@ public partial class RevExHeaders : OpenXmlCompositeElement
     [SchemaAttr(0, "minRev")]
     public UInt64Value MinRev
     {
-        get { return (UInt64Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt64Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -68,8 +69,8 @@ public partial class RevExHeaders : OpenXmlCompositeElement
     [SchemaAttr(0, "maxRev")]
     public UInt64Value MaxRev
     {
-        get { return (UInt64Value)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (UInt64Value)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -79,8 +80,8 @@ public partial class RevExHeaders : OpenXmlCompositeElement
     [SchemaAttr(0, "docId")]
     public StringValue DocId
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -90,8 +91,8 @@ public partial class RevExHeaders : OpenXmlCompositeElement
     [SchemaAttr(0, "endpointId")]
     public StringValue EndpointId
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
 
@@ -139,25 +140,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "minRev" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "maxRev" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "docId" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "endpointId" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExHeaders>(deep);
 
@@ -213,7 +195,7 @@ public partial class RevExStream : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
     
@@ -302,7 +284,6 @@ if( 83 == namespaceId && "xrrg" == name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExStream>(deep);
 
@@ -344,7 +325,7 @@ public partial class DifferentialFormatType : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
     
@@ -505,7 +486,6 @@ if( 22 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DifferentialFormatType>(deep);
 
@@ -528,16 +508,15 @@ public partial class RevisionPtr : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "revIDLastSave","documentId" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt64Value>(0, "revIDLastSave"),
+		AttributeTag.Create<StringValue>(0, "documentId")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -547,8 +526,8 @@ public partial class RevisionPtr : OpenXmlLeafElement
     [SchemaAttr(0, "revIDLastSave")]
     public UInt64Value RevIDLastSave
     {
-        get { return (UInt64Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt64Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -558,8 +537,8 @@ public partial class RevisionPtr : OpenXmlLeafElement
     [SchemaAttr(0, "documentId")]
     public StringValue DocumentId
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
@@ -573,19 +552,6 @@ public partial class RevisionPtr : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "revIDLastSave" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "documentId" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionPtr>(deep);
 
@@ -625,7 +591,7 @@ public partial class StateBasedObject : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
     
@@ -771,7 +737,6 @@ if( 83 == namespaceId && "pivotTableDefinition" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StateBasedObject>(deep);
 
@@ -794,16 +759,17 @@ public partial class RevExHeader : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "id","minRev","maxRev","time" };
-    private static readonly byte[] attributeNamespaceIds = { 19,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(19, "id"),
+		AttributeTag.Create<UInt64Value>(0, "minRev"),
+		AttributeTag.Create<UInt64Value>(0, "maxRev"),
+		AttributeTag.Create<DateTimeValue>(0, "time")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -815,8 +781,8 @@ public partial class RevExHeader : OpenXmlLeafElement
     [SchemaAttr(19, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -826,8 +792,8 @@ public partial class RevExHeader : OpenXmlLeafElement
     [SchemaAttr(0, "minRev")]
     public UInt64Value MinRev
     {
-        get { return (UInt64Value)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (UInt64Value)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -837,8 +803,8 @@ public partial class RevExHeader : OpenXmlLeafElement
     [SchemaAttr(0, "maxRev")]
     public UInt64Value MaxRev
     {
-        get { return (UInt64Value)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (UInt64Value)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -848,8 +814,8 @@ public partial class RevExHeader : OpenXmlLeafElement
     [SchemaAttr(0, "time")]
     public DateTimeValue Time
     {
-        get { return (DateTimeValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (DateTimeValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
 
@@ -863,25 +829,6 @@ public partial class RevExHeader : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 19 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "minRev" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "maxRev" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "time" == name)
-    return new DateTimeValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExHeader>(deep);
 
@@ -911,16 +858,19 @@ public partial class RevExFuture : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "rev","uid","sh","uidp","ctx","sti" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt64Value>(0, "rev"),
+		AttributeTag.Create<StringValue>(0, "uid"),
+		AttributeTag.Create<StringValue>(0, "sh"),
+		AttributeTag.Create<StringValue>(0, "uidp"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(0, "ctx"),
+		AttributeTag.Create<BooleanValue>(0, "sti")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -930,8 +880,8 @@ public partial class RevExFuture : OpenXmlCompositeElement
     [SchemaAttr(0, "rev")]
     public UInt64Value Rev
     {
-        get { return (UInt64Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt64Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -941,8 +891,8 @@ public partial class RevExFuture : OpenXmlCompositeElement
     [SchemaAttr(0, "uid")]
     public StringValue Uid
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -952,8 +902,8 @@ public partial class RevExFuture : OpenXmlCompositeElement
     [SchemaAttr(0, "sh")]
     public StringValue Sh
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -963,8 +913,8 @@ public partial class RevExFuture : OpenXmlCompositeElement
     [SchemaAttr(0, "uidp")]
     public StringValue Uidp
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -974,8 +924,8 @@ public partial class RevExFuture : OpenXmlCompositeElement
     [SchemaAttr(0, "ctx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -985,8 +935,8 @@ public partial class RevExFuture : OpenXmlCompositeElement
     [SchemaAttr(0, "sti")]
     public BooleanValue Sti
     {
-        get { return (BooleanValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (BooleanValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
 
@@ -1034,31 +984,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "rev" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "uid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sh" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "uidp" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ctx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>();
-    
-if( 0 == namespaceId && "sti" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExFuture>(deep);
 
@@ -1081,16 +1006,18 @@ public partial class RevExUnsupported : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "rev","uid","sh","uidp","ctx" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt64Value>(0, "rev"),
+		AttributeTag.Create<StringValue>(0, "uid"),
+		AttributeTag.Create<StringValue>(0, "sh"),
+		AttributeTag.Create<StringValue>(0, "uidp"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(0, "ctx")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1100,8 +1027,8 @@ public partial class RevExUnsupported : OpenXmlLeafElement
     [SchemaAttr(0, "rev")]
     public UInt64Value Rev
     {
-        get { return (UInt64Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt64Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -1111,8 +1038,8 @@ public partial class RevExUnsupported : OpenXmlLeafElement
     [SchemaAttr(0, "uid")]
     public StringValue Uid
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -1122,8 +1049,8 @@ public partial class RevExUnsupported : OpenXmlLeafElement
     [SchemaAttr(0, "sh")]
     public StringValue Sh
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -1133,8 +1060,8 @@ public partial class RevExUnsupported : OpenXmlLeafElement
     [SchemaAttr(0, "uidp")]
     public StringValue Uidp
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -1144,8 +1071,8 @@ public partial class RevExUnsupported : OpenXmlLeafElement
     [SchemaAttr(0, "ctx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
 
@@ -1159,28 +1086,6 @@ public partial class RevExUnsupported : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "rev" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "uid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sh" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "uidp" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ctx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExUnsupported>(deep);
 
@@ -1203,16 +1108,18 @@ public partial class RevExTrimmed : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "rev","uid","sh","uidp","ctx" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt64Value>(0, "rev"),
+		AttributeTag.Create<StringValue>(0, "uid"),
+		AttributeTag.Create<StringValue>(0, "sh"),
+		AttributeTag.Create<StringValue>(0, "uidp"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(0, "ctx")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1222,8 +1129,8 @@ public partial class RevExTrimmed : OpenXmlLeafElement
     [SchemaAttr(0, "rev")]
     public UInt64Value Rev
     {
-        get { return (UInt64Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt64Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -1233,8 +1140,8 @@ public partial class RevExTrimmed : OpenXmlLeafElement
     [SchemaAttr(0, "uid")]
     public StringValue Uid
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -1244,8 +1151,8 @@ public partial class RevExTrimmed : OpenXmlLeafElement
     [SchemaAttr(0, "sh")]
     public StringValue Sh
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -1255,8 +1162,8 @@ public partial class RevExTrimmed : OpenXmlLeafElement
     [SchemaAttr(0, "uidp")]
     public StringValue Uidp
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -1266,8 +1173,8 @@ public partial class RevExTrimmed : OpenXmlLeafElement
     [SchemaAttr(0, "ctx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
 
@@ -1281,28 +1188,6 @@ public partial class RevExTrimmed : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "rev" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "uid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sh" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "uidp" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ctx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExTrimmed>(deep);
 
@@ -1325,16 +1210,21 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "rev","uid","sh","uidp","ctx","eol","ref","action" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt64Value>(0, "rev"),
+		AttributeTag.Create<StringValue>(0, "uid"),
+		AttributeTag.Create<StringValue>(0, "sh"),
+		AttributeTag.Create<StringValue>(0, "uidp"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(0, "ctx"),
+		AttributeTag.Create<BooleanValue>(0, "eol"),
+		AttributeTag.Create<StringValue>(0, "ref"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RwColAction>>(0, "action")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1344,8 +1234,8 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     [SchemaAttr(0, "rev")]
     public UInt64Value Rev
     {
-        get { return (UInt64Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt64Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -1355,8 +1245,8 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     [SchemaAttr(0, "uid")]
     public StringValue Uid
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -1366,8 +1256,8 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     [SchemaAttr(0, "sh")]
     public StringValue Sh
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -1377,8 +1267,8 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     [SchemaAttr(0, "uidp")]
     public StringValue Uidp
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -1388,8 +1278,8 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     [SchemaAttr(0, "ctx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -1399,8 +1289,8 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     [SchemaAttr(0, "eol")]
     public BooleanValue Eol
     {
-        get { return (BooleanValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (BooleanValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -1410,8 +1300,8 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     [SchemaAttr(0, "ref")]
     public StringValue Ref
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -1421,8 +1311,8 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     [SchemaAttr(0, "action")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RwColAction> Action
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RwColAction>)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RwColAction>)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
 
@@ -1436,37 +1326,6 @@ public partial class RevExRowColumn : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "rev" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "uid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sh" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "uidp" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ctx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>();
-    
-if( 0 == namespaceId && "eol" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "ref" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "action" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RwColAction>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExRowColumn>(deep);
 
@@ -1489,16 +1348,21 @@ public partial class RevExMove : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "rev","uid","sh","uidp","ctx","src","dst","srcSh" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt64Value>(0, "rev"),
+		AttributeTag.Create<StringValue>(0, "uid"),
+		AttributeTag.Create<StringValue>(0, "sh"),
+		AttributeTag.Create<StringValue>(0, "uidp"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(0, "ctx"),
+		AttributeTag.Create<StringValue>(0, "src"),
+		AttributeTag.Create<StringValue>(0, "dst"),
+		AttributeTag.Create<StringValue>(0, "srcSh")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1508,8 +1372,8 @@ public partial class RevExMove : OpenXmlLeafElement
     [SchemaAttr(0, "rev")]
     public UInt64Value Rev
     {
-        get { return (UInt64Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt64Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -1519,8 +1383,8 @@ public partial class RevExMove : OpenXmlLeafElement
     [SchemaAttr(0, "uid")]
     public StringValue Uid
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -1530,8 +1394,8 @@ public partial class RevExMove : OpenXmlLeafElement
     [SchemaAttr(0, "sh")]
     public StringValue Sh
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -1541,8 +1405,8 @@ public partial class RevExMove : OpenXmlLeafElement
     [SchemaAttr(0, "uidp")]
     public StringValue Uidp
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -1552,8 +1416,8 @@ public partial class RevExMove : OpenXmlLeafElement
     [SchemaAttr(0, "ctx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -1563,8 +1427,8 @@ public partial class RevExMove : OpenXmlLeafElement
     [SchemaAttr(0, "src")]
     public StringValue Src
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -1574,8 +1438,8 @@ public partial class RevExMove : OpenXmlLeafElement
     [SchemaAttr(0, "dst")]
     public StringValue Dst
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -1585,8 +1449,8 @@ public partial class RevExMove : OpenXmlLeafElement
     [SchemaAttr(0, "srcSh")]
     public StringValue SrcSh
     {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (StringValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
 
@@ -1600,37 +1464,6 @@ public partial class RevExMove : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "rev" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "uid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sh" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "uidp" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ctx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>();
-    
-if( 0 == namespaceId && "src" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "dst" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "srcSh" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExMove>(deep);
 
@@ -1662,16 +1495,23 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "listUid","rev","uid","sh","uidp","ctx","r","t","x","w" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "listUid"),
+		AttributeTag.Create<UInt64Value>(0, "rev"),
+		AttributeTag.Create<StringValue>(0, "uid"),
+		AttributeTag.Create<StringValue>(0, "sh"),
+		AttributeTag.Create<StringValue>(0, "uidp"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(0, "ctx"),
+		AttributeTag.Create<StringValue>(0, "r"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType>>(0, "t"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt>>(0, "x"),
+		AttributeTag.Create<UInt32Value>(0, "w")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1681,8 +1521,8 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "listUid")]
     public StringValue ListUid
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -1692,8 +1532,8 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "rev")]
     public UInt64Value Rev
     {
-        get { return (UInt64Value)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (UInt64Value)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -1703,8 +1543,8 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "uid")]
     public StringValue Uid
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -1714,8 +1554,8 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "sh")]
     public StringValue Sh
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -1725,8 +1565,8 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "uidp")]
     public StringValue Uidp
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -1736,8 +1576,8 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "ctx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -1747,8 +1587,8 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "r")]
     public StringValue R
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -1758,8 +1598,8 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "t")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType> T
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType>)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType>)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -1769,8 +1609,8 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "x")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt> X
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt>)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt>)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -1780,8 +1620,8 @@ public partial class RevExChangeCell : OpenXmlCompositeElement
     [SchemaAttr(0, "w")]
     public UInt32Value W
     {
-        get { return (UInt32Value)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (UInt32Value)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
 
@@ -1832,43 +1672,6 @@ if( 83 == namespaceId && "ccse" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "listUid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "rev" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "uid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sh" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "uidp" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ctx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>();
-    
-if( 0 == namespaceId && "r" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "t" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType>();
-    
-if( 0 == namespaceId && "x" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt>();
-    
-if( 0 == namespaceId && "w" == name)
-    return new UInt32Value();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExChangeCell>(deep);
 
@@ -1900,16 +1703,32 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "rev","uid","sh","uidp","ctx","numFmtId","xfDxf","style","sqref","start","length","styleUid","fBlankCell","applyNumberFormat","applyFont","applyFill","applyBorder","applyAlignment","applyProtection" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt64Value>(0, "rev"),
+		AttributeTag.Create<StringValue>(0, "uid"),
+		AttributeTag.Create<StringValue>(0, "sh"),
+		AttributeTag.Create<StringValue>(0, "uidp"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(0, "ctx"),
+		AttributeTag.Create<UInt32Value>(0, "numFmtId"),
+		AttributeTag.Create<BooleanValue>(0, "xfDxf"),
+		AttributeTag.Create<BooleanValue>(0, "style"),
+		AttributeTag.Create<ListValue<StringValue>>(0, "sqref"),
+		AttributeTag.Create<UInt32Value>(0, "start"),
+		AttributeTag.Create<UInt32Value>(0, "length"),
+		AttributeTag.Create<StringValue>(0, "styleUid"),
+		AttributeTag.Create<BooleanValue>(0, "fBlankCell"),
+		AttributeTag.Create<BooleanValue>(0, "applyNumberFormat"),
+		AttributeTag.Create<BooleanValue>(0, "applyFont"),
+		AttributeTag.Create<BooleanValue>(0, "applyFill"),
+		AttributeTag.Create<BooleanValue>(0, "applyBorder"),
+		AttributeTag.Create<BooleanValue>(0, "applyAlignment"),
+		AttributeTag.Create<BooleanValue>(0, "applyProtection")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -1919,8 +1738,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "rev")]
     public UInt64Value Rev
     {
-        get { return (UInt64Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt64Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -1930,8 +1749,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "uid")]
     public StringValue Uid
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -1941,8 +1760,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "sh")]
     public StringValue Sh
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -1952,8 +1771,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "uidp")]
     public StringValue Uidp
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -1963,8 +1782,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "ctx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -1974,8 +1793,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "numFmtId")]
     public UInt32Value NumFmtId
     {
-        get { return (UInt32Value)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (UInt32Value)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -1985,8 +1804,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "xfDxf")]
     public BooleanValue XfDxf
     {
-        get { return (BooleanValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (BooleanValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -1996,8 +1815,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "style")]
     public BooleanValue Style
     {
-        get { return (BooleanValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (BooleanValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -2007,8 +1826,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "sqref")]
     public ListValue<StringValue> Sqref
     {
-        get { return (ListValue<StringValue>)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (ListValue<StringValue>)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -2018,8 +1837,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "start")]
     public UInt32Value Start
     {
-        get { return (UInt32Value)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (UInt32Value)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -2029,8 +1848,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "length")]
     public UInt32Value Length
     {
-        get { return (UInt32Value)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (UInt32Value)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -2040,8 +1859,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "styleUid")]
     public StringValue StyleUid
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -2051,8 +1870,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "fBlankCell")]
     public BooleanValue FBlankCell
     {
-        get { return (BooleanValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (BooleanValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -2062,8 +1881,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "applyNumberFormat")]
     public BooleanValue ApplyNumberFormat
     {
-        get { return (BooleanValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (BooleanValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -2073,8 +1892,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "applyFont")]
     public BooleanValue ApplyFont
     {
-        get { return (BooleanValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (BooleanValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -2084,8 +1903,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "applyFill")]
     public BooleanValue ApplyFill
     {
-        get { return (BooleanValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (BooleanValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -2095,8 +1914,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "applyBorder")]
     public BooleanValue ApplyBorder
     {
-        get { return (BooleanValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (BooleanValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -2106,8 +1925,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "applyAlignment")]
     public BooleanValue ApplyAlignment
     {
-        get { return (BooleanValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (BooleanValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -2117,8 +1936,8 @@ public partial class RevExFormatting : OpenXmlCompositeElement
     [SchemaAttr(0, "applyProtection")]
     public BooleanValue ApplyProtection
     {
-        get { return (BooleanValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (BooleanValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
 
@@ -2202,70 +2021,6 @@ if( 83 == namespaceId && "extLst" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "rev" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "uid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sh" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "uidp" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ctx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>();
-    
-if( 0 == namespaceId && "numFmtId" == name)
-    return new UInt32Value();
-    
-if( 0 == namespaceId && "xfDxf" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "style" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "sqref" == name)
-    return new ListValue<StringValue>();
-    
-if( 0 == namespaceId && "start" == name)
-    return new UInt32Value();
-    
-if( 0 == namespaceId && "length" == name)
-    return new UInt32Value();
-    
-if( 0 == namespaceId && "styleUid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "fBlankCell" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "applyNumberFormat" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "applyFont" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "applyFill" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "applyBorder" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "applyAlignment" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "applyProtection" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExFormatting>(deep);
 
@@ -2297,16 +2052,29 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "rev","uid","sh","uidp","ctx","customView","name","function","functionGroupId","shortcutKey","hidden","customMenu","description","help","statusBar","comment" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt64Value>(0, "rev"),
+		AttributeTag.Create<StringValue>(0, "uid"),
+		AttributeTag.Create<StringValue>(0, "sh"),
+		AttributeTag.Create<StringValue>(0, "uidp"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(0, "ctx"),
+		AttributeTag.Create<BooleanValue>(0, "customView"),
+		AttributeTag.Create<StringValue>(0, "name"),
+		AttributeTag.Create<BooleanValue>(0, "function"),
+		AttributeTag.Create<ByteValue>(0, "functionGroupId"),
+		AttributeTag.Create<ByteValue>(0, "shortcutKey"),
+		AttributeTag.Create<BooleanValue>(0, "hidden"),
+		AttributeTag.Create<StringValue>(0, "customMenu"),
+		AttributeTag.Create<StringValue>(0, "description"),
+		AttributeTag.Create<StringValue>(0, "help"),
+		AttributeTag.Create<StringValue>(0, "statusBar"),
+		AttributeTag.Create<StringValue>(0, "comment")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2316,8 +2084,8 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "rev")]
     public UInt64Value Rev
     {
-        get { return (UInt64Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt64Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -2327,8 +2095,8 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "uid")]
     public StringValue Uid
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -2338,8 +2106,8 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "sh")]
     public StringValue Sh
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -2349,8 +2117,8 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "uidp")]
     public StringValue Uidp
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -2360,8 +2128,8 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "ctx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -2371,8 +2139,8 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "customView")]
     public BooleanValue CustomView
     {
-        get { return (BooleanValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (BooleanValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -2382,8 +2150,8 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     public StringValue Name
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -2393,8 +2161,8 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "function")]
     public BooleanValue Function
     {
-        get { return (BooleanValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (BooleanValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -2404,8 +2172,8 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "functionGroupId")]
     public ByteValue FunctionGroupId
     {
-        get { return (ByteValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (ByteValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -2415,8 +2183,8 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "shortcutKey")]
     public ByteValue ShortcutKey
     {
-        get { return (ByteValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (ByteValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -2426,8 +2194,8 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "hidden")]
     public BooleanValue Hidden
     {
-        get { return (BooleanValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (BooleanValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -2437,8 +2205,8 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "customMenu")]
     public StringValue CustomMenu
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -2448,8 +2216,8 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "description")]
     public StringValue Description
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -2459,8 +2227,8 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "help")]
     public StringValue Help
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -2470,8 +2238,8 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "statusBar")]
     public StringValue StatusBar
     {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (StringValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -2481,8 +2249,8 @@ public partial class RevExDefinedName : OpenXmlCompositeElement
     [SchemaAttr(0, "comment")]
     public StringValue Comment
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
 
@@ -2566,61 +2334,6 @@ if( 83 == namespaceId && "extLst" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "rev" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "uid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sh" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "uidp" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ctx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>();
-    
-if( 0 == namespaceId && "customView" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "name" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "function" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "functionGroupId" == name)
-    return new ByteValue();
-    
-if( 0 == namespaceId && "shortcutKey" == name)
-    return new ByteValue();
-    
-if( 0 == namespaceId && "hidden" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "customMenu" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "help" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "statusBar" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "comment" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExDefinedName>(deep);
 
@@ -2650,16 +2363,18 @@ public partial class RevExDelObj : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "rev","uid","sh","uidp","ctx" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt64Value>(0, "rev"),
+		AttributeTag.Create<StringValue>(0, "uid"),
+		AttributeTag.Create<StringValue>(0, "sh"),
+		AttributeTag.Create<StringValue>(0, "uidp"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(0, "ctx")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2669,8 +2384,8 @@ public partial class RevExDelObj : OpenXmlCompositeElement
     [SchemaAttr(0, "rev")]
     public UInt64Value Rev
     {
-        get { return (UInt64Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt64Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -2680,8 +2395,8 @@ public partial class RevExDelObj : OpenXmlCompositeElement
     [SchemaAttr(0, "uid")]
     public StringValue Uid
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -2691,8 +2406,8 @@ public partial class RevExDelObj : OpenXmlCompositeElement
     [SchemaAttr(0, "sh")]
     public StringValue Sh
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -2702,8 +2417,8 @@ public partial class RevExDelObj : OpenXmlCompositeElement
     [SchemaAttr(0, "uidp")]
     public StringValue Uidp
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -2713,8 +2428,8 @@ public partial class RevExDelObj : OpenXmlCompositeElement
     [SchemaAttr(0, "ctx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
 
@@ -2783,28 +2498,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "rev" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "uid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sh" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "uidp" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ctx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExDelObj>(deep);
 
@@ -2838,16 +2531,18 @@ public partial class RevExChgObj : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "rev","uid","sh","uidp","ctx" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt64Value>(0, "rev"),
+		AttributeTag.Create<StringValue>(0, "uid"),
+		AttributeTag.Create<StringValue>(0, "sh"),
+		AttributeTag.Create<StringValue>(0, "uidp"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(0, "ctx")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -2857,8 +2552,8 @@ public partial class RevExChgObj : OpenXmlCompositeElement
     [SchemaAttr(0, "rev")]
     public UInt64Value Rev
     {
-        get { return (UInt64Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt64Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -2868,8 +2563,8 @@ public partial class RevExChgObj : OpenXmlCompositeElement
     [SchemaAttr(0, "uid")]
     public StringValue Uid
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -2879,8 +2574,8 @@ public partial class RevExChgObj : OpenXmlCompositeElement
     [SchemaAttr(0, "sh")]
     public StringValue Sh
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -2890,8 +2585,8 @@ public partial class RevExChgObj : OpenXmlCompositeElement
     [SchemaAttr(0, "uidp")]
     public StringValue Uidp
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -2901,8 +2596,8 @@ public partial class RevExChgObj : OpenXmlCompositeElement
     [SchemaAttr(0, "ctx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
 
@@ -2977,28 +2672,6 @@ if( 83 == namespaceId && "body" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "rev" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "uid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sh" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "uidp" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ctx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExChgObj>(deep);
 
@@ -3021,16 +2694,22 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "rev","uid","sh","uidp","ctx","op","name","idOrig","idNew" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt64Value>(0, "rev"),
+		AttributeTag.Create<StringValue>(0, "uid"),
+		AttributeTag.Create<StringValue>(0, "sh"),
+		AttributeTag.Create<StringValue>(0, "uidp"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(0, "ctx"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SheetOp>>(0, "op"),
+		AttributeTag.Create<StringValue>(0, "name"),
+		AttributeTag.Create<UInt32Value>(0, "idOrig"),
+		AttributeTag.Create<UInt32Value>(0, "idNew")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3040,8 +2719,8 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     [SchemaAttr(0, "rev")]
     public UInt64Value Rev
     {
-        get { return (UInt64Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt64Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -3051,8 +2730,8 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     [SchemaAttr(0, "uid")]
     public StringValue Uid
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -3062,8 +2741,8 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     [SchemaAttr(0, "sh")]
     public StringValue Sh
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -3073,8 +2752,8 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     [SchemaAttr(0, "uidp")]
     public StringValue Uidp
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -3084,8 +2763,8 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     [SchemaAttr(0, "ctx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -3095,8 +2774,8 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     [SchemaAttr(0, "op")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SheetOp> Op
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SheetOp>)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SheetOp>)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -3106,8 +2785,8 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     [SchemaAttr(0, "name")]
     public StringValue Name
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -3117,8 +2796,8 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     [SchemaAttr(0, "idOrig")]
     public UInt32Value IdOrig
     {
-        get { return (UInt32Value)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (UInt32Value)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -3128,8 +2807,8 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     [SchemaAttr(0, "idNew")]
     public UInt32Value IdNew
     {
-        get { return (UInt32Value)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (UInt32Value)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
 
@@ -3143,40 +2822,6 @@ public partial class RevExSheetOp : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "rev" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "uid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sh" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "uidp" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ctx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>();
-    
-if( 0 == namespaceId && "op" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SheetOp>();
-    
-if( 0 == namespaceId && "name" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idOrig" == name)
-    return new UInt32Value();
-    
-if( 0 == namespaceId && "idNew" == name)
-    return new UInt32Value();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevExSheetOp>(deep);
 
@@ -3199,16 +2844,26 @@ public partial class RevisionList : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "rev","uid","sh","uidp","ctx","Data","Formatting","RangeBased","Fake","ref","Headers","InsDelHeaders","rId" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt64Value>(0, "rev"),
+		AttributeTag.Create<StringValue>(0, "uid"),
+		AttributeTag.Create<StringValue>(0, "sh"),
+		AttributeTag.Create<StringValue>(0, "uidp"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(0, "ctx"),
+		AttributeTag.Create<BooleanValue>(0, "Data"),
+		AttributeTag.Create<BooleanValue>(0, "Formatting"),
+		AttributeTag.Create<BooleanValue>(0, "RangeBased"),
+		AttributeTag.Create<BooleanValue>(0, "Fake"),
+		AttributeTag.Create<StringValue>(0, "ref"),
+		AttributeTag.Create<BooleanValue>(0, "Headers"),
+		AttributeTag.Create<BooleanValue>(0, "InsDelHeaders"),
+		AttributeTag.Create<UInt32Value>(0, "rId")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3218,8 +2873,8 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "rev")]
     public UInt64Value Rev
     {
-        get { return (UInt64Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt64Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -3229,8 +2884,8 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "uid")]
     public StringValue Uid
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -3240,8 +2895,8 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "sh")]
     public StringValue Sh
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -3251,8 +2906,8 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "uidp")]
     public StringValue Uidp
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -3262,8 +2917,8 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "ctx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -3273,8 +2928,8 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "Data")]
     public BooleanValue Data
     {
-        get { return (BooleanValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (BooleanValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -3284,8 +2939,8 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "Formatting")]
     public BooleanValue Formatting
     {
-        get { return (BooleanValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (BooleanValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -3295,8 +2950,8 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "RangeBased")]
     public BooleanValue RangeBased
     {
-        get { return (BooleanValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (BooleanValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -3306,8 +2961,8 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "Fake")]
     public BooleanValue Fake
     {
-        get { return (BooleanValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (BooleanValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -3317,8 +2972,8 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "ref")]
     public StringValue Ref
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -3328,8 +2983,8 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "Headers")]
     public BooleanValue Headers
     {
-        get { return (BooleanValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (BooleanValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -3339,8 +2994,8 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "InsDelHeaders")]
     public BooleanValue InsDelHeaders
     {
-        get { return (BooleanValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (BooleanValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -3350,8 +3005,8 @@ public partial class RevisionList : OpenXmlLeafElement
     [SchemaAttr(0, "rId")]
     public UInt32Value RId
     {
-        get { return (UInt32Value)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (UInt32Value)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
 
@@ -3365,52 +3020,6 @@ public partial class RevisionList : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "rev" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "uid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sh" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "uidp" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ctx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>();
-    
-if( 0 == namespaceId && "Data" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "Formatting" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "RangeBased" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "Fake" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "ref" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "Headers" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "InsDelHeaders" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "rId" == name)
-    return new UInt32Value();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionList>(deep);
 
@@ -3433,16 +3042,20 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "rev","uid","sh","uidp","ctx","refAdded","listGuid" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt64Value>(0, "rev"),
+		AttributeTag.Create<StringValue>(0, "uid"),
+		AttributeTag.Create<StringValue>(0, "sh"),
+		AttributeTag.Create<StringValue>(0, "uidp"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(0, "ctx"),
+		AttributeTag.Create<StringValue>(0, "refAdded"),
+		AttributeTag.Create<StringValue>(0, "listGuid")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3452,8 +3065,8 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
     [SchemaAttr(0, "rev")]
     public UInt64Value Rev
     {
-        get { return (UInt64Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt64Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -3463,8 +3076,8 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
     [SchemaAttr(0, "uid")]
     public StringValue Uid
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -3474,8 +3087,8 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
     [SchemaAttr(0, "sh")]
     public StringValue Sh
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -3485,8 +3098,8 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
     [SchemaAttr(0, "uidp")]
     public StringValue Uidp
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -3496,8 +3109,8 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
     [SchemaAttr(0, "ctx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -3507,8 +3120,8 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
     [SchemaAttr(0, "refAdded")]
     public StringValue RefAdded
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -3518,8 +3131,8 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
     [SchemaAttr(0, "listGuid")]
     public StringValue ListGuid
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
 
@@ -3533,34 +3146,6 @@ public partial class RevListAutoExpandRw : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "rev" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "uid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sh" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "uidp" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ctx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>();
-    
-if( 0 == namespaceId && "refAdded" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "listGuid" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevListAutoExpandRw>(deep);
 
@@ -3614,16 +3199,18 @@ public partial class RevGroup : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "rev","uid","sh","uidp","ctx" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<UInt64Value>(0, "rev"),
+		AttributeTag.Create<StringValue>(0, "uid"),
+		AttributeTag.Create<StringValue>(0, "sh"),
+		AttributeTag.Create<StringValue>(0, "uidp"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>>(0, "ctx")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3633,8 +3220,8 @@ public partial class RevGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "rev")]
     public UInt64Value Rev
     {
-        get { return (UInt64Value)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (UInt64Value)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -3644,8 +3231,8 @@ public partial class RevGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "uid")]
     public StringValue Uid
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -3655,8 +3242,8 @@ public partial class RevGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "sh")]
     public StringValue Sh
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -3666,8 +3253,8 @@ public partial class RevGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "uidp")]
     public StringValue Uidp
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -3677,8 +3264,8 @@ public partial class RevGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "ctx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext> Ctx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
 
@@ -3762,28 +3349,6 @@ if( 83 == namespaceId && "xrrListExpR" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "rev" == name)
-    return new UInt64Value();
-    
-if( 0 == namespaceId && "uid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sh" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "uidp" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ctx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RevisionContext>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevGroup>(deep);
 
@@ -3806,7 +3371,7 @@ public partial class RevExTest : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
     
@@ -3819,7 +3384,6 @@ public partial class RevExTest : OpenXmlLeafElement
     
       
      
-    
     
     
     
@@ -3856,16 +3420,17 @@ public partial class RevCell : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "t","nop","tick","rep" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>>(0, "t"),
+		AttributeTag.Create<BooleanValue>(0, "nop"),
+		AttributeTag.Create<BooleanValue>(0, "tick"),
+		AttributeTag.Create<UInt32Value>(0, "rep")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -3875,8 +3440,8 @@ public partial class RevCell : OpenXmlCompositeElement
     [SchemaAttr(0, "t")]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues> T
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -3886,8 +3451,8 @@ public partial class RevCell : OpenXmlCompositeElement
     [SchemaAttr(0, "nop")]
     public BooleanValue Nop
     {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (BooleanValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -3897,8 +3462,8 @@ public partial class RevCell : OpenXmlCompositeElement
     [SchemaAttr(0, "tick")]
     public BooleanValue Tick
     {
-        get { return (BooleanValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (BooleanValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -3908,8 +3473,8 @@ public partial class RevCell : OpenXmlCompositeElement
     [SchemaAttr(0, "rep")]
     public UInt32Value Rep
     {
-        get { return (UInt32Value)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (UInt32Value)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
 
@@ -4008,25 +3573,6 @@ if( 83 == namespaceId && "is" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "t" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Spreadsheet.CellValues>();
-    
-if( 0 == namespaceId && "nop" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "tick" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "rep" == name)
-    return new UInt32Value();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevCell>(deep);
 
@@ -4056,16 +3602,17 @@ public partial class ChangeCellSubEdit : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "r","t","x","w" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "r"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType>>(0, "t"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt>>(0, "x"),
+		AttributeTag.Create<UInt32Value>(0, "w")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4075,8 +3622,8 @@ public partial class ChangeCellSubEdit : OpenXmlCompositeElement
     [SchemaAttr(0, "r")]
     public StringValue R
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -4086,8 +3633,8 @@ public partial class ChangeCellSubEdit : OpenXmlCompositeElement
     [SchemaAttr(0, "t")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType> T
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -4097,8 +3644,8 @@ public partial class ChangeCellSubEdit : OpenXmlCompositeElement
     [SchemaAttr(0, "x")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt> X
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -4108,8 +3655,8 @@ public partial class ChangeCellSubEdit : OpenXmlCompositeElement
     [SchemaAttr(0, "w")]
     public UInt32Value W
     {
-        get { return (UInt32Value)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (UInt32Value)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
 
@@ -4157,25 +3704,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "r" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "t" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillType>();
-    
-if( 0 == namespaceId && "x" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FillTypeExt>();
-    
-if( 0 == namespaceId && "w" == name)
-    return new UInt32Value();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChangeCellSubEdit>(deep);
 
@@ -4205,7 +3733,7 @@ public partial class ExtensionList : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
     
@@ -4255,7 +3783,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExtensionList>(deep);
 
@@ -4278,7 +3805,7 @@ public partial class FormulaFormula : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
     /// <summary>
@@ -4322,7 +3849,7 @@ public partial class FFormula : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
     /// <summary>
@@ -4373,16 +3900,18 @@ public partial class StateBasedHeader : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "uid","eft","eftx","seft","seftx" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "uid"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FeatureType>>(0, "eft"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtFeatureType>>(0, "eftx"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SubFeatureType>>(0, "seft"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtSubFeatureType>>(0, "seftx")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4392,8 +3921,8 @@ public partial class StateBasedHeader : OpenXmlCompositeElement
     [SchemaAttr(0, "uid")]
     public StringValue Uid
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -4403,8 +3932,8 @@ public partial class StateBasedHeader : OpenXmlCompositeElement
     [SchemaAttr(0, "eft")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FeatureType> Eft
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FeatureType>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FeatureType>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -4414,8 +3943,8 @@ public partial class StateBasedHeader : OpenXmlCompositeElement
     [SchemaAttr(0, "eftx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtFeatureType> Eftx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtFeatureType>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtFeatureType>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -4425,8 +3954,8 @@ public partial class StateBasedHeader : OpenXmlCompositeElement
     [SchemaAttr(0, "seft")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SubFeatureType> Seft
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SubFeatureType>)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SubFeatureType>)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -4436,8 +3965,8 @@ public partial class StateBasedHeader : OpenXmlCompositeElement
     [SchemaAttr(0, "seftx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtSubFeatureType> Seftx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtSubFeatureType>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtSubFeatureType>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
 
@@ -4506,28 +4035,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "uid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "eft" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.FeatureType>();
-    
-if( 0 == namespaceId && "eftx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtFeatureType>();
-    
-if( 0 == namespaceId && "seft" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.SubFeatureType>();
-    
-if( 0 == namespaceId && "seftx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.ExtSubFeatureType>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StateBasedHeader>(deep);
 
@@ -4550,16 +4057,14 @@ public partial class RevisionStateLink : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "id" };
-    private static readonly byte[] attributeNamespaceIds = { 19 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(19, "id")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4571,8 +4076,8 @@ public partial class RevisionStateLink : OpenXmlLeafElement
     [SchemaAttr(19, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -4586,16 +4091,6 @@ public partial class RevisionStateLink : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 19 == namespaceId && "id" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionStateLink>(deep);
 
@@ -4633,7 +4128,7 @@ public partial class RevisionState : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
     
@@ -4764,7 +4259,6 @@ if( 83 == namespaceId && "outlines" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionState>(deep);
 
@@ -4802,7 +4296,7 @@ public partial class RefMap : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
     
@@ -4864,7 +4358,6 @@ if( 83 == namespaceId && "test" == name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RefMap>(deep);
 
@@ -4887,16 +4380,17 @@ public partial class RowColVisualOps : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "action","isRow","size","userSized" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOp>>(0, "action"),
+		AttributeTag.Create<BooleanValue>(0, "isRow"),
+		AttributeTag.Create<UInt32Value>(0, "size"),
+		AttributeTag.Create<BooleanValue>(0, "userSized")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4906,8 +4400,8 @@ public partial class RowColVisualOps : OpenXmlLeafElement
     [SchemaAttr(0, "action")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOp> Action
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOp>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOp>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -4917,8 +4411,8 @@ public partial class RowColVisualOps : OpenXmlLeafElement
     [SchemaAttr(0, "isRow")]
     public BooleanValue IsRow
     {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (BooleanValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -4928,8 +4422,8 @@ public partial class RowColVisualOps : OpenXmlLeafElement
     [SchemaAttr(0, "size")]
     public UInt32Value Size
     {
-        get { return (UInt32Value)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (UInt32Value)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -4939,8 +4433,8 @@ public partial class RowColVisualOps : OpenXmlLeafElement
     [SchemaAttr(0, "userSized")]
     public BooleanValue UserSized
     {
-        get { return (BooleanValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (BooleanValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
 
@@ -4954,25 +4448,6 @@ public partial class RowColVisualOps : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "action" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.RowColVisualOp>();
-    
-if( 0 == namespaceId && "isRow" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "size" == name)
-    return new UInt32Value();
-    
-if( 0 == namespaceId && "userSized" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowColVisualOps>(deep);
 
@@ -4995,16 +4470,14 @@ public partial class HideUnhideSheet : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "hide" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<BooleanValue>(0, "hide")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5014,8 +4487,8 @@ public partial class HideUnhideSheet : OpenXmlLeafElement
     [SchemaAttr(0, "hide")]
     public BooleanValue Hide
     {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (BooleanValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -5029,16 +4502,6 @@ public partial class HideUnhideSheet : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "hide" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HideUnhideSheet>(deep);
 
@@ -5061,16 +4524,15 @@ public partial class ShowGridlinesHeadings : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "showGridLines","showRowCol" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<BooleanValue>(0, "showGridLines"),
+		AttributeTag.Create<BooleanValue>(0, "showRowCol")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5080,8 +4542,8 @@ public partial class ShowGridlinesHeadings : OpenXmlLeafElement
     [SchemaAttr(0, "showGridLines")]
     public BooleanValue ShowGridLines
     {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (BooleanValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -5091,8 +4553,8 @@ public partial class ShowGridlinesHeadings : OpenXmlLeafElement
     [SchemaAttr(0, "showRowCol")]
     public BooleanValue ShowRowCol
     {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (BooleanValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
@@ -5106,19 +4568,6 @@ public partial class ShowGridlinesHeadings : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "showGridLines" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "showRowCol" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowGridlinesHeadings>(deep);
 
@@ -5141,16 +4590,14 @@ public partial class FreezePanes : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "sheetViewUid" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "sheetViewUid")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5160,8 +4607,8 @@ public partial class FreezePanes : OpenXmlLeafElement
     [SchemaAttr(0, "sheetViewUid")]
     public StringValue SheetViewUid
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -5175,16 +4622,6 @@ public partial class FreezePanes : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "sheetViewUid" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FreezePanes>(deep);
 
@@ -5214,16 +4651,14 @@ public partial class Outlines : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "isRow" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<BooleanValue>(0, "isRow")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5233,8 +4668,8 @@ public partial class Outlines : OpenXmlCompositeElement
     [SchemaAttr(0, "isRow")]
     public BooleanValue IsRow
     {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (BooleanValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -5282,16 +4717,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "isRow" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Outlines>(deep);
 
@@ -5314,16 +4739,15 @@ public partial class Outline : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "isCollapsed","level" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<BooleanValue>(0, "isCollapsed"),
+		AttributeTag.Create<ByteValue>(0, "level")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5333,8 +4757,8 @@ public partial class Outline : OpenXmlLeafElement
     [SchemaAttr(0, "isCollapsed")]
     public BooleanValue IsCollapsed
     {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (BooleanValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -5344,8 +4768,8 @@ public partial class Outline : OpenXmlLeafElement
     [SchemaAttr(0, "level")]
     public ByteValue Level
     {
-        get { return (ByteValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (ByteValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
@@ -5359,19 +4783,6 @@ public partial class Outline : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "isCollapsed" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "level" == name)
-    return new ByteValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Outline>(deep);
 
@@ -5394,7 +4805,7 @@ public partial class Xstring : OpenXmlLeafTextElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
     
@@ -5420,7 +4831,6 @@ public partial class Xstring : OpenXmlLeafTextElement
     }
     
  
-    
     
     
     
@@ -5459,7 +4869,7 @@ public partial class RstType : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
     
@@ -5539,7 +4949,6 @@ if( 22 == namespaceId && "phoneticPr" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RstType>(deep);
 
@@ -5562,16 +4971,20 @@ public partial class RefCell : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "n","ajt","ajtx","homeRef","r","uid","uidLast" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "n"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>>(0, "ajt"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>>(0, "ajtx"),
+		AttributeTag.Create<BooleanValue>(0, "homeRef"),
+		AttributeTag.Create<ListValue<StringValue>>(0, "r"),
+		AttributeTag.Create<StringValue>(0, "uid"),
+		AttributeTag.Create<StringValue>(0, "uidLast")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5581,8 +4994,8 @@ public partial class RefCell : OpenXmlLeafElement
     [SchemaAttr(0, "n")]
     public StringValue N
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -5592,8 +5005,8 @@ public partial class RefCell : OpenXmlLeafElement
     [SchemaAttr(0, "ajt")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -5603,8 +5016,8 @@ public partial class RefCell : OpenXmlLeafElement
     [SchemaAttr(0, "ajtx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -5614,8 +5027,8 @@ public partial class RefCell : OpenXmlLeafElement
     [SchemaAttr(0, "homeRef")]
     public BooleanValue HomeRef
     {
-        get { return (BooleanValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (BooleanValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -5625,8 +5038,8 @@ public partial class RefCell : OpenXmlLeafElement
     [SchemaAttr(0, "r")]
     public ListValue<StringValue> R
     {
-        get { return (ListValue<StringValue>)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (ListValue<StringValue>)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -5636,8 +5049,8 @@ public partial class RefCell : OpenXmlLeafElement
     [SchemaAttr(0, "uid")]
     public StringValue Uid
     {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (StringValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -5647,8 +5060,8 @@ public partial class RefCell : OpenXmlLeafElement
     [SchemaAttr(0, "uidLast")]
     public StringValue UidLast
     {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (StringValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
 
@@ -5662,34 +5075,6 @@ public partial class RefCell : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "n" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ajt" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>();
-    
-if( 0 == namespaceId && "ajtx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>();
-    
-if( 0 == namespaceId && "homeRef" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "r" == name)
-    return new ListValue<StringValue>();
-    
-if( 0 == namespaceId && "uid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "uidLast" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RefCell>(deep);
 
@@ -5712,16 +5097,18 @@ public partial class SheetXluid : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "n","ajt","ajtx","homeRef","uid" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "n"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>>(0, "ajt"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>>(0, "ajtx"),
+		AttributeTag.Create<BooleanValue>(0, "homeRef"),
+		AttributeTag.Create<StringValue>(0, "uid")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5731,8 +5118,8 @@ public partial class SheetXluid : OpenXmlLeafElement
     [SchemaAttr(0, "n")]
     public StringValue N
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -5742,8 +5129,8 @@ public partial class SheetXluid : OpenXmlLeafElement
     [SchemaAttr(0, "ajt")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -5753,8 +5140,8 @@ public partial class SheetXluid : OpenXmlLeafElement
     [SchemaAttr(0, "ajtx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -5764,8 +5151,8 @@ public partial class SheetXluid : OpenXmlLeafElement
     [SchemaAttr(0, "homeRef")]
     public BooleanValue HomeRef
     {
-        get { return (BooleanValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (BooleanValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -5775,8 +5162,8 @@ public partial class SheetXluid : OpenXmlLeafElement
     [SchemaAttr(0, "uid")]
     public StringValue Uid
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
 
@@ -5790,28 +5177,6 @@ public partial class SheetXluid : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "n" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ajt" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>();
-    
-if( 0 == namespaceId && "ajtx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>();
-    
-if( 0 == namespaceId && "homeRef" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "uid" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SheetXluid>(deep);
 
@@ -5834,16 +5199,27 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "n","ajt","ajtx","homeRef","r","fromRowOff","fromColOff","toRowOff","toColOff","cx","cy","x","y","oat" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "n"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>>(0, "ajt"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>>(0, "ajtx"),
+		AttributeTag.Create<BooleanValue>(0, "homeRef"),
+		AttributeTag.Create<StringValue>(0, "r"),
+		AttributeTag.Create<Int64Value>(0, "fromRowOff"),
+		AttributeTag.Create<Int64Value>(0, "fromColOff"),
+		AttributeTag.Create<Int64Value>(0, "toRowOff"),
+		AttributeTag.Create<Int64Value>(0, "toColOff"),
+		AttributeTag.Create<Int64Value>(0, "cx"),
+		AttributeTag.Create<Int64Value>(0, "cy"),
+		AttributeTag.Create<Int64Value>(0, "x"),
+		AttributeTag.Create<Int64Value>(0, "y"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.OartAnchorType>>(0, "oat")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -5853,8 +5229,8 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "n")]
     public StringValue N
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -5864,8 +5240,8 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "ajt")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -5875,8 +5251,8 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "ajtx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -5886,8 +5262,8 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "homeRef")]
     public BooleanValue HomeRef
     {
-        get { return (BooleanValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (BooleanValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -5897,8 +5273,8 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "r")]
     public StringValue R
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -5908,8 +5284,8 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "fromRowOff")]
     public Int64Value FromRowOff
     {
-        get { return (Int64Value)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (Int64Value)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -5919,8 +5295,8 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "fromColOff")]
     public Int64Value FromColOff
     {
-        get { return (Int64Value)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (Int64Value)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -5930,8 +5306,8 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "toRowOff")]
     public Int64Value ToRowOff
     {
-        get { return (Int64Value)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (Int64Value)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -5941,8 +5317,8 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "toColOff")]
     public Int64Value ToColOff
     {
-        get { return (Int64Value)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (Int64Value)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -5952,8 +5328,8 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "cx")]
     public Int64Value Cx
     {
-        get { return (Int64Value)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (Int64Value)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -5963,8 +5339,8 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "cy")]
     public Int64Value Cy
     {
-        get { return (Int64Value)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (Int64Value)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -5974,8 +5350,8 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "x")]
     public Int64Value X
     {
-        get { return (Int64Value)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (Int64Value)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -5985,8 +5361,8 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "y")]
     public Int64Value Y
     {
-        get { return (Int64Value)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (Int64Value)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -5996,8 +5372,8 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     [SchemaAttr(0, "oat")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.OartAnchorType> Oat
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.OartAnchorType>)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.OartAnchorType>)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
 
@@ -6011,55 +5387,6 @@ public partial class RefOartAnchor : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "n" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ajt" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>();
-    
-if( 0 == namespaceId && "ajtx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>();
-    
-if( 0 == namespaceId && "homeRef" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "r" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "fromRowOff" == name)
-    return new Int64Value();
-    
-if( 0 == namespaceId && "fromColOff" == name)
-    return new Int64Value();
-    
-if( 0 == namespaceId && "toRowOff" == name)
-    return new Int64Value();
-    
-if( 0 == namespaceId && "toColOff" == name)
-    return new Int64Value();
-    
-if( 0 == namespaceId && "cx" == name)
-    return new Int64Value();
-    
-if( 0 == namespaceId && "cy" == name)
-    return new Int64Value();
-    
-if( 0 == namespaceId && "x" == name)
-    return new Int64Value();
-    
-if( 0 == namespaceId && "y" == name)
-    return new Int64Value();
-    
-if( 0 == namespaceId && "oat" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.OartAnchorType>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RefOartAnchor>(deep);
 
@@ -6082,7 +5409,7 @@ public partial class RefFuture : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
     
@@ -6095,7 +5422,6 @@ public partial class RefFuture : OpenXmlLeafElement
     
       
      
-    
     
     
     
@@ -6121,16 +5447,17 @@ public partial class RefTest : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "n","ajt","ajtx","homeRef" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "n"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>>(0, "ajt"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>>(0, "ajtx"),
+		AttributeTag.Create<BooleanValue>(0, "homeRef")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6140,8 +5467,8 @@ public partial class RefTest : OpenXmlLeafElement
     [SchemaAttr(0, "n")]
     public StringValue N
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -6151,8 +5478,8 @@ public partial class RefTest : OpenXmlLeafElement
     [SchemaAttr(0, "ajt")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType> Ajt
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -6162,8 +5489,8 @@ public partial class RefTest : OpenXmlLeafElement
     [SchemaAttr(0, "ajtx")]
     public EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt> Ajtx
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -6173,8 +5500,8 @@ public partial class RefTest : OpenXmlLeafElement
     [SchemaAttr(0, "homeRef")]
     public BooleanValue HomeRef
     {
-        get { return (BooleanValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (BooleanValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
 
@@ -6188,25 +5515,6 @@ public partial class RefTest : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "n" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ajt" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustType>();
-    
-if( 0 == namespaceId && "ajtx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2016.Excel.AdjustTypeExt>();
-    
-if( 0 == namespaceId && "homeRef" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RefTest>(deep);
 
@@ -6240,16 +5548,26 @@ public partial class DataValidation : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "type","errorStyle","imeMode","operator","allowBlank","showDropDown","showInputMessage","showErrorMessage","errorTitle","error","promptTitle","prompt","sqref" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>>(0, "type"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>>(0, "errorStyle"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>>(0, "imeMode"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>>(0, "operator"),
+		AttributeTag.Create<BooleanValue>(0, "allowBlank"),
+		AttributeTag.Create<BooleanValue>(0, "showDropDown"),
+		AttributeTag.Create<BooleanValue>(0, "showInputMessage"),
+		AttributeTag.Create<BooleanValue>(0, "showErrorMessage"),
+		AttributeTag.Create<StringValue>(0, "errorTitle"),
+		AttributeTag.Create<StringValue>(0, "error"),
+		AttributeTag.Create<StringValue>(0, "promptTitle"),
+		AttributeTag.Create<StringValue>(0, "prompt"),
+		AttributeTag.Create<ListValue<StringValue>>(0, "sqref")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6259,8 +5577,8 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "type")]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues> Type
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -6270,8 +5588,8 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "errorStyle")]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues> ErrorStyle
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -6281,8 +5599,8 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "imeMode")]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues> ImeMode
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -6292,8 +5610,8 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "operator")]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues> Operator
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -6303,8 +5621,8 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "allowBlank")]
     public BooleanValue AllowBlank
     {
-        get { return (BooleanValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (BooleanValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -6314,8 +5632,8 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "showDropDown")]
     public BooleanValue ShowDropDown
     {
-        get { return (BooleanValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (BooleanValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -6325,8 +5643,8 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "showInputMessage")]
     public BooleanValue ShowInputMessage
     {
-        get { return (BooleanValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (BooleanValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -6336,8 +5654,8 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "showErrorMessage")]
     public BooleanValue ShowErrorMessage
     {
-        get { return (BooleanValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (BooleanValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -6347,8 +5665,8 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "errorTitle")]
     public StringValue ErrorTitle
     {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (StringValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -6358,8 +5676,8 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "error")]
     public StringValue Error
     {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (StringValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -6369,8 +5687,8 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "promptTitle")]
     public StringValue PromptTitle
     {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (StringValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -6380,8 +5698,8 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "prompt")]
     public StringValue Prompt
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -6391,8 +5709,8 @@ public partial class DataValidation : OpenXmlCompositeElement
     [SchemaAttr(0, "sqref")]
     public ListValue<StringValue> SequenceOfReferences
     {
-        get { return (ListValue<StringValue>)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (ListValue<StringValue>)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
 
@@ -6491,52 +5809,6 @@ if( 22 == namespaceId && "formula2" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "type" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationValues>();
-    
-if( 0 == namespaceId && "errorStyle" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationErrorStyleValues>();
-    
-if( 0 == namespaceId && "imeMode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationImeModeValues>();
-    
-if( 0 == namespaceId && "operator" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Spreadsheet.DataValidationOperatorValues>();
-    
-if( 0 == namespaceId && "allowBlank" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "showDropDown" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "showInputMessage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "showErrorMessage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "errorTitle" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "error" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "promptTitle" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "prompt" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sqref" == name)
-    return new ListValue<StringValue>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataValidation>(deep);
 
@@ -6559,16 +5831,18 @@ public partial class Hyperlink : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "ref","id","location","tooltip","display" };
-    private static readonly byte[] attributeNamespaceIds = { 0,19,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "ref"),
+		AttributeTag.Create<StringValue>(19, "id"),
+		AttributeTag.Create<StringValue>(0, "location"),
+		AttributeTag.Create<StringValue>(0, "tooltip"),
+		AttributeTag.Create<StringValue>(0, "display")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6578,8 +5852,8 @@ public partial class Hyperlink : OpenXmlLeafElement
     [SchemaAttr(0, "ref")]
     public StringValue Reference
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -6591,8 +5865,8 @@ public partial class Hyperlink : OpenXmlLeafElement
     [SchemaAttr(19, "id")]
     public StringValue Id
     {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (StringValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -6602,8 +5876,8 @@ public partial class Hyperlink : OpenXmlLeafElement
     [SchemaAttr(0, "location")]
     public StringValue Location
     {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (StringValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -6613,8 +5887,8 @@ public partial class Hyperlink : OpenXmlLeafElement
     [SchemaAttr(0, "tooltip")]
     public StringValue Tooltip
     {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (StringValue)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -6624,8 +5898,8 @@ public partial class Hyperlink : OpenXmlLeafElement
     [SchemaAttr(0, "display")]
     public StringValue Display
     {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (StringValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
 
@@ -6639,28 +5913,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "ref" == name)
-    return new StringValue();
-    
-if( 19 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "location" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tooltip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "display" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Hyperlink>(deep);
 
@@ -6708,16 +5960,30 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "manualMax","manualMin","lineWeight","type","dateAxis","displayEmptyCellsAs","markers","high","low","first","last","negative","displayXAxis","displayHidden","minAxisType","maxAxisType","rightToLeft" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<DoubleValue>(0, "manualMax"),
+		AttributeTag.Create<DoubleValue>(0, "manualMin"),
+		AttributeTag.Create<DoubleValue>(0, "lineWeight"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues>>(0, "type"),
+		AttributeTag.Create<BooleanValue>(0, "dateAxis"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues>>(0, "displayEmptyCellsAs"),
+		AttributeTag.Create<BooleanValue>(0, "markers"),
+		AttributeTag.Create<BooleanValue>(0, "high"),
+		AttributeTag.Create<BooleanValue>(0, "low"),
+		AttributeTag.Create<BooleanValue>(0, "first"),
+		AttributeTag.Create<BooleanValue>(0, "last"),
+		AttributeTag.Create<BooleanValue>(0, "negative"),
+		AttributeTag.Create<BooleanValue>(0, "displayXAxis"),
+		AttributeTag.Create<BooleanValue>(0, "displayHidden"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>>(0, "minAxisType"),
+		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>>(0, "maxAxisType"),
+		AttributeTag.Create<BooleanValue>(0, "rightToLeft")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -6727,8 +5993,8 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "manualMax")]
     public DoubleValue ManualMax
     {
-        get { return (DoubleValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (DoubleValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -6738,8 +6004,8 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "manualMin")]
     public DoubleValue ManualMin
     {
-        get { return (DoubleValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (DoubleValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -6749,8 +6015,8 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "lineWeight")]
     public DoubleValue LineWeight
     {
-        get { return (DoubleValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (DoubleValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -6760,8 +6026,8 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "type")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues> Type
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues>)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues>)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -6771,8 +6037,8 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "dateAxis")]
     public BooleanValue DateAxis
     {
-        get { return (BooleanValue)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (BooleanValue)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -6782,8 +6048,8 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "displayEmptyCellsAs")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues> DisplayEmptyCellsAs
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues>)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues>)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -6793,8 +6059,8 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "markers")]
     public BooleanValue Markers
     {
-        get { return (BooleanValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (BooleanValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -6804,8 +6070,8 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "high")]
     public BooleanValue High
     {
-        get { return (BooleanValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (BooleanValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -6815,8 +6081,8 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "low")]
     public BooleanValue Low
     {
-        get { return (BooleanValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (BooleanValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -6826,8 +6092,8 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "first")]
     public BooleanValue First
     {
-        get { return (BooleanValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (BooleanValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -6837,8 +6103,8 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "last")]
     public BooleanValue Last
     {
-        get { return (BooleanValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (BooleanValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -6848,8 +6114,8 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "negative")]
     public BooleanValue Negative
     {
-        get { return (BooleanValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (BooleanValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -6859,8 +6125,8 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "displayXAxis")]
     public BooleanValue DisplayXAxis
     {
-        get { return (BooleanValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (BooleanValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -6870,8 +6136,8 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "displayHidden")]
     public BooleanValue DisplayHidden
     {
-        get { return (BooleanValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (BooleanValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -6881,8 +6147,8 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "minAxisType")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues> MinAxisType
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -6892,8 +6158,8 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "maxAxisType")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues> MaxAxisType
     {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -6903,8 +6169,8 @@ public partial class SparklineGroup : OpenXmlCompositeElement
     [SchemaAttr(0, "rightToLeft")]
     public BooleanValue RightToLeft
     {
-        get { return (BooleanValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (BooleanValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
 
@@ -7108,64 +6374,6 @@ if( 53 == namespaceId && "sparklines" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "manualMax" == name)
-    return new DoubleValue();
-    
-if( 0 == namespaceId && "manualMin" == name)
-    return new DoubleValue();
-    
-if( 0 == namespaceId && "lineWeight" == name)
-    return new DoubleValue();
-    
-if( 0 == namespaceId && "type" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineTypeValues>();
-    
-if( 0 == namespaceId && "dateAxis" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "displayEmptyCellsAs" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.Excel.DisplayBlanksAsValues>();
-    
-if( 0 == namespaceId && "markers" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "high" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "low" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "first" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "last" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "negative" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "displayXAxis" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "displayHidden" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "minAxisType" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>();
-    
-if( 0 == namespaceId && "maxAxisType" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.Excel.SparklineAxisMinMaxValues>();
-    
-if( 0 == namespaceId && "rightToLeft" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SparklineGroup>(deep);
 
@@ -7199,7 +6407,7 @@ public partial class Comments : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
     
@@ -7300,7 +6508,6 @@ if( 22 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Comments>(deep);
 
@@ -7334,16 +6541,14 @@ public partial class AutoFilter : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "ref" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "ref")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -7353,8 +6558,8 @@ public partial class AutoFilter : OpenXmlCompositeElement
     [SchemaAttr(0, "ref")]
     public StringValue Reference
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
 
@@ -7408,16 +6613,6 @@ if( 22 == namespaceId && "extLst" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "ref" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoFilter>(deep);
 
@@ -7479,16 +6674,81 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "name","cacheId","dataOnRows","dataPosition","autoFormatId","applyNumberFormats","applyBorderFormats","applyFontFormats","applyPatternFormats","applyAlignmentFormats","applyWidthHeightFormats","dataCaption","grandTotalCaption","errorCaption","showError","missingCaption","showMissing","pageStyle","pivotTableStyle","vacatedStyle","tag","updatedVersion","minRefreshableVersion","asteriskTotals","showItems","editData","disableFieldList","showCalcMbrs","visualTotals","showMultipleLabel","showDataDropDown","showDrill","printDrill","showMemberPropertyTips","showDataTips","enableWizard","enableDrill","enableFieldProperties","preserveFormatting","useAutoFormatting","pageWrap","pageOverThenDown","subtotalHiddenItems","rowGrandTotals","colGrandTotals","fieldPrintTitles","itemPrintTitles","mergeItem","showDropZones","createdVersion","indent","showEmptyRow","showEmptyCol","showHeaders","compact","outline","outlineData","compactData","published","gridDropZones","immersive","multipleFieldFilters","chartFormat","rowHeaderCaption","colHeaderCaption","fieldListSortAscending","mdxSubqueries","customListSort" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "name"),
+		AttributeTag.Create<UInt32Value>(0, "cacheId"),
+		AttributeTag.Create<BooleanValue>(0, "dataOnRows"),
+		AttributeTag.Create<UInt32Value>(0, "dataPosition"),
+		AttributeTag.Create<UInt32Value>(0, "autoFormatId"),
+		AttributeTag.Create<BooleanValue>(0, "applyNumberFormats"),
+		AttributeTag.Create<BooleanValue>(0, "applyBorderFormats"),
+		AttributeTag.Create<BooleanValue>(0, "applyFontFormats"),
+		AttributeTag.Create<BooleanValue>(0, "applyPatternFormats"),
+		AttributeTag.Create<BooleanValue>(0, "applyAlignmentFormats"),
+		AttributeTag.Create<BooleanValue>(0, "applyWidthHeightFormats"),
+		AttributeTag.Create<StringValue>(0, "dataCaption"),
+		AttributeTag.Create<StringValue>(0, "grandTotalCaption"),
+		AttributeTag.Create<StringValue>(0, "errorCaption"),
+		AttributeTag.Create<BooleanValue>(0, "showError"),
+		AttributeTag.Create<StringValue>(0, "missingCaption"),
+		AttributeTag.Create<BooleanValue>(0, "showMissing"),
+		AttributeTag.Create<StringValue>(0, "pageStyle"),
+		AttributeTag.Create<StringValue>(0, "pivotTableStyle"),
+		AttributeTag.Create<StringValue>(0, "vacatedStyle"),
+		AttributeTag.Create<StringValue>(0, "tag"),
+		AttributeTag.Create<ByteValue>(0, "updatedVersion"),
+		AttributeTag.Create<ByteValue>(0, "minRefreshableVersion"),
+		AttributeTag.Create<BooleanValue>(0, "asteriskTotals"),
+		AttributeTag.Create<BooleanValue>(0, "showItems"),
+		AttributeTag.Create<BooleanValue>(0, "editData"),
+		AttributeTag.Create<BooleanValue>(0, "disableFieldList"),
+		AttributeTag.Create<BooleanValue>(0, "showCalcMbrs"),
+		AttributeTag.Create<BooleanValue>(0, "visualTotals"),
+		AttributeTag.Create<BooleanValue>(0, "showMultipleLabel"),
+		AttributeTag.Create<BooleanValue>(0, "showDataDropDown"),
+		AttributeTag.Create<BooleanValue>(0, "showDrill"),
+		AttributeTag.Create<BooleanValue>(0, "printDrill"),
+		AttributeTag.Create<BooleanValue>(0, "showMemberPropertyTips"),
+		AttributeTag.Create<BooleanValue>(0, "showDataTips"),
+		AttributeTag.Create<BooleanValue>(0, "enableWizard"),
+		AttributeTag.Create<BooleanValue>(0, "enableDrill"),
+		AttributeTag.Create<BooleanValue>(0, "enableFieldProperties"),
+		AttributeTag.Create<BooleanValue>(0, "preserveFormatting"),
+		AttributeTag.Create<BooleanValue>(0, "useAutoFormatting"),
+		AttributeTag.Create<UInt32Value>(0, "pageWrap"),
+		AttributeTag.Create<BooleanValue>(0, "pageOverThenDown"),
+		AttributeTag.Create<BooleanValue>(0, "subtotalHiddenItems"),
+		AttributeTag.Create<BooleanValue>(0, "rowGrandTotals"),
+		AttributeTag.Create<BooleanValue>(0, "colGrandTotals"),
+		AttributeTag.Create<BooleanValue>(0, "fieldPrintTitles"),
+		AttributeTag.Create<BooleanValue>(0, "itemPrintTitles"),
+		AttributeTag.Create<BooleanValue>(0, "mergeItem"),
+		AttributeTag.Create<BooleanValue>(0, "showDropZones"),
+		AttributeTag.Create<ByteValue>(0, "createdVersion"),
+		AttributeTag.Create<UInt32Value>(0, "indent"),
+		AttributeTag.Create<BooleanValue>(0, "showEmptyRow"),
+		AttributeTag.Create<BooleanValue>(0, "showEmptyCol"),
+		AttributeTag.Create<BooleanValue>(0, "showHeaders"),
+		AttributeTag.Create<BooleanValue>(0, "compact"),
+		AttributeTag.Create<BooleanValue>(0, "outline"),
+		AttributeTag.Create<BooleanValue>(0, "outlineData"),
+		AttributeTag.Create<BooleanValue>(0, "compactData"),
+		AttributeTag.Create<BooleanValue>(0, "published"),
+		AttributeTag.Create<BooleanValue>(0, "gridDropZones"),
+		AttributeTag.Create<BooleanValue>(0, "immersive"),
+		AttributeTag.Create<BooleanValue>(0, "multipleFieldFilters"),
+		AttributeTag.Create<UInt32Value>(0, "chartFormat"),
+		AttributeTag.Create<StringValue>(0, "rowHeaderCaption"),
+		AttributeTag.Create<StringValue>(0, "colHeaderCaption"),
+		AttributeTag.Create<BooleanValue>(0, "fieldListSortAscending"),
+		AttributeTag.Create<BooleanValue>(0, "mdxSubqueries"),
+		AttributeTag.Create<BooleanValue>(0, "customListSort")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -7498,8 +6758,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "name")]
     public StringValue Name
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -7509,8 +6769,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "cacheId")]
     public UInt32Value CacheId
     {
-        get { return (UInt32Value)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (UInt32Value)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -7520,8 +6780,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "dataOnRows")]
     public BooleanValue DataOnRows
     {
-        get { return (BooleanValue)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (BooleanValue)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
     /// <summary>
@@ -7531,8 +6791,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "dataPosition")]
     public UInt32Value DataPosition
     {
-        get { return (UInt32Value)Attributes[3]; }
-        set { Attributes[3] = value; }
+        get { return (UInt32Value)Attributes[3].Value; }
+        set { Attributes[3].Value = value; }
     }
     
     /// <summary>
@@ -7542,8 +6802,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "autoFormatId")]
     public UInt32Value AutoFormatId
     {
-        get { return (UInt32Value)Attributes[4]; }
-        set { Attributes[4] = value; }
+        get { return (UInt32Value)Attributes[4].Value; }
+        set { Attributes[4].Value = value; }
     }
     
     /// <summary>
@@ -7553,8 +6813,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "applyNumberFormats")]
     public BooleanValue ApplyNumberFormats
     {
-        get { return (BooleanValue)Attributes[5]; }
-        set { Attributes[5] = value; }
+        get { return (BooleanValue)Attributes[5].Value; }
+        set { Attributes[5].Value = value; }
     }
     
     /// <summary>
@@ -7564,8 +6824,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "applyBorderFormats")]
     public BooleanValue ApplyBorderFormats
     {
-        get { return (BooleanValue)Attributes[6]; }
-        set { Attributes[6] = value; }
+        get { return (BooleanValue)Attributes[6].Value; }
+        set { Attributes[6].Value = value; }
     }
     
     /// <summary>
@@ -7575,8 +6835,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "applyFontFormats")]
     public BooleanValue ApplyFontFormats
     {
-        get { return (BooleanValue)Attributes[7]; }
-        set { Attributes[7] = value; }
+        get { return (BooleanValue)Attributes[7].Value; }
+        set { Attributes[7].Value = value; }
     }
     
     /// <summary>
@@ -7586,8 +6846,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "applyPatternFormats")]
     public BooleanValue ApplyPatternFormats
     {
-        get { return (BooleanValue)Attributes[8]; }
-        set { Attributes[8] = value; }
+        get { return (BooleanValue)Attributes[8].Value; }
+        set { Attributes[8].Value = value; }
     }
     
     /// <summary>
@@ -7597,8 +6857,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "applyAlignmentFormats")]
     public BooleanValue ApplyAlignmentFormats
     {
-        get { return (BooleanValue)Attributes[9]; }
-        set { Attributes[9] = value; }
+        get { return (BooleanValue)Attributes[9].Value; }
+        set { Attributes[9].Value = value; }
     }
     
     /// <summary>
@@ -7608,8 +6868,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "applyWidthHeightFormats")]
     public BooleanValue ApplyWidthHeightFormats
     {
-        get { return (BooleanValue)Attributes[10]; }
-        set { Attributes[10] = value; }
+        get { return (BooleanValue)Attributes[10].Value; }
+        set { Attributes[10].Value = value; }
     }
     
     /// <summary>
@@ -7619,8 +6879,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "dataCaption")]
     public StringValue DataCaption
     {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
+        get { return (StringValue)Attributes[11].Value; }
+        set { Attributes[11].Value = value; }
     }
     
     /// <summary>
@@ -7630,8 +6890,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "grandTotalCaption")]
     public StringValue GrandTotalCaption
     {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
+        get { return (StringValue)Attributes[12].Value; }
+        set { Attributes[12].Value = value; }
     }
     
     /// <summary>
@@ -7641,8 +6901,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "errorCaption")]
     public StringValue ErrorCaption
     {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
+        get { return (StringValue)Attributes[13].Value; }
+        set { Attributes[13].Value = value; }
     }
     
     /// <summary>
@@ -7652,8 +6912,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showError")]
     public BooleanValue ShowError
     {
-        get { return (BooleanValue)Attributes[14]; }
-        set { Attributes[14] = value; }
+        get { return (BooleanValue)Attributes[14].Value; }
+        set { Attributes[14].Value = value; }
     }
     
     /// <summary>
@@ -7663,8 +6923,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "missingCaption")]
     public StringValue MissingCaption
     {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
+        get { return (StringValue)Attributes[15].Value; }
+        set { Attributes[15].Value = value; }
     }
     
     /// <summary>
@@ -7674,8 +6934,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showMissing")]
     public BooleanValue ShowMissing
     {
-        get { return (BooleanValue)Attributes[16]; }
-        set { Attributes[16] = value; }
+        get { return (BooleanValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
     }
     
     /// <summary>
@@ -7685,8 +6945,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "pageStyle")]
     public StringValue PageStyle
     {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
+        get { return (StringValue)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
     }
     
     /// <summary>
@@ -7696,8 +6956,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "pivotTableStyle")]
     public StringValue PivotTableStyleName
     {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
     /// <summary>
@@ -7707,8 +6967,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "vacatedStyle")]
     public StringValue VacatedStyle
     {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
+        get { return (StringValue)Attributes[19].Value; }
+        set { Attributes[19].Value = value; }
     }
     
     /// <summary>
@@ -7718,8 +6978,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
+        get { return (StringValue)Attributes[20].Value; }
+        set { Attributes[20].Value = value; }
     }
     
     /// <summary>
@@ -7729,8 +6989,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "updatedVersion")]
     public ByteValue UpdatedVersion
     {
-        get { return (ByteValue)Attributes[21]; }
-        set { Attributes[21] = value; }
+        get { return (ByteValue)Attributes[21].Value; }
+        set { Attributes[21].Value = value; }
     }
     
     /// <summary>
@@ -7740,8 +7000,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "minRefreshableVersion")]
     public ByteValue MinRefreshableVersion
     {
-        get { return (ByteValue)Attributes[22]; }
-        set { Attributes[22] = value; }
+        get { return (ByteValue)Attributes[22].Value; }
+        set { Attributes[22].Value = value; }
     }
     
     /// <summary>
@@ -7751,8 +7011,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "asteriskTotals")]
     public BooleanValue AsteriskTotals
     {
-        get { return (BooleanValue)Attributes[23]; }
-        set { Attributes[23] = value; }
+        get { return (BooleanValue)Attributes[23].Value; }
+        set { Attributes[23].Value = value; }
     }
     
     /// <summary>
@@ -7762,8 +7022,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showItems")]
     public BooleanValue ShowItems
     {
-        get { return (BooleanValue)Attributes[24]; }
-        set { Attributes[24] = value; }
+        get { return (BooleanValue)Attributes[24].Value; }
+        set { Attributes[24].Value = value; }
     }
     
     /// <summary>
@@ -7773,8 +7033,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "editData")]
     public BooleanValue EditData
     {
-        get { return (BooleanValue)Attributes[25]; }
-        set { Attributes[25] = value; }
+        get { return (BooleanValue)Attributes[25].Value; }
+        set { Attributes[25].Value = value; }
     }
     
     /// <summary>
@@ -7784,8 +7044,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "disableFieldList")]
     public BooleanValue DisableFieldList
     {
-        get { return (BooleanValue)Attributes[26]; }
-        set { Attributes[26] = value; }
+        get { return (BooleanValue)Attributes[26].Value; }
+        set { Attributes[26].Value = value; }
     }
     
     /// <summary>
@@ -7795,8 +7055,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showCalcMbrs")]
     public BooleanValue ShowCalculatedMembers
     {
-        get { return (BooleanValue)Attributes[27]; }
-        set { Attributes[27] = value; }
+        get { return (BooleanValue)Attributes[27].Value; }
+        set { Attributes[27].Value = value; }
     }
     
     /// <summary>
@@ -7806,8 +7066,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "visualTotals")]
     public BooleanValue VisualTotals
     {
-        get { return (BooleanValue)Attributes[28]; }
-        set { Attributes[28] = value; }
+        get { return (BooleanValue)Attributes[28].Value; }
+        set { Attributes[28].Value = value; }
     }
     
     /// <summary>
@@ -7817,8 +7077,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showMultipleLabel")]
     public BooleanValue ShowMultipleLabel
     {
-        get { return (BooleanValue)Attributes[29]; }
-        set { Attributes[29] = value; }
+        get { return (BooleanValue)Attributes[29].Value; }
+        set { Attributes[29].Value = value; }
     }
     
     /// <summary>
@@ -7828,8 +7088,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showDataDropDown")]
     public BooleanValue ShowDataDropDown
     {
-        get { return (BooleanValue)Attributes[30]; }
-        set { Attributes[30] = value; }
+        get { return (BooleanValue)Attributes[30].Value; }
+        set { Attributes[30].Value = value; }
     }
     
     /// <summary>
@@ -7839,8 +7099,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showDrill")]
     public BooleanValue ShowDrill
     {
-        get { return (BooleanValue)Attributes[31]; }
-        set { Attributes[31] = value; }
+        get { return (BooleanValue)Attributes[31].Value; }
+        set { Attributes[31].Value = value; }
     }
     
     /// <summary>
@@ -7850,8 +7110,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "printDrill")]
     public BooleanValue PrintDrill
     {
-        get { return (BooleanValue)Attributes[32]; }
-        set { Attributes[32] = value; }
+        get { return (BooleanValue)Attributes[32].Value; }
+        set { Attributes[32].Value = value; }
     }
     
     /// <summary>
@@ -7861,8 +7121,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showMemberPropertyTips")]
     public BooleanValue ShowMemberPropertyTips
     {
-        get { return (BooleanValue)Attributes[33]; }
-        set { Attributes[33] = value; }
+        get { return (BooleanValue)Attributes[33].Value; }
+        set { Attributes[33].Value = value; }
     }
     
     /// <summary>
@@ -7872,8 +7132,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showDataTips")]
     public BooleanValue ShowDataTips
     {
-        get { return (BooleanValue)Attributes[34]; }
-        set { Attributes[34] = value; }
+        get { return (BooleanValue)Attributes[34].Value; }
+        set { Attributes[34].Value = value; }
     }
     
     /// <summary>
@@ -7883,8 +7143,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "enableWizard")]
     public BooleanValue EnableWizard
     {
-        get { return (BooleanValue)Attributes[35]; }
-        set { Attributes[35] = value; }
+        get { return (BooleanValue)Attributes[35].Value; }
+        set { Attributes[35].Value = value; }
     }
     
     /// <summary>
@@ -7894,8 +7154,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "enableDrill")]
     public BooleanValue EnableDrill
     {
-        get { return (BooleanValue)Attributes[36]; }
-        set { Attributes[36] = value; }
+        get { return (BooleanValue)Attributes[36].Value; }
+        set { Attributes[36].Value = value; }
     }
     
     /// <summary>
@@ -7905,8 +7165,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "enableFieldProperties")]
     public BooleanValue EnableFieldProperties
     {
-        get { return (BooleanValue)Attributes[37]; }
-        set { Attributes[37] = value; }
+        get { return (BooleanValue)Attributes[37].Value; }
+        set { Attributes[37].Value = value; }
     }
     
     /// <summary>
@@ -7916,8 +7176,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "preserveFormatting")]
     public BooleanValue PreserveFormatting
     {
-        get { return (BooleanValue)Attributes[38]; }
-        set { Attributes[38] = value; }
+        get { return (BooleanValue)Attributes[38].Value; }
+        set { Attributes[38].Value = value; }
     }
     
     /// <summary>
@@ -7927,8 +7187,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "useAutoFormatting")]
     public BooleanValue UseAutoFormatting
     {
-        get { return (BooleanValue)Attributes[39]; }
-        set { Attributes[39] = value; }
+        get { return (BooleanValue)Attributes[39].Value; }
+        set { Attributes[39].Value = value; }
     }
     
     /// <summary>
@@ -7938,8 +7198,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "pageWrap")]
     public UInt32Value PageWrap
     {
-        get { return (UInt32Value)Attributes[40]; }
-        set { Attributes[40] = value; }
+        get { return (UInt32Value)Attributes[40].Value; }
+        set { Attributes[40].Value = value; }
     }
     
     /// <summary>
@@ -7949,8 +7209,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "pageOverThenDown")]
     public BooleanValue PageOverThenDown
     {
-        get { return (BooleanValue)Attributes[41]; }
-        set { Attributes[41] = value; }
+        get { return (BooleanValue)Attributes[41].Value; }
+        set { Attributes[41].Value = value; }
     }
     
     /// <summary>
@@ -7960,8 +7220,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "subtotalHiddenItems")]
     public BooleanValue SubtotalHiddenItems
     {
-        get { return (BooleanValue)Attributes[42]; }
-        set { Attributes[42] = value; }
+        get { return (BooleanValue)Attributes[42].Value; }
+        set { Attributes[42].Value = value; }
     }
     
     /// <summary>
@@ -7971,8 +7231,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "rowGrandTotals")]
     public BooleanValue RowGrandTotals
     {
-        get { return (BooleanValue)Attributes[43]; }
-        set { Attributes[43] = value; }
+        get { return (BooleanValue)Attributes[43].Value; }
+        set { Attributes[43].Value = value; }
     }
     
     /// <summary>
@@ -7982,8 +7242,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "colGrandTotals")]
     public BooleanValue ColumnGrandTotals
     {
-        get { return (BooleanValue)Attributes[44]; }
-        set { Attributes[44] = value; }
+        get { return (BooleanValue)Attributes[44].Value; }
+        set { Attributes[44].Value = value; }
     }
     
     /// <summary>
@@ -7993,8 +7253,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "fieldPrintTitles")]
     public BooleanValue FieldPrintTitles
     {
-        get { return (BooleanValue)Attributes[45]; }
-        set { Attributes[45] = value; }
+        get { return (BooleanValue)Attributes[45].Value; }
+        set { Attributes[45].Value = value; }
     }
     
     /// <summary>
@@ -8004,8 +7264,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "itemPrintTitles")]
     public BooleanValue ItemPrintTitles
     {
-        get { return (BooleanValue)Attributes[46]; }
-        set { Attributes[46] = value; }
+        get { return (BooleanValue)Attributes[46].Value; }
+        set { Attributes[46].Value = value; }
     }
     
     /// <summary>
@@ -8015,8 +7275,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "mergeItem")]
     public BooleanValue MergeItem
     {
-        get { return (BooleanValue)Attributes[47]; }
-        set { Attributes[47] = value; }
+        get { return (BooleanValue)Attributes[47].Value; }
+        set { Attributes[47].Value = value; }
     }
     
     /// <summary>
@@ -8026,8 +7286,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showDropZones")]
     public BooleanValue ShowDropZones
     {
-        get { return (BooleanValue)Attributes[48]; }
-        set { Attributes[48] = value; }
+        get { return (BooleanValue)Attributes[48].Value; }
+        set { Attributes[48].Value = value; }
     }
     
     /// <summary>
@@ -8037,8 +7297,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "createdVersion")]
     public ByteValue CreatedVersion
     {
-        get { return (ByteValue)Attributes[49]; }
-        set { Attributes[49] = value; }
+        get { return (ByteValue)Attributes[49].Value; }
+        set { Attributes[49].Value = value; }
     }
     
     /// <summary>
@@ -8048,8 +7308,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "indent")]
     public UInt32Value Indent
     {
-        get { return (UInt32Value)Attributes[50]; }
-        set { Attributes[50] = value; }
+        get { return (UInt32Value)Attributes[50].Value; }
+        set { Attributes[50].Value = value; }
     }
     
     /// <summary>
@@ -8059,8 +7319,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showEmptyRow")]
     public BooleanValue ShowEmptyRow
     {
-        get { return (BooleanValue)Attributes[51]; }
-        set { Attributes[51] = value; }
+        get { return (BooleanValue)Attributes[51].Value; }
+        set { Attributes[51].Value = value; }
     }
     
     /// <summary>
@@ -8070,8 +7330,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showEmptyCol")]
     public BooleanValue ShowEmptyColumn
     {
-        get { return (BooleanValue)Attributes[52]; }
-        set { Attributes[52] = value; }
+        get { return (BooleanValue)Attributes[52].Value; }
+        set { Attributes[52].Value = value; }
     }
     
     /// <summary>
@@ -8081,8 +7341,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "showHeaders")]
     public BooleanValue ShowHeaders
     {
-        get { return (BooleanValue)Attributes[53]; }
-        set { Attributes[53] = value; }
+        get { return (BooleanValue)Attributes[53].Value; }
+        set { Attributes[53].Value = value; }
     }
     
     /// <summary>
@@ -8092,8 +7352,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "compact")]
     public BooleanValue Compact
     {
-        get { return (BooleanValue)Attributes[54]; }
-        set { Attributes[54] = value; }
+        get { return (BooleanValue)Attributes[54].Value; }
+        set { Attributes[54].Value = value; }
     }
     
     /// <summary>
@@ -8103,8 +7363,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "outline")]
     public BooleanValue Outline
     {
-        get { return (BooleanValue)Attributes[55]; }
-        set { Attributes[55] = value; }
+        get { return (BooleanValue)Attributes[55].Value; }
+        set { Attributes[55].Value = value; }
     }
     
     /// <summary>
@@ -8114,8 +7374,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "outlineData")]
     public BooleanValue OutlineData
     {
-        get { return (BooleanValue)Attributes[56]; }
-        set { Attributes[56] = value; }
+        get { return (BooleanValue)Attributes[56].Value; }
+        set { Attributes[56].Value = value; }
     }
     
     /// <summary>
@@ -8125,8 +7385,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "compactData")]
     public BooleanValue CompactData
     {
-        get { return (BooleanValue)Attributes[57]; }
-        set { Attributes[57] = value; }
+        get { return (BooleanValue)Attributes[57].Value; }
+        set { Attributes[57].Value = value; }
     }
     
     /// <summary>
@@ -8136,8 +7396,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "published")]
     public BooleanValue Published
     {
-        get { return (BooleanValue)Attributes[58]; }
-        set { Attributes[58] = value; }
+        get { return (BooleanValue)Attributes[58].Value; }
+        set { Attributes[58].Value = value; }
     }
     
     /// <summary>
@@ -8147,8 +7407,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "gridDropZones")]
     public BooleanValue GridDropZones
     {
-        get { return (BooleanValue)Attributes[59]; }
-        set { Attributes[59] = value; }
+        get { return (BooleanValue)Attributes[59].Value; }
+        set { Attributes[59].Value = value; }
     }
     
     /// <summary>
@@ -8158,8 +7418,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "immersive")]
     public BooleanValue StopImmersiveUi
     {
-        get { return (BooleanValue)Attributes[60]; }
-        set { Attributes[60] = value; }
+        get { return (BooleanValue)Attributes[60].Value; }
+        set { Attributes[60].Value = value; }
     }
     
     /// <summary>
@@ -8169,8 +7429,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "multipleFieldFilters")]
     public BooleanValue MultipleFieldFilters
     {
-        get { return (BooleanValue)Attributes[61]; }
-        set { Attributes[61] = value; }
+        get { return (BooleanValue)Attributes[61].Value; }
+        set { Attributes[61].Value = value; }
     }
     
     /// <summary>
@@ -8180,8 +7440,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "chartFormat")]
     public UInt32Value ChartFormat
     {
-        get { return (UInt32Value)Attributes[62]; }
-        set { Attributes[62] = value; }
+        get { return (UInt32Value)Attributes[62].Value; }
+        set { Attributes[62].Value = value; }
     }
     
     /// <summary>
@@ -8191,8 +7451,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "rowHeaderCaption")]
     public StringValue RowHeaderCaption
     {
-        get { return (StringValue)Attributes[63]; }
-        set { Attributes[63] = value; }
+        get { return (StringValue)Attributes[63].Value; }
+        set { Attributes[63].Value = value; }
     }
     
     /// <summary>
@@ -8202,8 +7462,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "colHeaderCaption")]
     public StringValue ColumnHeaderCaption
     {
-        get { return (StringValue)Attributes[64]; }
-        set { Attributes[64] = value; }
+        get { return (StringValue)Attributes[64].Value; }
+        set { Attributes[64].Value = value; }
     }
     
     /// <summary>
@@ -8213,8 +7473,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "fieldListSortAscending")]
     public BooleanValue FieldListSortAscending
     {
-        get { return (BooleanValue)Attributes[65]; }
-        set { Attributes[65] = value; }
+        get { return (BooleanValue)Attributes[65].Value; }
+        set { Attributes[65].Value = value; }
     }
     
     /// <summary>
@@ -8224,8 +7484,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "mdxSubqueries")]
     public BooleanValue MdxSubqueries
     {
-        get { return (BooleanValue)Attributes[66]; }
-        set { Attributes[66] = value; }
+        get { return (BooleanValue)Attributes[66].Value; }
+        set { Attributes[66].Value = value; }
     }
     
     /// <summary>
@@ -8235,8 +7495,8 @@ public partial class pivotTableDefinition : OpenXmlCompositeElement
     [SchemaAttr(0, "customListSort")]
     public BooleanValue CustomListSort
     {
-        get { return (BooleanValue)Attributes[67]; }
-        set { Attributes[67] = value; }
+        get { return (BooleanValue)Attributes[67].Value; }
+        set { Attributes[67].Value = value; }
     }
     
 
@@ -8544,217 +7804,6 @@ if( 22 == namespaceId && "extLst" == name)
         set => SetElement(16, value);
     }
 
-
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "name" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "cacheId" == name)
-    return new UInt32Value();
-    
-if( 0 == namespaceId && "dataOnRows" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "dataPosition" == name)
-    return new UInt32Value();
-    
-if( 0 == namespaceId && "autoFormatId" == name)
-    return new UInt32Value();
-    
-if( 0 == namespaceId && "applyNumberFormats" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "applyBorderFormats" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "applyFontFormats" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "applyPatternFormats" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "applyAlignmentFormats" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "applyWidthHeightFormats" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "dataCaption" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "grandTotalCaption" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "errorCaption" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showError" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "missingCaption" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showMissing" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "pageStyle" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "pivotTableStyle" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "vacatedStyle" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "updatedVersion" == name)
-    return new ByteValue();
-    
-if( 0 == namespaceId && "minRefreshableVersion" == name)
-    return new ByteValue();
-    
-if( 0 == namespaceId && "asteriskTotals" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "showItems" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "editData" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "disableFieldList" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "showCalcMbrs" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "visualTotals" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "showMultipleLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "showDataDropDown" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "showDrill" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "printDrill" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "showMemberPropertyTips" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "showDataTips" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "enableWizard" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "enableDrill" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "enableFieldProperties" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "preserveFormatting" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "useAutoFormatting" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "pageWrap" == name)
-    return new UInt32Value();
-    
-if( 0 == namespaceId && "pageOverThenDown" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "subtotalHiddenItems" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "rowGrandTotals" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "colGrandTotals" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "fieldPrintTitles" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "itemPrintTitles" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "mergeItem" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "showDropZones" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "createdVersion" == name)
-    return new ByteValue();
-    
-if( 0 == namespaceId && "indent" == name)
-    return new UInt32Value();
-    
-if( 0 == namespaceId && "showEmptyRow" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "showEmptyCol" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "showHeaders" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "compact" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "outline" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "outlineData" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "compactData" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "published" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "gridDropZones" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "immersive" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "multipleFieldFilters" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "chartFormat" == name)
-    return new UInt32Value();
-    
-if( 0 == namespaceId && "rowHeaderCaption" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "colHeaderCaption" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "fieldListSortAscending" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "mdxSubqueries" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "customListSort" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<pivotTableDefinition>(deep);

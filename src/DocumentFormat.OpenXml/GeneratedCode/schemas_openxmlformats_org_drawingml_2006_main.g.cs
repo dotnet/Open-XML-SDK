@@ -32293,6 +32293,8 @@ public abstract partial class TextCharacterPropertiesType : OpenXmlCompositeElem
 		AttributeTag.Create<BooleanValue>(0, "noProof"),
 		AttributeTag.Create<BooleanValue>(0, "dirty"),
 		AttributeTag.Create<BooleanValue>(0, "err"),
+		AttributeTag.Create<BooleanValue>(0, "smtClean"),
+		AttributeTag.Create<UInt32Value>(0, "smtId"),
 		AttributeTag.Create<StringValue>(0, "bmk")
 	};
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
@@ -32474,14 +32476,36 @@ public abstract partial class TextCharacterPropertiesType : OpenXmlCompositeElem
     }
     
     /// <summary>
+    /// <para> smtClean.</para>
+    /// <para>Represents the following attribute in the schema: smtClean </para>
+    /// </summary>
+    [SchemaAttr(0, "smtClean")]
+    public BooleanValue SmtClean
+    {
+        get { return (BooleanValue)Attributes[16].Value; }
+        set { Attributes[16].Value = value; }
+    }
+    
+    /// <summary>
+    /// <para> smtId.</para>
+    /// <para>Represents the following attribute in the schema: smtId </para>
+    /// </summary>
+    [SchemaAttr(0, "smtId")]
+    public UInt32Value SmtId
+    {
+        get { return (UInt32Value)Attributes[17].Value; }
+        set { Attributes[17].Value = value; }
+    }
+    
+    /// <summary>
     /// <para> bmk.</para>
     /// <para>Represents the following attribute in the schema: bmk </para>
     /// </summary>
     [SchemaAttr(0, "bmk")]
     public StringValue Bookmark
     {
-        get { return (StringValue)Attributes[16].Value; }
-        set { Attributes[16].Value = value; }
+        get { return (StringValue)Attributes[18].Value; }
+        set { Attributes[18].Value = value; }
     }
     
 
