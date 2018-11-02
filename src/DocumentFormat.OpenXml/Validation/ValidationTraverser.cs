@@ -44,7 +44,7 @@ namespace DocumentFormat.OpenXml.Validation
             if (element.IsStrongTypedElement())
             {
                 // only call validate on elements that defined in the format.
-                if (element.IsInVersion(validationContext.FileFormat))
+                if (validationContext.FileFormat.AtLeast(element.InitialVersion))
                 {
                     validateAction(validationContext);
                     validatingActed = true;

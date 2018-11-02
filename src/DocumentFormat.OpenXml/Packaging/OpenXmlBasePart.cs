@@ -71,11 +71,11 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (IsContentTypeFixed && metroPart.ContentType != ContentType)
             {
-                string errorMessage = string.Format(CultureInfo.CurrentUICulture,
-                                                    ExceptionMessages.InvalidPartContentType,
-                                                    metroPart.Uri.OriginalString,
-                                                    metroPart.ContentType,
-                                                    ContentType);
+                var errorMessage = SR.Format(
+                    ExceptionMessages.InvalidPartContentType,
+                    metroPart.Uri.OriginalString,
+                    metroPart.ContentType,
+                    ContentType);
 
                 throw new OpenXmlPackageException(errorMessage);
             }

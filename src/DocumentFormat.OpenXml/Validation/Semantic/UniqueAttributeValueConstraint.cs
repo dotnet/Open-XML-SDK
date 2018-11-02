@@ -36,17 +36,17 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 return null;
             }
 
-            OpenXmlSimpleType attributeValue = context.Element.Attributes[_attribute];
+            var attribute = context.Element.Attributes[_attribute];
 
             //if the attribute is omitted, semantic validation will do nothing
-            if (attributeValue == null || string.IsNullOrEmpty(attributeValue.InnerText))
+            if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
                 return null;
             }
 
-            if (!_values.Where(v => string.Equals(v, attributeValue.InnerText, _caseSensitive ? StringComparison.OrdinalIgnoreCase : StringComparison.Ordinal)).Any())
+            if (!_values.Where(v => string.Equals(v, attribute.Value.InnerText, _caseSensitive ? StringComparison.OrdinalIgnoreCase : StringComparison.Ordinal)).Any())
             {
-                _values.Add(attributeValue.InnerText);
+                _values.Add(attribute.Value.InnerText);
                 return null;
             }
 
@@ -55,8 +55,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Id = "Sem_UniqueAttributeValue",
                 ErrorType = ValidationErrorType.Semantic,
                 Node = context.Element,
-                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_UniqueAttributeValue,
-                                            GetAttributeQualifiedName(context.Element, _attribute), attributeValue.InnerText),
+                Description = SR.Format(
+                    ValidationResources.Sem_UniqueAttributeValue,
+                    GetAttributeQualifiedName(context.Element, _attribute),
+                    attribute.Value.InnerText),
             };
         }
 

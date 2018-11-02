@@ -27,16 +27,16 @@ public partial class WebVideoProperty : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-    	private static readonly string[] attributeTagNames = { "embeddedHtml","h","w" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(0, "embeddedHtml"),
+		AttributeTag.Create<UInt32Value>(0, "h"),
+		AttributeTag.Create<UInt32Value>(0, "w")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -46,8 +46,8 @@ public partial class WebVideoProperty : OpenXmlLeafElement
     [SchemaAttr(0, "embeddedHtml")]
     public StringValue EmbeddedHtml
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -57,8 +57,8 @@ public partial class WebVideoProperty : OpenXmlLeafElement
     [SchemaAttr(0, "h")]
     public UInt32Value Height
     {
-        get { return (UInt32Value)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (UInt32Value)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
     /// <summary>
@@ -68,8 +68,8 @@ public partial class WebVideoProperty : OpenXmlLeafElement
     [SchemaAttr(0, "w")]
     public UInt32Value Width
     {
-        get { return (UInt32Value)Attributes[2]; }
-        set { Attributes[2] = value; }
+        get { return (UInt32Value)Attributes[2].Value; }
+        set { Attributes[2].Value = value; }
     }
     
 
@@ -83,22 +83,6 @@ public partial class WebVideoProperty : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "embeddedHtml" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "h" == name)
-    return new UInt32Value();
-    
-if( 0 == namespaceId && "w" == name)
-    return new UInt32Value();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebVideoProperty>(deep);
 

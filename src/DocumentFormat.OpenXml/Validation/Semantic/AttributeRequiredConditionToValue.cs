@@ -24,23 +24,23 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            OpenXmlSimpleType attributeValue = context.Element.Attributes[_requiredAttribute];
+            var attribute = context.Element.Attributes[_requiredAttribute];
 
-            if (attributeValue != null)
+            if (!attribute.HasValue)
             {
                 return null;
             }
 
-            OpenXmlSimpleType conditionAttributeValue = context.Element.Attributes[_conditionAttribute];
+            var conditionAttribute = context.Element.Attributes[_conditionAttribute];
 
-            if (conditionAttributeValue == null)
+            if (!conditionAttribute.HasValue)
             {
                 return null;
             }
 
             foreach (string value in _values)
             {
-                if (AttributeValueEquals(conditionAttributeValue, value, false))
+                if (AttributeValueEquals(conditionAttribute.Value, value, false))
                 {
                     string valueString = "'" + _values[0] + "'";
 
@@ -59,10 +59,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                         Id = "Sem_AttributeRequiredConditionToValue",
                         ErrorType = ValidationErrorType.Semantic,
                         Node = context.Element,
-                        Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_AttributeRequiredConditionToValue,
-                                                    GetAttributeQualifiedName(context.Element, _requiredAttribute),
-                                                    GetAttributeQualifiedName(context.Element, _conditionAttribute),
-                                                    valueString),
+                        Description = SR.Format(
+                            ValidationResources.Sem_AttributeRequiredConditionToValue,
+                            GetAttributeQualifiedName(context.Element, _requiredAttribute),
+                            GetAttributeQualifiedName(context.Element, _conditionAttribute),
+                            valueString),
                     };
                 }
             }

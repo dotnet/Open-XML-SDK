@@ -17,7 +17,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            if (context.Element.Attributes[_attribute] != null)
+            if (context.Element.Attributes[_attribute].HasValue)
             {
                 return null;
             }
@@ -27,8 +27,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Id = "Sem_MissRequiredAttribute",
                 ErrorType = ValidationErrorType.Schema,
                 Node = context.Element,
-                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sch_MissRequiredAttribute,
-                                            GetAttributeQualifiedName(context.Element, _attribute)),
+                Description = SR.Format(ValidationResources.Sch_MissRequiredAttribute, GetAttributeQualifiedName(context.Element, _attribute)),
             };
         }
     }

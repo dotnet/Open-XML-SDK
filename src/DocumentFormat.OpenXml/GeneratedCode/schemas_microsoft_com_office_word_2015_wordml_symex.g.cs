@@ -27,16 +27,15 @@ public partial class SymEx : OpenXmlLeafElement
     
     internal override int ElementTypeId => ElementTypeIdConst;
    
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2016);
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2016;
     
 
-    	private static readonly string[] attributeTagNames = { "font","char" };
-    private static readonly byte[] attributeNamespaceIds = { 86,86 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
+	{
+		AttributeTag.Create<StringValue>(86, "font"),
+		AttributeTag.Create<HexBinaryValue>(86, "char")
+	};
+    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -48,8 +47,8 @@ public partial class SymEx : OpenXmlLeafElement
     [SchemaAttr(86, "font")]
     public StringValue Font
     {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
+        get { return (StringValue)Attributes[0].Value; }
+        set { Attributes[0].Value = value; }
     }
     
     /// <summary>
@@ -61,8 +60,8 @@ public partial class SymEx : OpenXmlLeafElement
     [SchemaAttr(86, "char")]
     public HexBinaryValue Char
     {
-        get { return (HexBinaryValue)Attributes[1]; }
-        set { Attributes[1] = value; }
+        get { return (HexBinaryValue)Attributes[1].Value; }
+        set { Attributes[1].Value = value; }
     }
     
 
@@ -76,19 +75,6 @@ public partial class SymEx : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 86 == namespaceId && "font" == name)
-    return new StringValue();
-    
-if( 86 == namespaceId && "char" == name)
-    return new HexBinaryValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SymEx>(deep);
 

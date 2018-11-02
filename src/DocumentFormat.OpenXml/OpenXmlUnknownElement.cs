@@ -281,10 +281,6 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        /// <inheritdoc/>
-        internal override bool IsInVersion(FileFormatVersions version)
-        {
-            return false;
-        }
+        internal override FileFormatVersions InitialVersion => FileFormatVersions.None;
     }
 }
