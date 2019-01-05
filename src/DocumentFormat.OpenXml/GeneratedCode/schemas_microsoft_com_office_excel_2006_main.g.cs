@@ -590,7 +590,6 @@ public partial class RowSortMap : OpenXmlCompositeElement
     /// <para> Reference.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
-    [SchemaAttr(0, "ref")]
     public StringValue Ref
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -601,7 +600,6 @@ public partial class RowSortMap : OpenXmlCompositeElement
     /// <para> Count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
-    [SchemaAttr(0, "count")]
     public UInt32Value Count
     {
         get { return (UInt32Value)Attributes[1].Value; }
@@ -697,7 +695,6 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
     /// <para> Reference.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
-    [SchemaAttr(0, "ref")]
     public StringValue Ref
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -708,7 +705,6 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
     /// <para> Count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
-    [SchemaAttr(0, "count")]
     public UInt32Value Count
     {
         get { return (UInt32Value)Attributes[1].Value; }
@@ -844,7 +840,6 @@ public abstract partial class SortMapItemType : OpenXmlLeafElement
     /// <para> New Value.</para>
     /// <para>Represents the following attribute in the schema: newVal </para>
     /// </summary>
-    [SchemaAttr(0, "newVal")]
     public UInt32Value NewVal
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -855,7 +850,6 @@ public abstract partial class SortMapItemType : OpenXmlLeafElement
     /// <para> Old Value.</para>
     /// <para>Represents the following attribute in the schema: oldVal </para>
     /// </summary>
-    [SchemaAttr(0, "oldVal")]
     public UInt32Value OldVal
     {
         get { return (UInt32Value)Attributes[1].Value; }

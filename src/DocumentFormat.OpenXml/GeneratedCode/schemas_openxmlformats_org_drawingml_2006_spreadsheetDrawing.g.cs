@@ -65,7 +65,6 @@ public partial class TwoCellAnchor : OpenXmlCompositeElement
     /// <para> Positioning and Resizing Behaviors.</para>
     /// <para>Represents the following attribute in the schema: editAs </para>
     /// </summary>
-    [SchemaAttr(0, "editAs")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Spreadsheet.EditAsValues> EditAs
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.Spreadsheet.EditAsValues>)Attributes[0].Value; }
@@ -530,7 +529,6 @@ public partial class Shape : OpenXmlCompositeElement
     /// <para> Reference to Custom Function.</para>
     /// <para>Represents the following attribute in the schema: macro </para>
     /// </summary>
-    [SchemaAttr(0, "macro")]
     public StringValue Macro
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -541,7 +539,6 @@ public partial class Shape : OpenXmlCompositeElement
     /// <para> Text Link.</para>
     /// <para>Represents the following attribute in the schema: textlink </para>
     /// </summary>
-    [SchemaAttr(0, "textlink")]
     public StringValue TextLink
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -552,7 +549,6 @@ public partial class Shape : OpenXmlCompositeElement
     /// <para> Lock Text Flag.</para>
     /// <para>Represents the following attribute in the schema: fLocksText </para>
     /// </summary>
-    [SchemaAttr(0, "fLocksText")]
     public BooleanValue LockText
     {
         get { return (BooleanValue)Attributes[2].Value; }
@@ -563,7 +559,6 @@ public partial class Shape : OpenXmlCompositeElement
     /// <para> Publish to Server Flag.</para>
     /// <para>Represents the following attribute in the schema: fPublished </para>
     /// </summary>
-    [SchemaAttr(0, "fPublished")]
     public BooleanValue Published
     {
         get { return (BooleanValue)Attributes[3].Value; }
@@ -876,7 +871,6 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <para> Reference To Custom Function.</para>
     /// <para>Represents the following attribute in the schema: macro </para>
     /// </summary>
-    [SchemaAttr(0, "macro")]
     public StringValue Macro
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -887,7 +881,6 @@ public partial class GraphicFrame : OpenXmlCompositeElement
     /// <para> Publish to Server Flag.</para>
     /// <para>Represents the following attribute in the schema: fPublished </para>
     /// </summary>
-    [SchemaAttr(0, "fPublished")]
     public BooleanValue Published
     {
         get { return (BooleanValue)Attributes[1].Value; }
@@ -1038,7 +1031,6 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     /// <para> Reference to Custom Function.</para>
     /// <para>Represents the following attribute in the schema: macro </para>
     /// </summary>
-    [SchemaAttr(0, "macro")]
     public StringValue Macro
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1049,7 +1041,6 @@ public partial class ConnectionShape : OpenXmlCompositeElement
     /// <para> Publish to Server Flag.</para>
     /// <para>Represents the following attribute in the schema: fPublished </para>
     /// </summary>
-    [SchemaAttr(0, "fPublished")]
     public BooleanValue Published
     {
         get { return (BooleanValue)Attributes[1].Value; }
@@ -1202,7 +1193,6 @@ public partial class Picture : OpenXmlCompositeElement
     /// <para> Reference To Custom Function.</para>
     /// <para>Represents the following attribute in the schema: macro </para>
     /// </summary>
-    [SchemaAttr(0, "macro")]
     public StringValue Macro
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1213,7 +1203,6 @@ public partial class Picture : OpenXmlCompositeElement
     /// <para> Publish to Server Flag.</para>
     /// <para>Represents the following attribute in the schema: fPublished </para>
     /// </summary>
-    [SchemaAttr(0, "fPublished")]
     public BooleanValue Published
     {
         get { return (BooleanValue)Attributes[1].Value; }
@@ -1383,7 +1372,6 @@ public partial class ContentPart : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "id")]
     public StringValue RelationshipId
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1394,7 +1382,6 @@ public partial class ContentPart : OpenXmlCompositeElement
     /// <para> bwMode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
-    [SchemaAttr(0, "bwMode")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[1].Value; }
@@ -1817,7 +1804,6 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
-    [SchemaAttr(0, "bwMode")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[0].Value; }
@@ -2488,7 +2474,6 @@ public partial class BlipFill : OpenXmlCompositeElement
     /// <para> Rotate With Shape.</para>
     /// <para>Represents the following attribute in the schema: rotWithShape </para>
     /// </summary>
-    [SchemaAttr(0, "rotWithShape")]
     public BooleanValue RotateWithShape
     {
         get { return (BooleanValue)Attributes[0].Value; }
@@ -2746,7 +2731,6 @@ public partial class Transform : OpenXmlCompositeElement
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
-    [SchemaAttr(0, "rot")]
     public Int32Value Rotation
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -2757,7 +2741,6 @@ public partial class Transform : OpenXmlCompositeElement
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
     /// </summary>
-    [SchemaAttr(0, "flipH")]
     public BooleanValue HorizontalFlip
     {
         get { return (BooleanValue)Attributes[1].Value; }
@@ -2768,7 +2751,6 @@ public partial class Transform : OpenXmlCompositeElement
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
     /// </summary>
-    [SchemaAttr(0, "flipV")]
     public BooleanValue VerticalFlip
     {
         get { return (BooleanValue)Attributes[2].Value; }
@@ -3346,7 +3328,6 @@ public partial class ClientData : OpenXmlLeafElement
     /// <para> Locks With Sheet Flag.</para>
     /// <para>Represents the following attribute in the schema: fLocksWithSheet </para>
     /// </summary>
-    [SchemaAttr(0, "fLocksWithSheet")]
     public BooleanValue LockWithSheet
     {
         get { return (BooleanValue)Attributes[0].Value; }
@@ -3357,7 +3338,6 @@ public partial class ClientData : OpenXmlLeafElement
     /// <para> Prints With Sheet Flag.</para>
     /// <para>Represents the following attribute in the schema: fPrintsWithSheet </para>
     /// </summary>
-    [SchemaAttr(0, "fPrintsWithSheet")]
     public BooleanValue PrintWithSheet
     {
         get { return (BooleanValue)Attributes[1].Value; }
@@ -3412,7 +3392,6 @@ public partial class Extent : OpenXmlLeafElement
     /// <para> Extent Length.</para>
     /// <para>Represents the following attribute in the schema: cx </para>
     /// </summary>
-    [SchemaAttr(0, "cx")]
     public Int64Value Cx
     {
         get { return (Int64Value)Attributes[0].Value; }
@@ -3423,7 +3402,6 @@ public partial class Extent : OpenXmlLeafElement
     /// <para> Extent Width.</para>
     /// <para>Represents the following attribute in the schema: cy </para>
     /// </summary>
-    [SchemaAttr(0, "cy")]
     public Int64Value Cy
     {
         get { return (Int64Value)Attributes[1].Value; }
@@ -3478,7 +3456,6 @@ public partial class Position : OpenXmlLeafElement
     /// <para> X-Axis Coordinate.</para>
     /// <para>Represents the following attribute in the schema: x </para>
     /// </summary>
-    [SchemaAttr(0, "x")]
     public Int64Value X
     {
         get { return (Int64Value)Attributes[0].Value; }
@@ -3489,7 +3466,6 @@ public partial class Position : OpenXmlLeafElement
     /// <para> Y-Axis Coordinate.</para>
     /// <para>Represents the following attribute in the schema: y </para>
     /// </summary>
-    [SchemaAttr(0, "y")]
     public Int64Value Y
     {
         get { return (Int64Value)Attributes[1].Value; }
@@ -3558,7 +3534,6 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public UInt32Value Id
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -3569,7 +3544,6 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -3580,7 +3554,6 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
-    [SchemaAttr(0, "descr")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -3591,7 +3564,6 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
-    [SchemaAttr(0, "hidden")]
     public BooleanValue Hidden
     {
         get { return (BooleanValue)Attributes[3].Value; }
@@ -3602,7 +3574,6 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title")]
     public StringValue Title
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -3750,7 +3721,6 @@ public partial class NonVisualShapeDrawingProperties : OpenXmlCompositeElement
     /// <para> Text Box.</para>
     /// <para>Represents the following attribute in the schema: txBox </para>
     /// </summary>
-    [SchemaAttr(0, "txBox")]
     public BooleanValue TextBox
     {
         get { return (BooleanValue)Attributes[0].Value; }
@@ -4034,7 +4004,6 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
     /// <para> preferRelativeResize.</para>
     /// <para>Represents the following attribute in the schema: preferRelativeResize </para>
     /// </summary>
-    [SchemaAttr(0, "preferRelativeResize")]
     public BooleanValue PreferRelativeResize
     {
         get { return (BooleanValue)Attributes[0].Value; }
@@ -4536,7 +4505,6 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
-    [SchemaAttr(0, "bwMode")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[0].Value; }

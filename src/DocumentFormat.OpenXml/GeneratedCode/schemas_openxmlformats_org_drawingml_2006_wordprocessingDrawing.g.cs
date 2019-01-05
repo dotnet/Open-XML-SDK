@@ -91,7 +91,6 @@ public partial class WrapSquare : OpenXmlCompositeElement
     /// <para> Text Wrapping Location.</para>
     /// <para>Represents the following attribute in the schema: wrapText </para>
     /// </summary>
-    [SchemaAttr(0, "wrapText")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>)Attributes[0].Value; }
@@ -102,7 +101,6 @@ public partial class WrapSquare : OpenXmlCompositeElement
     /// <para> Distance From Text (Top).</para>
     /// <para>Represents the following attribute in the schema: distT </para>
     /// </summary>
-    [SchemaAttr(0, "distT")]
     public UInt32Value DistanceFromTop
     {
         get { return (UInt32Value)Attributes[1].Value; }
@@ -113,7 +111,6 @@ public partial class WrapSquare : OpenXmlCompositeElement
     /// <para> Distance From Text on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: distB </para>
     /// </summary>
-    [SchemaAttr(0, "distB")]
     public UInt32Value DistanceFromBottom
     {
         get { return (UInt32Value)Attributes[2].Value; }
@@ -124,7 +121,6 @@ public partial class WrapSquare : OpenXmlCompositeElement
     /// <para> Distance From Text on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
     /// </summary>
-    [SchemaAttr(0, "distL")]
     public UInt32Value DistanceFromLeft
     {
         get { return (UInt32Value)Attributes[3].Value; }
@@ -135,7 +131,6 @@ public partial class WrapSquare : OpenXmlCompositeElement
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
     /// </summary>
-    [SchemaAttr(0, "distR")]
     public UInt32Value DistanceFromRight
     {
         get { return (UInt32Value)Attributes[4].Value; }
@@ -253,7 +248,6 @@ public partial class WrapTight : OpenXmlCompositeElement
     /// <para> Text Wrapping Location.</para>
     /// <para>Represents the following attribute in the schema: wrapText </para>
     /// </summary>
-    [SchemaAttr(0, "wrapText")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>)Attributes[0].Value; }
@@ -264,7 +258,6 @@ public partial class WrapTight : OpenXmlCompositeElement
     /// <para> Distance From Test on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
     /// </summary>
-    [SchemaAttr(0, "distL")]
     public UInt32Value DistanceFromLeft
     {
         get { return (UInt32Value)Attributes[1].Value; }
@@ -275,7 +268,6 @@ public partial class WrapTight : OpenXmlCompositeElement
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
     /// </summary>
-    [SchemaAttr(0, "distR")]
     public UInt32Value DistanceFromRight
     {
         get { return (UInt32Value)Attributes[2].Value; }
@@ -393,7 +385,6 @@ public partial class WrapThrough : OpenXmlCompositeElement
     /// <para> Text Wrapping Location.</para>
     /// <para>Represents the following attribute in the schema: wrapText </para>
     /// </summary>
-    [SchemaAttr(0, "wrapText")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>)Attributes[0].Value; }
@@ -404,7 +395,6 @@ public partial class WrapThrough : OpenXmlCompositeElement
     /// <para> Distance From Text on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
     /// </summary>
-    [SchemaAttr(0, "distL")]
     public UInt32Value DistanceFromLeft
     {
         get { return (UInt32Value)Attributes[1].Value; }
@@ -415,7 +405,6 @@ public partial class WrapThrough : OpenXmlCompositeElement
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
     /// </summary>
-    [SchemaAttr(0, "distR")]
     public UInt32Value DistanceFromRight
     {
         get { return (UInt32Value)Attributes[2].Value; }
@@ -532,7 +521,6 @@ public partial class WrapTopBottom : OpenXmlCompositeElement
     /// <para> Distance From Text on Top Edge.</para>
     /// <para>Represents the following attribute in the schema: distT </para>
     /// </summary>
-    [SchemaAttr(0, "distT")]
     public UInt32Value DistanceFromTop
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -543,7 +531,6 @@ public partial class WrapTopBottom : OpenXmlCompositeElement
     /// <para> Distance From Text on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: distB </para>
     /// </summary>
-    [SchemaAttr(0, "distB")]
     public UInt32Value DistanceFromBottom
     {
         get { return (UInt32Value)Attributes[1].Value; }
@@ -672,7 +659,6 @@ public partial class Inline : OpenXmlCompositeElement
     /// <para> Distance From Text on Top Edge.</para>
     /// <para>Represents the following attribute in the schema: distT </para>
     /// </summary>
-    [SchemaAttr(0, "distT")]
     public UInt32Value DistanceFromTop
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -683,7 +669,6 @@ public partial class Inline : OpenXmlCompositeElement
     /// <para> Distance From Text on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: distB </para>
     /// </summary>
-    [SchemaAttr(0, "distB")]
     public UInt32Value DistanceFromBottom
     {
         get { return (UInt32Value)Attributes[1].Value; }
@@ -694,7 +679,6 @@ public partial class Inline : OpenXmlCompositeElement
     /// <para> Distance From Text on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
     /// </summary>
-    [SchemaAttr(0, "distL")]
     public UInt32Value DistanceFromLeft
     {
         get { return (UInt32Value)Attributes[2].Value; }
@@ -705,7 +689,6 @@ public partial class Inline : OpenXmlCompositeElement
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
     /// </summary>
-    [SchemaAttr(0, "distR")]
     public UInt32Value DistanceFromRight
     {
         get { return (UInt32Value)Attributes[3].Value; }
@@ -718,7 +701,6 @@ public partial class Inline : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
 ///</remark>
-    [SchemaAttr(51, "anchorId")]
     public HexBinaryValue AnchorId
     {
         get { return (HexBinaryValue)Attributes[4].Value; }
@@ -731,7 +713,6 @@ public partial class Inline : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
 ///</remark>
-    [SchemaAttr(51, "editId")]
     public HexBinaryValue EditId
     {
         get { return (HexBinaryValue)Attributes[5].Value; }
@@ -947,7 +928,6 @@ public partial class Anchor : OpenXmlCompositeElement
     /// <para> Distance From Text on Top Edge.</para>
     /// <para>Represents the following attribute in the schema: distT </para>
     /// </summary>
-    [SchemaAttr(0, "distT")]
     public UInt32Value DistanceFromTop
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -958,7 +938,6 @@ public partial class Anchor : OpenXmlCompositeElement
     /// <para> Distance From Text on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: distB </para>
     /// </summary>
-    [SchemaAttr(0, "distB")]
     public UInt32Value DistanceFromBottom
     {
         get { return (UInt32Value)Attributes[1].Value; }
@@ -969,7 +948,6 @@ public partial class Anchor : OpenXmlCompositeElement
     /// <para> Distance From Text on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
     /// </summary>
-    [SchemaAttr(0, "distL")]
     public UInt32Value DistanceFromLeft
     {
         get { return (UInt32Value)Attributes[2].Value; }
@@ -980,7 +958,6 @@ public partial class Anchor : OpenXmlCompositeElement
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
     /// </summary>
-    [SchemaAttr(0, "distR")]
     public UInt32Value DistanceFromRight
     {
         get { return (UInt32Value)Attributes[3].Value; }
@@ -991,7 +968,6 @@ public partial class Anchor : OpenXmlCompositeElement
     /// <para> Page Positioning.</para>
     /// <para>Represents the following attribute in the schema: simplePos </para>
     /// </summary>
-    [SchemaAttr(0, "simplePos")]
     public BooleanValue SimplePos
     {
         get { return (BooleanValue)Attributes[4].Value; }
@@ -1002,7 +978,6 @@ public partial class Anchor : OpenXmlCompositeElement
     /// <para> Relative Z-Ordering Position.</para>
     /// <para>Represents the following attribute in the schema: relativeHeight </para>
     /// </summary>
-    [SchemaAttr(0, "relativeHeight")]
     public UInt32Value RelativeHeight
     {
         get { return (UInt32Value)Attributes[5].Value; }
@@ -1013,7 +988,6 @@ public partial class Anchor : OpenXmlCompositeElement
     /// <para> Display Behind Document Text.</para>
     /// <para>Represents the following attribute in the schema: behindDoc </para>
     /// </summary>
-    [SchemaAttr(0, "behindDoc")]
     public BooleanValue BehindDoc
     {
         get { return (BooleanValue)Attributes[6].Value; }
@@ -1024,7 +998,6 @@ public partial class Anchor : OpenXmlCompositeElement
     /// <para> Lock Anchor.</para>
     /// <para>Represents the following attribute in the schema: locked </para>
     /// </summary>
-    [SchemaAttr(0, "locked")]
     public BooleanValue Locked
     {
         get { return (BooleanValue)Attributes[7].Value; }
@@ -1035,7 +1008,6 @@ public partial class Anchor : OpenXmlCompositeElement
     /// <para> Layout In Table Cell.</para>
     /// <para>Represents the following attribute in the schema: layoutInCell </para>
     /// </summary>
-    [SchemaAttr(0, "layoutInCell")]
     public BooleanValue LayoutInCell
     {
         get { return (BooleanValue)Attributes[8].Value; }
@@ -1046,7 +1018,6 @@ public partial class Anchor : OpenXmlCompositeElement
     /// <para> Hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
-    [SchemaAttr(0, "hidden")]
     public BooleanValue Hidden
     {
         get { return (BooleanValue)Attributes[9].Value; }
@@ -1057,7 +1028,6 @@ public partial class Anchor : OpenXmlCompositeElement
     /// <para> Allow Objects to Overlap.</para>
     /// <para>Represents the following attribute in the schema: allowOverlap </para>
     /// </summary>
-    [SchemaAttr(0, "allowOverlap")]
     public BooleanValue AllowOverlap
     {
         get { return (BooleanValue)Attributes[10].Value; }
@@ -1070,7 +1040,6 @@ public partial class Anchor : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
 ///</remark>
-    [SchemaAttr(51, "editId")]
     public HexBinaryValue EditId
     {
         get { return (HexBinaryValue)Attributes[11].Value; }
@@ -1083,7 +1052,6 @@ public partial class Anchor : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
 ///</remark>
-    [SchemaAttr(51, "anchorId")]
     public HexBinaryValue AnchorId
     {
         get { return (HexBinaryValue)Attributes[12].Value; }
@@ -1361,7 +1329,6 @@ public abstract partial class Point2DType : OpenXmlLeafElement
     /// <para> X-Axis Coordinate.</para>
     /// <para>Represents the following attribute in the schema: x </para>
     /// </summary>
-    [SchemaAttr(0, "x")]
     public Int64Value X
     {
         get { return (Int64Value)Attributes[0].Value; }
@@ -1372,7 +1339,6 @@ public abstract partial class Point2DType : OpenXmlLeafElement
     /// <para> Y-Axis Coordinate.</para>
     /// <para>Represents the following attribute in the schema: y </para>
     /// </summary>
-    [SchemaAttr(0, "y")]
     public Int64Value Y
     {
         get { return (Int64Value)Attributes[1].Value; }
@@ -1426,7 +1392,6 @@ public partial class EffectExtent : OpenXmlLeafElement
     /// <para> Additional Extent on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: l </para>
     /// </summary>
-    [SchemaAttr(0, "l")]
     public Int64Value LeftEdge
     {
         get { return (Int64Value)Attributes[0].Value; }
@@ -1437,7 +1402,6 @@ public partial class EffectExtent : OpenXmlLeafElement
     /// <para> Additional Extent on Top Edge.</para>
     /// <para>Represents the following attribute in the schema: t </para>
     /// </summary>
-    [SchemaAttr(0, "t")]
     public Int64Value TopEdge
     {
         get { return (Int64Value)Attributes[1].Value; }
@@ -1448,7 +1412,6 @@ public partial class EffectExtent : OpenXmlLeafElement
     /// <para> Additional Extent on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: r </para>
     /// </summary>
-    [SchemaAttr(0, "r")]
     public Int64Value RightEdge
     {
         get { return (Int64Value)Attributes[2].Value; }
@@ -1459,7 +1422,6 @@ public partial class EffectExtent : OpenXmlLeafElement
     /// <para> Additional Extent on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: b </para>
     /// </summary>
-    [SchemaAttr(0, "b")]
     public Int64Value BottomEdge
     {
         get { return (Int64Value)Attributes[3].Value; }
@@ -1522,7 +1484,6 @@ public partial class WrapPolygon : OpenXmlCompositeElement
     /// <para> Wrapping Points Modified.</para>
     /// <para>Represents the following attribute in the schema: edited </para>
     /// </summary>
-    [SchemaAttr(0, "edited")]
     public BooleanValue Edited
     {
         get { return (BooleanValue)Attributes[0].Value; }
@@ -1645,7 +1606,6 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
     /// <para> Horizontal Position Relative Base.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
-    [SchemaAttr(0, "relativeFrom")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues> RelativeFrom
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues>)Attributes[0].Value; }
@@ -1795,7 +1755,6 @@ public partial class VerticalPosition : OpenXmlCompositeElement
     /// <para> Vertical Position Relative Base.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
-    [SchemaAttr(0, "relativeFrom")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues> RelativeFrom
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues>)Attributes[0].Value; }
@@ -1935,7 +1894,6 @@ public partial class Extent : OpenXmlLeafElement
     /// <para> Extent Length.</para>
     /// <para>Represents the following attribute in the schema: cx </para>
     /// </summary>
-    [SchemaAttr(0, "cx")]
     public Int64Value Cx
     {
         get { return (Int64Value)Attributes[0].Value; }
@@ -1946,7 +1904,6 @@ public partial class Extent : OpenXmlLeafElement
     /// <para> Extent Width.</para>
     /// <para>Represents the following attribute in the schema: cy </para>
     /// </summary>
-    [SchemaAttr(0, "cy")]
     public Int64Value Cy
     {
         get { return (Int64Value)Attributes[1].Value; }
@@ -2015,7 +1972,6 @@ public partial class DocProperties : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public UInt32Value Id
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -2026,7 +1982,6 @@ public partial class DocProperties : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -2037,7 +1992,6 @@ public partial class DocProperties : OpenXmlCompositeElement
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
-    [SchemaAttr(0, "descr")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -2048,7 +2002,6 @@ public partial class DocProperties : OpenXmlCompositeElement
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
-    [SchemaAttr(0, "hidden")]
     public BooleanValue Hidden
     {
         get { return (BooleanValue)Attributes[3].Value; }
@@ -2059,7 +2012,6 @@ public partial class DocProperties : OpenXmlCompositeElement
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title")]
     public StringValue Title
     {
         get { return (StringValue)Attributes[4].Value; }

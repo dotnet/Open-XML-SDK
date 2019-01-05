@@ -50,7 +50,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// Represents the attribute in schema: w:uri.
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
-        [SchemaAttr(23, "uri")]
         public StringValue Uri
         {
             get { return (StringValue)Attributes[0].Value; }
@@ -64,7 +63,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// Represents the attribute in schema: w:element.
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
-        [SchemaAttr(23, "element")]
         public StringValue Element
         {
             get { return (StringValue)Attributes[1].Value; }

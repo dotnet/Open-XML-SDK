@@ -123,7 +123,6 @@ public partial class Schema : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
-    [SchemaAttr(25, "uri")]
     public StringValue Uri
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -136,7 +135,6 @@ public partial class Schema : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
-    [SchemaAttr(25, "manifestLocation")]
     public StringValue ManifestLocation
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -149,7 +147,6 @@ public partial class Schema : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
-    [SchemaAttr(25, "schemaLocation")]
     public StringValue SchemaLocation
     {
         get { return (StringValue)Attributes[2].Value; }

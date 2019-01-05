@@ -46,7 +46,6 @@ public partial class Color : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -59,7 +58,6 @@ public partial class Color : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "themeColor")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>)Attributes[1].Value; }
@@ -72,7 +70,6 @@ public partial class Color : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "themeTint")]
     public StringValue ThemeTint
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -85,7 +82,6 @@ public partial class Color : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "themeShade")]
     public StringValue ThemeShade
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -143,7 +139,6 @@ public partial class DataBinding : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "prefixMappings")]
     public StringValue PrefixMappings
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -156,7 +151,6 @@ public partial class DataBinding : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "xpath")]
     public StringValue XPath
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -169,7 +163,6 @@ public partial class DataBinding : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "storeItemID")]
     public StringValue StoreItemId
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -225,7 +218,6 @@ public partial class Appearance : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
-    [SchemaAttr(69, "val")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>)Attributes[0].Value; }
@@ -790,7 +782,6 @@ public abstract partial class OnOffType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "val")]
     public OnOffValue Val
     {
         get { return (OnOffValue)Attributes[0].Value; }
@@ -843,7 +834,6 @@ public partial class PersistentDocumentId : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
-    [SchemaAttr(69, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -899,7 +889,6 @@ public partial class FootnoteColumns : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "val")]
     public Int32Value Val
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -957,7 +946,6 @@ public partial class CommentEx : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
-    [SchemaAttr(69, "paraId")]
     public HexBinaryValue ParaId
     {
         get { return (HexBinaryValue)Attributes[0].Value; }
@@ -970,7 +958,6 @@ public partial class CommentEx : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
-    [SchemaAttr(69, "paraIdParent")]
     public HexBinaryValue ParaIdParent
     {
         get { return (HexBinaryValue)Attributes[1].Value; }
@@ -983,7 +970,6 @@ public partial class CommentEx : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
-    [SchemaAttr(69, "done")]
     public OnOffValue Done
     {
         get { return (OnOffValue)Attributes[2].Value; }
@@ -1047,7 +1033,6 @@ public partial class Person : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
-    [SchemaAttr(69, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1060,7 +1045,6 @@ public partial class Person : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
-    [SchemaAttr(69, "contact")]
     public StringValue Contact
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -1172,7 +1156,6 @@ public partial class PresenceInfo : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
-    [SchemaAttr(69, "providerId")]
     public StringValue ProviderId
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1185,7 +1168,6 @@ public partial class PresenceInfo : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
-    [SchemaAttr(69, "userId")]
     public StringValue UserId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -1241,7 +1223,6 @@ public partial class SectionTitle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }

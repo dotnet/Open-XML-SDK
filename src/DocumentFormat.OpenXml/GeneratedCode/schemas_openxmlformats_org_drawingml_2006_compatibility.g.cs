@@ -41,7 +41,6 @@ public partial class LegacyDrawing : OpenXmlLeafElement
     /// <para> Shape ID.</para>
     /// <para>Represents the following attribute in the schema: spid </para>
     /// </summary>
-    [SchemaAttr(0, "spid")]
     public StringValue ShapeId
     {
         get { return (StringValue)Attributes[0].Value; }
