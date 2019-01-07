@@ -263,7 +263,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #region public properties
 
         /// <summary>
-        /// Gets a part that is in the OpenXmlPackage container.
+        /// Gets the OpenXmlPackage which contains the current part.
         /// </summary>
         public OpenXmlPackage OpenXmlPackage
         {
