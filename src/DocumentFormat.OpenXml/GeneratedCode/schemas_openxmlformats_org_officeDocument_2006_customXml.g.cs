@@ -48,7 +48,6 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     /// </summary>
 ///<remark> xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
 ///</remark>
-    [SchemaAttr(20, "itemID")]
     public StringValue ItemId
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -188,7 +187,6 @@ public partial class SchemaReference : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
 ///</remark>
-    [SchemaAttr(20, "uri")]
     public StringValue Uri
     {
         get { return (StringValue)Attributes[0].Value; }

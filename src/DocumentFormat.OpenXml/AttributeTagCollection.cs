@@ -2,13 +2,15 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace DocumentFormat.OpenXml
 {
     [DebuggerDisplay("Length = {Length}")]
     [DebuggerTypeProxy(typeof(AttributeTagCollectionDebugView))]
-    internal readonly struct AttributeTagCollection
+    internal readonly struct AttributeTagCollection : IEnumerable<OpenXmlAttribute>
     {
         private readonly ReadOnlyArray<AttributeTag> _tags;
         private readonly OpenXmlSimpleType[] _fields;
@@ -65,6 +67,18 @@ namespace DocumentFormat.OpenXml
             }
 
             return array;
+        }
+
+        IEnumerator<OpenXmlAttribute> IEnumerable<OpenXmlAttribute>.GetEnumerator() => ToAttributes().GetEnumerator();
+
+        IEnumerator IEnumerable.GetEnumerator() => ToAttributes().GetEnumerator();
+
+        private IEnumerable<OpenXmlAttribute> ToAttributes()
+        {
+            foreach (var attribute in this)
+            {
+                yield return new OpenXmlAttribute(attribute.Tag.Name, attribute.Tag.Namespace, null);
+            }
         }
 
         public struct Enumerator

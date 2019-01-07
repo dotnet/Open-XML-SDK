@@ -766,7 +766,6 @@ public partial class VTVector : OpenXmlCompositeElement
     /// <para> Vector Base Type.</para>
     /// <para>Represents the following attribute in the schema: baseType </para>
     /// </summary>
-    [SchemaAttr(0, "baseType")]
     public EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues> BaseType
     {
         get { return (EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues>)Attributes[0].Value; }
@@ -777,7 +776,6 @@ public partial class VTVector : OpenXmlCompositeElement
     /// <para> Vector Size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
-    [SchemaAttr(0, "size")]
     public UInt32Value Size
     {
         get { return (UInt32Value)Attributes[1].Value; }
@@ -966,7 +964,6 @@ public partial class VTArray : OpenXmlCompositeElement
     /// <para> Array Lower Bounds Attribute.</para>
     /// <para>Represents the following attribute in the schema: lBound </para>
     /// </summary>
-    [SchemaAttr(0, "lBound")]
     public Int32Value LowerBounds
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -977,7 +974,6 @@ public partial class VTArray : OpenXmlCompositeElement
     /// <para> Array Upper Bounds Attribute.</para>
     /// <para>Represents the following attribute in the schema: uBound </para>
     /// </summary>
-    [SchemaAttr(0, "uBound")]
     public Int32Value UpperBounds
     {
         get { return (Int32Value)Attributes[1].Value; }
@@ -988,7 +984,6 @@ public partial class VTArray : OpenXmlCompositeElement
     /// <para> Array Base Type.</para>
     /// <para>Represents the following attribute in the schema: baseType </para>
     /// </summary>
-    [SchemaAttr(0, "baseType")]
     public EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues> BaseType
     {
         get { return (EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues>)Attributes[2].Value; }
@@ -2472,7 +2467,6 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
     /// <para> VSTREAM Version Attribute.</para>
     /// <para>Represents the following attribute in the schema: version </para>
     /// </summary>
-    [SchemaAttr(0, "version")]
     public StringValue Version
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -2591,7 +2585,6 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
     /// <para> Format Attribute.</para>
     /// <para>Represents the following attribute in the schema: format </para>
     /// </summary>
-    [SchemaAttr(0, "format")]
     public Int32Value Format
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -2602,7 +2595,6 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
-    [SchemaAttr(0, "size")]
     public UInt32Value Size
     {
         get { return (UInt32Value)Attributes[1].Value; }

@@ -56,7 +56,6 @@ public partial class Dummy : OpenXmlLeafElement
     /// <para> decimals.</para>
     /// <para>Represents the following attribute in the schema: decimals </para>
     /// </summary>
-    [SchemaAttr(0, "decimals")]
     public StringValue Decimals
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -67,7 +66,6 @@ public partial class Dummy : OpenXmlLeafElement
     /// <para> default.</para>
     /// <para>Represents the following attribute in the schema: default </para>
     /// </summary>
-    [SchemaAttr(0, "default")]
     public StringValue Default
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -78,7 +76,6 @@ public partial class Dummy : OpenXmlLeafElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -89,7 +86,6 @@ public partial class Dummy : OpenXmlLeafElement
     /// <para> displayName.</para>
     /// <para>Represents the following attribute in the schema: displayName </para>
     /// </summary>
-    [SchemaAttr(0, "displayName")]
     public StringValue DisplayName
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -100,7 +96,6 @@ public partial class Dummy : OpenXmlLeafElement
     /// <para> fieldsID.</para>
     /// <para>Represents the following attribute in the schema: fieldsID </para>
     /// </summary>
-    [SchemaAttr(0, "fieldsID")]
     public StringValue FieldsID
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -111,7 +106,6 @@ public partial class Dummy : OpenXmlLeafElement
     /// <para> format.</para>
     /// <para>Represents the following attribute in the schema: format </para>
     /// </summary>
-    [SchemaAttr(0, "format")]
     public StringValue Format
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -122,7 +116,6 @@ public partial class Dummy : OpenXmlLeafElement
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
-    [SchemaAttr(0, "hidden")]
     public StringValue Hidden
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -133,7 +126,6 @@ public partial class Dummy : OpenXmlLeafElement
     /// <para> index.</para>
     /// <para>Represents the following attribute in the schema: index </para>
     /// </summary>
-    [SchemaAttr(0, "index")]
     public Int32Value Index
     {
         get { return (Int32Value)Attributes[7].Value; }
@@ -144,7 +136,6 @@ public partial class Dummy : OpenXmlLeafElement
     /// <para> internalName.</para>
     /// <para>Represents the following attribute in the schema: internalName </para>
     /// </summary>
-    [SchemaAttr(0, "internalName")]
     public StringValue InternalName
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -155,7 +146,6 @@ public partial class Dummy : OpenXmlLeafElement
     /// <para> LCID.</para>
     /// <para>Represents the following attribute in the schema: LCID </para>
     /// </summary>
-    [SchemaAttr(0, "LCID")]
     public Int32Value LCID
     {
         get { return (Int32Value)Attributes[9].Value; }
@@ -166,7 +156,6 @@ public partial class Dummy : OpenXmlLeafElement
     /// <para> list.</para>
     /// <para>Represents the following attribute in the schema: list </para>
     /// </summary>
-    [SchemaAttr(0, "list")]
     public StringValue List
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -177,7 +166,6 @@ public partial class Dummy : OpenXmlLeafElement
     /// <para> percentage.</para>
     /// <para>Represents the following attribute in the schema: percentage </para>
     /// </summary>
-    [SchemaAttr(0, "percentage")]
     public StringValue Percentage
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -188,7 +176,6 @@ public partial class Dummy : OpenXmlLeafElement
     /// <para> readOnly.</para>
     /// <para>Represents the following attribute in the schema: readOnly </para>
     /// </summary>
-    [SchemaAttr(0, "readOnly")]
     public StringValue ReadOnly
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -199,7 +186,6 @@ public partial class Dummy : OpenXmlLeafElement
     /// <para> requiredMultiChoice.</para>
     /// <para>Represents the following attribute in the schema: requiredMultiChoice </para>
     /// </summary>
-    [SchemaAttr(0, "requiredMultiChoice")]
     public StringValue RequiredMultiChoice
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -210,7 +196,6 @@ public partial class Dummy : OpenXmlLeafElement
     /// <para> root.</para>
     /// <para>Represents the following attribute in the schema: root </para>
     /// </summary>
-    [SchemaAttr(0, "root")]
     public EnumValue<DocumentFormat.OpenXml.Office.MetaAttributes.TrueOnlyValues> Root
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office.MetaAttributes.TrueOnlyValues>)Attributes[14].Value; }
@@ -221,7 +206,6 @@ public partial class Dummy : OpenXmlLeafElement
     /// <para> showField.</para>
     /// <para>Represents the following attribute in the schema: showField </para>
     /// </summary>
-    [SchemaAttr(0, "showField")]
     public StringValue ShowField
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -232,7 +216,6 @@ public partial class Dummy : OpenXmlLeafElement
     /// <para> web.</para>
     /// <para>Represents the following attribute in the schema: web </para>
     /// </summary>
-    [SchemaAttr(0, "web")]
     public StringValue Web
     {
         get { return (StringValue)Attributes[16].Value; }

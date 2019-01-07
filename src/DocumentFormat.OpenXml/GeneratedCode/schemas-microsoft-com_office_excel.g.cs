@@ -179,7 +179,6 @@ public partial class ClientData : OpenXmlCompositeElement
     /// <para> Object type.</para>
     /// <para>Represents the following attribute in the schema: ObjectType </para>
     /// </summary>
-    [SchemaAttr(0, "ObjectType")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues> ObjectType
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>)Attributes[0].Value; }

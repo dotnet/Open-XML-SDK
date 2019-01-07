@@ -9,11 +9,9 @@ namespace DocumentFormat.OpenXml
     /// Defines the attribute which is used to decorate a property for its corresponding attribute information.
     /// </summary>
     [AttributeUsage(AttributeTargets.Property)]
+    [Obsolete("Not used as of v2.10 to annotate schema")]
     public sealed class SchemaAttrAttribute : Attribute
     {
-        private string _tag;
-        private byte _nsId;
-
         /// <summary>
         /// Initializes a new instance of the SchemaAttrAttribute.
         /// </summary>
@@ -26,29 +24,18 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(tag));
             }
 
-            _nsId = nsId;
-            _tag = tag;
+            NamespaceUri = NamespaceIdMap.GetNamespaceUri(nsId);
+            Tag = tag;
         }
 
         /// <summary>
-        /// Gets/Sets the Tag name of the schema attribute.
+        /// Gets the tag name of the schema attribute.
         /// </summary>
-        public string Tag
-        {
-            get { return _tag; }
-
-            //set { _tag = value; }
-        }
+        public string Tag { get; }
 
         /// <summary>
         /// Gets the Namespace Uri of the schema attribute.
         /// </summary>
-        public string NamespaceUri
-        {
-            get
-            {
-                return NamespaceIdMap.GetNamespaceUri(_nsId);
-            }
-        }
+        public string NamespaceUri { get; }
     }
 }
