@@ -144,11 +144,13 @@ To build the Open XML SDK
 
 If you want to use a command line approach:
 
-1. Go to the directory that contains the project file, i.e. `cd <clone path>\src\DocumentFormat.OpenXml`
 1. Run `dotnet restore` in the directory.
 1. Run `dotnet test DocumentFormat.OpenXml.Tests.csproj` to run the tests.
-1. Run `dotnet pack DocumentFormat.OpenXml.csproj` to build the SDK framework assembly.
 1. Run `dotnet pack DocumentFormat.OpenXml.csproj` to generate a nupkg.
+1. Run `dotnet pack ./src/DocumentFormat.OpenXml/DocumentFormat.OpenXml.csproj` to build the SDK framework assembly.
+
+By default, `dotnet` will build/test/run only the .NET Core target. To build all targets, set the ProjectLoadStyle environment variable: `ProjectLoadStyle=All`
+
 
 Related tools
 -------------
