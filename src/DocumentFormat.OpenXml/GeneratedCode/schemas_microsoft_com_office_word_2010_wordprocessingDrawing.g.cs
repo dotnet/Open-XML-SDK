@@ -136,7 +136,6 @@ public partial class RelativeWidth : OpenXmlCompositeElement
     /// <para> relativeFrom.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
-    [SchemaAttr(0, "relativeFrom")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues> ObjectId
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>)Attributes[0].Value; }
@@ -252,7 +251,6 @@ public partial class RelativeHeight : OpenXmlCompositeElement
     /// <para> relativeFrom.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
-    [SchemaAttr(0, "relativeFrom")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues> RelativeFrom
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>)Attributes[0].Value; }

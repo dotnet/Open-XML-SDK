@@ -65,7 +65,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -76,7 +75,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -87,7 +85,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -98,7 +95,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -109,7 +105,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -120,7 +115,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -131,7 +125,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -142,7 +135,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -153,7 +145,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -164,7 +155,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -175,7 +165,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[10].Value; }
@@ -186,7 +175,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -197,7 +185,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -208,7 +195,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -219,7 +205,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -230,7 +215,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -241,7 +225,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -252,7 +235,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -263,7 +245,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[18].Value; }
@@ -274,7 +255,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -285,7 +265,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -296,7 +275,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -307,7 +285,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[22].Value; }
@@ -318,7 +295,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[23].Value; }
@@ -329,7 +305,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[24].Value; }
@@ -340,7 +315,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[25].Value; }
@@ -423,7 +397,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -434,7 +407,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[1].Value; }
@@ -445,7 +417,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -456,7 +427,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -467,7 +437,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -478,7 +447,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -489,7 +457,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -500,7 +467,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -511,7 +477,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -522,7 +487,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -533,7 +497,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -544,7 +507,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -555,7 +517,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -566,7 +527,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -577,7 +537,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -588,7 +547,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -599,7 +557,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -610,7 +567,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -621,7 +577,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -632,7 +587,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -643,7 +597,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -654,7 +607,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -665,7 +617,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[22].Value; }
@@ -676,7 +627,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[23].Value; }
@@ -687,7 +637,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[24].Value; }
@@ -698,7 +647,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[25].Value; }
@@ -709,7 +657,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[26].Value; }
@@ -720,7 +667,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[27].Value; }
@@ -731,7 +677,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[28].Value; }
@@ -742,7 +687,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[29].Value; }
@@ -819,7 +763,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> getPressed.</para>
     /// <para>Represents the following attribute in the schema: getPressed </para>
     /// </summary>
-    [SchemaAttr(0, "getPressed")]
     public StringValue GetPressed
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -830,7 +773,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -841,7 +783,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[2].Value; }
@@ -852,7 +793,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -863,7 +803,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -874,7 +813,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -885,7 +823,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -896,7 +833,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -907,7 +843,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -918,7 +853,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -929,7 +863,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -940,7 +873,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -951,7 +883,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -962,7 +893,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -973,7 +903,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -984,7 +913,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -995,7 +923,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -1006,7 +933,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -1017,7 +943,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -1028,7 +953,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -1039,7 +963,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[20].Value; }
@@ -1050,7 +973,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -1061,7 +983,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[22].Value; }
@@ -1072,7 +993,6 @@ public partial class CheckBox : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[23].Value; }
@@ -1183,7 +1103,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1194,7 +1113,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -1205,7 +1123,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> invalidateContentOnDrop.</para>
     /// <para>Represents the following attribute in the schema: invalidateContentOnDrop </para>
     /// </summary>
-    [SchemaAttr(0, "invalidateContentOnDrop")]
     public BooleanValue InvalidateContentOnDrop
     {
         get { return (BooleanValue)Attributes[2].Value; }
@@ -1216,7 +1133,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> columns.</para>
     /// <para>Represents the following attribute in the schema: columns </para>
     /// </summary>
-    [SchemaAttr(0, "columns")]
     public IntegerValue Columns
     {
         get { return (IntegerValue)Attributes[3].Value; }
@@ -1227,7 +1143,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> rows.</para>
     /// <para>Represents the following attribute in the schema: rows </para>
     /// </summary>
-    [SchemaAttr(0, "rows")]
     public IntegerValue Rows
     {
         get { return (IntegerValue)Attributes[4].Value; }
@@ -1238,7 +1153,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> itemWidth.</para>
     /// <para>Represents the following attribute in the schema: itemWidth </para>
     /// </summary>
-    [SchemaAttr(0, "itemWidth")]
     public IntegerValue ItemWidth
     {
         get { return (IntegerValue)Attributes[5].Value; }
@@ -1249,7 +1163,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> itemHeight.</para>
     /// <para>Represents the following attribute in the schema: itemHeight </para>
     /// </summary>
-    [SchemaAttr(0, "itemHeight")]
     public IntegerValue ItemHeight
     {
         get { return (IntegerValue)Attributes[6].Value; }
@@ -1260,7 +1173,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getItemWidth.</para>
     /// <para>Represents the following attribute in the schema: getItemWidth </para>
     /// </summary>
-    [SchemaAttr(0, "getItemWidth")]
     public StringValue GetItemWidth
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -1271,7 +1183,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getItemHeight.</para>
     /// <para>Represents the following attribute in the schema: getItemHeight </para>
     /// </summary>
-    [SchemaAttr(0, "getItemHeight")]
     public StringValue GetItemHeight
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -1282,7 +1193,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> showItemLabel.</para>
     /// <para>Represents the following attribute in the schema: showItemLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showItemLabel")]
     public BooleanValue ShowItemLabel
     {
         get { return (BooleanValue)Attributes[9].Value; }
@@ -1293,7 +1203,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> showInRibbon.</para>
     /// <para>Represents the following attribute in the schema: showInRibbon </para>
     /// </summary>
-    [SchemaAttr(0, "showInRibbon")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues> ShowInRibbon
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>)Attributes[10].Value; }
@@ -1304,7 +1213,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -1315,7 +1223,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[12].Value; }
@@ -1326,7 +1233,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -1337,7 +1243,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -1348,7 +1253,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -1359,7 +1263,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -1370,7 +1273,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> showItemImage.</para>
     /// <para>Represents the following attribute in the schema: showItemImage </para>
     /// </summary>
-    [SchemaAttr(0, "showItemImage")]
     public BooleanValue ShowItemImage
     {
         get { return (BooleanValue)Attributes[17].Value; }
@@ -1381,7 +1283,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getItemCount.</para>
     /// <para>Represents the following attribute in the schema: getItemCount </para>
     /// </summary>
-    [SchemaAttr(0, "getItemCount")]
     public StringValue GetItemCount
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -1392,7 +1293,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getItemLabel.</para>
     /// <para>Represents the following attribute in the schema: getItemLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getItemLabel")]
     public StringValue GetItemLabel
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -1403,7 +1303,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getItemScreentip.</para>
     /// <para>Represents the following attribute in the schema: getItemScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getItemScreentip")]
     public StringValue GetItemScreentip
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -1414,7 +1313,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getItemSupertip.</para>
     /// <para>Represents the following attribute in the schema: getItemSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getItemSupertip")]
     public StringValue GetItemSupertip
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -1425,7 +1323,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getItemImage.</para>
     /// <para>Represents the following attribute in the schema: getItemImage </para>
     /// </summary>
-    [SchemaAttr(0, "getItemImage")]
     public StringValue GetItemImage
     {
         get { return (StringValue)Attributes[22].Value; }
@@ -1436,7 +1333,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getItemID.</para>
     /// <para>Represents the following attribute in the schema: getItemID </para>
     /// </summary>
-    [SchemaAttr(0, "getItemID")]
     public StringValue GetItemID
     {
         get { return (StringValue)Attributes[23].Value; }
@@ -1447,7 +1343,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
-    [SchemaAttr(0, "sizeString")]
     public StringValue SizeString
     {
         get { return (StringValue)Attributes[24].Value; }
@@ -1458,7 +1353,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getSelectedItemID.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemID </para>
     /// </summary>
-    [SchemaAttr(0, "getSelectedItemID")]
     public StringValue GetSelectedItemID
     {
         get { return (StringValue)Attributes[25].Value; }
@@ -1469,7 +1363,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getSelectedItemIndex.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemIndex </para>
     /// </summary>
-    [SchemaAttr(0, "getSelectedItemIndex")]
     public StringValue GetSelectedItemIndex
     {
         get { return (StringValue)Attributes[26].Value; }
@@ -1480,7 +1373,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[27].Value; }
@@ -1491,7 +1383,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[28].Value; }
@@ -1502,7 +1393,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[29].Value; }
@@ -1513,7 +1403,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[30].Value; }
@@ -1524,7 +1413,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[31].Value; }
@@ -1535,7 +1423,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[32].Value; }
@@ -1546,7 +1433,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[33].Value; }
@@ -1557,7 +1443,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[34].Value; }
@@ -1568,7 +1453,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[35].Value; }
@@ -1579,7 +1463,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[36].Value; }
@@ -1590,7 +1473,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[37].Value; }
@@ -1601,7 +1483,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[38].Value; }
@@ -1612,7 +1493,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[39].Value; }
@@ -1623,7 +1503,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[40].Value; }
@@ -1634,7 +1513,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[41].Value; }
@@ -1645,7 +1523,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[42].Value; }
@@ -1656,7 +1533,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[43].Value; }
@@ -1667,7 +1543,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[44].Value; }
@@ -1678,7 +1553,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[45].Value; }
@@ -1689,7 +1563,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[46].Value; }
@@ -1700,7 +1573,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[47].Value; }
@@ -1711,7 +1583,6 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[48].Value; }
@@ -1832,7 +1703,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> getPressed.</para>
     /// <para>Represents the following attribute in the schema: getPressed </para>
     /// </summary>
-    [SchemaAttr(0, "getPressed")]
     public StringValue GetPressed
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1843,7 +1713,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -1854,7 +1723,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[2].Value; }
@@ -1865,7 +1733,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -1876,7 +1743,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -1887,7 +1753,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -1898,7 +1763,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -1909,7 +1773,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -1920,7 +1783,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -1931,7 +1793,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -1942,7 +1803,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -1953,7 +1813,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -1964,7 +1823,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -1975,7 +1833,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -1986,7 +1843,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -1997,7 +1853,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -2008,7 +1863,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -2019,7 +1873,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -2030,7 +1883,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -2041,7 +1893,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -2052,7 +1903,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -2063,7 +1913,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -2074,7 +1923,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[22].Value; }
@@ -2085,7 +1933,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[23].Value; }
@@ -2096,7 +1943,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[24].Value; }
@@ -2107,7 +1953,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[25].Value; }
@@ -2118,7 +1963,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[26].Value; }
@@ -2129,7 +1973,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[27].Value; }
@@ -2140,7 +1983,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[28].Value; }
@@ -2151,7 +1993,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[29].Value; }
@@ -2162,7 +2003,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[30].Value; }
@@ -2224,7 +2064,6 @@ public partial class MenuSeparator : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -2235,7 +2074,6 @@ public partial class MenuSeparator : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -2246,7 +2084,6 @@ public partial class MenuSeparator : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -2257,7 +2094,6 @@ public partial class MenuSeparator : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -2268,7 +2104,6 @@ public partial class MenuSeparator : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -2279,7 +2114,6 @@ public partial class MenuSeparator : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -2290,7 +2124,6 @@ public partial class MenuSeparator : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -2301,7 +2134,6 @@ public partial class MenuSeparator : OpenXmlLeafElement
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title")]
     public StringValue Title
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -2312,7 +2144,6 @@ public partial class MenuSeparator : OpenXmlLeafElement
     /// <para> getTitle.</para>
     /// <para>Represents the following attribute in the schema: getTitle </para>
     /// </summary>
-    [SchemaAttr(0, "getTitle")]
     public StringValue GetTitle
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -2392,7 +2223,6 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[0].Value; }
@@ -2403,7 +2233,6 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -2414,7 +2243,6 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -2425,7 +2253,6 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -2436,7 +2263,6 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -2447,7 +2273,6 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -2458,7 +2283,6 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -2469,7 +2293,6 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -2480,7 +2303,6 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -2491,7 +2313,6 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -2502,7 +2323,6 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[10].Value; }
@@ -2513,7 +2333,6 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -2524,7 +2343,6 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -2535,7 +2353,6 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -2546,7 +2363,6 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[14].Value; }
@@ -2557,7 +2373,6 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -2703,7 +2518,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> itemSize.</para>
     /// <para>Represents the following attribute in the schema: itemSize </para>
     /// </summary>
-    [SchemaAttr(0, "itemSize")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>)Attributes[0].Value; }
@@ -2714,7 +2528,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -2725,7 +2538,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -2736,7 +2548,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -2747,7 +2558,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -2758,7 +2568,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -2769,7 +2578,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -2780,7 +2588,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -2791,7 +2598,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -2802,7 +2608,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -2813,7 +2618,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -2824,7 +2628,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -2835,7 +2638,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -2846,7 +2648,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -2857,7 +2658,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[14].Value; }
@@ -2868,7 +2668,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -2879,7 +2678,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -2890,7 +2688,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -2901,7 +2698,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -2912,7 +2708,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -2923,7 +2718,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -2934,7 +2728,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -2945,7 +2738,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[22].Value; }
@@ -2956,7 +2748,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[23].Value; }
@@ -2967,7 +2758,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[24].Value; }
@@ -2978,7 +2768,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[25].Value; }
@@ -2989,7 +2778,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[26].Value; }
@@ -3000,7 +2788,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[27].Value; }
@@ -3011,7 +2798,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[28].Value; }
@@ -3022,7 +2808,6 @@ public partial class MenuRegular : OpenXmlCompositeElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[29].Value; }
@@ -3164,7 +2949,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -3175,7 +2959,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -3186,7 +2969,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -3197,7 +2979,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -3208,7 +2989,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -3219,7 +2999,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -3230,7 +3009,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> getContent.</para>
     /// <para>Represents the following attribute in the schema: getContent </para>
     /// </summary>
-    [SchemaAttr(0, "getContent")]
     public StringValue GetContent
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -3241,7 +3019,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> invalidateContentOnDrop.</para>
     /// <para>Represents the following attribute in the schema: invalidateContentOnDrop </para>
     /// </summary>
-    [SchemaAttr(0, "invalidateContentOnDrop")]
     public BooleanValue InvalidateContentOnDrop
     {
         get { return (BooleanValue)Attributes[7].Value; }
@@ -3252,7 +3029,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -3263,7 +3039,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -3274,7 +3049,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -3285,7 +3059,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -3296,7 +3069,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -3307,7 +3079,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -3318,7 +3089,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -3329,7 +3099,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[15].Value; }
@@ -3340,7 +3109,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -3351,7 +3119,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -3362,7 +3129,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -3373,7 +3139,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -3384,7 +3149,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -3395,7 +3159,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -3406,7 +3169,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[22].Value; }
@@ -3417,7 +3179,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[23].Value; }
@@ -3428,7 +3189,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[24].Value; }
@@ -3439,7 +3199,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[25].Value; }
@@ -3450,7 +3209,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[26].Value; }
@@ -3461,7 +3219,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[27].Value; }
@@ -3472,7 +3229,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[28].Value; }
@@ -3483,7 +3239,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[29].Value; }
@@ -3494,7 +3249,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[30].Value; }
@@ -3574,7 +3328,6 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[0].Value; }
@@ -3585,7 +3338,6 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -3596,7 +3348,6 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -3607,7 +3358,6 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -3618,7 +3368,6 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -3629,7 +3378,6 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -3640,7 +3388,6 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -3651,7 +3398,6 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -3662,7 +3408,6 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -3673,7 +3418,6 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -3684,7 +3428,6 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[10].Value; }
@@ -3695,7 +3438,6 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -3706,7 +3448,6 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -3717,7 +3458,6 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -3728,7 +3468,6 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[14].Value; }
@@ -3739,7 +3478,6 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -3885,7 +3623,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -3896,7 +3633,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -3907,7 +3643,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -3918,7 +3653,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -3929,7 +3663,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> itemSize.</para>
     /// <para>Represents the following attribute in the schema: itemSize </para>
     /// </summary>
-    [SchemaAttr(0, "itemSize")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>)Attributes[4].Value; }
@@ -3940,7 +3673,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title")]
     public StringValue Title
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -3951,7 +3683,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> getTitle.</para>
     /// <para>Represents the following attribute in the schema: getTitle </para>
     /// </summary>
-    [SchemaAttr(0, "getTitle")]
     public StringValue GetTitle
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -3962,7 +3693,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -3973,7 +3703,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -3984,7 +3713,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -3995,7 +3723,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -4006,7 +3733,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -4017,7 +3743,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -4028,7 +3753,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -4039,7 +3763,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[14].Value; }
@@ -4050,7 +3773,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -4061,7 +3783,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -4072,7 +3793,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -4083,7 +3803,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -4094,7 +3813,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -4105,7 +3823,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -4116,7 +3833,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -4127,7 +3843,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[22].Value; }
@@ -4138,7 +3853,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[23].Value; }
@@ -4149,7 +3863,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[24].Value; }
@@ -4160,7 +3873,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[25].Value; }
@@ -4171,7 +3883,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[26].Value; }
@@ -4182,7 +3893,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[27].Value; }
@@ -4193,7 +3903,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[28].Value; }
@@ -4204,7 +3913,6 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[29].Value; }
@@ -4322,7 +4030,6 @@ public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -4333,7 +4040,6 @@ public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -4344,7 +4050,6 @@ public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -4355,7 +4060,6 @@ public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -4366,7 +4070,6 @@ public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -4377,7 +4080,6 @@ public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -4388,7 +4090,6 @@ public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -4471,7 +4172,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
-    [SchemaAttr(0, "size")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>)Attributes[0].Value; }
@@ -4482,7 +4182,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
-    [SchemaAttr(0, "getSize")]
     public StringValue GetSize
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -4493,7 +4192,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[2].Value; }
@@ -4504,7 +4202,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -4515,7 +4212,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -4526,7 +4222,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -4537,7 +4232,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -4548,7 +4242,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -4559,7 +4252,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -4570,7 +4262,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -4581,7 +4272,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -4592,7 +4282,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -4603,7 +4292,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -4614,7 +4302,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -4625,7 +4312,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -4636,7 +4322,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -4647,7 +4332,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -4658,7 +4342,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -4669,7 +4352,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -4680,7 +4362,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -4691,7 +4372,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -4702,7 +4382,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -4713,7 +4392,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[22].Value; }
@@ -4724,7 +4402,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[23].Value; }
@@ -4735,7 +4412,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[24].Value; }
@@ -4746,7 +4422,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[25].Value; }
@@ -4757,7 +4432,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[26].Value; }
@@ -4768,7 +4442,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[27].Value; }
@@ -4779,7 +4452,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[28].Value; }
@@ -4790,7 +4462,6 @@ public partial class ControlClone : OpenXmlLeafElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[29].Value; }
@@ -4863,7 +4534,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -4874,7 +4544,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -4885,7 +4554,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -4896,7 +4564,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -4907,7 +4574,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -4918,7 +4584,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -4929,7 +4594,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -4940,7 +4604,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -4951,7 +4614,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[8].Value; }
@@ -4962,7 +4624,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -4973,7 +4634,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -4984,7 +4644,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -4995,7 +4654,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -5006,7 +4664,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -5017,7 +4674,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -5028,7 +4684,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -5039,7 +4694,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[16].Value; }
@@ -5050,7 +4704,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -5061,7 +4714,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[18].Value; }
@@ -5072,7 +4724,6 @@ public partial class LabelControl : OpenXmlLeafElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -5157,7 +4808,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
-    [SchemaAttr(0, "size")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>)Attributes[0].Value; }
@@ -5168,7 +4818,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
-    [SchemaAttr(0, "getSize")]
     public StringValue GetSize
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -5179,7 +4828,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -5190,7 +4838,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[3].Value; }
@@ -5201,7 +4848,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -5212,7 +4858,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -5223,7 +4868,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -5234,7 +4878,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -5245,7 +4888,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -5256,7 +4898,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -5267,7 +4908,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -5278,7 +4918,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -5289,7 +4928,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -5300,7 +4938,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -5311,7 +4948,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -5322,7 +4958,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -5333,7 +4968,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -5344,7 +4978,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -5355,7 +4988,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -5366,7 +4998,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -5377,7 +5008,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -5388,7 +5018,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -5399,7 +5028,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[22].Value; }
@@ -5410,7 +5038,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[23].Value; }
@@ -5421,7 +5048,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[24].Value; }
@@ -5432,7 +5058,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[25].Value; }
@@ -5443,7 +5068,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[26].Value; }
@@ -5454,7 +5078,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[27].Value; }
@@ -5465,7 +5088,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[28].Value; }
@@ -5476,7 +5098,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[29].Value; }
@@ -5487,7 +5108,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[30].Value; }
@@ -5498,7 +5118,6 @@ public partial class Button : OpenXmlLeafElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[31].Value; }
@@ -5584,7 +5203,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
-    [SchemaAttr(0, "size")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>)Attributes[0].Value; }
@@ -5595,7 +5213,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
-    [SchemaAttr(0, "getSize")]
     public StringValue GetSize
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -5606,7 +5223,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> getPressed.</para>
     /// <para>Represents the following attribute in the schema: getPressed </para>
     /// </summary>
-    [SchemaAttr(0, "getPressed")]
     public StringValue GetPressed
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -5617,7 +5233,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -5628,7 +5243,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[4].Value; }
@@ -5639,7 +5253,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -5650,7 +5263,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -5661,7 +5273,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -5672,7 +5283,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -5683,7 +5293,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -5694,7 +5303,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -5705,7 +5313,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -5716,7 +5323,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -5727,7 +5333,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -5738,7 +5343,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -5749,7 +5353,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -5760,7 +5363,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -5771,7 +5373,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -5782,7 +5383,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -5793,7 +5393,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -5804,7 +5403,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -5815,7 +5413,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -5826,7 +5423,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[22].Value; }
@@ -5837,7 +5433,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[23].Value; }
@@ -5848,7 +5443,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[24].Value; }
@@ -5859,7 +5453,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[25].Value; }
@@ -5870,7 +5463,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[26].Value; }
@@ -5881,7 +5473,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[27].Value; }
@@ -5892,7 +5483,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[28].Value; }
@@ -5903,7 +5493,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[29].Value; }
@@ -5914,7 +5503,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[30].Value; }
@@ -5925,7 +5513,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[31].Value; }
@@ -5936,7 +5523,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[32].Value; }
@@ -6020,7 +5606,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[0].Value; }
@@ -6031,7 +5616,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -6042,7 +5626,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -6053,7 +5636,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -6064,7 +5646,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -6075,7 +5656,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> maxLength.</para>
     /// <para>Represents the following attribute in the schema: maxLength </para>
     /// </summary>
-    [SchemaAttr(0, "maxLength")]
     public IntegerValue MaxLength
     {
         get { return (IntegerValue)Attributes[5].Value; }
@@ -6086,7 +5666,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> getText.</para>
     /// <para>Represents the following attribute in the schema: getText </para>
     /// </summary>
-    [SchemaAttr(0, "getText")]
     public StringValue GetText
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -6097,7 +5676,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> onChange.</para>
     /// <para>Represents the following attribute in the schema: onChange </para>
     /// </summary>
-    [SchemaAttr(0, "onChange")]
     public StringValue OnChange
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -6108,7 +5686,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
-    [SchemaAttr(0, "sizeString")]
     public StringValue SizeString
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -6119,7 +5696,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -6130,7 +5706,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -6141,7 +5716,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -6152,7 +5726,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -6163,7 +5736,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -6174,7 +5746,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -6185,7 +5756,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -6196,7 +5766,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -6207,7 +5776,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -6218,7 +5786,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -6229,7 +5796,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -6240,7 +5806,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -6251,7 +5816,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -6262,7 +5826,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[22].Value; }
@@ -6273,7 +5836,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[23].Value; }
@@ -6284,7 +5846,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[24].Value; }
@@ -6295,7 +5856,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[25].Value; }
@@ -6306,7 +5866,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[26].Value; }
@@ -6317,7 +5876,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[27].Value; }
@@ -6328,7 +5886,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[28].Value; }
@@ -6339,7 +5896,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[29].Value; }
@@ -6350,7 +5906,6 @@ public partial class EditBox : OpenXmlLeafElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[30].Value; }
@@ -6449,7 +6004,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> showItemImage.</para>
     /// <para>Represents the following attribute in the schema: showItemImage </para>
     /// </summary>
-    [SchemaAttr(0, "showItemImage")]
     public BooleanValue ShowItemImage
     {
         get { return (BooleanValue)Attributes[0].Value; }
@@ -6460,7 +6014,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> getItemCount.</para>
     /// <para>Represents the following attribute in the schema: getItemCount </para>
     /// </summary>
-    [SchemaAttr(0, "getItemCount")]
     public StringValue GetItemCount
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -6471,7 +6024,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> getItemLabel.</para>
     /// <para>Represents the following attribute in the schema: getItemLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getItemLabel")]
     public StringValue GetItemLabel
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -6482,7 +6034,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> getItemScreentip.</para>
     /// <para>Represents the following attribute in the schema: getItemScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getItemScreentip")]
     public StringValue GetItemScreentip
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -6493,7 +6044,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> getItemSupertip.</para>
     /// <para>Represents the following attribute in the schema: getItemSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getItemSupertip")]
     public StringValue GetItemSupertip
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -6504,7 +6054,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> getItemImage.</para>
     /// <para>Represents the following attribute in the schema: getItemImage </para>
     /// </summary>
-    [SchemaAttr(0, "getItemImage")]
     public StringValue GetItemImage
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -6515,7 +6064,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> getItemID.</para>
     /// <para>Represents the following attribute in the schema: getItemID </para>
     /// </summary>
-    [SchemaAttr(0, "getItemID")]
     public StringValue GetItemID
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -6526,7 +6074,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
-    [SchemaAttr(0, "sizeString")]
     public StringValue SizeString
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -6537,7 +6084,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> invalidateContentOnDrop.</para>
     /// <para>Represents the following attribute in the schema: invalidateContentOnDrop </para>
     /// </summary>
-    [SchemaAttr(0, "invalidateContentOnDrop")]
     public BooleanValue InvalidateContentOnDrop
     {
         get { return (BooleanValue)Attributes[8].Value; }
@@ -6548,7 +6094,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[9].Value; }
@@ -6559,7 +6104,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -6570,7 +6114,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -6581,7 +6124,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -6592,7 +6134,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -6603,7 +6144,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> maxLength.</para>
     /// <para>Represents the following attribute in the schema: maxLength </para>
     /// </summary>
-    [SchemaAttr(0, "maxLength")]
     public IntegerValue MaxLength
     {
         get { return (IntegerValue)Attributes[14].Value; }
@@ -6614,7 +6154,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> getText.</para>
     /// <para>Represents the following attribute in the schema: getText </para>
     /// </summary>
-    [SchemaAttr(0, "getText")]
     public StringValue GetText
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -6625,7 +6164,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> onChange.</para>
     /// <para>Represents the following attribute in the schema: onChange </para>
     /// </summary>
-    [SchemaAttr(0, "onChange")]
     public StringValue OnChange
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -6636,7 +6174,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -6647,7 +6184,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -6658,7 +6194,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -6669,7 +6204,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -6680,7 +6214,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -6691,7 +6224,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[22].Value; }
@@ -6702,7 +6234,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[23].Value; }
@@ -6713,7 +6244,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[24].Value; }
@@ -6724,7 +6254,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[25].Value; }
@@ -6735,7 +6264,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[26].Value; }
@@ -6746,7 +6274,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[27].Value; }
@@ -6757,7 +6284,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[28].Value; }
@@ -6768,7 +6294,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[29].Value; }
@@ -6779,7 +6304,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[30].Value; }
@@ -6790,7 +6314,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[31].Value; }
@@ -6801,7 +6324,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[32].Value; }
@@ -6812,7 +6334,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[33].Value; }
@@ -6823,7 +6344,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[34].Value; }
@@ -6834,7 +6354,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[35].Value; }
@@ -6845,7 +6364,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[36].Value; }
@@ -6856,7 +6374,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[37].Value; }
@@ -6867,7 +6384,6 @@ public partial class ComboBox : OpenXmlCompositeElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[38].Value; }
@@ -7002,7 +6518,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -7013,7 +6528,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[1].Value; }
@@ -7024,7 +6538,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -7035,7 +6548,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -7046,7 +6558,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -7057,7 +6568,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -7068,7 +6578,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> showItemImage.</para>
     /// <para>Represents the following attribute in the schema: showItemImage </para>
     /// </summary>
-    [SchemaAttr(0, "showItemImage")]
     public BooleanValue ShowItemImage
     {
         get { return (BooleanValue)Attributes[6].Value; }
@@ -7079,7 +6588,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> getItemCount.</para>
     /// <para>Represents the following attribute in the schema: getItemCount </para>
     /// </summary>
-    [SchemaAttr(0, "getItemCount")]
     public StringValue GetItemCount
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -7090,7 +6598,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> getItemLabel.</para>
     /// <para>Represents the following attribute in the schema: getItemLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getItemLabel")]
     public StringValue GetItemLabel
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -7101,7 +6608,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> getItemScreentip.</para>
     /// <para>Represents the following attribute in the schema: getItemScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getItemScreentip")]
     public StringValue GetItemScreentip
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -7112,7 +6618,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> getItemSupertip.</para>
     /// <para>Represents the following attribute in the schema: getItemSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getItemSupertip")]
     public StringValue GetItemSupertip
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -7123,7 +6628,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> getItemImage.</para>
     /// <para>Represents the following attribute in the schema: getItemImage </para>
     /// </summary>
-    [SchemaAttr(0, "getItemImage")]
     public StringValue GetItemImage
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -7134,7 +6638,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> getItemID.</para>
     /// <para>Represents the following attribute in the schema: getItemID </para>
     /// </summary>
-    [SchemaAttr(0, "getItemID")]
     public StringValue GetItemID
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -7145,7 +6648,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
-    [SchemaAttr(0, "sizeString")]
     public StringValue SizeString
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -7156,7 +6658,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> getSelectedItemID.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemID </para>
     /// </summary>
-    [SchemaAttr(0, "getSelectedItemID")]
     public StringValue GetSelectedItemID
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -7167,7 +6668,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> getSelectedItemIndex.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemIndex </para>
     /// </summary>
-    [SchemaAttr(0, "getSelectedItemIndex")]
     public StringValue GetSelectedItemIndex
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -7178,7 +6678,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> showItemLabel.</para>
     /// <para>Represents the following attribute in the schema: showItemLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showItemLabel")]
     public BooleanValue ShowItemLabel
     {
         get { return (BooleanValue)Attributes[16].Value; }
@@ -7189,7 +6688,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -7200,7 +6698,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -7211,7 +6708,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -7222,7 +6718,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -7233,7 +6728,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -7244,7 +6738,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[22].Value; }
@@ -7255,7 +6748,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[23].Value; }
@@ -7266,7 +6758,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[24].Value; }
@@ -7277,7 +6768,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[25].Value; }
@@ -7288,7 +6778,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[26].Value; }
@@ -7299,7 +6788,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[27].Value; }
@@ -7310,7 +6798,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[28].Value; }
@@ -7321,7 +6808,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[29].Value; }
@@ -7332,7 +6818,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[30].Value; }
@@ -7343,7 +6828,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[31].Value; }
@@ -7354,7 +6838,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[32].Value; }
@@ -7365,7 +6848,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[33].Value; }
@@ -7376,7 +6858,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[34].Value; }
@@ -7387,7 +6868,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[35].Value; }
@@ -7398,7 +6878,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[36].Value; }
@@ -7409,7 +6888,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[37].Value; }
@@ -7420,7 +6898,6 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[38].Value; }
@@ -7570,7 +7047,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
-    [SchemaAttr(0, "size")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>)Attributes[0].Value; }
@@ -7581,7 +7057,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
-    [SchemaAttr(0, "getSize")]
     public StringValue GetSize
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -7592,7 +7067,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -7603,7 +7077,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -7614,7 +7087,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> invalidateContentOnDrop.</para>
     /// <para>Represents the following attribute in the schema: invalidateContentOnDrop </para>
     /// </summary>
-    [SchemaAttr(0, "invalidateContentOnDrop")]
     public BooleanValue InvalidateContentOnDrop
     {
         get { return (BooleanValue)Attributes[4].Value; }
@@ -7625,7 +7097,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> columns.</para>
     /// <para>Represents the following attribute in the schema: columns </para>
     /// </summary>
-    [SchemaAttr(0, "columns")]
     public IntegerValue Columns
     {
         get { return (IntegerValue)Attributes[5].Value; }
@@ -7636,7 +7107,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> rows.</para>
     /// <para>Represents the following attribute in the schema: rows </para>
     /// </summary>
-    [SchemaAttr(0, "rows")]
     public IntegerValue Rows
     {
         get { return (IntegerValue)Attributes[6].Value; }
@@ -7647,7 +7117,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> itemWidth.</para>
     /// <para>Represents the following attribute in the schema: itemWidth </para>
     /// </summary>
-    [SchemaAttr(0, "itemWidth")]
     public IntegerValue ItemWidth
     {
         get { return (IntegerValue)Attributes[7].Value; }
@@ -7658,7 +7127,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> itemHeight.</para>
     /// <para>Represents the following attribute in the schema: itemHeight </para>
     /// </summary>
-    [SchemaAttr(0, "itemHeight")]
     public IntegerValue ItemHeight
     {
         get { return (IntegerValue)Attributes[8].Value; }
@@ -7669,7 +7137,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getItemWidth.</para>
     /// <para>Represents the following attribute in the schema: getItemWidth </para>
     /// </summary>
-    [SchemaAttr(0, "getItemWidth")]
     public StringValue GetItemWidth
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -7680,7 +7147,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getItemHeight.</para>
     /// <para>Represents the following attribute in the schema: getItemHeight </para>
     /// </summary>
-    [SchemaAttr(0, "getItemHeight")]
     public StringValue GetItemHeight
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -7691,7 +7157,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> showItemLabel.</para>
     /// <para>Represents the following attribute in the schema: showItemLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showItemLabel")]
     public BooleanValue ShowItemLabel
     {
         get { return (BooleanValue)Attributes[11].Value; }
@@ -7702,7 +7167,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> showInRibbon.</para>
     /// <para>Represents the following attribute in the schema: showInRibbon </para>
     /// </summary>
-    [SchemaAttr(0, "showInRibbon")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues> ShowInRibbon
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>)Attributes[12].Value; }
@@ -7713,7 +7177,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -7724,7 +7187,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[14].Value; }
@@ -7735,7 +7197,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -7746,7 +7207,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -7757,7 +7217,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -7768,7 +7227,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -7779,7 +7237,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> showItemImage.</para>
     /// <para>Represents the following attribute in the schema: showItemImage </para>
     /// </summary>
-    [SchemaAttr(0, "showItemImage")]
     public BooleanValue ShowItemImage
     {
         get { return (BooleanValue)Attributes[19].Value; }
@@ -7790,7 +7247,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getItemCount.</para>
     /// <para>Represents the following attribute in the schema: getItemCount </para>
     /// </summary>
-    [SchemaAttr(0, "getItemCount")]
     public StringValue GetItemCount
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -7801,7 +7257,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getItemLabel.</para>
     /// <para>Represents the following attribute in the schema: getItemLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getItemLabel")]
     public StringValue GetItemLabel
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -7812,7 +7267,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getItemScreentip.</para>
     /// <para>Represents the following attribute in the schema: getItemScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getItemScreentip")]
     public StringValue GetItemScreentip
     {
         get { return (StringValue)Attributes[22].Value; }
@@ -7823,7 +7277,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getItemSupertip.</para>
     /// <para>Represents the following attribute in the schema: getItemSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getItemSupertip")]
     public StringValue GetItemSupertip
     {
         get { return (StringValue)Attributes[23].Value; }
@@ -7834,7 +7287,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getItemImage.</para>
     /// <para>Represents the following attribute in the schema: getItemImage </para>
     /// </summary>
-    [SchemaAttr(0, "getItemImage")]
     public StringValue GetItemImage
     {
         get { return (StringValue)Attributes[24].Value; }
@@ -7845,7 +7297,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getItemID.</para>
     /// <para>Represents the following attribute in the schema: getItemID </para>
     /// </summary>
-    [SchemaAttr(0, "getItemID")]
     public StringValue GetItemID
     {
         get { return (StringValue)Attributes[25].Value; }
@@ -7856,7 +7307,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
-    [SchemaAttr(0, "sizeString")]
     public StringValue SizeString
     {
         get { return (StringValue)Attributes[26].Value; }
@@ -7867,7 +7317,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getSelectedItemID.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemID </para>
     /// </summary>
-    [SchemaAttr(0, "getSelectedItemID")]
     public StringValue GetSelectedItemID
     {
         get { return (StringValue)Attributes[27].Value; }
@@ -7878,7 +7327,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getSelectedItemIndex.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemIndex </para>
     /// </summary>
-    [SchemaAttr(0, "getSelectedItemIndex")]
     public StringValue GetSelectedItemIndex
     {
         get { return (StringValue)Attributes[28].Value; }
@@ -7889,7 +7337,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[29].Value; }
@@ -7900,7 +7347,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[30].Value; }
@@ -7911,7 +7357,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[31].Value; }
@@ -7922,7 +7367,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[32].Value; }
@@ -7933,7 +7377,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[33].Value; }
@@ -7944,7 +7387,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[34].Value; }
@@ -7955,7 +7397,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[35].Value; }
@@ -7966,7 +7407,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[36].Value; }
@@ -7977,7 +7417,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[37].Value; }
@@ -7988,7 +7427,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[38].Value; }
@@ -7999,7 +7437,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[39].Value; }
@@ -8010,7 +7447,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[40].Value; }
@@ -8021,7 +7457,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[41].Value; }
@@ -8032,7 +7467,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[42].Value; }
@@ -8043,7 +7477,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[43].Value; }
@@ -8054,7 +7487,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[44].Value; }
@@ -8065,7 +7497,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[45].Value; }
@@ -8076,7 +7507,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[46].Value; }
@@ -8087,7 +7517,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[47].Value; }
@@ -8098,7 +7527,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[48].Value; }
@@ -8109,7 +7537,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[49].Value; }
@@ -8120,7 +7547,6 @@ public partial class Gallery : OpenXmlCompositeElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[50].Value; }
@@ -8265,7 +7691,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
-    [SchemaAttr(0, "size")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>)Attributes[0].Value; }
@@ -8276,7 +7701,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
-    [SchemaAttr(0, "getSize")]
     public StringValue GetSize
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -8287,7 +7711,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> itemSize.</para>
     /// <para>Represents the following attribute in the schema: itemSize </para>
     /// </summary>
-    [SchemaAttr(0, "itemSize")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>)Attributes[2].Value; }
@@ -8298,7 +7721,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -8309,7 +7731,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -8320,7 +7741,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -8331,7 +7751,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -8342,7 +7761,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -8353,7 +7771,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -8364,7 +7781,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -8375,7 +7791,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -8386,7 +7801,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -8397,7 +7811,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -8408,7 +7821,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -8419,7 +7831,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -8430,7 +7841,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -8441,7 +7851,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[16].Value; }
@@ -8452,7 +7861,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -8463,7 +7871,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -8474,7 +7881,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -8485,7 +7891,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -8496,7 +7901,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -8507,7 +7911,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[22].Value; }
@@ -8518,7 +7921,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[23].Value; }
@@ -8529,7 +7931,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[24].Value; }
@@ -8540,7 +7941,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[25].Value; }
@@ -8551,7 +7951,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[26].Value; }
@@ -8562,7 +7961,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[27].Value; }
@@ -8573,7 +7971,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[28].Value; }
@@ -8584,7 +7981,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[29].Value; }
@@ -8595,7 +7991,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[30].Value; }
@@ -8606,7 +8001,6 @@ public partial class Menu : OpenXmlCompositeElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[31].Value; }
@@ -8750,7 +8144,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
-    [SchemaAttr(0, "size")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>)Attributes[0].Value; }
@@ -8761,7 +8154,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
-    [SchemaAttr(0, "getSize")]
     public StringValue GetSize
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -8772,7 +8164,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -8783,7 +8174,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -8794,7 +8184,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -8805,7 +8194,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -8816,7 +8204,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -8827,7 +8214,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -8838,7 +8224,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> getContent.</para>
     /// <para>Represents the following attribute in the schema: getContent </para>
     /// </summary>
-    [SchemaAttr(0, "getContent")]
     public StringValue GetContent
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -8849,7 +8234,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> invalidateContentOnDrop.</para>
     /// <para>Represents the following attribute in the schema: invalidateContentOnDrop </para>
     /// </summary>
-    [SchemaAttr(0, "invalidateContentOnDrop")]
     public BooleanValue InvalidateContentOnDrop
     {
         get { return (BooleanValue)Attributes[9].Value; }
@@ -8860,7 +8244,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -8871,7 +8254,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -8882,7 +8264,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -8893,7 +8274,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -8904,7 +8284,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -8915,7 +8294,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -8926,7 +8304,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -8937,7 +8314,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[17].Value; }
@@ -8948,7 +8324,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -8959,7 +8334,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -8970,7 +8344,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -8981,7 +8354,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -8992,7 +8364,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[22].Value; }
@@ -9003,7 +8374,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[23].Value; }
@@ -9014,7 +8384,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[24].Value; }
@@ -9025,7 +8394,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[25].Value; }
@@ -9036,7 +8404,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[26].Value; }
@@ -9047,7 +8414,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[27].Value; }
@@ -9058,7 +8424,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[28].Value; }
@@ -9069,7 +8434,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[29].Value; }
@@ -9080,7 +8444,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[30].Value; }
@@ -9091,7 +8454,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[31].Value; }
@@ -9102,7 +8464,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[32].Value; }
@@ -9184,7 +8545,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
-    [SchemaAttr(0, "size")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>)Attributes[0].Value; }
@@ -9195,7 +8555,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
-    [SchemaAttr(0, "getSize")]
     public StringValue GetSize
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -9206,7 +8565,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[2].Value; }
@@ -9217,7 +8575,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -9228,7 +8585,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -9239,7 +8595,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -9250,7 +8605,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -9261,7 +8615,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -9272,7 +8625,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -9283,7 +8635,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -9294,7 +8645,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -9305,7 +8655,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -9316,7 +8665,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[12].Value; }
@@ -9327,7 +8675,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -9338,7 +8685,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -9349,7 +8695,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -9360,7 +8705,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[16].Value; }
@@ -9371,7 +8715,6 @@ public partial class SplitButton : OpenXmlCompositeElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -9507,7 +8850,6 @@ public partial class Box : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -9518,7 +8860,6 @@ public partial class Box : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -9529,7 +8870,6 @@ public partial class Box : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -9540,7 +8880,6 @@ public partial class Box : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[3].Value; }
@@ -9551,7 +8890,6 @@ public partial class Box : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -9562,7 +8900,6 @@ public partial class Box : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -9573,7 +8910,6 @@ public partial class Box : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -9584,7 +8920,6 @@ public partial class Box : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -9595,7 +8930,6 @@ public partial class Box : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -9606,7 +8940,6 @@ public partial class Box : OpenXmlCompositeElement
     /// <para> boxStyle.</para>
     /// <para>Represents the following attribute in the schema: boxStyle </para>
     /// </summary>
-    [SchemaAttr(0, "boxStyle")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues> BoxStyle
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues>)Attributes[9].Value; }
@@ -9762,7 +9095,6 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -9773,7 +9105,6 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -9784,7 +9115,6 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -9795,7 +9125,6 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[3].Value; }
@@ -9806,7 +9135,6 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -9817,7 +9145,6 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -9828,7 +9155,6 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -9839,7 +9165,6 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -9850,7 +9175,6 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -9976,7 +9300,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -9987,7 +9310,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -9998,7 +9320,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -10009,7 +9330,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -10020,7 +9340,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -10031,7 +9350,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -10042,7 +9360,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <para> isDefinitive.</para>
     /// <para>Represents the following attribute in the schema: isDefinitive </para>
     /// </summary>
-    [SchemaAttr(0, "isDefinitive")]
     public BooleanValue IsDefinitive
     {
         get { return (BooleanValue)Attributes[6].Value; }
@@ -10053,7 +9370,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[7].Value; }
@@ -10064,7 +9380,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -10075,7 +9390,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -10086,7 +9400,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -10097,7 +9410,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[11].Value; }
@@ -10108,7 +9420,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -10119,7 +9430,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -10130,7 +9440,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -10141,7 +9450,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -10152,7 +9460,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -10163,7 +9470,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -10231,7 +9537,6 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -10242,7 +9547,6 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -10253,7 +9557,6 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -10264,7 +9567,6 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -10275,7 +9577,6 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -10286,7 +9587,6 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -10297,7 +9597,6 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     /// <para> getPressed.</para>
     /// <para>Represents the following attribute in the schema: getPressed </para>
     /// </summary>
-    [SchemaAttr(0, "getPressed")]
     public StringValue GetPressed
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -10308,7 +9607,6 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[7].Value; }
@@ -10319,7 +9617,6 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -10330,7 +9627,6 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -10341,7 +9637,6 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -10352,7 +9647,6 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[11].Value; }
@@ -10363,7 +9657,6 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -10374,7 +9667,6 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -10385,7 +9677,6 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -10461,7 +9752,6 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -10472,7 +9762,6 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -10483,7 +9772,6 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -10494,7 +9782,6 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -10505,7 +9792,6 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -10516,7 +9802,6 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[5].Value; }
@@ -10527,7 +9812,6 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -10538,7 +9822,6 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -10549,7 +9832,6 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -10560,7 +9842,6 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[9].Value; }
@@ -10571,7 +9852,6 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -10582,7 +9862,6 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -10593,7 +9872,6 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -10604,7 +9882,6 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -10615,7 +9892,6 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -10626,7 +9902,6 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -10731,7 +10006,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -10742,7 +10016,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -10753,7 +10026,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -10764,7 +10036,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -10775,7 +10046,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -10786,7 +10056,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -10797,7 +10066,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -10808,7 +10076,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -10819,7 +10086,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -10830,7 +10096,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <para> getPressed.</para>
     /// <para>Represents the following attribute in the schema: getPressed </para>
     /// </summary>
-    [SchemaAttr(0, "getPressed")]
     public StringValue GetPressed
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -10841,7 +10106,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[10].Value; }
@@ -10852,7 +10116,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -10863,7 +10126,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -10874,7 +10136,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -10885,7 +10146,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[14].Value; }
@@ -10896,7 +10156,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -10907,7 +10166,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -10918,7 +10176,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -10993,7 +10250,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
-    [SchemaAttr(0, "expand")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[0].Value; }
@@ -11004,7 +10260,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> style.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
-    [SchemaAttr(0, "style")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.Style2Values> Style
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.Style2Values>)Attributes[1].Value; }
@@ -11015,7 +10270,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -11026,7 +10280,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -11037,7 +10290,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -11048,7 +10300,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -11059,7 +10310,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -11070,7 +10320,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -11081,7 +10330,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -11092,7 +10340,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -11103,7 +10350,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> isDefinitive.</para>
     /// <para>Represents the following attribute in the schema: isDefinitive </para>
     /// </summary>
-    [SchemaAttr(0, "isDefinitive")]
     public BooleanValue IsDefinitive
     {
         get { return (BooleanValue)Attributes[10].Value; }
@@ -11114,7 +10360,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[11].Value; }
@@ -11125,7 +10370,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -11136,7 +10380,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -11147,7 +10390,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -11158,7 +10400,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[15].Value; }
@@ -11169,7 +10410,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -11180,7 +10420,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -11191,7 +10430,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -11202,7 +10440,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -11213,7 +10450,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -11224,7 +10460,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -11297,7 +10532,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
-    [SchemaAttr(0, "expand")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[0].Value; }
@@ -11308,7 +10542,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -11319,7 +10552,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -11330,7 +10562,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -11341,7 +10572,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -11352,7 +10582,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -11363,7 +10592,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -11374,7 +10602,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -11385,7 +10612,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -11396,7 +10622,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -11407,7 +10632,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -11418,7 +10642,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> getPressed.</para>
     /// <para>Represents the following attribute in the schema: getPressed </para>
     /// </summary>
-    [SchemaAttr(0, "getPressed")]
     public StringValue GetPressed
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -11429,7 +10652,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[12].Value; }
@@ -11440,7 +10662,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -11451,7 +10672,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -11462,7 +10682,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -11473,7 +10692,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[16].Value; }
@@ -11484,7 +10702,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -11495,7 +10712,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -11506,7 +10722,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -11576,7 +10791,6 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -11587,7 +10801,6 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -11598,7 +10811,6 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -11609,7 +10821,6 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     /// <para> alignLabel.</para>
     /// <para>Represents the following attribute in the schema: alignLabel </para>
     /// </summary>
-    [SchemaAttr(0, "alignLabel")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[3].Value; }
@@ -11620,7 +10831,6 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
-    [SchemaAttr(0, "expand")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[4].Value; }
@@ -11631,7 +10841,6 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[5].Value; }
@@ -11642,7 +10851,6 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -11653,7 +10861,6 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -11664,7 +10871,6 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -11675,7 +10881,6 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[9].Value; }
@@ -11686,7 +10891,6 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -11697,7 +10901,6 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -11708,7 +10911,6 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -11719,7 +10921,6 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     /// <para> getText.</para>
     /// <para>Represents the following attribute in the schema: getText </para>
     /// </summary>
-    [SchemaAttr(0, "getText")]
     public StringValue GetText
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -11730,7 +10931,6 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     /// <para> onChange.</para>
     /// <para>Represents the following attribute in the schema: onChange </para>
     /// </summary>
-    [SchemaAttr(0, "onChange")]
     public StringValue OnChange
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -11741,7 +10941,6 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     /// <para> maxLength.</para>
     /// <para>Represents the following attribute in the schema: maxLength </para>
     /// </summary>
-    [SchemaAttr(0, "maxLength")]
     public IntegerValue MaxLength
     {
         get { return (IntegerValue)Attributes[15].Value; }
@@ -11752,7 +10951,6 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
-    [SchemaAttr(0, "sizeString")]
     public StringValue SizeString
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -11835,7 +11033,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -11846,7 +11043,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -11857,7 +11053,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -11868,7 +11063,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> alignLabel.</para>
     /// <para>Represents the following attribute in the schema: alignLabel </para>
     /// </summary>
-    [SchemaAttr(0, "alignLabel")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[3].Value; }
@@ -11879,7 +11073,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
-    [SchemaAttr(0, "expand")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[4].Value; }
@@ -11890,7 +11083,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[5].Value; }
@@ -11901,7 +11093,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -11912,7 +11103,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -11923,7 +11113,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -11934,7 +11123,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[9].Value; }
@@ -11945,7 +11133,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -11956,7 +11143,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -11967,7 +11153,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -11978,7 +11163,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -11989,7 +11173,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -12000,7 +11183,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -12011,7 +11193,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -12022,7 +11203,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -12033,7 +11213,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> getSelectedItemIndex.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemIndex </para>
     /// </summary>
-    [SchemaAttr(0, "getSelectedItemIndex")]
     public StringValue GetSelectedItemIndex
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -12044,7 +11223,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
-    [SchemaAttr(0, "sizeString")]
     public StringValue SizeString
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -12055,7 +11233,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> getItemCount.</para>
     /// <para>Represents the following attribute in the schema: getItemCount </para>
     /// </summary>
-    [SchemaAttr(0, "getItemCount")]
     public StringValue GetItemCount
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -12066,7 +11243,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> getItemLabel.</para>
     /// <para>Represents the following attribute in the schema: getItemLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getItemLabel")]
     public StringValue GetItemLabel
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -12077,7 +11253,6 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     /// <para> getItemID.</para>
     /// <para>Represents the following attribute in the schema: getItemID </para>
     /// </summary>
-    [SchemaAttr(0, "getItemID")]
     public StringValue GetItemID
     {
         get { return (StringValue)Attributes[22].Value; }
@@ -12189,7 +11364,6 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -12200,7 +11374,6 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -12211,7 +11384,6 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -12222,7 +11394,6 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <para> alignLabel.</para>
     /// <para>Represents the following attribute in the schema: alignLabel </para>
     /// </summary>
-    [SchemaAttr(0, "alignLabel")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[3].Value; }
@@ -12233,7 +11404,6 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
-    [SchemaAttr(0, "expand")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[4].Value; }
@@ -12244,7 +11414,6 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[5].Value; }
@@ -12255,7 +11424,6 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -12266,7 +11434,6 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -12277,7 +11444,6 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -12288,7 +11454,6 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[9].Value; }
@@ -12299,7 +11464,6 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -12310,7 +11474,6 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -12321,7 +11484,6 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -12332,7 +11494,6 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -12343,7 +11504,6 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <para> getSelectedItemIndex.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemIndex </para>
     /// </summary>
-    [SchemaAttr(0, "getSelectedItemIndex")]
     public StringValue GetSelectedItemIndex
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -12354,7 +11514,6 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <para> getItemCount.</para>
     /// <para>Represents the following attribute in the schema: getItemCount </para>
     /// </summary>
-    [SchemaAttr(0, "getItemCount")]
     public StringValue GetItemCount
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -12365,7 +11524,6 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <para> getItemLabel.</para>
     /// <para>Represents the following attribute in the schema: getItemLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getItemLabel")]
     public StringValue GetItemLabel
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -12376,7 +11534,6 @@ public partial class RadioGroup : OpenXmlCompositeElement
     /// <para> getItemID.</para>
     /// <para>Represents the following attribute in the schema: getItemID </para>
     /// </summary>
-    [SchemaAttr(0, "getItemID")]
     public StringValue GetItemID
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -12489,7 +11646,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -12500,7 +11656,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -12511,7 +11666,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -12522,7 +11676,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> alignLabel.</para>
     /// <para>Represents the following attribute in the schema: alignLabel </para>
     /// </summary>
-    [SchemaAttr(0, "alignLabel")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[3].Value; }
@@ -12533,7 +11686,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
-    [SchemaAttr(0, "expand")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[4].Value; }
@@ -12544,7 +11696,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[5].Value; }
@@ -12555,7 +11706,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -12566,7 +11716,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -12577,7 +11726,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -12588,7 +11736,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[9].Value; }
@@ -12599,7 +11746,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -12610,7 +11756,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -12621,7 +11766,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -12632,7 +11776,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> getText.</para>
     /// <para>Represents the following attribute in the schema: getText </para>
     /// </summary>
-    [SchemaAttr(0, "getText")]
     public StringValue GetText
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -12643,7 +11786,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> onChange.</para>
     /// <para>Represents the following attribute in the schema: onChange </para>
     /// </summary>
-    [SchemaAttr(0, "onChange")]
     public StringValue OnChange
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -12654,7 +11796,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
-    [SchemaAttr(0, "sizeString")]
     public StringValue SizeString
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -12665,7 +11806,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> getItemCount.</para>
     /// <para>Represents the following attribute in the schema: getItemCount </para>
     /// </summary>
-    [SchemaAttr(0, "getItemCount")]
     public StringValue GetItemCount
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -12676,7 +11816,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> getItemLabel.</para>
     /// <para>Represents the following attribute in the schema: getItemLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getItemLabel")]
     public StringValue GetItemLabel
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -12687,7 +11826,6 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     /// <para> getItemID.</para>
     /// <para>Represents the following attribute in the schema: getItemID </para>
     /// </summary>
-    [SchemaAttr(0, "getItemID")]
     public StringValue GetItemID
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -12797,7 +11935,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -12808,7 +11945,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -12819,7 +11955,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -12830,7 +11965,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> alignLabel.</para>
     /// <para>Represents the following attribute in the schema: alignLabel </para>
     /// </summary>
-    [SchemaAttr(0, "alignLabel")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[3].Value; }
@@ -12841,7 +11975,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
-    [SchemaAttr(0, "expand")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[4].Value; }
@@ -12852,7 +11985,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[5].Value; }
@@ -12863,7 +11995,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -12874,7 +12005,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[7].Value; }
@@ -12885,7 +12015,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -12896,7 +12025,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -12907,7 +12035,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -12918,7 +12045,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -12929,7 +12055,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -12940,7 +12065,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -12951,7 +12075,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -12962,7 +12085,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -12973,7 +12095,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -12984,7 +12105,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -12995,7 +12115,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -13006,7 +12125,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -13017,7 +12135,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -13028,7 +12145,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
     /// </summary>
-    [SchemaAttr(0, "target")]
     public StringValue Target
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -13039,7 +12155,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     /// <para> getTarget.</para>
     /// <para>Represents the following attribute in the schema: getTarget </para>
     /// </summary>
-    [SchemaAttr(0, "getTarget")]
     public StringValue GetTarget
     {
         get { return (StringValue)Attributes[22].Value; }
@@ -13104,7 +12219,6 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -13115,7 +12229,6 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -13126,7 +12239,6 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -13137,7 +12249,6 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     /// <para> alignLabel.</para>
     /// <para>Represents the following attribute in the schema: alignLabel </para>
     /// </summary>
-    [SchemaAttr(0, "alignLabel")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[3].Value; }
@@ -13148,7 +12259,6 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
-    [SchemaAttr(0, "expand")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[4].Value; }
@@ -13159,7 +12269,6 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[5].Value; }
@@ -13170,7 +12279,6 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -13181,7 +12289,6 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -13192,7 +12299,6 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -13203,7 +12309,6 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[9].Value; }
@@ -13214,7 +12319,6 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -13225,7 +12329,6 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     /// <para> noWrap.</para>
     /// <para>Represents the following attribute in the schema: noWrap </para>
     /// </summary>
-    [SchemaAttr(0, "noWrap")]
     public BooleanValue NoWrap
     {
         get { return (BooleanValue)Attributes[11].Value; }
@@ -13311,7 +12414,6 @@ public partial class GroupBox : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -13322,7 +12424,6 @@ public partial class GroupBox : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -13333,7 +12434,6 @@ public partial class GroupBox : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -13344,7 +12444,6 @@ public partial class GroupBox : OpenXmlCompositeElement
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
-    [SchemaAttr(0, "expand")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[3].Value; }
@@ -13355,7 +12454,6 @@ public partial class GroupBox : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -13366,7 +12464,6 @@ public partial class GroupBox : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -13516,7 +12613,6 @@ public partial class LayoutContainer : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -13527,7 +12623,6 @@ public partial class LayoutContainer : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -13538,7 +12633,6 @@ public partial class LayoutContainer : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -13549,7 +12643,6 @@ public partial class LayoutContainer : OpenXmlCompositeElement
     /// <para> align.</para>
     /// <para>Represents the following attribute in the schema: align </para>
     /// </summary>
-    [SchemaAttr(0, "align")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Align
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[3].Value; }
@@ -13560,7 +12653,6 @@ public partial class LayoutContainer : OpenXmlCompositeElement
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
-    [SchemaAttr(0, "expand")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[4].Value; }
@@ -13571,7 +12663,6 @@ public partial class LayoutContainer : OpenXmlCompositeElement
     /// <para> layoutChildren.</para>
     /// <para>Represents the following attribute in the schema: layoutChildren </para>
     /// </summary>
-    [SchemaAttr(0, "layoutChildren")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues> LayoutChildren
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues>)Attributes[5].Value; }
@@ -13700,7 +12791,6 @@ public partial class ImageControl : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -13711,7 +12801,6 @@ public partial class ImageControl : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -13722,7 +12811,6 @@ public partial class ImageControl : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -13733,7 +12821,6 @@ public partial class ImageControl : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[3].Value; }
@@ -13744,7 +12831,6 @@ public partial class ImageControl : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -13755,7 +12841,6 @@ public partial class ImageControl : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[5].Value; }
@@ -13766,7 +12851,6 @@ public partial class ImageControl : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -13777,7 +12861,6 @@ public partial class ImageControl : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -13788,7 +12871,6 @@ public partial class ImageControl : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -13799,7 +12881,6 @@ public partial class ImageControl : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -13810,7 +12891,6 @@ public partial class ImageControl : OpenXmlLeafElement
     /// <para> altText.</para>
     /// <para>Represents the following attribute in the schema: altText </para>
     /// </summary>
-    [SchemaAttr(0, "altText")]
     public StringValue AltText
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -13821,7 +12901,6 @@ public partial class ImageControl : OpenXmlLeafElement
     /// <para> getAltText.</para>
     /// <para>Represents the following attribute in the schema: getAltText </para>
     /// </summary>
-    [SchemaAttr(0, "getAltText")]
     public StringValue GetAltText
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -13903,7 +12982,6 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -13914,7 +12992,6 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -13925,7 +13002,6 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -13936,7 +13012,6 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -13947,7 +13022,6 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -13958,7 +13032,6 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -13969,7 +13042,6 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -13980,7 +13052,6 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -13991,7 +13062,6 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -14002,7 +13072,6 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -14013,7 +13082,6 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[10].Value; }
@@ -14024,7 +13092,6 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -14035,7 +13102,6 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <para> style.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
-    [SchemaAttr(0, "style")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.StyleValues> Style
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.StyleValues>)Attributes[12].Value; }
@@ -14046,7 +13112,6 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <para> getStyle.</para>
     /// <para>Represents the following attribute in the schema: getStyle </para>
     /// </summary>
-    [SchemaAttr(0, "getStyle")]
     public StringValue GetStyle
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -14057,7 +13122,6 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <para> helperText.</para>
     /// <para>Represents the following attribute in the schema: helperText </para>
     /// </summary>
-    [SchemaAttr(0, "helperText")]
     public StringValue HelperText
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -14068,7 +13132,6 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <para> getHelperText.</para>
     /// <para>Represents the following attribute in the schema: getHelperText </para>
     /// </summary>
-    [SchemaAttr(0, "getHelperText")]
     public StringValue GetHelperText
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -14079,7 +13142,6 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[16].Value; }
@@ -14090,7 +13152,6 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -14207,7 +13268,6 @@ public partial class TaskGroup : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -14218,7 +13278,6 @@ public partial class TaskGroup : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -14229,7 +13288,6 @@ public partial class TaskGroup : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -14240,7 +13298,6 @@ public partial class TaskGroup : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -14251,7 +13308,6 @@ public partial class TaskGroup : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -14262,7 +13318,6 @@ public partial class TaskGroup : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -14273,7 +13328,6 @@ public partial class TaskGroup : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -14284,7 +13338,6 @@ public partial class TaskGroup : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -14295,7 +13348,6 @@ public partial class TaskGroup : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -14306,7 +13358,6 @@ public partial class TaskGroup : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -14317,7 +13368,6 @@ public partial class TaskGroup : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[10].Value; }
@@ -14328,7 +13378,6 @@ public partial class TaskGroup : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -14339,7 +13388,6 @@ public partial class TaskGroup : OpenXmlCompositeElement
     /// <para> helperText.</para>
     /// <para>Represents the following attribute in the schema: helperText </para>
     /// </summary>
-    [SchemaAttr(0, "helperText")]
     public StringValue HelperText
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -14350,7 +13398,6 @@ public partial class TaskGroup : OpenXmlCompositeElement
     /// <para> getHelperText.</para>
     /// <para>Represents the following attribute in the schema: getHelperText </para>
     /// </summary>
-    [SchemaAttr(0, "getHelperText")]
     public StringValue GetHelperText
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -14361,7 +13408,6 @@ public partial class TaskGroup : OpenXmlCompositeElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[14].Value; }
@@ -14372,7 +13418,6 @@ public partial class TaskGroup : OpenXmlCompositeElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -14383,7 +13428,6 @@ public partial class TaskGroup : OpenXmlCompositeElement
     /// <para> allowedTaskSizes.</para>
     /// <para>Represents the following attribute in the schema: allowedTaskSizes </para>
     /// </summary>
-    [SchemaAttr(0, "allowedTaskSizes")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues> AllowedTaskSizes
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>)Attributes[16].Value; }
@@ -14496,7 +13540,6 @@ public partial class MenuRoot : OpenXmlCompositeElement
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title")]
     public StringValue Title
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -14507,7 +13550,6 @@ public partial class MenuRoot : OpenXmlCompositeElement
     /// <para> getTitle.</para>
     /// <para>Represents the following attribute in the schema: getTitle </para>
     /// </summary>
-    [SchemaAttr(0, "getTitle")]
     public StringValue GetTitle
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -14518,7 +13560,6 @@ public partial class MenuRoot : OpenXmlCompositeElement
     /// <para> itemSize.</para>
     /// <para>Represents the following attribute in the schema: itemSize </para>
     /// </summary>
-    [SchemaAttr(0, "itemSize")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>)Attributes[2].Value; }
@@ -14643,7 +13684,6 @@ public partial class CustomUI : OpenXmlPartRootElement
     /// <para> onLoad.</para>
     /// <para>Represents the following attribute in the schema: onLoad </para>
     /// </summary>
-    [SchemaAttr(0, "onLoad")]
     public StringValue OnLoad
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -14654,7 +13694,6 @@ public partial class CustomUI : OpenXmlPartRootElement
     /// <para> loadImage.</para>
     /// <para>Represents the following attribute in the schema: loadImage </para>
     /// </summary>
-    [SchemaAttr(0, "loadImage")]
     public StringValue LoadImage
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -14842,7 +13881,6 @@ public partial class Item : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -14853,7 +13891,6 @@ public partial class Item : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -14864,7 +13901,6 @@ public partial class Item : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -14875,7 +13911,6 @@ public partial class Item : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -14886,7 +13921,6 @@ public partial class Item : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -14897,7 +13931,6 @@ public partial class Item : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -14978,7 +14011,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -14989,7 +14021,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[1].Value; }
@@ -15000,7 +14031,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -15011,7 +14041,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -15022,7 +14051,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -15033,7 +14061,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -15044,7 +14071,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -15055,7 +14081,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -15066,7 +14091,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -15077,7 +14101,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -15088,7 +14111,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -15099,7 +14121,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -15110,7 +14131,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -15121,7 +14141,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -15132,7 +14151,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -15143,7 +14161,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -15154,7 +14171,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -15165,7 +14181,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -15176,7 +14191,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -15187,7 +14201,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -15198,7 +14211,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -15209,7 +14221,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -15220,7 +14231,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[22].Value; }
@@ -15231,7 +14241,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[23].Value; }
@@ -15242,7 +14251,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[24].Value; }
@@ -15253,7 +14261,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[25].Value; }
@@ -15264,7 +14271,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[26].Value; }
@@ -15275,7 +14281,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[27].Value; }
@@ -15357,7 +14362,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> getPressed.</para>
     /// <para>Represents the following attribute in the schema: getPressed </para>
     /// </summary>
-    [SchemaAttr(0, "getPressed")]
     public StringValue GetPressed
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -15368,7 +14372,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -15379,7 +14382,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[2].Value; }
@@ -15390,7 +14392,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -15401,7 +14402,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -15412,7 +14412,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -15423,7 +14422,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -15434,7 +14432,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -15445,7 +14442,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -15456,7 +14452,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -15467,7 +14462,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -15478,7 +14472,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -15489,7 +14482,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -15500,7 +14492,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -15511,7 +14502,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -15522,7 +14512,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -15533,7 +14522,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -15544,7 +14532,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -15555,7 +14542,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -15566,7 +14552,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -15577,7 +14562,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -15588,7 +14572,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -15599,7 +14582,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[22].Value; }
@@ -15610,7 +14592,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[23].Value; }
@@ -15621,7 +14602,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[24].Value; }
@@ -15632,7 +14612,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[25].Value; }
@@ -15643,7 +14622,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[26].Value; }
@@ -15654,7 +14632,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[27].Value; }
@@ -15665,7 +14642,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[28].Value; }
@@ -15727,7 +14703,6 @@ public partial class Separator : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -15738,7 +14713,6 @@ public partial class Separator : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -15749,7 +14723,6 @@ public partial class Separator : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -15760,7 +14733,6 @@ public partial class Separator : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[3].Value; }
@@ -15771,7 +14743,6 @@ public partial class Separator : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -15782,7 +14753,6 @@ public partial class Separator : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -15793,7 +14763,6 @@ public partial class Separator : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -15804,7 +14773,6 @@ public partial class Separator : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -15815,7 +14783,6 @@ public partial class Separator : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -16028,7 +14995,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -16039,7 +15005,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -16050,7 +15015,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -16061,7 +15025,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -16072,7 +15035,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -16083,7 +15045,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -16094,7 +15055,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -16105,7 +15065,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -16116,7 +15075,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -16127,7 +15085,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -16138,7 +15095,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -16149,7 +15105,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -16160,7 +15115,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -16171,7 +15125,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -16182,7 +15135,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -16193,7 +15145,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -16204,7 +15155,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -16215,7 +15165,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[17].Value; }
@@ -16226,7 +15175,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -16237,7 +15185,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -16248,7 +15195,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -16259,7 +15205,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> autoScale.</para>
     /// <para>Represents the following attribute in the schema: autoScale </para>
     /// </summary>
-    [SchemaAttr(0, "autoScale")]
     public BooleanValue AutoScale
     {
         get { return (BooleanValue)Attributes[21].Value; }
@@ -16270,7 +15215,6 @@ public partial class Group : OpenXmlCompositeElement
     /// <para> centerVertically.</para>
     /// <para>Represents the following attribute in the schema: centerVertically </para>
     /// </summary>
-    [SchemaAttr(0, "centerVertically")]
     public BooleanValue CenterVertically
     {
         get { return (BooleanValue)Attributes[22].Value; }
@@ -16432,7 +15376,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -16443,7 +15386,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue IdQ
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -16454,7 +15396,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -16465,7 +15406,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -16476,7 +15416,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -16487,7 +15426,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
-    [SchemaAttr(0, "size")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>)Attributes[5].Value; }
@@ -16498,7 +15436,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
-    [SchemaAttr(0, "getSize")]
     public StringValue GetSize
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -16509,7 +15446,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -16520,7 +15456,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -16531,7 +15466,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -16542,7 +15476,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -16553,7 +15486,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -16564,7 +15496,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -16575,7 +15506,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -16586,7 +15516,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[14].Value; }
@@ -16597,7 +15526,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -16608,7 +15536,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -16619,7 +15546,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -16630,7 +15556,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -16641,7 +15566,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -16652,7 +15576,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -16663,7 +15586,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -16674,7 +15596,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[22].Value; }
@@ -16685,7 +15606,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[23].Value; }
@@ -16696,7 +15616,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[24].Value; }
@@ -16707,7 +15626,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[25].Value; }
@@ -16718,7 +15636,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[26].Value; }
@@ -16729,7 +15646,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[27].Value; }
@@ -16740,7 +15656,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
-    [SchemaAttr(0, "showImage")]
     public BooleanValue ShowImage
     {
         get { return (BooleanValue)Attributes[28].Value; }
@@ -16751,7 +15666,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
-    [SchemaAttr(0, "getShowImage")]
     public StringValue GetShowImage
     {
         get { return (StringValue)Attributes[29].Value; }
@@ -17024,7 +15938,6 @@ public partial class Tab : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -17035,7 +15948,6 @@ public partial class Tab : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -17046,7 +15958,6 @@ public partial class Tab : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -17057,7 +15968,6 @@ public partial class Tab : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -17068,7 +15978,6 @@ public partial class Tab : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -17079,7 +15988,6 @@ public partial class Tab : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -17090,7 +15998,6 @@ public partial class Tab : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -17101,7 +16008,6 @@ public partial class Tab : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -17112,7 +16018,6 @@ public partial class Tab : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -17123,7 +16028,6 @@ public partial class Tab : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -17134,7 +16038,6 @@ public partial class Tab : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[10].Value; }
@@ -17145,7 +16048,6 @@ public partial class Tab : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -17156,7 +16058,6 @@ public partial class Tab : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -17167,7 +16068,6 @@ public partial class Tab : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -17264,7 +16164,6 @@ public partial class TabSet : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -17275,7 +16174,6 @@ public partial class TabSet : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[1].Value; }
@@ -17286,7 +16184,6 @@ public partial class TabSet : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -17377,7 +16274,6 @@ public partial class Command : OpenXmlLeafElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -17388,7 +16284,6 @@ public partial class Command : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[1].Value; }
@@ -17399,7 +16294,6 @@ public partial class Command : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -17410,7 +16304,6 @@ public partial class Command : OpenXmlLeafElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -17762,7 +16655,6 @@ public partial class ContextMenu : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -17923,7 +16815,6 @@ public abstract partial class BackstageItemType : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -17934,7 +16825,6 @@ public abstract partial class BackstageItemType : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -17945,7 +16835,6 @@ public abstract partial class BackstageItemType : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -18015,7 +16904,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -18026,7 +16914,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -18037,7 +16924,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -18048,7 +16934,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -18059,7 +16944,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -18070,7 +16954,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -18081,7 +16964,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -18092,7 +16974,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -18103,7 +16984,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> isDefinitive.</para>
     /// <para>Represents the following attribute in the schema: isDefinitive </para>
     /// </summary>
-    [SchemaAttr(0, "isDefinitive")]
     public BooleanValue IsDefinitive
     {
         get { return (BooleanValue)Attributes[8].Value; }
@@ -18114,7 +16994,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[9].Value; }
@@ -18125,7 +17004,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -18136,7 +17014,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -18147,7 +17024,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -18158,7 +17034,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[13].Value; }
@@ -18169,7 +17044,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -18180,7 +17054,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -18191,7 +17064,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -18202,7 +17074,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -18213,7 +17084,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -18224,7 +17094,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -18302,7 +17171,6 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
-    [SchemaAttr(0, "screentip")]
     public StringValue Screentip
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -18313,7 +17181,6 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
-    [SchemaAttr(0, "getScreentip")]
     public StringValue GetScreentip
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -18324,7 +17191,6 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
-    [SchemaAttr(0, "supertip")]
     public StringValue Supertip
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -18335,7 +17201,6 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
-    [SchemaAttr(0, "getSupertip")]
     public StringValue GetSupertip
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -18346,7 +17211,6 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -18357,7 +17221,6 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -18368,7 +17231,6 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -18379,7 +17241,6 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[7].Value; }
@@ -18390,7 +17251,6 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -18401,7 +17261,6 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -18412,7 +17271,6 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -18423,7 +17281,6 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[11].Value; }
@@ -18434,7 +17291,6 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -18445,7 +17301,6 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -18456,7 +17311,6 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -18467,7 +17321,6 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -18478,7 +17331,6 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -18489,7 +17341,6 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -18595,7 +17446,6 @@ public partial class BackstageMenuGroup : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -18606,7 +17456,6 @@ public partial class BackstageMenuGroup : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -18617,7 +17466,6 @@ public partial class BackstageMenuGroup : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -18628,7 +17476,6 @@ public partial class BackstageMenuGroup : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -18639,7 +17486,6 @@ public partial class BackstageMenuGroup : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -18650,7 +17496,6 @@ public partial class BackstageMenuGroup : OpenXmlCompositeElement
     /// <para> itemSize.</para>
     /// <para>Represents the following attribute in the schema: itemSize </para>
     /// </summary>
-    [SchemaAttr(0, "itemSize")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>)Attributes[5].Value; }
@@ -19137,7 +17982,6 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -19148,7 +17992,6 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -19159,7 +18002,6 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -19170,7 +18012,6 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -19181,7 +18022,6 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -19192,7 +18032,6 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -19203,7 +18042,6 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -19214,7 +18052,6 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -19225,7 +18062,6 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[8].Value; }
@@ -19236,7 +18072,6 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -19247,7 +18082,6 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -19258,7 +18092,6 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -19368,7 +18201,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -19379,7 +18211,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -19390,7 +18221,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -19401,7 +18231,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -19412,7 +18241,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -19423,7 +18251,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -19434,7 +18261,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -19445,7 +18271,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -19456,7 +18281,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -19467,7 +18291,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> isDefinitive.</para>
     /// <para>Represents the following attribute in the schema: isDefinitive </para>
     /// </summary>
-    [SchemaAttr(0, "isDefinitive")]
     public BooleanValue IsDefinitive
     {
         get { return (BooleanValue)Attributes[9].Value; }
@@ -19478,7 +18301,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -19489,7 +18311,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -19500,7 +18321,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -19511,7 +18331,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[13].Value; }
@@ -19522,7 +18341,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -19533,7 +18351,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -19544,7 +18361,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -19555,7 +18371,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[17].Value; }
@@ -19566,7 +18381,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -19577,7 +18391,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -19588,7 +18401,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -19599,7 +18411,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[21].Value; }
@@ -19610,7 +18421,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[22].Value; }
@@ -19682,7 +18492,6 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -19693,7 +18502,6 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -19704,7 +18512,6 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -19715,7 +18522,6 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -19726,7 +18532,6 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -19737,7 +18542,6 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -19748,7 +18552,6 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -19759,7 +18562,6 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -19770,7 +18572,6 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[8].Value; }
@@ -19781,7 +18582,6 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -19792,7 +18592,6 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -19803,7 +18602,6 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -19918,7 +18716,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -19929,7 +18726,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -19940,7 +18736,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -19951,7 +18746,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -19962,7 +18756,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -19973,7 +18766,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -19984,7 +18776,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -19995,7 +18786,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -20006,7 +18796,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -20017,7 +18806,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -20028,7 +18816,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -20039,7 +18826,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[11].Value; }
@@ -20050,7 +18836,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -20061,7 +18846,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -20072,7 +18856,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -20083,7 +18866,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[15].Value; }
@@ -20094,7 +18876,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -20105,7 +18886,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
-    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -20116,7 +18896,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
-    [SchemaAttr(0, "getDescription")]
     public StringValue GetDescription
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -20127,7 +18906,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -20138,7 +18916,6 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -20245,7 +19022,6 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -20256,7 +19032,6 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -20267,7 +19042,6 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -20278,7 +19052,6 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -20289,7 +19062,6 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -20300,7 +19072,6 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -20311,7 +19082,6 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[6].Value; }
@@ -20322,7 +19092,6 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -20333,7 +19102,6 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
     /// <para> helperText.</para>
     /// <para>Represents the following attribute in the schema: helperText </para>
     /// </summary>
-    [SchemaAttr(0, "helperText")]
     public StringValue HelperText
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -20344,7 +19112,6 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
     /// <para> getHelperText.</para>
     /// <para>Represents the following attribute in the schema: getHelperText </para>
     /// </summary>
-    [SchemaAttr(0, "getHelperText")]
     public StringValue GetHelperText
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -20355,7 +19122,6 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
-    [SchemaAttr(0, "showLabel")]
     public BooleanValue ShowLabel
     {
         get { return (BooleanValue)Attributes[10].Value; }
@@ -20366,7 +19132,6 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getShowLabel")]
     public StringValue GetShowLabel
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -20377,7 +19142,6 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
     /// <para> allowedTaskSizes.</para>
     /// <para>Represents the following attribute in the schema: allowedTaskSizes </para>
     /// </summary>
-    [SchemaAttr(0, "allowedTaskSizes")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues> AllowedTaskSizes
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>)Attributes[12].Value; }
@@ -20669,7 +19433,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -20680,7 +19443,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -20691,7 +19453,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -20702,7 +19463,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -20713,7 +19473,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -20724,7 +19483,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -20735,7 +19493,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -20746,7 +19503,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -20757,7 +19513,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[8].Value; }
@@ -20768,7 +19523,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -20779,7 +19533,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -20790,7 +19543,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -20801,7 +19553,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[12].Value; }
@@ -20812,7 +19563,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -20823,7 +19573,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -20834,7 +19583,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -20845,7 +19593,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    [SchemaAttr(0, "title")]
     public StringValue Title
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -20856,7 +19603,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> getTitle.</para>
     /// <para>Represents the following attribute in the schema: getTitle </para>
     /// </summary>
-    [SchemaAttr(0, "getTitle")]
     public StringValue GetTitle
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -20867,7 +19613,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> columnWidthPercent.</para>
     /// <para>Represents the following attribute in the schema: columnWidthPercent </para>
     /// </summary>
-    [SchemaAttr(0, "columnWidthPercent")]
     public IntegerValue ColumnWidthPercent
     {
         get { return (IntegerValue)Attributes[18].Value; }
@@ -20878,7 +19623,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> firstColumnMinWidth.</para>
     /// <para>Represents the following attribute in the schema: firstColumnMinWidth </para>
     /// </summary>
-    [SchemaAttr(0, "firstColumnMinWidth")]
     public IntegerValue FirstColumnMinWidth
     {
         get { return (IntegerValue)Attributes[19].Value; }
@@ -20889,7 +19633,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> firstColumnMaxWidth.</para>
     /// <para>Represents the following attribute in the schema: firstColumnMaxWidth </para>
     /// </summary>
-    [SchemaAttr(0, "firstColumnMaxWidth")]
     public IntegerValue FirstColumnMaxWidth
     {
         get { return (IntegerValue)Attributes[20].Value; }
@@ -20900,7 +19643,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> secondColumnMinWidth.</para>
     /// <para>Represents the following attribute in the schema: secondColumnMinWidth </para>
     /// </summary>
-    [SchemaAttr(0, "secondColumnMinWidth")]
     public IntegerValue SecondColumnMinWidth
     {
         get { return (IntegerValue)Attributes[21].Value; }
@@ -20911,7 +19653,6 @@ public partial class BackstageTab : OpenXmlCompositeElement
     /// <para> secondColumnMaxWidth.</para>
     /// <para>Represents the following attribute in the schema: secondColumnMaxWidth </para>
     /// </summary>
-    [SchemaAttr(0, "secondColumnMaxWidth")]
     public IntegerValue SecondColumnMaxWidth
     {
         get { return (IntegerValue)Attributes[22].Value; }
@@ -21055,7 +19796,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
-    [SchemaAttr(0, "idMso")]
     public StringValue IdMso
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -21066,7 +19806,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterMso")]
     public StringValue InsertAfterMso
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -21077,7 +19816,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeMso")]
     public StringValue InsertBeforeMso
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -21088,7 +19826,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertAfterQ")]
     public StringValue InsertAfterQulifiedId
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -21099,7 +19836,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
-    [SchemaAttr(0, "insertBeforeQ")]
     public StringValue InsertBeforeQulifiedId
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -21110,7 +19846,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -21121,7 +19856,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
-    [SchemaAttr(0, "idQ")]
     public StringValue QualifiedId
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -21132,7 +19866,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
-    [SchemaAttr(0, "tag")]
     public StringValue Tag
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -21143,7 +19876,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
-    [SchemaAttr(0, "onAction")]
     public StringValue OnAction
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -21154,7 +19886,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> isDefinitive.</para>
     /// <para>Represents the following attribute in the schema: isDefinitive </para>
     /// </summary>
-    [SchemaAttr(0, "isDefinitive")]
     public BooleanValue IsDefinitive
     {
         get { return (BooleanValue)Attributes[9].Value; }
@@ -21165,7 +19896,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
-    [SchemaAttr(0, "enabled")]
     public BooleanValue Enabled
     {
         get { return (BooleanValue)Attributes[10].Value; }
@@ -21176,7 +19906,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
-    [SchemaAttr(0, "getEnabled")]
     public StringValue GetEnabled
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -21187,7 +19916,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
-    [SchemaAttr(0, "label")]
     public StringValue Label
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -21198,7 +19926,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
-    [SchemaAttr(0, "getLabel")]
     public StringValue GetLabel
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -21209,7 +19936,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
-    [SchemaAttr(0, "visible")]
     public BooleanValue Visible
     {
         get { return (BooleanValue)Attributes[14].Value; }
@@ -21220,7 +19946,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
-    [SchemaAttr(0, "getVisible")]
     public StringValue GetVisible
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -21231,7 +19956,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
-    [SchemaAttr(0, "keytip")]
     public StringValue Keytip
     {
         get { return (StringValue)Attributes[16].Value; }
@@ -21242,7 +19966,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
-    [SchemaAttr(0, "getKeytip")]
     public StringValue GetKeytip
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -21253,7 +19976,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
-    [SchemaAttr(0, "image")]
     public StringValue Image
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -21264,7 +19986,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
-    [SchemaAttr(0, "imageMso")]
     public StringValue ImageMso
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -21275,7 +19996,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
-    [SchemaAttr(0, "getImage")]
     public StringValue GetImage
     {
         get { return (StringValue)Attributes[20].Value; }
@@ -21419,7 +20139,6 @@ public partial class Ribbon : OpenXmlCompositeElement
     /// <para> startFromScratch.</para>
     /// <para>Represents the following attribute in the schema: startFromScratch </para>
     /// </summary>
-    [SchemaAttr(0, "startFromScratch")]
     public BooleanValue StartFromScratch
     {
         get { return (BooleanValue)Attributes[0].Value; }
@@ -21568,7 +20287,6 @@ public partial class Backstage : OpenXmlCompositeElement
     /// <para> onShow.</para>
     /// <para>Represents the following attribute in the schema: onShow </para>
     /// </summary>
-    [SchemaAttr(0, "onShow")]
     public StringValue OnShow
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -21579,7 +20297,6 @@ public partial class Backstage : OpenXmlCompositeElement
     /// <para> onHide.</para>
     /// <para>Represents the following attribute in the schema: onHide </para>
     /// </summary>
-    [SchemaAttr(0, "onHide")]
     public StringValue OnHide
     {
         get { return (StringValue)Attributes[1].Value; }

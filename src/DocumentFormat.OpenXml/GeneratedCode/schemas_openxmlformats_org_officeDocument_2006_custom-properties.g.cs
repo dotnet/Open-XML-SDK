@@ -224,7 +224,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <para> Format ID.</para>
     /// <para>Represents the following attribute in the schema: fmtid </para>
     /// </summary>
-    [SchemaAttr(0, "fmtid")]
     public StringValue FormatId
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -235,7 +234,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <para> Property ID.</para>
     /// <para>Represents the following attribute in the schema: pid </para>
     /// </summary>
-    [SchemaAttr(0, "pid")]
     public Int32Value PropertyId
     {
         get { return (Int32Value)Attributes[1].Value; }
@@ -246,7 +244,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <para> Custom File Property Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -257,7 +254,6 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <para> Bookmark Link Target.</para>
     /// <para>Represents the following attribute in the schema: linkTarget </para>
     /// </summary>
-    [SchemaAttr(0, "linkTarget")]
     public StringValue LinkTarget
     {
         get { return (StringValue)Attributes[3].Value; }
