@@ -40,30 +40,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "id"),
-		AttributeTag.Create<StringValue>(0, "type"),
-		AttributeTag.Create<ListValue<StringValue>>(0, "rotatedBoundingBox"),
-		AttributeTag.Create<Int32Value>(0, "alignmentLevel"),
-		AttributeTag.Create<Int32Value>(0, "contentType"),
-		AttributeTag.Create<StringValue>(0, "ascender"),
-		AttributeTag.Create<StringValue>(0, "descender"),
-		AttributeTag.Create<StringValue>(0, "baseline"),
-		AttributeTag.Create<StringValue>(0, "midline"),
-		AttributeTag.Create<StringValue>(0, "customRecognizerId"),
-		AttributeTag.Create<StringValue>(0, "mathML"),
-		AttributeTag.Create<StringValue>(0, "mathStruct"),
-		AttributeTag.Create<StringValue>(0, "mathSymbol"),
-		AttributeTag.Create<StringValue>(0, "beginModifierType"),
-		AttributeTag.Create<StringValue>(0, "endModifierType"),
-		AttributeTag.Create<Int32Value>(0, "rotationAngle"),
-		AttributeTag.Create<ListValue<StringValue>>(0, "hotPoints"),
-		AttributeTag.Create<StringValue>(0, "centroid"),
-		AttributeTag.Create<StringValue>(0, "semanticType"),
-		AttributeTag.Create<StringValue>(0, "shapeName"),
-		AttributeTag.Create<ListValue<StringValue>>(0, "shapeGeometry")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ContextNode>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -71,6 +48,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -81,6 +59,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+    [SchemaAttr(0, "type")]
     public StringValue Type
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -91,6 +70,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> rotatedBoundingBox.</para>
     /// <para>Represents the following attribute in the schema: rotatedBoundingBox </para>
     /// </summary>
+    [SchemaAttr(0, "rotatedBoundingBox")]
     public ListValue<StringValue> RotatedBoundingBox
     {
         get { return (ListValue<StringValue>)Attributes[2].Value; }
@@ -101,6 +81,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> alignmentLevel.</para>
     /// <para>Represents the following attribute in the schema: alignmentLevel </para>
     /// </summary>
+    [SchemaAttr(0, "alignmentLevel")]
     public Int32Value AlignmentLevel
     {
         get { return (Int32Value)Attributes[3].Value; }
@@ -111,6 +92,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> contentType.</para>
     /// <para>Represents the following attribute in the schema: contentType </para>
     /// </summary>
+    [SchemaAttr(0, "contentType")]
     public Int32Value ContentType
     {
         get { return (Int32Value)Attributes[4].Value; }
@@ -121,6 +103,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> ascender.</para>
     /// <para>Represents the following attribute in the schema: ascender </para>
     /// </summary>
+    [SchemaAttr(0, "ascender")]
     public StringValue Ascender
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -131,6 +114,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> descender.</para>
     /// <para>Represents the following attribute in the schema: descender </para>
     /// </summary>
+    [SchemaAttr(0, "descender")]
     public StringValue Descender
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -141,6 +125,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> baseline.</para>
     /// <para>Represents the following attribute in the schema: baseline </para>
     /// </summary>
+    [SchemaAttr(0, "baseline")]
     public StringValue Baseline
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -151,6 +136,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> midline.</para>
     /// <para>Represents the following attribute in the schema: midline </para>
     /// </summary>
+    [SchemaAttr(0, "midline")]
     public StringValue Midline
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -161,6 +147,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> customRecognizerId.</para>
     /// <para>Represents the following attribute in the schema: customRecognizerId </para>
     /// </summary>
+    [SchemaAttr(0, "customRecognizerId")]
     public StringValue CustomRecognizerId
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -171,6 +158,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> mathML.</para>
     /// <para>Represents the following attribute in the schema: mathML </para>
     /// </summary>
+    [SchemaAttr(0, "mathML")]
     public StringValue MathML
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -181,6 +169,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> mathStruct.</para>
     /// <para>Represents the following attribute in the schema: mathStruct </para>
     /// </summary>
+    [SchemaAttr(0, "mathStruct")]
     public StringValue MathStruct
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -191,6 +180,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> mathSymbol.</para>
     /// <para>Represents the following attribute in the schema: mathSymbol </para>
     /// </summary>
+    [SchemaAttr(0, "mathSymbol")]
     public StringValue MathSymbol
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -201,6 +191,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> beginModifierType.</para>
     /// <para>Represents the following attribute in the schema: beginModifierType </para>
     /// </summary>
+    [SchemaAttr(0, "beginModifierType")]
     public StringValue BeginModifierType
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -211,6 +202,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> endModifierType.</para>
     /// <para>Represents the following attribute in the schema: endModifierType </para>
     /// </summary>
+    [SchemaAttr(0, "endModifierType")]
     public StringValue EndModifierType
     {
         get { return (StringValue)Attributes[14].Value; }
@@ -221,6 +213,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> rotationAngle.</para>
     /// <para>Represents the following attribute in the schema: rotationAngle </para>
     /// </summary>
+    [SchemaAttr(0, "rotationAngle")]
     public Int32Value RotationAngle
     {
         get { return (Int32Value)Attributes[15].Value; }
@@ -231,6 +224,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> hotPoints.</para>
     /// <para>Represents the following attribute in the schema: hotPoints </para>
     /// </summary>
+    [SchemaAttr(0, "hotPoints")]
     public ListValue<StringValue> HotPoints
     {
         get { return (ListValue<StringValue>)Attributes[16].Value; }
@@ -241,6 +235,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> centroid.</para>
     /// <para>Represents the following attribute in the schema: centroid </para>
     /// </summary>
+    [SchemaAttr(0, "centroid")]
     public StringValue Centroid
     {
         get { return (StringValue)Attributes[17].Value; }
@@ -251,6 +246,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> semanticType.</para>
     /// <para>Represents the following attribute in the schema: semanticType </para>
     /// </summary>
+    [SchemaAttr(0, "semanticType")]
     public StringValue SemanticType
     {
         get { return (StringValue)Attributes[18].Value; }
@@ -261,6 +257,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> shapeName.</para>
     /// <para>Represents the following attribute in the schema: shapeName </para>
     /// </summary>
+    [SchemaAttr(0, "shapeName")]
     public StringValue ShapeName
     {
         get { return (StringValue)Attributes[19].Value; }
@@ -271,6 +268,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para> shapeGeometry.</para>
     /// <para>Represents the following attribute in the schema: shapeGeometry </para>
     /// </summary>
+    [SchemaAttr(0, "shapeGeometry")]
     public ListValue<StringValue> ShapeGeometry
     {
         get { return (ListValue<StringValue>)Attributes[20].Value; }
@@ -353,10 +351,7 @@ public partial class ContextNodeProperty : OpenXmlLeafTextElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "type")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ContextNodeProperty>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -364,6 +359,7 @@ public partial class ContextNodeProperty : OpenXmlLeafTextElement
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+    [SchemaAttr(0, "type")]
     public StringValue Type
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -467,17 +463,14 @@ public partial class DestinationLink : ContextLinkType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class ContextLinkType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues>>(0, "direction"),
-		AttributeTag.Create<StringValue>(0, "ref")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ContextLinkType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> direction.</para>
     /// <para>Represents the following attribute in the schema: direction </para>
     /// </summary>
+    [SchemaAttr(0, "direction")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues> Direction
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues>)Attributes[0].Value; }
@@ -488,6 +481,7 @@ public abstract partial class ContextLinkType : OpenXmlLeafElement
     /// <para> ref.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
+    [SchemaAttr(0, "ref")]
     public StringValue Reference
     {
         get { return (StringValue)Attributes[1].Value; }

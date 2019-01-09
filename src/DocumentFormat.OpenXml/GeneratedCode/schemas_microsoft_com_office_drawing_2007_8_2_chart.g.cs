@@ -417,10 +417,7 @@ public partial class Style : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<ByteValue>(0, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Style>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -428,6 +425,7 @@ public partial class Style : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+    [SchemaAttr(0, "val")]
     public ByteValue Val
     {
         get { return (ByteValue)Attributes[0].Value; }
@@ -505,10 +503,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwMode")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ShapeProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -516,6 +511,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
+    [SchemaAttr(0, "bwMode")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[0].Value; }
@@ -827,16 +823,14 @@ public partial class InSketchMode : BooleanFalseType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class BooleanFalseType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<BooleanFalseType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+    [SchemaAttr(0, "val")]
     public BooleanValue Val
     {
         get { return (BooleanValue)Attributes[0].Value; }
@@ -876,10 +870,7 @@ public partial class ShowSketchButton : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ShowSketchButton>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -887,6 +878,7 @@ public partial class ShowSketchButton : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+    [SchemaAttr(0, "val")]
     public BooleanValue Val
     {
         get { return (BooleanValue)Attributes[0].Value; }

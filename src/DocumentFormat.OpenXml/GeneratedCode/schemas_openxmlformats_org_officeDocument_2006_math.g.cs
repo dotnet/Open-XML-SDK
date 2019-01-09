@@ -30,10 +30,7 @@ public partial class Script : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Script>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -43,6 +40,7 @@ public partial class Script : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>)Attributes[0].Value; }
@@ -85,10 +83,7 @@ public partial class Style : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.StyleValues>>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Style>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -98,6 +93,7 @@ public partial class Style : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.StyleValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Math.StyleValues>)Attributes[0].Value; }
@@ -4672,10 +4668,7 @@ public partial class WrapRight : OnOffType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OnOffType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<OnOffType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -4684,6 +4677,7 @@ public abstract partial class OnOffType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>)Attributes[0].Value; }
@@ -4723,11 +4717,7 @@ public partial class Break : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<IntegerValue>(21, "alnAt"),
-		AttributeTag.Create<IntegerValue>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Break>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -4737,6 +4727,7 @@ public partial class Break : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "alnAt")]
     public IntegerValue AlignAt
     {
         get { return (IntegerValue)Attributes[0].Value; }
@@ -4749,6 +4740,7 @@ public partial class Break : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public IntegerValue Val
     {
         get { return (IntegerValue)Attributes[1].Value; }
@@ -4916,10 +4908,7 @@ public partial class Text : OpenXmlLeafTextElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>(1, "space")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Text>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -4929,6 +4918,7 @@ public partial class Text : OpenXmlLeafTextElement
     /// </summary>
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
+    [SchemaAttr(1, "space")]
     public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space
     {
         get { return (EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>)Attributes[0].Value; }
@@ -5094,10 +5084,7 @@ public partial class EndChar : CharType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class CharType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<CharType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -5106,6 +5093,7 @@ public abstract partial class CharType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -6728,10 +6716,7 @@ public partial class VerticalJustification : TopBottomType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class TopBottomType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TopBottomType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -6740,6 +6725,7 @@ public abstract partial class TopBottomType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>)Attributes[0].Value; }
@@ -7317,10 +7303,7 @@ public partial class Shape : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Shape>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -7330,6 +7313,7 @@ public partial class Shape : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>)Attributes[0].Value; }
@@ -7557,10 +7541,7 @@ public partial class BaseJustification : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<BaseJustification>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -7570,6 +7551,7 @@ public partial class BaseJustification : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>)Attributes[0].Value; }
@@ -7660,10 +7642,7 @@ public partial class ColumnGapRule : SpacingRuleType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class SpacingRuleType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<IntegerValue>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SpacingRuleType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -7672,6 +7651,7 @@ public abstract partial class SpacingRuleType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public IntegerValue Val
     {
         get { return (IntegerValue)Attributes[0].Value; }
@@ -7759,10 +7739,7 @@ public partial class ColumnGap : UnsignedShortType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class UnsignedShortType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt16Value>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<UnsignedShortType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -7771,6 +7748,7 @@ public abstract partial class UnsignedShortType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public UInt16Value Val
     {
         get { return (UInt16Value)Attributes[0].Value; }
@@ -7995,10 +7973,7 @@ public partial class FractionType : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<FractionType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -8008,6 +7983,7 @@ public partial class FractionType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>)Attributes[0].Value; }
@@ -8618,10 +8594,7 @@ public partial class MatrixColumnCount : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<IntegerValue>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<MatrixColumnCount>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -8631,6 +8604,7 @@ public partial class MatrixColumnCount : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public IntegerValue Val
     {
         get { return (IntegerValue)Attributes[0].Value; }
@@ -8673,10 +8647,7 @@ public partial class MatrixColumnJustification : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<MatrixColumnJustification>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -8686,6 +8657,7 @@ public partial class MatrixColumnJustification : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>)Attributes[0].Value; }
@@ -9179,10 +9151,7 @@ public partial class WrapIndent : TwipsMeasureType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class TwipsMeasureType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TwipsMeasureType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -9191,6 +9160,7 @@ public abstract partial class TwipsMeasureType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public UInt32Value Val
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -9703,10 +9673,7 @@ public partial class NaryLimitLocation : LimitLocationType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class LimitLocationType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<LimitLocationType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -9715,6 +9682,7 @@ public abstract partial class LimitLocationType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>)Attributes[0].Value; }
@@ -10658,10 +10626,7 @@ public partial class ArgumentSize : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<IntegerValue>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ArgumentSize>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -10671,6 +10636,7 @@ public partial class ArgumentSize : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public IntegerValue Val
     {
         get { return (IntegerValue)Attributes[0].Value; }
@@ -10861,10 +10827,7 @@ public partial class DefaultJustification : OfficeMathJustificationType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OfficeMathJustificationType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<OfficeMathJustificationType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -10873,6 +10836,7 @@ public abstract partial class OfficeMathJustificationType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>)Attributes[0].Value; }
@@ -10912,10 +10876,7 @@ public partial class MathFont : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<MathFont>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -10925,6 +10886,7 @@ public partial class MathFont : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -10967,10 +10929,7 @@ public partial class BreakBinary : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<BreakBinary>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -10980,6 +10939,7 @@ public partial class BreakBinary : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>)Attributes[0].Value; }
@@ -11022,10 +10982,7 @@ public partial class BreakBinarySubtraction : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>>(21, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<BreakBinarySubtraction>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -11035,6 +10992,7 @@ public partial class BreakBinarySubtraction : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
+    [SchemaAttr(21, "val")]
     public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>)Attributes[0].Value; }

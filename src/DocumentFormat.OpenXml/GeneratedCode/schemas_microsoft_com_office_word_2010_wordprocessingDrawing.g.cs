@@ -125,10 +125,7 @@ public partial class RelativeWidth : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>>(0, "relativeFrom")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<RelativeWidth>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -136,6 +133,7 @@ public partial class RelativeWidth : OpenXmlCompositeElement
     /// <para> relativeFrom.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
+    [SchemaAttr(0, "relativeFrom")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues> ObjectId
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>)Attributes[0].Value; }
@@ -240,10 +238,7 @@ public partial class RelativeHeight : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>>(0, "relativeFrom")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<RelativeHeight>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -251,6 +246,7 @@ public partial class RelativeHeight : OpenXmlCompositeElement
     /// <para> relativeFrom.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
+    [SchemaAttr(0, "relativeFrom")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues> RelativeFrom
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>)Attributes[0].Value; }

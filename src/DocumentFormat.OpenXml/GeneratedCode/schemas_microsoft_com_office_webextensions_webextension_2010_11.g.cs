@@ -46,11 +46,7 @@ public partial class WebExtension : OpenXmlPartRootElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "id"),
-		AttributeTag.Create<BooleanValue>(0, "frozen")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<WebExtension>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -58,6 +54,7 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -68,6 +65,7 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <para> frozen.</para>
     /// <para>Represents the following attribute in the schema: frozen </para>
     /// </summary>
+    [SchemaAttr(0, "frozen")]
     public BooleanValue Frozen
     {
         get { return (BooleanValue)Attributes[1].Value; }
@@ -269,10 +267,7 @@ public partial class WebExtensionReference : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(19, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<WebExtensionReference>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -282,6 +277,7 @@ public partial class WebExtensionReference : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -324,11 +320,7 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<StringValue>(0, "value")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<WebExtensionProperty>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -336,6 +328,7 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+    [SchemaAttr(0, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -346,6 +339,7 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
     /// </summary>
+    [SchemaAttr(0, "value")]
     public StringValue Value
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -474,12 +468,7 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "id"),
-		AttributeTag.Create<StringValue>(0, "type"),
-		AttributeTag.Create<StringValue>(0, "appref")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<WebExtensionBinding>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -487,6 +476,7 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -497,6 +487,7 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+    [SchemaAttr(0, "type")]
     public StringValue Type
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -507,6 +498,7 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     /// <para> appref.</para>
     /// <para>Represents the following attribute in the schema: appref </para>
     /// </summary>
+    [SchemaAttr(0, "appref")]
     public StringValue AppReference
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -611,13 +603,7 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "id"),
-		AttributeTag.Create<StringValue>(0, "version"),
-		AttributeTag.Create<StringValue>(0, "store"),
-		AttributeTag.Create<StringValue>(0, "storeType")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<WebExtensionStoreReference>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -625,6 +611,7 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -635,6 +622,7 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     /// <para> version.</para>
     /// <para>Represents the following attribute in the schema: version </para>
     /// </summary>
+    [SchemaAttr(0, "version")]
     public StringValue Version
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -645,6 +633,7 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     /// <para> store.</para>
     /// <para>Represents the following attribute in the schema: store </para>
     /// </summary>
+    [SchemaAttr(0, "store")]
     public StringValue Store
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -655,6 +644,7 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     /// <para> storeType.</para>
     /// <para>Represents the following attribute in the schema: storeType </para>
     /// </summary>
+    [SchemaAttr(0, "storeType")]
     public StringValue StoreType
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -1030,12 +1020,7 @@ public partial class Snapshot : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(19, "embed"),
-		AttributeTag.Create<StringValue>(19, "link"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>>(0, "cstate")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Snapshot>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1045,6 +1030,7 @@ public partial class Snapshot : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "embed")]
     public StringValue Embed
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1057,6 +1043,7 @@ public partial class Snapshot : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "link")]
     public StringValue Link
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -1067,6 +1054,7 @@ public partial class Snapshot : OpenXmlCompositeElement
     /// <para> cstate.</para>
     /// <para>Represents the following attribute in the schema: cstate </para>
     /// </summary>
+    [SchemaAttr(0, "cstate")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues> CompressionState
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>)Attributes[2].Value; }

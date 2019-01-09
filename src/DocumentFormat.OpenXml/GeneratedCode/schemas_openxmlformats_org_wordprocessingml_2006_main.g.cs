@@ -332,12 +332,7 @@ public partial class MoveTo : TrackChangeType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class TrackChangeType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TrackChangeType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -346,6 +341,7 @@ public abstract partial class TrackChangeType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -358,6 +354,7 @@ public abstract partial class TrackChangeType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[1].Value; }
@@ -370,6 +367,7 @@ public abstract partial class TrackChangeType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -409,14 +407,7 @@ public partial class CellMerge : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>>(23, "vMerge"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>>(23, "vMergeOrig"),
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<CellMerge>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -426,6 +417,7 @@ public partial class CellMerge : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "vMerge")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues> VerticalMerge
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>)Attributes[0].Value; }
@@ -438,6 +430,7 @@ public partial class CellMerge : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "vMergeOrig")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues> VerticalMergeOriginal
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues>)Attributes[1].Value; }
@@ -450,6 +443,7 @@ public partial class CellMerge : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -462,6 +456,7 @@ public partial class CellMerge : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[3].Value; }
@@ -474,6 +469,7 @@ public partial class CellMerge : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -516,14 +512,7 @@ public partial class BookmarkStart : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "name"),
-		AttributeTag.Create<Int32Value>(23, "colFirst"),
-		AttributeTag.Create<Int32Value>(23, "colLast"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>(23, "displacedByCustomXml"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<BookmarkStart>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -533,6 +522,7 @@ public partial class BookmarkStart : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -545,6 +535,7 @@ public partial class BookmarkStart : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "colFirst")]
     public Int32Value ColumnFirst
     {
         get { return (Int32Value)Attributes[1].Value; }
@@ -557,6 +548,7 @@ public partial class BookmarkStart : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "colLast")]
     public Int32Value ColumnLast
     {
         get { return (Int32Value)Attributes[2].Value; }
@@ -569,6 +561,7 @@ public partial class BookmarkStart : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "displacedByCustomXml")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>)Attributes[3].Value; }
@@ -581,6 +574,7 @@ public partial class BookmarkStart : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -764,11 +758,7 @@ public partial class MoveToRangeEnd : MarkupRangeType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class MarkupRangeType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>(23, "displacedByCustomXml"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<MarkupRangeType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -777,6 +767,7 @@ public abstract partial class MarkupRangeType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "displacedByCustomXml")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>)Attributes[0].Value; }
@@ -789,6 +780,7 @@ public abstract partial class MarkupRangeType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -876,16 +868,7 @@ public partial class MoveToRangeStart : MoveBookmarkType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class MoveBookmarkType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "name"),
-		AttributeTag.Create<Int32Value>(23, "colFirst"),
-		AttributeTag.Create<Int32Value>(23, "colLast"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>(23, "displacedByCustomXml"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<MoveBookmarkType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -894,6 +877,7 @@ public abstract partial class MoveBookmarkType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -906,6 +890,7 @@ public abstract partial class MoveBookmarkType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[1].Value; }
@@ -918,6 +903,7 @@ public abstract partial class MoveBookmarkType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -930,6 +916,7 @@ public abstract partial class MoveBookmarkType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "colFirst")]
     public Int32Value ColumnFirst
     {
         get { return (Int32Value)Attributes[3].Value; }
@@ -942,6 +929,7 @@ public abstract partial class MoveBookmarkType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "colLast")]
     public Int32Value ColumnLast
     {
         get { return (Int32Value)Attributes[4].Value; }
@@ -954,6 +942,7 @@ public abstract partial class MoveBookmarkType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "displacedByCustomXml")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>)Attributes[5].Value; }
@@ -966,6 +955,7 @@ public abstract partial class MoveBookmarkType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -1146,10 +1136,7 @@ public partial class CommentReference : MarkupType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class MarkupType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<MarkupType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -1158,6 +1145,7 @@ public abstract partial class MarkupType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1989,10 +1977,7 @@ public partial class AltName : StringType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class StringType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<StringType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -2001,6 +1986,7 @@ public abstract partial class StringType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -7792,10 +7778,7 @@ public partial class NotTrueType : OnOffType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OnOffType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<OnOffValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<OnOffType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -7804,6 +7787,7 @@ public abstract partial class OnOffType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public OnOffValue Val
     {
         get { return (OnOffValue)Attributes[0].Value; }
@@ -7843,24 +7827,7 @@ public partial class FrameProperties : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DropCapLocationValues>>(23, "dropCap"),
-		AttributeTag.Create<Int32Value>(23, "lines"),
-		AttributeTag.Create<StringValue>(23, "w"),
-		AttributeTag.Create<UInt32Value>(23, "h"),
-		AttributeTag.Create<StringValue>(23, "vSpace"),
-		AttributeTag.Create<StringValue>(23, "hSpace"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextWrappingValues>>(23, "wrap"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>>(23, "hAnchor"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>>(23, "vAnchor"),
-		AttributeTag.Create<StringValue>(23, "x"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>>(23, "xAlign"),
-		AttributeTag.Create<StringValue>(23, "y"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>>(23, "yAlign"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>>(23, "hRule"),
-		AttributeTag.Create<OnOffValue>(23, "anchorLock")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<FrameProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -7870,6 +7837,7 @@ public partial class FrameProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "dropCap")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DropCapLocationValues> DropCap
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.DropCapLocationValues>)Attributes[0].Value; }
@@ -7882,6 +7850,7 @@ public partial class FrameProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "lines")]
     public Int32Value Lines
     {
         get { return (Int32Value)Attributes[1].Value; }
@@ -7894,6 +7863,7 @@ public partial class FrameProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "w")]
     public StringValue Width
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -7906,6 +7876,7 @@ public partial class FrameProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "h")]
     public UInt32Value Height
     {
         get { return (UInt32Value)Attributes[3].Value; }
@@ -7918,6 +7889,7 @@ public partial class FrameProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "vSpace")]
     public StringValue VerticalSpace
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -7930,6 +7902,7 @@ public partial class FrameProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "hSpace")]
     public StringValue HorizontalSpace
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -7942,6 +7915,7 @@ public partial class FrameProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "wrap")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextWrappingValues> Wrap
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextWrappingValues>)Attributes[6].Value; }
@@ -7954,6 +7928,7 @@ public partial class FrameProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "hAnchor")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues> HorizontalPosition
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>)Attributes[7].Value; }
@@ -7966,6 +7941,7 @@ public partial class FrameProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "vAnchor")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues> VerticalPosition
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>)Attributes[8].Value; }
@@ -7978,6 +7954,7 @@ public partial class FrameProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "x")]
     public StringValue X
     {
         get { return (StringValue)Attributes[9].Value; }
@@ -7990,6 +7967,7 @@ public partial class FrameProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "xAlign")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues> XAlign
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>)Attributes[10].Value; }
@@ -8002,6 +7980,7 @@ public partial class FrameProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "y")]
     public StringValue Y
     {
         get { return (StringValue)Attributes[11].Value; }
@@ -8014,6 +7993,7 @@ public partial class FrameProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "yAlign")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues> YAlign
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>)Attributes[12].Value; }
@@ -8026,6 +8006,7 @@ public partial class FrameProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "hRule")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues> HeightType
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>)Attributes[13].Value; }
@@ -8038,6 +8019,7 @@ public partial class FrameProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "anchorLock")]
     public OnOffValue AnchorLock
     {
         get { return (OnOffValue)Attributes[14].Value; }
@@ -8416,18 +8398,7 @@ public partial class Shading : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ShadingPatternValues>>(23, "val"),
-		AttributeTag.Create<StringValue>(23, "color"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(23, "themeColor"),
-		AttributeTag.Create<StringValue>(23, "themeTint"),
-		AttributeTag.Create<StringValue>(23, "themeShade"),
-		AttributeTag.Create<StringValue>(23, "fill"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(23, "themeFill"),
-		AttributeTag.Create<StringValue>(23, "themeFillTint"),
-		AttributeTag.Create<StringValue>(23, "themeFillShade")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Shading>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -8437,6 +8408,7 @@ public partial class Shading : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ShadingPatternValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ShadingPatternValues>)Attributes[0].Value; }
@@ -8449,6 +8421,7 @@ public partial class Shading : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "color")]
     public StringValue Color
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -8461,6 +8434,7 @@ public partial class Shading : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeColor")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>)Attributes[2].Value; }
@@ -8473,6 +8447,7 @@ public partial class Shading : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeTint")]
     public StringValue ThemeTint
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -8485,6 +8460,7 @@ public partial class Shading : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeShade")]
     public StringValue ThemeShade
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -8497,6 +8473,7 @@ public partial class Shading : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "fill")]
     public StringValue Fill
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -8509,6 +8486,7 @@ public partial class Shading : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeFill")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeFill
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>)Attributes[6].Value; }
@@ -8521,6 +8499,7 @@ public partial class Shading : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeFillTint")]
     public StringValue ThemeFillTint
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -8533,6 +8512,7 @@ public partial class Shading : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeFillShade")]
     public StringValue ThemeFillShade
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -8654,17 +8634,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "before"),
-		AttributeTag.Create<Int32Value>(23, "beforeLines"),
-		AttributeTag.Create<OnOffValue>(23, "beforeAutospacing"),
-		AttributeTag.Create<StringValue>(23, "after"),
-		AttributeTag.Create<Int32Value>(23, "afterLines"),
-		AttributeTag.Create<OnOffValue>(23, "afterAutospacing"),
-		AttributeTag.Create<StringValue>(23, "line"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineSpacingRuleValues>>(23, "lineRule")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SpacingBetweenLines>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -8674,6 +8644,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "before")]
     public StringValue Before
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -8686,6 +8657,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "beforeLines")]
     public Int32Value BeforeLines
     {
         get { return (Int32Value)Attributes[1].Value; }
@@ -8698,6 +8670,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "beforeAutospacing")]
     public OnOffValue BeforeAutoSpacing
     {
         get { return (OnOffValue)Attributes[2].Value; }
@@ -8710,6 +8683,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "after")]
     public StringValue After
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -8722,6 +8696,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "afterLines")]
     public Int32Value AfterLines
     {
         get { return (Int32Value)Attributes[4].Value; }
@@ -8734,6 +8709,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "afterAutospacing")]
     public OnOffValue AfterAutoSpacing
     {
         get { return (OnOffValue)Attributes[5].Value; }
@@ -8746,6 +8722,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "line")]
     public StringValue Line
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -8758,6 +8735,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "lineRule")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineSpacingRuleValues> LineRule
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineSpacingRuleValues>)Attributes[7].Value; }
@@ -8800,21 +8778,7 @@ public partial class Indentation : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "left"),
-		AttributeTag.Create<StringValue>(23, "start"),
-		AttributeTag.Create<Int32Value>(23, "leftChars"),
-		AttributeTag.Create<Int32Value>(23, "startChars"),
-		AttributeTag.Create<StringValue>(23, "right"),
-		AttributeTag.Create<StringValue>(23, "end"),
-		AttributeTag.Create<Int32Value>(23, "rightChars"),
-		AttributeTag.Create<Int32Value>(23, "endChars"),
-		AttributeTag.Create<StringValue>(23, "hanging"),
-		AttributeTag.Create<Int32Value>(23, "hangingChars"),
-		AttributeTag.Create<StringValue>(23, "firstLine"),
-		AttributeTag.Create<Int32Value>(23, "firstLineChars")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Indentation>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -8824,6 +8788,7 @@ public partial class Indentation : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "left")]
     public StringValue Left
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -8836,6 +8801,7 @@ public partial class Indentation : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "start")]
     public StringValue Start
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -8848,6 +8814,7 @@ public partial class Indentation : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "leftChars")]
     public Int32Value LeftChars
     {
         get { return (Int32Value)Attributes[2].Value; }
@@ -8860,6 +8827,7 @@ public partial class Indentation : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "startChars")]
     public Int32Value StartCharacters
     {
         get { return (Int32Value)Attributes[3].Value; }
@@ -8872,6 +8840,7 @@ public partial class Indentation : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "right")]
     public StringValue Right
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -8884,6 +8853,7 @@ public partial class Indentation : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "end")]
     public StringValue End
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -8896,6 +8866,7 @@ public partial class Indentation : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rightChars")]
     public Int32Value RightChars
     {
         get { return (Int32Value)Attributes[6].Value; }
@@ -8908,6 +8879,7 @@ public partial class Indentation : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "endChars")]
     public Int32Value EndCharacters
     {
         get { return (Int32Value)Attributes[7].Value; }
@@ -8920,6 +8892,7 @@ public partial class Indentation : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "hanging")]
     public StringValue Hanging
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -8932,6 +8905,7 @@ public partial class Indentation : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "hangingChars")]
     public Int32Value HangingChars
     {
         get { return (Int32Value)Attributes[9].Value; }
@@ -8944,6 +8918,7 @@ public partial class Indentation : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "firstLine")]
     public StringValue FirstLine
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -8956,6 +8931,7 @@ public partial class Indentation : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "firstLineChars")]
     public Int32Value FirstLineChars
     {
         get { return (Int32Value)Attributes[11].Value; }
@@ -8998,10 +8974,7 @@ public partial class Justification : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.JustificationValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Justification>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -9011,6 +8984,7 @@ public partial class Justification : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.JustificationValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.JustificationValues>)Attributes[0].Value; }
@@ -9053,10 +9027,7 @@ public partial class TextDirection : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextDirectionValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TextDirection>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -9066,6 +9037,7 @@ public partial class TextDirection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextDirectionValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextDirectionValues>)Attributes[0].Value; }
@@ -9108,10 +9080,7 @@ public partial class TextAlignment : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TextAlignment>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -9121,6 +9090,7 @@ public partial class TextAlignment : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentValues>)Attributes[0].Value; }
@@ -9163,10 +9133,7 @@ public partial class TextBoxTightWrap : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrapValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TextBoxTightWrap>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -9176,6 +9143,7 @@ public partial class TextBoxTightWrap : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrapValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrapValues>)Attributes[0].Value; }
@@ -9607,10 +9575,7 @@ public partial class PixelsPerInch : DecimalNumberType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class DecimalNumberType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DecimalNumberType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -9619,6 +9584,7 @@ public abstract partial class DecimalNumberType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public Int32Value Val
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -9665,12 +9631,7 @@ public partial class ParagraphPropertiesChange : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ParagraphPropertiesChange>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -9680,6 +9641,7 @@ public partial class ParagraphPropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -9692,6 +9654,7 @@ public partial class ParagraphPropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[1].Value; }
@@ -9704,6 +9667,7 @@ public partial class ParagraphPropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -9849,11 +9813,7 @@ public partial class FooterReference : HeaderFooterReferenceType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class HeaderFooterReferenceType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeaderFooterValues>>(23, "type"),
-		AttributeTag.Create<StringValue>(19, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<HeaderFooterReferenceType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -9862,6 +9822,7 @@ public abstract partial class HeaderFooterReferenceType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "type")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeaderFooterValues> Type
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeaderFooterValues>)Attributes[0].Value; }
@@ -9874,6 +9835,7 @@ public abstract partial class HeaderFooterReferenceType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -9913,11 +9875,7 @@ public partial class Break : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakValues>>(23, "type"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakTextRestartLocationValues>>(23, "clear")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Break>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -9927,6 +9885,7 @@ public partial class Break : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "type")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakValues> Type
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakValues>)Attributes[0].Value; }
@@ -9939,6 +9898,7 @@ public partial class Break : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "clear")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakTextRestartLocationValues> Clear
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakTextRestartLocationValues>)Attributes[1].Value; }
@@ -10143,10 +10103,7 @@ public partial class DeletedFieldCode : TextType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class TextType : OpenXmlLeafTextElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>(1, "space")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TextType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -10155,6 +10112,7 @@ public abstract partial class TextType : OpenXmlLeafTextElement
     /// </summary>
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
+    [SchemaAttr(1, "space")]
     public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space
     {
         get { return (EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>)Attributes[0].Value; }
@@ -10971,11 +10929,7 @@ public partial class SymbolChar : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "font"),
-		AttributeTag.Create<HexBinaryValue>(23, "char")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SymbolChar>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -10985,6 +10939,7 @@ public partial class SymbolChar : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "font")]
     public StringValue Font
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -10997,6 +10952,7 @@ public partial class SymbolChar : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "char")]
     public HexBinaryValue Char
     {
         get { return (HexBinaryValue)Attributes[1].Value; }
@@ -11076,12 +11032,7 @@ public partial class EmbeddedObject : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "dxaOrig"),
-		AttributeTag.Create<StringValue>(23, "dyaOrig"),
-		AttributeTag.Create<HexBinaryValue>(52, "anchorId")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<EmbeddedObject>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -11091,6 +11042,7 @@ public partial class EmbeddedObject : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "dxaOrig")]
     public StringValue DxaOriginal
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -11103,6 +11055,7 @@ public partial class EmbeddedObject : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "dyaOrig")]
     public StringValue DyaOriginal
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -11115,6 +11068,7 @@ public partial class EmbeddedObject : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "anchorId")]
     public HexBinaryValue AnchorId
     {
         get { return (HexBinaryValue)Attributes[2].Value; }
@@ -11269,10 +11223,7 @@ public partial class Picture : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(52, "anchorId")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Picture>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -11282,6 +11233,7 @@ public partial class Picture : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "anchorId")]
     public HexBinaryValue AnchorId
     {
         get { return (HexBinaryValue)Attributes[0].Value; }
@@ -11408,12 +11360,7 @@ public partial class FieldChar : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FieldCharValues>>(23, "fldCharType"),
-		AttributeTag.Create<OnOffValue>(23, "fldLock"),
-		AttributeTag.Create<OnOffValue>(23, "dirty")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<FieldChar>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -11423,6 +11370,7 @@ public partial class FieldChar : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "fldCharType")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FieldCharValues> FieldCharType
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.FieldCharValues>)Attributes[0].Value; }
@@ -11435,6 +11383,7 @@ public partial class FieldChar : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "fldLock")]
     public OnOffValue FieldLock
     {
         get { return (OnOffValue)Attributes[1].Value; }
@@ -11447,6 +11396,7 @@ public partial class FieldChar : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "dirty")]
     public OnOffValue Dirty
     {
         get { return (OnOffValue)Attributes[2].Value; }
@@ -11756,11 +11706,7 @@ public partial class EndnoteReference : FootnoteEndnoteReferenceType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class FootnoteEndnoteReferenceType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<OnOffValue>(23, "customMarkFollows"),
-		AttributeTag.Create<IntegerValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<FootnoteEndnoteReferenceType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -11769,6 +11715,7 @@ public abstract partial class FootnoteEndnoteReferenceType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "customMarkFollows")]
     public OnOffValue CustomMarkFollows
     {
         get { return (OnOffValue)Attributes[0].Value; }
@@ -11781,6 +11728,7 @@ public abstract partial class FootnoteEndnoteReferenceType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public IntegerValue Id
     {
         get { return (IntegerValue)Attributes[1].Value; }
@@ -11937,12 +11885,7 @@ public partial class PositionalTab : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabAlignmentValues>>(23, "alignment"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabPositioningBaseValues>>(23, "relativeTo"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabLeaderCharValues>>(23, "leader")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PositionalTab>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -11952,6 +11895,7 @@ public partial class PositionalTab : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "alignment")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabAlignmentValues> Alignment
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabAlignmentValues>)Attributes[0].Value; }
@@ -11964,6 +11908,7 @@ public partial class PositionalTab : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "relativeTo")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabPositioningBaseValues> RelativeTo
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabPositioningBaseValues>)Attributes[1].Value; }
@@ -11976,6 +11921,7 @@ public partial class PositionalTab : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "leader")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabLeaderCharValues> Leader
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabLeaderCharValues>)Attributes[2].Value; }
@@ -12376,10 +12322,7 @@ public partial class DefaultTableStyle : String253Type
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class String253Type : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<String253Type>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -12388,6 +12331,7 @@ public abstract partial class String253Type : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -12427,18 +12371,7 @@ public partial class RunFonts : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontTypeHintValues>>(23, "hint"),
-		AttributeTag.Create<StringValue>(23, "ascii"),
-		AttributeTag.Create<StringValue>(23, "hAnsi"),
-		AttributeTag.Create<StringValue>(23, "eastAsia"),
-		AttributeTag.Create<StringValue>(23, "cs"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>(23, "asciiTheme"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>(23, "hAnsiTheme"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>(23, "eastAsiaTheme"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>>(23, "cstheme")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<RunFonts>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -12448,6 +12381,7 @@ public partial class RunFonts : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "hint")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontTypeHintValues> Hint
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontTypeHintValues>)Attributes[0].Value; }
@@ -12460,6 +12394,7 @@ public partial class RunFonts : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "ascii")]
     public StringValue Ascii
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -12472,6 +12407,7 @@ public partial class RunFonts : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "hAnsi")]
     public StringValue HighAnsi
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -12484,6 +12420,7 @@ public partial class RunFonts : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "eastAsia")]
     public StringValue EastAsia
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -12496,6 +12433,7 @@ public partial class RunFonts : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "cs")]
     public StringValue ComplexScript
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -12508,6 +12446,7 @@ public partial class RunFonts : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "asciiTheme")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> AsciiTheme
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>)Attributes[5].Value; }
@@ -12520,6 +12459,7 @@ public partial class RunFonts : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "hAnsiTheme")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> HighAnsiTheme
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>)Attributes[6].Value; }
@@ -12532,6 +12472,7 @@ public partial class RunFonts : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "eastAsiaTheme")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> EastAsiaTheme
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>)Attributes[7].Value; }
@@ -12544,6 +12485,7 @@ public partial class RunFonts : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "cstheme")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> ComplexScriptTheme
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues>)Attributes[8].Value; }
@@ -12586,13 +12528,7 @@ public partial class Color : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(23, "themeColor"),
-		AttributeTag.Create<StringValue>(23, "themeTint"),
-		AttributeTag.Create<StringValue>(23, "themeShade")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Color>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -12602,6 +12538,7 @@ public partial class Color : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -12614,6 +12551,7 @@ public partial class Color : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeColor")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>)Attributes[1].Value; }
@@ -12626,6 +12564,7 @@ public partial class Color : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeTint")]
     public StringValue ThemeTint
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -12638,6 +12577,7 @@ public partial class Color : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeShade")]
     public StringValue ThemeShade
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -12680,10 +12620,7 @@ public partial class Spacing : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Spacing>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -12693,6 +12630,7 @@ public partial class Spacing : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public Int32Value Val
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -12735,10 +12673,7 @@ public partial class CharacterScale : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<IntegerValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<CharacterScale>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -12748,6 +12683,7 @@ public partial class CharacterScale : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public IntegerValue Val
     {
         get { return (IntegerValue)Attributes[0].Value; }
@@ -12790,10 +12726,7 @@ public partial class Kern : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Kern>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -12803,6 +12736,7 @@ public partial class Kern : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public UInt32Value Val
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -12845,10 +12779,7 @@ public partial class Position : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Position>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -12858,6 +12789,7 @@ public partial class Position : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -13041,10 +12973,7 @@ public partial class PhoneticGuideBaseTextSize : HpsMeasureType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class HpsMeasureType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<HpsMeasureType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -13053,6 +12982,7 @@ public abstract partial class HpsMeasureType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -13092,10 +13022,7 @@ public partial class Highlight : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HighlightColorValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Highlight>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -13105,6 +13032,7 @@ public partial class Highlight : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HighlightColorValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.HighlightColorValues>)Attributes[0].Value; }
@@ -13147,14 +13075,7 @@ public partial class Underline : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.UnderlineValues>>(23, "val"),
-		AttributeTag.Create<StringValue>(23, "color"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(23, "themeColor"),
-		AttributeTag.Create<StringValue>(23, "themeTint"),
-		AttributeTag.Create<StringValue>(23, "themeShade")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Underline>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -13164,6 +13085,7 @@ public partial class Underline : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.UnderlineValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.UnderlineValues>)Attributes[0].Value; }
@@ -13176,6 +13098,7 @@ public partial class Underline : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "color")]
     public StringValue Color
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -13188,6 +13111,7 @@ public partial class Underline : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeColor")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>)Attributes[2].Value; }
@@ -13200,6 +13124,7 @@ public partial class Underline : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeTint")]
     public StringValue ThemeTint
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -13212,6 +13137,7 @@ public partial class Underline : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeShade")]
     public StringValue ThemeShade
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -13254,10 +13180,7 @@ public partial class TextEffect : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextEffectValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TextEffect>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -13267,6 +13190,7 @@ public partial class TextEffect : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextEffectValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextEffectValues>)Attributes[0].Value; }
@@ -13698,18 +13622,7 @@ public partial class TopRightToBottomLeftCellBorder : BorderType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class BorderType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.BorderValues>>(23, "val"),
-		AttributeTag.Create<StringValue>(23, "color"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(23, "themeColor"),
-		AttributeTag.Create<StringValue>(23, "themeTint"),
-		AttributeTag.Create<StringValue>(23, "themeShade"),
-		AttributeTag.Create<UInt32Value>(23, "sz"),
-		AttributeTag.Create<UInt32Value>(23, "space"),
-		AttributeTag.Create<OnOffValue>(23, "shadow"),
-		AttributeTag.Create<OnOffValue>(23, "frame")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<BorderType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -13718,6 +13631,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BorderValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.BorderValues>)Attributes[0].Value; }
@@ -13730,6 +13644,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "color")]
     public StringValue Color
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -13742,6 +13657,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeColor")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>)Attributes[2].Value; }
@@ -13754,6 +13670,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeTint")]
     public StringValue ThemeTint
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -13766,6 +13683,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeShade")]
     public StringValue ThemeShade
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -13778,6 +13696,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "sz")]
     public UInt32Value Size
     {
         get { return (UInt32Value)Attributes[5].Value; }
@@ -13790,6 +13709,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "space")]
     public UInt32Value Space
     {
         get { return (UInt32Value)Attributes[6].Value; }
@@ -13802,6 +13722,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "shadow")]
     public OnOffValue Shadow
     {
         get { return (OnOffValue)Attributes[7].Value; }
@@ -13814,6 +13735,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "frame")]
     public OnOffValue Frame
     {
         get { return (OnOffValue)Attributes[8].Value; }
@@ -13853,11 +13775,7 @@ public partial class FitText : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(23, "val"),
-		AttributeTag.Create<Int32Value>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<FitText>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -13867,6 +13785,7 @@ public partial class FitText : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public UInt32Value Val
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -13879,6 +13798,7 @@ public partial class FitText : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public Int32Value Id
     {
         get { return (Int32Value)Attributes[1].Value; }
@@ -13921,10 +13841,7 @@ public partial class VerticalTextAlignment : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalPositionValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<VerticalTextAlignment>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -13934,6 +13851,7 @@ public partial class VerticalTextAlignment : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalPositionValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalPositionValues>)Attributes[0].Value; }
@@ -13976,10 +13894,7 @@ public partial class Emphasis : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.EmphasisMarkValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Emphasis>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -13989,6 +13904,7 @@ public partial class Emphasis : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.EmphasisMarkValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.EmphasisMarkValues>)Attributes[0].Value; }
@@ -14079,12 +13995,7 @@ public partial class ThemeFontLanguages : LanguageType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class LanguageType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val"),
-		AttributeTag.Create<StringValue>(23, "eastAsia"),
-		AttributeTag.Create<StringValue>(23, "bidi")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<LanguageType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -14093,6 +14004,7 @@ public abstract partial class LanguageType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -14105,6 +14017,7 @@ public abstract partial class LanguageType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "eastAsia")]
     public StringValue EastAsia
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -14117,6 +14030,7 @@ public abstract partial class LanguageType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "bidi")]
     public StringValue Bidi
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -14156,14 +14070,7 @@ public partial class EastAsianLayout : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "id"),
-		AttributeTag.Create<OnOffValue>(23, "combine"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CombineBracketValues>>(23, "combineBrackets"),
-		AttributeTag.Create<OnOffValue>(23, "vert"),
-		AttributeTag.Create<OnOffValue>(23, "vertCompress")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<EastAsianLayout>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -14173,6 +14080,7 @@ public partial class EastAsianLayout : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public Int32Value Id
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -14185,6 +14093,7 @@ public partial class EastAsianLayout : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "combine")]
     public OnOffValue Combine
     {
         get { return (OnOffValue)Attributes[1].Value; }
@@ -14197,6 +14106,7 @@ public partial class EastAsianLayout : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "combineBrackets")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CombineBracketValues> CombineBrackets
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.CombineBracketValues>)Attributes[2].Value; }
@@ -14209,6 +14119,7 @@ public partial class EastAsianLayout : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "vert")]
     public OnOffValue Vertical
     {
         get { return (OnOffValue)Attributes[3].Value; }
@@ -14221,6 +14132,7 @@ public partial class EastAsianLayout : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "vertCompress")]
     public OnOffValue VerticalCompress
     {
         get { return (OnOffValue)Attributes[4].Value; }
@@ -14270,12 +14182,7 @@ public partial class RunPropertiesChange : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<RunPropertiesChange>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -14285,6 +14192,7 @@ public partial class RunPropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -14297,6 +14205,7 @@ public partial class RunPropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[1].Value; }
@@ -14309,6 +14218,7 @@ public partial class RunPropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -15365,12 +15275,7 @@ public partial class InsertedMathControl : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<InsertedMathControl>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -15380,6 +15285,7 @@ public partial class InsertedMathControl : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -15392,6 +15298,7 @@ public partial class InsertedMathControl : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[1].Value; }
@@ -15404,6 +15311,7 @@ public partial class InsertedMathControl : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -15490,12 +15398,7 @@ public partial class DeletedMathControl : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DeletedMathControl>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -15505,6 +15408,7 @@ public partial class DeletedMathControl : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -15517,6 +15421,7 @@ public partial class DeletedMathControl : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[1].Value; }
@@ -15529,6 +15434,7 @@ public partial class DeletedMathControl : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -15730,12 +15636,7 @@ public partial class MoveToMathControl : MathControlMoveType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class MathControlMoveType : OpenXmlCompositeElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<MathControlMoveType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -15744,6 +15645,7 @@ public abstract partial class MathControlMoveType : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -15756,6 +15658,7 @@ public abstract partial class MathControlMoveType : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[1].Value; }
@@ -15768,6 +15671,7 @@ public abstract partial class MathControlMoveType : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -15968,11 +15872,7 @@ public partial class CustomXmlRuby : CustomXmlElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "uri"),
-		AttributeTag.Create<StringValue>(23, "element")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<CustomXmlRuby>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -16347,12 +16247,7 @@ public partial class SimpleFieldRuby : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "instr"),
-		AttributeTag.Create<OnOffValue>(23, "fldLock"),
-		AttributeTag.Create<OnOffValue>(23, "dirty")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SimpleFieldRuby>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -16362,6 +16257,7 @@ public partial class SimpleFieldRuby : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "instr")]
     public StringValue Instruction
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -16374,6 +16270,7 @@ public partial class SimpleFieldRuby : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "fldLock")]
     public OnOffValue FieldLock
     {
         get { return (OnOffValue)Attributes[1].Value; }
@@ -16386,6 +16283,7 @@ public partial class SimpleFieldRuby : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "dirty")]
     public OnOffValue Dirty
     {
         get { return (OnOffValue)Attributes[2].Value; }
@@ -16773,15 +16671,7 @@ public partial class HyperlinkRuby : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "tgtFrame"),
-		AttributeTag.Create<StringValue>(23, "tooltip"),
-		AttributeTag.Create<StringValue>(23, "docLocation"),
-		AttributeTag.Create<OnOffValue>(23, "history"),
-		AttributeTag.Create<StringValue>(23, "anchor"),
-		AttributeTag.Create<StringValue>(19, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<HyperlinkRuby>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -16791,6 +16681,7 @@ public partial class HyperlinkRuby : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "tgtFrame")]
     public StringValue TargetFrame
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -16803,6 +16694,7 @@ public partial class HyperlinkRuby : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "tooltip")]
     public StringValue Tooltip
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -16815,6 +16707,7 @@ public partial class HyperlinkRuby : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "docLocation")]
     public StringValue DocLocation
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -16827,6 +16720,7 @@ public partial class HyperlinkRuby : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "history")]
     public OnOffValue History
     {
         get { return (OnOffValue)Attributes[3].Value; }
@@ -16839,6 +16733,7 @@ public partial class HyperlinkRuby : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "anchor")]
     public StringValue Anchor
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -16851,6 +16746,7 @@ public partial class HyperlinkRuby : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -17166,12 +17062,7 @@ public partial class Run : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(23, "rsidRPr"),
-		AttributeTag.Create<HexBinaryValue>(23, "rsidDel"),
-		AttributeTag.Create<HexBinaryValue>(23, "rsidR")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Run>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -17181,6 +17072,7 @@ public partial class Run : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidRPr")]
     public HexBinaryValue RsidRunProperties
     {
         get { return (HexBinaryValue)Attributes[0].Value; }
@@ -17193,6 +17085,7 @@ public partial class Run : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidDel")]
     public HexBinaryValue RsidRunDeletion
     {
         get { return (HexBinaryValue)Attributes[1].Value; }
@@ -17205,6 +17098,7 @@ public partial class Run : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidR")]
     public HexBinaryValue RsidRunAddition
     {
         get { return (HexBinaryValue)Attributes[2].Value; }
@@ -17608,10 +17502,7 @@ public partial class ProofError : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingErrorValues>>(23, "type")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ProofError>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -17621,6 +17512,7 @@ public partial class ProofError : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "type")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingErrorValues> Type
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingErrorValues>)Attributes[0].Value; }
@@ -17663,15 +17555,7 @@ public partial class PermStart : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RangePermissionEditingGroupValues>>(23, "edGrp"),
-		AttributeTag.Create<StringValue>(23, "ed"),
-		AttributeTag.Create<Int32Value>(23, "colFirst"),
-		AttributeTag.Create<Int32Value>(23, "colLast"),
-		AttributeTag.Create<Int32Value>(23, "id"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>(23, "displacedByCustomXml")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PermStart>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -17681,6 +17565,7 @@ public partial class PermStart : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "edGrp")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RangePermissionEditingGroupValues> EditorGroup
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.RangePermissionEditingGroupValues>)Attributes[0].Value; }
@@ -17693,6 +17578,7 @@ public partial class PermStart : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "ed")]
     public StringValue Ed
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -17705,6 +17591,7 @@ public partial class PermStart : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "colFirst")]
     public Int32Value ColumnFirst
     {
         get { return (Int32Value)Attributes[2].Value; }
@@ -17717,6 +17604,7 @@ public partial class PermStart : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "colLast")]
     public Int32Value ColumnLast
     {
         get { return (Int32Value)Attributes[3].Value; }
@@ -17729,6 +17617,7 @@ public partial class PermStart : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public Int32Value Id
     {
         get { return (Int32Value)Attributes[4].Value; }
@@ -17741,6 +17630,7 @@ public partial class PermStart : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "displacedByCustomXml")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>)Attributes[5].Value; }
@@ -17783,11 +17673,7 @@ public partial class PermEnd : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "id"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>>(23, "displacedByCustomXml")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PermEnd>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -17797,6 +17683,7 @@ public partial class PermEnd : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public Int32Value Id
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -17809,6 +17696,7 @@ public partial class PermEnd : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "displacedByCustomXml")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues>)Attributes[1].Value; }
@@ -18422,12 +18310,7 @@ public partial class MoveToRun : RunTrackChangeType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<RunTrackChangeType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -18436,6 +18319,7 @@ public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -18448,6 +18332,7 @@ public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[1].Value; }
@@ -18460,6 +18345,7 @@ public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -18698,10 +18584,7 @@ public partial class ContentPart : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(19, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ContentPart>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -18711,6 +18594,7 @@ public partial class ContentPart : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -19038,11 +18922,7 @@ public partial class CustomXmlBlock : CustomXmlElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "uri"),
-		AttributeTag.Create<StringValue>(23, "element")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<CustomXmlBlock>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -19564,17 +19444,7 @@ public partial class Paragraph : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(23, "rsidRPr"),
-		AttributeTag.Create<HexBinaryValue>(23, "rsidR"),
-		AttributeTag.Create<HexBinaryValue>(23, "rsidDel"),
-		AttributeTag.Create<HexBinaryValue>(23, "rsidP"),
-		AttributeTag.Create<HexBinaryValue>(23, "rsidRDefault"),
-		AttributeTag.Create<HexBinaryValue>(52, "paraId"),
-		AttributeTag.Create<HexBinaryValue>(52, "textId"),
-		AttributeTag.Create<OnOffValue>(52, "noSpellErr")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Paragraph>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -19584,6 +19454,7 @@ public partial class Paragraph : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidRPr")]
     public HexBinaryValue RsidParagraphMarkRevision
     {
         get { return (HexBinaryValue)Attributes[0].Value; }
@@ -19596,6 +19467,7 @@ public partial class Paragraph : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidR")]
     public HexBinaryValue RsidParagraphAddition
     {
         get { return (HexBinaryValue)Attributes[1].Value; }
@@ -19608,6 +19480,7 @@ public partial class Paragraph : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidDel")]
     public HexBinaryValue RsidParagraphDeletion
     {
         get { return (HexBinaryValue)Attributes[2].Value; }
@@ -19620,6 +19493,7 @@ public partial class Paragraph : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidP")]
     public HexBinaryValue RsidParagraphProperties
     {
         get { return (HexBinaryValue)Attributes[3].Value; }
@@ -19632,6 +19506,7 @@ public partial class Paragraph : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidRDefault")]
     public HexBinaryValue RsidRunAdditionDefault
     {
         get { return (HexBinaryValue)Attributes[4].Value; }
@@ -19644,6 +19519,7 @@ public partial class Paragraph : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "paraId")]
     public HexBinaryValue ParagraphId
     {
         get { return (HexBinaryValue)Attributes[5].Value; }
@@ -19656,6 +19532,7 @@ public partial class Paragraph : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "textId")]
     public HexBinaryValue TextId
     {
         get { return (HexBinaryValue)Attributes[6].Value; }
@@ -19668,6 +19545,7 @@ public partial class Paragraph : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "noSpellErr")]
     public OnOffValue NoSpellError
     {
         get { return (OnOffValue)Attributes[7].Value; }
@@ -20269,15 +20147,7 @@ public partial class TableRow : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(23, "rsidRPr"),
-		AttributeTag.Create<HexBinaryValue>(23, "rsidR"),
-		AttributeTag.Create<HexBinaryValue>(23, "rsidDel"),
-		AttributeTag.Create<HexBinaryValue>(23, "rsidTr"),
-		AttributeTag.Create<HexBinaryValue>(52, "paraId"),
-		AttributeTag.Create<HexBinaryValue>(52, "textId")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TableRow>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -20287,6 +20157,7 @@ public partial class TableRow : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidRPr")]
     public HexBinaryValue RsidTableRowMarkRevision
     {
         get { return (HexBinaryValue)Attributes[0].Value; }
@@ -20299,6 +20170,7 @@ public partial class TableRow : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidR")]
     public HexBinaryValue RsidTableRowAddition
     {
         get { return (HexBinaryValue)Attributes[1].Value; }
@@ -20311,6 +20183,7 @@ public partial class TableRow : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidDel")]
     public HexBinaryValue RsidTableRowDeletion
     {
         get { return (HexBinaryValue)Attributes[2].Value; }
@@ -20323,6 +20196,7 @@ public partial class TableRow : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidTr")]
     public HexBinaryValue RsidTableRowProperties
     {
         get { return (HexBinaryValue)Attributes[3].Value; }
@@ -20335,6 +20209,7 @@ public partial class TableRow : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "paraId")]
     public HexBinaryValue ParagraphId
     {
         get { return (HexBinaryValue)Attributes[4].Value; }
@@ -20347,6 +20222,7 @@ public partial class TableRow : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "textId")]
     public HexBinaryValue TextId
     {
         get { return (HexBinaryValue)Attributes[5].Value; }
@@ -20631,11 +20507,7 @@ public partial class CustomXmlRow : CustomXmlElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "uri"),
-		AttributeTag.Create<StringValue>(23, "element")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<CustomXmlRow>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -21375,11 +21247,7 @@ public partial class CustomXmlCell : CustomXmlElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "uri"),
-		AttributeTag.Create<StringValue>(23, "element")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<CustomXmlCell>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -21898,11 +21766,7 @@ public partial class CustomXmlRun : CustomXmlElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "uri"),
-		AttributeTag.Create<StringValue>(23, "element")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<CustomXmlRun>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -22292,12 +22156,7 @@ public partial class SimpleField : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "instr"),
-		AttributeTag.Create<OnOffValue>(23, "fldLock"),
-		AttributeTag.Create<OnOffValue>(23, "dirty")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SimpleField>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -22307,6 +22166,7 @@ public partial class SimpleField : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "instr")]
     public StringValue Instruction
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -22319,6 +22179,7 @@ public partial class SimpleField : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "fldLock")]
     public OnOffValue FieldLock
     {
         get { return (OnOffValue)Attributes[1].Value; }
@@ -22331,6 +22192,7 @@ public partial class SimpleField : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "dirty")]
     public OnOffValue Dirty
     {
         get { return (OnOffValue)Attributes[2].Value; }
@@ -22733,15 +22595,7 @@ public partial class Hyperlink : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "tgtFrame"),
-		AttributeTag.Create<StringValue>(23, "tooltip"),
-		AttributeTag.Create<StringValue>(23, "docLocation"),
-		AttributeTag.Create<OnOffValue>(23, "history"),
-		AttributeTag.Create<StringValue>(23, "anchor"),
-		AttributeTag.Create<StringValue>(19, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Hyperlink>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -22751,6 +22605,7 @@ public partial class Hyperlink : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "tgtFrame")]
     public StringValue TargetFrame
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -22763,6 +22618,7 @@ public partial class Hyperlink : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "tooltip")]
     public StringValue Tooltip
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -22775,6 +22631,7 @@ public partial class Hyperlink : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "docLocation")]
     public StringValue DocLocation
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -22787,6 +22644,7 @@ public partial class Hyperlink : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "history")]
     public OnOffValue History
     {
         get { return (OnOffValue)Attributes[3].Value; }
@@ -22799,6 +22657,7 @@ public partial class Hyperlink : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "anchor")]
     public StringValue Anchor
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -22811,6 +22670,7 @@ public partial class Hyperlink : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -23189,10 +23049,7 @@ public partial class BidirectionalOverride : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<BidirectionalOverride>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -23202,6 +23059,7 @@ public partial class BidirectionalOverride : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>)Attributes[0].Value; }
@@ -23580,10 +23438,7 @@ public partial class BidirectionalEmbedding : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<BidirectionalEmbedding>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -23593,6 +23448,7 @@ public partial class BidirectionalEmbedding : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues>)Attributes[0].Value; }
@@ -24111,10 +23967,7 @@ public partial class AttachedTemplate : RelationshipType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class RelationshipType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(19, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<RelationshipType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -24123,6 +23976,7 @@ public abstract partial class RelationshipType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -24162,22 +24016,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val"),
-		AttributeTag.Create<OnOffValue>(23, "firstRow"),
-		AttributeTag.Create<OnOffValue>(23, "lastRow"),
-		AttributeTag.Create<OnOffValue>(23, "firstColumn"),
-		AttributeTag.Create<OnOffValue>(23, "lastColumn"),
-		AttributeTag.Create<OnOffValue>(23, "oddVBand"),
-		AttributeTag.Create<OnOffValue>(23, "evenVBand"),
-		AttributeTag.Create<OnOffValue>(23, "oddHBand"),
-		AttributeTag.Create<OnOffValue>(23, "evenHBand"),
-		AttributeTag.Create<OnOffValue>(23, "firstRowFirstColumn"),
-		AttributeTag.Create<OnOffValue>(23, "firstRowLastColumn"),
-		AttributeTag.Create<OnOffValue>(23, "lastRowFirstColumn"),
-		AttributeTag.Create<OnOffValue>(23, "lastRowLastColumn")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ConditionalFormatStyle>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -24187,6 +24026,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -24199,6 +24039,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "firstRow")]
     public OnOffValue FirstRow
     {
         get { return (OnOffValue)Attributes[1].Value; }
@@ -24211,6 +24052,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "lastRow")]
     public OnOffValue LastRow
     {
         get { return (OnOffValue)Attributes[2].Value; }
@@ -24223,6 +24065,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "firstColumn")]
     public OnOffValue FirstColumn
     {
         get { return (OnOffValue)Attributes[3].Value; }
@@ -24235,6 +24078,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "lastColumn")]
     public OnOffValue LastColumn
     {
         get { return (OnOffValue)Attributes[4].Value; }
@@ -24247,6 +24091,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "oddVBand")]
     public OnOffValue OddVerticalBand
     {
         get { return (OnOffValue)Attributes[5].Value; }
@@ -24259,6 +24104,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "evenVBand")]
     public OnOffValue EvenVerticalBand
     {
         get { return (OnOffValue)Attributes[6].Value; }
@@ -24271,6 +24117,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "oddHBand")]
     public OnOffValue OddHorizontalBand
     {
         get { return (OnOffValue)Attributes[7].Value; }
@@ -24283,6 +24130,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "evenHBand")]
     public OnOffValue EvenHorizontalBand
     {
         get { return (OnOffValue)Attributes[8].Value; }
@@ -24295,6 +24143,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "firstRowFirstColumn")]
     public OnOffValue FirstRowFirstColumn
     {
         get { return (OnOffValue)Attributes[9].Value; }
@@ -24307,6 +24156,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "firstRowLastColumn")]
     public OnOffValue FirstRowLastColumn
     {
         get { return (OnOffValue)Attributes[10].Value; }
@@ -24319,6 +24169,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "lastRowFirstColumn")]
     public OnOffValue LastRowFirstColumn
     {
         get { return (OnOffValue)Attributes[11].Value; }
@@ -24331,6 +24182,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "lastRowLastColumn")]
     public OnOffValue LastRowLastColumn
     {
         get { return (OnOffValue)Attributes[12].Value; }
@@ -24700,11 +24552,7 @@ public partial class RightMargin : TableWidthType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class TableWidthType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "w"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>>(23, "type")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TableWidthType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -24713,6 +24561,7 @@ public abstract partial class TableWidthType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "w")]
     public StringValue Width
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -24725,6 +24574,7 @@ public abstract partial class TableWidthType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "type")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues> Type
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>)Attributes[1].Value; }
@@ -24764,10 +24614,7 @@ public partial class HorizontalMerge : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<HorizontalMerge>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -24777,6 +24624,7 @@ public partial class HorizontalMerge : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>)Attributes[0].Value; }
@@ -24819,10 +24667,7 @@ public partial class VerticalMerge : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<VerticalMerge>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -24832,6 +24677,7 @@ public partial class VerticalMerge : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues>)Attributes[0].Value; }
@@ -25702,10 +25548,7 @@ public partial class PersonalReply : OnOffOnlyType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OnOffOnlyType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.OnOffOnlyValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<OnOffOnlyType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -25714,6 +25557,7 @@ public abstract partial class OnOffOnlyType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.OnOffOnlyValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.OnOffOnlyValues>)Attributes[0].Value; }
@@ -25938,10 +25782,7 @@ public partial class TableCellVerticalAlignment : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableVerticalAlignmentValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TableCellVerticalAlignment>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -25951,6 +25792,7 @@ public partial class TableCellVerticalAlignment : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableVerticalAlignmentValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableVerticalAlignmentValues>)Attributes[0].Value; }
@@ -25993,10 +25835,7 @@ public partial class DivId : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DivId>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -26006,6 +25845,7 @@ public partial class DivId : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -26048,11 +25888,7 @@ public partial class TableRowHeight : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(23, "val"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>>(23, "hRule")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TableRowHeight>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -26062,6 +25898,7 @@ public partial class TableRowHeight : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public UInt32Value Val
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -26074,6 +25911,7 @@ public partial class TableRowHeight : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "hRule")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues> HeightType
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues>)Attributes[1].Value; }
@@ -26116,10 +25954,7 @@ public partial class TableJustification : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TableJustification>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -26129,6 +25964,7 @@ public partial class TableJustification : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues>)Attributes[0].Value; }
@@ -26171,19 +26007,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int16Value>(23, "leftFromText"),
-		AttributeTag.Create<Int16Value>(23, "rightFromText"),
-		AttributeTag.Create<Int16Value>(23, "topFromText"),
-		AttributeTag.Create<Int16Value>(23, "bottomFromText"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>>(23, "vertAnchor"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>>(23, "horzAnchor"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>>(23, "tblpXSpec"),
-		AttributeTag.Create<Int32Value>(23, "tblpX"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>>(23, "tblpYSpec"),
-		AttributeTag.Create<Int32Value>(23, "tblpY")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TablePositionProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -26193,6 +26017,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "leftFromText")]
     public Int16Value LeftFromText
     {
         get { return (Int16Value)Attributes[0].Value; }
@@ -26205,6 +26030,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rightFromText")]
     public Int16Value RightFromText
     {
         get { return (Int16Value)Attributes[1].Value; }
@@ -26217,6 +26043,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "topFromText")]
     public Int16Value TopFromText
     {
         get { return (Int16Value)Attributes[2].Value; }
@@ -26229,6 +26056,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "bottomFromText")]
     public Int16Value BottomFromText
     {
         get { return (Int16Value)Attributes[3].Value; }
@@ -26241,6 +26069,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "vertAnchor")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues> VerticalAnchor
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues>)Attributes[4].Value; }
@@ -26253,6 +26082,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "horzAnchor")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues> HorizontalAnchor
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues>)Attributes[5].Value; }
@@ -26265,6 +26095,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "tblpXSpec")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues> TablePositionXAlignment
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues>)Attributes[6].Value; }
@@ -26277,6 +26108,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "tblpX")]
     public Int32Value TablePositionX
     {
         get { return (Int32Value)Attributes[7].Value; }
@@ -26289,6 +26121,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "tblpYSpec")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues> TablePositionYAlignment
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues>)Attributes[8].Value; }
@@ -26301,6 +26134,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "tblpY")]
     public Int32Value TablePositionY
     {
         get { return (Int32Value)Attributes[9].Value; }
@@ -26343,10 +26177,7 @@ public partial class TableOverlap : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableOverlapValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TableOverlap>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -26356,6 +26187,7 @@ public partial class TableOverlap : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableOverlapValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableOverlapValues>)Attributes[0].Value; }
@@ -26446,10 +26278,7 @@ public partial class TableStyleColumnBandSize : UnsignedDecimalNumberMax3Type
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class UnsignedDecimalNumberMax3Type : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<UnsignedDecimalNumberMax3Type>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -26458,6 +26287,7 @@ public abstract partial class UnsignedDecimalNumberMax3Type : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public Int32Value Val
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -26497,11 +26327,7 @@ public partial class TableIndentation : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "w"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>>(23, "type")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TableIndentation>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -26511,6 +26337,7 @@ public partial class TableIndentation : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "w")]
     public Int32Value Width
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -26523,6 +26350,7 @@ public partial class TableIndentation : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "type")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues> Type
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues>)Attributes[1].Value; }
@@ -26784,10 +26612,7 @@ public partial class TableLayout : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableLayoutValues>>(23, "type")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TableLayout>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -26797,6 +26622,7 @@ public partial class TableLayout : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "type")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableLayoutValues> Type
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableLayoutValues>)Attributes[0].Value; }
@@ -27024,10 +26850,7 @@ public partial class NumberingStart : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt16Value>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NumberingStart>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -27037,6 +26860,7 @@ public partial class NumberingStart : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public UInt16Value Val
     {
         get { return (UInt16Value)Attributes[0].Value; }
@@ -27079,10 +26903,7 @@ public partial class NumberingRestart : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RestartNumberValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NumberingRestart>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -27092,6 +26913,7 @@ public partial class NumberingRestart : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RestartNumberValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.RestartNumberValues>)Attributes[0].Value; }
@@ -27141,10 +26963,7 @@ public partial class AltChunk : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(19, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<AltChunk>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -27154,6 +26973,7 @@ public partial class AltChunk : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -27251,16 +27071,7 @@ public partial class TableLook : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(23, "val"),
-		AttributeTag.Create<OnOffValue>(23, "firstRow"),
-		AttributeTag.Create<OnOffValue>(23, "lastRow"),
-		AttributeTag.Create<OnOffValue>(23, "firstColumn"),
-		AttributeTag.Create<OnOffValue>(23, "lastColumn"),
-		AttributeTag.Create<OnOffValue>(23, "noHBand"),
-		AttributeTag.Create<OnOffValue>(23, "noVBand")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TableLook>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -27270,6 +27081,7 @@ public partial class TableLook : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public HexBinaryValue Val
     {
         get { return (HexBinaryValue)Attributes[0].Value; }
@@ -27282,6 +27094,7 @@ public partial class TableLook : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "firstRow")]
     public OnOffValue FirstRow
     {
         get { return (OnOffValue)Attributes[1].Value; }
@@ -27294,6 +27107,7 @@ public partial class TableLook : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "lastRow")]
     public OnOffValue LastRow
     {
         get { return (OnOffValue)Attributes[2].Value; }
@@ -27306,6 +27120,7 @@ public partial class TableLook : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "firstColumn")]
     public OnOffValue FirstColumn
     {
         get { return (OnOffValue)Attributes[3].Value; }
@@ -27318,6 +27133,7 @@ public partial class TableLook : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "lastColumn")]
     public OnOffValue LastColumn
     {
         get { return (OnOffValue)Attributes[4].Value; }
@@ -27330,6 +27146,7 @@ public partial class TableLook : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "noHBand")]
     public OnOffValue NoHorizontalBand
     {
         get { return (OnOffValue)Attributes[5].Value; }
@@ -27342,6 +27159,7 @@ public partial class TableLook : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "noVBand")]
     public OnOffValue NoVerticalBand
     {
         get { return (OnOffValue)Attributes[6].Value; }
@@ -27686,10 +27504,7 @@ public partial class SectionType : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.SectionMarkValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SectionType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -27699,6 +27514,7 @@ public partial class SectionType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.SectionMarkValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.SectionMarkValues>)Attributes[0].Value; }
@@ -27741,13 +27557,7 @@ public partial class PageSize : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(23, "w"),
-		AttributeTag.Create<UInt32Value>(23, "h"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageOrientationValues>>(23, "orient"),
-		AttributeTag.Create<UInt16Value>(23, "code")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PageSize>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -27757,6 +27567,7 @@ public partial class PageSize : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "w")]
     public UInt32Value Width
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -27769,6 +27580,7 @@ public partial class PageSize : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "h")]
     public UInt32Value Height
     {
         get { return (UInt32Value)Attributes[1].Value; }
@@ -27781,6 +27593,7 @@ public partial class PageSize : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "orient")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageOrientationValues> Orient
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageOrientationValues>)Attributes[2].Value; }
@@ -27793,6 +27606,7 @@ public partial class PageSize : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "code")]
     public UInt16Value Code
     {
         get { return (UInt16Value)Attributes[3].Value; }
@@ -27835,16 +27649,7 @@ public partial class PageMargin : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "top"),
-		AttributeTag.Create<UInt32Value>(23, "right"),
-		AttributeTag.Create<Int32Value>(23, "bottom"),
-		AttributeTag.Create<UInt32Value>(23, "left"),
-		AttributeTag.Create<UInt32Value>(23, "header"),
-		AttributeTag.Create<UInt32Value>(23, "footer"),
-		AttributeTag.Create<UInt32Value>(23, "gutter")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PageMargin>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -27854,6 +27659,7 @@ public partial class PageMargin : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "top")]
     public Int32Value Top
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -27866,6 +27672,7 @@ public partial class PageMargin : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "right")]
     public UInt32Value Right
     {
         get { return (UInt32Value)Attributes[1].Value; }
@@ -27878,6 +27685,7 @@ public partial class PageMargin : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "bottom")]
     public Int32Value Bottom
     {
         get { return (Int32Value)Attributes[2].Value; }
@@ -27890,6 +27698,7 @@ public partial class PageMargin : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "left")]
     public UInt32Value Left
     {
         get { return (UInt32Value)Attributes[3].Value; }
@@ -27902,6 +27711,7 @@ public partial class PageMargin : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "header")]
     public UInt32Value Header
     {
         get { return (UInt32Value)Attributes[4].Value; }
@@ -27914,6 +27724,7 @@ public partial class PageMargin : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "footer")]
     public UInt32Value Footer
     {
         get { return (UInt32Value)Attributes[5].Value; }
@@ -27926,6 +27737,7 @@ public partial class PageMargin : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "gutter")]
     public UInt32Value Gutter
     {
         get { return (UInt32Value)Attributes[6].Value; }
@@ -27968,11 +27780,7 @@ public partial class PaperSource : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt16Value>(23, "first"),
-		AttributeTag.Create<UInt16Value>(23, "other")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PaperSource>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -27982,6 +27790,7 @@ public partial class PaperSource : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "first")]
     public UInt16Value First
     {
         get { return (UInt16Value)Attributes[0].Value; }
@@ -27994,6 +27803,7 @@ public partial class PaperSource : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "other")]
     public UInt16Value Other
     {
         get { return (UInt16Value)Attributes[1].Value; }
@@ -28049,12 +27859,7 @@ public partial class PageBorders : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderZOrderValues>>(23, "zOrder"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderDisplayValues>>(23, "display"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderOffsetValues>>(23, "offsetFrom")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PageBorders>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -28064,6 +27869,7 @@ public partial class PageBorders : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "zOrder")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderZOrderValues> ZOrder
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderZOrderValues>)Attributes[0].Value; }
@@ -28076,6 +27882,7 @@ public partial class PageBorders : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "display")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderDisplayValues> Display
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderDisplayValues>)Attributes[1].Value; }
@@ -28088,6 +27895,7 @@ public partial class PageBorders : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "offsetFrom")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderOffsetValues> OffsetFrom
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderOffsetValues>)Attributes[2].Value; }
@@ -28230,13 +28038,7 @@ public partial class LineNumberType : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int16Value>(23, "countBy"),
-		AttributeTag.Create<Int16Value>(23, "start"),
-		AttributeTag.Create<StringValue>(23, "distance"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineNumberRestartValues>>(23, "restart")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<LineNumberType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -28246,6 +28048,7 @@ public partial class LineNumberType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "countBy")]
     public Int16Value CountBy
     {
         get { return (Int16Value)Attributes[0].Value; }
@@ -28258,6 +28061,7 @@ public partial class LineNumberType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "start")]
     public Int16Value Start
     {
         get { return (Int16Value)Attributes[1].Value; }
@@ -28270,6 +28074,7 @@ public partial class LineNumberType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "distance")]
     public StringValue Distance
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -28282,6 +28087,7 @@ public partial class LineNumberType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "restart")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineNumberRestartValues> Restart
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineNumberRestartValues>)Attributes[3].Value; }
@@ -28324,13 +28130,7 @@ public partial class PageNumberType : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>(23, "fmt"),
-		AttributeTag.Create<Int32Value>(23, "start"),
-		AttributeTag.Create<ByteValue>(23, "chapStyle"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>>(23, "chapSep")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PageNumberType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -28340,6 +28140,7 @@ public partial class PageNumberType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "fmt")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues> Format
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>)Attributes[0].Value; }
@@ -28352,6 +28153,7 @@ public partial class PageNumberType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "start")]
     public Int32Value Start
     {
         get { return (Int32Value)Attributes[1].Value; }
@@ -28364,6 +28166,7 @@ public partial class PageNumberType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "chapStyle")]
     public ByteValue ChapterStyle
     {
         get { return (ByteValue)Attributes[2].Value; }
@@ -28376,6 +28179,7 @@ public partial class PageNumberType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "chapSep")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues> ChapterSeparator
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>)Attributes[3].Value; }
@@ -28425,13 +28229,7 @@ public partial class Columns : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<OnOffValue>(23, "equalWidth"),
-		AttributeTag.Create<StringValue>(23, "space"),
-		AttributeTag.Create<Int16Value>(23, "num"),
-		AttributeTag.Create<OnOffValue>(23, "sep")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Columns>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -28441,6 +28239,7 @@ public partial class Columns : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "equalWidth")]
     public OnOffValue EqualWidth
     {
         get { return (OnOffValue)Attributes[0].Value; }
@@ -28453,6 +28252,7 @@ public partial class Columns : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "space")]
     public StringValue Space
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -28465,6 +28265,7 @@ public partial class Columns : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "num")]
     public Int16Value ColumnCount
     {
         get { return (Int16Value)Attributes[2].Value; }
@@ -28477,6 +28278,7 @@ public partial class Columns : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "sep")]
     public OnOffValue Separator
     {
         get { return (OnOffValue)Attributes[3].Value; }
@@ -28553,10 +28355,7 @@ public partial class VerticalTextAlignmentOnPage : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalJustificationValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<VerticalTextAlignmentOnPage>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -28566,6 +28365,7 @@ public partial class VerticalTextAlignmentOnPage : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalJustificationValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalJustificationValues>)Attributes[0].Value; }
@@ -28608,12 +28408,7 @@ public partial class DocGrid : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocGridValues>>(23, "type"),
-		AttributeTag.Create<Int32Value>(23, "linePitch"),
-		AttributeTag.Create<Int32Value>(23, "charSpace")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DocGrid>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -28623,6 +28418,7 @@ public partial class DocGrid : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "type")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocGridValues> Type
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocGridValues>)Attributes[0].Value; }
@@ -28635,6 +28431,7 @@ public partial class DocGrid : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "linePitch")]
     public Int32Value LinePitch
     {
         get { return (Int32Value)Attributes[1].Value; }
@@ -28647,6 +28444,7 @@ public partial class DocGrid : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "charSpace")]
     public Int32Value CharacterSpace
     {
         get { return (Int32Value)Attributes[2].Value; }
@@ -31675,10 +31473,7 @@ public partial class Document : OpenXmlPartRootElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentConformance>>(23, "conformance")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Document>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -31688,6 +31483,7 @@ public partial class Document : OpenXmlPartRootElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "conformance")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentConformance> Conformance
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentConformance>)Attributes[0].Value; }
@@ -33046,13 +32842,7 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(23, "rsidRPr"),
-		AttributeTag.Create<HexBinaryValue>(23, "rsidDel"),
-		AttributeTag.Create<HexBinaryValue>(23, "rsidR"),
-		AttributeTag.Create<HexBinaryValue>(23, "rsidSect")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PreviousSectionProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -33062,6 +32852,7 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidRPr")]
     public HexBinaryValue RsidRPr
     {
         get { return (HexBinaryValue)Attributes[0].Value; }
@@ -33074,6 +32865,7 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidDel")]
     public HexBinaryValue RsidDel
     {
         get { return (HexBinaryValue)Attributes[1].Value; }
@@ -33086,6 +32878,7 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidR")]
     public HexBinaryValue RsidR
     {
         get { return (HexBinaryValue)Attributes[2].Value; }
@@ -33098,6 +32891,7 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidSect")]
     public HexBinaryValue RsidSect
     {
         get { return (HexBinaryValue)Attributes[3].Value; }
@@ -34865,10 +34659,7 @@ public partial class NumberingLevelReference : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NumberingLevelReference>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -34878,6 +34669,7 @@ public partial class NumberingLevelReference : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public Int32Value Val
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -34999,10 +34791,7 @@ public partial class AbstractNumId : NonNegativeDecimalNumberType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class NonNegativeDecimalNumberType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NonNegativeDecimalNumberType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -35011,6 +34800,7 @@ public abstract partial class NonNegativeDecimalNumberType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public Int32Value Val
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -35050,13 +34840,7 @@ public partial class NumberingChange : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "original"),
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NumberingChange>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -35066,6 +34850,7 @@ public partial class NumberingChange : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "original")]
     public StringValue Original
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -35078,6 +34863,7 @@ public partial class NumberingChange : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -35090,6 +34876,7 @@ public partial class NumberingChange : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[2].Value; }
@@ -35102,6 +34889,7 @@ public partial class NumberingChange : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -35144,12 +34932,7 @@ public partial class TabStop : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopValues>>(23, "val"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopLeaderCharValues>>(23, "leader"),
-		AttributeTag.Create<Int32Value>(23, "pos")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TabStop>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -35159,6 +34942,7 @@ public partial class TabStop : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopValues>)Attributes[0].Value; }
@@ -35171,6 +34955,7 @@ public partial class TabStop : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "leader")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopLeaderCharValues> Leader
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopLeaderCharValues>)Attributes[1].Value; }
@@ -35183,6 +34968,7 @@ public partial class TabStop : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "pos")]
     public Int32Value Position
     {
         get { return (Int32Value)Attributes[2].Value; }
@@ -35697,13 +35483,7 @@ public partial class SectionProperties : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(23, "rsidRPr"),
-		AttributeTag.Create<HexBinaryValue>(23, "rsidDel"),
-		AttributeTag.Create<HexBinaryValue>(23, "rsidR"),
-		AttributeTag.Create<HexBinaryValue>(23, "rsidSect")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SectionProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -35713,6 +35493,7 @@ public partial class SectionProperties : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidRPr")]
     public HexBinaryValue RsidRPr
     {
         get { return (HexBinaryValue)Attributes[0].Value; }
@@ -35725,6 +35506,7 @@ public partial class SectionProperties : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidDel")]
     public HexBinaryValue RsidDel
     {
         get { return (HexBinaryValue)Attributes[1].Value; }
@@ -35737,6 +35519,7 @@ public partial class SectionProperties : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidR")]
     public HexBinaryValue RsidR
     {
         get { return (HexBinaryValue)Attributes[2].Value; }
@@ -35749,6 +35532,7 @@ public partial class SectionProperties : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "rsidSect")]
     public HexBinaryValue RsidSect
     {
         get { return (HexBinaryValue)Attributes[3].Value; }
@@ -36066,10 +35850,7 @@ public partial class FormFieldName : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<FormFieldName>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -36079,6 +35860,7 @@ public partial class FormFieldName : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -36169,10 +35951,7 @@ public partial class ExitMacro : MacroNameType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class MacroNameType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<MacroNameType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -36181,6 +35960,7 @@ public abstract partial class MacroNameType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -36220,11 +36000,7 @@ public partial class HelpText : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>>(23, "type"),
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<HelpText>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -36234,6 +36010,7 @@ public partial class HelpText : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "type")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues> Type
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>)Attributes[0].Value; }
@@ -36246,6 +36023,7 @@ public partial class HelpText : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -36288,11 +36066,7 @@ public partial class StatusText : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>>(23, "type"),
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<StatusText>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -36302,6 +36076,7 @@ public partial class StatusText : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "type")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues> Type
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues>)Attributes[0].Value; }
@@ -36314,6 +36089,7 @@ public partial class StatusText : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -36723,10 +36499,7 @@ public partial class DefaultDropDownListItemIndex : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DefaultDropDownListItemIndex>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -36736,6 +36509,7 @@ public partial class DefaultDropDownListItemIndex : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public Int32Value Val
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -36857,10 +36631,7 @@ public partial class FrameName : String255Type
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class String255Type : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<String255Type>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -36869,6 +36640,7 @@ public abstract partial class String255Type : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -36908,10 +36680,7 @@ public partial class TextBoxFormFieldType : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TextBoxFormFieldType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -36921,6 +36690,7 @@ public partial class TextBoxFormFieldType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldValues>)Attributes[0].Value; }
@@ -36963,10 +36733,7 @@ public partial class MaxLength : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int16Value>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<MaxLength>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -36976,6 +36743,7 @@ public partial class MaxLength : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public Int16Value Val
     {
         get { return (Int16Value)Attributes[0].Value; }
@@ -37018,10 +36786,7 @@ public partial class Format : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Format>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -37031,6 +36796,7 @@ public partial class Format : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -37073,11 +36839,7 @@ public partial class Column : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "w"),
-		AttributeTag.Create<StringValue>(23, "space")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Column>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -37087,6 +36849,7 @@ public partial class Column : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "w")]
     public StringValue Width
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -37099,6 +36862,7 @@ public partial class Column : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "space")]
     public StringValue Space
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -37148,12 +36912,7 @@ public partial class SectionPropertiesChange : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SectionPropertiesChange>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -37163,6 +36922,7 @@ public partial class SectionPropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -37175,6 +36935,7 @@ public partial class SectionPropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[1].Value; }
@@ -37187,6 +36948,7 @@ public partial class SectionPropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -37291,12 +37053,7 @@ public partial class ParagraphMarkRunPropertiesChange : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ParagraphMarkRunPropertiesChange>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -37306,6 +37063,7 @@ public partial class ParagraphMarkRunPropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -37318,6 +37076,7 @@ public partial class ParagraphMarkRunPropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[1].Value; }
@@ -37330,6 +37089,7 @@ public partial class ParagraphMarkRunPropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -37527,10 +37287,7 @@ public partial class RubyAlign : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.RubyAlignValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<RubyAlign>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -37540,6 +37297,7 @@ public partial class RubyAlign : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RubyAlignValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.RubyAlignValues>)Attributes[0].Value; }
@@ -37582,10 +37340,7 @@ public partial class PhoneticGuideRaise : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int16Value>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PhoneticGuideRaise>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -37595,6 +37350,7 @@ public partial class PhoneticGuideRaise : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public Int16Value Val
     {
         get { return (Int16Value)Attributes[0].Value; }
@@ -37637,10 +37393,7 @@ public partial class LanguageId : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<LanguageId>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -37650,6 +37403,7 @@ public partial class LanguageId : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -38454,10 +38208,7 @@ public partial class SdtDateMappingType : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DateFormatValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SdtDateMappingType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -38467,6 +38218,7 @@ public partial class SdtDateMappingType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DateFormatValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.DateFormatValues>)Attributes[0].Value; }
@@ -38509,10 +38261,7 @@ public partial class Calendar : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CalendarValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Calendar>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -38522,6 +38271,7 @@ public partial class Calendar : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CalendarValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.CalendarValues>)Attributes[0].Value; }
@@ -38564,11 +38314,7 @@ public partial class ListItem : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "displayText"),
-		AttributeTag.Create<StringValue>(23, "value")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ListItem>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -38578,6 +38324,7 @@ public partial class ListItem : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "displayText")]
     public StringValue DisplayText
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -38590,6 +38337,7 @@ public partial class ListItem : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "value")]
     public StringValue Value
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -40495,12 +40243,7 @@ public partial class CustomXmlAttribute : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "uri"),
-		AttributeTag.Create<StringValue>(23, "name"),
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<CustomXmlAttribute>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -40510,6 +40253,7 @@ public partial class CustomXmlAttribute : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "uri")]
     public StringValue Uri
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -40522,6 +40266,7 @@ public partial class CustomXmlAttribute : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -40534,6 +40279,7 @@ public partial class CustomXmlAttribute : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -40576,10 +40322,7 @@ public partial class GridColumn : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "w")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<GridColumn>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -40589,6 +40332,7 @@ public partial class GridColumn : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "w")]
     public StringValue Width
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -40638,10 +40382,7 @@ public partial class TableGridChange : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TableGridChange>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -40651,6 +40392,7 @@ public partial class TableGridChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -40755,12 +40497,7 @@ public partial class TableCellPropertiesChange : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TableCellPropertiesChange>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -40770,6 +40507,7 @@ public partial class TableCellPropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -40782,6 +40520,7 @@ public partial class TableCellPropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[1].Value; }
@@ -40794,6 +40533,7 @@ public partial class TableCellPropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -41222,12 +40962,7 @@ public partial class TablePropertiesChange : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TablePropertiesChange>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -41237,6 +40972,7 @@ public partial class TablePropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -41249,6 +40985,7 @@ public partial class TablePropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[1].Value; }
@@ -41261,6 +40998,7 @@ public partial class TablePropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -41365,12 +41103,7 @@ public partial class TablePropertyExceptionsChange : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TablePropertyExceptionsChange>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -41380,6 +41113,7 @@ public partial class TablePropertyExceptionsChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -41392,6 +41126,7 @@ public partial class TablePropertyExceptionsChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[1].Value; }
@@ -41404,6 +41139,7 @@ public partial class TablePropertyExceptionsChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -41940,10 +41676,7 @@ public partial class FootnotePosition : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnotePositionValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<FootnotePosition>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -41953,6 +41686,7 @@ public partial class FootnotePosition : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnotePositionValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnotePositionValues>)Attributes[0].Value; }
@@ -41995,11 +41729,7 @@ public partial class NumberingFormat : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>(23, "val"),
-		AttributeTag.Create<StringValue>(23, "format")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NumberingFormat>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -42009,6 +41739,7 @@ public partial class NumberingFormat : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>)Attributes[0].Value; }
@@ -42021,6 +41752,7 @@ public partial class NumberingFormat : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "format")]
     public StringValue Format
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -42063,10 +41795,7 @@ public partial class EndnotePosition : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.EndnotePositionValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<EndnotePosition>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -42076,6 +41805,7 @@ public partial class EndnotePosition : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.EndnotePositionValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.EndnotePositionValues>)Attributes[0].Value; }
@@ -42166,10 +41896,7 @@ public partial class EndnoteSpecialReference : FootnoteEndnoteSeparatorReference
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class FootnoteEndnoteSeparatorReferenceType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<IntegerValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<FootnoteEndnoteSeparatorReferenceType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -42178,6 +41905,7 @@ public abstract partial class FootnoteEndnoteSeparatorReferenceType : OpenXmlLea
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public IntegerValue Id
     {
         get { return (IntegerValue)Attributes[0].Value; }
@@ -42265,10 +41993,7 @@ public partial class ColumnDelimiter : UnsignedDecimalNumberType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class UnsignedDecimalNumberType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<UnsignedDecimalNumberType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -42277,6 +42002,7 @@ public abstract partial class UnsignedDecimalNumberType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public UInt32Value Val
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -42316,10 +42042,7 @@ public partial class UniqueTag : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Base64BinaryValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<UniqueTag>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -42329,6 +42052,7 @@ public partial class UniqueTag : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public Base64BinaryValue Val
     {
         get { return (Base64BinaryValue)Attributes[0].Value; }
@@ -42505,10 +42229,7 @@ public partial class MailMergeFieldType : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeOdsoFieldValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<MailMergeFieldType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -42518,6 +42239,7 @@ public partial class MailMergeFieldType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeOdsoFieldValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeOdsoFieldValues>)Attributes[0].Value; }
@@ -42560,10 +42282,7 @@ public partial class MailMergeSource : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeSourceValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<MailMergeSource>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -42573,6 +42292,7 @@ public partial class MailMergeSource : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeSourceValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeSourceValues>)Attributes[0].Value; }
@@ -42800,10 +42520,7 @@ public partial class MainDocumentType : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDocumentValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<MainDocumentType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -42813,6 +42530,7 @@ public partial class MainDocumentType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDocumentValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDocumentValues>)Attributes[0].Value; }
@@ -42855,10 +42573,7 @@ public partial class DataType : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDataValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DataType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -42868,6 +42583,7 @@ public partial class DataType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDataValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDataValues>)Attributes[0].Value; }
@@ -42910,10 +42626,7 @@ public partial class Destination : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDestinationValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Destination>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -42923,6 +42636,7 @@ public partial class Destination : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDestinationValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDestinationValues>)Attributes[0].Value; }
@@ -43160,11 +42874,7 @@ public partial class DocumentVariable : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "name"),
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DocumentVariable>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -43174,6 +42884,7 @@ public partial class DocumentVariable : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -43186,6 +42897,7 @@ public partial class DocumentVariable : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -43338,10 +43050,7 @@ public partial class TemplateCode : LongHexNumberType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class LongHexNumberType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<LongHexNumberType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -43350,6 +43059,7 @@ public abstract partial class LongHexNumberType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public HexBinaryValue Val
     {
         get { return (HexBinaryValue)Attributes[0].Value; }
@@ -44891,10 +44601,7 @@ public partial class MarginHeight : PixelsMeasureType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class PixelsMeasureType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PixelsMeasureType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -44903,6 +44610,7 @@ public abstract partial class PixelsMeasureType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public UInt32Value Val
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -44942,10 +44650,7 @@ public partial class ScrollbarVisibility : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameScrollbarVisibilityValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ScrollbarVisibility>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -44955,6 +44660,7 @@ public partial class ScrollbarVisibility : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameScrollbarVisibilityValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameScrollbarVisibilityValues>)Attributes[0].Value; }
@@ -45169,10 +44875,7 @@ public partial class DrawingGridVerticalOrigin : TwipsMeasureType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class TwipsMeasureType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TwipsMeasureType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -45181,6 +44884,7 @@ public abstract partial class TwipsMeasureType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -45371,10 +45075,7 @@ public partial class FrameLayout : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameLayoutValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<FrameLayout>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -45384,6 +45085,7 @@ public partial class FrameLayout : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameLayoutValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameLayoutValues>)Attributes[0].Value; }
@@ -45789,10 +45491,7 @@ public partial class LevelSuffix : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelSuffixValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<LevelSuffix>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -45802,6 +45501,7 @@ public partial class LevelSuffix : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelSuffixValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelSuffixValues>)Attributes[0].Value; }
@@ -45844,11 +45544,7 @@ public partial class LevelText : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val"),
-		AttributeTag.Create<OnOffValue>(23, "null")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<LevelText>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -45858,6 +45554,7 @@ public partial class LevelText : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -45870,6 +45567,7 @@ public partial class LevelText : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "null")]
     public OnOffValue Null
     {
         get { return (OnOffValue)Attributes[1].Value; }
@@ -45912,12 +45610,7 @@ public partial class LegacyNumbering : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<OnOffValue>(23, "legacy"),
-		AttributeTag.Create<StringValue>(23, "legacySpace"),
-		AttributeTag.Create<StringValue>(23, "legacyIndent")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<LegacyNumbering>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -45927,6 +45620,7 @@ public partial class LegacyNumbering : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "legacy")]
     public OnOffValue Legacy
     {
         get { return (OnOffValue)Attributes[0].Value; }
@@ -45939,6 +45633,7 @@ public partial class LegacyNumbering : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "legacySpace")]
     public StringValue LegacySpace
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -45951,6 +45646,7 @@ public partial class LegacyNumbering : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "legacyIndent")]
     public StringValue LegacyIndent
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -45993,10 +45689,7 @@ public partial class LevelJustification : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelJustificationValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<LevelJustification>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -46006,6 +45699,7 @@ public partial class LevelJustification : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelJustificationValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelJustificationValues>)Attributes[0].Value; }
@@ -47353,10 +47047,7 @@ public partial class MultiLevelType : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.MultiLevelValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<MultiLevelType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -47366,6 +47057,7 @@ public partial class MultiLevelType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MultiLevelValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.MultiLevelValues>)Attributes[0].Value; }
@@ -47437,12 +47129,7 @@ public partial class Level : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "ilvl"),
-		AttributeTag.Create<HexBinaryValue>(23, "tplc"),
-		AttributeTag.Create<OnOffValue>(23, "tentative")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Level>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -47452,6 +47139,7 @@ public partial class Level : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "ilvl")]
     public Int32Value LevelIndex
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -47464,6 +47152,7 @@ public partial class Level : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "tplc")]
     public HexBinaryValue TemplateCode
     {
         get { return (HexBinaryValue)Attributes[1].Value; }
@@ -47476,6 +47165,7 @@ public partial class Level : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "tentative")]
     public OnOffValue Tentative
     {
         get { return (OnOffValue)Attributes[2].Value; }
@@ -47747,10 +47437,7 @@ public partial class LevelOverride : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "ilvl")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<LevelOverride>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -47760,6 +47447,7 @@ public partial class LevelOverride : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "ilvl")]
     public Int32Value LevelIndex
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -47881,10 +47569,7 @@ public partial class NumberingPictureBullet : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "numPicBulletId")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NumberingPictureBullet>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -47894,6 +47579,7 @@ public partial class NumberingPictureBullet : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "numPicBulletId")]
     public Int32Value NumberingPictureBulletId
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -48025,10 +47711,7 @@ public partial class AbstractNum : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "abstractNumId")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<AbstractNum>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -48038,6 +47721,7 @@ public partial class AbstractNum : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "abstractNumId")]
     public Int32Value AbstractNumberId
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -48222,10 +47906,7 @@ public partial class NumberingInstance : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "numId")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NumberingInstance>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -48235,6 +47916,7 @@ public partial class NumberingInstance : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "numId")]
     public Int32Value NumberID
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -49397,10 +49079,7 @@ public partial class StyleName : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<StyleName>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -49410,6 +49089,7 @@ public partial class StyleName : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -49452,10 +49132,7 @@ public partial class UIPriority : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<UIPriority>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -49465,6 +49142,7 @@ public partial class UIPriority : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public Int32Value Val
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -50570,10 +50248,7 @@ public partial class TableStyleProperties : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableStyleOverrideValues>>(23, "type")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TableStyleProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -50583,6 +50258,7 @@ public partial class TableStyleProperties : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "type")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableStyleOverrideValues> Type
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableStyleOverrideValues>)Attributes[0].Value; }
@@ -50740,15 +50416,7 @@ public partial class LatentStyleExceptionInfo : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "name"),
-		AttributeTag.Create<OnOffValue>(23, "locked"),
-		AttributeTag.Create<Int32Value>(23, "uiPriority"),
-		AttributeTag.Create<OnOffValue>(23, "semiHidden"),
-		AttributeTag.Create<OnOffValue>(23, "unhideWhenUsed"),
-		AttributeTag.Create<OnOffValue>(23, "qFormat")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<LatentStyleExceptionInfo>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -50758,6 +50426,7 @@ public partial class LatentStyleExceptionInfo : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -50770,6 +50439,7 @@ public partial class LatentStyleExceptionInfo : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "locked")]
     public OnOffValue Locked
     {
         get { return (OnOffValue)Attributes[1].Value; }
@@ -50782,6 +50452,7 @@ public partial class LatentStyleExceptionInfo : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "uiPriority")]
     public Int32Value UiPriority
     {
         get { return (Int32Value)Attributes[2].Value; }
@@ -50794,6 +50465,7 @@ public partial class LatentStyleExceptionInfo : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "semiHidden")]
     public OnOffValue SemiHidden
     {
         get { return (OnOffValue)Attributes[3].Value; }
@@ -50806,6 +50478,7 @@ public partial class LatentStyleExceptionInfo : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "unhideWhenUsed")]
     public OnOffValue UnhideWhenUsed
     {
         get { return (OnOffValue)Attributes[4].Value; }
@@ -50818,6 +50491,7 @@ public partial class LatentStyleExceptionInfo : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "qFormat")]
     public OnOffValue PrimaryStyle
     {
         get { return (OnOffValue)Attributes[5].Value; }
@@ -50984,15 +50658,7 @@ public partial class LatentStyles : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<OnOffValue>(23, "defLockedState"),
-		AttributeTag.Create<Int32Value>(23, "defUIPriority"),
-		AttributeTag.Create<OnOffValue>(23, "defSemiHidden"),
-		AttributeTag.Create<OnOffValue>(23, "defUnhideWhenUsed"),
-		AttributeTag.Create<OnOffValue>(23, "defQFormat"),
-		AttributeTag.Create<Int32Value>(23, "count")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<LatentStyles>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -51002,6 +50668,7 @@ public partial class LatentStyles : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "defLockedState")]
     public OnOffValue DefaultLockedState
     {
         get { return (OnOffValue)Attributes[0].Value; }
@@ -51014,6 +50681,7 @@ public partial class LatentStyles : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "defUIPriority")]
     public Int32Value DefaultUiPriority
     {
         get { return (Int32Value)Attributes[1].Value; }
@@ -51026,6 +50694,7 @@ public partial class LatentStyles : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "defSemiHidden")]
     public OnOffValue DefaultSemiHidden
     {
         get { return (OnOffValue)Attributes[2].Value; }
@@ -51038,6 +50707,7 @@ public partial class LatentStyles : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "defUnhideWhenUsed")]
     public OnOffValue DefaultUnhideWhenUsed
     {
         get { return (OnOffValue)Attributes[3].Value; }
@@ -51050,6 +50720,7 @@ public partial class LatentStyles : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "defQFormat")]
     public OnOffValue DefaultPrimaryStyle
     {
         get { return (OnOffValue)Attributes[4].Value; }
@@ -51062,6 +50733,7 @@ public partial class LatentStyles : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "count")]
     public Int32Value Count
     {
         get { return (Int32Value)Attributes[5].Value; }
@@ -51187,13 +50859,7 @@ public partial class Style : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StyleValues>>(23, "type"),
-		AttributeTag.Create<StringValue>(23, "styleId"),
-		AttributeTag.Create<OnOffValue>(23, "default"),
-		AttributeTag.Create<OnOffValue>(23, "customStyle")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Style>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -51203,6 +50869,7 @@ public partial class Style : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "type")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.StyleValues> Type
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.StyleValues>)Attributes[0].Value; }
@@ -51215,6 +50882,7 @@ public partial class Style : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "styleId")]
     public StringValue StyleId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -51227,6 +50895,7 @@ public partial class Style : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "default")]
     public OnOffValue Default
     {
         get { return (OnOffValue)Attributes[2].Value; }
@@ -51239,6 +50908,7 @@ public partial class Style : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "customStyle")]
     public OnOffValue CustomStyle
     {
         get { return (OnOffValue)Attributes[3].Value; }
@@ -51666,10 +51336,7 @@ public partial class Font : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "name")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Font>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -51679,6 +51346,7 @@ public partial class Font : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -52036,10 +51704,7 @@ public partial class BottomMarginDiv : SignedTwipsMeasureType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class SignedTwipsMeasureType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SignedTwipsMeasureType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -52048,6 +51713,7 @@ public abstract partial class SignedTwipsMeasureType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -52444,10 +52110,7 @@ public partial class Div : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Div>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -52457,6 +52120,7 @@ public partial class Div : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -52676,13 +52340,7 @@ public partial class Comment : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "initials"),
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Comment>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -52692,6 +52350,7 @@ public partial class Comment : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "initials")]
     public StringValue Initials
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -52704,6 +52363,7 @@ public partial class Comment : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -52716,6 +52376,7 @@ public partial class Comment : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[2].Value; }
@@ -52728,6 +52389,7 @@ public partial class Comment : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -53090,11 +52752,7 @@ public partial class Endnote : FootnoteEndnoteType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class FootnoteEndnoteType : OpenXmlCompositeElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnoteEndnoteValues>>(23, "type"),
-		AttributeTag.Create<IntegerValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<FootnoteEndnoteType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -53103,6 +52761,7 @@ public abstract partial class FootnoteEndnoteType : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "type")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnoteEndnoteValues> Type
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnoteEndnoteValues>)Attributes[0].Value; }
@@ -53115,6 +52774,7 @@ public abstract partial class FootnoteEndnoteType : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public IntegerValue Id
     {
         get { return (IntegerValue)Attributes[1].Value; }
@@ -53290,10 +52950,7 @@ public partial class Behavior : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartBehaviorValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Behavior>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -53303,6 +52960,7 @@ public partial class Behavior : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartBehaviorValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartBehaviorValues>)Attributes[0].Value; }
@@ -53345,10 +53003,7 @@ public partial class DocPartType : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DocPartType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -53358,6 +53013,7 @@ public partial class DocPartType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartValues>)Attributes[0].Value; }
@@ -53400,10 +53056,7 @@ public partial class Gallery : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartGalleryValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Gallery>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -53413,6 +53066,7 @@ public partial class Gallery : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartGalleryValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartGalleryValues>)Attributes[0].Value; }
@@ -53455,11 +53109,7 @@ public partial class AutoCaption : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "name"),
-		AttributeTag.Create<StringValue>(23, "caption")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<AutoCaption>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -53469,6 +53119,7 @@ public partial class AutoCaption : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -53481,6 +53132,7 @@ public partial class AutoCaption : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "caption")]
     public StringValue Caption
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -53523,16 +53175,7 @@ public partial class Caption : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "name"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CaptionPositionValues>>(23, "pos"),
-		AttributeTag.Create<OnOffValue>(23, "chapNum"),
-		AttributeTag.Create<Int32Value>(23, "heading"),
-		AttributeTag.Create<OnOffValue>(23, "noLabel"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>>(23, "numFmt"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>>(23, "sep")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Caption>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -53542,6 +53185,7 @@ public partial class Caption : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -53554,6 +53198,7 @@ public partial class Caption : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "pos")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CaptionPositionValues> Position
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.CaptionPositionValues>)Attributes[1].Value; }
@@ -53566,6 +53211,7 @@ public partial class Caption : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "chapNum")]
     public OnOffValue ChapterNumber
     {
         get { return (OnOffValue)Attributes[2].Value; }
@@ -53578,6 +53224,7 @@ public partial class Caption : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "heading")]
     public Int32Value Heading
     {
         get { return (Int32Value)Attributes[3].Value; }
@@ -53590,6 +53237,7 @@ public partial class Caption : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "noLabel")]
     public OnOffValue NoLabel
     {
         get { return (OnOffValue)Attributes[4].Value; }
@@ -53602,6 +53250,7 @@ public partial class Caption : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "numFmt")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues> NumberFormat
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues>)Attributes[5].Value; }
@@ -53614,6 +53263,7 @@ public partial class Caption : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "sep")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues> Separator
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues>)Attributes[6].Value; }
@@ -53742,13 +53392,7 @@ public partial class DocumentBackground : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "color"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(23, "themeColor"),
-		AttributeTag.Create<StringValue>(23, "themeTint"),
-		AttributeTag.Create<StringValue>(23, "themeShade")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DocumentBackground>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -53758,6 +53402,7 @@ public partial class DocumentBackground : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "color")]
     public StringValue Color
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -53770,6 +53415,7 @@ public partial class DocumentBackground : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeColor")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>)Attributes[1].Value; }
@@ -53782,6 +53428,7 @@ public partial class DocumentBackground : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeTint")]
     public StringValue ThemeTint
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -53794,6 +53441,7 @@ public partial class DocumentBackground : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeShade")]
     public StringValue ThemeShade
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -53970,11 +53618,7 @@ public partial class DocPartName : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val"),
-		AttributeTag.Create<OnOffValue>(23, "decorated")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DocPartName>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -53984,6 +53628,7 @@ public partial class DocPartName : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -53996,6 +53641,7 @@ public partial class DocPartName : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "decorated")]
     public OnOffValue Decorated
     {
         get { return (OnOffValue)Attributes[1].Value; }
@@ -54162,10 +53808,7 @@ public partial class DocPartTypes : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<OnOffValue>(23, "all")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DocPartTypes>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -54175,6 +53818,7 @@ public partial class DocPartTypes : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "all")]
     public OnOffValue All
     {
         get { return (OnOffValue)Attributes[0].Value; }
@@ -54330,10 +53974,7 @@ public partial class DocPartId : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DocPartId>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -54343,6 +53984,7 @@ public partial class DocPartId : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -55134,12 +54776,7 @@ public partial class CompatibilitySetting : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CompatSettingNameValues>>(23, "name"),
-		AttributeTag.Create<StringValue>(23, "uri"),
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<CompatibilitySetting>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -55149,6 +54786,7 @@ public partial class CompatibilitySetting : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "name")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CompatSettingNameValues> Name
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.CompatSettingNameValues>)Attributes[0].Value; }
@@ -55161,6 +54799,7 @@ public partial class CompatibilitySetting : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "uri")]
     public StringValue Uri
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -55173,6 +54812,7 @@ public partial class CompatibilitySetting : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -55263,11 +54903,7 @@ public partial class TableCellRightMargin : TableWidthDxaNilType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class TableWidthDxaNilType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int16Value>(23, "w"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthValues>>(23, "type")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TableWidthDxaNilType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -55276,6 +54912,7 @@ public abstract partial class TableWidthDxaNilType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "w")]
     public Int16Value Width
     {
         get { return (Int16Value)Attributes[0].Value; }
@@ -55288,6 +54925,7 @@ public abstract partial class TableWidthDxaNilType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "type")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthValues> Type
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthValues>)Attributes[1].Value; }
@@ -55746,12 +55384,7 @@ public partial class TableRowPropertiesChange : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TableRowPropertiesChange>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -55761,6 +55394,7 @@ public partial class TableRowPropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -55773,6 +55407,7 @@ public partial class TableRowPropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[1].Value; }
@@ -55785,6 +55420,7 @@ public partial class TableRowPropertiesChange : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -56577,12 +56213,7 @@ public partial class Control : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "name"),
-		AttributeTag.Create<StringValue>(23, "shapeid"),
-		AttributeTag.Create<StringValue>(19, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Control>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -56592,6 +56223,7 @@ public partial class Control : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -56604,6 +56236,7 @@ public partial class Control : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "shapeid")]
     public StringValue ShapeId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -56616,6 +56249,7 @@ public partial class Control : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -56737,14 +56371,7 @@ public partial class ObjectEmbed : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>>(23, "drawAspect"),
-		AttributeTag.Create<StringValue>(19, "id"),
-		AttributeTag.Create<StringValue>(23, "progId"),
-		AttributeTag.Create<StringValue>(23, "shapeId"),
-		AttributeTag.Create<StringValue>(23, "fieldCodes")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ObjectEmbed>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -56754,6 +56381,7 @@ public partial class ObjectEmbed : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "drawAspect")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect> drawAspect
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>)Attributes[0].Value; }
@@ -56766,6 +56394,7 @@ public partial class ObjectEmbed : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -56778,6 +56407,7 @@ public partial class ObjectEmbed : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "progId")]
     public StringValue ProgId
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -56790,6 +56420,7 @@ public partial class ObjectEmbed : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "shapeId")]
     public StringValue ShapeId
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -56802,6 +56433,7 @@ public partial class ObjectEmbed : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "fieldCodes")]
     public StringValue FieldCodes
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -56844,16 +56476,7 @@ public partial class ObjectLink : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectUpdateMode>>(23, "updateMode"),
-		AttributeTag.Create<OnOffValue>(23, "lockedField"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>>(23, "drawAspect"),
-		AttributeTag.Create<StringValue>(19, "id"),
-		AttributeTag.Create<StringValue>(23, "progId"),
-		AttributeTag.Create<StringValue>(23, "shapeId"),
-		AttributeTag.Create<StringValue>(23, "fieldCodes")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ObjectLink>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -56863,6 +56486,7 @@ public partial class ObjectLink : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "updateMode")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectUpdateMode> UpdateMode
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectUpdateMode>)Attributes[0].Value; }
@@ -56875,6 +56499,7 @@ public partial class ObjectLink : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "lockedField")]
     public OnOffValue LockedField
     {
         get { return (OnOffValue)Attributes[1].Value; }
@@ -56887,6 +56512,7 @@ public partial class ObjectLink : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "drawAspect")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect> drawAspect
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect>)Attributes[2].Value; }
@@ -56899,6 +56525,7 @@ public partial class ObjectLink : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -56911,6 +56538,7 @@ public partial class ObjectLink : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "progId")]
     public StringValue ProgId
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -56923,6 +56551,7 @@ public partial class ObjectLink : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "shapeId")]
     public StringValue ShapeId
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -56935,6 +56564,7 @@ public partial class ObjectLink : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "fieldCodes")]
     public StringValue FieldCodes
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -56977,10 +56607,7 @@ public partial class Lock : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.LockingValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Lock>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -56990,6 +56617,7 @@ public partial class Lock : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LockingValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.LockingValues>)Attributes[0].Value; }
@@ -57132,12 +56760,7 @@ public partial class DataBinding : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "prefixMappings"),
-		AttributeTag.Create<StringValue>(23, "xpath"),
-		AttributeTag.Create<StringValue>(23, "storeItemID")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DataBinding>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -57147,6 +56770,7 @@ public partial class DataBinding : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "prefixMappings")]
     public StringValue PrefixMappings
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -57159,6 +56783,7 @@ public partial class DataBinding : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "xpath")]
     public StringValue XPath
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -57171,6 +56796,7 @@ public partial class DataBinding : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "storeItemID")]
     public StringValue StoreItemId
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -57220,10 +56846,7 @@ public partial class SdtContentComboBox : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "lastValue")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SdtContentComboBox>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -57233,6 +56856,7 @@ public partial class SdtContentComboBox : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "lastValue")]
     public StringValue LastValue
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -57322,10 +56946,7 @@ public partial class SdtContentDate : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<DateTimeValue>(23, "fullDate")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SdtContentDate>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -57335,6 +56956,7 @@ public partial class SdtContentDate : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "fullDate")]
     public DateTimeValue FullDate
     {
         get { return (DateTimeValue)Attributes[0].Value; }
@@ -57728,10 +57350,7 @@ public partial class SdtContentDropDownList : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "lastValue")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SdtContentDropDownList>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -57741,6 +57360,7 @@ public partial class SdtContentDropDownList : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "lastValue")]
     public StringValue LastValue
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -57817,10 +57437,7 @@ public partial class SdtContentText : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<OnOffValue>(23, "multiLine")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SdtContentText>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -57830,6 +57447,7 @@ public partial class SdtContentText : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "multiLine")]
     public OnOffValue MultiLine
     {
         get { return (OnOffValue)Attributes[0].Value; }
@@ -57872,26 +57490,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<OnOffValue>(23, "recommended"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>>(23, "cryptProviderType"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>>(23, "cryptAlgorithmClass"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>>(23, "cryptAlgorithmType"),
-		AttributeTag.Create<Int32Value>(23, "cryptAlgorithmSid"),
-		AttributeTag.Create<UInt32Value>(23, "cryptSpinCount"),
-		AttributeTag.Create<StringValue>(23, "cryptProvider"),
-		AttributeTag.Create<HexBinaryValue>(23, "algIdExt"),
-		AttributeTag.Create<StringValue>(23, "algIdExtSource"),
-		AttributeTag.Create<HexBinaryValue>(23, "cryptProviderTypeExt"),
-		AttributeTag.Create<StringValue>(23, "cryptProviderTypeExtSource"),
-		AttributeTag.Create<Base64BinaryValue>(23, "hash"),
-		AttributeTag.Create<Base64BinaryValue>(23, "salt"),
-		AttributeTag.Create<StringValue>(23, "algorithmName"),
-		AttributeTag.Create<Base64BinaryValue>(23, "hashValue"),
-		AttributeTag.Create<Base64BinaryValue>(23, "saltValue"),
-		AttributeTag.Create<Int32Value>(23, "spinCount")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<WriteProtection>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -57901,6 +57500,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "recommended")]
     public OnOffValue Recommended
     {
         get { return (OnOffValue)Attributes[0].Value; }
@@ -57913,6 +57513,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "cryptProviderType")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues> CryptographicProviderType
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>)Attributes[1].Value; }
@@ -57925,6 +57526,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "cryptAlgorithmClass")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues> CryptographicAlgorithmClass
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>)Attributes[2].Value; }
@@ -57937,6 +57539,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "cryptAlgorithmType")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues> CryptographicAlgorithmType
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>)Attributes[3].Value; }
@@ -57949,6 +57552,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "cryptAlgorithmSid")]
     public Int32Value CryptographicAlgorithmSid
     {
         get { return (Int32Value)Attributes[4].Value; }
@@ -57961,6 +57565,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "cryptSpinCount")]
     public UInt32Value CryptographicSpinCount
     {
         get { return (UInt32Value)Attributes[5].Value; }
@@ -57973,6 +57578,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "cryptProvider")]
     public StringValue CryptographicProvider
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -57985,6 +57591,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "algIdExt")]
     public HexBinaryValue AlgorithmIdExtensibility
     {
         get { return (HexBinaryValue)Attributes[7].Value; }
@@ -57997,6 +57604,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "algIdExtSource")]
     public StringValue AlgorithmIdExtensibilitySource
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -58009,6 +57617,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "cryptProviderTypeExt")]
     public HexBinaryValue CryptographicProviderTypeExtensibility
     {
         get { return (HexBinaryValue)Attributes[9].Value; }
@@ -58021,6 +57630,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "cryptProviderTypeExtSource")]
     public StringValue CryptographicProviderTypeExtSource
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -58033,6 +57643,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "hash")]
     public Base64BinaryValue Hash
     {
         get { return (Base64BinaryValue)Attributes[11].Value; }
@@ -58045,6 +57656,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "salt")]
     public Base64BinaryValue Salt
     {
         get { return (Base64BinaryValue)Attributes[12].Value; }
@@ -58057,6 +57669,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "algorithmName")]
     public StringValue AlgorithmName
     {
         get { return (StringValue)Attributes[13].Value; }
@@ -58069,6 +57682,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "hashValue")]
     public Base64BinaryValue HashValue
     {
         get { return (Base64BinaryValue)Attributes[14].Value; }
@@ -58081,6 +57695,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "saltValue")]
     public Base64BinaryValue SaltValue
     {
         get { return (Base64BinaryValue)Attributes[15].Value; }
@@ -58093,6 +57708,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "spinCount")]
     public Int32Value SpinCount
     {
         get { return (Int32Value)Attributes[16].Value; }
@@ -58135,10 +57751,7 @@ public partial class View : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ViewValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<View>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -58148,6 +57761,7 @@ public partial class View : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ViewValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ViewValues>)Attributes[0].Value; }
@@ -58190,11 +57804,7 @@ public partial class Zoom : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.PresetZoomValues>>(23, "val"),
-		AttributeTag.Create<StringValue>(23, "percent")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Zoom>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -58204,6 +57814,7 @@ public partial class Zoom : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PresetZoomValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.PresetZoomValues>)Attributes[0].Value; }
@@ -58216,6 +57827,7 @@ public partial class Zoom : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "percent")]
     public StringValue Percent
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -58258,15 +57870,7 @@ public partial class ActiveWritingStyle : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "lang"),
-		AttributeTag.Create<UInt16Value>(23, "vendorID"),
-		AttributeTag.Create<Int32Value>(23, "dllVersion"),
-		AttributeTag.Create<OnOffValue>(23, "nlCheck"),
-		AttributeTag.Create<OnOffValue>(23, "checkStyle"),
-		AttributeTag.Create<StringValue>(23, "appName")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ActiveWritingStyle>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -58276,6 +57880,7 @@ public partial class ActiveWritingStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "lang")]
     public StringValue Language
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -58288,6 +57893,7 @@ public partial class ActiveWritingStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "vendorID")]
     public UInt16Value VendorID
     {
         get { return (UInt16Value)Attributes[1].Value; }
@@ -58300,6 +57906,7 @@ public partial class ActiveWritingStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "dllVersion")]
     public Int32Value DllVersion
     {
         get { return (Int32Value)Attributes[2].Value; }
@@ -58312,6 +57919,7 @@ public partial class ActiveWritingStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "nlCheck")]
     public OnOffValue NaturalLanguageGrammarCheck
     {
         get { return (OnOffValue)Attributes[3].Value; }
@@ -58324,6 +57932,7 @@ public partial class ActiveWritingStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "checkStyle")]
     public OnOffValue CheckStyle
     {
         get { return (OnOffValue)Attributes[4].Value; }
@@ -58336,6 +57945,7 @@ public partial class ActiveWritingStyle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "appName")]
     public StringValue ApplicationName
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -58378,11 +57988,7 @@ public partial class ProofState : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>>(23, "spelling"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>>(23, "grammar")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ProofState>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -58392,6 +57998,7 @@ public partial class ProofState : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "spelling")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues> Spelling
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>)Attributes[0].Value; }
@@ -58404,6 +58011,7 @@ public partial class ProofState : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "grammar")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues> Grammar
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues>)Attributes[1].Value; }
@@ -58446,25 +58054,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(23, "val"),
-		AttributeTag.Create<OnOffValue>(23, "allStyles"),
-		AttributeTag.Create<OnOffValue>(23, "customStyles"),
-		AttributeTag.Create<OnOffValue>(23, "latentStyles"),
-		AttributeTag.Create<OnOffValue>(23, "stylesInUse"),
-		AttributeTag.Create<OnOffValue>(23, "headingStyles"),
-		AttributeTag.Create<OnOffValue>(23, "numberingStyles"),
-		AttributeTag.Create<OnOffValue>(23, "tableStyles"),
-		AttributeTag.Create<OnOffValue>(23, "directFormattingOnRuns"),
-		AttributeTag.Create<OnOffValue>(23, "directFormattingOnParagraphs"),
-		AttributeTag.Create<OnOffValue>(23, "directFormattingOnNumbering"),
-		AttributeTag.Create<OnOffValue>(23, "directFormattingOnTables"),
-		AttributeTag.Create<OnOffValue>(23, "clearFormatting"),
-		AttributeTag.Create<OnOffValue>(23, "top3HeadingStyles"),
-		AttributeTag.Create<OnOffValue>(23, "visibleStyles"),
-		AttributeTag.Create<OnOffValue>(23, "alternateStyleNames")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<StylePaneFormatFilter>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -58474,6 +58064,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public HexBinaryValue Val
     {
         get { return (HexBinaryValue)Attributes[0].Value; }
@@ -58486,6 +58077,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "allStyles")]
     public OnOffValue AllStyles
     {
         get { return (OnOffValue)Attributes[1].Value; }
@@ -58498,6 +58090,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "customStyles")]
     public OnOffValue CustomStyles
     {
         get { return (OnOffValue)Attributes[2].Value; }
@@ -58510,6 +58103,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "latentStyles")]
     public OnOffValue LatentStyles
     {
         get { return (OnOffValue)Attributes[3].Value; }
@@ -58522,6 +58116,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "stylesInUse")]
     public OnOffValue StylesInUse
     {
         get { return (OnOffValue)Attributes[4].Value; }
@@ -58534,6 +58129,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "headingStyles")]
     public OnOffValue HeadingStyles
     {
         get { return (OnOffValue)Attributes[5].Value; }
@@ -58546,6 +58142,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "numberingStyles")]
     public OnOffValue NumberingStyles
     {
         get { return (OnOffValue)Attributes[6].Value; }
@@ -58558,6 +58155,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "tableStyles")]
     public OnOffValue TableStyles
     {
         get { return (OnOffValue)Attributes[7].Value; }
@@ -58570,6 +58168,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "directFormattingOnRuns")]
     public OnOffValue DirectFormattingOnRuns
     {
         get { return (OnOffValue)Attributes[8].Value; }
@@ -58582,6 +58181,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "directFormattingOnParagraphs")]
     public OnOffValue DirectFormattingOnParagraphs
     {
         get { return (OnOffValue)Attributes[9].Value; }
@@ -58594,6 +58194,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "directFormattingOnNumbering")]
     public OnOffValue DirectFormattingOnNumbering
     {
         get { return (OnOffValue)Attributes[10].Value; }
@@ -58606,6 +58207,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "directFormattingOnTables")]
     public OnOffValue DirectFormattingOnTables
     {
         get { return (OnOffValue)Attributes[11].Value; }
@@ -58618,6 +58220,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "clearFormatting")]
     public OnOffValue ClearFormatting
     {
         get { return (OnOffValue)Attributes[12].Value; }
@@ -58630,6 +58233,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "top3HeadingStyles")]
     public OnOffValue Top3HeadingStyles
     {
         get { return (OnOffValue)Attributes[13].Value; }
@@ -58642,6 +58246,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "visibleStyles")]
     public OnOffValue VisibleStyles
     {
         get { return (OnOffValue)Attributes[14].Value; }
@@ -58654,6 +58259,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "alternateStyleNames")]
     public OnOffValue AlternateStyleNames
     {
         get { return (OnOffValue)Attributes[15].Value; }
@@ -58696,10 +58302,7 @@ public partial class StylePaneSortMethods : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<StylePaneSortMethods>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -58709,6 +58312,7 @@ public partial class StylePaneSortMethods : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -58751,10 +58355,7 @@ public partial class DocumentType : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentTypeValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DocumentType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -58764,6 +58365,7 @@ public partial class DocumentType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentTypeValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentTypeValues>)Attributes[0].Value; }
@@ -59161,14 +58763,7 @@ public partial class RevisionView : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<OnOffValue>(23, "markup"),
-		AttributeTag.Create<OnOffValue>(23, "comments"),
-		AttributeTag.Create<OnOffValue>(23, "insDel"),
-		AttributeTag.Create<OnOffValue>(23, "formatting"),
-		AttributeTag.Create<OnOffValue>(23, "inkAnnotations")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<RevisionView>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -59178,6 +58773,7 @@ public partial class RevisionView : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "markup")]
     public OnOffValue Markup
     {
         get { return (OnOffValue)Attributes[0].Value; }
@@ -59190,6 +58786,7 @@ public partial class RevisionView : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "comments")]
     public OnOffValue Comments
     {
         get { return (OnOffValue)Attributes[1].Value; }
@@ -59202,6 +58799,7 @@ public partial class RevisionView : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "insDel")]
     public OnOffValue DisplayRevision
     {
         get { return (OnOffValue)Attributes[2].Value; }
@@ -59214,6 +58812,7 @@ public partial class RevisionView : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "formatting")]
     public OnOffValue Formatting
     {
         get { return (OnOffValue)Attributes[3].Value; }
@@ -59226,6 +58825,7 @@ public partial class RevisionView : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "inkAnnotations")]
     public OnOffValue InkAnnotations
     {
         get { return (OnOffValue)Attributes[4].Value; }
@@ -59268,28 +58868,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentProtectionValues>>(23, "edit"),
-		AttributeTag.Create<OnOffValue>(23, "formatting"),
-		AttributeTag.Create<OnOffValue>(23, "enforcement"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>>(23, "cryptProviderType"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>>(23, "cryptAlgorithmClass"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>>(23, "cryptAlgorithmType"),
-		AttributeTag.Create<Int32Value>(23, "cryptAlgorithmSid"),
-		AttributeTag.Create<UInt32Value>(23, "cryptSpinCount"),
-		AttributeTag.Create<StringValue>(23, "cryptProvider"),
-		AttributeTag.Create<HexBinaryValue>(23, "algIdExt"),
-		AttributeTag.Create<StringValue>(23, "algIdExtSource"),
-		AttributeTag.Create<HexBinaryValue>(23, "cryptProviderTypeExt"),
-		AttributeTag.Create<StringValue>(23, "cryptProviderTypeExtSource"),
-		AttributeTag.Create<Base64BinaryValue>(23, "hash"),
-		AttributeTag.Create<Base64BinaryValue>(23, "salt"),
-		AttributeTag.Create<StringValue>(23, "algorithmName"),
-		AttributeTag.Create<Base64BinaryValue>(23, "hashValue"),
-		AttributeTag.Create<Base64BinaryValue>(23, "saltValue"),
-		AttributeTag.Create<Int32Value>(23, "spinCount")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DocumentProtection>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -59299,6 +58878,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "edit")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentProtectionValues> Edit
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentProtectionValues>)Attributes[0].Value; }
@@ -59311,6 +58891,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "formatting")]
     public OnOffValue Formatting
     {
         get { return (OnOffValue)Attributes[1].Value; }
@@ -59323,6 +58904,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "enforcement")]
     public OnOffValue Enforcement
     {
         get { return (OnOffValue)Attributes[2].Value; }
@@ -59335,6 +58917,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "cryptProviderType")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues> CryptographicProviderType
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues>)Attributes[3].Value; }
@@ -59347,6 +58930,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "cryptAlgorithmClass")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues> CryptographicAlgorithmClass
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues>)Attributes[4].Value; }
@@ -59359,6 +58943,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "cryptAlgorithmType")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues> CryptographicAlgorithmType
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues>)Attributes[5].Value; }
@@ -59371,6 +58956,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "cryptAlgorithmSid")]
     public Int32Value CryptographicAlgorithmSid
     {
         get { return (Int32Value)Attributes[6].Value; }
@@ -59383,6 +58969,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "cryptSpinCount")]
     public UInt32Value CryptographicSpinCount
     {
         get { return (UInt32Value)Attributes[7].Value; }
@@ -59395,6 +58982,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "cryptProvider")]
     public StringValue CryptographicProvider
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -59407,6 +58995,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "algIdExt")]
     public HexBinaryValue AlgorithmIdExtensibility
     {
         get { return (HexBinaryValue)Attributes[9].Value; }
@@ -59419,6 +59008,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "algIdExtSource")]
     public StringValue AlgorithmIdExtensibilitySource
     {
         get { return (StringValue)Attributes[10].Value; }
@@ -59431,6 +59021,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "cryptProviderTypeExt")]
     public HexBinaryValue CryptographicProviderTypeExtensibility
     {
         get { return (HexBinaryValue)Attributes[11].Value; }
@@ -59443,6 +59034,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "cryptProviderTypeExtSource")]
     public StringValue CryptographicProviderTypeExtSource
     {
         get { return (StringValue)Attributes[12].Value; }
@@ -59455,6 +59047,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "hash")]
     public Base64BinaryValue Hash
     {
         get { return (Base64BinaryValue)Attributes[13].Value; }
@@ -59467,6 +59060,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "salt")]
     public Base64BinaryValue Salt
     {
         get { return (Base64BinaryValue)Attributes[14].Value; }
@@ -59479,6 +59073,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "algorithmName")]
     public StringValue AlgorithmName
     {
         get { return (StringValue)Attributes[15].Value; }
@@ -59491,6 +59086,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "hashValue")]
     public Base64BinaryValue HashValue
     {
         get { return (Base64BinaryValue)Attributes[16].Value; }
@@ -59503,6 +59099,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "saltValue")]
     public Base64BinaryValue SaltValue
     {
         get { return (Base64BinaryValue)Attributes[17].Value; }
@@ -59515,6 +59112,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "spinCount")]
     public Int32Value SpinCount
     {
         get { return (Int32Value)Attributes[18].Value; }
@@ -59605,10 +59203,7 @@ public partial class BookFoldPrintingSheets : NonNegativeShortType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class NonNegativeShortType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int16Value>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NonNegativeShortType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -59617,6 +59212,7 @@ public abstract partial class NonNegativeShortType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public Int16Value Val
     {
         get { return (Int16Value)Attributes[0].Value; }
@@ -59656,10 +59252,7 @@ public partial class ConsecutiveHyphenLimit : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt16Value>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ConsecutiveHyphenLimit>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -59669,6 +59262,7 @@ public partial class ConsecutiveHyphenLimit : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public UInt16Value Val
     {
         get { return (UInt16Value)Attributes[0].Value; }
@@ -59711,10 +59305,7 @@ public partial class SummaryLength : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SummaryLength>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -59724,6 +59315,7 @@ public partial class SummaryLength : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public Int32Value Val
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -59814,10 +59406,7 @@ public partial class DisplayVerticalDrawingGrid : UnsignedInt7Type
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class UnsignedInt7Type : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<UnsignedInt7Type>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -59826,6 +59415,7 @@ public abstract partial class UnsignedInt7Type : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public Int32Value Val
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -59865,10 +59455,7 @@ public partial class CharacterSpacingControl : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<CharacterSpacingControl>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -59878,6 +59465,7 @@ public partial class CharacterSpacingControl : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingValues>)Attributes[0].Value; }
@@ -59920,11 +59508,7 @@ public partial class NoLineBreaksAfterKinsoku : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "lang"),
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NoLineBreaksAfterKinsoku>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -59934,6 +59518,7 @@ public partial class NoLineBreaksAfterKinsoku : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "lang")]
     public StringValue Language
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -59946,6 +59531,7 @@ public partial class NoLineBreaksAfterKinsoku : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -59988,11 +59574,7 @@ public partial class NoLineBreaksBeforeKinsoku : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "lang"),
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NoLineBreaksBeforeKinsoku>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -60002,6 +59584,7 @@ public partial class NoLineBreaksBeforeKinsoku : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "lang")]
     public StringValue Language
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -60014,6 +59597,7 @@ public partial class NoLineBreaksBeforeKinsoku : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -60056,11 +59640,7 @@ public partial class SaveThroughXslt : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(19, "id"),
-		AttributeTag.Create<StringValue>(23, "solutionID")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SaveThroughXslt>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -60070,6 +59650,7 @@ public partial class SaveThroughXslt : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -60082,6 +59663,7 @@ public partial class SaveThroughXslt : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "solutionID")]
     public StringValue SolutionId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -62005,21 +61587,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(23, "bg1"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(23, "t1"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(23, "bg2"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(23, "t2"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(23, "accent1"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(23, "accent2"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(23, "accent3"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(23, "accent4"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(23, "accent5"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(23, "accent6"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(23, "hyperlink"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>>(23, "followedHyperlink")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ColorSchemeMapping>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -62029,6 +61597,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "bg1")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Background1
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>)Attributes[0].Value; }
@@ -62041,6 +61610,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "t1")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Text1
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>)Attributes[1].Value; }
@@ -62053,6 +61623,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "bg2")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Background2
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>)Attributes[2].Value; }
@@ -62065,6 +61636,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "t2")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Text2
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>)Attributes[3].Value; }
@@ -62077,6 +61649,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "accent1")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent1
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>)Attributes[4].Value; }
@@ -62089,6 +61662,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "accent2")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent2
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>)Attributes[5].Value; }
@@ -62101,6 +61675,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "accent3")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent3
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>)Attributes[6].Value; }
@@ -62113,6 +61688,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "accent4")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent4
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>)Attributes[7].Value; }
@@ -62125,6 +61701,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "accent5")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent5
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>)Attributes[8].Value; }
@@ -62137,6 +61714,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "accent6")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent6
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>)Attributes[9].Value; }
@@ -62149,6 +61727,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "hyperlink")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Hyperlink
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>)Attributes[10].Value; }
@@ -62161,6 +61740,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "followedHyperlink")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> FollowedHyperlink
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues>)Attributes[11].Value; }
@@ -62287,13 +61867,7 @@ public partial class ReadModeInkLockDown : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<OnOffValue>(23, "actualPg"),
-		AttributeTag.Create<UInt32Value>(23, "w"),
-		AttributeTag.Create<UInt32Value>(23, "h"),
-		AttributeTag.Create<StringValue>(23, "fontSz")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ReadModeInkLockDown>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -62303,6 +61877,7 @@ public partial class ReadModeInkLockDown : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "actualPg")]
     public OnOffValue UseActualPages
     {
         get { return (OnOffValue)Attributes[0].Value; }
@@ -62315,6 +61890,7 @@ public partial class ReadModeInkLockDown : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "w")]
     public UInt32Value Width
     {
         get { return (UInt32Value)Attributes[1].Value; }
@@ -62327,6 +61903,7 @@ public partial class ReadModeInkLockDown : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "h")]
     public UInt32Value Height
     {
         get { return (UInt32Value)Attributes[2].Value; }
@@ -62339,6 +61916,7 @@ public partial class ReadModeInkLockDown : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "fontSz")]
     public StringValue FontSize
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -62381,10 +61959,7 @@ public partial class TargetScreenSize : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSizeValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TargetScreenSize>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -62394,6 +61969,7 @@ public partial class TargetScreenSize : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSizeValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSizeValues>)Attributes[0].Value; }
@@ -62555,10 +62131,7 @@ public partial class Panose1Number : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Panose1Number>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -62568,6 +62141,7 @@ public partial class Panose1Number : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public HexBinaryValue Val
     {
         get { return (HexBinaryValue)Attributes[0].Value; }
@@ -62610,11 +62184,7 @@ public partial class FontCharSet : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.StrictCharacterSet>>(23, "characterSet")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<FontCharSet>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -62624,6 +62194,7 @@ public partial class FontCharSet : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -62636,6 +62207,7 @@ public partial class FontCharSet : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "characterSet")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.StrictCharacterSet> StrictCharacterSet
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.StrictCharacterSet>)Attributes[1].Value; }
@@ -62678,10 +62250,7 @@ public partial class FontFamily : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontFamilyValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<FontFamily>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -62691,6 +62260,7 @@ public partial class FontFamily : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontFamilyValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontFamilyValues>)Attributes[0].Value; }
@@ -62733,10 +62303,7 @@ public partial class Pitch : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontPitchValues>>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Pitch>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -62746,6 +62313,7 @@ public partial class Pitch : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontPitchValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontPitchValues>)Attributes[0].Value; }
@@ -62788,15 +62356,7 @@ public partial class FontSignature : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(23, "usb0"),
-		AttributeTag.Create<HexBinaryValue>(23, "usb1"),
-		AttributeTag.Create<HexBinaryValue>(23, "usb2"),
-		AttributeTag.Create<HexBinaryValue>(23, "usb3"),
-		AttributeTag.Create<HexBinaryValue>(23, "csb0"),
-		AttributeTag.Create<HexBinaryValue>(23, "csb1")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<FontSignature>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -62806,6 +62366,7 @@ public partial class FontSignature : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "usb0")]
     public HexBinaryValue UnicodeSignature0
     {
         get { return (HexBinaryValue)Attributes[0].Value; }
@@ -62818,6 +62379,7 @@ public partial class FontSignature : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "usb1")]
     public HexBinaryValue UnicodeSignature1
     {
         get { return (HexBinaryValue)Attributes[1].Value; }
@@ -62830,6 +62392,7 @@ public partial class FontSignature : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "usb2")]
     public HexBinaryValue UnicodeSignature2
     {
         get { return (HexBinaryValue)Attributes[2].Value; }
@@ -62842,6 +62405,7 @@ public partial class FontSignature : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "usb3")]
     public HexBinaryValue UnicodeSignature3
     {
         get { return (HexBinaryValue)Attributes[3].Value; }
@@ -62854,6 +62418,7 @@ public partial class FontSignature : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "csb0")]
     public HexBinaryValue CodePageSignature0
     {
         get { return (HexBinaryValue)Attributes[4].Value; }
@@ -62866,6 +62431,7 @@ public partial class FontSignature : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "csb1")]
     public HexBinaryValue CodePageSignature1
     {
         get { return (HexBinaryValue)Attributes[5].Value; }
@@ -63018,12 +62584,7 @@ public partial class EmbedBoldItalicFont : FontRelationshipType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class FontRelationshipType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "fontKey"),
-		AttributeTag.Create<OnOffValue>(23, "subsetted"),
-		AttributeTag.Create<StringValue>(19, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<FontRelationshipType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -63032,6 +62593,7 @@ public abstract partial class FontRelationshipType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "fontKey")]
     public StringValue FontKey
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -63044,6 +62606,7 @@ public abstract partial class FontRelationshipType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "subsetted")]
     public OnOffValue Subsetted
     {
         get { return (OnOffValue)Attributes[1].Value; }
@@ -63056,6 +62619,7 @@ public abstract partial class FontRelationshipType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }

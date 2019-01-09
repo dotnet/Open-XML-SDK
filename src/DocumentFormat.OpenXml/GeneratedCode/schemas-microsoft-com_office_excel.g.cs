@@ -168,10 +168,7 @@ public partial class ClientData : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>>(0, "ObjectType")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ClientData>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -179,6 +176,7 @@ public partial class ClientData : OpenXmlCompositeElement
     /// <para> Object type.</para>
     /// <para>Represents the following attribute in the schema: ObjectType </para>
     /// </summary>
+    [SchemaAttr(0, "ObjectType")]
     public EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues> ObjectType
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>)Attributes[0].Value; }

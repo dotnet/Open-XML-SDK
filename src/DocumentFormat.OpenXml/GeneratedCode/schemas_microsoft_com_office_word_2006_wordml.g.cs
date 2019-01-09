@@ -454,12 +454,7 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(33, "fciName"),
-		AttributeTag.Create<HexBinaryValue>(33, "fciIndex"),
-		AttributeTag.Create<HexBinaryValue>(33, "swArg")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<FixedCommandKeyboardCustomization>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -469,6 +464,7 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "fciName")]
     public StringValue CommandName
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -481,6 +477,7 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "fciIndex")]
     public HexBinaryValue CommandIndex
     {
         get { return (HexBinaryValue)Attributes[1].Value; }
@@ -493,6 +490,7 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "swArg")]
     public HexBinaryValue Argument
     {
         get { return (HexBinaryValue)Attributes[2].Value; }
@@ -583,10 +581,7 @@ public partial class WllMacroKeyboardCustomization : MacroWllType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class MacroWllType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(33, "macroName")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<MacroWllType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -595,6 +590,7 @@ public abstract partial class MacroWllType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "macroName")]
     public StringValue MacroName
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -682,10 +678,7 @@ public partial class AllocatedCommandManifestEntry : AcceleratorKeymapType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class AcceleratorKeymapType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(33, "acdName")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<AcceleratorKeymapType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -694,6 +687,7 @@ public abstract partial class AcceleratorKeymapType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "acdName")]
     public StringValue AcceleratorName
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -733,10 +727,7 @@ public partial class CharacterInsertion : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(33, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<CharacterInsertion>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -746,6 +737,7 @@ public partial class CharacterInsertion : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "val")]
     public HexBinaryValue Val
     {
         get { return (HexBinaryValue)Attributes[0].Value; }
@@ -803,14 +795,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(33, "chmPrimary"),
-		AttributeTag.Create<HexBinaryValue>(33, "chmSecondary"),
-		AttributeTag.Create<HexBinaryValue>(33, "kcmPrimary"),
-		AttributeTag.Create<HexBinaryValue>(33, "kcmSecondary"),
-		AttributeTag.Create<OnOffValue>(33, "mask")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<KeyMapEntry>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -820,6 +805,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "chmPrimary")]
     public HexBinaryValue CharacterMapPrimary
     {
         get { return (HexBinaryValue)Attributes[0].Value; }
@@ -832,6 +818,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "chmSecondary")]
     public HexBinaryValue CharacterMapSecondary
     {
         get { return (HexBinaryValue)Attributes[1].Value; }
@@ -844,6 +831,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "kcmPrimary")]
     public HexBinaryValue KeyCodePrimary
     {
         get { return (HexBinaryValue)Attributes[2].Value; }
@@ -856,6 +844,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "kcmSecondary")]
     public HexBinaryValue KeyCodeSecondary
     {
         get { return (HexBinaryValue)Attributes[3].Value; }
@@ -868,6 +857,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "mask")]
     public OnOffValue Mask
     {
         get { return (OnOffValue)Attributes[4].Value; }
@@ -1025,13 +1015,7 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(33, "argValue"),
-		AttributeTag.Create<StringValue>(33, "fciBasedOn"),
-		AttributeTag.Create<HexBinaryValue>(33, "fciIndexBasedOn"),
-		AttributeTag.Create<StringValue>(33, "acdName")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<AllocatedCommand>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1041,6 +1025,7 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "argValue")]
     public StringValue ArgumentValue
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1053,6 +1038,7 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "fciBasedOn")]
     public StringValue CommandBasedOn
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -1065,6 +1051,7 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "fciIndexBasedOn")]
     public HexBinaryValue CommandIndexBasedOn
     {
         get { return (HexBinaryValue)Attributes[2].Value; }
@@ -1077,6 +1064,7 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "acdName")]
     public StringValue AcceleratorName
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -1119,14 +1107,7 @@ public partial class Mcd : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(33, "macroName"),
-		AttributeTag.Create<StringValue>(33, "name"),
-		AttributeTag.Create<StringValue>(33, "menuHelp"),
-		AttributeTag.Create<HexBinaryValue>(33, "bEncrypt"),
-		AttributeTag.Create<HexBinaryValue>(33, "cmg")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Mcd>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1136,6 +1117,7 @@ public partial class Mcd : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "macroName")]
     public StringValue MacroName
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1148,6 +1130,7 @@ public partial class Mcd : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -1160,6 +1143,7 @@ public partial class Mcd : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "menuHelp")]
     public StringValue MenuHelp
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -1172,6 +1156,7 @@ public partial class Mcd : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "bEncrypt")]
     public HexBinaryValue BEncrypt
     {
         get { return (HexBinaryValue)Attributes[3].Value; }
@@ -1184,6 +1169,7 @@ public partial class Mcd : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "cmg")]
     public HexBinaryValue Cmg
     {
         get { return (HexBinaryValue)Attributes[4].Value; }
@@ -2181,10 +2167,7 @@ public partial class ToolbarData : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(19, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ToolbarData>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -2194,6 +2177,7 @@ public partial class ToolbarData : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -2584,10 +2568,7 @@ public partial class RecordIncluded : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<OnOffValue>(33, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<RecordIncluded>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -2597,6 +2578,7 @@ public partial class RecordIncluded : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "val")]
     public OnOffValue Val
     {
         get { return (OnOffValue)Attributes[0].Value; }
@@ -2639,10 +2621,7 @@ public partial class RecordHashCode : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<IntegerValue>(33, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<RecordHashCode>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -2652,6 +2631,7 @@ public partial class RecordHashCode : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
+    [SchemaAttr(33, "val")]
     public IntegerValue Val
     {
         get { return (IntegerValue)Attributes[0].Value; }

@@ -138,10 +138,7 @@ public partial class WebExtensionPartReference : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(19, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<WebExtensionPartReference>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -151,6 +148,7 @@ public partial class WebExtensionPartReference : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -281,14 +279,7 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "dockstate"),
-		AttributeTag.Create<BooleanValue>(0, "visibility"),
-		AttributeTag.Create<DoubleValue>(0, "width"),
-		AttributeTag.Create<UInt32Value>(0, "row"),
-		AttributeTag.Create<BooleanValue>(0, "locked")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<WebExtensionTaskpane>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -296,6 +287,7 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     /// <para> dockstate.</para>
     /// <para>Represents the following attribute in the schema: dockstate </para>
     /// </summary>
+    [SchemaAttr(0, "dockstate")]
     public StringValue DockState
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -306,6 +298,7 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     /// <para> visibility.</para>
     /// <para>Represents the following attribute in the schema: visibility </para>
     /// </summary>
+    [SchemaAttr(0, "visibility")]
     public BooleanValue Visibility
     {
         get { return (BooleanValue)Attributes[1].Value; }
@@ -316,6 +309,7 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     /// <para> width.</para>
     /// <para>Represents the following attribute in the schema: width </para>
     /// </summary>
+    [SchemaAttr(0, "width")]
     public DoubleValue Width
     {
         get { return (DoubleValue)Attributes[2].Value; }
@@ -326,6 +320,7 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     /// <para> row.</para>
     /// <para>Represents the following attribute in the schema: row </para>
     /// </summary>
+    [SchemaAttr(0, "row")]
     public UInt32Value Row
     {
         get { return (UInt32Value)Attributes[3].Value; }
@@ -336,6 +331,7 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     /// <para> locked.</para>
     /// <para>Represents the following attribute in the schema: locked </para>
     /// </summary>
+    [SchemaAttr(0, "locked")]
     public BooleanValue Locked
     {
         get { return (BooleanValue)Attributes[4].Value; }

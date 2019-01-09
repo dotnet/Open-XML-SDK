@@ -578,11 +578,7 @@ public partial class RowSortMap : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "ref"),
-		AttributeTag.Create<UInt32Value>(0, "count")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<RowSortMap>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -590,6 +586,7 @@ public partial class RowSortMap : OpenXmlCompositeElement
     /// <para> Reference.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
+    [SchemaAttr(0, "ref")]
     public StringValue Ref
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -600,6 +597,7 @@ public partial class RowSortMap : OpenXmlCompositeElement
     /// <para> Count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
+    [SchemaAttr(0, "count")]
     public UInt32Value Count
     {
         get { return (UInt32Value)Attributes[1].Value; }
@@ -683,11 +681,7 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "ref"),
-		AttributeTag.Create<UInt32Value>(0, "count")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ColumnSortMap>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -695,6 +689,7 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
     /// <para> Reference.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
+    [SchemaAttr(0, "ref")]
     public StringValue Ref
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -705,6 +700,7 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
     /// <para> Count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
+    [SchemaAttr(0, "count")]
     public UInt32Value Count
     {
         get { return (UInt32Value)Attributes[1].Value; }
@@ -829,17 +825,14 @@ public partial class ColumnSortMapItem : SortMapItemType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class SortMapItemType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(0, "newVal"),
-		AttributeTag.Create<UInt32Value>(0, "oldVal")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SortMapItemType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> New Value.</para>
     /// <para>Represents the following attribute in the schema: newVal </para>
     /// </summary>
+    [SchemaAttr(0, "newVal")]
     public UInt32Value NewVal
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -850,6 +843,7 @@ public abstract partial class SortMapItemType : OpenXmlLeafElement
     /// <para> Old Value.</para>
     /// <para>Represents the following attribute in the schema: oldVal </para>
     /// </summary>
+    [SchemaAttr(0, "oldVal")]
     public UInt32Value OldVal
     {
         get { return (UInt32Value)Attributes[1].Value; }

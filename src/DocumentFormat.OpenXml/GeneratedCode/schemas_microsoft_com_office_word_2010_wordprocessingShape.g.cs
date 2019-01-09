@@ -54,10 +54,7 @@ public partial class WordprocessingShape : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "normalEastAsianFlow")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<WordprocessingShape>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -65,6 +62,7 @@ public partial class WordprocessingShape : OpenXmlCompositeElement
     /// <para> normalEastAsianFlow.</para>
     /// <para>Represents the following attribute in the schema: normalEastAsianFlow </para>
     /// </summary>
+    [SchemaAttr(0, "normalEastAsianFlow")]
     public BooleanValue NormalEastAsianFlow
     {
         get { return (BooleanValue)Attributes[0].Value; }
@@ -276,14 +274,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(0, "id"),
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<StringValue>(0, "descr"),
-		AttributeTag.Create<BooleanValue>(0, "hidden"),
-		AttributeTag.Create<StringValue>(0, "title")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NonVisualDrawingProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -291,6 +282,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+    [SchemaAttr(0, "id")]
     public UInt32Value Id
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -301,6 +293,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+    [SchemaAttr(0, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -311,6 +304,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
+    [SchemaAttr(0, "descr")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -321,6 +315,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
+    [SchemaAttr(0, "hidden")]
     public BooleanValue Hidden
     {
         get { return (BooleanValue)Attributes[3].Value; }
@@ -331,6 +326,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
+    [SchemaAttr(0, "title")]
     public StringValue Title
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -467,10 +463,7 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "txBox")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NonVisualDrawingShapeProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -478,6 +471,7 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     /// <para> Text Box.</para>
     /// <para>Represents the following attribute in the schema: txBox </para>
     /// </summary>
+    [SchemaAttr(0, "txBox")]
     public BooleanValue TextBox
     {
         get { return (BooleanValue)Attributes[0].Value; }
@@ -776,10 +770,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwMode")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ShapeProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -787,6 +778,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
+    [SchemaAttr(0, "bwMode")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[0].Value; }
@@ -1086,10 +1078,7 @@ public partial class TextBoxInfo2 : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt16Value>(0, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TextBoxInfo2>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1097,6 +1086,7 @@ public partial class TextBoxInfo2 : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+    [SchemaAttr(0, "id")]
     public UInt16Value Id
     {
         get { return (UInt16Value)Attributes[0].Value; }
@@ -1216,11 +1206,7 @@ public partial class LinkedTextBox : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt16Value>(0, "id"),
-		AttributeTag.Create<UInt16Value>(0, "seq")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<LinkedTextBox>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1228,6 +1214,7 @@ public partial class LinkedTextBox : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+    [SchemaAttr(0, "id")]
     public UInt16Value Id
     {
         get { return (UInt16Value)Attributes[0].Value; }
@@ -1238,6 +1225,7 @@ public partial class LinkedTextBox : OpenXmlCompositeElement
     /// <para> seq.</para>
     /// <para>Represents the following attribute in the schema: seq </para>
     /// </summary>
+    [SchemaAttr(0, "seq")]
     public UInt16Value Sequence
     {
         get { return (UInt16Value)Attributes[1].Value; }
@@ -1356,28 +1344,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(0, "rot"),
-		AttributeTag.Create<BooleanValue>(0, "spcFirstLastPara"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>>(0, "vertOverflow"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>>(0, "horzOverflow"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>>(0, "vert"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>>(0, "wrap"),
-		AttributeTag.Create<Int32Value>(0, "lIns"),
-		AttributeTag.Create<Int32Value>(0, "tIns"),
-		AttributeTag.Create<Int32Value>(0, "rIns"),
-		AttributeTag.Create<Int32Value>(0, "bIns"),
-		AttributeTag.Create<Int32Value>(0, "numCol"),
-		AttributeTag.Create<Int32Value>(0, "spcCol"),
-		AttributeTag.Create<BooleanValue>(0, "rtlCol"),
-		AttributeTag.Create<BooleanValue>(0, "fromWordArt"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>>(0, "anchor"),
-		AttributeTag.Create<BooleanValue>(0, "anchorCtr"),
-		AttributeTag.Create<BooleanValue>(0, "forceAA"),
-		AttributeTag.Create<BooleanValue>(0, "upright"),
-		AttributeTag.Create<BooleanValue>(0, "compatLnSpc")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TextBodyProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1385,6 +1352,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
+    [SchemaAttr(0, "rot")]
     public Int32Value Rotation
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -1395,6 +1363,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> Paragraph Spacing.</para>
     /// <para>Represents the following attribute in the schema: spcFirstLastPara </para>
     /// </summary>
+    [SchemaAttr(0, "spcFirstLastPara")]
     public BooleanValue UseParagraphSpacing
     {
         get { return (BooleanValue)Attributes[1].Value; }
@@ -1405,6 +1374,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> Text Vertical Overflow.</para>
     /// <para>Represents the following attribute in the schema: vertOverflow </para>
     /// </summary>
+    [SchemaAttr(0, "vertOverflow")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues> VerticalOverflow
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalOverflowValues>)Attributes[2].Value; }
@@ -1415,6 +1385,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> Text Horizontal Overflow.</para>
     /// <para>Represents the following attribute in the schema: horzOverflow </para>
     /// </summary>
+    [SchemaAttr(0, "horzOverflow")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues> HorizontalOverflow
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextHorizontalOverflowValues>)Attributes[3].Value; }
@@ -1425,6 +1396,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> Vertical Text.</para>
     /// <para>Represents the following attribute in the schema: vert </para>
     /// </summary>
+    [SchemaAttr(0, "vert")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues> Vertical
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextVerticalValues>)Attributes[4].Value; }
@@ -1435,6 +1407,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> Text Wrapping Type.</para>
     /// <para>Represents the following attribute in the schema: wrap </para>
     /// </summary>
+    [SchemaAttr(0, "wrap")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues> Wrap
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextWrappingValues>)Attributes[5].Value; }
@@ -1445,6 +1418,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> Left Inset.</para>
     /// <para>Represents the following attribute in the schema: lIns </para>
     /// </summary>
+    [SchemaAttr(0, "lIns")]
     public Int32Value LeftInset
     {
         get { return (Int32Value)Attributes[6].Value; }
@@ -1455,6 +1429,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> Top Inset.</para>
     /// <para>Represents the following attribute in the schema: tIns </para>
     /// </summary>
+    [SchemaAttr(0, "tIns")]
     public Int32Value TopInset
     {
         get { return (Int32Value)Attributes[7].Value; }
@@ -1465,6 +1440,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> Right Inset.</para>
     /// <para>Represents the following attribute in the schema: rIns </para>
     /// </summary>
+    [SchemaAttr(0, "rIns")]
     public Int32Value RightInset
     {
         get { return (Int32Value)Attributes[8].Value; }
@@ -1475,6 +1451,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> Bottom Inset.</para>
     /// <para>Represents the following attribute in the schema: bIns </para>
     /// </summary>
+    [SchemaAttr(0, "bIns")]
     public Int32Value BottomInset
     {
         get { return (Int32Value)Attributes[9].Value; }
@@ -1485,6 +1462,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> Number of Columns.</para>
     /// <para>Represents the following attribute in the schema: numCol </para>
     /// </summary>
+    [SchemaAttr(0, "numCol")]
     public Int32Value ColumnCount
     {
         get { return (Int32Value)Attributes[10].Value; }
@@ -1495,6 +1473,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> Space Between Columns.</para>
     /// <para>Represents the following attribute in the schema: spcCol </para>
     /// </summary>
+    [SchemaAttr(0, "spcCol")]
     public Int32Value ColumnSpacing
     {
         get { return (Int32Value)Attributes[11].Value; }
@@ -1505,6 +1484,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> Columns Right-To-Left.</para>
     /// <para>Represents the following attribute in the schema: rtlCol </para>
     /// </summary>
+    [SchemaAttr(0, "rtlCol")]
     public BooleanValue RightToLeftColumns
     {
         get { return (BooleanValue)Attributes[12].Value; }
@@ -1515,6 +1495,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> From WordArt.</para>
     /// <para>Represents the following attribute in the schema: fromWordArt </para>
     /// </summary>
+    [SchemaAttr(0, "fromWordArt")]
     public BooleanValue FromWordArt
     {
         get { return (BooleanValue)Attributes[13].Value; }
@@ -1525,6 +1506,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> Anchor.</para>
     /// <para>Represents the following attribute in the schema: anchor </para>
     /// </summary>
+    [SchemaAttr(0, "anchor")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues> Anchor
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.TextAnchoringTypeValues>)Attributes[14].Value; }
@@ -1535,6 +1517,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> Anchor Center.</para>
     /// <para>Represents the following attribute in the schema: anchorCtr </para>
     /// </summary>
+    [SchemaAttr(0, "anchorCtr")]
     public BooleanValue AnchorCenter
     {
         get { return (BooleanValue)Attributes[15].Value; }
@@ -1545,6 +1528,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> Force Anti-Alias.</para>
     /// <para>Represents the following attribute in the schema: forceAA </para>
     /// </summary>
+    [SchemaAttr(0, "forceAA")]
     public BooleanValue ForceAntiAlias
     {
         get { return (BooleanValue)Attributes[16].Value; }
@@ -1555,6 +1539,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> Text Upright.</para>
     /// <para>Represents the following attribute in the schema: upright </para>
     /// </summary>
+    [SchemaAttr(0, "upright")]
     public BooleanValue UpRight
     {
         get { return (BooleanValue)Attributes[17].Value; }
@@ -1565,6 +1550,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
     /// <para> Compatible Line Spacing.</para>
     /// <para>Represents the following attribute in the schema: compatLnSpc </para>
     /// </summary>
+    [SchemaAttr(0, "compatLnSpc")]
     public BooleanValue CompatibleLineSpacing
     {
         get { return (BooleanValue)Attributes[18].Value; }

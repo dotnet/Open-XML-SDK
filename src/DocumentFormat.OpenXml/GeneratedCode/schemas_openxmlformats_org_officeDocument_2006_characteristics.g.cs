@@ -108,13 +108,7 @@ public partial class Characteristic : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues>>(0, "relation"),
-		AttributeTag.Create<StringValue>(0, "val"),
-		AttributeTag.Create<StringValue>(0, "vocabulary")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Characteristic>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -122,6 +116,7 @@ public partial class Characteristic : OpenXmlLeafElement
     /// <para> Name of Characteristic.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+    [SchemaAttr(0, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -132,6 +127,7 @@ public partial class Characteristic : OpenXmlLeafElement
     /// <para> Relationship of Value to Name.</para>
     /// <para>Represents the following attribute in the schema: relation </para>
     /// </summary>
+    [SchemaAttr(0, "relation")]
     public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues> Relation
     {
         get { return (EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues>)Attributes[1].Value; }
@@ -142,6 +138,7 @@ public partial class Characteristic : OpenXmlLeafElement
     /// <para> Characteristic Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+    [SchemaAttr(0, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -152,6 +149,7 @@ public partial class Characteristic : OpenXmlLeafElement
     /// <para> Characteristic Grammar.</para>
     /// <para>Represents the following attribute in the schema: vocabulary </para>
     /// </summary>
+    [SchemaAttr(0, "vocabulary")]
     public StringValue Vocabulary
     {
         get { return (StringValue)Attributes[3].Value; }

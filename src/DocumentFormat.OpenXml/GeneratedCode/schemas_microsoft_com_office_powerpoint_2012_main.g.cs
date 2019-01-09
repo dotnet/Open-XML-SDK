@@ -31,12 +31,7 @@ public partial class PresetTransition : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "prst"),
-		AttributeTag.Create<BooleanValue>(0, "invX"),
-		AttributeTag.Create<BooleanValue>(0, "invY")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PresetTransition>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -44,6 +39,7 @@ public partial class PresetTransition : OpenXmlLeafElement
     /// <para> prst.</para>
     /// <para>Represents the following attribute in the schema: prst </para>
     /// </summary>
+    [SchemaAttr(0, "prst")]
     public StringValue Preset
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -54,6 +50,7 @@ public partial class PresetTransition : OpenXmlLeafElement
     /// <para> invX.</para>
     /// <para>Represents the following attribute in the schema: invX </para>
     /// </summary>
+    [SchemaAttr(0, "invX")]
     public BooleanValue InvX
     {
         get { return (BooleanValue)Attributes[1].Value; }
@@ -64,6 +61,7 @@ public partial class PresetTransition : OpenXmlLeafElement
     /// <para> invY.</para>
     /// <para>Represents the following attribute in the schema: invY </para>
     /// </summary>
+    [SchemaAttr(0, "invY")]
     public BooleanValue InvY
     {
         get { return (BooleanValue)Attributes[2].Value; }
@@ -106,11 +104,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "userId"),
-		AttributeTag.Create<StringValue>(0, "providerId")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PresenceInfo>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -118,6 +112,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
     /// <para> userId.</para>
     /// <para>Represents the following attribute in the schema: userId </para>
     /// </summary>
+    [SchemaAttr(0, "userId")]
     public StringValue UserId
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -128,6 +123,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
     /// <para> providerId.</para>
     /// <para>Represents the following attribute in the schema: providerId </para>
     /// </summary>
+    [SchemaAttr(0, "providerId")]
     public StringValue ProviderId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -177,10 +173,7 @@ public partial class ThreadingInfo : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(0, "timeZoneBias")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ThreadingInfo>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -188,6 +181,7 @@ public partial class ThreadingInfo : OpenXmlCompositeElement
     /// <para> timeZoneBias.</para>
     /// <para>Represents the following attribute in the schema: timeZoneBias </para>
     /// </summary>
+    [SchemaAttr(0, "timeZoneBias")]
     public Int32Value TimeZoneBias
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -477,10 +471,7 @@ public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ChartTrackingReferenceBased>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -488,6 +479,7 @@ public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
+    [SchemaAttr(0, "val")]
     public BooleanValue Val
     {
         get { return (BooleanValue)Attributes[0].Value; }
@@ -530,11 +522,7 @@ public partial class ParentCommentIdentifier : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(0, "authorId"),
-		AttributeTag.Create<UInt32Value>(0, "idx")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ParentCommentIdentifier>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -542,6 +530,7 @@ public partial class ParentCommentIdentifier : OpenXmlLeafElement
     /// <para> authorId.</para>
     /// <para>Represents the following attribute in the schema: authorId </para>
     /// </summary>
+    [SchemaAttr(0, "authorId")]
     public UInt32Value AuthorId
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -552,6 +541,7 @@ public partial class ParentCommentIdentifier : OpenXmlLeafElement
     /// <para> idx.</para>
     /// <para>Represents the following attribute in the schema: idx </para>
     /// </summary>
+    [SchemaAttr(0, "idx")]
     public UInt32Value Index
     {
         get { return (UInt32Value)Attributes[1].Value; }
@@ -867,14 +857,7 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(0, "id"),
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>>(0, "orient"),
-		AttributeTag.Create<Int32Value>(0, "pos"),
-		AttributeTag.Create<BooleanValue>(0, "userDrawn")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ExtendedGuide>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -882,6 +865,7 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+    [SchemaAttr(0, "id")]
     public UInt32Value Id
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -892,6 +876,7 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+    [SchemaAttr(0, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -902,6 +887,7 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     /// <para> orient.</para>
     /// <para>Represents the following attribute in the schema: orient </para>
     /// </summary>
+    [SchemaAttr(0, "orient")]
     public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Orientation
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>)Attributes[2].Value; }
@@ -912,6 +898,7 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     /// <para> pos.</para>
     /// <para>Represents the following attribute in the schema: pos </para>
     /// </summary>
+    [SchemaAttr(0, "pos")]
     public Int32Value Position
     {
         get { return (Int32Value)Attributes[3].Value; }
@@ -922,6 +909,7 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     /// <para> userDrawn.</para>
     /// <para>Represents the following attribute in the schema: userDrawn </para>
     /// </summary>
+    [SchemaAttr(0, "userDrawn")]
     public BooleanValue IsUserDrawn
     {
         get { return (BooleanValue)Attributes[4].Value; }

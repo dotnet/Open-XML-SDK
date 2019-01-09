@@ -159,11 +159,7 @@ public partial class DataModelExtensionBlock : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "relId"),
-		AttributeTag.Create<StringValue>(0, "minVer")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DataModelExtensionBlock>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -171,6 +167,7 @@ public partial class DataModelExtensionBlock : OpenXmlLeafElement
     /// <para> relId.</para>
     /// <para>Represents the following attribute in the schema: relId </para>
     /// </summary>
+    [SchemaAttr(0, "relId")]
     public StringValue RelId
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -181,6 +178,7 @@ public partial class DataModelExtensionBlock : OpenXmlLeafElement
     /// <para> minVer.</para>
     /// <para>Represents the following attribute in the schema: minVer </para>
     /// </summary>
+    [SchemaAttr(0, "minVer")]
     public StringValue MinVer
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -234,14 +232,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(0, "id"),
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<StringValue>(0, "descr"),
-		AttributeTag.Create<BooleanValue>(0, "hidden"),
-		AttributeTag.Create<StringValue>(0, "title")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NonVisualDrawingProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -249,6 +240,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+    [SchemaAttr(0, "id")]
     public UInt32Value Id
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -259,6 +251,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+    [SchemaAttr(0, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -269,6 +262,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
+    [SchemaAttr(0, "descr")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -279,6 +273,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
+    [SchemaAttr(0, "hidden")]
     public BooleanValue Hidden
     {
         get { return (BooleanValue)Attributes[3].Value; }
@@ -289,6 +284,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
+    [SchemaAttr(0, "title")]
     public StringValue Title
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -425,10 +421,7 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "txBox")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NonVisualDrawingShapeProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -436,6 +429,7 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     /// <para> Text Box.</para>
     /// <para>Represents the following attribute in the schema: txBox </para>
     /// </summary>
+    [SchemaAttr(0, "txBox")]
     public BooleanValue TextBox
     {
         get { return (BooleanValue)Attributes[0].Value; }
@@ -700,10 +694,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwMode")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ShapeProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -711,6 +702,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
+    [SchemaAttr(0, "bwMode")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[0].Value; }
@@ -1132,12 +1124,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(0, "rot"),
-		AttributeTag.Create<BooleanValue>(0, "flipH"),
-		AttributeTag.Create<BooleanValue>(0, "flipV")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Transform2D>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1145,6 +1132,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
+    [SchemaAttr(0, "rot")]
     public Int32Value Rotation
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -1155,6 +1143,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
     /// </summary>
+    [SchemaAttr(0, "flipH")]
     public BooleanValue HorizontalFlip
     {
         get { return (BooleanValue)Attributes[1].Value; }
@@ -1165,6 +1154,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
     /// </summary>
+    [SchemaAttr(0, "flipV")]
     public BooleanValue VerticalFlip
     {
         get { return (BooleanValue)Attributes[2].Value; }
@@ -1617,10 +1607,7 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwMode")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<GroupShapeProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1628,6 +1615,7 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
+    [SchemaAttr(0, "bwMode")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[0].Value; }
@@ -1772,10 +1760,7 @@ public partial class Shape : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "modelId")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Shape>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1783,6 +1768,7 @@ public partial class Shape : OpenXmlCompositeElement
     /// <para> modelId.</para>
     /// <para>Represents the following attribute in the schema: modelId </para>
     /// </summary>
+    [SchemaAttr(0, "modelId")]
     public StringValue ModelId
     {
         get { return (StringValue)Attributes[0].Value; }

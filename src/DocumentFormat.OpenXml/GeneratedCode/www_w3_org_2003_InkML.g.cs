@@ -48,10 +48,7 @@ public partial class Ink : OpenXmlPartRootElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "documentID")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Ink>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -59,6 +56,7 @@ public partial class Ink : OpenXmlPartRootElement
     /// <para> documentID.</para>
     /// <para>Represents the following attribute in the schema: documentID </para>
     /// </summary>
+    [SchemaAttr(0, "documentID")]
     public StringValue DocumentId
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -153,13 +151,7 @@ public partial class Bind : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "source"),
-		AttributeTag.Create<StringValue>(0, "target"),
-		AttributeTag.Create<StringValue>(0, "column"),
-		AttributeTag.Create<StringValue>(0, "variable")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Bind>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -167,6 +159,7 @@ public partial class Bind : OpenXmlLeafElement
     /// <para> source.</para>
     /// <para>Represents the following attribute in the schema: source </para>
     /// </summary>
+    [SchemaAttr(0, "source")]
     public StringValue Source
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -177,6 +170,7 @@ public partial class Bind : OpenXmlLeafElement
     /// <para> target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
     /// </summary>
+    [SchemaAttr(0, "target")]
     public StringValue Target
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -187,6 +181,7 @@ public partial class Bind : OpenXmlLeafElement
     /// <para> column.</para>
     /// <para>Represents the following attribute in the schema: column </para>
     /// </summary>
+    [SchemaAttr(0, "column")]
     public StringValue Column
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -197,6 +192,7 @@ public partial class Bind : OpenXmlLeafElement
     /// <para> variable.</para>
     /// <para>Represents the following attribute in the schema: variable </para>
     /// </summary>
+    [SchemaAttr(0, "variable")]
     public StringValue Variable
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -239,12 +235,7 @@ public partial class Table : OpenXmlLeafTextElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(1, "id"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues>>(0, "apply"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues>>(0, "interpolation")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Table>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -254,6 +245,7 @@ public partial class Table : OpenXmlLeafTextElement
     /// </summary>
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
+    [SchemaAttr(1, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -264,6 +256,7 @@ public partial class Table : OpenXmlLeafTextElement
     /// <para> apply.</para>
     /// <para>Represents the following attribute in the schema: apply </para>
     /// </summary>
+    [SchemaAttr(0, "apply")]
     public EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues> Apply
     {
         get { return (EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues>)Attributes[1].Value; }
@@ -274,6 +267,7 @@ public partial class Table : OpenXmlLeafTextElement
     /// <para> interpolation.</para>
     /// <para>Represents the following attribute in the schema: interpolation </para>
     /// </summary>
+    [SchemaAttr(0, "interpolation")]
     public EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues> Interpolation
     {
         get { return (EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues>)Attributes[2].Value; }
@@ -329,10 +323,7 @@ public partial class Matrix : OpenXmlLeafTextElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(1, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Matrix>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -342,6 +333,7 @@ public partial class Matrix : OpenXmlLeafTextElement
     /// </summary>
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
+    [SchemaAttr(1, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -410,12 +402,7 @@ public partial class Mapping : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(1, "id"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues>>(0, "type"),
-		AttributeTag.Create<StringValue>(0, "mappingRef")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Mapping>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -425,6 +412,7 @@ public partial class Mapping : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
+    [SchemaAttr(1, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -435,6 +423,7 @@ public partial class Mapping : OpenXmlCompositeElement
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+    [SchemaAttr(0, "type")]
     public EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues> Type
     {
         get { return (EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues>)Attributes[1].Value; }
@@ -445,6 +434,7 @@ public partial class Mapping : OpenXmlCompositeElement
     /// <para> mappingRef.</para>
     /// <para>Represents the following attribute in the schema: mappingRef </para>
     /// </summary>
+    [SchemaAttr(0, "mappingRef")]
     public StringValue MappingRef
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -537,18 +527,7 @@ public partial class Channel : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(1, "id"),
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues>>(0, "type"),
-		AttributeTag.Create<StringValue>(0, "default"),
-		AttributeTag.Create<DecimalValue>(0, "min"),
-		AttributeTag.Create<DecimalValue>(0, "max"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues>>(0, "orientation"),
-		AttributeTag.Create<StringValue>(0, "respectTo"),
-		AttributeTag.Create<StringValue>(0, "units")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Channel>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -558,6 +537,7 @@ public partial class Channel : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
+    [SchemaAttr(1, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -568,6 +548,7 @@ public partial class Channel : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+    [SchemaAttr(0, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -578,6 +559,7 @@ public partial class Channel : OpenXmlCompositeElement
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+    [SchemaAttr(0, "type")]
     public EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues> Type
     {
         get { return (EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues>)Attributes[2].Value; }
@@ -588,6 +570,7 @@ public partial class Channel : OpenXmlCompositeElement
     /// <para> default.</para>
     /// <para>Represents the following attribute in the schema: default </para>
     /// </summary>
+    [SchemaAttr(0, "default")]
     public StringValue Default
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -598,6 +581,7 @@ public partial class Channel : OpenXmlCompositeElement
     /// <para> min.</para>
     /// <para>Represents the following attribute in the schema: min </para>
     /// </summary>
+    [SchemaAttr(0, "min")]
     public DecimalValue Min
     {
         get { return (DecimalValue)Attributes[4].Value; }
@@ -608,6 +592,7 @@ public partial class Channel : OpenXmlCompositeElement
     /// <para> max.</para>
     /// <para>Represents the following attribute in the schema: max </para>
     /// </summary>
+    [SchemaAttr(0, "max")]
     public DecimalValue Max
     {
         get { return (DecimalValue)Attributes[5].Value; }
@@ -618,6 +603,7 @@ public partial class Channel : OpenXmlCompositeElement
     /// <para> orientation.</para>
     /// <para>Represents the following attribute in the schema: orientation </para>
     /// </summary>
+    [SchemaAttr(0, "orientation")]
     public EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues> Orientation
     {
         get { return (EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues>)Attributes[6].Value; }
@@ -628,6 +614,7 @@ public partial class Channel : OpenXmlCompositeElement
     /// <para> respectTo.</para>
     /// <para>Represents the following attribute in the schema: respectTo </para>
     /// </summary>
+    [SchemaAttr(0, "respectTo")]
     public StringValue RespectTo
     {
         get { return (StringValue)Attributes[7].Value; }
@@ -638,6 +625,7 @@ public partial class Channel : OpenXmlCompositeElement
     /// <para> units.</para>
     /// <para>Represents the following attribute in the schema: units </para>
     /// </summary>
+    [SchemaAttr(0, "units")]
     public StringValue Units
     {
         get { return (StringValue)Attributes[8].Value; }
@@ -793,13 +781,7 @@ public partial class ChannelProperty : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "channel"),
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<DecimalValue>(0, "value"),
-		AttributeTag.Create<StringValue>(0, "units")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ChannelProperty>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -807,6 +789,7 @@ public partial class ChannelProperty : OpenXmlLeafElement
     /// <para> channel.</para>
     /// <para>Represents the following attribute in the schema: channel </para>
     /// </summary>
+    [SchemaAttr(0, "channel")]
     public StringValue Channel
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -817,6 +800,7 @@ public partial class ChannelProperty : OpenXmlLeafElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+    [SchemaAttr(0, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -827,6 +811,7 @@ public partial class ChannelProperty : OpenXmlLeafElement
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
     /// </summary>
+    [SchemaAttr(0, "value")]
     public DecimalValue Value
     {
         get { return (DecimalValue)Attributes[2].Value; }
@@ -837,6 +822,7 @@ public partial class ChannelProperty : OpenXmlLeafElement
     /// <para> units.</para>
     /// <para>Represents the following attribute in the schema: units </para>
     /// </summary>
+    [SchemaAttr(0, "units")]
     public StringValue Units
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -888,10 +874,7 @@ public partial class TraceFormat : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(1, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TraceFormat>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -901,6 +884,7 @@ public partial class TraceFormat : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
+    [SchemaAttr(1, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -980,11 +964,7 @@ public partial class SampleRate : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "uniform"),
-		AttributeTag.Create<DecimalValue>(0, "value")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SampleRate>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -992,6 +972,7 @@ public partial class SampleRate : OpenXmlLeafElement
     /// <para> uniform.</para>
     /// <para>Represents the following attribute in the schema: uniform </para>
     /// </summary>
+    [SchemaAttr(0, "uniform")]
     public BooleanValue Uniform
     {
         get { return (BooleanValue)Attributes[0].Value; }
@@ -1002,6 +983,7 @@ public partial class SampleRate : OpenXmlLeafElement
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
     /// </summary>
+    [SchemaAttr(0, "value")]
     public DecimalValue Value
     {
         get { return (DecimalValue)Attributes[1].Value; }
@@ -1044,10 +1026,7 @@ public partial class Latency : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<DecimalValue>(0, "value")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Latency>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1055,6 +1034,7 @@ public partial class Latency : OpenXmlLeafElement
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
     /// </summary>
+    [SchemaAttr(0, "value")]
     public DecimalValue Value
     {
         get { return (DecimalValue)Attributes[0].Value; }
@@ -1097,13 +1077,7 @@ public partial class ActiveArea : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "size"),
-		AttributeTag.Create<DecimalValue>(0, "height"),
-		AttributeTag.Create<DecimalValue>(0, "width"),
-		AttributeTag.Create<StringValue>(0, "units")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ActiveArea>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1111,6 +1085,7 @@ public partial class ActiveArea : OpenXmlLeafElement
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
+    [SchemaAttr(0, "size")]
     public StringValue Size
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1121,6 +1096,7 @@ public partial class ActiveArea : OpenXmlLeafElement
     /// <para> height.</para>
     /// <para>Represents the following attribute in the schema: height </para>
     /// </summary>
+    [SchemaAttr(0, "height")]
     public DecimalValue Height
     {
         get { return (DecimalValue)Attributes[1].Value; }
@@ -1131,6 +1107,7 @@ public partial class ActiveArea : OpenXmlLeafElement
     /// <para> width.</para>
     /// <para>Represents the following attribute in the schema: width </para>
     /// </summary>
+    [SchemaAttr(0, "width")]
     public DecimalValue Width
     {
         get { return (DecimalValue)Attributes[2].Value; }
@@ -1141,6 +1118,7 @@ public partial class ActiveArea : OpenXmlLeafElement
     /// <para> units.</para>
     /// <para>Represents the following attribute in the schema: units </para>
     /// </summary>
+    [SchemaAttr(0, "units")]
     public StringValue Units
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -1183,12 +1161,7 @@ public partial class SourceProperty : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<DecimalValue>(0, "value"),
-		AttributeTag.Create<StringValue>(0, "units")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SourceProperty>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1196,6 +1169,7 @@ public partial class SourceProperty : OpenXmlLeafElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+    [SchemaAttr(0, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1206,6 +1180,7 @@ public partial class SourceProperty : OpenXmlLeafElement
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
     /// </summary>
+    [SchemaAttr(0, "value")]
     public DecimalValue Value
     {
         get { return (DecimalValue)Attributes[1].Value; }
@@ -1216,6 +1191,7 @@ public partial class SourceProperty : OpenXmlLeafElement
     /// <para> units.</para>
     /// <para>Represents the following attribute in the schema: units </para>
     /// </summary>
+    [SchemaAttr(0, "units")]
     public StringValue Units
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -1337,11 +1313,7 @@ public partial class Annotation : OpenXmlLeafTextElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "type"),
-		AttributeTag.Create<StringValue>(0, "encoding")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Annotation>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1349,6 +1321,7 @@ public partial class Annotation : OpenXmlLeafTextElement
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+    [SchemaAttr(0, "type")]
     public StringValue Type
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1359,6 +1332,7 @@ public partial class Annotation : OpenXmlLeafTextElement
     /// <para> encoding.</para>
     /// <para>Represents the following attribute in the schema: encoding </para>
     /// </summary>
+    [SchemaAttr(0, "encoding")]
     public StringValue Encoding
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -1421,12 +1395,7 @@ public partial class AnnotationXml : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "type"),
-		AttributeTag.Create<StringValue>(0, "encoding"),
-		AttributeTag.Create<StringValue>(0, "href")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<AnnotationXml>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1434,6 +1403,7 @@ public partial class AnnotationXml : OpenXmlCompositeElement
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+    [SchemaAttr(0, "type")]
     public StringValue Type
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1444,6 +1414,7 @@ public partial class AnnotationXml : OpenXmlCompositeElement
     /// <para> encoding.</para>
     /// <para>Represents the following attribute in the schema: encoding </para>
     /// </summary>
+    [SchemaAttr(0, "encoding")]
     public StringValue Encoding
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -1454,6 +1425,7 @@ public partial class AnnotationXml : OpenXmlCompositeElement
     /// <para> href.</para>
     /// <para>Represents the following attribute in the schema: href </para>
     /// </summary>
+    [SchemaAttr(0, "href")]
     public StringValue Href
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -1560,12 +1532,7 @@ public partial class BrushProperty : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<StringValue>(0, "value"),
-		AttributeTag.Create<StringValue>(0, "units")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<BrushProperty>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1573,6 +1540,7 @@ public partial class BrushProperty : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+    [SchemaAttr(0, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1583,6 +1551,7 @@ public partial class BrushProperty : OpenXmlCompositeElement
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
     /// </summary>
+    [SchemaAttr(0, "value")]
     public StringValue Value
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -1593,6 +1562,7 @@ public partial class BrushProperty : OpenXmlCompositeElement
     /// <para> units.</para>
     /// <para>Represents the following attribute in the schema: units </para>
     /// </summary>
+    [SchemaAttr(0, "units")]
     public StringValue Units
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -1679,11 +1649,7 @@ public partial class Canvas : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(1, "id"),
-		AttributeTag.Create<StringValue>(0, "traceFormatRef")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Canvas>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1693,6 +1659,7 @@ public partial class Canvas : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
+    [SchemaAttr(1, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1703,6 +1670,7 @@ public partial class Canvas : OpenXmlCompositeElement
     /// <para> traceFormatRef.</para>
     /// <para>Represents the following attribute in the schema: traceFormatRef </para>
     /// </summary>
+    [SchemaAttr(0, "traceFormatRef")]
     public StringValue TraceFormatRef
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -1807,11 +1775,7 @@ public partial class CanvasTransform : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(1, "id"),
-		AttributeTag.Create<BooleanValue>(0, "invertible")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<CanvasTransform>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1821,6 +1785,7 @@ public partial class CanvasTransform : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
+    [SchemaAttr(1, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1831,6 +1796,7 @@ public partial class CanvasTransform : OpenXmlCompositeElement
     /// <para> invertible.</para>
     /// <para>Represents the following attribute in the schema: invertible </para>
     /// </summary>
+    [SchemaAttr(0, "invertible")]
     public BooleanValue Invertible
     {
         get { return (BooleanValue)Attributes[1].Value; }
@@ -1924,15 +1890,7 @@ public partial class InkSource : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(1, "id"),
-		AttributeTag.Create<StringValue>(0, "manufacturer"),
-		AttributeTag.Create<StringValue>(0, "model"),
-		AttributeTag.Create<StringValue>(0, "serialNo"),
-		AttributeTag.Create<StringValue>(0, "specificationRef"),
-		AttributeTag.Create<StringValue>(0, "description")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<InkSource>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1942,6 +1900,7 @@ public partial class InkSource : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
+    [SchemaAttr(1, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1952,6 +1911,7 @@ public partial class InkSource : OpenXmlCompositeElement
     /// <para> manufacturer.</para>
     /// <para>Represents the following attribute in the schema: manufacturer </para>
     /// </summary>
+    [SchemaAttr(0, "manufacturer")]
     public StringValue Manufacturer
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -1962,6 +1922,7 @@ public partial class InkSource : OpenXmlCompositeElement
     /// <para> model.</para>
     /// <para>Represents the following attribute in the schema: model </para>
     /// </summary>
+    [SchemaAttr(0, "model")]
     public StringValue Model
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -1972,6 +1933,7 @@ public partial class InkSource : OpenXmlCompositeElement
     /// <para> serialNo.</para>
     /// <para>Represents the following attribute in the schema: serialNo </para>
     /// </summary>
+    [SchemaAttr(0, "serialNo")]
     public StringValue SerialNo
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -1982,6 +1944,7 @@ public partial class InkSource : OpenXmlCompositeElement
     /// <para> specificationRef.</para>
     /// <para>Represents the following attribute in the schema: specificationRef </para>
     /// </summary>
+    [SchemaAttr(0, "specificationRef")]
     public StringValue SpecificationRef
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -1992,6 +1955,7 @@ public partial class InkSource : OpenXmlCompositeElement
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
+    [SchemaAttr(0, "description")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -2151,11 +2115,7 @@ public partial class Brush : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(1, "id"),
-		AttributeTag.Create<StringValue>(0, "brushRef")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Brush>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -2165,6 +2125,7 @@ public partial class Brush : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
+    [SchemaAttr(1, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -2175,6 +2136,7 @@ public partial class Brush : OpenXmlCompositeElement
     /// <para> brushRef.</para>
     /// <para>Represents the following attribute in the schema: brushRef </para>
     /// </summary>
+    [SchemaAttr(0, "brushRef")]
     public StringValue BrushRef
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -2257,14 +2219,7 @@ public partial class Timestamp : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(1, "id"),
-		AttributeTag.Create<DecimalValue>(0, "time"),
-		AttributeTag.Create<StringValue>(0, "timestampRef"),
-		AttributeTag.Create<DateTimeValue>(0, "timeString"),
-		AttributeTag.Create<DecimalValue>(0, "timeOffset")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Timestamp>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -2274,6 +2229,7 @@ public partial class Timestamp : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
+    [SchemaAttr(1, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -2284,6 +2240,7 @@ public partial class Timestamp : OpenXmlLeafElement
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
+    [SchemaAttr(0, "time")]
     public DecimalValue Time
     {
         get { return (DecimalValue)Attributes[1].Value; }
@@ -2294,6 +2251,7 @@ public partial class Timestamp : OpenXmlLeafElement
     /// <para> timestampRef.</para>
     /// <para>Represents the following attribute in the schema: timestampRef </para>
     /// </summary>
+    [SchemaAttr(0, "timestampRef")]
     public StringValue TimestampRef
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -2304,6 +2262,7 @@ public partial class Timestamp : OpenXmlLeafElement
     /// <para> timeString.</para>
     /// <para>Represents the following attribute in the schema: timeString </para>
     /// </summary>
+    [SchemaAttr(0, "timeString")]
     public DateTimeValue TimeString
     {
         get { return (DateTimeValue)Attributes[3].Value; }
@@ -2314,6 +2273,7 @@ public partial class Timestamp : OpenXmlLeafElement
     /// <para> timeOffset.</para>
     /// <para>Represents the following attribute in the schema: timeOffset </para>
     /// </summary>
+    [SchemaAttr(0, "timeOffset")]
     public DecimalValue TimeOffset
     {
         get { return (DecimalValue)Attributes[4].Value; }
@@ -2356,17 +2316,7 @@ public partial class Trace : OpenXmlLeafTextElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(1, "id"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues>>(0, "type"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues>>(0, "continuation"),
-		AttributeTag.Create<StringValue>(0, "priorRef"),
-		AttributeTag.Create<StringValue>(0, "contextRef"),
-		AttributeTag.Create<StringValue>(0, "brushRef"),
-		AttributeTag.Create<DecimalValue>(0, "duration"),
-		AttributeTag.Create<DecimalValue>(0, "timeOffset")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Trace>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -2376,6 +2326,7 @@ public partial class Trace : OpenXmlLeafTextElement
     /// </summary>
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
+    [SchemaAttr(1, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -2386,6 +2337,7 @@ public partial class Trace : OpenXmlLeafTextElement
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
+    [SchemaAttr(0, "type")]
     public EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues> Type
     {
         get { return (EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues>)Attributes[1].Value; }
@@ -2396,6 +2348,7 @@ public partial class Trace : OpenXmlLeafTextElement
     /// <para> continuation.</para>
     /// <para>Represents the following attribute in the schema: continuation </para>
     /// </summary>
+    [SchemaAttr(0, "continuation")]
     public EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues> Continuation
     {
         get { return (EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues>)Attributes[2].Value; }
@@ -2406,6 +2359,7 @@ public partial class Trace : OpenXmlLeafTextElement
     /// <para> priorRef.</para>
     /// <para>Represents the following attribute in the schema: priorRef </para>
     /// </summary>
+    [SchemaAttr(0, "priorRef")]
     public StringValue PriorRef
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -2416,6 +2370,7 @@ public partial class Trace : OpenXmlLeafTextElement
     /// <para> contextRef.</para>
     /// <para>Represents the following attribute in the schema: contextRef </para>
     /// </summary>
+    [SchemaAttr(0, "contextRef")]
     public StringValue ContextRef
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -2426,6 +2381,7 @@ public partial class Trace : OpenXmlLeafTextElement
     /// <para> brushRef.</para>
     /// <para>Represents the following attribute in the schema: brushRef </para>
     /// </summary>
+    [SchemaAttr(0, "brushRef")]
     public StringValue BrushRef
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -2436,6 +2392,7 @@ public partial class Trace : OpenXmlLeafTextElement
     /// <para> duration.</para>
     /// <para>Represents the following attribute in the schema: duration </para>
     /// </summary>
+    [SchemaAttr(0, "duration")]
     public DecimalValue Duration
     {
         get { return (DecimalValue)Attributes[6].Value; }
@@ -2446,6 +2403,7 @@ public partial class Trace : OpenXmlLeafTextElement
     /// <para> timeOffset.</para>
     /// <para>Represents the following attribute in the schema: timeOffset </para>
     /// </summary>
+    [SchemaAttr(0, "timeOffset")]
     public DecimalValue TimeOffset
     {
         get { return (DecimalValue)Attributes[7].Value; }
@@ -2514,12 +2472,7 @@ public partial class TraceGroup : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(1, "id"),
-		AttributeTag.Create<StringValue>(0, "contextRef"),
-		AttributeTag.Create<StringValue>(0, "brushRef")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TraceGroup>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -2529,6 +2482,7 @@ public partial class TraceGroup : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
+    [SchemaAttr(1, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -2539,6 +2493,7 @@ public partial class TraceGroup : OpenXmlCompositeElement
     /// <para> contextRef.</para>
     /// <para>Represents the following attribute in the schema: contextRef </para>
     /// </summary>
+    [SchemaAttr(0, "contextRef")]
     public StringValue ContextRef
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -2549,6 +2504,7 @@ public partial class TraceGroup : OpenXmlCompositeElement
     /// <para> brushRef.</para>
     /// <para>Represents the following attribute in the schema: brushRef </para>
     /// </summary>
+    [SchemaAttr(0, "brushRef")]
     public StringValue BrushRef
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -2645,14 +2601,7 @@ public partial class TraceView : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(1, "id"),
-		AttributeTag.Create<StringValue>(0, "contextRef"),
-		AttributeTag.Create<StringValue>(0, "traceDataRef"),
-		AttributeTag.Create<StringValue>(0, "from"),
-		AttributeTag.Create<StringValue>(0, "to")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TraceView>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -2662,6 +2611,7 @@ public partial class TraceView : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
+    [SchemaAttr(1, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -2672,6 +2622,7 @@ public partial class TraceView : OpenXmlCompositeElement
     /// <para> contextRef.</para>
     /// <para>Represents the following attribute in the schema: contextRef </para>
     /// </summary>
+    [SchemaAttr(0, "contextRef")]
     public StringValue ContextRef
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -2682,6 +2633,7 @@ public partial class TraceView : OpenXmlCompositeElement
     /// <para> traceDataRef.</para>
     /// <para>Represents the following attribute in the schema: traceDataRef </para>
     /// </summary>
+    [SchemaAttr(0, "traceDataRef")]
     public StringValue TraceDataRef
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -2692,6 +2644,7 @@ public partial class TraceView : OpenXmlCompositeElement
     /// <para> from.</para>
     /// <para>Represents the following attribute in the schema: from </para>
     /// </summary>
+    [SchemaAttr(0, "from")]
     public StringValue From
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -2702,6 +2655,7 @@ public partial class TraceView : OpenXmlCompositeElement
     /// <para> to.</para>
     /// <para>Represents the following attribute in the schema: to </para>
     /// </summary>
+    [SchemaAttr(0, "to")]
     public StringValue To
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -2801,17 +2755,7 @@ public partial class Context : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(1, "id"),
-		AttributeTag.Create<StringValue>(0, "contextRef"),
-		AttributeTag.Create<StringValue>(0, "canvasRef"),
-		AttributeTag.Create<StringValue>(0, "canvasTransformRef"),
-		AttributeTag.Create<StringValue>(0, "traceFormatRef"),
-		AttributeTag.Create<StringValue>(0, "inkSourceRef"),
-		AttributeTag.Create<StringValue>(0, "brushRef"),
-		AttributeTag.Create<StringValue>(0, "timestampRef")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Context>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -2821,6 +2765,7 @@ public partial class Context : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
+    [SchemaAttr(1, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -2831,6 +2776,7 @@ public partial class Context : OpenXmlCompositeElement
     /// <para> contextRef.</para>
     /// <para>Represents the following attribute in the schema: contextRef </para>
     /// </summary>
+    [SchemaAttr(0, "contextRef")]
     public StringValue ContextRef
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -2841,6 +2787,7 @@ public partial class Context : OpenXmlCompositeElement
     /// <para> canvasRef.</para>
     /// <para>Represents the following attribute in the schema: canvasRef </para>
     /// </summary>
+    [SchemaAttr(0, "canvasRef")]
     public StringValue CanvasRef
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -2851,6 +2798,7 @@ public partial class Context : OpenXmlCompositeElement
     /// <para> canvasTransformRef.</para>
     /// <para>Represents the following attribute in the schema: canvasTransformRef </para>
     /// </summary>
+    [SchemaAttr(0, "canvasTransformRef")]
     public StringValue CanvasTransformRef
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -2861,6 +2809,7 @@ public partial class Context : OpenXmlCompositeElement
     /// <para> traceFormatRef.</para>
     /// <para>Represents the following attribute in the schema: traceFormatRef </para>
     /// </summary>
+    [SchemaAttr(0, "traceFormatRef")]
     public StringValue TraceFromatRef
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -2871,6 +2820,7 @@ public partial class Context : OpenXmlCompositeElement
     /// <para> inkSourceRef.</para>
     /// <para>Represents the following attribute in the schema: inkSourceRef </para>
     /// </summary>
+    [SchemaAttr(0, "inkSourceRef")]
     public StringValue InkSourceRef
     {
         get { return (StringValue)Attributes[5].Value; }
@@ -2881,6 +2831,7 @@ public partial class Context : OpenXmlCompositeElement
     /// <para> brushRef.</para>
     /// <para>Represents the following attribute in the schema: brushRef </para>
     /// </summary>
+    [SchemaAttr(0, "brushRef")]
     public StringValue BrushRef
     {
         get { return (StringValue)Attributes[6].Value; }
@@ -2891,6 +2842,7 @@ public partial class Context : OpenXmlCompositeElement
     /// <para> timestampRef.</para>
     /// <para>Represents the following attribute in the schema: timestampRef </para>
     /// </summary>
+    [SchemaAttr(0, "timestampRef")]
     public StringValue TimestampRef
     {
         get { return (StringValue)Attributes[7].Value; }

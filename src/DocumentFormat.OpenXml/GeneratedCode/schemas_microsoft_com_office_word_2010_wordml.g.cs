@@ -369,12 +369,7 @@ public partial class RunConflictDeletion : RunTrackChangeType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<RunTrackChangeType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -383,6 +378,7 @@ public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -395,6 +391,7 @@ public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[1].Value; }
@@ -407,6 +404,7 @@ public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -755,12 +753,7 @@ public partial class CustomXmlConflictDeletionRangeStart : TrackChangeType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class TrackChangeType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TrackChangeType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -769,6 +762,7 @@ public abstract partial class TrackChangeType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -781,6 +775,7 @@ public abstract partial class TrackChangeType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "date")]
     public DateTimeValue Date
     {
         get { return (DateTimeValue)Attributes[1].Value; }
@@ -793,6 +788,7 @@ public abstract partial class TrackChangeType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -911,10 +907,7 @@ public partial class Alpha : PositiveFixedPercentageType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class PositiveFixedPercentageType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PositiveFixedPercentageType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -923,6 +916,7 @@ public abstract partial class PositiveFixedPercentageType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "val")]
     public Int32Value Val
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -962,10 +956,7 @@ public partial class HueModulation : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<HueModulation>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -975,6 +966,7 @@ public partial class HueModulation : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "val")]
     public Int32Value Val
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -1189,10 +1181,7 @@ public partial class LuminanceModulation : PercentageType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class PercentageType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PercentageType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -1201,6 +1190,7 @@ public abstract partial class PercentageType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "val")]
     public Int32Value Val
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -1265,10 +1255,7 @@ public partial class RgbColorModelHex : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(52, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<RgbColorModelHex>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1278,6 +1265,7 @@ public partial class RgbColorModelHex : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "val")]
     public HexBinaryValue Val
     {
         get { return (HexBinaryValue)Attributes[0].Value; }
@@ -1406,10 +1394,7 @@ public partial class SchemeColor : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues>>(52, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SchemeColor>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1419,6 +1404,7 @@ public partial class SchemeColor : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "val")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues>)Attributes[0].Value; }
@@ -1522,11 +1508,7 @@ public partial class LinearShadeProperties : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "ang"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>(52, "scaled")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<LinearShadeProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1536,6 +1518,7 @@ public partial class LinearShadeProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "ang")]
     public Int32Value Angle
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -1548,6 +1531,7 @@ public partial class LinearShadeProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "scaled")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Scaled
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>)Attributes[1].Value; }
@@ -1597,10 +1581,7 @@ public partial class PathShadeProperties : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues>>(52, "path")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PathShadeProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1610,6 +1591,7 @@ public partial class PathShadeProperties : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "path")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues> Path
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues>)Attributes[0].Value; }
@@ -2078,10 +2060,7 @@ public partial class PresetLineDashProperties : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues>>(52, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PresetLineDashProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -2091,6 +2070,7 @@ public partial class PresetLineDashProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "val")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues>)Attributes[0].Value; }
@@ -2133,10 +2113,7 @@ public partial class LineJoinMiterProperties : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "lim")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<LineJoinMiterProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -2146,6 +2123,7 @@ public partial class LineJoinMiterProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "lim")]
     public Int32Value Limit
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -2197,10 +2175,7 @@ public partial class Glow : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int64Value>(52, "rad")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Glow>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -2210,6 +2185,7 @@ public partial class Glow : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "rad")]
     public Int64Value GlowRadius
     {
         get { return (Int64Value)Attributes[0].Value; }
@@ -2331,17 +2307,7 @@ public partial class Shadow : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int64Value>(52, "blurRad"),
-		AttributeTag.Create<Int64Value>(52, "dist"),
-		AttributeTag.Create<Int32Value>(52, "dir"),
-		AttributeTag.Create<Int32Value>(52, "sx"),
-		AttributeTag.Create<Int32Value>(52, "sy"),
-		AttributeTag.Create<Int32Value>(52, "kx"),
-		AttributeTag.Create<Int32Value>(52, "ky"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>>(52, "algn")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Shadow>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -2351,6 +2317,7 @@ public partial class Shadow : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "blurRad")]
     public Int64Value BlurRadius
     {
         get { return (Int64Value)Attributes[0].Value; }
@@ -2363,6 +2330,7 @@ public partial class Shadow : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "dist")]
     public Int64Value DistanceFromText
     {
         get { return (Int64Value)Attributes[1].Value; }
@@ -2375,6 +2343,7 @@ public partial class Shadow : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "dir")]
     public Int32Value DirectionAngle
     {
         get { return (Int32Value)Attributes[2].Value; }
@@ -2387,6 +2356,7 @@ public partial class Shadow : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "sx")]
     public Int32Value HorizontalScalingFactor
     {
         get { return (Int32Value)Attributes[3].Value; }
@@ -2399,6 +2369,7 @@ public partial class Shadow : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "sy")]
     public Int32Value VerticalScalingFactor
     {
         get { return (Int32Value)Attributes[4].Value; }
@@ -2411,6 +2382,7 @@ public partial class Shadow : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "kx")]
     public Int32Value HorizontalSkewAngle
     {
         get { return (Int32Value)Attributes[5].Value; }
@@ -2423,6 +2395,7 @@ public partial class Shadow : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "ky")]
     public Int32Value VerticalSkewAngle
     {
         get { return (Int32Value)Attributes[6].Value; }
@@ -2435,6 +2408,7 @@ public partial class Shadow : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "algn")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues> Alignment
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>)Attributes[7].Value; }
@@ -2547,22 +2521,7 @@ public partial class Reflection : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int64Value>(52, "blurRad"),
-		AttributeTag.Create<Int32Value>(52, "stA"),
-		AttributeTag.Create<Int32Value>(52, "stPos"),
-		AttributeTag.Create<Int32Value>(52, "endA"),
-		AttributeTag.Create<Int32Value>(52, "endPos"),
-		AttributeTag.Create<Int64Value>(52, "dist"),
-		AttributeTag.Create<Int32Value>(52, "dir"),
-		AttributeTag.Create<Int32Value>(52, "fadeDir"),
-		AttributeTag.Create<Int32Value>(52, "sx"),
-		AttributeTag.Create<Int32Value>(52, "sy"),
-		AttributeTag.Create<Int32Value>(52, "kx"),
-		AttributeTag.Create<Int32Value>(52, "ky"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>>(52, "algn")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Reflection>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -2572,6 +2531,7 @@ public partial class Reflection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "blurRad")]
     public Int64Value BlurRadius
     {
         get { return (Int64Value)Attributes[0].Value; }
@@ -2584,6 +2544,7 @@ public partial class Reflection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "stA")]
     public Int32Value StartingOpacity
     {
         get { return (Int32Value)Attributes[1].Value; }
@@ -2596,6 +2557,7 @@ public partial class Reflection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "stPos")]
     public Int32Value StartPosition
     {
         get { return (Int32Value)Attributes[2].Value; }
@@ -2608,6 +2570,7 @@ public partial class Reflection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "endA")]
     public Int32Value EndingOpacity
     {
         get { return (Int32Value)Attributes[3].Value; }
@@ -2620,6 +2583,7 @@ public partial class Reflection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "endPos")]
     public Int32Value EndPosition
     {
         get { return (Int32Value)Attributes[4].Value; }
@@ -2632,6 +2596,7 @@ public partial class Reflection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "dist")]
     public Int64Value DistanceFromText
     {
         get { return (Int64Value)Attributes[5].Value; }
@@ -2644,6 +2609,7 @@ public partial class Reflection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "dir")]
     public Int32Value DirectionAngle
     {
         get { return (Int32Value)Attributes[6].Value; }
@@ -2656,6 +2622,7 @@ public partial class Reflection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "fadeDir")]
     public Int32Value FadeDirection
     {
         get { return (Int32Value)Attributes[7].Value; }
@@ -2668,6 +2635,7 @@ public partial class Reflection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "sx")]
     public Int32Value HorizontalScalingFactor
     {
         get { return (Int32Value)Attributes[8].Value; }
@@ -2680,6 +2648,7 @@ public partial class Reflection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "sy")]
     public Int32Value VerticalScalingFactor
     {
         get { return (Int32Value)Attributes[9].Value; }
@@ -2692,6 +2661,7 @@ public partial class Reflection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "kx")]
     public Int32Value HorizontalSkewAngle
     {
         get { return (Int32Value)Attributes[10].Value; }
@@ -2704,6 +2674,7 @@ public partial class Reflection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "ky")]
     public Int32Value VerticalSkewAngle
     {
         get { return (Int32Value)Attributes[11].Value; }
@@ -2716,6 +2687,7 @@ public partial class Reflection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "algn")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues> Alignment
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>)Attributes[12].Value; }
@@ -2777,13 +2749,7 @@ public partial class TextOutlineEffect : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "w"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues>>(52, "cap"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues>>(52, "cmpd"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues>>(52, "algn")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TextOutlineEffect>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -2793,6 +2759,7 @@ public partial class TextOutlineEffect : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "w")]
     public Int32Value LineWidth
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -2805,6 +2772,7 @@ public partial class TextOutlineEffect : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "cap")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues> CapType
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues>)Attributes[1].Value; }
@@ -2817,6 +2785,7 @@ public partial class TextOutlineEffect : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "cmpd")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues> Compound
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues>)Attributes[2].Value; }
@@ -2829,6 +2798,7 @@ public partial class TextOutlineEffect : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "algn")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues> Alignment
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues>)Attributes[3].Value; }
@@ -3187,12 +3157,7 @@ public partial class Properties3D : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int64Value>(52, "extrusionH"),
-		AttributeTag.Create<Int64Value>(52, "contourW"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues>>(52, "prstMaterial")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Properties3D>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -3202,6 +3167,7 @@ public partial class Properties3D : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "extrusionH")]
     public Int64Value ExtrusionHeight
     {
         get { return (Int64Value)Attributes[0].Value; }
@@ -3214,6 +3180,7 @@ public partial class Properties3D : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "contourW")]
     public Int64Value ContourWidth
     {
         get { return (Int64Value)Attributes[1].Value; }
@@ -3226,6 +3193,7 @@ public partial class Properties3D : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "prstMaterial")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues> PresetMaterialType
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues>)Attributes[2].Value; }
@@ -3368,10 +3336,7 @@ public partial class Ligatures : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues>>(52, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Ligatures>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -3381,6 +3346,7 @@ public partial class Ligatures : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "val")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues>)Attributes[0].Value; }
@@ -3423,10 +3389,7 @@ public partial class NumberingFormat : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues>>(52, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NumberingFormat>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -3436,6 +3399,7 @@ public partial class NumberingFormat : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "val")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues>)Attributes[0].Value; }
@@ -3478,10 +3442,7 @@ public partial class NumberSpacing : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues>>(52, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NumberSpacing>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -3491,6 +3452,7 @@ public partial class NumberSpacing : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "val")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues>)Attributes[0].Value; }
@@ -3722,10 +3684,7 @@ public partial class Checked : OnOffType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OnOffType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>(52, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<OnOffType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -3734,6 +3693,7 @@ public abstract partial class OnOffType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "val")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>)Attributes[0].Value; }
@@ -3784,11 +3744,7 @@ public partial class ContentPart : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(52, "bwMode"),
-		AttributeTag.Create<StringValue>(19, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ContentPart>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -3798,6 +3754,7 @@ public partial class ContentPart : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "bwMode")]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[0].Value; }
@@ -3810,6 +3767,7 @@ public partial class ContentPart : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue RelationshipId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -3937,10 +3895,7 @@ public partial class DocumentId : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(52, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DocumentId>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -3950,6 +3905,7 @@ public partial class DocumentId : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "val")]
     public HexBinaryValue Val
     {
         get { return (HexBinaryValue)Attributes[0].Value; }
@@ -4040,10 +3996,7 @@ public partial class CustomXmlConflictDeletionRangeEnd : MarkupType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class MarkupType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<MarkupType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -4052,6 +4005,7 @@ public abstract partial class MarkupType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -4091,10 +4045,7 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DefaultImageDpi>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -4104,6 +4055,7 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "val")]
     public Int32Value Val
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -4289,10 +4241,7 @@ public partial class GradientStop : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "pos")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<GradientStop>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -4302,6 +4251,7 @@ public partial class GradientStop : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "pos")]
     public Int32Value StopPosition
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -4414,13 +4364,7 @@ public partial class FillToRectangle : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "l"),
-		AttributeTag.Create<Int32Value>(52, "t"),
-		AttributeTag.Create<Int32Value>(52, "r"),
-		AttributeTag.Create<Int32Value>(52, "b")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<FillToRectangle>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -4430,6 +4374,7 @@ public partial class FillToRectangle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "l")]
     public Int32Value Left
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -4442,6 +4387,7 @@ public partial class FillToRectangle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "t")]
     public Int32Value Top
     {
         get { return (Int32Value)Attributes[1].Value; }
@@ -4454,6 +4400,7 @@ public partial class FillToRectangle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "r")]
     public Int32Value Right
     {
         get { return (Int32Value)Attributes[2].Value; }
@@ -4466,6 +4413,7 @@ public partial class FillToRectangle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "b")]
     public Int32Value Bottom
     {
         get { return (Int32Value)Attributes[3].Value; }
@@ -4587,12 +4535,7 @@ public partial class SphereCoordinates : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "lat"),
-		AttributeTag.Create<Int32Value>(52, "lon"),
-		AttributeTag.Create<Int32Value>(52, "rev")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SphereCoordinates>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -4602,6 +4545,7 @@ public partial class SphereCoordinates : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "lat")]
     public Int32Value Lattitude
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -4614,6 +4558,7 @@ public partial class SphereCoordinates : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "lon")]
     public Int32Value Longitude
     {
         get { return (Int32Value)Attributes[1].Value; }
@@ -4626,6 +4571,7 @@ public partial class SphereCoordinates : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "rev")]
     public Int32Value Revolution
     {
         get { return (Int32Value)Attributes[2].Value; }
@@ -4668,10 +4614,7 @@ public partial class Camera : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues>>(52, "prst")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Camera>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -4681,6 +4624,7 @@ public partial class Camera : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "prst")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues> PresetCameraType
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues>)Attributes[0].Value; }
@@ -4730,11 +4674,7 @@ public partial class LightRig : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues>>(52, "rig"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues>>(52, "dir")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<LightRig>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -4744,6 +4684,7 @@ public partial class LightRig : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "rig")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues> LightRigType
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues>)Attributes[0].Value; }
@@ -4756,6 +4697,7 @@ public partial class LightRig : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "dir")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues> LightDirectionType
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues>)Attributes[1].Value; }
@@ -4901,12 +4843,7 @@ public partial class BevelBottom : BevelType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class BevelType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int64Value>(52, "w"),
-		AttributeTag.Create<Int64Value>(52, "h"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues>>(52, "prst")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<BevelType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -4915,6 +4852,7 @@ public abstract partial class BevelType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "w")]
     public Int64Value Width
     {
         get { return (Int64Value)Attributes[0].Value; }
@@ -4927,6 +4865,7 @@ public abstract partial class BevelType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "h")]
     public Int64Value Height
     {
         get { return (Int64Value)Attributes[1].Value; }
@@ -4939,6 +4878,7 @@ public abstract partial class BevelType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "prst")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues> PresetProfileType
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues>)Attributes[2].Value; }
@@ -5203,11 +5143,7 @@ public partial class StyleSet : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(52, "id"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>(52, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<StyleSet>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -5217,6 +5153,7 @@ public partial class StyleSet : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "id")]
     public UInt32Value Id
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -5229,6 +5166,7 @@ public partial class StyleSet : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "val")]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>)Attributes[1].Value; }
@@ -5319,11 +5257,7 @@ public partial class UncheckedState : CheckBoxSymbolType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class CheckBoxSymbolType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(52, "font"),
-		AttributeTag.Create<HexBinaryValue>(52, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<CheckBoxSymbolType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -5332,6 +5266,7 @@ public abstract partial class CheckBoxSymbolType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "font")]
     public StringValue Font
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -5344,6 +5279,7 @@ public abstract partial class CheckBoxSymbolType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
+    [SchemaAttr(52, "val")]
     public HexBinaryValue Val
     {
         get { return (HexBinaryValue)Attributes[1].Value; }
@@ -5394,14 +5330,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(0, "id"),
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<StringValue>(0, "descr"),
-		AttributeTag.Create<BooleanValue>(0, "hidden"),
-		AttributeTag.Create<StringValue>(0, "title")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NonVisualDrawingProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -5409,6 +5338,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+    [SchemaAttr(0, "id")]
     public UInt32Value Id
     {
         get { return (UInt32Value)Attributes[0].Value; }
@@ -5419,6 +5349,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+    [SchemaAttr(0, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -5429,6 +5360,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
+    [SchemaAttr(0, "descr")]
     public StringValue Description
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -5439,6 +5371,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
+    [SchemaAttr(0, "hidden")]
     public BooleanValue Hidden
     {
         get { return (BooleanValue)Attributes[3].Value; }
@@ -5449,6 +5382,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
+    [SchemaAttr(0, "title")]
     public StringValue Title
     {
         get { return (StringValue)Attributes[4].Value; }
@@ -5585,10 +5519,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "isComment")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<NonVisualInkContentPartProperties>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -5596,6 +5527,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <para> isComment.</para>
     /// <para>Represents the following attribute in the schema: isComment </para>
     /// </summary>
+    [SchemaAttr(0, "isComment")]
     public BooleanValue IsComment
     {
         get { return (BooleanValue)Attributes[0].Value; }
@@ -5834,12 +5766,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(0, "rot"),
-		AttributeTag.Create<BooleanValue>(0, "flipH"),
-		AttributeTag.Create<BooleanValue>(0, "flipV")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Transform2D>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -5847,6 +5774,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
+    [SchemaAttr(0, "rot")]
     public Int32Value Rotation
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -5857,6 +5785,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
     /// </summary>
+    [SchemaAttr(0, "flipH")]
     public BooleanValue HorizontalFlip
     {
         get { return (BooleanValue)Attributes[1].Value; }
@@ -5867,6 +5796,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
     /// </summary>
+    [SchemaAttr(0, "flipV")]
     public BooleanValue VerticalFlip
     {
         get { return (BooleanValue)Attributes[2].Value; }

@@ -37,12 +37,7 @@ public partial class ThemeFamily : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<StringValue>(0, "id"),
-		AttributeTag.Create<StringValue>(0, "vid")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ThemeFamily>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -50,6 +45,7 @@ public partial class ThemeFamily : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+    [SchemaAttr(0, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -60,6 +56,7 @@ public partial class ThemeFamily : OpenXmlCompositeElement
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
+    [SchemaAttr(0, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -70,6 +67,7 @@ public partial class ThemeFamily : OpenXmlCompositeElement
     /// <para> vid.</para>
     /// <para>Represents the following attribute in the schema: vid </para>
     /// </summary>
+    [SchemaAttr(0, "vid")]
     public StringValue Vid
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -253,14 +251,7 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<StringValue>(0, "vid"),
-		AttributeTag.Create<Int64Value>(0, "cx"),
-		AttributeTag.Create<Int64Value>(0, "cy"),
-		AttributeTag.Create<StringValue>(19, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ThemeVariant>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -268,6 +259,7 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
+    [SchemaAttr(0, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -278,6 +270,7 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     /// <para> vid.</para>
     /// <para>Represents the following attribute in the schema: vid </para>
     /// </summary>
+    [SchemaAttr(0, "vid")]
     public StringValue Vid
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -288,6 +281,7 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     /// <para> cx.</para>
     /// <para>Represents the following attribute in the schema: cx </para>
     /// </summary>
+    [SchemaAttr(0, "cx")]
     public Int64Value X
     {
         get { return (Int64Value)Attributes[2].Value; }
@@ -298,6 +292,7 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     /// <para> cy.</para>
     /// <para>Represents the following attribute in the schema: cy </para>
     /// </summary>
+    [SchemaAttr(0, "cy")]
     public Int64Value Y
     {
         get { return (Int64Value)Attributes[3].Value; }
@@ -310,6 +305,7 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[4].Value; }

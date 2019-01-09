@@ -30,10 +30,7 @@ public partial class CompatibilityShape : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "spid")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<CompatibilityShape>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -41,6 +38,7 @@ public partial class CompatibilityShape : OpenXmlLeafElement
     /// <para> spid.</para>
     /// <para>Represents the following attribute in the schema: spid </para>
     /// </summary>
+    [SchemaAttr(0, "spid")]
     public StringValue ShapeId
     {
         get { return (StringValue)Attributes[0].Value; }

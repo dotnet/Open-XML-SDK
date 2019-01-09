@@ -36,12 +36,7 @@ public partial class Sources : OpenXmlPartRootElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "SelectedStyle"),
-		AttributeTag.Create<StringValue>(0, "StyleName"),
-		AttributeTag.Create<StringValue>(0, "URI")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Sources>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -49,6 +44,7 @@ public partial class Sources : OpenXmlPartRootElement
     /// <para> Selected Style.</para>
     /// <para>Represents the following attribute in the schema: SelectedStyle </para>
     /// </summary>
+    [SchemaAttr(0, "SelectedStyle")]
     public StringValue SelectedStyle
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -59,6 +55,7 @@ public partial class Sources : OpenXmlPartRootElement
     /// <para> Documentation Style Name.</para>
     /// <para>Represents the following attribute in the schema: StyleName </para>
     /// </summary>
+    [SchemaAttr(0, "StyleName")]
     public StringValue StyleName
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -69,6 +66,7 @@ public partial class Sources : OpenXmlPartRootElement
     /// <para> Uniform Resource Identifier.</para>
     /// <para>Represents the following attribute in the schema: URI </para>
     /// </summary>
+    [SchemaAttr(0, "URI")]
     public StringValue Uri
     {
         get { return (StringValue)Attributes[2].Value; }

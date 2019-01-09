@@ -30,13 +30,7 @@ public partial class Color : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>>(23, "themeColor"),
-		AttributeTag.Create<StringValue>(23, "themeTint"),
-		AttributeTag.Create<StringValue>(23, "themeShade")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Color>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -46,6 +40,7 @@ public partial class Color : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -58,6 +53,7 @@ public partial class Color : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeColor")]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues>)Attributes[1].Value; }
@@ -70,6 +66,7 @@ public partial class Color : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeTint")]
     public StringValue ThemeTint
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -82,6 +79,7 @@ public partial class Color : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "themeShade")]
     public StringValue ThemeShade
     {
         get { return (StringValue)Attributes[3].Value; }
@@ -124,12 +122,7 @@ public partial class DataBinding : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "prefixMappings"),
-		AttributeTag.Create<StringValue>(23, "xpath"),
-		AttributeTag.Create<StringValue>(23, "storeItemID")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DataBinding>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -139,6 +132,7 @@ public partial class DataBinding : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "prefixMappings")]
     public StringValue PrefixMappings
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -151,6 +145,7 @@ public partial class DataBinding : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "xpath")]
     public StringValue XPath
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -163,6 +158,7 @@ public partial class DataBinding : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "storeItemID")]
     public StringValue StoreItemId
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -205,10 +201,7 @@ public partial class Appearance : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>>(69, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Appearance>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -218,6 +211,7 @@ public partial class Appearance : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
+    [SchemaAttr(69, "val")]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance> Val
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance>)Attributes[0].Value; }
@@ -770,10 +764,7 @@ public partial class DoNotAllowInsertDeleteSection : OnOffType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OnOffType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<OnOffValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<OnOffType>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
@@ -782,6 +773,7 @@ public abstract partial class OnOffType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public OnOffValue Val
     {
         get { return (OnOffValue)Attributes[0].Value; }
@@ -821,10 +813,7 @@ public partial class PersistentDocumentId : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(69, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PersistentDocumentId>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -834,6 +823,7 @@ public partial class PersistentDocumentId : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
+    [SchemaAttr(69, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -876,10 +866,7 @@ public partial class FootnoteColumns : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<FootnoteColumns>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -889,6 +876,7 @@ public partial class FootnoteColumns : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public Int32Value Val
     {
         get { return (Int32Value)Attributes[0].Value; }
@@ -931,12 +919,7 @@ public partial class CommentEx : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(69, "paraId"),
-		AttributeTag.Create<HexBinaryValue>(69, "paraIdParent"),
-		AttributeTag.Create<OnOffValue>(69, "done")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<CommentEx>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -946,6 +929,7 @@ public partial class CommentEx : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
+    [SchemaAttr(69, "paraId")]
     public HexBinaryValue ParaId
     {
         get { return (HexBinaryValue)Attributes[0].Value; }
@@ -958,6 +942,7 @@ public partial class CommentEx : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
+    [SchemaAttr(69, "paraIdParent")]
     public HexBinaryValue ParaIdParent
     {
         get { return (HexBinaryValue)Attributes[1].Value; }
@@ -970,6 +955,7 @@ public partial class CommentEx : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
+    [SchemaAttr(69, "done")]
     public OnOffValue Done
     {
         get { return (OnOffValue)Attributes[2].Value; }
@@ -1019,11 +1005,7 @@ public partial class Person : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(69, "author"),
-		AttributeTag.Create<StringValue>(69, "contact")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Person>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1033,6 +1015,7 @@ public partial class Person : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
+    [SchemaAttr(69, "author")]
     public StringValue Author
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1045,6 +1028,7 @@ public partial class Person : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
+    [SchemaAttr(69, "contact")]
     public StringValue Contact
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -1142,11 +1126,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(69, "providerId"),
-		AttributeTag.Create<StringValue>(69, "userId")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<PresenceInfo>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1156,6 +1136,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
+    [SchemaAttr(69, "providerId")]
     public StringValue ProviderId
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -1168,6 +1149,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
+    [SchemaAttr(69, "userId")]
     public StringValue UserId
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -1210,10 +1192,7 @@ public partial class SectionTitle : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "val")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SectionTitle>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -1223,6 +1202,7 @@ public partial class SectionTitle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
+    [SchemaAttr(23, "val")]
     public StringValue Val
     {
         get { return (StringValue)Attributes[0].Value; }

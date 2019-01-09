@@ -30,10 +30,7 @@ public partial class AbsolutePath : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "url")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<AbsolutePath>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -41,6 +38,7 @@ public partial class AbsolutePath : OpenXmlLeafElement
     /// <para> url.</para>
     /// <para>Represents the following attribute in the schema: url </para>
     /// </summary>
+    [SchemaAttr(0, "url")]
     public StringValue Url
     {
         get { return (StringValue)Attributes[0].Value; }

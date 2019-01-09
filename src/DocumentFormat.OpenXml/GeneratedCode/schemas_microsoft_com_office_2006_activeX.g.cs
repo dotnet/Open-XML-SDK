@@ -36,13 +36,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(35, "classid"),
-		AttributeTag.Create<StringValue>(35, "license"),
-		AttributeTag.Create<StringValue>(19, "id"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>(35, "persistence")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ActiveXControlData>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -52,6 +46,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
+    [SchemaAttr(35, "classid")]
     public StringValue ActiveXControlClassId
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -64,6 +59,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
+    [SchemaAttr(35, "license")]
     public StringValue License
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -76,6 +72,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[2].Value; }
@@ -88,6 +85,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
+    [SchemaAttr(35, "persistence")]
     public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>)Attributes[3].Value; }
@@ -173,11 +171,7 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(35, "name"),
-		AttributeTag.Create<StringValue>(35, "value")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ActiveXObjectProperty>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -187,6 +181,7 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
+    [SchemaAttr(35, "name")]
     public StringValue Name
     {
         get { return (StringValue)Attributes[0].Value; }
@@ -199,6 +194,7 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
+    [SchemaAttr(35, "value")]
     public StringValue Value
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -318,11 +314,7 @@ public partial class SharedComFont : OpenXmlCompositeElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>>(35, "persistence"),
-		AttributeTag.Create<StringValue>(19, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SharedComFont>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -332,6 +324,7 @@ public partial class SharedComFont : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ax=http://schemas.microsoft.com/office/2006/activeX
 ///</remark>
+    [SchemaAttr(35, "persistence")]
     public EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues> Persistence
     {
         get { return (EnumValue<DocumentFormat.OpenXml.Office.ActiveX.PersistenceValues>)Attributes[0].Value; }
@@ -344,6 +337,7 @@ public partial class SharedComFont : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[1].Value; }
@@ -420,10 +414,7 @@ public partial class SharedComPicture : OpenXmlLeafElement
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(19, "id")
-	};
+        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SharedComPicture>();
     internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
@@ -433,6 +424,7 @@ public partial class SharedComPicture : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
+    [SchemaAttr(19, "id")]
     public StringValue Id
     {
         get { return (StringValue)Attributes[0].Value; }
