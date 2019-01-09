@@ -119,7 +119,7 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlElement()
             : base()
         {
-            RawAttributes = new AttributeTagCollection(this, AttributeTag.Load(GetType()));
+            RawAttributes = new AttributeTagCollection(this);
         }
 
         /// <summary>

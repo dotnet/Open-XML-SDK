@@ -4,17 +4,22 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 
 namespace DocumentFormat.OpenXml
 {
     internal readonly struct AttributeTagCollection : IEnumerable<OpenXmlAttribute>
     {
+        private static ConditionalWeakTable<Type, AttributeTag[]> _allTags = new ConditionalWeakTable<Type, AttributeTag[]>();
+
         private readonly ReadOnlyArray<AttributeTag> _tags;
         private readonly OpenXmlElement _element;
 
-        public AttributeTagCollection(OpenXmlElement element, in ReadOnlyArray<AttributeTag> tags)
+        public AttributeTagCollection(OpenXmlElement element)
         {
-            _tags = tags;
+            _tags = Load(element.GetType());
             _element = element;
         }
 
@@ -68,6 +73,32 @@ namespace DocumentFormat.OpenXml
             {
                 yield return new OpenXmlAttribute(attribute.Tag.Name, attribute.Tag.Namespace, null);
             }
+        }
+
+        public static AttributeTag[] Load(Type type)
+        {
+            AttributeTag Create(PropertyInfo property)
+            {
+                var schema = property.GetCustomAttribute<SchemaAttrAttribute>();
+
+                return new AttributeTag(
+                    schema.NamespaceId,
+                    schema.Tag,
+                    property.CreateGetter<OpenXmlElement, OpenXmlSimpleType>(),
+                    property.CreateSetter<OpenXmlElement, OpenXmlSimpleType>(),
+                    OpenXmlSimpleType.CreateFactory(property.PropertyType));
+            }
+
+            AttributeTag[] LoadInternal(Type t)
+            {
+                return t.GetRuntimeProperties()
+                   .Where(p => p.GetCustomAttribute<SchemaAttrAttribute>() != null)
+                   .OrderBy(p => p.GetCustomAttribute<SchemaIndexAttribute>().Index)
+                   .Select(Create)
+                   .ToArray();
+            }
+
+            return _allTags.GetValue(type, LoadInternal);
         }
 
         public struct Enumerator

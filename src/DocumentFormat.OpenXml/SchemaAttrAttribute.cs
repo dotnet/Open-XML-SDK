@@ -5,17 +5,6 @@ using System;
 
 namespace DocumentFormat.OpenXml
 {
-    [AttributeUsage(AttributeTargets.Property, Inherited = true, AllowMultiple = false)]
-    internal sealed class SchemaIndexAttribute : Attribute
-    {
-        public SchemaIndexAttribute(int index)
-        {
-            Index = index;
-        }
-
-        public int Index { get; }
-    }
-
     /// <summary>
     /// Defines the attribute which is used to decorate a property for its corresponding attribute information.
     /// </summary>
