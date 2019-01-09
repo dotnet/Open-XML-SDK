@@ -35,31 +35,24 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12887;
     /// <inheritdoc/>
     public override string LocalName => "style";
-    
     internal override byte NamespaceId => 50;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the ShapeStyle class.
     /// </summary>
     public ShapeStyle():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ShapeStyle class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ShapeStyle(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ShapeStyle class with the specified child elements.
     /// </summary>
@@ -67,7 +60,6 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     public ShapeStyle(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ShapeStyle class from outer XML.
     /// </summary>
@@ -76,36 +68,28 @@ public partial class ShapeStyle : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 10 == namespaceId && "lnRef" == name)
     return new DocumentFormat.OpenXml.Drawing.LineReference();
-    
 if( 10 == namespaceId && "fillRef" == name)
     return new DocumentFormat.OpenXml.Drawing.FillReference();
-    
 if( 10 == namespaceId && "effectRef" == name)
     return new DocumentFormat.OpenXml.Drawing.EffectReference();
-    
 if( 10 == namespaceId && "fontRef" == name)
     return new DocumentFormat.OpenXml.Drawing.FontReference();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "lnRef","fillRef","effectRef","fontRef" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> LineReference.</para>
     /// <para> Represents the following element tag in the schema: a:lnRef </para>
@@ -180,31 +164,24 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12888;
     /// <inheritdoc/>
     public override string LocalName => "extLst";
-    
     internal override byte NamespaceId => 50;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class.
     /// </summary>
     public OfficeArtExtensionList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public OfficeArtExtensionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
@@ -212,7 +189,6 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     public OfficeArtExtensionList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class from outer XML.
     /// </summary>
@@ -221,15 +197,13 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 10 == namespaceId && "ext" == name)
     return new DocumentFormat.OpenXml.Drawing.Extension();
-    
 
     return null;
 }
@@ -240,5 +214,3 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 }
 }
- 
- 

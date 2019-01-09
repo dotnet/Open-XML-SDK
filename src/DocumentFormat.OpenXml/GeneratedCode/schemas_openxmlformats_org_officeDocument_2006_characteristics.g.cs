@@ -28,31 +28,24 @@ public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 10822;
     /// <inheritdoc/>
     public override string LocalName => "additionalCharacteristics";
-    
     internal override byte NamespaceId => 8;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the AdditionalCharacteristicsInfo class.
     /// </summary>
     public AdditionalCharacteristicsInfo():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the AdditionalCharacteristicsInfo class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public AdditionalCharacteristicsInfo(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AdditionalCharacteristicsInfo class with the specified child elements.
     /// </summary>
@@ -60,7 +53,6 @@ public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
     public AdditionalCharacteristicsInfo(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AdditionalCharacteristicsInfo class from outer XML.
     /// </summary>
@@ -69,15 +61,13 @@ public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 8 == namespaceId && "characteristic" == name)
     return new Characteristic();
-    
 
     return null;
 }
@@ -100,16 +90,9 @@ public partial class Characteristic : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10823;
     /// <inheritdoc/>
     public override string LocalName => "characteristic";
-    
     internal override byte NamespaceId => 8;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Characteristic>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -117,53 +100,35 @@ public partial class Characteristic : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-    public StringValue Name
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public StringValue Name { get; set;}
     /// <summary>
     /// <para> Relationship of Value to Name.</para>
     /// <para>Represents the following attribute in the schema: relation </para>
     /// </summary>
     [SchemaAttr(0, "relation")]
-    public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues> Relation
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues>)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+	[SchemaIndex(1)]
+    public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues> Relation { get; set;}
     /// <summary>
     /// <para> Characteristic Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
     [SchemaAttr(0, "val")]
-    public StringValue Val
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+	[SchemaIndex(2)]
+    public StringValue Val { get; set;}
     /// <summary>
     /// <para> Characteristic Grammar.</para>
     /// <para>Represents the following attribute in the schema: vocabulary </para>
     /// </summary>
     [SchemaAttr(0, "vocabulary")]
-    public StringValue Vocabulary
-    {
-        get { return (StringValue)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+	[SchemaIndex(3)]
+    public StringValue Vocabulary { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the Characteristic class.
     /// </summary>
     public Characteristic():base(){}
     
-      
-     
     
     
     
@@ -172,11 +137,11 @@ public partial class Characteristic : OpenXmlLeafElement
 
 }
 /// <summary>
-/// Characteristic Relationship Types 
-/// </summary> 
+/// Characteristic Relationship Types
+/// </summary>
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum RelationValues
-{  
+{
 	///<summary>
 ///Greater Than or Equal to.
 ///<para>When the item is serialized out as xml, its value is "ge".</para>
@@ -207,8 +172,6 @@ LessThan,
 ///</summary>
 [EnumString("eq")]
 EqualTo,
- 
+
 }
 }
- 
- 

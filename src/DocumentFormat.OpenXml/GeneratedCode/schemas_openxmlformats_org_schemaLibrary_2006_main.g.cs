@@ -28,31 +28,24 @@ public partial class SchemaLibrary : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12468;
     /// <inheritdoc/>
     public override string LocalName => "schemaLibrary";
-    
     internal override byte NamespaceId => 25;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the SchemaLibrary class.
     /// </summary>
     public SchemaLibrary():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the SchemaLibrary class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public SchemaLibrary(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SchemaLibrary class with the specified child elements.
     /// </summary>
@@ -60,7 +53,6 @@ public partial class SchemaLibrary : OpenXmlCompositeElement
     public SchemaLibrary(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SchemaLibrary class from outer XML.
     /// </summary>
@@ -69,15 +61,13 @@ public partial class SchemaLibrary : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 25 == namespaceId && "schema" == name)
     return new Schema();
-    
 
     return null;
 }
@@ -100,16 +90,9 @@ public partial class Schema : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12469;
     /// <inheritdoc/>
     public override string LocalName => "schema";
-    
     internal override byte NamespaceId => 25;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Schema>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -119,12 +102,8 @@ public partial class Schema : OpenXmlLeafElement
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
     [SchemaAttr(25, "uri")]
-    public StringValue Uri
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public StringValue Uri { get; set;}
     /// <summary>
     /// <para> Resource File Location.</para>
     /// <para>Represents the following attribute in the schema: sl:manifestLocation </para>
@@ -132,12 +111,8 @@ public partial class Schema : OpenXmlLeafElement
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
     [SchemaAttr(25, "manifestLocation")]
-    public StringValue ManifestLocation
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+	[SchemaIndex(1)]
+    public StringValue ManifestLocation { get; set;}
     /// <summary>
     /// <para> Custom XML Schema Location.</para>
     /// <para>Represents the following attribute in the schema: sl:schemaLocation </para>
@@ -145,20 +120,14 @@ public partial class Schema : OpenXmlLeafElement
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
     [SchemaAttr(25, "schemaLocation")]
-    public StringValue SchemaLocation
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+	[SchemaIndex(2)]
+    public StringValue SchemaLocation { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the Schema class.
     /// </summary>
     public Schema():base(){}
     
-      
-     
     
     
     
@@ -167,5 +136,3 @@ public partial class Schema : OpenXmlLeafElement
 
 }
 }
- 
- 

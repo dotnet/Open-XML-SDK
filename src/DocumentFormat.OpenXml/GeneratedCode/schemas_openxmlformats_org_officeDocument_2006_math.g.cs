@@ -22,16 +22,9 @@ public partial class Script : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10905;
     /// <inheritdoc/>
     public override string LocalName => "scr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Script>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -41,20 +34,14 @@ public partial class Script : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues> Val { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the Script class.
     /// </summary>
     public Script():base(){}
     
-      
-     
     
     
     
@@ -75,16 +62,9 @@ public partial class Style : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10906;
     /// <inheritdoc/>
     public override string LocalName => "sty";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Style>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -94,20 +74,14 @@ public partial class Style : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public EnumValue<DocumentFormat.OpenXml.Math.StyleValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.StyleValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.StyleValues> Val { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the Style class.
     /// </summary>
     public Style():base(){}
     
-      
-     
     
     
     
@@ -203,31 +177,24 @@ public partial class Run : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10907;
     /// <inheritdoc/>
     public override string LocalName => "r";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the Run class.
     /// </summary>
     public Run():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Run class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Run(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Run class with the specified child elements.
     /// </summary>
@@ -235,7 +202,6 @@ public partial class Run : OpenXmlCompositeElement
     public Run(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Run class from outer XML.
     /// </summary>
@@ -244,129 +210,90 @@ public partial class Run : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "rPr" == name)
     return new RunProperties();
-    
 if( 23 == namespaceId && "rPr" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.RunProperties();
-    
 if( 23 == namespaceId && "br" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.Break();
-    
 if( 23 == namespaceId && "t" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.Text();
-    
 if( 23 == namespaceId && "delText" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.DeletedText();
-    
 if( 23 == namespaceId && "instrText" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.FieldCode();
-    
 if( 23 == namespaceId && "delInstrText" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode();
-    
 if( 23 == namespaceId && "noBreakHyphen" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.NoBreakHyphen();
-    
 if( 23 == namespaceId && "softHyphen" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.SoftHyphen();
-    
 if( 23 == namespaceId && "dayShort" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.DayShort();
-    
 if( 23 == namespaceId && "monthShort" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MonthShort();
-    
 if( 23 == namespaceId && "yearShort" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.YearShort();
-    
 if( 23 == namespaceId && "dayLong" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.DayLong();
-    
 if( 23 == namespaceId && "monthLong" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MonthLong();
-    
 if( 23 == namespaceId && "yearLong" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.YearLong();
-    
 if( 23 == namespaceId && "annotationRef" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.AnnotationReferenceMark();
-    
 if( 23 == namespaceId && "footnoteRef" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.FootnoteReferenceMark();
-    
 if( 23 == namespaceId && "endnoteRef" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.EndnoteReferenceMark();
-    
 if( 23 == namespaceId && "separator" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.SeparatorMark();
-    
 if( 23 == namespaceId && "continuationSeparator" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.ContinuationSeparatorMark();
-    
 if( 23 == namespaceId && "sym" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.SymbolChar();
-    
 if( 23 == namespaceId && "pgNum" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.PageNumber();
-    
 if( 23 == namespaceId && "cr" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CarriageReturn();
-    
 if( 23 == namespaceId && "tab" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.TabChar();
-    
 if( 23 == namespaceId && "object" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.EmbeddedObject();
-    
 if( 23 == namespaceId && "pict" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.Picture();
-    
 if( 23 == namespaceId && "fldChar" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.FieldChar();
-    
 if( 23 == namespaceId && "ruby" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.Ruby();
-    
 if( 23 == namespaceId && "footnoteReference" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.FootnoteReference();
-    
 if( 23 == namespaceId && "endnoteReference" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.EndnoteReference();
-    
 if( 23 == namespaceId && "commentReference" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CommentReference();
-    
 if( 23 == namespaceId && "drawing" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.Drawing();
-    
 if( 23 == namespaceId && "ptab" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.PositionalTab();
-    
 if( 23 == namespaceId && "lastRenderedPageBreak" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.LastRenderedPageBreak();
-    
 if( 21 == namespaceId && "t" == name)
     return new Text();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "rPr","rPr","br","t","delText","instrText","delInstrText","noBreakHyphen","softHyphen","dayShort","monthShort","yearShort","dayLong","monthLong","yearLong","annotationRef","footnoteRef","endnoteRef","separator","continuationSeparator","sym","pgNum","cr","tab","object","pict","fldChar","ruby","footnoteReference","endnoteReference","commentReference","drawing","ptab","lastRenderedPageBreak","t" };
     private static readonly byte[] eleNamespaceIds = { 21,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Run Properties.</para>
     /// <para> Represents the following element tag in the schema: m:rPr </para>
@@ -419,31 +346,24 @@ public partial class Accent : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10908;
     /// <inheritdoc/>
     public override string LocalName => "acc";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the Accent class.
     /// </summary>
     public Accent():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Accent class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Accent(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Accent class with the specified child elements.
     /// </summary>
@@ -451,7 +371,6 @@ public partial class Accent : OpenXmlCompositeElement
     public Accent(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Accent class from outer XML.
     /// </summary>
@@ -460,30 +379,24 @@ public partial class Accent : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "accPr" == name)
     return new AccentProperties();
-    
 if( 21 == namespaceId && "e" == name)
     return new Base();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "accPr","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Accent Properties.</para>
     /// <para> Represents the following element tag in the schema: m:accPr </para>
@@ -536,31 +449,24 @@ public partial class Bar : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10909;
     /// <inheritdoc/>
     public override string LocalName => "bar";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the Bar class.
     /// </summary>
     public Bar():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Bar class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Bar(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Bar class with the specified child elements.
     /// </summary>
@@ -568,7 +474,6 @@ public partial class Bar : OpenXmlCompositeElement
     public Bar(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Bar class from outer XML.
     /// </summary>
@@ -577,30 +482,24 @@ public partial class Bar : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "barPr" == name)
     return new BarProperties();
-    
 if( 21 == namespaceId && "e" == name)
     return new Base();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "barPr","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Bar Properties.</para>
     /// <para> Represents the following element tag in the schema: m:barPr </para>
@@ -653,31 +552,24 @@ public partial class Box : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10910;
     /// <inheritdoc/>
     public override string LocalName => "box";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the Box class.
     /// </summary>
     public Box():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Box class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Box(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Box class with the specified child elements.
     /// </summary>
@@ -685,7 +577,6 @@ public partial class Box : OpenXmlCompositeElement
     public Box(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Box class from outer XML.
     /// </summary>
@@ -694,30 +585,24 @@ public partial class Box : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "boxPr" == name)
     return new BoxProperties();
-    
 if( 21 == namespaceId && "e" == name)
     return new Base();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "boxPr","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Box Properties.</para>
     /// <para> Represents the following element tag in the schema: m:boxPr </para>
@@ -770,31 +655,24 @@ public partial class BorderBox : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10911;
     /// <inheritdoc/>
     public override string LocalName => "borderBox";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the BorderBox class.
     /// </summary>
     public BorderBox():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the BorderBox class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public BorderBox(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BorderBox class with the specified child elements.
     /// </summary>
@@ -802,7 +680,6 @@ public partial class BorderBox : OpenXmlCompositeElement
     public BorderBox(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BorderBox class from outer XML.
     /// </summary>
@@ -811,30 +688,24 @@ public partial class BorderBox : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "borderBoxPr" == name)
     return new BorderBoxProperties();
-    
 if( 21 == namespaceId && "e" == name)
     return new Base();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "borderBoxPr","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Border Box Properties.</para>
     /// <para> Represents the following element tag in the schema: m:borderBoxPr </para>
@@ -887,31 +758,24 @@ public partial class Delimiter : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10912;
     /// <inheritdoc/>
     public override string LocalName => "d";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the Delimiter class.
     /// </summary>
     public Delimiter():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Delimiter class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Delimiter(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Delimiter class with the specified child elements.
     /// </summary>
@@ -919,7 +783,6 @@ public partial class Delimiter : OpenXmlCompositeElement
     public Delimiter(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Delimiter class from outer XML.
     /// </summary>
@@ -928,30 +791,24 @@ public partial class Delimiter : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "dPr" == name)
     return new DelimiterProperties();
-    
 if( 21 == namespaceId && "e" == name)
     return new Base();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "dPr","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Delimiter Properties.</para>
     /// <para> Represents the following element tag in the schema: m:dPr </para>
@@ -992,31 +849,24 @@ public partial class EquationArray : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10913;
     /// <inheritdoc/>
     public override string LocalName => "eqArr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the EquationArray class.
     /// </summary>
     public EquationArray():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the EquationArray class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public EquationArray(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the EquationArray class with the specified child elements.
     /// </summary>
@@ -1024,7 +874,6 @@ public partial class EquationArray : OpenXmlCompositeElement
     public EquationArray(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the EquationArray class from outer XML.
     /// </summary>
@@ -1033,30 +882,24 @@ public partial class EquationArray : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "eqArrPr" == name)
     return new EquationArrayProperties();
-    
 if( 21 == namespaceId && "e" == name)
     return new Base();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "eqArrPr","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Equation Array Properties.</para>
     /// <para> Represents the following element tag in the schema: m:eqArrPr </para>
@@ -1099,31 +942,24 @@ public partial class Fraction : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10914;
     /// <inheritdoc/>
     public override string LocalName => "f";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the Fraction class.
     /// </summary>
     public Fraction():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Fraction class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Fraction(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Fraction class with the specified child elements.
     /// </summary>
@@ -1131,7 +967,6 @@ public partial class Fraction : OpenXmlCompositeElement
     public Fraction(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Fraction class from outer XML.
     /// </summary>
@@ -1140,33 +975,26 @@ public partial class Fraction : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "fPr" == name)
     return new FractionProperties();
-    
 if( 21 == namespaceId && "num" == name)
     return new Numerator();
-    
 if( 21 == namespaceId && "den" == name)
     return new Denominator();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "fPr","num","den" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Fraction Properties.</para>
     /// <para> Represents the following element tag in the schema: m:fPr </para>
@@ -1233,31 +1061,24 @@ public partial class MathFunction : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10915;
     /// <inheritdoc/>
     public override string LocalName => "func";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the MathFunction class.
     /// </summary>
     public MathFunction():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MathFunction class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MathFunction(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MathFunction class with the specified child elements.
     /// </summary>
@@ -1265,7 +1086,6 @@ public partial class MathFunction : OpenXmlCompositeElement
     public MathFunction(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MathFunction class from outer XML.
     /// </summary>
@@ -1274,33 +1094,26 @@ public partial class MathFunction : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "funcPr" == name)
     return new FunctionProperties();
-    
 if( 21 == namespaceId && "fName" == name)
     return new FunctionName();
-    
 if( 21 == namespaceId && "e" == name)
     return new Base();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "funcPr","fName","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Function Properties.</para>
     /// <para> Represents the following element tag in the schema: m:funcPr </para>
@@ -1365,31 +1178,24 @@ public partial class GroupChar : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10916;
     /// <inheritdoc/>
     public override string LocalName => "groupChr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the GroupChar class.
     /// </summary>
     public GroupChar():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the GroupChar class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public GroupChar(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the GroupChar class with the specified child elements.
     /// </summary>
@@ -1397,7 +1203,6 @@ public partial class GroupChar : OpenXmlCompositeElement
     public GroupChar(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the GroupChar class from outer XML.
     /// </summary>
@@ -1406,30 +1211,24 @@ public partial class GroupChar : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "groupChrPr" == name)
     return new GroupCharProperties();
-    
 if( 21 == namespaceId && "e" == name)
     return new Base();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "groupChrPr","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Group-Character Properties.</para>
     /// <para> Represents the following element tag in the schema: m:groupChrPr </para>
@@ -1484,31 +1283,24 @@ public partial class LimitLower : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10917;
     /// <inheritdoc/>
     public override string LocalName => "limLow";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the LimitLower class.
     /// </summary>
     public LimitLower():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the LimitLower class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public LimitLower(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LimitLower class with the specified child elements.
     /// </summary>
@@ -1516,7 +1308,6 @@ public partial class LimitLower : OpenXmlCompositeElement
     public LimitLower(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LimitLower class from outer XML.
     /// </summary>
@@ -1525,33 +1316,26 @@ public partial class LimitLower : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "limLowPr" == name)
     return new LimitLowerProperties();
-    
 if( 21 == namespaceId && "e" == name)
     return new Base();
-    
 if( 21 == namespaceId && "lim" == name)
     return new Limit();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "limLowPr","e","lim" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Lower Limit Properties.</para>
     /// <para> Represents the following element tag in the schema: m:limLowPr </para>
@@ -1618,31 +1402,24 @@ public partial class LimitUpper : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10918;
     /// <inheritdoc/>
     public override string LocalName => "limUpp";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the LimitUpper class.
     /// </summary>
     public LimitUpper():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the LimitUpper class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public LimitUpper(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LimitUpper class with the specified child elements.
     /// </summary>
@@ -1650,7 +1427,6 @@ public partial class LimitUpper : OpenXmlCompositeElement
     public LimitUpper(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LimitUpper class from outer XML.
     /// </summary>
@@ -1659,33 +1435,26 @@ public partial class LimitUpper : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "limUppPr" == name)
     return new LimitUpperProperties();
-    
 if( 21 == namespaceId && "e" == name)
     return new Base();
-    
 if( 21 == namespaceId && "lim" == name)
     return new Limit();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "limUppPr","e","lim" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Upper Limit Properties.</para>
     /// <para> Represents the following element tag in the schema: m:limUppPr </para>
@@ -1750,31 +1519,24 @@ public partial class Matrix : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10919;
     /// <inheritdoc/>
     public override string LocalName => "m";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the Matrix class.
     /// </summary>
     public Matrix():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Matrix class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Matrix(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Matrix class with the specified child elements.
     /// </summary>
@@ -1782,7 +1544,6 @@ public partial class Matrix : OpenXmlCompositeElement
     public Matrix(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Matrix class from outer XML.
     /// </summary>
@@ -1791,30 +1552,24 @@ public partial class Matrix : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "mPr" == name)
     return new MatrixProperties();
-    
 if( 21 == namespaceId && "mr" == name)
     return new MatrixRow();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "mPr","mr" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Matrix Properties.</para>
     /// <para> Represents the following element tag in the schema: m:mPr </para>
@@ -1859,31 +1614,24 @@ public partial class Nary : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10920;
     /// <inheritdoc/>
     public override string LocalName => "nary";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the Nary class.
     /// </summary>
     public Nary():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Nary class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Nary(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Nary class with the specified child elements.
     /// </summary>
@@ -1891,7 +1639,6 @@ public partial class Nary : OpenXmlCompositeElement
     public Nary(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Nary class from outer XML.
     /// </summary>
@@ -1900,36 +1647,28 @@ public partial class Nary : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "naryPr" == name)
     return new NaryProperties();
-    
 if( 21 == namespaceId && "sub" == name)
     return new SubArgument();
-    
 if( 21 == namespaceId && "sup" == name)
     return new SuperArgument();
-    
 if( 21 == namespaceId && "e" == name)
     return new Base();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "naryPr","sub","sup","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> n-ary Properties.</para>
     /// <para> Represents the following element tag in the schema: m:naryPr </para>
@@ -2006,31 +1745,24 @@ public partial class Phantom : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10921;
     /// <inheritdoc/>
     public override string LocalName => "phant";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the Phantom class.
     /// </summary>
     public Phantom():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Phantom class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Phantom(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Phantom class with the specified child elements.
     /// </summary>
@@ -2038,7 +1770,6 @@ public partial class Phantom : OpenXmlCompositeElement
     public Phantom(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Phantom class from outer XML.
     /// </summary>
@@ -2047,30 +1778,24 @@ public partial class Phantom : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "phantPr" == name)
     return new PhantomProperties();
-    
 if( 21 == namespaceId && "e" == name)
     return new Base();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "phantPr","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Phantom Properties.</para>
     /// <para> Represents the following element tag in the schema: m:phantPr </para>
@@ -2125,31 +1850,24 @@ public partial class Radical : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10922;
     /// <inheritdoc/>
     public override string LocalName => "rad";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the Radical class.
     /// </summary>
     public Radical():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Radical class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Radical(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Radical class with the specified child elements.
     /// </summary>
@@ -2157,7 +1875,6 @@ public partial class Radical : OpenXmlCompositeElement
     public Radical(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Radical class from outer XML.
     /// </summary>
@@ -2166,33 +1883,26 @@ public partial class Radical : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "radPr" == name)
     return new RadicalProperties();
-    
 if( 21 == namespaceId && "deg" == name)
     return new Degree();
-    
 if( 21 == namespaceId && "e" == name)
     return new Base();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "radPr","deg","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Radical Properties.</para>
     /// <para> Represents the following element tag in the schema: m:radPr </para>
@@ -2261,31 +1971,24 @@ public partial class PreSubSuper : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10923;
     /// <inheritdoc/>
     public override string LocalName => "sPre";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the PreSubSuper class.
     /// </summary>
     public PreSubSuper():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the PreSubSuper class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public PreSubSuper(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PreSubSuper class with the specified child elements.
     /// </summary>
@@ -2293,7 +1996,6 @@ public partial class PreSubSuper : OpenXmlCompositeElement
     public PreSubSuper(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PreSubSuper class from outer XML.
     /// </summary>
@@ -2302,36 +2004,28 @@ public partial class PreSubSuper : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "sPrePr" == name)
     return new PreSubSuperProperties();
-    
 if( 21 == namespaceId && "sub" == name)
     return new SubArgument();
-    
 if( 21 == namespaceId && "sup" == name)
     return new SuperArgument();
-    
 if( 21 == namespaceId && "e" == name)
     return new Base();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "sPrePr","sub","sup","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Pre-Sub-Superscript Properties.</para>
     /// <para> Represents the following element tag in the schema: m:sPrePr </para>
@@ -2410,31 +2104,24 @@ public partial class Subscript : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10924;
     /// <inheritdoc/>
     public override string LocalName => "sSub";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the Subscript class.
     /// </summary>
     public Subscript():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Subscript class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Subscript(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Subscript class with the specified child elements.
     /// </summary>
@@ -2442,7 +2129,6 @@ public partial class Subscript : OpenXmlCompositeElement
     public Subscript(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Subscript class from outer XML.
     /// </summary>
@@ -2451,33 +2137,26 @@ public partial class Subscript : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "sSubPr" == name)
     return new SubscriptProperties();
-    
 if( 21 == namespaceId && "e" == name)
     return new Base();
-    
 if( 21 == namespaceId && "sub" == name)
     return new SubArgument();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "sSubPr","e","sub" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Subscript Properties.</para>
     /// <para> Represents the following element tag in the schema: m:sSubPr </para>
@@ -2546,31 +2225,24 @@ public partial class SubSuperscript : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10925;
     /// <inheritdoc/>
     public override string LocalName => "sSubSup";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the SubSuperscript class.
     /// </summary>
     public SubSuperscript():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the SubSuperscript class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public SubSuperscript(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SubSuperscript class with the specified child elements.
     /// </summary>
@@ -2578,7 +2250,6 @@ public partial class SubSuperscript : OpenXmlCompositeElement
     public SubSuperscript(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SubSuperscript class from outer XML.
     /// </summary>
@@ -2587,36 +2258,28 @@ public partial class SubSuperscript : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "sSubSupPr" == name)
     return new SubSuperscriptProperties();
-    
 if( 21 == namespaceId && "e" == name)
     return new Base();
-    
 if( 21 == namespaceId && "sub" == name)
     return new SubArgument();
-    
 if( 21 == namespaceId && "sup" == name)
     return new SuperArgument();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "sSubSupPr","e","sub","sup" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Sub-Superscript Properties.</para>
     /// <para> Represents the following element tag in the schema: m:sSubSupPr </para>
@@ -2695,31 +2358,24 @@ public partial class Superscript : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10926;
     /// <inheritdoc/>
     public override string LocalName => "sSup";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the Superscript class.
     /// </summary>
     public Superscript():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Superscript class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Superscript(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Superscript class with the specified child elements.
     /// </summary>
@@ -2727,7 +2383,6 @@ public partial class Superscript : OpenXmlCompositeElement
     public Superscript(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Superscript class from outer XML.
     /// </summary>
@@ -2736,33 +2391,26 @@ public partial class Superscript : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "sSupPr" == name)
     return new SuperscriptProperties();
-    
 if( 21 == namespaceId && "e" == name)
     return new Base();
-    
 if( 21 == namespaceId && "sup" == name)
     return new SuperArgument();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "sSupPr","e","sup" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Superscript Properties.</para>
     /// <para> Represents the following element tag in the schema: m:sSupPr </para>
@@ -2891,31 +2539,24 @@ public partial class Paragraph : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10927;
     /// <inheritdoc/>
     public override string LocalName => "oMathPara";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the Paragraph class.
     /// </summary>
     public Paragraph():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the Paragraph class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Paragraph(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Paragraph class with the specified child elements.
     /// </summary>
@@ -2923,7 +2564,6 @@ public partial class Paragraph : OpenXmlCompositeElement
     public Paragraph(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Paragraph class from outer XML.
     /// </summary>
@@ -2932,126 +2572,88 @@ public partial class Paragraph : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "oMathParaPr" == name)
     return new ParagraphProperties();
-    
 if( 21 == namespaceId && "oMath" == name)
     return new OfficeMath();
-    
 if( 21 == namespaceId && "r" == name)
     return new Run();
-    
 if( 23 == namespaceId && "proofErr" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.ProofError();
-    
 if( 23 == namespaceId && "permStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.PermStart();
-    
 if( 23 == namespaceId && "permEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.PermEnd();
-    
 if( 23 == namespaceId && "bookmarkStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart();
-    
 if( 23 == namespaceId && "bookmarkEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd();
-    
 if( 23 == namespaceId && "commentRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart();
-    
 if( 23 == namespaceId && "commentRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd();
-    
 if( 23 == namespaceId && "moveFromRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart();
-    
 if( 23 == namespaceId && "moveFromRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd();
-    
 if( 23 == namespaceId && "moveToRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart();
-    
 if( 23 == namespaceId && "moveToRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd();
-    
 if( 23 == namespaceId && "customXmlInsRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart();
-    
 if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd();
-    
 if( 23 == namespaceId && "customXmlDelRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart();
-    
 if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd();
-    
 if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart();
-    
 if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd();
-    
 if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart();
-    
 if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd();
-    
 if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
 if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
 if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
 if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
 if( 23 == namespaceId && "ins" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.InsertedRun();
-    
 if( 23 == namespaceId && "del" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.DeletedRun();
-    
 if( 23 == namespaceId && "moveFrom" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun();
-    
 if( 23 == namespaceId && "moveTo" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveToRun();
-    
 if( 23 == namespaceId && "contentPart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.ContentPart();
-    
 if( 52 == namespaceId && "conflictIns" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
 if( 52 == namespaceId && "conflictDel" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
 if( 23 == namespaceId && "r" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.Run();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "oMathParaPr","oMath","r","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel","r" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52,23 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Office Math Paragraph Properties.</para>
     /// <para> Represents the following element tag in the schema: m:oMathParaPr </para>
@@ -3200,31 +2802,24 @@ public partial class OfficeMath : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10928;
     /// <inheritdoc/>
     public override string LocalName => "oMath";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the OfficeMath class.
     /// </summary>
     public OfficeMath():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the OfficeMath class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public OfficeMath(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeMath class with the specified child elements.
     /// </summary>
@@ -3232,7 +2827,6 @@ public partial class OfficeMath : OpenXmlCompositeElement
     public OfficeMath(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeMath class from outer XML.
     /// </summary>
@@ -3241,180 +2835,123 @@ public partial class OfficeMath : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "acc" == name)
     return new Accent();
-    
 if( 21 == namespaceId && "bar" == name)
     return new Bar();
-    
 if( 21 == namespaceId && "box" == name)
     return new Box();
-    
 if( 21 == namespaceId && "borderBox" == name)
     return new BorderBox();
-    
 if( 21 == namespaceId && "d" == name)
     return new Delimiter();
-    
 if( 21 == namespaceId && "eqArr" == name)
     return new EquationArray();
-    
 if( 21 == namespaceId && "f" == name)
     return new Fraction();
-    
 if( 21 == namespaceId && "func" == name)
     return new MathFunction();
-    
 if( 21 == namespaceId && "groupChr" == name)
     return new GroupChar();
-    
 if( 21 == namespaceId && "limLow" == name)
     return new LimitLower();
-    
 if( 21 == namespaceId && "limUpp" == name)
     return new LimitUpper();
-    
 if( 21 == namespaceId && "m" == name)
     return new Matrix();
-    
 if( 21 == namespaceId && "nary" == name)
     return new Nary();
-    
 if( 21 == namespaceId && "phant" == name)
     return new Phantom();
-    
 if( 21 == namespaceId && "rad" == name)
     return new Radical();
-    
 if( 21 == namespaceId && "sPre" == name)
     return new PreSubSuper();
-    
 if( 21 == namespaceId && "sSub" == name)
     return new Subscript();
-    
 if( 21 == namespaceId && "sSubSup" == name)
     return new SubSuperscript();
-    
 if( 21 == namespaceId && "sSup" == name)
     return new Superscript();
-    
 if( 21 == namespaceId && "r" == name)
     return new Run();
-    
 if( 23 == namespaceId && "customXml" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun();
-    
 if( 23 == namespaceId && "fldSimple" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.SimpleField();
-    
 if( 23 == namespaceId && "hyperlink" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.Hyperlink();
-    
 if( 23 == namespaceId && "sdt" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.SdtRun();
-    
 if( 23 == namespaceId && "proofErr" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.ProofError();
-    
 if( 23 == namespaceId && "permStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.PermStart();
-    
 if( 23 == namespaceId && "permEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.PermEnd();
-    
 if( 23 == namespaceId && "bookmarkStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart();
-    
 if( 23 == namespaceId && "bookmarkEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd();
-    
 if( 23 == namespaceId && "commentRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart();
-    
 if( 23 == namespaceId && "commentRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd();
-    
 if( 23 == namespaceId && "moveFromRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart();
-    
 if( 23 == namespaceId && "moveFromRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd();
-    
 if( 23 == namespaceId && "moveToRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart();
-    
 if( 23 == namespaceId && "moveToRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd();
-    
 if( 23 == namespaceId && "customXmlInsRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart();
-    
 if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd();
-    
 if( 23 == namespaceId && "customXmlDelRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart();
-    
 if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd();
-    
 if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart();
-    
 if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd();
-    
 if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart();
-    
 if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd();
-    
 if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
 if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
 if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
 if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
 if( 23 == namespaceId && "ins" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.InsertedRun();
-    
 if( 23 == namespaceId && "del" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.DeletedRun();
-    
 if( 23 == namespaceId && "moveFrom" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun();
-    
 if( 23 == namespaceId && "moveTo" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveToRun();
-    
 if( 23 == namespaceId && "contentPart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.ContentPart();
-    
 if( 52 == namespaceId && "conflictIns" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
 if( 52 == namespaceId && "conflictDel" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
 if( 21 == namespaceId && "oMathPara" == name)
     return new Paragraph();
-    
 if( 21 == namespaceId && "oMath" == name)
     return new OfficeMath();
-    
 
     return null;
 }
@@ -3474,31 +3011,24 @@ public partial class MathProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10929;
     /// <inheritdoc/>
     public override string LocalName => "mathPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the MathProperties class.
     /// </summary>
     public MathProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MathProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MathProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MathProperties class with the specified child elements.
     /// </summary>
@@ -3506,7 +3036,6 @@ public partial class MathProperties : OpenXmlCompositeElement
     public MathProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MathProperties class from outer XML.
     /// </summary>
@@ -3515,72 +3044,52 @@ public partial class MathProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "mathFont" == name)
     return new MathFont();
-    
 if( 21 == namespaceId && "brkBin" == name)
     return new BreakBinary();
-    
 if( 21 == namespaceId && "brkBinSub" == name)
     return new BreakBinarySubtraction();
-    
 if( 21 == namespaceId && "smallFrac" == name)
     return new SmallFraction();
-    
 if( 21 == namespaceId && "dispDef" == name)
     return new DisplayDefaults();
-    
 if( 21 == namespaceId && "lMargin" == name)
     return new LeftMargin();
-    
 if( 21 == namespaceId && "rMargin" == name)
     return new RightMargin();
-    
 if( 21 == namespaceId && "defJc" == name)
     return new DefaultJustification();
-    
 if( 21 == namespaceId && "preSp" == name)
     return new PreSpacing();
-    
 if( 21 == namespaceId && "postSp" == name)
     return new PostSpacing();
-    
 if( 21 == namespaceId && "interSp" == name)
     return new InterSpacing();
-    
 if( 21 == namespaceId && "intraSp" == name)
     return new IntraSpacing();
-    
 if( 21 == namespaceId && "wrapIndent" == name)
     return new WrapIndent();
-    
 if( 21 == namespaceId && "wrapRight" == name)
     return new WrapRight();
-    
 if( 21 == namespaceId && "intLim" == name)
     return new IntegralLimitLocation();
-    
 if( 21 == namespaceId && "naryLim" == name)
     return new NaryLimitLocation();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "mathFont","brkBin","brkBinSub","smallFrac","dispDef","lMargin","rMargin","defJc","preSp","postSp","interSp","intraSp","wrapIndent","wrapRight","intLim","naryLim" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Math Font.</para>
     /// <para> Represents the following element tag in the schema: m:mathFont </para>
@@ -3744,13 +3253,9 @@ public partial class Literal : OnOffType
     internal const int ElementTypeIdConst = 10930;
     /// <inheritdoc/>
     public override string LocalName => "lit";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Literal class.
@@ -3775,13 +3280,9 @@ public partial class NormalText : OnOffType
     internal const int ElementTypeIdConst = 10931;
     /// <inheritdoc/>
     public override string LocalName => "nor";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the NormalText class.
@@ -3806,13 +3307,9 @@ public partial class Alignment : OnOffType
     internal const int ElementTypeIdConst = 10933;
     /// <inheritdoc/>
     public override string LocalName => "aln";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Alignment class.
@@ -3837,13 +3334,9 @@ public partial class OperatorEmulator : OnOffType
     internal const int ElementTypeIdConst = 10942;
     /// <inheritdoc/>
     public override string LocalName => "opEmu";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the OperatorEmulator class.
@@ -3868,13 +3361,9 @@ public partial class NoBreak : OnOffType
     internal const int ElementTypeIdConst = 10943;
     /// <inheritdoc/>
     public override string LocalName => "noBreak";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the NoBreak class.
@@ -3899,13 +3388,9 @@ public partial class Differential : OnOffType
     internal const int ElementTypeIdConst = 10944;
     /// <inheritdoc/>
     public override string LocalName => "diff";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Differential class.
@@ -3930,13 +3415,9 @@ public partial class HideTop : OnOffType
     internal const int ElementTypeIdConst = 10946;
     /// <inheritdoc/>
     public override string LocalName => "hideTop";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HideTop class.
@@ -3961,13 +3442,9 @@ public partial class HideBottom : OnOffType
     internal const int ElementTypeIdConst = 10947;
     /// <inheritdoc/>
     public override string LocalName => "hideBot";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HideBottom class.
@@ -3992,13 +3469,9 @@ public partial class HideLeft : OnOffType
     internal const int ElementTypeIdConst = 10948;
     /// <inheritdoc/>
     public override string LocalName => "hideLeft";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HideLeft class.
@@ -4023,13 +3496,9 @@ public partial class HideRight : OnOffType
     internal const int ElementTypeIdConst = 10949;
     /// <inheritdoc/>
     public override string LocalName => "hideRight";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HideRight class.
@@ -4054,13 +3523,9 @@ public partial class StrikeHorizontal : OnOffType
     internal const int ElementTypeIdConst = 10950;
     /// <inheritdoc/>
     public override string LocalName => "strikeH";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the StrikeHorizontal class.
@@ -4085,13 +3550,9 @@ public partial class StrikeVertical : OnOffType
     internal const int ElementTypeIdConst = 10951;
     /// <inheritdoc/>
     public override string LocalName => "strikeV";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the StrikeVertical class.
@@ -4116,13 +3577,9 @@ public partial class StrikeBottomLeftToTopRight : OnOffType
     internal const int ElementTypeIdConst = 10952;
     /// <inheritdoc/>
     public override string LocalName => "strikeBLTR";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the StrikeBottomLeftToTopRight class.
@@ -4147,13 +3604,9 @@ public partial class StrikeTopLeftToBottomRight : OnOffType
     internal const int ElementTypeIdConst = 10953;
     /// <inheritdoc/>
     public override string LocalName => "strikeTLBR";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the StrikeTopLeftToBottomRight class.
@@ -4178,13 +3631,9 @@ public partial class GrowOperators : OnOffType
     internal const int ElementTypeIdConst = 10958;
     /// <inheritdoc/>
     public override string LocalName => "grow";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the GrowOperators class.
@@ -4209,13 +3658,9 @@ public partial class MaxDistribution : OnOffType
     internal const int ElementTypeIdConst = 10962;
     /// <inheritdoc/>
     public override string LocalName => "maxDist";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the MaxDistribution class.
@@ -4240,13 +3685,9 @@ public partial class ObjectDistribution : OnOffType
     internal const int ElementTypeIdConst = 10963;
     /// <inheritdoc/>
     public override string LocalName => "objDist";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ObjectDistribution class.
@@ -4271,13 +3712,9 @@ public partial class HidePlaceholder : OnOffType
     internal const int ElementTypeIdConst = 10982;
     /// <inheritdoc/>
     public override string LocalName => "plcHide";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HidePlaceholder class.
@@ -4302,13 +3739,9 @@ public partial class HideSubArgument : OnOffType
     internal const int ElementTypeIdConst = 10990;
     /// <inheritdoc/>
     public override string LocalName => "subHide";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HideSubArgument class.
@@ -4333,13 +3766,9 @@ public partial class HideSuperArgument : OnOffType
     internal const int ElementTypeIdConst = 10991;
     /// <inheritdoc/>
     public override string LocalName => "supHide";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HideSuperArgument class.
@@ -4364,13 +3793,9 @@ public partial class ShowPhantom : OnOffType
     internal const int ElementTypeIdConst = 10995;
     /// <inheritdoc/>
     public override string LocalName => "show";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ShowPhantom class.
@@ -4395,13 +3820,9 @@ public partial class ZeroWidth : OnOffType
     internal const int ElementTypeIdConst = 10996;
     /// <inheritdoc/>
     public override string LocalName => "zeroWid";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ZeroWidth class.
@@ -4426,13 +3847,9 @@ public partial class ZeroAscent : OnOffType
     internal const int ElementTypeIdConst = 10997;
     /// <inheritdoc/>
     public override string LocalName => "zeroAsc";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ZeroAscent class.
@@ -4457,13 +3874,9 @@ public partial class ZeroDescent : OnOffType
     internal const int ElementTypeIdConst = 10998;
     /// <inheritdoc/>
     public override string LocalName => "zeroDesc";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ZeroDescent class.
@@ -4488,13 +3901,9 @@ public partial class Transparent : OnOffType
     internal const int ElementTypeIdConst = 10999;
     /// <inheritdoc/>
     public override string LocalName => "transp";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Transparent class.
@@ -4519,13 +3928,9 @@ public partial class HideDegree : OnOffType
     internal const int ElementTypeIdConst = 11001;
     /// <inheritdoc/>
     public override string LocalName => "degHide";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HideDegree class.
@@ -4550,13 +3955,9 @@ public partial class AlignScripts : OnOffType
     internal const int ElementTypeIdConst = 11006;
     /// <inheritdoc/>
     public override string LocalName => "alnScr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AlignScripts class.
@@ -4581,13 +3982,9 @@ public partial class SmallFraction : OnOffType
     internal const int ElementTypeIdConst = 11015;
     /// <inheritdoc/>
     public override string LocalName => "smallFrac";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the SmallFraction class.
@@ -4612,13 +4009,9 @@ public partial class DisplayDefaults : OnOffType
     internal const int ElementTypeIdConst = 11016;
     /// <inheritdoc/>
     public override string LocalName => "dispDef";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DisplayDefaults class.
@@ -4643,13 +4036,9 @@ public partial class WrapRight : OnOffType
     internal const int ElementTypeIdConst = 11025;
     /// <inheritdoc/>
     public override string LocalName => "wrapRight";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the WrapRight class.
@@ -4668,8 +4057,6 @@ public partial class WrapRight : OnOffType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OnOffType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<OnOffType>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> value.</para>
@@ -4678,21 +4065,15 @@ public abstract partial class OnOffType : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues> Val { get; set;}
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the OnOffType class.
     /// </summary>
     protected OnOffType(){}
-    
     
     
 }
@@ -4709,16 +4090,9 @@ public partial class Break : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10932;
     /// <inheritdoc/>
     public override string LocalName => "brk";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Break>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4728,12 +4102,8 @@ public partial class Break : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "alnAt")]
-    public IntegerValue AlignAt
-    {
-        get { return (IntegerValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public IntegerValue AlignAt { get; set;}
     /// <summary>
     /// <para> Index of Operator to Align To.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
@@ -4741,20 +4111,14 @@ public partial class Break : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public IntegerValue Val
-    {
-        get { return (IntegerValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+	[SchemaIndex(1)]
+    public IntegerValue Val { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the Break class.
     /// </summary>
     public Break():base(){}
     
-      
-     
     
     
     
@@ -4792,31 +4156,24 @@ public partial class RunProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10934;
     /// <inheritdoc/>
     public override string LocalName => "rPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the RunProperties class.
     /// </summary>
     public RunProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RunProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RunProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RunProperties class with the specified child elements.
     /// </summary>
@@ -4824,7 +4181,6 @@ public partial class RunProperties : OpenXmlCompositeElement
     public RunProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RunProperties class from outer XML.
     /// </summary>
@@ -4833,42 +4189,32 @@ public partial class RunProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "lit" == name)
     return new Literal();
-    
 if( 21 == namespaceId && "nor" == name)
     return new NormalText();
-    
 if( 21 == namespaceId && "scr" == name)
     return new Script();
-    
 if( 21 == namespaceId && "sty" == name)
     return new Style();
-    
 if( 21 == namespaceId && "brk" == name)
     return new Break();
-    
 if( 21 == namespaceId && "aln" == name)
     return new Alignment();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "lit","nor","scr","sty","brk","aln" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Literal.</para>
     /// <para> Represents the following element tag in the schema: m:lit </para>
@@ -4900,16 +4246,9 @@ public partial class Text : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10935;
     /// <inheritdoc/>
     public override string LocalName => "t";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Text>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -4919,19 +4258,14 @@ public partial class Text : OpenXmlLeafTextElement
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
     [SchemaAttr(1, "space")]
-    public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the Text class.
     /// </summary>
     public Text():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the Text class with the specified text content.
     /// </summary>
@@ -4939,14 +4273,11 @@ public partial class Text : OpenXmlLeafTextElement
     public Text(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -4966,13 +4297,9 @@ public partial class AccentChar : CharType
     internal const int ElementTypeIdConst = 10936;
     /// <inheritdoc/>
     public override string LocalName => "chr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AccentChar class.
@@ -4997,13 +4324,9 @@ public partial class BeginChar : CharType
     internal const int ElementTypeIdConst = 10955;
     /// <inheritdoc/>
     public override string LocalName => "begChr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the BeginChar class.
@@ -5028,13 +4351,9 @@ public partial class SeparatorChar : CharType
     internal const int ElementTypeIdConst = 10956;
     /// <inheritdoc/>
     public override string LocalName => "sepChr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the SeparatorChar class.
@@ -5059,13 +4378,9 @@ public partial class EndChar : CharType
     internal const int ElementTypeIdConst = 10957;
     /// <inheritdoc/>
     public override string LocalName => "endChr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the EndChar class.
@@ -5084,8 +4399,6 @@ public partial class EndChar : CharType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class CharType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<CharType>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> value.</para>
@@ -5094,21 +4407,15 @@ public abstract partial class CharType : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public StringValue Val
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public StringValue Val { get; set;}
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the CharType class.
     /// </summary>
     protected CharType(){}
-    
     
     
 }
@@ -5140,31 +4447,24 @@ public partial class ControlProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10937;
     /// <inheritdoc/>
     public override string LocalName => "ctrlPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the ControlProperties class.
     /// </summary>
     public ControlProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ControlProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ControlProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ControlProperties class with the specified child elements.
     /// </summary>
@@ -5172,7 +4472,6 @@ public partial class ControlProperties : OpenXmlCompositeElement
     public ControlProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ControlProperties class from outer XML.
     /// </summary>
@@ -5181,27 +4480,21 @@ public partial class ControlProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 23 == namespaceId && "rPr" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.RunProperties();
-    
 if( 23 == namespaceId && "ins" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl();
-    
 if( 23 == namespaceId && "del" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl();
-    
 if( 23 == namespaceId && "moveFrom" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveFromMathControl();
-    
 if( 23 == namespaceId && "moveTo" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveToMathControl();
-    
 
     return null;
 }
@@ -5233,31 +4526,24 @@ public partial class AccentProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10938;
     /// <inheritdoc/>
     public override string LocalName => "accPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the AccentProperties class.
     /// </summary>
     public AccentProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the AccentProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public AccentProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AccentProperties class with the specified child elements.
     /// </summary>
@@ -5265,7 +4551,6 @@ public partial class AccentProperties : OpenXmlCompositeElement
     public AccentProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the AccentProperties class from outer XML.
     /// </summary>
@@ -5274,30 +4559,24 @@ public partial class AccentProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "chr" == name)
     return new AccentChar();
-    
 if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "chr","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Accent Character.</para>
     /// <para> Represents the following element tag in the schema: m:chr </para>
@@ -5404,13 +4683,9 @@ public partial class Base : OfficeMathArgumentType
     internal const int ElementTypeIdConst = 10939;
     /// <inheritdoc/>
     public override string LocalName => "e";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Base class.
@@ -5422,9 +4697,8 @@ public partial class Base : OfficeMathArgumentType
     /// <param name="childElements">Specifies the child elements.</param>
     public Base(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Base class with the specified child elements.
     /// </summary>
@@ -5432,7 +4706,6 @@ public partial class Base : OfficeMathArgumentType
     public Base(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Base class from outer XML.
     /// </summary>
@@ -5523,13 +4796,9 @@ public partial class Numerator : OfficeMathArgumentType
     internal const int ElementTypeIdConst = 10969;
     /// <inheritdoc/>
     public override string LocalName => "num";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Numerator class.
@@ -5541,9 +4810,8 @@ public partial class Numerator : OfficeMathArgumentType
     /// <param name="childElements">Specifies the child elements.</param>
     public Numerator(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Numerator class with the specified child elements.
     /// </summary>
@@ -5551,7 +4819,6 @@ public partial class Numerator : OfficeMathArgumentType
     public Numerator(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Numerator class from outer XML.
     /// </summary>
@@ -5642,13 +4909,9 @@ public partial class Denominator : OfficeMathArgumentType
     internal const int ElementTypeIdConst = 10970;
     /// <inheritdoc/>
     public override string LocalName => "den";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Denominator class.
@@ -5660,9 +4923,8 @@ public partial class Denominator : OfficeMathArgumentType
     /// <param name="childElements">Specifies the child elements.</param>
     public Denominator(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Denominator class with the specified child elements.
     /// </summary>
@@ -5670,7 +4932,6 @@ public partial class Denominator : OfficeMathArgumentType
     public Denominator(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Denominator class from outer XML.
     /// </summary>
@@ -5761,13 +5022,9 @@ public partial class FunctionName : OfficeMathArgumentType
     internal const int ElementTypeIdConst = 10972;
     /// <inheritdoc/>
     public override string LocalName => "fName";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the FunctionName class.
@@ -5779,9 +5036,8 @@ public partial class FunctionName : OfficeMathArgumentType
     /// <param name="childElements">Specifies the child elements.</param>
     public FunctionName(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the FunctionName class with the specified child elements.
     /// </summary>
@@ -5789,7 +5045,6 @@ public partial class FunctionName : OfficeMathArgumentType
     public FunctionName(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the FunctionName class from outer XML.
     /// </summary>
@@ -5880,13 +5135,9 @@ public partial class Limit : OfficeMathArgumentType
     internal const int ElementTypeIdConst = 10976;
     /// <inheritdoc/>
     public override string LocalName => "lim";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Limit class.
@@ -5898,9 +5149,8 @@ public partial class Limit : OfficeMathArgumentType
     /// <param name="childElements">Specifies the child elements.</param>
     public Limit(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Limit class with the specified child elements.
     /// </summary>
@@ -5908,7 +5158,6 @@ public partial class Limit : OfficeMathArgumentType
     public Limit(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Limit class from outer XML.
     /// </summary>
@@ -5999,13 +5248,9 @@ public partial class SubArgument : OfficeMathArgumentType
     internal const int ElementTypeIdConst = 10993;
     /// <inheritdoc/>
     public override string LocalName => "sub";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the SubArgument class.
@@ -6017,9 +5262,8 @@ public partial class SubArgument : OfficeMathArgumentType
     /// <param name="childElements">Specifies the child elements.</param>
     public SubArgument(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SubArgument class with the specified child elements.
     /// </summary>
@@ -6027,7 +5271,6 @@ public partial class SubArgument : OfficeMathArgumentType
     public SubArgument(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SubArgument class from outer XML.
     /// </summary>
@@ -6118,13 +5361,9 @@ public partial class SuperArgument : OfficeMathArgumentType
     internal const int ElementTypeIdConst = 10994;
     /// <inheritdoc/>
     public override string LocalName => "sup";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the SuperArgument class.
@@ -6136,9 +5375,8 @@ public partial class SuperArgument : OfficeMathArgumentType
     /// <param name="childElements">Specifies the child elements.</param>
     public SuperArgument(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SuperArgument class with the specified child elements.
     /// </summary>
@@ -6146,7 +5384,6 @@ public partial class SuperArgument : OfficeMathArgumentType
     public SuperArgument(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SuperArgument class from outer XML.
     /// </summary>
@@ -6237,13 +5474,9 @@ public partial class Degree : OfficeMathArgumentType
     internal const int ElementTypeIdConst = 11003;
     /// <inheritdoc/>
     public override string LocalName => "deg";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Degree class.
@@ -6255,9 +5488,8 @@ public partial class Degree : OfficeMathArgumentType
     /// <param name="childElements">Specifies the child elements.</param>
     public Degree(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Degree class with the specified child elements.
     /// </summary>
@@ -6265,7 +5497,6 @@ public partial class Degree : OfficeMathArgumentType
     public Degree(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Degree class from outer XML.
     /// </summary>
@@ -6408,197 +5639,136 @@ public partial class Degree : OfficeMathArgumentType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
 {
-        
+    
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "argPr" == name)
     return new ArgumentProperties();
-    
 if( 21 == namespaceId && "acc" == name)
     return new Accent();
-    
 if( 21 == namespaceId && "bar" == name)
     return new Bar();
-    
 if( 21 == namespaceId && "box" == name)
     return new Box();
-    
 if( 21 == namespaceId && "borderBox" == name)
     return new BorderBox();
-    
 if( 21 == namespaceId && "d" == name)
     return new Delimiter();
-    
 if( 21 == namespaceId && "eqArr" == name)
     return new EquationArray();
-    
 if( 21 == namespaceId && "f" == name)
     return new Fraction();
-    
 if( 21 == namespaceId && "func" == name)
     return new MathFunction();
-    
 if( 21 == namespaceId && "groupChr" == name)
     return new GroupChar();
-    
 if( 21 == namespaceId && "limLow" == name)
     return new LimitLower();
-    
 if( 21 == namespaceId && "limUpp" == name)
     return new LimitUpper();
-    
 if( 21 == namespaceId && "m" == name)
     return new Matrix();
-    
 if( 21 == namespaceId && "nary" == name)
     return new Nary();
-    
 if( 21 == namespaceId && "phant" == name)
     return new Phantom();
-    
 if( 21 == namespaceId && "rad" == name)
     return new Radical();
-    
 if( 21 == namespaceId && "sPre" == name)
     return new PreSubSuper();
-    
 if( 21 == namespaceId && "sSub" == name)
     return new Subscript();
-    
 if( 21 == namespaceId && "sSubSup" == name)
     return new SubSuperscript();
-    
 if( 21 == namespaceId && "sSup" == name)
     return new Superscript();
-    
 if( 21 == namespaceId && "r" == name)
     return new Run();
-    
 if( 23 == namespaceId && "customXml" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun();
-    
 if( 23 == namespaceId && "fldSimple" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.SimpleField();
-    
 if( 23 == namespaceId && "hyperlink" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.Hyperlink();
-    
 if( 23 == namespaceId && "sdt" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.SdtRun();
-    
 if( 23 == namespaceId && "proofErr" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.ProofError();
-    
 if( 23 == namespaceId && "permStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.PermStart();
-    
 if( 23 == namespaceId && "permEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.PermEnd();
-    
 if( 23 == namespaceId && "bookmarkStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart();
-    
 if( 23 == namespaceId && "bookmarkEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd();
-    
 if( 23 == namespaceId && "commentRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart();
-    
 if( 23 == namespaceId && "commentRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd();
-    
 if( 23 == namespaceId && "moveFromRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart();
-    
 if( 23 == namespaceId && "moveFromRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd();
-    
 if( 23 == namespaceId && "moveToRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart();
-    
 if( 23 == namespaceId && "moveToRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd();
-    
 if( 23 == namespaceId && "customXmlInsRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart();
-    
 if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd();
-    
 if( 23 == namespaceId && "customXmlDelRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart();
-    
 if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd();
-    
 if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart();
-    
 if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd();
-    
 if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart();
-    
 if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd();
-    
 if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
 if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
 if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
 if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
 if( 23 == namespaceId && "ins" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.InsertedRun();
-    
 if( 23 == namespaceId && "del" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.DeletedRun();
-    
 if( 23 == namespaceId && "moveFrom" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun();
-    
 if( 23 == namespaceId && "moveTo" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.MoveToRun();
-    
 if( 23 == namespaceId && "contentPart" == name)
     return new DocumentFormat.OpenXml.Wordprocessing.ContentPart();
-    
 if( 52 == namespaceId && "conflictIns" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
 if( 52 == namespaceId && "conflictDel" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
 if( 21 == namespaceId && "oMathPara" == name)
     return new Paragraph();
-    
 if( 21 == namespaceId && "oMath" == name)
     return new OfficeMath();
-    
 if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "argPr","acc","bar","box","borderBox","d","eqArr","f","func","groupChr","limLow","limUpp","m","nary","phant","rad","sPre","sSub","sSubSup","sSup","r","customXml","fldSimple","hyperlink","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel","oMathPara","oMath","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52,21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Argument Properties.</para>
     /// <para> Represents the following element tag in the schema: m:argPr </para>
@@ -6613,21 +5783,18 @@ if( 21 == namespaceId && "ctrlPr" == name)
     }
 
 
-    
     /// <summary>
     /// Initializes a new instance of the OfficeMathArgumentType class.
     /// </summary>
     protected OfficeMathArgumentType(){}
-    
         /// <summary>
     ///Initializes a new instance of the OfficeMathArgumentType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     protected OfficeMathArgumentType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeMathArgumentType class with the specified child elements.
     /// </summary>
@@ -6635,7 +5802,6 @@ if( 21 == namespaceId && "ctrlPr" == name)
     protected OfficeMathArgumentType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeMathArgumentType class from outer XML.
     /// </summary>
@@ -6660,13 +5826,9 @@ public partial class Position : TopBottomType
     internal const int ElementTypeIdConst = 10940;
     /// <inheritdoc/>
     public override string LocalName => "pos";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Position class.
@@ -6691,13 +5853,9 @@ public partial class VerticalJustification : TopBottomType
     internal const int ElementTypeIdConst = 10973;
     /// <inheritdoc/>
     public override string LocalName => "vertJc";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the VerticalJustification class.
@@ -6716,8 +5874,6 @@ public partial class VerticalJustification : TopBottomType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class TopBottomType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TopBottomType>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> Value.</para>
@@ -6726,21 +5882,15 @@ public abstract partial class TopBottomType : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues> Val { get; set;}
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the TopBottomType class.
     /// </summary>
     protected TopBottomType(){}
-    
     
     
 }
@@ -6766,31 +5916,24 @@ public partial class BarProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10941;
     /// <inheritdoc/>
     public override string LocalName => "barPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the BarProperties class.
     /// </summary>
     public BarProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the BarProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public BarProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BarProperties class with the specified child elements.
     /// </summary>
@@ -6798,7 +5941,6 @@ public partial class BarProperties : OpenXmlCompositeElement
     public BarProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BarProperties class from outer XML.
     /// </summary>
@@ -6807,30 +5949,24 @@ public partial class BarProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "pos" == name)
     return new Position();
-    
 if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "pos","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Position (Bar).</para>
     /// <para> Represents the following element tag in the schema: m:pos </para>
@@ -6891,31 +6027,24 @@ public partial class BoxProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10945;
     /// <inheritdoc/>
     public override string LocalName => "boxPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the BoxProperties class.
     /// </summary>
     public BoxProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the BoxProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public BoxProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BoxProperties class with the specified child elements.
     /// </summary>
@@ -6923,7 +6052,6 @@ public partial class BoxProperties : OpenXmlCompositeElement
     public BoxProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BoxProperties class from outer XML.
     /// </summary>
@@ -6932,42 +6060,32 @@ public partial class BoxProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "opEmu" == name)
     return new OperatorEmulator();
-    
 if( 21 == namespaceId && "noBreak" == name)
     return new NoBreak();
-    
 if( 21 == namespaceId && "diff" == name)
     return new Differential();
-    
 if( 21 == namespaceId && "brk" == name)
     return new Break();
-    
 if( 21 == namespaceId && "aln" == name)
     return new Alignment();
-    
 if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "opEmu","noBreak","diff","brk","aln","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Operator Emulator.</para>
     /// <para> Represents the following element tag in the schema: m:opEmu </para>
@@ -7082,31 +6200,24 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10954;
     /// <inheritdoc/>
     public override string LocalName => "borderBoxPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the BorderBoxProperties class.
     /// </summary>
     public BorderBoxProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the BorderBoxProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public BorderBoxProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BorderBoxProperties class with the specified child elements.
     /// </summary>
@@ -7114,7 +6225,6 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     public BorderBoxProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the BorderBoxProperties class from outer XML.
     /// </summary>
@@ -7123,51 +6233,38 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "hideTop" == name)
     return new HideTop();
-    
 if( 21 == namespaceId && "hideBot" == name)
     return new HideBottom();
-    
 if( 21 == namespaceId && "hideLeft" == name)
     return new HideLeft();
-    
 if( 21 == namespaceId && "hideRight" == name)
     return new HideRight();
-    
 if( 21 == namespaceId && "strikeH" == name)
     return new StrikeHorizontal();
-    
 if( 21 == namespaceId && "strikeV" == name)
     return new StrikeVertical();
-    
 if( 21 == namespaceId && "strikeBLTR" == name)
     return new StrikeBottomLeftToTopRight();
-    
 if( 21 == namespaceId && "strikeTLBR" == name)
     return new StrikeTopLeftToBottomRight();
-    
 if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "hideTop","hideBot","hideLeft","hideRight","strikeH","strikeV","strikeBLTR","strikeTLBR","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21,21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Hide Top Edge.</para>
     /// <para> Represents the following element tag in the schema: m:hideTop </para>
@@ -7295,16 +6392,9 @@ public partial class Shape : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10959;
     /// <inheritdoc/>
     public override string LocalName => "shp";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<Shape>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -7314,20 +6404,14 @@ public partial class Shape : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues> Val { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the Shape class.
     /// </summary>
     public Shape():base(){}
     
-      
-     
     
     
     
@@ -7365,31 +6449,24 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10960;
     /// <inheritdoc/>
     public override string LocalName => "dPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the DelimiterProperties class.
     /// </summary>
     public DelimiterProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the DelimiterProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public DelimiterProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DelimiterProperties class with the specified child elements.
     /// </summary>
@@ -7397,7 +6474,6 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
     public DelimiterProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DelimiterProperties class from outer XML.
     /// </summary>
@@ -7406,42 +6482,32 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "begChr" == name)
     return new BeginChar();
-    
 if( 21 == namespaceId && "sepChr" == name)
     return new SeparatorChar();
-    
 if( 21 == namespaceId && "endChr" == name)
     return new EndChar();
-    
 if( 21 == namespaceId && "grow" == name)
     return new GrowOperators();
-    
 if( 21 == namespaceId && "shp" == name)
     return new Shape();
-    
 if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "begChr","sepChr","endChr","grow","shp","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Delimiter Beginning Character.</para>
     /// <para> Represents the following element tag in the schema: m:begChr </para>
@@ -7533,16 +6599,9 @@ public partial class BaseJustification : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10961;
     /// <inheritdoc/>
     public override string LocalName => "baseJc";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<BaseJustification>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -7552,20 +6611,14 @@ public partial class BaseJustification : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues> Val { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the BaseJustification class.
     /// </summary>
     public BaseJustification():base(){}
     
-      
-     
     
     
     
@@ -7586,13 +6639,9 @@ public partial class RowSpacingRule : SpacingRuleType
     internal const int ElementTypeIdConst = 10964;
     /// <inheritdoc/>
     public override string LocalName => "rSpRule";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the RowSpacingRule class.
@@ -7617,13 +6666,9 @@ public partial class ColumnGapRule : SpacingRuleType
     internal const int ElementTypeIdConst = 10983;
     /// <inheritdoc/>
     public override string LocalName => "cGpRule";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ColumnGapRule class.
@@ -7642,8 +6687,6 @@ public partial class ColumnGapRule : SpacingRuleType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class SpacingRuleType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SpacingRuleType>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> Value.</para>
@@ -7652,21 +6695,15 @@ public abstract partial class SpacingRuleType : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public IntegerValue Val
-    {
-        get { return (IntegerValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public IntegerValue Val { get; set;}
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the SpacingRuleType class.
     /// </summary>
     protected SpacingRuleType(){}
-    
     
     
 }
@@ -7683,13 +6720,9 @@ public partial class RowSpacing : UnsignedShortType
     internal const int ElementTypeIdConst = 10965;
     /// <inheritdoc/>
     public override string LocalName => "rSp";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the RowSpacing class.
@@ -7714,13 +6747,9 @@ public partial class ColumnGap : UnsignedShortType
     internal const int ElementTypeIdConst = 10985;
     /// <inheritdoc/>
     public override string LocalName => "cGp";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ColumnGap class.
@@ -7739,8 +6768,6 @@ public partial class ColumnGap : UnsignedShortType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class UnsignedShortType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<UnsignedShortType>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> val.</para>
@@ -7749,21 +6776,15 @@ public abstract partial class UnsignedShortType : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public UInt16Value Val
-    {
-        get { return (UInt16Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public UInt16Value Val { get; set;}
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the UnsignedShortType class.
     /// </summary>
     protected UnsignedShortType(){}
-    
     
     
 }
@@ -7797,31 +6818,24 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10966;
     /// <inheritdoc/>
     public override string LocalName => "eqArrPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the EquationArrayProperties class.
     /// </summary>
     public EquationArrayProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the EquationArrayProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public EquationArrayProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the EquationArrayProperties class with the specified child elements.
     /// </summary>
@@ -7829,7 +6843,6 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
     public EquationArrayProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the EquationArrayProperties class from outer XML.
     /// </summary>
@@ -7838,42 +6851,32 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "baseJc" == name)
     return new BaseJustification();
-    
 if( 21 == namespaceId && "maxDist" == name)
     return new MaxDistribution();
-    
 if( 21 == namespaceId && "objDist" == name)
     return new ObjectDistribution();
-    
 if( 21 == namespaceId && "rSpRule" == name)
     return new RowSpacingRule();
-    
 if( 21 == namespaceId && "rSp" == name)
     return new RowSpacing();
-    
 if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "baseJc","maxDist","objDist","rSpRule","rSp","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Equation Array Base Justification.</para>
     /// <para> Represents the following element tag in the schema: m:baseJc </para>
@@ -7965,16 +6968,9 @@ public partial class FractionType : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10967;
     /// <inheritdoc/>
     public override string LocalName => "type";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<FractionType>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -7984,20 +6980,14 @@ public partial class FractionType : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues> Val { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the FractionType class.
     /// </summary>
     public FractionType():base(){}
     
-      
-     
     
     
     
@@ -8027,31 +7017,24 @@ public partial class FractionProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10968;
     /// <inheritdoc/>
     public override string LocalName => "fPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the FractionProperties class.
     /// </summary>
     public FractionProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the FractionProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public FractionProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the FractionProperties class with the specified child elements.
     /// </summary>
@@ -8059,7 +7042,6 @@ public partial class FractionProperties : OpenXmlCompositeElement
     public FractionProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the FractionProperties class from outer XML.
     /// </summary>
@@ -8068,30 +7050,24 @@ public partial class FractionProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "type" == name)
     return new FractionType();
-    
 if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "type","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Fraction type.</para>
     /// <para> Represents the following element tag in the schema: m:type </para>
@@ -8142,31 +7118,24 @@ public partial class FunctionProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10971;
     /// <inheritdoc/>
     public override string LocalName => "funcPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the FunctionProperties class.
     /// </summary>
     public FunctionProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the FunctionProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public FunctionProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the FunctionProperties class with the specified child elements.
     /// </summary>
@@ -8174,7 +7143,6 @@ public partial class FunctionProperties : OpenXmlCompositeElement
     public FunctionProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the FunctionProperties class from outer XML.
     /// </summary>
@@ -8183,27 +7151,22 @@ public partial class FunctionProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -8248,31 +7211,24 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10974;
     /// <inheritdoc/>
     public override string LocalName => "groupChrPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the GroupCharProperties class.
     /// </summary>
     public GroupCharProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the GroupCharProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public GroupCharProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the GroupCharProperties class with the specified child elements.
     /// </summary>
@@ -8280,7 +7236,6 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
     public GroupCharProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the GroupCharProperties class from outer XML.
     /// </summary>
@@ -8289,36 +7244,28 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "chr" == name)
     return new AccentChar();
-    
 if( 21 == namespaceId && "pos" == name)
     return new Position();
-    
 if( 21 == namespaceId && "vertJc" == name)
     return new VerticalJustification();
-    
 if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "chr","pos","vertJc","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Group Character (Grouping Character).</para>
     /// <para> Represents the following element tag in the schema: m:chr </para>
@@ -8393,31 +7340,24 @@ public partial class LimitLowerProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10975;
     /// <inheritdoc/>
     public override string LocalName => "limLowPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the LimitLowerProperties class.
     /// </summary>
     public LimitLowerProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the LimitLowerProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public LimitLowerProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LimitLowerProperties class with the specified child elements.
     /// </summary>
@@ -8425,7 +7365,6 @@ public partial class LimitLowerProperties : OpenXmlCompositeElement
     public LimitLowerProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LimitLowerProperties class from outer XML.
     /// </summary>
@@ -8434,27 +7373,22 @@ public partial class LimitLowerProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -8493,31 +7427,24 @@ public partial class LimitUpperProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10977;
     /// <inheritdoc/>
     public override string LocalName => "limUppPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the LimitUpperProperties class.
     /// </summary>
     public LimitUpperProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the LimitUpperProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public LimitUpperProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LimitUpperProperties class with the specified child elements.
     /// </summary>
@@ -8525,7 +7452,6 @@ public partial class LimitUpperProperties : OpenXmlCompositeElement
     public LimitUpperProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the LimitUpperProperties class from outer XML.
     /// </summary>
@@ -8534,27 +7460,22 @@ public partial class LimitUpperProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -8586,16 +7507,9 @@ public partial class MatrixColumnCount : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10978;
     /// <inheritdoc/>
     public override string LocalName => "count";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<MatrixColumnCount>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -8605,20 +7519,14 @@ public partial class MatrixColumnCount : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public IntegerValue Val
-    {
-        get { return (IntegerValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public IntegerValue Val { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the MatrixColumnCount class.
     /// </summary>
     public MatrixColumnCount():base(){}
     
-      
-     
     
     
     
@@ -8639,16 +7547,9 @@ public partial class MatrixColumnJustification : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10979;
     /// <inheritdoc/>
     public override string LocalName => "mcJc";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<MatrixColumnJustification>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -8658,20 +7559,14 @@ public partial class MatrixColumnJustification : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues> Val { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the MatrixColumnJustification class.
     /// </summary>
     public MatrixColumnJustification():base(){}
     
-      
-     
     
     
     
@@ -8701,31 +7596,24 @@ public partial class MatrixColumnProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10980;
     /// <inheritdoc/>
     public override string LocalName => "mcPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the MatrixColumnProperties class.
     /// </summary>
     public MatrixColumnProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MatrixColumnProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MatrixColumnProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixColumnProperties class with the specified child elements.
     /// </summary>
@@ -8733,7 +7621,6 @@ public partial class MatrixColumnProperties : OpenXmlCompositeElement
     public MatrixColumnProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixColumnProperties class from outer XML.
     /// </summary>
@@ -8742,30 +7629,24 @@ public partial class MatrixColumnProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "count" == name)
     return new MatrixColumnCount();
-    
 if( 21 == namespaceId && "mcJc" == name)
     return new MatrixColumnJustification();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "count","mcJc" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Matrix Column Count.</para>
     /// <para> Represents the following element tag in the schema: m:count </para>
@@ -8816,31 +7697,24 @@ public partial class MatrixColumn : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10981;
     /// <inheritdoc/>
     public override string LocalName => "mc";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the MatrixColumn class.
     /// </summary>
     public MatrixColumn():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MatrixColumn class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MatrixColumn(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixColumn class with the specified child elements.
     /// </summary>
@@ -8848,7 +7722,6 @@ public partial class MatrixColumn : OpenXmlCompositeElement
     public MatrixColumn(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixColumn class from outer XML.
     /// </summary>
@@ -8857,27 +7730,22 @@ public partial class MatrixColumn : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "mcPr" == name)
     return new MatrixColumnProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "mcPr" };
     private static readonly byte[] eleNamespaceIds = { 21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Matrix Column Properties.</para>
     /// <para> Represents the following element tag in the schema: m:mcPr </para>
@@ -8909,13 +7777,9 @@ public partial class ColumnSpacing : TwipsMeasureType
     internal const int ElementTypeIdConst = 10984;
     /// <inheritdoc/>
     public override string LocalName => "cSp";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ColumnSpacing class.
@@ -8940,13 +7804,9 @@ public partial class LeftMargin : TwipsMeasureType
     internal const int ElementTypeIdConst = 11017;
     /// <inheritdoc/>
     public override string LocalName => "lMargin";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the LeftMargin class.
@@ -8971,13 +7831,9 @@ public partial class RightMargin : TwipsMeasureType
     internal const int ElementTypeIdConst = 11018;
     /// <inheritdoc/>
     public override string LocalName => "rMargin";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the RightMargin class.
@@ -9002,13 +7858,9 @@ public partial class PreSpacing : TwipsMeasureType
     internal const int ElementTypeIdConst = 11020;
     /// <inheritdoc/>
     public override string LocalName => "preSp";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the PreSpacing class.
@@ -9033,13 +7885,9 @@ public partial class PostSpacing : TwipsMeasureType
     internal const int ElementTypeIdConst = 11021;
     /// <inheritdoc/>
     public override string LocalName => "postSp";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the PostSpacing class.
@@ -9064,13 +7912,9 @@ public partial class InterSpacing : TwipsMeasureType
     internal const int ElementTypeIdConst = 11022;
     /// <inheritdoc/>
     public override string LocalName => "interSp";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the InterSpacing class.
@@ -9095,13 +7939,9 @@ public partial class IntraSpacing : TwipsMeasureType
     internal const int ElementTypeIdConst = 11023;
     /// <inheritdoc/>
     public override string LocalName => "intraSp";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the IntraSpacing class.
@@ -9126,13 +7966,9 @@ public partial class WrapIndent : TwipsMeasureType
     internal const int ElementTypeIdConst = 11024;
     /// <inheritdoc/>
     public override string LocalName => "wrapIndent";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the WrapIndent class.
@@ -9151,8 +7987,6 @@ public partial class WrapIndent : TwipsMeasureType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class TwipsMeasureType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<TwipsMeasureType>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> Value.</para>
@@ -9161,21 +7995,15 @@ public abstract partial class TwipsMeasureType : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public UInt32Value Val
-    {
-        get { return (UInt32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public UInt32Value Val { get; set;}
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the TwipsMeasureType class.
     /// </summary>
     protected TwipsMeasureType(){}
-    
     
     
 }
@@ -9199,31 +8027,24 @@ public partial class MatrixColumns : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10986;
     /// <inheritdoc/>
     public override string LocalName => "mcs";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the MatrixColumns class.
     /// </summary>
     public MatrixColumns():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MatrixColumns class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MatrixColumns(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixColumns class with the specified child elements.
     /// </summary>
@@ -9231,7 +8052,6 @@ public partial class MatrixColumns : OpenXmlCompositeElement
     public MatrixColumns(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixColumns class from outer XML.
     /// </summary>
@@ -9240,15 +8060,13 @@ public partial class MatrixColumns : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "mc" == name)
     return new MatrixColumn();
-    
 
     return null;
 }
@@ -9294,31 +8112,24 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10987;
     /// <inheritdoc/>
     public override string LocalName => "mPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the MatrixProperties class.
     /// </summary>
     public MatrixProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MatrixProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MatrixProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixProperties class with the specified child elements.
     /// </summary>
@@ -9326,7 +8137,6 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     public MatrixProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixProperties class from outer XML.
     /// </summary>
@@ -9335,51 +8145,38 @@ public partial class MatrixProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "baseJc" == name)
     return new BaseJustification();
-    
 if( 21 == namespaceId && "plcHide" == name)
     return new HidePlaceholder();
-    
 if( 21 == namespaceId && "rSpRule" == name)
     return new RowSpacingRule();
-    
 if( 21 == namespaceId && "cGpRule" == name)
     return new ColumnGapRule();
-    
 if( 21 == namespaceId && "rSp" == name)
     return new RowSpacing();
-    
 if( 21 == namespaceId && "cSp" == name)
     return new ColumnSpacing();
-    
 if( 21 == namespaceId && "cGp" == name)
     return new ColumnGap();
-    
 if( 21 == namespaceId && "mcs" == name)
     return new MatrixColumns();
-    
 if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "baseJc","plcHide","rSpRule","cGpRule","rSp","cSp","cGp","mcs","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21,21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Matrix Base Justification.</para>
     /// <para> Represents the following element tag in the schema: m:baseJc </para>
@@ -9514,31 +8311,24 @@ public partial class MatrixRow : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10988;
     /// <inheritdoc/>
     public override string LocalName => "mr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the MatrixRow class.
     /// </summary>
     public MatrixRow():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the MatrixRow class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public MatrixRow(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixRow class with the specified child elements.
     /// </summary>
@@ -9546,7 +8336,6 @@ public partial class MatrixRow : OpenXmlCompositeElement
     public MatrixRow(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the MatrixRow class from outer XML.
     /// </summary>
@@ -9555,15 +8344,13 @@ public partial class MatrixRow : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "e" == name)
     return new Base();
-    
 
     return null;
 }
@@ -9586,13 +8373,9 @@ public partial class LimitLocation : LimitLocationType
     internal const int ElementTypeIdConst = 10989;
     /// <inheritdoc/>
     public override string LocalName => "limLoc";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the LimitLocation class.
@@ -9617,13 +8400,9 @@ public partial class IntegralLimitLocation : LimitLocationType
     internal const int ElementTypeIdConst = 11026;
     /// <inheritdoc/>
     public override string LocalName => "intLim";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the IntegralLimitLocation class.
@@ -9648,13 +8427,9 @@ public partial class NaryLimitLocation : LimitLocationType
     internal const int ElementTypeIdConst = 11027;
     /// <inheritdoc/>
     public override string LocalName => "naryLim";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the NaryLimitLocation class.
@@ -9673,8 +8448,6 @@ public partial class NaryLimitLocation : LimitLocationType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class LimitLocationType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<LimitLocationType>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> Value.</para>
@@ -9683,21 +8456,15 @@ public abstract partial class LimitLocationType : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues> Val { get; set;}
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the LimitLocationType class.
     /// </summary>
     protected LimitLocationType(){}
-    
     
     
 }
@@ -9731,31 +8498,24 @@ public partial class NaryProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10992;
     /// <inheritdoc/>
     public override string LocalName => "naryPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the NaryProperties class.
     /// </summary>
     public NaryProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the NaryProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NaryProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NaryProperties class with the specified child elements.
     /// </summary>
@@ -9763,7 +8523,6 @@ public partial class NaryProperties : OpenXmlCompositeElement
     public NaryProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the NaryProperties class from outer XML.
     /// </summary>
@@ -9772,42 +8531,32 @@ public partial class NaryProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "chr" == name)
     return new AccentChar();
-    
 if( 21 == namespaceId && "limLoc" == name)
     return new LimitLocation();
-    
 if( 21 == namespaceId && "grow" == name)
     return new GrowOperators();
-    
 if( 21 == namespaceId && "subHide" == name)
     return new HideSubArgument();
-    
 if( 21 == namespaceId && "supHide" == name)
     return new HideSuperArgument();
-    
 if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "chr","limLoc","grow","subHide","supHide","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> n-ary Operator Character.</para>
     /// <para> Represents the following element tag in the schema: m:chr </para>
@@ -9916,31 +8665,24 @@ public partial class PhantomProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11000;
     /// <inheritdoc/>
     public override string LocalName => "phantPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the PhantomProperties class.
     /// </summary>
     public PhantomProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the PhantomProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public PhantomProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PhantomProperties class with the specified child elements.
     /// </summary>
@@ -9948,7 +8690,6 @@ public partial class PhantomProperties : OpenXmlCompositeElement
     public PhantomProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PhantomProperties class from outer XML.
     /// </summary>
@@ -9957,42 +8698,32 @@ public partial class PhantomProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "show" == name)
     return new ShowPhantom();
-    
 if( 21 == namespaceId && "zeroWid" == name)
     return new ZeroWidth();
-    
 if( 21 == namespaceId && "zeroAsc" == name)
     return new ZeroAscent();
-    
 if( 21 == namespaceId && "zeroDesc" == name)
     return new ZeroDescent();
-    
 if( 21 == namespaceId && "transp" == name)
     return new Transparent();
-    
 if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "show","zeroWid","zeroAsc","zeroDesc","transp","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Phantom Show.</para>
     /// <para> Represents the following element tag in the schema: m:show </para>
@@ -10093,31 +8824,24 @@ public partial class RadicalProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11002;
     /// <inheritdoc/>
     public override string LocalName => "radPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the RadicalProperties class.
     /// </summary>
     public RadicalProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the RadicalProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RadicalProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RadicalProperties class with the specified child elements.
     /// </summary>
@@ -10125,7 +8849,6 @@ public partial class RadicalProperties : OpenXmlCompositeElement
     public RadicalProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the RadicalProperties class from outer XML.
     /// </summary>
@@ -10134,30 +8857,24 @@ public partial class RadicalProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "degHide" == name)
     return new HideDegree();
-    
 if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "degHide","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Hide Degree.</para>
     /// <para> Represents the following element tag in the schema: m:degHide </para>
@@ -10208,31 +8925,24 @@ public partial class PreSubSuperProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11004;
     /// <inheritdoc/>
     public override string LocalName => "sPrePr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the PreSubSuperProperties class.
     /// </summary>
     public PreSubSuperProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the PreSubSuperProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public PreSubSuperProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PreSubSuperProperties class with the specified child elements.
     /// </summary>
@@ -10240,7 +8950,6 @@ public partial class PreSubSuperProperties : OpenXmlCompositeElement
     public PreSubSuperProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the PreSubSuperProperties class from outer XML.
     /// </summary>
@@ -10249,27 +8958,22 @@ public partial class PreSubSuperProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -10308,31 +9012,24 @@ public partial class SubscriptProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11005;
     /// <inheritdoc/>
     public override string LocalName => "sSubPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the SubscriptProperties class.
     /// </summary>
     public SubscriptProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the SubscriptProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public SubscriptProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SubscriptProperties class with the specified child elements.
     /// </summary>
@@ -10340,7 +9037,6 @@ public partial class SubscriptProperties : OpenXmlCompositeElement
     public SubscriptProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SubscriptProperties class from outer XML.
     /// </summary>
@@ -10349,27 +9045,22 @@ public partial class SubscriptProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -10410,31 +9101,24 @@ public partial class SubSuperscriptProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11007;
     /// <inheritdoc/>
     public override string LocalName => "sSubSupPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the SubSuperscriptProperties class.
     /// </summary>
     public SubSuperscriptProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the SubSuperscriptProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public SubSuperscriptProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SubSuperscriptProperties class with the specified child elements.
     /// </summary>
@@ -10442,7 +9126,6 @@ public partial class SubSuperscriptProperties : OpenXmlCompositeElement
     public SubSuperscriptProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SubSuperscriptProperties class from outer XML.
     /// </summary>
@@ -10451,30 +9134,24 @@ public partial class SubSuperscriptProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "alnScr" == name)
     return new AlignScripts();
-    
 if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "alnScr","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Align Scripts.</para>
     /// <para> Represents the following element tag in the schema: m:alnScr </para>
@@ -10525,31 +9202,24 @@ public partial class SuperscriptProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11008;
     /// <inheritdoc/>
     public override string LocalName => "sSupPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the SuperscriptProperties class.
     /// </summary>
     public SuperscriptProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the SuperscriptProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public SuperscriptProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SuperscriptProperties class with the specified child elements.
     /// </summary>
@@ -10557,7 +9227,6 @@ public partial class SuperscriptProperties : OpenXmlCompositeElement
     public SuperscriptProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SuperscriptProperties class from outer XML.
     /// </summary>
@@ -10566,27 +9235,22 @@ public partial class SuperscriptProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "ctrlPr" == name)
     return new ControlProperties();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -10618,16 +9282,9 @@ public partial class ArgumentSize : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11009;
     /// <inheritdoc/>
     public override string LocalName => "argSz";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ArgumentSize>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -10637,20 +9294,14 @@ public partial class ArgumentSize : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public IntegerValue Val
-    {
-        get { return (IntegerValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public IntegerValue Val { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the ArgumentSize class.
     /// </summary>
     public ArgumentSize():base(){}
     
-      
-     
     
     
     
@@ -10678,31 +9329,24 @@ public partial class ArgumentProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11010;
     /// <inheritdoc/>
     public override string LocalName => "argPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the ArgumentProperties class.
     /// </summary>
     public ArgumentProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ArgumentProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ArgumentProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ArgumentProperties class with the specified child elements.
     /// </summary>
@@ -10710,7 +9354,6 @@ public partial class ArgumentProperties : OpenXmlCompositeElement
     public ArgumentProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ArgumentProperties class from outer XML.
     /// </summary>
@@ -10719,27 +9362,22 @@ public partial class ArgumentProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "argSz" == name)
     return new ArgumentSize();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "argSz" };
     private static readonly byte[] eleNamespaceIds = { 21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Argument Size.</para>
     /// <para> Represents the following element tag in the schema: m:argSz </para>
@@ -10771,13 +9409,9 @@ public partial class Justification : OfficeMathJustificationType
     internal const int ElementTypeIdConst = 11011;
     /// <inheritdoc/>
     public override string LocalName => "jc";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Justification class.
@@ -10802,13 +9436,9 @@ public partial class DefaultJustification : OfficeMathJustificationType
     internal const int ElementTypeIdConst = 11019;
     /// <inheritdoc/>
     public override string LocalName => "defJc";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DefaultJustification class.
@@ -10827,8 +9457,6 @@ public partial class DefaultJustification : OfficeMathJustificationType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OfficeMathJustificationType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<OfficeMathJustificationType>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
     
         /// <summary>
     /// <para> Value.</para>
@@ -10837,21 +9465,15 @@ public abstract partial class OfficeMathJustificationType : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues> Val { get; set;}
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the OfficeMathJustificationType class.
     /// </summary>
     protected OfficeMathJustificationType(){}
-    
     
     
 }
@@ -10868,16 +9490,9 @@ public partial class MathFont : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11012;
     /// <inheritdoc/>
     public override string LocalName => "mathFont";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<MathFont>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -10887,20 +9502,14 @@ public partial class MathFont : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public StringValue Val
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public StringValue Val { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the MathFont class.
     /// </summary>
     public MathFont():base(){}
     
-      
-     
     
     
     
@@ -10921,16 +9530,9 @@ public partial class BreakBinary : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11013;
     /// <inheritdoc/>
     public override string LocalName => "brkBin";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<BreakBinary>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -10940,20 +9542,14 @@ public partial class BreakBinary : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues> Val { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the BreakBinary class.
     /// </summary>
     public BreakBinary():base(){}
     
-      
-     
     
     
     
@@ -10974,16 +9570,9 @@ public partial class BreakBinarySubtraction : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11014;
     /// <inheritdoc/>
     public override string LocalName => "brkBinSub";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<BreakBinarySubtraction>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -10993,20 +9582,14 @@ public partial class BreakBinarySubtraction : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-    public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues> Val { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the BreakBinarySubtraction class.
     /// </summary>
     public BreakBinarySubtraction():base(){}
     
-      
-     
     
     
     
@@ -11034,31 +9617,24 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11028;
     /// <inheritdoc/>
     public override string LocalName => "oMathParaPr";
-    
     internal override byte NamespaceId => 21;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the ParagraphProperties class.
     /// </summary>
     public ParagraphProperties():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ParagraphProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ParagraphProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ParagraphProperties class with the specified child elements.
     /// </summary>
@@ -11066,7 +9642,6 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     public ParagraphProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ParagraphProperties class from outer XML.
     /// </summary>
@@ -11075,27 +9650,22 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 21 == namespaceId && "jc" == name)
     return new Justification();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "jc" };
     private static readonly byte[] eleNamespaceIds = { 21 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Justification.</para>
     /// <para> Represents the following element tag in the schema: m:jc </para>
@@ -11115,11 +9685,11 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 }
 /// <summary>
-/// Defines the HorizontalAlignmentValues enumeration. 
-/// </summary> 
+/// Defines the HorizontalAlignmentValues enumeration.
+/// </summary>
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum HorizontalAlignmentValues
-{  
+{
 	///<summary>
 ///Left Justification.
 ///<para>When the item is serialized out as xml, its value is "left".</para>
@@ -11138,14 +9708,14 @@ Center,
 ///</summary>
 [EnumString("right")]
 Right,
- 
+
 }
 /// <summary>
-/// Defines the ShapeDelimiterValues enumeration. 
-/// </summary> 
+/// Defines the ShapeDelimiterValues enumeration.
+/// </summary>
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ShapeDelimiterValues
-{  
+{
 	///<summary>
 ///Centered (Delimiters).
 ///<para>When the item is serialized out as xml, its value is "centered".</para>
@@ -11158,14 +9728,14 @@ Centered,
 ///</summary>
 [EnumString("match")]
 Match,
- 
+
 }
 /// <summary>
-/// Defines the FractionTypeValues enumeration. 
-/// </summary> 
+/// Defines the FractionTypeValues enumeration.
+/// </summary>
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum FractionTypeValues
-{  
+{
 	///<summary>
 ///Bar Fraction.
 ///<para>When the item is serialized out as xml, its value is "bar".</para>
@@ -11190,14 +9760,14 @@ Linear,
 ///</summary>
 [EnumString("noBar")]
 NoBar,
- 
+
 }
 /// <summary>
-/// Defines the LimitLocationValues enumeration. 
-/// </summary> 
+/// Defines the LimitLocationValues enumeration.
+/// </summary>
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum LimitLocationValues
-{  
+{
 	///<summary>
 ///Under-Over location.
 ///<para>When the item is serialized out as xml, its value is "undOvr".</para>
@@ -11210,14 +9780,14 @@ UnderOver,
 ///</summary>
 [EnumString("subSup")]
 SubscriptSuperscript,
- 
+
 }
 /// <summary>
-/// Defines the VerticalJustificationValues enumeration. 
-/// </summary> 
+/// Defines the VerticalJustificationValues enumeration.
+/// </summary>
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum VerticalJustificationValues
-{  
+{
 	///<summary>
 ///Top.
 ///<para>When the item is serialized out as xml, its value is "top".</para>
@@ -11230,14 +9800,14 @@ Top,
 ///</summary>
 [EnumString("bot")]
 Bottom,
- 
+
 }
 /// <summary>
-/// Defines the ScriptValues enumeration. 
-/// </summary> 
+/// Defines the ScriptValues enumeration.
+/// </summary>
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ScriptValues
-{  
+{
 	///<summary>
 ///Roman.
 ///<para>When the item is serialized out as xml, its value is "roman".</para>
@@ -11274,14 +9844,14 @@ SansSerif,
 ///</summary>
 [EnumString("monospace")]
 Monospace,
- 
+
 }
 /// <summary>
-/// Defines the StyleValues enumeration. 
-/// </summary> 
+/// Defines the StyleValues enumeration.
+/// </summary>
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum StyleValues
-{  
+{
 	///<summary>
 ///Plain.
 ///<para>When the item is serialized out as xml, its value is "p".</para>
@@ -11306,14 +9876,14 @@ Italic,
 ///</summary>
 [EnumString("bi")]
 BoldItalic,
- 
+
 }
 /// <summary>
-/// Defines the JustificationValues enumeration. 
-/// </summary> 
+/// Defines the JustificationValues enumeration.
+/// </summary>
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum JustificationValues
-{  
+{
 	///<summary>
 ///Left Justification.
 ///<para>When the item is serialized out as xml, its value is "left".</para>
@@ -11338,14 +9908,14 @@ Center,
 ///</summary>
 [EnumString("centerGroup")]
 CenterGroup,
- 
+
 }
 /// <summary>
-/// Defines the BreakBinaryOperatorValues enumeration. 
-/// </summary> 
+/// Defines the BreakBinaryOperatorValues enumeration.
+/// </summary>
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum BreakBinaryOperatorValues
-{  
+{
 	///<summary>
 ///Before.
 ///<para>When the item is serialized out as xml, its value is "before".</para>
@@ -11364,14 +9934,14 @@ After,
 ///</summary>
 [EnumString("repeat")]
 Repeat,
- 
+
 }
 /// <summary>
-/// Defines the BreakBinarySubtractionValues enumeration. 
-/// </summary> 
+/// Defines the BreakBinarySubtractionValues enumeration.
+/// </summary>
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum BreakBinarySubtractionValues
-{  
+{
 	///<summary>
 ///Minus Minus.
 ///<para>When the item is serialized out as xml, its value is "--".</para>
@@ -11390,14 +9960,14 @@ MinusPlus,
 ///</summary>
 [EnumString("+-")]
 PlusMinus,
- 
+
 }
 /// <summary>
-/// Defines the VerticalAlignmentValues enumeration. 
-/// </summary> 
+/// Defines the VerticalAlignmentValues enumeration.
+/// </summary>
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum VerticalAlignmentValues
-{  
+{
 	///<summary>
 ///Top.
 ///<para>When the item is serialized out as xml, its value is "top".</para>
@@ -11422,14 +9992,14 @@ Bottom,
 ///</summary>
 [EnumString("bot")]
 Bot,
- 
+
 }
 /// <summary>
-/// Defines the BooleanValues enumeration. 
-/// </summary> 
+/// Defines the BooleanValues enumeration.
+/// </summary>
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum BooleanValues
-{  
+{
 	///<summary>
 ///true.
 ///<para>When the item is serialized out as xml, its value is "true".</para>
@@ -11466,8 +10036,6 @@ Zero,
 ///</summary>
 [EnumString("1")]
 One,
- 
+
 }
 }
- 
- 

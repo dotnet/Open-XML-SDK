@@ -27,16 +27,9 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 10900;
     /// <inheritdoc/>
     public override string LocalName => "datastoreItem";
-    
     internal override byte NamespaceId => 20;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<DataStoreItem>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -46,16 +39,10 @@ public partial class DataStoreItem : OpenXmlPartRootElement
 ///<remark> xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
 ///</remark>
     [SchemaAttr(20, "itemID")]
-    public StringValue ItemId
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public StringValue ItemId { get; set;}
 
-    
 	internal DataStoreItem(CustomXmlPropertiesPart ownerPart) : base (ownerPart){}
-    
     /// <summary>
     /// Loads the DOM from the CustomXmlPropertiesPart.
     /// </summary>
@@ -72,16 +59,14 @@ public partial class DataStoreItem : OpenXmlPartRootElement
 		get => OpenXmlPart as CustomXmlPropertiesPart;
 		internal set => OpenXmlPart = value;
     }
-    
         /// <summary>
     ///Initializes a new instance of the DataStoreItem class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public DataStoreItem(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DataStoreItem class with the specified child elements.
     /// </summary>
@@ -89,7 +74,6 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     public DataStoreItem(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the DataStoreItem class from outer XML.
     /// </summary>
@@ -100,12 +84,10 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     }
 
     
-    
     /// <summary>
     /// Initializes a new instance of the DataStoreItem class.
     /// </summary>
     public DataStoreItem():base(){}
-    
     /// <summary>
     /// Saves the DOM into the CustomXmlPropertiesPart.
     /// </summary>
@@ -114,25 +96,20 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     {
         base.SaveToPart(openXmlPart);
     }
-    
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 20 == namespaceId && "schemaRefs" == name)
     return new SchemaReferences();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "schemaRefs" };
     private static readonly byte[] eleNamespaceIds = { 20 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> Set of Associated XML Schemas.</para>
     /// <para> Represents the following element tag in the schema: ds:schemaRefs </para>
@@ -164,16 +141,9 @@ public partial class SchemaReference : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10901;
     /// <inheritdoc/>
     public override string LocalName => "schemaRef";
-    
     internal override byte NamespaceId => 20;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<SchemaReference>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -183,20 +153,14 @@ public partial class SchemaReference : OpenXmlLeafElement
 ///<remark> xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
 ///</remark>
     [SchemaAttr(20, "uri")]
-    public StringValue Uri
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public StringValue Uri { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the SchemaReference class.
     /// </summary>
     public SchemaReference():base(){}
     
-      
-     
     
     
     
@@ -224,31 +188,24 @@ public partial class SchemaReferences : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10902;
     /// <inheritdoc/>
     public override string LocalName => "schemaRefs";
-    
     internal override byte NamespaceId => 20;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the SchemaReferences class.
     /// </summary>
     public SchemaReferences():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the SchemaReferences class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public SchemaReferences(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SchemaReferences class with the specified child elements.
     /// </summary>
@@ -256,7 +213,6 @@ public partial class SchemaReferences : OpenXmlCompositeElement
     public SchemaReferences(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the SchemaReferences class from outer XML.
     /// </summary>
@@ -265,15 +221,13 @@ public partial class SchemaReferences : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 20 == namespaceId && "schemaRef" == name)
     return new SchemaReference();
-    
 
     return null;
 }
@@ -284,5 +238,3 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 }
 }
- 
- 

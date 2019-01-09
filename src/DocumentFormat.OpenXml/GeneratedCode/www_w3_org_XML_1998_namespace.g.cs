@@ -9,11 +9,11 @@ using DocumentFormat.OpenXml;
 namespace DocumentFormat.OpenXml
 {
 /// <summary>
-/// Defines the SpaceProcessingModeValues enumeration. 
-/// </summary> 
+/// Defines the SpaceProcessingModeValues enumeration.
+/// </summary>
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum SpaceProcessingModeValues
-{  
+{
 	///<summary>
 ///default.
 ///<para>When the item is serialized out as xml, its value is "default".</para>
@@ -26,8 +26,6 @@ Default,
 ///</summary>
 [EnumString("preserve")]
 Preserve,
- 
+
 }
 }
- 
- 

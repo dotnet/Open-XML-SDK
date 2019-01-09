@@ -29,20 +29,13 @@ public partial class Taskpanes : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 13352;
     /// <inheritdoc/>
     public override string LocalName => "taskpanes";
-    
     internal override byte NamespaceId => 70;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
-    
 
     
     
-    
-    
 	internal Taskpanes(WebExTaskpanesPart ownerPart) : base (ownerPart){}
-    
     /// <summary>
     /// Loads the DOM from the WebExTaskpanesPart.
     /// </summary>
@@ -59,16 +52,14 @@ public partial class Taskpanes : OpenXmlPartRootElement
 		get => OpenXmlPart as WebExTaskpanesPart;
 		internal set => OpenXmlPart = value;
     }
-    
         /// <summary>
     ///Initializes a new instance of the Taskpanes class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Taskpanes(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Taskpanes class with the specified child elements.
     /// </summary>
@@ -76,7 +67,6 @@ public partial class Taskpanes : OpenXmlPartRootElement
     public Taskpanes(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the Taskpanes class from outer XML.
     /// </summary>
@@ -87,12 +77,10 @@ public partial class Taskpanes : OpenXmlPartRootElement
     }
 
     
-    
     /// <summary>
     /// Initializes a new instance of the Taskpanes class.
     /// </summary>
     public Taskpanes():base(){}
-    
     /// <summary>
     /// Saves the DOM into the WebExTaskpanesPart.
     /// </summary>
@@ -101,13 +89,11 @@ public partial class Taskpanes : OpenXmlPartRootElement
     {
         base.SaveToPart(openXmlPart);
     }
-    
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 70 == namespaceId && "taskpane" == name)
     return new WebExtensionTaskpane();
-    
 
     return null;
 }
@@ -130,16 +116,9 @@ public partial class WebExtensionPartReference : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13353;
     /// <inheritdoc/>
     public override string LocalName => "webextensionref";
-    
     internal override byte NamespaceId => 70;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<WebExtensionPartReference>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -149,20 +128,14 @@ public partial class WebExtensionPartReference : OpenXmlLeafElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public StringValue Id { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionPartReference class.
     /// </summary>
     public WebExtensionPartReference():base(){}
     
-      
-     
     
     
     
@@ -190,31 +163,24 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13354;
     /// <inheritdoc/>
     public override string LocalName => "extLst";
-    
     internal override byte NamespaceId => 70;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
-    
 
-    
     
     
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class.
     /// </summary>
     public OfficeArtExtensionList():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public OfficeArtExtensionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
@@ -222,7 +188,6 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     public OfficeArtExtensionList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class from outer XML.
     /// </summary>
@@ -231,15 +196,13 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 10 == namespaceId && "ext" == name)
     return new DocumentFormat.OpenXml.Drawing.Extension();
-    
 
     return null;
 }
@@ -271,16 +234,9 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13355;
     /// <inheritdoc/>
     public override string LocalName => "taskpane";
-    
     internal override byte NamespaceId => 70;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<WebExtensionTaskpane>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -288,71 +244,49 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: dockstate </para>
     /// </summary>
     [SchemaAttr(0, "dockstate")]
-    public StringValue DockState
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public StringValue DockState { get; set;}
     /// <summary>
     /// <para> visibility.</para>
     /// <para>Represents the following attribute in the schema: visibility </para>
     /// </summary>
     [SchemaAttr(0, "visibility")]
-    public BooleanValue Visibility
-    {
-        get { return (BooleanValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+	[SchemaIndex(1)]
+    public BooleanValue Visibility { get; set;}
     /// <summary>
     /// <para> width.</para>
     /// <para>Represents the following attribute in the schema: width </para>
     /// </summary>
     [SchemaAttr(0, "width")]
-    public DoubleValue Width
-    {
-        get { return (DoubleValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+	[SchemaIndex(2)]
+    public DoubleValue Width { get; set;}
     /// <summary>
     /// <para> row.</para>
     /// <para>Represents the following attribute in the schema: row </para>
     /// </summary>
     [SchemaAttr(0, "row")]
-    public UInt32Value Row
-    {
-        get { return (UInt32Value)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+	[SchemaIndex(3)]
+    public UInt32Value Row { get; set;}
     /// <summary>
     /// <para> locked.</para>
     /// <para>Represents the following attribute in the schema: locked </para>
     /// </summary>
     [SchemaAttr(0, "locked")]
-    public BooleanValue Locked
-    {
-        get { return (BooleanValue)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+	[SchemaIndex(4)]
+    public BooleanValue Locked { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionTaskpane class.
     /// </summary>
     public WebExtensionTaskpane():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the WebExtensionTaskpane class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public WebExtensionTaskpane(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WebExtensionTaskpane class with the specified child elements.
     /// </summary>
@@ -360,7 +294,6 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     public WebExtensionTaskpane(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the WebExtensionTaskpane class from outer XML.
     /// </summary>
@@ -369,30 +302,24 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 70 == namespaceId && "webextensionref" == name)
     return new WebExtensionPartReference();
-    
 if( 70 == namespaceId && "extLst" == name)
     return new OfficeArtExtensionList();
-    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "webextensionref","extLst" };
     private static readonly byte[] eleNamespaceIds = { 70,70 };
-    
     internal override string[] ElementTagNames => eleTagNames;
-    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
-    
         /// <summary>
     /// <para> WebExtensionPartReference.</para>
     /// <para> Represents the following element tag in the schema: wetp:webextensionref </para>
@@ -424,5 +351,3 @@ if( 70 == namespaceId && "extLst" == name)
 
 }
 }
- 
- 

@@ -2,6 +2,8 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
+using System.Collections.Generic;
+using System.Reflection;
 
 namespace DocumentFormat.OpenXml
 {
@@ -93,6 +95,18 @@ namespace DocumentFormat.OpenXml
         internal virtual bool IsInVersion(FileFormatVersions fileFormat)
         {
             throw new NotImplementedException();
+        }
+
+        internal static Func<OpenXmlSimpleType> CreateFactory(Type type)
+        {
+            if (!typeof(OpenXmlSimpleType).GetTypeInfo().IsAssignableFrom(type.GetTypeInfo()))
+            {
+                throw new ArgumentOutOfRangeException(nameof(type));
+            }
+
+            OpenXmlSimpleType Factory() => (OpenXmlSimpleType)Activator.CreateInstance(type);
+
+            return Factory;
         }
     }
 }

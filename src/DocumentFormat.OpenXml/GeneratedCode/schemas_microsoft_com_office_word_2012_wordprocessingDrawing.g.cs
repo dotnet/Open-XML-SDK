@@ -22,16 +22,9 @@ public partial class WebVideoProperty : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13435;
     /// <inheritdoc/>
     public override string LocalName => "webVideoPr";
-    
     internal override byte NamespaceId => 75;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<WebVideoProperty>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -39,42 +32,28 @@ public partial class WebVideoProperty : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: embeddedHtml </para>
     /// </summary>
     [SchemaAttr(0, "embeddedHtml")]
-    public StringValue EmbeddedHtml
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public StringValue EmbeddedHtml { get; set;}
     /// <summary>
     /// <para> h.</para>
     /// <para>Represents the following attribute in the schema: h </para>
     /// </summary>
     [SchemaAttr(0, "h")]
-    public UInt32Value Height
-    {
-        get { return (UInt32Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+	[SchemaIndex(1)]
+    public UInt32Value Height { get; set;}
     /// <summary>
     /// <para> w.</para>
     /// <para>Represents the following attribute in the schema: w </para>
     /// </summary>
     [SchemaAttr(0, "w")]
-    public UInt32Value Width
-    {
-        get { return (UInt32Value)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+	[SchemaIndex(2)]
+    public UInt32Value Width { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the WebVideoProperty class.
     /// </summary>
     public WebVideoProperty():base(){}
     
-      
-     
     
     
     
@@ -83,5 +62,3 @@ public partial class WebVideoProperty : OpenXmlLeafElement
 
 }
 }
- 
- 

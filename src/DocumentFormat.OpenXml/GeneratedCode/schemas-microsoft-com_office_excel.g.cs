@@ -160,16 +160,9 @@ public partial class ClientData : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12507;
     /// <inheritdoc/>
     public override string LocalName => "ClientData";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<ClientData>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -177,27 +170,21 @@ public partial class ClientData : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: ObjectType </para>
     /// </summary>
     [SchemaAttr(0, "ObjectType")]
-    public EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues> ObjectType
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues> ObjectType { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the ClientData class.
     /// </summary>
     public ClientData():base(){}
-    
         /// <summary>
     ///Initializes a new instance of the ClientData class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ClientData(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    { 
+    {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ClientData class with the specified child elements.
     /// </summary>
@@ -205,7 +192,6 @@ public partial class ClientData : OpenXmlCompositeElement
     public ClientData(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
-    
     /// <summary>
     /// Initializes a new instance of the ClientData class from outer XML.
     /// </summary>
@@ -214,213 +200,145 @@ public partial class ClientData : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-  
-     
+
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 29 == namespaceId && "MoveWithCells" == name)
     return new MoveWithCells();
-    
 if( 29 == namespaceId && "SizeWithCells" == name)
     return new ResizeWithCells();
-    
 if( 29 == namespaceId && "Anchor" == name)
     return new Anchor();
-    
 if( 29 == namespaceId && "Locked" == name)
     return new Locked();
-    
 if( 29 == namespaceId && "DefaultSize" == name)
     return new DefaultSize();
-    
 if( 29 == namespaceId && "PrintObject" == name)
     return new PrintObject();
-    
 if( 29 == namespaceId && "Disabled" == name)
     return new Disabled();
-    
 if( 29 == namespaceId && "AutoFill" == name)
     return new AutoFill();
-    
 if( 29 == namespaceId && "AutoLine" == name)
     return new AutoLine();
-    
 if( 29 == namespaceId && "AutoPict" == name)
     return new AutoSizePicture();
-    
 if( 29 == namespaceId && "FmlaMacro" == name)
     return new FormulaMacro();
-    
 if( 29 == namespaceId && "TextHAlign" == name)
     return new HorizontalTextAlignment();
-    
 if( 29 == namespaceId && "TextVAlign" == name)
     return new VerticalTextAlignment();
-    
 if( 29 == namespaceId && "LockText" == name)
     return new LockText();
-    
 if( 29 == namespaceId && "JustLastX" == name)
     return new JustifyLastLine();
-    
 if( 29 == namespaceId && "SecretEdit" == name)
     return new SecretEdit();
-    
 if( 29 == namespaceId && "Default" == name)
     return new DefaultButton();
-    
 if( 29 == namespaceId && "Help" == name)
     return new HelpButton();
-    
 if( 29 == namespaceId && "Cancel" == name)
     return new CancelButton();
-    
 if( 29 == namespaceId && "Dismiss" == name)
     return new DismissButton();
-    
 if( 29 == namespaceId && "Accel" == name)
     return new AcceleratorPrimary();
-    
 if( 29 == namespaceId && "Accel2" == name)
     return new AcceleratorSecondary();
-    
 if( 29 == namespaceId && "Row" == name)
     return new CommentRowTarget();
-    
 if( 29 == namespaceId && "Column" == name)
     return new CommentColumnTarget();
-    
 if( 29 == namespaceId && "Visible" == name)
     return new Visible();
-    
 if( 29 == namespaceId && "RowHidden" == name)
     return new RowHidden();
-    
 if( 29 == namespaceId && "ColHidden" == name)
     return new ColumnHidden();
-    
 if( 29 == namespaceId && "VTEdit" == name)
     return new InputValidationType();
-    
 if( 29 == namespaceId && "MultiLine" == name)
     return new MultiLine();
-    
 if( 29 == namespaceId && "VScroll" == name)
     return new VerticalScrollBar();
-    
 if( 29 == namespaceId && "ValidIds" == name)
     return new ValidIds();
-    
 if( 29 == namespaceId && "FmlaRange" == name)
     return new FormulaRange();
-    
 if( 29 == namespaceId && "WidthMin" == name)
     return new MinDropDownWidth();
-    
 if( 29 == namespaceId && "Sel" == name)
     return new SelectionEntry();
-    
 if( 29 == namespaceId && "NoThreeD2" == name)
     return new Disable3DForListBoxAndDropDown();
-    
 if( 29 == namespaceId && "SelType" == name)
     return new SelectionType();
-    
 if( 29 == namespaceId && "MultiSel" == name)
     return new MultiSelections();
-    
 if( 29 == namespaceId && "LCT" == name)
     return new ListBoxCallbackType();
-    
 if( 29 == namespaceId && "ListItem" == name)
     return new ListItem();
-    
 if( 29 == namespaceId && "DropStyle" == name)
     return new DropStyle();
-    
 if( 29 == namespaceId && "Colored" == name)
     return new Colored();
-    
 if( 29 == namespaceId && "DropLines" == name)
     return new DropLines();
-    
 if( 29 == namespaceId && "Checked" == name)
     return new Checked();
-    
 if( 29 == namespaceId && "FmlaLink" == name)
     return new FormulaLink();
-    
 if( 29 == namespaceId && "FmlaPict" == name)
     return new FormulaPicture();
-    
 if( 29 == namespaceId && "NoThreeD" == name)
     return new Disable3D();
-    
 if( 29 == namespaceId && "FirstButton" == name)
     return new FirstButton();
-    
 if( 29 == namespaceId && "FmlaGroup" == name)
     return new FormulaGroup();
-    
 if( 29 == namespaceId && "Val" == name)
     return new ScrollBarPosition();
-    
 if( 29 == namespaceId && "Min" == name)
     return new ScrollBarMin();
-    
 if( 29 == namespaceId && "Max" == name)
     return new ScrollBarMax();
-    
 if( 29 == namespaceId && "Inc" == name)
     return new ScrollBarIncrement();
-    
 if( 29 == namespaceId && "Page" == name)
     return new ScrollBarPageIncrement();
-    
 if( 29 == namespaceId && "Horiz" == name)
     return new HorizontalScrollBar();
-    
 if( 29 == namespaceId && "Dx" == name)
     return new ScrollBarWidth();
-    
 if( 29 == namespaceId && "MapOCX" == name)
     return new MapOcxControl();
-    
 if( 29 == namespaceId && "CF" == name)
     return new ClipboardFormat();
-    
 if( 29 == namespaceId && "Camera" == name)
     return new CameraObject();
-    
 if( 29 == namespaceId && "RecalcAlways" == name)
     return new RecalculateAlways();
-    
 if( 29 == namespaceId && "AutoScale" == name)
     return new AutoScaleFont();
-    
 if( 29 == namespaceId && "DDE" == name)
     return new DdeObject();
-    
 if( 29 == namespaceId && "UIObj" == name)
     return new UIObject();
-    
 if( 29 == namespaceId && "ScriptText" == name)
     return new ScriptText();
-    
 if( 29 == namespaceId && "ScriptExtended" == name)
     return new ScriptExtended();
-    
 if( 29 == namespaceId && "ScriptLanguage" == name)
     return new ScriptLanguage();
-    
 if( 29 == namespaceId && "ScriptLocation" == name)
     return new ScriptLocation();
-    
 if( 29 == namespaceId && "FmlaTxbx" == name)
     return new FormulaTextBox();
-    
 
     return null;
 }
@@ -443,13 +361,9 @@ public partial class MoveWithCells : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12508;
     /// <inheritdoc/>
     public override string LocalName => "MoveWithCells";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the MoveWithCells class.
@@ -463,12 +377,10 @@ public partial class MoveWithCells : OpenXmlLeafTextElement
     public MoveWithCells(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MoveWithCells>(deep);
@@ -487,13 +399,9 @@ public partial class ResizeWithCells : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12509;
     /// <inheritdoc/>
     public override string LocalName => "SizeWithCells";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ResizeWithCells class.
@@ -507,12 +415,10 @@ public partial class ResizeWithCells : OpenXmlLeafTextElement
     public ResizeWithCells(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ResizeWithCells>(deep);
@@ -531,13 +437,9 @@ public partial class Locked : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12511;
     /// <inheritdoc/>
     public override string LocalName => "Locked";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Locked class.
@@ -551,12 +453,10 @@ public partial class Locked : OpenXmlLeafTextElement
     public Locked(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Locked>(deep);
@@ -575,13 +475,9 @@ public partial class DefaultSize : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12512;
     /// <inheritdoc/>
     public override string LocalName => "DefaultSize";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DefaultSize class.
@@ -595,12 +491,10 @@ public partial class DefaultSize : OpenXmlLeafTextElement
     public DefaultSize(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultSize>(deep);
@@ -619,13 +513,9 @@ public partial class PrintObject : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12513;
     /// <inheritdoc/>
     public override string LocalName => "PrintObject";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the PrintObject class.
@@ -639,12 +529,10 @@ public partial class PrintObject : OpenXmlLeafTextElement
     public PrintObject(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrintObject>(deep);
@@ -663,13 +551,9 @@ public partial class Disabled : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12514;
     /// <inheritdoc/>
     public override string LocalName => "Disabled";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Disabled class.
@@ -683,12 +567,10 @@ public partial class Disabled : OpenXmlLeafTextElement
     public Disabled(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Disabled>(deep);
@@ -707,13 +589,9 @@ public partial class AutoFill : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12515;
     /// <inheritdoc/>
     public override string LocalName => "AutoFill";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AutoFill class.
@@ -727,12 +605,10 @@ public partial class AutoFill : OpenXmlLeafTextElement
     public AutoFill(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoFill>(deep);
@@ -751,13 +627,9 @@ public partial class AutoLine : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12516;
     /// <inheritdoc/>
     public override string LocalName => "AutoLine";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AutoLine class.
@@ -771,12 +643,10 @@ public partial class AutoLine : OpenXmlLeafTextElement
     public AutoLine(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoLine>(deep);
@@ -795,13 +665,9 @@ public partial class AutoSizePicture : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12517;
     /// <inheritdoc/>
     public override string LocalName => "AutoPict";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AutoSizePicture class.
@@ -815,12 +681,10 @@ public partial class AutoSizePicture : OpenXmlLeafTextElement
     public AutoSizePicture(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoSizePicture>(deep);
@@ -839,13 +703,9 @@ public partial class LockText : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12521;
     /// <inheritdoc/>
     public override string LocalName => "LockText";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the LockText class.
@@ -859,12 +719,10 @@ public partial class LockText : OpenXmlLeafTextElement
     public LockText(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LockText>(deep);
@@ -883,13 +741,9 @@ public partial class JustifyLastLine : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12522;
     /// <inheritdoc/>
     public override string LocalName => "JustLastX";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the JustifyLastLine class.
@@ -903,12 +757,10 @@ public partial class JustifyLastLine : OpenXmlLeafTextElement
     public JustifyLastLine(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<JustifyLastLine>(deep);
@@ -927,13 +779,9 @@ public partial class SecretEdit : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12523;
     /// <inheritdoc/>
     public override string LocalName => "SecretEdit";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the SecretEdit class.
@@ -947,12 +795,10 @@ public partial class SecretEdit : OpenXmlLeafTextElement
     public SecretEdit(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SecretEdit>(deep);
@@ -971,13 +817,9 @@ public partial class DefaultButton : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12524;
     /// <inheritdoc/>
     public override string LocalName => "Default";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DefaultButton class.
@@ -991,12 +833,10 @@ public partial class DefaultButton : OpenXmlLeafTextElement
     public DefaultButton(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefaultButton>(deep);
@@ -1015,13 +855,9 @@ public partial class HelpButton : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12525;
     /// <inheritdoc/>
     public override string LocalName => "Help";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HelpButton class.
@@ -1035,12 +871,10 @@ public partial class HelpButton : OpenXmlLeafTextElement
     public HelpButton(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HelpButton>(deep);
@@ -1059,13 +893,9 @@ public partial class CancelButton : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12526;
     /// <inheritdoc/>
     public override string LocalName => "Cancel";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the CancelButton class.
@@ -1079,12 +909,10 @@ public partial class CancelButton : OpenXmlLeafTextElement
     public CancelButton(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CancelButton>(deep);
@@ -1103,13 +931,9 @@ public partial class DismissButton : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12527;
     /// <inheritdoc/>
     public override string LocalName => "Dismiss";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DismissButton class.
@@ -1123,12 +947,10 @@ public partial class DismissButton : OpenXmlLeafTextElement
     public DismissButton(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DismissButton>(deep);
@@ -1147,13 +969,9 @@ public partial class Visible : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12532;
     /// <inheritdoc/>
     public override string LocalName => "Visible";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Visible class.
@@ -1167,12 +985,10 @@ public partial class Visible : OpenXmlLeafTextElement
     public Visible(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Visible>(deep);
@@ -1191,13 +1007,9 @@ public partial class RowHidden : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12533;
     /// <inheritdoc/>
     public override string LocalName => "RowHidden";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the RowHidden class.
@@ -1211,12 +1023,10 @@ public partial class RowHidden : OpenXmlLeafTextElement
     public RowHidden(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowHidden>(deep);
@@ -1235,13 +1045,9 @@ public partial class ColumnHidden : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12534;
     /// <inheritdoc/>
     public override string LocalName => "ColHidden";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ColumnHidden class.
@@ -1255,12 +1061,10 @@ public partial class ColumnHidden : OpenXmlLeafTextElement
     public ColumnHidden(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnHidden>(deep);
@@ -1279,13 +1083,9 @@ public partial class MultiLine : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12536;
     /// <inheritdoc/>
     public override string LocalName => "MultiLine";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the MultiLine class.
@@ -1299,12 +1099,10 @@ public partial class MultiLine : OpenXmlLeafTextElement
     public MultiLine(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MultiLine>(deep);
@@ -1323,13 +1121,9 @@ public partial class VerticalScrollBar : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12537;
     /// <inheritdoc/>
     public override string LocalName => "VScroll";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the VerticalScrollBar class.
@@ -1343,12 +1137,10 @@ public partial class VerticalScrollBar : OpenXmlLeafTextElement
     public VerticalScrollBar(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalScrollBar>(deep);
@@ -1367,13 +1159,9 @@ public partial class ValidIds : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12538;
     /// <inheritdoc/>
     public override string LocalName => "ValidIds";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ValidIds class.
@@ -1387,12 +1175,10 @@ public partial class ValidIds : OpenXmlLeafTextElement
     public ValidIds(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ValidIds>(deep);
@@ -1411,13 +1197,9 @@ public partial class Disable3DForListBoxAndDropDown : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12542;
     /// <inheritdoc/>
     public override string LocalName => "NoThreeD2";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Disable3DForListBoxAndDropDown class.
@@ -1431,12 +1213,10 @@ public partial class Disable3DForListBoxAndDropDown : OpenXmlLeafTextElement
     public Disable3DForListBoxAndDropDown(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Disable3DForListBoxAndDropDown>(deep);
@@ -1455,13 +1235,9 @@ public partial class Colored : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12548;
     /// <inheritdoc/>
     public override string LocalName => "Colored";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Colored class.
@@ -1475,12 +1251,10 @@ public partial class Colored : OpenXmlLeafTextElement
     public Colored(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Colored>(deep);
@@ -1499,13 +1273,9 @@ public partial class Disable3D : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12553;
     /// <inheritdoc/>
     public override string LocalName => "NoThreeD";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Disable3D class.
@@ -1519,12 +1289,10 @@ public partial class Disable3D : OpenXmlLeafTextElement
     public Disable3D(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Disable3D>(deep);
@@ -1543,13 +1311,9 @@ public partial class FirstButton : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12554;
     /// <inheritdoc/>
     public override string LocalName => "FirstButton";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the FirstButton class.
@@ -1563,12 +1327,10 @@ public partial class FirstButton : OpenXmlLeafTextElement
     public FirstButton(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FirstButton>(deep);
@@ -1587,13 +1349,9 @@ public partial class HorizontalScrollBar : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12561;
     /// <inheritdoc/>
     public override string LocalName => "Horiz";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HorizontalScrollBar class.
@@ -1607,12 +1365,10 @@ public partial class HorizontalScrollBar : OpenXmlLeafTextElement
     public HorizontalScrollBar(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HorizontalScrollBar>(deep);
@@ -1631,13 +1387,9 @@ public partial class MapOcxControl : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12563;
     /// <inheritdoc/>
     public override string LocalName => "MapOCX";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the MapOcxControl class.
@@ -1651,12 +1403,10 @@ public partial class MapOcxControl : OpenXmlLeafTextElement
     public MapOcxControl(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MapOcxControl>(deep);
@@ -1675,13 +1425,9 @@ public partial class CameraObject : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12565;
     /// <inheritdoc/>
     public override string LocalName => "Camera";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the CameraObject class.
@@ -1695,12 +1441,10 @@ public partial class CameraObject : OpenXmlLeafTextElement
     public CameraObject(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CameraObject>(deep);
@@ -1719,13 +1463,9 @@ public partial class RecalculateAlways : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12566;
     /// <inheritdoc/>
     public override string LocalName => "RecalcAlways";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the RecalculateAlways class.
@@ -1739,12 +1479,10 @@ public partial class RecalculateAlways : OpenXmlLeafTextElement
     public RecalculateAlways(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RecalculateAlways>(deep);
@@ -1763,13 +1501,9 @@ public partial class AutoScaleFont : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12567;
     /// <inheritdoc/>
     public override string LocalName => "AutoScale";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AutoScaleFont class.
@@ -1783,12 +1517,10 @@ public partial class AutoScaleFont : OpenXmlLeafTextElement
     public AutoScaleFont(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoScaleFont>(deep);
@@ -1807,13 +1539,9 @@ public partial class DdeObject : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12568;
     /// <inheritdoc/>
     public override string LocalName => "DDE";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DdeObject class.
@@ -1827,12 +1555,10 @@ public partial class DdeObject : OpenXmlLeafTextElement
     public DdeObject(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DdeObject>(deep);
@@ -1851,13 +1577,9 @@ public partial class UIObject : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12569;
     /// <inheritdoc/>
     public override string LocalName => "UIObj";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the UIObject class.
@@ -1871,12 +1593,10 @@ public partial class UIObject : OpenXmlLeafTextElement
     public UIObject(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.BooleanEntryWithBlankValues>(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UIObject>(deep);
@@ -1895,13 +1615,9 @@ public partial class Anchor : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12510;
     /// <inheritdoc/>
     public override string LocalName => "Anchor";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Anchor class.
@@ -1915,12 +1631,10 @@ public partial class Anchor : OpenXmlLeafTextElement
     public Anchor(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Anchor>(deep);
@@ -1939,13 +1653,9 @@ public partial class HorizontalTextAlignment : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12519;
     /// <inheritdoc/>
     public override string LocalName => "TextHAlign";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HorizontalTextAlignment class.
@@ -1959,12 +1669,10 @@ public partial class HorizontalTextAlignment : OpenXmlLeafTextElement
     public HorizontalTextAlignment(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HorizontalTextAlignment>(deep);
@@ -1983,13 +1691,9 @@ public partial class VerticalTextAlignment : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12520;
     /// <inheritdoc/>
     public override string LocalName => "TextVAlign";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the VerticalTextAlignment class.
@@ -2003,12 +1707,10 @@ public partial class VerticalTextAlignment : OpenXmlLeafTextElement
     public VerticalTextAlignment(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VerticalTextAlignment>(deep);
@@ -2027,13 +1729,9 @@ public partial class FormulaRange : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12539;
     /// <inheritdoc/>
     public override string LocalName => "FmlaRange";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the FormulaRange class.
@@ -2047,12 +1745,10 @@ public partial class FormulaRange : OpenXmlLeafTextElement
     public FormulaRange(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaRange>(deep);
@@ -2071,13 +1767,9 @@ public partial class SelectionType : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12543;
     /// <inheritdoc/>
     public override string LocalName => "SelType";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the SelectionType class.
@@ -2091,12 +1783,10 @@ public partial class SelectionType : OpenXmlLeafTextElement
     public SelectionType(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SelectionType>(deep);
@@ -2115,13 +1805,9 @@ public partial class MultiSelections : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12544;
     /// <inheritdoc/>
     public override string LocalName => "MultiSel";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the MultiSelections class.
@@ -2135,12 +1821,10 @@ public partial class MultiSelections : OpenXmlLeafTextElement
     public MultiSelections(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MultiSelections>(deep);
@@ -2159,13 +1843,9 @@ public partial class ListBoxCallbackType : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12545;
     /// <inheritdoc/>
     public override string LocalName => "LCT";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ListBoxCallbackType class.
@@ -2179,12 +1859,10 @@ public partial class ListBoxCallbackType : OpenXmlLeafTextElement
     public ListBoxCallbackType(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ListBoxCallbackType>(deep);
@@ -2203,13 +1881,9 @@ public partial class ListItem : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12546;
     /// <inheritdoc/>
     public override string LocalName => "ListItem";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ListItem class.
@@ -2223,12 +1897,10 @@ public partial class ListItem : OpenXmlLeafTextElement
     public ListItem(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ListItem>(deep);
@@ -2247,13 +1919,9 @@ public partial class DropStyle : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12547;
     /// <inheritdoc/>
     public override string LocalName => "DropStyle";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DropStyle class.
@@ -2267,12 +1935,10 @@ public partial class DropStyle : OpenXmlLeafTextElement
     public DropStyle(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropStyle>(deep);
@@ -2291,13 +1957,9 @@ public partial class FormulaLink : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12551;
     /// <inheritdoc/>
     public override string LocalName => "FmlaLink";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the FormulaLink class.
@@ -2311,12 +1973,10 @@ public partial class FormulaLink : OpenXmlLeafTextElement
     public FormulaLink(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaLink>(deep);
@@ -2335,13 +1995,9 @@ public partial class FormulaPicture : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12552;
     /// <inheritdoc/>
     public override string LocalName => "FmlaPict";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the FormulaPicture class.
@@ -2355,12 +2011,10 @@ public partial class FormulaPicture : OpenXmlLeafTextElement
     public FormulaPicture(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaPicture>(deep);
@@ -2379,13 +2033,9 @@ public partial class FormulaGroup : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12555;
     /// <inheritdoc/>
     public override string LocalName => "FmlaGroup";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the FormulaGroup class.
@@ -2399,12 +2049,10 @@ public partial class FormulaGroup : OpenXmlLeafTextElement
     public FormulaGroup(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaGroup>(deep);
@@ -2423,13 +2071,9 @@ public partial class ScriptText : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12570;
     /// <inheritdoc/>
     public override string LocalName => "ScriptText";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScriptText class.
@@ -2443,12 +2087,10 @@ public partial class ScriptText : OpenXmlLeafTextElement
     public ScriptText(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptText>(deep);
@@ -2467,13 +2109,9 @@ public partial class ScriptExtended : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12571;
     /// <inheritdoc/>
     public override string LocalName => "ScriptExtended";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScriptExtended class.
@@ -2487,12 +2125,10 @@ public partial class ScriptExtended : OpenXmlLeafTextElement
     public ScriptExtended(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptExtended>(deep);
@@ -2511,13 +2147,9 @@ public partial class FormulaTextBox : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12574;
     /// <inheritdoc/>
     public override string LocalName => "FmlaTxbx";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the FormulaTextBox class.
@@ -2531,12 +2163,10 @@ public partial class FormulaTextBox : OpenXmlLeafTextElement
     public FormulaTextBox(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormulaTextBox>(deep);
@@ -2555,15 +2185,10 @@ public partial class FormulaMacro : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12518;
     /// <inheritdoc/>
     public override string LocalName => "FmlaMacro";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
@@ -2571,7 +2196,6 @@ public partial class FormulaMacro : OpenXmlLeafTextElement
     /// </summary>
     public FormulaMacro():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the FormulaMacro class with the specified text content.
     /// </summary>
@@ -2579,14 +2203,11 @@ public partial class FormulaMacro : OpenXmlLeafTextElement
     public FormulaMacro(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -2606,13 +2227,9 @@ public partial class AcceleratorPrimary : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12528;
     /// <inheritdoc/>
     public override string LocalName => "Accel";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AcceleratorPrimary class.
@@ -2626,12 +2243,10 @@ public partial class AcceleratorPrimary : OpenXmlLeafTextElement
     public AcceleratorPrimary(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new ByteValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AcceleratorPrimary>(deep);
@@ -2650,13 +2265,9 @@ public partial class AcceleratorSecondary : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12529;
     /// <inheritdoc/>
     public override string LocalName => "Accel2";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AcceleratorSecondary class.
@@ -2670,12 +2281,10 @@ public partial class AcceleratorSecondary : OpenXmlLeafTextElement
     public AcceleratorSecondary(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new ByteValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AcceleratorSecondary>(deep);
@@ -2694,13 +2303,9 @@ public partial class CommentRowTarget : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12530;
     /// <inheritdoc/>
     public override string LocalName => "Row";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the CommentRowTarget class.
@@ -2714,12 +2319,10 @@ public partial class CommentRowTarget : OpenXmlLeafTextElement
     public CommentRowTarget(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentRowTarget>(deep);
@@ -2738,13 +2341,9 @@ public partial class CommentColumnTarget : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12531;
     /// <inheritdoc/>
     public override string LocalName => "Column";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the CommentColumnTarget class.
@@ -2758,12 +2357,10 @@ public partial class CommentColumnTarget : OpenXmlLeafTextElement
     public CommentColumnTarget(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentColumnTarget>(deep);
@@ -2782,13 +2379,9 @@ public partial class InputValidationType : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12535;
     /// <inheritdoc/>
     public override string LocalName => "VTEdit";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the InputValidationType class.
@@ -2802,12 +2395,10 @@ public partial class InputValidationType : OpenXmlLeafTextElement
     public InputValidationType(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InputValidationType>(deep);
@@ -2826,13 +2417,9 @@ public partial class MinDropDownWidth : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12540;
     /// <inheritdoc/>
     public override string LocalName => "WidthMin";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the MinDropDownWidth class.
@@ -2846,12 +2433,10 @@ public partial class MinDropDownWidth : OpenXmlLeafTextElement
     public MinDropDownWidth(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MinDropDownWidth>(deep);
@@ -2870,13 +2455,9 @@ public partial class SelectionEntry : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12541;
     /// <inheritdoc/>
     public override string LocalName => "Sel";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the SelectionEntry class.
@@ -2890,12 +2471,10 @@ public partial class SelectionEntry : OpenXmlLeafTextElement
     public SelectionEntry(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SelectionEntry>(deep);
@@ -2914,13 +2493,9 @@ public partial class DropLines : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12549;
     /// <inheritdoc/>
     public override string LocalName => "DropLines";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DropLines class.
@@ -2934,12 +2509,10 @@ public partial class DropLines : OpenXmlLeafTextElement
     public DropLines(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropLines>(deep);
@@ -2958,13 +2531,9 @@ public partial class Checked : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12550;
     /// <inheritdoc/>
     public override string LocalName => "Checked";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Checked class.
@@ -2978,12 +2547,10 @@ public partial class Checked : OpenXmlLeafTextElement
     public Checked(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Checked>(deep);
@@ -3002,13 +2569,9 @@ public partial class ScrollBarPosition : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12556;
     /// <inheritdoc/>
     public override string LocalName => "Val";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScrollBarPosition class.
@@ -3022,12 +2585,10 @@ public partial class ScrollBarPosition : OpenXmlLeafTextElement
     public ScrollBarPosition(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarPosition>(deep);
@@ -3046,13 +2607,9 @@ public partial class ScrollBarMin : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12557;
     /// <inheritdoc/>
     public override string LocalName => "Min";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScrollBarMin class.
@@ -3066,12 +2623,10 @@ public partial class ScrollBarMin : OpenXmlLeafTextElement
     public ScrollBarMin(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarMin>(deep);
@@ -3090,13 +2645,9 @@ public partial class ScrollBarMax : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12558;
     /// <inheritdoc/>
     public override string LocalName => "Max";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScrollBarMax class.
@@ -3110,12 +2661,10 @@ public partial class ScrollBarMax : OpenXmlLeafTextElement
     public ScrollBarMax(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarMax>(deep);
@@ -3134,13 +2683,9 @@ public partial class ScrollBarIncrement : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12559;
     /// <inheritdoc/>
     public override string LocalName => "Inc";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScrollBarIncrement class.
@@ -3154,12 +2699,10 @@ public partial class ScrollBarIncrement : OpenXmlLeafTextElement
     public ScrollBarIncrement(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarIncrement>(deep);
@@ -3178,13 +2721,9 @@ public partial class ScrollBarPageIncrement : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12560;
     /// <inheritdoc/>
     public override string LocalName => "Page";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScrollBarPageIncrement class.
@@ -3198,12 +2737,10 @@ public partial class ScrollBarPageIncrement : OpenXmlLeafTextElement
     public ScrollBarPageIncrement(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarPageIncrement>(deep);
@@ -3222,13 +2759,9 @@ public partial class ScrollBarWidth : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12562;
     /// <inheritdoc/>
     public override string LocalName => "Dx";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScrollBarWidth class.
@@ -3242,12 +2775,10 @@ public partial class ScrollBarWidth : OpenXmlLeafTextElement
     public ScrollBarWidth(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScrollBarWidth>(deep);
@@ -3266,15 +2797,10 @@ public partial class ClipboardFormat : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12564;
     /// <inheritdoc/>
     public override string LocalName => "CF";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    
     
     
     /// <summary>
@@ -3282,7 +2808,6 @@ public partial class ClipboardFormat : OpenXmlLeafTextElement
     /// </summary>
     public ClipboardFormat():base(){}
     
-      
         /// <summary>
     /// Initializes a new instance of the ClipboardFormat class with the specified text content.
     /// </summary>
@@ -3290,14 +2815,11 @@ public partial class ClipboardFormat : OpenXmlLeafTextElement
     public ClipboardFormat(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ClipboardFormatValues>(){ InnerText = text };
     }
-    
- 
-    
+
     
     
     /// <inheritdoc/>
@@ -3317,13 +2839,9 @@ public partial class ScriptLanguage : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12572;
     /// <inheritdoc/>
     public override string LocalName => "ScriptLanguage";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScriptLanguage class.
@@ -3337,12 +2855,10 @@ public partial class ScriptLanguage : OpenXmlLeafTextElement
     public ScriptLanguage(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptLanguage>(deep);
@@ -3361,13 +2877,9 @@ public partial class ScriptLocation : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12573;
     /// <inheritdoc/>
     public override string LocalName => "ScriptLocation";
-    
     internal override byte NamespaceId => 29;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScriptLocation class.
@@ -3381,23 +2893,21 @@ public partial class ScriptLocation : OpenXmlLeafTextElement
     public ScriptLocation(string text):base(text)
     {
     }
-    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new IntegerValue(){ InnerText = text };
     }
-    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScriptLocation>(deep);
 
 }
 /// <summary>
-/// Clipboard Format Type 
-/// </summary> 
+/// Clipboard Format Type
+/// </summary>
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ClipboardFormatValues
-{  
+{
 	///<summary>
 ///WMF.
 ///<para>When the item is serialized out as xml, its value is "PictOld".</para>
@@ -3428,14 +2938,14 @@ PicturePrint,
 ///</summary>
 [EnumString("PictScreen")]
 PictureScreen,
- 
+
 }
 /// <summary>
-/// Object Type 
-/// </summary> 
+/// Object Type
+/// </summary>
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ObjectValues
-{  
+{
 	///<summary>
 ///Pushbutton.
 ///<para>When the item is serialized out as xml, its value is "Button".</para>
@@ -3550,14 +3060,14 @@ Group,
 ///</summary>
 [EnumString("Rect")]
 Rectangle,
- 
+
 }
 /// <summary>
-/// Boolean Value with Blank State 
-/// </summary> 
+/// Boolean Value with Blank State
+/// </summary>
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum BooleanEntryWithBlankValues
-{  
+{
 	///<summary>
 ///Logical True.
 ///<para>When the item is serialized out as xml, its value is "True".</para>
@@ -3588,8 +3098,6 @@ F,
 ///</summary>
 [EnumString("")]
 Empty,
- 
+
 }
 }
- 
- 

@@ -5,11 +5,21 @@ using System;
 
 namespace DocumentFormat.OpenXml
 {
+    [AttributeUsage(AttributeTargets.Property, Inherited = true, AllowMultiple = false)]
+    internal sealed class SchemaIndexAttribute : Attribute
+    {
+        public SchemaIndexAttribute(int index)
+        {
+            Index = index;
+        }
+
+        public int Index { get; }
+    }
+
     /// <summary>
     /// Defines the attribute which is used to decorate a property for its corresponding attribute information.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Property)]
-    [Obsolete("Not used as of v2.10 to annotate schema")]
+    [AttributeUsage(AttributeTargets.Property, Inherited = true, AllowMultiple = false)]
     public sealed class SchemaAttrAttribute : Attribute
     {
         /// <summary>
@@ -24,7 +34,7 @@ namespace DocumentFormat.OpenXml
                 throw new ArgumentNullException(nameof(tag));
             }
 
-            NamespaceUri = NamespaceIdMap.GetNamespaceUri(nsId);
+            NamespaceId = nsId;
             Tag = tag;
         }
 
@@ -34,8 +44,13 @@ namespace DocumentFormat.OpenXml
         public string Tag { get; }
 
         /// <summary>
+        /// Gets the id of the namespace
+        /// </summary>
+        internal byte NamespaceId { get; }
+
+        /// <summary>
         /// Gets the Namespace Uri of the schema attribute.
         /// </summary>
-        public string NamespaceUri { get; }
+        public string NamespaceUri => NamespaceIdMap.GetNamespaceUri(NamespaceId);
     }
 }

@@ -22,16 +22,9 @@ public partial class LegacyDrawing : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10681;
     /// <inheritdoc/>
     public override string LocalName => "legacyDrawing";
-    
     internal override byte NamespaceId => 13;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<LegacyDrawing>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -39,20 +32,14 @@ public partial class LegacyDrawing : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: spid </para>
     /// </summary>
     [SchemaAttr(0, "spid")]
-    public StringValue ShapeId
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public StringValue ShapeId { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the LegacyDrawing class.
     /// </summary>
     public LegacyDrawing():base(){}
     
-      
-     
     
     
     
@@ -61,5 +48,3 @@ public partial class LegacyDrawing : OpenXmlLeafElement
 
 }
 }
- 
- 

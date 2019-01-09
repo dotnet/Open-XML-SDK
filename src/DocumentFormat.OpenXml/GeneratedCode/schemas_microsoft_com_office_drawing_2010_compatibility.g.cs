@@ -22,16 +22,9 @@ public partial class CompatibilityShape : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13208;
     /// <inheritdoc/>
     public override string LocalName => "compatSp";
-    
     internal override byte NamespaceId => 63;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = AttributeTag.Load<CompatibilityShape>();
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
 
     
         /// <summary>
@@ -39,20 +32,14 @@ public partial class CompatibilityShape : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: spid </para>
     /// </summary>
     [SchemaAttr(0, "spid")]
-    public StringValue ShapeId
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+	[SchemaIndex(0)]
+    public StringValue ShapeId { get; set;}
 
     /// <summary>
     /// Initializes a new instance of the CompatibilityShape class.
     /// </summary>
     public CompatibilityShape():base(){}
     
-      
-     
     
     
     
@@ -61,5 +48,3 @@ public partial class CompatibilityShape : OpenXmlLeafElement
 
 }
 }
- 
- 
