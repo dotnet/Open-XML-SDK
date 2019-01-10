@@ -19,7 +19,7 @@ namespace DocumentFormat.OpenXml
 
         public AttributeTagCollection(OpenXmlElement element)
         {
-            _tags = Load(element.GetType());
+            _tags = GetTagCollection(element.GetType());
             _element = element;
         }
 
@@ -75,30 +75,41 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        public static AttributeTag[] Load(Type type)
+        public static AttributeTag[] GetTagCollection(Type type)
         {
-            AttributeTag Create(PropertyInfo property)
-            {
-                var schema = property.GetCustomAttribute<SchemaAttrAttribute>();
-
-                return new AttributeTag(
-                    schema.NamespaceId,
-                    schema.Tag,
-                    property.CreateGetter<OpenXmlElement, OpenXmlSimpleType>(),
-                    property.CreateSetter<OpenXmlElement, OpenXmlSimpleType>(),
-                    OpenXmlSimpleType.CreateFactory(property.PropertyType));
-            }
-
-            AttributeTag[] LoadInternal(Type t)
+            AttributeTag[] BuildTagCollection(Type t)
             {
                 return t.GetRuntimeProperties()
-                   .Where(p => p.GetCustomAttribute<SchemaAttrAttribute>() != null)
-                   .OrderBy(p => p.GetCustomAttribute<SchemaIndexAttribute>().Index)
-                   .Select(Create)
+                   .Select(property =>
+                   {
+                       var schema = property.GetCustomAttribute<SchemaAttrAttribute>();
+
+                       if (schema is null)
+                       {
+                           return default;
+                       }
+
+                       var indexAttribute = property.GetCustomAttribute<SchemaIndexAttribute>();
+
+                       if (indexAttribute is null)
+                       {
+                           throw new InvalidOperationException();
+                       }
+
+                       return new AttributeTag(
+                           schema.NamespaceId,
+                           schema.Tag,
+                           indexAttribute.Index,
+                           property.CreateGetter<OpenXmlElement, OpenXmlSimpleType>(),
+                           property.CreateSetter<OpenXmlElement, OpenXmlSimpleType>(),
+                           OpenXmlSimpleType.CreateFactory(property.PropertyType));
+                   })
+                   .Where(tag => tag.IsValid)
+                   .OrderBy(tag => tag.Order)
                    .ToArray();
             }
 
-            return _allTags.GetValue(type, LoadInternal);
+            return _allTags.GetValue(type, BuildTagCollection);
         }
 
         public struct Enumerator

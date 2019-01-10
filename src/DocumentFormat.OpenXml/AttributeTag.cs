@@ -15,6 +15,7 @@ namespace DocumentFormat.OpenXml
         internal AttributeTag(
             byte namespaceId,
             string name,
+            int order,
             Func<OpenXmlElement, OpenXmlSimpleType> getter,
             Action<OpenXmlElement, OpenXmlSimpleType> setter,
             Func<OpenXmlSimpleType> factory)
@@ -23,9 +24,14 @@ namespace DocumentFormat.OpenXml
             _getter = getter;
             _setter = setter;
 
+            Order = order;
             Name = name;
             NamespaceId = namespaceId;
         }
+
+        public bool IsValid => Name != null;
+
+        public int Order { get; }
 
         public string Name { get; }
 
