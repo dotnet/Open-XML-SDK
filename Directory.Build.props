@@ -9,8 +9,9 @@
          - DevFramework40: Will only build for .NET 4.0
          - DevFramework46: Will only build for .NET 4.6
          - DevCore10: Will only build for .NET Core 1.0
+         - DevCore21: Will only build for .NET Core 2.1
          - All: Will build for all platforms -->
-    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevCore10</ProjectLoadStyle>
+    <ProjectLoadStyle Condition=" '$(ProjectLoadStyle)' == '' ">DevCore21</ProjectLoadStyle>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">

@@ -9,6 +9,7 @@
       (tracked at https://github.com/dotnet/project-system/issues/1519)
     -->
     <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevCore10' ">netstandard1.3</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevCore21' ">netstandard1.3</TargetFrameworks>
     <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevFramework40' ">net40</TargetFrameworks>
     <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevFramework46' ">net46</TargetFrameworks>
     <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'All' ">netstandard1.3;net35;net40;net46</TargetFrameworks>
