@@ -5,14 +5,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Runtime.CompilerServices;
+
+#if FEATURE_NO_CONDITIONAL_WEAK_TABLE
+using TagLookup = DocumentFormat.OpenXml.LockingDictionary<System.Type, DocumentFormat.OpenXml.AttributeTag[]>;
+#else
+using TagLookup = System.Runtime.CompilerServices.ConditionalWeakTable<System.Type, DocumentFormat.OpenXml.AttributeTag[]>;
+#endif
 
 namespace DocumentFormat.OpenXml
 {
     internal readonly struct AttributeTagCollection : IEnumerable<OpenXmlAttribute>
     {
-        private static ConditionalWeakTable<Type, AttributeTag[]> _allTags = new ConditionalWeakTable<Type, AttributeTag[]>();
+        private static TagLookup _allTags = new TagLookup();
 
         private readonly ReadOnlyArray<AttributeTag> _tags;
         private readonly OpenXmlElement _element;

@@ -23,6 +23,7 @@
     <Compile Remove="System\**\*.cs" />
     <Compile Include="System\UriHelper.cs" />
     <Compile Remove="PartActivator.Custom.cs" />
+    <Compile Condition="$(DefineConstants.Contains('FEATURE_NO_CONDITIONAL_WEAK_TABLE'))" Include="System\Collections\Generic\LockingDictionary.cs" />
   </ItemGroup>
 
   <Choose>
