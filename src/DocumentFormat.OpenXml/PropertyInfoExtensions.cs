@@ -7,11 +7,11 @@ using System.Reflection;
 
 namespace DocumentFormat.OpenXml
 {
-    internal static class ReflectionExtensions
+    internal static class PropertyInfoExtensions
     {
         public static Func<TIn, TOut> CreateGetter<TIn, TOut>(this PropertyInfo property)
         {
-            var method = property.GetMethod;
+            var method = property.GetGetMethod();
             var isValueType = property.DeclaringType.GetTypeInfo().IsValueType;
             var instance = Expression.Parameter(typeof(TIn), "instance");
             var instanceCast = !isValueType ?
@@ -28,7 +28,7 @@ namespace DocumentFormat.OpenXml
 
         public static Action<TIn, TValue> CreateSetter<TIn, TValue>(this PropertyInfo property)
         {
-            var method = property.SetMethod;
+            var method = property.GetSetMethod();
 
             var instance = Expression.Parameter(typeof(TIn), "instance");
             var instanceCast = Expression.Convert(instance, property.DeclaringType);
@@ -40,5 +40,11 @@ namespace DocumentFormat.OpenXml
                 Expression.Call(instanceCast, method, paramCast),
                 instance, param).Compile();
         }
+
+#if NETSTANDARD1_3
+        private static MethodInfo GetGetMethod(this PropertyInfo property) => property.GetMethod;
+
+        private static MethodInfo GetSetMethod(this PropertyInfo property) => property.SetMethod;
+#endif
     }
 }
