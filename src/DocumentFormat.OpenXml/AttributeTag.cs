@@ -1,28 +1,21 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
 using System.Xml;
 
 namespace DocumentFormat.OpenXml
 {
     internal readonly struct AttributeTag
     {
-        private readonly Func<OpenXmlSimpleType> _factory;
-        private readonly Func<OpenXmlElement, OpenXmlSimpleType> _getter;
-        private readonly Action<OpenXmlElement, OpenXmlSimpleType> _setter;
+        private readonly PropertyAccessor<OpenXmlElement, OpenXmlSimpleType> _accessor;
 
         internal AttributeTag(
             byte namespaceId,
             string name,
             int order,
-            Func<OpenXmlElement, OpenXmlSimpleType> getter,
-            Action<OpenXmlElement, OpenXmlSimpleType> setter,
-            Func<OpenXmlSimpleType> factory)
+            PropertyAccessor<OpenXmlElement, OpenXmlSimpleType> accessor)
         {
-            _factory = factory;
-            _getter = getter;
-            _setter = setter;
+            _accessor = accessor;
 
             Order = order;
             Name = name;
@@ -41,11 +34,11 @@ namespace DocumentFormat.OpenXml
 
         public string NamespacePrefix => NamespaceIdMap.GetNamespacePrefix(NamespaceId);
 
-        public OpenXmlSimpleType GetValue(OpenXmlElement element) => _getter(element);
+        public OpenXmlSimpleType GetValue(OpenXmlElement element) => _accessor.Get(element);
 
-        public void SetValue(OpenXmlElement element, OpenXmlSimpleType value) => _setter(element, value);
+        public void SetValue(OpenXmlElement element, OpenXmlSimpleType value) => _accessor.Set(element, value);
 
-        public OpenXmlSimpleType CreateNew() => _factory();
+        public OpenXmlSimpleType CreateNew() => _accessor.Create();
 
         public XmlQualifiedName GetQName() => new XmlQualifiedName(Name, Namespace);
     }

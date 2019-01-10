@@ -105,9 +105,7 @@ namespace DocumentFormat.OpenXml
                            schema.NamespaceId,
                            schema.Tag,
                            indexAttribute.Index,
-                           property.CreateGetter<OpenXmlElement, OpenXmlSimpleType>(),
-                           property.CreateSetter<OpenXmlElement, OpenXmlSimpleType>(),
-                           OpenXmlSimpleType.CreateFactory(property.PropertyType));
+                           new PropertyAccessor<OpenXmlElement, OpenXmlSimpleType>(property));
                    })
                    .Where(tag => tag.IsValid)
                    .OrderBy(tag => tag.Order)

@@ -96,17 +96,5 @@ namespace DocumentFormat.OpenXml
         {
             throw new NotImplementedException();
         }
-
-        internal static Func<OpenXmlSimpleType> CreateFactory(Type type)
-        {
-            if (!typeof(OpenXmlSimpleType).GetTypeInfo().IsAssignableFrom(type.GetTypeInfo()))
-            {
-                throw new ArgumentOutOfRangeException(nameof(type));
-            }
-
-            OpenXmlSimpleType Factory() => (OpenXmlSimpleType)Activator.CreateInstance(type);
-
-            return Factory;
-        }
     }
 }
