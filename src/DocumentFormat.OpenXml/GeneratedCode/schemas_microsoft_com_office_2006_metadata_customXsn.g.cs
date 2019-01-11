@@ -38,9 +38,7 @@ public partial class CustomXsn : OpenXmlCompositeElement
     internal override byte NamespaceId => 39;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -176,9 +174,7 @@ public partial class XsnLocation : OpenXmlLeafTextElement
     internal override byte NamespaceId => 39;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the XsnLocation class.
@@ -220,9 +216,7 @@ public partial class CachedView : OpenXmlLeafTextElement
     internal override byte NamespaceId => 39;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the CachedView class.
@@ -264,9 +258,7 @@ public partial class OpenByDefault : OpenXmlLeafTextElement
     internal override byte NamespaceId => 39;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the OpenByDefault class.
@@ -308,9 +300,7 @@ public partial class Scope : OpenXmlLeafTextElement
     internal override byte NamespaceId => 39;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Scope class.

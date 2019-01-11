@@ -25,9 +25,7 @@ public partial class Key : OpenXmlLeafTextElement
     internal override byte NamespaceId => 76;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
-    
 
     /// <summary>
     /// Initializes a new instance of the Key class.
@@ -69,9 +67,7 @@ public partial class Value : OpenXmlLeafTextElement
     internal override byte NamespaceId => 76;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
-    
 
     /// <summary>
     /// Initializes a new instance of the Value class.
@@ -122,9 +118,7 @@ public partial class RoamingProperty : OpenXmlCompositeElement
     internal override byte NamespaceId => 76;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
-    
 
     
     

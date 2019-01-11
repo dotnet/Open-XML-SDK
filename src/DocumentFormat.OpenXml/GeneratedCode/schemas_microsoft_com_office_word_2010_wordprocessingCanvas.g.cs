@@ -51,9 +51,7 @@ public partial class WordprocessingCanvas : OpenXmlCompositeElement
     internal override byte NamespaceId => 59;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -198,9 +196,7 @@ public partial class BackgroundFormatting : OpenXmlCompositeElement
     internal override byte NamespaceId => 59;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -302,9 +298,7 @@ public partial class WholeFormatting : OpenXmlCompositeElement
     internal override byte NamespaceId => 59;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -416,9 +410,7 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
     internal override byte NamespaceId => 59;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -576,9 +568,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     internal override byte NamespaceId => 59;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     

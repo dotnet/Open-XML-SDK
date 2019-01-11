@@ -33,9 +33,7 @@ public partial class Taskpanes : OpenXmlPartRootElement
     internal override byte NamespaceId => 70;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
-    
 
     
     
@@ -134,16 +132,9 @@ public partial class WebExtensionPartReference : OpenXmlLeafElement
     internal override byte NamespaceId => 70;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(19, "id")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> id.</para>
@@ -151,12 +142,9 @@ public partial class WebExtensionPartReference : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(19, "id")]
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionPartReference class.
@@ -196,9 +184,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     internal override byte NamespaceId => 70;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
-    
 
     
     
@@ -277,71 +263,45 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     internal override byte NamespaceId => 70;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "dockstate"),
-		AttributeTag.Create<BooleanValue>(0, "visibility"),
-		AttributeTag.Create<DoubleValue>(0, "width"),
-		AttributeTag.Create<UInt32Value>(0, "row"),
-		AttributeTag.Create<BooleanValue>(0, "locked")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> dockstate.</para>
     /// <para>Represents the following attribute in the schema: dockstate </para>
     /// </summary>
-    public StringValue DockState
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "dockstate")]
+    [SchemaIndex(0)]
+    public StringValue DockState { get; set; }
     /// <summary>
     /// <para> visibility.</para>
     /// <para>Represents the following attribute in the schema: visibility </para>
     /// </summary>
-    public BooleanValue Visibility
-    {
-        get { return (BooleanValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "visibility")]
+    [SchemaIndex(1)]
+    public BooleanValue Visibility { get; set; }
     /// <summary>
     /// <para> width.</para>
     /// <para>Represents the following attribute in the schema: width </para>
     /// </summary>
-    public DoubleValue Width
-    {
-        get { return (DoubleValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "width")]
+    [SchemaIndex(2)]
+    public DoubleValue Width { get; set; }
     /// <summary>
     /// <para> row.</para>
     /// <para>Represents the following attribute in the schema: row </para>
     /// </summary>
-    public UInt32Value Row
-    {
-        get { return (UInt32Value)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(0, "row")]
+    [SchemaIndex(3)]
+    public UInt32Value Row { get; set; }
     /// <summary>
     /// <para> locked.</para>
     /// <para>Represents the following attribute in the schema: locked </para>
     /// </summary>
-    public BooleanValue Locked
-    {
-        get { return (BooleanValue)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [SchemaAttr(0, "locked")]
+    [SchemaIndex(4)]
+    public BooleanValue Locked { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionTaskpane class.

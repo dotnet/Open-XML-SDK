@@ -32,9 +32,7 @@ public partial class Properties : OpenXmlPartRootElement
     internal override byte NamespaceId => 4;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -206,60 +204,38 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     internal override byte NamespaceId => 4;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "fmtid"),
-		AttributeTag.Create<Int32Value>(0, "pid"),
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<StringValue>(0, "linkTarget")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Format ID.</para>
     /// <para>Represents the following attribute in the schema: fmtid </para>
     /// </summary>
-    public StringValue FormatId
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "fmtid")]
+    [SchemaIndex(0)]
+    public StringValue FormatId { get; set; }
     /// <summary>
     /// <para> Property ID.</para>
     /// <para>Represents the following attribute in the schema: pid </para>
     /// </summary>
-    public Int32Value PropertyId
-    {
-        get { return (Int32Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "pid")]
+    [SchemaIndex(1)]
+    public Int32Value PropertyId { get; set; }
     /// <summary>
     /// <para> Custom File Property Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    public StringValue Name
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "name")]
+    [SchemaIndex(2)]
+    public StringValue Name { get; set; }
     /// <summary>
     /// <para> Bookmark Link Target.</para>
     /// <para>Represents the following attribute in the schema: linkTarget </para>
     /// </summary>
-    public StringValue LinkTarget
-    {
-        get { return (StringValue)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(0, "linkTarget")]
+    [SchemaIndex(3)]
+    public StringValue LinkTarget { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the CustomDocumentProperty class.

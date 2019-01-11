@@ -84,9 +84,7 @@ public partial class Properties : OpenXmlPartRootElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -596,9 +594,7 @@ public partial class Template : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Template class.
@@ -640,9 +636,7 @@ public partial class Manager : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Manager class.
@@ -684,9 +678,7 @@ public partial class Company : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Company class.
@@ -728,9 +720,7 @@ public partial class PresentationFormat : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the PresentationFormat class.
@@ -772,9 +762,7 @@ public partial class HyperlinkBase : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HyperlinkBase class.
@@ -816,9 +804,7 @@ public partial class Application : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Application class.
@@ -860,9 +846,7 @@ public partial class ApplicationVersion : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ApplicationVersion class.
@@ -904,9 +888,7 @@ public partial class Pages : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Pages class.
@@ -948,9 +930,7 @@ public partial class Words : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Words class.
@@ -992,9 +972,7 @@ public partial class Characters : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Characters class.
@@ -1036,9 +1014,7 @@ public partial class Lines : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Lines class.
@@ -1080,9 +1056,7 @@ public partial class Paragraphs : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Paragraphs class.
@@ -1124,9 +1098,7 @@ public partial class Slides : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Slides class.
@@ -1168,9 +1140,7 @@ public partial class Notes : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Notes class.
@@ -1212,9 +1182,7 @@ public partial class TotalTime : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the TotalTime class.
@@ -1256,9 +1224,7 @@ public partial class HiddenSlides : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HiddenSlides class.
@@ -1300,9 +1266,7 @@ public partial class MultimediaClips : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the MultimediaClips class.
@@ -1344,9 +1308,7 @@ public partial class CharactersWithSpaces : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the CharactersWithSpaces class.
@@ -1388,9 +1350,7 @@ public partial class DocumentSecurity : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DocumentSecurity class.
@@ -1432,9 +1392,7 @@ public partial class ScaleCrop : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ScaleCrop class.
@@ -1476,9 +1434,7 @@ public partial class LinksUpToDate : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the LinksUpToDate class.
@@ -1520,9 +1476,7 @@ public partial class SharedDocument : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the SharedDocument class.
@@ -1564,9 +1518,7 @@ public partial class HyperlinksChanged : OpenXmlLeafTextElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HyperlinksChanged class.
@@ -1614,9 +1566,7 @@ public partial class HeadingPairs : VectorVariantType
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HeadingPairs class.
@@ -1676,9 +1626,7 @@ public partial class HyperlinkList : VectorVariantType
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HyperlinkList class.
@@ -1821,9 +1769,7 @@ public partial class TitlesOfParts : OpenXmlCompositeElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -1921,9 +1867,7 @@ public partial class DigitalSignature : OpenXmlCompositeElement
     internal override byte NamespaceId => 3;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     

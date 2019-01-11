@@ -35,14 +35,6 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         {
         }
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new[]
-        {
-            AttributeTag.Create<StringValue>(23, "uri"),
-            AttributeTag.Create<StringValue>(23, "element"),
-        };
-
-        internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
         /// <summary>
         /// Gets or sets the custom XML Markup Namespace.
         /// </summary>
@@ -50,11 +42,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// Represents the attribute in schema: w:uri.
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
-        public StringValue Uri
-        {
-            get { return (StringValue)Attributes[0].Value; }
-            set { Attributes[0].Value = value; }
-        }
+        [SchemaAttr(23, "uri")]
+        [SchemaIndex(0)]
+        public StringValue Uri { get; set; }
 
         /// <summary>
         /// Gets or sets the element name.
@@ -63,11 +53,9 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// Represents the attribute in schema: w:element.
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
-        public StringValue Element
-        {
-            get { return (StringValue)Attributes[1].Value; }
-            set { Attributes[1].Value = value; }
-        }
+        [SchemaAttr(23, "element")]
+        [SchemaIndex(1)]
+        public StringValue Element { get; set; }
 
         /// <summary>
         /// Gets or sets the CustomXmlProperties which represents the element tag in schema: w:customXmlPr.

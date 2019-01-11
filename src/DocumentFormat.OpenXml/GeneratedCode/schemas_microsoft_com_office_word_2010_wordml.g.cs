@@ -89,9 +89,7 @@ public partial class RunConflictInsertion : RunTrackChangeType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the RunConflictInsertion class.
@@ -206,9 +204,7 @@ public partial class RunConflictDeletion : RunTrackChangeType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the RunConflictDeletion class.
@@ -369,50 +365,34 @@ public partial class RunConflictDeletion : RunTrackChangeType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> author.</para>
     /// <para>Represents the following attribute in the schema: w:author </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    public StringValue Author
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(23, "author")]
+    [SchemaIndex(0)]
+    public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
     /// <para>Represents the following attribute in the schema: w:date </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    public DateTimeValue Date
-    {
-        get { return (DateTimeValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(23, "date")]
+    [SchemaIndex(1)]
+    public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
     /// <para>Represents the following attribute in the schema: w:id </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(23, "id")]
+    [SchemaIndex(2)]
+    public StringValue Id { get; set; }
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
@@ -641,9 +621,7 @@ public partial class ConflictInsertion : TrackChangeType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the ConflictInsertion class.
@@ -672,9 +650,7 @@ public partial class ConflictDeletion : TrackChangeType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the ConflictDeletion class.
@@ -703,9 +679,7 @@ public partial class CustomXmlConflictInsertionRangeStart : TrackChangeType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the CustomXmlConflictInsertionRangeStart class.
@@ -734,9 +708,7 @@ public partial class CustomXmlConflictDeletionRangeStart : TrackChangeType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the CustomXmlConflictDeletionRangeStart class.
@@ -755,50 +727,34 @@ public partial class CustomXmlConflictDeletionRangeStart : TrackChangeType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class TrackChangeType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "author"),
-		AttributeTag.Create<DateTimeValue>(23, "date"),
-		AttributeTag.Create<StringValue>(23, "id")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> author.</para>
     /// <para>Represents the following attribute in the schema: w:author </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    public StringValue Author
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(23, "author")]
+    [SchemaIndex(0)]
+    public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
     /// <para>Represents the following attribute in the schema: w:date </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    public DateTimeValue Date
-    {
-        get { return (DateTimeValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(23, "date")]
+    [SchemaIndex(1)]
+    public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
     /// <para>Represents the following attribute in the schema: w:id </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(23, "id")]
+    [SchemaIndex(2)]
+    public StringValue Id { get; set; }
 
     
     
@@ -828,9 +784,7 @@ public partial class Tint : PositiveFixedPercentageType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the Tint class.
@@ -859,9 +813,7 @@ public partial class Shade : PositiveFixedPercentageType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the Shade class.
@@ -890,9 +842,7 @@ public partial class Alpha : PositiveFixedPercentageType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the Alpha class.
@@ -911,24 +861,16 @@ public partial class Alpha : PositiveFixedPercentageType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class PositiveFixedPercentageType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: w14:val </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value Val
-    {
-        get { return (Int32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "val")]
+    [SchemaIndex(0)]
+    public Int32Value Val { get; set; }
 
     
     
@@ -958,16 +900,9 @@ public partial class HueModulation : OpenXmlLeafElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
@@ -975,12 +910,9 @@ public partial class HueModulation : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value Val
-    {
-        get { return (Int32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "val")]
+    [SchemaIndex(0)]
+    public Int32Value Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the HueModulation class.
@@ -1013,9 +945,7 @@ public partial class Saturation : PercentageType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the Saturation class.
@@ -1044,9 +974,7 @@ public partial class SaturationOffset : PercentageType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the SaturationOffset class.
@@ -1075,9 +1003,7 @@ public partial class SaturationModulation : PercentageType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the SaturationModulation class.
@@ -1106,9 +1032,7 @@ public partial class Luminance : PercentageType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the Luminance class.
@@ -1137,9 +1061,7 @@ public partial class LuminanceOffset : PercentageType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the LuminanceOffset class.
@@ -1168,9 +1090,7 @@ public partial class LuminanceModulation : PercentageType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the LuminanceModulation class.
@@ -1189,24 +1109,16 @@ public partial class LuminanceModulation : PercentageType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class PercentageType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: w14:val </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value Val
-    {
-        get { return (Int32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "val")]
+    [SchemaIndex(0)]
+    public Int32Value Val { get; set; }
 
     
     
@@ -1261,16 +1173,9 @@ public partial class RgbColorModelHex : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(52, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
@@ -1278,12 +1183,9 @@ public partial class RgbColorModelHex : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public HexBinaryValue Val
-    {
-        get { return (HexBinaryValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "val")]
+    [SchemaIndex(0)]
+    public HexBinaryValue Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the RgbColorModelHex class.
@@ -1402,16 +1304,9 @@ public partial class SchemeColor : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues>>(52, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
@@ -1419,12 +1314,9 @@ public partial class SchemeColor : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "val")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues> Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the SchemeColor class.
@@ -1518,17 +1410,9 @@ public partial class LinearShadeProperties : OpenXmlLeafElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "ang"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>(52, "scaled")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> ang.</para>
@@ -1536,24 +1420,18 @@ public partial class LinearShadeProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value Angle
-    {
-        get { return (Int32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "ang")]
+    [SchemaIndex(0)]
+    public Int32Value Angle { get; set; }
     /// <summary>
     /// <para> scaled.</para>
     /// <para>Represents the following attribute in the schema: w14:scaled </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Scaled
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(52, "scaled")]
+    [SchemaIndex(1)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Scaled { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the LinearShadeProperties class.
@@ -1593,16 +1471,9 @@ public partial class PathShadeProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues>>(52, "path")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> path.</para>
@@ -1610,12 +1481,9 @@ public partial class PathShadeProperties : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues> Path
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "path")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues> Path { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the PathShadeProperties class.
@@ -1703,9 +1571,7 @@ public partial class NoFillEmpty : EmptyType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the NoFillEmpty class.
@@ -1734,9 +1600,7 @@ public partial class RoundEmpty : EmptyType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the RoundEmpty class.
@@ -1765,9 +1629,7 @@ public partial class BevelEmpty : EmptyType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the BevelEmpty class.
@@ -1796,9 +1658,7 @@ public partial class EntityPickerEmpty : EmptyType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the EntityPickerEmpty class.
@@ -1856,9 +1716,7 @@ public partial class SolidColorFillProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -1975,9 +1833,7 @@ public partial class GradientFillProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -2074,16 +1930,9 @@ public partial class PresetLineDashProperties : OpenXmlLeafElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues>>(52, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
@@ -2091,12 +1940,9 @@ public partial class PresetLineDashProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "val")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues> Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the PresetLineDashProperties class.
@@ -2129,16 +1975,9 @@ public partial class LineJoinMiterProperties : OpenXmlLeafElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "lim")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> lim.</para>
@@ -2146,12 +1985,9 @@ public partial class LineJoinMiterProperties : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value Limit
-    {
-        get { return (Int32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "lim")]
+    [SchemaIndex(0)]
+    public Int32Value Limit { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the LineJoinMiterProperties class.
@@ -2193,16 +2029,9 @@ public partial class Glow : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int64Value>(52, "rad")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> rad.</para>
@@ -2210,12 +2039,9 @@ public partial class Glow : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int64Value GlowRadius
-    {
-        get { return (Int64Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "rad")]
+    [SchemaIndex(0)]
+    public Int64Value GlowRadius { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Glow class.
@@ -2327,23 +2153,9 @@ public partial class Shadow : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int64Value>(52, "blurRad"),
-		AttributeTag.Create<Int64Value>(52, "dist"),
-		AttributeTag.Create<Int32Value>(52, "dir"),
-		AttributeTag.Create<Int32Value>(52, "sx"),
-		AttributeTag.Create<Int32Value>(52, "sy"),
-		AttributeTag.Create<Int32Value>(52, "kx"),
-		AttributeTag.Create<Int32Value>(52, "ky"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>>(52, "algn")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> blurRad.</para>
@@ -2351,96 +2163,72 @@ public partial class Shadow : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int64Value BlurRadius
-    {
-        get { return (Int64Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "blurRad")]
+    [SchemaIndex(0)]
+    public Int64Value BlurRadius { get; set; }
     /// <summary>
     /// <para> dist.</para>
     /// <para>Represents the following attribute in the schema: w14:dist </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int64Value DistanceFromText
-    {
-        get { return (Int64Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(52, "dist")]
+    [SchemaIndex(1)]
+    public Int64Value DistanceFromText { get; set; }
     /// <summary>
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: w14:dir </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value DirectionAngle
-    {
-        get { return (Int32Value)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(52, "dir")]
+    [SchemaIndex(2)]
+    public Int32Value DirectionAngle { get; set; }
     /// <summary>
     /// <para> sx.</para>
     /// <para>Represents the following attribute in the schema: w14:sx </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value HorizontalScalingFactor
-    {
-        get { return (Int32Value)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(52, "sx")]
+    [SchemaIndex(3)]
+    public Int32Value HorizontalScalingFactor { get; set; }
     /// <summary>
     /// <para> sy.</para>
     /// <para>Represents the following attribute in the schema: w14:sy </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value VerticalScalingFactor
-    {
-        get { return (Int32Value)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [SchemaAttr(52, "sy")]
+    [SchemaIndex(4)]
+    public Int32Value VerticalScalingFactor { get; set; }
     /// <summary>
     /// <para> kx.</para>
     /// <para>Represents the following attribute in the schema: w14:kx </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value HorizontalSkewAngle
-    {
-        get { return (Int32Value)Attributes[5].Value; }
-        set { Attributes[5].Value = value; }
-    }
-    
+    [SchemaAttr(52, "kx")]
+    [SchemaIndex(5)]
+    public Int32Value HorizontalSkewAngle { get; set; }
     /// <summary>
     /// <para> ky.</para>
     /// <para>Represents the following attribute in the schema: w14:ky </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value VerticalSkewAngle
-    {
-        get { return (Int32Value)Attributes[6].Value; }
-        set { Attributes[6].Value = value; }
-    }
-    
+    [SchemaAttr(52, "ky")]
+    [SchemaIndex(6)]
+    public Int32Value VerticalSkewAngle { get; set; }
     /// <summary>
     /// <para> algn.</para>
     /// <para>Represents the following attribute in the schema: w14:algn </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues> Alignment
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>)Attributes[7].Value; }
-        set { Attributes[7].Value = value; }
-    }
-    
+    [SchemaAttr(52, "algn")]
+    [SchemaIndex(7)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues> Alignment { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Shadow class.
@@ -2543,28 +2331,9 @@ public partial class Reflection : OpenXmlLeafElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int64Value>(52, "blurRad"),
-		AttributeTag.Create<Int32Value>(52, "stA"),
-		AttributeTag.Create<Int32Value>(52, "stPos"),
-		AttributeTag.Create<Int32Value>(52, "endA"),
-		AttributeTag.Create<Int32Value>(52, "endPos"),
-		AttributeTag.Create<Int64Value>(52, "dist"),
-		AttributeTag.Create<Int32Value>(52, "dir"),
-		AttributeTag.Create<Int32Value>(52, "fadeDir"),
-		AttributeTag.Create<Int32Value>(52, "sx"),
-		AttributeTag.Create<Int32Value>(52, "sy"),
-		AttributeTag.Create<Int32Value>(52, "kx"),
-		AttributeTag.Create<Int32Value>(52, "ky"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>>(52, "algn")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> blurRad.</para>
@@ -2572,156 +2341,117 @@ public partial class Reflection : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int64Value BlurRadius
-    {
-        get { return (Int64Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "blurRad")]
+    [SchemaIndex(0)]
+    public Int64Value BlurRadius { get; set; }
     /// <summary>
     /// <para> stA.</para>
     /// <para>Represents the following attribute in the schema: w14:stA </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value StartingOpacity
-    {
-        get { return (Int32Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(52, "stA")]
+    [SchemaIndex(1)]
+    public Int32Value StartingOpacity { get; set; }
     /// <summary>
     /// <para> stPos.</para>
     /// <para>Represents the following attribute in the schema: w14:stPos </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value StartPosition
-    {
-        get { return (Int32Value)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(52, "stPos")]
+    [SchemaIndex(2)]
+    public Int32Value StartPosition { get; set; }
     /// <summary>
     /// <para> endA.</para>
     /// <para>Represents the following attribute in the schema: w14:endA </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value EndingOpacity
-    {
-        get { return (Int32Value)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(52, "endA")]
+    [SchemaIndex(3)]
+    public Int32Value EndingOpacity { get; set; }
     /// <summary>
     /// <para> endPos.</para>
     /// <para>Represents the following attribute in the schema: w14:endPos </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value EndPosition
-    {
-        get { return (Int32Value)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [SchemaAttr(52, "endPos")]
+    [SchemaIndex(4)]
+    public Int32Value EndPosition { get; set; }
     /// <summary>
     /// <para> dist.</para>
     /// <para>Represents the following attribute in the schema: w14:dist </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int64Value DistanceFromText
-    {
-        get { return (Int64Value)Attributes[5].Value; }
-        set { Attributes[5].Value = value; }
-    }
-    
+    [SchemaAttr(52, "dist")]
+    [SchemaIndex(5)]
+    public Int64Value DistanceFromText { get; set; }
     /// <summary>
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: w14:dir </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value DirectionAngle
-    {
-        get { return (Int32Value)Attributes[6].Value; }
-        set { Attributes[6].Value = value; }
-    }
-    
+    [SchemaAttr(52, "dir")]
+    [SchemaIndex(6)]
+    public Int32Value DirectionAngle { get; set; }
     /// <summary>
     /// <para> fadeDir.</para>
     /// <para>Represents the following attribute in the schema: w14:fadeDir </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value FadeDirection
-    {
-        get { return (Int32Value)Attributes[7].Value; }
-        set { Attributes[7].Value = value; }
-    }
-    
+    [SchemaAttr(52, "fadeDir")]
+    [SchemaIndex(7)]
+    public Int32Value FadeDirection { get; set; }
     /// <summary>
     /// <para> sx.</para>
     /// <para>Represents the following attribute in the schema: w14:sx </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value HorizontalScalingFactor
-    {
-        get { return (Int32Value)Attributes[8].Value; }
-        set { Attributes[8].Value = value; }
-    }
-    
+    [SchemaAttr(52, "sx")]
+    [SchemaIndex(8)]
+    public Int32Value HorizontalScalingFactor { get; set; }
     /// <summary>
     /// <para> sy.</para>
     /// <para>Represents the following attribute in the schema: w14:sy </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value VerticalScalingFactor
-    {
-        get { return (Int32Value)Attributes[9].Value; }
-        set { Attributes[9].Value = value; }
-    }
-    
+    [SchemaAttr(52, "sy")]
+    [SchemaIndex(9)]
+    public Int32Value VerticalScalingFactor { get; set; }
     /// <summary>
     /// <para> kx.</para>
     /// <para>Represents the following attribute in the schema: w14:kx </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value HorizontalSkewAngle
-    {
-        get { return (Int32Value)Attributes[10].Value; }
-        set { Attributes[10].Value = value; }
-    }
-    
+    [SchemaAttr(52, "kx")]
+    [SchemaIndex(10)]
+    public Int32Value HorizontalSkewAngle { get; set; }
     /// <summary>
     /// <para> ky.</para>
     /// <para>Represents the following attribute in the schema: w14:ky </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value VerticalSkewAngle
-    {
-        get { return (Int32Value)Attributes[11].Value; }
-        set { Attributes[11].Value = value; }
-    }
-    
+    [SchemaAttr(52, "ky")]
+    [SchemaIndex(11)]
+    public Int32Value VerticalSkewAngle { get; set; }
     /// <summary>
     /// <para> algn.</para>
     /// <para>Represents the following attribute in the schema: w14:algn </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues> Alignment
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues>)Attributes[12].Value; }
-        set { Attributes[12].Value = value; }
-    }
-    
+    [SchemaAttr(52, "algn")]
+    [SchemaIndex(12)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues> Alignment { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Reflection class.
@@ -2773,19 +2503,9 @@ public partial class TextOutlineEffect : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "w"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues>>(52, "cap"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues>>(52, "cmpd"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues>>(52, "algn")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> w.</para>
@@ -2793,48 +2513,36 @@ public partial class TextOutlineEffect : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value LineWidth
-    {
-        get { return (Int32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "w")]
+    [SchemaIndex(0)]
+    public Int32Value LineWidth { get; set; }
     /// <summary>
     /// <para> cap.</para>
     /// <para>Represents the following attribute in the schema: w14:cap </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues> CapType
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues>)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(52, "cap")]
+    [SchemaIndex(1)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues> CapType { get; set; }
     /// <summary>
     /// <para> cmpd.</para>
     /// <para>Represents the following attribute in the schema: w14:cmpd </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues> Compound
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues>)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(52, "cmpd")]
+    [SchemaIndex(2)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues> Compound { get; set; }
     /// <summary>
     /// <para> algn.</para>
     /// <para>Represents the following attribute in the schema: w14:algn </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues> Alignment
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues>)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(52, "algn")]
+    [SchemaIndex(3)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues> Alignment { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the TextOutlineEffect class.
@@ -2930,9 +2638,7 @@ public partial class FillTextEffect : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -3062,9 +2768,7 @@ public partial class Scene3D : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -3183,18 +2887,9 @@ public partial class Properties3D : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int64Value>(52, "extrusionH"),
-		AttributeTag.Create<Int64Value>(52, "contourW"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues>>(52, "prstMaterial")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> extrusionH.</para>
@@ -3202,36 +2897,27 @@ public partial class Properties3D : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int64Value ExtrusionHeight
-    {
-        get { return (Int64Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "extrusionH")]
+    [SchemaIndex(0)]
+    public Int64Value ExtrusionHeight { get; set; }
     /// <summary>
     /// <para> contourW.</para>
     /// <para>Represents the following attribute in the schema: w14:contourW </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int64Value ContourWidth
-    {
-        get { return (Int64Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(52, "contourW")]
+    [SchemaIndex(1)]
+    public Int64Value ContourWidth { get; set; }
     /// <summary>
     /// <para> prstMaterial.</para>
     /// <para>Represents the following attribute in the schema: w14:prstMaterial </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues> PresetMaterialType
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues>)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(52, "prstMaterial")]
+    [SchemaIndex(2)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues> PresetMaterialType { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Properties3D class.
@@ -3364,16 +3050,9 @@ public partial class Ligatures : OpenXmlLeafElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues>>(52, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
@@ -3381,12 +3060,9 @@ public partial class Ligatures : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "val")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues> Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Ligatures class.
@@ -3419,16 +3095,9 @@ public partial class NumberingFormat : OpenXmlLeafElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues>>(52, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
@@ -3436,12 +3105,9 @@ public partial class NumberingFormat : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "val")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues> Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the NumberingFormat class.
@@ -3474,16 +3140,9 @@ public partial class NumberSpacing : OpenXmlLeafElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues>>(52, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
@@ -3491,12 +3150,9 @@ public partial class NumberSpacing : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "val")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues> Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the NumberSpacing class.
@@ -3536,9 +3192,7 @@ public partial class StylisticSets : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -3608,9 +3262,7 @@ public partial class ContextualAlternatives : OnOffType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the ContextualAlternatives class.
@@ -3639,9 +3291,7 @@ public partial class ConflictMode : OnOffType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the ConflictMode class.
@@ -3670,9 +3320,7 @@ public partial class DiscardImageEditingData : OnOffType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the DiscardImageEditingData class.
@@ -3701,9 +3349,7 @@ public partial class Checked : OnOffType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the Checked class.
@@ -3722,24 +3368,16 @@ public partial class Checked : OnOffType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OnOffType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>(52, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: w14:val </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "val")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val { get; set; }
 
     
     
@@ -3780,17 +3418,9 @@ public partial class ContentPart : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(52, "bwMode"),
-		AttributeTag.Create<StringValue>(19, "id")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> bwMode.</para>
@@ -3798,24 +3428,18 @@ public partial class ContentPart : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "bwMode")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    public StringValue RelationshipId
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(19, "id")]
+    [SchemaIndex(1)]
+    public StringValue RelationshipId { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ContentPart class.
@@ -3933,16 +3557,9 @@ public partial class DocumentId : OpenXmlLeafElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(52, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
@@ -3950,12 +3567,9 @@ public partial class DocumentId : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public HexBinaryValue Val
-    {
-        get { return (HexBinaryValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "val")]
+    [SchemaIndex(0)]
+    public HexBinaryValue Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the DocumentId class.
@@ -3988,9 +3602,7 @@ public partial class CustomXmlConflictInsertionRangeEnd : MarkupType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the CustomXmlConflictInsertionRangeEnd class.
@@ -4019,9 +3631,7 @@ public partial class CustomXmlConflictDeletionRangeEnd : MarkupType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the CustomXmlConflictDeletionRangeEnd class.
@@ -4040,24 +3650,16 @@ public partial class CustomXmlConflictDeletionRangeEnd : MarkupType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class MarkupType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(23, "id")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> Annotation Identifier.</para>
     /// <para>Represents the following attribute in the schema: w:id </para>
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(23, "id")]
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
 
     
     
@@ -4087,16 +3689,9 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
@@ -4104,12 +3699,9 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value Val
-    {
-        get { return (Int32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "val")]
+    [SchemaIndex(0)]
+    public Int32Value Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the DefaultImageDpi class.
@@ -4153,9 +3745,7 @@ public partial class SdtContentCheckBox : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -4285,16 +3875,9 @@ public partial class GradientStop : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "pos")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> pos.</para>
@@ -4302,12 +3885,9 @@ public partial class GradientStop : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value StopPosition
-    {
-        get { return (Int32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "pos")]
+    [SchemaIndex(0)]
+    public Int32Value StopPosition { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the GradientStop class.
@@ -4410,19 +3990,9 @@ public partial class FillToRectangle : OpenXmlLeafElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "l"),
-		AttributeTag.Create<Int32Value>(52, "t"),
-		AttributeTag.Create<Int32Value>(52, "r"),
-		AttributeTag.Create<Int32Value>(52, "b")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> l.</para>
@@ -4430,48 +4000,36 @@ public partial class FillToRectangle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value Left
-    {
-        get { return (Int32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "l")]
+    [SchemaIndex(0)]
+    public Int32Value Left { get; set; }
     /// <summary>
     /// <para> t.</para>
     /// <para>Represents the following attribute in the schema: w14:t </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value Top
-    {
-        get { return (Int32Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(52, "t")]
+    [SchemaIndex(1)]
+    public Int32Value Top { get; set; }
     /// <summary>
     /// <para> r.</para>
     /// <para>Represents the following attribute in the schema: w14:r </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value Right
-    {
-        get { return (Int32Value)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(52, "r")]
+    [SchemaIndex(2)]
+    public Int32Value Right { get; set; }
     /// <summary>
     /// <para> b.</para>
     /// <para>Represents the following attribute in the schema: w14:b </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value Bottom
-    {
-        get { return (Int32Value)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(52, "b")]
+    [SchemaIndex(3)]
+    public Int32Value Bottom { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the FillToRectangle class.
@@ -4511,9 +4069,7 @@ public partial class GradientStopList : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -4583,18 +4139,9 @@ public partial class SphereCoordinates : OpenXmlLeafElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(52, "lat"),
-		AttributeTag.Create<Int32Value>(52, "lon"),
-		AttributeTag.Create<Int32Value>(52, "rev")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> lat.</para>
@@ -4602,36 +4149,27 @@ public partial class SphereCoordinates : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value Lattitude
-    {
-        get { return (Int32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "lat")]
+    [SchemaIndex(0)]
+    public Int32Value Lattitude { get; set; }
     /// <summary>
     /// <para> lon.</para>
     /// <para>Represents the following attribute in the schema: w14:lon </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value Longitude
-    {
-        get { return (Int32Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(52, "lon")]
+    [SchemaIndex(1)]
+    public Int32Value Longitude { get; set; }
     /// <summary>
     /// <para> rev.</para>
     /// <para>Represents the following attribute in the schema: w14:rev </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int32Value Revolution
-    {
-        get { return (Int32Value)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(52, "rev")]
+    [SchemaIndex(2)]
+    public Int32Value Revolution { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the SphereCoordinates class.
@@ -4664,16 +4202,9 @@ public partial class Camera : OpenXmlLeafElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues>>(52, "prst")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> prst.</para>
@@ -4681,12 +4212,9 @@ public partial class Camera : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues> PresetCameraType
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "prst")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues> PresetCameraType { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Camera class.
@@ -4726,17 +4254,9 @@ public partial class LightRig : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues>>(52, "rig"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues>>(52, "dir")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> rig.</para>
@@ -4744,24 +4264,18 @@ public partial class LightRig : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues> LightRigType
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "rig")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues> LightRigType { get; set; }
     /// <summary>
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: w14:dir </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues> LightDirectionType
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues>)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(52, "dir")]
+    [SchemaIndex(1)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues> LightDirectionType { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the LightRig class.
@@ -4849,9 +4363,7 @@ public partial class BevelTop : BevelType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the BevelTop class.
@@ -4880,9 +4392,7 @@ public partial class BevelBottom : BevelType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the BevelBottom class.
@@ -4901,50 +4411,34 @@ public partial class BevelBottom : BevelType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class BevelType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int64Value>(52, "w"),
-		AttributeTag.Create<Int64Value>(52, "h"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues>>(52, "prst")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> w.</para>
     /// <para>Represents the following attribute in the schema: w14:w </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int64Value Width
-    {
-        get { return (Int64Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "w")]
+    [SchemaIndex(0)]
+    public Int64Value Width { get; set; }
     /// <summary>
     /// <para> h.</para>
     /// <para>Represents the following attribute in the schema: w14:h </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public Int64Value Height
-    {
-        get { return (Int64Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(52, "h")]
+    [SchemaIndex(1)]
+    public Int64Value Height { get; set; }
     /// <summary>
     /// <para> prst.</para>
     /// <para>Represents the following attribute in the schema: w14:prst </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues> PresetProfileType
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues>)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(52, "prst")]
+    [SchemaIndex(2)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues> PresetProfileType { get; set; }
 
     
     
@@ -4981,9 +4475,7 @@ public partial class ExtrusionColor : ColorType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the ExtrusionColor class.
@@ -5044,9 +4536,7 @@ public partial class ContourColor : ColorType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the ContourColor class.
@@ -5199,17 +4689,9 @@ public partial class StyleSet : OpenXmlLeafElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(52, "id"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>>(52, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> id.</para>
@@ -5217,24 +4699,18 @@ public partial class StyleSet : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public UInt32Value Id
-    {
-        get { return (UInt32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "id")]
+    [SchemaIndex(0)]
+    public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: w14:val </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues>)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(52, "val")]
+    [SchemaIndex(1)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the StyleSet class.
@@ -5267,9 +4743,7 @@ public partial class CheckedState : CheckBoxSymbolType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the CheckedState class.
@@ -5298,9 +4772,7 @@ public partial class UncheckedState : CheckBoxSymbolType
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the UncheckedState class.
@@ -5319,37 +4791,25 @@ public partial class UncheckedState : CheckBoxSymbolType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class CheckBoxSymbolType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(52, "font"),
-		AttributeTag.Create<HexBinaryValue>(52, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> font.</para>
     /// <para>Represents the following attribute in the schema: w14:font </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public StringValue Font
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(52, "font")]
+    [SchemaIndex(0)]
+    public StringValue Font { get; set; }
     /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: w14:val </para>
     /// </summary>
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
-    public HexBinaryValue Val
-    {
-        get { return (HexBinaryValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(52, "val")]
+    [SchemaIndex(1)]
+    public HexBinaryValue Val { get; set; }
 
     
     
@@ -5390,71 +4850,45 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(0, "id"),
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<StringValue>(0, "descr"),
-		AttributeTag.Create<BooleanValue>(0, "hidden"),
-		AttributeTag.Create<StringValue>(0, "title")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    public UInt32Value Id
-    {
-        get { return (UInt32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "id")]
+    [SchemaIndex(0)]
+    public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    public StringValue Name
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "name")]
+    [SchemaIndex(1)]
+    public StringValue Name { get; set; }
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "descr")]
+    [SchemaIndex(2)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
-    public BooleanValue Hidden
-    {
-        get { return (BooleanValue)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(0, "hidden")]
+    [SchemaIndex(3)]
+    public BooleanValue Hidden { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    public StringValue Title
-    {
-        get { return (StringValue)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [SchemaAttr(0, "title")]
+    [SchemaIndex(4)]
+    public StringValue Title { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the NonVisualDrawingProperties class.
@@ -5581,27 +5015,17 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "isComment")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> isComment.</para>
     /// <para>Represents the following attribute in the schema: isComment </para>
     /// </summary>
-    public BooleanValue IsComment
-    {
-        get { return (BooleanValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "isComment")]
+    [SchemaIndex(0)]
+    public BooleanValue IsComment { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the NonVisualInkContentPartProperties class.
@@ -5713,9 +5137,7 @@ public partial class WordNonVisualContentPartShapeProperties : OpenXmlCompositeE
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -5830,49 +5252,31 @@ public partial class Transform2D : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(0, "rot"),
-		AttributeTag.Create<BooleanValue>(0, "flipH"),
-		AttributeTag.Create<BooleanValue>(0, "flipV")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
-    public Int32Value Rotation
-    {
-        get { return (Int32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "rot")]
+    [SchemaIndex(0)]
+    public Int32Value Rotation { get; set; }
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
     /// </summary>
-    public BooleanValue HorizontalFlip
-    {
-        get { return (BooleanValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "flipH")]
+    [SchemaIndex(1)]
+    public BooleanValue HorizontalFlip { get; set; }
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
     /// </summary>
-    public BooleanValue VerticalFlip
-    {
-        get { return (BooleanValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "flipV")]
+    [SchemaIndex(2)]
+    public BooleanValue VerticalFlip { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Transform2D class.
@@ -5982,9 +5386,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     internal override byte NamespaceId => 52;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     

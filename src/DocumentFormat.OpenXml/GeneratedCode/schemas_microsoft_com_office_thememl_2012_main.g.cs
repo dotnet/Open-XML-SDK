@@ -33,49 +33,31 @@ public partial class ThemeFamily : OpenXmlCompositeElement
     internal override byte NamespaceId => 73;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<StringValue>(0, "id"),
-		AttributeTag.Create<StringValue>(0, "vid")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    public StringValue Name
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "name")]
+    [SchemaIndex(0)]
+    public StringValue Name { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "id")]
+    [SchemaIndex(1)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> vid.</para>
     /// <para>Represents the following attribute in the schema: vid </para>
     /// </summary>
-    public StringValue Vid
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "vid")]
+    [SchemaIndex(2)]
+    public StringValue Vid { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ThemeFamily class.
@@ -170,9 +152,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     internal override byte NamespaceId => 73;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
-    
 
     
     
@@ -249,73 +229,47 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     internal override byte NamespaceId => 73;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<StringValue>(0, "vid"),
-		AttributeTag.Create<Int64Value>(0, "cx"),
-		AttributeTag.Create<Int64Value>(0, "cy"),
-		AttributeTag.Create<StringValue>(19, "id")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    public StringValue Name
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "name")]
+    [SchemaIndex(0)]
+    public StringValue Name { get; set; }
     /// <summary>
     /// <para> vid.</para>
     /// <para>Represents the following attribute in the schema: vid </para>
     /// </summary>
-    public StringValue Vid
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "vid")]
+    [SchemaIndex(1)]
+    public StringValue Vid { get; set; }
     /// <summary>
     /// <para> cx.</para>
     /// <para>Represents the following attribute in the schema: cx </para>
     /// </summary>
-    public Int64Value X
-    {
-        get { return (Int64Value)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "cx")]
+    [SchemaIndex(2)]
+    public Int64Value X { get; set; }
     /// <summary>
     /// <para> cy.</para>
     /// <para>Represents the following attribute in the schema: cy </para>
     /// </summary>
-    public Int64Value Y
-    {
-        get { return (Int64Value)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(0, "cy")]
+    [SchemaIndex(3)]
+    public Int64Value Y { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [SchemaAttr(19, "id")]
+    [SchemaIndex(4)]
+    public StringValue Id { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ThemeVariant class.
@@ -410,9 +364,7 @@ public partial class ThemeVariantList : OpenXmlCompositeElement
     internal override byte NamespaceId => 73;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
-    
 
     
     

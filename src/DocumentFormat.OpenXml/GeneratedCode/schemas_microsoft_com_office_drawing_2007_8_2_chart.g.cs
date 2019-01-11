@@ -43,9 +43,7 @@ public partial class PivotOptions : OpenXmlCompositeElement
     internal override byte NamespaceId => 46;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -205,9 +203,7 @@ public partial class SketchOptions : OpenXmlCompositeElement
     internal override byte NamespaceId => 46;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -320,9 +316,7 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
     internal override byte NamespaceId => 46;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -413,27 +407,17 @@ public partial class Style : OpenXmlLeafElement
     internal override byte NamespaceId => 46;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<ByteValue>(0, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    public ByteValue Val
-    {
-        get { return (ByteValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "val")]
+    [SchemaIndex(0)]
+    public ByteValue Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Style class.
@@ -501,27 +485,17 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 46;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>>(0, "bwMode")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "bwMode")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class.
@@ -651,9 +625,7 @@ public partial class DropZoneFilter : BooleanFalseType
     internal override byte NamespaceId => 46;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the DropZoneFilter class.
@@ -682,9 +654,7 @@ public partial class DropZoneCategories : BooleanFalseType
     internal override byte NamespaceId => 46;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the DropZoneCategories class.
@@ -713,9 +683,7 @@ public partial class DropZoneData : BooleanFalseType
     internal override byte NamespaceId => 46;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the DropZoneData class.
@@ -744,9 +712,7 @@ public partial class DropZoneSeries : BooleanFalseType
     internal override byte NamespaceId => 46;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the DropZoneSeries class.
@@ -775,9 +741,7 @@ public partial class DropZonesVisible : BooleanFalseType
     internal override byte NamespaceId => 46;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the DropZonesVisible class.
@@ -806,9 +770,7 @@ public partial class InSketchMode : BooleanFalseType
     internal override byte NamespaceId => 46;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the InSketchMode class.
@@ -827,22 +789,14 @@ public partial class InSketchMode : BooleanFalseType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class BooleanFalseType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    public BooleanValue Val
-    {
-        get { return (BooleanValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "val")]
+    [SchemaIndex(0)]
+    public BooleanValue Val { get; set; }
 
     
     
@@ -872,27 +826,17 @@ public partial class ShowSketchButton : OpenXmlLeafElement
     internal override byte NamespaceId => 46;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    public BooleanValue Val
-    {
-        get { return (BooleanValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "val")]
+    [SchemaIndex(0)]
+    public BooleanValue Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ShowSketchButton class.

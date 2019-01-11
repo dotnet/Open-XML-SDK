@@ -36,9 +36,7 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
     internal override byte NamespaceId => 37;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -147,9 +145,7 @@ public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
     internal override byte NamespaceId => 37;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the PropertyEditorNamespace class.
@@ -191,9 +187,7 @@ public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
     internal override byte NamespaceId => 37;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DefaultPropertyEditorNamespace class.
@@ -235,9 +229,7 @@ public partial class XsnFileLocation : OpenXmlLeafTextElement
     internal override byte NamespaceId => 37;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -286,9 +278,7 @@ public partial class ShowOnOpen : OpenXmlLeafTextElement
     internal override byte NamespaceId => 37;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -346,9 +336,7 @@ public partial class CustomPropertyEditor : OpenXmlCompositeElement
     internal override byte NamespaceId => 37;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     

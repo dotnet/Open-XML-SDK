@@ -31,16 +31,9 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     internal override byte NamespaceId => 20;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(20, "itemID")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Custom XML Data ID.</para>
@@ -48,12 +41,9 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     /// </summary>
 ///<remark> xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
 ///</remark>
-    public StringValue ItemId
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(20, "itemID")]
+    [SchemaIndex(0)]
+    public StringValue ItemId { get; set; }
 
     
 	internal DataStoreItem(CustomXmlPropertiesPart ownerPart) : base (ownerPart){}
@@ -170,16 +160,9 @@ public partial class SchemaReference : OpenXmlLeafElement
     internal override byte NamespaceId => 20;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(20, "uri")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Target Namespace of Associated XML Schema.</para>
@@ -187,12 +170,9 @@ public partial class SchemaReference : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:ds=http://schemas.openxmlformats.org/officeDocument/2006/customXml
 ///</remark>
-    public StringValue Uri
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(20, "uri")]
+    [SchemaIndex(0)]
+    public StringValue Uri { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the SchemaReference class.
@@ -232,9 +212,7 @@ public partial class SchemaReferences : OpenXmlCompositeElement
     internal override byte NamespaceId => 20;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     

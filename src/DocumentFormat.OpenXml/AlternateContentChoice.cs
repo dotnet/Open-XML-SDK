@@ -71,23 +71,14 @@ namespace DocumentFormat.OpenXml
 
         internal override byte NamespaceId => AlternateContent.MarkupCompatibilityNamespaceId;
 
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new[]
-        {
-            AttributeTag.Create<StringValue>(0, "Requires"),
-        };
-
-        internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
         /// <summary>
         /// Gets or sets a whitespace-delimited list of namespace prefixes that identify the
         /// namespaces a markup consumer needs in order to understand and select that
         /// Choice and process the content.
         /// </summary>
-        public StringValue Requires
-        {
-            get { return (StringValue)Attributes[0].Value; }
-            set { Attributes[0].Value = value; }
-        }
+        [SchemaAttr(0, "Requires")]
+        [SchemaIndex(0)]
+        public StringValue Requires { get; set; }
 
         internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         {
@@ -96,7 +87,7 @@ namespace DocumentFormat.OpenXml
             if (Parent != null &&
                  Parent is AlternateContent)
             {
-                OpenXmlElement parentsParentElemnt = Parent.Parent;
+                var parentsParentElemnt = Parent.Parent;
                 if (parentsParentElemnt != null)
                 {
                     newElement = parentsParentElemnt.ElementFactory(namespaceId, name);
@@ -119,10 +110,7 @@ namespace DocumentFormat.OpenXml
         /// True to recursively clone the subtree under the specified node; False
         ///  to clone only the node itself.
         /// </param>
-        public override OpenXmlElement CloneNode(bool deep)
-        {
-            return CloneImp<AlternateContentChoice>(deep);
-        }
+        public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlternateContentChoice>(deep);
 
         /// <summary>
         /// Gets the type ID of the element.

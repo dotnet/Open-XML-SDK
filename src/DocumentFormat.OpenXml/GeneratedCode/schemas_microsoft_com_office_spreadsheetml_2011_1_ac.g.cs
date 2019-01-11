@@ -26,9 +26,7 @@ public partial class List : OpenXmlLeafTextElement
     internal override byte NamespaceId => 72;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
-    
 
     
     

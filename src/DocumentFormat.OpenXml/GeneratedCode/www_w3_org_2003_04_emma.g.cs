@@ -26,38 +26,24 @@ public partial class DerivedFrom : OpenXmlLeafElement
     internal override byte NamespaceId => 44;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "resource"),
-		AttributeTag.Create<BooleanValue>(0, "composite")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> resource.</para>
     /// <para>Represents the following attribute in the schema: resource </para>
     /// </summary>
-    public StringValue Resource
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "resource")]
+    [SchemaIndex(0)]
+    public StringValue Resource { get; set; }
     /// <summary>
     /// <para> composite.</para>
     /// <para>Represents the following attribute in the schema: composite </para>
     /// </summary>
-    public BooleanValue Composite
-    {
-        get { return (BooleanValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "composite")]
+    [SchemaIndex(1)]
+    public BooleanValue Composite { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the DerivedFrom class.
@@ -95,27 +81,17 @@ public partial class Info : OpenXmlCompositeElement
     internal override byte NamespaceId => 44;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "id")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "id")]
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Info class.
@@ -188,64 +164,42 @@ public partial class Lattice : OpenXmlCompositeElement
     internal override byte NamespaceId => 44;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<IntegerValue>(0, "initial"),
-		AttributeTag.Create<ListValue<DecimalValue>>(0, "final"),
-		AttributeTag.Create<StringValue>(44, "time-ref-uri"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>(44, "time-ref-anchor-point")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> initial.</para>
     /// <para>Represents the following attribute in the schema: initial </para>
     /// </summary>
-    public IntegerValue Initial
-    {
-        get { return (IntegerValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "initial")]
+    [SchemaIndex(0)]
+    public IntegerValue Initial { get; set; }
     /// <summary>
     /// <para> final.</para>
     /// <para>Represents the following attribute in the schema: final </para>
     /// </summary>
-    public ListValue<DecimalValue> Final
-    {
-        get { return (ListValue<DecimalValue>)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "final")]
+    [SchemaIndex(1)]
+    public ListValue<DecimalValue> Final { get; set; }
     /// <summary>
     /// <para> time-ref-uri.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-uri </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue TimeReference
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(44, "time-ref-uri")]
+    [SchemaIndex(2)]
+    public StringValue TimeReference { get; set; }
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-anchor-point </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(44, "time-ref-anchor-point")]
+    [SchemaIndex(3)]
+    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Lattice class.
@@ -315,9 +269,7 @@ public partial class Literal : OpenXmlLeafTextElement
     internal override byte NamespaceId => 44;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -381,352 +333,242 @@ public partial class Interpretation : OpenXmlCompositeElement
     internal override byte NamespaceId => 44;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "id"),
-		AttributeTag.Create<StringValue>(44, "tokens"),
-		AttributeTag.Create<StringValue>(44, "process"),
-		AttributeTag.Create<StringValue>(44, "lang"),
-		AttributeTag.Create<StringValue>(44, "signal"),
-		AttributeTag.Create<IntegerValue>(44, "signal-size"),
-		AttributeTag.Create<StringValue>(44, "media-type"),
-		AttributeTag.Create<DecimalValue>(44, "confidence"),
-		AttributeTag.Create<StringValue>(44, "source"),
-		AttributeTag.Create<UInt64Value>(44, "start"),
-		AttributeTag.Create<UInt64Value>(44, "end"),
-		AttributeTag.Create<StringValue>(44, "time-ref-uri"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>(44, "time-ref-anchor-point"),
-		AttributeTag.Create<IntegerValue>(44, "offset-to-start"),
-		AttributeTag.Create<IntegerValue>(44, "duration"),
-		AttributeTag.Create<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(44, "medium"),
-		AttributeTag.Create<ListValue<StringValue>>(44, "mode"),
-		AttributeTag.Create<StringValue>(44, "function"),
-		AttributeTag.Create<BooleanValue>(44, "verbal"),
-		AttributeTag.Create<DecimalValue>(44, "cost"),
-		AttributeTag.Create<StringValue>(44, "grammar-ref"),
-		AttributeTag.Create<StringValue>(44, "endpoint-info-ref"),
-		AttributeTag.Create<StringValue>(44, "model-ref"),
-		AttributeTag.Create<StringValue>(44, "dialog-turn"),
-		AttributeTag.Create<BooleanValue>(44, "no-input"),
-		AttributeTag.Create<BooleanValue>(44, "uninterpreted")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "id")]
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> tokens.</para>
     /// <para>Represents the following attribute in the schema: emma:tokens </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Tokens
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(44, "tokens")]
+    [SchemaIndex(1)]
+    public StringValue Tokens { get; set; }
     /// <summary>
     /// <para> process.</para>
     /// <para>Represents the following attribute in the schema: emma:process </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Process
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(44, "process")]
+    [SchemaIndex(2)]
+    public StringValue Process { get; set; }
     /// <summary>
     /// <para> lang.</para>
     /// <para>Represents the following attribute in the schema: emma:lang </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Language
-    {
-        get { return (StringValue)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(44, "lang")]
+    [SchemaIndex(3)]
+    public StringValue Language { get; set; }
     /// <summary>
     /// <para> signal.</para>
     /// <para>Represents the following attribute in the schema: emma:signal </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Signal
-    {
-        get { return (StringValue)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [SchemaAttr(44, "signal")]
+    [SchemaIndex(4)]
+    public StringValue Signal { get; set; }
     /// <summary>
     /// <para> signal-size.</para>
     /// <para>Represents the following attribute in the schema: emma:signal-size </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public IntegerValue SignalSize
-    {
-        get { return (IntegerValue)Attributes[5].Value; }
-        set { Attributes[5].Value = value; }
-    }
-    
+    [SchemaAttr(44, "signal-size")]
+    [SchemaIndex(5)]
+    public IntegerValue SignalSize { get; set; }
     /// <summary>
     /// <para> media-type.</para>
     /// <para>Represents the following attribute in the schema: emma:media-type </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue MediaType
-    {
-        get { return (StringValue)Attributes[6].Value; }
-        set { Attributes[6].Value = value; }
-    }
-    
+    [SchemaAttr(44, "media-type")]
+    [SchemaIndex(6)]
+    public StringValue MediaType { get; set; }
     /// <summary>
     /// <para> confidence.</para>
     /// <para>Represents the following attribute in the schema: emma:confidence </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public DecimalValue Confidence
-    {
-        get { return (DecimalValue)Attributes[7].Value; }
-        set { Attributes[7].Value = value; }
-    }
-    
+    [SchemaAttr(44, "confidence")]
+    [SchemaIndex(7)]
+    public DecimalValue Confidence { get; set; }
     /// <summary>
     /// <para> source.</para>
     /// <para>Represents the following attribute in the schema: emma:source </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Source
-    {
-        get { return (StringValue)Attributes[8].Value; }
-        set { Attributes[8].Value = value; }
-    }
-    
+    [SchemaAttr(44, "source")]
+    [SchemaIndex(8)]
+    public StringValue Source { get; set; }
     /// <summary>
     /// <para> start.</para>
     /// <para>Represents the following attribute in the schema: emma:start </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public UInt64Value Start
-    {
-        get { return (UInt64Value)Attributes[9].Value; }
-        set { Attributes[9].Value = value; }
-    }
-    
+    [SchemaAttr(44, "start")]
+    [SchemaIndex(9)]
+    public UInt64Value Start { get; set; }
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: emma:end </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public UInt64Value End
-    {
-        get { return (UInt64Value)Attributes[10].Value; }
-        set { Attributes[10].Value = value; }
-    }
-    
+    [SchemaAttr(44, "end")]
+    [SchemaIndex(10)]
+    public UInt64Value End { get; set; }
     /// <summary>
     /// <para> time-ref-uri.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-uri </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue TimeReference
-    {
-        get { return (StringValue)Attributes[11].Value; }
-        set { Attributes[11].Value = value; }
-    }
-    
+    [SchemaAttr(44, "time-ref-uri")]
+    [SchemaIndex(11)]
+    public StringValue TimeReference { get; set; }
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-anchor-point </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[12].Value; }
-        set { Attributes[12].Value = value; }
-    }
-    
+    [SchemaAttr(44, "time-ref-anchor-point")]
+    [SchemaIndex(12)]
+    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
     /// <summary>
     /// <para> offset-to-start.</para>
     /// <para>Represents the following attribute in the schema: emma:offset-to-start </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public IntegerValue OffsetToStart
-    {
-        get { return (IntegerValue)Attributes[13].Value; }
-        set { Attributes[13].Value = value; }
-    }
-    
+    [SchemaAttr(44, "offset-to-start")]
+    [SchemaIndex(13)]
+    public IntegerValue OffsetToStart { get; set; }
     /// <summary>
     /// <para> duration.</para>
     /// <para>Represents the following attribute in the schema: emma:duration </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public IntegerValue Duration
-    {
-        get { return (IntegerValue)Attributes[14].Value; }
-        set { Attributes[14].Value = value; }
-    }
-    
+    [SchemaAttr(44, "duration")]
+    [SchemaIndex(14)]
+    public IntegerValue Duration { get; set; }
     /// <summary>
     /// <para> medium.</para>
     /// <para>Represents the following attribute in the schema: emma:medium </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
-    {
-        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[15].Value; }
-        set { Attributes[15].Value = value; }
-    }
-    
+    [SchemaAttr(44, "medium")]
+    [SchemaIndex(15)]
+    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
     /// <summary>
     /// <para> mode.</para>
     /// <para>Represents the following attribute in the schema: emma:mode </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public ListValue<StringValue> Mode
-    {
-        get { return (ListValue<StringValue>)Attributes[16].Value; }
-        set { Attributes[16].Value = value; }
-    }
-    
+    [SchemaAttr(44, "mode")]
+    [SchemaIndex(16)]
+    public ListValue<StringValue> Mode { get; set; }
     /// <summary>
     /// <para> function.</para>
     /// <para>Represents the following attribute in the schema: emma:function </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Function
-    {
-        get { return (StringValue)Attributes[17].Value; }
-        set { Attributes[17].Value = value; }
-    }
-    
+    [SchemaAttr(44, "function")]
+    [SchemaIndex(17)]
+    public StringValue Function { get; set; }
     /// <summary>
     /// <para> verbal.</para>
     /// <para>Represents the following attribute in the schema: emma:verbal </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public BooleanValue Verbal
-    {
-        get { return (BooleanValue)Attributes[18].Value; }
-        set { Attributes[18].Value = value; }
-    }
-    
+    [SchemaAttr(44, "verbal")]
+    [SchemaIndex(18)]
+    public BooleanValue Verbal { get; set; }
     /// <summary>
     /// <para> cost.</para>
     /// <para>Represents the following attribute in the schema: emma:cost </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public DecimalValue Cost
-    {
-        get { return (DecimalValue)Attributes[19].Value; }
-        set { Attributes[19].Value = value; }
-    }
-    
+    [SchemaAttr(44, "cost")]
+    [SchemaIndex(19)]
+    public DecimalValue Cost { get; set; }
     /// <summary>
     /// <para> grammar-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:grammar-ref </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue GrammarRef
-    {
-        get { return (StringValue)Attributes[20].Value; }
-        set { Attributes[20].Value = value; }
-    }
-    
+    [SchemaAttr(44, "grammar-ref")]
+    [SchemaIndex(20)]
+    public StringValue GrammarRef { get; set; }
     /// <summary>
     /// <para> endpoint-info-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-info-ref </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue EndpointInfoRef
-    {
-        get { return (StringValue)Attributes[21].Value; }
-        set { Attributes[21].Value = value; }
-    }
-    
+    [SchemaAttr(44, "endpoint-info-ref")]
+    [SchemaIndex(21)]
+    public StringValue EndpointInfoRef { get; set; }
     /// <summary>
     /// <para> model-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:model-ref </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue ModelRef
-    {
-        get { return (StringValue)Attributes[22].Value; }
-        set { Attributes[22].Value = value; }
-    }
-    
+    [SchemaAttr(44, "model-ref")]
+    [SchemaIndex(22)]
+    public StringValue ModelRef { get; set; }
     /// <summary>
     /// <para> dialog-turn.</para>
     /// <para>Represents the following attribute in the schema: emma:dialog-turn </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue DialogTurn
-    {
-        get { return (StringValue)Attributes[23].Value; }
-        set { Attributes[23].Value = value; }
-    }
-    
+    [SchemaAttr(44, "dialog-turn")]
+    [SchemaIndex(23)]
+    public StringValue DialogTurn { get; set; }
     /// <summary>
     /// <para> no-input.</para>
     /// <para>Represents the following attribute in the schema: emma:no-input </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public BooleanValue NoInput
-    {
-        get { return (BooleanValue)Attributes[24].Value; }
-        set { Attributes[24].Value = value; }
-    }
-    
+    [SchemaAttr(44, "no-input")]
+    [SchemaIndex(24)]
+    public BooleanValue NoInput { get; set; }
     /// <summary>
     /// <para> uninterpreted.</para>
     /// <para>Represents the following attribute in the schema: emma:uninterpreted </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public BooleanValue Uninterpreted
-    {
-        get { return (BooleanValue)Attributes[25].Value; }
-        set { Attributes[25].Value = value; }
-    }
-    
+    [SchemaAttr(44, "uninterpreted")]
+    [SchemaIndex(25)]
+    public BooleanValue Uninterpreted { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Interpretation class.
@@ -822,337 +664,231 @@ public partial class OneOf : OpenXmlCompositeElement
     internal override byte NamespaceId => 44;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues>>(0, "disjunction-type"),
-		AttributeTag.Create<StringValue>(0, "id"),
-		AttributeTag.Create<StringValue>(44, "tokens"),
-		AttributeTag.Create<StringValue>(44, "process"),
-		AttributeTag.Create<StringValue>(44, "lang"),
-		AttributeTag.Create<StringValue>(44, "signal"),
-		AttributeTag.Create<IntegerValue>(44, "signal-size"),
-		AttributeTag.Create<StringValue>(44, "media-type"),
-		AttributeTag.Create<DecimalValue>(44, "confidence"),
-		AttributeTag.Create<StringValue>(44, "source"),
-		AttributeTag.Create<UInt64Value>(44, "start"),
-		AttributeTag.Create<UInt64Value>(44, "end"),
-		AttributeTag.Create<StringValue>(44, "time-ref-uri"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>(44, "time-ref-anchor-point"),
-		AttributeTag.Create<IntegerValue>(44, "offset-to-start"),
-		AttributeTag.Create<IntegerValue>(44, "duration"),
-		AttributeTag.Create<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(44, "medium"),
-		AttributeTag.Create<ListValue<StringValue>>(44, "mode"),
-		AttributeTag.Create<StringValue>(44, "function"),
-		AttributeTag.Create<BooleanValue>(44, "verbal"),
-		AttributeTag.Create<DecimalValue>(44, "cost"),
-		AttributeTag.Create<StringValue>(44, "grammar-ref"),
-		AttributeTag.Create<StringValue>(44, "endpoint-info-ref"),
-		AttributeTag.Create<StringValue>(44, "model-ref"),
-		AttributeTag.Create<StringValue>(44, "dialog-turn")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> disjunction-type.</para>
     /// <para>Represents the following attribute in the schema: disjunction-type </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues> DisjunctionType
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "disjunction-type")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues> DisjunctionType { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "id")]
+    [SchemaIndex(1)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> tokens.</para>
     /// <para>Represents the following attribute in the schema: emma:tokens </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Tokens
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(44, "tokens")]
+    [SchemaIndex(2)]
+    public StringValue Tokens { get; set; }
     /// <summary>
     /// <para> process.</para>
     /// <para>Represents the following attribute in the schema: emma:process </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Process
-    {
-        get { return (StringValue)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(44, "process")]
+    [SchemaIndex(3)]
+    public StringValue Process { get; set; }
     /// <summary>
     /// <para> lang.</para>
     /// <para>Represents the following attribute in the schema: emma:lang </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Language
-    {
-        get { return (StringValue)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [SchemaAttr(44, "lang")]
+    [SchemaIndex(4)]
+    public StringValue Language { get; set; }
     /// <summary>
     /// <para> signal.</para>
     /// <para>Represents the following attribute in the schema: emma:signal </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Signal
-    {
-        get { return (StringValue)Attributes[5].Value; }
-        set { Attributes[5].Value = value; }
-    }
-    
+    [SchemaAttr(44, "signal")]
+    [SchemaIndex(5)]
+    public StringValue Signal { get; set; }
     /// <summary>
     /// <para> signal-size.</para>
     /// <para>Represents the following attribute in the schema: emma:signal-size </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public IntegerValue SignalSize
-    {
-        get { return (IntegerValue)Attributes[6].Value; }
-        set { Attributes[6].Value = value; }
-    }
-    
+    [SchemaAttr(44, "signal-size")]
+    [SchemaIndex(6)]
+    public IntegerValue SignalSize { get; set; }
     /// <summary>
     /// <para> media-type.</para>
     /// <para>Represents the following attribute in the schema: emma:media-type </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue MediaType
-    {
-        get { return (StringValue)Attributes[7].Value; }
-        set { Attributes[7].Value = value; }
-    }
-    
+    [SchemaAttr(44, "media-type")]
+    [SchemaIndex(7)]
+    public StringValue MediaType { get; set; }
     /// <summary>
     /// <para> confidence.</para>
     /// <para>Represents the following attribute in the schema: emma:confidence </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public DecimalValue Confidence
-    {
-        get { return (DecimalValue)Attributes[8].Value; }
-        set { Attributes[8].Value = value; }
-    }
-    
+    [SchemaAttr(44, "confidence")]
+    [SchemaIndex(8)]
+    public DecimalValue Confidence { get; set; }
     /// <summary>
     /// <para> source.</para>
     /// <para>Represents the following attribute in the schema: emma:source </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Source
-    {
-        get { return (StringValue)Attributes[9].Value; }
-        set { Attributes[9].Value = value; }
-    }
-    
+    [SchemaAttr(44, "source")]
+    [SchemaIndex(9)]
+    public StringValue Source { get; set; }
     /// <summary>
     /// <para> start.</para>
     /// <para>Represents the following attribute in the schema: emma:start </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public UInt64Value Start
-    {
-        get { return (UInt64Value)Attributes[10].Value; }
-        set { Attributes[10].Value = value; }
-    }
-    
+    [SchemaAttr(44, "start")]
+    [SchemaIndex(10)]
+    public UInt64Value Start { get; set; }
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: emma:end </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public UInt64Value End
-    {
-        get { return (UInt64Value)Attributes[11].Value; }
-        set { Attributes[11].Value = value; }
-    }
-    
+    [SchemaAttr(44, "end")]
+    [SchemaIndex(11)]
+    public UInt64Value End { get; set; }
     /// <summary>
     /// <para> time-ref-uri.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-uri </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue TimeReference
-    {
-        get { return (StringValue)Attributes[12].Value; }
-        set { Attributes[12].Value = value; }
-    }
-    
+    [SchemaAttr(44, "time-ref-uri")]
+    [SchemaIndex(12)]
+    public StringValue TimeReference { get; set; }
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-anchor-point </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[13].Value; }
-        set { Attributes[13].Value = value; }
-    }
-    
+    [SchemaAttr(44, "time-ref-anchor-point")]
+    [SchemaIndex(13)]
+    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
     /// <summary>
     /// <para> offset-to-start.</para>
     /// <para>Represents the following attribute in the schema: emma:offset-to-start </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public IntegerValue OffsetToStart
-    {
-        get { return (IntegerValue)Attributes[14].Value; }
-        set { Attributes[14].Value = value; }
-    }
-    
+    [SchemaAttr(44, "offset-to-start")]
+    [SchemaIndex(14)]
+    public IntegerValue OffsetToStart { get; set; }
     /// <summary>
     /// <para> duration.</para>
     /// <para>Represents the following attribute in the schema: emma:duration </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public IntegerValue Duration
-    {
-        get { return (IntegerValue)Attributes[15].Value; }
-        set { Attributes[15].Value = value; }
-    }
-    
+    [SchemaAttr(44, "duration")]
+    [SchemaIndex(15)]
+    public IntegerValue Duration { get; set; }
     /// <summary>
     /// <para> medium.</para>
     /// <para>Represents the following attribute in the schema: emma:medium </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
-    {
-        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[16].Value; }
-        set { Attributes[16].Value = value; }
-    }
-    
+    [SchemaAttr(44, "medium")]
+    [SchemaIndex(16)]
+    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
     /// <summary>
     /// <para> mode.</para>
     /// <para>Represents the following attribute in the schema: emma:mode </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public ListValue<StringValue> Mode
-    {
-        get { return (ListValue<StringValue>)Attributes[17].Value; }
-        set { Attributes[17].Value = value; }
-    }
-    
+    [SchemaAttr(44, "mode")]
+    [SchemaIndex(17)]
+    public ListValue<StringValue> Mode { get; set; }
     /// <summary>
     /// <para> function.</para>
     /// <para>Represents the following attribute in the schema: emma:function </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Function
-    {
-        get { return (StringValue)Attributes[18].Value; }
-        set { Attributes[18].Value = value; }
-    }
-    
+    [SchemaAttr(44, "function")]
+    [SchemaIndex(18)]
+    public StringValue Function { get; set; }
     /// <summary>
     /// <para> verbal.</para>
     /// <para>Represents the following attribute in the schema: emma:verbal </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public BooleanValue Verbal
-    {
-        get { return (BooleanValue)Attributes[19].Value; }
-        set { Attributes[19].Value = value; }
-    }
-    
+    [SchemaAttr(44, "verbal")]
+    [SchemaIndex(19)]
+    public BooleanValue Verbal { get; set; }
     /// <summary>
     /// <para> cost.</para>
     /// <para>Represents the following attribute in the schema: emma:cost </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public DecimalValue Cost
-    {
-        get { return (DecimalValue)Attributes[20].Value; }
-        set { Attributes[20].Value = value; }
-    }
-    
+    [SchemaAttr(44, "cost")]
+    [SchemaIndex(20)]
+    public DecimalValue Cost { get; set; }
     /// <summary>
     /// <para> grammar-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:grammar-ref </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue GrammarRef
-    {
-        get { return (StringValue)Attributes[21].Value; }
-        set { Attributes[21].Value = value; }
-    }
-    
+    [SchemaAttr(44, "grammar-ref")]
+    [SchemaIndex(21)]
+    public StringValue GrammarRef { get; set; }
     /// <summary>
     /// <para> endpoint-info-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-info-ref </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue EndpointInfoRef
-    {
-        get { return (StringValue)Attributes[22].Value; }
-        set { Attributes[22].Value = value; }
-    }
-    
+    [SchemaAttr(44, "endpoint-info-ref")]
+    [SchemaIndex(22)]
+    public StringValue EndpointInfoRef { get; set; }
     /// <summary>
     /// <para> model-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:model-ref </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue ModelRef
-    {
-        get { return (StringValue)Attributes[23].Value; }
-        set { Attributes[23].Value = value; }
-    }
-    
+    [SchemaAttr(44, "model-ref")]
+    [SchemaIndex(23)]
+    public StringValue ModelRef { get; set; }
     /// <summary>
     /// <para> dialog-turn.</para>
     /// <para>Represents the following attribute in the schema: emma:dialog-turn </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue DialogTurn
-    {
-        get { return (StringValue)Attributes[24].Value; }
-        set { Attributes[24].Value = value; }
-    }
-    
+    [SchemaAttr(44, "dialog-turn")]
+    [SchemaIndex(24)]
+    public StringValue DialogTurn { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the OneOf class.
@@ -1253,326 +989,224 @@ public partial class Group : OpenXmlCompositeElement
     internal override byte NamespaceId => 44;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "id"),
-		AttributeTag.Create<StringValue>(44, "tokens"),
-		AttributeTag.Create<StringValue>(44, "process"),
-		AttributeTag.Create<StringValue>(44, "lang"),
-		AttributeTag.Create<StringValue>(44, "signal"),
-		AttributeTag.Create<IntegerValue>(44, "signal-size"),
-		AttributeTag.Create<StringValue>(44, "media-type"),
-		AttributeTag.Create<DecimalValue>(44, "confidence"),
-		AttributeTag.Create<StringValue>(44, "source"),
-		AttributeTag.Create<UInt64Value>(44, "start"),
-		AttributeTag.Create<UInt64Value>(44, "end"),
-		AttributeTag.Create<StringValue>(44, "time-ref-uri"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>(44, "time-ref-anchor-point"),
-		AttributeTag.Create<IntegerValue>(44, "offset-to-start"),
-		AttributeTag.Create<IntegerValue>(44, "duration"),
-		AttributeTag.Create<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(44, "medium"),
-		AttributeTag.Create<ListValue<StringValue>>(44, "mode"),
-		AttributeTag.Create<StringValue>(44, "function"),
-		AttributeTag.Create<BooleanValue>(44, "verbal"),
-		AttributeTag.Create<DecimalValue>(44, "cost"),
-		AttributeTag.Create<StringValue>(44, "grammar-ref"),
-		AttributeTag.Create<StringValue>(44, "endpoint-info-ref"),
-		AttributeTag.Create<StringValue>(44, "model-ref"),
-		AttributeTag.Create<StringValue>(44, "dialog-turn")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "id")]
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> tokens.</para>
     /// <para>Represents the following attribute in the schema: emma:tokens </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Tokens
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(44, "tokens")]
+    [SchemaIndex(1)]
+    public StringValue Tokens { get; set; }
     /// <summary>
     /// <para> process.</para>
     /// <para>Represents the following attribute in the schema: emma:process </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Process
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(44, "process")]
+    [SchemaIndex(2)]
+    public StringValue Process { get; set; }
     /// <summary>
     /// <para> lang.</para>
     /// <para>Represents the following attribute in the schema: emma:lang </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Language
-    {
-        get { return (StringValue)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(44, "lang")]
+    [SchemaIndex(3)]
+    public StringValue Language { get; set; }
     /// <summary>
     /// <para> signal.</para>
     /// <para>Represents the following attribute in the schema: emma:signal </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Signal
-    {
-        get { return (StringValue)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [SchemaAttr(44, "signal")]
+    [SchemaIndex(4)]
+    public StringValue Signal { get; set; }
     /// <summary>
     /// <para> signal-size.</para>
     /// <para>Represents the following attribute in the schema: emma:signal-size </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public IntegerValue SignalSize
-    {
-        get { return (IntegerValue)Attributes[5].Value; }
-        set { Attributes[5].Value = value; }
-    }
-    
+    [SchemaAttr(44, "signal-size")]
+    [SchemaIndex(5)]
+    public IntegerValue SignalSize { get; set; }
     /// <summary>
     /// <para> media-type.</para>
     /// <para>Represents the following attribute in the schema: emma:media-type </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue MediaType
-    {
-        get { return (StringValue)Attributes[6].Value; }
-        set { Attributes[6].Value = value; }
-    }
-    
+    [SchemaAttr(44, "media-type")]
+    [SchemaIndex(6)]
+    public StringValue MediaType { get; set; }
     /// <summary>
     /// <para> confidence.</para>
     /// <para>Represents the following attribute in the schema: emma:confidence </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public DecimalValue Confidence
-    {
-        get { return (DecimalValue)Attributes[7].Value; }
-        set { Attributes[7].Value = value; }
-    }
-    
+    [SchemaAttr(44, "confidence")]
+    [SchemaIndex(7)]
+    public DecimalValue Confidence { get; set; }
     /// <summary>
     /// <para> source.</para>
     /// <para>Represents the following attribute in the schema: emma:source </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Source
-    {
-        get { return (StringValue)Attributes[8].Value; }
-        set { Attributes[8].Value = value; }
-    }
-    
+    [SchemaAttr(44, "source")]
+    [SchemaIndex(8)]
+    public StringValue Source { get; set; }
     /// <summary>
     /// <para> start.</para>
     /// <para>Represents the following attribute in the schema: emma:start </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public UInt64Value Start
-    {
-        get { return (UInt64Value)Attributes[9].Value; }
-        set { Attributes[9].Value = value; }
-    }
-    
+    [SchemaAttr(44, "start")]
+    [SchemaIndex(9)]
+    public UInt64Value Start { get; set; }
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: emma:end </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public UInt64Value End
-    {
-        get { return (UInt64Value)Attributes[10].Value; }
-        set { Attributes[10].Value = value; }
-    }
-    
+    [SchemaAttr(44, "end")]
+    [SchemaIndex(10)]
+    public UInt64Value End { get; set; }
     /// <summary>
     /// <para> time-ref-uri.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-uri </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue TimeReference
-    {
-        get { return (StringValue)Attributes[11].Value; }
-        set { Attributes[11].Value = value; }
-    }
-    
+    [SchemaAttr(44, "time-ref-uri")]
+    [SchemaIndex(11)]
+    public StringValue TimeReference { get; set; }
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-anchor-point </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[12].Value; }
-        set { Attributes[12].Value = value; }
-    }
-    
+    [SchemaAttr(44, "time-ref-anchor-point")]
+    [SchemaIndex(12)]
+    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
     /// <summary>
     /// <para> offset-to-start.</para>
     /// <para>Represents the following attribute in the schema: emma:offset-to-start </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public IntegerValue OffsetToStart
-    {
-        get { return (IntegerValue)Attributes[13].Value; }
-        set { Attributes[13].Value = value; }
-    }
-    
+    [SchemaAttr(44, "offset-to-start")]
+    [SchemaIndex(13)]
+    public IntegerValue OffsetToStart { get; set; }
     /// <summary>
     /// <para> duration.</para>
     /// <para>Represents the following attribute in the schema: emma:duration </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public IntegerValue Duration
-    {
-        get { return (IntegerValue)Attributes[14].Value; }
-        set { Attributes[14].Value = value; }
-    }
-    
+    [SchemaAttr(44, "duration")]
+    [SchemaIndex(14)]
+    public IntegerValue Duration { get; set; }
     /// <summary>
     /// <para> medium.</para>
     /// <para>Represents the following attribute in the schema: emma:medium </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
-    {
-        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[15].Value; }
-        set { Attributes[15].Value = value; }
-    }
-    
+    [SchemaAttr(44, "medium")]
+    [SchemaIndex(15)]
+    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
     /// <summary>
     /// <para> mode.</para>
     /// <para>Represents the following attribute in the schema: emma:mode </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public ListValue<StringValue> Mode
-    {
-        get { return (ListValue<StringValue>)Attributes[16].Value; }
-        set { Attributes[16].Value = value; }
-    }
-    
+    [SchemaAttr(44, "mode")]
+    [SchemaIndex(16)]
+    public ListValue<StringValue> Mode { get; set; }
     /// <summary>
     /// <para> function.</para>
     /// <para>Represents the following attribute in the schema: emma:function </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Function
-    {
-        get { return (StringValue)Attributes[17].Value; }
-        set { Attributes[17].Value = value; }
-    }
-    
+    [SchemaAttr(44, "function")]
+    [SchemaIndex(17)]
+    public StringValue Function { get; set; }
     /// <summary>
     /// <para> verbal.</para>
     /// <para>Represents the following attribute in the schema: emma:verbal </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public BooleanValue Verbal
-    {
-        get { return (BooleanValue)Attributes[18].Value; }
-        set { Attributes[18].Value = value; }
-    }
-    
+    [SchemaAttr(44, "verbal")]
+    [SchemaIndex(18)]
+    public BooleanValue Verbal { get; set; }
     /// <summary>
     /// <para> cost.</para>
     /// <para>Represents the following attribute in the schema: emma:cost </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public DecimalValue Cost
-    {
-        get { return (DecimalValue)Attributes[19].Value; }
-        set { Attributes[19].Value = value; }
-    }
-    
+    [SchemaAttr(44, "cost")]
+    [SchemaIndex(19)]
+    public DecimalValue Cost { get; set; }
     /// <summary>
     /// <para> grammar-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:grammar-ref </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue GrammarRef
-    {
-        get { return (StringValue)Attributes[20].Value; }
-        set { Attributes[20].Value = value; }
-    }
-    
+    [SchemaAttr(44, "grammar-ref")]
+    [SchemaIndex(20)]
+    public StringValue GrammarRef { get; set; }
     /// <summary>
     /// <para> endpoint-info-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-info-ref </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue EndpointInfoRef
-    {
-        get { return (StringValue)Attributes[21].Value; }
-        set { Attributes[21].Value = value; }
-    }
-    
+    [SchemaAttr(44, "endpoint-info-ref")]
+    [SchemaIndex(21)]
+    public StringValue EndpointInfoRef { get; set; }
     /// <summary>
     /// <para> model-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:model-ref </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue ModelRef
-    {
-        get { return (StringValue)Attributes[22].Value; }
-        set { Attributes[22].Value = value; }
-    }
-    
+    [SchemaAttr(44, "model-ref")]
+    [SchemaIndex(22)]
+    public StringValue ModelRef { get; set; }
     /// <summary>
     /// <para> dialog-turn.</para>
     /// <para>Represents the following attribute in the schema: emma:dialog-turn </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue DialogTurn
-    {
-        get { return (StringValue)Attributes[23].Value; }
-        set { Attributes[23].Value = value; }
-    }
-    
+    [SchemaAttr(44, "dialog-turn")]
+    [SchemaIndex(23)]
+    public StringValue DialogTurn { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Group class.
@@ -1674,326 +1308,224 @@ public partial class Sequence : OpenXmlCompositeElement
     internal override byte NamespaceId => 44;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "id"),
-		AttributeTag.Create<StringValue>(44, "tokens"),
-		AttributeTag.Create<StringValue>(44, "process"),
-		AttributeTag.Create<StringValue>(44, "lang"),
-		AttributeTag.Create<StringValue>(44, "signal"),
-		AttributeTag.Create<IntegerValue>(44, "signal-size"),
-		AttributeTag.Create<StringValue>(44, "media-type"),
-		AttributeTag.Create<DecimalValue>(44, "confidence"),
-		AttributeTag.Create<StringValue>(44, "source"),
-		AttributeTag.Create<UInt64Value>(44, "start"),
-		AttributeTag.Create<UInt64Value>(44, "end"),
-		AttributeTag.Create<StringValue>(44, "time-ref-uri"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>>(44, "time-ref-anchor-point"),
-		AttributeTag.Create<IntegerValue>(44, "offset-to-start"),
-		AttributeTag.Create<IntegerValue>(44, "duration"),
-		AttributeTag.Create<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(44, "medium"),
-		AttributeTag.Create<ListValue<StringValue>>(44, "mode"),
-		AttributeTag.Create<StringValue>(44, "function"),
-		AttributeTag.Create<BooleanValue>(44, "verbal"),
-		AttributeTag.Create<DecimalValue>(44, "cost"),
-		AttributeTag.Create<StringValue>(44, "grammar-ref"),
-		AttributeTag.Create<StringValue>(44, "endpoint-info-ref"),
-		AttributeTag.Create<StringValue>(44, "model-ref"),
-		AttributeTag.Create<StringValue>(44, "dialog-turn")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "id")]
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> tokens.</para>
     /// <para>Represents the following attribute in the schema: emma:tokens </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Tokens
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(44, "tokens")]
+    [SchemaIndex(1)]
+    public StringValue Tokens { get; set; }
     /// <summary>
     /// <para> process.</para>
     /// <para>Represents the following attribute in the schema: emma:process </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Process
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(44, "process")]
+    [SchemaIndex(2)]
+    public StringValue Process { get; set; }
     /// <summary>
     /// <para> lang.</para>
     /// <para>Represents the following attribute in the schema: emma:lang </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Language
-    {
-        get { return (StringValue)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(44, "lang")]
+    [SchemaIndex(3)]
+    public StringValue Language { get; set; }
     /// <summary>
     /// <para> signal.</para>
     /// <para>Represents the following attribute in the schema: emma:signal </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Signal
-    {
-        get { return (StringValue)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [SchemaAttr(44, "signal")]
+    [SchemaIndex(4)]
+    public StringValue Signal { get; set; }
     /// <summary>
     /// <para> signal-size.</para>
     /// <para>Represents the following attribute in the schema: emma:signal-size </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public IntegerValue SignalSize
-    {
-        get { return (IntegerValue)Attributes[5].Value; }
-        set { Attributes[5].Value = value; }
-    }
-    
+    [SchemaAttr(44, "signal-size")]
+    [SchemaIndex(5)]
+    public IntegerValue SignalSize { get; set; }
     /// <summary>
     /// <para> media-type.</para>
     /// <para>Represents the following attribute in the schema: emma:media-type </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue MediaType
-    {
-        get { return (StringValue)Attributes[6].Value; }
-        set { Attributes[6].Value = value; }
-    }
-    
+    [SchemaAttr(44, "media-type")]
+    [SchemaIndex(6)]
+    public StringValue MediaType { get; set; }
     /// <summary>
     /// <para> confidence.</para>
     /// <para>Represents the following attribute in the schema: emma:confidence </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public DecimalValue Confidence
-    {
-        get { return (DecimalValue)Attributes[7].Value; }
-        set { Attributes[7].Value = value; }
-    }
-    
+    [SchemaAttr(44, "confidence")]
+    [SchemaIndex(7)]
+    public DecimalValue Confidence { get; set; }
     /// <summary>
     /// <para> source.</para>
     /// <para>Represents the following attribute in the schema: emma:source </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Source
-    {
-        get { return (StringValue)Attributes[8].Value; }
-        set { Attributes[8].Value = value; }
-    }
-    
+    [SchemaAttr(44, "source")]
+    [SchemaIndex(8)]
+    public StringValue Source { get; set; }
     /// <summary>
     /// <para> start.</para>
     /// <para>Represents the following attribute in the schema: emma:start </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public UInt64Value Start
-    {
-        get { return (UInt64Value)Attributes[9].Value; }
-        set { Attributes[9].Value = value; }
-    }
-    
+    [SchemaAttr(44, "start")]
+    [SchemaIndex(9)]
+    public UInt64Value Start { get; set; }
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: emma:end </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public UInt64Value End
-    {
-        get { return (UInt64Value)Attributes[10].Value; }
-        set { Attributes[10].Value = value; }
-    }
-    
+    [SchemaAttr(44, "end")]
+    [SchemaIndex(10)]
+    public UInt64Value End { get; set; }
     /// <summary>
     /// <para> time-ref-uri.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-uri </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue TimeReference
-    {
-        get { return (StringValue)Attributes[11].Value; }
-        set { Attributes[11].Value = value; }
-    }
-    
+    [SchemaAttr(44, "time-ref-uri")]
+    [SchemaIndex(11)]
+    public StringValue TimeReference { get; set; }
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-anchor-point </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[12].Value; }
-        set { Attributes[12].Value = value; }
-    }
-    
+    [SchemaAttr(44, "time-ref-anchor-point")]
+    [SchemaIndex(12)]
+    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
     /// <summary>
     /// <para> offset-to-start.</para>
     /// <para>Represents the following attribute in the schema: emma:offset-to-start </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public IntegerValue OffsetToStart
-    {
-        get { return (IntegerValue)Attributes[13].Value; }
-        set { Attributes[13].Value = value; }
-    }
-    
+    [SchemaAttr(44, "offset-to-start")]
+    [SchemaIndex(13)]
+    public IntegerValue OffsetToStart { get; set; }
     /// <summary>
     /// <para> duration.</para>
     /// <para>Represents the following attribute in the schema: emma:duration </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public IntegerValue Duration
-    {
-        get { return (IntegerValue)Attributes[14].Value; }
-        set { Attributes[14].Value = value; }
-    }
-    
+    [SchemaAttr(44, "duration")]
+    [SchemaIndex(14)]
+    public IntegerValue Duration { get; set; }
     /// <summary>
     /// <para> medium.</para>
     /// <para>Represents the following attribute in the schema: emma:medium </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
-    {
-        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[15].Value; }
-        set { Attributes[15].Value = value; }
-    }
-    
+    [SchemaAttr(44, "medium")]
+    [SchemaIndex(15)]
+    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
     /// <summary>
     /// <para> mode.</para>
     /// <para>Represents the following attribute in the schema: emma:mode </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public ListValue<StringValue> Mode
-    {
-        get { return (ListValue<StringValue>)Attributes[16].Value; }
-        set { Attributes[16].Value = value; }
-    }
-    
+    [SchemaAttr(44, "mode")]
+    [SchemaIndex(16)]
+    public ListValue<StringValue> Mode { get; set; }
     /// <summary>
     /// <para> function.</para>
     /// <para>Represents the following attribute in the schema: emma:function </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Function
-    {
-        get { return (StringValue)Attributes[17].Value; }
-        set { Attributes[17].Value = value; }
-    }
-    
+    [SchemaAttr(44, "function")]
+    [SchemaIndex(17)]
+    public StringValue Function { get; set; }
     /// <summary>
     /// <para> verbal.</para>
     /// <para>Represents the following attribute in the schema: emma:verbal </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public BooleanValue Verbal
-    {
-        get { return (BooleanValue)Attributes[18].Value; }
-        set { Attributes[18].Value = value; }
-    }
-    
+    [SchemaAttr(44, "verbal")]
+    [SchemaIndex(18)]
+    public BooleanValue Verbal { get; set; }
     /// <summary>
     /// <para> cost.</para>
     /// <para>Represents the following attribute in the schema: emma:cost </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public DecimalValue Cost
-    {
-        get { return (DecimalValue)Attributes[19].Value; }
-        set { Attributes[19].Value = value; }
-    }
-    
+    [SchemaAttr(44, "cost")]
+    [SchemaIndex(19)]
+    public DecimalValue Cost { get; set; }
     /// <summary>
     /// <para> grammar-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:grammar-ref </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue GrammarRef
-    {
-        get { return (StringValue)Attributes[20].Value; }
-        set { Attributes[20].Value = value; }
-    }
-    
+    [SchemaAttr(44, "grammar-ref")]
+    [SchemaIndex(20)]
+    public StringValue GrammarRef { get; set; }
     /// <summary>
     /// <para> endpoint-info-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-info-ref </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue EndpointInfoRef
-    {
-        get { return (StringValue)Attributes[21].Value; }
-        set { Attributes[21].Value = value; }
-    }
-    
+    [SchemaAttr(44, "endpoint-info-ref")]
+    [SchemaIndex(21)]
+    public StringValue EndpointInfoRef { get; set; }
     /// <summary>
     /// <para> model-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:model-ref </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue ModelRef
-    {
-        get { return (StringValue)Attributes[22].Value; }
-        set { Attributes[22].Value = value; }
-    }
-    
+    [SchemaAttr(44, "model-ref")]
+    [SchemaIndex(22)]
+    public StringValue ModelRef { get; set; }
     /// <summary>
     /// <para> dialog-turn.</para>
     /// <para>Represents the following attribute in the schema: emma:dialog-turn </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue DialogTurn
-    {
-        get { return (StringValue)Attributes[23].Value; }
-        set { Attributes[23].Value = value; }
-    }
-    
+    [SchemaAttr(44, "dialog-turn")]
+    [SchemaIndex(23)]
+    public StringValue DialogTurn { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Sequence class.
@@ -2080,27 +1612,17 @@ public partial class GroupInfo : OpenXmlCompositeElement
     internal override byte NamespaceId => 44;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "ref")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> ref.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
-    public StringValue Reference
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "ref")]
+    [SchemaIndex(0)]
+    public StringValue Reference { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the GroupInfo class.
@@ -2177,9 +1699,7 @@ public partial class Derivation : OpenXmlCompositeElement
     internal override byte NamespaceId => 44;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -2258,38 +1778,24 @@ public partial class Grammar : OpenXmlLeafElement
     internal override byte NamespaceId => 44;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "id"),
-		AttributeTag.Create<StringValue>(0, "ref")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "id")]
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> ref.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
-    public StringValue Reference
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "ref")]
+    [SchemaIndex(1)]
+    public StringValue Reference { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Grammar class.
@@ -2327,38 +1833,24 @@ public partial class Model : OpenXmlCompositeElement
     internal override byte NamespaceId => 44;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "id"),
-		AttributeTag.Create<StringValue>(0, "ref")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "id")]
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> ref.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
-    public StringValue Reference
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "ref")]
+    [SchemaIndex(1)]
+    public StringValue Reference { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Model class.
@@ -2429,27 +1921,17 @@ public partial class EndPointInfo : OpenXmlCompositeElement
     internal override byte NamespaceId => 44;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "id")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "id")]
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the EndPointInfo class.
@@ -2521,157 +2003,107 @@ public partial class EndPoint : OpenXmlCompositeElement
     internal override byte NamespaceId => 44;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "id"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues>>(44, "endpoint-role"),
-		AttributeTag.Create<StringValue>(44, "endpoint-address"),
-		AttributeTag.Create<StringValue>(44, "message-id"),
-		AttributeTag.Create<IntegerValue>(44, "port-num"),
-		AttributeTag.Create<StringValue>(44, "port-type"),
-		AttributeTag.Create<StringValue>(44, "endpoint-pair-ref"),
-		AttributeTag.Create<StringValue>(44, "service-name"),
-		AttributeTag.Create<StringValue>(44, "media-type"),
-		AttributeTag.Create<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(44, "medium"),
-		AttributeTag.Create<ListValue<StringValue>>(44, "mode")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "id")]
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> endpoint-role.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-role </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues> EndpointRole
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues>)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(44, "endpoint-role")]
+    [SchemaIndex(1)]
+    public EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues> EndpointRole { get; set; }
     /// <summary>
     /// <para> endpoint-address.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-address </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue EndPointAddress
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(44, "endpoint-address")]
+    [SchemaIndex(2)]
+    public StringValue EndPointAddress { get; set; }
     /// <summary>
     /// <para> message-id.</para>
     /// <para>Represents the following attribute in the schema: emma:message-id </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue MessageId
-    {
-        get { return (StringValue)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(44, "message-id")]
+    [SchemaIndex(3)]
+    public StringValue MessageId { get; set; }
     /// <summary>
     /// <para> port-num.</para>
     /// <para>Represents the following attribute in the schema: emma:port-num </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public IntegerValue PortNumber
-    {
-        get { return (IntegerValue)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [SchemaAttr(44, "port-num")]
+    [SchemaIndex(4)]
+    public IntegerValue PortNumber { get; set; }
     /// <summary>
     /// <para> port-type.</para>
     /// <para>Represents the following attribute in the schema: emma:port-type </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue PortType
-    {
-        get { return (StringValue)Attributes[5].Value; }
-        set { Attributes[5].Value = value; }
-    }
-    
+    [SchemaAttr(44, "port-type")]
+    [SchemaIndex(5)]
+    public StringValue PortType { get; set; }
     /// <summary>
     /// <para> endpoint-pair-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-pair-ref </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue EndpointPairRef
-    {
-        get { return (StringValue)Attributes[6].Value; }
-        set { Attributes[6].Value = value; }
-    }
-    
+    [SchemaAttr(44, "endpoint-pair-ref")]
+    [SchemaIndex(6)]
+    public StringValue EndpointPairRef { get; set; }
     /// <summary>
     /// <para> service-name.</para>
     /// <para>Represents the following attribute in the schema: emma:service-name </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue ServiceName
-    {
-        get { return (StringValue)Attributes[7].Value; }
-        set { Attributes[7].Value = value; }
-    }
-    
+    [SchemaAttr(44, "service-name")]
+    [SchemaIndex(7)]
+    public StringValue ServiceName { get; set; }
     /// <summary>
     /// <para> media-type.</para>
     /// <para>Represents the following attribute in the schema: emma:media-type </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue MediaType
-    {
-        get { return (StringValue)Attributes[8].Value; }
-        set { Attributes[8].Value = value; }
-    }
-    
+    [SchemaAttr(44, "media-type")]
+    [SchemaIndex(8)]
+    public StringValue MediaType { get; set; }
     /// <summary>
     /// <para> medium.</para>
     /// <para>Represents the following attribute in the schema: emma:medium </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
-    {
-        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[9].Value; }
-        set { Attributes[9].Value = value; }
-    }
-    
+    [SchemaAttr(44, "medium")]
+    [SchemaIndex(9)]
+    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
     /// <summary>
     /// <para> mode.</para>
     /// <para>Represents the following attribute in the schema: emma:mode </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public ListValue<StringValue> Mode
-    {
-        get { return (ListValue<StringValue>)Attributes[10].Value; }
-        set { Attributes[10].Value = value; }
-    }
-    
+    [SchemaAttr(44, "mode")]
+    [SchemaIndex(10)]
+    public ListValue<StringValue> Mode { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the EndPoint class.
@@ -2742,53 +2174,35 @@ public partial class Node : OpenXmlCompositeElement
     internal override byte NamespaceId => 44;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<IntegerValue>(0, "node-number"),
-		AttributeTag.Create<DecimalValue>(44, "confidence"),
-		AttributeTag.Create<DecimalValue>(44, "cost")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> node-number.</para>
     /// <para>Represents the following attribute in the schema: node-number </para>
     /// </summary>
-    public IntegerValue NodeNumber
-    {
-        get { return (IntegerValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "node-number")]
+    [SchemaIndex(0)]
+    public IntegerValue NodeNumber { get; set; }
     /// <summary>
     /// <para> confidence.</para>
     /// <para>Represents the following attribute in the schema: emma:confidence </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public DecimalValue Confidence
-    {
-        get { return (DecimalValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(44, "confidence")]
+    [SchemaIndex(1)]
+    public DecimalValue Confidence { get; set; }
     /// <summary>
     /// <para> cost.</para>
     /// <para>Represents the following attribute in the schema: emma:cost </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public DecimalValue Cost
-    {
-        get { return (DecimalValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(44, "cost")]
+    [SchemaIndex(2)]
+    public DecimalValue Cost { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Node class.
@@ -2862,168 +2276,114 @@ public partial class Arc : OpenXmlCompositeElement
     internal override byte NamespaceId => 44;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<IntegerValue>(0, "from"),
-		AttributeTag.Create<IntegerValue>(0, "to"),
-		AttributeTag.Create<UInt64Value>(44, "start"),
-		AttributeTag.Create<UInt64Value>(44, "end"),
-		AttributeTag.Create<IntegerValue>(44, "offset-to-start"),
-		AttributeTag.Create<IntegerValue>(44, "duration"),
-		AttributeTag.Create<DecimalValue>(44, "confidence"),
-		AttributeTag.Create<DecimalValue>(44, "cost"),
-		AttributeTag.Create<StringValue>(44, "lang"),
-		AttributeTag.Create<ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>>(44, "medium"),
-		AttributeTag.Create<ListValue<StringValue>>(44, "mode"),
-		AttributeTag.Create<StringValue>(44, "source")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> from.</para>
     /// <para>Represents the following attribute in the schema: from </para>
     /// </summary>
-    public IntegerValue From
-    {
-        get { return (IntegerValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "from")]
+    [SchemaIndex(0)]
+    public IntegerValue From { get; set; }
     /// <summary>
     /// <para> to.</para>
     /// <para>Represents the following attribute in the schema: to </para>
     /// </summary>
-    public IntegerValue To
-    {
-        get { return (IntegerValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "to")]
+    [SchemaIndex(1)]
+    public IntegerValue To { get; set; }
     /// <summary>
     /// <para> start.</para>
     /// <para>Represents the following attribute in the schema: emma:start </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public UInt64Value Start
-    {
-        get { return (UInt64Value)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(44, "start")]
+    [SchemaIndex(2)]
+    public UInt64Value Start { get; set; }
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: emma:end </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public UInt64Value End
-    {
-        get { return (UInt64Value)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(44, "end")]
+    [SchemaIndex(3)]
+    public UInt64Value End { get; set; }
     /// <summary>
     /// <para> offset-to-start.</para>
     /// <para>Represents the following attribute in the schema: emma:offset-to-start </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public IntegerValue OffsetToStart
-    {
-        get { return (IntegerValue)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [SchemaAttr(44, "offset-to-start")]
+    [SchemaIndex(4)]
+    public IntegerValue OffsetToStart { get; set; }
     /// <summary>
     /// <para> duration.</para>
     /// <para>Represents the following attribute in the schema: emma:duration </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public IntegerValue Duration
-    {
-        get { return (IntegerValue)Attributes[5].Value; }
-        set { Attributes[5].Value = value; }
-    }
-    
+    [SchemaAttr(44, "duration")]
+    [SchemaIndex(5)]
+    public IntegerValue Duration { get; set; }
     /// <summary>
     /// <para> confidence.</para>
     /// <para>Represents the following attribute in the schema: emma:confidence </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public DecimalValue Confidence
-    {
-        get { return (DecimalValue)Attributes[6].Value; }
-        set { Attributes[6].Value = value; }
-    }
-    
+    [SchemaAttr(44, "confidence")]
+    [SchemaIndex(6)]
+    public DecimalValue Confidence { get; set; }
     /// <summary>
     /// <para> cost.</para>
     /// <para>Represents the following attribute in the schema: emma:cost </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public DecimalValue Cost
-    {
-        get { return (DecimalValue)Attributes[7].Value; }
-        set { Attributes[7].Value = value; }
-    }
-    
+    [SchemaAttr(44, "cost")]
+    [SchemaIndex(7)]
+    public DecimalValue Cost { get; set; }
     /// <summary>
     /// <para> lang.</para>
     /// <para>Represents the following attribute in the schema: emma:lang </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Language
-    {
-        get { return (StringValue)Attributes[8].Value; }
-        set { Attributes[8].Value = value; }
-    }
-    
+    [SchemaAttr(44, "lang")]
+    [SchemaIndex(8)]
+    public StringValue Language { get; set; }
     /// <summary>
     /// <para> medium.</para>
     /// <para>Represents the following attribute in the schema: emma:medium </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
-    {
-        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[9].Value; }
-        set { Attributes[9].Value = value; }
-    }
-    
+    [SchemaAttr(44, "medium")]
+    [SchemaIndex(9)]
+    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
     /// <summary>
     /// <para> mode.</para>
     /// <para>Represents the following attribute in the schema: emma:mode </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public ListValue<StringValue> Mode
-    {
-        get { return (ListValue<StringValue>)Attributes[10].Value; }
-        set { Attributes[10].Value = value; }
-    }
-    
+    [SchemaAttr(44, "mode")]
+    [SchemaIndex(10)]
+    public ListValue<StringValue> Mode { get; set; }
     /// <summary>
     /// <para> source.</para>
     /// <para>Represents the following attribute in the schema: emma:source </para>
     /// </summary>
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
-    public StringValue Source
-    {
-        get { return (StringValue)Attributes[11].Value; }
-        set { Attributes[11].Value = value; }
-    }
-    
+    [SchemaAttr(44, "source")]
+    [SchemaIndex(11)]
+    public StringValue Source { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Arc class.
@@ -3113,27 +2473,17 @@ public partial class Emma : OpenXmlCompositeElement
     internal override byte NamespaceId => 44;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "version")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> version.</para>
     /// <para>Represents the following attribute in the schema: version </para>
     /// </summary>
-    public StringValue Version
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "version")]
+    [SchemaIndex(0)]
+    public StringValue Version { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Emma class.

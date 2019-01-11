@@ -32,9 +32,7 @@ public partial class SchemaLibrary : OpenXmlCompositeElement
     internal override byte NamespaceId => 25;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -104,18 +102,9 @@ public partial class Schema : OpenXmlLeafElement
     internal override byte NamespaceId => 25;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(25, "uri"),
-		AttributeTag.Create<StringValue>(25, "manifestLocation"),
-		AttributeTag.Create<StringValue>(25, "schemaLocation")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Custom XML Schema Namespace.</para>
@@ -123,36 +112,27 @@ public partial class Schema : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
-    public StringValue Uri
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(25, "uri")]
+    [SchemaIndex(0)]
+    public StringValue Uri { get; set; }
     /// <summary>
     /// <para> Resource File Location.</para>
     /// <para>Represents the following attribute in the schema: sl:manifestLocation </para>
     /// </summary>
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
-    public StringValue ManifestLocation
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(25, "manifestLocation")]
+    [SchemaIndex(1)]
+    public StringValue ManifestLocation { get; set; }
     /// <summary>
     /// <para> Custom XML Schema Location.</para>
     /// <para>Represents the following attribute in the schema: sl:schemaLocation </para>
     /// </summary>
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
-    public StringValue SchemaLocation
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(25, "schemaLocation")]
+    [SchemaIndex(2)]
+    public StringValue SchemaLocation { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Schema class.

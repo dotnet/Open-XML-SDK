@@ -51,9 +51,7 @@ public partial class LockedCanvas : OpenXmlCompositeElement
     internal override byte NamespaceId => 15;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     

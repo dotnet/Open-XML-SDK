@@ -26,9 +26,7 @@ public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
     internal override byte NamespaceId => 51;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the PercentagePositionHeightOffset class.
@@ -70,9 +68,7 @@ public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
     internal override byte NamespaceId => 51;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the PercentagePositionVerticalOffset class.
@@ -121,27 +117,17 @@ public partial class RelativeWidth : OpenXmlCompositeElement
     internal override byte NamespaceId => 51;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>>(0, "relativeFrom")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> relativeFrom.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues> ObjectId
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "relativeFrom")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues> ObjectId { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the RelativeWidth class.
@@ -236,27 +222,17 @@ public partial class RelativeHeight : OpenXmlCompositeElement
     internal override byte NamespaceId => 51;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>>(0, "relativeFrom")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> relativeFrom.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues> RelativeFrom
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "relativeFrom")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues> RelativeFrom { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the RelativeHeight class.
@@ -344,9 +320,7 @@ public partial class PercentageWidth : OpenXmlLeafTextElement
     internal override byte NamespaceId => 51;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the PercentageWidth class.
@@ -388,9 +362,7 @@ public partial class PercentageHeight : OpenXmlLeafTextElement
     internal override byte NamespaceId => 51;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the PercentageHeight class.

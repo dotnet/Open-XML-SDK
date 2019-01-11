@@ -37,9 +37,7 @@ public partial class TemplateCommandGroup : OpenXmlPartRootElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -154,9 +152,7 @@ public partial class Mcds : OpenXmlCompositeElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -234,9 +230,7 @@ public partial class VbaSuppData : OpenXmlPartRootElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -378,9 +372,7 @@ public partial class MailMergeRecipients : OpenXmlPartRootElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -450,18 +442,9 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(33, "fciName"),
-		AttributeTag.Create<HexBinaryValue>(33, "fciIndex"),
-		AttributeTag.Create<HexBinaryValue>(33, "swArg")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> fciName.</para>
@@ -469,36 +452,27 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public StringValue CommandName
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(33, "fciName")]
+    [SchemaIndex(0)]
+    public StringValue CommandName { get; set; }
     /// <summary>
     /// <para> fciIndex.</para>
     /// <para>Represents the following attribute in the schema: wne:fciIndex </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public HexBinaryValue CommandIndex
-    {
-        get { return (HexBinaryValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(33, "fciIndex")]
+    [SchemaIndex(1)]
+    public HexBinaryValue CommandIndex { get; set; }
     /// <summary>
     /// <para> swArg.</para>
     /// <para>Represents the following attribute in the schema: wne:swArg </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public HexBinaryValue Argument
-    {
-        get { return (HexBinaryValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(33, "swArg")]
+    [SchemaIndex(2)]
+    public HexBinaryValue Argument { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the FixedCommandKeyboardCustomization class.
@@ -531,9 +505,7 @@ public partial class MacroKeyboardCustomization : MacroWllType
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the MacroKeyboardCustomization class.
@@ -562,9 +534,7 @@ public partial class WllMacroKeyboardCustomization : MacroWllType
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the WllMacroKeyboardCustomization class.
@@ -583,24 +553,16 @@ public partial class WllMacroKeyboardCustomization : MacroWllType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class MacroWllType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(33, "macroName")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> macroName.</para>
     /// <para>Represents the following attribute in the schema: wne:macroName </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public StringValue MacroName
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(33, "macroName")]
+    [SchemaIndex(0)]
+    public StringValue MacroName { get; set; }
 
     
     
@@ -630,9 +592,7 @@ public partial class AllocatedCommandKeyboardCustomization : AcceleratorKeymapTy
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AllocatedCommandKeyboardCustomization class.
@@ -661,9 +621,7 @@ public partial class AllocatedCommandManifestEntry : AcceleratorKeymapType
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AllocatedCommandManifestEntry class.
@@ -682,24 +640,16 @@ public partial class AllocatedCommandManifestEntry : AcceleratorKeymapType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class AcceleratorKeymapType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(33, "acdName")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> acdName.</para>
     /// <para>Represents the following attribute in the schema: wne:acdName </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public StringValue AcceleratorName
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(33, "acdName")]
+    [SchemaIndex(0)]
+    public StringValue AcceleratorName { get; set; }
 
     
     
@@ -729,16 +679,9 @@ public partial class CharacterInsertion : OpenXmlLeafElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(33, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
@@ -746,12 +689,9 @@ public partial class CharacterInsertion : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public HexBinaryValue Val
-    {
-        get { return (HexBinaryValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(33, "val")]
+    [SchemaIndex(0)]
+    public HexBinaryValue Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the CharacterInsertion class.
@@ -799,20 +739,9 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<HexBinaryValue>(33, "chmPrimary"),
-		AttributeTag.Create<HexBinaryValue>(33, "chmSecondary"),
-		AttributeTag.Create<HexBinaryValue>(33, "kcmPrimary"),
-		AttributeTag.Create<HexBinaryValue>(33, "kcmSecondary"),
-		AttributeTag.Create<OnOffValue>(33, "mask")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> chmPrimary.</para>
@@ -820,60 +749,45 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public HexBinaryValue CharacterMapPrimary
-    {
-        get { return (HexBinaryValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(33, "chmPrimary")]
+    [SchemaIndex(0)]
+    public HexBinaryValue CharacterMapPrimary { get; set; }
     /// <summary>
     /// <para> chmSecondary.</para>
     /// <para>Represents the following attribute in the schema: wne:chmSecondary </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public HexBinaryValue CharacterMapSecondary
-    {
-        get { return (HexBinaryValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(33, "chmSecondary")]
+    [SchemaIndex(1)]
+    public HexBinaryValue CharacterMapSecondary { get; set; }
     /// <summary>
     /// <para> kcmPrimary.</para>
     /// <para>Represents the following attribute in the schema: wne:kcmPrimary </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public HexBinaryValue KeyCodePrimary
-    {
-        get { return (HexBinaryValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(33, "kcmPrimary")]
+    [SchemaIndex(2)]
+    public HexBinaryValue KeyCodePrimary { get; set; }
     /// <summary>
     /// <para> kcmSecondary.</para>
     /// <para>Represents the following attribute in the schema: wne:kcmSecondary </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public HexBinaryValue KeyCodeSecondary
-    {
-        get { return (HexBinaryValue)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(33, "kcmSecondary")]
+    [SchemaIndex(3)]
+    public HexBinaryValue KeyCodeSecondary { get; set; }
     /// <summary>
     /// <para> mask.</para>
     /// <para>Represents the following attribute in the schema: wne:mask </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public OnOffValue Mask
-    {
-        get { return (OnOffValue)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [SchemaAttr(33, "mask")]
+    [SchemaIndex(4)]
+    public OnOffValue Mask { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the KeyMapEntry class.
@@ -1021,19 +935,9 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(33, "argValue"),
-		AttributeTag.Create<StringValue>(33, "fciBasedOn"),
-		AttributeTag.Create<HexBinaryValue>(33, "fciIndexBasedOn"),
-		AttributeTag.Create<StringValue>(33, "acdName")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> argValue.</para>
@@ -1041,48 +945,36 @@ public partial class AllocatedCommand : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public StringValue ArgumentValue
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(33, "argValue")]
+    [SchemaIndex(0)]
+    public StringValue ArgumentValue { get; set; }
     /// <summary>
     /// <para> fciBasedOn.</para>
     /// <para>Represents the following attribute in the schema: wne:fciBasedOn </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public StringValue CommandBasedOn
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(33, "fciBasedOn")]
+    [SchemaIndex(1)]
+    public StringValue CommandBasedOn { get; set; }
     /// <summary>
     /// <para> fciIndexBasedOn.</para>
     /// <para>Represents the following attribute in the schema: wne:fciIndexBasedOn </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public HexBinaryValue CommandIndexBasedOn
-    {
-        get { return (HexBinaryValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(33, "fciIndexBasedOn")]
+    [SchemaIndex(2)]
+    public HexBinaryValue CommandIndexBasedOn { get; set; }
     /// <summary>
     /// <para> acdName.</para>
     /// <para>Represents the following attribute in the schema: wne:acdName </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public StringValue AcceleratorName
-    {
-        get { return (StringValue)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(33, "acdName")]
+    [SchemaIndex(3)]
+    public StringValue AcceleratorName { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the AllocatedCommand class.
@@ -1115,20 +1007,9 @@ public partial class Mcd : OpenXmlLeafElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(33, "macroName"),
-		AttributeTag.Create<StringValue>(33, "name"),
-		AttributeTag.Create<StringValue>(33, "menuHelp"),
-		AttributeTag.Create<HexBinaryValue>(33, "bEncrypt"),
-		AttributeTag.Create<HexBinaryValue>(33, "cmg")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> macroName.</para>
@@ -1136,60 +1017,45 @@ public partial class Mcd : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public StringValue MacroName
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(33, "macroName")]
+    [SchemaIndex(0)]
+    public StringValue MacroName { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: wne:name </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public StringValue Name
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(33, "name")]
+    [SchemaIndex(1)]
+    public StringValue Name { get; set; }
     /// <summary>
     /// <para> menuHelp.</para>
     /// <para>Represents the following attribute in the schema: wne:menuHelp </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public StringValue MenuHelp
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(33, "menuHelp")]
+    [SchemaIndex(2)]
+    public StringValue MenuHelp { get; set; }
     /// <summary>
     /// <para> bEncrypt.</para>
     /// <para>Represents the following attribute in the schema: wne:bEncrypt </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public HexBinaryValue BEncrypt
-    {
-        get { return (HexBinaryValue)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(33, "bEncrypt")]
+    [SchemaIndex(3)]
+    public HexBinaryValue BEncrypt { get; set; }
     /// <summary>
     /// <para> cmg.</para>
     /// <para>Represents the following attribute in the schema: wne:cmg </para>
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public HexBinaryValue Cmg
-    {
-        get { return (HexBinaryValue)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [SchemaAttr(33, "cmg")]
+    [SchemaIndex(4)]
+    public HexBinaryValue Cmg { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Mcd class.
@@ -1222,9 +1088,7 @@ public partial class EventDocNewXsdString : OpenXmlLeafTextElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the EventDocNewXsdString class.
@@ -1266,9 +1130,7 @@ public partial class EventDocOpenXsdString : OpenXmlLeafTextElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the EventDocOpenXsdString class.
@@ -1310,9 +1172,7 @@ public partial class EventDocCloseXsdString : OpenXmlLeafTextElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the EventDocCloseXsdString class.
@@ -1354,9 +1214,7 @@ public partial class EventDocSyncXsdString : OpenXmlLeafTextElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the EventDocSyncXsdString class.
@@ -1398,9 +1256,7 @@ public partial class EventDocXmlAfterInsertXsdString : OpenXmlLeafTextElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the EventDocXmlAfterInsertXsdString class.
@@ -1442,9 +1298,7 @@ public partial class EventDocXmlBeforeDeleteXsdString : OpenXmlLeafTextElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the EventDocXmlBeforeDeleteXsdString class.
@@ -1486,9 +1340,7 @@ public partial class EventDocContentControlAfterInsertXsdString : OpenXmlLeafTex
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the EventDocContentControlAfterInsertXsdString class.
@@ -1530,9 +1382,7 @@ public partial class EventDocContentControlBeforeDeleteXsdString : OpenXmlLeafTe
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the EventDocContentControlBeforeDeleteXsdString class.
@@ -1574,9 +1424,7 @@ public partial class EventDocContentControlOnExistXsdString : OpenXmlLeafTextEle
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the EventDocContentControlOnExistXsdString class.
@@ -1618,9 +1466,7 @@ public partial class EventDocContentControlOnEnterXsdString : OpenXmlLeafTextEle
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the EventDocContentControlOnEnterXsdString class.
@@ -1662,9 +1508,7 @@ public partial class EventDocStoreUpdateXsdString : OpenXmlLeafTextElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the EventDocStoreUpdateXsdString class.
@@ -1706,9 +1550,7 @@ public partial class EventDocContentControlUpdateXsdString : OpenXmlLeafTextElem
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the EventDocContentControlUpdateXsdString class.
@@ -1750,9 +1592,7 @@ public partial class EventDocBuildingBlockAfterInsertXsdString : OpenXmlLeafText
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the EventDocBuildingBlockAfterInsertXsdString class.
@@ -1825,9 +1665,7 @@ public partial class DocEvents : OpenXmlCompositeElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -2105,9 +1943,7 @@ public partial class AllocatedCommandManifest : OpenXmlCompositeElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -2177,16 +2013,9 @@ public partial class ToolbarData : OpenXmlLeafElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(19, "id")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> id.</para>
@@ -2194,12 +2023,9 @@ public partial class ToolbarData : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(19, "id")]
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ToolbarData class.
@@ -2238,9 +2064,7 @@ public partial class KeyMapCustomizations : KeymapsType
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the KeyMapCustomizations class.
@@ -2300,9 +2124,7 @@ public partial class MismatchedKeyMapCustomization : KeymapsType
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the MismatchedKeyMapCustomization class.
@@ -2426,9 +2248,7 @@ public partial class Toolbars : OpenXmlCompositeElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -2508,9 +2328,7 @@ public partial class AllocatedCommands : OpenXmlCompositeElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -2580,16 +2398,9 @@ public partial class RecordIncluded : OpenXmlLeafElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<OnOffValue>(33, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
@@ -2597,12 +2408,9 @@ public partial class RecordIncluded : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public OnOffValue Val
-    {
-        get { return (OnOffValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(33, "val")]
+    [SchemaIndex(0)]
+    public OnOffValue Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the RecordIncluded class.
@@ -2635,16 +2443,9 @@ public partial class RecordHashCode : OpenXmlLeafElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<IntegerValue>(33, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
@@ -2652,12 +2453,9 @@ public partial class RecordHashCode : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
-    public IntegerValue Val
-    {
-        get { return (IntegerValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(33, "val")]
+    [SchemaIndex(0)]
+    public IntegerValue Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the RecordHashCode class.
@@ -2699,9 +2497,7 @@ public partial class SingleDataSourceRecord : OpenXmlCompositeElement
     internal override byte NamespaceId => 33;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     

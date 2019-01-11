@@ -4,29 +4,28 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
+using System.Linq;
+using System.Reflection;
+
+#if FEATURE_NO_CONDITIONAL_WEAK_TABLE
+using TagLookup = DocumentFormat.OpenXml.LockingDictionary<System.Type, DocumentFormat.OpenXml.AttributeTag[]>;
+#else
+using TagLookup = System.Runtime.CompilerServices.ConditionalWeakTable<System.Type, DocumentFormat.OpenXml.AttributeTag[]>;
+#endif
 
 namespace DocumentFormat.OpenXml
 {
-    [DebuggerDisplay("Length = {Length}")]
-    [DebuggerTypeProxy(typeof(AttributeTagCollectionDebugView))]
     internal readonly struct AttributeTagCollection : IEnumerable<OpenXmlAttribute>
     {
+        private static TagLookup _allTags = new TagLookup();
+
         private readonly ReadOnlyArray<AttributeTag> _tags;
-        private readonly OpenXmlSimpleType[] _fields;
+        private readonly OpenXmlElement _element;
 
-        public AttributeTagCollection(in ReadOnlyArray<AttributeTag> tags)
+        public AttributeTagCollection(OpenXmlElement element)
         {
-            _tags = tags;
-
-            if (tags.Length == 0)
-            {
-                _fields = Cached.Array<OpenXmlSimpleType>();
-            }
-            else
-            {
-                _fields = new OpenXmlSimpleType[tags.Length];
-            }
+            _tags = GetTagCollection(element.GetType());
+            _element = element;
         }
 
         public bool Any() => Length > 0;
@@ -35,15 +34,15 @@ namespace DocumentFormat.OpenXml
 
         public AttributeEntry this[string namespaceUri, string tagName] => this[GetIndex(namespaceUri, tagName)];
 
-        public int Length => _fields.Length;
+        public int Length => _tags.Length;
 
         public Enumerator GetEnumerator() => new Enumerator(this);
 
         private int GetIndex(string namespaceUri, string tagName)
         {
-            if (!string.IsNullOrEmpty(tagName) && namespaceUri != null && NamespaceIdMap.TryGetNamespaceId(namespaceUri, out byte nsId))
+            if (!string.IsNullOrEmpty(tagName) && namespaceUri != null && NamespaceIdMap.TryGetNamespaceId(namespaceUri, out var nsId))
             {
-                for (int i = 0; i < _tags.Length; i++)
+                for (var i = 0; i < _tags.Length; i++)
                 {
                     var tag = _tags[i];
 
@@ -81,6 +80,41 @@ namespace DocumentFormat.OpenXml
             }
         }
 
+        public static AttributeTag[] GetTagCollection(Type type)
+        {
+            AttributeTag[] BuildTagCollection(Type t)
+            {
+                return t.GetRuntimeProperties()
+                   .Select(property =>
+                   {
+                       var schema = property.GetCustomAttribute<SchemaAttrAttribute>();
+
+                       if (schema is null)
+                       {
+                           return default;
+                       }
+
+                       var indexAttribute = property.GetCustomAttribute<SchemaIndexAttribute>();
+
+                       if (indexAttribute is null)
+                       {
+                           throw new InvalidOperationException();
+                       }
+
+                       return new AttributeTag(
+                           schema.NamespaceId,
+                           schema.Tag,
+                           indexAttribute.Index,
+                           new PropertyAccessor<OpenXmlElement, OpenXmlSimpleType>(property));
+                   })
+                   .Where(tag => tag.IsValid)
+                   .OrderBy(tag => tag.Order)
+                   .ToArray();
+            }
+
+            return _allTags.GetValue(type, BuildTagCollection);
+        }
+
         public struct Enumerator
         {
             private readonly AttributeTagCollection _collection;
@@ -97,13 +131,10 @@ namespace DocumentFormat.OpenXml
             public bool MoveNext() => ++_index < _collection.Length;
         }
 
-        [DebuggerDisplay("{Tag}: {Value}")]
         public readonly struct AttributeEntry
         {
-            [DebuggerBrowsable(DebuggerBrowsableState.Never)]
             private readonly AttributeTagCollection _collection;
 
-            [DebuggerBrowsable(DebuggerBrowsableState.Never)]
             private readonly int _index;
 
             public AttributeEntry(in AttributeTagCollection collection, int index)
@@ -116,22 +147,11 @@ namespace DocumentFormat.OpenXml
 
             public ref readonly AttributeTag Tag => ref _collection._tags[_index];
 
-            public ref OpenXmlSimpleType Value => ref _collection._fields[_index];
+            public OpenXmlSimpleType Value => _collection._tags[_index].GetValue(_collection._element);
+
+            public void SetValue(OpenXmlSimpleType value) => _collection._tags[_index].SetValue(_collection._element, value);
 
             public bool HasValue => Value != null;
-        }
-
-        internal sealed class AttributeTagCollectionDebugView
-        {
-            private readonly AttributeTagCollection _collection;
-
-            public AttributeTagCollectionDebugView(AttributeTagCollection collection)
-            {
-                _collection = collection;
-            }
-
-            [DebuggerBrowsable(DebuggerBrowsableState.RootHidden)]
-            public AttributeEntry[] Items => _collection.ToArray();
         }
     }
 }

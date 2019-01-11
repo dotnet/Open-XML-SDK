@@ -84,9 +84,7 @@ public partial class Macrosheet : OpenXmlPartRootElement
     internal override byte NamespaceId => 32;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -328,9 +326,7 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
     internal override byte NamespaceId => 32;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -465,9 +461,7 @@ public partial class ReferenceSequence : OpenXmlLeafTextElement
     internal override byte NamespaceId => 32;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -516,9 +510,7 @@ public partial class Formula : OpenXmlLeafTextElement
     internal override byte NamespaceId => 32;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -574,38 +566,24 @@ public partial class RowSortMap : OpenXmlCompositeElement
     internal override byte NamespaceId => 32;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "ref"),
-		AttributeTag.Create<UInt32Value>(0, "count")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Reference.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
-    public StringValue Ref
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "ref")]
+    [SchemaIndex(0)]
+    public StringValue Ref { get; set; }
     /// <summary>
     /// <para> Count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
-    public UInt32Value Count
-    {
-        get { return (UInt32Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "count")]
+    [SchemaIndex(1)]
+    public UInt32Value Count { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the RowSortMap class.
@@ -679,38 +657,24 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
     internal override byte NamespaceId => 32;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "ref"),
-		AttributeTag.Create<UInt32Value>(0, "count")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Reference.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
-    public StringValue Ref
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "ref")]
+    [SchemaIndex(0)]
+    public StringValue Ref { get; set; }
     /// <summary>
     /// <para> Count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
-    public UInt32Value Count
-    {
-        get { return (UInt32Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "count")]
+    [SchemaIndex(1)]
+    public UInt32Value Count { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ColumnSortMap class.
@@ -777,9 +741,7 @@ public partial class RowSortMapItem : SortMapItemType
     internal override byte NamespaceId => 32;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the RowSortMapItem class.
@@ -808,9 +770,7 @@ public partial class ColumnSortMapItem : SortMapItemType
     internal override byte NamespaceId => 32;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ColumnSortMapItem class.
@@ -829,33 +789,21 @@ public partial class ColumnSortMapItem : SortMapItemType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class SortMapItemType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(0, "newVal"),
-		AttributeTag.Create<UInt32Value>(0, "oldVal")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> New Value.</para>
     /// <para>Represents the following attribute in the schema: newVal </para>
     /// </summary>
-    public UInt32Value NewVal
-    {
-        get { return (UInt32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "newVal")]
+    [SchemaIndex(0)]
+    public UInt32Value NewVal { get; set; }
     /// <summary>
     /// <para> Old Value.</para>
     /// <para>Represents the following attribute in the schema: oldVal </para>
     /// </summary>
-    public UInt32Value OldVal
-    {
-        get { return (UInt32Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "oldVal")]
+    [SchemaIndex(1)]
+    public UInt32Value OldVal { get; set; }
 
     
     

@@ -27,9 +27,7 @@ public partial class WrapNone : OpenXmlLeafElement
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -72,71 +70,45 @@ public partial class WrapSquare : OpenXmlCompositeElement
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>>(0, "wrapText"),
-		AttributeTag.Create<UInt32Value>(0, "distT"),
-		AttributeTag.Create<UInt32Value>(0, "distB"),
-		AttributeTag.Create<UInt32Value>(0, "distL"),
-		AttributeTag.Create<UInt32Value>(0, "distR")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Text Wrapping Location.</para>
     /// <para>Represents the following attribute in the schema: wrapText </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "wrapText")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText { get; set; }
     /// <summary>
     /// <para> Distance From Text (Top).</para>
     /// <para>Represents the following attribute in the schema: distT </para>
     /// </summary>
-    public UInt32Value DistanceFromTop
-    {
-        get { return (UInt32Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "distT")]
+    [SchemaIndex(1)]
+    public UInt32Value DistanceFromTop { get; set; }
     /// <summary>
     /// <para> Distance From Text on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: distB </para>
     /// </summary>
-    public UInt32Value DistanceFromBottom
-    {
-        get { return (UInt32Value)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "distB")]
+    [SchemaIndex(2)]
+    public UInt32Value DistanceFromBottom { get; set; }
     /// <summary>
     /// <para> Distance From Text on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
     /// </summary>
-    public UInt32Value DistanceFromLeft
-    {
-        get { return (UInt32Value)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(0, "distL")]
+    [SchemaIndex(3)]
+    public UInt32Value DistanceFromLeft { get; set; }
     /// <summary>
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
     /// </summary>
-    public UInt32Value DistanceFromRight
-    {
-        get { return (UInt32Value)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [SchemaAttr(0, "distR")]
+    [SchemaIndex(4)]
+    public UInt32Value DistanceFromRight { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the WrapSquare class.
@@ -231,49 +203,31 @@ public partial class WrapTight : OpenXmlCompositeElement
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>>(0, "wrapText"),
-		AttributeTag.Create<UInt32Value>(0, "distL"),
-		AttributeTag.Create<UInt32Value>(0, "distR")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Text Wrapping Location.</para>
     /// <para>Represents the following attribute in the schema: wrapText </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "wrapText")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText { get; set; }
     /// <summary>
     /// <para> Distance From Test on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
     /// </summary>
-    public UInt32Value DistanceFromLeft
-    {
-        get { return (UInt32Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "distL")]
+    [SchemaIndex(1)]
+    public UInt32Value DistanceFromLeft { get; set; }
     /// <summary>
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
     /// </summary>
-    public UInt32Value DistanceFromRight
-    {
-        get { return (UInt32Value)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "distR")]
+    [SchemaIndex(2)]
+    public UInt32Value DistanceFromRight { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the WrapTight class.
@@ -368,49 +322,31 @@ public partial class WrapThrough : OpenXmlCompositeElement
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>>(0, "wrapText"),
-		AttributeTag.Create<UInt32Value>(0, "distL"),
-		AttributeTag.Create<UInt32Value>(0, "distR")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Text Wrapping Location.</para>
     /// <para>Represents the following attribute in the schema: wrapText </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "wrapText")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.WrapTextValues> WrapText { get; set; }
     /// <summary>
     /// <para> Distance From Text on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
     /// </summary>
-    public UInt32Value DistanceFromLeft
-    {
-        get { return (UInt32Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "distL")]
+    [SchemaIndex(1)]
+    public UInt32Value DistanceFromLeft { get; set; }
     /// <summary>
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
     /// </summary>
-    public UInt32Value DistanceFromRight
-    {
-        get { return (UInt32Value)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "distR")]
+    [SchemaIndex(2)]
+    public UInt32Value DistanceFromRight { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the WrapThrough class.
@@ -505,38 +441,24 @@ public partial class WrapTopBottom : OpenXmlCompositeElement
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(0, "distT"),
-		AttributeTag.Create<UInt32Value>(0, "distB")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Distance From Text on Top Edge.</para>
     /// <para>Represents the following attribute in the schema: distT </para>
     /// </summary>
-    public UInt32Value DistanceFromTop
-    {
-        get { return (UInt32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "distT")]
+    [SchemaIndex(0)]
+    public UInt32Value DistanceFromTop { get; set; }
     /// <summary>
     /// <para> Distance From Text on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: distB </para>
     /// </summary>
-    public UInt32Value DistanceFromBottom
-    {
-        get { return (UInt32Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "distB")]
+    [SchemaIndex(1)]
+    public UInt32Value DistanceFromBottom { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the WrapTopBottom class.
@@ -639,86 +561,56 @@ public partial class Inline : OpenXmlCompositeElement
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(0, "distT"),
-		AttributeTag.Create<UInt32Value>(0, "distB"),
-		AttributeTag.Create<UInt32Value>(0, "distL"),
-		AttributeTag.Create<UInt32Value>(0, "distR"),
-		AttributeTag.Create<HexBinaryValue>(51, "anchorId"),
-		AttributeTag.Create<HexBinaryValue>(51, "editId")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Distance From Text on Top Edge.</para>
     /// <para>Represents the following attribute in the schema: distT </para>
     /// </summary>
-    public UInt32Value DistanceFromTop
-    {
-        get { return (UInt32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "distT")]
+    [SchemaIndex(0)]
+    public UInt32Value DistanceFromTop { get; set; }
     /// <summary>
     /// <para> Distance From Text on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: distB </para>
     /// </summary>
-    public UInt32Value DistanceFromBottom
-    {
-        get { return (UInt32Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "distB")]
+    [SchemaIndex(1)]
+    public UInt32Value DistanceFromBottom { get; set; }
     /// <summary>
     /// <para> Distance From Text on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
     /// </summary>
-    public UInt32Value DistanceFromLeft
-    {
-        get { return (UInt32Value)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "distL")]
+    [SchemaIndex(2)]
+    public UInt32Value DistanceFromLeft { get; set; }
     /// <summary>
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
     /// </summary>
-    public UInt32Value DistanceFromRight
-    {
-        get { return (UInt32Value)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(0, "distR")]
+    [SchemaIndex(3)]
+    public UInt32Value DistanceFromRight { get; set; }
     /// <summary>
     /// <para> anchorId.</para>
     /// <para>Represents the following attribute in the schema: wp14:anchorId </para>
     /// </summary>
 ///<remark> xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
 ///</remark>
-    public HexBinaryValue AnchorId
-    {
-        get { return (HexBinaryValue)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [SchemaAttr(51, "anchorId")]
+    [SchemaIndex(4)]
+    public HexBinaryValue AnchorId { get; set; }
     /// <summary>
     /// <para> editId.</para>
     /// <para>Represents the following attribute in the schema: wp14:editId </para>
     /// </summary>
 ///<remark> xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
 ///</remark>
-    public HexBinaryValue EditId
-    {
-        get { return (HexBinaryValue)Attributes[5].Value; }
-        set { Attributes[5].Value = value; }
-    }
-    
+    [SchemaAttr(51, "editId")]
+    [SchemaIndex(5)]
+    public HexBinaryValue EditId { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Inline class.
@@ -901,163 +793,105 @@ public partial class Anchor : OpenXmlCompositeElement
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(0, "distT"),
-		AttributeTag.Create<UInt32Value>(0, "distB"),
-		AttributeTag.Create<UInt32Value>(0, "distL"),
-		AttributeTag.Create<UInt32Value>(0, "distR"),
-		AttributeTag.Create<BooleanValue>(0, "simplePos"),
-		AttributeTag.Create<UInt32Value>(0, "relativeHeight"),
-		AttributeTag.Create<BooleanValue>(0, "behindDoc"),
-		AttributeTag.Create<BooleanValue>(0, "locked"),
-		AttributeTag.Create<BooleanValue>(0, "layoutInCell"),
-		AttributeTag.Create<BooleanValue>(0, "hidden"),
-		AttributeTag.Create<BooleanValue>(0, "allowOverlap"),
-		AttributeTag.Create<HexBinaryValue>(51, "editId"),
-		AttributeTag.Create<HexBinaryValue>(51, "anchorId")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Distance From Text on Top Edge.</para>
     /// <para>Represents the following attribute in the schema: distT </para>
     /// </summary>
-    public UInt32Value DistanceFromTop
-    {
-        get { return (UInt32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "distT")]
+    [SchemaIndex(0)]
+    public UInt32Value DistanceFromTop { get; set; }
     /// <summary>
     /// <para> Distance From Text on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: distB </para>
     /// </summary>
-    public UInt32Value DistanceFromBottom
-    {
-        get { return (UInt32Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "distB")]
+    [SchemaIndex(1)]
+    public UInt32Value DistanceFromBottom { get; set; }
     /// <summary>
     /// <para> Distance From Text on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: distL </para>
     /// </summary>
-    public UInt32Value DistanceFromLeft
-    {
-        get { return (UInt32Value)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "distL")]
+    [SchemaIndex(2)]
+    public UInt32Value DistanceFromLeft { get; set; }
     /// <summary>
     /// <para> Distance From Text on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: distR </para>
     /// </summary>
-    public UInt32Value DistanceFromRight
-    {
-        get { return (UInt32Value)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(0, "distR")]
+    [SchemaIndex(3)]
+    public UInt32Value DistanceFromRight { get; set; }
     /// <summary>
     /// <para> Page Positioning.</para>
     /// <para>Represents the following attribute in the schema: simplePos </para>
     /// </summary>
-    public BooleanValue SimplePos
-    {
-        get { return (BooleanValue)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [SchemaAttr(0, "simplePos")]
+    [SchemaIndex(4)]
+    public BooleanValue SimplePos { get; set; }
     /// <summary>
     /// <para> Relative Z-Ordering Position.</para>
     /// <para>Represents the following attribute in the schema: relativeHeight </para>
     /// </summary>
-    public UInt32Value RelativeHeight
-    {
-        get { return (UInt32Value)Attributes[5].Value; }
-        set { Attributes[5].Value = value; }
-    }
-    
+    [SchemaAttr(0, "relativeHeight")]
+    [SchemaIndex(5)]
+    public UInt32Value RelativeHeight { get; set; }
     /// <summary>
     /// <para> Display Behind Document Text.</para>
     /// <para>Represents the following attribute in the schema: behindDoc </para>
     /// </summary>
-    public BooleanValue BehindDoc
-    {
-        get { return (BooleanValue)Attributes[6].Value; }
-        set { Attributes[6].Value = value; }
-    }
-    
+    [SchemaAttr(0, "behindDoc")]
+    [SchemaIndex(6)]
+    public BooleanValue BehindDoc { get; set; }
     /// <summary>
     /// <para> Lock Anchor.</para>
     /// <para>Represents the following attribute in the schema: locked </para>
     /// </summary>
-    public BooleanValue Locked
-    {
-        get { return (BooleanValue)Attributes[7].Value; }
-        set { Attributes[7].Value = value; }
-    }
-    
+    [SchemaAttr(0, "locked")]
+    [SchemaIndex(7)]
+    public BooleanValue Locked { get; set; }
     /// <summary>
     /// <para> Layout In Table Cell.</para>
     /// <para>Represents the following attribute in the schema: layoutInCell </para>
     /// </summary>
-    public BooleanValue LayoutInCell
-    {
-        get { return (BooleanValue)Attributes[8].Value; }
-        set { Attributes[8].Value = value; }
-    }
-    
+    [SchemaAttr(0, "layoutInCell")]
+    [SchemaIndex(8)]
+    public BooleanValue LayoutInCell { get; set; }
     /// <summary>
     /// <para> Hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
-    public BooleanValue Hidden
-    {
-        get { return (BooleanValue)Attributes[9].Value; }
-        set { Attributes[9].Value = value; }
-    }
-    
+    [SchemaAttr(0, "hidden")]
+    [SchemaIndex(9)]
+    public BooleanValue Hidden { get; set; }
     /// <summary>
     /// <para> Allow Objects to Overlap.</para>
     /// <para>Represents the following attribute in the schema: allowOverlap </para>
     /// </summary>
-    public BooleanValue AllowOverlap
-    {
-        get { return (BooleanValue)Attributes[10].Value; }
-        set { Attributes[10].Value = value; }
-    }
-    
+    [SchemaAttr(0, "allowOverlap")]
+    [SchemaIndex(10)]
+    public BooleanValue AllowOverlap { get; set; }
     /// <summary>
     /// <para> editId.</para>
     /// <para>Represents the following attribute in the schema: wp14:editId </para>
     /// </summary>
 ///<remark> xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
 ///</remark>
-    public HexBinaryValue EditId
-    {
-        get { return (HexBinaryValue)Attributes[11].Value; }
-        set { Attributes[11].Value = value; }
-    }
-    
+    [SchemaAttr(51, "editId")]
+    [SchemaIndex(11)]
+    public HexBinaryValue EditId { get; set; }
     /// <summary>
     /// <para> anchorId.</para>
     /// <para>Represents the following attribute in the schema: wp14:anchorId </para>
     /// </summary>
 ///<remark> xmlns:wp14=http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing
 ///</remark>
-    public HexBinaryValue AnchorId
-    {
-        get { return (HexBinaryValue)Attributes[12].Value; }
-        set { Attributes[12].Value = value; }
-    }
-    
+    [SchemaAttr(51, "anchorId")]
+    [SchemaIndex(12)]
+    public HexBinaryValue AnchorId { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Anchor class.
@@ -1235,9 +1069,7 @@ public partial class StartPoint : Point2DType
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the StartPoint class.
@@ -1266,9 +1098,7 @@ public partial class LineTo : Point2DType
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the LineTo class.
@@ -1297,9 +1127,7 @@ public partial class SimplePosition : Point2DType
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the SimplePosition class.
@@ -1318,33 +1146,21 @@ public partial class SimplePosition : Point2DType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class Point2DType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int64Value>(0, "x"),
-		AttributeTag.Create<Int64Value>(0, "y")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> X-Axis Coordinate.</para>
     /// <para>Represents the following attribute in the schema: x </para>
     /// </summary>
-    public Int64Value X
-    {
-        get { return (Int64Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "x")]
+    [SchemaIndex(0)]
+    public Int64Value X { get; set; }
     /// <summary>
     /// <para> Y-Axis Coordinate.</para>
     /// <para>Represents the following attribute in the schema: y </para>
     /// </summary>
-    public Int64Value Y
-    {
-        get { return (Int64Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "y")]
+    [SchemaIndex(1)]
+    public Int64Value Y { get; set; }
 
     
     
@@ -1374,60 +1190,38 @@ public partial class EffectExtent : OpenXmlLeafElement
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int64Value>(0, "l"),
-		AttributeTag.Create<Int64Value>(0, "t"),
-		AttributeTag.Create<Int64Value>(0, "r"),
-		AttributeTag.Create<Int64Value>(0, "b")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Additional Extent on Left Edge.</para>
     /// <para>Represents the following attribute in the schema: l </para>
     /// </summary>
-    public Int64Value LeftEdge
-    {
-        get { return (Int64Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "l")]
+    [SchemaIndex(0)]
+    public Int64Value LeftEdge { get; set; }
     /// <summary>
     /// <para> Additional Extent on Top Edge.</para>
     /// <para>Represents the following attribute in the schema: t </para>
     /// </summary>
-    public Int64Value TopEdge
-    {
-        get { return (Int64Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "t")]
+    [SchemaIndex(1)]
+    public Int64Value TopEdge { get; set; }
     /// <summary>
     /// <para> Additional Extent on Right Edge.</para>
     /// <para>Represents the following attribute in the schema: r </para>
     /// </summary>
-    public Int64Value RightEdge
-    {
-        get { return (Int64Value)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "r")]
+    [SchemaIndex(2)]
+    public Int64Value RightEdge { get; set; }
     /// <summary>
     /// <para> Additional Extent on Bottom Edge.</para>
     /// <para>Represents the following attribute in the schema: b </para>
     /// </summary>
-    public Int64Value BottomEdge
-    {
-        get { return (Int64Value)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(0, "b")]
+    [SchemaIndex(3)]
+    public Int64Value BottomEdge { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the EffectExtent class.
@@ -1469,27 +1263,17 @@ public partial class WrapPolygon : OpenXmlCompositeElement
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "edited")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Wrapping Points Modified.</para>
     /// <para>Represents the following attribute in the schema: edited </para>
     /// </summary>
-    public BooleanValue Edited
-    {
-        get { return (BooleanValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "edited")]
+    [SchemaIndex(0)]
+    public BooleanValue Edited { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the WrapPolygon class.
@@ -1591,27 +1375,17 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues>>(0, "relativeFrom")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Horizontal Position Relative Base.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues> RelativeFrom
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "relativeFrom")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.HorizontalRelativePositionValues> RelativeFrom { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the HorizontalPosition class.
@@ -1740,27 +1514,17 @@ public partial class VerticalPosition : OpenXmlCompositeElement
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues>>(0, "relativeFrom")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Vertical Position Relative Base.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues> RelativeFrom
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "relativeFrom")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Drawing.Wordprocessing.VerticalRelativePositionValues> RelativeFrom { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the VerticalPosition class.
@@ -1878,38 +1642,24 @@ public partial class Extent : OpenXmlLeafElement
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int64Value>(0, "cx"),
-		AttributeTag.Create<Int64Value>(0, "cy")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Extent Length.</para>
     /// <para>Represents the following attribute in the schema: cx </para>
     /// </summary>
-    public Int64Value Cx
-    {
-        get { return (Int64Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "cx")]
+    [SchemaIndex(0)]
+    public Int64Value Cx { get; set; }
     /// <summary>
     /// <para> Extent Width.</para>
     /// <para>Represents the following attribute in the schema: cy </para>
     /// </summary>
-    public Int64Value Cy
-    {
-        get { return (Int64Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "cy")]
+    [SchemaIndex(1)]
+    public Int64Value Cy { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Extent class.
@@ -1953,71 +1703,45 @@ public partial class DocProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(0, "id"),
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<StringValue>(0, "descr"),
-		AttributeTag.Create<BooleanValue>(0, "hidden"),
-		AttributeTag.Create<StringValue>(0, "title")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    public UInt32Value Id
-    {
-        get { return (UInt32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "id")]
+    [SchemaIndex(0)]
+    public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    public StringValue Name
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "name")]
+    [SchemaIndex(1)]
+    public StringValue Name { get; set; }
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "descr")]
+    [SchemaIndex(2)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
-    public BooleanValue Hidden
-    {
-        get { return (BooleanValue)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(0, "hidden")]
+    [SchemaIndex(3)]
+    public BooleanValue Hidden { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    public StringValue Title
-    {
-        get { return (StringValue)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [SchemaAttr(0, "title")]
+    [SchemaIndex(4)]
+    public StringValue Title { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the DocProperties class.
@@ -2144,9 +1868,7 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -2252,9 +1974,7 @@ public partial class VerticalAlignment : OpenXmlLeafTextElement
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -2303,9 +2023,7 @@ public partial class PositionOffset : OpenXmlLeafTextElement
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -2354,9 +2072,7 @@ public partial class HorizontalAlignment : OpenXmlLeafTextElement
     internal override byte NamespaceId => 16;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     

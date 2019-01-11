@@ -32,49 +32,31 @@ public partial class Sources : OpenXmlPartRootElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "SelectedStyle"),
-		AttributeTag.Create<StringValue>(0, "StyleName"),
-		AttributeTag.Create<StringValue>(0, "URI")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Selected Style.</para>
     /// <para>Represents the following attribute in the schema: SelectedStyle </para>
     /// </summary>
-    public StringValue SelectedStyle
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "SelectedStyle")]
+    [SchemaIndex(0)]
+    public StringValue SelectedStyle { get; set; }
     /// <summary>
     /// <para> Documentation Style Name.</para>
     /// <para>Represents the following attribute in the schema: StyleName </para>
     /// </summary>
-    public StringValue StyleName
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "StyleName")]
+    [SchemaIndex(1)]
+    public StringValue StyleName { get; set; }
     /// <summary>
     /// <para> Uniform Resource Identifier.</para>
     /// <para>Represents the following attribute in the schema: URI </para>
     /// </summary>
-    public StringValue Uri
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "URI")]
+    [SchemaIndex(2)]
+    public StringValue Uri { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Sources class.
@@ -152,9 +134,7 @@ public partial class Person : OpenXmlCompositeElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -230,9 +210,7 @@ public partial class Last : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Last class.
@@ -274,9 +252,7 @@ public partial class First : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the First class.
@@ -318,9 +294,7 @@ public partial class Middle : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Middle class.
@@ -362,9 +336,7 @@ public partial class Corporate : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Corporate class.
@@ -406,9 +378,7 @@ public partial class AbbreviatedCaseNumber : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AbbreviatedCaseNumber class.
@@ -450,9 +420,7 @@ public partial class AlbumTitle : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AlbumTitle class.
@@ -494,9 +462,7 @@ public partial class BookTitle : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the BookTitle class.
@@ -538,9 +504,7 @@ public partial class Broadcaster : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Broadcaster class.
@@ -582,9 +546,7 @@ public partial class BroadcastTitle : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the BroadcastTitle class.
@@ -626,9 +588,7 @@ public partial class CaseNumber : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the CaseNumber class.
@@ -670,9 +630,7 @@ public partial class ChapterNumber : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ChapterNumber class.
@@ -714,9 +672,7 @@ public partial class City : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the City class.
@@ -758,9 +714,7 @@ public partial class Comments : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Comments class.
@@ -802,9 +756,7 @@ public partial class ConferenceName : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ConferenceName class.
@@ -846,9 +798,7 @@ public partial class CountryRegion : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the CountryRegion class.
@@ -890,9 +840,7 @@ public partial class Court : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Court class.
@@ -934,9 +882,7 @@ public partial class Day : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Day class.
@@ -978,9 +924,7 @@ public partial class DayAccessed : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DayAccessed class.
@@ -1022,9 +966,7 @@ public partial class Department : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Department class.
@@ -1066,9 +1008,7 @@ public partial class Distributor : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Distributor class.
@@ -1110,9 +1050,7 @@ public partial class Edition : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Edition class.
@@ -1154,9 +1092,7 @@ public partial class GuidString : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the GuidString class.
@@ -1198,9 +1134,7 @@ public partial class Institution : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Institution class.
@@ -1242,9 +1176,7 @@ public partial class InternetSiteTitle : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the InternetSiteTitle class.
@@ -1286,9 +1218,7 @@ public partial class Issue : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Issue class.
@@ -1330,9 +1260,7 @@ public partial class JournalName : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the JournalName class.
@@ -1374,9 +1302,7 @@ public partial class LcId : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the LcId class.
@@ -1418,9 +1344,7 @@ public partial class Medium : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Medium class.
@@ -1462,9 +1386,7 @@ public partial class Month : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Month class.
@@ -1506,9 +1428,7 @@ public partial class MonthAccessed : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the MonthAccessed class.
@@ -1550,9 +1470,7 @@ public partial class NumberVolumes : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the NumberVolumes class.
@@ -1594,9 +1512,7 @@ public partial class Pages : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Pages class.
@@ -1638,9 +1554,7 @@ public partial class PatentNumber : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the PatentNumber class.
@@ -1682,9 +1596,7 @@ public partial class PeriodicalTitle : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the PeriodicalTitle class.
@@ -1726,9 +1638,7 @@ public partial class ProductionCompany : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ProductionCompany class.
@@ -1770,9 +1680,7 @@ public partial class PublicationTitle : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the PublicationTitle class.
@@ -1814,9 +1722,7 @@ public partial class Publisher : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Publisher class.
@@ -1858,9 +1764,7 @@ public partial class RecordingNumber : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the RecordingNumber class.
@@ -1902,9 +1806,7 @@ public partial class ReferenceOrder : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ReferenceOrder class.
@@ -1946,9 +1848,7 @@ public partial class Reporter : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Reporter class.
@@ -1990,9 +1890,7 @@ public partial class ShortTitle : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ShortTitle class.
@@ -2034,9 +1932,7 @@ public partial class StandardNumber : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the StandardNumber class.
@@ -2078,9 +1974,7 @@ public partial class StateProvince : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the StateProvince class.
@@ -2122,9 +2016,7 @@ public partial class Station : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Station class.
@@ -2166,9 +2058,7 @@ public partial class Tag : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Tag class.
@@ -2210,9 +2100,7 @@ public partial class Theater : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Theater class.
@@ -2254,9 +2142,7 @@ public partial class ThesisType : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ThesisType class.
@@ -2298,9 +2184,7 @@ public partial class Title : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Title class.
@@ -2342,9 +2226,7 @@ public partial class PatentType : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the PatentType class.
@@ -2386,9 +2268,7 @@ public partial class UrlString : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the UrlString class.
@@ -2430,9 +2310,7 @@ public partial class Version : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Version class.
@@ -2474,9 +2352,7 @@ public partial class Volume : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Volume class.
@@ -2518,9 +2394,7 @@ public partial class Year : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Year class.
@@ -2562,9 +2436,7 @@ public partial class YearAccessed : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the YearAccessed class.
@@ -2613,9 +2485,7 @@ public partial class NameList : OpenXmlCompositeElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -2691,9 +2561,7 @@ public partial class Artist : NameType
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Artist class.
@@ -2753,9 +2621,7 @@ public partial class BookAuthor : NameType
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the BookAuthor class.
@@ -2815,9 +2681,7 @@ public partial class Compiler : NameType
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Compiler class.
@@ -2877,9 +2741,7 @@ public partial class Composer : NameType
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Composer class.
@@ -2939,9 +2801,7 @@ public partial class Conductor : NameType
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Conductor class.
@@ -3001,9 +2861,7 @@ public partial class Counsel : NameType
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Counsel class.
@@ -3063,9 +2921,7 @@ public partial class Director : NameType
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Director class.
@@ -3125,9 +2981,7 @@ public partial class Editor : NameType
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Editor class.
@@ -3187,9 +3041,7 @@ public partial class Interviewee : NameType
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Interviewee class.
@@ -3249,9 +3101,7 @@ public partial class Interviewer : NameType
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Interviewer class.
@@ -3311,9 +3161,7 @@ public partial class Inventor : NameType
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Inventor class.
@@ -3373,9 +3221,7 @@ public partial class ProducerName : NameType
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ProducerName class.
@@ -3435,9 +3281,7 @@ public partial class Translator : NameType
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Translator class.
@@ -3497,9 +3341,7 @@ public partial class Writer : NameType
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Writer class.
@@ -3642,9 +3484,7 @@ public partial class Author : NameOrCorporateType
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Author class.
@@ -3705,9 +3545,7 @@ public partial class Performer : NameOrCorporateType
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Performer class.
@@ -3897,9 +3735,7 @@ public partial class AuthorList : OpenXmlCompositeElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -4215,9 +4051,7 @@ public partial class SourceType : OpenXmlLeafTextElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -4375,9 +4209,7 @@ public partial class Source : OpenXmlCompositeElement
     internal override byte NamespaceId => 9;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     

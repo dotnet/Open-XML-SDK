@@ -42,9 +42,7 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 36;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -210,9 +208,7 @@ public partial class PublishDate : OpenXmlLeafTextElement
     internal override byte NamespaceId => 36;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -261,9 +257,7 @@ public partial class DocumentAbstract : OpenXmlLeafTextElement
     internal override byte NamespaceId => 36;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DocumentAbstract class.
@@ -305,9 +299,7 @@ public partial class CompanyAddress : OpenXmlLeafTextElement
     internal override byte NamespaceId => 36;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the CompanyAddress class.
@@ -349,9 +341,7 @@ public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
     internal override byte NamespaceId => 36;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the CompanyPhoneNumber class.
@@ -393,9 +383,7 @@ public partial class CompanyFaxNumber : OpenXmlLeafTextElement
     internal override byte NamespaceId => 36;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the CompanyFaxNumber class.
@@ -437,9 +425,7 @@ public partial class CompanyEmailAddress : OpenXmlLeafTextElement
     internal override byte NamespaceId => 36;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the CompanyEmailAddress class.

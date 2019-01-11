@@ -39,9 +39,7 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -171,49 +169,31 @@ public partial class Transform2D : OpenXmlCompositeElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<Int32Value>(0, "rot"),
-		AttributeTag.Create<BooleanValue>(0, "flipH"),
-		AttributeTag.Create<BooleanValue>(0, "flipV")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
-    public Int32Value Rotation
-    {
-        get { return (Int32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "rot")]
+    [SchemaIndex(0)]
+    public Int32Value Rotation { get; set; }
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
     /// </summary>
-    public BooleanValue HorizontalFlip
-    {
-        get { return (BooleanValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "flipH")]
+    [SchemaIndex(1)]
+    public BooleanValue HorizontalFlip { get; set; }
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
     /// </summary>
-    public BooleanValue VerticalFlip
-    {
-        get { return (BooleanValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "flipV")]
+    [SchemaIndex(2)]
+    public BooleanValue VerticalFlip { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Transform2D class.
@@ -323,27 +303,17 @@ public partial class ExtensionListModify : OpenXmlCompositeElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "mod")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Modify.</para>
     /// <para>Represents the following attribute in the schema: mod </para>
     /// </summary>
-    public BooleanValue Modify
-    {
-        get { return (BooleanValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "mod")]
+    [SchemaIndex(0)]
+    public BooleanValue Modify { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ExtensionListModify class.
@@ -423,17 +393,9 @@ public partial class Media : OpenXmlCompositeElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(19, "embed"),
-		AttributeTag.Create<StringValue>(19, "link")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Embedded Picture Reference.</para>
@@ -441,24 +403,18 @@ public partial class Media : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    public StringValue Embed
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(19, "embed")]
+    [SchemaIndex(0)]
+    public StringValue Embed { get; set; }
     /// <summary>
     /// <para> Linked Picture Reference.</para>
     /// <para>Represents the following attribute in the schema: r:link </para>
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    public StringValue Link
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(19, "link")]
+    [SchemaIndex(1)]
+    public StringValue Link { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Media class.
@@ -591,9 +547,7 @@ public partial class VortexTransition : SideDirectionTransitionType
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the VortexTransition class.
@@ -622,9 +576,7 @@ public partial class PanTransition : SideDirectionTransitionType
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the PanTransition class.
@@ -643,22 +595,14 @@ public partial class PanTransition : SideDirectionTransitionType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class SideDirectionTransitionType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>(0, "dir")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> Direction.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "dir")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction { get; set; }
 
     
     
@@ -688,9 +632,7 @@ public partial class SwitchTransition : LeftRightDirectionTransitionType
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the SwitchTransition class.
@@ -719,9 +661,7 @@ public partial class FlipTransition : LeftRightDirectionTransitionType
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the FlipTransition class.
@@ -750,9 +690,7 @@ public partial class FerrisTransition : LeftRightDirectionTransitionType
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the FerrisTransition class.
@@ -781,9 +719,7 @@ public partial class GalleryTransition : LeftRightDirectionTransitionType
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the GalleryTransition class.
@@ -812,9 +748,7 @@ public partial class ConveyorTransition : LeftRightDirectionTransitionType
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the ConveyorTransition class.
@@ -833,22 +767,14 @@ public partial class ConveyorTransition : LeftRightDirectionTransitionType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class LeftRightDirectionTransitionType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues>>(0, "dir")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues> Direction
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "dir")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues> Direction { get; set; }
 
     
     
@@ -878,27 +804,17 @@ public partial class RippleTransition : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "dir")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    public StringValue Direction
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "dir")]
+    [SchemaIndex(0)]
+    public StringValue Direction { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the RippleTransition class.
@@ -931,9 +847,7 @@ public partial class HoneycombTransition : EmptyType
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the HoneycombTransition class.
@@ -962,9 +876,7 @@ public partial class FlashTransition : EmptyType
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the FlashTransition class.
@@ -1013,49 +925,31 @@ public partial class PrismTransition : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>(0, "dir"),
-		AttributeTag.Create<BooleanValue>(0, "isContent"),
-		AttributeTag.Create<BooleanValue>(0, "isInverted")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "dir")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction { get; set; }
     /// <summary>
     /// <para> isContent.</para>
     /// <para>Represents the following attribute in the schema: isContent </para>
     /// </summary>
-    public BooleanValue IsContent
-    {
-        get { return (BooleanValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "isContent")]
+    [SchemaIndex(1)]
+    public BooleanValue IsContent { get; set; }
     /// <summary>
     /// <para> isInverted.</para>
     /// <para>Represents the following attribute in the schema: isInverted </para>
     /// </summary>
-    public BooleanValue IsInverted
-    {
-        get { return (BooleanValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "isInverted")]
+    [SchemaIndex(2)]
+    public BooleanValue IsInverted { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the PrismTransition class.
@@ -1088,9 +982,7 @@ public partial class DoorsTransition : OrientationTransitionType
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the DoorsTransition class.
@@ -1119,9 +1011,7 @@ public partial class WindowTransition : OrientationTransitionType
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the WindowTransition class.
@@ -1140,22 +1030,14 @@ public partial class WindowTransition : OrientationTransitionType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OrientationTransitionType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>>(0, "dir")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> Transition Direction.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Direction
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "dir")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Direction { get; set; }
 
     
     
@@ -1185,38 +1067,24 @@ public partial class GlitterTransition : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>>(0, "dir"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues>>(0, "pattern")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "dir")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionSlideDirectionValues> Direction { get; set; }
     /// <summary>
     /// <para> pattern.</para>
     /// <para>Represents the following attribute in the schema: pattern </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues> Pattern
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues>)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "pattern")]
+    [SchemaIndex(1)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionPatternValues> Pattern { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the GlitterTransition class.
@@ -1249,27 +1117,17 @@ public partial class WarpTransition : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>(0, "dir")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Direction.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "dir")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the WarpTransition class.
@@ -1302,38 +1160,24 @@ public partial class FlythroughTransition : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>(0, "dir"),
-		AttributeTag.Create<BooleanValue>(0, "hasBounce")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "dir")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get; set; }
     /// <summary>
     /// <para> hasBounce.</para>
     /// <para>Represents the following attribute in the schema: hasBounce </para>
     /// </summary>
-    public BooleanValue HasBounce
-    {
-        get { return (BooleanValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "hasBounce")]
+    [SchemaIndex(1)]
+    public BooleanValue HasBounce { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the FlythroughTransition class.
@@ -1366,38 +1210,24 @@ public partial class ShredTransition : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues>>(0, "pattern"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>>(0, "dir")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> pattern.</para>
     /// <para>Represents the following attribute in the schema: pattern </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues> Pattern
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "pattern")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionShredPatternValues> Pattern { get; set; }
     /// <summary>
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues>)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "dir")]
+    [SchemaIndex(1)]
+    public EnumValue<DocumentFormat.OpenXml.Presentation.TransitionInOutDirectionValues> Direction { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ShredTransition class.
@@ -1430,38 +1260,24 @@ public partial class RevealTransition : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "thruBlk"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues>>(0, "dir")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> thruBlk.</para>
     /// <para>Represents the following attribute in the schema: thruBlk </para>
     /// </summary>
-    public BooleanValue ThroughBlack
-    {
-        get { return (BooleanValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "thruBlk")]
+    [SchemaIndex(0)]
+    public BooleanValue ThroughBlack { get; set; }
     /// <summary>
     /// <para> dir.</para>
     /// <para>Represents the following attribute in the schema: dir </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues> Direction
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues>)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "dir")]
+    [SchemaIndex(1)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.PowerPoint.TransitionLeftRightDirectionTypeValues> Direction { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the RevealTransition class.
@@ -1494,27 +1310,17 @@ public partial class WheelReverseTransition : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(0, "spokes")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Spokes.</para>
     /// <para>Represents the following attribute in the schema: spokes </para>
     /// </summary>
-    public UInt32Value Spokes
-    {
-        get { return (UInt32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "spokes")]
+    [SchemaIndex(0)]
+    public UInt32Value Spokes { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the WheelReverseTransition class.
@@ -1547,38 +1353,24 @@ public partial class BookmarkTarget : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(0, "spid"),
-		AttributeTag.Create<StringValue>(0, "bmkName")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> spid.</para>
     /// <para>Represents the following attribute in the schema: spid </para>
     /// </summary>
-    public UInt32Value ShapeId
-    {
-        get { return (UInt32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "spid")]
+    [SchemaIndex(0)]
+    public UInt32Value ShapeId { get; set; }
     /// <summary>
     /// <para> bmkName.</para>
     /// <para>Represents the following attribute in the schema: bmkName </para>
     /// </summary>
-    public StringValue BookmarkName
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "bmkName")]
+    [SchemaIndex(1)]
+    public StringValue BookmarkName { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BookmarkTarget class.
@@ -1618,9 +1410,7 @@ public partial class SectionProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -1697,9 +1487,7 @@ public partial class SectionList : OpenXmlCompositeElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -1769,27 +1557,17 @@ public partial class BrowseMode : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "showStatus")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> showStatus.</para>
     /// <para>Represents the following attribute in the schema: showStatus </para>
     /// </summary>
-    public BooleanValue ShowStatus
-    {
-        get { return (BooleanValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "showStatus")]
+    [SchemaIndex(0)]
+    public BooleanValue ShowStatus { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BrowseMode class.
@@ -1839,9 +1617,7 @@ public partial class LaserColor : OpenXmlCompositeElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -2007,27 +1783,17 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(0, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    public UInt32Value Val
-    {
-        get { return (UInt32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "val")]
+    [SchemaIndex(0)]
+    public UInt32Value Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the DefaultImageDpi class.
@@ -2060,27 +1826,17 @@ public partial class DiscardImageEditData : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    public BooleanValue Val
-    {
-        get { return (BooleanValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "val")]
+    [SchemaIndex(0)]
+    public BooleanValue Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the DiscardImageEditData class.
@@ -2113,27 +1869,17 @@ public partial class ShowMediaControls : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    public BooleanValue Val
-    {
-        get { return (BooleanValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "val")]
+    [SchemaIndex(0)]
+    public BooleanValue Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ShowMediaControls class.
@@ -2173,9 +1919,7 @@ public partial class LaserTraceList : OpenXmlCompositeElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -2245,9 +1989,7 @@ public partial class CreationId : RandomIdType
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the CreationId class.
@@ -2276,9 +2018,7 @@ public partial class ModificationId : RandomIdType
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the ModificationId class.
@@ -2297,22 +2037,14 @@ public partial class ModificationId : RandomIdType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class RandomIdType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(0, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    public UInt32Value Val
-    {
-        get { return (UInt32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "val")]
+    [SchemaIndex(0)]
+    public UInt32Value Val { get; set; }
 
     
     
@@ -2361,9 +2093,7 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -2555,71 +2285,45 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(0, "id"),
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<StringValue>(0, "descr"),
-		AttributeTag.Create<BooleanValue>(0, "hidden"),
-		AttributeTag.Create<StringValue>(0, "title")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    public UInt32Value Id
-    {
-        get { return (UInt32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "id")]
+    [SchemaIndex(0)]
+    public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    public StringValue Name
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "name")]
+    [SchemaIndex(1)]
+    public StringValue Name { get; set; }
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "descr")]
+    [SchemaIndex(2)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
-    public BooleanValue Hidden
-    {
-        get { return (BooleanValue)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(0, "hidden")]
+    [SchemaIndex(3)]
+    public BooleanValue Hidden { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
-    public StringValue Title
-    {
-        get { return (StringValue)Attributes[4].Value; }
-        set { Attributes[4].Value = value; }
-    }
-    
+    [SchemaAttr(0, "title")]
+    [SchemaIndex(4)]
+    public StringValue Title { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the NonVisualDrawingProperties class.
@@ -2746,27 +2450,17 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "isComment")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> isComment.</para>
     /// <para>Represents the following attribute in the schema: isComment </para>
     /// </summary>
-    public BooleanValue IsComment
-    {
-        get { return (BooleanValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "isComment")]
+    [SchemaIndex(0)]
+    public BooleanValue IsComment { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the NonVisualInkContentPartProperties class.
@@ -2890,38 +2584,24 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeEle
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<BooleanValue>(0, "isPhoto"),
-		AttributeTag.Create<BooleanValue>(0, "userDrawn")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Is a Photo Album.</para>
     /// <para>Represents the following attribute in the schema: isPhoto </para>
     /// </summary>
-    public BooleanValue IsPhoto
-    {
-        get { return (BooleanValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "isPhoto")]
+    [SchemaIndex(0)]
+    public BooleanValue IsPhoto { get; set; }
     /// <summary>
     /// <para> Is User Drawn.</para>
     /// <para>Represents the following attribute in the schema: userDrawn </para>
     /// </summary>
-    public BooleanValue UserDrawn
-    {
-        get { return (BooleanValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "userDrawn")]
+    [SchemaIndex(1)]
+    public BooleanValue UserDrawn { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ApplicationNonVisualDrawingProperties class.
@@ -3030,38 +2710,24 @@ public partial class MediaBookmark : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<StringValue>(0, "time")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    public StringValue Name
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "name")]
+    [SchemaIndex(0)]
+    public StringValue Name { get; set; }
     /// <summary>
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
-    public StringValue Time
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "time")]
+    [SchemaIndex(1)]
+    public StringValue Time { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the MediaBookmark class.
@@ -3094,38 +2760,24 @@ public partial class MediaTrim : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "st"),
-		AttributeTag.Create<StringValue>(0, "end")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> st.</para>
     /// <para>Represents the following attribute in the schema: st </para>
     /// </summary>
-    public StringValue Start
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "st")]
+    [SchemaIndex(0)]
+    public StringValue Start { get; set; }
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: end </para>
     /// </summary>
-    public StringValue End
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "end")]
+    [SchemaIndex(1)]
+    public StringValue End { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the MediaTrim class.
@@ -3158,38 +2810,24 @@ public partial class MediaFade : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "in"),
-		AttributeTag.Create<StringValue>(0, "out")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> in.</para>
     /// <para>Represents the following attribute in the schema: in </para>
     /// </summary>
-    public StringValue InDuration
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "in")]
+    [SchemaIndex(0)]
+    public StringValue InDuration { get; set; }
     /// <summary>
     /// <para> out.</para>
     /// <para>Represents the following attribute in the schema: out </para>
     /// </summary>
-    public StringValue OutDuration
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "out")]
+    [SchemaIndex(1)]
+    public StringValue OutDuration { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the MediaFade class.
@@ -3229,9 +2867,7 @@ public partial class MediaBookmarkList : OpenXmlCompositeElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -3308,9 +2944,7 @@ public partial class ExtensionList : OpenXmlCompositeElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -3387,49 +3021,31 @@ public partial class SectionOld : OpenXmlCompositeElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<ListValue<UInt32Value>>(0, "slideIdLst"),
-		AttributeTag.Create<StringValue>(0, "id")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    public StringValue Name
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "name")]
+    [SchemaIndex(0)]
+    public StringValue Name { get; set; }
     /// <summary>
     /// <para> slideIdLst.</para>
     /// <para>Represents the following attribute in the schema: slideIdLst </para>
     /// </summary>
-    public ListValue<UInt32Value> SlideIdList
-    {
-        get { return (ListValue<UInt32Value>)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "slideIdLst")]
+    [SchemaIndex(1)]
+    public ListValue<UInt32Value> SlideIdList { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "id")]
+    [SchemaIndex(2)]
+    public StringValue Id { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the SectionOld class.
@@ -3517,27 +3133,17 @@ public partial class SectionSlideIdListEntry : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(0, "id")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    public UInt32Value Id
-    {
-        get { return (UInt32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "id")]
+    [SchemaIndex(0)]
+    public UInt32Value Id { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the SectionSlideIdListEntry class.
@@ -3577,9 +3183,7 @@ public partial class SectionSlideIdList : OpenXmlCompositeElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -3658,38 +3262,24 @@ public partial class Section : OpenXmlCompositeElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<StringValue>(0, "id")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    public StringValue Name
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "name")]
+    [SchemaIndex(0)]
+    public StringValue Name { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "id")]
+    [SchemaIndex(1)]
+    public StringValue Id { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Section class.
@@ -3792,49 +3382,31 @@ public partial class TracePoint : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "t"),
-		AttributeTag.Create<Int64Value>(0, "x"),
-		AttributeTag.Create<Int64Value>(0, "y")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> t.</para>
     /// <para>Represents the following attribute in the schema: t </para>
     /// </summary>
-    public StringValue Time
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "t")]
+    [SchemaIndex(0)]
+    public StringValue Time { get; set; }
     /// <summary>
     /// <para> x.</para>
     /// <para>Represents the following attribute in the schema: x </para>
     /// </summary>
-    public Int64Value XCoordinate
-    {
-        get { return (Int64Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "x")]
+    [SchemaIndex(1)]
+    public Int64Value XCoordinate { get; set; }
     /// <summary>
     /// <para> y.</para>
     /// <para>Represents the following attribute in the schema: y </para>
     /// </summary>
-    public Int64Value YCoordinate
-    {
-        get { return (Int64Value)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "y")]
+    [SchemaIndex(2)]
+    public Int64Value YCoordinate { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the TracePoint class.
@@ -3874,9 +3446,7 @@ public partial class TracePointList : OpenXmlCompositeElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -3946,49 +3516,31 @@ public partial class TriggerEventRecord : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues>>(0, "type"),
-		AttributeTag.Create<StringValue>(0, "time"),
-		AttributeTag.Create<UInt32Value>(0, "objId")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues> Type
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "type")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Presentation.TriggerEventValues> Type { get; set; }
     /// <summary>
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
-    public StringValue Time
-    {
-        get { return (StringValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "time")]
+    [SchemaIndex(1)]
+    public StringValue Time { get; set; }
     /// <summary>
     /// <para> objId.</para>
     /// <para>Represents the following attribute in the schema: objId </para>
     /// </summary>
-    public UInt32Value ObjectId
-    {
-        get { return (UInt32Value)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "objId")]
+    [SchemaIndex(2)]
+    public UInt32Value ObjectId { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the TriggerEventRecord class.
@@ -4021,9 +3573,7 @@ public partial class PlayEventRecord : MediaPlaybackEventRecordType
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the PlayEventRecord class.
@@ -4052,9 +3602,7 @@ public partial class StopEventRecord : MediaPlaybackEventRecordType
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the StopEventRecord class.
@@ -4083,9 +3631,7 @@ public partial class PauseEventRecord : MediaPlaybackEventRecordType
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the PauseEventRecord class.
@@ -4114,9 +3660,7 @@ public partial class ResumeEventRecord : MediaPlaybackEventRecordType
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the ResumeEventRecord class.
@@ -4135,33 +3679,21 @@ public partial class ResumeEventRecord : MediaPlaybackEventRecordType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class MediaPlaybackEventRecordType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "time"),
-		AttributeTag.Create<UInt32Value>(0, "objId")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
-    public StringValue Time
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "time")]
+    [SchemaIndex(0)]
+    public StringValue Time { get; set; }
     /// <summary>
     /// <para> objId.</para>
     /// <para>Represents the following attribute in the schema: objId </para>
     /// </summary>
-    public UInt32Value ObjectId
-    {
-        get { return (UInt32Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "objId")]
+    [SchemaIndex(1)]
+    public UInt32Value ObjectId { get; set; }
 
     
     
@@ -4191,49 +3723,31 @@ public partial class SeekEventRecord : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "time"),
-		AttributeTag.Create<UInt32Value>(0, "objId"),
-		AttributeTag.Create<StringValue>(0, "seek")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
-    public StringValue Time
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "time")]
+    [SchemaIndex(0)]
+    public StringValue Time { get; set; }
     /// <summary>
     /// <para> objId.</para>
     /// <para>Represents the following attribute in the schema: objId </para>
     /// </summary>
-    public UInt32Value ObjectId
-    {
-        get { return (UInt32Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "objId")]
+    [SchemaIndex(1)]
+    public UInt32Value ObjectId { get; set; }
     /// <summary>
     /// <para> seek.</para>
     /// <para>Represents the following attribute in the schema: seek </para>
     /// </summary>
-    public StringValue Seek
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "seek")]
+    [SchemaIndex(2)]
+    public StringValue Seek { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the SeekEventRecord class.
@@ -4266,38 +3780,24 @@ public partial class NullEventRecord : OpenXmlLeafElement
     internal override byte NamespaceId => 49;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "time"),
-		AttributeTag.Create<UInt32Value>(0, "objId")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
-    public StringValue Time
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "time")]
+    [SchemaIndex(0)]
+    public StringValue Time { get; set; }
     /// <summary>
     /// <para> objId.</para>
     /// <para>Represents the following attribute in the schema: objId </para>
     /// </summary>
-    public UInt32Value ObjectId
-    {
-        get { return (UInt32Value)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "objId")]
+    [SchemaIndex(1)]
+    public UInt32Value ObjectId { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the NullEventRecord class.

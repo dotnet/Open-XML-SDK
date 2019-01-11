@@ -26,16 +26,9 @@ public partial class Script : OpenXmlLeafElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Value.</para>
@@ -43,12 +36,9 @@ public partial class Script : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.ScriptValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues> Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Script class.
@@ -81,16 +71,9 @@ public partial class Style : OpenXmlLeafElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.StyleValues>>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Value.</para>
@@ -98,12 +81,9 @@ public partial class Style : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Math.StyleValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.StyleValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.StyleValues> Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Style class.
@@ -211,9 +191,7 @@ public partial class Run : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -427,9 +405,7 @@ public partial class Accent : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -544,9 +520,7 @@ public partial class Bar : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -661,9 +635,7 @@ public partial class Box : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -778,9 +750,7 @@ public partial class BorderBox : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -895,9 +865,7 @@ public partial class Delimiter : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -1000,9 +968,7 @@ public partial class EquationArray : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -1107,9 +1073,7 @@ public partial class Fraction : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -1241,9 +1205,7 @@ public partial class MathFunction : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -1373,9 +1335,7 @@ public partial class GroupChar : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -1492,9 +1452,7 @@ public partial class LimitLower : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -1626,9 +1584,7 @@ public partial class LimitUpper : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -1758,9 +1714,7 @@ public partial class Matrix : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -1867,9 +1821,7 @@ public partial class Nary : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -2014,9 +1966,7 @@ public partial class Phantom : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -2133,9 +2083,7 @@ public partial class Radical : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -2269,9 +2217,7 @@ public partial class PreSubSuper : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -2418,9 +2364,7 @@ public partial class Subscript : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -2554,9 +2498,7 @@ public partial class SubSuperscript : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -2703,9 +2645,7 @@ public partial class Superscript : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -2899,9 +2839,7 @@ public partial class Paragraph : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -3208,9 +3146,7 @@ public partial class OfficeMath : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -3482,9 +3418,7 @@ public partial class MathProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -3752,9 +3686,7 @@ public partial class Literal : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Literal class.
@@ -3783,9 +3715,7 @@ public partial class NormalText : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the NormalText class.
@@ -3814,9 +3744,7 @@ public partial class Alignment : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Alignment class.
@@ -3845,9 +3773,7 @@ public partial class OperatorEmulator : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the OperatorEmulator class.
@@ -3876,9 +3802,7 @@ public partial class NoBreak : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the NoBreak class.
@@ -3907,9 +3831,7 @@ public partial class Differential : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Differential class.
@@ -3938,9 +3860,7 @@ public partial class HideTop : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HideTop class.
@@ -3969,9 +3889,7 @@ public partial class HideBottom : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HideBottom class.
@@ -4000,9 +3918,7 @@ public partial class HideLeft : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HideLeft class.
@@ -4031,9 +3947,7 @@ public partial class HideRight : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HideRight class.
@@ -4062,9 +3976,7 @@ public partial class StrikeHorizontal : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the StrikeHorizontal class.
@@ -4093,9 +4005,7 @@ public partial class StrikeVertical : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the StrikeVertical class.
@@ -4124,9 +4034,7 @@ public partial class StrikeBottomLeftToTopRight : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the StrikeBottomLeftToTopRight class.
@@ -4155,9 +4063,7 @@ public partial class StrikeTopLeftToBottomRight : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the StrikeTopLeftToBottomRight class.
@@ -4186,9 +4092,7 @@ public partial class GrowOperators : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the GrowOperators class.
@@ -4217,9 +4121,7 @@ public partial class MaxDistribution : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the MaxDistribution class.
@@ -4248,9 +4150,7 @@ public partial class ObjectDistribution : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ObjectDistribution class.
@@ -4279,9 +4179,7 @@ public partial class HidePlaceholder : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HidePlaceholder class.
@@ -4310,9 +4208,7 @@ public partial class HideSubArgument : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HideSubArgument class.
@@ -4341,9 +4237,7 @@ public partial class HideSuperArgument : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HideSuperArgument class.
@@ -4372,9 +4266,7 @@ public partial class ShowPhantom : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ShowPhantom class.
@@ -4403,9 +4295,7 @@ public partial class ZeroWidth : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ZeroWidth class.
@@ -4434,9 +4324,7 @@ public partial class ZeroAscent : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ZeroAscent class.
@@ -4465,9 +4353,7 @@ public partial class ZeroDescent : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ZeroDescent class.
@@ -4496,9 +4382,7 @@ public partial class Transparent : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Transparent class.
@@ -4527,9 +4411,7 @@ public partial class HideDegree : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the HideDegree class.
@@ -4558,9 +4440,7 @@ public partial class AlignScripts : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AlignScripts class.
@@ -4589,9 +4469,7 @@ public partial class SmallFraction : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the SmallFraction class.
@@ -4620,9 +4498,7 @@ public partial class DisplayDefaults : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DisplayDefaults class.
@@ -4651,9 +4527,7 @@ public partial class WrapRight : OnOffType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the WrapRight class.
@@ -4672,24 +4546,16 @@ public partial class WrapRight : OnOffType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OnOffType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.BooleanValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues> Val { get; set; }
 
     
     
@@ -4719,17 +4585,9 @@ public partial class Break : OpenXmlLeafElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<IntegerValue>(21, "alnAt"),
-		AttributeTag.Create<IntegerValue>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Index of Operator to Align To.</para>
@@ -4737,24 +4595,18 @@ public partial class Break : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public IntegerValue AlignAt
-    {
-        get { return (IntegerValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "alnAt")]
+    [SchemaIndex(0)]
+    public IntegerValue AlignAt { get; set; }
     /// <summary>
     /// <para> Index of Operator to Align To.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public IntegerValue Val
-    {
-        get { return (IntegerValue)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(1)]
+    public IntegerValue Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Break class.
@@ -4804,9 +4656,7 @@ public partial class RunProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -4912,16 +4762,9 @@ public partial class Text : OpenXmlLeafTextElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>>(1, "space")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> space.</para>
@@ -4929,12 +4772,9 @@ public partial class Text : OpenXmlLeafTextElement
     /// </summary>
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(1, "space")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Text class.
@@ -4980,9 +4820,7 @@ public partial class AccentChar : CharType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the AccentChar class.
@@ -5011,9 +4849,7 @@ public partial class BeginChar : CharType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the BeginChar class.
@@ -5042,9 +4878,7 @@ public partial class SeparatorChar : CharType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the SeparatorChar class.
@@ -5073,9 +4907,7 @@ public partial class EndChar : CharType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the EndChar class.
@@ -5094,24 +4926,16 @@ public partial class EndChar : CharType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class CharType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public StringValue Val
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public StringValue Val { get; set; }
 
     
     
@@ -5156,9 +4980,7 @@ public partial class ControlProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -5249,9 +5071,7 @@ public partial class AccentProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -5420,9 +5240,7 @@ public partial class Base : OfficeMathArgumentType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Base class.
@@ -5539,9 +5357,7 @@ public partial class Numerator : OfficeMathArgumentType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Numerator class.
@@ -5658,9 +5474,7 @@ public partial class Denominator : OfficeMathArgumentType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Denominator class.
@@ -5777,9 +5591,7 @@ public partial class FunctionName : OfficeMathArgumentType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the FunctionName class.
@@ -5896,9 +5708,7 @@ public partial class Limit : OfficeMathArgumentType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Limit class.
@@ -6015,9 +5825,7 @@ public partial class SubArgument : OfficeMathArgumentType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the SubArgument class.
@@ -6134,9 +5942,7 @@ public partial class SuperArgument : OfficeMathArgumentType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the SuperArgument class.
@@ -6253,9 +6059,7 @@ public partial class Degree : OfficeMathArgumentType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Degree class.
@@ -6676,9 +6480,7 @@ public partial class Position : TopBottomType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Position class.
@@ -6707,9 +6509,7 @@ public partial class VerticalJustification : TopBottomType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the VerticalJustification class.
@@ -6728,24 +6528,16 @@ public partial class VerticalJustification : TopBottomType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class TopBottomType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues> Val { get; set; }
 
     
     
@@ -6784,9 +6576,7 @@ public partial class BarProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -6909,9 +6699,7 @@ public partial class BoxProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -7100,9 +6888,7 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -7313,16 +7099,9 @@ public partial class Shape : OpenXmlLeafElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Value.</para>
@@ -7330,12 +7109,9 @@ public partial class Shape : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues> Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Shape class.
@@ -7385,9 +7161,7 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -7553,16 +7327,9 @@ public partial class BaseJustification : OpenXmlLeafElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Value.</para>
@@ -7570,12 +7337,9 @@ public partial class BaseJustification : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues> Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BaseJustification class.
@@ -7608,9 +7372,7 @@ public partial class RowSpacingRule : SpacingRuleType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the RowSpacingRule class.
@@ -7639,9 +7401,7 @@ public partial class ColumnGapRule : SpacingRuleType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ColumnGapRule class.
@@ -7660,24 +7420,16 @@ public partial class ColumnGapRule : SpacingRuleType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class SpacingRuleType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<IntegerValue>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public IntegerValue Val
-    {
-        get { return (IntegerValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public IntegerValue Val { get; set; }
 
     
     
@@ -7707,9 +7459,7 @@ public partial class RowSpacing : UnsignedShortType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the RowSpacing class.
@@ -7738,9 +7488,7 @@ public partial class ColumnGap : UnsignedShortType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ColumnGap class.
@@ -7759,24 +7507,16 @@ public partial class ColumnGap : UnsignedShortType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class UnsignedShortType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt16Value>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public UInt16Value Val
-    {
-        get { return (UInt16Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public UInt16Value Val { get; set; }
 
     
     
@@ -7823,9 +7563,7 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -7991,16 +7729,9 @@ public partial class FractionType : OpenXmlLeafElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Value.</para>
@@ -8008,12 +7739,9 @@ public partial class FractionType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues> Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the FractionType class.
@@ -8055,9 +7783,7 @@ public partial class FractionProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -8170,9 +7896,7 @@ public partial class FunctionProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -8276,9 +8000,7 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -8421,9 +8143,7 @@ public partial class LimitLowerProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -8521,9 +8241,7 @@ public partial class LimitUpperProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -8614,16 +8332,9 @@ public partial class MatrixColumnCount : OpenXmlLeafElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<IntegerValue>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
@@ -8631,12 +8342,9 @@ public partial class MatrixColumnCount : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public IntegerValue Val
-    {
-        get { return (IntegerValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public IntegerValue Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the MatrixColumnCount class.
@@ -8669,16 +8377,9 @@ public partial class MatrixColumnJustification : OpenXmlLeafElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Value.</para>
@@ -8686,12 +8387,9 @@ public partial class MatrixColumnJustification : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues> Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the MatrixColumnJustification class.
@@ -8733,9 +8431,7 @@ public partial class MatrixColumnProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -8848,9 +8544,7 @@ public partial class MatrixColumn : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -8941,9 +8635,7 @@ public partial class ColumnSpacing : TwipsMeasureType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the ColumnSpacing class.
@@ -8972,9 +8664,7 @@ public partial class LeftMargin : TwipsMeasureType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the LeftMargin class.
@@ -9003,9 +8693,7 @@ public partial class RightMargin : TwipsMeasureType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the RightMargin class.
@@ -9034,9 +8722,7 @@ public partial class PreSpacing : TwipsMeasureType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the PreSpacing class.
@@ -9065,9 +8751,7 @@ public partial class PostSpacing : TwipsMeasureType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the PostSpacing class.
@@ -9096,9 +8780,7 @@ public partial class InterSpacing : TwipsMeasureType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the InterSpacing class.
@@ -9127,9 +8809,7 @@ public partial class IntraSpacing : TwipsMeasureType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the IntraSpacing class.
@@ -9158,9 +8838,7 @@ public partial class WrapIndent : TwipsMeasureType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the WrapIndent class.
@@ -9179,24 +8857,16 @@ public partial class WrapIndent : TwipsMeasureType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class TwipsMeasureType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<UInt32Value>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public UInt32Value Val
-    {
-        get { return (UInt32Value)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public UInt32Value Val { get; set; }
 
     
     
@@ -9233,9 +8903,7 @@ public partial class MatrixColumns : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -9328,9 +8996,7 @@ public partial class MatrixProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -9548,9 +9214,7 @@ public partial class MatrixRow : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -9620,9 +9284,7 @@ public partial class LimitLocation : LimitLocationType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the LimitLocation class.
@@ -9651,9 +9313,7 @@ public partial class IntegralLimitLocation : LimitLocationType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the IntegralLimitLocation class.
@@ -9682,9 +9342,7 @@ public partial class NaryLimitLocation : LimitLocationType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the NaryLimitLocation class.
@@ -9703,24 +9361,16 @@ public partial class NaryLimitLocation : LimitLocationType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class LimitLocationType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues> Val { get; set; }
 
     
     
@@ -9767,9 +9417,7 @@ public partial class NaryProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -9952,9 +9600,7 @@ public partial class PhantomProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -10129,9 +9775,7 @@ public partial class RadicalProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -10244,9 +9888,7 @@ public partial class PreSubSuperProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -10344,9 +9986,7 @@ public partial class SubscriptProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -10446,9 +10086,7 @@ public partial class SubSuperscriptProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -10561,9 +10199,7 @@ public partial class SuperscriptProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -10654,16 +10290,9 @@ public partial class ArgumentSize : OpenXmlLeafElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<IntegerValue>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Value.</para>
@@ -10671,12 +10300,9 @@ public partial class ArgumentSize : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public IntegerValue Val
-    {
-        get { return (IntegerValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public IntegerValue Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ArgumentSize class.
@@ -10716,9 +10342,7 @@ public partial class ArgumentProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -10809,9 +10433,7 @@ public partial class Justification : OfficeMathJustificationType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the Justification class.
@@ -10840,9 +10462,7 @@ public partial class DefaultJustification : OfficeMathJustificationType
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the DefaultJustification class.
@@ -10861,24 +10481,16 @@ public partial class DefaultJustification : OfficeMathJustificationType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OfficeMathJustificationType : OpenXmlLeafElement
 {
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-    
+        
         /// <summary>
     /// <para> Value.</para>
     /// <para>Represents the following attribute in the schema: m:val </para>
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.JustificationValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues> Val { get; set; }
 
     
     
@@ -10908,16 +10520,9 @@ public partial class MathFont : OpenXmlLeafElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> val.</para>
@@ -10925,12 +10530,9 @@ public partial class MathFont : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public StringValue Val
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public StringValue Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the MathFont class.
@@ -10963,16 +10565,9 @@ public partial class BreakBinary : OpenXmlLeafElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Value.</para>
@@ -10980,12 +10575,9 @@ public partial class BreakBinary : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues> Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BreakBinary class.
@@ -11018,16 +10610,9 @@ public partial class BreakBinarySubtraction : OpenXmlLeafElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>>(21, "val")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Value.</para>
@@ -11035,12 +10620,9 @@ public partial class BreakBinarySubtraction : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
-    public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues> Val
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues>)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(21, "val")]
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues> Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BreakBinarySubtraction class.
@@ -11080,9 +10662,7 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     internal override byte NamespaceId => 21;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     

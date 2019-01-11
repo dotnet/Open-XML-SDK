@@ -32,9 +32,7 @@ public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
     internal override byte NamespaceId => 8;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -104,60 +102,38 @@ public partial class Characteristic : OpenXmlLeafElement
     internal override byte NamespaceId => 8;
     
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
+
     
-
-        private static readonly ReadOnlyArray<AttributeTag> s_attributeTags = new []
-	{
-		AttributeTag.Create<StringValue>(0, "name"),
-		AttributeTag.Create<EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues>>(0, "relation"),
-		AttributeTag.Create<StringValue>(0, "val"),
-		AttributeTag.Create<StringValue>(0, "vocabulary")
-	};
-    internal override AttributeTagCollection RawAttributes { get; } = new AttributeTagCollection(s_attributeTags);
-
     
         /// <summary>
     /// <para> Name of Characteristic.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    public StringValue Name
-    {
-        get { return (StringValue)Attributes[0].Value; }
-        set { Attributes[0].Value = value; }
-    }
-    
+    [SchemaAttr(0, "name")]
+    [SchemaIndex(0)]
+    public StringValue Name { get; set; }
     /// <summary>
     /// <para> Relationship of Value to Name.</para>
     /// <para>Represents the following attribute in the schema: relation </para>
     /// </summary>
-    public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues> Relation
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues>)Attributes[1].Value; }
-        set { Attributes[1].Value = value; }
-    }
-    
+    [SchemaAttr(0, "relation")]
+    [SchemaIndex(1)]
+    public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues> Relation { get; set; }
     /// <summary>
     /// <para> Characteristic Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    public StringValue Val
-    {
-        get { return (StringValue)Attributes[2].Value; }
-        set { Attributes[2].Value = value; }
-    }
-    
+    [SchemaAttr(0, "val")]
+    [SchemaIndex(2)]
+    public StringValue Val { get; set; }
     /// <summary>
     /// <para> Characteristic Grammar.</para>
     /// <para>Represents the following attribute in the schema: vocabulary </para>
     /// </summary>
-    public StringValue Vocabulary
-    {
-        get { return (StringValue)Attributes[3].Value; }
-        set { Attributes[3].Value = value; }
-    }
-    
+    [SchemaAttr(0, "vocabulary")]
+    [SchemaIndex(3)]
+    public StringValue Vocabulary { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Characteristic class.
