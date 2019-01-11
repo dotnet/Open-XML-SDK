@@ -16,8 +16,7 @@ namespace DocumentFormat.OpenXml
         private static readonly System.Runtime.CompilerServices.ConditionalWeakTable<Type, Func<TProperty>> _activatorCache = new System.Runtime.CompilerServices.ConditionalWeakTable<Type, Func<TProperty>>();
 #endif
 
-        private readonly PropertyInfo _property;
-
+        private PropertyInfo _property;
         private Func<TInstance, TProperty> _getter;
         private Action<TInstance, TProperty> _setter;
         private Func<TProperty> _activator;
@@ -36,6 +35,7 @@ namespace DocumentFormat.OpenXml
                     if (_getter is null)
                     {
                         _getter = CreateGetter(_property);
+                        CleanUp();
                     }
                 }
             }
@@ -52,6 +52,7 @@ namespace DocumentFormat.OpenXml
                     if (_setter is null)
                     {
                         _setter = CreateSetter(_property);
+                        CleanUp();
                     }
                 }
             }
@@ -68,11 +69,23 @@ namespace DocumentFormat.OpenXml
                     if (_activator is null)
                     {
                         _activator = _activatorCache.GetValue(_property.PropertyType, CreateActivator);
+                        CleanUp();
                     }
                 }
             }
 
             return _activator();
+        }
+
+        /// <summary>
+        /// Once all delegates are created, we do not need to continue to hold onto <see cref="_property"/>
+        /// </summary>
+        private void CleanUp()
+        {
+            if(_getter is null && _setter is null && _activator is null)
+            {
+                _property = null;
+            }
         }
 
         private static Func<TInstance, TProperty> CreateGetter(PropertyInfo property)
