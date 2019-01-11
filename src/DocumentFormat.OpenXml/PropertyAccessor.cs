@@ -2,21 +2,19 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-
-#if FEATURE_NO_CONDITIONAL_WEAK_TABLE
-using TagLookup = DocumentFormat.OpenXml.LockingDictionary<System.Type, DocumentFormat.OpenXml.AttributeTag[]>;
-#else
-#endif
 
 namespace DocumentFormat.OpenXml
 {
     internal class PropertyAccessor<TInstance, TProperty>
     {
-        private static readonly Dictionary<Type, Func<TProperty>> _activatorCache = new Dictionary<Type, Func<TProperty>>();
+#if FEATURE_NO_CONDITIONAL_WEAK_TABLE
+        private static readonly LockingDictionary<Type, Func<TProperty>> _activatorCache = new LockingDictionary<Type, Func<TProperty>>();
+#else
+        private static readonly System.Runtime.CompilerServices.ConditionalWeakTable<Type, Func<TProperty>> _activatorCache = new System.Runtime.CompilerServices.ConditionalWeakTable<Type, Func<TProperty>>();
+#endif
 
         private readonly PropertyInfo _property;
 
@@ -69,7 +67,7 @@ namespace DocumentFormat.OpenXml
                 {
                     if (_activator is null)
                     {
-                        _activator = CreateActivator(_property.PropertyType);
+                        _activator = _activatorCache.GetValue(typeof(TProperty), CreateActivator);
                     }
                 }
             }
@@ -85,18 +83,11 @@ namespace DocumentFormat.OpenXml
             var method = property.GetGetMethod();
 #endif
 
-            var isValueType = property.DeclaringType.GetTypeInfo().IsValueType;
             var instance = Expression.Parameter(typeof(TInstance), "instance");
-            var instanceCast = !isValueType ?
-                Expression.TypeAs(instance, property.DeclaringType) :
-                Expression.Convert(instance, property.DeclaringType);
+            var instanceCast = Expression.Convert(instance, property.DeclaringType);
+            var result = Expression.Convert(Expression.Call(instanceCast, method), typeof(TProperty));
 
-            return Expression.Lambda<Func<TInstance, TProperty>>(
-                Expression.TypeAs(
-                    Expression.Call(instanceCast, method),
-                    typeof(TProperty)),
-                instance)
-                .Compile();
+            return Expression.Lambda<Func<TInstance, TProperty>>(result, instance).Compile();
         }
 
         private static Action<TInstance, TProperty> CreateSetter(PropertyInfo property)
@@ -113,38 +104,25 @@ namespace DocumentFormat.OpenXml
             var param = Expression.Parameter(typeof(TProperty), "value");
             var paramCast = Expression.Convert(param, property.PropertyType);
 
-            return Expression.Lambda<Action<TInstance, TProperty>>(
-                Expression.Call(instanceCast, method, paramCast),
-                instance, param).Compile();
+            var result = Expression.Call(instanceCast, method, paramCast);
+
+            return Expression.Lambda<Action<TInstance, TProperty>>(result, instance, param).Compile();
         }
 
         private static Func<TProperty> CreateActivator(Type type)
         {
-            if (!_activatorCache.TryGetValue(type, out var activator))
-            {
-                lock (_activatorCache)
-                {
-                    if (!_activatorCache.TryGetValue(type, out activator))
-                    {
 #if NETSTANDARD1_3
-                        var constructor = type.GetTypeInfo().DeclaredConstructors.FirstOrDefault(c => !c.GetParameters().Any());
+            var constructor = type.GetTypeInfo().DeclaredConstructors.FirstOrDefault(c => !c.GetParameters().Any());
 #else
-                        var constructor = type.GetConstructor(Type.EmptyTypes);
+            var constructor = type.GetConstructor(Type.EmptyTypes);
 #endif
 
-                        if (constructor is null)
-                        {
-                            throw new ArgumentOutOfRangeException(nameof(type));
-                        }
-
-                        activator = Expression.Lambda<Func<TProperty>>(Expression.New(constructor)).Compile();
-
-                        _activatorCache.Add(type, activator);
-                    }
-                }
+            if (constructor is null)
+            {
+                throw new ArgumentOutOfRangeException(nameof(type));
             }
 
-            return activator;
+            return Expression.Lambda<Func<TProperty>>(Expression.New(constructor)).Compile();
         }
     }
 }
