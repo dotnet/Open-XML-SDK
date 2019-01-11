@@ -4,9 +4,6 @@
 using System;
 using System.Diagnostics;
 
-// See https://github.com/dotnet/roslyn-analyzers/issues/1671
-#pragma warning disable CA1036
-
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
