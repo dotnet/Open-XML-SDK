@@ -68,7 +68,6 @@ namespace DocumentFormat.OpenXml.Benchmarks
                 // Frameworks to run against
 #if NET46
                 Add(Job.Default.With(Runtime.Clr).WithId("net46"));
-                Add(Job.Default.With(Runtime.Mono).WithId("mono"));
 #else
                 Add(Job.Default.With(Runtime.Core));
 #endif
