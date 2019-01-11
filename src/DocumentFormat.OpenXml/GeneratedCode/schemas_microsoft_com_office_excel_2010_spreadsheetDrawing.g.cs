@@ -36,10 +36,13 @@ public partial class ContentPart : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13076;
     /// <inheritdoc/>
     public override string LocalName => "contentPart";
+    
     internal override byte NamespaceId => 54;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
+    
     
         /// <summary>
     /// <para> id.</para>
@@ -48,28 +51,30 @@ public partial class ContentPart : OpenXmlCompositeElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-	[SchemaIndex(0)]
-    public StringValue RelationshipId { get; set;}
+    [SchemaIndex(0)]
+    public StringValue RelationshipId { get; set; }
     /// <summary>
     /// <para> bwMode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
     [SchemaAttr(0, "bwMode")]
-	[SchemaIndex(1)]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set;}
+    [SchemaIndex(1)]
+    public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ContentPart class.
     /// </summary>
     public ContentPart():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the ContentPart class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ContentPart(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the ContentPart class with the specified child elements.
     /// </summary>
@@ -77,6 +82,7 @@ public partial class ContentPart : OpenXmlCompositeElement
     public ContentPart(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the ContentPart class from outer XML.
     /// </summary>
@@ -85,28 +91,36 @@ public partial class ContentPart : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 54 == namespaceId && "nvContentPartPr" == name)
     return new ExcelNonVisualContentPartShapeProperties();
+    
 if( 54 == namespaceId && "nvPr" == name)
     return new ApplicationNonVisualDrawingProperties();
+    
 if( 54 == namespaceId && "xfrm" == name)
     return new Transform2D();
+    
 if( 54 == namespaceId && "extLst" == name)
     return new OfficeArtExtensionList();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "nvContentPartPr","nvPr","xfrm","extLst" };
     private static readonly byte[] eleNamespaceIds = { 54,54,54,54 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> ExcelNonVisualContentPartShapeProperties.</para>
     /// <para> Represents the following element tag in the schema: xdr14:nvContentPartPr </para>
@@ -185,59 +199,64 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13077;
     /// <inheritdoc/>
     public override string LocalName => "cNvPr";
+    
     internal override byte NamespaceId => 54;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
+    
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-	[SchemaIndex(0)]
-    public UInt32Value Id { get; set;}
+    [SchemaIndex(0)]
+    public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-	[SchemaIndex(1)]
-    public StringValue Name { get; set;}
+    [SchemaIndex(1)]
+    public StringValue Name { get; set; }
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
     [SchemaAttr(0, "descr")]
-	[SchemaIndex(2)]
-    public StringValue Description { get; set;}
+    [SchemaIndex(2)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
     [SchemaAttr(0, "hidden")]
-	[SchemaIndex(3)]
-    public BooleanValue Hidden { get; set;}
+    [SchemaIndex(3)]
+    public BooleanValue Hidden { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
     [SchemaAttr(0, "title")]
-	[SchemaIndex(4)]
-    public StringValue Title { get; set;}
+    [SchemaIndex(4)]
+    public StringValue Title { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the NonVisualDrawingProperties class.
     /// </summary>
     public NonVisualDrawingProperties():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the NonVisualDrawingProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NonVisualDrawingProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the NonVisualDrawingProperties class with the specified child elements.
     /// </summary>
@@ -245,6 +264,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     public NonVisualDrawingProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the NonVisualDrawingProperties class from outer XML.
     /// </summary>
@@ -253,26 +273,33 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 10 == namespaceId && "hlinkClick" == name)
     return new DocumentFormat.OpenXml.Drawing.HyperlinkOnClick();
+    
 if( 10 == namespaceId && "hlinkHover" == name)
     return new DocumentFormat.OpenXml.Drawing.HyperlinkOnHover();
+    
 if( 10 == namespaceId && "extLst" == name)
     return new DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "hlinkClick","hlinkHover","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> HyperlinkOnClick.</para>
     /// <para> Represents the following element tag in the schema: a:hlinkClick </para>
@@ -337,31 +364,36 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13078;
     /// <inheritdoc/>
     public override string LocalName => "cNvContentPartPr";
+    
     internal override byte NamespaceId => 54;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
+    
     
         /// <summary>
     /// <para> isComment.</para>
     /// <para>Represents the following attribute in the schema: isComment </para>
     /// </summary>
     [SchemaAttr(0, "isComment")]
-	[SchemaIndex(0)]
-    public BooleanValue IsComment { get; set;}
+    [SchemaIndex(0)]
+    public BooleanValue IsComment { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the NonVisualInkContentPartProperties class.
     /// </summary>
     public NonVisualInkContentPartProperties():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the NonVisualInkContentPartProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NonVisualInkContentPartProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the NonVisualInkContentPartProperties class with the specified child elements.
     /// </summary>
@@ -369,6 +401,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     public NonVisualInkContentPartProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the NonVisualInkContentPartProperties class from outer XML.
     /// </summary>
@@ -377,24 +410,30 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 48 == namespaceId && "cpLocks" == name)
     return new DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks();
+    
 if( 48 == namespaceId && "extLst" == name)
     return new DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "cpLocks","extLst" };
     private static readonly byte[] eleNamespaceIds = { 48,48 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> ContentPartLocks.</para>
     /// <para> Represents the following element tag in the schema: a14:cpLocks </para>
@@ -447,24 +486,29 @@ public partial class ExcelNonVisualContentPartShapeProperties : OpenXmlComposite
     internal const int ElementTypeIdConst = 13079;
     /// <inheritdoc/>
     public override string LocalName => "nvContentPartPr";
+    
     internal override byte NamespaceId => 54;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the ExcelNonVisualContentPartShapeProperties class.
     /// </summary>
     public ExcelNonVisualContentPartShapeProperties():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the ExcelNonVisualContentPartShapeProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ExcelNonVisualContentPartShapeProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the ExcelNonVisualContentPartShapeProperties class with the specified child elements.
     /// </summary>
@@ -472,6 +516,7 @@ public partial class ExcelNonVisualContentPartShapeProperties : OpenXmlComposite
     public ExcelNonVisualContentPartShapeProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the ExcelNonVisualContentPartShapeProperties class from outer XML.
     /// </summary>
@@ -480,24 +525,30 @@ public partial class ExcelNonVisualContentPartShapeProperties : OpenXmlComposite
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 54 == namespaceId && "cNvPr" == name)
     return new NonVisualDrawingProperties();
+    
 if( 54 == namespaceId && "cNvContentPartPr" == name)
     return new NonVisualInkContentPartProperties();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "cNvPr","cNvContentPartPr" };
     private static readonly byte[] eleNamespaceIds = { 54,54 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
     /// <para> Represents the following element tag in the schema: xdr14:cNvPr </para>
@@ -541,31 +592,36 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13080;
     /// <inheritdoc/>
     public override string LocalName => "nvPr";
+    
     internal override byte NamespaceId => 54;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
+    
     
         /// <summary>
     /// <para> macro.</para>
     /// <para>Represents the following attribute in the schema: macro </para>
     /// </summary>
     [SchemaAttr(0, "macro")]
-	[SchemaIndex(0)]
-    public StringValue Macro { get; set;}
+    [SchemaIndex(0)]
+    public StringValue Macro { get; set; }
     /// <summary>
     /// <para> fPublished.</para>
     /// <para>Represents the following attribute in the schema: fPublished </para>
     /// </summary>
     [SchemaAttr(0, "fPublished")]
-	[SchemaIndex(1)]
-    public BooleanValue PublishedFlag { get; set;}
+    [SchemaIndex(1)]
+    public BooleanValue PublishedFlag { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ApplicationNonVisualDrawingProperties class.
     /// </summary>
     public ApplicationNonVisualDrawingProperties():base(){}
     
+      
+     
     
     
     
@@ -595,45 +651,50 @@ public partial class Transform2D : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13081;
     /// <inheritdoc/>
     public override string LocalName => "xfrm";
+    
     internal override byte NamespaceId => 54;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
+    
     
         /// <summary>
     /// <para> Rotation.</para>
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
     [SchemaAttr(0, "rot")]
-	[SchemaIndex(0)]
-    public Int32Value Rotation { get; set;}
+    [SchemaIndex(0)]
+    public Int32Value Rotation { get; set; }
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
     /// </summary>
     [SchemaAttr(0, "flipH")]
-	[SchemaIndex(1)]
-    public BooleanValue HorizontalFlip { get; set;}
+    [SchemaIndex(1)]
+    public BooleanValue HorizontalFlip { get; set; }
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
     /// </summary>
     [SchemaAttr(0, "flipV")]
-	[SchemaIndex(2)]
-    public BooleanValue VerticalFlip { get; set;}
+    [SchemaIndex(2)]
+    public BooleanValue VerticalFlip { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Transform2D class.
     /// </summary>
     public Transform2D():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the Transform2D class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Transform2D(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Transform2D class with the specified child elements.
     /// </summary>
@@ -641,6 +702,7 @@ public partial class Transform2D : OpenXmlCompositeElement
     public Transform2D(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Transform2D class from outer XML.
     /// </summary>
@@ -649,24 +711,30 @@ public partial class Transform2D : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 10 == namespaceId && "off" == name)
     return new DocumentFormat.OpenXml.Drawing.Offset();
+    
 if( 10 == namespaceId && "ext" == name)
     return new DocumentFormat.OpenXml.Drawing.Extents();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "off","ext" };
     private static readonly byte[] eleNamespaceIds = { 10,10 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> Offset.</para>
     /// <para> Represents the following element tag in the schema: a:off </para>
@@ -717,24 +785,29 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13082;
     /// <inheritdoc/>
     public override string LocalName => "extLst";
+    
     internal override byte NamespaceId => 54;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class.
     /// </summary>
     public OfficeArtExtensionList():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public OfficeArtExtensionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
@@ -742,6 +815,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     public OfficeArtExtensionList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class from outer XML.
     /// </summary>
@@ -750,13 +824,15 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 10 == namespaceId && "ext" == name)
     return new DocumentFormat.OpenXml.Drawing.Extension();
+    
 
     return null;
 }
@@ -767,3 +843,5 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 }
 }
+ 
+ 

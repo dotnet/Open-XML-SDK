@@ -22,10 +22,13 @@ public partial class Color : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13334;
     /// <inheritdoc/>
     public override string LocalName => "color";
+    
     internal override byte NamespaceId => 69;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
+    
     
         /// <summary>
     /// <para> Run Content Color.</para>
@@ -34,8 +37,8 @@ public partial class Color : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-	[SchemaIndex(0)]
-    public StringValue Val { get; set;}
+    [SchemaIndex(0)]
+    public StringValue Val { get; set; }
     /// <summary>
     /// <para> Run Content Theme Color.</para>
     /// <para>Represents the following attribute in the schema: w:themeColor </para>
@@ -43,8 +46,8 @@ public partial class Color : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeColor")]
-	[SchemaIndex(1)]
-    public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get; set;}
+    [SchemaIndex(1)]
+    public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get; set; }
     /// <summary>
     /// <para> Run Content Theme Color Tint.</para>
     /// <para>Represents the following attribute in the schema: w:themeTint </para>
@@ -52,8 +55,8 @@ public partial class Color : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeTint")]
-	[SchemaIndex(2)]
-    public StringValue ThemeTint { get; set;}
+    [SchemaIndex(2)]
+    public StringValue ThemeTint { get; set; }
     /// <summary>
     /// <para> Run Content Theme Color Shade.</para>
     /// <para>Represents the following attribute in the schema: w:themeShade </para>
@@ -61,14 +64,16 @@ public partial class Color : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeShade")]
-	[SchemaIndex(3)]
-    public StringValue ThemeShade { get; set;}
+    [SchemaIndex(3)]
+    public StringValue ThemeShade { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Color class.
     /// </summary>
     public Color():base(){}
     
+      
+     
     
     
     
@@ -89,10 +94,13 @@ public partial class DataBinding : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13335;
     /// <inheritdoc/>
     public override string LocalName => "dataBinding";
+    
     internal override byte NamespaceId => 69;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
+    
     
         /// <summary>
     /// <para> XML Namespace Prefix Mappings.</para>
@@ -101,8 +109,8 @@ public partial class DataBinding : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "prefixMappings")]
-	[SchemaIndex(0)]
-    public StringValue PrefixMappings { get; set;}
+    [SchemaIndex(0)]
+    public StringValue PrefixMappings { get; set; }
     /// <summary>
     /// <para> XPath.</para>
     /// <para>Represents the following attribute in the schema: w:xpath </para>
@@ -110,8 +118,8 @@ public partial class DataBinding : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "xpath")]
-	[SchemaIndex(1)]
-    public StringValue XPath { get; set;}
+    [SchemaIndex(1)]
+    public StringValue XPath { get; set; }
     /// <summary>
     /// <para> Custom XML Data Storage ID.</para>
     /// <para>Represents the following attribute in the schema: w:storeItemID </para>
@@ -119,14 +127,16 @@ public partial class DataBinding : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "storeItemID")]
-	[SchemaIndex(2)]
-    public StringValue StoreItemId { get; set;}
+    [SchemaIndex(2)]
+    public StringValue StoreItemId { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the DataBinding class.
     /// </summary>
     public DataBinding():base(){}
     
+      
+     
     
     
     
@@ -147,10 +157,13 @@ public partial class Appearance : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13336;
     /// <inheritdoc/>
     public override string LocalName => "appearance";
+    
     internal override byte NamespaceId => 69;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
+    
     
         /// <summary>
     /// <para> val.</para>
@@ -159,14 +172,16 @@ public partial class Appearance : OpenXmlLeafElement
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
     [SchemaAttr(69, "val")]
-	[SchemaIndex(0)]
-    public EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance> Val { get; set;}
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance> Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Appearance class.
     /// </summary>
     public Appearance():base(){}
     
+      
+     
     
     
     
@@ -193,13 +208,18 @@ public partial class CommentsEx : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 13337;
     /// <inheritdoc/>
     public override string LocalName => "commentsEx";
+    
     internal override byte NamespaceId => 69;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
+    
+    
 	internal CommentsEx(WordprocessingCommentsExPart ownerPart) : base (ownerPart){}
+    
     /// <summary>
     /// Loads the DOM from the WordprocessingCommentsExPart.
     /// </summary>
@@ -216,14 +236,16 @@ public partial class CommentsEx : OpenXmlPartRootElement
 		get => OpenXmlPart as WordprocessingCommentsExPart;
 		internal set => OpenXmlPart = value;
     }
+    
         /// <summary>
     ///Initializes a new instance of the CommentsEx class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public CommentsEx(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the CommentsEx class with the specified child elements.
     /// </summary>
@@ -231,6 +253,7 @@ public partial class CommentsEx : OpenXmlPartRootElement
     public CommentsEx(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the CommentsEx class from outer XML.
     /// </summary>
@@ -241,10 +264,12 @@ public partial class CommentsEx : OpenXmlPartRootElement
     }
 
     
+    
     /// <summary>
     /// Initializes a new instance of the CommentsEx class.
     /// </summary>
     public CommentsEx():base(){}
+    
     /// <summary>
     /// Saves the DOM into the WordprocessingCommentsExPart.
     /// </summary>
@@ -253,11 +278,13 @@ public partial class CommentsEx : OpenXmlPartRootElement
     {
         base.SaveToPart(openXmlPart);
     }
+    
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 69 == namespaceId && "commentEx" == name)
     return new CommentEx();
+    
 
     return null;
 }
@@ -286,13 +313,18 @@ public partial class People : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 13338;
     /// <inheritdoc/>
     public override string LocalName => "people";
+    
     internal override byte NamespaceId => 69;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
+    
+    
 	internal People(WordprocessingPeoplePart ownerPart) : base (ownerPart){}
+    
     /// <summary>
     /// Loads the DOM from the WordprocessingPeoplePart.
     /// </summary>
@@ -309,14 +341,16 @@ public partial class People : OpenXmlPartRootElement
 		get => OpenXmlPart as WordprocessingPeoplePart;
 		internal set => OpenXmlPart = value;
     }
+    
         /// <summary>
     ///Initializes a new instance of the People class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public People(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the People class with the specified child elements.
     /// </summary>
@@ -324,6 +358,7 @@ public partial class People : OpenXmlPartRootElement
     public People(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the People class from outer XML.
     /// </summary>
@@ -334,10 +369,12 @@ public partial class People : OpenXmlPartRootElement
     }
 
     
+    
     /// <summary>
     /// Initializes a new instance of the People class.
     /// </summary>
     public People():base(){}
+    
     /// <summary>
     /// Saves the DOM into the WordprocessingPeoplePart.
     /// </summary>
@@ -346,11 +383,13 @@ public partial class People : OpenXmlPartRootElement
     {
         base.SaveToPart(openXmlPart);
     }
+    
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 69 == namespaceId && "person" == name)
     return new Person();
+    
 
     return null;
 }
@@ -382,24 +421,29 @@ public partial class SdtRepeatedSection : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13339;
     /// <inheritdoc/>
     public override string LocalName => "repeatingSection";
+    
     internal override byte NamespaceId => 69;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the SdtRepeatedSection class.
     /// </summary>
     public SdtRepeatedSection():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the SdtRepeatedSection class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public SdtRepeatedSection(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the SdtRepeatedSection class with the specified child elements.
     /// </summary>
@@ -407,6 +451,7 @@ public partial class SdtRepeatedSection : OpenXmlCompositeElement
     public SdtRepeatedSection(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the SdtRepeatedSection class from outer XML.
     /// </summary>
@@ -415,24 +460,30 @@ public partial class SdtRepeatedSection : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 69 == namespaceId && "sectionTitle" == name)
     return new SectionTitle();
+    
 if( 69 == namespaceId && "doNotAllowInsertDeleteSection" == name)
     return new DoNotAllowInsertDeleteSection();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "sectionTitle","doNotAllowInsertDeleteSection" };
     private static readonly byte[] eleNamespaceIds = { 69,69 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> SectionTitle.</para>
     /// <para> Represents the following element tag in the schema: w15:sectionTitle </para>
@@ -476,10 +527,13 @@ public partial class SdtRepeatedSectionItem : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13340;
     /// <inheritdoc/>
     public override string LocalName => "repeatingSectionItem";
+    
     internal override byte NamespaceId => 69;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
+    
     
     
     /// <summary>
@@ -487,6 +541,8 @@ public partial class SdtRepeatedSectionItem : OpenXmlLeafElement
     /// </summary>
     public SdtRepeatedSectionItem():base(){}
     
+      
+     
     
     
     
@@ -507,7 +563,9 @@ public partial class ChartTrackingRefBased : OnOffType
     internal const int ElementTypeIdConst = 13341;
     /// <inheritdoc/>
     public override string LocalName => "chartTrackingRefBased";
+    
     internal override byte NamespaceId => 69;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
@@ -534,7 +592,9 @@ public partial class DefaultCollapsed : OnOffType
     internal const int ElementTypeIdConst = 13342;
     /// <inheritdoc/>
     public override string LocalName => "collapsed";
+    
     internal override byte NamespaceId => 69;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
@@ -561,7 +621,9 @@ public partial class WebExtensionLinked : OnOffType
     internal const int ElementTypeIdConst = 13345;
     /// <inheritdoc/>
     public override string LocalName => "webExtensionLinked";
+    
     internal override byte NamespaceId => 69;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
@@ -588,7 +650,9 @@ public partial class WebExtensionCreated : OnOffType
     internal const int ElementTypeIdConst = 13346;
     /// <inheritdoc/>
     public override string LocalName => "webExtensionCreated";
+    
     internal override byte NamespaceId => 69;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
@@ -615,7 +679,9 @@ public partial class DoNotAllowInsertDeleteSection : OnOffType
     internal const int ElementTypeIdConst = 13351;
     /// <inheritdoc/>
     public override string LocalName => "doNotAllowInsertDeleteSection";
+    
     internal override byte NamespaceId => 69;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
@@ -636,7 +702,7 @@ public partial class DoNotAllowInsertDeleteSection : OnOffType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class OnOffType : OpenXmlLeafElement
 {
-    
+        
         /// <summary>
     /// <para> On/Off Value.</para>
     /// <para>Represents the following attribute in the schema: w:val </para>
@@ -644,15 +710,17 @@ public abstract partial class OnOffType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-	[SchemaIndex(0)]
-    public OnOffValue Val { get; set;}
+    [SchemaIndex(0)]
+    public OnOffValue Val { get; set; }
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the OnOffType class.
     /// </summary>
     protected OnOffType(){}
+    
     
     
 }
@@ -669,10 +737,13 @@ public partial class PersistentDocumentId : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13343;
     /// <inheritdoc/>
     public override string LocalName => "docId";
+    
     internal override byte NamespaceId => 69;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
+    
     
         /// <summary>
     /// <para> val.</para>
@@ -681,14 +752,16 @@ public partial class PersistentDocumentId : OpenXmlLeafElement
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
     [SchemaAttr(69, "val")]
-	[SchemaIndex(0)]
-    public StringValue Val { get; set;}
+    [SchemaIndex(0)]
+    public StringValue Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the PersistentDocumentId class.
     /// </summary>
     public PersistentDocumentId():base(){}
     
+      
+     
     
     
     
@@ -709,10 +782,13 @@ public partial class FootnoteColumns : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13344;
     /// <inheritdoc/>
     public override string LocalName => "footnoteColumns";
+    
     internal override byte NamespaceId => 69;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
+    
     
         /// <summary>
     /// <para> Decimal Number Value.</para>
@@ -721,14 +797,16 @@ public partial class FootnoteColumns : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-	[SchemaIndex(0)]
-    public Int32Value Val { get; set;}
+    [SchemaIndex(0)]
+    public Int32Value Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the FootnoteColumns class.
     /// </summary>
     public FootnoteColumns():base(){}
     
+      
+     
     
     
     
@@ -749,10 +827,13 @@ public partial class CommentEx : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13347;
     /// <inheritdoc/>
     public override string LocalName => "commentEx";
+    
     internal override byte NamespaceId => 69;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
+    
     
         /// <summary>
     /// <para> paraId.</para>
@@ -761,8 +842,8 @@ public partial class CommentEx : OpenXmlLeafElement
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
     [SchemaAttr(69, "paraId")]
-	[SchemaIndex(0)]
-    public HexBinaryValue ParaId { get; set;}
+    [SchemaIndex(0)]
+    public HexBinaryValue ParaId { get; set; }
     /// <summary>
     /// <para> paraIdParent.</para>
     /// <para>Represents the following attribute in the schema: w15:paraIdParent </para>
@@ -770,8 +851,8 @@ public partial class CommentEx : OpenXmlLeafElement
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
     [SchemaAttr(69, "paraIdParent")]
-	[SchemaIndex(1)]
-    public HexBinaryValue ParaIdParent { get; set;}
+    [SchemaIndex(1)]
+    public HexBinaryValue ParaIdParent { get; set; }
     /// <summary>
     /// <para> done.</para>
     /// <para>Represents the following attribute in the schema: w15:done </para>
@@ -779,14 +860,16 @@ public partial class CommentEx : OpenXmlLeafElement
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
     [SchemaAttr(69, "done")]
-	[SchemaIndex(2)]
-    public OnOffValue Done { get; set;}
+    [SchemaIndex(2)]
+    public OnOffValue Done { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the CommentEx class.
     /// </summary>
     public CommentEx():base(){}
     
+      
+     
     
     
     
@@ -814,10 +897,13 @@ public partial class Person : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13348;
     /// <inheritdoc/>
     public override string LocalName => "person";
+    
     internal override byte NamespaceId => 69;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
+    
     
         /// <summary>
     /// <para> author.</para>
@@ -826,8 +912,8 @@ public partial class Person : OpenXmlCompositeElement
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
     [SchemaAttr(69, "author")]
-	[SchemaIndex(0)]
-    public StringValue Author { get; set;}
+    [SchemaIndex(0)]
+    public StringValue Author { get; set; }
     /// <summary>
     /// <para> contact.</para>
     /// <para>Represents the following attribute in the schema: w15:contact </para>
@@ -835,21 +921,23 @@ public partial class Person : OpenXmlCompositeElement
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
     [SchemaAttr(69, "contact")]
-	[SchemaIndex(1)]
-    public StringValue Contact { get; set;}
+    [SchemaIndex(1)]
+    public StringValue Contact { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Person class.
     /// </summary>
     public Person():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the Person class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Person(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Person class with the specified child elements.
     /// </summary>
@@ -857,6 +945,7 @@ public partial class Person : OpenXmlCompositeElement
     public Person(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Person class from outer XML.
     /// </summary>
@@ -865,22 +954,27 @@ public partial class Person : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 69 == namespaceId && "presenceInfo" == name)
     return new PresenceInfo();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "presenceInfo" };
     private static readonly byte[] eleNamespaceIds = { 69 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> PresenceInfo.</para>
     /// <para> Represents the following element tag in the schema: w15:presenceInfo </para>
@@ -912,10 +1006,13 @@ public partial class PresenceInfo : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13349;
     /// <inheritdoc/>
     public override string LocalName => "presenceInfo";
+    
     internal override byte NamespaceId => 69;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
+    
     
         /// <summary>
     /// <para> providerId.</para>
@@ -924,8 +1021,8 @@ public partial class PresenceInfo : OpenXmlLeafElement
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
     [SchemaAttr(69, "providerId")]
-	[SchemaIndex(0)]
-    public StringValue ProviderId { get; set;}
+    [SchemaIndex(0)]
+    public StringValue ProviderId { get; set; }
     /// <summary>
     /// <para> userId.</para>
     /// <para>Represents the following attribute in the schema: w15:userId </para>
@@ -933,14 +1030,16 @@ public partial class PresenceInfo : OpenXmlLeafElement
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
     [SchemaAttr(69, "userId")]
-	[SchemaIndex(1)]
-    public StringValue UserId { get; set;}
+    [SchemaIndex(1)]
+    public StringValue UserId { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the PresenceInfo class.
     /// </summary>
     public PresenceInfo():base(){}
     
+      
+     
     
     
     
@@ -961,10 +1060,13 @@ public partial class SectionTitle : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13350;
     /// <inheritdoc/>
     public override string LocalName => "sectionTitle";
+    
     internal override byte NamespaceId => 69;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
+    
     
         /// <summary>
     /// <para> String Value.</para>
@@ -973,14 +1075,16 @@ public partial class SectionTitle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-	[SchemaIndex(0)]
-    public StringValue Val { get; set;}
+    [SchemaIndex(0)]
+    public StringValue Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the SectionTitle class.
     /// </summary>
     public SectionTitle():base(){}
     
+      
+     
     
     
     
@@ -989,11 +1093,11 @@ public partial class SectionTitle : OpenXmlLeafElement
 
 }
 /// <summary>
-/// Defines the SdtAppearance enumeration.
-/// </summary>
+/// Defines the SdtAppearance enumeration. 
+/// </summary> 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum SdtAppearance
-{
+{  
 	///<summary>
 ///boundingBox.
 ///<para>When the item is serialized out as xml, its value is "boundingBox".</para>
@@ -1012,6 +1116,8 @@ Tags,
 ///</summary>
 [EnumString("hidden")]
 Hidden,
-
+ 
 }
 }
+ 
+ 

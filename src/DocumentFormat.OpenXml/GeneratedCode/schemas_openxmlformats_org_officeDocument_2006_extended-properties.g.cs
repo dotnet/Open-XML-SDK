@@ -80,13 +80,18 @@ public partial class Properties : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 11064;
     /// <inheritdoc/>
     public override string LocalName => "Properties";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
+    
+    
 	internal Properties(ExtendedFilePropertiesPart ownerPart) : base (ownerPart){}
+    
     /// <summary>
     /// Loads the DOM from the ExtendedFilePropertiesPart.
     /// </summary>
@@ -103,14 +108,16 @@ public partial class Properties : OpenXmlPartRootElement
 		get => OpenXmlPart as ExtendedFilePropertiesPart;
 		internal set => OpenXmlPart = value;
     }
+    
         /// <summary>
     ///Initializes a new instance of the Properties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Properties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Properties class with the specified child elements.
     /// </summary>
@@ -118,6 +125,7 @@ public partial class Properties : OpenXmlPartRootElement
     public Properties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Properties class from outer XML.
     /// </summary>
@@ -128,10 +136,12 @@ public partial class Properties : OpenXmlPartRootElement
     }
 
     
+    
     /// <summary>
     /// Initializes a new instance of the Properties class.
     /// </summary>
     public Properties():base(){}
+    
     /// <summary>
     /// Saves the DOM into the ExtendedFilePropertiesPart.
     /// </summary>
@@ -140,72 +150,103 @@ public partial class Properties : OpenXmlPartRootElement
     {
         base.SaveToPart(openXmlPart);
     }
+    
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 3 == namespaceId && "Template" == name)
     return new Template();
+    
 if( 3 == namespaceId && "Manager" == name)
     return new Manager();
+    
 if( 3 == namespaceId && "Company" == name)
     return new Company();
+    
 if( 3 == namespaceId && "Pages" == name)
     return new Pages();
+    
 if( 3 == namespaceId && "Words" == name)
     return new Words();
+    
 if( 3 == namespaceId && "Characters" == name)
     return new Characters();
+    
 if( 3 == namespaceId && "PresentationFormat" == name)
     return new PresentationFormat();
+    
 if( 3 == namespaceId && "Lines" == name)
     return new Lines();
+    
 if( 3 == namespaceId && "Paragraphs" == name)
     return new Paragraphs();
+    
 if( 3 == namespaceId && "Slides" == name)
     return new Slides();
+    
 if( 3 == namespaceId && "Notes" == name)
     return new Notes();
+    
 if( 3 == namespaceId && "TotalTime" == name)
     return new TotalTime();
+    
 if( 3 == namespaceId && "HiddenSlides" == name)
     return new HiddenSlides();
+    
 if( 3 == namespaceId && "MMClips" == name)
     return new MultimediaClips();
+    
 if( 3 == namespaceId && "ScaleCrop" == name)
     return new ScaleCrop();
+    
 if( 3 == namespaceId && "HeadingPairs" == name)
     return new HeadingPairs();
+    
 if( 3 == namespaceId && "TitlesOfParts" == name)
     return new TitlesOfParts();
+    
 if( 3 == namespaceId && "LinksUpToDate" == name)
     return new LinksUpToDate();
+    
 if( 3 == namespaceId && "CharactersWithSpaces" == name)
     return new CharactersWithSpaces();
+    
 if( 3 == namespaceId && "SharedDoc" == name)
     return new SharedDocument();
+    
 if( 3 == namespaceId && "HyperlinkBase" == name)
     return new HyperlinkBase();
+    
 if( 3 == namespaceId && "HLinks" == name)
     return new HyperlinkList();
+    
 if( 3 == namespaceId && "HyperlinksChanged" == name)
     return new HyperlinksChanged();
+    
 if( 3 == namespaceId && "DigSig" == name)
     return new DigitalSignature();
+    
 if( 3 == namespaceId && "Application" == name)
     return new Application();
+    
 if( 3 == namespaceId && "AppVersion" == name)
     return new ApplicationVersion();
+    
 if( 3 == namespaceId && "DocSecurity" == name)
     return new DocumentSecurity();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "Template","Manager","Company","Pages","Words","Characters","PresentationFormat","Lines","Paragraphs","Slides","Notes","TotalTime","HiddenSlides","MMClips","ScaleCrop","HeadingPairs","TitlesOfParts","LinksUpToDate","CharactersWithSpaces","SharedDoc","HyperlinkBase","HLinks","HyperlinksChanged","DigSig","Application","AppVersion","DocSecurity" };
     private static readonly byte[] eleNamespaceIds = { 3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+    
         /// <summary>
     /// <para> Name of Document Template.</para>
     /// <para> Represents the following element tag in the schema: ap:Template </para>
@@ -549,7 +590,9 @@ public partial class Template : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11065;
     /// <inheritdoc/>
     public override string LocalName => "Template";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -565,10 +608,12 @@ public partial class Template : OpenXmlLeafTextElement
     public Template(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Template>(deep);
@@ -587,7 +632,9 @@ public partial class Manager : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11066;
     /// <inheritdoc/>
     public override string LocalName => "Manager";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -603,10 +650,12 @@ public partial class Manager : OpenXmlLeafTextElement
     public Manager(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Manager>(deep);
@@ -625,7 +674,9 @@ public partial class Company : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11067;
     /// <inheritdoc/>
     public override string LocalName => "Company";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -641,10 +692,12 @@ public partial class Company : OpenXmlLeafTextElement
     public Company(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Company>(deep);
@@ -663,7 +716,9 @@ public partial class PresentationFormat : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11071;
     /// <inheritdoc/>
     public override string LocalName => "PresentationFormat";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -679,10 +734,12 @@ public partial class PresentationFormat : OpenXmlLeafTextElement
     public PresentationFormat(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PresentationFormat>(deep);
@@ -701,7 +758,9 @@ public partial class HyperlinkBase : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11085;
     /// <inheritdoc/>
     public override string LocalName => "HyperlinkBase";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -717,10 +776,12 @@ public partial class HyperlinkBase : OpenXmlLeafTextElement
     public HyperlinkBase(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkBase>(deep);
@@ -739,7 +800,9 @@ public partial class Application : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11089;
     /// <inheritdoc/>
     public override string LocalName => "Application";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -755,10 +818,12 @@ public partial class Application : OpenXmlLeafTextElement
     public Application(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Application>(deep);
@@ -777,7 +842,9 @@ public partial class ApplicationVersion : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11090;
     /// <inheritdoc/>
     public override string LocalName => "AppVersion";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -793,10 +860,12 @@ public partial class ApplicationVersion : OpenXmlLeafTextElement
     public ApplicationVersion(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ApplicationVersion>(deep);
@@ -815,7 +884,9 @@ public partial class Pages : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11068;
     /// <inheritdoc/>
     public override string LocalName => "Pages";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -831,10 +902,12 @@ public partial class Pages : OpenXmlLeafTextElement
     public Pages(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Pages>(deep);
@@ -853,7 +926,9 @@ public partial class Words : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11069;
     /// <inheritdoc/>
     public override string LocalName => "Words";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -869,10 +944,12 @@ public partial class Words : OpenXmlLeafTextElement
     public Words(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Words>(deep);
@@ -891,7 +968,9 @@ public partial class Characters : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11070;
     /// <inheritdoc/>
     public override string LocalName => "Characters";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -907,10 +986,12 @@ public partial class Characters : OpenXmlLeafTextElement
     public Characters(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Characters>(deep);
@@ -929,7 +1010,9 @@ public partial class Lines : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11072;
     /// <inheritdoc/>
     public override string LocalName => "Lines";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -945,10 +1028,12 @@ public partial class Lines : OpenXmlLeafTextElement
     public Lines(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Lines>(deep);
@@ -967,7 +1052,9 @@ public partial class Paragraphs : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11073;
     /// <inheritdoc/>
     public override string LocalName => "Paragraphs";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -983,10 +1070,12 @@ public partial class Paragraphs : OpenXmlLeafTextElement
     public Paragraphs(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Paragraphs>(deep);
@@ -1005,7 +1094,9 @@ public partial class Slides : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11074;
     /// <inheritdoc/>
     public override string LocalName => "Slides";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1021,10 +1112,12 @@ public partial class Slides : OpenXmlLeafTextElement
     public Slides(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Slides>(deep);
@@ -1043,7 +1136,9 @@ public partial class Notes : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11075;
     /// <inheritdoc/>
     public override string LocalName => "Notes";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1059,10 +1154,12 @@ public partial class Notes : OpenXmlLeafTextElement
     public Notes(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Notes>(deep);
@@ -1081,7 +1178,9 @@ public partial class TotalTime : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11076;
     /// <inheritdoc/>
     public override string LocalName => "TotalTime";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1097,10 +1196,12 @@ public partial class TotalTime : OpenXmlLeafTextElement
     public TotalTime(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TotalTime>(deep);
@@ -1119,7 +1220,9 @@ public partial class HiddenSlides : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11077;
     /// <inheritdoc/>
     public override string LocalName => "HiddenSlides";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1135,10 +1238,12 @@ public partial class HiddenSlides : OpenXmlLeafTextElement
     public HiddenSlides(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HiddenSlides>(deep);
@@ -1157,7 +1262,9 @@ public partial class MultimediaClips : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11078;
     /// <inheritdoc/>
     public override string LocalName => "MMClips";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1173,10 +1280,12 @@ public partial class MultimediaClips : OpenXmlLeafTextElement
     public MultimediaClips(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MultimediaClips>(deep);
@@ -1195,7 +1304,9 @@ public partial class CharactersWithSpaces : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11083;
     /// <inheritdoc/>
     public override string LocalName => "CharactersWithSpaces";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1211,10 +1322,12 @@ public partial class CharactersWithSpaces : OpenXmlLeafTextElement
     public CharactersWithSpaces(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CharactersWithSpaces>(deep);
@@ -1233,7 +1346,9 @@ public partial class DocumentSecurity : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11091;
     /// <inheritdoc/>
     public override string LocalName => "DocSecurity";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1249,10 +1364,12 @@ public partial class DocumentSecurity : OpenXmlLeafTextElement
     public DocumentSecurity(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocumentSecurity>(deep);
@@ -1271,7 +1388,9 @@ public partial class ScaleCrop : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11079;
     /// <inheritdoc/>
     public override string LocalName => "ScaleCrop";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1287,10 +1406,12 @@ public partial class ScaleCrop : OpenXmlLeafTextElement
     public ScaleCrop(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new BooleanValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ScaleCrop>(deep);
@@ -1309,7 +1430,9 @@ public partial class LinksUpToDate : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11082;
     /// <inheritdoc/>
     public override string LocalName => "LinksUpToDate";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1325,10 +1448,12 @@ public partial class LinksUpToDate : OpenXmlLeafTextElement
     public LinksUpToDate(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new BooleanValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LinksUpToDate>(deep);
@@ -1347,7 +1472,9 @@ public partial class SharedDocument : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11084;
     /// <inheritdoc/>
     public override string LocalName => "SharedDoc";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1363,10 +1490,12 @@ public partial class SharedDocument : OpenXmlLeafTextElement
     public SharedDocument(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new BooleanValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SharedDocument>(deep);
@@ -1385,7 +1514,9 @@ public partial class HyperlinksChanged : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11087;
     /// <inheritdoc/>
     public override string LocalName => "HyperlinksChanged";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1401,10 +1532,12 @@ public partial class HyperlinksChanged : OpenXmlLeafTextElement
     public HyperlinksChanged(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new BooleanValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinksChanged>(deep);
@@ -1429,7 +1562,9 @@ public partial class HeadingPairs : VectorVariantType
     internal const int ElementTypeIdConst = 11080;
     /// <inheritdoc/>
     public override string LocalName => "HeadingPairs";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1443,8 +1578,9 @@ public partial class HeadingPairs : VectorVariantType
     /// <param name="childElements">Specifies the child elements.</param>
     public HeadingPairs(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the HeadingPairs class with the specified child elements.
     /// </summary>
@@ -1452,6 +1588,7 @@ public partial class HeadingPairs : VectorVariantType
     public HeadingPairs(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the HeadingPairs class from outer XML.
     /// </summary>
@@ -1485,7 +1622,9 @@ public partial class HyperlinkList : VectorVariantType
     internal const int ElementTypeIdConst = 11086;
     /// <inheritdoc/>
     public override string LocalName => "HLinks";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1499,8 +1638,9 @@ public partial class HyperlinkList : VectorVariantType
     /// <param name="childElements">Specifies the child elements.</param>
     public HyperlinkList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the HyperlinkList class with the specified child elements.
     /// </summary>
@@ -1508,6 +1648,7 @@ public partial class HyperlinkList : VectorVariantType
     public HyperlinkList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the HyperlinkList class from outer XML.
     /// </summary>
@@ -1536,22 +1677,26 @@ public partial class HyperlinkList : VectorVariantType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class VectorVariantType : OpenXmlCompositeElement
 {
-    
+        
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 5 == namespaceId && "vector" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTVector();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "vector" };
     private static readonly byte[] eleNamespaceIds = { 5 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> Vector.</para>
     /// <para> Represents the following element tag in the schema: vt:vector </para>
@@ -1566,18 +1711,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
+    
     /// <summary>
     /// Initializes a new instance of the VectorVariantType class.
     /// </summary>
     protected VectorVariantType(){}
+    
         /// <summary>
     ///Initializes a new instance of the VectorVariantType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     protected VectorVariantType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the VectorVariantType class with the specified child elements.
     /// </summary>
@@ -1585,6 +1733,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     protected VectorVariantType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the VectorVariantType class from outer XML.
     /// </summary>
@@ -1616,24 +1765,29 @@ public partial class TitlesOfParts : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11081;
     /// <inheritdoc/>
     public override string LocalName => "TitlesOfParts";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the TitlesOfParts class.
     /// </summary>
     public TitlesOfParts():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the TitlesOfParts class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public TitlesOfParts(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the TitlesOfParts class with the specified child elements.
     /// </summary>
@@ -1641,6 +1795,7 @@ public partial class TitlesOfParts : OpenXmlCompositeElement
     public TitlesOfParts(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the TitlesOfParts class from outer XML.
     /// </summary>
@@ -1649,22 +1804,27 @@ public partial class TitlesOfParts : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 5 == namespaceId && "vector" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTVector();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "vector" };
     private static readonly byte[] eleNamespaceIds = { 5 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> Vector.</para>
     /// <para> Represents the following element tag in the schema: vt:vector </para>
@@ -1703,24 +1863,29 @@ public partial class DigitalSignature : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11088;
     /// <inheritdoc/>
     public override string LocalName => "DigSig";
+    
     internal override byte NamespaceId => 3;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the DigitalSignature class.
     /// </summary>
     public DigitalSignature():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the DigitalSignature class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public DigitalSignature(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the DigitalSignature class with the specified child elements.
     /// </summary>
@@ -1728,6 +1893,7 @@ public partial class DigitalSignature : OpenXmlCompositeElement
     public DigitalSignature(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the DigitalSignature class from outer XML.
     /// </summary>
@@ -1736,22 +1902,27 @@ public partial class DigitalSignature : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 5 == namespaceId && "blob" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTBlob();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "blob" };
     private static readonly byte[] eleNamespaceIds = { 5 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> Binary Blob.</para>
     /// <para> Represents the following element tag in the schema: vt:blob </para>
@@ -1771,3 +1942,5 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 }
 }
+ 
+ 

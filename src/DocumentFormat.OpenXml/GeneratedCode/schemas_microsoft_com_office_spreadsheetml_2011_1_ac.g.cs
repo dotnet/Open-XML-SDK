@@ -22,10 +22,13 @@ public partial class List : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 13429;
     /// <inheritdoc/>
     public override string LocalName => "list";
+    
     internal override byte NamespaceId => 72;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
+    
     
     
     /// <summary>
@@ -33,6 +36,7 @@ public partial class List : OpenXmlLeafTextElement
     /// </summary>
     public List():base(){}
     
+      
         /// <summary>
     /// Initializes a new instance of the List class with the specified text content.
     /// </summary>
@@ -40,11 +44,14 @@ public partial class List : OpenXmlLeafTextElement
     public List(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-
+    
+ 
+    
     
     
     /// <inheritdoc/>
@@ -52,3 +59,5 @@ public partial class List : OpenXmlLeafTextElement
 
 }
 }
+ 
+ 

@@ -22,24 +22,29 @@ public partial class CompatibilityShape : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13208;
     /// <inheritdoc/>
     public override string LocalName => "compatSp";
+    
     internal override byte NamespaceId => 63;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
+    
     
         /// <summary>
     /// <para> spid.</para>
     /// <para>Represents the following attribute in the schema: spid </para>
     /// </summary>
     [SchemaAttr(0, "spid")]
-	[SchemaIndex(0)]
-    public StringValue ShapeId { get; set;}
+    [SchemaIndex(0)]
+    public StringValue ShapeId { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the CompatibilityShape class.
     /// </summary>
     public CompatibilityShape():base(){}
     
+      
+     
     
     
     
@@ -48,3 +53,5 @@ public partial class CompatibilityShape : OpenXmlLeafElement
 
 }
 }
+ 
+ 

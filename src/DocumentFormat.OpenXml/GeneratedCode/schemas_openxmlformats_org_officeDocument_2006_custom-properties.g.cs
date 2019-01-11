@@ -28,13 +28,18 @@ public partial class Properties : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 10903;
     /// <inheritdoc/>
     public override string LocalName => "Properties";
+    
     internal override byte NamespaceId => 4;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
+    
+    
 	internal Properties(CustomFilePropertiesPart ownerPart) : base (ownerPart){}
+    
     /// <summary>
     /// Loads the DOM from the CustomFilePropertiesPart.
     /// </summary>
@@ -51,14 +56,16 @@ public partial class Properties : OpenXmlPartRootElement
 		get => OpenXmlPart as CustomFilePropertiesPart;
 		internal set => OpenXmlPart = value;
     }
+    
         /// <summary>
     ///Initializes a new instance of the Properties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Properties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Properties class with the specified child elements.
     /// </summary>
@@ -66,6 +73,7 @@ public partial class Properties : OpenXmlPartRootElement
     public Properties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Properties class from outer XML.
     /// </summary>
@@ -76,10 +84,12 @@ public partial class Properties : OpenXmlPartRootElement
     }
 
     
+    
     /// <summary>
     /// Initializes a new instance of the Properties class.
     /// </summary>
     public Properties():base(){}
+    
     /// <summary>
     /// Saves the DOM into the CustomFilePropertiesPart.
     /// </summary>
@@ -88,11 +98,13 @@ public partial class Properties : OpenXmlPartRootElement
     {
         base.SaveToPart(openXmlPart);
     }
+    
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 4 == namespaceId && "property" == name)
     return new CustomDocumentProperty();
+    
 
     return null;
 }
@@ -188,52 +200,57 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10904;
     /// <inheritdoc/>
     public override string LocalName => "property";
+    
     internal override byte NamespaceId => 4;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
         /// <summary>
     /// <para> Format ID.</para>
     /// <para>Represents the following attribute in the schema: fmtid </para>
     /// </summary>
     [SchemaAttr(0, "fmtid")]
-	[SchemaIndex(0)]
-    public StringValue FormatId { get; set;}
+    [SchemaIndex(0)]
+    public StringValue FormatId { get; set; }
     /// <summary>
     /// <para> Property ID.</para>
     /// <para>Represents the following attribute in the schema: pid </para>
     /// </summary>
     [SchemaAttr(0, "pid")]
-	[SchemaIndex(1)]
-    public Int32Value PropertyId { get; set;}
+    [SchemaIndex(1)]
+    public Int32Value PropertyId { get; set; }
     /// <summary>
     /// <para> Custom File Property Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-	[SchemaIndex(2)]
-    public StringValue Name { get; set;}
+    [SchemaIndex(2)]
+    public StringValue Name { get; set; }
     /// <summary>
     /// <para> Bookmark Link Target.</para>
     /// <para>Represents the following attribute in the schema: linkTarget </para>
     /// </summary>
     [SchemaAttr(0, "linkTarget")]
-	[SchemaIndex(3)]
-    public StringValue LinkTarget { get; set;}
+    [SchemaIndex(3)]
+    public StringValue LinkTarget { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the CustomDocumentProperty class.
     /// </summary>
     public CustomDocumentProperty():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the CustomDocumentProperty class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public CustomDocumentProperty(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the CustomDocumentProperty class with the specified child elements.
     /// </summary>
@@ -241,6 +258,7 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     public CustomDocumentProperty(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the CustomDocumentProperty class from outer XML.
     /// </summary>
@@ -249,88 +267,126 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 5 == namespaceId && "vector" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTVector();
+    
 if( 5 == namespaceId && "array" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTArray();
+    
 if( 5 == namespaceId && "blob" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTBlob();
+    
 if( 5 == namespaceId && "oblob" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTOBlob();
+    
 if( 5 == namespaceId && "empty" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTEmpty();
+    
 if( 5 == namespaceId && "null" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTNull();
+    
 if( 5 == namespaceId && "i1" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTByte();
+    
 if( 5 == namespaceId && "i2" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTShort();
+    
 if( 5 == namespaceId && "i4" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTInt32();
+    
 if( 5 == namespaceId && "i8" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTInt64();
+    
 if( 5 == namespaceId && "int" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTInteger();
+    
 if( 5 == namespaceId && "ui1" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTUnsignedByte();
+    
 if( 5 == namespaceId && "ui2" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTUnsignedShort();
+    
 if( 5 == namespaceId && "ui4" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt32();
+    
 if( 5 == namespaceId && "ui8" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTUnsignedInt64();
+    
 if( 5 == namespaceId && "uint" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTUnsignedInteger();
+    
 if( 5 == namespaceId && "r4" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTFloat();
+    
 if( 5 == namespaceId && "r8" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTDouble();
+    
 if( 5 == namespaceId && "decimal" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTDecimal();
+    
 if( 5 == namespaceId && "lpstr" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTLPSTR();
+    
 if( 5 == namespaceId && "lpwstr" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTLPWSTR();
+    
 if( 5 == namespaceId && "bstr" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTBString();
+    
 if( 5 == namespaceId && "date" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTDate();
+    
 if( 5 == namespaceId && "filetime" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTFileTime();
+    
 if( 5 == namespaceId && "bool" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTBool();
+    
 if( 5 == namespaceId && "cy" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTCurrency();
+    
 if( 5 == namespaceId && "error" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTError();
+    
 if( 5 == namespaceId && "stream" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTStreamData();
+    
 if( 5 == namespaceId && "ostream" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTOStreamData();
+    
 if( 5 == namespaceId && "storage" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTStorage();
+    
 if( 5 == namespaceId && "ostorage" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTOStorage();
+    
 if( 5 == namespaceId && "vstream" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTVStreamData();
+    
 if( 5 == namespaceId && "clsid" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTClassId();
+    
 if( 5 == namespaceId && "cf" == name)
     return new DocumentFormat.OpenXml.VariantTypes.VTClipboardData();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "vector","array","blob","oblob","empty","null","i1","i2","i4","i8","int","ui1","ui2","ui4","ui8","uint","r4","r8","decimal","lpstr","lpwstr","bstr","date","filetime","bool","cy","error","stream","ostream","storage","ostorage","vstream","clsid","cf" };
     private static readonly byte[] eleNamespaceIds = { 5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+    
         /// <summary>
     /// <para> Vector.</para>
     /// <para> Represents the following element tag in the schema: vt:vector </para>
@@ -746,3 +802,5 @@ if( 5 == namespaceId && "cf" == name)
 
 }
 }
+ 
+ 

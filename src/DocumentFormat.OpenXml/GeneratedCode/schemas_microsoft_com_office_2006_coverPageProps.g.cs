@@ -38,24 +38,29 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12692;
     /// <inheritdoc/>
     public override string LocalName => "CoverPageProperties";
+    
     internal override byte NamespaceId => 36;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the CoverPageProperties class.
     /// </summary>
     public CoverPageProperties():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the CoverPageProperties class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public CoverPageProperties(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the CoverPageProperties class with the specified child elements.
     /// </summary>
@@ -63,6 +68,7 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
     public CoverPageProperties(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the CoverPageProperties class from outer XML.
     /// </summary>
@@ -71,32 +77,42 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 36 == namespaceId && "PublishDate" == name)
     return new PublishDate();
+    
 if( 36 == namespaceId && "Abstract" == name)
     return new DocumentAbstract();
+    
 if( 36 == namespaceId && "CompanyAddress" == name)
     return new CompanyAddress();
+    
 if( 36 == namespaceId && "CompanyPhone" == name)
     return new CompanyPhoneNumber();
+    
 if( 36 == namespaceId && "CompanyFax" == name)
     return new CompanyFaxNumber();
+    
 if( 36 == namespaceId && "CompanyEmail" == name)
     return new CompanyEmailAddress();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "PublishDate","Abstract","CompanyAddress","CompanyPhone","CompanyFax","CompanyEmail" };
     private static readonly byte[] eleNamespaceIds = { 36,36,36,36,36,36 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> PublishDate.</para>
     /// <para> Represents the following element tag in the schema: cppr:PublishDate </para>
@@ -188,10 +204,13 @@ public partial class PublishDate : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12693;
     /// <inheritdoc/>
     public override string LocalName => "PublishDate";
+    
     internal override byte NamespaceId => 36;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
@@ -199,6 +218,7 @@ public partial class PublishDate : OpenXmlLeafTextElement
     /// </summary>
     public PublishDate():base(){}
     
+      
         /// <summary>
     /// Initializes a new instance of the PublishDate class with the specified text content.
     /// </summary>
@@ -206,11 +226,14 @@ public partial class PublishDate : OpenXmlLeafTextElement
     public PublishDate(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-
+    
+ 
+    
     
     
     /// <inheritdoc/>
@@ -230,7 +253,9 @@ public partial class DocumentAbstract : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12694;
     /// <inheritdoc/>
     public override string LocalName => "Abstract";
+    
     internal override byte NamespaceId => 36;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -246,10 +271,12 @@ public partial class DocumentAbstract : OpenXmlLeafTextElement
     public DocumentAbstract(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocumentAbstract>(deep);
@@ -268,7 +295,9 @@ public partial class CompanyAddress : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12695;
     /// <inheritdoc/>
     public override string LocalName => "CompanyAddress";
+    
     internal override byte NamespaceId => 36;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -284,10 +313,12 @@ public partial class CompanyAddress : OpenXmlLeafTextElement
     public CompanyAddress(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyAddress>(deep);
@@ -306,7 +337,9 @@ public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12696;
     /// <inheritdoc/>
     public override string LocalName => "CompanyPhone";
+    
     internal override byte NamespaceId => 36;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -322,10 +355,12 @@ public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
     public CompanyPhoneNumber(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyPhoneNumber>(deep);
@@ -344,7 +379,9 @@ public partial class CompanyFaxNumber : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12697;
     /// <inheritdoc/>
     public override string LocalName => "CompanyFax";
+    
     internal override byte NamespaceId => 36;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -360,10 +397,12 @@ public partial class CompanyFaxNumber : OpenXmlLeafTextElement
     public CompanyFaxNumber(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyFaxNumber>(deep);
@@ -382,7 +421,9 @@ public partial class CompanyEmailAddress : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12698;
     /// <inheritdoc/>
     public override string LocalName => "CompanyEmail";
+    
     internal override byte NamespaceId => 36;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -398,13 +439,17 @@ public partial class CompanyEmailAddress : OpenXmlLeafTextElement
     public CompanyEmailAddress(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CompanyEmailAddress>(deep);
 
 }
 }
+ 
+ 

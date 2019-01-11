@@ -34,24 +34,29 @@ public partial class CustomXsn : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12706;
     /// <inheritdoc/>
     public override string LocalName => "customXsn";
+    
     internal override byte NamespaceId => 39;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the CustomXsn class.
     /// </summary>
     public CustomXsn():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the CustomXsn class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public CustomXsn(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the CustomXsn class with the specified child elements.
     /// </summary>
@@ -59,6 +64,7 @@ public partial class CustomXsn : OpenXmlCompositeElement
     public CustomXsn(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the CustomXsn class from outer XML.
     /// </summary>
@@ -67,28 +73,36 @@ public partial class CustomXsn : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 39 == namespaceId && "xsnLocation" == name)
     return new XsnLocation();
+    
 if( 39 == namespaceId && "cached" == name)
     return new CachedView();
+    
 if( 39 == namespaceId && "openByDefault" == name)
     return new OpenByDefault();
+    
 if( 39 == namespaceId && "xsnScope" == name)
     return new Scope();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "xsnLocation","cached","openByDefault","xsnScope" };
     private static readonly byte[] eleNamespaceIds = { 39,39,39,39 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> XsnLocation.</para>
     /// <para> Represents the following element tag in the schema: ntns:xsnLocation </para>
@@ -156,7 +170,9 @@ public partial class XsnLocation : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12707;
     /// <inheritdoc/>
     public override string LocalName => "xsnLocation";
+    
     internal override byte NamespaceId => 39;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -172,10 +188,12 @@ public partial class XsnLocation : OpenXmlLeafTextElement
     public XsnLocation(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<XsnLocation>(deep);
@@ -194,7 +212,9 @@ public partial class CachedView : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12708;
     /// <inheritdoc/>
     public override string LocalName => "cached";
+    
     internal override byte NamespaceId => 39;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -210,10 +230,12 @@ public partial class CachedView : OpenXmlLeafTextElement
     public CachedView(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CachedView>(deep);
@@ -232,7 +254,9 @@ public partial class OpenByDefault : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12709;
     /// <inheritdoc/>
     public override string LocalName => "openByDefault";
+    
     internal override byte NamespaceId => 39;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -248,10 +272,12 @@ public partial class OpenByDefault : OpenXmlLeafTextElement
     public OpenByDefault(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OpenByDefault>(deep);
@@ -270,7 +296,9 @@ public partial class Scope : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12710;
     /// <inheritdoc/>
     public override string LocalName => "xsnScope";
+    
     internal override byte NamespaceId => 39;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -286,13 +314,17 @@ public partial class Scope : OpenXmlLeafTextElement
     public Scope(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Scope>(deep);
 
 }
 }
+ 
+ 

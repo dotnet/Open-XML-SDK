@@ -28,45 +28,50 @@ public partial class Sources : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 10824;
     /// <inheritdoc/>
     public override string LocalName => "Sources";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
         /// <summary>
     /// <para> Selected Style.</para>
     /// <para>Represents the following attribute in the schema: SelectedStyle </para>
     /// </summary>
     [SchemaAttr(0, "SelectedStyle")]
-	[SchemaIndex(0)]
-    public StringValue SelectedStyle { get; set;}
+    [SchemaIndex(0)]
+    public StringValue SelectedStyle { get; set; }
     /// <summary>
     /// <para> Documentation Style Name.</para>
     /// <para>Represents the following attribute in the schema: StyleName </para>
     /// </summary>
     [SchemaAttr(0, "StyleName")]
-	[SchemaIndex(1)]
-    public StringValue StyleName { get; set;}
+    [SchemaIndex(1)]
+    public StringValue StyleName { get; set; }
     /// <summary>
     /// <para> Uniform Resource Identifier.</para>
     /// <para>Represents the following attribute in the schema: URI </para>
     /// </summary>
     [SchemaAttr(0, "URI")]
-	[SchemaIndex(2)]
-    public StringValue Uri { get; set;}
+    [SchemaIndex(2)]
+    public StringValue Uri { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Sources class.
     /// </summary>
     public Sources():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the Sources class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Sources(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Sources class with the specified child elements.
     /// </summary>
@@ -74,6 +79,7 @@ public partial class Sources : OpenXmlPartRootElement
     public Sources(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Sources class from outer XML.
     /// </summary>
@@ -82,13 +88,15 @@ public partial class Sources : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 9 == namespaceId && "Source" == name)
     return new Source();
+    
 
     return null;
 }
@@ -122,24 +130,29 @@ public partial class Person : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10825;
     /// <inheritdoc/>
     public override string LocalName => "Person";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the Person class.
     /// </summary>
     public Person():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the Person class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Person(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Person class with the specified child elements.
     /// </summary>
@@ -147,6 +160,7 @@ public partial class Person : OpenXmlCompositeElement
     public Person(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Person class from outer XML.
     /// </summary>
@@ -155,17 +169,21 @@ public partial class Person : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 9 == namespaceId && "Last" == name)
     return new Last();
+    
 if( 9 == namespaceId && "First" == name)
     return new First();
+    
 if( 9 == namespaceId && "Middle" == name)
     return new Middle();
+    
 
     return null;
 }
@@ -188,7 +206,9 @@ public partial class Last : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10826;
     /// <inheritdoc/>
     public override string LocalName => "Last";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -204,10 +224,12 @@ public partial class Last : OpenXmlLeafTextElement
     public Last(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Last>(deep);
@@ -226,7 +248,9 @@ public partial class First : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10827;
     /// <inheritdoc/>
     public override string LocalName => "First";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -242,10 +266,12 @@ public partial class First : OpenXmlLeafTextElement
     public First(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<First>(deep);
@@ -264,7 +290,9 @@ public partial class Middle : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10828;
     /// <inheritdoc/>
     public override string LocalName => "Middle";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -280,10 +308,12 @@ public partial class Middle : OpenXmlLeafTextElement
     public Middle(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Middle>(deep);
@@ -302,7 +332,9 @@ public partial class Corporate : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10830;
     /// <inheritdoc/>
     public override string LocalName => "Corporate";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -318,10 +350,12 @@ public partial class Corporate : OpenXmlLeafTextElement
     public Corporate(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Corporate>(deep);
@@ -340,7 +374,9 @@ public partial class AbbreviatedCaseNumber : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10847;
     /// <inheritdoc/>
     public override string LocalName => "AbbreviatedCaseNumber";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -356,10 +392,12 @@ public partial class AbbreviatedCaseNumber : OpenXmlLeafTextElement
     public AbbreviatedCaseNumber(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AbbreviatedCaseNumber>(deep);
@@ -378,7 +416,9 @@ public partial class AlbumTitle : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10848;
     /// <inheritdoc/>
     public override string LocalName => "AlbumTitle";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -394,10 +434,12 @@ public partial class AlbumTitle : OpenXmlLeafTextElement
     public AlbumTitle(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AlbumTitle>(deep);
@@ -416,7 +458,9 @@ public partial class BookTitle : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10850;
     /// <inheritdoc/>
     public override string LocalName => "BookTitle";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -432,10 +476,12 @@ public partial class BookTitle : OpenXmlLeafTextElement
     public BookTitle(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookTitle>(deep);
@@ -454,7 +500,9 @@ public partial class Broadcaster : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10851;
     /// <inheritdoc/>
     public override string LocalName => "Broadcaster";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -470,10 +518,12 @@ public partial class Broadcaster : OpenXmlLeafTextElement
     public Broadcaster(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Broadcaster>(deep);
@@ -492,7 +542,9 @@ public partial class BroadcastTitle : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10852;
     /// <inheritdoc/>
     public override string LocalName => "BroadcastTitle";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -508,10 +560,12 @@ public partial class BroadcastTitle : OpenXmlLeafTextElement
     public BroadcastTitle(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BroadcastTitle>(deep);
@@ -530,7 +584,9 @@ public partial class CaseNumber : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10853;
     /// <inheritdoc/>
     public override string LocalName => "CaseNumber";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -546,10 +602,12 @@ public partial class CaseNumber : OpenXmlLeafTextElement
     public CaseNumber(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CaseNumber>(deep);
@@ -568,7 +626,9 @@ public partial class ChapterNumber : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10854;
     /// <inheritdoc/>
     public override string LocalName => "ChapterNumber";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -584,10 +644,12 @@ public partial class ChapterNumber : OpenXmlLeafTextElement
     public ChapterNumber(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChapterNumber>(deep);
@@ -606,7 +668,9 @@ public partial class City : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10855;
     /// <inheritdoc/>
     public override string LocalName => "City";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -622,10 +686,12 @@ public partial class City : OpenXmlLeafTextElement
     public City(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<City>(deep);
@@ -644,7 +710,9 @@ public partial class Comments : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10856;
     /// <inheritdoc/>
     public override string LocalName => "Comments";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -660,10 +728,12 @@ public partial class Comments : OpenXmlLeafTextElement
     public Comments(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Comments>(deep);
@@ -682,7 +752,9 @@ public partial class ConferenceName : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10857;
     /// <inheritdoc/>
     public override string LocalName => "ConferenceName";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -698,10 +770,12 @@ public partial class ConferenceName : OpenXmlLeafTextElement
     public ConferenceName(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConferenceName>(deep);
@@ -720,7 +794,9 @@ public partial class CountryRegion : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10858;
     /// <inheritdoc/>
     public override string LocalName => "CountryRegion";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -736,10 +812,12 @@ public partial class CountryRegion : OpenXmlLeafTextElement
     public CountryRegion(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CountryRegion>(deep);
@@ -758,7 +836,9 @@ public partial class Court : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10859;
     /// <inheritdoc/>
     public override string LocalName => "Court";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -774,10 +854,12 @@ public partial class Court : OpenXmlLeafTextElement
     public Court(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Court>(deep);
@@ -796,7 +878,9 @@ public partial class Day : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10860;
     /// <inheritdoc/>
     public override string LocalName => "Day";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -812,10 +896,12 @@ public partial class Day : OpenXmlLeafTextElement
     public Day(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Day>(deep);
@@ -834,7 +920,9 @@ public partial class DayAccessed : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10861;
     /// <inheritdoc/>
     public override string LocalName => "DayAccessed";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -850,10 +938,12 @@ public partial class DayAccessed : OpenXmlLeafTextElement
     public DayAccessed(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DayAccessed>(deep);
@@ -872,7 +962,9 @@ public partial class Department : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10862;
     /// <inheritdoc/>
     public override string LocalName => "Department";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -888,10 +980,12 @@ public partial class Department : OpenXmlLeafTextElement
     public Department(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Department>(deep);
@@ -910,7 +1004,9 @@ public partial class Distributor : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10863;
     /// <inheritdoc/>
     public override string LocalName => "Distributor";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -926,10 +1022,12 @@ public partial class Distributor : OpenXmlLeafTextElement
     public Distributor(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Distributor>(deep);
@@ -948,7 +1046,9 @@ public partial class Edition : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10864;
     /// <inheritdoc/>
     public override string LocalName => "Edition";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -964,10 +1064,12 @@ public partial class Edition : OpenXmlLeafTextElement
     public Edition(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Edition>(deep);
@@ -986,7 +1088,9 @@ public partial class GuidString : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10865;
     /// <inheritdoc/>
     public override string LocalName => "Guid";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1002,10 +1106,12 @@ public partial class GuidString : OpenXmlLeafTextElement
     public GuidString(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GuidString>(deep);
@@ -1024,7 +1130,9 @@ public partial class Institution : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10866;
     /// <inheritdoc/>
     public override string LocalName => "Institution";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1040,10 +1148,12 @@ public partial class Institution : OpenXmlLeafTextElement
     public Institution(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Institution>(deep);
@@ -1062,7 +1172,9 @@ public partial class InternetSiteTitle : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10867;
     /// <inheritdoc/>
     public override string LocalName => "InternetSiteTitle";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1078,10 +1190,12 @@ public partial class InternetSiteTitle : OpenXmlLeafTextElement
     public InternetSiteTitle(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InternetSiteTitle>(deep);
@@ -1100,7 +1214,9 @@ public partial class Issue : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10868;
     /// <inheritdoc/>
     public override string LocalName => "Issue";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1116,10 +1232,12 @@ public partial class Issue : OpenXmlLeafTextElement
     public Issue(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Issue>(deep);
@@ -1138,7 +1256,9 @@ public partial class JournalName : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10869;
     /// <inheritdoc/>
     public override string LocalName => "JournalName";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1154,10 +1274,12 @@ public partial class JournalName : OpenXmlLeafTextElement
     public JournalName(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<JournalName>(deep);
@@ -1176,7 +1298,9 @@ public partial class LcId : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10870;
     /// <inheritdoc/>
     public override string LocalName => "LCID";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1192,10 +1316,12 @@ public partial class LcId : OpenXmlLeafTextElement
     public LcId(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LcId>(deep);
@@ -1214,7 +1340,9 @@ public partial class Medium : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10871;
     /// <inheritdoc/>
     public override string LocalName => "Medium";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1230,10 +1358,12 @@ public partial class Medium : OpenXmlLeafTextElement
     public Medium(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Medium>(deep);
@@ -1252,7 +1382,9 @@ public partial class Month : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10872;
     /// <inheritdoc/>
     public override string LocalName => "Month";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1268,10 +1400,12 @@ public partial class Month : OpenXmlLeafTextElement
     public Month(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Month>(deep);
@@ -1290,7 +1424,9 @@ public partial class MonthAccessed : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10873;
     /// <inheritdoc/>
     public override string LocalName => "MonthAccessed";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1306,10 +1442,12 @@ public partial class MonthAccessed : OpenXmlLeafTextElement
     public MonthAccessed(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MonthAccessed>(deep);
@@ -1328,7 +1466,9 @@ public partial class NumberVolumes : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10874;
     /// <inheritdoc/>
     public override string LocalName => "NumberVolumes";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1344,10 +1484,12 @@ public partial class NumberVolumes : OpenXmlLeafTextElement
     public NumberVolumes(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberVolumes>(deep);
@@ -1366,7 +1508,9 @@ public partial class Pages : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10875;
     /// <inheritdoc/>
     public override string LocalName => "Pages";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1382,10 +1526,12 @@ public partial class Pages : OpenXmlLeafTextElement
     public Pages(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Pages>(deep);
@@ -1404,7 +1550,9 @@ public partial class PatentNumber : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10876;
     /// <inheritdoc/>
     public override string LocalName => "PatentNumber";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1420,10 +1568,12 @@ public partial class PatentNumber : OpenXmlLeafTextElement
     public PatentNumber(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PatentNumber>(deep);
@@ -1442,7 +1592,9 @@ public partial class PeriodicalTitle : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10877;
     /// <inheritdoc/>
     public override string LocalName => "PeriodicalTitle";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1458,10 +1610,12 @@ public partial class PeriodicalTitle : OpenXmlLeafTextElement
     public PeriodicalTitle(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PeriodicalTitle>(deep);
@@ -1480,7 +1634,9 @@ public partial class ProductionCompany : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10878;
     /// <inheritdoc/>
     public override string LocalName => "ProductionCompany";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1496,10 +1652,12 @@ public partial class ProductionCompany : OpenXmlLeafTextElement
     public ProductionCompany(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ProductionCompany>(deep);
@@ -1518,7 +1676,9 @@ public partial class PublicationTitle : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10879;
     /// <inheritdoc/>
     public override string LocalName => "PublicationTitle";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1534,10 +1694,12 @@ public partial class PublicationTitle : OpenXmlLeafTextElement
     public PublicationTitle(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PublicationTitle>(deep);
@@ -1556,7 +1718,9 @@ public partial class Publisher : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10880;
     /// <inheritdoc/>
     public override string LocalName => "Publisher";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1572,10 +1736,12 @@ public partial class Publisher : OpenXmlLeafTextElement
     public Publisher(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Publisher>(deep);
@@ -1594,7 +1760,9 @@ public partial class RecordingNumber : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10881;
     /// <inheritdoc/>
     public override string LocalName => "RecordingNumber";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1610,10 +1778,12 @@ public partial class RecordingNumber : OpenXmlLeafTextElement
     public RecordingNumber(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RecordingNumber>(deep);
@@ -1632,7 +1802,9 @@ public partial class ReferenceOrder : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10882;
     /// <inheritdoc/>
     public override string LocalName => "RefOrder";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1648,10 +1820,12 @@ public partial class ReferenceOrder : OpenXmlLeafTextElement
     public ReferenceOrder(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ReferenceOrder>(deep);
@@ -1670,7 +1844,9 @@ public partial class Reporter : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10883;
     /// <inheritdoc/>
     public override string LocalName => "Reporter";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1686,10 +1862,12 @@ public partial class Reporter : OpenXmlLeafTextElement
     public Reporter(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Reporter>(deep);
@@ -1708,7 +1886,9 @@ public partial class ShortTitle : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10885;
     /// <inheritdoc/>
     public override string LocalName => "ShortTitle";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1724,10 +1904,12 @@ public partial class ShortTitle : OpenXmlLeafTextElement
     public ShortTitle(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShortTitle>(deep);
@@ -1746,7 +1928,9 @@ public partial class StandardNumber : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10886;
     /// <inheritdoc/>
     public override string LocalName => "StandardNumber";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1762,10 +1946,12 @@ public partial class StandardNumber : OpenXmlLeafTextElement
     public StandardNumber(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StandardNumber>(deep);
@@ -1784,7 +1970,9 @@ public partial class StateProvince : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10887;
     /// <inheritdoc/>
     public override string LocalName => "StateProvince";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1800,10 +1988,12 @@ public partial class StateProvince : OpenXmlLeafTextElement
     public StateProvince(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StateProvince>(deep);
@@ -1822,7 +2012,9 @@ public partial class Station : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10888;
     /// <inheritdoc/>
     public override string LocalName => "Station";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1838,10 +2030,12 @@ public partial class Station : OpenXmlLeafTextElement
     public Station(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Station>(deep);
@@ -1860,7 +2054,9 @@ public partial class Tag : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10889;
     /// <inheritdoc/>
     public override string LocalName => "Tag";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1876,10 +2072,12 @@ public partial class Tag : OpenXmlLeafTextElement
     public Tag(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tag>(deep);
@@ -1898,7 +2096,9 @@ public partial class Theater : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10890;
     /// <inheritdoc/>
     public override string LocalName => "Theater";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1914,10 +2114,12 @@ public partial class Theater : OpenXmlLeafTextElement
     public Theater(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Theater>(deep);
@@ -1936,7 +2138,9 @@ public partial class ThesisType : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10891;
     /// <inheritdoc/>
     public override string LocalName => "ThesisType";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1952,10 +2156,12 @@ public partial class ThesisType : OpenXmlLeafTextElement
     public ThesisType(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ThesisType>(deep);
@@ -1974,7 +2180,9 @@ public partial class Title : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10892;
     /// <inheritdoc/>
     public override string LocalName => "Title";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1990,10 +2198,12 @@ public partial class Title : OpenXmlLeafTextElement
     public Title(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Title>(deep);
@@ -2012,7 +2222,9 @@ public partial class PatentType : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10893;
     /// <inheritdoc/>
     public override string LocalName => "Type";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2028,10 +2240,12 @@ public partial class PatentType : OpenXmlLeafTextElement
     public PatentType(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PatentType>(deep);
@@ -2050,7 +2264,9 @@ public partial class UrlString : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10894;
     /// <inheritdoc/>
     public override string LocalName => "URL";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2066,10 +2282,12 @@ public partial class UrlString : OpenXmlLeafTextElement
     public UrlString(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<UrlString>(deep);
@@ -2088,7 +2306,9 @@ public partial class Version : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10895;
     /// <inheritdoc/>
     public override string LocalName => "Version";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2104,10 +2324,12 @@ public partial class Version : OpenXmlLeafTextElement
     public Version(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Version>(deep);
@@ -2126,7 +2348,9 @@ public partial class Volume : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10896;
     /// <inheritdoc/>
     public override string LocalName => "Volume";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2142,10 +2366,12 @@ public partial class Volume : OpenXmlLeafTextElement
     public Volume(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Volume>(deep);
@@ -2164,7 +2390,9 @@ public partial class Year : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10897;
     /// <inheritdoc/>
     public override string LocalName => "Year";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2180,10 +2408,12 @@ public partial class Year : OpenXmlLeafTextElement
     public Year(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Year>(deep);
@@ -2202,7 +2432,9 @@ public partial class YearAccessed : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10898;
     /// <inheritdoc/>
     public override string LocalName => "YearAccessed";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2218,10 +2450,12 @@ public partial class YearAccessed : OpenXmlLeafTextElement
     public YearAccessed(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<YearAccessed>(deep);
@@ -2247,24 +2481,29 @@ public partial class NameList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10829;
     /// <inheritdoc/>
     public override string LocalName => "NameList";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the NameList class.
     /// </summary>
     public NameList():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the NameList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public NameList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the NameList class with the specified child elements.
     /// </summary>
@@ -2272,6 +2511,7 @@ public partial class NameList : OpenXmlCompositeElement
     public NameList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the NameList class from outer XML.
     /// </summary>
@@ -2280,13 +2520,15 @@ public partial class NameList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 9 == namespaceId && "Person" == name)
     return new Person();
+    
 
     return null;
 }
@@ -2315,7 +2557,9 @@ public partial class Artist : NameType
     internal const int ElementTypeIdConst = 10831;
     /// <inheritdoc/>
     public override string LocalName => "Artist";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2329,8 +2573,9 @@ public partial class Artist : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Artist(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Artist class with the specified child elements.
     /// </summary>
@@ -2338,6 +2583,7 @@ public partial class Artist : NameType
     public Artist(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Artist class from outer XML.
     /// </summary>
@@ -2371,7 +2617,9 @@ public partial class BookAuthor : NameType
     internal const int ElementTypeIdConst = 10833;
     /// <inheritdoc/>
     public override string LocalName => "BookAuthor";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2385,8 +2633,9 @@ public partial class BookAuthor : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public BookAuthor(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the BookAuthor class with the specified child elements.
     /// </summary>
@@ -2394,6 +2643,7 @@ public partial class BookAuthor : NameType
     public BookAuthor(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the BookAuthor class from outer XML.
     /// </summary>
@@ -2427,7 +2677,9 @@ public partial class Compiler : NameType
     internal const int ElementTypeIdConst = 10834;
     /// <inheritdoc/>
     public override string LocalName => "Compiler";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2441,8 +2693,9 @@ public partial class Compiler : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Compiler(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Compiler class with the specified child elements.
     /// </summary>
@@ -2450,6 +2703,7 @@ public partial class Compiler : NameType
     public Compiler(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Compiler class from outer XML.
     /// </summary>
@@ -2483,7 +2737,9 @@ public partial class Composer : NameType
     internal const int ElementTypeIdConst = 10835;
     /// <inheritdoc/>
     public override string LocalName => "Composer";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2497,8 +2753,9 @@ public partial class Composer : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Composer(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Composer class with the specified child elements.
     /// </summary>
@@ -2506,6 +2763,7 @@ public partial class Composer : NameType
     public Composer(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Composer class from outer XML.
     /// </summary>
@@ -2539,7 +2797,9 @@ public partial class Conductor : NameType
     internal const int ElementTypeIdConst = 10836;
     /// <inheritdoc/>
     public override string LocalName => "Conductor";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2553,8 +2813,9 @@ public partial class Conductor : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Conductor(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Conductor class with the specified child elements.
     /// </summary>
@@ -2562,6 +2823,7 @@ public partial class Conductor : NameType
     public Conductor(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Conductor class from outer XML.
     /// </summary>
@@ -2595,7 +2857,9 @@ public partial class Counsel : NameType
     internal const int ElementTypeIdConst = 10837;
     /// <inheritdoc/>
     public override string LocalName => "Counsel";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2609,8 +2873,9 @@ public partial class Counsel : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Counsel(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Counsel class with the specified child elements.
     /// </summary>
@@ -2618,6 +2883,7 @@ public partial class Counsel : NameType
     public Counsel(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Counsel class from outer XML.
     /// </summary>
@@ -2651,7 +2917,9 @@ public partial class Director : NameType
     internal const int ElementTypeIdConst = 10838;
     /// <inheritdoc/>
     public override string LocalName => "Director";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2665,8 +2933,9 @@ public partial class Director : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Director(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Director class with the specified child elements.
     /// </summary>
@@ -2674,6 +2943,7 @@ public partial class Director : NameType
     public Director(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Director class from outer XML.
     /// </summary>
@@ -2707,7 +2977,9 @@ public partial class Editor : NameType
     internal const int ElementTypeIdConst = 10839;
     /// <inheritdoc/>
     public override string LocalName => "Editor";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2721,8 +2993,9 @@ public partial class Editor : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Editor(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Editor class with the specified child elements.
     /// </summary>
@@ -2730,6 +3003,7 @@ public partial class Editor : NameType
     public Editor(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Editor class from outer XML.
     /// </summary>
@@ -2763,7 +3037,9 @@ public partial class Interviewee : NameType
     internal const int ElementTypeIdConst = 10840;
     /// <inheritdoc/>
     public override string LocalName => "Interviewee";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2777,8 +3053,9 @@ public partial class Interviewee : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Interviewee(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Interviewee class with the specified child elements.
     /// </summary>
@@ -2786,6 +3063,7 @@ public partial class Interviewee : NameType
     public Interviewee(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Interviewee class from outer XML.
     /// </summary>
@@ -2819,7 +3097,9 @@ public partial class Interviewer : NameType
     internal const int ElementTypeIdConst = 10841;
     /// <inheritdoc/>
     public override string LocalName => "Interviewer";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2833,8 +3113,9 @@ public partial class Interviewer : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Interviewer(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Interviewer class with the specified child elements.
     /// </summary>
@@ -2842,6 +3123,7 @@ public partial class Interviewer : NameType
     public Interviewer(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Interviewer class from outer XML.
     /// </summary>
@@ -2875,7 +3157,9 @@ public partial class Inventor : NameType
     internal const int ElementTypeIdConst = 10842;
     /// <inheritdoc/>
     public override string LocalName => "Inventor";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2889,8 +3173,9 @@ public partial class Inventor : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Inventor(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Inventor class with the specified child elements.
     /// </summary>
@@ -2898,6 +3183,7 @@ public partial class Inventor : NameType
     public Inventor(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Inventor class from outer XML.
     /// </summary>
@@ -2931,7 +3217,9 @@ public partial class ProducerName : NameType
     internal const int ElementTypeIdConst = 10844;
     /// <inheritdoc/>
     public override string LocalName => "ProducerName";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2945,8 +3233,9 @@ public partial class ProducerName : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public ProducerName(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the ProducerName class with the specified child elements.
     /// </summary>
@@ -2954,6 +3243,7 @@ public partial class ProducerName : NameType
     public ProducerName(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the ProducerName class from outer XML.
     /// </summary>
@@ -2987,7 +3277,9 @@ public partial class Translator : NameType
     internal const int ElementTypeIdConst = 10845;
     /// <inheritdoc/>
     public override string LocalName => "Translator";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3001,8 +3293,9 @@ public partial class Translator : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Translator(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Translator class with the specified child elements.
     /// </summary>
@@ -3010,6 +3303,7 @@ public partial class Translator : NameType
     public Translator(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Translator class from outer XML.
     /// </summary>
@@ -3043,7 +3337,9 @@ public partial class Writer : NameType
     internal const int ElementTypeIdConst = 10846;
     /// <inheritdoc/>
     public override string LocalName => "Writer";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3057,8 +3353,9 @@ public partial class Writer : NameType
     /// <param name="childElements">Specifies the child elements.</param>
     public Writer(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Writer class with the specified child elements.
     /// </summary>
@@ -3066,6 +3363,7 @@ public partial class Writer : NameType
     public Writer(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Writer class from outer XML.
     /// </summary>
@@ -3094,22 +3392,26 @@ public partial class Writer : NameType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class NameType : OpenXmlCompositeElement
 {
-    
+        
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 9 == namespaceId && "NameList" == name)
     return new NameList();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "NameList" };
     private static readonly byte[] eleNamespaceIds = { 9 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> Name List.</para>
     /// <para> Represents the following element tag in the schema: b:NameList </para>
@@ -3124,18 +3426,21 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
+    
     /// <summary>
     /// Initializes a new instance of the NameType class.
     /// </summary>
     protected NameType(){}
+    
         /// <summary>
     ///Initializes a new instance of the NameType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     protected NameType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the NameType class with the specified child elements.
     /// </summary>
@@ -3143,6 +3448,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     protected NameType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the NameType class from outer XML.
     /// </summary>
@@ -3174,7 +3480,9 @@ public partial class Author : NameOrCorporateType
     internal const int ElementTypeIdConst = 10832;
     /// <inheritdoc/>
     public override string LocalName => "Author";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3188,8 +3496,9 @@ public partial class Author : NameOrCorporateType
     /// <param name="childElements">Specifies the child elements.</param>
     public Author(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Author class with the specified child elements.
     /// </summary>
@@ -3197,6 +3506,7 @@ public partial class Author : NameOrCorporateType
     public Author(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Author class from outer XML.
     /// </summary>
@@ -3231,7 +3541,9 @@ public partial class Performer : NameOrCorporateType
     internal const int ElementTypeIdConst = 10843;
     /// <inheritdoc/>
     public override string LocalName => "Performer";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3245,8 +3557,9 @@ public partial class Performer : NameOrCorporateType
     /// <param name="childElements">Specifies the child elements.</param>
     public Performer(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Performer class with the specified child elements.
     /// </summary>
@@ -3254,6 +3567,7 @@ public partial class Performer : NameOrCorporateType
     public Performer(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Performer class from outer XML.
     /// </summary>
@@ -3284,24 +3598,29 @@ public partial class Performer : NameOrCorporateType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
 {
-    
+        
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 9 == namespaceId && "NameList" == name)
     return new NameList();
+    
 if( 9 == namespaceId && "Corporate" == name)
     return new Corporate();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "NameList","Corporate" };
     private static readonly byte[] eleNamespaceIds = { 9,9 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+    
         /// <summary>
     /// <para> NameList.</para>
     /// <para> Represents the following element tag in the schema: b:NameList </para>
@@ -3328,18 +3647,21 @@ if( 9 == namespaceId && "Corporate" == name)
     }
 
 
+    
     /// <summary>
     /// Initializes a new instance of the NameOrCorporateType class.
     /// </summary>
     protected NameOrCorporateType(){}
+    
         /// <summary>
     ///Initializes a new instance of the NameOrCorporateType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     protected NameOrCorporateType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the NameOrCorporateType class with the specified child elements.
     /// </summary>
@@ -3347,6 +3669,7 @@ if( 9 == namespaceId && "Corporate" == name)
     protected NameOrCorporateType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the NameOrCorporateType class from outer XML.
     /// </summary>
@@ -3408,24 +3731,29 @@ public partial class AuthorList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10849;
     /// <inheritdoc/>
     public override string LocalName => "Author";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the AuthorList class.
     /// </summary>
     public AuthorList():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the AuthorList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public AuthorList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the AuthorList class with the specified child elements.
     /// </summary>
@@ -3433,6 +3761,7 @@ public partial class AuthorList : OpenXmlCompositeElement
     public AuthorList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the AuthorList class from outer XML.
     /// </summary>
@@ -3441,52 +3770,72 @@ public partial class AuthorList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 9 == namespaceId && "Artist" == name)
     return new Artist();
+    
 if( 9 == namespaceId && "Author" == name)
     return new Author();
+    
 if( 9 == namespaceId && "BookAuthor" == name)
     return new BookAuthor();
+    
 if( 9 == namespaceId && "Compiler" == name)
     return new Compiler();
+    
 if( 9 == namespaceId && "Composer" == name)
     return new Composer();
+    
 if( 9 == namespaceId && "Conductor" == name)
     return new Conductor();
+    
 if( 9 == namespaceId && "Counsel" == name)
     return new Counsel();
+    
 if( 9 == namespaceId && "Director" == name)
     return new Director();
+    
 if( 9 == namespaceId && "Editor" == name)
     return new Editor();
+    
 if( 9 == namespaceId && "Interviewee" == name)
     return new Interviewee();
+    
 if( 9 == namespaceId && "Interviewer" == name)
     return new Interviewer();
+    
 if( 9 == namespaceId && "Inventor" == name)
     return new Inventor();
+    
 if( 9 == namespaceId && "Performer" == name)
     return new Performer();
+    
 if( 9 == namespaceId && "ProducerName" == name)
     return new ProducerName();
+    
 if( 9 == namespaceId && "Translator" == name)
     return new Translator();
+    
 if( 9 == namespaceId && "Writer" == name)
     return new Writer();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "Artist","Author","BookAuthor","Compiler","Composer","Conductor","Counsel","Director","Editor","Interviewee","Interviewer","Inventor","Performer","ProducerName","Translator","Writer" };
     private static readonly byte[] eleNamespaceIds = { 9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+    
         /// <summary>
     /// <para> Artist.</para>
     /// <para> Represents the following element tag in the schema: b:Artist </para>
@@ -3698,10 +4047,13 @@ public partial class SourceType : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 10884;
     /// <inheritdoc/>
     public override string LocalName => "SourceType";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
@@ -3709,6 +4061,7 @@ public partial class SourceType : OpenXmlLeafTextElement
     /// </summary>
     public SourceType():base(){}
     
+      
         /// <summary>
     /// Initializes a new instance of the SourceType class with the specified text content.
     /// </summary>
@@ -3716,11 +4069,14 @@ public partial class SourceType : OpenXmlLeafTextElement
     public SourceType(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new EnumValue<DocumentFormat.OpenXml.Bibliography.DataSourceValues>(){ InnerText = text };
     }
-
+    
+ 
+    
     
     
     /// <inheritdoc/>
@@ -3849,24 +4205,29 @@ public partial class Source : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10899;
     /// <inheritdoc/>
     public override string LocalName => "Source";
+    
     internal override byte NamespaceId => 9;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the Source class.
     /// </summary>
     public Source():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the Source class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Source(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Source class with the specified child elements.
     /// </summary>
@@ -3874,6 +4235,7 @@ public partial class Source : OpenXmlCompositeElement
     public Source(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Source class from outer XML.
     /// </summary>
@@ -3882,124 +4244,180 @@ public partial class Source : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 9 == namespaceId && "AbbreviatedCaseNumber" == name)
     return new AbbreviatedCaseNumber();
+    
 if( 9 == namespaceId && "AlbumTitle" == name)
     return new AlbumTitle();
+    
 if( 9 == namespaceId && "Author" == name)
     return new AuthorList();
+    
 if( 9 == namespaceId && "BookTitle" == name)
     return new BookTitle();
+    
 if( 9 == namespaceId && "Broadcaster" == name)
     return new Broadcaster();
+    
 if( 9 == namespaceId && "BroadcastTitle" == name)
     return new BroadcastTitle();
+    
 if( 9 == namespaceId && "CaseNumber" == name)
     return new CaseNumber();
+    
 if( 9 == namespaceId && "ChapterNumber" == name)
     return new ChapterNumber();
+    
 if( 9 == namespaceId && "City" == name)
     return new City();
+    
 if( 9 == namespaceId && "Comments" == name)
     return new Comments();
+    
 if( 9 == namespaceId && "ConferenceName" == name)
     return new ConferenceName();
+    
 if( 9 == namespaceId && "CountryRegion" == name)
     return new CountryRegion();
+    
 if( 9 == namespaceId && "Court" == name)
     return new Court();
+    
 if( 9 == namespaceId && "Day" == name)
     return new Day();
+    
 if( 9 == namespaceId && "DayAccessed" == name)
     return new DayAccessed();
+    
 if( 9 == namespaceId && "Department" == name)
     return new Department();
+    
 if( 9 == namespaceId && "Distributor" == name)
     return new Distributor();
+    
 if( 9 == namespaceId && "Edition" == name)
     return new Edition();
+    
 if( 9 == namespaceId && "Guid" == name)
     return new GuidString();
+    
 if( 9 == namespaceId && "Institution" == name)
     return new Institution();
+    
 if( 9 == namespaceId && "InternetSiteTitle" == name)
     return new InternetSiteTitle();
+    
 if( 9 == namespaceId && "Issue" == name)
     return new Issue();
+    
 if( 9 == namespaceId && "JournalName" == name)
     return new JournalName();
+    
 if( 9 == namespaceId && "LCID" == name)
     return new LcId();
+    
 if( 9 == namespaceId && "Medium" == name)
     return new Medium();
+    
 if( 9 == namespaceId && "Month" == name)
     return new Month();
+    
 if( 9 == namespaceId && "MonthAccessed" == name)
     return new MonthAccessed();
+    
 if( 9 == namespaceId && "NumberVolumes" == name)
     return new NumberVolumes();
+    
 if( 9 == namespaceId && "Pages" == name)
     return new Pages();
+    
 if( 9 == namespaceId && "PatentNumber" == name)
     return new PatentNumber();
+    
 if( 9 == namespaceId && "PeriodicalTitle" == name)
     return new PeriodicalTitle();
+    
 if( 9 == namespaceId && "ProductionCompany" == name)
     return new ProductionCompany();
+    
 if( 9 == namespaceId && "PublicationTitle" == name)
     return new PublicationTitle();
+    
 if( 9 == namespaceId && "Publisher" == name)
     return new Publisher();
+    
 if( 9 == namespaceId && "RecordingNumber" == name)
     return new RecordingNumber();
+    
 if( 9 == namespaceId && "RefOrder" == name)
     return new ReferenceOrder();
+    
 if( 9 == namespaceId && "Reporter" == name)
     return new Reporter();
+    
 if( 9 == namespaceId && "SourceType" == name)
     return new SourceType();
+    
 if( 9 == namespaceId && "ShortTitle" == name)
     return new ShortTitle();
+    
 if( 9 == namespaceId && "StandardNumber" == name)
     return new StandardNumber();
+    
 if( 9 == namespaceId && "StateProvince" == name)
     return new StateProvince();
+    
 if( 9 == namespaceId && "Station" == name)
     return new Station();
+    
 if( 9 == namespaceId && "Tag" == name)
     return new Tag();
+    
 if( 9 == namespaceId && "Theater" == name)
     return new Theater();
+    
 if( 9 == namespaceId && "ThesisType" == name)
     return new ThesisType();
+    
 if( 9 == namespaceId && "Title" == name)
     return new Title();
+    
 if( 9 == namespaceId && "Type" == name)
     return new PatentType();
+    
 if( 9 == namespaceId && "URL" == name)
     return new UrlString();
+    
 if( 9 == namespaceId && "Version" == name)
     return new Version();
+    
 if( 9 == namespaceId && "Volume" == name)
     return new Volume();
+    
 if( 9 == namespaceId && "Year" == name)
     return new Year();
+    
 if( 9 == namespaceId && "YearAccessed" == name)
     return new YearAccessed();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "AbbreviatedCaseNumber","AlbumTitle","Author","BookTitle","Broadcaster","BroadcastTitle","CaseNumber","ChapterNumber","City","Comments","ConferenceName","CountryRegion","Court","Day","DayAccessed","Department","Distributor","Edition","Guid","Institution","InternetSiteTitle","Issue","JournalName","LCID","Medium","Month","MonthAccessed","NumberVolumes","Pages","PatentNumber","PeriodicalTitle","ProductionCompany","PublicationTitle","Publisher","RecordingNumber","RefOrder","Reporter","SourceType","ShortTitle","StandardNumber","StateProvince","Station","Tag","Theater","ThesisType","Title","Type","URL","Version","Volume","Year","YearAccessed" };
     private static readonly byte[] eleNamespaceIds = { 9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneAll;
+    
         /// <summary>
     /// <para> Abbreviated Case Number.</para>
     /// <para> Represents the following element tag in the schema: b:AbbreviatedCaseNumber </para>
@@ -4631,11 +5049,11 @@ if( 9 == namespaceId && "YearAccessed" == name)
 
 }
 /// <summary>
-/// Bibliographic Data Source Types
-/// </summary>
+/// Bibliographic Data Source Types 
+/// </summary> 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum DataSourceValues
-{
+{  
 	///<summary>
 ///Article in a Periodical.
 ///<para>When the item is serialized out as xml, its value is "ArticleInAPeriodical".</para>
@@ -4738,6 +5156,8 @@ Case,
 ///</summary>
 [EnumString("Misc")]
 Miscellaneous,
-
+ 
 }
 }
+ 
+ 

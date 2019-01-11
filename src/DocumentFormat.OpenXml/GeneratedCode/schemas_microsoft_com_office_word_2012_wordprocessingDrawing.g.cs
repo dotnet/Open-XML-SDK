@@ -22,38 +22,43 @@ public partial class WebVideoProperty : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13435;
     /// <inheritdoc/>
     public override string LocalName => "webVideoPr";
+    
     internal override byte NamespaceId => 75;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
+    
     
         /// <summary>
     /// <para> embeddedHtml.</para>
     /// <para>Represents the following attribute in the schema: embeddedHtml </para>
     /// </summary>
     [SchemaAttr(0, "embeddedHtml")]
-	[SchemaIndex(0)]
-    public StringValue EmbeddedHtml { get; set;}
+    [SchemaIndex(0)]
+    public StringValue EmbeddedHtml { get; set; }
     /// <summary>
     /// <para> h.</para>
     /// <para>Represents the following attribute in the schema: h </para>
     /// </summary>
     [SchemaAttr(0, "h")]
-	[SchemaIndex(1)]
-    public UInt32Value Height { get; set;}
+    [SchemaIndex(1)]
+    public UInt32Value Height { get; set; }
     /// <summary>
     /// <para> w.</para>
     /// <para>Represents the following attribute in the schema: w </para>
     /// </summary>
     [SchemaAttr(0, "w")]
-	[SchemaIndex(2)]
-    public UInt32Value Width { get; set;}
+    [SchemaIndex(2)]
+    public UInt32Value Width { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the WebVideoProperty class.
     /// </summary>
     public WebVideoProperty():base(){}
     
+      
+     
     
     
     
@@ -62,3 +67,5 @@ public partial class WebVideoProperty : OpenXmlLeafElement
 
 }
 }
+ 
+ 

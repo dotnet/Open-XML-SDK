@@ -29,45 +29,50 @@ public partial class ThemeFamily : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13430;
     /// <inheritdoc/>
     public override string LocalName => "themeFamily";
+    
     internal override byte NamespaceId => 73;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
+    
     
         /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-	[SchemaIndex(0)]
-    public StringValue Name { get; set;}
+    [SchemaIndex(0)]
+    public StringValue Name { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-	[SchemaIndex(1)]
-    public StringValue Id { get; set;}
+    [SchemaIndex(1)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> vid.</para>
     /// <para>Represents the following attribute in the schema: vid </para>
     /// </summary>
     [SchemaAttr(0, "vid")]
-	[SchemaIndex(2)]
-    public StringValue Vid { get; set;}
+    [SchemaIndex(2)]
+    public StringValue Vid { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ThemeFamily class.
     /// </summary>
     public ThemeFamily():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the ThemeFamily class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ThemeFamily(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the ThemeFamily class with the specified child elements.
     /// </summary>
@@ -75,6 +80,7 @@ public partial class ThemeFamily : OpenXmlCompositeElement
     public ThemeFamily(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the ThemeFamily class from outer XML.
     /// </summary>
@@ -83,22 +89,27 @@ public partial class ThemeFamily : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 73 == namespaceId && "extLst" == name)
     return new OfficeArtExtensionList();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 73 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> OfficeArtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: thm15:extLst </para>
@@ -137,24 +148,29 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13431;
     /// <inheritdoc/>
     public override string LocalName => "extLst";
+    
     internal override byte NamespaceId => 73;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class.
     /// </summary>
     public OfficeArtExtensionList():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public OfficeArtExtensionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
@@ -162,6 +178,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     public OfficeArtExtensionList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class from outer XML.
     /// </summary>
@@ -170,13 +187,15 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 10 == namespaceId && "ext" == name)
     return new DocumentFormat.OpenXml.Drawing.Extension();
+    
 
     return null;
 }
@@ -206,39 +225,42 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13432;
     /// <inheritdoc/>
     public override string LocalName => "themeVariant";
+    
     internal override byte NamespaceId => 73;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
+    
     
         /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-	[SchemaIndex(0)]
-    public StringValue Name { get; set;}
+    [SchemaIndex(0)]
+    public StringValue Name { get; set; }
     /// <summary>
     /// <para> vid.</para>
     /// <para>Represents the following attribute in the schema: vid </para>
     /// </summary>
     [SchemaAttr(0, "vid")]
-	[SchemaIndex(1)]
-    public StringValue Vid { get; set;}
+    [SchemaIndex(1)]
+    public StringValue Vid { get; set; }
     /// <summary>
     /// <para> cx.</para>
     /// <para>Represents the following attribute in the schema: cx </para>
     /// </summary>
     [SchemaAttr(0, "cx")]
-	[SchemaIndex(2)]
-    public Int64Value X { get; set;}
+    [SchemaIndex(2)]
+    public Int64Value X { get; set; }
     /// <summary>
     /// <para> cy.</para>
     /// <para>Represents the following attribute in the schema: cy </para>
     /// </summary>
     [SchemaAttr(0, "cy")]
-	[SchemaIndex(3)]
-    public Int64Value Y { get; set;}
+    [SchemaIndex(3)]
+    public Int64Value Y { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: r:id </para>
@@ -246,21 +268,23 @@ public partial class ThemeVariant : OpenXmlCompositeElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-	[SchemaIndex(4)]
-    public StringValue Id { get; set;}
+    [SchemaIndex(4)]
+    public StringValue Id { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ThemeVariant class.
     /// </summary>
     public ThemeVariant():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the ThemeVariant class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ThemeVariant(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the ThemeVariant class with the specified child elements.
     /// </summary>
@@ -268,6 +292,7 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     public ThemeVariant(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the ThemeVariant class from outer XML.
     /// </summary>
@@ -276,22 +301,27 @@ public partial class ThemeVariant : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 73 == namespaceId && "extLst" == name)
     return new OfficeArtExtensionList();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 73 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> OfficeArtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: thm15:extLst </para>
@@ -330,24 +360,29 @@ public partial class ThemeVariantList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13433;
     /// <inheritdoc/>
     public override string LocalName => "themeVariantLst";
+    
     internal override byte NamespaceId => 73;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the ThemeVariantList class.
     /// </summary>
     public ThemeVariantList():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the ThemeVariantList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public ThemeVariantList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the ThemeVariantList class with the specified child elements.
     /// </summary>
@@ -355,6 +390,7 @@ public partial class ThemeVariantList : OpenXmlCompositeElement
     public ThemeVariantList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the ThemeVariantList class from outer XML.
     /// </summary>
@@ -363,13 +399,15 @@ public partial class ThemeVariantList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 73 == namespaceId && "themeVariant" == name)
     return new ThemeVariant();
+    
 
     return null;
 }
@@ -380,3 +418,5 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 }
 }
+ 
+ 

@@ -47,24 +47,29 @@ public partial class WordprocessingCanvas : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13182;
     /// <inheritdoc/>
     public override string LocalName => "wpc";
+    
     internal override byte NamespaceId => 59;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the WordprocessingCanvas class.
     /// </summary>
     public WordprocessingCanvas():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the WordprocessingCanvas class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public WordprocessingCanvas(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the WordprocessingCanvas class with the specified child elements.
     /// </summary>
@@ -72,6 +77,7 @@ public partial class WordprocessingCanvas : OpenXmlCompositeElement
     public WordprocessingCanvas(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the WordprocessingCanvas class from outer XML.
     /// </summary>
@@ -80,36 +86,48 @@ public partial class WordprocessingCanvas : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 59 == namespaceId && "bg" == name)
     return new BackgroundFormatting();
+    
 if( 59 == namespaceId && "whole" == name)
     return new WholeFormatting();
+    
 if( 61 == namespaceId && "wsp" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.DrawingShape.WordprocessingShape();
+    
 if( 17 == namespaceId && "pic" == name)
     return new DocumentFormat.OpenXml.Drawing.Pictures.Picture();
+    
 if( 52 == namespaceId && "contentPart" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.ContentPart();
+    
 if( 60 == namespaceId && "wgp" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.WordprocessingGroup();
+    
 if( 59 == namespaceId && "graphicFrame" == name)
     return new GraphicFrameType();
+    
 if( 59 == namespaceId && "extLst" == name)
     return new OfficeArtExtensionList();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "bg","whole","wsp","pic","contentPart","wgp","graphicFrame","extLst" };
     private static readonly byte[] eleNamespaceIds = { 59,59,61,17,52,60,59,59 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> BackgroundFormatting.</para>
     /// <para> Represents the following element tag in the schema: wpc:bg </para>
@@ -174,24 +192,29 @@ public partial class BackgroundFormatting : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13183;
     /// <inheritdoc/>
     public override string LocalName => "bg";
+    
     internal override byte NamespaceId => 59;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the BackgroundFormatting class.
     /// </summary>
     public BackgroundFormatting():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the BackgroundFormatting class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public BackgroundFormatting(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the BackgroundFormatting class with the specified child elements.
     /// </summary>
@@ -199,6 +222,7 @@ public partial class BackgroundFormatting : OpenXmlCompositeElement
     public BackgroundFormatting(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the BackgroundFormatting class from outer XML.
     /// </summary>
@@ -207,27 +231,36 @@ public partial class BackgroundFormatting : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 10 == namespaceId && "noFill" == name)
     return new DocumentFormat.OpenXml.Drawing.NoFill();
+    
 if( 10 == namespaceId && "solidFill" == name)
     return new DocumentFormat.OpenXml.Drawing.SolidFill();
+    
 if( 10 == namespaceId && "gradFill" == name)
     return new DocumentFormat.OpenXml.Drawing.GradientFill();
+    
 if( 10 == namespaceId && "blipFill" == name)
     return new DocumentFormat.OpenXml.Drawing.BlipFill();
+    
 if( 10 == namespaceId && "pattFill" == name)
     return new DocumentFormat.OpenXml.Drawing.PatternFill();
+    
 if( 10 == namespaceId && "grpFill" == name)
     return new DocumentFormat.OpenXml.Drawing.GroupFill();
+    
 if( 10 == namespaceId && "effectLst" == name)
     return new DocumentFormat.OpenXml.Drawing.EffectList();
+    
 if( 10 == namespaceId && "effectDag" == name)
     return new DocumentFormat.OpenXml.Drawing.EffectDag();
+    
 
     return null;
 }
@@ -261,24 +294,29 @@ public partial class WholeFormatting : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13184;
     /// <inheritdoc/>
     public override string LocalName => "whole";
+    
     internal override byte NamespaceId => 59;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the WholeFormatting class.
     /// </summary>
     public WholeFormatting():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the WholeFormatting class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public WholeFormatting(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the WholeFormatting class with the specified child elements.
     /// </summary>
@@ -286,6 +324,7 @@ public partial class WholeFormatting : OpenXmlCompositeElement
     public WholeFormatting(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the WholeFormatting class from outer XML.
     /// </summary>
@@ -294,26 +333,33 @@ public partial class WholeFormatting : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 10 == namespaceId && "ln" == name)
     return new DocumentFormat.OpenXml.Drawing.Outline();
+    
 if( 10 == namespaceId && "effectLst" == name)
     return new DocumentFormat.OpenXml.Drawing.EffectList();
+    
 if( 10 == namespaceId && "effectDag" == name)
     return new DocumentFormat.OpenXml.Drawing.EffectDag();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "ln","effectLst","effectDag" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> Outline.</para>
     /// <para> Represents the following element tag in the schema: a:ln </para>
@@ -360,24 +406,29 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13185;
     /// <inheritdoc/>
     public override string LocalName => "graphicFrame";
+    
     internal override byte NamespaceId => 59;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the GraphicFrameType class.
     /// </summary>
     public GraphicFrameType():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the GraphicFrameType class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public GraphicFrameType(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the GraphicFrameType class with the specified child elements.
     /// </summary>
@@ -385,6 +436,7 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
     public GraphicFrameType(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the GraphicFrameType class from outer XML.
     /// </summary>
@@ -393,30 +445,39 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 60 == namespaceId && "cNvPr" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualDrawingProperties();
+    
 if( 60 == namespaceId && "cNvFrPr" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.NonVisualGraphicFrameProperties();
+    
 if( 60 == namespaceId && "xfrm" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.Transform2D();
+    
 if( 10 == namespaceId && "graphic" == name)
     return new DocumentFormat.OpenXml.Drawing.Graphic();
+    
 if( 60 == namespaceId && "extLst" == name)
     return new DocumentFormat.OpenXml.Office2010.Word.DrawingGroup.OfficeArtExtensionList();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "cNvPr","cNvFrPr","xfrm","graphic","extLst" };
     private static readonly byte[] eleNamespaceIds = { 60,60,60,10,60 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> NonVisualDrawingProperties.</para>
     /// <para> Represents the following element tag in the schema: wpg:cNvPr </para>
@@ -503,24 +564,29 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13186;
     /// <inheritdoc/>
     public override string LocalName => "extLst";
+    
     internal override byte NamespaceId => 59;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class.
     /// </summary>
     public OfficeArtExtensionList():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public OfficeArtExtensionList(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class with the specified child elements.
     /// </summary>
@@ -528,6 +594,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     public OfficeArtExtensionList(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the OfficeArtExtensionList class from outer XML.
     /// </summary>
@@ -536,13 +603,15 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 10 == namespaceId && "ext" == name)
     return new DocumentFormat.OpenXml.Drawing.Extension();
+    
 
     return null;
 }
@@ -553,3 +622,5 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 }
 }
+ 
+ 

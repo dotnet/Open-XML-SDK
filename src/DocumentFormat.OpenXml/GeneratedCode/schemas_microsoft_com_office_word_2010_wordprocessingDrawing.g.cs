@@ -22,7 +22,9 @@ public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12889;
     /// <inheritdoc/>
     public override string LocalName => "pctPosHOffset";
+    
     internal override byte NamespaceId => 51;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -38,10 +40,12 @@ public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
     public PercentagePositionHeightOffset(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentagePositionHeightOffset>(deep);
@@ -60,7 +64,9 @@ public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12890;
     /// <inheritdoc/>
     public override string LocalName => "pctPosVOffset";
+    
     internal override byte NamespaceId => 51;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -76,10 +82,12 @@ public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
     public PercentagePositionVerticalOffset(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentagePositionVerticalOffset>(deep);
@@ -105,31 +113,36 @@ public partial class RelativeWidth : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12891;
     /// <inheritdoc/>
     public override string LocalName => "sizeRelH";
+    
     internal override byte NamespaceId => 51;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
+    
     
         /// <summary>
     /// <para> relativeFrom.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
     [SchemaAttr(0, "relativeFrom")]
-	[SchemaIndex(0)]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues> ObjectId { get; set;}
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues> ObjectId { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the RelativeWidth class.
     /// </summary>
     public RelativeWidth():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the RelativeWidth class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RelativeWidth(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the RelativeWidth class with the specified child elements.
     /// </summary>
@@ -137,6 +150,7 @@ public partial class RelativeWidth : OpenXmlCompositeElement
     public RelativeWidth(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the RelativeWidth class from outer XML.
     /// </summary>
@@ -145,22 +159,27 @@ public partial class RelativeWidth : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 51 == namespaceId && "pctWidth" == name)
     return new PercentageWidth();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "pctWidth" };
     private static readonly byte[] eleNamespaceIds = { 51 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> PercentageWidth.</para>
     /// <para> Represents the following element tag in the schema: wp14:pctWidth </para>
@@ -199,31 +218,36 @@ public partial class RelativeHeight : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12892;
     /// <inheritdoc/>
     public override string LocalName => "sizeRelV";
+    
     internal override byte NamespaceId => 51;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
+    
     
         /// <summary>
     /// <para> relativeFrom.</para>
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
     [SchemaAttr(0, "relativeFrom")]
-	[SchemaIndex(0)]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues> RelativeFrom { get; set;}
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues> RelativeFrom { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the RelativeHeight class.
     /// </summary>
     public RelativeHeight():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the RelativeHeight class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public RelativeHeight(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the RelativeHeight class with the specified child elements.
     /// </summary>
@@ -231,6 +255,7 @@ public partial class RelativeHeight : OpenXmlCompositeElement
     public RelativeHeight(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the RelativeHeight class from outer XML.
     /// </summary>
@@ -239,22 +264,27 @@ public partial class RelativeHeight : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 51 == namespaceId && "pctHeight" == name)
     return new PercentageHeight();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "pctHeight" };
     private static readonly byte[] eleNamespaceIds = { 51 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneSequence;
+    
         /// <summary>
     /// <para> PercentageHeight.</para>
     /// <para> Represents the following element tag in the schema: wp14:pctHeight </para>
@@ -286,7 +316,9 @@ public partial class PercentageWidth : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12893;
     /// <inheritdoc/>
     public override string LocalName => "pctWidth";
+    
     internal override byte NamespaceId => 51;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -302,10 +334,12 @@ public partial class PercentageWidth : OpenXmlLeafTextElement
     public PercentageWidth(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentageWidth>(deep);
@@ -324,7 +358,9 @@ public partial class PercentageHeight : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12894;
     /// <inheritdoc/>
     public override string LocalName => "pctHeight";
+    
     internal override byte NamespaceId => 51;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -340,21 +376,23 @@ public partial class PercentageHeight : OpenXmlLeafTextElement
     public PercentageHeight(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PercentageHeight>(deep);
 
 }
 /// <summary>
-/// Defines the SizeRelativeHorizontallyValues enumeration.
-/// </summary>
+/// Defines the SizeRelativeHorizontallyValues enumeration. 
+/// </summary> 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum SizeRelativeHorizontallyValues
-{
+{  
 	///<summary>
 ///margin.
 ///<para>When the item is serialized out as xml, its value is "margin".</para>
@@ -391,14 +429,14 @@ InsideMargin,
 ///</summary>
 [EnumString("outsideMargin")]
 OutsideMargin,
-
+ 
 }
 /// <summary>
-/// Defines the SizeRelativeVerticallyValues enumeration.
-/// </summary>
+/// Defines the SizeRelativeVerticallyValues enumeration. 
+/// </summary> 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum SizeRelativeVerticallyValues
-{
+{  
 	///<summary>
 ///margin.
 ///<para>When the item is serialized out as xml, its value is "margin".</para>
@@ -435,6 +473,8 @@ InsideMargin,
 ///</summary>
 [EnumString("outsideMargin")]
 OutsideMargin,
-
+ 
 }
 }
+ 
+ 

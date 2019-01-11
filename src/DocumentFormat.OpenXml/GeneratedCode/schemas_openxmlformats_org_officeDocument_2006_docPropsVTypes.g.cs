@@ -96,24 +96,29 @@ public partial class Variant : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11029;
     /// <inheritdoc/>
     public override string LocalName => "variant";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
     /// Initializes a new instance of the Variant class.
     /// </summary>
     public Variant():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the Variant class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public Variant(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the Variant class with the specified child elements.
     /// </summary>
@@ -121,6 +126,7 @@ public partial class Variant : OpenXmlCompositeElement
     public Variant(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the Variant class from outer XML.
     /// </summary>
@@ -129,90 +135,129 @@ public partial class Variant : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 5 == namespaceId && "variant" == name)
     return new Variant();
+    
 if( 5 == namespaceId && "vector" == name)
     return new VTVector();
+    
 if( 5 == namespaceId && "array" == name)
     return new VTArray();
+    
 if( 5 == namespaceId && "blob" == name)
     return new VTBlob();
+    
 if( 5 == namespaceId && "oblob" == name)
     return new VTOBlob();
+    
 if( 5 == namespaceId && "empty" == name)
     return new VTEmpty();
+    
 if( 5 == namespaceId && "null" == name)
     return new VTNull();
+    
 if( 5 == namespaceId && "i1" == name)
     return new VTByte();
+    
 if( 5 == namespaceId && "i2" == name)
     return new VTShort();
+    
 if( 5 == namespaceId && "i4" == name)
     return new VTInt32();
+    
 if( 5 == namespaceId && "i8" == name)
     return new VTInt64();
+    
 if( 5 == namespaceId && "int" == name)
     return new VTInteger();
+    
 if( 5 == namespaceId && "ui1" == name)
     return new VTUnsignedByte();
+    
 if( 5 == namespaceId && "ui2" == name)
     return new VTUnsignedShort();
+    
 if( 5 == namespaceId && "ui4" == name)
     return new VTUnsignedInt32();
+    
 if( 5 == namespaceId && "ui8" == name)
     return new VTUnsignedInt64();
+    
 if( 5 == namespaceId && "uint" == name)
     return new VTUnsignedInteger();
+    
 if( 5 == namespaceId && "r4" == name)
     return new VTFloat();
+    
 if( 5 == namespaceId && "r8" == name)
     return new VTDouble();
+    
 if( 5 == namespaceId && "decimal" == name)
     return new VTDecimal();
+    
 if( 5 == namespaceId && "lpstr" == name)
     return new VTLPSTR();
+    
 if( 5 == namespaceId && "lpwstr" == name)
     return new VTLPWSTR();
+    
 if( 5 == namespaceId && "bstr" == name)
     return new VTBString();
+    
 if( 5 == namespaceId && "date" == name)
     return new VTDate();
+    
 if( 5 == namespaceId && "filetime" == name)
     return new VTFileTime();
+    
 if( 5 == namespaceId && "bool" == name)
     return new VTBool();
+    
 if( 5 == namespaceId && "cy" == name)
     return new VTCurrency();
+    
 if( 5 == namespaceId && "error" == name)
     return new VTError();
+    
 if( 5 == namespaceId && "stream" == name)
     return new VTStreamData();
+    
 if( 5 == namespaceId && "ostream" == name)
     return new VTOStreamData();
+    
 if( 5 == namespaceId && "storage" == name)
     return new VTStorage();
+    
 if( 5 == namespaceId && "ostorage" == name)
     return new VTOStorage();
+    
 if( 5 == namespaceId && "vstream" == name)
     return new VTVStreamData();
+    
 if( 5 == namespaceId && "clsid" == name)
     return new VTClassId();
+    
 if( 5 == namespaceId && "cf" == name)
     return new VTClipboardData();
+    
 
     return null;
 }
 
         private static readonly string[] eleTagNames = { "variant","vector","array","blob","oblob","empty","null","i1","i2","i4","i8","int","ui1","ui2","ui4","ui8","uint","r4","r8","decimal","lpstr","lpwstr","bstr","date","filetime","bool","cy","error","stream","ostream","storage","ostorage","vstream","clsid","cf" };
     private static readonly byte[] eleNamespaceIds = { 5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5 };
+    
     internal override string[] ElementTagNames => eleTagNames;
+    
     internal override byte[] ElementNamespaceIds => eleNamespaceIds;
     internal override OpenXmlCompositeType OpenXmlCompositeType => OpenXmlCompositeType.OneChoice;
+    
         /// <summary>
     /// <para> Variant.</para>
     /// <para> Represents the following element tag in the schema: vt:variant </para>
@@ -699,38 +744,43 @@ public partial class VTVector : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11030;
     /// <inheritdoc/>
     public override string LocalName => "vector";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
         /// <summary>
     /// <para> Vector Base Type.</para>
     /// <para>Represents the following attribute in the schema: baseType </para>
     /// </summary>
     [SchemaAttr(0, "baseType")]
-	[SchemaIndex(0)]
-    public EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues> BaseType { get; set;}
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues> BaseType { get; set; }
     /// <summary>
     /// <para> Vector Size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
     [SchemaAttr(0, "size")]
-	[SchemaIndex(1)]
-    public UInt32Value Size { get; set;}
+    [SchemaIndex(1)]
+    public UInt32Value Size { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the VTVector class.
     /// </summary>
     public VTVector():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the VTVector class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public VTVector(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the VTVector class with the specified child elements.
     /// </summary>
@@ -738,6 +788,7 @@ public partial class VTVector : OpenXmlCompositeElement
     public VTVector(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the VTVector class from outer XML.
     /// </summary>
@@ -746,53 +797,75 @@ public partial class VTVector : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 5 == namespaceId && "variant" == name)
     return new Variant();
+    
 if( 5 == namespaceId && "i1" == name)
     return new VTByte();
+    
 if( 5 == namespaceId && "i2" == name)
     return new VTShort();
+    
 if( 5 == namespaceId && "i4" == name)
     return new VTInt32();
+    
 if( 5 == namespaceId && "i8" == name)
     return new VTInt64();
+    
 if( 5 == namespaceId && "ui1" == name)
     return new VTUnsignedByte();
+    
 if( 5 == namespaceId && "ui2" == name)
     return new VTUnsignedShort();
+    
 if( 5 == namespaceId && "ui4" == name)
     return new VTUnsignedInt32();
+    
 if( 5 == namespaceId && "ui8" == name)
     return new VTUnsignedInt64();
+    
 if( 5 == namespaceId && "r4" == name)
     return new VTFloat();
+    
 if( 5 == namespaceId && "r8" == name)
     return new VTDouble();
+    
 if( 5 == namespaceId && "lpstr" == name)
     return new VTLPSTR();
+    
 if( 5 == namespaceId && "lpwstr" == name)
     return new VTLPWSTR();
+    
 if( 5 == namespaceId && "bstr" == name)
     return new VTBString();
+    
 if( 5 == namespaceId && "date" == name)
     return new VTDate();
+    
 if( 5 == namespaceId && "filetime" == name)
     return new VTFileTime();
+    
 if( 5 == namespaceId && "bool" == name)
     return new VTBool();
+    
 if( 5 == namespaceId && "cy" == name)
     return new VTCurrency();
+    
 if( 5 == namespaceId && "error" == name)
     return new VTError();
+    
 if( 5 == namespaceId && "clsid" == name)
     return new VTClassId();
+    
 if( 5 == namespaceId && "cf" == name)
     return new VTClipboardData();
+    
 
     return null;
 }
@@ -854,45 +927,50 @@ public partial class VTArray : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11031;
     /// <inheritdoc/>
     public override string LocalName => "array";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
         /// <summary>
     /// <para> Array Lower Bounds Attribute.</para>
     /// <para>Represents the following attribute in the schema: lBound </para>
     /// </summary>
     [SchemaAttr(0, "lBound")]
-	[SchemaIndex(0)]
-    public Int32Value LowerBounds { get; set;}
+    [SchemaIndex(0)]
+    public Int32Value LowerBounds { get; set; }
     /// <summary>
     /// <para> Array Upper Bounds Attribute.</para>
     /// <para>Represents the following attribute in the schema: uBound </para>
     /// </summary>
     [SchemaAttr(0, "uBound")]
-	[SchemaIndex(1)]
-    public Int32Value UpperBounds { get; set;}
+    [SchemaIndex(1)]
+    public Int32Value UpperBounds { get; set; }
     /// <summary>
     /// <para> Array Base Type.</para>
     /// <para>Represents the following attribute in the schema: baseType </para>
     /// </summary>
     [SchemaAttr(0, "baseType")]
-	[SchemaIndex(2)]
-    public EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues> BaseType { get; set;}
+    [SchemaIndex(2)]
+    public EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues> BaseType { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the VTArray class.
     /// </summary>
     public VTArray():base(){}
+    
         /// <summary>
     ///Initializes a new instance of the VTArray class with the specified child elements.
     /// </summary>
     /// <param name="childElements">Specifies the child elements.</param>
     public VTArray(System.Collections.Generic.IEnumerable<OpenXmlElement> childElements)
         : base(childElements)
-    {
+    { 
     }
+    
     /// <summary>
     /// Initializes a new instance of the VTArray class with the specified child elements.
     /// </summary>
@@ -900,6 +978,7 @@ public partial class VTArray : OpenXmlCompositeElement
     public VTArray(params OpenXmlElement[] childElements) : base(childElements)
     {
     }
+    
     /// <summary>
     /// Initializes a new instance of the VTArray class from outer XML.
     /// </summary>
@@ -908,45 +987,63 @@ public partial class VTArray : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
-
+  
+     
     
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
 internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 {
     if( 5 == namespaceId && "variant" == name)
     return new Variant();
+    
 if( 5 == namespaceId && "i1" == name)
     return new VTByte();
+    
 if( 5 == namespaceId && "i2" == name)
     return new VTShort();
+    
 if( 5 == namespaceId && "i4" == name)
     return new VTInt32();
+    
 if( 5 == namespaceId && "int" == name)
     return new VTInteger();
+    
 if( 5 == namespaceId && "ui1" == name)
     return new VTUnsignedByte();
+    
 if( 5 == namespaceId && "ui2" == name)
     return new VTUnsignedShort();
+    
 if( 5 == namespaceId && "ui4" == name)
     return new VTUnsignedInt32();
+    
 if( 5 == namespaceId && "uint" == name)
     return new VTUnsignedInteger();
+    
 if( 5 == namespaceId && "r4" == name)
     return new VTFloat();
+    
 if( 5 == namespaceId && "r8" == name)
     return new VTDouble();
+    
 if( 5 == namespaceId && "decimal" == name)
     return new VTDecimal();
+    
 if( 5 == namespaceId && "bstr" == name)
     return new VTBString();
+    
 if( 5 == namespaceId && "date" == name)
     return new VTDate();
+    
 if( 5 == namespaceId && "bool" == name)
     return new VTBool();
+    
 if( 5 == namespaceId && "error" == name)
     return new VTError();
+    
 if( 5 == namespaceId && "cy" == name)
     return new VTCurrency();
+    
 
     return null;
 }
@@ -969,7 +1066,9 @@ public partial class VTBlob : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11032;
     /// <inheritdoc/>
     public override string LocalName => "blob";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -985,10 +1084,12 @@ public partial class VTBlob : OpenXmlLeafTextElement
     public VTBlob(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Base64BinaryValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTBlob>(deep);
@@ -1007,7 +1108,9 @@ public partial class VTOBlob : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11033;
     /// <inheritdoc/>
     public override string LocalName => "oblob";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1023,10 +1126,12 @@ public partial class VTOBlob : OpenXmlLeafTextElement
     public VTOBlob(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Base64BinaryValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOBlob>(deep);
@@ -1045,7 +1150,9 @@ public partial class VTStreamData : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11057;
     /// <inheritdoc/>
     public override string LocalName => "stream";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1061,10 +1168,12 @@ public partial class VTStreamData : OpenXmlLeafTextElement
     public VTStreamData(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Base64BinaryValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTStreamData>(deep);
@@ -1083,7 +1192,9 @@ public partial class VTOStreamData : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11058;
     /// <inheritdoc/>
     public override string LocalName => "ostream";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1099,10 +1210,12 @@ public partial class VTOStreamData : OpenXmlLeafTextElement
     public VTOStreamData(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Base64BinaryValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOStreamData>(deep);
@@ -1121,7 +1234,9 @@ public partial class VTStorage : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11059;
     /// <inheritdoc/>
     public override string LocalName => "storage";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1137,10 +1252,12 @@ public partial class VTStorage : OpenXmlLeafTextElement
     public VTStorage(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Base64BinaryValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTStorage>(deep);
@@ -1159,7 +1276,9 @@ public partial class VTOStorage : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11060;
     /// <inheritdoc/>
     public override string LocalName => "ostorage";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1175,10 +1294,12 @@ public partial class VTOStorage : OpenXmlLeafTextElement
     public VTOStorage(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Base64BinaryValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTOStorage>(deep);
@@ -1197,10 +1318,13 @@ public partial class VTEmpty : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11034;
     /// <inheritdoc/>
     public override string LocalName => "empty";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
@@ -1208,6 +1332,8 @@ public partial class VTEmpty : OpenXmlLeafElement
     /// </summary>
     public VTEmpty():base(){}
     
+      
+     
     
     
     
@@ -1228,10 +1354,13 @@ public partial class VTNull : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11035;
     /// <inheritdoc/>
     public override string LocalName => "null";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
@@ -1239,6 +1368,8 @@ public partial class VTNull : OpenXmlLeafElement
     /// </summary>
     public VTNull():base(){}
     
+      
+     
     
     
     
@@ -1259,10 +1390,13 @@ public partial class VTByte : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11036;
     /// <inheritdoc/>
     public override string LocalName => "i1";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
@@ -1270,6 +1404,7 @@ public partial class VTByte : OpenXmlLeafTextElement
     /// </summary>
     public VTByte():base(){}
     
+      
         /// <summary>
     /// Initializes a new instance of the VTByte class with the specified text content.
     /// </summary>
@@ -1277,11 +1412,14 @@ public partial class VTByte : OpenXmlLeafTextElement
     public VTByte(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new SByteValue(){ InnerText = text };
     }
-
+    
+ 
+    
     
     
     /// <inheritdoc/>
@@ -1301,10 +1439,13 @@ public partial class VTShort : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11037;
     /// <inheritdoc/>
     public override string LocalName => "i2";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
@@ -1312,6 +1453,7 @@ public partial class VTShort : OpenXmlLeafTextElement
     /// </summary>
     public VTShort():base(){}
     
+      
         /// <summary>
     /// Initializes a new instance of the VTShort class with the specified text content.
     /// </summary>
@@ -1319,11 +1461,14 @@ public partial class VTShort : OpenXmlLeafTextElement
     public VTShort(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int16Value(){ InnerText = text };
     }
-
+    
+ 
+    
     
     
     /// <inheritdoc/>
@@ -1343,7 +1488,9 @@ public partial class VTInt32 : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11038;
     /// <inheritdoc/>
     public override string LocalName => "i4";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1359,10 +1506,12 @@ public partial class VTInt32 : OpenXmlLeafTextElement
     public VTInt32(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTInt32>(deep);
@@ -1381,7 +1530,9 @@ public partial class VTInteger : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11040;
     /// <inheritdoc/>
     public override string LocalName => "int";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1397,10 +1548,12 @@ public partial class VTInteger : OpenXmlLeafTextElement
     public VTInteger(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTInteger>(deep);
@@ -1419,10 +1572,13 @@ public partial class VTInt64 : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11039;
     /// <inheritdoc/>
     public override string LocalName => "i8";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
@@ -1430,6 +1586,7 @@ public partial class VTInt64 : OpenXmlLeafTextElement
     /// </summary>
     public VTInt64():base(){}
     
+      
         /// <summary>
     /// Initializes a new instance of the VTInt64 class with the specified text content.
     /// </summary>
@@ -1437,11 +1594,14 @@ public partial class VTInt64 : OpenXmlLeafTextElement
     public VTInt64(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Int64Value(){ InnerText = text };
     }
-
+    
+ 
+    
     
     
     /// <inheritdoc/>
@@ -1461,10 +1621,13 @@ public partial class VTUnsignedByte : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11041;
     /// <inheritdoc/>
     public override string LocalName => "ui1";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
@@ -1472,6 +1635,7 @@ public partial class VTUnsignedByte : OpenXmlLeafTextElement
     /// </summary>
     public VTUnsignedByte():base(){}
     
+      
         /// <summary>
     /// Initializes a new instance of the VTUnsignedByte class with the specified text content.
     /// </summary>
@@ -1479,11 +1643,14 @@ public partial class VTUnsignedByte : OpenXmlLeafTextElement
     public VTUnsignedByte(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new ByteValue(){ InnerText = text };
     }
-
+    
+ 
+    
     
     
     /// <inheritdoc/>
@@ -1503,10 +1670,13 @@ public partial class VTUnsignedShort : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11042;
     /// <inheritdoc/>
     public override string LocalName => "ui2";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
@@ -1514,6 +1684,7 @@ public partial class VTUnsignedShort : OpenXmlLeafTextElement
     /// </summary>
     public VTUnsignedShort():base(){}
     
+      
         /// <summary>
     /// Initializes a new instance of the VTUnsignedShort class with the specified text content.
     /// </summary>
@@ -1521,11 +1692,14 @@ public partial class VTUnsignedShort : OpenXmlLeafTextElement
     public VTUnsignedShort(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new UInt16Value(){ InnerText = text };
     }
-
+    
+ 
+    
     
     
     /// <inheritdoc/>
@@ -1545,7 +1719,9 @@ public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11043;
     /// <inheritdoc/>
     public override string LocalName => "ui4";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1561,10 +1737,12 @@ public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
     public VTUnsignedInt32(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new UInt32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedInt32>(deep);
@@ -1583,7 +1761,9 @@ public partial class VTUnsignedInteger : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11045;
     /// <inheritdoc/>
     public override string LocalName => "uint";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1599,10 +1779,12 @@ public partial class VTUnsignedInteger : OpenXmlLeafTextElement
     public VTUnsignedInteger(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new UInt32Value(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTUnsignedInteger>(deep);
@@ -1621,10 +1803,13 @@ public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11044;
     /// <inheritdoc/>
     public override string LocalName => "ui8";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
@@ -1632,6 +1817,7 @@ public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
     /// </summary>
     public VTUnsignedInt64():base(){}
     
+      
         /// <summary>
     /// Initializes a new instance of the VTUnsignedInt64 class with the specified text content.
     /// </summary>
@@ -1639,11 +1825,14 @@ public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
     public VTUnsignedInt64(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new UInt64Value(){ InnerText = text };
     }
-
+    
+ 
+    
     
     
     /// <inheritdoc/>
@@ -1663,10 +1852,13 @@ public partial class VTFloat : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11046;
     /// <inheritdoc/>
     public override string LocalName => "r4";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
@@ -1674,6 +1866,7 @@ public partial class VTFloat : OpenXmlLeafTextElement
     /// </summary>
     public VTFloat():base(){}
     
+      
         /// <summary>
     /// Initializes a new instance of the VTFloat class with the specified text content.
     /// </summary>
@@ -1681,11 +1874,14 @@ public partial class VTFloat : OpenXmlLeafTextElement
     public VTFloat(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new SingleValue(){ InnerText = text };
     }
-
+    
+ 
+    
     
     
     /// <inheritdoc/>
@@ -1705,10 +1901,13 @@ public partial class VTDouble : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11047;
     /// <inheritdoc/>
     public override string LocalName => "r8";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
@@ -1716,6 +1915,7 @@ public partial class VTDouble : OpenXmlLeafTextElement
     /// </summary>
     public VTDouble():base(){}
     
+      
         /// <summary>
     /// Initializes a new instance of the VTDouble class with the specified text content.
     /// </summary>
@@ -1723,11 +1923,14 @@ public partial class VTDouble : OpenXmlLeafTextElement
     public VTDouble(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new DoubleValue(){ InnerText = text };
     }
-
+    
+ 
+    
     
     
     /// <inheritdoc/>
@@ -1747,10 +1950,13 @@ public partial class VTDecimal : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11048;
     /// <inheritdoc/>
     public override string LocalName => "decimal";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
@@ -1758,6 +1964,7 @@ public partial class VTDecimal : OpenXmlLeafTextElement
     /// </summary>
     public VTDecimal():base(){}
     
+      
         /// <summary>
     /// Initializes a new instance of the VTDecimal class with the specified text content.
     /// </summary>
@@ -1765,11 +1972,14 @@ public partial class VTDecimal : OpenXmlLeafTextElement
     public VTDecimal(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new DecimalValue(){ InnerText = text };
     }
-
+    
+ 
+    
     
     
     /// <inheritdoc/>
@@ -1789,7 +1999,9 @@ public partial class VTLPSTR : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11049;
     /// <inheritdoc/>
     public override string LocalName => "lpstr";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1805,10 +2017,12 @@ public partial class VTLPSTR : OpenXmlLeafTextElement
     public VTLPSTR(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTLPSTR>(deep);
@@ -1827,7 +2041,9 @@ public partial class VTLPWSTR : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11050;
     /// <inheritdoc/>
     public override string LocalName => "lpwstr";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1843,10 +2059,12 @@ public partial class VTLPWSTR : OpenXmlLeafTextElement
     public VTLPWSTR(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTLPWSTR>(deep);
@@ -1865,7 +2083,9 @@ public partial class VTBString : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11051;
     /// <inheritdoc/>
     public override string LocalName => "bstr";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1881,10 +2101,12 @@ public partial class VTBString : OpenXmlLeafTextElement
     public VTBString(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTBString>(deep);
@@ -1903,7 +2125,9 @@ public partial class VTDate : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11052;
     /// <inheritdoc/>
     public override string LocalName => "date";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1919,10 +2143,12 @@ public partial class VTDate : OpenXmlLeafTextElement
     public VTDate(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new DateTimeValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTDate>(deep);
@@ -1941,7 +2167,9 @@ public partial class VTFileTime : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11053;
     /// <inheritdoc/>
     public override string LocalName => "filetime";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1957,10 +2185,12 @@ public partial class VTFileTime : OpenXmlLeafTextElement
     public VTFileTime(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new DateTimeValue(){ InnerText = text };
     }
+    
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTFileTime>(deep);
@@ -1979,10 +2209,13 @@ public partial class VTBool : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11054;
     /// <inheritdoc/>
     public override string LocalName => "bool";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
@@ -1990,6 +2223,7 @@ public partial class VTBool : OpenXmlLeafTextElement
     /// </summary>
     public VTBool():base(){}
     
+      
         /// <summary>
     /// Initializes a new instance of the VTBool class with the specified text content.
     /// </summary>
@@ -1997,11 +2231,14 @@ public partial class VTBool : OpenXmlLeafTextElement
     public VTBool(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new BooleanValue(){ InnerText = text };
     }
-
+    
+ 
+    
     
     
     /// <inheritdoc/>
@@ -2021,10 +2258,13 @@ public partial class VTCurrency : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11055;
     /// <inheritdoc/>
     public override string LocalName => "cy";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
@@ -2032,6 +2272,7 @@ public partial class VTCurrency : OpenXmlLeafTextElement
     /// </summary>
     public VTCurrency():base(){}
     
+      
         /// <summary>
     /// Initializes a new instance of the VTCurrency class with the specified text content.
     /// </summary>
@@ -2039,11 +2280,14 @@ public partial class VTCurrency : OpenXmlLeafTextElement
     public VTCurrency(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-
+    
+ 
+    
     
     
     /// <inheritdoc/>
@@ -2063,10 +2307,13 @@ public partial class VTError : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11056;
     /// <inheritdoc/>
     public override string LocalName => "error";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
@@ -2074,6 +2321,7 @@ public partial class VTError : OpenXmlLeafTextElement
     /// </summary>
     public VTError():base(){}
     
+      
         /// <summary>
     /// Initializes a new instance of the VTError class with the specified text content.
     /// </summary>
@@ -2081,11 +2329,14 @@ public partial class VTError : OpenXmlLeafTextElement
     public VTError(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-
+    
+ 
+    
     
     
     /// <inheritdoc/>
@@ -2105,24 +2356,28 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11061;
     /// <inheritdoc/>
     public override string LocalName => "vstream";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
         /// <summary>
     /// <para> VSTREAM Version Attribute.</para>
     /// <para>Represents the following attribute in the schema: version </para>
     /// </summary>
     [SchemaAttr(0, "version")]
-	[SchemaIndex(0)]
-    public StringValue Version { get; set;}
+    [SchemaIndex(0)]
+    public StringValue Version { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the VTVStreamData class.
     /// </summary>
     public VTVStreamData():base(){}
     
+      
         /// <summary>
     /// Initializes a new instance of the VTVStreamData class with the specified text content.
     /// </summary>
@@ -2130,11 +2385,14 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
     public VTVStreamData(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Base64BinaryValue(){ InnerText = text };
     }
-
+    
+ 
+    
     
     
     /// <inheritdoc/>
@@ -2154,10 +2412,13 @@ public partial class VTClassId : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11062;
     /// <inheritdoc/>
     public override string LocalName => "clsid";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
     
     /// <summary>
@@ -2165,6 +2426,7 @@ public partial class VTClassId : OpenXmlLeafTextElement
     /// </summary>
     public VTClassId():base(){}
     
+      
         /// <summary>
     /// Initializes a new instance of the VTClassId class with the specified text content.
     /// </summary>
@@ -2172,11 +2434,14 @@ public partial class VTClassId : OpenXmlLeafTextElement
     public VTClassId(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new StringValue(){ InnerText = text };
     }
-
+    
+ 
+    
     
     
     /// <inheritdoc/>
@@ -2196,31 +2461,35 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11063;
     /// <inheritdoc/>
     public override string LocalName => "cf";
+    
     internal override byte NamespaceId => 5;
+    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
+    
     
         /// <summary>
     /// <para> Format Attribute.</para>
     /// <para>Represents the following attribute in the schema: format </para>
     /// </summary>
     [SchemaAttr(0, "format")]
-	[SchemaIndex(0)]
-    public Int32Value Format { get; set;}
+    [SchemaIndex(0)]
+    public Int32Value Format { get; set; }
     /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
     [SchemaAttr(0, "size")]
-	[SchemaIndex(1)]
-    public UInt32Value Size { get; set;}
+    [SchemaIndex(1)]
+    public UInt32Value Size { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the VTClipboardData class.
     /// </summary>
     public VTClipboardData():base(){}
     
+      
         /// <summary>
     /// Initializes a new instance of the VTClipboardData class with the specified text content.
     /// </summary>
@@ -2228,11 +2497,14 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
     public VTClipboardData(string text):base(text)
     {
     }
+    
     internal override OpenXmlSimpleType InnerTextToValue(string text)
     {
 		return new Base64BinaryValue(){ InnerText = text };
     }
-
+    
+ 
+    
     
     
     /// <inheritdoc/>
@@ -2240,11 +2512,11 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
 
 }
 /// <summary>
-/// Vector Base Type Simple Type
-/// </summary>
+/// Vector Base Type Simple Type 
+/// </summary> 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum VectorBaseValues
-{
+{  
 	///<summary>
 ///Variant Base Type.
 ///<para>When the item is serialized out as xml, its value is "variant".</para>
@@ -2371,14 +2643,14 @@ ClassId,
 ///</summary>
 [EnumString("cf")]
 ClipboardData,
-
+ 
 }
 /// <summary>
-/// Array Base Type Simple Type
-/// </summary>
+/// Array Base Type Simple Type 
+/// </summary> 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public enum ArrayBaseValues
-{
+{  
 	///<summary>
 ///Variant Base Type.
 ///<para>When the item is serialized out as xml, its value is "variant".</para>
@@ -2481,6 +2753,8 @@ Currency,
 ///</summary>
 [EnumString("error")]
 Error,
-
+ 
 }
 }
+ 
+ 
