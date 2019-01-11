@@ -78,7 +78,7 @@ namespace DocumentFormat.OpenXml.Benchmarks
         internal static Type[] GetBenchmarks()
         {
             var assembly = typeof(BenchmarkAttribute).GetTypeInfo().Assembly;
-            var extensions = assembly.GetType("BenchmarkDotNet.Extensions.ReflectionExtensions");
+            var extensions = assembly.GetType("BenchmarkDotNet.Helpers.GenericBenchmarksBuilder");
             var method = extensions.GetMethod("GetRunnableBenchmarks", BindingFlags.NonPublic | BindingFlags.Static);
 
             return (Type[])method.Invoke(null, new object[] { typeof(Program).GetTypeInfo().Assembly });
