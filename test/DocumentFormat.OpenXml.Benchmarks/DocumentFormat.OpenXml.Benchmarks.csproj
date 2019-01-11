@@ -6,7 +6,7 @@
     <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevCore21' ">netcoreapp2.1</TargetFrameworks>
     <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevFramework40' ">net46</TargetFrameworks>
     <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'DevFramework46' ">net46</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'All' ">net46;netcoreapp1.1;netcoreapp2.1</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(ProjectLoadStyle)' == 'All' ">net46;netcoreapp2.1</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -23,7 +23,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BenchmarkDotNet" Version="0.10.14" />
+    <PackageReference Include="BenchmarkDotNet" Version="0.11.3" />
     <PackageReference Include="xunit" Version="2.4.1" />
   </ItemGroup>
 
