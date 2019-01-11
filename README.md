@@ -144,13 +144,13 @@ To build the Open XML SDK
 
 If you want to use a command line approach:
 
-1. Go to the directory that contains the solution.
-1. Run `dotnet restore` in the directory (only if using .NET Core SDK version less than 2.1).
-1. Run `dotnet test DocumentFormat.OpenXml.Tests.csproj` to run the tests.
-1. Run `dotnet pack .\src\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj` to generate a nupkg.
-1. Run `dotnet build` to build the SDK and test projects
+* Go to the directory that contains the solution.
+* Run `dotnet restore` in the directory (only if using .NET Core SDK version less than 2.1).
+* Run `dotnet test DocumentFormat.OpenXml.Tests.csproj` to run the tests.
+* Run `dotnet pack .\src\DocumentFormat.OpenXml\DocumentFormat.OpenXml.csproj` to generate a nupkg.
+* Run `dotnet build` to build the SDK and test projects
 
-By default, `dotnet` will build/test/run only the .NET Core target framework. To build all target frameworks, set the ProjectLoadStyle environment variable: `ProjectLoadStyle=All` To see the other values for `ProjectLoadStyle`, please refer to the comments in [Directory.Build.Props](Directory.Build.Props). 
+By default, `dotnet` will build/test/run only the .NET Core target framework. To build all target frameworks, set the ProjectLoadStyle environment variable: `ProjectLoadStyle=All` To see the other values for `ProjectLoadStyle`, please refer to the comments in [Directory.Build.Props](Directory.Build.Props). NOTE: Because the other frameworks will be targeted (like .NET 4.6) when using `ProjectLoadStyle=All`, msbuild.exe is needed instead of dotnet.exe so refer to [appveyor.yml](appveyor.yml) to see the appropriate command lines.
 
 
 Related tools
