@@ -67,7 +67,7 @@ namespace DocumentFormat.OpenXml
                 {
                     if (_activator is null)
                     {
-                        _activator = _activatorCache.GetValue(typeof(TProperty), CreateActivator);
+                        _activator = _activatorCache.GetValue(_property.PropertyType, CreateActivator);
                     }
                 }
             }
