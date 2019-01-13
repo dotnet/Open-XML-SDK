@@ -30,7 +30,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             SemanticValidationLevel = level;
         }
 
-        protected SemanticConstraint(SemanticValidationLevel level, IEnumerable<string> values)
+        protected SemanticConstraint(SemanticValidationLevel level, string[] values)
         {
             SemanticValidationLevel = level;
             _valuesString = new Lazy<string>(() => GetValueString(values));
@@ -206,7 +206,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             return temp;
         }
 
-        private static string GetValueString(IEnumerable<string> values)
+        private static string GetValueString(string[] values)
         {
             const char Quote = '\'';
 

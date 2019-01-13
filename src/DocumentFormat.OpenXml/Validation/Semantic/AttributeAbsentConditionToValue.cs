@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                             ValidationResources.Sem_AttributeAbsentConditionToValue,
                             GetAttributeQualifiedName(context.Element, _absentAttribute),
                             GetAttributeQualifiedName(context.Element, _conditionAttribute),
-                            valueString),
+                            ValuesString),
                     };
                 }
             }
