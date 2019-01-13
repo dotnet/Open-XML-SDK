@@ -28,10 +28,10 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            OpenXmlSimpleType attributeValue = context.Element.Attributes[_attribute];
+            var attribute = context.Element.Attributes[_attribute];
 
             //if the attribute is omitted, semantic validation will do nothing
-            if (attributeValue == null || string.IsNullOrEmpty(attributeValue.InnerText))
+            if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
                 return null;
             }
@@ -40,7 +40,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             foreach (string value in _valueSet)
             {
-                if (AttributeValueEquals(attributeValue, value, false))
+                if (AttributeValueEquals(attribute.Value, value, false))
                 {
                     valueSetContains = true;
                 }
@@ -54,7 +54,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
             var errorDescription = SR.Format(
                 ValidationResources.Sem_AttributeValueDataTypeDetailed,
                 GetAttributeQualifiedName(context.Element, _attribute),
-                attributeValue,
+                attribute.Value,
                 ValidationResources.Sch_EnumerationConstraintFailed);
 
             return new ValidationErrorInfo()

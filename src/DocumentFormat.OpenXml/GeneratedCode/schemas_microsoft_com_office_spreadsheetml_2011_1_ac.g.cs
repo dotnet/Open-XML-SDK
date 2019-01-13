@@ -22,13 +22,9 @@ public partial class List : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 13429;
     /// <inheritdoc/>
     public override string LocalName => "list";
-    
     internal override byte NamespaceId => 72;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
-    
 
     
     
@@ -53,7 +49,6 @@ public partial class List : OpenXmlLeafTextElement
     }
     
  
-    
     
     
     

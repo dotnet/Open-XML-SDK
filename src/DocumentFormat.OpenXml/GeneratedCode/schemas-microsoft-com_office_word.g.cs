@@ -21,13 +21,9 @@ public partial class TopBorder : BorderType
     internal const int ElementTypeIdConst = 12501;
     /// <inheritdoc/>
     public override string LocalName => "bordertop";
-    
     internal override byte NamespaceId => 28;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the TopBorder class.
@@ -52,13 +48,9 @@ public partial class LeftBorder : BorderType
     internal const int ElementTypeIdConst = 12502;
     /// <inheritdoc/>
     public override string LocalName => "borderleft";
-    
     internal override byte NamespaceId => 28;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the LeftBorder class.
@@ -83,13 +75,9 @@ public partial class RightBorder : BorderType
     internal const int ElementTypeIdConst = 12503;
     /// <inheritdoc/>
     public override string LocalName => "borderright";
-    
     internal override byte NamespaceId => 28;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the RightBorder class.
@@ -114,13 +102,9 @@ public partial class BottomBorder : BorderType
     internal const int ElementTypeIdConst = 12504;
     /// <inheritdoc/>
     public override string LocalName => "borderbottom";
-    
     internal override byte NamespaceId => 28;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     /// <summary>
     /// Initializes a new instance of the BottomBorder class.
@@ -139,66 +123,31 @@ public partial class BottomBorder : BorderType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class BorderType : OpenXmlLeafElement
 {
-    	private static readonly string[] attributeTagNames = { "type","width","shadow" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-    
+        
         /// <summary>
     /// <para> Border Style.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-    public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues> Type
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues> Type { get; set; }
     /// <summary>
     /// <para> Border Width.</para>
     /// <para>Represents the following attribute in the schema: width </para>
     /// </summary>
     [SchemaAttr(0, "width")]
-    public IntegerValue Width
-    {
-        get { return (IntegerValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public IntegerValue Width { get; set; }
     /// <summary>
     /// <para> Border shadow.</para>
     /// <para>Represents the following attribute in the schema: shadow </para>
     /// </summary>
     [SchemaAttr(0, "shadow")]
-    public TrueFalseValue Shadow
-    {
-        get { return (TrueFalseValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public TrueFalseValue Shadow { get; set; }
 
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "type" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues>();
-    
-if( 0 == namespaceId && "width" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "shadow" == name)
-    return new TrueFalseValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the BorderType class.
@@ -221,67 +170,40 @@ public partial class TextWrap : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12505;
     /// <inheritdoc/>
     public override string LocalName => "wrap";
-    
     internal override byte NamespaceId => 28;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    	private static readonly string[] attributeTagNames = { "type","side","anchorx","anchory" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> Wrapping type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-    public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues> Type
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues> Type { get; set; }
     /// <summary>
     /// <para> Wrapping side.</para>
     /// <para>Represents the following attribute in the schema: side </para>
     /// </summary>
     [SchemaAttr(0, "side")]
-    public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues> Side
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues>)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues> Side { get; set; }
     /// <summary>
     /// <para> Horizontal Positioning Base.</para>
     /// <para>Represents the following attribute in the schema: anchorx </para>
     /// </summary>
     [SchemaAttr(0, "anchorx")]
-    public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues> AnchorX
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues>)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues> AnchorX { get; set; }
     /// <summary>
     /// <para> Vertical Positioning Base.</para>
     /// <para>Represents the following attribute in the schema: anchory </para>
     /// </summary>
     [SchemaAttr(0, "anchory")]
-    public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues> AnchorY
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues>)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues> AnchorY { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the TextWrap class.
@@ -293,25 +215,6 @@ public partial class TextWrap : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "type" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues>();
-    
-if( 0 == namespaceId && "side" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues>();
-    
-if( 0 == namespaceId && "anchorx" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues>();
-    
-if( 0 == namespaceId && "anchory" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextWrap>(deep);
 
@@ -329,13 +232,9 @@ public partial class AnchorLock : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12506;
     /// <inheritdoc/>
     public override string LocalName => "anchorlock";
-    
     internal override byte NamespaceId => 28;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -347,7 +246,6 @@ public partial class AnchorLock : OpenXmlLeafElement
     
       
      
-    
     
     
     

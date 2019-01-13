@@ -11,10 +11,7 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class AlternateContent : OpenXmlCompositeElement
     {
-        private static string _mcNamespace = @"http://schemas.openxmlformats.org/markup-compatibility/2006";
         private static byte _mcNamespaceId = byte.MaxValue;
-
-        private static string tagName = "AlternateContent";
 
         /// <summary>
         /// Initializes a new instance of the AlternateContent
@@ -64,10 +61,7 @@ namespace DocumentFormat.OpenXml
         /// Gets a value that represents the markup compatibility
         /// namespace.
         /// </summary>
-        public static string MarkupCompatibilityNamespace
-        {
-            get { return _mcNamespace; }
-        }
+        public static string MarkupCompatibilityNamespace { get; } = @"http://schemas.openxmlformats.org/markup-compatibility/2006";
 
         /// <summary>
         /// Gets a value that represents the markup compatibility
@@ -79,7 +73,7 @@ namespace DocumentFormat.OpenXml
             {
                 if (_mcNamespaceId == byte.MaxValue)
                 {
-                    _mcNamespaceId = NamespaceIdMap.GetNamespaceId(_mcNamespace);
+                    _mcNamespaceId = NamespaceIdMap.GetNamespaceId(MarkupCompatibilityNamespace);
                 }
 
                 return _mcNamespaceId;
@@ -90,43 +84,13 @@ namespace DocumentFormat.OpenXml
         /// Gets a value that represents the tag name of the
         /// AlternateContent element.
         /// </summary>
-        public static string TagName
-        {
-            get { return tagName; }
-        }
+        public static string TagName { get; } = "AlternateContent";
 
         /// <inheritdoc/>
-        public override string LocalName
-        {
-            get { return tagName; }
-        }
+        public override string LocalName => TagName;
 
         /// <inheritdoc/>
-        internal override byte NamespaceId
-        {
-            get { return MarkupCompatibilityNamespaceId; }
-        }
-
-        private static string[] attributeTagNames = Cached.Array<string>();
-        private static byte[] attributeNamespaceIds = Cached.Array<byte>();
-
-        /// <inheritdoc/>
-        internal override string[] AttributeTagNames
-        {
-            get
-            {
-                return attributeTagNames;
-            }
-        }
-
-        /// <inheritdoc/>
-        internal override byte[] AttributeNamespaceIds
-        {
-            get
-            {
-                return attributeNamespaceIds;
-            }
-        }
+        internal override byte NamespaceId => MarkupCompatibilityNamespaceId;
 
         /// <inheritdoc/>
         internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
@@ -167,23 +131,15 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-        {
-            return null;
-        }
-
-        /// <inheritdoc/>
         public override OpenXmlElement CloneNode(bool deep)
         {
             return CloneImp<AlternateContent>(deep);
         }
 
         /// <inheritdoc/>
-        internal override int ElementTypeId
-        {
-            get { return ReservedElementTypeIds.AlternateContentId; }
-        }
+        internal override int ElementTypeId => ReservedElementTypeIds.AlternateContentId;
 
+        /// <inheritdoc/>
         internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     }
 }

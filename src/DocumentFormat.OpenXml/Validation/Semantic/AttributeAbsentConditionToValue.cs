@@ -27,23 +27,23 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            var attributeValue = context.Element.Attributes[_absentAttribute];
+            var attribute = context.Element.Attributes[_absentAttribute];
 
-            if (attributeValue == null)
+            if (!attribute.HasValue)
             {
                 return null;
             }
 
-            var conditionAttributeValue = context.Element.Attributes[_conditionAttribute];
+            var conditionAttribute = context.Element.Attributes[_conditionAttribute];
 
-            if (conditionAttributeValue == null)
+            if (!conditionAttribute.HasValue)
             {
                 return null;
             }
 
             foreach (string value in _values)
             {
-                if (AttributeValueEquals(conditionAttributeValue, value, false))
+                if (AttributeValueEquals(conditionAttribute.Value, value, false))
                 {
                     return new ValidationErrorInfo()
                     {

@@ -44,14 +44,14 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            OpenXmlSimpleType attributeValue = context.Element.Attributes[_refAttribute];
+            var attribute = context.Element.Attributes[_refAttribute];
 
-            if (attributeValue == null || string.IsNullOrEmpty(attributeValue.InnerText))
+            if (!attribute.HasValue || string.IsNullOrEmpty(attribute.Value.InnerText))
             {
                 return null;
             }
 
-            if (GetReferencedAttributes(context).Contains(attributeValue.InnerText))
+            if (GetReferencedAttributes(context).Contains(attribute.Value.InnerText))
             {
                 return null;
             }
@@ -69,7 +69,7 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                     context.Element.LocalName,
                     GetAttributeQualifiedName(context.Element, _refAttribute),
                     _relatedPart == null ? _partPath : _relatedPart.PackagePart.Uri.ToString(),
-                    attributeValue.InnerText),
+                    attribute.Value.InnerText),
             };
         }
 
@@ -112,14 +112,14 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
             if (context.Element.ElementTypeId == _element)
             {
-                OpenXmlSimpleType attributeValue = context.Element.Attributes[_attribute];
+                var attribute = context.Element.Attributes[_attribute];
 
                 //Attributes whose value is empty string or null don't need to be cached.
-                if (attributeValue != null && !string.IsNullOrEmpty(attributeValue.InnerText))
+                if (attribute.HasValue && !string.IsNullOrEmpty(attribute.Value.InnerText))
                 {
                     Debug.Assert(_referencedAttributes != null);
 
-                    _referencedAttributes.Add(attributeValue.InnerText);
+                    _referencedAttributes.Add(attribute.Value.InnerText);
                 }
             }
         }

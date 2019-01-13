@@ -28,13 +28,9 @@ public partial class Properties : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 10903;
     /// <inheritdoc/>
     public override string LocalName => "Properties";
-    
     internal override byte NamespaceId => 4;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
     
     
@@ -111,7 +107,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     return null;
 }
 
-    
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Properties>(deep);
@@ -203,67 +198,40 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10904;
     /// <inheritdoc/>
     public override string LocalName => "property";
-    
     internal override byte NamespaceId => 4;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
-    
 
-    	private static readonly string[] attributeTagNames = { "fmtid","pid","name","linkTarget" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> Format ID.</para>
     /// <para>Represents the following attribute in the schema: fmtid </para>
     /// </summary>
     [SchemaAttr(0, "fmtid")]
-    public StringValue FormatId
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue FormatId { get; set; }
     /// <summary>
     /// <para> Property ID.</para>
     /// <para>Represents the following attribute in the schema: pid </para>
     /// </summary>
     [SchemaAttr(0, "pid")]
-    public Int32Value PropertyId
-    {
-        get { return (Int32Value)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public Int32Value PropertyId { get; set; }
     /// <summary>
     /// <para> Custom File Property Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-    public StringValue Name
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Name { get; set; }
     /// <summary>
     /// <para> Bookmark Link Target.</para>
     /// <para>Represents the following attribute in the schema: linkTarget </para>
     /// </summary>
     [SchemaAttr(0, "linkTarget")]
-    public StringValue LinkTarget
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue LinkTarget { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the CustomDocumentProperty class.
@@ -824,25 +792,6 @@ if( 5 == namespaceId && "cf" == name)
         set => SetElement(33, value);
     }
 
-
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "fmtid" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "pid" == name)
-    return new Int32Value();
-    
-if( 0 == namespaceId && "name" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "linkTarget" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
 
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomDocumentProperty>(deep);
