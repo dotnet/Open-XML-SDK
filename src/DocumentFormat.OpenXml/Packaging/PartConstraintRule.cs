@@ -27,6 +27,11 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <summary>
+        /// Gets the relationship type.
+        /// </summary>
+        public string RelationshipType => _info.RelationshipType;
+
+        /// <summary>
         /// Gets the class name for the relationship type.
         /// </summary>
         public string PartClassName => _info.PartClassName;
@@ -65,7 +70,10 @@ namespace DocumentFormat.OpenXml.Packaging
                 PartClassName = type.Name;
                 PartContentType = type.GetTypeInfo().GetCustomAttribute<ContentTypeAttribute>()?.ContentType;
                 Availability = type.GetTypeInfo().GetCustomAttribute<OfficeAvailabilityAttribute>()?.OfficeVersion ?? FileFormatVersions.Office2007;
+                RelationshipType = type.GetTypeInfo().GetCustomAttribute<RelationshipTypeAttribute>()?.RelationshipType ?? string.Empty;
             }
+
+            public string RelationshipType { get; }
 
             public string PartClassName { get; }
 

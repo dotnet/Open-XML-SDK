@@ -9,8 +9,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the VmlDrawingPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class VmlDrawingPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.vmlDrawing";
@@ -32,9 +32,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
-
         /// <summary>
         /// Gets the LegacyDiagramTextParts of the VmlDrawingPart
         /// </summary>
@@ -49,14 +46,8 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     _partConstraints = new PartConstraintCollection
                     {
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-                            PartConstraintRule.Create<ImagePart>(false, true)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2006/relationships/legacyDiagramText",
-                            PartConstraintRule.Create<LegacyDiagramTextPart>(false, true)
-                        }
+                        PartConstraintRule.Create<ImagePart>(false, true),
+                        PartConstraintRule.Create<LegacyDiagramTextPart>(false, true)
                     };
                 }
 

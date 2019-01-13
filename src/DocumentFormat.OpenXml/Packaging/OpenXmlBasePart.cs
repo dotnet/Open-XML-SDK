@@ -520,14 +520,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets a value indicating whether the ContentType for the current part is fixed.
         /// </summary>
-        internal virtual bool IsContentTypeFixed
-        {
-            get
-            {
-                ThrowIfObjectDisposed();
-                return false;
-            }
-        }
+        internal bool IsContentTypeFixed => this is IFixedContentTypePart;
 
         // find all reachable parts from the package root, the dictionary also used for cycle reference defense
         internal sealed override void FindAllReachableParts(IDictionary<OpenXmlPart, bool> reachableParts)
