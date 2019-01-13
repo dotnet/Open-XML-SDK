@@ -24,37 +24,37 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
 
         public override ValidationErrorInfo Validate(ValidationContext context)
         {
-            OpenXmlSimpleType attributeValue = context.Element.Attributes[_absentAttribute];
+            var attribute = context.Element.Attributes[_absentAttribute];
 
-            if (attributeValue == null)
+            if (!attribute.HasValue)
             {
                 return null;
             }
 
-            OpenXmlSimpleType conditionAttributeValue = context.Element.Attributes[_conditionAttribute];
+            var conditionAttribute = context.Element.Attributes[_conditionAttribute];
 
-            if (conditionAttributeValue == null)
+            if (!conditionAttribute.HasValue)
             {
                 return null;
             }
 
             foreach (string value in _values)
             {
-                if (AttributeValueEquals(conditionAttributeValue, value, false))
+                if (AttributeValueEquals(conditionAttribute.Value, value, false))
                 {
                     return null;
                 }
             }
 
             string valueString = "'" + _values[0] + "'";
-            if(_values.Length >1)
+            if (_values.Length > 1)
             {
-                for(int i=1; i< _values.Length-1; i++)
+                for (int i = 1; i < _values.Length - 1; i++)
                 {
                     valueString += ", '" + _values[i] + "'";
                 }
 
-                valueString += " and '" + _values[_values.Length-1] + "'";
+                valueString += " and '" + _values[_values.Length - 1] + "'";
             }
 
             return new ValidationErrorInfo()
@@ -62,10 +62,11 @@ namespace DocumentFormat.OpenXml.Validation.Semantic
                 Id = "Sem_AttributeAbsentConditionToNonValue",
                 ErrorType = ValidationErrorType.Semantic,
                 Node = context.Element,
-                Description = string.Format(System.Globalization.CultureInfo.CurrentUICulture, ValidationResources.Sem_AttributeAbsentConditionToNonValue,
-                                            GetAttributeQualifiedName(context.Element, _absentAttribute),
-                                            GetAttributeQualifiedName(context.Element, _conditionAttribute),
-                                            valueString),
+                Description = SR.Format(
+                    ValidationResources.Sem_AttributeAbsentConditionToNonValue,
+                    GetAttributeQualifiedName(context.Element, _absentAttribute),
+                    GetAttributeQualifiedName(context.Element, _conditionAttribute),
+                    valueString),
             };
         }
     }

@@ -21,309 +21,194 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13099;
     /// <inheritdoc/>
     public override string LocalName => "control";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "idQ","tag","idMso","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ControlCloneRegular class.
@@ -335,91 +220,6 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ControlCloneRegular>(deep);
 
@@ -437,353 +237,222 @@ public partial class ButtonRegular : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13100;
     /// <inheritdoc/>
     public override string LocalName => "button";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[26]; }
-        set { Attributes[26] = value; }
-    }
-    
+    [SchemaIndex(26)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
-    }
-    
+    [SchemaIndex(27)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[28]; }
-        set { Attributes[28] = value; }
-    }
-    
+    [SchemaIndex(28)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
-    }
-    
+    [SchemaIndex(29)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ButtonRegular class.
@@ -795,103 +464,6 @@ public partial class ButtonRegular : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ButtonRegular>(deep);
 
@@ -909,287 +481,180 @@ public partial class CheckBox : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13101;
     /// <inheritdoc/>
     public override string LocalName => "checkBox";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "getPressed","onAction","enabled","getEnabled","description","getDescription","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> getPressed.</para>
     /// <para>Represents the following attribute in the schema: getPressed </para>
     /// </summary>
     [SchemaAttr(0, "getPressed")]
-    public StringValue GetPressed
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue GetPressed { get; set; }
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue GetKeytip { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the CheckBox class.
@@ -1201,85 +666,6 @@ public partial class CheckBox : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "getPressed" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CheckBox>(deep);
 
@@ -1306,562 +692,355 @@ public partial class GalleryRegular : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13102;
     /// <inheritdoc/>
     public override string LocalName => "gallery";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "description","getDescription","invalidateContentOnDrop","columns","rows","itemWidth","itemHeight","getItemWidth","getItemHeight","showItemLabel","showInRibbon","onAction","enabled","getEnabled","image","imageMso","getImage","showItemImage","getItemCount","getItemLabel","getItemScreentip","getItemSupertip","getItemImage","getItemID","sizeString","getSelectedItemID","getSelectedItemIndex","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> invalidateContentOnDrop.</para>
     /// <para>Represents the following attribute in the schema: invalidateContentOnDrop </para>
     /// </summary>
     [SchemaAttr(0, "invalidateContentOnDrop")]
-    public BooleanValue InvalidateContentOnDrop
-    {
-        get { return (BooleanValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public BooleanValue InvalidateContentOnDrop { get; set; }
     /// <summary>
     /// <para> columns.</para>
     /// <para>Represents the following attribute in the schema: columns </para>
     /// </summary>
     [SchemaAttr(0, "columns")]
-    public IntegerValue Columns
-    {
-        get { return (IntegerValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public IntegerValue Columns { get; set; }
     /// <summary>
     /// <para> rows.</para>
     /// <para>Represents the following attribute in the schema: rows </para>
     /// </summary>
     [SchemaAttr(0, "rows")]
-    public IntegerValue Rows
-    {
-        get { return (IntegerValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public IntegerValue Rows { get; set; }
     /// <summary>
     /// <para> itemWidth.</para>
     /// <para>Represents the following attribute in the schema: itemWidth </para>
     /// </summary>
     [SchemaAttr(0, "itemWidth")]
-    public IntegerValue ItemWidth
-    {
-        get { return (IntegerValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public IntegerValue ItemWidth { get; set; }
     /// <summary>
     /// <para> itemHeight.</para>
     /// <para>Represents the following attribute in the schema: itemHeight </para>
     /// </summary>
     [SchemaAttr(0, "itemHeight")]
-    public IntegerValue ItemHeight
-    {
-        get { return (IntegerValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public IntegerValue ItemHeight { get; set; }
     /// <summary>
     /// <para> getItemWidth.</para>
     /// <para>Represents the following attribute in the schema: getItemWidth </para>
     /// </summary>
     [SchemaAttr(0, "getItemWidth")]
-    public StringValue GetItemWidth
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue GetItemWidth { get; set; }
     /// <summary>
     /// <para> getItemHeight.</para>
     /// <para>Represents the following attribute in the schema: getItemHeight </para>
     /// </summary>
     [SchemaAttr(0, "getItemHeight")]
-    public StringValue GetItemHeight
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue GetItemHeight { get; set; }
     /// <summary>
     /// <para> showItemLabel.</para>
     /// <para>Represents the following attribute in the schema: showItemLabel </para>
     /// </summary>
     [SchemaAttr(0, "showItemLabel")]
-    public BooleanValue ShowItemLabel
-    {
-        get { return (BooleanValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public BooleanValue ShowItemLabel { get; set; }
     /// <summary>
     /// <para> showInRibbon.</para>
     /// <para>Represents the following attribute in the schema: showInRibbon </para>
     /// </summary>
     [SchemaAttr(0, "showInRibbon")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues> ShowInRibbon
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues> ShowInRibbon { get; set; }
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> showItemImage.</para>
     /// <para>Represents the following attribute in the schema: showItemImage </para>
     /// </summary>
     [SchemaAttr(0, "showItemImage")]
-    public BooleanValue ShowItemImage
-    {
-        get { return (BooleanValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public BooleanValue ShowItemImage { get; set; }
     /// <summary>
     /// <para> getItemCount.</para>
     /// <para>Represents the following attribute in the schema: getItemCount </para>
     /// </summary>
     [SchemaAttr(0, "getItemCount")]
-    public StringValue GetItemCount
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue GetItemCount { get; set; }
     /// <summary>
     /// <para> getItemLabel.</para>
     /// <para>Represents the following attribute in the schema: getItemLabel </para>
     /// </summary>
     [SchemaAttr(0, "getItemLabel")]
-    public StringValue GetItemLabel
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue GetItemLabel { get; set; }
     /// <summary>
     /// <para> getItemScreentip.</para>
     /// <para>Represents the following attribute in the schema: getItemScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getItemScreentip")]
-    public StringValue GetItemScreentip
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue GetItemScreentip { get; set; }
     /// <summary>
     /// <para> getItemSupertip.</para>
     /// <para>Represents the following attribute in the schema: getItemSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getItemSupertip")]
-    public StringValue GetItemSupertip
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue GetItemSupertip { get; set; }
     /// <summary>
     /// <para> getItemImage.</para>
     /// <para>Represents the following attribute in the schema: getItemImage </para>
     /// </summary>
     [SchemaAttr(0, "getItemImage")]
-    public StringValue GetItemImage
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue GetItemImage { get; set; }
     /// <summary>
     /// <para> getItemID.</para>
     /// <para>Represents the following attribute in the schema: getItemID </para>
     /// </summary>
     [SchemaAttr(0, "getItemID")]
-    public StringValue GetItemID
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue GetItemID { get; set; }
     /// <summary>
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
     [SchemaAttr(0, "sizeString")]
-    public StringValue SizeString
-    {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public StringValue SizeString { get; set; }
     /// <summary>
     /// <para> getSelectedItemID.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemID </para>
     /// </summary>
     [SchemaAttr(0, "getSelectedItemID")]
-    public StringValue GetSelectedItemID
-    {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public StringValue GetSelectedItemID { get; set; }
     /// <summary>
     /// <para> getSelectedItemIndex.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemIndex </para>
     /// </summary>
     [SchemaAttr(0, "getSelectedItemIndex")]
-    public StringValue GetSelectedItemIndex
-    {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
-    }
-    
+    [SchemaIndex(26)]
+    public StringValue GetSelectedItemIndex { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
-    }
-    
+    [SchemaIndex(27)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
-    }
-    
+    [SchemaIndex(28)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
-    }
-    
+    [SchemaIndex(29)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[30]; }
-        set { Attributes[30] = value; }
-    }
-    
+    [SchemaIndex(30)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[31]; }
-        set { Attributes[31] = value; }
-    }
-    
+    [SchemaIndex(31)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[32]; }
-        set { Attributes[32] = value; }
-    }
-    
+    [SchemaIndex(32)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[33]; }
-        set { Attributes[33] = value; }
-    }
-    
+    [SchemaIndex(33)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[34]; }
-        set { Attributes[34] = value; }
-    }
-    
+    [SchemaIndex(34)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[35]; }
-        set { Attributes[35] = value; }
-    }
-    
+    [SchemaIndex(35)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[36]; }
-        set { Attributes[36] = value; }
-    }
-    
+    [SchemaIndex(36)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[37]; }
-        set { Attributes[37] = value; }
-    }
-    
+    [SchemaIndex(37)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[38]; }
-        set { Attributes[38] = value; }
-    }
-    
+    [SchemaIndex(38)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[39]; }
-        set { Attributes[39] = value; }
-    }
-    
+    [SchemaIndex(39)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[40]; }
-        set { Attributes[40] = value; }
-    }
-    
+    [SchemaIndex(40)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[41]; }
-        set { Attributes[41] = value; }
-    }
-    
+    [SchemaIndex(41)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[42]; }
-        set { Attributes[42] = value; }
-    }
-    
+    [SchemaIndex(42)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[43]; }
-        set { Attributes[43] = value; }
-    }
-    
+    [SchemaIndex(43)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[44]; }
-        set { Attributes[44] = value; }
-    }
-    
+    [SchemaIndex(44)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[45]; }
-        set { Attributes[45] = value; }
-    }
-    
+    [SchemaIndex(45)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[46]; }
-        set { Attributes[46] = value; }
-    }
-    
+    [SchemaIndex(46)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[47]; }
-        set { Attributes[47] = value; }
-    }
-    
+    [SchemaIndex(47)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[48]; }
-        set { Attributes[48] = value; }
-    }
-    
+    [SchemaIndex(48)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the GalleryRegular class.
@@ -1910,160 +1089,6 @@ if( 57 == namespaceId && "button" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "invalidateContentOnDrop" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "columns" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "rows" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "itemWidth" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "itemHeight" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "getItemWidth" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemHeight" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showItemLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "showInRibbon" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showItemImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getItemCount" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemID" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sizeString" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSelectedItemID" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSelectedItemIndex" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GalleryRegular>(deep);
 
@@ -2081,364 +1106,229 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13103;
     /// <inheritdoc/>
     public override string LocalName => "toggleButton";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "getPressed","onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> getPressed.</para>
     /// <para>Represents the following attribute in the schema: getPressed </para>
     /// </summary>
     [SchemaAttr(0, "getPressed")]
-    public StringValue GetPressed
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue GetPressed { get; set; }
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
-    }
-    
+    [SchemaIndex(26)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[27]; }
-        set { Attributes[27] = value; }
-    }
-    
+    [SchemaIndex(27)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
-    }
-    
+    [SchemaIndex(28)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[29]; }
-        set { Attributes[29] = value; }
-    }
-    
+    [SchemaIndex(29)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[30]; }
-        set { Attributes[30] = value; }
-    }
-    
+    [SchemaIndex(30)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ToggleButtonRegular class.
@@ -2450,106 +1340,6 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "getPressed" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ToggleButtonRegular>(deep);
 
@@ -2567,122 +1357,75 @@ public partial class MenuSeparator : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13104;
     /// <inheritdoc/>
     public override string LocalName => "menuSeparator";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","title","getTitle" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
     [SchemaAttr(0, "title")]
-    public StringValue Title
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue Title { get; set; }
     /// <summary>
     /// <para> getTitle.</para>
     /// <para>Represents the following attribute in the schema: getTitle </para>
     /// </summary>
     [SchemaAttr(0, "getTitle")]
-    public StringValue GetTitle
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue GetTitle { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the MenuSeparator class.
@@ -2694,40 +1437,6 @@ public partial class MenuSeparator : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getTitle" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MenuSeparator>(deep);
 
@@ -2756,199 +1465,124 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13105;
     /// <inheritdoc/>
     public override string LocalName => "splitButton";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "enabled","getEnabled","id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetShowLabel { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the SplitButtonRegular class.
@@ -3000,61 +1634,6 @@ if( 57 == namespaceId && "menu" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SplitButtonRegular>(deep);
 
@@ -3095,353 +1674,222 @@ public partial class MenuRegular : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13106;
     /// <inheritdoc/>
     public override string LocalName => "menu";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "itemSize","description","getDescription","id","idQ","tag","idMso","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> itemSize.</para>
     /// <para>Represents the following attribute in the schema: itemSize </para>
     /// </summary>
     [SchemaAttr(0, "itemSize")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[26]; }
-        set { Attributes[26] = value; }
-    }
-    
+    [SchemaIndex(26)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
-    }
-    
+    [SchemaIndex(27)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[28]; }
-        set { Attributes[28] = value; }
-    }
-    
+    [SchemaIndex(28)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
-    }
-    
+    [SchemaIndex(29)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the MenuRegular class.
@@ -3511,103 +1959,6 @@ if( 57 == namespaceId && "dynamicMenu" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "itemSize" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MenuRegular>(deep);
 
@@ -3625,364 +1976,229 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13107;
     /// <inheritdoc/>
     public override string LocalName => "dynamicMenu";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "description","getDescription","id","idQ","tag","idMso","getContent","invalidateContentOnDrop","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> getContent.</para>
     /// <para>Represents the following attribute in the schema: getContent </para>
     /// </summary>
     [SchemaAttr(0, "getContent")]
-    public StringValue GetContent
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue GetContent { get; set; }
     /// <summary>
     /// <para> invalidateContentOnDrop.</para>
     /// <para>Represents the following attribute in the schema: invalidateContentOnDrop </para>
     /// </summary>
     [SchemaAttr(0, "invalidateContentOnDrop")]
-    public BooleanValue InvalidateContentOnDrop
-    {
-        get { return (BooleanValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public BooleanValue InvalidateContentOnDrop { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
-    }
-    
+    [SchemaIndex(26)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[27]; }
-        set { Attributes[27] = value; }
-    }
-    
+    [SchemaIndex(27)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
-    }
-    
+    [SchemaIndex(28)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[29]; }
-        set { Attributes[29] = value; }
-    }
-    
+    [SchemaIndex(29)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[30]; }
-        set { Attributes[30] = value; }
-    }
-    
+    [SchemaIndex(30)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the DynamicMenuRegular class.
@@ -3994,106 +2210,6 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getContent" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "invalidateContentOnDrop" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DynamicMenuRegular>(deep);
 
@@ -4122,199 +2238,124 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13108;
     /// <inheritdoc/>
     public override string LocalName => "splitButton";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "enabled","getEnabled","id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetShowLabel { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the SplitButtonWithTitle class.
@@ -4366,61 +2407,6 @@ if( 57 == namespaceId && "menu" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SplitButtonWithTitle>(deep);
 
@@ -4461,353 +2447,222 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13109;
     /// <inheritdoc/>
     public override string LocalName => "menu";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","itemSize","title","getTitle","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> itemSize.</para>
     /// <para>Represents the following attribute in the schema: itemSize </para>
     /// </summary>
     [SchemaAttr(0, "itemSize")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
     [SchemaAttr(0, "title")]
-    public StringValue Title
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue Title { get; set; }
     /// <summary>
     /// <para> getTitle.</para>
     /// <para>Represents the following attribute in the schema: getTitle </para>
     /// </summary>
     [SchemaAttr(0, "getTitle")]
-    public StringValue GetTitle
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue GetTitle { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[26]; }
-        set { Attributes[26] = value; }
-    }
-    
+    [SchemaIndex(26)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
-    }
-    
+    [SchemaIndex(27)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[28]; }
-        set { Attributes[28] = value; }
-    }
-    
+    [SchemaIndex(28)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
-    }
-    
+    [SchemaIndex(29)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the MenuWithTitle class.
@@ -4877,103 +2732,6 @@ if( 57 == namespaceId && "dynamicMenu" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "itemSize" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>();
-    
-if( 0 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getTitle" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MenuWithTitle>(deep);
 
@@ -4991,100 +2749,61 @@ public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13110;
     /// <inheritdoc/>
     public override string LocalName => "menuSeparator";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the MenuSeparatorNoTitle class.
@@ -5096,34 +2815,6 @@ public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MenuSeparatorNoTitle>(deep);
 
@@ -5141,353 +2832,222 @@ public partial class ControlClone : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13111;
     /// <inheritdoc/>
     public override string LocalName => "control";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "size","getSize","enabled","getEnabled","description","getDescription","image","imageMso","getImage","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
     [SchemaAttr(0, "size")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size { get; set; }
     /// <summary>
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
     [SchemaAttr(0, "getSize")]
-    public StringValue GetSize
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetSize { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[26]; }
-        set { Attributes[26] = value; }
-    }
-    
+    [SchemaIndex(26)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
-    }
-    
+    [SchemaIndex(27)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[28]; }
-        set { Attributes[28] = value; }
-    }
-    
+    [SchemaIndex(28)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
-    }
-    
+    [SchemaIndex(29)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ControlClone class.
@@ -5499,103 +3059,6 @@ public partial class ControlClone : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "size" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>();
-    
-if( 0 == namespaceId && "getSize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ControlClone>(deep);
 
@@ -5613,243 +3076,152 @@ public partial class LabelControl : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13112;
     /// <inheritdoc/>
     public override string LocalName => "labelControl";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","showLabel","getShowLabel" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue GetShowLabel { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the LabelControl class.
@@ -5861,73 +3233,6 @@ public partial class LabelControl : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LabelControl>(deep);
 
@@ -5945,375 +3250,236 @@ public partial class Button : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13113;
     /// <inheritdoc/>
     public override string LocalName => "button";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "size","getSize","onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
     [SchemaAttr(0, "size")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size { get; set; }
     /// <summary>
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
     [SchemaAttr(0, "getSize")]
-    public StringValue GetSize
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetSize { get; set; }
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
-    }
-    
+    [SchemaIndex(26)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
-    }
-    
+    [SchemaIndex(27)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[28]; }
-        set { Attributes[28] = value; }
-    }
-    
+    [SchemaIndex(28)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
-    }
-    
+    [SchemaIndex(29)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[30]; }
-        set { Attributes[30] = value; }
-    }
-    
+    [SchemaIndex(30)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[31]; }
-        set { Attributes[31] = value; }
-    }
-    
+    [SchemaIndex(31)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Button class.
@@ -6325,109 +3491,6 @@ public partial class Button : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "size" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>();
-    
-if( 0 == namespaceId && "getSize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Button>(deep);
 
@@ -6445,386 +3508,243 @@ public partial class ToggleButton : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13114;
     /// <inheritdoc/>
     public override string LocalName => "toggleButton";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "size","getSize","getPressed","onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
     [SchemaAttr(0, "size")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size { get; set; }
     /// <summary>
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
     [SchemaAttr(0, "getSize")]
-    public StringValue GetSize
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetSize { get; set; }
     /// <summary>
     /// <para> getPressed.</para>
     /// <para>Represents the following attribute in the schema: getPressed </para>
     /// </summary>
     [SchemaAttr(0, "getPressed")]
-    public StringValue GetPressed
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue GetPressed { get; set; }
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
-    }
-    
+    [SchemaIndex(26)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
-    }
-    
+    [SchemaIndex(27)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
-    }
-    
+    [SchemaIndex(28)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[29]; }
-        set { Attributes[29] = value; }
-    }
-    
+    [SchemaIndex(29)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[30]; }
-        set { Attributes[30] = value; }
-    }
-    
+    [SchemaIndex(30)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[31]; }
-        set { Attributes[31] = value; }
-    }
-    
+    [SchemaIndex(31)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[32]; }
-        set { Attributes[32] = value; }
-    }
-    
+    [SchemaIndex(32)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ToggleButton class.
@@ -6836,112 +3756,6 @@ public partial class ToggleButton : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "size" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>();
-    
-if( 0 == namespaceId && "getSize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getPressed" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ToggleButton>(deep);
 
@@ -6959,364 +3773,229 @@ public partial class EditBox : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13115;
     /// <inheritdoc/>
     public override string LocalName => "editBox";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "enabled","getEnabled","image","imageMso","getImage","maxLength","getText","onChange","sizeString","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> maxLength.</para>
     /// <para>Represents the following attribute in the schema: maxLength </para>
     /// </summary>
     [SchemaAttr(0, "maxLength")]
-    public IntegerValue MaxLength
-    {
-        get { return (IntegerValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public IntegerValue MaxLength { get; set; }
     /// <summary>
     /// <para> getText.</para>
     /// <para>Represents the following attribute in the schema: getText </para>
     /// </summary>
     [SchemaAttr(0, "getText")]
-    public StringValue GetText
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue GetText { get; set; }
     /// <summary>
     /// <para> onChange.</para>
     /// <para>Represents the following attribute in the schema: onChange </para>
     /// </summary>
     [SchemaAttr(0, "onChange")]
-    public StringValue OnChange
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue OnChange { get; set; }
     /// <summary>
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
     [SchemaAttr(0, "sizeString")]
-    public StringValue SizeString
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue SizeString { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
-    }
-    
+    [SchemaIndex(26)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[27]; }
-        set { Attributes[27] = value; }
-    }
-    
+    [SchemaIndex(27)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
-    }
-    
+    [SchemaIndex(28)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[29]; }
-        set { Attributes[29] = value; }
-    }
-    
+    [SchemaIndex(29)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[30]; }
-        set { Attributes[30] = value; }
-    }
-    
+    [SchemaIndex(30)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the EditBox class.
@@ -7328,106 +4007,6 @@ public partial class EditBox : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "maxLength" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "getText" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onChange" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sizeString" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EditBox>(deep);
 
@@ -7452,452 +4031,285 @@ public partial class ComboBox : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13116;
     /// <inheritdoc/>
     public override string LocalName => "comboBox";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "showItemImage","getItemCount","getItemLabel","getItemScreentip","getItemSupertip","getItemImage","getItemID","sizeString","invalidateContentOnDrop","enabled","getEnabled","image","imageMso","getImage","maxLength","getText","onChange","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> showItemImage.</para>
     /// <para>Represents the following attribute in the schema: showItemImage </para>
     /// </summary>
     [SchemaAttr(0, "showItemImage")]
-    public BooleanValue ShowItemImage
-    {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public BooleanValue ShowItemImage { get; set; }
     /// <summary>
     /// <para> getItemCount.</para>
     /// <para>Represents the following attribute in the schema: getItemCount </para>
     /// </summary>
     [SchemaAttr(0, "getItemCount")]
-    public StringValue GetItemCount
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetItemCount { get; set; }
     /// <summary>
     /// <para> getItemLabel.</para>
     /// <para>Represents the following attribute in the schema: getItemLabel </para>
     /// </summary>
     [SchemaAttr(0, "getItemLabel")]
-    public StringValue GetItemLabel
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue GetItemLabel { get; set; }
     /// <summary>
     /// <para> getItemScreentip.</para>
     /// <para>Represents the following attribute in the schema: getItemScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getItemScreentip")]
-    public StringValue GetItemScreentip
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue GetItemScreentip { get; set; }
     /// <summary>
     /// <para> getItemSupertip.</para>
     /// <para>Represents the following attribute in the schema: getItemSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getItemSupertip")]
-    public StringValue GetItemSupertip
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue GetItemSupertip { get; set; }
     /// <summary>
     /// <para> getItemImage.</para>
     /// <para>Represents the following attribute in the schema: getItemImage </para>
     /// </summary>
     [SchemaAttr(0, "getItemImage")]
-    public StringValue GetItemImage
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue GetItemImage { get; set; }
     /// <summary>
     /// <para> getItemID.</para>
     /// <para>Represents the following attribute in the schema: getItemID </para>
     /// </summary>
     [SchemaAttr(0, "getItemID")]
-    public StringValue GetItemID
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue GetItemID { get; set; }
     /// <summary>
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
     [SchemaAttr(0, "sizeString")]
-    public StringValue SizeString
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue SizeString { get; set; }
     /// <summary>
     /// <para> invalidateContentOnDrop.</para>
     /// <para>Represents the following attribute in the schema: invalidateContentOnDrop </para>
     /// </summary>
     [SchemaAttr(0, "invalidateContentOnDrop")]
-    public BooleanValue InvalidateContentOnDrop
-    {
-        get { return (BooleanValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public BooleanValue InvalidateContentOnDrop { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> maxLength.</para>
     /// <para>Represents the following attribute in the schema: maxLength </para>
     /// </summary>
     [SchemaAttr(0, "maxLength")]
-    public IntegerValue MaxLength
-    {
-        get { return (IntegerValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public IntegerValue MaxLength { get; set; }
     /// <summary>
     /// <para> getText.</para>
     /// <para>Represents the following attribute in the schema: getText </para>
     /// </summary>
     [SchemaAttr(0, "getText")]
-    public StringValue GetText
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetText { get; set; }
     /// <summary>
     /// <para> onChange.</para>
     /// <para>Represents the following attribute in the schema: onChange </para>
     /// </summary>
     [SchemaAttr(0, "onChange")]
-    public StringValue OnChange
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue OnChange { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
-    }
-    
+    [SchemaIndex(26)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
-    }
-    
+    [SchemaIndex(27)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
-    }
-    
+    [SchemaIndex(28)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
-    }
-    
+    [SchemaIndex(29)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[30]; }
-        set { Attributes[30] = value; }
-    }
-    
+    [SchemaIndex(30)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[31]; }
-        set { Attributes[31] = value; }
-    }
-    
+    [SchemaIndex(31)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[32]; }
-        set { Attributes[32] = value; }
-    }
-    
+    [SchemaIndex(32)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[33]; }
-        set { Attributes[33] = value; }
-    }
-    
+    [SchemaIndex(33)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[34]; }
-        set { Attributes[34] = value; }
-    }
-    
+    [SchemaIndex(34)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[35]; }
-        set { Attributes[35] = value; }
-    }
-    
+    [SchemaIndex(35)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[36]; }
-        set { Attributes[36] = value; }
-    }
-    
+    [SchemaIndex(36)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[37]; }
-        set { Attributes[37] = value; }
-    }
-    
+    [SchemaIndex(37)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[38]; }
-        set { Attributes[38] = value; }
-    }
-    
+    [SchemaIndex(38)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ComboBox class.
@@ -7943,130 +4355,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "showItemImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getItemCount" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemID" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sizeString" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "invalidateContentOnDrop" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "maxLength" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "getText" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onChange" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ComboBox>(deep);
 
@@ -8093,452 +4381,285 @@ public partial class DropDownRegular : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13117;
     /// <inheritdoc/>
     public override string LocalName => "dropDown";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "onAction","enabled","getEnabled","image","imageMso","getImage","showItemImage","getItemCount","getItemLabel","getItemScreentip","getItemSupertip","getItemImage","getItemID","sizeString","getSelectedItemID","getSelectedItemIndex","showItemLabel","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> showItemImage.</para>
     /// <para>Represents the following attribute in the schema: showItemImage </para>
     /// </summary>
     [SchemaAttr(0, "showItemImage")]
-    public BooleanValue ShowItemImage
-    {
-        get { return (BooleanValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public BooleanValue ShowItemImage { get; set; }
     /// <summary>
     /// <para> getItemCount.</para>
     /// <para>Represents the following attribute in the schema: getItemCount </para>
     /// </summary>
     [SchemaAttr(0, "getItemCount")]
-    public StringValue GetItemCount
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue GetItemCount { get; set; }
     /// <summary>
     /// <para> getItemLabel.</para>
     /// <para>Represents the following attribute in the schema: getItemLabel </para>
     /// </summary>
     [SchemaAttr(0, "getItemLabel")]
-    public StringValue GetItemLabel
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue GetItemLabel { get; set; }
     /// <summary>
     /// <para> getItemScreentip.</para>
     /// <para>Represents the following attribute in the schema: getItemScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getItemScreentip")]
-    public StringValue GetItemScreentip
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue GetItemScreentip { get; set; }
     /// <summary>
     /// <para> getItemSupertip.</para>
     /// <para>Represents the following attribute in the schema: getItemSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getItemSupertip")]
-    public StringValue GetItemSupertip
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue GetItemSupertip { get; set; }
     /// <summary>
     /// <para> getItemImage.</para>
     /// <para>Represents the following attribute in the schema: getItemImage </para>
     /// </summary>
     [SchemaAttr(0, "getItemImage")]
-    public StringValue GetItemImage
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetItemImage { get; set; }
     /// <summary>
     /// <para> getItemID.</para>
     /// <para>Represents the following attribute in the schema: getItemID </para>
     /// </summary>
     [SchemaAttr(0, "getItemID")]
-    public StringValue GetItemID
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue GetItemID { get; set; }
     /// <summary>
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
     [SchemaAttr(0, "sizeString")]
-    public StringValue SizeString
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue SizeString { get; set; }
     /// <summary>
     /// <para> getSelectedItemID.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemID </para>
     /// </summary>
     [SchemaAttr(0, "getSelectedItemID")]
-    public StringValue GetSelectedItemID
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue GetSelectedItemID { get; set; }
     /// <summary>
     /// <para> getSelectedItemIndex.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemIndex </para>
     /// </summary>
     [SchemaAttr(0, "getSelectedItemIndex")]
-    public StringValue GetSelectedItemIndex
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetSelectedItemIndex { get; set; }
     /// <summary>
     /// <para> showItemLabel.</para>
     /// <para>Represents the following attribute in the schema: showItemLabel </para>
     /// </summary>
     [SchemaAttr(0, "showItemLabel")]
-    public BooleanValue ShowItemLabel
-    {
-        get { return (BooleanValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public BooleanValue ShowItemLabel { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
-    }
-    
+    [SchemaIndex(26)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
-    }
-    
+    [SchemaIndex(27)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
-    }
-    
+    [SchemaIndex(28)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
-    }
-    
+    [SchemaIndex(29)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[30]; }
-        set { Attributes[30] = value; }
-    }
-    
+    [SchemaIndex(30)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[31]; }
-        set { Attributes[31] = value; }
-    }
-    
+    [SchemaIndex(31)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[32]; }
-        set { Attributes[32] = value; }
-    }
-    
+    [SchemaIndex(32)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[33]; }
-        set { Attributes[33] = value; }
-    }
-    
+    [SchemaIndex(33)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[34]; }
-        set { Attributes[34] = value; }
-    }
-    
+    [SchemaIndex(34)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[35]; }
-        set { Attributes[35] = value; }
-    }
-    
+    [SchemaIndex(35)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[36]; }
-        set { Attributes[36] = value; }
-    }
-    
+    [SchemaIndex(36)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[37]; }
-        set { Attributes[37] = value; }
-    }
-    
+    [SchemaIndex(37)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[38]; }
-        set { Attributes[38] = value; }
-    }
-    
+    [SchemaIndex(38)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the DropDownRegular class.
@@ -8587,130 +4708,6 @@ if( 57 == namespaceId && "button" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showItemImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getItemCount" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemID" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sizeString" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSelectedItemID" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSelectedItemIndex" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showItemLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropDownRegular>(deep);
 
@@ -8737,584 +4734,369 @@ public partial class Gallery : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13118;
     /// <inheritdoc/>
     public override string LocalName => "gallery";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "size","getSize","description","getDescription","invalidateContentOnDrop","columns","rows","itemWidth","itemHeight","getItemWidth","getItemHeight","showItemLabel","showInRibbon","onAction","enabled","getEnabled","image","imageMso","getImage","showItemImage","getItemCount","getItemLabel","getItemScreentip","getItemSupertip","getItemImage","getItemID","sizeString","getSelectedItemID","getSelectedItemIndex","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
     [SchemaAttr(0, "size")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size { get; set; }
     /// <summary>
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
     [SchemaAttr(0, "getSize")]
-    public StringValue GetSize
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetSize { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> invalidateContentOnDrop.</para>
     /// <para>Represents the following attribute in the schema: invalidateContentOnDrop </para>
     /// </summary>
     [SchemaAttr(0, "invalidateContentOnDrop")]
-    public BooleanValue InvalidateContentOnDrop
-    {
-        get { return (BooleanValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public BooleanValue InvalidateContentOnDrop { get; set; }
     /// <summary>
     /// <para> columns.</para>
     /// <para>Represents the following attribute in the schema: columns </para>
     /// </summary>
     [SchemaAttr(0, "columns")]
-    public IntegerValue Columns
-    {
-        get { return (IntegerValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public IntegerValue Columns { get; set; }
     /// <summary>
     /// <para> rows.</para>
     /// <para>Represents the following attribute in the schema: rows </para>
     /// </summary>
     [SchemaAttr(0, "rows")]
-    public IntegerValue Rows
-    {
-        get { return (IntegerValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public IntegerValue Rows { get; set; }
     /// <summary>
     /// <para> itemWidth.</para>
     /// <para>Represents the following attribute in the schema: itemWidth </para>
     /// </summary>
     [SchemaAttr(0, "itemWidth")]
-    public IntegerValue ItemWidth
-    {
-        get { return (IntegerValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public IntegerValue ItemWidth { get; set; }
     /// <summary>
     /// <para> itemHeight.</para>
     /// <para>Represents the following attribute in the schema: itemHeight </para>
     /// </summary>
     [SchemaAttr(0, "itemHeight")]
-    public IntegerValue ItemHeight
-    {
-        get { return (IntegerValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public IntegerValue ItemHeight { get; set; }
     /// <summary>
     /// <para> getItemWidth.</para>
     /// <para>Represents the following attribute in the schema: getItemWidth </para>
     /// </summary>
     [SchemaAttr(0, "getItemWidth")]
-    public StringValue GetItemWidth
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue GetItemWidth { get; set; }
     /// <summary>
     /// <para> getItemHeight.</para>
     /// <para>Represents the following attribute in the schema: getItemHeight </para>
     /// </summary>
     [SchemaAttr(0, "getItemHeight")]
-    public StringValue GetItemHeight
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue GetItemHeight { get; set; }
     /// <summary>
     /// <para> showItemLabel.</para>
     /// <para>Represents the following attribute in the schema: showItemLabel </para>
     /// </summary>
     [SchemaAttr(0, "showItemLabel")]
-    public BooleanValue ShowItemLabel
-    {
-        get { return (BooleanValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public BooleanValue ShowItemLabel { get; set; }
     /// <summary>
     /// <para> showInRibbon.</para>
     /// <para>Represents the following attribute in the schema: showInRibbon </para>
     /// </summary>
     [SchemaAttr(0, "showInRibbon")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues> ShowInRibbon
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues> ShowInRibbon { get; set; }
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> showItemImage.</para>
     /// <para>Represents the following attribute in the schema: showItemImage </para>
     /// </summary>
     [SchemaAttr(0, "showItemImage")]
-    public BooleanValue ShowItemImage
-    {
-        get { return (BooleanValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public BooleanValue ShowItemImage { get; set; }
     /// <summary>
     /// <para> getItemCount.</para>
     /// <para>Represents the following attribute in the schema: getItemCount </para>
     /// </summary>
     [SchemaAttr(0, "getItemCount")]
-    public StringValue GetItemCount
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue GetItemCount { get; set; }
     /// <summary>
     /// <para> getItemLabel.</para>
     /// <para>Represents the following attribute in the schema: getItemLabel </para>
     /// </summary>
     [SchemaAttr(0, "getItemLabel")]
-    public StringValue GetItemLabel
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue GetItemLabel { get; set; }
     /// <summary>
     /// <para> getItemScreentip.</para>
     /// <para>Represents the following attribute in the schema: getItemScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getItemScreentip")]
-    public StringValue GetItemScreentip
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue GetItemScreentip { get; set; }
     /// <summary>
     /// <para> getItemSupertip.</para>
     /// <para>Represents the following attribute in the schema: getItemSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getItemSupertip")]
-    public StringValue GetItemSupertip
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue GetItemSupertip { get; set; }
     /// <summary>
     /// <para> getItemImage.</para>
     /// <para>Represents the following attribute in the schema: getItemImage </para>
     /// </summary>
     [SchemaAttr(0, "getItemImage")]
-    public StringValue GetItemImage
-    {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public StringValue GetItemImage { get; set; }
     /// <summary>
     /// <para> getItemID.</para>
     /// <para>Represents the following attribute in the schema: getItemID </para>
     /// </summary>
     [SchemaAttr(0, "getItemID")]
-    public StringValue GetItemID
-    {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public StringValue GetItemID { get; set; }
     /// <summary>
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
     [SchemaAttr(0, "sizeString")]
-    public StringValue SizeString
-    {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
-    }
-    
+    [SchemaIndex(26)]
+    public StringValue SizeString { get; set; }
     /// <summary>
     /// <para> getSelectedItemID.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemID </para>
     /// </summary>
     [SchemaAttr(0, "getSelectedItemID")]
-    public StringValue GetSelectedItemID
-    {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
-    }
-    
+    [SchemaIndex(27)]
+    public StringValue GetSelectedItemID { get; set; }
     /// <summary>
     /// <para> getSelectedItemIndex.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemIndex </para>
     /// </summary>
     [SchemaAttr(0, "getSelectedItemIndex")]
-    public StringValue GetSelectedItemIndex
-    {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
-    }
-    
+    [SchemaIndex(28)]
+    public StringValue GetSelectedItemIndex { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
-    }
-    
+    [SchemaIndex(29)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[30]; }
-        set { Attributes[30] = value; }
-    }
-    
+    [SchemaIndex(30)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[31]; }
-        set { Attributes[31] = value; }
-    }
-    
+    [SchemaIndex(31)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[32]; }
-        set { Attributes[32] = value; }
-    }
-    
+    [SchemaIndex(32)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[33]; }
-        set { Attributes[33] = value; }
-    }
-    
+    [SchemaIndex(33)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[34]; }
-        set { Attributes[34] = value; }
-    }
-    
+    [SchemaIndex(34)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[35]; }
-        set { Attributes[35] = value; }
-    }
-    
+    [SchemaIndex(35)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[36]; }
-        set { Attributes[36] = value; }
-    }
-    
+    [SchemaIndex(36)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[37]; }
-        set { Attributes[37] = value; }
-    }
-    
+    [SchemaIndex(37)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[38]; }
-        set { Attributes[38] = value; }
-    }
-    
+    [SchemaIndex(38)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[39]; }
-        set { Attributes[39] = value; }
-    }
-    
+    [SchemaIndex(39)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[40]; }
-        set { Attributes[40] = value; }
-    }
-    
+    [SchemaIndex(40)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[41]; }
-        set { Attributes[41] = value; }
-    }
-    
+    [SchemaIndex(41)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[42]; }
-        set { Attributes[42] = value; }
-    }
-    
+    [SchemaIndex(42)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[43]; }
-        set { Attributes[43] = value; }
-    }
-    
+    [SchemaIndex(43)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[44]; }
-        set { Attributes[44] = value; }
-    }
-    
+    [SchemaIndex(44)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[45]; }
-        set { Attributes[45] = value; }
-    }
-    
+    [SchemaIndex(45)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[46]; }
-        set { Attributes[46] = value; }
-    }
-    
+    [SchemaIndex(46)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[47]; }
-        set { Attributes[47] = value; }
-    }
-    
+    [SchemaIndex(47)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[48]; }
-        set { Attributes[48] = value; }
-    }
-    
+    [SchemaIndex(48)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[49]; }
-        set { Attributes[49] = value; }
-    }
-    
+    [SchemaIndex(49)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[50]; }
-        set { Attributes[50] = value; }
-    }
-    
+    [SchemaIndex(50)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Gallery class.
@@ -9363,166 +5145,6 @@ if( 57 == namespaceId && "button" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "size" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>();
-    
-if( 0 == namespaceId && "getSize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "invalidateContentOnDrop" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "columns" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "rows" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "itemWidth" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "itemHeight" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "getItemWidth" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemHeight" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showItemLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "showInRibbon" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.GalleryShowInRibbonValues>();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showItemImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getItemCount" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemID" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sizeString" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSelectedItemID" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSelectedItemIndex" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Gallery>(deep);
 
@@ -9563,375 +5185,236 @@ public partial class Menu : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13119;
     /// <inheritdoc/>
     public override string LocalName => "menu";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "size","getSize","itemSize","description","getDescription","id","idQ","tag","idMso","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
     [SchemaAttr(0, "size")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size { get; set; }
     /// <summary>
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
     [SchemaAttr(0, "getSize")]
-    public StringValue GetSize
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetSize { get; set; }
     /// <summary>
     /// <para> itemSize.</para>
     /// <para>Represents the following attribute in the schema: itemSize </para>
     /// </summary>
     [SchemaAttr(0, "itemSize")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
-    }
-    
+    [SchemaIndex(26)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
-    }
-    
+    [SchemaIndex(27)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[28]; }
-        set { Attributes[28] = value; }
-    }
-    
+    [SchemaIndex(28)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
-    }
-    
+    [SchemaIndex(29)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[30]; }
-        set { Attributes[30] = value; }
-    }
-    
+    [SchemaIndex(30)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[31]; }
-        set { Attributes[31] = value; }
-    }
-    
+    [SchemaIndex(31)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Menu class.
@@ -10001,109 +5484,6 @@ if( 57 == namespaceId && "dynamicMenu" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "size" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>();
-    
-if( 0 == namespaceId && "getSize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "itemSize" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Menu>(deep);
 
@@ -10121,386 +5501,243 @@ public partial class DynamicMenu : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13120;
     /// <inheritdoc/>
     public override string LocalName => "dynamicMenu";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "size","getSize","description","getDescription","id","idQ","tag","idMso","getContent","invalidateContentOnDrop","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
     [SchemaAttr(0, "size")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size { get; set; }
     /// <summary>
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
     [SchemaAttr(0, "getSize")]
-    public StringValue GetSize
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetSize { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> getContent.</para>
     /// <para>Represents the following attribute in the schema: getContent </para>
     /// </summary>
     [SchemaAttr(0, "getContent")]
-    public StringValue GetContent
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue GetContent { get; set; }
     /// <summary>
     /// <para> invalidateContentOnDrop.</para>
     /// <para>Represents the following attribute in the schema: invalidateContentOnDrop </para>
     /// </summary>
     [SchemaAttr(0, "invalidateContentOnDrop")]
-    public BooleanValue InvalidateContentOnDrop
-    {
-        get { return (BooleanValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public BooleanValue InvalidateContentOnDrop { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
-    }
-    
+    [SchemaIndex(26)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
-    }
-    
+    [SchemaIndex(27)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
-    }
-    
+    [SchemaIndex(28)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[29]; }
-        set { Attributes[29] = value; }
-    }
-    
+    [SchemaIndex(29)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[30]; }
-        set { Attributes[30] = value; }
-    }
-    
+    [SchemaIndex(30)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[31]; }
-        set { Attributes[31] = value; }
-    }
-    
+    [SchemaIndex(31)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[32]; }
-        set { Attributes[32] = value; }
-    }
-    
+    [SchemaIndex(32)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the DynamicMenu class.
@@ -10512,112 +5749,6 @@ public partial class DynamicMenu : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "size" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>();
-    
-if( 0 == namespaceId && "getSize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getContent" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "invalidateContentOnDrop" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DynamicMenu>(deep);
 
@@ -10646,221 +5777,138 @@ public partial class SplitButton : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13121;
     /// <inheritdoc/>
     public override string LocalName => "splitButton";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "size","getSize","enabled","getEnabled","id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
     [SchemaAttr(0, "size")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size { get; set; }
     /// <summary>
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
     [SchemaAttr(0, "getSize")]
-    public StringValue GetSize
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetSize { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetShowLabel { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the SplitButton class.
@@ -10912,67 +5960,6 @@ if( 57 == namespaceId && "menu" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "size" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>();
-    
-if( 0 == namespaceId && "getSize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SplitButton>(deep);
 
@@ -11023,133 +6010,82 @@ public partial class Box : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13122;
     /// <inheritdoc/>
     public override string LocalName => "box";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","visible","getVisible","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","boxStyle" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> boxStyle.</para>
     /// <para>Represents the following attribute in the schema: boxStyle </para>
     /// </summary>
     [SchemaAttr(0, "boxStyle")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues> BoxStyle
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues>)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues> BoxStyle { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Box class.
@@ -11234,43 +6170,6 @@ if( 57 == namespaceId && "buttonGroup" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "boxStyle" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.BoxStyleValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Box>(deep);
 
@@ -11309,122 +6208,75 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13123;
     /// <inheritdoc/>
     public override string LocalName => "buttonGroup";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","visible","getVisible","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ButtonGroup class.
@@ -11491,40 +6343,6 @@ if( 57 == namespaceId && "separator" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ButtonGroup>(deep);
 
@@ -11542,221 +6360,138 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13124;
     /// <inheritdoc/>
     public override string LocalName => "button";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "description","getDescription","id","idQ","tag","onAction","isDefinitive","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","image","imageMso","getImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> isDefinitive.</para>
     /// <para>Represents the following attribute in the schema: isDefinitive </para>
     /// </summary>
     [SchemaAttr(0, "isDefinitive")]
-    public BooleanValue IsDefinitive
-    {
-        get { return (BooleanValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public BooleanValue IsDefinitive { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BackstageMenuButton class.
@@ -11768,67 +6503,6 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "isDefinitive" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageMenuButton>(deep);
 
@@ -11846,188 +6520,117 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13125;
     /// <inheritdoc/>
     public override string LocalName => "checkBox";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "description","getDescription","id","idQ","tag","onAction","getPressed","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> getPressed.</para>
     /// <para>Represents the following attribute in the schema: getPressed </para>
     /// </summary>
     [SchemaAttr(0, "getPressed")]
-    public StringValue GetPressed
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue GetPressed { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue GetKeytip { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BackstageMenuCheckBox class.
@@ -12039,58 +6642,6 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getPressed" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageMenuCheckBox>(deep);
 
@@ -12115,199 +6666,124 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13126;
     /// <inheritdoc/>
     public override string LocalName => "menu";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "description","getDescription","id","idQ","tag","enabled","getEnabled","label","getLabel","visible","getVisible","image","imageMso","getImage","keytip","getKeytip" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetKeytip { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BackstageSubMenu class.
@@ -12353,61 +6829,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageSubMenu>(deep);
 
@@ -12425,221 +6846,138 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13127;
     /// <inheritdoc/>
     public override string LocalName => "toggleButton";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "image","imageMso","getImage","description","getDescription","id","idQ","tag","onAction","getPressed","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> getPressed.</para>
     /// <para>Represents the following attribute in the schema: getPressed </para>
     /// </summary>
     [SchemaAttr(0, "getPressed")]
-    public StringValue GetPressed
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue GetPressed { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetKeytip { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BackstageMenuToggleButton class.
@@ -12651,67 +6989,6 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getPressed" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageMenuToggleButton>(deep);
 
@@ -12729,265 +7006,166 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13128;
     /// <inheritdoc/>
     public override string LocalName => "button";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "expand","style","screentip","getScreentip","supertip","getSupertip","id","idQ","tag","onAction","isDefinitive","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","image","imageMso","getImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
     [SchemaAttr(0, "expand")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get; set; }
     /// <summary>
     /// <para> style.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
     [SchemaAttr(0, "style")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.Style2Values> Style
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.Style2Values>)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.Style2Values> Style { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> isDefinitive.</para>
     /// <para>Represents the following attribute in the schema: isDefinitive </para>
     /// </summary>
     [SchemaAttr(0, "isDefinitive")]
-    public BooleanValue IsDefinitive
-    {
-        get { return (BooleanValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public BooleanValue IsDefinitive { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue GetImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BackstageGroupButton class.
@@ -12999,79 +7177,6 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "expand" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>();
-    
-if( 0 == namespaceId && "style" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.Style2Values>();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "isDefinitive" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageGroupButton>(deep);
 
@@ -13089,243 +7194,152 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13129;
     /// <inheritdoc/>
     public override string LocalName => "checkBox";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "expand","description","getDescription","screentip","getScreentip","supertip","getSupertip","id","idQ","tag","onAction","getPressed","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
     [SchemaAttr(0, "expand")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> getPressed.</para>
     /// <para>Represents the following attribute in the schema: getPressed </para>
     /// </summary>
     [SchemaAttr(0, "getPressed")]
-    public StringValue GetPressed
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetPressed { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue GetKeytip { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BackstageCheckBox class.
@@ -13337,73 +7351,6 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "expand" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getPressed" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageCheckBox>(deep);
 
@@ -13421,210 +7368,131 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13130;
     /// <inheritdoc/>
     public override string LocalName => "editBox";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","alignLabel","expand","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","getText","onChange","maxLength","sizeString" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> alignLabel.</para>
     /// <para>Represents the following attribute in the schema: alignLabel </para>
     /// </summary>
     [SchemaAttr(0, "alignLabel")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel { get; set; }
     /// <summary>
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
     [SchemaAttr(0, "expand")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> getText.</para>
     /// <para>Represents the following attribute in the schema: getText </para>
     /// </summary>
     [SchemaAttr(0, "getText")]
-    public StringValue GetText
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetText { get; set; }
     /// <summary>
     /// <para> onChange.</para>
     /// <para>Represents the following attribute in the schema: onChange </para>
     /// </summary>
     [SchemaAttr(0, "onChange")]
-    public StringValue OnChange
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue OnChange { get; set; }
     /// <summary>
     /// <para> maxLength.</para>
     /// <para>Represents the following attribute in the schema: maxLength </para>
     /// </summary>
     [SchemaAttr(0, "maxLength")]
-    public IntegerValue MaxLength
-    {
-        get { return (IntegerValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public IntegerValue MaxLength { get; set; }
     /// <summary>
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
     [SchemaAttr(0, "sizeString")]
-    public StringValue SizeString
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue SizeString { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BackstageEditBox class.
@@ -13636,64 +7504,6 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "alignLabel" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>();
-    
-if( 0 == namespaceId && "expand" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getText" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onChange" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "maxLength" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "sizeString" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageEditBox>(deep);
 
@@ -13718,276 +7528,173 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13131;
     /// <inheritdoc/>
     public override string LocalName => "dropDown";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","alignLabel","expand","enabled","getEnabled","label","getLabel","visible","getVisible","onAction","screentip","getScreentip","supertip","getSupertip","keytip","getKeytip","getSelectedItemIndex","sizeString","getItemCount","getItemLabel","getItemID" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> alignLabel.</para>
     /// <para>Represents the following attribute in the schema: alignLabel </para>
     /// </summary>
     [SchemaAttr(0, "alignLabel")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel { get; set; }
     /// <summary>
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
     [SchemaAttr(0, "expand")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> getSelectedItemIndex.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemIndex </para>
     /// </summary>
     [SchemaAttr(0, "getSelectedItemIndex")]
-    public StringValue GetSelectedItemIndex
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue GetSelectedItemIndex { get; set; }
     /// <summary>
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
     [SchemaAttr(0, "sizeString")]
-    public StringValue SizeString
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue SizeString { get; set; }
     /// <summary>
     /// <para> getItemCount.</para>
     /// <para>Represents the following attribute in the schema: getItemCount </para>
     /// </summary>
     [SchemaAttr(0, "getItemCount")]
-    public StringValue GetItemCount
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue GetItemCount { get; set; }
     /// <summary>
     /// <para> getItemLabel.</para>
     /// <para>Represents the following attribute in the schema: getItemLabel </para>
     /// </summary>
     [SchemaAttr(0, "getItemLabel")]
-    public StringValue GetItemLabel
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue GetItemLabel { get; set; }
     /// <summary>
     /// <para> getItemID.</para>
     /// <para>Represents the following attribute in the schema: getItemID </para>
     /// </summary>
     [SchemaAttr(0, "getItemID")]
-    public StringValue GetItemID
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue GetItemID { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BackstageDropDown class.
@@ -14033,82 +7740,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "alignLabel" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>();
-    
-if( 0 == namespaceId && "expand" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSelectedItemIndex" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sizeString" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemCount" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemID" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageDropDown>(deep);
 
@@ -14133,221 +7764,138 @@ public partial class RadioGroup : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13132;
     /// <inheritdoc/>
     public override string LocalName => "radioGroup";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","alignLabel","expand","enabled","getEnabled","label","getLabel","visible","getVisible","onAction","keytip","getKeytip","getSelectedItemIndex","getItemCount","getItemLabel","getItemID" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> alignLabel.</para>
     /// <para>Represents the following attribute in the schema: alignLabel </para>
     /// </summary>
     [SchemaAttr(0, "alignLabel")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel { get; set; }
     /// <summary>
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
     [SchemaAttr(0, "expand")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> getSelectedItemIndex.</para>
     /// <para>Represents the following attribute in the schema: getSelectedItemIndex </para>
     /// </summary>
     [SchemaAttr(0, "getSelectedItemIndex")]
-    public StringValue GetSelectedItemIndex
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue GetSelectedItemIndex { get; set; }
     /// <summary>
     /// <para> getItemCount.</para>
     /// <para>Represents the following attribute in the schema: getItemCount </para>
     /// </summary>
     [SchemaAttr(0, "getItemCount")]
-    public StringValue GetItemCount
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetItemCount { get; set; }
     /// <summary>
     /// <para> getItemLabel.</para>
     /// <para>Represents the following attribute in the schema: getItemLabel </para>
     /// </summary>
     [SchemaAttr(0, "getItemLabel")]
-    public StringValue GetItemLabel
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue GetItemLabel { get; set; }
     /// <summary>
     /// <para> getItemID.</para>
     /// <para>Represents the following attribute in the schema: getItemID </para>
     /// </summary>
     [SchemaAttr(0, "getItemID")]
-    public StringValue GetItemID
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetItemID { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the RadioGroup class.
@@ -14393,67 +7941,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "alignLabel" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>();
-    
-if( 0 == namespaceId && "expand" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSelectedItemIndex" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemCount" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemID" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RadioGroup>(deep);
 
@@ -14478,232 +7965,145 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13133;
     /// <inheritdoc/>
     public override string LocalName => "comboBox";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","alignLabel","expand","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","getText","onChange","sizeString","getItemCount","getItemLabel","getItemID" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> alignLabel.</para>
     /// <para>Represents the following attribute in the schema: alignLabel </para>
     /// </summary>
     [SchemaAttr(0, "alignLabel")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel { get; set; }
     /// <summary>
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
     [SchemaAttr(0, "expand")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> getText.</para>
     /// <para>Represents the following attribute in the schema: getText </para>
     /// </summary>
     [SchemaAttr(0, "getText")]
-    public StringValue GetText
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetText { get; set; }
     /// <summary>
     /// <para> onChange.</para>
     /// <para>Represents the following attribute in the schema: onChange </para>
     /// </summary>
     [SchemaAttr(0, "onChange")]
-    public StringValue OnChange
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue OnChange { get; set; }
     /// <summary>
     /// <para> sizeString.</para>
     /// <para>Represents the following attribute in the schema: sizeString </para>
     /// </summary>
     [SchemaAttr(0, "sizeString")]
-    public StringValue SizeString
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue SizeString { get; set; }
     /// <summary>
     /// <para> getItemCount.</para>
     /// <para>Represents the following attribute in the schema: getItemCount </para>
     /// </summary>
     [SchemaAttr(0, "getItemCount")]
-    public StringValue GetItemCount
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue GetItemCount { get; set; }
     /// <summary>
     /// <para> getItemLabel.</para>
     /// <para>Represents the following attribute in the schema: getItemLabel </para>
     /// </summary>
     [SchemaAttr(0, "getItemLabel")]
-    public StringValue GetItemLabel
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetItemLabel { get; set; }
     /// <summary>
     /// <para> getItemID.</para>
     /// <para>Represents the following attribute in the schema: getItemID </para>
     /// </summary>
     [SchemaAttr(0, "getItemID")]
-    public StringValue GetItemID
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue GetItemID { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BackstageComboBox class.
@@ -14749,70 +8149,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "alignLabel" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>();
-    
-if( 0 == namespaceId && "expand" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getText" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onChange" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sizeString" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemCount" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getItemID" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageComboBox>(deep);
 
@@ -14830,276 +8166,173 @@ public partial class Hyperlink : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13134;
     /// <inheritdoc/>
     public override string LocalName => "hyperlink";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","alignLabel","expand","enabled","getEnabled","visible","getVisible","keytip","getKeytip","label","getLabel","onAction","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","target","getTarget" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> alignLabel.</para>
     /// <para>Represents the following attribute in the schema: alignLabel </para>
     /// </summary>
     [SchemaAttr(0, "alignLabel")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel { get; set; }
     /// <summary>
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
     [SchemaAttr(0, "expand")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
     /// </summary>
     [SchemaAttr(0, "target")]
-    public StringValue Target
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue Target { get; set; }
     /// <summary>
     /// <para> getTarget.</para>
     /// <para>Represents the following attribute in the schema: getTarget </para>
     /// </summary>
     [SchemaAttr(0, "getTarget")]
-    public StringValue GetTarget
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue GetTarget { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Hyperlink class.
@@ -15111,82 +8344,6 @@ public partial class Hyperlink : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "alignLabel" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>();
-    
-if( 0 == namespaceId && "expand" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "target" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getTarget" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Hyperlink>(deep);
 
@@ -15204,155 +8361,96 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13135;
     /// <inheritdoc/>
     public override string LocalName => "labelControl";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","alignLabel","expand","enabled","getEnabled","label","getLabel","visible","getVisible","noWrap" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> alignLabel.</para>
     /// <para>Represents the following attribute in the schema: alignLabel </para>
     /// </summary>
     [SchemaAttr(0, "alignLabel")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> AlignLabel { get; set; }
     /// <summary>
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
     [SchemaAttr(0, "expand")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> noWrap.</para>
     /// <para>Represents the following attribute in the schema: noWrap </para>
     /// </summary>
     [SchemaAttr(0, "noWrap")]
-    public BooleanValue NoWrap
-    {
-        get { return (BooleanValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public BooleanValue NoWrap { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BackstageLabelControl class.
@@ -15364,49 +8462,6 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "alignLabel" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>();
-    
-if( 0 == namespaceId && "expand" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "noWrap" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageLabelControl>(deep);
 
@@ -15451,89 +8506,54 @@ public partial class GroupBox : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13136;
     /// <inheritdoc/>
     public override string LocalName => "groupBox";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","expand","label","getLabel" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
     [SchemaAttr(0, "expand")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue GetLabel { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the GroupBox class.
@@ -15609,31 +8629,6 @@ if( 57 == namespaceId && "imageControl" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "expand" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupBox>(deep);
 
@@ -15678,89 +8673,54 @@ public partial class LayoutContainer : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13137;
     /// <inheritdoc/>
     public override string LocalName => "layoutContainer";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","align","expand","layoutChildren" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> align.</para>
     /// <para>Represents the following attribute in the schema: align </para>
     /// </summary>
     [SchemaAttr(0, "align")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Align
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Align { get; set; }
     /// <summary>
     /// <para> expand.</para>
     /// <para>Represents the following attribute in the schema: expand </para>
     /// </summary>
     [SchemaAttr(0, "expand")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues> Expand { get; set; }
     /// <summary>
     /// <para> layoutChildren.</para>
     /// <para>Represents the following attribute in the schema: layoutChildren </para>
     /// </summary>
     [SchemaAttr(0, "layoutChildren")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues> LayoutChildren
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues>)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues> LayoutChildren { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the LayoutContainer class.
@@ -15836,31 +8796,6 @@ if( 57 == namespaceId && "imageControl" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "align" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>();
-    
-if( 0 == namespaceId && "expand" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ExpandValues>();
-    
-if( 0 == namespaceId && "layoutChildren" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.LayoutChildrenValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutContainer>(deep);
 
@@ -15878,155 +8813,96 @@ public partial class ImageControl : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13138;
     /// <inheritdoc/>
     public override string LocalName => "imageControl";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","enabled","getEnabled","visible","getVisible","image","imageMso","getImage","altText","getAltText" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> altText.</para>
     /// <para>Represents the following attribute in the schema: altText </para>
     /// </summary>
     [SchemaAttr(0, "altText")]
-    public StringValue AltText
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue AltText { get; set; }
     /// <summary>
     /// <para> getAltText.</para>
     /// <para>Represents the following attribute in the schema: getAltText </para>
     /// </summary>
     [SchemaAttr(0, "getAltText")]
-    public StringValue GetAltText
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetAltText { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ImageControl class.
@@ -16038,49 +8914,6 @@ public partial class ImageControl : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "altText" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getAltText" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ImageControl>(deep);
 
@@ -16109,221 +8942,138 @@ public partial class BackstageGroup : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13139;
     /// <inheritdoc/>
     public override string LocalName => "group";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","label","getLabel","visible","getVisible","style","getStyle","helperText","getHelperText","showLabel","getShowLabel" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> style.</para>
     /// <para>Represents the following attribute in the schema: style </para>
     /// </summary>
     [SchemaAttr(0, "style")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.StyleValues> Style
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.StyleValues>)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.StyleValues> Style { get; set; }
     /// <summary>
     /// <para> getStyle.</para>
     /// <para>Represents the following attribute in the schema: getStyle </para>
     /// </summary>
     [SchemaAttr(0, "getStyle")]
-    public StringValue GetStyle
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetStyle { get; set; }
     /// <summary>
     /// <para> helperText.</para>
     /// <para>Represents the following attribute in the schema: helperText </para>
     /// </summary>
     [SchemaAttr(0, "helperText")]
-    public StringValue HelperText
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue HelperText { get; set; }
     /// <summary>
     /// <para> getHelperText.</para>
     /// <para>Represents the following attribute in the schema: getHelperText </para>
     /// </summary>
     [SchemaAttr(0, "getHelperText")]
-    public StringValue GetHelperText
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetHelperText { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetShowLabel { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BackstageGroup class.
@@ -16375,67 +9125,6 @@ if( 57 == namespaceId && "bottomItems" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "style" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.StyleValues>();
-    
-if( 0 == namespaceId && "getStyle" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "helperText" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getHelperText" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageGroup>(deep);
 
@@ -16460,210 +9149,131 @@ public partial class TaskGroup : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13140;
     /// <inheritdoc/>
     public override string LocalName => "taskGroup";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","label","getLabel","visible","getVisible","helperText","getHelperText","showLabel","getShowLabel","allowedTaskSizes" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> helperText.</para>
     /// <para>Represents the following attribute in the schema: helperText </para>
     /// </summary>
     [SchemaAttr(0, "helperText")]
-    public StringValue HelperText
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue HelperText { get; set; }
     /// <summary>
     /// <para> getHelperText.</para>
     /// <para>Represents the following attribute in the schema: getHelperText </para>
     /// </summary>
     [SchemaAttr(0, "getHelperText")]
-    public StringValue GetHelperText
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetHelperText { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> allowedTaskSizes.</para>
     /// <para>Represents the following attribute in the schema: allowedTaskSizes </para>
     /// </summary>
     [SchemaAttr(0, "allowedTaskSizes")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues> AllowedTaskSizes
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues> AllowedTaskSizes { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the TaskGroup class.
@@ -16709,64 +9319,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "helperText" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getHelperText" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "allowedTaskSizes" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TaskGroup>(deep);
 
@@ -16807,56 +9359,33 @@ public partial class MenuRoot : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13141;
     /// <inheritdoc/>
     public override string LocalName => "menu";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "title","getTitle","itemSize" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
     [SchemaAttr(0, "title")]
-    public StringValue Title
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Title { get; set; }
     /// <summary>
     /// <para> getTitle.</para>
     /// <para>Represents the following attribute in the schema: getTitle </para>
     /// </summary>
     [SchemaAttr(0, "getTitle")]
-    public StringValue GetTitle
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetTitle { get; set; }
     /// <summary>
     /// <para> itemSize.</para>
     /// <para>Represents the following attribute in the schema: itemSize </para>
     /// </summary>
     [SchemaAttr(0, "itemSize")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the MenuRoot class.
@@ -16926,22 +9455,6 @@ if( 57 == namespaceId && "dynamicMenu" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getTitle" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "itemSize" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MenuRoot>(deep);
 
@@ -16971,45 +9484,26 @@ public partial class CustomUI : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 13142;
     /// <inheritdoc/>
     public override string LocalName => "customUI";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "onLoad","loadImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> onLoad.</para>
     /// <para>Represents the following attribute in the schema: onLoad </para>
     /// </summary>
     [SchemaAttr(0, "onLoad")]
-    public StringValue OnLoad
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue OnLoad { get; set; }
     /// <summary>
     /// <para> loadImage.</para>
     /// <para>Represents the following attribute in the schema: loadImage </para>
     /// </summary>
     [SchemaAttr(0, "loadImage")]
-    public StringValue LoadImage
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue LoadImage { get; set; }
 
     
 	internal CustomUI(RibbonAndBackstageCustomizationsPart ownerPart) : base (ownerPart){}
@@ -17150,19 +9644,6 @@ if( 57 == namespaceId && "contextMenus" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "onLoad" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "loadImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomUI>(deep);
 
@@ -17180,89 +9661,54 @@ public partial class Item : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13143;
     /// <inheritdoc/>
     public override string LocalName => "item";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","label","image","imageMso","screentip","supertip" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue Supertip { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Item class.
@@ -17274,31 +9720,6 @@ public partial class Item : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Item>(deep);
 
@@ -17316,331 +9737,208 @@ public partial class VisibleButton : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13144;
     /// <inheritdoc/>
     public override string LocalName => "button";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[26]; }
-        set { Attributes[26] = value; }
-    }
-    
+    [SchemaIndex(26)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
-    }
-    
+    [SchemaIndex(27)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the VisibleButton class.
@@ -17652,97 +9950,6 @@ public partial class VisibleButton : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VisibleButton>(deep);
 
@@ -17760,342 +9967,215 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13145;
     /// <inheritdoc/>
     public override string LocalName => "toggleButton";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "getPressed","onAction","enabled","getEnabled","description","getDescription","image","imageMso","getImage","id","idQ","tag","idMso","screentip","getScreentip","supertip","getSupertip","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> getPressed.</para>
     /// <para>Represents the following attribute in the schema: getPressed </para>
     /// </summary>
     [SchemaAttr(0, "getPressed")]
-    public StringValue GetPressed
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue GetPressed { get; set; }
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[26]; }
-        set { Attributes[26] = value; }
-    }
-    
+    [SchemaIndex(26)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[27]; }
-        set { Attributes[27] = value; }
-    }
-    
+    [SchemaIndex(27)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[28]; }
-        set { Attributes[28] = value; }
-    }
-    
+    [SchemaIndex(28)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the VisibleToggleButton class.
@@ -18107,100 +10187,6 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "getPressed" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VisibleToggleButton>(deep);
 
@@ -18218,122 +10204,75 @@ public partial class Separator : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13146;
     /// <inheritdoc/>
     public override string LocalName => "separator";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","visible","getVisible","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Separator class.
@@ -18345,40 +10284,6 @@ public partial class Separator : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Separator>(deep);
 
@@ -18403,13 +10308,9 @@ public partial class DialogBoxLauncher : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13147;
     /// <inheritdoc/>
     public override string LocalName => "dialogBoxLauncher";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -18479,7 +10380,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DialogBoxLauncher>(deep);
 
@@ -18534,276 +10434,173 @@ public partial class Group : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13148;
     /// <inheritdoc/>
     public override string LocalName => "group";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","label","getLabel","image","imageMso","getImage","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","screentip","getScreentip","supertip","getSupertip","visible","getVisible","keytip","getKeytip","autoScale","centerVertically" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> autoScale.</para>
     /// <para>Represents the following attribute in the schema: autoScale </para>
     /// </summary>
     [SchemaAttr(0, "autoScale")]
-    public BooleanValue AutoScale
-    {
-        get { return (BooleanValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public BooleanValue AutoScale { get; set; }
     /// <summary>
     /// <para> centerVertically.</para>
     /// <para>Represents the following attribute in the schema: centerVertically </para>
     /// </summary>
     [SchemaAttr(0, "centerVertically")]
-    public BooleanValue CenterVertically
-    {
-        get { return (BooleanValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public BooleanValue CenterVertically { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Group class.
@@ -18894,82 +10691,6 @@ if( 57 == namespaceId && "dialogBoxLauncher" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "autoScale" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "centerVertically" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Group>(deep);
 
@@ -18987,353 +10708,222 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13149;
     /// <inheritdoc/>
     public override string LocalName => "control";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","idMso","description","getDescription","size","getSize","image","imageMso","getImage","screentip","getScreentip","supertip","getSupertip","enabled","getEnabled","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip","showLabel","getShowLabel","showImage","getShowImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue IdQ
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue IdQ { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
     [SchemaAttr(0, "size")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues> Size { get; set; }
     /// <summary>
     /// <para> getSize.</para>
     /// <para>Represents the following attribute in the schema: getSize </para>
     /// </summary>
     [SchemaAttr(0, "getSize")]
-    public StringValue GetSize
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue GetSize { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[26]; }
-        set { Attributes[26] = value; }
-    }
-    
+    [SchemaIndex(26)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[27]; }
-        set { Attributes[27] = value; }
-    }
-    
+    [SchemaIndex(27)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> showImage.</para>
     /// <para>Represents the following attribute in the schema: showImage </para>
     /// </summary>
     [SchemaAttr(0, "showImage")]
-    public BooleanValue ShowImage
-    {
-        get { return (BooleanValue)Attributes[28]; }
-        set { Attributes[28] = value; }
-    }
-    
+    [SchemaIndex(28)]
+    public BooleanValue ShowImage { get; set; }
     /// <summary>
     /// <para> getShowImage.</para>
     /// <para>Represents the following attribute in the schema: getShowImage </para>
     /// </summary>
     [SchemaAttr(0, "getShowImage")]
-    public StringValue GetShowImage
-    {
-        get { return (StringValue)Attributes[29]; }
-        set { Attributes[29] = value; }
-    }
-    
+    [SchemaIndex(29)]
+    public StringValue GetShowImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ControlCloneQat class.
@@ -19345,103 +10935,6 @@ public partial class ControlCloneQat : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "size" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.SizeValues>();
-    
-if( 0 == namespaceId && "getSize" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showImage" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ControlCloneQat>(deep);
 
@@ -19467,13 +10960,9 @@ public partial class SharedControlsQatItems : QatItemsType
     internal const int ElementTypeIdConst = 13150;
     /// <inheritdoc/>
     public override string LocalName => "sharedControls";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the SharedControlsQatItems class.
@@ -19531,13 +11020,9 @@ public partial class DocumentControlsQatItems : QatItemsType
     internal const int ElementTypeIdConst = 13151;
     /// <inheritdoc/>
     public override string LocalName => "documentControls";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the DocumentControlsQatItems class.
@@ -19612,7 +11097,6 @@ if( 57 == namespaceId && "separator" == name)
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the QatItemsType class.
     /// </summary>
@@ -19666,177 +11150,110 @@ public partial class Tab : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13152;
     /// <inheritdoc/>
     public override string LocalName => "tab";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","label","getLabel","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","keytip","getKeytip" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetKeytip { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Tab class.
@@ -19882,55 +11299,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tab>(deep);
 
@@ -19955,56 +11323,33 @@ public partial class TabSet : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13153;
     /// <inheritdoc/>
     public override string LocalName => "tabSet";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "idMso","visible","getVisible" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue GetVisible { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the TabSet class.
@@ -20050,22 +11395,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TabSet>(deep);
 
@@ -20083,67 +11412,40 @@ public partial class Command : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13154;
     /// <inheritdoc/>
     public override string LocalName => "command";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "onAction","enabled","getEnabled","idMso" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue IdMso { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Command class.
@@ -20155,25 +11457,6 @@ public partial class Command : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Command>(deep);
 
@@ -20200,13 +11483,9 @@ public partial class QuickAccessToolbar : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13155;
     /// <inheritdoc/>
     public override string LocalName => "qat";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -20291,7 +11570,6 @@ if( 57 == namespaceId && "documentControls" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<QuickAccessToolbar>(deep);
 
@@ -20316,13 +11594,9 @@ public partial class Tabs : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13156;
     /// <inheritdoc/>
     public override string LocalName => "tabs";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -20371,7 +11645,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tabs>(deep);
 
@@ -20396,13 +11669,9 @@ public partial class ContextualTabs : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13157;
     /// <inheritdoc/>
     public override string LocalName => "contextualTabs";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -20451,7 +11720,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContextualTabs>(deep);
 
@@ -20492,34 +11760,19 @@ public partial class ContextMenu : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13158;
     /// <inheritdoc/>
     public override string LocalName => "contextMenu";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "idMso" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue IdMso { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ContextMenu class.
@@ -20589,16 +11842,6 @@ if( 57 == namespaceId && "menuSeparator" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContextMenu>(deep);
 
@@ -20616,13 +11859,9 @@ public partial class ItemBackstageItem : BackstageItemType
     internal const int ElementTypeIdConst = 13159;
     /// <inheritdoc/>
     public override string LocalName => "item";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the ItemBackstageItem class.
@@ -20647,13 +11886,9 @@ public partial class RadioButtonBackstageItem : BackstageItemType
     internal const int ElementTypeIdConst = 13160;
     /// <inheritdoc/>
     public override string LocalName => "radioButton";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the RadioButtonBackstageItem class.
@@ -20672,66 +11907,31 @@ public partial class RadioButtonBackstageItem : BackstageItemType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class BackstageItemType : OpenXmlLeafElement
 {
-    	private static readonly string[] attributeTagNames = { "id","label","getLabel" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-    
+        
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue GetLabel { get; set; }
 
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the BackstageItemType class.
@@ -20754,243 +11954,152 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13161;
     /// <inheritdoc/>
     public override string LocalName => "button";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "screentip","getScreentip","supertip","getSupertip","id","idQ","tag","onAction","isDefinitive","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","image","imageMso","getImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> isDefinitive.</para>
     /// <para>Represents the following attribute in the schema: isDefinitive </para>
     /// </summary>
     [SchemaAttr(0, "isDefinitive")]
-    public BooleanValue IsDefinitive
-    {
-        get { return (BooleanValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public BooleanValue IsDefinitive { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue GetImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BackstageRegularButton class.
@@ -21002,73 +12111,6 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "isDefinitive" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageRegularButton>(deep);
 
@@ -21093,221 +12135,138 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13162;
     /// <inheritdoc/>
     public override string LocalName => "menu";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "screentip","getScreentip","supertip","getSupertip","id","idQ","tag","enabled","getEnabled","label","getLabel","visible","getVisible","image","imageMso","getImage","keytip","getKeytip" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> screentip.</para>
     /// <para>Represents the following attribute in the schema: screentip </para>
     /// </summary>
     [SchemaAttr(0, "screentip")]
-    public StringValue Screentip
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Screentip { get; set; }
     /// <summary>
     /// <para> getScreentip.</para>
     /// <para>Represents the following attribute in the schema: getScreentip </para>
     /// </summary>
     [SchemaAttr(0, "getScreentip")]
-    public StringValue GetScreentip
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue GetScreentip { get; set; }
     /// <summary>
     /// <para> supertip.</para>
     /// <para>Represents the following attribute in the schema: supertip </para>
     /// </summary>
     [SchemaAttr(0, "supertip")]
-    public StringValue Supertip
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Supertip { get; set; }
     /// <summary>
     /// <para> getSupertip.</para>
     /// <para>Represents the following attribute in the schema: getSupertip </para>
     /// </summary>
     [SchemaAttr(0, "getSupertip")]
-    public StringValue GetSupertip
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue GetSupertip { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetKeytip { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BackstagePrimaryMenu class.
@@ -21353,67 +12312,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "screentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getScreentip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "supertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getSupertip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstagePrimaryMenu>(deep);
 
@@ -21444,89 +12342,54 @@ public partial class BackstageMenuGroup : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13163;
     /// <inheritdoc/>
     public override string LocalName => "menuGroup";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","label","getLabel","itemSize" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> itemSize.</para>
     /// <para>Represents the following attribute in the schema: itemSize </para>
     /// </summary>
     [SchemaAttr(0, "itemSize")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues> ItemSize { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BackstageMenuGroup class.
@@ -21581,31 +12444,6 @@ if( 57 == namespaceId && "toggleButton" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "itemSize" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.ItemSizeValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageMenuGroup>(deep);
 
@@ -21632,13 +12470,9 @@ public partial class PrimaryItem : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13164;
     /// <inheritdoc/>
     public override string LocalName => "primaryItem";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -21723,7 +12557,6 @@ if( 57 == namespaceId && "menu" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PrimaryItem>(deep);
 
@@ -21757,13 +12590,9 @@ public partial class TopItemsGroupControls : GroupControlsType
     internal const int ElementTypeIdConst = 13165;
     /// <inheritdoc/>
     public override string LocalName => "topItems";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the TopItemsGroupControls class.
@@ -21829,13 +12658,9 @@ public partial class BottomItemsGroupControls : GroupControlsType
     internal const int ElementTypeIdConst = 13166;
     /// <inheritdoc/>
     public override string LocalName => "bottomItems";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the BottomItemsGroupControls class.
@@ -21950,7 +12775,6 @@ if( 57 == namespaceId && "imageControl" == name)
 
     
     
-    
     /// <summary>
     /// Initializes a new instance of the GroupControlsType class.
     /// </summary>
@@ -22004,155 +12828,96 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13167;
     /// <inheritdoc/>
     public override string LocalName => "category";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","label","getLabel" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetLabel { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the TaskGroupCategory class.
@@ -22198,49 +12963,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TaskGroupCategory>(deep);
 
@@ -22258,276 +12980,173 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13168;
     /// <inheritdoc/>
     public override string LocalName => "task";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","onAction","isDefinitive","image","imageMso","getImage","enabled","getEnabled","label","getLabel","visible","getVisible","description","getDescription","keytip","getKeytip" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> isDefinitive.</para>
     /// <para>Represents the following attribute in the schema: isDefinitive </para>
     /// </summary>
     [SchemaAttr(0, "isDefinitive")]
-    public BooleanValue IsDefinitive
-    {
-        get { return (BooleanValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public BooleanValue IsDefinitive { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue GetKeytip { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the TaskGroupTask class.
@@ -22539,82 +13158,6 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "isDefinitive" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TaskGroupTask>(deep);
 
@@ -22639,155 +13182,96 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13169;
     /// <inheritdoc/>
     public override string LocalName => "category";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","visible","getVisible","label","getLabel" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetLabel { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the TaskFormGroupCategory class.
@@ -22833,49 +13317,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TaskFormGroupCategory>(deep);
 
@@ -22900,254 +13341,159 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13170;
     /// <inheritdoc/>
     public override string LocalName => "task";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","image","imageMso","getImage","enabled","getEnabled","label","getLabel","visible","getVisible","description","getDescription","keytip","getKeytip" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue GetImage { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-    public StringValue Description
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue Description { get; set; }
     /// <summary>
     /// <para> getDescription.</para>
     /// <para>Represents the following attribute in the schema: getDescription </para>
     /// </summary>
     [SchemaAttr(0, "getDescription")]
-    public StringValue GetDescription
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue GetDescription { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue GetKeytip { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the TaskFormGroupTask class.
@@ -23193,76 +13539,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "description" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getDescription" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TaskFormGroupTask>(deep);
 
@@ -23287,166 +13563,103 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13171;
     /// <inheritdoc/>
     public override string LocalName => "taskFormGroup";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","label","getLabel","visible","getVisible","helperText","getHelperText","showLabel","getShowLabel","allowedTaskSizes" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> helperText.</para>
     /// <para>Represents the following attribute in the schema: helperText </para>
     /// </summary>
     [SchemaAttr(0, "helperText")]
-    public StringValue HelperText
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue HelperText { get; set; }
     /// <summary>
     /// <para> getHelperText.</para>
     /// <para>Represents the following attribute in the schema: getHelperText </para>
     /// </summary>
     [SchemaAttr(0, "getHelperText")]
-    public StringValue GetHelperText
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue GetHelperText { get; set; }
     /// <summary>
     /// <para> showLabel.</para>
     /// <para>Represents the following attribute in the schema: showLabel </para>
     /// </summary>
     [SchemaAttr(0, "showLabel")]
-    public BooleanValue ShowLabel
-    {
-        get { return (BooleanValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public BooleanValue ShowLabel { get; set; }
     /// <summary>
     /// <para> getShowLabel.</para>
     /// <para>Represents the following attribute in the schema: getShowLabel </para>
     /// </summary>
     [SchemaAttr(0, "getShowLabel")]
-    public StringValue GetShowLabel
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetShowLabel { get; set; }
     /// <summary>
     /// <para> allowedTaskSizes.</para>
     /// <para>Represents the following attribute in the schema: allowedTaskSizes </para>
     /// </summary>
     [SchemaAttr(0, "allowedTaskSizes")]
-    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues> AllowedTaskSizes
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues> AllowedTaskSizes { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the TaskFormGroup class.
@@ -23492,52 +13705,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "helperText" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getHelperText" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "showLabel" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getShowLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "allowedTaskSizes" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2010.CustomUI.TaskSizesValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TaskFormGroup>(deep);
 
@@ -23566,13 +13733,9 @@ public partial class BackstageGroups : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13172;
     /// <inheritdoc/>
     public override string LocalName => "firstColumn";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -23627,7 +13790,6 @@ if( 57 == namespaceId && "taskGroup" == name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageGroups>(deep);
 
@@ -23654,13 +13816,9 @@ public partial class SimpleGroups : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13173;
     /// <inheritdoc/>
     public override string LocalName => "secondColumn";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -23712,7 +13870,6 @@ if( 57 == namespaceId && "taskGroup" == name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SimpleGroups>(deep);
 
@@ -23739,276 +13896,173 @@ public partial class BackstageTab : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13174;
     /// <inheritdoc/>
     public override string LocalName => "tab";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "id","idQ","tag","idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","title","getTitle","columnWidthPercent","firstColumnMinWidth","firstColumnMaxWidth","secondColumnMinWidth","secondColumnMaxWidth" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
     [SchemaAttr(0, "title")]
-    public StringValue Title
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue Title { get; set; }
     /// <summary>
     /// <para> getTitle.</para>
     /// <para>Represents the following attribute in the schema: getTitle </para>
     /// </summary>
     [SchemaAttr(0, "getTitle")]
-    public StringValue GetTitle
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetTitle { get; set; }
     /// <summary>
     /// <para> columnWidthPercent.</para>
     /// <para>Represents the following attribute in the schema: columnWidthPercent </para>
     /// </summary>
     [SchemaAttr(0, "columnWidthPercent")]
-    public IntegerValue ColumnWidthPercent
-    {
-        get { return (IntegerValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public IntegerValue ColumnWidthPercent { get; set; }
     /// <summary>
     /// <para> firstColumnMinWidth.</para>
     /// <para>Represents the following attribute in the schema: firstColumnMinWidth </para>
     /// </summary>
     [SchemaAttr(0, "firstColumnMinWidth")]
-    public IntegerValue FirstColumnMinWidth
-    {
-        get { return (IntegerValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public IntegerValue FirstColumnMinWidth { get; set; }
     /// <summary>
     /// <para> firstColumnMaxWidth.</para>
     /// <para>Represents the following attribute in the schema: firstColumnMaxWidth </para>
     /// </summary>
     [SchemaAttr(0, "firstColumnMaxWidth")]
-    public IntegerValue FirstColumnMaxWidth
-    {
-        get { return (IntegerValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public IntegerValue FirstColumnMaxWidth { get; set; }
     /// <summary>
     /// <para> secondColumnMinWidth.</para>
     /// <para>Represents the following attribute in the schema: secondColumnMinWidth </para>
     /// </summary>
     [SchemaAttr(0, "secondColumnMinWidth")]
-    public IntegerValue SecondColumnMinWidth
-    {
-        get { return (IntegerValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public IntegerValue SecondColumnMinWidth { get; set; }
     /// <summary>
     /// <para> secondColumnMaxWidth.</para>
     /// <para>Represents the following attribute in the schema: secondColumnMaxWidth </para>
     /// </summary>
     [SchemaAttr(0, "secondColumnMaxWidth")]
-    public IntegerValue SecondColumnMaxWidth
-    {
-        get { return (IntegerValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public IntegerValue SecondColumnMaxWidth { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BackstageTab class.
@@ -24090,82 +14144,6 @@ if( 57 == namespaceId && "secondColumn" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "title" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getTitle" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "columnWidthPercent" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "firstColumnMinWidth" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "firstColumnMaxWidth" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "secondColumnMinWidth" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "secondColumnMaxWidth" == name)
-    return new IntegerValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageTab>(deep);
 
@@ -24183,254 +14161,159 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13175;
     /// <inheritdoc/>
     public override string LocalName => "button";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "idMso","insertAfterMso","insertBeforeMso","insertAfterQ","insertBeforeQ","id","idQ","tag","onAction","isDefinitive","enabled","getEnabled","label","getLabel","visible","getVisible","keytip","getKeytip","image","imageMso","getImage" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> idMso.</para>
     /// <para>Represents the following attribute in the schema: idMso </para>
     /// </summary>
     [SchemaAttr(0, "idMso")]
-    public StringValue IdMso
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue IdMso { get; set; }
     /// <summary>
     /// <para> insertAfterMso.</para>
     /// <para>Represents the following attribute in the schema: insertAfterMso </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterMso")]
-    public StringValue InsertAfterMso
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue InsertAfterMso { get; set; }
     /// <summary>
     /// <para> insertBeforeMso.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeMso </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeMso")]
-    public StringValue InsertBeforeMso
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue InsertBeforeMso { get; set; }
     /// <summary>
     /// <para> insertAfterQ.</para>
     /// <para>Represents the following attribute in the schema: insertAfterQ </para>
     /// </summary>
     [SchemaAttr(0, "insertAfterQ")]
-    public StringValue InsertAfterQulifiedId
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue InsertAfterQulifiedId { get; set; }
     /// <summary>
     /// <para> insertBeforeQ.</para>
     /// <para>Represents the following attribute in the schema: insertBeforeQ </para>
     /// </summary>
     [SchemaAttr(0, "insertBeforeQ")]
-    public StringValue InsertBeforeQulifiedId
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue InsertBeforeQulifiedId { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> idQ.</para>
     /// <para>Represents the following attribute in the schema: idQ </para>
     /// </summary>
     [SchemaAttr(0, "idQ")]
-    public StringValue QualifiedId
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue QualifiedId { get; set; }
     /// <summary>
     /// <para> tag.</para>
     /// <para>Represents the following attribute in the schema: tag </para>
     /// </summary>
     [SchemaAttr(0, "tag")]
-    public StringValue Tag
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue Tag { get; set; }
     /// <summary>
     /// <para> onAction.</para>
     /// <para>Represents the following attribute in the schema: onAction </para>
     /// </summary>
     [SchemaAttr(0, "onAction")]
-    public StringValue OnAction
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue OnAction { get; set; }
     /// <summary>
     /// <para> isDefinitive.</para>
     /// <para>Represents the following attribute in the schema: isDefinitive </para>
     /// </summary>
     [SchemaAttr(0, "isDefinitive")]
-    public BooleanValue IsDefinitive
-    {
-        get { return (BooleanValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public BooleanValue IsDefinitive { get; set; }
     /// <summary>
     /// <para> enabled.</para>
     /// <para>Represents the following attribute in the schema: enabled </para>
     /// </summary>
     [SchemaAttr(0, "enabled")]
-    public BooleanValue Enabled
-    {
-        get { return (BooleanValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public BooleanValue Enabled { get; set; }
     /// <summary>
     /// <para> getEnabled.</para>
     /// <para>Represents the following attribute in the schema: getEnabled </para>
     /// </summary>
     [SchemaAttr(0, "getEnabled")]
-    public StringValue GetEnabled
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue GetEnabled { get; set; }
     /// <summary>
     /// <para> label.</para>
     /// <para>Represents the following attribute in the schema: label </para>
     /// </summary>
     [SchemaAttr(0, "label")]
-    public StringValue Label
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue Label { get; set; }
     /// <summary>
     /// <para> getLabel.</para>
     /// <para>Represents the following attribute in the schema: getLabel </para>
     /// </summary>
     [SchemaAttr(0, "getLabel")]
-    public StringValue GetLabel
-    {
-        get { return (StringValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public StringValue GetLabel { get; set; }
     /// <summary>
     /// <para> visible.</para>
     /// <para>Represents the following attribute in the schema: visible </para>
     /// </summary>
     [SchemaAttr(0, "visible")]
-    public BooleanValue Visible
-    {
-        get { return (BooleanValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public BooleanValue Visible { get; set; }
     /// <summary>
     /// <para> getVisible.</para>
     /// <para>Represents the following attribute in the schema: getVisible </para>
     /// </summary>
     [SchemaAttr(0, "getVisible")]
-    public StringValue GetVisible
-    {
-        get { return (StringValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public StringValue GetVisible { get; set; }
     /// <summary>
     /// <para> keytip.</para>
     /// <para>Represents the following attribute in the schema: keytip </para>
     /// </summary>
     [SchemaAttr(0, "keytip")]
-    public StringValue Keytip
-    {
-        get { return (StringValue)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public StringValue Keytip { get; set; }
     /// <summary>
     /// <para> getKeytip.</para>
     /// <para>Represents the following attribute in the schema: getKeytip </para>
     /// </summary>
     [SchemaAttr(0, "getKeytip")]
-    public StringValue GetKeytip
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue GetKeytip { get; set; }
     /// <summary>
     /// <para> image.</para>
     /// <para>Represents the following attribute in the schema: image </para>
     /// </summary>
     [SchemaAttr(0, "image")]
-    public StringValue Image
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue Image { get; set; }
     /// <summary>
     /// <para> imageMso.</para>
     /// <para>Represents the following attribute in the schema: imageMso </para>
     /// </summary>
     [SchemaAttr(0, "imageMso")]
-    public StringValue ImageMso
-    {
-        get { return (StringValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public StringValue ImageMso { get; set; }
     /// <summary>
     /// <para> getImage.</para>
     /// <para>Represents the following attribute in the schema: getImage </para>
     /// </summary>
     [SchemaAttr(0, "getImage")]
-    public StringValue GetImage
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue GetImage { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BackstageFastCommandButton class.
@@ -24442,76 +14325,6 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "idMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertAfterQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "insertBeforeQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "idQ" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "tag" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onAction" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "isDefinitive" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "enabled" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getEnabled" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "label" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getLabel" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "visible" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "getVisible" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "keytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getKeytip" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "image" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "imageMso" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "getImage" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageFastCommandButton>(deep);
 
@@ -24536,13 +14349,9 @@ public partial class Commands : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13176;
     /// <inheritdoc/>
     public override string LocalName => "commands";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -24591,7 +14400,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Commands>(deep);
 
@@ -24620,34 +14428,19 @@ public partial class Ribbon : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13177;
     /// <inheritdoc/>
     public override string LocalName => "ribbon";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "startFromScratch" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> startFromScratch.</para>
     /// <para>Represents the following attribute in the schema: startFromScratch </para>
     /// </summary>
     [SchemaAttr(0, "startFromScratch")]
-    public BooleanValue StartFromScratch
-    {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public BooleanValue StartFromScratch { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Ribbon class.
@@ -24744,16 +14537,6 @@ if( 57 == namespaceId && "contextualTabs" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "startFromScratch" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Ribbon>(deep);
 
@@ -24780,45 +14563,26 @@ public partial class Backstage : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13178;
     /// <inheritdoc/>
     public override string LocalName => "backstage";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "onShow","onHide" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> onShow.</para>
     /// <para>Represents the following attribute in the schema: onShow </para>
     /// </summary>
     [SchemaAttr(0, "onShow")]
-    public StringValue OnShow
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue OnShow { get; set; }
     /// <summary>
     /// <para> onHide.</para>
     /// <para>Represents the following attribute in the schema: onHide </para>
     /// </summary>
     [SchemaAttr(0, "onHide")]
-    public StringValue OnHide
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue OnHide { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Backstage class.
@@ -24867,19 +14631,6 @@ if( 57 == namespaceId && "button" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "onShow" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "onHide" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Backstage>(deep);
 
@@ -24904,13 +14655,9 @@ public partial class ContextMenus : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13179;
     /// <inheritdoc/>
     public override string LocalName => "contextMenus";
-    
     internal override byte NamespaceId => 57;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -24958,7 +14705,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     return null;
 }
 
-    
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContextMenus>(deep);

@@ -432,7 +432,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException(ExceptionMessages.ForeignMediaDataPart);
             }
 
-            T dataPartReferenceRelationship = PartActivator.CreateInstance<T>();
+            T dataPartReferenceRelationship = ClassActivator<T>.CreateInstance();
 
             PackageRelationship relationship = CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, dataPartReferenceRelationship.RelationshipType);
 
@@ -469,7 +469,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 throw new InvalidOperationException(ExceptionMessages.ForeignMediaDataPart);
             }
 
-            T dataPartReferenceRelationship = PartActivator.CreateInstance<T>();
+            T dataPartReferenceRelationship = ClassActivator<T>.CreateInstance();
 
             PackageRelationship relationship = CreateRelationship(mediaDataPart.Uri, TargetMode.Internal, dataPartReferenceRelationship.RelationshipType, id);
 
@@ -1282,7 +1282,7 @@ namespace DocumentFormat.OpenXml.Packaging
             ThrowIfObjectDisposed();
 
             // use reflection to create the instance. As the default constructor of part is not "public"
-            var part = PartActivator.CreateInstance<T>();
+            var part = ClassActivator<T>.CreateInstance();
 
             try
             {
@@ -1341,7 +1341,7 @@ namespace DocumentFormat.OpenXml.Packaging
             }
 
             // Use reflection to create the instance as the default constructor of part is not public
-            var part = PartActivator.CreateInstance<T>();
+            var part = ClassActivator<T>.CreateInstance();
 
             if (part is ExtendedPart)
             {

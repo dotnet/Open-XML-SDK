@@ -71,11 +71,11 @@ namespace DocumentFormat.OpenXml.Packaging
 
             if (IsContentTypeFixed && metroPart.ContentType != ContentType)
             {
-                string errorMessage = string.Format(CultureInfo.CurrentUICulture,
-                                                    ExceptionMessages.InvalidPartContentType,
-                                                    metroPart.Uri.OriginalString,
-                                                    metroPart.ContentType,
-                                                    ContentType);
+                var errorMessage = SR.Format(
+                    ExceptionMessages.InvalidPartContentType,
+                    metroPart.Uri.OriginalString,
+                    metroPart.ContentType,
+                    ContentType);
 
                 throw new OpenXmlPackageException(errorMessage);
             }
@@ -263,7 +263,7 @@ namespace DocumentFormat.OpenXml.Packaging
         #region public properties
 
         /// <summary>
-        /// Gets a part that is in the OpenXmlPackage container.
+        /// Gets the OpenXmlPackage which contains the current part.
         /// </summary>
         public OpenXmlPackage OpenXmlPackage
         {

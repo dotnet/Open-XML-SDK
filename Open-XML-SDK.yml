@@ -1,0 +1,18 @@
+### YamlMime:Sample
+sample:
+- name: Open-XML-SDK
+  path: ''
+  description: Open XML SDK by Microsoft
+  readme: ''
+  generateZip: False
+  isLive: True
+  technologies: []
+  azureDeploy: ''
+  author: ''
+  platforms: []
+  languages:
+  - C#
+  extensions:
+    type: sdks
+    products: []
+    scenarios: []

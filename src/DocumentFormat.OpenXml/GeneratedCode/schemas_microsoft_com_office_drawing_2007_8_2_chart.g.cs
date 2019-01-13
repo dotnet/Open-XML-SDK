@@ -39,13 +39,9 @@ public partial class PivotOptions : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12762;
     /// <inheritdoc/>
     public override string LocalName => "pivotOptions";
-    
     internal override byte NamespaceId => 46;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -175,7 +171,6 @@ if( 46 == namespaceId && "dropZonesVisible" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotOptions>(deep);
 
@@ -202,13 +197,9 @@ public partial class SketchOptions : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12763;
     /// <inheritdoc/>
     public override string LocalName => "sketchOptions";
-    
     internal override byte NamespaceId => 46;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -293,7 +284,6 @@ if( 46 == namespaceId && "showSketchBtn" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SketchOptions>(deep);
 
@@ -318,13 +308,9 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12764;
     /// <inheritdoc/>
     public override string LocalName => "invertSolidFillFmt";
-    
     internal override byte NamespaceId => 46;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     
     
@@ -394,7 +380,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InvertSolidFillFormat>(deep);
 
@@ -412,34 +397,19 @@ public partial class Style : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12765;
     /// <inheritdoc/>
     public override string LocalName => "style";
-    
     internal override byte NamespaceId => 46;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
     [SchemaAttr(0, "val")]
-    public ByteValue Val
-    {
-        get { return (ByteValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public ByteValue Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Style class.
@@ -451,16 +421,6 @@ public partial class Style : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "val" == name)
-    return new ByteValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Style>(deep);
 
@@ -513,34 +473,19 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12766;
     /// <inheritdoc/>
     public override string LocalName => "spPr";
-    
     internal override byte NamespaceId => 46;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "bwMode" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
     [SchemaAttr(0, "bwMode")]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ShapeProperties class.
@@ -649,16 +594,6 @@ if( 10 == namespaceId && "extLst" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "bwMode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeProperties>(deep);
 
@@ -676,13 +611,9 @@ public partial class DropZoneFilter : BooleanFalseType
     internal const int ElementTypeIdConst = 12767;
     /// <inheritdoc/>
     public override string LocalName => "dropZoneFilter";
-    
     internal override byte NamespaceId => 46;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the DropZoneFilter class.
@@ -707,13 +638,9 @@ public partial class DropZoneCategories : BooleanFalseType
     internal const int ElementTypeIdConst = 12768;
     /// <inheritdoc/>
     public override string LocalName => "dropZoneCategories";
-    
     internal override byte NamespaceId => 46;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the DropZoneCategories class.
@@ -738,13 +665,9 @@ public partial class DropZoneData : BooleanFalseType
     internal const int ElementTypeIdConst = 12769;
     /// <inheritdoc/>
     public override string LocalName => "dropZoneData";
-    
     internal override byte NamespaceId => 46;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the DropZoneData class.
@@ -769,13 +692,9 @@ public partial class DropZoneSeries : BooleanFalseType
     internal const int ElementTypeIdConst = 12770;
     /// <inheritdoc/>
     public override string LocalName => "dropZoneSeries";
-    
     internal override byte NamespaceId => 46;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the DropZoneSeries class.
@@ -800,13 +719,9 @@ public partial class DropZonesVisible : BooleanFalseType
     internal const int ElementTypeIdConst = 12771;
     /// <inheritdoc/>
     public override string LocalName => "dropZonesVisible";
-    
     internal override byte NamespaceId => 46;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the DropZonesVisible class.
@@ -831,13 +746,9 @@ public partial class InSketchMode : BooleanFalseType
     internal const int ElementTypeIdConst = 12772;
     /// <inheritdoc/>
     public override string LocalName => "inSketchMode";
-    
     internal override byte NamespaceId => 46;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
     /// <summary>
     /// Initializes a new instance of the InSketchMode class.
@@ -856,38 +767,17 @@ public partial class InSketchMode : BooleanFalseType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class BooleanFalseType : OpenXmlLeafElement
 {
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-    
+        
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
     [SchemaAttr(0, "val")]
-    public BooleanValue Val
-    {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public BooleanValue Val { get; set; }
 
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "val" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the BooleanFalseType class.
@@ -910,34 +800,19 @@ public partial class ShowSketchButton : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12773;
     /// <inheritdoc/>
     public override string LocalName => "showSketchBtn";
-    
     internal override byte NamespaceId => 46;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
-    
 
-    	private static readonly string[] attributeTagNames = { "val" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> val.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
     [SchemaAttr(0, "val")]
-    public BooleanValue Val
-    {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public BooleanValue Val { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ShowSketchButton class.
@@ -949,16 +824,6 @@ public partial class ShowSketchButton : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "val" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShowSketchButton>(deep);
 
