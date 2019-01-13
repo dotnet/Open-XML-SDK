@@ -4,6 +4,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -18,14 +20,34 @@ namespace DocumentFormat.OpenXml.Packaging
         {
         }
 
-        public static PartConstraintCollection Instance { get; } = new PartConstraintCollection(false);
+        public static PartConstraintCollection Create<T>(Type type)
+            where T : IConstraintAttribute
+        {
+            var collection = new PartConstraintCollection();
 
-        public int Count => _dictionary.Count;
+            foreach (var constraint in type.GetTypeInfo().GetCustomAttributes().OfType<T>())
+            {
+                collection.Add(PartConstraintRule.Create(constraint.ConstraintType, constraint.MinOccursIsNonZero, constraint.MaxOccursGreatThanOne));
+            }
+
+            if (collection.Count == 0)
+            {
+                return Instance;
+            }
+
+            collection._writeable = false;
+
+            return collection;
+        }
+
+        public static PartConstraintCollection Instance { get; } = new PartConstraintCollection(false);
 
         public PartConstraintCollection(bool writeable)
         {
             _writeable = writeable;
         }
+
+        public int Count => _dictionary.Count;
 
         public void Add(PartConstraintRule value)
         {

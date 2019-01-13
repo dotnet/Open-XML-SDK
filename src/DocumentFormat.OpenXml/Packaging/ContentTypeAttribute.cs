@@ -6,7 +6,7 @@ using System;
 namespace DocumentFormat.OpenXml.Packaging
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
-    internal class ContentTypeAttribute : Attribute
+    internal sealed class ContentTypeAttribute : Attribute
     {
         public ContentTypeAttribute(string contentType)
         {

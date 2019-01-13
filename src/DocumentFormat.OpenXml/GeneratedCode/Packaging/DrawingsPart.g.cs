@@ -11,11 +11,19 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(ChartPart), false, true)]
+    [PartConstraint(typeof(DiagramColorsPart), false, true)]
+    [PartConstraint(typeof(DiagramDataPart), false, true)]
+    [PartConstraint(typeof(DiagramPersistLayoutPart), false, true)]
+    [PartConstraint(typeof(DiagramLayoutDefinitionPart), false, true)]
+    [PartConstraint(typeof(DiagramStylePart), false, true)]
+    [PartConstraint(typeof(ImagePart), false, true)]
+    [PartConstraint(typeof(CustomXmlPart), false, true)]
+    [PartConstraint(typeof(WebExtensionPart), false, true)]
     public partial class DrawingsPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawing+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing";
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Drawing.Spreadsheet.WorksheetDrawing _rootElement;
 
         /// <summary>
@@ -78,31 +86,6 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Drawing.Spreadsheet.WorksheetDrawing;
-            }
-        }
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<ChartPart>(false, true),
-                        PartConstraintRule.Create<DiagramColorsPart>(false, true),
-                        PartConstraintRule.Create<DiagramDataPart>(false, true),
-                        PartConstraintRule.Create<DiagramPersistLayoutPart>(false, true),
-                        PartConstraintRule.Create<DiagramLayoutDefinitionPart>(false, true),
-                        PartConstraintRule.Create<DiagramStylePart>(false, true),
-                        PartConstraintRule.Create<ImagePart>(false, true),
-                        PartConstraintRule.Create<CustomXmlPart>(false, true),
-                        PartConstraintRule.Create<WebExtensionPart>(false, true)
-                    };
-                }
-
-                return _partConstraints;
             }
         }
 

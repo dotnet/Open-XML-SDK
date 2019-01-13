@@ -21,9 +21,9 @@ namespace DocumentFormat.OpenXml.Packaging
             MaxOccursGreatThanOne = maxOccursGreatThanOne;
         }
 
-        public static PartConstraintRule Create<T>(bool minOccursIsNonZero, bool maxOccursGreatThanOne)
+        public static PartConstraintRule Create(Type type, bool minOccursIsNonZero, bool maxOccursGreatThanOne)
         {
-            return new PartConstraintRule(CachedTypeInfo<T>.Instance, minOccursIsNonZero, maxOccursGreatThanOne);
+            return new PartConstraintRule(new TypeConstraintInfo(type), minOccursIsNonZero, maxOccursGreatThanOne);
         }
 
         /// <summary>
@@ -57,11 +57,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the file format version information.
         /// </summary>
         public FileFormatVersions FileFormat => _info.Availability;
-
-        private static class CachedTypeInfo<T>
-        {
-            public static TypeConstraintInfo Instance { get; } = new TypeConstraintInfo(typeof(T));
-        }
 
         private class TypeConstraintInfo
         {

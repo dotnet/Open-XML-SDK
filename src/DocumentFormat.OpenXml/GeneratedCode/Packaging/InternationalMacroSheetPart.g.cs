@@ -11,11 +11,18 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(SpreadsheetPrinterSettingsPart), false, true)]
+    [PartConstraint(typeof(DrawingsPart), false, false)]
+    [PartConstraint(typeof(VmlDrawingPart), false, true)]
+    [PartConstraint(typeof(WorksheetCommentsPart), false, false)]
+    [PartConstraint(typeof(CustomPropertyPart), false, true)]
+    [PartConstraint(typeof(EmbeddedObjectPart), false, true)]
+    [PartConstraint(typeof(EmbeddedPackagePart), false, true)]
+    [PartConstraint(typeof(ImagePart), false, true)]
     public partial class InternationalMacroSheetPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.intlmacrosheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/xlIntlMacrosheet";
-        private static PartConstraintCollection _partConstraints;
 
         /// <summary>
         /// Creates an instance of the InternationalMacroSheetPart OpenXmlType
@@ -51,30 +58,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the ImageParts of the InternationalMacroSheetPart
         /// </summary>
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<SpreadsheetPrinterSettingsPart>(false, true),
-                        PartConstraintRule.Create<DrawingsPart>(false, false),
-                        PartConstraintRule.Create<VmlDrawingPart>(false, true),
-                        PartConstraintRule.Create<WorksheetCommentsPart>(false, false),
-                        PartConstraintRule.Create<CustomPropertyPart>(false, true),
-                        PartConstraintRule.Create<EmbeddedObjectPart>(false, true),
-                        PartConstraintRule.Create<EmbeddedPackagePart>(false, true),
-                        PartConstraintRule.Create<ImagePart>(false, true)
-                    };
-                }
-
-                return _partConstraints;
-            }
-        }
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

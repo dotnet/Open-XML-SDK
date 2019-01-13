@@ -12,11 +12,11 @@ namespace DocumentFormat.OpenXml.Packaging
     [OfficeAvailability(FileFormatVersions.Office2010)]
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(CustomDataPart), false, false)]
     public partial class CustomDataPropertiesPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.customDataProperties+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2007/relationships/customDataProps";
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Office2010.Excel.DatastoreItem _rootElement;
 
         /// <summary>
@@ -70,23 +70,6 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Office2010.Excel.DatastoreItem;
-            }
-        }
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<CustomDataPart>(false, false)
-                    };
-                }
-
-                return _partConstraints;
             }
         }
 
