@@ -26,7 +26,7 @@ namespace DocumentFormat.OpenXml
 
         public static Func<T> GetActivator(Type type)
         {
-            return _activatorCache.GetValue(typeof(T), CreateActivator);
+            return _activatorCache.GetValue(type, CreateActivator);
         }
 
         private static Func<T> CreateActivator(Type type)
