@@ -139,7 +139,7 @@ public partial class WebExtensionPartReference : OpenXmlLeafElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -264,35 +264,35 @@ public partial class WebExtensionTaskpane : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: dockstate </para>
     /// </summary>
     [SchemaAttr(0, "dockstate")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public StringValue DockState { get; set; }
     /// <summary>
     /// <para> visibility.</para>
     /// <para>Represents the following attribute in the schema: visibility </para>
     /// </summary>
     [SchemaAttr(0, "visibility")]
-[SchemaIndex(1)]
+  [SchemaIndex(1)]
     public BooleanValue Visibility { get; set; }
     /// <summary>
     /// <para> width.</para>
     /// <para>Represents the following attribute in the schema: width </para>
     /// </summary>
     [SchemaAttr(0, "width")]
-[SchemaIndex(2)]
+  [SchemaIndex(2)]
     public DoubleValue Width { get; set; }
     /// <summary>
     /// <para> row.</para>
     /// <para>Represents the following attribute in the schema: row </para>
     /// </summary>
     [SchemaAttr(0, "row")]
-[SchemaIndex(3)]
+  [SchemaIndex(3)]
     public UInt32Value Row { get; set; }
     /// <summary>
     /// <para> locked.</para>
     /// <para>Represents the following attribute in the schema: locked </para>
     /// </summary>
     [SchemaAttr(0, "locked")]
-[SchemaIndex(4)]
+  [SchemaIndex(4)]
     public BooleanValue Locked { get; set; }
 
     /// <summary>

@@ -158,14 +158,14 @@ public partial class DataModelExtensionBlock : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: relId </para>
     /// </summary>
     [SchemaAttr(0, "relId")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public StringValue RelId { get; set; }
     /// <summary>
     /// <para> minVer.</para>
     /// <para>Represents the following attribute in the schema: minVer </para>
     /// </summary>
     [SchemaAttr(0, "minVer")]
-[SchemaIndex(1)]
+  [SchemaIndex(1)]
     public StringValue MinVer { get; set; }
 
     /// <summary>
@@ -217,35 +217,35 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-[SchemaIndex(1)]
+  [SchemaIndex(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
     [SchemaAttr(0, "descr")]
-[SchemaIndex(2)]
+  [SchemaIndex(2)]
     public StringValue Description { get; set; }
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
     [SchemaAttr(0, "hidden")]
-[SchemaIndex(3)]
+  [SchemaIndex(3)]
     public BooleanValue Hidden { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
     [SchemaAttr(0, "title")]
-[SchemaIndex(4)]
+  [SchemaIndex(4)]
     public StringValue Title { get; set; }
 
     /// <summary>
@@ -380,7 +380,7 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: txBox </para>
     /// </summary>
     [SchemaAttr(0, "txBox")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public BooleanValue TextBox { get; set; }
 
     /// <summary>
@@ -639,7 +639,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
     [SchemaAttr(0, "bwMode")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
@@ -1051,21 +1051,21 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
     [SchemaAttr(0, "rot")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public Int32Value Rotation { get; set; }
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
     /// </summary>
     [SchemaAttr(0, "flipH")]
-[SchemaIndex(1)]
+  [SchemaIndex(1)]
     public BooleanValue HorizontalFlip { get; set; }
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
     /// </summary>
     [SchemaAttr(0, "flipV")]
-[SchemaIndex(2)]
+  [SchemaIndex(2)]
     public BooleanValue VerticalFlip { get; set; }
 
     /// <summary>
@@ -1504,7 +1504,7 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
     [SchemaAttr(0, "bwMode")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
@@ -1647,7 +1647,7 @@ public partial class Shape : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: modelId </para>
     /// </summary>
     [SchemaAttr(0, "modelId")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public StringValue ModelId { get; set; }
 
     /// <summary>

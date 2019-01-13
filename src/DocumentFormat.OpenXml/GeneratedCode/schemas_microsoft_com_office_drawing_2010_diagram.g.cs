@@ -44,35 +44,35 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-[SchemaIndex(1)]
+  [SchemaIndex(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
     [SchemaAttr(0, "descr")]
-[SchemaIndex(2)]
+  [SchemaIndex(2)]
     public StringValue Description { get; set; }
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
     [SchemaAttr(0, "hidden")]
-[SchemaIndex(3)]
+  [SchemaIndex(3)]
     public BooleanValue Hidden { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
     [SchemaAttr(0, "title")]
-[SchemaIndex(4)]
+  [SchemaIndex(4)]
     public StringValue Title { get; set; }
 
     /// <summary>
@@ -198,7 +198,7 @@ public partial class RecolorImages : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
     [SchemaAttr(0, "val")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public BooleanValue Val { get; set; }
 
     /// <summary>

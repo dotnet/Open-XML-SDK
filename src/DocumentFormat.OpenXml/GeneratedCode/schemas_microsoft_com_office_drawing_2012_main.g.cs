@@ -33,28 +33,28 @@ public partial class BackgroundProperties : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
     [SchemaAttr(0, "bwMode")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Mode { get; set; }
     /// <summary>
     /// <para> bwPure.</para>
     /// <para>Represents the following attribute in the schema: bwPure </para>
     /// </summary>
     [SchemaAttr(0, "bwPure")]
-[SchemaIndex(1)]
+  [SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Pure { get; set; }
     /// <summary>
     /// <para> bwNormal.</para>
     /// <para>Represents the following attribute in the schema: bwNormal </para>
     /// </summary>
     [SchemaAttr(0, "bwNormal")]
-[SchemaIndex(2)]
+  [SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Normal { get; set; }
     /// <summary>
     /// <para> targetScreenSize.</para>
     /// <para>Represents the following attribute in the schema: targetScreenSize </para>
     /// </summary>
     [SchemaAttr(0, "targetScreenSize")]
-[SchemaIndex(3)]
+  [SchemaIndex(3)]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize> TargetScreenSize { get; set; }
 
     /// <summary>
@@ -95,7 +95,7 @@ public partial class NonVisualGroupProperties : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: isLegacyGroup </para>
     /// </summary>
     [SchemaAttr(0, "isLegacyGroup")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public BooleanValue IsLegacyGroup { get; set; }
 
     /// <summary>
@@ -136,21 +136,21 @@ public partial class ObjectProperties : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: objectId </para>
     /// </summary>
     [SchemaAttr(0, "objectId")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> isActiveX.</para>
     /// <para>Represents the following attribute in the schema: isActiveX </para>
     /// </summary>
     [SchemaAttr(0, "isActiveX")]
-[SchemaIndex(1)]
+  [SchemaIndex(1)]
     public BooleanValue IsActiveX { get; set; }
     /// <summary>
     /// <para> linkType.</para>
     /// <para>Represents the following attribute in the schema: linkType </para>
     /// </summary>
     [SchemaAttr(0, "linkType")]
-[SchemaIndex(2)]
+  [SchemaIndex(2)]
     public StringValue LinkType { get; set; }
 
     /// <summary>
@@ -191,84 +191,84 @@ public partial class SignatureLine : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: isSignatureLine </para>
     /// </summary>
     [SchemaAttr(0, "isSignatureLine")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public BooleanValue IsSignatureLine { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-[SchemaIndex(1)]
+  [SchemaIndex(1)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> provId.</para>
     /// <para>Represents the following attribute in the schema: provId </para>
     /// </summary>
     [SchemaAttr(0, "provId")]
-[SchemaIndex(2)]
+  [SchemaIndex(2)]
     public StringValue ProviderId { get; set; }
     /// <summary>
     /// <para> signingInstructionsSet.</para>
     /// <para>Represents the following attribute in the schema: signingInstructionsSet </para>
     /// </summary>
     [SchemaAttr(0, "signingInstructionsSet")]
-[SchemaIndex(3)]
+  [SchemaIndex(3)]
     public BooleanValue SigningInstructionsSet { get; set; }
     /// <summary>
     /// <para> allowComments.</para>
     /// <para>Represents the following attribute in the schema: allowComments </para>
     /// </summary>
     [SchemaAttr(0, "allowComments")]
-[SchemaIndex(4)]
+  [SchemaIndex(4)]
     public BooleanValue AllowComments { get; set; }
     /// <summary>
     /// <para> showSignDate.</para>
     /// <para>Represents the following attribute in the schema: showSignDate </para>
     /// </summary>
     [SchemaAttr(0, "showSignDate")]
-[SchemaIndex(5)]
+  [SchemaIndex(5)]
     public BooleanValue ShowSignDate { get; set; }
     /// <summary>
     /// <para> suggestedSigner.</para>
     /// <para>Represents the following attribute in the schema: suggestedSigner </para>
     /// </summary>
     [SchemaAttr(0, "suggestedSigner")]
-[SchemaIndex(6)]
+  [SchemaIndex(6)]
     public StringValue SuggestedSigner { get; set; }
     /// <summary>
     /// <para> suggestedSigner2.</para>
     /// <para>Represents the following attribute in the schema: suggestedSigner2 </para>
     /// </summary>
     [SchemaAttr(0, "suggestedSigner2")]
-[SchemaIndex(7)]
+  [SchemaIndex(7)]
     public StringValue SuggestedSigner2 { get; set; }
     /// <summary>
     /// <para> suggestedSignerEmail.</para>
     /// <para>Represents the following attribute in the schema: suggestedSignerEmail </para>
     /// </summary>
     [SchemaAttr(0, "suggestedSignerEmail")]
-[SchemaIndex(8)]
+  [SchemaIndex(8)]
     public StringValue SuggestedSignerEmail { get; set; }
     /// <summary>
     /// <para> signingInstructions.</para>
     /// <para>Represents the following attribute in the schema: signingInstructions </para>
     /// </summary>
     [SchemaAttr(0, "signingInstructions")]
-[SchemaIndex(9)]
+  [SchemaIndex(9)]
     public StringValue SigningInstructions { get; set; }
     /// <summary>
     /// <para> addlXml.</para>
     /// <para>Represents the following attribute in the schema: addlXml </para>
     /// </summary>
     [SchemaAttr(0, "addlXml")]
-[SchemaIndex(10)]
+  [SchemaIndex(10)]
     public StringValue AdditionalXml { get; set; }
     /// <summary>
     /// <para> sigProvUrl.</para>
     /// <para>Represents the following attribute in the schema: sigProvUrl </para>
     /// </summary>
     [SchemaAttr(0, "sigProvUrl")]
-[SchemaIndex(11)]
+  [SchemaIndex(11)]
     public StringValue SignatureProviderUrl { get; set; }
 
     /// <summary>

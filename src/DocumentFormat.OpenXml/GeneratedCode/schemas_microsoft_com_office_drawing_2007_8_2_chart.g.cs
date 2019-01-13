@@ -408,7 +408,7 @@ public partial class Style : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
     [SchemaAttr(0, "val")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public ByteValue Val { get; set; }
 
     /// <summary>
@@ -484,7 +484,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
     [SchemaAttr(0, "bwMode")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
@@ -773,7 +773,7 @@ public abstract partial class BooleanFalseType : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
     [SchemaAttr(0, "val")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public BooleanValue Val { get; set; }
 
     
@@ -811,7 +811,7 @@ public partial class ShowSketchButton : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
     [SchemaAttr(0, "val")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public BooleanValue Val { get; set; }
 
     /// <summary>

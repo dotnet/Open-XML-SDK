@@ -49,14 +49,14 @@ public partial class ContentPart : OpenXmlCompositeElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public StringValue RelationshipId { get; set; }
     /// <summary>
     /// <para> bwMode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
     [SchemaAttr(0, "bwMode")]
-[SchemaIndex(1)]
+  [SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
@@ -208,35 +208,35 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-[SchemaIndex(1)]
+  [SchemaIndex(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
     [SchemaAttr(0, "descr")]
-[SchemaIndex(2)]
+  [SchemaIndex(2)]
     public StringValue Description { get; set; }
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
     [SchemaAttr(0, "hidden")]
-[SchemaIndex(3)]
+  [SchemaIndex(3)]
     public BooleanValue Hidden { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
     [SchemaAttr(0, "title")]
-[SchemaIndex(4)]
+  [SchemaIndex(4)]
     public StringValue Title { get; set; }
 
     /// <summary>
@@ -371,7 +371,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: isComment </para>
     /// </summary>
     [SchemaAttr(0, "isComment")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public BooleanValue IsComment { get; set; }
 
     /// <summary>
@@ -595,14 +595,14 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: macro </para>
     /// </summary>
     [SchemaAttr(0, "macro")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public StringValue Macro { get; set; }
     /// <summary>
     /// <para> fPublished.</para>
     /// <para>Represents the following attribute in the schema: fPublished </para>
     /// </summary>
     [SchemaAttr(0, "fPublished")]
-[SchemaIndex(1)]
+  [SchemaIndex(1)]
     public BooleanValue PublishedFlag { get; set; }
 
     /// <summary>
@@ -652,21 +652,21 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
     [SchemaAttr(0, "rot")]
-[SchemaIndex(0)]
+  [SchemaIndex(0)]
     public Int32Value Rotation { get; set; }
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
     /// </summary>
     [SchemaAttr(0, "flipH")]
-[SchemaIndex(1)]
+  [SchemaIndex(1)]
     public BooleanValue HorizontalFlip { get; set; }
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
     /// </summary>
     [SchemaAttr(0, "flipV")]
-[SchemaIndex(2)]
+  [SchemaIndex(2)]
     public BooleanValue VerticalFlip { get; set; }
 
     /// <summary>
