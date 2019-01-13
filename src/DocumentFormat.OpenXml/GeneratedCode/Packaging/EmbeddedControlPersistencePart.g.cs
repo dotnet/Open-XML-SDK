@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the EmbeddedControlPersistencePart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class EmbeddedControlPersistencePart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control";
@@ -28,9 +28,6 @@ namespace DocumentFormat.OpenXml.Packaging
         public IEnumerable<EmbeddedControlPersistenceBinaryDataPart> EmbeddedControlPersistenceBinaryDataParts => GetPartsOfType<EmbeddedControlPersistenceBinaryDataPart>();
 
         /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => false;
-
-        /// <inheritdoc/>
         internal sealed override PartConstraintCollection PartConstraints
         {
             get
@@ -39,10 +36,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     _partConstraints = new PartConstraintCollection
                     {
-                        {
-                            "http://schemas.microsoft.com/office/2006/relationships/activeXControlBinary",
-                            PartConstraintRule.Create<EmbeddedControlPersistenceBinaryDataPart>(false, true)
-                        }
+                        PartConstraintRule.Create<EmbeddedControlPersistenceBinaryDataPart>(false, true)
                     };
                 }
 

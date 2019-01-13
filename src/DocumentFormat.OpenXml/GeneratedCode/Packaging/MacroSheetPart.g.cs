@@ -9,8 +9,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the MacroSheetPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class MacroSheetPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-excel.macrosheet+xml";
@@ -66,9 +66,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
-
         /// <summary>
         /// Gets or sets the root element of this part.
         /// </summary>
@@ -104,38 +101,14 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     _partConstraints = new PartConstraintCollection
                     {
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings",
-                            PartConstraintRule.Create<SpreadsheetPrinterSettingsPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/drawing",
-                            PartConstraintRule.Create<DrawingsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing",
-                            PartConstraintRule.Create<VmlDrawingPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments",
-                            PartConstraintRule.Create<WorksheetCommentsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customProperty",
-                            PartConstraintRule.Create<CustomPropertyPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-                            PartConstraintRule.Create<EmbeddedObjectPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-                            PartConstraintRule.Create<EmbeddedPackagePart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-                            PartConstraintRule.Create<ImagePart>(false, true)
-                        }
+                        PartConstraintRule.Create<SpreadsheetPrinterSettingsPart>(false, true),
+                        PartConstraintRule.Create<DrawingsPart>(false, false),
+                        PartConstraintRule.Create<VmlDrawingPart>(false, true),
+                        PartConstraintRule.Create<WorksheetCommentsPart>(false, false),
+                        PartConstraintRule.Create<CustomPropertyPart>(false, true),
+                        PartConstraintRule.Create<EmbeddedObjectPart>(false, true),
+                        PartConstraintRule.Create<EmbeddedPackagePart>(false, true),
+                        PartConstraintRule.Create<ImagePart>(false, true)
                     };
                 }
 

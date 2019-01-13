@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the MainDocumentPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class MainDocumentPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
@@ -53,10 +53,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     _dataPartConstraints = new PartConstraintCollection
                     {
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/video",
-                            PartConstraintRule.Create<VideoReferenceRelationship>(false, true)
-                        }
+                        PartConstraintRule.Create<VideoReferenceRelationship>(false, true)
                     };
                 }
 
@@ -183,9 +180,6 @@ namespace DocumentFormat.OpenXml.Packaging
             }
         }
 
-        /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => false;
-
         /// <summary>
         /// Gets the NumberingDefinitionsPart of the MainDocumentPart
         /// </summary>
@@ -200,130 +194,37 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     _partConstraints = new PartConstraintCollection
                     {
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-                            PartConstraintRule.Create<CustomXmlPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/glossaryDocument",
-                            PartConstraintRule.Create<GlossaryDocumentPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme",
-                            PartConstraintRule.Create<ThemePart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail",
-                            PartConstraintRule.Create<ThumbnailPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/comments",
-                            PartConstraintRule.Create<WordprocessingCommentsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings",
-                            PartConstraintRule.Create<DocumentSettingsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/endnotes",
-                            PartConstraintRule.Create<EndnotesPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/fontTable",
-                            PartConstraintRule.Create<FontTablePart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footnotes",
-                            PartConstraintRule.Create<FootnotesPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering",
-                            PartConstraintRule.Create<NumberingDefinitionsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles",
-                            PartConstraintRule.Create<StyleDefinitionsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2007/relationships/stylesWithEffects",
-                            PartConstraintRule.Create<StylesWithEffectsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings",
-                            PartConstraintRule.Create<WebSettingsPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer",
-                            PartConstraintRule.Create<FooterPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/header",
-                            PartConstraintRule.Create<HeaderPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/printerSettings",
-                            PartConstraintRule.Create<WordprocessingPrinterSettingsPart>(false, true)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2006/relationships/keyMapCustomizations",
-                            PartConstraintRule.Create<CustomizationPart>(false, false)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2006/relationships/vbaProject",
-                            PartConstraintRule.Create<VbaProjectPart>(false, false)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2011/relationships/commentsExtended",
-                            PartConstraintRule.Create<WordprocessingCommentsExPart>(false, false)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2011/relationships/people",
-                            PartConstraintRule.Create<WordprocessingPeoplePart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/aFChunk",
-                            PartConstraintRule.Create<AlternativeFormatImportPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-                            PartConstraintRule.Create<ChartPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-                            PartConstraintRule.Create<DiagramColorsPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-                            PartConstraintRule.Create<DiagramDataPart>(false, true)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-                            PartConstraintRule.Create<DiagramPersistLayoutPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-                            PartConstraintRule.Create<DiagramLayoutDefinitionPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-                            PartConstraintRule.Create<DiagramStylePart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control",
-                            PartConstraintRule.Create<EmbeddedControlPersistencePart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/oleObject",
-                            PartConstraintRule.Create<EmbeddedObjectPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-                            PartConstraintRule.Create<EmbeddedPackagePart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-                            PartConstraintRule.Create<ImagePart>(false, true)
-                        }
+                        PartConstraintRule.Create<CustomXmlPart>(false, true),
+                        PartConstraintRule.Create<GlossaryDocumentPart>(false, false),
+                        PartConstraintRule.Create<ThemePart>(false, false),
+                        PartConstraintRule.Create<ThumbnailPart>(false, false),
+                        PartConstraintRule.Create<WordprocessingCommentsPart>(false, false),
+                        PartConstraintRule.Create<DocumentSettingsPart>(false, false),
+                        PartConstraintRule.Create<EndnotesPart>(false, false),
+                        PartConstraintRule.Create<FontTablePart>(false, false),
+                        PartConstraintRule.Create<FootnotesPart>(false, false),
+                        PartConstraintRule.Create<NumberingDefinitionsPart>(false, false),
+                        PartConstraintRule.Create<StyleDefinitionsPart>(false, false),
+                        PartConstraintRule.Create<StylesWithEffectsPart>(false, false),
+                        PartConstraintRule.Create<WebSettingsPart>(false, false),
+                        PartConstraintRule.Create<FooterPart>(false, true),
+                        PartConstraintRule.Create<HeaderPart>(false, true),
+                        PartConstraintRule.Create<WordprocessingPrinterSettingsPart>(false, true),
+                        PartConstraintRule.Create<CustomizationPart>(false, false),
+                        PartConstraintRule.Create<VbaProjectPart>(false, false),
+                        PartConstraintRule.Create<WordprocessingCommentsExPart>(false, false),
+                        PartConstraintRule.Create<WordprocessingPeoplePart>(false, false),
+                        PartConstraintRule.Create<AlternativeFormatImportPart>(false, true),
+                        PartConstraintRule.Create<ChartPart>(false, true),
+                        PartConstraintRule.Create<DiagramColorsPart>(false, true),
+                        PartConstraintRule.Create<DiagramDataPart>(false, true),
+                        PartConstraintRule.Create<DiagramPersistLayoutPart>(false, true),
+                        PartConstraintRule.Create<DiagramLayoutDefinitionPart>(false, true),
+                        PartConstraintRule.Create<DiagramStylePart>(false, true),
+                        PartConstraintRule.Create<EmbeddedControlPersistencePart>(false, true),
+                        PartConstraintRule.Create<EmbeddedObjectPart>(false, true),
+                        PartConstraintRule.Create<EmbeddedPackagePart>(false, true),
+                        PartConstraintRule.Create<ImagePart>(false, true)
                     };
                 }
 

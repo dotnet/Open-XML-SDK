@@ -28,16 +28,16 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     _partConstraints = new PartConstraintCollection
                     {
-                        { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", PartConstraintRule.Create<PresentationPart>(true, false) },
-                        { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", PartConstraintRule.Create<CoreFilePropertiesPart>(false, false) },
-                        { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", PartConstraintRule.Create<ExtendedFilePropertiesPart>(false, false) },
-                        { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", PartConstraintRule.Create<CustomFilePropertiesPart>(false, false) },
-                        { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", PartConstraintRule.Create<ThumbnailPart>(false, false) },
-                        { "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin", PartConstraintRule.Create<DigitalSignatureOriginPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", PartConstraintRule.Create<QuickAccessToolbarCustomizationsPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", PartConstraintRule.Create<RibbonExtensibilityPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", PartConstraintRule.Create<RibbonAndBackstageCustomizationsPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", PartConstraintRule.Create<WebExTaskpanesPart>(false, false) },
+                        PartConstraintRule.Create<PresentationPart>(true, false),
+                        PartConstraintRule.Create<CoreFilePropertiesPart>(false, false),
+                        PartConstraintRule.Create<ExtendedFilePropertiesPart>(false, false),
+                        PartConstraintRule.Create<CustomFilePropertiesPart>(false, false),
+                        PartConstraintRule.Create<ThumbnailPart>(false, false),
+                        PartConstraintRule.Create<DigitalSignatureOriginPart>(false, false),
+                        PartConstraintRule.Create<QuickAccessToolbarCustomizationsPart>(false, false),
+                        PartConstraintRule.Create<RibbonExtensibilityPart>(false, false),
+                        PartConstraintRule.Create<RibbonAndBackstageCustomizationsPart>(false, false),
+                        PartConstraintRule.Create<WebExTaskpanesPart>(false, false),
                     };
                 }
 
@@ -64,16 +64,16 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (_validMainPartContentType == null)
                 {
-                    Dictionary<PresentationDocumentType, string> tempData = new Dictionary<PresentationDocumentType, string>();
-                    tempData.Add(PresentationDocumentType.Presentation, @"application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml");
-                    tempData.Add(PresentationDocumentType.Template, @"application/vnd.openxmlformats-officedocument.presentationml.template.main+xml");
-                    tempData.Add(PresentationDocumentType.Slideshow, @"application/vnd.openxmlformats-officedocument.presentationml.slideshow.main+xml");
-                    tempData.Add(PresentationDocumentType.MacroEnabledPresentation, @"application/vnd.ms-powerpoint.presentation.macroEnabled.main+xml");
-                    tempData.Add(PresentationDocumentType.MacroEnabledTemplate, @"application/vnd.ms-powerpoint.template.macroEnabled.main+xml");
-                    tempData.Add(PresentationDocumentType.MacroEnabledSlideshow, @"application/vnd.ms-powerpoint.slideshow.macroEnabled.main+xml");
-                    tempData.Add(PresentationDocumentType.AddIn, @"application/vnd.ms-powerpoint.addin.macroEnabled.main+xml");
-
-                    _validMainPartContentType = tempData;
+                    _validMainPartContentType = new Dictionary<PresentationDocumentType, string>
+                    {
+                        { PresentationDocumentType.Presentation, @"application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml" },
+                        { PresentationDocumentType.Template, @"application/vnd.openxmlformats-officedocument.presentationml.template.main+xml" },
+                        { PresentationDocumentType.Slideshow, @"application/vnd.openxmlformats-officedocument.presentationml.slideshow.main+xml" },
+                        { PresentationDocumentType.MacroEnabledPresentation, @"application/vnd.ms-powerpoint.presentation.macroEnabled.main+xml" },
+                        { PresentationDocumentType.MacroEnabledTemplate, @"application/vnd.ms-powerpoint.template.macroEnabled.main+xml" },
+                        { PresentationDocumentType.MacroEnabledSlideshow, @"application/vnd.ms-powerpoint.slideshow.macroEnabled.main+xml" },
+                        { PresentationDocumentType.AddIn, @"application/vnd.ms-powerpoint.addin.macroEnabled.main+xml" },
+                    };
                 }
 
                 return _validMainPartContentType;

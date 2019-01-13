@@ -9,8 +9,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the ChartPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class ChartPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawingml.chart+xml";
@@ -93,9 +93,6 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
-
-        /// <inheritdoc/>
         internal sealed override PartConstraintCollection PartConstraints
         {
             get
@@ -104,30 +101,12 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     _partConstraints = new PartConstraintCollection
                     {
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes",
-                            PartConstraintRule.Create<ChartDrawingPart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/package",
-                            PartConstraintRule.Create<EmbeddedPackagePart>(false, false)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-                            PartConstraintRule.Create<ImagePart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/themeOverride",
-                            PartConstraintRule.Create<ThemeOverridePart>(false, false)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2011/relationships/chartStyle",
-                            PartConstraintRule.Create<ChartStylePart>(false, true)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2011/relationships/chartColorStyle",
-                            PartConstraintRule.Create<ChartColorStylePart>(false, true)
-                        }
+                        PartConstraintRule.Create<ChartDrawingPart>(false, false),
+                        PartConstraintRule.Create<EmbeddedPackagePart>(false, false),
+                        PartConstraintRule.Create<ImagePart>(false, true),
+                        PartConstraintRule.Create<ThemeOverridePart>(false, false),
+                        PartConstraintRule.Create<ChartStylePart>(false, true),
+                        PartConstraintRule.Create<ChartColorStylePart>(false, true)
                     };
                 }
 

@@ -9,8 +9,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the DrawingsPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class DrawingsPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawing+xml";
@@ -82,9 +82,6 @@ namespace DocumentFormat.OpenXml.Packaging
         }
 
         /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
-
-        /// <inheritdoc/>
         internal sealed override PartConstraintCollection PartConstraints
         {
             get
@@ -93,42 +90,15 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     _partConstraints = new PartConstraintCollection
                     {
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chart",
-                            PartConstraintRule.Create<ChartPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramColors",
-                            PartConstraintRule.Create<DiagramColorsPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData",
-                            PartConstraintRule.Create<DiagramDataPart>(false, true)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2007/relationships/diagramDrawing",
-                            PartConstraintRule.Create<DiagramPersistLayoutPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramLayout",
-                            PartConstraintRule.Create<DiagramLayoutDefinitionPart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramQuickStyle",
-                            PartConstraintRule.Create<DiagramStylePart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-                            PartConstraintRule.Create<ImagePart>(false, true)
-                        },
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml",
-                            PartConstraintRule.Create<CustomXmlPart>(false, true)
-                        },
-                        {
-                            "http://schemas.microsoft.com/office/2011/relationships/webextension",
-                            PartConstraintRule.Create<WebExtensionPart>(false, true)
-                        }
+                        PartConstraintRule.Create<ChartPart>(false, true),
+                        PartConstraintRule.Create<DiagramColorsPart>(false, true),
+                        PartConstraintRule.Create<DiagramDataPart>(false, true),
+                        PartConstraintRule.Create<DiagramPersistLayoutPart>(false, true),
+                        PartConstraintRule.Create<DiagramLayoutDefinitionPart>(false, true),
+                        PartConstraintRule.Create<DiagramStylePart>(false, true),
+                        PartConstraintRule.Create<ImagePart>(false, true),
+                        PartConstraintRule.Create<CustomXmlPart>(false, true),
+                        PartConstraintRule.Create<WebExtensionPart>(false, true)
                     };
                 }
 

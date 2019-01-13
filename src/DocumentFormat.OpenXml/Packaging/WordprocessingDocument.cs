@@ -14,7 +14,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public partial class WordprocessingDocument : OpenXmlPackage
     {
-        private static PartConstraintCollection  _partConstraints;
+        private static PartConstraintCollection _partConstraints;
 
         /// <summary>
         /// Gets part constraint data.
@@ -28,16 +28,16 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     _partConstraints = new PartConstraintCollection
                     {
-                        { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument", PartConstraintRule.Create<MainDocumentPart>(true, false) },
-                        { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties", PartConstraintRule.Create<CoreFilePropertiesPart>(false, false) },
-                        { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/extended-properties", PartConstraintRule.Create<ExtendedFilePropertiesPart>(false, false) },
-                        { "http://schemas.openxmlformats.org/officeDocument/2006/relationships/custom-properties", PartConstraintRule.Create<CustomFilePropertiesPart>(false, false) },
-                        { "http://schemas.openxmlformats.org/package/2006/relationships/metadata/thumbnail", PartConstraintRule.Create<ThumbnailPart>(false, false) },
-                        { "http://schemas.openxmlformats.org/package/2006/relationships/digital-signature/origin", PartConstraintRule.Create<DigitalSignatureOriginPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2006/relationships/ui/userCustomization", PartConstraintRule.Create<QuickAccessToolbarCustomizationsPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2006/relationships/ui/extensibility", PartConstraintRule.Create<RibbonExtensibilityPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2007/relationships/ui/extensibility", PartConstraintRule.Create<RibbonAndBackstageCustomizationsPart>(false, false) },
-                        { "http://schemas.microsoft.com/office/2011/relationships/webextensiontaskpanes", PartConstraintRule.Create<WebExTaskpanesPart>(false, false) },
+                        PartConstraintRule.Create<MainDocumentPart>(true, false),
+                        PartConstraintRule.Create<CoreFilePropertiesPart>(false, false),
+                        PartConstraintRule.Create<ExtendedFilePropertiesPart>(false, false),
+                        PartConstraintRule.Create<CustomFilePropertiesPart>(false, false),
+                        PartConstraintRule.Create<ThumbnailPart>(false, false),
+                        PartConstraintRule.Create<DigitalSignatureOriginPart>(false, false),
+                        PartConstraintRule.Create<QuickAccessToolbarCustomizationsPart>(false, false),
+                        PartConstraintRule.Create<RibbonExtensibilityPart>(false, false),
+                        PartConstraintRule.Create<RibbonAndBackstageCustomizationsPart>(false, false),
+                        PartConstraintRule.Create<WebExTaskpanesPart>(false, false),
                     };
                 }
 
@@ -64,13 +64,13 @@ namespace DocumentFormat.OpenXml.Packaging
             {
                 if (_validMainPartContentType == null)
                 {
-                    Dictionary<WordprocessingDocumentType, string> tempData = new Dictionary<WordprocessingDocumentType, string>();
-                    tempData.Add(WordprocessingDocumentType.Document, @"application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml");
-                    tempData.Add(WordprocessingDocumentType.Template, @"application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml");
-                    tempData.Add(WordprocessingDocumentType.MacroEnabledDocument, @"application/vnd.ms-word.document.macroEnabled.main+xml");
-                    tempData.Add(WordprocessingDocumentType.MacroEnabledTemplate, @"application/vnd.ms-word.template.macroEnabledTemplate.main+xml");
-
-                    _validMainPartContentType = tempData;
+                    _validMainPartContentType = new Dictionary<WordprocessingDocumentType, string>
+                    {
+                        { WordprocessingDocumentType.Document, @"application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml" },
+                        { WordprocessingDocumentType.Template, @"application/vnd.openxmlformats-officedocument.wordprocessingml.template.main+xml" },
+                        { WordprocessingDocumentType.MacroEnabledDocument, @"application/vnd.ms-word.document.macroEnabled.main+xml" },
+                        { WordprocessingDocumentType.MacroEnabledTemplate, @"application/vnd.ms-word.template.macroEnabledTemplate.main+xml" },
+                    };
                 }
 
                 return _validMainPartContentType;

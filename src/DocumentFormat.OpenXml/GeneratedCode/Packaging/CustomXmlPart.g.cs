@@ -9,7 +9,7 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the CustomXmlPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class CustomXmlPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXml";
@@ -28,9 +28,6 @@ namespace DocumentFormat.OpenXml.Packaging
         public CustomXmlPropertiesPart CustomXmlPropertiesPart => GetSubPartOfType<CustomXmlPropertiesPart>();
 
         /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => false;
-
-        /// <inheritdoc/>
         internal sealed override PartConstraintCollection PartConstraints
         {
             get
@@ -39,10 +36,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     _partConstraints = new PartConstraintCollection
                     {
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/customXmlProps",
-                            PartConstraintRule.Create<CustomXmlPropertiesPart>(false, false)
-                        }
+                        PartConstraintRule.Create<CustomXmlPropertiesPart>(false, false)
                     };
                 }
 

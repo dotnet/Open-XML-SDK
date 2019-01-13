@@ -27,14 +27,14 @@ namespace DocumentFormat.OpenXml.Packaging
             _writeable = writeable;
         }
 
-        public void Add(string key, PartConstraintRule value)
+        public void Add(PartConstraintRule value)
         {
             if (!_writeable)
             {
                 throw new InvalidOperationException();
             }
 
-            _dictionary.Add(key, value);
+            _dictionary.Add(value.RelationshipType, value);
         }
 
         public bool TryGetValue(string key, out PartConstraintRule rule) => _dictionary.TryGetValue(key, out rule);
@@ -47,7 +47,20 @@ namespace DocumentFormat.OpenXml.Packaging
 
         IEnumerable<PartConstraintRule> IReadOnlyDictionary<string, PartConstraintRule>.Values => _dictionary.Values;
 
-        PartConstraintRule IReadOnlyDictionary<string, PartConstraintRule>.this[string key] => _dictionary[key];
+        PartConstraintRule IReadOnlyDictionary<string, PartConstraintRule>.this[string key]
+        {
+            get
+            {
+                try
+                {
+                    return _dictionary[key];
+                }
+                catch (Exception e)
+                {
+                    throw new KeyNotFoundException(key, e);
+                }
+            }
+        }
 
         IEnumerator<KeyValuePair<string, PartConstraintRule>> IEnumerable<KeyValuePair<string, PartConstraintRule>>.GetEnumerator() => _dictionary.GetEnumerator();
 

@@ -9,8 +9,8 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines the RibbonExtensibilityPart
     /// </summary>
-    [OfficeAvailability(FileFormatVersions.Office2007)]
     [ContentType(ContentTypeConstant)]
+    [RelationshipTypeAttribute(RelationshipTypeConstant)]
     public partial class RibbonExtensibilityPart : CustomUIPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/xml";
@@ -33,9 +33,6 @@ namespace DocumentFormat.OpenXml.Packaging
         public IEnumerable<ImagePart> ImageParts => GetPartsOfType<ImagePart>();
 
         /// <inheritdoc/>
-        internal sealed override bool IsContentTypeFixed => true;
-
-        /// <inheritdoc/>
         internal sealed override PartConstraintCollection PartConstraints
         {
             get
@@ -44,10 +41,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 {
                     _partConstraints = new PartConstraintCollection
                     {
-                        {
-                            "http://schemas.openxmlformats.org/officeDocument/2006/relationships/image",
-                            PartConstraintRule.Create<ImagePart>(false, true)
-                        }
+                        PartConstraintRule.Create<ImagePart>(false, true)
                     };
                 }
 
