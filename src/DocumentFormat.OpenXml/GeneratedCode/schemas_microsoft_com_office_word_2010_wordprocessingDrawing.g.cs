@@ -22,9 +22,7 @@ public partial class PercentagePositionHeightOffset : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12889;
     /// <inheritdoc/>
     public override string LocalName => "pctPosHOffset";
-    
     internal override byte NamespaceId => 51;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -64,9 +62,7 @@ public partial class PercentagePositionVerticalOffset : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12890;
     /// <inheritdoc/>
     public override string LocalName => "pctPosVOffset";
-    
     internal override byte NamespaceId => 51;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -113,9 +109,7 @@ public partial class RelativeWidth : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12891;
     /// <inheritdoc/>
     public override string LocalName => "sizeRelH";
-    
     internal override byte NamespaceId => 51;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -126,7 +120,7 @@ public partial class RelativeWidth : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
     [SchemaAttr(0, "relativeFrom")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeHorizontallyValues> ObjectId { get; set; }
 
     /// <summary>
@@ -218,9 +212,7 @@ public partial class RelativeHeight : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12892;
     /// <inheritdoc/>
     public override string LocalName => "sizeRelV";
-    
     internal override byte NamespaceId => 51;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -231,7 +223,7 @@ public partial class RelativeHeight : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: relativeFrom </para>
     /// </summary>
     [SchemaAttr(0, "relativeFrom")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.Drawing.SizeRelativeVerticallyValues> RelativeFrom { get; set; }
 
     /// <summary>
@@ -316,9 +308,7 @@ public partial class PercentageWidth : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12893;
     /// <inheritdoc/>
     public override string LocalName => "pctWidth";
-    
     internal override byte NamespaceId => 51;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -358,9 +348,7 @@ public partial class PercentageHeight : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12894;
     /// <inheritdoc/>
     public override string LocalName => "pctHeight";
-    
     internal override byte NamespaceId => 51;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 

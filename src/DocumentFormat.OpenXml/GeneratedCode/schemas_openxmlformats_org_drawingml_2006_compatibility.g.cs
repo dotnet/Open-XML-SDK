@@ -22,9 +22,7 @@ public partial class LegacyDrawing : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10681;
     /// <inheritdoc/>
     public override string LocalName => "legacyDrawing";
-    
     internal override byte NamespaceId => 13;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -35,7 +33,7 @@ public partial class LegacyDrawing : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: spid </para>
     /// </summary>
     [SchemaAttr(0, "spid")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue ShapeId { get; set; }
 
     /// <summary>

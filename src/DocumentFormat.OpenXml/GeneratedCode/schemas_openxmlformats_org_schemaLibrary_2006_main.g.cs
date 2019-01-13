@@ -28,9 +28,7 @@ public partial class SchemaLibrary : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12468;
     /// <inheritdoc/>
     public override string LocalName => "schemaLibrary";
-    
     internal override byte NamespaceId => 25;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -98,9 +96,7 @@ public partial class Schema : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12469;
     /// <inheritdoc/>
     public override string LocalName => "schema";
-    
     internal override byte NamespaceId => 25;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -113,7 +109,7 @@ public partial class Schema : OpenXmlLeafElement
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
     [SchemaAttr(25, "uri")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Uri { get; set; }
     /// <summary>
     /// <para> Resource File Location.</para>
@@ -122,7 +118,7 @@ public partial class Schema : OpenXmlLeafElement
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
     [SchemaAttr(25, "manifestLocation")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue ManifestLocation { get; set; }
     /// <summary>
     /// <para> Custom XML Schema Location.</para>
@@ -131,7 +127,7 @@ public partial class Schema : OpenXmlLeafElement
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
     [SchemaAttr(25, "schemaLocation")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue SchemaLocation { get; set; }
 
     /// <summary>

@@ -21,9 +21,7 @@ public partial class TopBorder : BorderType
     internal const int ElementTypeIdConst = 12501;
     /// <inheritdoc/>
     public override string LocalName => "bordertop";
-    
     internal override byte NamespaceId => 28;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -50,9 +48,7 @@ public partial class LeftBorder : BorderType
     internal const int ElementTypeIdConst = 12502;
     /// <inheritdoc/>
     public override string LocalName => "borderleft";
-    
     internal override byte NamespaceId => 28;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -79,9 +75,7 @@ public partial class RightBorder : BorderType
     internal const int ElementTypeIdConst = 12503;
     /// <inheritdoc/>
     public override string LocalName => "borderright";
-    
     internal override byte NamespaceId => 28;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -108,9 +102,7 @@ public partial class BottomBorder : BorderType
     internal const int ElementTypeIdConst = 12504;
     /// <inheritdoc/>
     public override string LocalName => "borderbottom";
-    
     internal override byte NamespaceId => 28;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -137,21 +129,21 @@ public abstract partial class BorderType : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.BorderValues> Type { get; set; }
     /// <summary>
     /// <para> Border Width.</para>
     /// <para>Represents the following attribute in the schema: width </para>
     /// </summary>
     [SchemaAttr(0, "width")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public IntegerValue Width { get; set; }
     /// <summary>
     /// <para> Border shadow.</para>
     /// <para>Represents the following attribute in the schema: shadow </para>
     /// </summary>
     [SchemaAttr(0, "shadow")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public TrueFalseValue Shadow { get; set; }
 
     
@@ -178,9 +170,7 @@ public partial class TextWrap : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12505;
     /// <inheritdoc/>
     public override string LocalName => "wrap";
-    
     internal override byte NamespaceId => 28;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -191,28 +181,28 @@ public partial class TextWrap : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapValues> Type { get; set; }
     /// <summary>
     /// <para> Wrapping side.</para>
     /// <para>Represents the following attribute in the schema: side </para>
     /// </summary>
     [SchemaAttr(0, "side")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.WrapSideValues> Side { get; set; }
     /// <summary>
     /// <para> Horizontal Positioning Base.</para>
     /// <para>Represents the following attribute in the schema: anchorx </para>
     /// </summary>
     [SchemaAttr(0, "anchorx")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.HorizontalAnchorValues> AnchorX { get; set; }
     /// <summary>
     /// <para> Vertical Positioning Base.</para>
     /// <para>Represents the following attribute in the schema: anchory </para>
     /// </summary>
     [SchemaAttr(0, "anchory")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Wordprocessing.VerticalAnchorValues> AnchorY { get; set; }
 
     /// <summary>
@@ -242,9 +232,7 @@ public partial class AnchorLock : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12506;
     /// <inheritdoc/>
     public override string LocalName => "anchorlock";
-    
     internal override byte NamespaceId => 28;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 

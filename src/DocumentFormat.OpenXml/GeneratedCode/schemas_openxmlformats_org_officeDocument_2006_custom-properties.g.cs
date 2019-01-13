@@ -28,9 +28,7 @@ public partial class Properties : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 10903;
     /// <inheritdoc/>
     public override string LocalName => "Properties";
-    
     internal override byte NamespaceId => 4;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -200,9 +198,7 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10904;
     /// <inheritdoc/>
     public override string LocalName => "property";
-    
     internal override byte NamespaceId => 4;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -213,28 +209,28 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: fmtid </para>
     /// </summary>
     [SchemaAttr(0, "fmtid")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue FormatId { get; set; }
     /// <summary>
     /// <para> Property ID.</para>
     /// <para>Represents the following attribute in the schema: pid </para>
     /// </summary>
     [SchemaAttr(0, "pid")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public Int32Value PropertyId { get; set; }
     /// <summary>
     /// <para> Custom File Property Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> Bookmark Link Target.</para>
     /// <para>Represents the following attribute in the schema: linkTarget </para>
     /// </summary>
     [SchemaAttr(0, "linkTarget")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public StringValue LinkTarget { get; set; }
 
     /// <summary>

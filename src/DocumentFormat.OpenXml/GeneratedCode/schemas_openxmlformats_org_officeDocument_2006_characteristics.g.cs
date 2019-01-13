@@ -28,9 +28,7 @@ public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 10822;
     /// <inheritdoc/>
     public override string LocalName => "additionalCharacteristics";
-    
     internal override byte NamespaceId => 8;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -98,9 +96,7 @@ public partial class Characteristic : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10823;
     /// <inheritdoc/>
     public override string LocalName => "characteristic";
-    
     internal override byte NamespaceId => 8;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -111,28 +107,28 @@ public partial class Characteristic : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> Relationship of Value to Name.</para>
     /// <para>Represents the following attribute in the schema: relation </para>
     /// </summary>
     [SchemaAttr(0, "relation")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues> Relation { get; set; }
     /// <summary>
     /// <para> Characteristic Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
     [SchemaAttr(0, "val")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Val { get; set; }
     /// <summary>
     /// <para> Characteristic Grammar.</para>
     /// <para>Represents the following attribute in the schema: vocabulary </para>
     /// </summary>
     [SchemaAttr(0, "vocabulary")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public StringValue Vocabulary { get; set; }
 
     /// <summary>

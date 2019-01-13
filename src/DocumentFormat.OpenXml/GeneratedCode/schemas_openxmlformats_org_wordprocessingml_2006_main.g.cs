@@ -28,9 +28,7 @@ public partial class CellInsertion : TrackChangeType
     internal const int ElementTypeIdConst = 11537;
     /// <inheritdoc/>
     public override string LocalName => "cellIns";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -57,9 +55,7 @@ public partial class CellDeletion : TrackChangeType
     internal const int ElementTypeIdConst = 11538;
     /// <inheritdoc/>
     public override string LocalName => "cellDel";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -86,9 +82,7 @@ public partial class CustomXmlInsRangeStart : TrackChangeType
     internal const int ElementTypeIdConst = 11548;
     /// <inheritdoc/>
     public override string LocalName => "customXmlInsRangeStart";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -115,9 +109,7 @@ public partial class CustomXmlDelRangeStart : TrackChangeType
     internal const int ElementTypeIdConst = 11550;
     /// <inheritdoc/>
     public override string LocalName => "customXmlDelRangeStart";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -144,9 +136,7 @@ public partial class CustomXmlMoveFromRangeStart : TrackChangeType
     internal const int ElementTypeIdConst = 11552;
     /// <inheritdoc/>
     public override string LocalName => "customXmlMoveFromRangeStart";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -173,9 +163,7 @@ public partial class CustomXmlMoveToRangeStart : TrackChangeType
     internal const int ElementTypeIdConst = 11554;
     /// <inheritdoc/>
     public override string LocalName => "customXmlMoveToRangeStart";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -202,9 +190,7 @@ public partial class Inserted : TrackChangeType
     internal const int ElementTypeIdConst = 11732;
     /// <inheritdoc/>
     public override string LocalName => "ins";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -231,9 +217,7 @@ public partial class Deleted : TrackChangeType
     internal const int ElementTypeIdConst = 11733;
     /// <inheritdoc/>
     public override string LocalName => "del";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -260,9 +244,7 @@ public partial class MoveFrom : TrackChangeType
     internal const int ElementTypeIdConst = 11734;
     /// <inheritdoc/>
     public override string LocalName => "moveFrom";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -289,9 +271,7 @@ public partial class MoveTo : TrackChangeType
     internal const int ElementTypeIdConst = 11735;
     /// <inheritdoc/>
     public override string LocalName => "moveTo";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -320,7 +300,7 @@ public abstract partial class TrackChangeType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -329,7 +309,7 @@ public abstract partial class TrackChangeType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -338,7 +318,7 @@ public abstract partial class TrackChangeType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Id { get; set; }
 
     
@@ -365,9 +345,7 @@ public partial class CellMerge : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11539;
     /// <inheritdoc/>
     public override string LocalName => "cellMerge";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -380,7 +358,7 @@ public partial class CellMerge : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "vMerge")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues> VerticalMerge { get; set; }
     /// <summary>
     /// <para> vMergeOrig.</para>
@@ -389,7 +367,7 @@ public partial class CellMerge : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "vMergeOrig")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalMergeRevisionValues> VerticalMergeOriginal { get; set; }
     /// <summary>
     /// <para> author.</para>
@@ -398,7 +376,7 @@ public partial class CellMerge : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -407,7 +385,7 @@ public partial class CellMerge : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -416,7 +394,7 @@ public partial class CellMerge : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -446,9 +424,7 @@ public partial class BookmarkStart : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11540;
     /// <inheritdoc/>
     public override string LocalName => "bookmarkStart";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -461,7 +437,7 @@ public partial class BookmarkStart : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "name")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> colFirst.</para>
@@ -470,7 +446,7 @@ public partial class BookmarkStart : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "colFirst")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public Int32Value ColumnFirst { get; set; }
     /// <summary>
     /// <para> colLast.</para>
@@ -479,7 +455,7 @@ public partial class BookmarkStart : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "colLast")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public Int32Value ColumnLast { get; set; }
     /// <summary>
     /// <para> displacedByCustomXml.</para>
@@ -488,7 +464,7 @@ public partial class BookmarkStart : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "displacedByCustomXml")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -497,7 +473,7 @@ public partial class BookmarkStart : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -527,9 +503,7 @@ public partial class BookmarkEnd : MarkupRangeType
     internal const int ElementTypeIdConst = 11541;
     /// <inheritdoc/>
     public override string LocalName => "bookmarkEnd";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -556,9 +530,7 @@ public partial class CommentRangeStart : MarkupRangeType
     internal const int ElementTypeIdConst = 11542;
     /// <inheritdoc/>
     public override string LocalName => "commentRangeStart";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -585,9 +557,7 @@ public partial class CommentRangeEnd : MarkupRangeType
     internal const int ElementTypeIdConst = 11543;
     /// <inheritdoc/>
     public override string LocalName => "commentRangeEnd";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -614,9 +584,7 @@ public partial class MoveFromRangeEnd : MarkupRangeType
     internal const int ElementTypeIdConst = 11545;
     /// <inheritdoc/>
     public override string LocalName => "moveFromRangeEnd";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -643,9 +611,7 @@ public partial class MoveToRangeEnd : MarkupRangeType
     internal const int ElementTypeIdConst = 11547;
     /// <inheritdoc/>
     public override string LocalName => "moveToRangeEnd";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -674,7 +640,7 @@ public abstract partial class MarkupRangeType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "displacedByCustomXml")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -683,7 +649,7 @@ public abstract partial class MarkupRangeType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Id { get; set; }
 
     
@@ -710,9 +676,7 @@ public partial class MoveFromRangeStart : MoveBookmarkType
     internal const int ElementTypeIdConst = 11544;
     /// <inheritdoc/>
     public override string LocalName => "moveFromRangeStart";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -739,9 +703,7 @@ public partial class MoveToRangeStart : MoveBookmarkType
     internal const int ElementTypeIdConst = 11546;
     /// <inheritdoc/>
     public override string LocalName => "moveToRangeStart";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -770,7 +732,7 @@ public abstract partial class MoveBookmarkType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -779,7 +741,7 @@ public abstract partial class MoveBookmarkType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> name.</para>
@@ -788,7 +750,7 @@ public abstract partial class MoveBookmarkType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "name")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> colFirst.</para>
@@ -797,7 +759,7 @@ public abstract partial class MoveBookmarkType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "colFirst")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public Int32Value ColumnFirst { get; set; }
     /// <summary>
     /// <para> colLast.</para>
@@ -806,7 +768,7 @@ public abstract partial class MoveBookmarkType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "colLast")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public Int32Value ColumnLast { get; set; }
     /// <summary>
     /// <para> displacedByCustomXml.</para>
@@ -815,7 +777,7 @@ public abstract partial class MoveBookmarkType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "displacedByCustomXml")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -824,7 +786,7 @@ public abstract partial class MoveBookmarkType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(6)]
+	[SchemaIndex(6)]
     public StringValue Id { get; set; }
 
     
@@ -851,9 +813,7 @@ public partial class CustomXmlInsRangeEnd : MarkupType
     internal const int ElementTypeIdConst = 11549;
     /// <inheritdoc/>
     public override string LocalName => "customXmlInsRangeEnd";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -880,9 +840,7 @@ public partial class CustomXmlDelRangeEnd : MarkupType
     internal const int ElementTypeIdConst = 11551;
     /// <inheritdoc/>
     public override string LocalName => "customXmlDelRangeEnd";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -909,9 +867,7 @@ public partial class CustomXmlMoveFromRangeEnd : MarkupType
     internal const int ElementTypeIdConst = 11553;
     /// <inheritdoc/>
     public override string LocalName => "customXmlMoveFromRangeEnd";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -938,9 +894,7 @@ public partial class CustomXmlMoveToRangeEnd : MarkupType
     internal const int ElementTypeIdConst = 11555;
     /// <inheritdoc/>
     public override string LocalName => "customXmlMoveToRangeEnd";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -967,9 +921,7 @@ public partial class CommentReference : MarkupType
     internal const int ElementTypeIdConst = 11618;
     /// <inheritdoc/>
     public override string LocalName => "commentReference";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -998,7 +950,7 @@ public abstract partial class MarkupType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Id { get; set; }
 
     
@@ -1025,9 +977,7 @@ public partial class ParagraphStyleId : StringType
     internal const int ElementTypeIdConst = 11556;
     /// <inheritdoc/>
     public override string LocalName => "pStyle";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1054,9 +1004,7 @@ public partial class DateFormat : StringType
     internal const int ElementTypeIdConst = 11824;
     /// <inheritdoc/>
     public override string LocalName => "dateFormat";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1083,9 +1031,7 @@ public partial class DocPartGallery : StringType
     internal const int ElementTypeIdConst = 11828;
     /// <inheritdoc/>
     public override string LocalName => "docPartGallery";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1112,9 +1058,7 @@ public partial class DocPartCategory : StringType
     internal const int ElementTypeIdConst = 11829;
     /// <inheritdoc/>
     public override string LocalName => "docPartCategory";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1141,9 +1085,7 @@ public partial class DocPartReference : StringType
     internal const int ElementTypeIdConst = 11831;
     /// <inheritdoc/>
     public override string LocalName => "docPart";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1170,9 +1112,7 @@ public partial class CustomXmlPlaceholder : StringType
     internal const int ElementTypeIdConst = 11840;
     /// <inheritdoc/>
     public override string LocalName => "placeholder";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1199,9 +1139,7 @@ public partial class TableCaption : StringType
     internal const int ElementTypeIdConst = 11846;
     /// <inheritdoc/>
     public override string LocalName => "tblCaption";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -1228,9 +1166,7 @@ public partial class TableDescription : StringType
     internal const int ElementTypeIdConst = 11847;
     /// <inheritdoc/>
     public override string LocalName => "tblDescription";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -1257,9 +1193,7 @@ public partial class Name : StringType
     internal const int ElementTypeIdConst = 11862;
     /// <inheritdoc/>
     public override string LocalName => "name";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1286,9 +1220,7 @@ public partial class MappedName : StringType
     internal const int ElementTypeIdConst = 11863;
     /// <inheritdoc/>
     public override string LocalName => "mappedName";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1315,9 +1247,7 @@ public partial class UdlConnectionString : StringType
     internal const int ElementTypeIdConst = 11865;
     /// <inheritdoc/>
     public override string LocalName => "udl";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1344,9 +1274,7 @@ public partial class DataSourceTableName : StringType
     internal const int ElementTypeIdConst = 11866;
     /// <inheritdoc/>
     public override string LocalName => "table";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1373,9 +1301,7 @@ public partial class ConnectString : StringType
     internal const int ElementTypeIdConst = 11876;
     /// <inheritdoc/>
     public override string LocalName => "connectString";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1402,9 +1328,7 @@ public partial class Query : StringType
     internal const int ElementTypeIdConst = 11877;
     /// <inheritdoc/>
     public override string LocalName => "query";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1431,9 +1355,7 @@ public partial class AddressFieldName : StringType
     internal const int ElementTypeIdConst = 11882;
     /// <inheritdoc/>
     public override string LocalName => "addressFieldName";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1460,9 +1382,7 @@ public partial class MailSubject : StringType
     internal const int ElementTypeIdConst = 11883;
     /// <inheritdoc/>
     public override string LocalName => "mailSubject";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1489,9 +1409,7 @@ public partial class FrameSize : StringType
     internal const int ElementTypeIdConst = 11896;
     /// <inheritdoc/>
     public override string LocalName => "sz";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1518,9 +1436,7 @@ public partial class StyleId : StringType
     internal const int ElementTypeIdConst = 11985;
     /// <inheritdoc/>
     public override string LocalName => "style";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1547,9 +1463,7 @@ public partial class Description : StringType
     internal const int ElementTypeIdConst = 11989;
     /// <inheritdoc/>
     public override string LocalName => "description";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1576,9 +1490,7 @@ public partial class SdtAlias : StringType
     internal const int ElementTypeIdConst = 12083;
     /// <inheritdoc/>
     public override string LocalName => "alias";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1605,9 +1517,7 @@ public partial class Tag : StringType
     internal const int ElementTypeIdConst = 12090;
     /// <inheritdoc/>
     public override string LocalName => "tag";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1634,9 +1544,7 @@ public partial class AttachedSchema : StringType
     internal const int ElementTypeIdConst = 12187;
     /// <inheritdoc/>
     public override string LocalName => "attachedSchema";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1663,9 +1571,7 @@ public partial class DecimalSymbol : StringType
     internal const int ElementTypeIdConst = 12196;
     /// <inheritdoc/>
     public override string LocalName => "decimalSymbol";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1692,9 +1598,7 @@ public partial class ListSeparator : StringType
     internal const int ElementTypeIdConst = 12197;
     /// <inheritdoc/>
     public override string LocalName => "listSeparator";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1721,9 +1625,7 @@ public partial class WebPageEncoding : StringType
     internal const int ElementTypeIdConst = 12199;
     /// <inheritdoc/>
     public override string LocalName => "encoding";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1750,9 +1652,7 @@ public partial class AltName : StringType
     internal const int ElementTypeIdConst = 12210;
     /// <inheritdoc/>
     public override string LocalName => "altName";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1781,7 +1681,7 @@ public abstract partial class StringType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
 
     
@@ -1808,9 +1708,7 @@ public partial class KeepNext : OnOffType
     internal const int ElementTypeIdConst = 11557;
     /// <inheritdoc/>
     public override string LocalName => "keepNext";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1837,9 +1735,7 @@ public partial class KeepLines : OnOffType
     internal const int ElementTypeIdConst = 11558;
     /// <inheritdoc/>
     public override string LocalName => "keepLines";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1866,9 +1762,7 @@ public partial class PageBreakBefore : OnOffType
     internal const int ElementTypeIdConst = 11559;
     /// <inheritdoc/>
     public override string LocalName => "pageBreakBefore";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1895,9 +1789,7 @@ public partial class WidowControl : OnOffType
     internal const int ElementTypeIdConst = 11561;
     /// <inheritdoc/>
     public override string LocalName => "widowControl";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1924,9 +1816,7 @@ public partial class SuppressLineNumbers : OnOffType
     internal const int ElementTypeIdConst = 11563;
     /// <inheritdoc/>
     public override string LocalName => "suppressLineNumbers";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1953,9 +1843,7 @@ public partial class SuppressAutoHyphens : OnOffType
     internal const int ElementTypeIdConst = 11567;
     /// <inheritdoc/>
     public override string LocalName => "suppressAutoHyphens";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1982,9 +1870,7 @@ public partial class Kinsoku : OnOffType
     internal const int ElementTypeIdConst = 11568;
     /// <inheritdoc/>
     public override string LocalName => "kinsoku";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2011,9 +1897,7 @@ public partial class WordWrap : OnOffType
     internal const int ElementTypeIdConst = 11569;
     /// <inheritdoc/>
     public override string LocalName => "wordWrap";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2040,9 +1924,7 @@ public partial class OverflowPunctuation : OnOffType
     internal const int ElementTypeIdConst = 11570;
     /// <inheritdoc/>
     public override string LocalName => "overflowPunct";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2069,9 +1951,7 @@ public partial class TopLinePunctuation : OnOffType
     internal const int ElementTypeIdConst = 11571;
     /// <inheritdoc/>
     public override string LocalName => "topLinePunct";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2098,9 +1978,7 @@ public partial class AutoSpaceDE : OnOffType
     internal const int ElementTypeIdConst = 11572;
     /// <inheritdoc/>
     public override string LocalName => "autoSpaceDE";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2127,9 +2005,7 @@ public partial class AutoSpaceDN : OnOffType
     internal const int ElementTypeIdConst = 11573;
     /// <inheritdoc/>
     public override string LocalName => "autoSpaceDN";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2156,9 +2032,7 @@ public partial class BiDi : OnOffType
     internal const int ElementTypeIdConst = 11574;
     /// <inheritdoc/>
     public override string LocalName => "bidi";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2185,9 +2059,7 @@ public partial class AdjustRightIndent : OnOffType
     internal const int ElementTypeIdConst = 11575;
     /// <inheritdoc/>
     public override string LocalName => "adjustRightInd";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2214,9 +2086,7 @@ public partial class SnapToGrid : OnOffType
     internal const int ElementTypeIdConst = 11576;
     /// <inheritdoc/>
     public override string LocalName => "snapToGrid";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2243,9 +2113,7 @@ public partial class ContextualSpacing : OnOffType
     internal const int ElementTypeIdConst = 11579;
     /// <inheritdoc/>
     public override string LocalName => "contextualSpacing";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2272,9 +2140,7 @@ public partial class MirrorIndents : OnOffType
     internal const int ElementTypeIdConst = 11580;
     /// <inheritdoc/>
     public override string LocalName => "mirrorIndents";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2301,9 +2167,7 @@ public partial class SuppressOverlap : OnOffType
     internal const int ElementTypeIdConst = 11581;
     /// <inheritdoc/>
     public override string LocalName => "suppressOverlap";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2330,9 +2194,7 @@ public partial class Bold : OnOffType
     internal const int ElementTypeIdConst = 11624;
     /// <inheritdoc/>
     public override string LocalName => "b";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2359,9 +2221,7 @@ public partial class BoldComplexScript : OnOffType
     internal const int ElementTypeIdConst = 11625;
     /// <inheritdoc/>
     public override string LocalName => "bCs";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2388,9 +2248,7 @@ public partial class Italic : OnOffType
     internal const int ElementTypeIdConst = 11626;
     /// <inheritdoc/>
     public override string LocalName => "i";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2417,9 +2275,7 @@ public partial class ItalicComplexScript : OnOffType
     internal const int ElementTypeIdConst = 11627;
     /// <inheritdoc/>
     public override string LocalName => "iCs";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2446,9 +2302,7 @@ public partial class Caps : OnOffType
     internal const int ElementTypeIdConst = 11628;
     /// <inheritdoc/>
     public override string LocalName => "caps";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2475,9 +2329,7 @@ public partial class SmallCaps : OnOffType
     internal const int ElementTypeIdConst = 11629;
     /// <inheritdoc/>
     public override string LocalName => "smallCaps";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2504,9 +2356,7 @@ public partial class Strike : OnOffType
     internal const int ElementTypeIdConst = 11630;
     /// <inheritdoc/>
     public override string LocalName => "strike";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2533,9 +2383,7 @@ public partial class DoubleStrike : OnOffType
     internal const int ElementTypeIdConst = 11631;
     /// <inheritdoc/>
     public override string LocalName => "dstrike";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2562,9 +2410,7 @@ public partial class Outline : OnOffType
     internal const int ElementTypeIdConst = 11632;
     /// <inheritdoc/>
     public override string LocalName => "outline";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2591,9 +2437,7 @@ public partial class Shadow : OnOffType
     internal const int ElementTypeIdConst = 11633;
     /// <inheritdoc/>
     public override string LocalName => "shadow";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2620,9 +2464,7 @@ public partial class Emboss : OnOffType
     internal const int ElementTypeIdConst = 11634;
     /// <inheritdoc/>
     public override string LocalName => "emboss";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2649,9 +2491,7 @@ public partial class Imprint : OnOffType
     internal const int ElementTypeIdConst = 11635;
     /// <inheritdoc/>
     public override string LocalName => "imprint";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2678,9 +2518,7 @@ public partial class NoProof : OnOffType
     internal const int ElementTypeIdConst = 11636;
     /// <inheritdoc/>
     public override string LocalName => "noProof";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2707,9 +2545,7 @@ public partial class Vanish : OnOffType
     internal const int ElementTypeIdConst = 11637;
     /// <inheritdoc/>
     public override string LocalName => "vanish";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2736,9 +2572,7 @@ public partial class WebHidden : OnOffType
     internal const int ElementTypeIdConst = 11638;
     /// <inheritdoc/>
     public override string LocalName => "webHidden";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2765,9 +2599,7 @@ public partial class RightToLeftText : OnOffType
     internal const int ElementTypeIdConst = 11652;
     /// <inheritdoc/>
     public override string LocalName => "rtl";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2794,9 +2626,7 @@ public partial class ComplexScript : OnOffType
     internal const int ElementTypeIdConst = 11653;
     /// <inheritdoc/>
     public override string LocalName => "cs";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2823,9 +2653,7 @@ public partial class SpecVanish : OnOffType
     internal const int ElementTypeIdConst = 11657;
     /// <inheritdoc/>
     public override string LocalName => "specVanish";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2852,9 +2680,7 @@ public partial class OfficeMath : OnOffType
     internal const int ElementTypeIdConst = 11658;
     /// <inheritdoc/>
     public override string LocalName => "oMath";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2881,9 +2707,7 @@ public partial class Hidden : OnOffType
     internal const int ElementTypeIdConst = 11712;
     /// <inheritdoc/>
     public override string LocalName => "hidden";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2910,9 +2734,7 @@ public partial class FormProtection : OnOffType
     internal const int ElementTypeIdConst = 11746;
     /// <inheritdoc/>
     public override string LocalName => "formProt";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2939,9 +2761,7 @@ public partial class NoEndnote : OnOffType
     internal const int ElementTypeIdConst = 11748;
     /// <inheritdoc/>
     public override string LocalName => "noEndnote";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2968,9 +2788,7 @@ public partial class TitlePage : OnOffType
     internal const int ElementTypeIdConst = 11749;
     /// <inheritdoc/>
     public override string LocalName => "titlePg";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2997,9 +2815,7 @@ public partial class GutterOnRight : OnOffType
     internal const int ElementTypeIdConst = 11750;
     /// <inheritdoc/>
     public override string LocalName => "rtlGutter";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3026,9 +2842,7 @@ public partial class Enabled : OnOffType
     internal const int ElementTypeIdConst = 11790;
     /// <inheritdoc/>
     public override string LocalName => "enabled";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3055,9 +2869,7 @@ public partial class CalculateOnExit : OnOffType
     internal const int ElementTypeIdConst = 11791;
     /// <inheritdoc/>
     public override string LocalName => "calcOnExit";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3084,9 +2896,7 @@ public partial class AutomaticallySizeFormField : OnOffType
     internal const int ElementTypeIdConst = 11800;
     /// <inheritdoc/>
     public override string LocalName => "sizeAuto";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3113,9 +2923,7 @@ public partial class DefaultCheckBoxFormFieldState : OnOffType
     internal const int ElementTypeIdConst = 11801;
     /// <inheritdoc/>
     public override string LocalName => "default";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3142,9 +2950,7 @@ public partial class Checked : OnOffType
     internal const int ElementTypeIdConst = 11802;
     /// <inheritdoc/>
     public override string LocalName => "checked";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3171,9 +2977,7 @@ public partial class MatchSource : OnOffType
     internal const int ElementTypeIdConst = 11814;
     /// <inheritdoc/>
     public override string LocalName => "matchSrc";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3200,9 +3004,7 @@ public partial class Dirty : OnOffType
     internal const int ElementTypeIdConst = 11820;
     /// <inheritdoc/>
     public override string LocalName => "dirty";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3229,9 +3031,7 @@ public partial class DocPartUnique : OnOffType
     internal const int ElementTypeIdConst = 11830;
     /// <inheritdoc/>
     public override string LocalName => "docPartUnique";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3258,9 +3058,7 @@ public partial class Active : OnOffType
     internal const int ElementTypeIdConst = 11857;
     /// <inheritdoc/>
     public override string LocalName => "active";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3287,9 +3085,7 @@ public partial class DynamicAddress : OnOffType
     internal const int ElementTypeIdConst = 11864;
     /// <inheritdoc/>
     public override string LocalName => "dynamicAddress";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3316,9 +3112,7 @@ public partial class FirstRowHeader : OnOffType
     internal const int ElementTypeIdConst = 11870;
     /// <inheritdoc/>
     public override string LocalName => "fHdr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3345,9 +3139,7 @@ public partial class LinkToQuery : OnOffType
     internal const int ElementTypeIdConst = 11874;
     /// <inheritdoc/>
     public override string LocalName => "linkToQuery";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3374,9 +3166,7 @@ public partial class DoNotSuppressBlankLines : OnOffType
     internal const int ElementTypeIdConst = 11880;
     /// <inheritdoc/>
     public override string LocalName => "doNotSuppressBlankLines";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3403,9 +3193,7 @@ public partial class MailAsAttachment : OnOffType
     internal const int ElementTypeIdConst = 11884;
     /// <inheritdoc/>
     public override string LocalName => "mailAsAttachment";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3432,9 +3220,7 @@ public partial class ViewMergedData : OnOffType
     internal const int ElementTypeIdConst = 11885;
     /// <inheritdoc/>
     public override string LocalName => "viewMergedData";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3461,9 +3247,7 @@ public partial class IsLegalNumberingStyle : OnOffType
     internal const int ElementTypeIdConst = 11914;
     /// <inheritdoc/>
     public override string LocalName => "isLgl";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3490,9 +3274,7 @@ public partial class BlockQuote : OnOffType
     internal const int ElementTypeIdConst = 11964;
     /// <inheritdoc/>
     public override string LocalName => "blockQuote";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3519,9 +3301,7 @@ public partial class BodyDiv : OnOffType
     internal const int ElementTypeIdConst = 11965;
     /// <inheritdoc/>
     public override string LocalName => "bodyDiv";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3548,9 +3328,7 @@ public partial class UseSingleBorderForContiguousCells : OnOffType
     internal const int ElementTypeIdConst = 11994;
     /// <inheritdoc/>
     public override string LocalName => "useSingleBorderforContiguousCells";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3577,9 +3355,7 @@ public partial class WordPerfectJustification : OnOffType
     internal const int ElementTypeIdConst = 11995;
     /// <inheritdoc/>
     public override string LocalName => "wpJustification";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3606,9 +3382,7 @@ public partial class NoTabHangIndent : OnOffType
     internal const int ElementTypeIdConst = 11996;
     /// <inheritdoc/>
     public override string LocalName => "noTabHangInd";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3635,9 +3409,7 @@ public partial class NoLeading : OnOffType
     internal const int ElementTypeIdConst = 11997;
     /// <inheritdoc/>
     public override string LocalName => "noLeading";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3664,9 +3436,7 @@ public partial class SpaceForUnderline : OnOffType
     internal const int ElementTypeIdConst = 11998;
     /// <inheritdoc/>
     public override string LocalName => "spaceForUL";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3693,9 +3463,7 @@ public partial class NoColumnBalance : OnOffType
     internal const int ElementTypeIdConst = 11999;
     /// <inheritdoc/>
     public override string LocalName => "noColumnBalance";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3722,9 +3490,7 @@ public partial class BalanceSingleByteDoubleByteWidth : OnOffType
     internal const int ElementTypeIdConst = 12000;
     /// <inheritdoc/>
     public override string LocalName => "balanceSingleByteDoubleByteWidth";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3751,9 +3517,7 @@ public partial class NoExtraLineSpacing : OnOffType
     internal const int ElementTypeIdConst = 12001;
     /// <inheritdoc/>
     public override string LocalName => "noExtraLineSpacing";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3780,9 +3544,7 @@ public partial class DoNotLeaveBackslashAlone : OnOffType
     internal const int ElementTypeIdConst = 12002;
     /// <inheritdoc/>
     public override string LocalName => "doNotLeaveBackslashAlone";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3809,9 +3571,7 @@ public partial class UnderlineTrailingSpaces : OnOffType
     internal const int ElementTypeIdConst = 12003;
     /// <inheritdoc/>
     public override string LocalName => "ulTrailSpace";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3838,9 +3598,7 @@ public partial class DoNotExpandShiftReturn : OnOffType
     internal const int ElementTypeIdConst = 12004;
     /// <inheritdoc/>
     public override string LocalName => "doNotExpandShiftReturn";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3867,9 +3625,7 @@ public partial class SpacingInWholePoints : OnOffType
     internal const int ElementTypeIdConst = 12005;
     /// <inheritdoc/>
     public override string LocalName => "spacingInWholePoints";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3896,9 +3652,7 @@ public partial class LineWrapLikeWord6 : OnOffType
     internal const int ElementTypeIdConst = 12006;
     /// <inheritdoc/>
     public override string LocalName => "lineWrapLikeWord6";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3925,9 +3679,7 @@ public partial class PrintBodyTextBeforeHeader : OnOffType
     internal const int ElementTypeIdConst = 12007;
     /// <inheritdoc/>
     public override string LocalName => "printBodyTextBeforeHeader";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3954,9 +3706,7 @@ public partial class PrintColorBlackWhite : OnOffType
     internal const int ElementTypeIdConst = 12008;
     /// <inheritdoc/>
     public override string LocalName => "printColBlack";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3983,9 +3733,7 @@ public partial class WordPerfectSpaceWidth : OnOffType
     internal const int ElementTypeIdConst = 12009;
     /// <inheritdoc/>
     public override string LocalName => "wpSpaceWidth";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4012,9 +3760,7 @@ public partial class ShowBreaksInFrames : OnOffType
     internal const int ElementTypeIdConst = 12010;
     /// <inheritdoc/>
     public override string LocalName => "showBreaksInFrames";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4041,9 +3787,7 @@ public partial class SubFontBySize : OnOffType
     internal const int ElementTypeIdConst = 12011;
     /// <inheritdoc/>
     public override string LocalName => "subFontBySize";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4070,9 +3814,7 @@ public partial class SuppressBottomSpacing : OnOffType
     internal const int ElementTypeIdConst = 12012;
     /// <inheritdoc/>
     public override string LocalName => "suppressBottomSpacing";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4099,9 +3841,7 @@ public partial class SuppressTopSpacing : OnOffType
     internal const int ElementTypeIdConst = 12013;
     /// <inheritdoc/>
     public override string LocalName => "suppressTopSpacing";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4128,9 +3868,7 @@ public partial class SuppressSpacingAtTopOfPage : OnOffType
     internal const int ElementTypeIdConst = 12014;
     /// <inheritdoc/>
     public override string LocalName => "suppressSpacingAtTopOfPage";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4157,9 +3895,7 @@ public partial class SuppressTopSpacingWordPerfect : OnOffType
     internal const int ElementTypeIdConst = 12015;
     /// <inheritdoc/>
     public override string LocalName => "suppressTopSpacingWP";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4186,9 +3922,7 @@ public partial class SuppressSpacingBeforeAfterPageBreak : OnOffType
     internal const int ElementTypeIdConst = 12016;
     /// <inheritdoc/>
     public override string LocalName => "suppressSpBfAfterPgBrk";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4215,9 +3949,7 @@ public partial class SwapBordersFacingPages : OnOffType
     internal const int ElementTypeIdConst = 12017;
     /// <inheritdoc/>
     public override string LocalName => "swapBordersFacingPages";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4244,9 +3976,7 @@ public partial class ConvertMailMergeEscape : OnOffType
     internal const int ElementTypeIdConst = 12018;
     /// <inheritdoc/>
     public override string LocalName => "convMailMergeEsc";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4273,9 +4003,7 @@ public partial class TruncateFontHeightsLikeWordPerfect : OnOffType
     internal const int ElementTypeIdConst = 12019;
     /// <inheritdoc/>
     public override string LocalName => "truncateFontHeightsLikeWP6";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4302,9 +4030,7 @@ public partial class MacWordSmallCaps : OnOffType
     internal const int ElementTypeIdConst = 12020;
     /// <inheritdoc/>
     public override string LocalName => "mwSmallCaps";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4331,9 +4057,7 @@ public partial class UsePrinterMetrics : OnOffType
     internal const int ElementTypeIdConst = 12021;
     /// <inheritdoc/>
     public override string LocalName => "usePrinterMetrics";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4360,9 +4084,7 @@ public partial class DoNotSuppressParagraphBorders : OnOffType
     internal const int ElementTypeIdConst = 12022;
     /// <inheritdoc/>
     public override string LocalName => "doNotSuppressParagraphBorders";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4389,9 +4111,7 @@ public partial class WrapTrailSpaces : OnOffType
     internal const int ElementTypeIdConst = 12023;
     /// <inheritdoc/>
     public override string LocalName => "wrapTrailSpaces";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4418,9 +4138,7 @@ public partial class FootnoteLayoutLikeWord8 : OnOffType
     internal const int ElementTypeIdConst = 12024;
     /// <inheritdoc/>
     public override string LocalName => "footnoteLayoutLikeWW8";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4447,9 +4165,7 @@ public partial class ShapeLayoutLikeWord8 : OnOffType
     internal const int ElementTypeIdConst = 12025;
     /// <inheritdoc/>
     public override string LocalName => "shapeLayoutLikeWW8";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4476,9 +4192,7 @@ public partial class AlignTablesRowByRow : OnOffType
     internal const int ElementTypeIdConst = 12026;
     /// <inheritdoc/>
     public override string LocalName => "alignTablesRowByRow";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4505,9 +4219,7 @@ public partial class ForgetLastTabAlignment : OnOffType
     internal const int ElementTypeIdConst = 12027;
     /// <inheritdoc/>
     public override string LocalName => "forgetLastTabAlignment";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4534,9 +4246,7 @@ public partial class AdjustLineHeightInTable : OnOffType
     internal const int ElementTypeIdConst = 12028;
     /// <inheritdoc/>
     public override string LocalName => "adjustLineHeightInTable";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4563,9 +4273,7 @@ public partial class AutoSpaceLikeWord95 : OnOffType
     internal const int ElementTypeIdConst = 12029;
     /// <inheritdoc/>
     public override string LocalName => "autoSpaceLikeWord95";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4592,9 +4300,7 @@ public partial class NoSpaceRaiseLower : OnOffType
     internal const int ElementTypeIdConst = 12030;
     /// <inheritdoc/>
     public override string LocalName => "noSpaceRaiseLower";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4621,9 +4327,7 @@ public partial class DoNotUseHTMLParagraphAutoSpacing : OnOffType
     internal const int ElementTypeIdConst = 12031;
     /// <inheritdoc/>
     public override string LocalName => "doNotUseHTMLParagraphAutoSpacing";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4650,9 +4354,7 @@ public partial class LayoutRawTableWidth : OnOffType
     internal const int ElementTypeIdConst = 12032;
     /// <inheritdoc/>
     public override string LocalName => "layoutRawTableWidth";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4679,9 +4381,7 @@ public partial class LayoutTableRowsApart : OnOffType
     internal const int ElementTypeIdConst = 12033;
     /// <inheritdoc/>
     public override string LocalName => "layoutTableRowsApart";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4708,9 +4408,7 @@ public partial class UseWord97LineBreakRules : OnOffType
     internal const int ElementTypeIdConst = 12034;
     /// <inheritdoc/>
     public override string LocalName => "useWord97LineBreakRules";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4737,9 +4435,7 @@ public partial class DoNotBreakWrappedTables : OnOffType
     internal const int ElementTypeIdConst = 12035;
     /// <inheritdoc/>
     public override string LocalName => "doNotBreakWrappedTables";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4766,9 +4462,7 @@ public partial class DoNotSnapToGridInCell : OnOffType
     internal const int ElementTypeIdConst = 12036;
     /// <inheritdoc/>
     public override string LocalName => "doNotSnapToGridInCell";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4795,9 +4489,7 @@ public partial class SelectFieldWithFirstOrLastChar : OnOffType
     internal const int ElementTypeIdConst = 12037;
     /// <inheritdoc/>
     public override string LocalName => "selectFldWithFirstOrLastChar";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4824,9 +4516,7 @@ public partial class ApplyBreakingRules : OnOffType
     internal const int ElementTypeIdConst = 12038;
     /// <inheritdoc/>
     public override string LocalName => "applyBreakingRules";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4853,9 +4543,7 @@ public partial class DoNotWrapTextWithPunctuation : OnOffType
     internal const int ElementTypeIdConst = 12039;
     /// <inheritdoc/>
     public override string LocalName => "doNotWrapTextWithPunct";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4882,9 +4570,7 @@ public partial class DoNotUseEastAsianBreakRules : OnOffType
     internal const int ElementTypeIdConst = 12040;
     /// <inheritdoc/>
     public override string LocalName => "doNotUseEastAsianBreakRules";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4911,9 +4597,7 @@ public partial class UseWord2002TableStyleRules : OnOffType
     internal const int ElementTypeIdConst = 12041;
     /// <inheritdoc/>
     public override string LocalName => "useWord2002TableStyleRules";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4940,9 +4624,7 @@ public partial class GrowAutofit : OnOffType
     internal const int ElementTypeIdConst = 12042;
     /// <inheritdoc/>
     public override string LocalName => "growAutofit";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4969,9 +4651,7 @@ public partial class UseFarEastLayout : OnOffType
     internal const int ElementTypeIdConst = 12043;
     /// <inheritdoc/>
     public override string LocalName => "useFELayout";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4998,9 +4678,7 @@ public partial class UseNormalStyleForList : OnOffType
     internal const int ElementTypeIdConst = 12044;
     /// <inheritdoc/>
     public override string LocalName => "useNormalStyleForList";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5027,9 +4705,7 @@ public partial class DoNotUseIndentAsNumberingTabStop : OnOffType
     internal const int ElementTypeIdConst = 12045;
     /// <inheritdoc/>
     public override string LocalName => "doNotUseIndentAsNumberingTabStop";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5056,9 +4732,7 @@ public partial class UseAltKinsokuLineBreakRules : OnOffType
     internal const int ElementTypeIdConst = 12046;
     /// <inheritdoc/>
     public override string LocalName => "useAltKinsokuLineBreakRules";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5085,9 +4759,7 @@ public partial class AllowSpaceOfSameStyleInTable : OnOffType
     internal const int ElementTypeIdConst = 12047;
     /// <inheritdoc/>
     public override string LocalName => "allowSpaceOfSameStyleInTable";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5114,9 +4786,7 @@ public partial class DoNotSuppressIndentation : OnOffType
     internal const int ElementTypeIdConst = 12048;
     /// <inheritdoc/>
     public override string LocalName => "doNotSuppressIndentation";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5143,9 +4813,7 @@ public partial class DoNotAutofitConstrainedTables : OnOffType
     internal const int ElementTypeIdConst = 12049;
     /// <inheritdoc/>
     public override string LocalName => "doNotAutofitConstrainedTables";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5172,9 +4840,7 @@ public partial class AutofitToFirstFixedWidthCell : OnOffType
     internal const int ElementTypeIdConst = 12050;
     /// <inheritdoc/>
     public override string LocalName => "autofitToFirstFixedWidthCell";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5201,9 +4867,7 @@ public partial class UnderlineTabInNumberingList : OnOffType
     internal const int ElementTypeIdConst = 12051;
     /// <inheritdoc/>
     public override string LocalName => "underlineTabInNumList";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5230,9 +4894,7 @@ public partial class DisplayHangulFixedWidth : OnOffType
     internal const int ElementTypeIdConst = 12052;
     /// <inheritdoc/>
     public override string LocalName => "displayHangulFixedWidth";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5259,9 +4921,7 @@ public partial class SplitPageBreakAndParagraphMark : OnOffType
     internal const int ElementTypeIdConst = 12053;
     /// <inheritdoc/>
     public override string LocalName => "splitPgBreakAndParaMark";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5288,9 +4948,7 @@ public partial class DoNotVerticallyAlignCellWithShape : OnOffType
     internal const int ElementTypeIdConst = 12054;
     /// <inheritdoc/>
     public override string LocalName => "doNotVertAlignCellWithSp";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5317,9 +4975,7 @@ public partial class DoNotBreakConstrainedForcedTable : OnOffType
     internal const int ElementTypeIdConst = 12055;
     /// <inheritdoc/>
     public override string LocalName => "doNotBreakConstrainedForcedTable";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5346,9 +5002,7 @@ public partial class DoNotVerticallyAlignInTextBox : OnOffType
     internal const int ElementTypeIdConst = 12056;
     /// <inheritdoc/>
     public override string LocalName => "doNotVertAlignInTxbx";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5375,9 +5029,7 @@ public partial class UseAnsiKerningPairs : OnOffType
     internal const int ElementTypeIdConst = 12057;
     /// <inheritdoc/>
     public override string LocalName => "useAnsiKerningPairs";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5404,9 +5056,7 @@ public partial class CachedColumnBalance : OnOffType
     internal const int ElementTypeIdConst = 12058;
     /// <inheritdoc/>
     public override string LocalName => "cachedColBalance";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5433,9 +5083,7 @@ public partial class ShowingPlaceholder : OnOffType
     internal const int ElementTypeIdConst = 12086;
     /// <inheritdoc/>
     public override string LocalName => "showingPlcHdr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5462,9 +5110,7 @@ public partial class TemporarySdt : OnOffType
     internal const int ElementTypeIdConst = 12088;
     /// <inheritdoc/>
     public override string LocalName => "temporary";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5491,9 +5137,7 @@ public partial class RemovePersonalInformation : OnOffType
     internal const int ElementTypeIdConst = 12106;
     /// <inheritdoc/>
     public override string LocalName => "removePersonalInformation";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5520,9 +5164,7 @@ public partial class RemoveDateAndTime : OnOffType
     internal const int ElementTypeIdConst = 12107;
     /// <inheritdoc/>
     public override string LocalName => "removeDateAndTime";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5549,9 +5191,7 @@ public partial class DoNotDisplayPageBoundaries : OnOffType
     internal const int ElementTypeIdConst = 12108;
     /// <inheritdoc/>
     public override string LocalName => "doNotDisplayPageBoundaries";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5578,9 +5218,7 @@ public partial class DisplayBackgroundShape : OnOffType
     internal const int ElementTypeIdConst = 12109;
     /// <inheritdoc/>
     public override string LocalName => "displayBackgroundShape";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5607,9 +5245,7 @@ public partial class PrintPostScriptOverText : OnOffType
     internal const int ElementTypeIdConst = 12110;
     /// <inheritdoc/>
     public override string LocalName => "printPostScriptOverText";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5636,9 +5272,7 @@ public partial class PrintFractionalCharacterWidth : OnOffType
     internal const int ElementTypeIdConst = 12111;
     /// <inheritdoc/>
     public override string LocalName => "printFractionalCharacterWidth";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5665,9 +5299,7 @@ public partial class PrintFormsData : OnOffType
     internal const int ElementTypeIdConst = 12112;
     /// <inheritdoc/>
     public override string LocalName => "printFormsData";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5694,9 +5326,7 @@ public partial class EmbedTrueTypeFonts : OnOffType
     internal const int ElementTypeIdConst = 12113;
     /// <inheritdoc/>
     public override string LocalName => "embedTrueTypeFonts";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5723,9 +5353,7 @@ public partial class EmbedSystemFonts : OnOffType
     internal const int ElementTypeIdConst = 12114;
     /// <inheritdoc/>
     public override string LocalName => "embedSystemFonts";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5752,9 +5380,7 @@ public partial class SaveSubsetFonts : OnOffType
     internal const int ElementTypeIdConst = 12115;
     /// <inheritdoc/>
     public override string LocalName => "saveSubsetFonts";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5781,9 +5407,7 @@ public partial class SaveFormsData : OnOffType
     internal const int ElementTypeIdConst = 12116;
     /// <inheritdoc/>
     public override string LocalName => "saveFormsData";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5810,9 +5434,7 @@ public partial class MirrorMargins : OnOffType
     internal const int ElementTypeIdConst = 12117;
     /// <inheritdoc/>
     public override string LocalName => "mirrorMargins";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5839,9 +5461,7 @@ public partial class AlignBorderAndEdges : OnOffType
     internal const int ElementTypeIdConst = 12118;
     /// <inheritdoc/>
     public override string LocalName => "alignBordersAndEdges";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5868,9 +5488,7 @@ public partial class BordersDoNotSurroundHeader : OnOffType
     internal const int ElementTypeIdConst = 12119;
     /// <inheritdoc/>
     public override string LocalName => "bordersDoNotSurroundHeader";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5897,9 +5515,7 @@ public partial class BordersDoNotSurroundFooter : OnOffType
     internal const int ElementTypeIdConst = 12120;
     /// <inheritdoc/>
     public override string LocalName => "bordersDoNotSurroundFooter";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5926,9 +5542,7 @@ public partial class GutterAtTop : OnOffType
     internal const int ElementTypeIdConst = 12121;
     /// <inheritdoc/>
     public override string LocalName => "gutterAtTop";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5955,9 +5569,7 @@ public partial class HideSpellingErrors : OnOffType
     internal const int ElementTypeIdConst = 12122;
     /// <inheritdoc/>
     public override string LocalName => "hideSpellingErrors";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5984,9 +5596,7 @@ public partial class HideGrammaticalErrors : OnOffType
     internal const int ElementTypeIdConst = 12123;
     /// <inheritdoc/>
     public override string LocalName => "hideGrammaticalErrors";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6013,9 +5623,7 @@ public partial class FormsDesign : OnOffType
     internal const int ElementTypeIdConst = 12126;
     /// <inheritdoc/>
     public override string LocalName => "formsDesign";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6042,9 +5650,7 @@ public partial class LinkStyles : OnOffType
     internal const int ElementTypeIdConst = 12128;
     /// <inheritdoc/>
     public override string LocalName => "linkStyles";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6071,9 +5677,7 @@ public partial class TrackRevisions : OnOffType
     internal const int ElementTypeIdConst = 12134;
     /// <inheritdoc/>
     public override string LocalName => "trackRevisions";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6100,9 +5704,7 @@ public partial class DoNotTrackMoves : OnOffType
     internal const int ElementTypeIdConst = 12135;
     /// <inheritdoc/>
     public override string LocalName => "doNotTrackMoves";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6129,9 +5731,7 @@ public partial class DoNotTrackFormatting : OnOffType
     internal const int ElementTypeIdConst = 12136;
     /// <inheritdoc/>
     public override string LocalName => "doNotTrackFormatting";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6158,9 +5758,7 @@ public partial class AutoFormatOverride : OnOffType
     internal const int ElementTypeIdConst = 12138;
     /// <inheritdoc/>
     public override string LocalName => "autoFormatOverride";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6187,9 +5785,7 @@ public partial class StyleLockThemesPart : OnOffType
     internal const int ElementTypeIdConst = 12139;
     /// <inheritdoc/>
     public override string LocalName => "styleLockTheme";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6216,9 +5812,7 @@ public partial class StyleLockStylesPart : OnOffType
     internal const int ElementTypeIdConst = 12140;
     /// <inheritdoc/>
     public override string LocalName => "styleLockQFSet";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6245,9 +5839,7 @@ public partial class AutoHyphenation : OnOffType
     internal const int ElementTypeIdConst = 12142;
     /// <inheritdoc/>
     public override string LocalName => "autoHyphenation";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6274,9 +5866,7 @@ public partial class DoNotHyphenateCaps : OnOffType
     internal const int ElementTypeIdConst = 12145;
     /// <inheritdoc/>
     public override string LocalName => "doNotHyphenateCaps";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6303,9 +5893,7 @@ public partial class ShowEnvelope : OnOffType
     internal const int ElementTypeIdConst = 12146;
     /// <inheritdoc/>
     public override string LocalName => "showEnvelope";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6332,9 +5920,7 @@ public partial class EvenAndOddHeaders : OnOffType
     internal const int ElementTypeIdConst = 12150;
     /// <inheritdoc/>
     public override string LocalName => "evenAndOddHeaders";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6361,9 +5947,7 @@ public partial class BookFoldReversePrinting : OnOffType
     internal const int ElementTypeIdConst = 12151;
     /// <inheritdoc/>
     public override string LocalName => "bookFoldRevPrinting";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6390,9 +5974,7 @@ public partial class BookFoldPrinting : OnOffType
     internal const int ElementTypeIdConst = 12152;
     /// <inheritdoc/>
     public override string LocalName => "bookFoldPrinting";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6419,9 +6001,7 @@ public partial class DoNotUseMarginsForDrawingGridOrigin : OnOffType
     internal const int ElementTypeIdConst = 12158;
     /// <inheritdoc/>
     public override string LocalName => "doNotUseMarginsForDrawingGridOrigin";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6448,9 +6028,7 @@ public partial class DoNotShadeFormData : OnOffType
     internal const int ElementTypeIdConst = 12161;
     /// <inheritdoc/>
     public override string LocalName => "doNotShadeFormData";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6477,9 +6055,7 @@ public partial class NoPunctuationKerning : OnOffType
     internal const int ElementTypeIdConst = 12162;
     /// <inheritdoc/>
     public override string LocalName => "noPunctuationKerning";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6506,9 +6082,7 @@ public partial class PrintTwoOnOne : OnOffType
     internal const int ElementTypeIdConst = 12164;
     /// <inheritdoc/>
     public override string LocalName => "printTwoOnOne";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6535,9 +6109,7 @@ public partial class StrictFirstAndLastChars : OnOffType
     internal const int ElementTypeIdConst = 12165;
     /// <inheritdoc/>
     public override string LocalName => "strictFirstAndLastChars";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6564,9 +6136,7 @@ public partial class SavePreviewPicture : OnOffType
     internal const int ElementTypeIdConst = 12168;
     /// <inheritdoc/>
     public override string LocalName => "savePreviewPicture";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6593,9 +6163,7 @@ public partial class DoNotValidateAgainstSchema : OnOffType
     internal const int ElementTypeIdConst = 12169;
     /// <inheritdoc/>
     public override string LocalName => "doNotValidateAgainstSchema";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6622,9 +6190,7 @@ public partial class SaveInvalidXml : OnOffType
     internal const int ElementTypeIdConst = 12170;
     /// <inheritdoc/>
     public override string LocalName => "saveInvalidXml";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6651,9 +6217,7 @@ public partial class IgnoreMixedContent : OnOffType
     internal const int ElementTypeIdConst = 12171;
     /// <inheritdoc/>
     public override string LocalName => "ignoreMixedContent";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6680,9 +6244,7 @@ public partial class AlwaysShowPlaceholderText : OnOffType
     internal const int ElementTypeIdConst = 12172;
     /// <inheritdoc/>
     public override string LocalName => "alwaysShowPlaceholderText";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6709,9 +6271,7 @@ public partial class DoNotDemarcateInvalidXml : OnOffType
     internal const int ElementTypeIdConst = 12173;
     /// <inheritdoc/>
     public override string LocalName => "doNotDemarcateInvalidXml";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6738,9 +6298,7 @@ public partial class SaveXmlDataOnly : OnOffType
     internal const int ElementTypeIdConst = 12174;
     /// <inheritdoc/>
     public override string LocalName => "saveXmlDataOnly";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6767,9 +6325,7 @@ public partial class UseXsltWhenSaving : OnOffType
     internal const int ElementTypeIdConst = 12175;
     /// <inheritdoc/>
     public override string LocalName => "useXSLTWhenSaving";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6796,9 +6352,7 @@ public partial class ShowXmlTags : OnOffType
     internal const int ElementTypeIdConst = 12177;
     /// <inheritdoc/>
     public override string LocalName => "showXMLTags";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6825,9 +6379,7 @@ public partial class AlwaysMergeEmptyNamespace : OnOffType
     internal const int ElementTypeIdConst = 12178;
     /// <inheritdoc/>
     public override string LocalName => "alwaysMergeEmptyNamespace";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6854,9 +6406,7 @@ public partial class UpdateFieldsOnOpen : OnOffType
     internal const int ElementTypeIdConst = 12179;
     /// <inheritdoc/>
     public override string LocalName => "updateFields";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6883,9 +6433,7 @@ public partial class UICompatibleWith97To2003 : OnOffType
     internal const int ElementTypeIdConst = 12186;
     /// <inheritdoc/>
     public override string LocalName => "uiCompat97To2003";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6912,9 +6460,7 @@ public partial class DoNotIncludeSubdocsInStats : OnOffType
     internal const int ElementTypeIdConst = 12190;
     /// <inheritdoc/>
     public override string LocalName => "doNotIncludeSubdocsInStats";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6941,9 +6487,7 @@ public partial class DoNotAutoCompressPictures : OnOffType
     internal const int ElementTypeIdConst = 12191;
     /// <inheritdoc/>
     public override string LocalName => "doNotAutoCompressPictures";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6970,9 +6514,7 @@ public partial class OptimizeForBrowser : OnOffType
     internal const int ElementTypeIdConst = 12200;
     /// <inheritdoc/>
     public override string LocalName => "optimizeForBrowser";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6999,9 +6541,7 @@ public partial class RelyOnVML : OnOffType
     internal const int ElementTypeIdConst = 12201;
     /// <inheritdoc/>
     public override string LocalName => "relyOnVML";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7028,9 +6568,7 @@ public partial class AllowPNG : OnOffType
     internal const int ElementTypeIdConst = 12202;
     /// <inheritdoc/>
     public override string LocalName => "allowPNG";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7057,9 +6595,7 @@ public partial class DoNotRelyOnCSS : OnOffType
     internal const int ElementTypeIdConst = 12203;
     /// <inheritdoc/>
     public override string LocalName => "doNotRelyOnCSS";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7086,9 +6622,7 @@ public partial class DoNotSaveAsSingleFile : OnOffType
     internal const int ElementTypeIdConst = 12204;
     /// <inheritdoc/>
     public override string LocalName => "doNotSaveAsSingleFile";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7115,9 +6649,7 @@ public partial class DoNotOrganizeInFolder : OnOffType
     internal const int ElementTypeIdConst = 12205;
     /// <inheritdoc/>
     public override string LocalName => "doNotOrganizeInFolder";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7144,9 +6676,7 @@ public partial class DoNotUseLongFileNames : OnOffType
     internal const int ElementTypeIdConst = 12206;
     /// <inheritdoc/>
     public override string LocalName => "doNotUseLongFileNames";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7173,9 +6703,7 @@ public partial class NotTrueType : OnOffType
     internal const int ElementTypeIdConst = 12214;
     /// <inheritdoc/>
     public override string LocalName => "notTrueType";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7204,7 +6732,7 @@ public abstract partial class OnOffType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public OnOffValue Val { get; set; }
 
     
@@ -7231,9 +6759,7 @@ public partial class FrameProperties : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11560;
     /// <inheritdoc/>
     public override string LocalName => "framePr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7246,7 +6772,7 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "dropCap")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DropCapLocationValues> DropCap { get; set; }
     /// <summary>
     /// <para> Drop Cap Vertical Height in Lines.</para>
@@ -7255,7 +6781,7 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "lines")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public Int32Value Lines { get; set; }
     /// <summary>
     /// <para> Frame Width.</para>
@@ -7264,7 +6790,7 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "w")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Width { get; set; }
     /// <summary>
     /// <para> Frame Height.</para>
@@ -7273,7 +6799,7 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "h")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public UInt32Value Height { get; set; }
     /// <summary>
     /// <para> Vertical Frame Padding.</para>
@@ -7282,7 +6808,7 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "vSpace")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public StringValue VerticalSpace { get; set; }
     /// <summary>
     /// <para> Horizontal Frame Padding.</para>
@@ -7291,7 +6817,7 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "hSpace")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public StringValue HorizontalSpace { get; set; }
     /// <summary>
     /// <para> Text Wrapping Around Frame.</para>
@@ -7300,7 +6826,7 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "wrap")]
-    [SchemaIndex(6)]
+	[SchemaIndex(6)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextWrappingValues> Wrap { get; set; }
     /// <summary>
     /// <para> Frame Horizontal Positioning Base.</para>
@@ -7309,7 +6835,7 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "hAnchor")]
-    [SchemaIndex(7)]
+	[SchemaIndex(7)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues> HorizontalPosition { get; set; }
     /// <summary>
     /// <para> Frame Vertical Positioning Base.</para>
@@ -7318,7 +6844,7 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "vAnchor")]
-    [SchemaIndex(8)]
+	[SchemaIndex(8)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues> VerticalPosition { get; set; }
     /// <summary>
     /// <para> Absolute Horizontal Position.</para>
@@ -7327,7 +6853,7 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "x")]
-    [SchemaIndex(9)]
+	[SchemaIndex(9)]
     public StringValue X { get; set; }
     /// <summary>
     /// <para> Relative Horizontal Position.</para>
@@ -7336,7 +6862,7 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "xAlign")]
-    [SchemaIndex(10)]
+	[SchemaIndex(10)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues> XAlign { get; set; }
     /// <summary>
     /// <para> Absolute Vertical Position.</para>
@@ -7345,7 +6871,7 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "y")]
-    [SchemaIndex(11)]
+	[SchemaIndex(11)]
     public StringValue Y { get; set; }
     /// <summary>
     /// <para> Relative Vertical Position.</para>
@@ -7354,7 +6880,7 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "yAlign")]
-    [SchemaIndex(12)]
+	[SchemaIndex(12)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues> YAlign { get; set; }
     /// <summary>
     /// <para> Frame Height Type.</para>
@@ -7363,7 +6889,7 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "hRule")]
-    [SchemaIndex(13)]
+	[SchemaIndex(13)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues> HeightType { get; set; }
     /// <summary>
     /// <para> Lock Frame Anchor to Paragraph.</para>
@@ -7372,7 +6898,7 @@ public partial class FrameProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "anchorLock")]
-    [SchemaIndex(14)]
+	[SchemaIndex(14)]
     public OnOffValue AnchorLock { get; set; }
 
     /// <summary>
@@ -7415,9 +6941,7 @@ public partial class NumberingProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11562;
     /// <inheritdoc/>
     public override string LocalName => "numPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7568,9 +7092,7 @@ public partial class ParagraphBorders : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11564;
     /// <inheritdoc/>
     public override string LocalName => "pBdr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7734,9 +7256,7 @@ public partial class Shading : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11565;
     /// <inheritdoc/>
     public override string LocalName => "shd";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7749,7 +7269,7 @@ public partial class Shading : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ShadingPatternValues> Val { get; set; }
     /// <summary>
     /// <para> Shading Pattern Color.</para>
@@ -7758,7 +7278,7 @@ public partial class Shading : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "color")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Color { get; set; }
     /// <summary>
     /// <para> Shading Pattern Theme Color.</para>
@@ -7767,7 +7287,7 @@ public partial class Shading : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeColor")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get; set; }
     /// <summary>
     /// <para> Shading Pattern Theme Color Tint.</para>
@@ -7776,7 +7296,7 @@ public partial class Shading : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeTint")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public StringValue ThemeTint { get; set; }
     /// <summary>
     /// <para> Shading Pattern Theme Color Shade.</para>
@@ -7785,7 +7305,7 @@ public partial class Shading : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeShade")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public StringValue ThemeShade { get; set; }
     /// <summary>
     /// <para> Shading Background Color.</para>
@@ -7794,7 +7314,7 @@ public partial class Shading : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "fill")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public StringValue Fill { get; set; }
     /// <summary>
     /// <para> Shading Background Theme Color.</para>
@@ -7803,7 +7323,7 @@ public partial class Shading : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeFill")]
-    [SchemaIndex(6)]
+	[SchemaIndex(6)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeFill { get; set; }
     /// <summary>
     /// <para> Shading Background Theme Color Tint.</para>
@@ -7812,7 +7332,7 @@ public partial class Shading : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeFillTint")]
-    [SchemaIndex(7)]
+	[SchemaIndex(7)]
     public StringValue ThemeFillTint { get; set; }
     /// <summary>
     /// <para> Shading Background Theme Color Shade.</para>
@@ -7821,7 +7341,7 @@ public partial class Shading : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeFillShade")]
-    [SchemaIndex(8)]
+	[SchemaIndex(8)]
     public StringValue ThemeFillShade { get; set; }
 
     /// <summary>
@@ -7858,9 +7378,7 @@ public partial class Tabs : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11566;
     /// <inheritdoc/>
     public override string LocalName => "tabs";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7928,9 +7446,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11577;
     /// <inheritdoc/>
     public override string LocalName => "spacing";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7943,7 +7459,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "before")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Before { get; set; }
     /// <summary>
     /// <para> Spacing Above Paragraph IN Line Units.</para>
@@ -7952,7 +7468,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "beforeLines")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public Int32Value BeforeLines { get; set; }
     /// <summary>
     /// <para> Automatically Determine Spacing Above Paragraph.</para>
@@ -7961,7 +7477,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "beforeAutospacing")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public OnOffValue BeforeAutoSpacing { get; set; }
     /// <summary>
     /// <para> Spacing Below Paragraph.</para>
@@ -7970,7 +7486,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "after")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public StringValue After { get; set; }
     /// <summary>
     /// <para> Spacing Below Paragraph in Line Units.</para>
@@ -7979,7 +7495,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "afterLines")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public Int32Value AfterLines { get; set; }
     /// <summary>
     /// <para> Automatically Determine Spacing Below Paragraph.</para>
@@ -7988,7 +7504,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "afterAutospacing")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public OnOffValue AfterAutoSpacing { get; set; }
     /// <summary>
     /// <para> Spacing Between Lines in Paragraph.</para>
@@ -7997,7 +7513,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "line")]
-    [SchemaIndex(6)]
+	[SchemaIndex(6)]
     public StringValue Line { get; set; }
     /// <summary>
     /// <para> Type of Spacing Between Lines.</para>
@@ -8006,7 +7522,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "lineRule")]
-    [SchemaIndex(7)]
+	[SchemaIndex(7)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineSpacingRuleValues> LineRule { get; set; }
 
     /// <summary>
@@ -8036,9 +7552,7 @@ public partial class Indentation : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11578;
     /// <inheritdoc/>
     public override string LocalName => "ind";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8051,7 +7565,7 @@ public partial class Indentation : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "left")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Left { get; set; }
     /// <summary>
     /// <para> start.</para>
@@ -8060,7 +7574,7 @@ public partial class Indentation : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "start")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Start { get; set; }
     /// <summary>
     /// <para> Left Indentation in Character Units.</para>
@@ -8069,7 +7583,7 @@ public partial class Indentation : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "leftChars")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public Int32Value LeftChars { get; set; }
     /// <summary>
     /// <para> startChars.</para>
@@ -8078,7 +7592,7 @@ public partial class Indentation : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "startChars")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public Int32Value StartCharacters { get; set; }
     /// <summary>
     /// <para> Right Indentation.</para>
@@ -8087,7 +7601,7 @@ public partial class Indentation : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "right")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public StringValue Right { get; set; }
     /// <summary>
     /// <para> end.</para>
@@ -8096,7 +7610,7 @@ public partial class Indentation : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "end")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public StringValue End { get; set; }
     /// <summary>
     /// <para> Right Indentation in Character Units.</para>
@@ -8105,7 +7619,7 @@ public partial class Indentation : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rightChars")]
-    [SchemaIndex(6)]
+	[SchemaIndex(6)]
     public Int32Value RightChars { get; set; }
     /// <summary>
     /// <para> endChars.</para>
@@ -8114,7 +7628,7 @@ public partial class Indentation : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "endChars")]
-    [SchemaIndex(7)]
+	[SchemaIndex(7)]
     public Int32Value EndCharacters { get; set; }
     /// <summary>
     /// <para> Indentation Removed from First Line.</para>
@@ -8123,7 +7637,7 @@ public partial class Indentation : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "hanging")]
-    [SchemaIndex(8)]
+	[SchemaIndex(8)]
     public StringValue Hanging { get; set; }
     /// <summary>
     /// <para> Indentation Removed From First Line in Character Units.</para>
@@ -8132,7 +7646,7 @@ public partial class Indentation : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "hangingChars")]
-    [SchemaIndex(9)]
+	[SchemaIndex(9)]
     public Int32Value HangingChars { get; set; }
     /// <summary>
     /// <para> Additional First Line Indentation.</para>
@@ -8141,7 +7655,7 @@ public partial class Indentation : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "firstLine")]
-    [SchemaIndex(10)]
+	[SchemaIndex(10)]
     public StringValue FirstLine { get; set; }
     /// <summary>
     /// <para> Additional First Line Indentation in Character Units.</para>
@@ -8150,7 +7664,7 @@ public partial class Indentation : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "firstLineChars")]
-    [SchemaIndex(11)]
+	[SchemaIndex(11)]
     public Int32Value FirstLineChars { get; set; }
 
     /// <summary>
@@ -8180,9 +7694,7 @@ public partial class Justification : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11582;
     /// <inheritdoc/>
     public override string LocalName => "jc";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8195,7 +7707,7 @@ public partial class Justification : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.JustificationValues> Val { get; set; }
 
     /// <summary>
@@ -8225,9 +7737,7 @@ public partial class TextDirection : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11583;
     /// <inheritdoc/>
     public override string LocalName => "textDirection";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8240,7 +7750,7 @@ public partial class TextDirection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextDirectionValues> Val { get; set; }
 
     /// <summary>
@@ -8270,9 +7780,7 @@ public partial class TextAlignment : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11584;
     /// <inheritdoc/>
     public override string LocalName => "textAlignment";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8285,7 +7793,7 @@ public partial class TextAlignment : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalTextAlignmentValues> Val { get; set; }
 
     /// <summary>
@@ -8315,9 +7823,7 @@ public partial class TextBoxTightWrap : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11585;
     /// <inheritdoc/>
     public override string LocalName => "textboxTightWrap";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8330,7 +7836,7 @@ public partial class TextBoxTightWrap : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxTightWrapValues> Val { get; set; }
 
     /// <summary>
@@ -8360,9 +7866,7 @@ public partial class OutlineLevel : DecimalNumberType
     internal const int ElementTypeIdConst = 11586;
     /// <inheritdoc/>
     public override string LocalName => "outlineLvl";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8389,9 +7893,7 @@ public partial class GridSpan : DecimalNumberType
     internal const int ElementTypeIdConst = 11697;
     /// <inheritdoc/>
     public override string LocalName => "gridSpan";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8418,9 +7920,7 @@ public partial class GridBefore : DecimalNumberType
     internal const int ElementTypeIdConst = 11707;
     /// <inheritdoc/>
     public override string LocalName => "gridBefore";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8447,9 +7947,7 @@ public partial class GridAfter : DecimalNumberType
     internal const int ElementTypeIdConst = 11708;
     /// <inheritdoc/>
     public override string LocalName => "gridAfter";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8476,9 +7974,7 @@ public partial class DropDownListSelection : DecimalNumberType
     internal const int ElementTypeIdConst = 11803;
     /// <inheritdoc/>
     public override string LocalName => "result";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8505,9 +8001,7 @@ public partial class ActiveRecord : DecimalNumberType
     internal const int ElementTypeIdConst = 11886;
     /// <inheritdoc/>
     public override string LocalName => "activeRecord";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8534,9 +8028,7 @@ public partial class CheckErrors : DecimalNumberType
     internal const int ElementTypeIdConst = 11887;
     /// <inheritdoc/>
     public override string LocalName => "checkErrors";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8563,9 +8055,7 @@ public partial class LevelRestart : DecimalNumberType
     internal const int ElementTypeIdConst = 11912;
     /// <inheritdoc/>
     public override string LocalName => "lvlRestart";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8592,9 +8082,7 @@ public partial class LevelPictureBulletId : DecimalNumberType
     internal const int ElementTypeIdConst = 11917;
     /// <inheritdoc/>
     public override string LocalName => "lvlPicBulletId";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8621,9 +8109,7 @@ public partial class StartOverrideNumberingValue : DecimalNumberType
     internal const int ElementTypeIdConst = 11929;
     /// <inheritdoc/>
     public override string LocalName => "startOverride";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8650,9 +8136,7 @@ public partial class NumberingIdMacAtCleanup : DecimalNumberType
     internal const int ElementTypeIdConst = 11935;
     /// <inheritdoc/>
     public override string LocalName => "numIdMacAtCleanup";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8679,9 +8163,7 @@ public partial class SdtId : DecimalNumberType
     internal const int ElementTypeIdConst = 12089;
     /// <inheritdoc/>
     public override string LocalName => "id";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8708,9 +8190,7 @@ public partial class PixelsPerInch : DecimalNumberType
     internal const int ElementTypeIdConst = 12207;
     /// <inheritdoc/>
     public override string LocalName => "pixelsPerInch";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8739,7 +8219,7 @@ public abstract partial class DecimalNumberType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int32Value Val { get; set; }
 
     
@@ -8773,9 +8253,7 @@ public partial class ParagraphPropertiesChange : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11587;
     /// <inheritdoc/>
     public override string LocalName => "pPrChange";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8788,7 +8266,7 @@ public partial class ParagraphPropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -8797,7 +8275,7 @@ public partial class ParagraphPropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -8806,7 +8284,7 @@ public partial class ParagraphPropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -8891,9 +8369,7 @@ public partial class HeaderReference : HeaderFooterReferenceType
     internal const int ElementTypeIdConst = 11588;
     /// <inheritdoc/>
     public override string LocalName => "headerReference";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8920,9 +8396,7 @@ public partial class FooterReference : HeaderFooterReferenceType
     internal const int ElementTypeIdConst = 11589;
     /// <inheritdoc/>
     public override string LocalName => "footerReference";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8951,7 +8425,7 @@ public abstract partial class HeaderFooterReferenceType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "type")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeaderFooterValues> Type { get; set; }
     /// <summary>
     /// <para> Relationship to Part.</para>
@@ -8960,7 +8434,7 @@ public abstract partial class HeaderFooterReferenceType : OpenXmlLeafElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Id { get; set; }
 
     
@@ -8987,9 +8461,7 @@ public partial class Break : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11590;
     /// <inheritdoc/>
     public override string LocalName => "br";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9002,7 +8474,7 @@ public partial class Break : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "type")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakValues> Type { get; set; }
     /// <summary>
     /// <para> Restart Location For Text Wrapping Break.</para>
@@ -9011,7 +8483,7 @@ public partial class Break : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "clear")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BreakTextRestartLocationValues> Clear { get; set; }
 
     /// <summary>
@@ -9041,9 +8513,7 @@ public partial class Text : TextType
     internal const int ElementTypeIdConst = 11591;
     /// <inheritdoc/>
     public override string LocalName => "t";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9083,9 +8553,7 @@ public partial class DeletedText : TextType
     internal const int ElementTypeIdConst = 11592;
     /// <inheritdoc/>
     public override string LocalName => "delText";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9125,9 +8593,7 @@ public partial class FieldCode : TextType
     internal const int ElementTypeIdConst = 11593;
     /// <inheritdoc/>
     public override string LocalName => "instrText";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9167,9 +8633,7 @@ public partial class DeletedFieldCode : TextType
     internal const int ElementTypeIdConst = 11594;
     /// <inheritdoc/>
     public override string LocalName => "delInstrText";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9211,7 +8675,7 @@ public abstract partial class TextType : OpenXmlLeafTextElement
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
     [SchemaAttr(1, "space")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space { get; set; }
 
     
@@ -9251,9 +8715,7 @@ public partial class NoBreakHyphen : EmptyType
     internal const int ElementTypeIdConst = 11595;
     /// <inheritdoc/>
     public override string LocalName => "noBreakHyphen";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9280,9 +8742,7 @@ public partial class SoftHyphen : EmptyType
     internal const int ElementTypeIdConst = 11596;
     /// <inheritdoc/>
     public override string LocalName => "softHyphen";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9309,9 +8769,7 @@ public partial class DayShort : EmptyType
     internal const int ElementTypeIdConst = 11597;
     /// <inheritdoc/>
     public override string LocalName => "dayShort";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9338,9 +8796,7 @@ public partial class MonthShort : EmptyType
     internal const int ElementTypeIdConst = 11598;
     /// <inheritdoc/>
     public override string LocalName => "monthShort";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9367,9 +8823,7 @@ public partial class YearShort : EmptyType
     internal const int ElementTypeIdConst = 11599;
     /// <inheritdoc/>
     public override string LocalName => "yearShort";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9396,9 +8850,7 @@ public partial class DayLong : EmptyType
     internal const int ElementTypeIdConst = 11600;
     /// <inheritdoc/>
     public override string LocalName => "dayLong";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9425,9 +8877,7 @@ public partial class MonthLong : EmptyType
     internal const int ElementTypeIdConst = 11601;
     /// <inheritdoc/>
     public override string LocalName => "monthLong";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9454,9 +8904,7 @@ public partial class YearLong : EmptyType
     internal const int ElementTypeIdConst = 11602;
     /// <inheritdoc/>
     public override string LocalName => "yearLong";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9483,9 +8931,7 @@ public partial class AnnotationReferenceMark : EmptyType
     internal const int ElementTypeIdConst = 11603;
     /// <inheritdoc/>
     public override string LocalName => "annotationRef";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9512,9 +8958,7 @@ public partial class FootnoteReferenceMark : EmptyType
     internal const int ElementTypeIdConst = 11604;
     /// <inheritdoc/>
     public override string LocalName => "footnoteRef";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9541,9 +8985,7 @@ public partial class EndnoteReferenceMark : EmptyType
     internal const int ElementTypeIdConst = 11605;
     /// <inheritdoc/>
     public override string LocalName => "endnoteRef";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9570,9 +9012,7 @@ public partial class SeparatorMark : EmptyType
     internal const int ElementTypeIdConst = 11606;
     /// <inheritdoc/>
     public override string LocalName => "separator";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9599,9 +9039,7 @@ public partial class ContinuationSeparatorMark : EmptyType
     internal const int ElementTypeIdConst = 11607;
     /// <inheritdoc/>
     public override string LocalName => "continuationSeparator";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9628,9 +9066,7 @@ public partial class PageNumber : EmptyType
     internal const int ElementTypeIdConst = 11609;
     /// <inheritdoc/>
     public override string LocalName => "pgNum";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9657,9 +9093,7 @@ public partial class CarriageReturn : EmptyType
     internal const int ElementTypeIdConst = 11610;
     /// <inheritdoc/>
     public override string LocalName => "cr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9686,9 +9120,7 @@ public partial class TabChar : EmptyType
     internal const int ElementTypeIdConst = 11611;
     /// <inheritdoc/>
     public override string LocalName => "tab";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9715,9 +9147,7 @@ public partial class LastRenderedPageBreak : EmptyType
     internal const int ElementTypeIdConst = 11621;
     /// <inheritdoc/>
     public override string LocalName => "lastRenderedPageBreak";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9744,9 +9174,7 @@ public partial class SdtContentEquation : EmptyType
     internal const int ElementTypeIdConst = 12091;
     /// <inheritdoc/>
     public override string LocalName => "equation";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9773,9 +9201,7 @@ public partial class SdtContentPicture : EmptyType
     internal const int ElementTypeIdConst = 12097;
     /// <inheritdoc/>
     public override string LocalName => "picture";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9802,9 +9228,7 @@ public partial class SdtContentRichText : EmptyType
     internal const int ElementTypeIdConst = 12098;
     /// <inheritdoc/>
     public override string LocalName => "richText";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9831,9 +9255,7 @@ public partial class SdtContentCitation : EmptyType
     internal const int ElementTypeIdConst = 12100;
     /// <inheritdoc/>
     public override string LocalName => "citation";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9860,9 +9282,7 @@ public partial class SdtContentGroup : EmptyType
     internal const int ElementTypeIdConst = 12101;
     /// <inheritdoc/>
     public override string LocalName => "group";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9889,9 +9309,7 @@ public partial class SdtContentBibliography : EmptyType
     internal const int ElementTypeIdConst = 12102;
     /// <inheritdoc/>
     public override string LocalName => "bibliography";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9918,9 +9336,7 @@ public partial class ForceUpgrade : EmptyType
     internal const int ElementTypeIdConst = 12192;
     /// <inheritdoc/>
     public override string LocalName => "forceUpgrade";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9967,9 +9383,7 @@ public partial class SymbolChar : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11608;
     /// <inheritdoc/>
     public override string LocalName => "sym";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -9982,7 +9396,7 @@ public partial class SymbolChar : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "font")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Font { get; set; }
     /// <summary>
     /// <para> Symbol Character Code.</para>
@@ -9991,7 +9405,7 @@ public partial class SymbolChar : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "char")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public HexBinaryValue Char { get; set; }
 
     /// <summary>
@@ -10058,9 +9472,7 @@ public partial class EmbeddedObject : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11612;
     /// <inheritdoc/>
     public override string LocalName => "object";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -10073,7 +9485,7 @@ public partial class EmbeddedObject : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "dxaOrig")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue DxaOriginal { get; set; }
     /// <summary>
     /// <para> dyaOrig.</para>
@@ -10082,7 +9494,7 @@ public partial class EmbeddedObject : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "dyaOrig")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue DyaOriginal { get; set; }
     /// <summary>
     /// <para> anchorId.</para>
@@ -10091,7 +9503,7 @@ public partial class EmbeddedObject : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "anchorId")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public HexBinaryValue AnchorId { get; set; }
 
     /// <summary>
@@ -10233,9 +9645,7 @@ public partial class Picture : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11613;
     /// <inheritdoc/>
     public override string LocalName => "pict";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -10248,7 +9658,7 @@ public partial class Picture : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "anchorId")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public HexBinaryValue AnchorId { get; set; }
 
     /// <summary>
@@ -10362,9 +9772,7 @@ public partial class FieldChar : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11614;
     /// <inheritdoc/>
     public override string LocalName => "fldChar";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -10377,7 +9785,7 @@ public partial class FieldChar : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "fldCharType")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FieldCharValues> FieldCharType { get; set; }
     /// <summary>
     /// <para> Field Should Not Be Recalculated.</para>
@@ -10386,7 +9794,7 @@ public partial class FieldChar : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "fldLock")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public OnOffValue FieldLock { get; set; }
     /// <summary>
     /// <para> Field Result Invalidated.</para>
@@ -10395,7 +9803,7 @@ public partial class FieldChar : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "dirty")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public OnOffValue Dirty { get; set; }
 
     /// <summary>
@@ -10521,9 +9929,7 @@ public partial class Ruby : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11615;
     /// <inheritdoc/>
     public override string LocalName => "ruby";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -10642,9 +10048,7 @@ public partial class FootnoteReference : FootnoteEndnoteReferenceType
     internal const int ElementTypeIdConst = 11616;
     /// <inheritdoc/>
     public override string LocalName => "footnoteReference";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -10671,9 +10075,7 @@ public partial class EndnoteReference : FootnoteEndnoteReferenceType
     internal const int ElementTypeIdConst = 11617;
     /// <inheritdoc/>
     public override string LocalName => "endnoteReference";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -10702,7 +10104,7 @@ public abstract partial class FootnoteEndnoteReferenceType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "customMarkFollows")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public OnOffValue CustomMarkFollows { get; set; }
     /// <summary>
     /// <para> Footnote/Endnote ID Reference.</para>
@@ -10711,7 +10113,7 @@ public abstract partial class FootnoteEndnoteReferenceType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public IntegerValue Id { get; set; }
 
     
@@ -10747,9 +10149,7 @@ public partial class Drawing : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11619;
     /// <inheritdoc/>
     public override string LocalName => "drawing";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -10853,9 +10253,7 @@ public partial class PositionalTab : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11620;
     /// <inheritdoc/>
     public override string LocalName => "ptab";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -10868,7 +10266,7 @@ public partial class PositionalTab : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "alignment")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabAlignmentValues> Alignment { get; set; }
     /// <summary>
     /// <para> Positional Tab Base.</para>
@@ -10877,7 +10275,7 @@ public partial class PositionalTab : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "relativeTo")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabPositioningBaseValues> RelativeTo { get; set; }
     /// <summary>
     /// <para> Tab Leader Character.</para>
@@ -10886,7 +10284,7 @@ public partial class PositionalTab : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "leader")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.AbsolutePositionTabLeaderCharValues> Leader { get; set; }
 
     /// <summary>
@@ -10916,9 +10314,7 @@ public partial class RunStyle : String253Type
     internal const int ElementTypeIdConst = 11622;
     /// <inheritdoc/>
     public override string LocalName => "rStyle";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -10945,9 +10341,7 @@ public partial class TableStyle : String253Type
     internal const int ElementTypeIdConst = 11717;
     /// <inheritdoc/>
     public override string LocalName => "tblStyle";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -10974,9 +10368,7 @@ public partial class ParagraphStyleIdInLevel : String253Type
     internal const int ElementTypeIdConst = 11913;
     /// <inheritdoc/>
     public override string LocalName => "pStyle";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11003,9 +10395,7 @@ public partial class AbstractNumDefinitionName : String253Type
     internal const int ElementTypeIdConst = 11925;
     /// <inheritdoc/>
     public override string LocalName => "name";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11032,9 +10422,7 @@ public partial class StyleLink : String253Type
     internal const int ElementTypeIdConst = 11926;
     /// <inheritdoc/>
     public override string LocalName => "styleLink";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11061,9 +10449,7 @@ public partial class NumberingStyleLink : String253Type
     internal const int ElementTypeIdConst = 11927;
     /// <inheritdoc/>
     public override string LocalName => "numStyleLink";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11090,9 +10476,7 @@ public partial class Aliases : String253Type
     internal const int ElementTypeIdConst = 11941;
     /// <inheritdoc/>
     public override string LocalName => "aliases";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11119,9 +10503,7 @@ public partial class BasedOn : String253Type
     internal const int ElementTypeIdConst = 11942;
     /// <inheritdoc/>
     public override string LocalName => "basedOn";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11148,9 +10530,7 @@ public partial class NextParagraphStyle : String253Type
     internal const int ElementTypeIdConst = 11943;
     /// <inheritdoc/>
     public override string LocalName => "next";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11177,9 +10557,7 @@ public partial class LinkedStyle : String253Type
     internal const int ElementTypeIdConst = 11944;
     /// <inheritdoc/>
     public override string LocalName => "link";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11206,9 +10584,7 @@ public partial class ClickAndTypeStyle : String253Type
     internal const int ElementTypeIdConst = 12148;
     /// <inheritdoc/>
     public override string LocalName => "clickAndTypeStyle";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11235,9 +10611,7 @@ public partial class DefaultTableStyle : String253Type
     internal const int ElementTypeIdConst = 12149;
     /// <inheritdoc/>
     public override string LocalName => "defaultTableStyle";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11266,7 +10640,7 @@ public abstract partial class String253Type : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
 
     
@@ -11293,9 +10667,7 @@ public partial class RunFonts : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11623;
     /// <inheritdoc/>
     public override string LocalName => "rFonts";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11308,7 +10680,7 @@ public partial class RunFonts : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "hint")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontTypeHintValues> Hint { get; set; }
     /// <summary>
     /// <para> ASCII Font.</para>
@@ -11317,7 +10689,7 @@ public partial class RunFonts : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "ascii")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Ascii { get; set; }
     /// <summary>
     /// <para> High ANSI Font.</para>
@@ -11326,7 +10698,7 @@ public partial class RunFonts : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "hAnsi")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue HighAnsi { get; set; }
     /// <summary>
     /// <para> East Asian Font.</para>
@@ -11335,7 +10707,7 @@ public partial class RunFonts : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "eastAsia")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public StringValue EastAsia { get; set; }
     /// <summary>
     /// <para> Complex Script Font.</para>
@@ -11344,7 +10716,7 @@ public partial class RunFonts : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "cs")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public StringValue ComplexScript { get; set; }
     /// <summary>
     /// <para> ASCII Theme Font.</para>
@@ -11353,7 +10725,7 @@ public partial class RunFonts : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "asciiTheme")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> AsciiTheme { get; set; }
     /// <summary>
     /// <para> High ANSI Theme Font.</para>
@@ -11362,7 +10734,7 @@ public partial class RunFonts : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "hAnsiTheme")]
-    [SchemaIndex(6)]
+	[SchemaIndex(6)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> HighAnsiTheme { get; set; }
     /// <summary>
     /// <para> East Asian Theme Font.</para>
@@ -11371,7 +10743,7 @@ public partial class RunFonts : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "eastAsiaTheme")]
-    [SchemaIndex(7)]
+	[SchemaIndex(7)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> EastAsiaTheme { get; set; }
     /// <summary>
     /// <para> Complex Script Theme Font.</para>
@@ -11380,7 +10752,7 @@ public partial class RunFonts : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "cstheme")]
-    [SchemaIndex(8)]
+	[SchemaIndex(8)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeFontValues> ComplexScriptTheme { get; set; }
 
     /// <summary>
@@ -11410,9 +10782,7 @@ public partial class Color : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11639;
     /// <inheritdoc/>
     public override string LocalName => "color";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11425,7 +10795,7 @@ public partial class Color : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
     /// <summary>
     /// <para> Run Content Theme Color.</para>
@@ -11434,7 +10804,7 @@ public partial class Color : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeColor")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get; set; }
     /// <summary>
     /// <para> Run Content Theme Color Tint.</para>
@@ -11443,7 +10813,7 @@ public partial class Color : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeTint")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue ThemeTint { get; set; }
     /// <summary>
     /// <para> Run Content Theme Color Shade.</para>
@@ -11452,7 +10822,7 @@ public partial class Color : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeShade")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public StringValue ThemeShade { get; set; }
 
     /// <summary>
@@ -11482,9 +10852,7 @@ public partial class Spacing : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11640;
     /// <inheritdoc/>
     public override string LocalName => "spacing";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11497,7 +10865,7 @@ public partial class Spacing : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int32Value Val { get; set; }
 
     /// <summary>
@@ -11527,9 +10895,7 @@ public partial class CharacterScale : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11641;
     /// <inheritdoc/>
     public override string LocalName => "w";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11542,7 +10908,7 @@ public partial class CharacterScale : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public IntegerValue Val { get; set; }
 
     /// <summary>
@@ -11572,9 +10938,7 @@ public partial class Kern : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11642;
     /// <inheritdoc/>
     public override string LocalName => "kern";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11587,7 +10951,7 @@ public partial class Kern : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public UInt32Value Val { get; set; }
 
     /// <summary>
@@ -11617,9 +10981,7 @@ public partial class Position : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11643;
     /// <inheritdoc/>
     public override string LocalName => "position";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11632,7 +10994,7 @@ public partial class Position : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -11662,9 +11024,7 @@ public partial class FontSize : HpsMeasureType
     internal const int ElementTypeIdConst = 11644;
     /// <inheritdoc/>
     public override string LocalName => "sz";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11691,9 +11051,7 @@ public partial class FontSizeComplexScript : HpsMeasureType
     internal const int ElementTypeIdConst = 11645;
     /// <inheritdoc/>
     public override string LocalName => "szCs";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11720,9 +11078,7 @@ public partial class FormFieldSize : HpsMeasureType
     internal const int ElementTypeIdConst = 11799;
     /// <inheritdoc/>
     public override string LocalName => "size";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11749,9 +11105,7 @@ public partial class PhoneticGuideTextFontSize : HpsMeasureType
     internal const int ElementTypeIdConst = 11816;
     /// <inheritdoc/>
     public override string LocalName => "hps";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11778,9 +11132,7 @@ public partial class PhoneticGuideBaseTextSize : HpsMeasureType
     internal const int ElementTypeIdConst = 11818;
     /// <inheritdoc/>
     public override string LocalName => "hpsBaseText";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11809,7 +11161,7 @@ public abstract partial class HpsMeasureType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
 
     
@@ -11836,9 +11188,7 @@ public partial class Highlight : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11646;
     /// <inheritdoc/>
     public override string LocalName => "highlight";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11851,7 +11201,7 @@ public partial class Highlight : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HighlightColorValues> Val { get; set; }
 
     /// <summary>
@@ -11881,9 +11231,7 @@ public partial class Underline : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11647;
     /// <inheritdoc/>
     public override string LocalName => "u";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11896,7 +11244,7 @@ public partial class Underline : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.UnderlineValues> Val { get; set; }
     /// <summary>
     /// <para> Underline Color.</para>
@@ -11905,7 +11253,7 @@ public partial class Underline : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "color")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Color { get; set; }
     /// <summary>
     /// <para> Underline Theme Color.</para>
@@ -11914,7 +11262,7 @@ public partial class Underline : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeColor")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get; set; }
     /// <summary>
     /// <para> Underline Theme Color Tint.</para>
@@ -11923,7 +11271,7 @@ public partial class Underline : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeTint")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public StringValue ThemeTint { get; set; }
     /// <summary>
     /// <para> Underline Theme Color Shade.</para>
@@ -11932,7 +11280,7 @@ public partial class Underline : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeShade")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public StringValue ThemeShade { get; set; }
 
     /// <summary>
@@ -11962,9 +11310,7 @@ public partial class TextEffect : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11648;
     /// <inheritdoc/>
     public override string LocalName => "effect";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -11977,7 +11323,7 @@ public partial class TextEffect : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextEffectValues> Val { get; set; }
 
     /// <summary>
@@ -12007,9 +11353,7 @@ public partial class Border : BorderType
     internal const int ElementTypeIdConst = 11649;
     /// <inheritdoc/>
     public override string LocalName => "bdr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -12036,9 +11380,7 @@ public partial class TopBorder : BorderType
     internal const int ElementTypeIdConst = 11778;
     /// <inheritdoc/>
     public override string LocalName => "top";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -12065,9 +11407,7 @@ public partial class LeftBorder : BorderType
     internal const int ElementTypeIdConst = 11779;
     /// <inheritdoc/>
     public override string LocalName => "left";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -12094,9 +11434,7 @@ public partial class BottomBorder : BorderType
     internal const int ElementTypeIdConst = 11780;
     /// <inheritdoc/>
     public override string LocalName => "bottom";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -12123,9 +11461,7 @@ public partial class RightBorder : BorderType
     internal const int ElementTypeIdConst = 11781;
     /// <inheritdoc/>
     public override string LocalName => "right";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -12152,9 +11488,7 @@ public partial class BetweenBorder : BorderType
     internal const int ElementTypeIdConst = 11782;
     /// <inheritdoc/>
     public override string LocalName => "between";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -12181,9 +11515,7 @@ public partial class BarBorder : BorderType
     internal const int ElementTypeIdConst = 11783;
     /// <inheritdoc/>
     public override string LocalName => "bar";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -12210,9 +11542,7 @@ public partial class StartBorder : BorderType
     internal const int ElementTypeIdConst = 12060;
     /// <inheritdoc/>
     public override string LocalName => "start";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -12239,9 +11569,7 @@ public partial class EndBorder : BorderType
     internal const int ElementTypeIdConst = 12061;
     /// <inheritdoc/>
     public override string LocalName => "end";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -12268,9 +11596,7 @@ public partial class InsideHorizontalBorder : BorderType
     internal const int ElementTypeIdConst = 12062;
     /// <inheritdoc/>
     public override string LocalName => "insideH";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -12297,9 +11623,7 @@ public partial class InsideVerticalBorder : BorderType
     internal const int ElementTypeIdConst = 12063;
     /// <inheritdoc/>
     public override string LocalName => "insideV";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -12326,9 +11650,7 @@ public partial class TopLeftToBottomRightCellBorder : BorderType
     internal const int ElementTypeIdConst = 12075;
     /// <inheritdoc/>
     public override string LocalName => "tl2br";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -12355,9 +11677,7 @@ public partial class TopRightToBottomLeftCellBorder : BorderType
     internal const int ElementTypeIdConst = 12076;
     /// <inheritdoc/>
     public override string LocalName => "tr2bl";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -12386,7 +11706,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.BorderValues> Val { get; set; }
     /// <summary>
     /// <para> Border Color.</para>
@@ -12395,7 +11715,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "color")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Color { get; set; }
     /// <summary>
     /// <para> Border Theme Color.</para>
@@ -12404,7 +11724,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeColor")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get; set; }
     /// <summary>
     /// <para> Border Theme Color Tint.</para>
@@ -12413,7 +11733,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeTint")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public StringValue ThemeTint { get; set; }
     /// <summary>
     /// <para> Border Theme Color Shade.</para>
@@ -12422,7 +11742,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeShade")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public StringValue ThemeShade { get; set; }
     /// <summary>
     /// <para> Border Width.</para>
@@ -12431,7 +11751,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "sz")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public UInt32Value Size { get; set; }
     /// <summary>
     /// <para> Border Spacing Measurement.</para>
@@ -12440,7 +11760,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "space")]
-    [SchemaIndex(6)]
+	[SchemaIndex(6)]
     public UInt32Value Space { get; set; }
     /// <summary>
     /// <para> Border Shadow.</para>
@@ -12449,7 +11769,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "shadow")]
-    [SchemaIndex(7)]
+	[SchemaIndex(7)]
     public OnOffValue Shadow { get; set; }
     /// <summary>
     /// <para> Create Frame Effect.</para>
@@ -12458,7 +11778,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "frame")]
-    [SchemaIndex(8)]
+	[SchemaIndex(8)]
     public OnOffValue Frame { get; set; }
 
     
@@ -12485,9 +11805,7 @@ public partial class FitText : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11650;
     /// <inheritdoc/>
     public override string LocalName => "fitText";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -12500,7 +11818,7 @@ public partial class FitText : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public UInt32Value Val { get; set; }
     /// <summary>
     /// <para> Fit Text Run ID.</para>
@@ -12509,7 +11827,7 @@ public partial class FitText : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public Int32Value Id { get; set; }
 
     /// <summary>
@@ -12539,9 +11857,7 @@ public partial class VerticalTextAlignment : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11651;
     /// <inheritdoc/>
     public override string LocalName => "vertAlign";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -12554,7 +11870,7 @@ public partial class VerticalTextAlignment : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalPositionValues> Val { get; set; }
 
     /// <summary>
@@ -12584,9 +11900,7 @@ public partial class Emphasis : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11654;
     /// <inheritdoc/>
     public override string LocalName => "em";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -12599,7 +11913,7 @@ public partial class Emphasis : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.EmphasisMarkValues> Val { get; set; }
 
     /// <summary>
@@ -12629,9 +11943,7 @@ public partial class Languages : LanguageType
     internal const int ElementTypeIdConst = 11655;
     /// <inheritdoc/>
     public override string LocalName => "lang";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -12658,9 +11970,7 @@ public partial class ThemeFontLanguages : LanguageType
     internal const int ElementTypeIdConst = 12188;
     /// <inheritdoc/>
     public override string LocalName => "themeFontLang";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -12689,7 +11999,7 @@ public abstract partial class LanguageType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
     /// <summary>
     /// <para> East Asian Language.</para>
@@ -12698,7 +12008,7 @@ public abstract partial class LanguageType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "eastAsia")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue EastAsia { get; set; }
     /// <summary>
     /// <para> Complex Script Language.</para>
@@ -12707,7 +12017,7 @@ public abstract partial class LanguageType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "bidi")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Bidi { get; set; }
 
     
@@ -12734,9 +12044,7 @@ public partial class EastAsianLayout : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11656;
     /// <inheritdoc/>
     public override string LocalName => "eastAsianLayout";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -12749,7 +12057,7 @@ public partial class EastAsianLayout : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int32Value Id { get; set; }
     /// <summary>
     /// <para> Two Lines in One.</para>
@@ -12758,7 +12066,7 @@ public partial class EastAsianLayout : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "combine")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public OnOffValue Combine { get; set; }
     /// <summary>
     /// <para> Display Brackets Around Two Lines in One.</para>
@@ -12767,7 +12075,7 @@ public partial class EastAsianLayout : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "combineBrackets")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CombineBracketValues> CombineBrackets { get; set; }
     /// <summary>
     /// <para> Horizontal in Vertical (Rotate Text).</para>
@@ -12776,7 +12084,7 @@ public partial class EastAsianLayout : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "vert")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public OnOffValue Vertical { get; set; }
     /// <summary>
     /// <para> Compress Rotated Text to Line Height.</para>
@@ -12785,7 +12093,7 @@ public partial class EastAsianLayout : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "vertCompress")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public OnOffValue VerticalCompress { get; set; }
 
     /// <summary>
@@ -12822,9 +12130,7 @@ public partial class RunPropertiesChange : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11659;
     /// <inheritdoc/>
     public override string LocalName => "rPrChange";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -12837,7 +12143,7 @@ public partial class RunPropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -12846,7 +12152,7 @@ public partial class RunPropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -12855,7 +12161,7 @@ public partial class RunPropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -13047,9 +12353,7 @@ public partial class RunProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11660;
     /// <inheritdoc/>
     public override string LocalName => "rPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -13897,9 +13201,7 @@ public partial class InsertedMathControl : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11661;
     /// <inheritdoc/>
     public override string LocalName => "ins";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -13912,7 +13214,7 @@ public partial class InsertedMathControl : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -13921,7 +13223,7 @@ public partial class InsertedMathControl : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -13930,7 +13232,7 @@ public partial class InsertedMathControl : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -14004,9 +13306,7 @@ public partial class DeletedMathControl : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11662;
     /// <inheritdoc/>
     public override string LocalName => "del";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -14019,7 +13319,7 @@ public partial class DeletedMathControl : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -14028,7 +13328,7 @@ public partial class DeletedMathControl : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -14037,7 +13337,7 @@ public partial class DeletedMathControl : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -14109,9 +13409,7 @@ public partial class MoveFromMathControl : MathControlMoveType
     internal const int ElementTypeIdConst = 11663;
     /// <inheritdoc/>
     public override string LocalName => "moveFrom";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -14171,9 +13469,7 @@ public partial class MoveToMathControl : MathControlMoveType
     internal const int ElementTypeIdConst = 11664;
     /// <inheritdoc/>
     public override string LocalName => "moveTo";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -14238,7 +13534,7 @@ public abstract partial class MathControlMoveType : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -14247,7 +13543,7 @@ public abstract partial class MathControlMoveType : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -14256,7 +13552,7 @@ public abstract partial class MathControlMoveType : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Id { get; set; }
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
@@ -14444,9 +13740,7 @@ public partial class CustomXmlRuby : CustomXmlElement
     internal const int ElementTypeIdConst = 11665;
     /// <inheritdoc/>
     public override string LocalName => "customXml";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -14815,9 +14109,7 @@ public partial class SimpleFieldRuby : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11666;
     /// <inheritdoc/>
     public override string LocalName => "fldSimple";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -14830,7 +14122,7 @@ public partial class SimpleFieldRuby : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "instr")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Instruction { get; set; }
     /// <summary>
     /// <para> fldLock.</para>
@@ -14839,7 +14131,7 @@ public partial class SimpleFieldRuby : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "fldLock")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public OnOffValue FieldLock { get; set; }
     /// <summary>
     /// <para> dirty.</para>
@@ -14848,7 +14140,7 @@ public partial class SimpleFieldRuby : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "dirty")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public OnOffValue Dirty { get; set; }
 
     /// <summary>
@@ -15223,9 +14515,7 @@ public partial class HyperlinkRuby : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11667;
     /// <inheritdoc/>
     public override string LocalName => "hyperlink";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -15238,7 +14528,7 @@ public partial class HyperlinkRuby : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "tgtFrame")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue TargetFrame { get; set; }
     /// <summary>
     /// <para> tooltip.</para>
@@ -15247,7 +14537,7 @@ public partial class HyperlinkRuby : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "tooltip")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Tooltip { get; set; }
     /// <summary>
     /// <para> docLocation.</para>
@@ -15256,7 +14546,7 @@ public partial class HyperlinkRuby : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "docLocation")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue DocLocation { get; set; }
     /// <summary>
     /// <para> history.</para>
@@ -15265,7 +14555,7 @@ public partial class HyperlinkRuby : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "history")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public OnOffValue History { get; set; }
     /// <summary>
     /// <para> anchor.</para>
@@ -15274,7 +14564,7 @@ public partial class HyperlinkRuby : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "anchor")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public StringValue Anchor { get; set; }
     /// <summary>
     /// <para> id.</para>
@@ -15283,7 +14573,7 @@ public partial class HyperlinkRuby : OpenXmlCompositeElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -15586,9 +14876,7 @@ public partial class Run : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11668;
     /// <inheritdoc/>
     public override string LocalName => "r";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -15601,7 +14889,7 @@ public partial class Run : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidRPr")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public HexBinaryValue RsidRunProperties { get; set; }
     /// <summary>
     /// <para> Revision Identifier for Run Deletion.</para>
@@ -15610,7 +14898,7 @@ public partial class Run : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidDel")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public HexBinaryValue RsidRunDeletion { get; set; }
     /// <summary>
     /// <para> Revision Identifier for Run.</para>
@@ -15619,7 +14907,7 @@ public partial class Run : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidR")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public HexBinaryValue RsidRunAddition { get; set; }
 
     /// <summary>
@@ -15851,9 +15139,7 @@ public partial class SdtRunRuby : SdtElement
     internal const int ElementTypeIdConst = 11669;
     /// <inheritdoc/>
     public override string LocalName => "sdt";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -16008,9 +15294,7 @@ public partial class ProofError : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11670;
     /// <inheritdoc/>
     public override string LocalName => "proofErr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -16023,7 +15307,7 @@ public partial class ProofError : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "type")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingErrorValues> Type { get; set; }
 
     /// <summary>
@@ -16053,9 +15337,7 @@ public partial class PermStart : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11671;
     /// <inheritdoc/>
     public override string LocalName => "permStart";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -16068,7 +15350,7 @@ public partial class PermStart : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "edGrp")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RangePermissionEditingGroupValues> EditorGroup { get; set; }
     /// <summary>
     /// <para> ed.</para>
@@ -16077,7 +15359,7 @@ public partial class PermStart : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "ed")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Ed { get; set; }
     /// <summary>
     /// <para> colFirst.</para>
@@ -16086,7 +15368,7 @@ public partial class PermStart : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "colFirst")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public Int32Value ColumnFirst { get; set; }
     /// <summary>
     /// <para> colLast.</para>
@@ -16095,7 +15377,7 @@ public partial class PermStart : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "colLast")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public Int32Value ColumnLast { get; set; }
     /// <summary>
     /// <para> Annotation ID.</para>
@@ -16104,7 +15386,7 @@ public partial class PermStart : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public Int32Value Id { get; set; }
     /// <summary>
     /// <para> Annotation Displaced By Custom XML Markup.</para>
@@ -16113,7 +15395,7 @@ public partial class PermStart : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "displacedByCustomXml")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get; set; }
 
     /// <summary>
@@ -16143,9 +15425,7 @@ public partial class PermEnd : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11672;
     /// <inheritdoc/>
     public override string LocalName => "permEnd";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -16158,7 +15438,7 @@ public partial class PermEnd : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int32Value Id { get; set; }
     /// <summary>
     /// <para> Annotation Displaced By Custom XML Markup.</para>
@@ -16167,7 +15447,7 @@ public partial class PermEnd : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "displacedByCustomXml")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DisplacedByCustomXmlValues> DisplacedByCustomXml { get; set; }
 
     /// <summary>
@@ -16258,9 +15538,7 @@ public partial class InsertedRun : RunTrackChangeType
     internal const int ElementTypeIdConst = 11673;
     /// <inheritdoc/>
     public override string LocalName => "ins";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -16373,9 +15651,7 @@ public partial class DeletedRun : RunTrackChangeType
     internal const int ElementTypeIdConst = 11674;
     /// <inheritdoc/>
     public override string LocalName => "del";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -16488,9 +15764,7 @@ public partial class MoveFromRun : RunTrackChangeType
     internal const int ElementTypeIdConst = 11675;
     /// <inheritdoc/>
     public override string LocalName => "moveFrom";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -16603,9 +15877,7 @@ public partial class MoveToRun : RunTrackChangeType
     internal const int ElementTypeIdConst = 11676;
     /// <inheritdoc/>
     public override string LocalName => "moveTo";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -16776,7 +16048,7 @@ public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -16785,7 +16057,7 @@ public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -16794,7 +16066,7 @@ public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Id { get; set; }
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
@@ -17020,9 +16292,7 @@ public partial class ContentPart : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11677;
     /// <inheritdoc/>
     public override string LocalName => "contentPart";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -17035,7 +16305,7 @@ public partial class ContentPart : OpenXmlLeafElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -17116,9 +16386,7 @@ public partial class SdtRun : SdtElement
     internal const int ElementTypeIdConst = 11678;
     /// <inheritdoc/>
     public override string LocalName => "sdt";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -17348,9 +16616,7 @@ public partial class CustomXmlBlock : CustomXmlElement
     internal const int ElementTypeIdConst = 11679;
     /// <inheritdoc/>
     public override string LocalName => "customXml";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -17580,9 +16846,7 @@ public partial class SdtBlock : SdtElement
     internal const int ElementTypeIdConst = 11680;
     /// <inheritdoc/>
     public override string LocalName => "sdt";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -17864,9 +17128,7 @@ public partial class Paragraph : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11681;
     /// <inheritdoc/>
     public override string LocalName => "p";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -17879,7 +17141,7 @@ public partial class Paragraph : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidRPr")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public HexBinaryValue RsidParagraphMarkRevision { get; set; }
     /// <summary>
     /// <para> Revision Identifier for Paragraph.</para>
@@ -17888,7 +17150,7 @@ public partial class Paragraph : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidR")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public HexBinaryValue RsidParagraphAddition { get; set; }
     /// <summary>
     /// <para> Revision Identifier for Paragraph Deletion.</para>
@@ -17897,7 +17159,7 @@ public partial class Paragraph : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidDel")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public HexBinaryValue RsidParagraphDeletion { get; set; }
     /// <summary>
     /// <para> Revision Identifier for Paragraph Properties.</para>
@@ -17906,7 +17168,7 @@ public partial class Paragraph : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidP")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public HexBinaryValue RsidParagraphProperties { get; set; }
     /// <summary>
     /// <para> Default Revision Identifier for Runs.</para>
@@ -17915,7 +17177,7 @@ public partial class Paragraph : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidRDefault")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public HexBinaryValue RsidRunAdditionDefault { get; set; }
     /// <summary>
     /// <para> paraId.</para>
@@ -17924,7 +17186,7 @@ public partial class Paragraph : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "paraId")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public HexBinaryValue ParagraphId { get; set; }
     /// <summary>
     /// <para> textId.</para>
@@ -17933,7 +17195,7 @@ public partial class Paragraph : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "textId")]
-    [SchemaIndex(6)]
+	[SchemaIndex(6)]
     public HexBinaryValue TextId { get; set; }
     /// <summary>
     /// <para> noSpellErr.</para>
@@ -17942,7 +17204,7 @@ public partial class Paragraph : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "noSpellErr")]
-    [SchemaIndex(7)]
+	[SchemaIndex(7)]
     public OnOffValue NoSpellError { get; set; }
 
     /// <summary>
@@ -18282,9 +17544,7 @@ public partial class Table : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11682;
     /// <inheritdoc/>
     public override string LocalName => "tbl";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -18529,9 +17789,7 @@ public partial class TableRow : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11683;
     /// <inheritdoc/>
     public override string LocalName => "tr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -18544,7 +17802,7 @@ public partial class TableRow : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidRPr")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public HexBinaryValue RsidTableRowMarkRevision { get; set; }
     /// <summary>
     /// <para> Revision Identifier for Table Row.</para>
@@ -18553,7 +17811,7 @@ public partial class TableRow : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidR")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public HexBinaryValue RsidTableRowAddition { get; set; }
     /// <summary>
     /// <para> Revision Identifier for Table Row Deletion.</para>
@@ -18562,7 +17820,7 @@ public partial class TableRow : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidDel")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public HexBinaryValue RsidTableRowDeletion { get; set; }
     /// <summary>
     /// <para> Revision Identifier for Table Row Properties.</para>
@@ -18571,7 +17829,7 @@ public partial class TableRow : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidTr")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public HexBinaryValue RsidTableRowProperties { get; set; }
     /// <summary>
     /// <para> paraId.</para>
@@ -18580,7 +17838,7 @@ public partial class TableRow : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "paraId")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public HexBinaryValue ParagraphId { get; set; }
     /// <summary>
     /// <para> textId.</para>
@@ -18589,7 +17847,7 @@ public partial class TableRow : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "textId")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public HexBinaryValue TextId { get; set; }
 
     /// <summary>
@@ -18861,9 +18119,7 @@ public partial class CustomXmlRow : CustomXmlElement
     internal const int ElementTypeIdConst = 11684;
     /// <inheritdoc/>
     public override string LocalName => "customXml";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -19090,9 +18346,7 @@ public partial class SdtRow : SdtElement
     internal const int ElementTypeIdConst = 11685;
     /// <inheritdoc/>
     public override string LocalName => "sdt";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -19324,9 +18578,7 @@ public partial class TableCell : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11686;
     /// <inheritdoc/>
     public override string LocalName => "tc";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -19593,9 +18845,7 @@ public partial class CustomXmlCell : CustomXmlElement
     internal const int ElementTypeIdConst = 11687;
     /// <inheritdoc/>
     public override string LocalName => "customXml";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -19822,9 +19072,7 @@ public partial class SdtCell : SdtElement
     internal const int ElementTypeIdConst = 11688;
     /// <inheritdoc/>
     public override string LocalName => "sdt";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -20106,9 +19354,7 @@ public partial class CustomXmlRun : CustomXmlElement
     internal const int ElementTypeIdConst = 11689;
     /// <inheritdoc/>
     public override string LocalName => "customXml";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -20492,9 +19738,7 @@ public partial class SimpleField : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11690;
     /// <inheritdoc/>
     public override string LocalName => "fldSimple";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -20507,7 +19751,7 @@ public partial class SimpleField : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "instr")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Instruction { get; set; }
     /// <summary>
     /// <para> Field Should Not Be Recalculated.</para>
@@ -20516,7 +19760,7 @@ public partial class SimpleField : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "fldLock")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public OnOffValue FieldLock { get; set; }
     /// <summary>
     /// <para> Field Result Invalidated.</para>
@@ -20525,7 +19769,7 @@ public partial class SimpleField : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "dirty")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public OnOffValue Dirty { get; set; }
 
     /// <summary>
@@ -20915,9 +20159,7 @@ public partial class Hyperlink : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11691;
     /// <inheritdoc/>
     public override string LocalName => "hyperlink";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -20930,7 +20172,7 @@ public partial class Hyperlink : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "tgtFrame")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue TargetFrame { get; set; }
     /// <summary>
     /// <para> Associated String.</para>
@@ -20939,7 +20181,7 @@ public partial class Hyperlink : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "tooltip")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Tooltip { get; set; }
     /// <summary>
     /// <para> Location in Target Document.</para>
@@ -20948,7 +20190,7 @@ public partial class Hyperlink : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "docLocation")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue DocLocation { get; set; }
     /// <summary>
     /// <para> Add To Viewed Hyperlinks.</para>
@@ -20957,7 +20199,7 @@ public partial class Hyperlink : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "history")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public OnOffValue History { get; set; }
     /// <summary>
     /// <para> Hyperlink Anchor.</para>
@@ -20966,7 +20208,7 @@ public partial class Hyperlink : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "anchor")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public StringValue Anchor { get; set; }
     /// <summary>
     /// <para> Hyperlink Target.</para>
@@ -20975,7 +20217,7 @@ public partial class Hyperlink : OpenXmlCompositeElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -21341,9 +20583,7 @@ public partial class BidirectionalOverride : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11692;
     /// <inheritdoc/>
     public override string LocalName => "bdo";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -21356,7 +20596,7 @@ public partial class BidirectionalOverride : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues> Val { get; set; }
 
     /// <summary>
@@ -21722,9 +20962,7 @@ public partial class BidirectionalEmbedding : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11693;
     /// <inheritdoc/>
     public override string LocalName => "dir";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -21737,7 +20975,7 @@ public partial class BidirectionalEmbedding : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DirectionValues> Val { get; set; }
 
     /// <summary>
@@ -21978,9 +21216,7 @@ public partial class SubDocumentReference : RelationshipType
     internal const int ElementTypeIdConst = 11694;
     /// <inheritdoc/>
     public override string LocalName => "subDoc";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22007,9 +21243,7 @@ public partial class PrinterSettingsReference : RelationshipType
     internal const int ElementTypeIdConst = 11752;
     /// <inheritdoc/>
     public override string LocalName => "printerSettings";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22036,9 +21270,7 @@ public partial class SourceReference : RelationshipType
     internal const int ElementTypeIdConst = 11867;
     /// <inheritdoc/>
     public override string LocalName => "src";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22065,9 +21297,7 @@ public partial class RecipientDataReference : RelationshipType
     internal const int ElementTypeIdConst = 11872;
     /// <inheritdoc/>
     public override string LocalName => "recipientData";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22094,9 +21324,7 @@ public partial class DataSourceReference : RelationshipType
     internal const int ElementTypeIdConst = 11878;
     /// <inheritdoc/>
     public override string LocalName => "dataSource";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22123,9 +21351,7 @@ public partial class HeaderSource : RelationshipType
     internal const int ElementTypeIdConst = 11879;
     /// <inheritdoc/>
     public override string LocalName => "headerSource";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22152,9 +21378,7 @@ public partial class SourceFileReference : RelationshipType
     internal const int ElementTypeIdConst = 11898;
     /// <inheritdoc/>
     public override string LocalName => "sourceFileName";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22181,9 +21405,7 @@ public partial class MovieReference : RelationshipType
     internal const int ElementTypeIdConst = 12078;
     /// <inheritdoc/>
     public override string LocalName => "movie";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22210,9 +21432,7 @@ public partial class AttachedTemplate : RelationshipType
     internal const int ElementTypeIdConst = 12127;
     /// <inheritdoc/>
     public override string LocalName => "attachedTemplate";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22241,7 +21461,7 @@ public abstract partial class RelationshipType : OpenXmlLeafElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Id { get; set; }
 
     
@@ -22268,9 +21488,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11695;
     /// <inheritdoc/>
     public override string LocalName => "cnfStyle";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22283,7 +21501,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
     /// <summary>
     /// <para> firstRow.</para>
@@ -22292,7 +21510,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "firstRow")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public OnOffValue FirstRow { get; set; }
     /// <summary>
     /// <para> lastRow.</para>
@@ -22301,7 +21519,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "lastRow")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public OnOffValue LastRow { get; set; }
     /// <summary>
     /// <para> firstColumn.</para>
@@ -22310,7 +21528,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "firstColumn")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public OnOffValue FirstColumn { get; set; }
     /// <summary>
     /// <para> lastColumn.</para>
@@ -22319,7 +21537,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "lastColumn")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public OnOffValue LastColumn { get; set; }
     /// <summary>
     /// <para> oddVBand.</para>
@@ -22328,7 +21546,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "oddVBand")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public OnOffValue OddVerticalBand { get; set; }
     /// <summary>
     /// <para> evenVBand.</para>
@@ -22337,7 +21555,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "evenVBand")]
-    [SchemaIndex(6)]
+	[SchemaIndex(6)]
     public OnOffValue EvenVerticalBand { get; set; }
     /// <summary>
     /// <para> oddHBand.</para>
@@ -22346,7 +21564,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "oddHBand")]
-    [SchemaIndex(7)]
+	[SchemaIndex(7)]
     public OnOffValue OddHorizontalBand { get; set; }
     /// <summary>
     /// <para> evenHBand.</para>
@@ -22355,7 +21573,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "evenHBand")]
-    [SchemaIndex(8)]
+	[SchemaIndex(8)]
     public OnOffValue EvenHorizontalBand { get; set; }
     /// <summary>
     /// <para> firstRowFirstColumn.</para>
@@ -22364,7 +21582,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "firstRowFirstColumn")]
-    [SchemaIndex(9)]
+	[SchemaIndex(9)]
     public OnOffValue FirstRowFirstColumn { get; set; }
     /// <summary>
     /// <para> firstRowLastColumn.</para>
@@ -22373,7 +21591,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "firstRowLastColumn")]
-    [SchemaIndex(10)]
+	[SchemaIndex(10)]
     public OnOffValue FirstRowLastColumn { get; set; }
     /// <summary>
     /// <para> lastRowFirstColumn.</para>
@@ -22382,7 +21600,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "lastRowFirstColumn")]
-    [SchemaIndex(11)]
+	[SchemaIndex(11)]
     public OnOffValue LastRowFirstColumn { get; set; }
     /// <summary>
     /// <para> lastRowLastColumn.</para>
@@ -22391,7 +21609,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "lastRowLastColumn")]
-    [SchemaIndex(12)]
+	[SchemaIndex(12)]
     public OnOffValue LastRowLastColumn { get; set; }
 
     /// <summary>
@@ -22421,9 +21639,7 @@ public partial class TableCellWidth : TableWidthType
     internal const int ElementTypeIdConst = 11696;
     /// <inheritdoc/>
     public override string LocalName => "tcW";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22450,9 +21666,7 @@ public partial class WidthBeforeTableRow : TableWidthType
     internal const int ElementTypeIdConst = 11709;
     /// <inheritdoc/>
     public override string LocalName => "wBefore";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22479,9 +21693,7 @@ public partial class WidthAfterTableRow : TableWidthType
     internal const int ElementTypeIdConst = 11710;
     /// <inheritdoc/>
     public override string LocalName => "wAfter";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22508,9 +21720,7 @@ public partial class TableCellSpacing : TableWidthType
     internal const int ElementTypeIdConst = 11715;
     /// <inheritdoc/>
     public override string LocalName => "tblCellSpacing";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22537,9 +21747,7 @@ public partial class TableWidth : TableWidthType
     internal const int ElementTypeIdConst = 11723;
     /// <inheritdoc/>
     public override string LocalName => "tblW";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22566,9 +21774,7 @@ public partial class TopMargin : TableWidthType
     internal const int ElementTypeIdConst = 12064;
     /// <inheritdoc/>
     public override string LocalName => "top";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22595,9 +21801,7 @@ public partial class StartMargin : TableWidthType
     internal const int ElementTypeIdConst = 12066;
     /// <inheritdoc/>
     public override string LocalName => "start";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -22624,9 +21828,7 @@ public partial class BottomMargin : TableWidthType
     internal const int ElementTypeIdConst = 12067;
     /// <inheritdoc/>
     public override string LocalName => "bottom";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22653,9 +21855,7 @@ public partial class EndMargin : TableWidthType
     internal const int ElementTypeIdConst = 12069;
     /// <inheritdoc/>
     public override string LocalName => "end";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -22682,9 +21882,7 @@ public partial class LeftMargin : TableWidthType
     internal const int ElementTypeIdConst = 12073;
     /// <inheritdoc/>
     public override string LocalName => "left";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22711,9 +21909,7 @@ public partial class RightMargin : TableWidthType
     internal const int ElementTypeIdConst = 12074;
     /// <inheritdoc/>
     public override string LocalName => "right";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22742,7 +21938,7 @@ public abstract partial class TableWidthType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "w")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Width { get; set; }
     /// <summary>
     /// <para> Table Width Type.</para>
@@ -22751,7 +21947,7 @@ public abstract partial class TableWidthType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "type")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues> Type { get; set; }
 
     
@@ -22778,9 +21974,7 @@ public partial class HorizontalMerge : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11698;
     /// <inheritdoc/>
     public override string LocalName => "hMerge";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22793,7 +21987,7 @@ public partial class HorizontalMerge : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues> Val { get; set; }
 
     /// <summary>
@@ -22823,9 +22017,7 @@ public partial class VerticalMerge : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11699;
     /// <inheritdoc/>
     public override string LocalName => "vMerge";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -22838,7 +22030,7 @@ public partial class VerticalMerge : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MergedCellValues> Val { get; set; }
 
     /// <summary>
@@ -22893,9 +22085,7 @@ public partial class TableCellBorders : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11700;
     /// <inheritdoc/>
     public override string LocalName => "tcBorders";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23119,9 +22309,7 @@ public partial class NoWrap : OnOffOnlyType
     internal const int ElementTypeIdConst = 11701;
     /// <inheritdoc/>
     public override string LocalName => "noWrap";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23148,9 +22336,7 @@ public partial class TableCellFitText : OnOffOnlyType
     internal const int ElementTypeIdConst = 11703;
     /// <inheritdoc/>
     public override string LocalName => "tcFitText";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23177,9 +22363,7 @@ public partial class HideMark : OnOffOnlyType
     internal const int ElementTypeIdConst = 11705;
     /// <inheritdoc/>
     public override string LocalName => "hideMark";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23206,9 +22390,7 @@ public partial class CantSplit : OnOffOnlyType
     internal const int ElementTypeIdConst = 11713;
     /// <inheritdoc/>
     public override string LocalName => "cantSplit";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23235,9 +22417,7 @@ public partial class TableHeader : OnOffOnlyType
     internal const int ElementTypeIdConst = 11714;
     /// <inheritdoc/>
     public override string LocalName => "tblHeader";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23264,9 +22444,7 @@ public partial class BiDiVisual : OnOffOnlyType
     internal const int ElementTypeIdConst = 11720;
     /// <inheritdoc/>
     public override string LocalName => "bidiVisual";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23293,9 +22471,7 @@ public partial class NoResizeAllowed : OnOffOnlyType
     internal const int ElementTypeIdConst = 11902;
     /// <inheritdoc/>
     public override string LocalName => "noResizeAllowed";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23322,9 +22498,7 @@ public partial class LinkedToFile : OnOffOnlyType
     internal const int ElementTypeIdConst = 11903;
     /// <inheritdoc/>
     public override string LocalName => "linkedToFile";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23351,9 +22525,7 @@ public partial class NoBorder : OnOffOnlyType
     internal const int ElementTypeIdConst = 11905;
     /// <inheritdoc/>
     public override string LocalName => "noBorder";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23380,9 +22552,7 @@ public partial class FlatBorders : OnOffOnlyType
     internal const int ElementTypeIdConst = 11906;
     /// <inheritdoc/>
     public override string LocalName => "flatBorders";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23409,9 +22579,7 @@ public partial class AutoRedefine : OnOffOnlyType
     internal const int ElementTypeIdConst = 11945;
     /// <inheritdoc/>
     public override string LocalName => "autoRedefine";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23438,9 +22606,7 @@ public partial class StyleHidden : OnOffOnlyType
     internal const int ElementTypeIdConst = 11946;
     /// <inheritdoc/>
     public override string LocalName => "hidden";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23467,9 +22633,7 @@ public partial class SemiHidden : OnOffOnlyType
     internal const int ElementTypeIdConst = 11948;
     /// <inheritdoc/>
     public override string LocalName => "semiHidden";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23496,9 +22660,7 @@ public partial class UnhideWhenUsed : OnOffOnlyType
     internal const int ElementTypeIdConst = 11949;
     /// <inheritdoc/>
     public override string LocalName => "unhideWhenUsed";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23525,9 +22687,7 @@ public partial class PrimaryStyle : OnOffOnlyType
     internal const int ElementTypeIdConst = 11950;
     /// <inheritdoc/>
     public override string LocalName => "qFormat";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23554,9 +22714,7 @@ public partial class Locked : OnOffOnlyType
     internal const int ElementTypeIdConst = 11951;
     /// <inheritdoc/>
     public override string LocalName => "locked";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23583,9 +22741,7 @@ public partial class Personal : OnOffOnlyType
     internal const int ElementTypeIdConst = 11952;
     /// <inheritdoc/>
     public override string LocalName => "personal";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23612,9 +22768,7 @@ public partial class PersonalCompose : OnOffOnlyType
     internal const int ElementTypeIdConst = 11953;
     /// <inheritdoc/>
     public override string LocalName => "personalCompose";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23641,9 +22795,7 @@ public partial class PersonalReply : OnOffOnlyType
     internal const int ElementTypeIdConst = 11954;
     /// <inheritdoc/>
     public override string LocalName => "personalReply";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23672,7 +22824,7 @@ public abstract partial class OnOffOnlyType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.OnOffOnlyValues> Val { get; set; }
 
     
@@ -23716,9 +22868,7 @@ public partial class TableCellMargin : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11702;
     /// <inheritdoc/>
     public override string LocalName => "tcMar";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23882,9 +23032,7 @@ public partial class TableCellVerticalAlignment : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11704;
     /// <inheritdoc/>
     public override string LocalName => "vAlign";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23897,7 +23045,7 @@ public partial class TableCellVerticalAlignment : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableVerticalAlignmentValues> Val { get; set; }
 
     /// <summary>
@@ -23927,9 +23075,7 @@ public partial class DivId : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11706;
     /// <inheritdoc/>
     public override string LocalName => "divId";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23942,7 +23088,7 @@ public partial class DivId : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -23972,9 +23118,7 @@ public partial class TableRowHeight : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11711;
     /// <inheritdoc/>
     public override string LocalName => "trHeight";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -23987,7 +23131,7 @@ public partial class TableRowHeight : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public UInt32Value Val { get; set; }
     /// <summary>
     /// <para> Table Row Height Type.</para>
@@ -23996,7 +23140,7 @@ public partial class TableRowHeight : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "hRule")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HeightRuleValues> HeightType { get; set; }
 
     /// <summary>
@@ -24026,9 +23170,7 @@ public partial class TableJustification : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11716;
     /// <inheritdoc/>
     public override string LocalName => "jc";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -24041,7 +23183,7 @@ public partial class TableJustification : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableRowAlignmentValues> Val { get; set; }
 
     /// <summary>
@@ -24071,9 +23213,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11718;
     /// <inheritdoc/>
     public override string LocalName => "tblpPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -24086,7 +23226,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "leftFromText")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int16Value LeftFromText { get; set; }
     /// <summary>
     /// <para> (Distance From Right of Table to Text.</para>
@@ -24095,7 +23235,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rightFromText")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public Int16Value RightFromText { get; set; }
     /// <summary>
     /// <para> Distance From Top of Table to Text.</para>
@@ -24104,7 +23244,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "topFromText")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public Int16Value TopFromText { get; set; }
     /// <summary>
     /// <para> Distance From Bottom of Table to Text.</para>
@@ -24113,7 +23253,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "bottomFromText")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public Int16Value BottomFromText { get; set; }
     /// <summary>
     /// <para> Table Vertical Anchor.</para>
@@ -24122,7 +23262,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "vertAnchor")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAnchorValues> VerticalAnchor { get; set; }
     /// <summary>
     /// <para> Table Horizontal Anchor.</para>
@@ -24131,7 +23271,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "horzAnchor")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAnchorValues> HorizontalAnchor { get; set; }
     /// <summary>
     /// <para> Relative Horizontal Alignment From Anchor.</para>
@@ -24140,7 +23280,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "tblpXSpec")]
-    [SchemaIndex(6)]
+	[SchemaIndex(6)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.HorizontalAlignmentValues> TablePositionXAlignment { get; set; }
     /// <summary>
     /// <para> Absolute Horizontal Distance From Anchor.</para>
@@ -24149,7 +23289,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "tblpX")]
-    [SchemaIndex(7)]
+	[SchemaIndex(7)]
     public Int32Value TablePositionX { get; set; }
     /// <summary>
     /// <para> Relative Vertical Alignment from Anchor.</para>
@@ -24158,7 +23298,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "tblpYSpec")]
-    [SchemaIndex(8)]
+	[SchemaIndex(8)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalAlignmentValues> TablePositionYAlignment { get; set; }
     /// <summary>
     /// <para> Absolute Vertical Distance From Anchor.</para>
@@ -24167,7 +23307,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "tblpY")]
-    [SchemaIndex(9)]
+	[SchemaIndex(9)]
     public Int32Value TablePositionY { get; set; }
 
     /// <summary>
@@ -24197,9 +23337,7 @@ public partial class TableOverlap : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11719;
     /// <inheritdoc/>
     public override string LocalName => "tblOverlap";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -24212,7 +23350,7 @@ public partial class TableOverlap : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableOverlapValues> Val { get; set; }
 
     /// <summary>
@@ -24242,9 +23380,7 @@ public partial class TableStyleRowBandSize : UnsignedDecimalNumberMax3Type
     internal const int ElementTypeIdConst = 11721;
     /// <inheritdoc/>
     public override string LocalName => "tblStyleRowBandSize";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -24271,9 +23407,7 @@ public partial class TableStyleColumnBandSize : UnsignedDecimalNumberMax3Type
     internal const int ElementTypeIdConst = 11722;
     /// <inheritdoc/>
     public override string LocalName => "tblStyleColBandSize";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -24302,7 +23436,7 @@ public abstract partial class UnsignedDecimalNumberMax3Type : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int32Value Val { get; set; }
 
     
@@ -24329,9 +23463,7 @@ public partial class TableIndentation : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11724;
     /// <inheritdoc/>
     public override string LocalName => "tblInd";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -24344,7 +23476,7 @@ public partial class TableIndentation : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "w")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int32Value Width { get; set; }
     /// <summary>
     /// <para> type.</para>
@@ -24353,7 +23485,7 @@ public partial class TableIndentation : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "type")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthUnitValues> Type { get; set; }
 
     /// <summary>
@@ -24404,9 +23536,7 @@ public partial class TableBorders : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11725;
     /// <inheritdoc/>
     public override string LocalName => "tblBorders";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -24600,9 +23730,7 @@ public partial class TableLayout : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11726;
     /// <inheritdoc/>
     public override string LocalName => "tblLayout";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -24615,7 +23743,7 @@ public partial class TableLayout : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "type")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableLayoutValues> Type { get; set; }
 
     /// <summary>
@@ -24662,9 +23790,7 @@ public partial class TableCellMarginDefault : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11727;
     /// <inheritdoc/>
     public override string LocalName => "tblCellMar";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -24828,9 +23954,7 @@ public partial class NumberingStart : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11728;
     /// <inheritdoc/>
     public override string LocalName => "numStart";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -24843,7 +23967,7 @@ public partial class NumberingStart : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public UInt16Value Val { get; set; }
 
     /// <summary>
@@ -24873,9 +23997,7 @@ public partial class NumberingRestart : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11729;
     /// <inheritdoc/>
     public override string LocalName => "numRestart";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -24888,7 +24010,7 @@ public partial class NumberingRestart : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RestartNumberValues> Val { get; set; }
 
     /// <summary>
@@ -24925,9 +24047,7 @@ public partial class AltChunk : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11730;
     /// <inheritdoc/>
     public override string LocalName => "altChunk";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -24940,7 +24060,7 @@ public partial class AltChunk : OpenXmlCompositeElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -25025,9 +24145,7 @@ public partial class TableLook : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11731;
     /// <inheritdoc/>
     public override string LocalName => "tblLook";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -25040,7 +24158,7 @@ public partial class TableLook : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public HexBinaryValue Val { get; set; }
     /// <summary>
     /// <para> firstRow.</para>
@@ -25049,7 +24167,7 @@ public partial class TableLook : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "firstRow")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public OnOffValue FirstRow { get; set; }
     /// <summary>
     /// <para> lastRow.</para>
@@ -25058,7 +24176,7 @@ public partial class TableLook : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "lastRow")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public OnOffValue LastRow { get; set; }
     /// <summary>
     /// <para> firstColumn.</para>
@@ -25067,7 +24185,7 @@ public partial class TableLook : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "firstColumn")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public OnOffValue FirstColumn { get; set; }
     /// <summary>
     /// <para> lastColumn.</para>
@@ -25076,7 +24194,7 @@ public partial class TableLook : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "lastColumn")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public OnOffValue LastColumn { get; set; }
     /// <summary>
     /// <para> noHBand.</para>
@@ -25085,7 +24203,7 @@ public partial class TableLook : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "noHBand")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public OnOffValue NoHorizontalBand { get; set; }
     /// <summary>
     /// <para> noVBand.</para>
@@ -25094,7 +24212,7 @@ public partial class TableLook : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "noVBand")]
-    [SchemaIndex(6)]
+	[SchemaIndex(6)]
     public OnOffValue NoVerticalBand { get; set; }
 
     /// <summary>
@@ -25137,9 +24255,7 @@ public partial class FootnoteProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11736;
     /// <inheritdoc/>
     public override string LocalName => "footnotePr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -25286,9 +24402,7 @@ public partial class EndnoteProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11737;
     /// <inheritdoc/>
     public override string LocalName => "endnotePr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -25422,9 +24536,7 @@ public partial class SectionType : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11738;
     /// <inheritdoc/>
     public override string LocalName => "type";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -25437,7 +24549,7 @@ public partial class SectionType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.SectionMarkValues> Val { get; set; }
 
     /// <summary>
@@ -25467,9 +24579,7 @@ public partial class PageSize : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11739;
     /// <inheritdoc/>
     public override string LocalName => "pgSz";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -25482,7 +24592,7 @@ public partial class PageSize : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "w")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public UInt32Value Width { get; set; }
     /// <summary>
     /// <para> Page Height.</para>
@@ -25491,7 +24601,7 @@ public partial class PageSize : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "h")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public UInt32Value Height { get; set; }
     /// <summary>
     /// <para> Page Orientation.</para>
@@ -25500,7 +24610,7 @@ public partial class PageSize : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "orient")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageOrientationValues> Orient { get; set; }
     /// <summary>
     /// <para> Printer Paper Code.</para>
@@ -25509,7 +24619,7 @@ public partial class PageSize : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "code")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public UInt16Value Code { get; set; }
 
     /// <summary>
@@ -25539,9 +24649,7 @@ public partial class PageMargin : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11740;
     /// <inheritdoc/>
     public override string LocalName => "pgMar";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -25554,7 +24662,7 @@ public partial class PageMargin : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "top")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int32Value Top { get; set; }
     /// <summary>
     /// <para> Right Margin Spacing.</para>
@@ -25563,7 +24671,7 @@ public partial class PageMargin : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "right")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public UInt32Value Right { get; set; }
     /// <summary>
     /// <para> Page Bottom Spacing.</para>
@@ -25572,7 +24680,7 @@ public partial class PageMargin : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "bottom")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public Int32Value Bottom { get; set; }
     /// <summary>
     /// <para> Left Margin Spacing.</para>
@@ -25581,7 +24689,7 @@ public partial class PageMargin : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "left")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public UInt32Value Left { get; set; }
     /// <summary>
     /// <para> Spacing to Top of Header.</para>
@@ -25590,7 +24698,7 @@ public partial class PageMargin : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "header")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public UInt32Value Header { get; set; }
     /// <summary>
     /// <para> Spacing to Bottom of Footer.</para>
@@ -25599,7 +24707,7 @@ public partial class PageMargin : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "footer")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public UInt32Value Footer { get; set; }
     /// <summary>
     /// <para> Page Gutter Spacing.</para>
@@ -25608,7 +24716,7 @@ public partial class PageMargin : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "gutter")]
-    [SchemaIndex(6)]
+	[SchemaIndex(6)]
     public UInt32Value Gutter { get; set; }
 
     /// <summary>
@@ -25638,9 +24746,7 @@ public partial class PaperSource : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11741;
     /// <inheritdoc/>
     public override string LocalName => "paperSrc";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -25653,7 +24759,7 @@ public partial class PaperSource : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "first")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public UInt16Value First { get; set; }
     /// <summary>
     /// <para> Non-First Page Printer Tray Code.</para>
@@ -25662,7 +24768,7 @@ public partial class PaperSource : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "other")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public UInt16Value Other { get; set; }
 
     /// <summary>
@@ -25705,9 +24811,7 @@ public partial class PageBorders : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11742;
     /// <inheritdoc/>
     public override string LocalName => "pgBorders";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -25720,7 +24824,7 @@ public partial class PageBorders : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "zOrder")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderZOrderValues> ZOrder { get; set; }
     /// <summary>
     /// <para> Pages to Display Page Borders.</para>
@@ -25729,7 +24833,7 @@ public partial class PageBorders : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "display")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderDisplayValues> Display { get; set; }
     /// <summary>
     /// <para> Page Border Positioning.</para>
@@ -25738,7 +24842,7 @@ public partial class PageBorders : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "offsetFrom")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PageBorderOffsetValues> OffsetFrom { get; set; }
 
     /// <summary>
@@ -25868,9 +24972,7 @@ public partial class LineNumberType : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11743;
     /// <inheritdoc/>
     public override string LocalName => "lnNumType";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -25883,7 +24985,7 @@ public partial class LineNumberType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "countBy")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int16Value CountBy { get; set; }
     /// <summary>
     /// <para> Line Numbering Starting Value.</para>
@@ -25892,7 +24994,7 @@ public partial class LineNumberType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "start")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public Int16Value Start { get; set; }
     /// <summary>
     /// <para> Distance Between Text and Line Numbering.</para>
@@ -25901,7 +25003,7 @@ public partial class LineNumberType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "distance")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Distance { get; set; }
     /// <summary>
     /// <para> Line Numbering Restart Setting.</para>
@@ -25910,7 +25012,7 @@ public partial class LineNumberType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "restart")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LineNumberRestartValues> Restart { get; set; }
 
     /// <summary>
@@ -25940,9 +25042,7 @@ public partial class PageNumberType : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11744;
     /// <inheritdoc/>
     public override string LocalName => "pgNumType";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -25955,7 +25055,7 @@ public partial class PageNumberType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "fmt")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues> Format { get; set; }
     /// <summary>
     /// <para> Starting Page Number.</para>
@@ -25964,7 +25064,7 @@ public partial class PageNumberType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "start")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public Int32Value Start { get; set; }
     /// <summary>
     /// <para> Chapter Heading Style.</para>
@@ -25973,7 +25073,7 @@ public partial class PageNumberType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "chapStyle")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public ByteValue ChapterStyle { get; set; }
     /// <summary>
     /// <para> Chapter Separator Character.</para>
@@ -25982,7 +25082,7 @@ public partial class PageNumberType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "chapSep")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues> ChapterSeparator { get; set; }
 
     /// <summary>
@@ -26019,9 +25119,7 @@ public partial class Columns : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11745;
     /// <inheritdoc/>
     public override string LocalName => "cols";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -26034,7 +25132,7 @@ public partial class Columns : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "equalWidth")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public OnOffValue EqualWidth { get; set; }
     /// <summary>
     /// <para> Spacing Between Equal Width Columns.</para>
@@ -26043,7 +25141,7 @@ public partial class Columns : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "space")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Space { get; set; }
     /// <summary>
     /// <para> Number of Equal Width Columns.</para>
@@ -26052,7 +25150,7 @@ public partial class Columns : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "num")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public Int16Value ColumnCount { get; set; }
     /// <summary>
     /// <para> Draw Line Between Columns.</para>
@@ -26061,7 +25159,7 @@ public partial class Columns : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "sep")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public OnOffValue Separator { get; set; }
 
     /// <summary>
@@ -26125,9 +25223,7 @@ public partial class VerticalTextAlignmentOnPage : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11747;
     /// <inheritdoc/>
     public override string LocalName => "vAlign";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -26140,7 +25236,7 @@ public partial class VerticalTextAlignmentOnPage : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.VerticalJustificationValues> Val { get; set; }
 
     /// <summary>
@@ -26170,9 +25266,7 @@ public partial class DocGrid : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11751;
     /// <inheritdoc/>
     public override string LocalName => "docGrid";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -26185,7 +25279,7 @@ public partial class DocGrid : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "type")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocGridValues> Type { get; set; }
     /// <summary>
     /// <para> Document Grid Line Pitch.</para>
@@ -26194,7 +25288,7 @@ public partial class DocGrid : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "linePitch")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public Int32Value LinePitch { get; set; }
     /// <summary>
     /// <para> Document Grid Character Pitch.</para>
@@ -26203,7 +25297,7 @@ public partial class DocGrid : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "charSpace")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public Int32Value CharacterSpace { get; set; }
 
     /// <summary>
@@ -26240,9 +25334,7 @@ public partial class Recipients : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 11753;
     /// <inheritdoc/>
     public override string LocalName => "recipients";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -26385,9 +25477,7 @@ public partial class TextBoxContent : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11754;
     /// <inheritdoc/>
     public override string LocalName => "txbxContent";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -26563,9 +25653,7 @@ public partial class Comments : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 11755;
     /// <inheritdoc/>
     public override string LocalName => "comments";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -26668,9 +25756,7 @@ public partial class Footnotes : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 11756;
     /// <inheritdoc/>
     public override string LocalName => "footnotes";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -26773,9 +25859,7 @@ public partial class Endnotes : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 11757;
     /// <inheritdoc/>
     public override string LocalName => "endnotes";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -26946,9 +26030,7 @@ public partial class Header : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 11758;
     /// <inheritdoc/>
     public override string LocalName => "hdr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -27221,9 +26303,7 @@ public partial class Footer : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 11759;
     /// <inheritdoc/>
     public override string LocalName => "ftr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -27863,9 +26943,7 @@ public partial class Settings : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 11760;
     /// <inheritdoc/>
     public override string LocalName => "settings";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -28557,9 +27635,7 @@ public partial class WebSettings : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 11761;
     /// <inheritdoc/>
     public override string LocalName => "webSettings";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -28848,9 +27924,7 @@ public partial class Fonts : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 11762;
     /// <inheritdoc/>
     public override string LocalName => "fonts";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -28959,9 +28033,7 @@ public partial class Numbering : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 11763;
     /// <inheritdoc/>
     public override string LocalName => "numbering";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -29078,9 +28150,7 @@ public partial class Styles : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 11764;
     /// <inheritdoc/>
     public override string LocalName => "styles";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -29195,9 +28265,7 @@ public partial class Document : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 11765;
     /// <inheritdoc/>
     public override string LocalName => "document";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -29210,7 +28278,7 @@ public partial class Document : OpenXmlPartRootElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "conformance")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentConformance> Conformance { get; set; }
 
     
@@ -29347,9 +28415,7 @@ public partial class GlossaryDocument : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 11766;
     /// <inheritdoc/>
     public override string LocalName => "glossaryDocument";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -29505,9 +28571,7 @@ public partial class PreviousTablePropertyExceptions : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11767;
     /// <inheritdoc/>
     public override string LocalName => "tblPrEx";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -29753,9 +28817,7 @@ public partial class PreviousTableCellProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11768;
     /// <inheritdoc/>
     public override string LocalName => "tcPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -30062,9 +29124,7 @@ public partial class PreviousTableRowProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11769;
     /// <inheritdoc/>
     public override string LocalName => "trPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -30200,9 +29260,7 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11770;
     /// <inheritdoc/>
     public override string LocalName => "tblPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -30546,9 +29604,7 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11771;
     /// <inheritdoc/>
     public override string LocalName => "sectPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -30561,7 +29617,7 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidRPr")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public HexBinaryValue RsidRPr { get; set; }
     /// <summary>
     /// <para> Section Deletion Revision ID.</para>
@@ -30570,7 +29626,7 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidDel")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public HexBinaryValue RsidDel { get; set; }
     /// <summary>
     /// <para> Section Addition Revision ID.</para>
@@ -30579,7 +29635,7 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidR")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public HexBinaryValue RsidR { get; set; }
     /// <summary>
     /// <para> Section Properties Revision ID.</para>
@@ -30588,7 +29644,7 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidSect")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public HexBinaryValue RsidSect { get; set; }
 
     /// <summary>
@@ -31030,9 +30086,7 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11772;
     /// <inheritdoc/>
     public override string LocalName => "pPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -31706,9 +30760,7 @@ public partial class PreviousRunProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11773;
     /// <inheritdoc/>
     public override string LocalName => "rPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -32042,9 +31094,7 @@ public partial class PreviousParagraphMarkRunProperties : OpenXmlCompositeElemen
     internal const int ElementTypeIdConst = 11774;
     /// <inheritdoc/>
     public override string LocalName => "rPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -32337,9 +31387,7 @@ public partial class NumberingLevelReference : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11775;
     /// <inheritdoc/>
     public override string LocalName => "ilvl";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -32352,7 +31400,7 @@ public partial class NumberingLevelReference : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int32Value Val { get; set; }
 
     /// <summary>
@@ -32382,9 +31430,7 @@ public partial class NumberingId : NonNegativeDecimalNumberType
     internal const int ElementTypeIdConst = 11776;
     /// <inheritdoc/>
     public override string LocalName => "numId";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -32411,9 +31457,7 @@ public partial class StartNumberingValue : NonNegativeDecimalNumberType
     internal const int ElementTypeIdConst = 11911;
     /// <inheritdoc/>
     public override string LocalName => "start";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -32440,9 +31484,7 @@ public partial class AbstractNumId : NonNegativeDecimalNumberType
     internal const int ElementTypeIdConst = 11930;
     /// <inheritdoc/>
     public override string LocalName => "abstractNumId";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -32471,7 +31513,7 @@ public abstract partial class NonNegativeDecimalNumberType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int32Value Val { get; set; }
 
     
@@ -32498,9 +31540,7 @@ public partial class NumberingChange : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11777;
     /// <inheritdoc/>
     public override string LocalName => "numberingChange";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -32513,7 +31553,7 @@ public partial class NumberingChange : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "original")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Original { get; set; }
     /// <summary>
     /// <para> author.</para>
@@ -32522,7 +31562,7 @@ public partial class NumberingChange : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -32531,7 +31571,7 @@ public partial class NumberingChange : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -32540,7 +31580,7 @@ public partial class NumberingChange : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -32570,9 +31610,7 @@ public partial class TabStop : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11784;
     /// <inheritdoc/>
     public override string LocalName => "tab";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -32585,7 +31623,7 @@ public partial class TabStop : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopValues> Val { get; set; }
     /// <summary>
     /// <para> Tab Leader Character.</para>
@@ -32594,7 +31632,7 @@ public partial class TabStop : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "leader")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TabStopLeaderCharValues> Leader { get; set; }
     /// <summary>
     /// <para> Tab Stop Position.</para>
@@ -32603,7 +31641,7 @@ public partial class TabStop : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "pos")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public Int32Value Position { get; set; }
 
     /// <summary>
@@ -32754,9 +31792,7 @@ public partial class ParagraphMarkRunProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11785;
     /// <inheritdoc/>
     public override string LocalName => "rPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -33103,9 +32139,7 @@ public partial class SectionProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11786;
     /// <inheritdoc/>
     public override string LocalName => "sectPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -33118,7 +32152,7 @@ public partial class SectionProperties : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidRPr")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public HexBinaryValue RsidRPr { get; set; }
     /// <summary>
     /// <para> Section Deletion Revision ID.</para>
@@ -33127,7 +32161,7 @@ public partial class SectionProperties : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidDel")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public HexBinaryValue RsidDel { get; set; }
     /// <summary>
     /// <para> Section Addition Revision ID.</para>
@@ -33136,7 +32170,7 @@ public partial class SectionProperties : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidR")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public HexBinaryValue RsidR { get; set; }
     /// <summary>
     /// <para> Section Properties Revision ID.</para>
@@ -33145,7 +32179,7 @@ public partial class SectionProperties : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "rsidSect")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public HexBinaryValue RsidSect { get; set; }
 
     /// <summary>
@@ -33275,9 +32309,7 @@ public partial class FieldData : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 11787;
     /// <inheritdoc/>
     public override string LocalName => "fldData";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -33349,9 +32381,7 @@ public partial class FormFieldData : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11788;
     /// <inheritdoc/>
     public override string LocalName => "ffData";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -33446,9 +32476,7 @@ public partial class FormFieldName : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11789;
     /// <inheritdoc/>
     public override string LocalName => "name";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -33461,7 +32489,7 @@ public partial class FormFieldName : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -33491,9 +32519,7 @@ public partial class EntryMacro : MacroNameType
     internal const int ElementTypeIdConst = 11792;
     /// <inheritdoc/>
     public override string LocalName => "entryMacro";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -33520,9 +32546,7 @@ public partial class ExitMacro : MacroNameType
     internal const int ElementTypeIdConst = 11793;
     /// <inheritdoc/>
     public override string LocalName => "exitMacro";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -33551,7 +32575,7 @@ public abstract partial class MacroNameType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
 
     
@@ -33578,9 +32602,7 @@ public partial class HelpText : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11794;
     /// <inheritdoc/>
     public override string LocalName => "helpText";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -33593,7 +32615,7 @@ public partial class HelpText : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "type")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues> Type { get; set; }
     /// <summary>
     /// <para> Help Text Value.</para>
@@ -33602,7 +32624,7 @@ public partial class HelpText : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -33632,9 +32654,7 @@ public partial class StatusText : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11795;
     /// <inheritdoc/>
     public override string LocalName => "statusText";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -33647,7 +32667,7 @@ public partial class StatusText : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "type")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.InfoTextValues> Type { get; set; }
     /// <summary>
     /// <para> Status Text Value.</para>
@@ -33656,7 +32676,7 @@ public partial class StatusText : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -33699,9 +32719,7 @@ public partial class CheckBox : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11796;
     /// <inheritdoc/>
     public override string LocalName => "checkBox";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -33789,9 +32807,7 @@ public partial class DropDownListFormField : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11797;
     /// <inheritdoc/>
     public override string LocalName => "ddList";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -33911,9 +32927,7 @@ public partial class TextInput : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11798;
     /// <inheritdoc/>
     public override string LocalName => "textInput";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -34047,9 +33061,7 @@ public partial class DefaultDropDownListItemIndex : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11804;
     /// <inheritdoc/>
     public override string LocalName => "default";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -34062,7 +33074,7 @@ public partial class DefaultDropDownListItemIndex : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int32Value Val { get; set; }
 
     /// <summary>
@@ -34092,9 +33104,7 @@ public partial class ListEntryFormField : String255Type
     internal const int ElementTypeIdConst = 11805;
     /// <inheritdoc/>
     public override string LocalName => "listEntry";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -34121,9 +33131,7 @@ public partial class DefaultTextBoxFormFieldString : String255Type
     internal const int ElementTypeIdConst = 11807;
     /// <inheritdoc/>
     public override string LocalName => "default";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -34150,9 +33158,7 @@ public partial class FrameName : String255Type
     internal const int ElementTypeIdConst = 11897;
     /// <inheritdoc/>
     public override string LocalName => "name";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -34181,7 +33187,7 @@ public abstract partial class String255Type : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
 
     
@@ -34208,9 +33214,7 @@ public partial class TextBoxFormFieldType : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11806;
     /// <inheritdoc/>
     public override string LocalName => "type";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -34223,7 +33227,7 @@ public partial class TextBoxFormFieldType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TextBoxFormFieldValues> Val { get; set; }
 
     /// <summary>
@@ -34253,9 +33257,7 @@ public partial class MaxLength : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11808;
     /// <inheritdoc/>
     public override string LocalName => "maxLength";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -34268,7 +33270,7 @@ public partial class MaxLength : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int16Value Val { get; set; }
 
     /// <summary>
@@ -34298,9 +33300,7 @@ public partial class Format : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11809;
     /// <inheritdoc/>
     public override string LocalName => "format";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -34313,7 +33313,7 @@ public partial class Format : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -34343,9 +33343,7 @@ public partial class Column : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11810;
     /// <inheritdoc/>
     public override string LocalName => "col";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -34358,7 +33356,7 @@ public partial class Column : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "w")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Width { get; set; }
     /// <summary>
     /// <para> Space Before Following Column.</para>
@@ -34367,7 +33365,7 @@ public partial class Column : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "space")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Space { get; set; }
 
     /// <summary>
@@ -34404,9 +33402,7 @@ public partial class SectionPropertiesChange : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11811;
     /// <inheritdoc/>
     public override string LocalName => "sectPrChange";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -34419,7 +33415,7 @@ public partial class SectionPropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -34428,7 +33424,7 @@ public partial class SectionPropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -34437,7 +33433,7 @@ public partial class SectionPropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -34529,9 +33525,7 @@ public partial class ParagraphMarkRunPropertiesChange : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11812;
     /// <inheritdoc/>
     public override string LocalName => "rPrChange";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -34544,7 +33538,7 @@ public partial class ParagraphMarkRunPropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -34553,7 +33547,7 @@ public partial class ParagraphMarkRunPropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -34562,7 +33556,7 @@ public partial class ParagraphMarkRunPropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -34654,9 +33648,7 @@ public partial class AltChunkProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11813;
     /// <inheritdoc/>
     public override string LocalName => "altChunkPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -34745,9 +33737,7 @@ public partial class RubyAlign : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11815;
     /// <inheritdoc/>
     public override string LocalName => "rubyAlign";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -34760,7 +33750,7 @@ public partial class RubyAlign : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.RubyAlignValues> Val { get; set; }
 
     /// <summary>
@@ -34790,9 +33780,7 @@ public partial class PhoneticGuideRaise : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11817;
     /// <inheritdoc/>
     public override string LocalName => "hpsRaise";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -34805,7 +33793,7 @@ public partial class PhoneticGuideRaise : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int16Value Val { get; set; }
 
     /// <summary>
@@ -34835,9 +33823,7 @@ public partial class LanguageId : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11819;
     /// <inheritdoc/>
     public override string LocalName => "lid";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -34850,7 +33836,7 @@ public partial class LanguageId : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -34897,9 +33883,7 @@ public partial class RubyProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11821;
     /// <inheritdoc/>
     public override string LocalName => "rubyPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -35125,9 +34109,7 @@ public partial class RubyContent : RubyContentType
     internal const int ElementTypeIdConst = 11822;
     /// <inheritdoc/>
     public override string LocalName => "rt";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -35241,9 +34223,7 @@ public partial class RubyBase : RubyContentType
     internal const int ElementTypeIdConst = 11823;
     /// <inheritdoc/>
     public override string LocalName => "rubyBase";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -35636,9 +34616,7 @@ public partial class SdtDateMappingType : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11825;
     /// <inheritdoc/>
     public override string LocalName => "storeMappedDataAs";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -35651,7 +34629,7 @@ public partial class SdtDateMappingType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DateFormatValues> Val { get; set; }
 
     /// <summary>
@@ -35681,9 +34659,7 @@ public partial class Calendar : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11826;
     /// <inheritdoc/>
     public override string LocalName => "calendar";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -35696,7 +34672,7 @@ public partial class Calendar : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CalendarValues> Val { get; set; }
 
     /// <summary>
@@ -35726,9 +34702,7 @@ public partial class ListItem : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11827;
     /// <inheritdoc/>
     public override string LocalName => "listItem";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -35741,7 +34715,7 @@ public partial class ListItem : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "displayText")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue DisplayText { get; set; }
     /// <summary>
     /// <para> List Entry Value.</para>
@@ -35750,7 +34724,7 @@ public partial class ListItem : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "value")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Value { get; set; }
 
     /// <summary>
@@ -35845,9 +34819,7 @@ public partial class SdtProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11832;
     /// <inheritdoc/>
     public override string LocalName => "sdtPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -36009,9 +34981,7 @@ public partial class SdtEndCharProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11833;
     /// <inheritdoc/>
     public override string LocalName => "sdtEndPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -36152,9 +35122,7 @@ public partial class SdtContentBlock : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11834;
     /// <inheritdoc/>
     public override string LocalName => "sdtContent";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -36446,9 +35414,7 @@ public partial class SdtContentRun : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11835;
     /// <inheritdoc/>
     public override string LocalName => "sdtContent";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -36812,9 +35778,7 @@ public partial class SdtContentRunRuby : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11836;
     /// <inheritdoc/>
     public override string LocalName => "sdtContent";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -37121,9 +36085,7 @@ public partial class SdtContentCell : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11837;
     /// <inheritdoc/>
     public override string LocalName => "sdtContent";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -37358,9 +36320,7 @@ public partial class SdtContentRow : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11838;
     /// <inheritdoc/>
     public override string LocalName => "sdtContent";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -37533,9 +36493,7 @@ public partial class CustomXmlProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11839;
     /// <inheritdoc/>
     public override string LocalName => "customXmlPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -37627,9 +36585,7 @@ public partial class CustomXmlAttribute : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11841;
     /// <inheritdoc/>
     public override string LocalName => "attr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -37642,7 +36598,7 @@ public partial class CustomXmlAttribute : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "uri")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Uri { get; set; }
     /// <summary>
     /// <para> name.</para>
@@ -37651,7 +36607,7 @@ public partial class CustomXmlAttribute : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "name")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> val.</para>
@@ -37660,7 +36616,7 @@ public partial class CustomXmlAttribute : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -37690,9 +36646,7 @@ public partial class GridColumn : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11842;
     /// <inheritdoc/>
     public override string LocalName => "gridCol";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -37705,7 +36659,7 @@ public partial class GridColumn : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "w")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Width { get; set; }
 
     /// <summary>
@@ -37742,9 +36696,7 @@ public partial class TableGridChange : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11843;
     /// <inheritdoc/>
     public override string LocalName => "tblGridChange";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -37757,7 +36709,7 @@ public partial class TableGridChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -37849,9 +36801,7 @@ public partial class TableCellPropertiesChange : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11844;
     /// <inheritdoc/>
     public override string LocalName => "tcPrChange";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -37864,7 +36814,7 @@ public partial class TableCellPropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -37873,7 +36823,7 @@ public partial class TableCellPropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -37882,7 +36832,7 @@ public partial class TableCellPropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -38006,9 +36956,7 @@ public partial class TableCellProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11845;
     /// <inheritdoc/>
     public override string LocalName => "tcPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -38296,9 +37244,7 @@ public partial class TablePropertiesChange : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11848;
     /// <inheritdoc/>
     public override string LocalName => "tblPrChange";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -38311,7 +37257,7 @@ public partial class TablePropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -38320,7 +37266,7 @@ public partial class TablePropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -38329,7 +37275,7 @@ public partial class TablePropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -38421,9 +37367,7 @@ public partial class TablePropertyExceptionsChange : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11849;
     /// <inheritdoc/>
     public override string LocalName => "tblPrExChange";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -38436,7 +37380,7 @@ public partial class TablePropertyExceptionsChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -38445,7 +37389,7 @@ public partial class TablePropertyExceptionsChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -38454,7 +37398,7 @@ public partial class TablePropertyExceptionsChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -38576,9 +37520,7 @@ public partial class TableProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11850;
     /// <inheritdoc/>
     public override string LocalName => "tblPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -38901,9 +37843,7 @@ public partial class TableGrid : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11851;
     /// <inheritdoc/>
     public override string LocalName => "tblGrid";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -38974,9 +37914,7 @@ public partial class FootnotePosition : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11852;
     /// <inheritdoc/>
     public override string LocalName => "pos";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -38989,7 +37927,7 @@ public partial class FootnotePosition : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnotePositionValues> Val { get; set; }
 
     /// <summary>
@@ -39019,9 +37957,7 @@ public partial class NumberingFormat : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11853;
     /// <inheritdoc/>
     public override string LocalName => "numFmt";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -39034,7 +37970,7 @@ public partial class NumberingFormat : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues> Val { get; set; }
     /// <summary>
     /// <para> format.</para>
@@ -39043,7 +37979,7 @@ public partial class NumberingFormat : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "format")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Format { get; set; }
 
     /// <summary>
@@ -39073,9 +38009,7 @@ public partial class EndnotePosition : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11854;
     /// <inheritdoc/>
     public override string LocalName => "pos";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -39088,7 +38022,7 @@ public partial class EndnotePosition : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.EndnotePositionValues> Val { get; set; }
 
     /// <summary>
@@ -39118,9 +38052,7 @@ public partial class FootnoteSpecialReference : FootnoteEndnoteSeparatorReferenc
     internal const int ElementTypeIdConst = 11855;
     /// <inheritdoc/>
     public override string LocalName => "footnote";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -39147,9 +38079,7 @@ public partial class EndnoteSpecialReference : FootnoteEndnoteSeparatorReference
     internal const int ElementTypeIdConst = 11856;
     /// <inheritdoc/>
     public override string LocalName => "endnote";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -39178,7 +38108,7 @@ public abstract partial class FootnoteEndnoteSeparatorReferenceType : OpenXmlLea
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public IntegerValue Id { get; set; }
 
     
@@ -39205,9 +38135,7 @@ public partial class ColumnIndex : UnsignedDecimalNumberType
     internal const int ElementTypeIdConst = 11858;
     /// <inheritdoc/>
     public override string LocalName => "column";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -39234,9 +38162,7 @@ public partial class ColumnDelimiter : UnsignedDecimalNumberType
     internal const int ElementTypeIdConst = 11868;
     /// <inheritdoc/>
     public override string LocalName => "colDelim";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -39265,7 +38191,7 @@ public abstract partial class UnsignedDecimalNumberType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public UInt32Value Val { get; set; }
 
     
@@ -39292,9 +38218,7 @@ public partial class UniqueTag : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11859;
     /// <inheritdoc/>
     public override string LocalName => "uniqueTag";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -39307,7 +38231,7 @@ public partial class UniqueTag : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Base64BinaryValue Val { get; set; }
 
     /// <summary>
@@ -39348,9 +38272,7 @@ public partial class RecipientData : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11860;
     /// <inheritdoc/>
     public override string LocalName => "recipientData";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -39469,9 +38391,7 @@ public partial class MailMergeFieldType : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11861;
     /// <inheritdoc/>
     public override string LocalName => "type";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -39484,7 +38404,7 @@ public partial class MailMergeFieldType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeOdsoFieldValues> Val { get; set; }
 
     /// <summary>
@@ -39514,9 +38434,7 @@ public partial class MailMergeSource : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11869;
     /// <inheritdoc/>
     public override string LocalName => "type";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -39529,7 +38447,7 @@ public partial class MailMergeSource : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeSourceValues> Val { get; set; }
 
     /// <summary>
@@ -39576,9 +38494,7 @@ public partial class FieldMapData : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11871;
     /// <inheritdoc/>
     public override string LocalName => "fieldMapData";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -39742,9 +38658,7 @@ public partial class MainDocumentType : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11873;
     /// <inheritdoc/>
     public override string LocalName => "mainDocumentType";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -39757,7 +38671,7 @@ public partial class MainDocumentType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDocumentValues> Val { get; set; }
 
     /// <summary>
@@ -39787,9 +38701,7 @@ public partial class DataType : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11875;
     /// <inheritdoc/>
     public override string LocalName => "dataType";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -39802,7 +38714,7 @@ public partial class DataType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDataValues> Val { get; set; }
 
     /// <summary>
@@ -39832,9 +38744,7 @@ public partial class Destination : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11881;
     /// <inheritdoc/>
     public override string LocalName => "destination";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -39847,7 +38757,7 @@ public partial class Destination : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MailMergeDestinationValues> Val { get; set; }
 
     /// <summary>
@@ -39898,9 +38808,7 @@ public partial class DataSourceObject : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11888;
     /// <inheritdoc/>
     public override string LocalName => "odso";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -40070,9 +38978,7 @@ public partial class DocumentVariable : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11889;
     /// <inheritdoc/>
     public override string LocalName => "docVar";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -40085,7 +38991,7 @@ public partial class DocumentVariable : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "name")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> Document Variable Value.</para>
@@ -40094,7 +39000,7 @@ public partial class DocumentVariable : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -40124,9 +39030,7 @@ public partial class RsidRoot : LongHexNumberType
     internal const int ElementTypeIdConst = 11890;
     /// <inheritdoc/>
     public override string LocalName => "rsidRoot";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -40153,9 +39057,7 @@ public partial class Rsid : LongHexNumberType
     internal const int ElementTypeIdConst = 11891;
     /// <inheritdoc/>
     public override string LocalName => "rsid";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -40182,9 +39084,7 @@ public partial class Nsid : LongHexNumberType
     internal const int ElementTypeIdConst = 11922;
     /// <inheritdoc/>
     public override string LocalName => "nsid";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -40211,9 +39111,7 @@ public partial class TemplateCode : LongHexNumberType
     internal const int ElementTypeIdConst = 11924;
     /// <inheritdoc/>
     public override string LocalName => "tmpl";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -40242,7 +39140,7 @@ public abstract partial class LongHexNumberType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public HexBinaryValue Val { get; set; }
 
     
@@ -40342,9 +39240,7 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11892;
     /// <inheritdoc/>
     public override string LocalName => "rPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -40993,9 +39889,7 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11893;
     /// <inheritdoc/>
     public override string LocalName => "pPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -41526,9 +40420,7 @@ public partial class RunPropertiesDefault : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11894;
     /// <inheritdoc/>
     public override string LocalName => "rPrDefault";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -41624,9 +40516,7 @@ public partial class ParagraphPropertiesDefault : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11895;
     /// <inheritdoc/>
     public override string LocalName => "pPrDefault";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -41715,9 +40605,7 @@ public partial class MarginWidth : PixelsMeasureType
     internal const int ElementTypeIdConst = 11899;
     /// <inheritdoc/>
     public override string LocalName => "marW";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -41744,9 +40632,7 @@ public partial class MarginHeight : PixelsMeasureType
     internal const int ElementTypeIdConst = 11900;
     /// <inheritdoc/>
     public override string LocalName => "marH";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -41775,7 +40661,7 @@ public abstract partial class PixelsMeasureType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public UInt32Value Val { get; set; }
 
     
@@ -41802,9 +40688,7 @@ public partial class ScrollbarVisibility : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11901;
     /// <inheritdoc/>
     public override string LocalName => "scrollbar";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -41817,7 +40701,7 @@ public partial class ScrollbarVisibility : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameScrollbarVisibilityValues> Val { get; set; }
 
     /// <summary>
@@ -41847,9 +40731,7 @@ public partial class Width : TwipsMeasureType
     internal const int ElementTypeIdConst = 11904;
     /// <inheritdoc/>
     public override string LocalName => "w";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -41876,9 +40758,7 @@ public partial class HyphenationZone : TwipsMeasureType
     internal const int ElementTypeIdConst = 12144;
     /// <inheritdoc/>
     public override string LocalName => "hyphenationZone";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -41905,9 +40785,7 @@ public partial class DrawingGridHorizontalSpacing : TwipsMeasureType
     internal const int ElementTypeIdConst = 12154;
     /// <inheritdoc/>
     public override string LocalName => "drawingGridHorizontalSpacing";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -41934,9 +40812,7 @@ public partial class DrawingGridVerticalSpacing : TwipsMeasureType
     internal const int ElementTypeIdConst = 12155;
     /// <inheritdoc/>
     public override string LocalName => "drawingGridVerticalSpacing";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -41963,9 +40839,7 @@ public partial class DrawingGridHorizontalOrigin : TwipsMeasureType
     internal const int ElementTypeIdConst = 12159;
     /// <inheritdoc/>
     public override string LocalName => "drawingGridHorizontalOrigin";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -41992,9 +40866,7 @@ public partial class DrawingGridVerticalOrigin : TwipsMeasureType
     internal const int ElementTypeIdConst = 12160;
     /// <inheritdoc/>
     public override string LocalName => "drawingGridVerticalOrigin";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -42023,7 +40895,7 @@ public abstract partial class TwipsMeasureType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
 
     
@@ -42063,9 +40935,7 @@ public partial class FramesetSplitbar : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11907;
     /// <inheritdoc/>
     public override string LocalName => "framesetSplitbar";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -42199,9 +41069,7 @@ public partial class FrameLayout : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11908;
     /// <inheritdoc/>
     public override string LocalName => "frameLayout";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -42214,7 +41082,7 @@ public partial class FrameLayout : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FrameLayoutValues> Val { get; set; }
 
     /// <summary>
@@ -42259,9 +41127,7 @@ public partial class Frameset : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11909;
     /// <inheritdoc/>
     public override string LocalName => "frameset";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -42407,9 +41273,7 @@ public partial class Frame : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11910;
     /// <inheritdoc/>
     public override string LocalName => "frame";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -42603,9 +41467,7 @@ public partial class LevelSuffix : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11915;
     /// <inheritdoc/>
     public override string LocalName => "suff";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -42618,7 +41480,7 @@ public partial class LevelSuffix : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelSuffixValues> Val { get; set; }
 
     /// <summary>
@@ -42648,9 +41510,7 @@ public partial class LevelText : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11916;
     /// <inheritdoc/>
     public override string LocalName => "lvlText";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -42663,7 +41523,7 @@ public partial class LevelText : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
     /// <summary>
     /// <para> Level Text Is Null Character.</para>
@@ -42672,7 +41532,7 @@ public partial class LevelText : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "null")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public OnOffValue Null { get; set; }
 
     /// <summary>
@@ -42702,9 +41562,7 @@ public partial class LegacyNumbering : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11918;
     /// <inheritdoc/>
     public override string LocalName => "legacy";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -42717,7 +41575,7 @@ public partial class LegacyNumbering : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "legacy")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public OnOffValue Legacy { get; set; }
     /// <summary>
     /// <para> Legacy Spacing.</para>
@@ -42726,7 +41584,7 @@ public partial class LegacyNumbering : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "legacySpace")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue LegacySpace { get; set; }
     /// <summary>
     /// <para> Legacy Indent.</para>
@@ -42735,7 +41593,7 @@ public partial class LegacyNumbering : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "legacyIndent")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue LegacyIndent { get; set; }
 
     /// <summary>
@@ -42765,9 +41623,7 @@ public partial class LevelJustification : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11919;
     /// <inheritdoc/>
     public override string LocalName => "lvlJc";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -42780,7 +41636,7 @@ public partial class LevelJustification : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LevelJustificationValues> Val { get; set; }
 
     /// <summary>
@@ -42877,9 +41733,7 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11920;
     /// <inheritdoc/>
     public override string LocalName => "pPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -43495,9 +42349,7 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11921;
     /// <inheritdoc/>
     public override string LocalName => "rPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -44111,9 +42963,7 @@ public partial class MultiLevelType : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11923;
     /// <inheritdoc/>
     public override string LocalName => "multiLevelType";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -44126,7 +42976,7 @@ public partial class MultiLevelType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.MultiLevelValues> Val { get; set; }
 
     /// <summary>
@@ -44185,9 +43035,7 @@ public partial class Level : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11928;
     /// <inheritdoc/>
     public override string LocalName => "lvl";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -44200,7 +43048,7 @@ public partial class Level : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "ilvl")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int32Value LevelIndex { get; set; }
     /// <summary>
     /// <para> Template Code.</para>
@@ -44209,7 +43057,7 @@ public partial class Level : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "tplc")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public HexBinaryValue TemplateCode { get; set; }
     /// <summary>
     /// <para> Tentative Numbering.</para>
@@ -44218,7 +43066,7 @@ public partial class Level : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "tentative")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public OnOffValue Tentative { get; set; }
 
     /// <summary>
@@ -44477,9 +43325,7 @@ public partial class LevelOverride : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11931;
     /// <inheritdoc/>
     public override string LocalName => "lvlOverride";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -44492,7 +43338,7 @@ public partial class LevelOverride : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "ilvl")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int32Value LevelIndex { get; set; }
 
     /// <summary>
@@ -44601,9 +43447,7 @@ public partial class NumberingPictureBullet : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11932;
     /// <inheritdoc/>
     public override string LocalName => "numPicBullet";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -44616,7 +43460,7 @@ public partial class NumberingPictureBullet : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "numPicBulletId")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int32Value NumberingPictureBulletId { get; set; }
 
     /// <summary>
@@ -44735,9 +43579,7 @@ public partial class AbstractNum : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11933;
     /// <inheritdoc/>
     public override string LocalName => "abstractNum";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -44750,7 +43592,7 @@ public partial class AbstractNum : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "abstractNumId")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int32Value AbstractNumberId { get; set; }
 
     /// <summary>
@@ -44922,9 +43764,7 @@ public partial class NumberingInstance : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11934;
     /// <inheritdoc/>
     public override string LocalName => "num";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -44937,7 +43777,7 @@ public partial class NumberingInstance : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "numId")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int32Value NumberID { get; set; }
 
     /// <summary>
@@ -45092,9 +43932,7 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11936;
     /// <inheritdoc/>
     public override string LocalName => "pPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -45650,9 +44488,7 @@ public partial class TableStyleConditionalFormattingTableProperties : OpenXmlCom
     internal const int ElementTypeIdConst = 11937;
     /// <inheritdoc/>
     public override string LocalName => "tblPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -45831,9 +44667,7 @@ public partial class TableStyleConditionalFormattingTableRowProperties : OpenXml
     internal const int ElementTypeIdConst = 11938;
     /// <inheritdoc/>
     public override string LocalName => "trPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -45928,9 +44762,7 @@ public partial class TableStyleConditionalFormattingTableCellProperties : OpenXm
     internal const int ElementTypeIdConst = 11939;
     /// <inheritdoc/>
     public override string LocalName => "tcPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -46079,9 +44911,7 @@ public partial class StyleName : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11940;
     /// <inheritdoc/>
     public override string LocalName => "name";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -46094,7 +44924,7 @@ public partial class StyleName : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -46124,9 +44954,7 @@ public partial class UIPriority : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11947;
     /// <inheritdoc/>
     public override string LocalName => "uiPriority";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -46139,7 +44967,7 @@ public partial class UIPriority : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int32Value Val { get; set; }
 
     /// <summary>
@@ -46244,9 +45072,7 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11955;
     /// <inheritdoc/>
     public override string LocalName => "rPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -46866,9 +45692,7 @@ public partial class StyleTableProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11956;
     /// <inheritdoc/>
     public override string LocalName => "tblPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -47075,9 +45899,7 @@ public partial class StyleTableCellProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11957;
     /// <inheritdoc/>
     public override string LocalName => "tcPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -47226,9 +46048,7 @@ public partial class TableStyleProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11958;
     /// <inheritdoc/>
     public override string LocalName => "tblStylePr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -47241,7 +46061,7 @@ public partial class TableStyleProperties : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "type")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableStyleOverrideValues> Type { get; set; }
 
     /// <summary>
@@ -47386,9 +46206,7 @@ public partial class LatentStyleExceptionInfo : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11959;
     /// <inheritdoc/>
     public override string LocalName => "lsdException";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -47401,7 +46219,7 @@ public partial class LatentStyleExceptionInfo : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "name")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> Latent Style Locking Setting.</para>
@@ -47410,7 +46228,7 @@ public partial class LatentStyleExceptionInfo : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "locked")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public OnOffValue Locked { get; set; }
     /// <summary>
     /// <para> Override default sorting order.</para>
@@ -47419,7 +46237,7 @@ public partial class LatentStyleExceptionInfo : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "uiPriority")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public Int32Value UiPriority { get; set; }
     /// <summary>
     /// <para> Semi hidden text override.</para>
@@ -47428,7 +46246,7 @@ public partial class LatentStyleExceptionInfo : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "semiHidden")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public OnOffValue SemiHidden { get; set; }
     /// <summary>
     /// <para> Unhide when used.</para>
@@ -47437,7 +46255,7 @@ public partial class LatentStyleExceptionInfo : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "unhideWhenUsed")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public OnOffValue UnhideWhenUsed { get; set; }
     /// <summary>
     /// <para> Latent Style Primary Style Setting.</para>
@@ -47446,7 +46264,7 @@ public partial class LatentStyleExceptionInfo : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "qFormat")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public OnOffValue PrimaryStyle { get; set; }
 
     /// <summary>
@@ -47485,9 +46303,7 @@ public partial class DocDefaults : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11960;
     /// <inheritdoc/>
     public override string LocalName => "docDefaults";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -47598,9 +46414,7 @@ public partial class LatentStyles : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11961;
     /// <inheritdoc/>
     public override string LocalName => "latentStyles";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -47613,7 +46427,7 @@ public partial class LatentStyles : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "defLockedState")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public OnOffValue DefaultLockedState { get; set; }
     /// <summary>
     /// <para> Default User Interface Priority Setting.</para>
@@ -47622,7 +46436,7 @@ public partial class LatentStyles : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "defUIPriority")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public Int32Value DefaultUiPriority { get; set; }
     /// <summary>
     /// <para> Default Semi-Hidden Setting.</para>
@@ -47631,7 +46445,7 @@ public partial class LatentStyles : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "defSemiHidden")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public OnOffValue DefaultSemiHidden { get; set; }
     /// <summary>
     /// <para> Default Hidden Until Used Setting.</para>
@@ -47640,7 +46454,7 @@ public partial class LatentStyles : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "defUnhideWhenUsed")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public OnOffValue DefaultUnhideWhenUsed { get; set; }
     /// <summary>
     /// <para> Default Primary Style Setting.</para>
@@ -47649,7 +46463,7 @@ public partial class LatentStyles : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "defQFormat")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public OnOffValue DefaultPrimaryStyle { get; set; }
     /// <summary>
     /// <para> Latent Style Count.</para>
@@ -47658,7 +46472,7 @@ public partial class LatentStyles : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "count")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public Int32Value Count { get; set; }
 
     /// <summary>
@@ -47771,9 +46585,7 @@ public partial class Style : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11962;
     /// <inheritdoc/>
     public override string LocalName => "style";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -47786,7 +46598,7 @@ public partial class Style : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "type")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.StyleValues> Type { get; set; }
     /// <summary>
     /// <para> Style ID.</para>
@@ -47795,7 +46607,7 @@ public partial class Style : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "styleId")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue StyleId { get; set; }
     /// <summary>
     /// <para> Default Style.</para>
@@ -47804,7 +46616,7 @@ public partial class Style : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "default")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public OnOffValue Default { get; set; }
     /// <summary>
     /// <para> User-Defined Style.</para>
@@ -47813,7 +46625,7 @@ public partial class Style : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "customStyle")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public OnOffValue CustomStyle { get; set; }
 
     /// <summary>
@@ -48228,9 +47040,7 @@ public partial class Font : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11963;
     /// <inheritdoc/>
     public override string LocalName => "font";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -48243,7 +47053,7 @@ public partial class Font : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "name")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Name { get; set; }
 
     /// <summary>
@@ -48478,9 +47288,7 @@ public partial class LeftMarginDiv : SignedTwipsMeasureType
     internal const int ElementTypeIdConst = 11966;
     /// <inheritdoc/>
     public override string LocalName => "marLeft";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -48507,9 +47315,7 @@ public partial class RightMarginDiv : SignedTwipsMeasureType
     internal const int ElementTypeIdConst = 11967;
     /// <inheritdoc/>
     public override string LocalName => "marRight";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -48536,9 +47342,7 @@ public partial class TopMarginDiv : SignedTwipsMeasureType
     internal const int ElementTypeIdConst = 11968;
     /// <inheritdoc/>
     public override string LocalName => "marTop";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -48565,9 +47369,7 @@ public partial class BottomMarginDiv : SignedTwipsMeasureType
     internal const int ElementTypeIdConst = 11969;
     /// <inheritdoc/>
     public override string LocalName => "marBottom";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -48596,7 +47398,7 @@ public abstract partial class SignedTwipsMeasureType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
 
     
@@ -48636,9 +47438,7 @@ public partial class DivBorder : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11970;
     /// <inheritdoc/>
     public override string LocalName => "divBdr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -48778,9 +47578,7 @@ public partial class DivsChild : DivsType
     internal const int ElementTypeIdConst = 11971;
     /// <inheritdoc/>
     public override string LocalName => "divsChild";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -48838,9 +47636,7 @@ public partial class Divs : DivsType
     internal const int ElementTypeIdConst = 12198;
     /// <inheritdoc/>
     public override string LocalName => "divs";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -48974,9 +47770,7 @@ public partial class Div : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11972;
     /// <inheritdoc/>
     public override string LocalName => "div";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -48989,7 +47783,7 @@ public partial class Div : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -49196,9 +47990,7 @@ public partial class Comment : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11973;
     /// <inheritdoc/>
     public override string LocalName => "comment";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -49211,7 +48003,7 @@ public partial class Comment : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "initials")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Initials { get; set; }
     /// <summary>
     /// <para> author.</para>
@@ -49220,7 +48012,7 @@ public partial class Comment : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -49229,7 +48021,7 @@ public partial class Comment : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -49238,7 +48030,7 @@ public partial class Comment : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -49375,9 +48167,7 @@ public partial class Footnote : FootnoteEndnoteType
     internal const int ElementTypeIdConst = 11974;
     /// <inheritdoc/>
     public override string LocalName => "footnote";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -49469,9 +48259,7 @@ public partial class Endnote : FootnoteEndnoteType
     internal const int ElementTypeIdConst = 11975;
     /// <inheritdoc/>
     public override string LocalName => "endnote";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -49600,7 +48388,7 @@ public abstract partial class FootnoteEndnoteType : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "type")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FootnoteEndnoteValues> Type { get; set; }
     /// <summary>
     /// <para> Footnote/Endnote ID.</para>
@@ -49609,7 +48397,7 @@ public abstract partial class FootnoteEndnoteType : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public IntegerValue Id { get; set; }
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
@@ -49772,9 +48560,7 @@ public partial class Behavior : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11976;
     /// <inheritdoc/>
     public override string LocalName => "behavior";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -49787,7 +48573,7 @@ public partial class Behavior : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartBehaviorValues> Val { get; set; }
 
     /// <summary>
@@ -49817,9 +48603,7 @@ public partial class DocPartType : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11977;
     /// <inheritdoc/>
     public override string LocalName => "type";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -49832,7 +48616,7 @@ public partial class DocPartType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartValues> Val { get; set; }
 
     /// <summary>
@@ -49862,9 +48646,7 @@ public partial class Gallery : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11978;
     /// <inheritdoc/>
     public override string LocalName => "gallery";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -49877,7 +48659,7 @@ public partial class Gallery : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocPartGalleryValues> Val { get; set; }
 
     /// <summary>
@@ -49907,9 +48689,7 @@ public partial class AutoCaption : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11979;
     /// <inheritdoc/>
     public override string LocalName => "autoCaption";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -49922,7 +48702,7 @@ public partial class AutoCaption : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "name")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> Caption Used for Automatic Captioning.</para>
@@ -49931,7 +48711,7 @@ public partial class AutoCaption : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "caption")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Caption { get; set; }
 
     /// <summary>
@@ -49961,9 +48741,7 @@ public partial class Caption : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11980;
     /// <inheritdoc/>
     public override string LocalName => "caption";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -49976,7 +48754,7 @@ public partial class Caption : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "name")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> Automatic Caption Placement.</para>
@@ -49985,7 +48763,7 @@ public partial class Caption : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "pos")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CaptionPositionValues> Position { get; set; }
     /// <summary>
     /// <para> Include Chapter Number in Field for Caption.</para>
@@ -49994,7 +48772,7 @@ public partial class Caption : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "chapNum")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public OnOffValue ChapterNumber { get; set; }
     /// <summary>
     /// <para> Style for Chapter Headings.</para>
@@ -50003,7 +48781,7 @@ public partial class Caption : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "heading")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public Int32Value Heading { get; set; }
     /// <summary>
     /// <para> Do Not Include Name In Caption.</para>
@@ -50012,7 +48790,7 @@ public partial class Caption : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "noLabel")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public OnOffValue NoLabel { get; set; }
     /// <summary>
     /// <para> Caption Numbering Format.</para>
@@ -50021,7 +48799,7 @@ public partial class Caption : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "numFmt")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.NumberFormatValues> NumberFormat { get; set; }
     /// <summary>
     /// <para> Chapter Number/Item Index Separator.</para>
@@ -50030,7 +48808,7 @@ public partial class Caption : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "sep")]
-    [SchemaIndex(6)]
+	[SchemaIndex(6)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ChapterSeparatorValues> Separator { get; set; }
 
     /// <summary>
@@ -50067,9 +48845,7 @@ public partial class AutoCaptions : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11981;
     /// <inheritdoc/>
     public override string LocalName => "autoCaptions";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -50144,9 +48920,7 @@ public partial class DocumentBackground : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11982;
     /// <inheritdoc/>
     public override string LocalName => "background";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -50159,7 +48933,7 @@ public partial class DocumentBackground : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "color")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Color { get; set; }
     /// <summary>
     /// <para> themeColor.</para>
@@ -50168,7 +48942,7 @@ public partial class DocumentBackground : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeColor")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get; set; }
     /// <summary>
     /// <para> themeTint.</para>
@@ -50177,7 +48951,7 @@ public partial class DocumentBackground : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeTint")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue ThemeTint { get; set; }
     /// <summary>
     /// <para> themeShade.</para>
@@ -50186,7 +48960,7 @@ public partial class DocumentBackground : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "themeShade")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public StringValue ThemeShade { get; set; }
 
     /// <summary>
@@ -50278,9 +49052,7 @@ public partial class DocParts : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11983;
     /// <inheritdoc/>
     public override string LocalName => "docParts";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -50348,9 +49120,7 @@ public partial class DocPartName : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11984;
     /// <inheritdoc/>
     public override string LocalName => "name";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -50363,7 +49133,7 @@ public partial class DocPartName : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
     /// <summary>
     /// <para> Built-In Entry.</para>
@@ -50372,7 +49142,7 @@ public partial class DocPartName : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "decorated")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public OnOffValue Decorated { get; set; }
 
     /// <summary>
@@ -50411,9 +49181,7 @@ public partial class Category : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11986;
     /// <inheritdoc/>
     public override string LocalName => "category";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -50524,9 +49292,7 @@ public partial class DocPartTypes : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11987;
     /// <inheritdoc/>
     public override string LocalName => "types";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -50539,7 +49305,7 @@ public partial class DocPartTypes : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "all")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public OnOffValue All { get; set; }
 
     /// <summary>
@@ -50610,9 +49376,7 @@ public partial class Behaviors : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11988;
     /// <inheritdoc/>
     public override string LocalName => "behaviors";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -50680,9 +49444,7 @@ public partial class DocPartId : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 11990;
     /// <inheritdoc/>
     public override string LocalName => "guid";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -50695,7 +49457,7 @@ public partial class DocPartId : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -50744,9 +49506,7 @@ public partial class DocPartProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11991;
     /// <inheritdoc/>
     public override string LocalName => "docPartPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -50966,9 +49726,7 @@ public partial class DocPartBody : BodyType
     internal const int ElementTypeIdConst = 11992;
     /// <inheritdoc/>
     public override string LocalName => "docPartBody";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -51061,9 +49819,7 @@ public partial class Body : BodyType
     internal const int ElementTypeIdConst = 12221;
     /// <inheritdoc/>
     public override string LocalName => "body";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -51360,9 +50116,7 @@ public partial class DocPart : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 11993;
     /// <inheritdoc/>
     public override string LocalName => "docPart";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -51466,9 +50220,7 @@ public partial class CompatibilitySetting : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12059;
     /// <inheritdoc/>
     public override string LocalName => "compatSetting";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -51481,7 +50233,7 @@ public partial class CompatibilitySetting : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "name")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CompatSettingNameValues> Name { get; set; }
     /// <summary>
     /// <para> uri.</para>
@@ -51490,7 +50242,7 @@ public partial class CompatibilitySetting : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "uri")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Uri { get; set; }
     /// <summary>
     /// <para> val.</para>
@@ -51499,7 +50251,7 @@ public partial class CompatibilitySetting : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -51529,9 +50281,7 @@ public partial class TableCellLeftMargin : TableWidthDxaNilType
     internal const int ElementTypeIdConst = 12065;
     /// <inheritdoc/>
     public override string LocalName => "left";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -51558,9 +50308,7 @@ public partial class TableCellRightMargin : TableWidthDxaNilType
     internal const int ElementTypeIdConst = 12068;
     /// <inheritdoc/>
     public override string LocalName => "right";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -51589,7 +50337,7 @@ public abstract partial class TableWidthDxaNilType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "w")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int16Value Width { get; set; }
     /// <summary>
     /// <para> type.</para>
@@ -51598,7 +50346,7 @@ public abstract partial class TableWidthDxaNilType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "type")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TableWidthValues> Type { get; set; }
 
     
@@ -51650,9 +50398,7 @@ public partial class TablePropertyExceptions : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12070;
     /// <inheritdoc/>
     public override string LocalName => "tblPrEx";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -51915,9 +50661,7 @@ public partial class TableRowProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12071;
     /// <inheritdoc/>
     public override string LocalName => "trPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -52040,9 +50784,7 @@ public partial class TableRowPropertiesChange : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12072;
     /// <inheritdoc/>
     public override string LocalName => "trPrChange";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -52055,7 +50797,7 @@ public partial class TableRowPropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -52064,7 +50806,7 @@ public partial class TableRowPropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -52073,7 +50815,7 @@ public partial class TableRowPropertiesChange : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -52235,9 +50977,7 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12077;
     /// <inheritdoc/>
     public override string LocalName => "pPr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -52851,9 +51591,7 @@ public partial class Control : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12079;
     /// <inheritdoc/>
     public override string LocalName => "control";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -52866,7 +51604,7 @@ public partial class Control : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "name")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> Associated VML Data Reference.</para>
@@ -52875,7 +51613,7 @@ public partial class Control : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "shapeid")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue ShapeId { get; set; }
     /// <summary>
     /// <para> Embedded Control Properties Relationship Reference.</para>
@@ -52884,7 +51622,7 @@ public partial class Control : OpenXmlLeafElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -52921,9 +51659,7 @@ public partial class PreviousTableGrid : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12080;
     /// <inheritdoc/>
     public override string LocalName => "tblGrid";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -52991,9 +51727,7 @@ public partial class ObjectEmbed : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12081;
     /// <inheritdoc/>
     public override string LocalName => "objectEmbed";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -53006,7 +51740,7 @@ public partial class ObjectEmbed : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "drawAspect")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect> drawAspect { get; set; }
     /// <summary>
     /// <para> id.</para>
@@ -53015,7 +51749,7 @@ public partial class ObjectEmbed : OpenXmlLeafElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> progId.</para>
@@ -53024,7 +51758,7 @@ public partial class ObjectEmbed : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "progId")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue ProgId { get; set; }
     /// <summary>
     /// <para> shapeId.</para>
@@ -53033,7 +51767,7 @@ public partial class ObjectEmbed : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "shapeId")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public StringValue ShapeId { get; set; }
     /// <summary>
     /// <para> fieldCodes.</para>
@@ -53042,7 +51776,7 @@ public partial class ObjectEmbed : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "fieldCodes")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public StringValue FieldCodes { get; set; }
 
     /// <summary>
@@ -53072,9 +51806,7 @@ public partial class ObjectLink : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12082;
     /// <inheritdoc/>
     public override string LocalName => "objectLink";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -53087,7 +51819,7 @@ public partial class ObjectLink : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "updateMode")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectUpdateMode> UpdateMode { get; set; }
     /// <summary>
     /// <para> lockedField.</para>
@@ -53096,7 +51828,7 @@ public partial class ObjectLink : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "lockedField")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public OnOffValue LockedField { get; set; }
     /// <summary>
     /// <para> drawAspect.</para>
@@ -53105,7 +51837,7 @@ public partial class ObjectLink : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "drawAspect")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ObjectDrawAspect> drawAspect { get; set; }
     /// <summary>
     /// <para> id.</para>
@@ -53114,7 +51846,7 @@ public partial class ObjectLink : OpenXmlLeafElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> progId.</para>
@@ -53123,7 +51855,7 @@ public partial class ObjectLink : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "progId")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public StringValue ProgId { get; set; }
     /// <summary>
     /// <para> shapeId.</para>
@@ -53132,7 +51864,7 @@ public partial class ObjectLink : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "shapeId")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public StringValue ShapeId { get; set; }
     /// <summary>
     /// <para> fieldCodes.</para>
@@ -53141,7 +51873,7 @@ public partial class ObjectLink : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "fieldCodes")]
-    [SchemaIndex(6)]
+	[SchemaIndex(6)]
     public StringValue FieldCodes { get; set; }
 
     /// <summary>
@@ -53171,9 +51903,7 @@ public partial class Lock : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12084;
     /// <inheritdoc/>
     public override string LocalName => "lock";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -53186,7 +51916,7 @@ public partial class Lock : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.LockingValues> Val { get; set; }
 
     /// <summary>
@@ -53223,9 +51953,7 @@ public partial class SdtPlaceholder : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12085;
     /// <inheritdoc/>
     public override string LocalName => "placeholder";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -53314,9 +52042,7 @@ public partial class DataBinding : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12087;
     /// <inheritdoc/>
     public override string LocalName => "dataBinding";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -53329,7 +52055,7 @@ public partial class DataBinding : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "prefixMappings")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue PrefixMappings { get; set; }
     /// <summary>
     /// <para> XPath.</para>
@@ -53338,7 +52064,7 @@ public partial class DataBinding : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "xpath")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue XPath { get; set; }
     /// <summary>
     /// <para> Custom XML Data Storage ID.</para>
@@ -53347,7 +52073,7 @@ public partial class DataBinding : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "storeItemID")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue StoreItemId { get; set; }
 
     /// <summary>
@@ -53384,9 +52110,7 @@ public partial class SdtContentComboBox : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12092;
     /// <inheritdoc/>
     public override string LocalName => "comboBox";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -53399,7 +52123,7 @@ public partial class SdtContentComboBox : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "lastValue")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue LastValue { get; set; }
 
     /// <summary>
@@ -53476,9 +52200,7 @@ public partial class SdtContentDate : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12093;
     /// <inheritdoc/>
     public override string LocalName => "date";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -53491,7 +52213,7 @@ public partial class SdtContentDate : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "fullDate")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public DateTimeValue FullDate { get; set; }
 
     /// <summary>
@@ -53629,9 +52351,7 @@ public partial class SdtContentDocPartObject : SdtDocPartType
     internal const int ElementTypeIdConst = 12094;
     /// <inheritdoc/>
     public override string LocalName => "docPartObj";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -53691,9 +52411,7 @@ public partial class SdtContentDocPartList : SdtDocPartType
     internal const int ElementTypeIdConst = 12095;
     /// <inheritdoc/>
     public override string LocalName => "docPartList";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -53868,9 +52586,7 @@ public partial class SdtContentDropDownList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12096;
     /// <inheritdoc/>
     public override string LocalName => "dropDownList";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -53883,7 +52599,7 @@ public partial class SdtContentDropDownList : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "lastValue")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue LastValue { get; set; }
 
     /// <summary>
@@ -53947,9 +52663,7 @@ public partial class SdtContentText : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12099;
     /// <inheritdoc/>
     public override string LocalName => "text";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -53962,7 +52676,7 @@ public partial class SdtContentText : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "multiLine")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public OnOffValue MultiLine { get; set; }
 
     /// <summary>
@@ -53992,9 +52706,7 @@ public partial class WriteProtection : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12103;
     /// <inheritdoc/>
     public override string LocalName => "writeProtection";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -54007,7 +52719,7 @@ public partial class WriteProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "recommended")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public OnOffValue Recommended { get; set; }
     /// <summary>
     /// <para> Cryptographic Provider Type.</para>
@@ -54016,7 +52728,7 @@ public partial class WriteProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "cryptProviderType")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues> CryptographicProviderType { get; set; }
     /// <summary>
     /// <para> Cryptographic Algorithm Class.</para>
@@ -54025,7 +52737,7 @@ public partial class WriteProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "cryptAlgorithmClass")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues> CryptographicAlgorithmClass { get; set; }
     /// <summary>
     /// <para> Cryptographic Algorithm Type.</para>
@@ -54034,7 +52746,7 @@ public partial class WriteProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "cryptAlgorithmType")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues> CryptographicAlgorithmType { get; set; }
     /// <summary>
     /// <para> Cryptographic Hashing Algorithm.</para>
@@ -54043,7 +52755,7 @@ public partial class WriteProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "cryptAlgorithmSid")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public Int32Value CryptographicAlgorithmSid { get; set; }
     /// <summary>
     /// <para> Iterations to Run Hashing Algorithm.</para>
@@ -54052,7 +52764,7 @@ public partial class WriteProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "cryptSpinCount")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public UInt32Value CryptographicSpinCount { get; set; }
     /// <summary>
     /// <para> Cryptographic Provider.</para>
@@ -54061,7 +52773,7 @@ public partial class WriteProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "cryptProvider")]
-    [SchemaIndex(6)]
+	[SchemaIndex(6)]
     public StringValue CryptographicProvider { get; set; }
     /// <summary>
     /// <para> Cryptographic Algorithm Extensibility.</para>
@@ -54070,7 +52782,7 @@ public partial class WriteProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "algIdExt")]
-    [SchemaIndex(7)]
+	[SchemaIndex(7)]
     public HexBinaryValue AlgorithmIdExtensibility { get; set; }
     /// <summary>
     /// <para> Algorithm Extensibility Source.</para>
@@ -54079,7 +52791,7 @@ public partial class WriteProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "algIdExtSource")]
-    [SchemaIndex(8)]
+	[SchemaIndex(8)]
     public StringValue AlgorithmIdExtensibilitySource { get; set; }
     /// <summary>
     /// <para> Cryptographic Provider Type Extensibility.</para>
@@ -54088,7 +52800,7 @@ public partial class WriteProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "cryptProviderTypeExt")]
-    [SchemaIndex(9)]
+	[SchemaIndex(9)]
     public HexBinaryValue CryptographicProviderTypeExtensibility { get; set; }
     /// <summary>
     /// <para> Provider Type Extensibility Source.</para>
@@ -54097,7 +52809,7 @@ public partial class WriteProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "cryptProviderTypeExtSource")]
-    [SchemaIndex(10)]
+	[SchemaIndex(10)]
     public StringValue CryptographicProviderTypeExtSource { get; set; }
     /// <summary>
     /// <para> Password Hash.</para>
@@ -54106,7 +52818,7 @@ public partial class WriteProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "hash")]
-    [SchemaIndex(11)]
+	[SchemaIndex(11)]
     public Base64BinaryValue Hash { get; set; }
     /// <summary>
     /// <para> Salt for Password Verifier.</para>
@@ -54115,7 +52827,7 @@ public partial class WriteProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "salt")]
-    [SchemaIndex(12)]
+	[SchemaIndex(12)]
     public Base64BinaryValue Salt { get; set; }
     /// <summary>
     /// <para> algorithmName.</para>
@@ -54124,7 +52836,7 @@ public partial class WriteProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "algorithmName")]
-    [SchemaIndex(13)]
+	[SchemaIndex(13)]
     public StringValue AlgorithmName { get; set; }
     /// <summary>
     /// <para> hashValue.</para>
@@ -54133,7 +52845,7 @@ public partial class WriteProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "hashValue")]
-    [SchemaIndex(14)]
+	[SchemaIndex(14)]
     public Base64BinaryValue HashValue { get; set; }
     /// <summary>
     /// <para> saltValue.</para>
@@ -54142,7 +52854,7 @@ public partial class WriteProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "saltValue")]
-    [SchemaIndex(15)]
+	[SchemaIndex(15)]
     public Base64BinaryValue SaltValue { get; set; }
     /// <summary>
     /// <para> spinCount.</para>
@@ -54151,7 +52863,7 @@ public partial class WriteProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "spinCount")]
-    [SchemaIndex(16)]
+	[SchemaIndex(16)]
     public Int32Value SpinCount { get; set; }
 
     /// <summary>
@@ -54181,9 +52893,7 @@ public partial class View : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12104;
     /// <inheritdoc/>
     public override string LocalName => "view";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -54196,7 +52906,7 @@ public partial class View : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ViewValues> Val { get; set; }
 
     /// <summary>
@@ -54226,9 +52936,7 @@ public partial class Zoom : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12105;
     /// <inheritdoc/>
     public override string LocalName => "zoom";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -54241,7 +52949,7 @@ public partial class Zoom : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.PresetZoomValues> Val { get; set; }
     /// <summary>
     /// <para> Zoom Percentage.</para>
@@ -54250,7 +52958,7 @@ public partial class Zoom : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "percent")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Percent { get; set; }
 
     /// <summary>
@@ -54280,9 +52988,7 @@ public partial class ActiveWritingStyle : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12124;
     /// <inheritdoc/>
     public override string LocalName => "activeWritingStyle";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -54295,7 +53001,7 @@ public partial class ActiveWritingStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "lang")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Language { get; set; }
     /// <summary>
     /// <para> Grammatical Engine ID.</para>
@@ -54304,7 +53010,7 @@ public partial class ActiveWritingStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "vendorID")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public UInt16Value VendorID { get; set; }
     /// <summary>
     /// <para> Grammatical Check Engine Version.</para>
@@ -54313,7 +53019,7 @@ public partial class ActiveWritingStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "dllVersion")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public Int32Value DllVersion { get; set; }
     /// <summary>
     /// <para> Natural Language Grammar Check.</para>
@@ -54322,7 +53028,7 @@ public partial class ActiveWritingStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "nlCheck")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public OnOffValue NaturalLanguageGrammarCheck { get; set; }
     /// <summary>
     /// <para> Check Stylistic Rules With Grammar.</para>
@@ -54331,7 +53037,7 @@ public partial class ActiveWritingStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "checkStyle")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public OnOffValue CheckStyle { get; set; }
     /// <summary>
     /// <para> Application Name.</para>
@@ -54340,7 +53046,7 @@ public partial class ActiveWritingStyle : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "appName")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public StringValue ApplicationName { get; set; }
 
     /// <summary>
@@ -54370,9 +53076,7 @@ public partial class ProofState : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12125;
     /// <inheritdoc/>
     public override string LocalName => "proofState";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -54385,7 +53089,7 @@ public partial class ProofState : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "spelling")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues> Spelling { get; set; }
     /// <summary>
     /// <para> Grammatical Checking State.</para>
@@ -54394,7 +53098,7 @@ public partial class ProofState : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "grammar")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ProofingStateValues> Grammar { get; set; }
 
     /// <summary>
@@ -54424,9 +53128,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12129;
     /// <inheritdoc/>
     public override string LocalName => "stylePaneFormatFilter";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -54439,7 +53141,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public HexBinaryValue Val { get; set; }
     /// <summary>
     /// <para> allStyles.</para>
@@ -54448,7 +53150,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "allStyles")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public OnOffValue AllStyles { get; set; }
     /// <summary>
     /// <para> customStyles.</para>
@@ -54457,7 +53159,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "customStyles")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public OnOffValue CustomStyles { get; set; }
     /// <summary>
     /// <para> latentStyles.</para>
@@ -54466,7 +53168,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "latentStyles")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public OnOffValue LatentStyles { get; set; }
     /// <summary>
     /// <para> stylesInUse.</para>
@@ -54475,7 +53177,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "stylesInUse")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public OnOffValue StylesInUse { get; set; }
     /// <summary>
     /// <para> headingStyles.</para>
@@ -54484,7 +53186,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "headingStyles")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public OnOffValue HeadingStyles { get; set; }
     /// <summary>
     /// <para> numberingStyles.</para>
@@ -54493,7 +53195,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "numberingStyles")]
-    [SchemaIndex(6)]
+	[SchemaIndex(6)]
     public OnOffValue NumberingStyles { get; set; }
     /// <summary>
     /// <para> tableStyles.</para>
@@ -54502,7 +53204,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "tableStyles")]
-    [SchemaIndex(7)]
+	[SchemaIndex(7)]
     public OnOffValue TableStyles { get; set; }
     /// <summary>
     /// <para> directFormattingOnRuns.</para>
@@ -54511,7 +53213,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "directFormattingOnRuns")]
-    [SchemaIndex(8)]
+	[SchemaIndex(8)]
     public OnOffValue DirectFormattingOnRuns { get; set; }
     /// <summary>
     /// <para> directFormattingOnParagraphs.</para>
@@ -54520,7 +53222,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "directFormattingOnParagraphs")]
-    [SchemaIndex(9)]
+	[SchemaIndex(9)]
     public OnOffValue DirectFormattingOnParagraphs { get; set; }
     /// <summary>
     /// <para> directFormattingOnNumbering.</para>
@@ -54529,7 +53231,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "directFormattingOnNumbering")]
-    [SchemaIndex(10)]
+	[SchemaIndex(10)]
     public OnOffValue DirectFormattingOnNumbering { get; set; }
     /// <summary>
     /// <para> directFormattingOnTables.</para>
@@ -54538,7 +53240,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "directFormattingOnTables")]
-    [SchemaIndex(11)]
+	[SchemaIndex(11)]
     public OnOffValue DirectFormattingOnTables { get; set; }
     /// <summary>
     /// <para> clearFormatting.</para>
@@ -54547,7 +53249,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "clearFormatting")]
-    [SchemaIndex(12)]
+	[SchemaIndex(12)]
     public OnOffValue ClearFormatting { get; set; }
     /// <summary>
     /// <para> top3HeadingStyles.</para>
@@ -54556,7 +53258,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "top3HeadingStyles")]
-    [SchemaIndex(13)]
+	[SchemaIndex(13)]
     public OnOffValue Top3HeadingStyles { get; set; }
     /// <summary>
     /// <para> visibleStyles.</para>
@@ -54565,7 +53267,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "visibleStyles")]
-    [SchemaIndex(14)]
+	[SchemaIndex(14)]
     public OnOffValue VisibleStyles { get; set; }
     /// <summary>
     /// <para> alternateStyleNames.</para>
@@ -54574,7 +53276,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "alternateStyleNames")]
-    [SchemaIndex(15)]
+	[SchemaIndex(15)]
     public OnOffValue AlternateStyleNames { get; set; }
 
     /// <summary>
@@ -54604,9 +53306,7 @@ public partial class StylePaneSortMethods : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12130;
     /// <inheritdoc/>
     public override string LocalName => "stylePaneSortMethod";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -54619,7 +53319,7 @@ public partial class StylePaneSortMethods : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -54649,9 +53349,7 @@ public partial class DocumentType : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12131;
     /// <inheritdoc/>
     public override string LocalName => "documentType";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -54664,7 +53362,7 @@ public partial class DocumentType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentTypeValues> Val { get; set; }
 
     /// <summary>
@@ -54731,9 +53429,7 @@ public partial class MailMerge : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12132;
     /// <inheritdoc/>
     public override string LocalName => "mailMerge";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -55047,9 +53743,7 @@ public partial class RevisionView : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12133;
     /// <inheritdoc/>
     public override string LocalName => "revisionView";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -55062,7 +53756,7 @@ public partial class RevisionView : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "markup")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public OnOffValue Markup { get; set; }
     /// <summary>
     /// <para> Display Comments.</para>
@@ -55071,7 +53765,7 @@ public partial class RevisionView : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "comments")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public OnOffValue Comments { get; set; }
     /// <summary>
     /// <para> Display Content Revisions.</para>
@@ -55080,7 +53774,7 @@ public partial class RevisionView : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "insDel")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public OnOffValue DisplayRevision { get; set; }
     /// <summary>
     /// <para> Display Formatting Revisions.</para>
@@ -55089,7 +53783,7 @@ public partial class RevisionView : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "formatting")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public OnOffValue Formatting { get; set; }
     /// <summary>
     /// <para> Display Ink Annotations.</para>
@@ -55098,7 +53792,7 @@ public partial class RevisionView : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "inkAnnotations")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public OnOffValue InkAnnotations { get; set; }
 
     /// <summary>
@@ -55128,9 +53822,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12137;
     /// <inheritdoc/>
     public override string LocalName => "documentProtection";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -55143,7 +53835,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "edit")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.DocumentProtectionValues> Edit { get; set; }
     /// <summary>
     /// <para> Only Allow Formatting With Unlocked Styles.</para>
@@ -55152,7 +53844,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "formatting")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public OnOffValue Formatting { get; set; }
     /// <summary>
     /// <para> Enforce Document Protection Settings.</para>
@@ -55161,7 +53853,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "enforcement")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public OnOffValue Enforcement { get; set; }
     /// <summary>
     /// <para> Cryptographic Provider Type.</para>
@@ -55170,7 +53862,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "cryptProviderType")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptProviderValues> CryptographicProviderType { get; set; }
     /// <summary>
     /// <para> Cryptographic Algorithm Class.</para>
@@ -55179,7 +53871,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "cryptAlgorithmClass")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmClassValues> CryptographicAlgorithmClass { get; set; }
     /// <summary>
     /// <para> Cryptographic Algorithm Type.</para>
@@ -55188,7 +53880,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "cryptAlgorithmType")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CryptAlgorithmValues> CryptographicAlgorithmType { get; set; }
     /// <summary>
     /// <para> Cryptographic Hashing Algorithm.</para>
@@ -55197,7 +53889,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "cryptAlgorithmSid")]
-    [SchemaIndex(6)]
+	[SchemaIndex(6)]
     public Int32Value CryptographicAlgorithmSid { get; set; }
     /// <summary>
     /// <para> Iterations to Run Hashing Algorithm.</para>
@@ -55206,7 +53898,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "cryptSpinCount")]
-    [SchemaIndex(7)]
+	[SchemaIndex(7)]
     public UInt32Value CryptographicSpinCount { get; set; }
     /// <summary>
     /// <para> Cryptographic Provider.</para>
@@ -55215,7 +53907,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "cryptProvider")]
-    [SchemaIndex(8)]
+	[SchemaIndex(8)]
     public StringValue CryptographicProvider { get; set; }
     /// <summary>
     /// <para> Cryptographic Algorithm Extensibility.</para>
@@ -55224,7 +53916,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "algIdExt")]
-    [SchemaIndex(9)]
+	[SchemaIndex(9)]
     public HexBinaryValue AlgorithmIdExtensibility { get; set; }
     /// <summary>
     /// <para> Algorithm Extensibility Source.</para>
@@ -55233,7 +53925,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "algIdExtSource")]
-    [SchemaIndex(10)]
+	[SchemaIndex(10)]
     public StringValue AlgorithmIdExtensibilitySource { get; set; }
     /// <summary>
     /// <para> Cryptographic Provider Type Extensibility.</para>
@@ -55242,7 +53934,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "cryptProviderTypeExt")]
-    [SchemaIndex(11)]
+	[SchemaIndex(11)]
     public HexBinaryValue CryptographicProviderTypeExtensibility { get; set; }
     /// <summary>
     /// <para> Provider Type Extensibility Source.</para>
@@ -55251,7 +53943,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "cryptProviderTypeExtSource")]
-    [SchemaIndex(12)]
+	[SchemaIndex(12)]
     public StringValue CryptographicProviderTypeExtSource { get; set; }
     /// <summary>
     /// <para> Password Hash.</para>
@@ -55260,7 +53952,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "hash")]
-    [SchemaIndex(13)]
+	[SchemaIndex(13)]
     public Base64BinaryValue Hash { get; set; }
     /// <summary>
     /// <para> Salt for Password Verifier.</para>
@@ -55269,7 +53961,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "salt")]
-    [SchemaIndex(14)]
+	[SchemaIndex(14)]
     public Base64BinaryValue Salt { get; set; }
     /// <summary>
     /// <para> algorithmName.</para>
@@ -55278,7 +53970,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "algorithmName")]
-    [SchemaIndex(15)]
+	[SchemaIndex(15)]
     public StringValue AlgorithmName { get; set; }
     /// <summary>
     /// <para> hashValue.</para>
@@ -55287,7 +53979,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "hashValue")]
-    [SchemaIndex(16)]
+	[SchemaIndex(16)]
     public Base64BinaryValue HashValue { get; set; }
     /// <summary>
     /// <para> saltValue.</para>
@@ -55296,7 +53988,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "saltValue")]
-    [SchemaIndex(17)]
+	[SchemaIndex(17)]
     public Base64BinaryValue SaltValue { get; set; }
     /// <summary>
     /// <para> spinCount.</para>
@@ -55305,7 +53997,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "spinCount")]
-    [SchemaIndex(18)]
+	[SchemaIndex(18)]
     public Int32Value SpinCount { get; set; }
 
     /// <summary>
@@ -55335,9 +54027,7 @@ public partial class DefaultTabStop : NonNegativeShortType
     internal const int ElementTypeIdConst = 12141;
     /// <inheritdoc/>
     public override string LocalName => "defaultTabStop";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -55364,9 +54054,7 @@ public partial class BookFoldPrintingSheets : NonNegativeShortType
     internal const int ElementTypeIdConst = 12153;
     /// <inheritdoc/>
     public override string LocalName => "bookFoldPrintingSheets";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -55395,7 +54083,7 @@ public abstract partial class NonNegativeShortType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int16Value Val { get; set; }
 
     
@@ -55422,9 +54110,7 @@ public partial class ConsecutiveHyphenLimit : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12143;
     /// <inheritdoc/>
     public override string LocalName => "consecutiveHyphenLimit";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -55437,7 +54123,7 @@ public partial class ConsecutiveHyphenLimit : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public UInt16Value Val { get; set; }
 
     /// <summary>
@@ -55467,9 +54153,7 @@ public partial class SummaryLength : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12147;
     /// <inheritdoc/>
     public override string LocalName => "summaryLength";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -55482,7 +54166,7 @@ public partial class SummaryLength : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int32Value Val { get; set; }
 
     /// <summary>
@@ -55512,9 +54196,7 @@ public partial class DisplayHorizontalDrawingGrid : UnsignedInt7Type
     internal const int ElementTypeIdConst = 12156;
     /// <inheritdoc/>
     public override string LocalName => "displayHorizontalDrawingGridEvery";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -55541,9 +54223,7 @@ public partial class DisplayVerticalDrawingGrid : UnsignedInt7Type
     internal const int ElementTypeIdConst = 12157;
     /// <inheritdoc/>
     public override string LocalName => "displayVerticalDrawingGridEvery";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -55572,7 +54252,7 @@ public abstract partial class UnsignedInt7Type : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public Int32Value Val { get; set; }
 
     
@@ -55599,9 +54279,7 @@ public partial class CharacterSpacingControl : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12163;
     /// <inheritdoc/>
     public override string LocalName => "characterSpacingControl";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -55614,7 +54292,7 @@ public partial class CharacterSpacingControl : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.CharacterSpacingValues> Val { get; set; }
 
     /// <summary>
@@ -55644,9 +54322,7 @@ public partial class NoLineBreaksAfterKinsoku : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12166;
     /// <inheritdoc/>
     public override string LocalName => "noLineBreaksAfter";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -55659,7 +54335,7 @@ public partial class NoLineBreaksAfterKinsoku : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "lang")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Language { get; set; }
     /// <summary>
     /// <para> val.</para>
@@ -55668,7 +54344,7 @@ public partial class NoLineBreaksAfterKinsoku : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -55698,9 +54374,7 @@ public partial class NoLineBreaksBeforeKinsoku : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12167;
     /// <inheritdoc/>
     public override string LocalName => "noLineBreaksBefore";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -55713,7 +54387,7 @@ public partial class NoLineBreaksBeforeKinsoku : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "lang")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Language { get; set; }
     /// <summary>
     /// <para> val.</para>
@@ -55722,7 +54396,7 @@ public partial class NoLineBreaksBeforeKinsoku : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -55752,9 +54426,7 @@ public partial class SaveThroughXslt : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12176;
     /// <inheritdoc/>
     public override string LocalName => "saveThroughXslt";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -55767,7 +54439,7 @@ public partial class SaveThroughXslt : OpenXmlLeafElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> Local Identifier for XSL Transform.</para>
@@ -55776,7 +54448,7 @@ public partial class SaveThroughXslt : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "solutionID")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public StringValue SolutionId { get; set; }
 
     /// <summary>
@@ -55813,9 +54485,7 @@ public partial class HeaderShapeDefaults : ShapeDefaultsType
     internal const int ElementTypeIdConst = 12180;
     /// <inheritdoc/>
     public override string LocalName => "hdrShapeDefaults";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -55874,9 +54544,7 @@ public partial class ShapeDefaults : ShapeDefaultsType
     internal const int ElementTypeIdConst = 12195;
     /// <inheritdoc/>
     public override string LocalName => "shapeDefaults";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -56009,9 +54677,7 @@ public partial class FootnoteDocumentWideProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12181;
     /// <inheritdoc/>
     public override string LocalName => "footnotePr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -56163,9 +54829,7 @@ public partial class EndnoteDocumentWideProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12182;
     /// <inheritdoc/>
     public override string LocalName => "endnotePr";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -56439,9 +55103,7 @@ public partial class Compatibility : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12183;
     /// <inheritdoc/>
     public override string LocalName => "compat";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -57500,9 +56162,7 @@ public partial class DocumentVariables : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12184;
     /// <inheritdoc/>
     public override string LocalName => "docVars";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -57579,9 +56239,7 @@ public partial class Rsids : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12185;
     /// <inheritdoc/>
     public override string LocalName => "rsids";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -57673,9 +56331,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12189;
     /// <inheritdoc/>
     public override string LocalName => "clrSchemeMapping";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -57688,7 +56344,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "bg1")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Background1 { get; set; }
     /// <summary>
     /// <para> Text 1 Theme Color Mapping.</para>
@@ -57697,7 +56353,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "t1")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Text1 { get; set; }
     /// <summary>
     /// <para> Background 2 Theme Color Mapping.</para>
@@ -57706,7 +56362,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "bg2")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Background2 { get; set; }
     /// <summary>
     /// <para> Text 2 Theme Color Mapping.</para>
@@ -57715,7 +56371,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "t2")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Text2 { get; set; }
     /// <summary>
     /// <para> Accent 1 Theme Color Mapping.</para>
@@ -57724,7 +56380,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "accent1")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent1 { get; set; }
     /// <summary>
     /// <para> Accent 2 Theme Color Mapping.</para>
@@ -57733,7 +56389,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "accent2")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent2 { get; set; }
     /// <summary>
     /// <para> Accent3 Theme Color Mapping.</para>
@@ -57742,7 +56398,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "accent3")]
-    [SchemaIndex(6)]
+	[SchemaIndex(6)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent3 { get; set; }
     /// <summary>
     /// <para> Accent4 Theme Color Mapping.</para>
@@ -57751,7 +56407,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "accent4")]
-    [SchemaIndex(7)]
+	[SchemaIndex(7)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent4 { get; set; }
     /// <summary>
     /// <para> Accent5 Theme Color Mapping.</para>
@@ -57760,7 +56416,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "accent5")]
-    [SchemaIndex(8)]
+	[SchemaIndex(8)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent5 { get; set; }
     /// <summary>
     /// <para> Accent6 Theme Color Mapping.</para>
@@ -57769,7 +56425,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "accent6")]
-    [SchemaIndex(9)]
+	[SchemaIndex(9)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Accent6 { get; set; }
     /// <summary>
     /// <para> Hyperlink Theme Color Mapping.</para>
@@ -57778,7 +56434,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "hyperlink")]
-    [SchemaIndex(10)]
+	[SchemaIndex(10)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> Hyperlink { get; set; }
     /// <summary>
     /// <para> Followed Hyperlink Theme Color Mapping.</para>
@@ -57787,7 +56443,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "followedHyperlink")]
-    [SchemaIndex(11)]
+	[SchemaIndex(11)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ColorSchemeIndexValues> FollowedHyperlink { get; set; }
 
     /// <summary>
@@ -57826,9 +56482,7 @@ public partial class Captions : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12193;
     /// <inheritdoc/>
     public override string LocalName => "captions";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -57899,9 +56553,7 @@ public partial class ReadModeInkLockDown : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12194;
     /// <inheritdoc/>
     public override string LocalName => "readModeInkLockDown";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -57914,7 +56566,7 @@ public partial class ReadModeInkLockDown : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "actualPg")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public OnOffValue UseActualPages { get; set; }
     /// <summary>
     /// <para> Virtual Page Width.</para>
@@ -57923,7 +56575,7 @@ public partial class ReadModeInkLockDown : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "w")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public UInt32Value Width { get; set; }
     /// <summary>
     /// <para> Virtual Page Height.</para>
@@ -57932,7 +56584,7 @@ public partial class ReadModeInkLockDown : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "h")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public UInt32Value Height { get; set; }
     /// <summary>
     /// <para> Font Size Scaling.</para>
@@ -57941,7 +56593,7 @@ public partial class ReadModeInkLockDown : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "fontSz")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public StringValue FontSize { get; set; }
 
     /// <summary>
@@ -57971,9 +56623,7 @@ public partial class TargetScreenSize : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12208;
     /// <inheritdoc/>
     public override string LocalName => "targetScreenSz";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -57986,7 +56636,7 @@ public partial class TargetScreenSize : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.TargetScreenSizeValues> Val { get; set; }
 
     /// <summary>
@@ -58039,9 +56689,7 @@ public partial class PictureBulletBase : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12209;
     /// <inheritdoc/>
     public override string LocalName => "pict";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -58133,9 +56781,7 @@ public partial class Panose1Number : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12211;
     /// <inheritdoc/>
     public override string LocalName => "panose1";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -58148,7 +56794,7 @@ public partial class Panose1Number : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public HexBinaryValue Val { get; set; }
 
     /// <summary>
@@ -58178,9 +56824,7 @@ public partial class FontCharSet : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12212;
     /// <inheritdoc/>
     public override string LocalName => "charset";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -58193,7 +56837,7 @@ public partial class FontCharSet : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue Val { get; set; }
     /// <summary>
     /// <para> characterSet.</para>
@@ -58202,7 +56846,7 @@ public partial class FontCharSet : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "characterSet")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.StrictCharacterSet> StrictCharacterSet { get; set; }
 
     /// <summary>
@@ -58232,9 +56876,7 @@ public partial class FontFamily : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12213;
     /// <inheritdoc/>
     public override string LocalName => "family";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -58247,7 +56889,7 @@ public partial class FontFamily : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontFamilyValues> Val { get; set; }
 
     /// <summary>
@@ -58277,9 +56919,7 @@ public partial class Pitch : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12215;
     /// <inheritdoc/>
     public override string LocalName => "pitch";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -58292,7 +56932,7 @@ public partial class Pitch : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.FontPitchValues> Val { get; set; }
 
     /// <summary>
@@ -58322,9 +56962,7 @@ public partial class FontSignature : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12216;
     /// <inheritdoc/>
     public override string LocalName => "sig";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -58337,7 +56975,7 @@ public partial class FontSignature : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "usb0")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public HexBinaryValue UnicodeSignature0 { get; set; }
     /// <summary>
     /// <para> Second 32 Bits of Unicode Subset Bitfield.</para>
@@ -58346,7 +56984,7 @@ public partial class FontSignature : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "usb1")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public HexBinaryValue UnicodeSignature1 { get; set; }
     /// <summary>
     /// <para> Third 32 Bits of Unicode Subset Bitfield.</para>
@@ -58355,7 +56993,7 @@ public partial class FontSignature : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "usb2")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public HexBinaryValue UnicodeSignature2 { get; set; }
     /// <summary>
     /// <para> Fourth 32 Bits of Unicode Subset Bitfield.</para>
@@ -58364,7 +57002,7 @@ public partial class FontSignature : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "usb3")]
-    [SchemaIndex(3)]
+	[SchemaIndex(3)]
     public HexBinaryValue UnicodeSignature3 { get; set; }
     /// <summary>
     /// <para> Lower 32 Bits of Code Page Bit Field.</para>
@@ -58373,7 +57011,7 @@ public partial class FontSignature : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "csb0")]
-    [SchemaIndex(4)]
+	[SchemaIndex(4)]
     public HexBinaryValue CodePageSignature0 { get; set; }
     /// <summary>
     /// <para> Upper 32 Bits of Code Page Bit Field.</para>
@@ -58382,7 +57020,7 @@ public partial class FontSignature : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "csb1")]
-    [SchemaIndex(5)]
+	[SchemaIndex(5)]
     public HexBinaryValue CodePageSignature1 { get; set; }
 
     /// <summary>
@@ -58412,9 +57050,7 @@ public partial class EmbedRegularFont : FontRelationshipType
     internal const int ElementTypeIdConst = 12217;
     /// <inheritdoc/>
     public override string LocalName => "embedRegular";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -58441,9 +57077,7 @@ public partial class EmbedBoldFont : FontRelationshipType
     internal const int ElementTypeIdConst = 12218;
     /// <inheritdoc/>
     public override string LocalName => "embedBold";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -58470,9 +57104,7 @@ public partial class EmbedItalicFont : FontRelationshipType
     internal const int ElementTypeIdConst = 12219;
     /// <inheritdoc/>
     public override string LocalName => "embedItalic";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -58499,9 +57131,7 @@ public partial class EmbedBoldItalicFont : FontRelationshipType
     internal const int ElementTypeIdConst = 12220;
     /// <inheritdoc/>
     public override string LocalName => "embedBoldItalic";
-    
     internal override byte NamespaceId => 23;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -58530,7 +57160,7 @@ public abstract partial class FontRelationshipType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "fontKey")]
-    [SchemaIndex(0)]
+	[SchemaIndex(0)]
     public StringValue FontKey { get; set; }
     /// <summary>
     /// <para> subsetted.</para>
@@ -58539,7 +57169,7 @@ public abstract partial class FontRelationshipType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "subsetted")]
-    [SchemaIndex(1)]
+	[SchemaIndex(1)]
     public OnOffValue Subsetted { get; set; }
     /// <summary>
     /// <para> Relationship to Part.</para>
@@ -58548,7 +57178,7 @@ public abstract partial class FontRelationshipType : OpenXmlLeafElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-    [SchemaIndex(2)]
+	[SchemaIndex(2)]
     public StringValue Id { get; set; }
 
     
