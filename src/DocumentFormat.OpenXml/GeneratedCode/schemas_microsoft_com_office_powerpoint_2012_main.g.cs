@@ -34,21 +34,21 @@ public partial class PresetTransition : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: prst </para>
     /// </summary>
     [SchemaAttr(0, "prst")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Preset { get; set; }
     /// <summary>
     /// <para> invX.</para>
     /// <para>Represents the following attribute in the schema: invX </para>
     /// </summary>
     [SchemaAttr(0, "invX")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public BooleanValue InvX { get; set; }
     /// <summary>
     /// <para> invY.</para>
     /// <para>Represents the following attribute in the schema: invY </para>
     /// </summary>
     [SchemaAttr(0, "invY")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public BooleanValue InvY { get; set; }
 
     /// <summary>
@@ -89,14 +89,14 @@ public partial class PresenceInfo : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: userId </para>
     /// </summary>
     [SchemaAttr(0, "userId")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue UserId { get; set; }
     /// <summary>
     /// <para> providerId.</para>
     /// <para>Represents the following attribute in the schema: providerId </para>
     /// </summary>
     [SchemaAttr(0, "providerId")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue ProviderId { get; set; }
 
     /// <summary>
@@ -144,7 +144,7 @@ public partial class ThreadingInfo : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: timeZoneBias </para>
     /// </summary>
     [SchemaAttr(0, "timeZoneBias")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int32Value TimeZoneBias { get; set; }
 
     /// <summary>
@@ -424,7 +424,7 @@ public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
     [SchemaAttr(0, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public BooleanValue Val { get; set; }
 
     /// <summary>
@@ -465,14 +465,14 @@ public partial class ParentCommentIdentifier : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: authorId </para>
     /// </summary>
     [SchemaAttr(0, "authorId")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public UInt32Value AuthorId { get; set; }
     /// <summary>
     /// <para> idx.</para>
     /// <para>Represents the following attribute in the schema: idx </para>
     /// </summary>
     [SchemaAttr(0, "idx")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public UInt32Value Index { get; set; }
 
     /// <summary>
@@ -778,35 +778,35 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> orient.</para>
     /// <para>Represents the following attribute in the schema: orient </para>
     /// </summary>
     [SchemaAttr(0, "orient")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.Presentation.DirectionValues> Orientation { get; set; }
     /// <summary>
     /// <para> pos.</para>
     /// <para>Represents the following attribute in the schema: pos </para>
     /// </summary>
     [SchemaAttr(0, "pos")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public Int32Value Position { get; set; }
     /// <summary>
     /// <para> userDrawn.</para>
     /// <para>Represents the following attribute in the schema: userDrawn </para>
     /// </summary>
     [SchemaAttr(0, "userDrawn")]
-	[SchemaIndex(4)]
+[SchemaIndex(4)]
     public BooleanValue IsUserDrawn { get; set; }
 
     /// <summary>

@@ -35,7 +35,7 @@ public partial class Script : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.ScriptValues> Val { get; set; }
 
     /// <summary>
@@ -78,7 +78,7 @@ public partial class Style : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.StyleValues> Val { get; set; }
 
     /// <summary>
@@ -4444,7 +4444,7 @@ public abstract partial class OnOffType : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.BooleanValues> Val { get; set; }
 
     
@@ -4484,7 +4484,7 @@ public partial class Break : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "alnAt")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public IntegerValue AlignAt { get; set; }
     /// <summary>
     /// <para> Index of Operator to Align To.</para>
@@ -4493,7 +4493,7 @@ public partial class Break : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public IntegerValue Val { get; set; }
 
     /// <summary>
@@ -4657,7 +4657,7 @@ public partial class Text : OpenXmlLeafTextElement
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
     [SchemaAttr(1, "space")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.SpaceProcessingModeValues> Space { get; set; }
 
     /// <summary>
@@ -4810,7 +4810,7 @@ public abstract partial class CharType : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Val { get; set; }
 
     
@@ -6388,7 +6388,7 @@ public abstract partial class TopBottomType : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.VerticalJustificationValues> Val { get; set; }
 
     
@@ -6954,7 +6954,7 @@ public partial class Shape : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.ShapeDelimiterValues> Val { get; set; }
 
     /// <summary>
@@ -7178,7 +7178,7 @@ public partial class BaseJustification : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.VerticalAlignmentValues> Val { get; set; }
 
     /// <summary>
@@ -7264,7 +7264,7 @@ public abstract partial class SpacingRuleType : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public IntegerValue Val { get; set; }
 
     
@@ -7347,7 +7347,7 @@ public abstract partial class UnsignedShortType : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public UInt16Value Val { get; set; }
 
     
@@ -7568,7 +7568,7 @@ public partial class FractionType : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.FractionTypeValues> Val { get; set; }
 
     /// <summary>
@@ -8159,7 +8159,7 @@ public partial class MatrixColumnCount : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public IntegerValue Val { get; set; }
 
     /// <summary>
@@ -8202,7 +8202,7 @@ public partial class MatrixColumnJustification : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.HorizontalAlignmentValues> Val { get; set; }
 
     /// <summary>
@@ -8659,7 +8659,7 @@ public abstract partial class TwipsMeasureType : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public UInt32Value Val { get; set; }
 
     
@@ -9151,7 +9151,7 @@ public abstract partial class LimitLocationType : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.LimitLocationValues> Val { get; set; }
 
     
@@ -10067,7 +10067,7 @@ public partial class ArgumentSize : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public IntegerValue Val { get; set; }
 
     /// <summary>
@@ -10249,7 +10249,7 @@ public abstract partial class OfficeMathJustificationType : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.JustificationValues> Val { get; set; }
 
     
@@ -10289,7 +10289,7 @@ public partial class MathFont : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -10332,7 +10332,7 @@ public partial class BreakBinary : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.BreakBinaryOperatorValues> Val { get; set; }
 
     /// <summary>
@@ -10375,7 +10375,7 @@ public partial class BreakBinarySubtraction : OpenXmlLeafElement
 ///<remark> xmlns:m=http://schemas.openxmlformats.org/officeDocument/2006/math
 ///</remark>
     [SchemaAttr(21, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Math.BreakBinarySubtractionValues> Val { get; set; }
 
     /// <summary>

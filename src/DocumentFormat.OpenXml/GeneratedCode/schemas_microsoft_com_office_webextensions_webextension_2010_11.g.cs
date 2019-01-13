@@ -49,14 +49,14 @@ public partial class WebExtension : OpenXmlPartRootElement
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> frozen.</para>
     /// <para>Represents the following attribute in the schema: frozen </para>
     /// </summary>
     [SchemaAttr(0, "frozen")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public BooleanValue Frozen { get; set; }
 
     
@@ -258,7 +258,7 @@ public partial class WebExtensionReference : OpenXmlLeafElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -299,14 +299,14 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
     /// </summary>
     [SchemaAttr(0, "value")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue Value { get; set; }
 
     /// <summary>
@@ -429,21 +429,21 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue Type { get; set; }
     /// <summary>
     /// <para> appref.</para>
     /// <para>Represents the following attribute in the schema: appref </para>
     /// </summary>
     [SchemaAttr(0, "appref")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public StringValue AppReference { get; set; }
 
     /// <summary>
@@ -546,28 +546,28 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> version.</para>
     /// <para>Represents the following attribute in the schema: version </para>
     /// </summary>
     [SchemaAttr(0, "version")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue Version { get; set; }
     /// <summary>
     /// <para> store.</para>
     /// <para>Represents the following attribute in the schema: store </para>
     /// </summary>
     [SchemaAttr(0, "store")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public StringValue Store { get; set; }
     /// <summary>
     /// <para> storeType.</para>
     /// <para>Represents the following attribute in the schema: storeType </para>
     /// </summary>
     [SchemaAttr(0, "storeType")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public StringValue StoreType { get; set; }
 
     /// <summary>
@@ -931,7 +931,7 @@ public partial class Snapshot : OpenXmlCompositeElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "embed")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Embed { get; set; }
     /// <summary>
     /// <para> Linked Picture Reference.</para>
@@ -940,14 +940,14 @@ public partial class Snapshot : OpenXmlCompositeElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "link")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue Link { get; set; }
     /// <summary>
     /// <para> cstate.</para>
     /// <para>Represents the following attribute in the schema: cstate </para>
     /// </summary>
     [SchemaAttr(0, "cstate")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues> CompressionState { get; set; }
 
     /// <summary>

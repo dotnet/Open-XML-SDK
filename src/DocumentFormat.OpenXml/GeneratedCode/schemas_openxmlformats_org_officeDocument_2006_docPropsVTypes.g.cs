@@ -753,14 +753,14 @@ public partial class VTVector : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: baseType </para>
     /// </summary>
     [SchemaAttr(0, "baseType")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues> BaseType { get; set; }
     /// <summary>
     /// <para> Vector Size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
     [SchemaAttr(0, "size")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public UInt32Value Size { get; set; }
 
     /// <summary>
@@ -934,21 +934,21 @@ public partial class VTArray : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: lBound </para>
     /// </summary>
     [SchemaAttr(0, "lBound")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int32Value LowerBounds { get; set; }
     /// <summary>
     /// <para> Array Upper Bounds Attribute.</para>
     /// <para>Represents the following attribute in the schema: uBound </para>
     /// </summary>
     [SchemaAttr(0, "uBound")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public Int32Value UpperBounds { get; set; }
     /// <summary>
     /// <para> Array Base Type.</para>
     /// <para>Represents the following attribute in the schema: baseType </para>
     /// </summary>
     [SchemaAttr(0, "baseType")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues> BaseType { get; set; }
 
     /// <summary>
@@ -2303,7 +2303,7 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
     /// <para>Represents the following attribute in the schema: version </para>
     /// </summary>
     [SchemaAttr(0, "version")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Version { get; set; }
 
     /// <summary>
@@ -2404,14 +2404,14 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
     /// <para>Represents the following attribute in the schema: format </para>
     /// </summary>
     [SchemaAttr(0, "format")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int32Value Format { get; set; }
     /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
     [SchemaAttr(0, "size")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public UInt32Value Size { get; set; }
 
     /// <summary>

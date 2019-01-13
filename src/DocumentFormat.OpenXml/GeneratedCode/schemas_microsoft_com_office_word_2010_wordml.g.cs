@@ -369,7 +369,7 @@ public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -378,7 +378,7 @@ public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -387,7 +387,7 @@ public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public StringValue Id { get; set; }
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
@@ -723,7 +723,7 @@ public abstract partial class TrackChangeType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "author")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> date.</para>
@@ -732,7 +732,7 @@ public abstract partial class TrackChangeType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "date")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public DateTimeValue Date { get; set; }
     /// <summary>
     /// <para> Annotation Identifier.</para>
@@ -741,7 +741,7 @@ public abstract partial class TrackChangeType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public StringValue Id { get; set; }
 
     
@@ -851,7 +851,7 @@ public abstract partial class PositiveFixedPercentageType : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int32Value Val { get; set; }
 
     
@@ -891,7 +891,7 @@ public partial class HueModulation : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int32Value Val { get; set; }
 
     /// <summary>
@@ -1085,7 +1085,7 @@ public abstract partial class PercentageType : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int32Value Val { get; set; }
 
     
@@ -1150,7 +1150,7 @@ public partial class RgbColorModelHex : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public HexBinaryValue Val { get; set; }
 
     /// <summary>
@@ -1279,7 +1279,7 @@ public partial class SchemeColor : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.SchemeColorValues> Val { get; set; }
 
     /// <summary>
@@ -1383,7 +1383,7 @@ public partial class LinearShadeProperties : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "ang")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int32Value Angle { get; set; }
     /// <summary>
     /// <para> scaled.</para>
@@ -1392,7 +1392,7 @@ public partial class LinearShadeProperties : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "scaled")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Scaled { get; set; }
 
     /// <summary>
@@ -1442,7 +1442,7 @@ public partial class PathShadeProperties : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "path")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PathShadeTypeValues> Path { get; set; }
 
     /// <summary>
@@ -1887,7 +1887,7 @@ public partial class PresetLineDashProperties : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetLineDashValues> Val { get; set; }
 
     /// <summary>
@@ -1930,7 +1930,7 @@ public partial class LineJoinMiterProperties : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "lim")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int32Value Limit { get; set; }
 
     /// <summary>
@@ -1982,7 +1982,7 @@ public partial class Glow : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "rad")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int64Value GlowRadius { get; set; }
 
     /// <summary>
@@ -2104,7 +2104,7 @@ public partial class Shadow : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "blurRad")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int64Value BlurRadius { get; set; }
     /// <summary>
     /// <para> dist.</para>
@@ -2113,7 +2113,7 @@ public partial class Shadow : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "dist")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public Int64Value DistanceFromText { get; set; }
     /// <summary>
     /// <para> dir.</para>
@@ -2122,7 +2122,7 @@ public partial class Shadow : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "dir")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public Int32Value DirectionAngle { get; set; }
     /// <summary>
     /// <para> sx.</para>
@@ -2131,7 +2131,7 @@ public partial class Shadow : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "sx")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public Int32Value HorizontalScalingFactor { get; set; }
     /// <summary>
     /// <para> sy.</para>
@@ -2140,7 +2140,7 @@ public partial class Shadow : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "sy")]
-	[SchemaIndex(4)]
+[SchemaIndex(4)]
     public Int32Value VerticalScalingFactor { get; set; }
     /// <summary>
     /// <para> kx.</para>
@@ -2149,7 +2149,7 @@ public partial class Shadow : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "kx")]
-	[SchemaIndex(5)]
+[SchemaIndex(5)]
     public Int32Value HorizontalSkewAngle { get; set; }
     /// <summary>
     /// <para> ky.</para>
@@ -2158,7 +2158,7 @@ public partial class Shadow : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "ky")]
-	[SchemaIndex(6)]
+[SchemaIndex(6)]
     public Int32Value VerticalSkewAngle { get; set; }
     /// <summary>
     /// <para> algn.</para>
@@ -2167,7 +2167,7 @@ public partial class Shadow : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "algn")]
-	[SchemaIndex(7)]
+[SchemaIndex(7)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues> Alignment { get; set; }
 
     /// <summary>
@@ -2280,7 +2280,7 @@ public partial class Reflection : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "blurRad")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int64Value BlurRadius { get; set; }
     /// <summary>
     /// <para> stA.</para>
@@ -2289,7 +2289,7 @@ public partial class Reflection : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "stA")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public Int32Value StartingOpacity { get; set; }
     /// <summary>
     /// <para> stPos.</para>
@@ -2298,7 +2298,7 @@ public partial class Reflection : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "stPos")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public Int32Value StartPosition { get; set; }
     /// <summary>
     /// <para> endA.</para>
@@ -2307,7 +2307,7 @@ public partial class Reflection : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "endA")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public Int32Value EndingOpacity { get; set; }
     /// <summary>
     /// <para> endPos.</para>
@@ -2316,7 +2316,7 @@ public partial class Reflection : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "endPos")]
-	[SchemaIndex(4)]
+[SchemaIndex(4)]
     public Int32Value EndPosition { get; set; }
     /// <summary>
     /// <para> dist.</para>
@@ -2325,7 +2325,7 @@ public partial class Reflection : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "dist")]
-	[SchemaIndex(5)]
+[SchemaIndex(5)]
     public Int64Value DistanceFromText { get; set; }
     /// <summary>
     /// <para> dir.</para>
@@ -2334,7 +2334,7 @@ public partial class Reflection : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "dir")]
-	[SchemaIndex(6)]
+[SchemaIndex(6)]
     public Int32Value DirectionAngle { get; set; }
     /// <summary>
     /// <para> fadeDir.</para>
@@ -2343,7 +2343,7 @@ public partial class Reflection : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "fadeDir")]
-	[SchemaIndex(7)]
+[SchemaIndex(7)]
     public Int32Value FadeDirection { get; set; }
     /// <summary>
     /// <para> sx.</para>
@@ -2352,7 +2352,7 @@ public partial class Reflection : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "sx")]
-	[SchemaIndex(8)]
+[SchemaIndex(8)]
     public Int32Value HorizontalScalingFactor { get; set; }
     /// <summary>
     /// <para> sy.</para>
@@ -2361,7 +2361,7 @@ public partial class Reflection : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "sy")]
-	[SchemaIndex(9)]
+[SchemaIndex(9)]
     public Int32Value VerticalScalingFactor { get; set; }
     /// <summary>
     /// <para> kx.</para>
@@ -2370,7 +2370,7 @@ public partial class Reflection : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "kx")]
-	[SchemaIndex(10)]
+[SchemaIndex(10)]
     public Int32Value HorizontalSkewAngle { get; set; }
     /// <summary>
     /// <para> ky.</para>
@@ -2379,7 +2379,7 @@ public partial class Reflection : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "ky")]
-	[SchemaIndex(11)]
+[SchemaIndex(11)]
     public Int32Value VerticalSkewAngle { get; set; }
     /// <summary>
     /// <para> algn.</para>
@@ -2388,7 +2388,7 @@ public partial class Reflection : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "algn")]
-	[SchemaIndex(12)]
+[SchemaIndex(12)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.RectangleAlignmentValues> Alignment { get; set; }
 
     /// <summary>
@@ -2450,7 +2450,7 @@ public partial class TextOutlineEffect : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "w")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int32Value LineWidth { get; set; }
     /// <summary>
     /// <para> cap.</para>
@@ -2459,7 +2459,7 @@ public partial class TextOutlineEffect : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "cap")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LineCapValues> CapType { get; set; }
     /// <summary>
     /// <para> cmpd.</para>
@@ -2468,7 +2468,7 @@ public partial class TextOutlineEffect : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "cmpd")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.CompoundLineValues> Compound { get; set; }
     /// <summary>
     /// <para> algn.</para>
@@ -2477,7 +2477,7 @@ public partial class TextOutlineEffect : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "algn")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PenAlignmentValues> Alignment { get; set; }
 
     /// <summary>
@@ -2828,7 +2828,7 @@ public partial class Properties3D : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "extrusionH")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int64Value ExtrusionHeight { get; set; }
     /// <summary>
     /// <para> contourW.</para>
@@ -2837,7 +2837,7 @@ public partial class Properties3D : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "contourW")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public Int64Value ContourWidth { get; set; }
     /// <summary>
     /// <para> prstMaterial.</para>
@@ -2846,7 +2846,7 @@ public partial class Properties3D : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "prstMaterial")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetMaterialTypeValues> PresetMaterialType { get; set; }
 
     /// <summary>
@@ -2989,7 +2989,7 @@ public partial class Ligatures : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LigaturesValues> Val { get; set; }
 
     /// <summary>
@@ -3032,7 +3032,7 @@ public partial class NumberingFormat : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberFormValues> Val { get; set; }
 
     /// <summary>
@@ -3075,7 +3075,7 @@ public partial class NumberSpacing : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.NumberSpacingValues> Val { get; set; }
 
     /// <summary>
@@ -3290,7 +3290,7 @@ public abstract partial class OnOffType : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val { get; set; }
 
     
@@ -3341,7 +3341,7 @@ public partial class ContentPart : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "bwMode")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
     /// <summary>
     /// <para> id.</para>
@@ -3350,7 +3350,7 @@ public partial class ContentPart : OpenXmlCompositeElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue RelationshipId { get; set; }
 
     /// <summary>
@@ -3478,7 +3478,7 @@ public partial class DocumentId : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public HexBinaryValue Val { get; set; }
 
     /// <summary>
@@ -3564,7 +3564,7 @@ public abstract partial class MarkupType : OpenXmlLeafElement
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
     [SchemaAttr(23, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
 
     
@@ -3604,7 +3604,7 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int32Value Val { get; set; }
 
     /// <summary>
@@ -3786,7 +3786,7 @@ public partial class GradientStop : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "pos")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int32Value StopPosition { get; set; }
 
     /// <summary>
@@ -3899,7 +3899,7 @@ public partial class FillToRectangle : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "l")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int32Value Left { get; set; }
     /// <summary>
     /// <para> t.</para>
@@ -3908,7 +3908,7 @@ public partial class FillToRectangle : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "t")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public Int32Value Top { get; set; }
     /// <summary>
     /// <para> r.</para>
@@ -3917,7 +3917,7 @@ public partial class FillToRectangle : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "r")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public Int32Value Right { get; set; }
     /// <summary>
     /// <para> b.</para>
@@ -3926,7 +3926,7 @@ public partial class FillToRectangle : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "b")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public Int32Value Bottom { get; set; }
 
     /// <summary>
@@ -4044,7 +4044,7 @@ public partial class SphereCoordinates : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "lat")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int32Value Lattitude { get; set; }
     /// <summary>
     /// <para> lon.</para>
@@ -4053,7 +4053,7 @@ public partial class SphereCoordinates : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "lon")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public Int32Value Longitude { get; set; }
     /// <summary>
     /// <para> rev.</para>
@@ -4062,7 +4062,7 @@ public partial class SphereCoordinates : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "rev")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public Int32Value Revolution { get; set; }
 
     /// <summary>
@@ -4105,7 +4105,7 @@ public partial class Camera : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "prst")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.PresetCameraTypeValues> PresetCameraType { get; set; }
 
     /// <summary>
@@ -4155,7 +4155,7 @@ public partial class LightRig : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "rig")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigTypeValues> LightRigType { get; set; }
     /// <summary>
     /// <para> dir.</para>
@@ -4164,7 +4164,7 @@ public partial class LightRig : OpenXmlCompositeElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "dir")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.LightRigDirectionValues> LightDirectionType { get; set; }
 
     /// <summary>
@@ -4305,7 +4305,7 @@ public abstract partial class BevelType : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "w")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int64Value Width { get; set; }
     /// <summary>
     /// <para> h.</para>
@@ -4314,7 +4314,7 @@ public abstract partial class BevelType : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "h")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public Int64Value Height { get; set; }
     /// <summary>
     /// <para> prst.</para>
@@ -4323,7 +4323,7 @@ public abstract partial class BevelType : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "prst")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.BevelPresetTypeValues> PresetProfileType { get; set; }
 
     
@@ -4580,7 +4580,7 @@ public partial class StyleSet : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> val.</para>
@@ -4589,7 +4589,7 @@ public partial class StyleSet : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "val")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Word.OnOffValues> Val { get; set; }
 
     /// <summary>
@@ -4675,7 +4675,7 @@ public abstract partial class CheckBoxSymbolType : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "font")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Font { get; set; }
     /// <summary>
     /// <para> val.</para>
@@ -4684,7 +4684,7 @@ public abstract partial class CheckBoxSymbolType : OpenXmlLeafElement
 ///<remark> xmlns:w14=http://schemas.microsoft.com/office/word/2010/wordml
 ///</remark>
     [SchemaAttr(52, "val")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public HexBinaryValue Val { get; set; }
 
     
@@ -4733,35 +4733,35 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public UInt32Value Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> descr.</para>
     /// <para>Represents the following attribute in the schema: descr </para>
     /// </summary>
     [SchemaAttr(0, "descr")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public StringValue Description { get; set; }
     /// <summary>
     /// <para> hidden.</para>
     /// <para>Represents the following attribute in the schema: hidden </para>
     /// </summary>
     [SchemaAttr(0, "hidden")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public BooleanValue Hidden { get; set; }
     /// <summary>
     /// <para> title.</para>
     /// <para>Represents the following attribute in the schema: title </para>
     /// </summary>
     [SchemaAttr(0, "title")]
-	[SchemaIndex(4)]
+[SchemaIndex(4)]
     public StringValue Title { get; set; }
 
     /// <summary>
@@ -4896,7 +4896,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: isComment </para>
     /// </summary>
     [SchemaAttr(0, "isComment")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public BooleanValue IsComment { get; set; }
 
     /// <summary>
@@ -5129,21 +5129,21 @@ public partial class Transform2D : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: rot </para>
     /// </summary>
     [SchemaAttr(0, "rot")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public Int32Value Rotation { get; set; }
     /// <summary>
     /// <para> Horizontal Flip.</para>
     /// <para>Represents the following attribute in the schema: flipH </para>
     /// </summary>
     [SchemaAttr(0, "flipH")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public BooleanValue HorizontalFlip { get; set; }
     /// <summary>
     /// <para> Vertical Flip.</para>
     /// <para>Represents the following attribute in the schema: flipV </para>
     /// </summary>
     [SchemaAttr(0, "flipV")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public BooleanValue VerticalFlip { get; set; }
 
     /// <summary>

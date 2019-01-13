@@ -51,7 +51,7 @@ public partial class Ink : OpenXmlPartRootElement
     /// <para>Represents the following attribute in the schema: documentID </para>
     /// </summary>
     [SchemaAttr(0, "documentID")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue DocumentId { get; set; }
 
     /// <summary>
@@ -144,28 +144,28 @@ public partial class Bind : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: source </para>
     /// </summary>
     [SchemaAttr(0, "source")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Source { get; set; }
     /// <summary>
     /// <para> target.</para>
     /// <para>Represents the following attribute in the schema: target </para>
     /// </summary>
     [SchemaAttr(0, "target")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue Target { get; set; }
     /// <summary>
     /// <para> column.</para>
     /// <para>Represents the following attribute in the schema: column </para>
     /// </summary>
     [SchemaAttr(0, "column")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public StringValue Column { get; set; }
     /// <summary>
     /// <para> variable.</para>
     /// <para>Represents the following attribute in the schema: variable </para>
     /// </summary>
     [SchemaAttr(0, "variable")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public StringValue Variable { get; set; }
 
     /// <summary>
@@ -208,21 +208,21 @@ public partial class Table : OpenXmlLeafTextElement
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
     [SchemaAttr(1, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> apply.</para>
     /// <para>Represents the following attribute in the schema: apply </para>
     /// </summary>
     [SchemaAttr(0, "apply")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.InkML.TableApplyValues> Apply { get; set; }
     /// <summary>
     /// <para> interpolation.</para>
     /// <para>Represents the following attribute in the schema: interpolation </para>
     /// </summary>
     [SchemaAttr(0, "interpolation")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.InkML.TableInterpolationValues> Interpolation { get; set; }
 
     /// <summary>
@@ -278,7 +278,7 @@ public partial class Matrix : OpenXmlLeafTextElement
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
     [SchemaAttr(1, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -347,21 +347,21 @@ public partial class Mapping : OpenXmlCompositeElement
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
     [SchemaAttr(1, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.InkML.MappingTypeValues> Type { get; set; }
     /// <summary>
     /// <para> mappingRef.</para>
     /// <para>Represents the following attribute in the schema: mappingRef </para>
     /// </summary>
     [SchemaAttr(0, "mappingRef")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public StringValue MappingRef { get; set; }
 
     /// <summary>
@@ -454,63 +454,63 @@ public partial class Channel : OpenXmlCompositeElement
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
     [SchemaAttr(1, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.InkML.ChannelDataTypeValues> Type { get; set; }
     /// <summary>
     /// <para> default.</para>
     /// <para>Represents the following attribute in the schema: default </para>
     /// </summary>
     [SchemaAttr(0, "default")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public StringValue Default { get; set; }
     /// <summary>
     /// <para> min.</para>
     /// <para>Represents the following attribute in the schema: min </para>
     /// </summary>
     [SchemaAttr(0, "min")]
-	[SchemaIndex(4)]
+[SchemaIndex(4)]
     public DecimalValue Min { get; set; }
     /// <summary>
     /// <para> max.</para>
     /// <para>Represents the following attribute in the schema: max </para>
     /// </summary>
     [SchemaAttr(0, "max")]
-	[SchemaIndex(5)]
+[SchemaIndex(5)]
     public DecimalValue Max { get; set; }
     /// <summary>
     /// <para> orientation.</para>
     /// <para>Represents the following attribute in the schema: orientation </para>
     /// </summary>
     [SchemaAttr(0, "orientation")]
-	[SchemaIndex(6)]
+[SchemaIndex(6)]
     public EnumValue<DocumentFormat.OpenXml.InkML.ChannelValueOrientationValues> Orientation { get; set; }
     /// <summary>
     /// <para> respectTo.</para>
     /// <para>Represents the following attribute in the schema: respectTo </para>
     /// </summary>
     [SchemaAttr(0, "respectTo")]
-	[SchemaIndex(7)]
+[SchemaIndex(7)]
     public StringValue RespectTo { get; set; }
     /// <summary>
     /// <para> units.</para>
     /// <para>Represents the following attribute in the schema: units </para>
     /// </summary>
     [SchemaAttr(0, "units")]
-	[SchemaIndex(8)]
+[SchemaIndex(8)]
     public StringValue Units { get; set; }
 
     /// <summary>
@@ -660,28 +660,28 @@ public partial class ChannelProperty : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: channel </para>
     /// </summary>
     [SchemaAttr(0, "channel")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Channel { get; set; }
     /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
     /// </summary>
     [SchemaAttr(0, "value")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public DecimalValue Value { get; set; }
     /// <summary>
     /// <para> units.</para>
     /// <para>Represents the following attribute in the schema: units </para>
     /// </summary>
     [SchemaAttr(0, "units")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public StringValue Units { get; set; }
 
     /// <summary>
@@ -733,7 +733,7 @@ public partial class TraceFormat : OpenXmlCompositeElement
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
     [SchemaAttr(1, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -811,14 +811,14 @@ public partial class SampleRate : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: uniform </para>
     /// </summary>
     [SchemaAttr(0, "uniform")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public BooleanValue Uniform { get; set; }
     /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
     /// </summary>
     [SchemaAttr(0, "value")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public DecimalValue Value { get; set; }
 
     /// <summary>
@@ -859,7 +859,7 @@ public partial class Latency : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: value </para>
     /// </summary>
     [SchemaAttr(0, "value")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public DecimalValue Value { get; set; }
 
     /// <summary>
@@ -900,28 +900,28 @@ public partial class ActiveArea : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
     [SchemaAttr(0, "size")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Size { get; set; }
     /// <summary>
     /// <para> height.</para>
     /// <para>Represents the following attribute in the schema: height </para>
     /// </summary>
     [SchemaAttr(0, "height")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public DecimalValue Height { get; set; }
     /// <summary>
     /// <para> width.</para>
     /// <para>Represents the following attribute in the schema: width </para>
     /// </summary>
     [SchemaAttr(0, "width")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public DecimalValue Width { get; set; }
     /// <summary>
     /// <para> units.</para>
     /// <para>Represents the following attribute in the schema: units </para>
     /// </summary>
     [SchemaAttr(0, "units")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public StringValue Units { get; set; }
 
     /// <summary>
@@ -962,21 +962,21 @@ public partial class SourceProperty : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
     /// </summary>
     [SchemaAttr(0, "value")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public DecimalValue Value { get; set; }
     /// <summary>
     /// <para> units.</para>
     /// <para>Represents the following attribute in the schema: units </para>
     /// </summary>
     [SchemaAttr(0, "units")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public StringValue Units { get; set; }
 
     /// <summary>
@@ -1092,14 +1092,14 @@ public partial class Annotation : OpenXmlLeafTextElement
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Type { get; set; }
     /// <summary>
     /// <para> encoding.</para>
     /// <para>Represents the following attribute in the schema: encoding </para>
     /// </summary>
     [SchemaAttr(0, "encoding")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue Encoding { get; set; }
 
     /// <summary>
@@ -1160,21 +1160,21 @@ public partial class AnnotationXml : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Type { get; set; }
     /// <summary>
     /// <para> encoding.</para>
     /// <para>Represents the following attribute in the schema: encoding </para>
     /// </summary>
     [SchemaAttr(0, "encoding")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue Encoding { get; set; }
     /// <summary>
     /// <para> href.</para>
     /// <para>Represents the following attribute in the schema: href </para>
     /// </summary>
     [SchemaAttr(0, "href")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public StringValue Href { get; set; }
 
     /// <summary>
@@ -1279,21 +1279,21 @@ public partial class BrushProperty : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
     /// </summary>
     [SchemaAttr(0, "value")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue Value { get; set; }
     /// <summary>
     /// <para> units.</para>
     /// <para>Represents the following attribute in the schema: units </para>
     /// </summary>
     [SchemaAttr(0, "units")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public StringValue Units { get; set; }
 
     /// <summary>
@@ -1380,14 +1380,14 @@ public partial class Canvas : OpenXmlCompositeElement
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
     [SchemaAttr(1, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> traceFormatRef.</para>
     /// <para>Represents the following attribute in the schema: traceFormatRef </para>
     /// </summary>
     [SchemaAttr(0, "traceFormatRef")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue TraceFormatRef { get; set; }
 
     /// <summary>
@@ -1492,14 +1492,14 @@ public partial class CanvasTransform : OpenXmlCompositeElement
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
     [SchemaAttr(1, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> invertible.</para>
     /// <para>Represents the following attribute in the schema: invertible </para>
     /// </summary>
     [SchemaAttr(0, "invertible")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public BooleanValue Invertible { get; set; }
 
     /// <summary>
@@ -1593,42 +1593,42 @@ public partial class InkSource : OpenXmlCompositeElement
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
     [SchemaAttr(1, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> manufacturer.</para>
     /// <para>Represents the following attribute in the schema: manufacturer </para>
     /// </summary>
     [SchemaAttr(0, "manufacturer")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue Manufacturer { get; set; }
     /// <summary>
     /// <para> model.</para>
     /// <para>Represents the following attribute in the schema: model </para>
     /// </summary>
     [SchemaAttr(0, "model")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public StringValue Model { get; set; }
     /// <summary>
     /// <para> serialNo.</para>
     /// <para>Represents the following attribute in the schema: serialNo </para>
     /// </summary>
     [SchemaAttr(0, "serialNo")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public StringValue SerialNo { get; set; }
     /// <summary>
     /// <para> specificationRef.</para>
     /// <para>Represents the following attribute in the schema: specificationRef </para>
     /// </summary>
     [SchemaAttr(0, "specificationRef")]
-	[SchemaIndex(4)]
+[SchemaIndex(4)]
     public StringValue SpecificationRef { get; set; }
     /// <summary>
     /// <para> description.</para>
     /// <para>Represents the following attribute in the schema: description </para>
     /// </summary>
     [SchemaAttr(0, "description")]
-	[SchemaIndex(5)]
+[SchemaIndex(5)]
     public StringValue Description { get; set; }
 
     /// <summary>
@@ -1788,14 +1788,14 @@ public partial class Brush : OpenXmlCompositeElement
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
     [SchemaAttr(1, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> brushRef.</para>
     /// <para>Represents the following attribute in the schema: brushRef </para>
     /// </summary>
     [SchemaAttr(0, "brushRef")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue BrushRef { get; set; }
 
     /// <summary>
@@ -1878,35 +1878,35 @@ public partial class Timestamp : OpenXmlLeafElement
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
     [SchemaAttr(1, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> time.</para>
     /// <para>Represents the following attribute in the schema: time </para>
     /// </summary>
     [SchemaAttr(0, "time")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public DecimalValue Time { get; set; }
     /// <summary>
     /// <para> timestampRef.</para>
     /// <para>Represents the following attribute in the schema: timestampRef </para>
     /// </summary>
     [SchemaAttr(0, "timestampRef")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public StringValue TimestampRef { get; set; }
     /// <summary>
     /// <para> timeString.</para>
     /// <para>Represents the following attribute in the schema: timeString </para>
     /// </summary>
     [SchemaAttr(0, "timeString")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public DateTimeValue TimeString { get; set; }
     /// <summary>
     /// <para> timeOffset.</para>
     /// <para>Represents the following attribute in the schema: timeOffset </para>
     /// </summary>
     [SchemaAttr(0, "timeOffset")]
-	[SchemaIndex(4)]
+[SchemaIndex(4)]
     public DecimalValue TimeOffset { get; set; }
 
     /// <summary>
@@ -1949,56 +1949,56 @@ public partial class Trace : OpenXmlLeafTextElement
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
     [SchemaAttr(1, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public EnumValue<DocumentFormat.OpenXml.InkML.TraceTypeValues> Type { get; set; }
     /// <summary>
     /// <para> continuation.</para>
     /// <para>Represents the following attribute in the schema: continuation </para>
     /// </summary>
     [SchemaAttr(0, "continuation")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public EnumValue<DocumentFormat.OpenXml.InkML.TraceContinuationValues> Continuation { get; set; }
     /// <summary>
     /// <para> priorRef.</para>
     /// <para>Represents the following attribute in the schema: priorRef </para>
     /// </summary>
     [SchemaAttr(0, "priorRef")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public StringValue PriorRef { get; set; }
     /// <summary>
     /// <para> contextRef.</para>
     /// <para>Represents the following attribute in the schema: contextRef </para>
     /// </summary>
     [SchemaAttr(0, "contextRef")]
-	[SchemaIndex(4)]
+[SchemaIndex(4)]
     public StringValue ContextRef { get; set; }
     /// <summary>
     /// <para> brushRef.</para>
     /// <para>Represents the following attribute in the schema: brushRef </para>
     /// </summary>
     [SchemaAttr(0, "brushRef")]
-	[SchemaIndex(5)]
+[SchemaIndex(5)]
     public StringValue BrushRef { get; set; }
     /// <summary>
     /// <para> duration.</para>
     /// <para>Represents the following attribute in the schema: duration </para>
     /// </summary>
     [SchemaAttr(0, "duration")]
-	[SchemaIndex(6)]
+[SchemaIndex(6)]
     public DecimalValue Duration { get; set; }
     /// <summary>
     /// <para> timeOffset.</para>
     /// <para>Represents the following attribute in the schema: timeOffset </para>
     /// </summary>
     [SchemaAttr(0, "timeOffset")]
-	[SchemaIndex(7)]
+[SchemaIndex(7)]
     public DecimalValue TimeOffset { get; set; }
 
     /// <summary>
@@ -2067,21 +2067,21 @@ public partial class TraceGroup : OpenXmlCompositeElement
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
     [SchemaAttr(1, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> contextRef.</para>
     /// <para>Represents the following attribute in the schema: contextRef </para>
     /// </summary>
     [SchemaAttr(0, "contextRef")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue ContextRef { get; set; }
     /// <summary>
     /// <para> brushRef.</para>
     /// <para>Represents the following attribute in the schema: brushRef </para>
     /// </summary>
     [SchemaAttr(0, "brushRef")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public StringValue BrushRef { get; set; }
 
     /// <summary>
@@ -2178,35 +2178,35 @@ public partial class TraceView : OpenXmlCompositeElement
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
     [SchemaAttr(1, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> contextRef.</para>
     /// <para>Represents the following attribute in the schema: contextRef </para>
     /// </summary>
     [SchemaAttr(0, "contextRef")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue ContextRef { get; set; }
     /// <summary>
     /// <para> traceDataRef.</para>
     /// <para>Represents the following attribute in the schema: traceDataRef </para>
     /// </summary>
     [SchemaAttr(0, "traceDataRef")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public StringValue TraceDataRef { get; set; }
     /// <summary>
     /// <para> from.</para>
     /// <para>Represents the following attribute in the schema: from </para>
     /// </summary>
     [SchemaAttr(0, "from")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public StringValue From { get; set; }
     /// <summary>
     /// <para> to.</para>
     /// <para>Represents the following attribute in the schema: to </para>
     /// </summary>
     [SchemaAttr(0, "to")]
-	[SchemaIndex(4)]
+[SchemaIndex(4)]
     public StringValue To { get; set; }
 
     /// <summary>
@@ -2306,56 +2306,56 @@ public partial class Context : OpenXmlCompositeElement
 ///<remark> xmlns:xml=http://www.w3.org/XML/1998/namespace
 ///</remark>
     [SchemaAttr(1, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> contextRef.</para>
     /// <para>Represents the following attribute in the schema: contextRef </para>
     /// </summary>
     [SchemaAttr(0, "contextRef")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue ContextRef { get; set; }
     /// <summary>
     /// <para> canvasRef.</para>
     /// <para>Represents the following attribute in the schema: canvasRef </para>
     /// </summary>
     [SchemaAttr(0, "canvasRef")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public StringValue CanvasRef { get; set; }
     /// <summary>
     /// <para> canvasTransformRef.</para>
     /// <para>Represents the following attribute in the schema: canvasTransformRef </para>
     /// </summary>
     [SchemaAttr(0, "canvasTransformRef")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public StringValue CanvasTransformRef { get; set; }
     /// <summary>
     /// <para> traceFormatRef.</para>
     /// <para>Represents the following attribute in the schema: traceFormatRef </para>
     /// </summary>
     [SchemaAttr(0, "traceFormatRef")]
-	[SchemaIndex(4)]
+[SchemaIndex(4)]
     public StringValue TraceFromatRef { get; set; }
     /// <summary>
     /// <para> inkSourceRef.</para>
     /// <para>Represents the following attribute in the schema: inkSourceRef </para>
     /// </summary>
     [SchemaAttr(0, "inkSourceRef")]
-	[SchemaIndex(5)]
+[SchemaIndex(5)]
     public StringValue InkSourceRef { get; set; }
     /// <summary>
     /// <para> brushRef.</para>
     /// <para>Represents the following attribute in the schema: brushRef </para>
     /// </summary>
     [SchemaAttr(0, "brushRef")]
-	[SchemaIndex(6)]
+[SchemaIndex(6)]
     public StringValue BrushRef { get; set; }
     /// <summary>
     /// <para> timestampRef.</para>
     /// <para>Represents the following attribute in the schema: timestampRef </para>
     /// </summary>
     [SchemaAttr(0, "timestampRef")]
-	[SchemaIndex(7)]
+[SchemaIndex(7)]
     public StringValue TimestampRef { get; set; }
 
     /// <summary>

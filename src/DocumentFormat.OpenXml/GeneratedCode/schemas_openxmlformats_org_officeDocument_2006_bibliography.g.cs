@@ -39,21 +39,21 @@ public partial class Sources : OpenXmlPartRootElement
     /// <para>Represents the following attribute in the schema: SelectedStyle </para>
     /// </summary>
     [SchemaAttr(0, "SelectedStyle")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue SelectedStyle { get; set; }
     /// <summary>
     /// <para> Documentation Style Name.</para>
     /// <para>Represents the following attribute in the schema: StyleName </para>
     /// </summary>
     [SchemaAttr(0, "StyleName")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue StyleName { get; set; }
     /// <summary>
     /// <para> Uniform Resource Identifier.</para>
     /// <para>Represents the following attribute in the schema: URI </para>
     /// </summary>
     [SchemaAttr(0, "URI")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public StringValue Uri { get; set; }
 
     /// <summary>

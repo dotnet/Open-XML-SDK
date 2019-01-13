@@ -443,7 +443,7 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "fciName")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue CommandName { get; set; }
     /// <summary>
     /// <para> fciIndex.</para>
@@ -452,7 +452,7 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "fciIndex")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public HexBinaryValue CommandIndex { get; set; }
     /// <summary>
     /// <para> swArg.</para>
@@ -461,7 +461,7 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "swArg")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public HexBinaryValue Argument { get; set; }
 
     /// <summary>
@@ -547,7 +547,7 @@ public abstract partial class MacroWllType : OpenXmlLeafElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "macroName")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue MacroName { get; set; }
 
     
@@ -630,7 +630,7 @@ public abstract partial class AcceleratorKeymapType : OpenXmlLeafElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "acdName")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue AcceleratorName { get; set; }
 
     
@@ -670,7 +670,7 @@ public partial class CharacterInsertion : OpenXmlLeafElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public HexBinaryValue Val { get; set; }
 
     /// <summary>
@@ -728,7 +728,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "chmPrimary")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public HexBinaryValue CharacterMapPrimary { get; set; }
     /// <summary>
     /// <para> chmSecondary.</para>
@@ -737,7 +737,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "chmSecondary")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public HexBinaryValue CharacterMapSecondary { get; set; }
     /// <summary>
     /// <para> kcmPrimary.</para>
@@ -746,7 +746,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "kcmPrimary")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public HexBinaryValue KeyCodePrimary { get; set; }
     /// <summary>
     /// <para> kcmSecondary.</para>
@@ -755,7 +755,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "kcmSecondary")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public HexBinaryValue KeyCodeSecondary { get; set; }
     /// <summary>
     /// <para> mask.</para>
@@ -764,7 +764,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "mask")]
-	[SchemaIndex(4)]
+[SchemaIndex(4)]
     public OnOffValue Mask { get; set; }
 
     /// <summary>
@@ -922,7 +922,7 @@ public partial class AllocatedCommand : OpenXmlLeafElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "argValue")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue ArgumentValue { get; set; }
     /// <summary>
     /// <para> fciBasedOn.</para>
@@ -931,7 +931,7 @@ public partial class AllocatedCommand : OpenXmlLeafElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "fciBasedOn")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue CommandBasedOn { get; set; }
     /// <summary>
     /// <para> fciIndexBasedOn.</para>
@@ -940,7 +940,7 @@ public partial class AllocatedCommand : OpenXmlLeafElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "fciIndexBasedOn")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public HexBinaryValue CommandIndexBasedOn { get; set; }
     /// <summary>
     /// <para> acdName.</para>
@@ -949,7 +949,7 @@ public partial class AllocatedCommand : OpenXmlLeafElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "acdName")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public StringValue AcceleratorName { get; set; }
 
     /// <summary>
@@ -992,7 +992,7 @@ public partial class Mcd : OpenXmlLeafElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "macroName")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue MacroName { get; set; }
     /// <summary>
     /// <para> name.</para>
@@ -1001,7 +1001,7 @@ public partial class Mcd : OpenXmlLeafElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "name")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> menuHelp.</para>
@@ -1010,7 +1010,7 @@ public partial class Mcd : OpenXmlLeafElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "menuHelp")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public StringValue MenuHelp { get; set; }
     /// <summary>
     /// <para> bEncrypt.</para>
@@ -1019,7 +1019,7 @@ public partial class Mcd : OpenXmlLeafElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "bEncrypt")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public HexBinaryValue BEncrypt { get; set; }
     /// <summary>
     /// <para> cmg.</para>
@@ -1028,7 +1028,7 @@ public partial class Mcd : OpenXmlLeafElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "cmg")]
-	[SchemaIndex(4)]
+[SchemaIndex(4)]
     public HexBinaryValue Cmg { get; set; }
 
     /// <summary>
@@ -1966,7 +1966,7 @@ public partial class ToolbarData : OpenXmlLeafElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
 
     /// <summary>
@@ -2341,7 +2341,7 @@ public partial class RecordIncluded : OpenXmlLeafElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public OnOffValue Val { get; set; }
 
     /// <summary>
@@ -2384,7 +2384,7 @@ public partial class RecordHashCode : OpenXmlLeafElement
 ///<remark> xmlns:wne=http://schemas.microsoft.com/office/word/2006/wordml
 ///</remark>
     [SchemaAttr(33, "val")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public IntegerValue Val { get; set; }
 
     /// <summary>

@@ -171,7 +171,7 @@ public partial class ClientData : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: ObjectType </para>
     /// </summary>
     [SchemaAttr(0, "ObjectType")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Vml.Spreadsheet.ObjectValues> ObjectType { get; set; }
 
     /// <summary>

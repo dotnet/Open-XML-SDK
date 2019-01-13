@@ -43,147 +43,147 @@ public partial class ContextNode : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue Type { get; set; }
     /// <summary>
     /// <para> rotatedBoundingBox.</para>
     /// <para>Represents the following attribute in the schema: rotatedBoundingBox </para>
     /// </summary>
     [SchemaAttr(0, "rotatedBoundingBox")]
-	[SchemaIndex(2)]
+[SchemaIndex(2)]
     public ListValue<StringValue> RotatedBoundingBox { get; set; }
     /// <summary>
     /// <para> alignmentLevel.</para>
     /// <para>Represents the following attribute in the schema: alignmentLevel </para>
     /// </summary>
     [SchemaAttr(0, "alignmentLevel")]
-	[SchemaIndex(3)]
+[SchemaIndex(3)]
     public Int32Value AlignmentLevel { get; set; }
     /// <summary>
     /// <para> contentType.</para>
     /// <para>Represents the following attribute in the schema: contentType </para>
     /// </summary>
     [SchemaAttr(0, "contentType")]
-	[SchemaIndex(4)]
+[SchemaIndex(4)]
     public Int32Value ContentType { get; set; }
     /// <summary>
     /// <para> ascender.</para>
     /// <para>Represents the following attribute in the schema: ascender </para>
     /// </summary>
     [SchemaAttr(0, "ascender")]
-	[SchemaIndex(5)]
+[SchemaIndex(5)]
     public StringValue Ascender { get; set; }
     /// <summary>
     /// <para> descender.</para>
     /// <para>Represents the following attribute in the schema: descender </para>
     /// </summary>
     [SchemaAttr(0, "descender")]
-	[SchemaIndex(6)]
+[SchemaIndex(6)]
     public StringValue Descender { get; set; }
     /// <summary>
     /// <para> baseline.</para>
     /// <para>Represents the following attribute in the schema: baseline </para>
     /// </summary>
     [SchemaAttr(0, "baseline")]
-	[SchemaIndex(7)]
+[SchemaIndex(7)]
     public StringValue Baseline { get; set; }
     /// <summary>
     /// <para> midline.</para>
     /// <para>Represents the following attribute in the schema: midline </para>
     /// </summary>
     [SchemaAttr(0, "midline")]
-	[SchemaIndex(8)]
+[SchemaIndex(8)]
     public StringValue Midline { get; set; }
     /// <summary>
     /// <para> customRecognizerId.</para>
     /// <para>Represents the following attribute in the schema: customRecognizerId </para>
     /// </summary>
     [SchemaAttr(0, "customRecognizerId")]
-	[SchemaIndex(9)]
+[SchemaIndex(9)]
     public StringValue CustomRecognizerId { get; set; }
     /// <summary>
     /// <para> mathML.</para>
     /// <para>Represents the following attribute in the schema: mathML </para>
     /// </summary>
     [SchemaAttr(0, "mathML")]
-	[SchemaIndex(10)]
+[SchemaIndex(10)]
     public StringValue MathML { get; set; }
     /// <summary>
     /// <para> mathStruct.</para>
     /// <para>Represents the following attribute in the schema: mathStruct </para>
     /// </summary>
     [SchemaAttr(0, "mathStruct")]
-	[SchemaIndex(11)]
+[SchemaIndex(11)]
     public StringValue MathStruct { get; set; }
     /// <summary>
     /// <para> mathSymbol.</para>
     /// <para>Represents the following attribute in the schema: mathSymbol </para>
     /// </summary>
     [SchemaAttr(0, "mathSymbol")]
-	[SchemaIndex(12)]
+[SchemaIndex(12)]
     public StringValue MathSymbol { get; set; }
     /// <summary>
     /// <para> beginModifierType.</para>
     /// <para>Represents the following attribute in the schema: beginModifierType </para>
     /// </summary>
     [SchemaAttr(0, "beginModifierType")]
-	[SchemaIndex(13)]
+[SchemaIndex(13)]
     public StringValue BeginModifierType { get; set; }
     /// <summary>
     /// <para> endModifierType.</para>
     /// <para>Represents the following attribute in the schema: endModifierType </para>
     /// </summary>
     [SchemaAttr(0, "endModifierType")]
-	[SchemaIndex(14)]
+[SchemaIndex(14)]
     public StringValue EndModifierType { get; set; }
     /// <summary>
     /// <para> rotationAngle.</para>
     /// <para>Represents the following attribute in the schema: rotationAngle </para>
     /// </summary>
     [SchemaAttr(0, "rotationAngle")]
-	[SchemaIndex(15)]
+[SchemaIndex(15)]
     public Int32Value RotationAngle { get; set; }
     /// <summary>
     /// <para> hotPoints.</para>
     /// <para>Represents the following attribute in the schema: hotPoints </para>
     /// </summary>
     [SchemaAttr(0, "hotPoints")]
-	[SchemaIndex(16)]
+[SchemaIndex(16)]
     public ListValue<StringValue> HotPoints { get; set; }
     /// <summary>
     /// <para> centroid.</para>
     /// <para>Represents the following attribute in the schema: centroid </para>
     /// </summary>
     [SchemaAttr(0, "centroid")]
-	[SchemaIndex(17)]
+[SchemaIndex(17)]
     public StringValue Centroid { get; set; }
     /// <summary>
     /// <para> semanticType.</para>
     /// <para>Represents the following attribute in the schema: semanticType </para>
     /// </summary>
     [SchemaAttr(0, "semanticType")]
-	[SchemaIndex(18)]
+[SchemaIndex(18)]
     public StringValue SemanticType { get; set; }
     /// <summary>
     /// <para> shapeName.</para>
     /// <para>Represents the following attribute in the schema: shapeName </para>
     /// </summary>
     [SchemaAttr(0, "shapeName")]
-	[SchemaIndex(19)]
+[SchemaIndex(19)]
     public StringValue ShapeName { get; set; }
     /// <summary>
     /// <para> shapeGeometry.</para>
     /// <para>Represents the following attribute in the schema: shapeGeometry </para>
     /// </summary>
     [SchemaAttr(0, "shapeGeometry")]
-	[SchemaIndex(20)]
+[SchemaIndex(20)]
     public ListValue<StringValue> ShapeGeometry { get; set; }
 
     /// <summary>
@@ -264,7 +264,7 @@ public partial class ContextNodeProperty : OpenXmlLeafTextElement
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public StringValue Type { get; set; }
 
     /// <summary>
@@ -361,14 +361,14 @@ public abstract partial class ContextLinkType : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: direction </para>
     /// </summary>
     [SchemaAttr(0, "direction")]
-	[SchemaIndex(0)]
+[SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Office2010.Ink.LinkDirectionValues> Direction { get; set; }
     /// <summary>
     /// <para> ref.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
     [SchemaAttr(0, "ref")]
-	[SchemaIndex(1)]
+[SchemaIndex(1)]
     public StringValue Reference { get; set; }
 
     
