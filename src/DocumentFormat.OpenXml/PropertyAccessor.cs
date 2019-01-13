@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
@@ -10,12 +9,6 @@ namespace DocumentFormat.OpenXml
 {
     internal class PropertyAccessor<TInstance, TProperty>
     {
-#if FEATURE_NO_CONDITIONAL_WEAK_TABLE
-        private static readonly LockingDictionary<Type, Func<TProperty>> _activatorCache = new LockingDictionary<Type, Func<TProperty>>();
-#else
-        private static readonly System.Runtime.CompilerServices.ConditionalWeakTable<Type, Func<TProperty>> _activatorCache = new System.Runtime.CompilerServices.ConditionalWeakTable<Type, Func<TProperty>>();
-#endif
-
         private PropertyInfo _property;
         private Func<TInstance, TProperty> _getter;
         private Action<TInstance, TProperty> _setter;
@@ -68,7 +61,7 @@ namespace DocumentFormat.OpenXml
                 {
                     if (_activator is null)
                     {
-                        _activator = _activatorCache.GetValue(_property.PropertyType, CreateActivator);
+                        _activator = PartActivator<TProperty>.GetActivator(_property.PropertyType);
                         CleanUp();
                     }
                 }
@@ -82,7 +75,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         private void CleanUp()
         {
-            if(_getter is null && _setter is null && _activator is null)
+            if (_getter is null && _setter is null && _activator is null)
             {
                 _property = null;
             }
@@ -120,22 +113,6 @@ namespace DocumentFormat.OpenXml
             var result = Expression.Call(instanceCast, method, paramCast);
 
             return Expression.Lambda<Action<TInstance, TProperty>>(result, instance, param).Compile();
-        }
-
-        private static Func<TProperty> CreateActivator(Type type)
-        {
-#if NETSTANDARD1_3
-            var constructor = type.GetTypeInfo().DeclaredConstructors.FirstOrDefault(c => !c.GetParameters().Any());
-#else
-            var constructor = type.GetConstructor(Type.EmptyTypes);
-#endif
-
-            if (constructor is null)
-            {
-                throw new ArgumentOutOfRangeException(nameof(type));
-            }
-
-            return Expression.Lambda<Func<TProperty>>(Expression.New(constructor)).Compile();
         }
     }
 }
