@@ -23,9 +23,7 @@ public partial class PresetTransition : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13324;
     /// <inheritdoc/>
     public override string LocalName => "prstTrans";
-    
     internal override byte NamespaceId => 68;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
@@ -80,9 +78,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13325;
     /// <inheritdoc/>
     public override string LocalName => "presenceInfo";
-    
     internal override byte NamespaceId => 68;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
@@ -137,9 +133,7 @@ public partial class ThreadingInfo : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13326;
     /// <inheritdoc/>
     public override string LocalName => "threadingInfo";
-    
     internal override byte NamespaceId => 68;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
@@ -242,9 +236,7 @@ public partial class SlideGuideList : ExtendedGuideList
     internal const int ElementTypeIdConst = 13327;
     /// <inheritdoc/>
     public override string LocalName => "sldGuideLst";
-    
     internal override byte NamespaceId => 68;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
@@ -303,9 +295,7 @@ public partial class NotesGuideList : ExtendedGuideList
     internal const int ElementTypeIdConst = 13328;
     /// <inheritdoc/>
     public override string LocalName => "notesGuideLst";
-    
     internal override byte NamespaceId => 68;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
@@ -423,9 +413,7 @@ public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13329;
     /// <inheritdoc/>
     public override string LocalName => "chartTrackingRefBased";
-    
     internal override byte NamespaceId => 68;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
@@ -466,9 +454,7 @@ public partial class ParentCommentIdentifier : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13330;
     /// <inheritdoc/>
     public override string LocalName => "parentCm";
-    
     internal override byte NamespaceId => 68;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
@@ -533,9 +519,7 @@ public partial class ColorType : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13331;
     /// <inheritdoc/>
     public override string LocalName => "clr";
-    
     internal override byte NamespaceId => 68;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
@@ -706,9 +690,7 @@ public partial class ExtensionList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13332;
     /// <inheritdoc/>
     public override string LocalName => "extLst";
-    
     internal override byte NamespaceId => 68;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
@@ -785,9 +767,7 @@ public partial class ExtendedGuide : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13333;
     /// <inheritdoc/>
     public override string LocalName => "guide";
-    
     internal override byte NamespaceId => 68;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 

@@ -28,9 +28,7 @@ public partial class AdditionalCharacteristicsInfo : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 10822;
     /// <inheritdoc/>
     public override string LocalName => "additionalCharacteristics";
-    
     internal override byte NamespaceId => 8;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -98,9 +96,7 @@ public partial class Characteristic : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10823;
     /// <inheritdoc/>
     public override string LocalName => "characteristic";
-    
     internal override byte NamespaceId => 8;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 

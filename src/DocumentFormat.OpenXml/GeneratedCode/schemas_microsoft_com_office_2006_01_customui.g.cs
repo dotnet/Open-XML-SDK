@@ -21,9 +21,7 @@ public partial class UnsizedControlClone : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12644;
     /// <inheritdoc/>
     public override string LocalName => "control";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -239,9 +237,7 @@ public partial class UnsizedButton : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12645;
     /// <inheritdoc/>
     public override string LocalName => "button";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -485,9 +481,7 @@ public partial class CheckBox : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12646;
     /// <inheritdoc/>
     public override string LocalName => "checkBox";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -698,9 +692,7 @@ public partial class UnsizedGallery : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12647;
     /// <inheritdoc/>
     public override string LocalName => "gallery";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1107,9 +1099,7 @@ public partial class UnsizedToggleButton : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12648;
     /// <inheritdoc/>
     public override string LocalName => "toggleButton";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1360,9 +1350,7 @@ public partial class MenuSeparator : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12649;
     /// <inheritdoc/>
     public override string LocalName => "menuSeparator";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1463,9 +1451,7 @@ public partial class UnsizedSplitButton : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12650;
     /// <inheritdoc/>
     public override string LocalName => "splitButton";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1674,9 +1660,7 @@ public partial class UnsizedMenu : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12651;
     /// <inheritdoc/>
     public override string LocalName => "menu";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1978,9 +1962,7 @@ public partial class UnsizedDynamicMenu : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12652;
     /// <inheritdoc/>
     public override string LocalName => "dynamicMenu";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2242,9 +2224,7 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12653;
     /// <inheritdoc/>
     public override string LocalName => "splitButton";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2453,9 +2433,7 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12654;
     /// <inheritdoc/>
     public override string LocalName => "menu";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2757,9 +2735,7 @@ public partial class ControlClone : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12655;
     /// <inheritdoc/>
     public override string LocalName => "control";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3003,9 +2979,7 @@ public partial class TextLabel : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12656;
     /// <inheritdoc/>
     public override string LocalName => "labelControl";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3179,9 +3153,7 @@ public partial class Button : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12657;
     /// <inheritdoc/>
     public override string LocalName => "button";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3439,9 +3411,7 @@ public partial class ToggleButton : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12658;
     /// <inheritdoc/>
     public override string LocalName => "toggleButton";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3706,9 +3676,7 @@ public partial class EditBox : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12659;
     /// <inheritdoc/>
     public override string LocalName => "editBox";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3966,9 +3934,7 @@ public partial class ComboBox : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12660;
     /// <inheritdoc/>
     public override string LocalName => "comboBox";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4318,9 +4284,7 @@ public partial class DropDown : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12661;
     /// <inheritdoc/>
     public override string LocalName => "dropDown";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4673,9 +4637,7 @@ public partial class Gallery : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12662;
     /// <inheritdoc/>
     public override string LocalName => "gallery";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5119,9 +5081,7 @@ public partial class Menu : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12663;
     /// <inheritdoc/>
     public override string LocalName => "menu";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5437,9 +5397,7 @@ public partial class DynamicMenu : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12664;
     /// <inheritdoc/>
     public override string LocalName => "dynamicMenu";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5715,9 +5673,7 @@ public partial class SplitButton : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12665;
     /// <inheritdoc/>
     public override string LocalName => "splitButton";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5950,9 +5906,7 @@ public partial class Box : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12666;
     /// <inheritdoc/>
     public override string LocalName => "box";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6141,9 +6095,7 @@ public partial class ButtonGroup : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12667;
     /// <inheritdoc/>
     public override string LocalName => "buttonGroup";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6308,9 +6260,7 @@ public partial class MenuRoot : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12668;
     /// <inheritdoc/>
     public override string LocalName => "menu";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6432,9 +6382,7 @@ public partial class CustomUI : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 12669;
     /// <inheritdoc/>
     public override string LocalName => "customUI";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6552,9 +6500,7 @@ public partial class Item : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12670;
     /// <inheritdoc/>
     public override string LocalName => "item";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6630,9 +6576,7 @@ public partial class VisibleButton : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12671;
     /// <inheritdoc/>
     public override string LocalName => "button";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6862,9 +6806,7 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12672;
     /// <inheritdoc/>
     public override string LocalName => "toggleButton";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7101,9 +7043,7 @@ public partial class VerticalSeparator : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12673;
     /// <inheritdoc/>
     public override string LocalName => "separator";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7200,9 +7140,7 @@ public partial class DialogBoxLauncher : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12674;
     /// <inheritdoc/>
     public override string LocalName => "dialogBoxLauncher";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7328,9 +7266,7 @@ public partial class Group : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12675;
     /// <inheritdoc/>
     public override string LocalName => "group";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7590,9 +7526,7 @@ public partial class QuickAccessToolbarControlClone : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12676;
     /// <inheritdoc/>
     public override string LocalName => "control";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7844,9 +7778,7 @@ public partial class SharedQatControls : QatItemsType
     internal const int ElementTypeIdConst = 12677;
     /// <inheritdoc/>
     public override string LocalName => "sharedControls";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7906,9 +7838,7 @@ public partial class DocumentSpecificQuickAccessToolbarControls : QatItemsType
     internal const int ElementTypeIdConst = 12678;
     /// <inheritdoc/>
     public override string LocalName => "documentControls";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8038,9 +7968,7 @@ public partial class Tab : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12679;
     /// <inheritdoc/>
     public override string LocalName => "tab";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8213,9 +8141,7 @@ public partial class ContextualTabSet : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12680;
     /// <inheritdoc/>
     public override string LocalName => "tabSet";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8304,9 +8230,7 @@ public partial class RepurposedCommand : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12681;
     /// <inheritdoc/>
     public override string LocalName => "command";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8391,9 +8315,7 @@ public partial class OfficeMenu : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12682;
     /// <inheritdoc/>
     public override string LocalName => "officeMenu";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8494,9 +8416,7 @@ public partial class QuickAccessToolbar : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12683;
     /// <inheritdoc/>
     public override string LocalName => "qat";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8607,9 +8527,7 @@ public partial class Tabs : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12684;
     /// <inheritdoc/>
     public override string LocalName => "tabs";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8684,9 +8602,7 @@ public partial class ContextualTabSets : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12685;
     /// <inheritdoc/>
     public override string LocalName => "contextualTabs";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8761,9 +8677,7 @@ public partial class RepurposedCommands : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12686;
     /// <inheritdoc/>
     public override string LocalName => "commands";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -8844,9 +8758,7 @@ public partial class Ribbon : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12687;
     /// <inheritdoc/>
     public override string LocalName => "ribbon";
-    
     internal override byte NamespaceId => 34;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 

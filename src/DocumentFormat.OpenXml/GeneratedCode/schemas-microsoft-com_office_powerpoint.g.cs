@@ -21,9 +21,7 @@ public partial class InkAnnotationFlag : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12575;
     /// <inheritdoc/>
     public override string LocalName => "iscomment";
-    
     internal override byte NamespaceId => 30;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -57,9 +55,7 @@ public partial class TextData : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12576;
     /// <inheritdoc/>
     public override string LocalName => "textdata";
-    
     internal override byte NamespaceId => 30;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
