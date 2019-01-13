@@ -380,9 +380,8 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        private protected override void LoadAttributes(XmlReader xmlReader)
+        internal override void LoadAttributes(XmlReader xmlReader)
         {
-            return;
         }
 
         /// <inheritdoc/>
