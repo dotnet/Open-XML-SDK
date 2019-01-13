@@ -552,13 +552,11 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        #region Event mechanism
-
         /// <summary>
         /// Fires the ElementInserting event.
         /// </summary>
         /// <param name="element">The OpenXmlElement element to insert.</param>
-        internal void ElementInsertingEvent(OpenXmlElement element)
+        private void ElementInsertingEvent(OpenXmlElement element)
         {
             if (OpenXmlElementContext != null)
             {
@@ -570,7 +568,7 @@ namespace DocumentFormat.OpenXml
         /// Fires the ElementInserted event.
         /// </summary>
         /// <param name="element">The OpenXmlElement element to insert.</param>
-        internal void ElementInsertedEvent(OpenXmlElement element)
+        private void ElementInsertedEvent(OpenXmlElement element)
         {
             if (OpenXmlElementContext != null)
             {
@@ -582,7 +580,7 @@ namespace DocumentFormat.OpenXml
         /// Fires the ElementRemoving event.
         /// </summary>
         /// <param name="element">The OpenXmlElement element to remove.</param>
-        internal void ElementRemovingEvent(OpenXmlElement element)
+        private void ElementRemovingEvent(OpenXmlElement element)
         {
             if (OpenXmlElementContext != null)
             {
@@ -594,7 +592,7 @@ namespace DocumentFormat.OpenXml
         /// Fires the ElementRemoved event.
         /// </summary>
         /// <param name="element">The OpenXmlElement element to be removed.</param>
-        internal void ElementRemovedEvent(OpenXmlElement element)
+        private void ElementRemovedEvent(OpenXmlElement element)
         {
             if (OpenXmlElementContext != null)
             {
@@ -602,16 +600,12 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        #endregion
-
-        #region internal methods
-
         /// <summary>
         /// Populates the XML into a strong typed DOM tree.
         /// </summary>
         /// <param name="xmlReader">The XmlReader to read the XML content.</param>
         /// <param name="loadMode">Specifies a load mode that is either lazy or full.</param>
-        internal override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
+        private protected override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
         {
             LoadAttributes(xmlReader);
 
@@ -813,7 +807,8 @@ namespace DocumentFormat.OpenXml
         /// <remarks>
         /// Returns null if there are invalid children.
         /// </remarks>
-        internal T GetElement<T>(int sequenceNumber) where T : OpenXmlElement
+        private protected T GetElement<T>(int sequenceNumber)
+            where T : OpenXmlElement
         {
             T theChild;
             switch (OpenXmlCompositeType)
@@ -825,7 +820,7 @@ namespace DocumentFormat.OpenXml
                     foreach (OpenXmlElement child in ChildElements)
                     {
                         // skip unknown element and MiscNode
-                        if (OpenXmlElement.IsKnownElement(child))
+                        if (IsKnownElement(child))
                         {
                             int childSequenceNumber = GetSequenceNumber(child);
                             if (childSequenceNumber == sequenceNumber)
@@ -850,7 +845,7 @@ namespace DocumentFormat.OpenXml
                         OpenXmlElement child = FirstChild;
 
                         // skip unknown element and MiscNode
-                        while (child != null && !OpenXmlElement.IsKnownElement(child))
+                        while (child != null && !IsKnownElement(child))
                         {
                             child = child.NextSibling();
                         }
@@ -858,7 +853,7 @@ namespace DocumentFormat.OpenXml
                         // There should be only one valid child.
                         if (child != null)
                         {
-                            Debug.Assert(OpenXmlElement.IsKnownElement(child));
+                            Debug.Assert(IsKnownElement(child));
 
                             int childSequenceNumber = GetSequenceNumber(child);
                             if (childSequenceNumber == sequenceNumber)
@@ -884,7 +879,7 @@ namespace DocumentFormat.OpenXml
 
                         while (child != null)
                         {
-                            if (OpenXmlElement.IsKnownElement(child))
+                            if (IsKnownElement(child))
                             {
                                 int childSequenceNumber = GetSequenceNumber(child);
 
@@ -928,7 +923,8 @@ namespace DocumentFormat.OpenXml
             return null;
         }
 
-        internal void SetElement<T>(int sequenceNumber, T newChild) where T : OpenXmlElement
+        private protected void SetElement<T>(int sequenceNumber, T newChild)
+            where T : OpenXmlElement
         {
             switch (OpenXmlCompositeType)
             {
@@ -962,7 +958,7 @@ namespace DocumentFormat.OpenXml
                         OpenXmlElement previousChild = null;
 
                         // skip unknown element and MiscNode
-                        while (child != null && !OpenXmlElement.IsKnownElement(child))
+                        while (child != null && !IsKnownElement(child))
                         {
                             previousChild = child;
                             child = child.NextSibling();
@@ -1001,7 +997,7 @@ namespace DocumentFormat.OpenXml
 
                         while (child != null)
                         {
-                            if (OpenXmlElement.IsKnownElement(child))
+                            if (IsKnownElement(child))
                             {
                                 int childSequenceNumber = GetSequenceNumber(child);
 
@@ -1057,9 +1053,6 @@ namespace DocumentFormat.OpenXml
             get { return OpenXmlCompositeType.Other; }
         }
 
-        #endregion
-
-        #region private methods
         private void AddANode(OpenXmlElement node)
         {
             node.Parent = this;
@@ -1075,7 +1068,5 @@ namespace DocumentFormat.OpenXml
                 _lastChild = node;
             }
         }
-
-        #endregion
     }
 }
