@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
-using System;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml
@@ -11,8 +10,6 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     public class AlternateContentFallback : OpenXmlCompositeElement
     {
-        private static string tagName = "Fallback";
-
         /// <summary>
         /// Initializes a new instance of the AlternateContentFallback class.
         /// </summary>
@@ -58,47 +55,14 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets a value that represents the tag name of the AlternateContentFallback element.
         /// </summary>
-        public static string TagName
-        {
-            get { return tagName; }
-        }
+        public static string TagName { get; } = "Fallback";
 
         /// <summary>
         /// Gets the local name of the element.
         /// </summary>
-        public override string LocalName
-        {
-            get { return tagName; }
-        }
+        public override string LocalName => TagName;
 
-        internal override byte NamespaceId
-        {
-            get { return AlternateContent.MarkupCompatibilityNamespaceId; }
-        }
-
-        private static string[] attributeTagNames = Cached.Array<string>();
-        private static byte[] attributeNamespaceIds = Cached.Array<byte>();
-
-        internal override string[] AttributeTagNames
-        {
-            get
-            {
-                return attributeTagNames;
-            }
-        }
-
-        internal override byte[] AttributeNamespaceIds
-        {
-            get
-            {
-                return attributeNamespaceIds;
-            }
-        }
-
-        internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-        {
-            return null;
-        }
+        internal override byte NamespaceId => AlternateContent.MarkupCompatibilityNamespaceId;
 
         internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         {
@@ -134,20 +98,8 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets the type ID of the element.
         /// </summary>
-        internal override int ElementTypeId
-        {
-            get { return ReservedElementTypeIds.AlternateContentFallbackId; }
-        }
+        internal override int ElementTypeId => ReservedElementTypeIds.AlternateContentFallbackId;
 
-        /// <summary>
-        /// Indicates whether this element is available in a specific version of an Office Application.
-        /// This method always return true since AlternateContentFallback is available in every version.
-        /// </summary>
-        /// <param name="version">The Office file format version.</param>
-        /// <returns>Returns true if the element is defined in the specified version.</returns>
-        internal override bool IsInVersion(FileFormatVersions version)
-        {
-            return true;
-        }
+        internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     }
 }

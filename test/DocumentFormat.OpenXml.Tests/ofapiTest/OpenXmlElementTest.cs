@@ -91,7 +91,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.NotNull(target.Type);
             Assert.True(target.Type.HasValue);
             Assert.Equal(HeaderFooterValues.Default, target.Type.Value);
-            Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues) target.Type);
+            Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues)target.Type);
 
             Assert.NotNull(target.Id);
             Assert.Equal("1", target.Id);
@@ -105,7 +105,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.NotNull(target.Type);
             Assert.True(target.Type.HasValue);
             Assert.Equal(HeaderFooterValues.Default, target.Type.Value);
-            Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues) target.Type);
+            Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues)target.Type);
 
             Assert.NotNull(target.Id);
             Assert.Equal("1", target.Id);
@@ -120,7 +120,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.NotNull(target.Type);
             Assert.True(target.Type.HasValue);
             Assert.Equal(HeaderFooterValues.Default, target.Type.Value);
-            Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues) target.Type);
+            Assert.Equal(HeaderFooterValues.Default, (HeaderFooterValues)target.Type);
 
             Assert.Null(target.Id);
 
@@ -552,7 +552,7 @@ namespace DocumentFormat.OpenXml.Tests
                 var clonedParagraph = paragraph.CloneNode(false);
                 Assert.False(clonedParagraph.HasChildren);
                 Assert.True(clonedParagraph.HasAttributes);
-                Assert.Equal(paragraph.Attributes.Count(), clonedParagraph.Attributes.Count());
+                Assert.Equal(paragraph.Attributes.Length, clonedParagraph.Attributes.Length);
                 Assert.Equal(paragraph.ExtendedAttributes.Count(), clonedParagraph.ExtendedAttributes.Count());
 
                 // Deep clone the document
@@ -568,11 +568,7 @@ namespace DocumentFormat.OpenXml.Tests
                     Assert.Equal(curElem.GetType(), elem.GetType());
                     Assert.Equal(curElem.NamespaceUri, elem.NamespaceUri);
                     Assert.Equal(curElem.XmlQualifiedName, elem.XmlQualifiedName);
-                    Assert.Equal(curElem.Attributes == null, elem.Attributes == null);
-                    if (curElem.Attributes != null)
-                    {
-                        Assert.Equal(curElem.Attributes.Length, elem.Attributes.Length);
-                    }
+                    Assert.Equal(curElem.Attributes.Length, elem.Attributes.Length);
 
                     Assert.Equal(curElem.ExtendedAttributes.Count(), elem.ExtendedAttributes.Count());
                     var a1 = curElem.ExtendedAttributes.ToArray();

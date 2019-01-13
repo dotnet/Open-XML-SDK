@@ -8,7 +8,7 @@ using Xunit;
 
 namespace DocumentFormat.OpenXml.Wordprocessing
 {
-    public class TableLookupTests
+    public class TableLookTests
     {
         [InlineData("firstRow", "true", 0x0020)]
         [InlineData("firstRow", "1", 0x020)]

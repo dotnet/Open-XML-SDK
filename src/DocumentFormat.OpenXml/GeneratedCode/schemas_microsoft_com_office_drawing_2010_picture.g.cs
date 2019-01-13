@@ -35,13 +35,9 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12887;
     /// <inheritdoc/>
     public override string LocalName => "style";
-    
     internal override byte NamespaceId => 50;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -156,7 +152,6 @@ if( 10 == namespaceId && "fontRef" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeStyle>(deep);
 
@@ -181,13 +176,9 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12888;
     /// <inheritdoc/>
     public override string LocalName => "extLst";
-    
     internal override byte NamespaceId => 50;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -235,7 +226,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     return null;
 }
 
-    
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeArtExtensionList>(deep);

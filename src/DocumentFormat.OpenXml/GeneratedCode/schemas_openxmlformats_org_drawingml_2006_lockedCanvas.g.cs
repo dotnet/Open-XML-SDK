@@ -47,13 +47,9 @@ public partial class LockedCanvas : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10759;
     /// <inheritdoc/>
     public override string LocalName => "lockedCanvas";
-    
     internal override byte NamespaceId => 15;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -162,7 +158,6 @@ if( 10 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LockedCanvas>(deep);
 

@@ -28,13 +28,9 @@ public partial class SchemaLibrary : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12468;
     /// <inheritdoc/>
     public override string LocalName => "schemaLibrary";
-    
     internal override byte NamespaceId => 25;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -83,7 +79,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SchemaLibrary>(deep);
 
@@ -101,22 +96,11 @@ public partial class Schema : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12469;
     /// <inheritdoc/>
     public override string LocalName => "schema";
-    
     internal override byte NamespaceId => 25;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
-    	private static readonly string[] attributeTagNames = { "uri","manifestLocation","schemaLocation" };
-    private static readonly byte[] attributeNamespaceIds = { 25,25,25 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> Custom XML Schema Namespace.</para>
@@ -125,12 +109,8 @@ public partial class Schema : OpenXmlLeafElement
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
     [SchemaAttr(25, "uri")]
-    public StringValue Uri
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Uri { get; set; }
     /// <summary>
     /// <para> Resource File Location.</para>
     /// <para>Represents the following attribute in the schema: sl:manifestLocation </para>
@@ -138,12 +118,8 @@ public partial class Schema : OpenXmlLeafElement
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
     [SchemaAttr(25, "manifestLocation")]
-    public StringValue ManifestLocation
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue ManifestLocation { get; set; }
     /// <summary>
     /// <para> Custom XML Schema Location.</para>
     /// <para>Represents the following attribute in the schema: sl:schemaLocation </para>
@@ -151,12 +127,8 @@ public partial class Schema : OpenXmlLeafElement
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
     [SchemaAttr(25, "schemaLocation")]
-    public StringValue SchemaLocation
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue SchemaLocation { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Schema class.
@@ -168,22 +140,6 @@ public partial class Schema : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 25 == namespaceId && "uri" == name)
-    return new StringValue();
-    
-if( 25 == namespaceId && "manifestLocation" == name)
-    return new StringValue();
-    
-if( 25 == namespaceId && "schemaLocation" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Schema>(deep);
 

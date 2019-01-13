@@ -43,11 +43,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
         [SchemaAttr(23, "uri")]
-        public StringValue Uri
-        {
-            get { return (StringValue)Attributes[0]; }
-            set { Attributes[0] = value; }
-        }
+        [SchemaIndex(0)]
+        public StringValue Uri { get; set; }
 
         /// <summary>
         /// Gets or sets the element name.
@@ -57,22 +54,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main.
         /// </remark>
         [SchemaAttr(23, "element")]
-        public StringValue Element
-        {
-            get { return (StringValue)Attributes[1]; }
-            set { Attributes[1] = value; }
-        }
-
-        internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-        {
-            if (23 == namespaceId && "uri" == name)
-                return new StringValue();
-
-            if (23 == namespaceId && "element" == name)
-                return new StringValue();
-
-            return null;
-        }
+        [SchemaIndex(1)]
+        public StringValue Element { get; set; }
 
         /// <summary>
         /// Gets or sets the CustomXmlProperties which represents the element tag in schema: w:customXmlPr.
@@ -82,15 +65,8 @@ namespace DocumentFormat.OpenXml.Wordprocessing
         /// </remark>
         public CustomXmlProperties CustomXmlProperties
         {
-            get
-            {
-                return GetElement<CustomXmlProperties>(0);
-            }
-
-            set
-            {
-                SetElement(0, value);
-            }
+            get => GetElement<CustomXmlProperties>(0);
+            set => SetElement(0, value);
         }
     }
 }

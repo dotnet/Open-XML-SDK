@@ -22,45 +22,26 @@ public partial class DerivedFrom : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12741;
     /// <inheritdoc/>
     public override string LocalName => "derived-from";
-    
     internal override byte NamespaceId => 44;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
-    	private static readonly string[] attributeTagNames = { "resource","composite" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> resource.</para>
     /// <para>Represents the following attribute in the schema: resource </para>
     /// </summary>
     [SchemaAttr(0, "resource")]
-    public StringValue Resource
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Resource { get; set; }
     /// <summary>
     /// <para> composite.</para>
     /// <para>Represents the following attribute in the schema: composite </para>
     /// </summary>
     [SchemaAttr(0, "composite")]
-    public BooleanValue Composite
-    {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public BooleanValue Composite { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the DerivedFrom class.
@@ -72,19 +53,6 @@ public partial class DerivedFrom : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "resource" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "composite" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DerivedFrom>(deep);
 
@@ -107,34 +75,19 @@ public partial class Info : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12742;
     /// <inheritdoc/>
     public override string LocalName => "info";
-    
     internal override byte NamespaceId => 44;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
-    	private static readonly string[] attributeTagNames = { "id" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Info class.
@@ -177,16 +130,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Info>(deep);
 
@@ -213,45 +156,26 @@ public partial class Lattice : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12743;
     /// <inheritdoc/>
     public override string LocalName => "lattice";
-    
     internal override byte NamespaceId => 44;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
-    	private static readonly string[] attributeTagNames = { "initial","final","time-ref-uri","time-ref-anchor-point" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,44,44 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> initial.</para>
     /// <para>Represents the following attribute in the schema: initial </para>
     /// </summary>
     [SchemaAttr(0, "initial")]
-    public IntegerValue Initial
-    {
-        get { return (IntegerValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public IntegerValue Initial { get; set; }
     /// <summary>
     /// <para> final.</para>
     /// <para>Represents the following attribute in the schema: final </para>
     /// </summary>
     [SchemaAttr(0, "final")]
-    public ListValue<DecimalValue> Final
-    {
-        get { return (ListValue<DecimalValue>)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public ListValue<DecimalValue> Final { get; set; }
     /// <summary>
     /// <para> time-ref-uri.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-uri </para>
@@ -259,12 +183,8 @@ public partial class Lattice : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "time-ref-uri")]
-    public StringValue TimeReference
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue TimeReference { get; set; }
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-anchor-point </para>
@@ -272,12 +192,8 @@ public partial class Lattice : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "time-ref-anchor-point")]
-    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Lattice class.
@@ -326,25 +242,6 @@ if( 44 == namespaceId && "node" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "initial" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "final" == name)
-    return new ListValue<DecimalValue>();
-    
-if( 44 == namespaceId && "time-ref-uri" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "time-ref-anchor-point" == name)
-    return new EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Lattice>(deep);
 
@@ -362,13 +259,9 @@ public partial class Literal : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12744;
     /// <inheritdoc/>
     public override string LocalName => "literal";
-    
     internal override byte NamespaceId => 44;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -393,7 +286,6 @@ public partial class Literal : OpenXmlLeafTextElement
     }
     
  
-    
     
     
     
@@ -429,34 +321,19 @@ public partial class Interpretation : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12745;
     /// <inheritdoc/>
     public override string LocalName => "interpretation";
-    
     internal override byte NamespaceId => 44;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
-    	private static readonly string[] attributeTagNames = { "id","tokens","process","lang","signal","signal-size","media-type","confidence","source","start","end","time-ref-uri","time-ref-anchor-point","offset-to-start","duration","medium","mode","function","verbal","cost","grammar-ref","endpoint-info-ref","model-ref","dialog-turn","no-input","uninterpreted" };
-    private static readonly byte[] attributeNamespaceIds = { 0,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> tokens.</para>
     /// <para>Represents the following attribute in the schema: emma:tokens </para>
@@ -464,12 +341,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "tokens")]
-    public StringValue Tokens
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue Tokens { get; set; }
     /// <summary>
     /// <para> process.</para>
     /// <para>Represents the following attribute in the schema: emma:process </para>
@@ -477,12 +350,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "process")]
-    public StringValue Process
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Process { get; set; }
     /// <summary>
     /// <para> lang.</para>
     /// <para>Represents the following attribute in the schema: emma:lang </para>
@@ -490,12 +359,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "lang")]
-    public StringValue Language
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue Language { get; set; }
     /// <summary>
     /// <para> signal.</para>
     /// <para>Represents the following attribute in the schema: emma:signal </para>
@@ -503,12 +368,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "signal")]
-    public StringValue Signal
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Signal { get; set; }
     /// <summary>
     /// <para> signal-size.</para>
     /// <para>Represents the following attribute in the schema: emma:signal-size </para>
@@ -516,12 +377,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "signal-size")]
-    public IntegerValue SignalSize
-    {
-        get { return (IntegerValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public IntegerValue SignalSize { get; set; }
     /// <summary>
     /// <para> media-type.</para>
     /// <para>Represents the following attribute in the schema: emma:media-type </para>
@@ -529,12 +386,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "media-type")]
-    public StringValue MediaType
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue MediaType { get; set; }
     /// <summary>
     /// <para> confidence.</para>
     /// <para>Represents the following attribute in the schema: emma:confidence </para>
@@ -542,12 +395,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "confidence")]
-    public DecimalValue Confidence
-    {
-        get { return (DecimalValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public DecimalValue Confidence { get; set; }
     /// <summary>
     /// <para> source.</para>
     /// <para>Represents the following attribute in the schema: emma:source </para>
@@ -555,12 +404,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "source")]
-    public StringValue Source
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue Source { get; set; }
     /// <summary>
     /// <para> start.</para>
     /// <para>Represents the following attribute in the schema: emma:start </para>
@@ -568,12 +413,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "start")]
-    public UInt64Value Start
-    {
-        get { return (UInt64Value)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public UInt64Value Start { get; set; }
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: emma:end </para>
@@ -581,12 +422,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "end")]
-    public UInt64Value End
-    {
-        get { return (UInt64Value)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public UInt64Value End { get; set; }
     /// <summary>
     /// <para> time-ref-uri.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-uri </para>
@@ -594,12 +431,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "time-ref-uri")]
-    public StringValue TimeReference
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue TimeReference { get; set; }
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-anchor-point </para>
@@ -607,12 +440,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "time-ref-anchor-point")]
-    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
     /// <summary>
     /// <para> offset-to-start.</para>
     /// <para>Represents the following attribute in the schema: emma:offset-to-start </para>
@@ -620,12 +449,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "offset-to-start")]
-    public IntegerValue OffsetToStart
-    {
-        get { return (IntegerValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public IntegerValue OffsetToStart { get; set; }
     /// <summary>
     /// <para> duration.</para>
     /// <para>Represents the following attribute in the schema: emma:duration </para>
@@ -633,12 +458,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "duration")]
-    public IntegerValue Duration
-    {
-        get { return (IntegerValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public IntegerValue Duration { get; set; }
     /// <summary>
     /// <para> medium.</para>
     /// <para>Represents the following attribute in the schema: emma:medium </para>
@@ -646,12 +467,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "medium")]
-    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
-    {
-        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
     /// <summary>
     /// <para> mode.</para>
     /// <para>Represents the following attribute in the schema: emma:mode </para>
@@ -659,12 +476,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "mode")]
-    public ListValue<StringValue> Mode
-    {
-        get { return (ListValue<StringValue>)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public ListValue<StringValue> Mode { get; set; }
     /// <summary>
     /// <para> function.</para>
     /// <para>Represents the following attribute in the schema: emma:function </para>
@@ -672,12 +485,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "function")]
-    public StringValue Function
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue Function { get; set; }
     /// <summary>
     /// <para> verbal.</para>
     /// <para>Represents the following attribute in the schema: emma:verbal </para>
@@ -685,12 +494,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "verbal")]
-    public BooleanValue Verbal
-    {
-        get { return (BooleanValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public BooleanValue Verbal { get; set; }
     /// <summary>
     /// <para> cost.</para>
     /// <para>Represents the following attribute in the schema: emma:cost </para>
@@ -698,12 +503,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "cost")]
-    public DecimalValue Cost
-    {
-        get { return (DecimalValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public DecimalValue Cost { get; set; }
     /// <summary>
     /// <para> grammar-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:grammar-ref </para>
@@ -711,12 +512,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "grammar-ref")]
-    public StringValue GrammarRef
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue GrammarRef { get; set; }
     /// <summary>
     /// <para> endpoint-info-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-info-ref </para>
@@ -724,12 +521,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "endpoint-info-ref")]
-    public StringValue EndpointInfoRef
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue EndpointInfoRef { get; set; }
     /// <summary>
     /// <para> model-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:model-ref </para>
@@ -737,12 +530,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "model-ref")]
-    public StringValue ModelRef
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue ModelRef { get; set; }
     /// <summary>
     /// <para> dialog-turn.</para>
     /// <para>Represents the following attribute in the schema: emma:dialog-turn </para>
@@ -750,12 +539,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "dialog-turn")]
-    public StringValue DialogTurn
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue DialogTurn { get; set; }
     /// <summary>
     /// <para> no-input.</para>
     /// <para>Represents the following attribute in the schema: emma:no-input </para>
@@ -763,12 +548,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "no-input")]
-    public BooleanValue NoInput
-    {
-        get { return (BooleanValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public BooleanValue NoInput { get; set; }
     /// <summary>
     /// <para> uninterpreted.</para>
     /// <para>Represents the following attribute in the schema: emma:uninterpreted </para>
@@ -776,12 +557,8 @@ public partial class Interpretation : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "uninterpreted")]
-    public BooleanValue Uninterpreted
-    {
-        get { return (BooleanValue)Attributes[25]; }
-        set { Attributes[25] = value; }
-    }
-    
+    [SchemaIndex(25)]
+    public BooleanValue Uninterpreted { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Interpretation class.
@@ -839,91 +616,6 @@ if( 45 == namespaceId && "context" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "tokens" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "process" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "lang" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "signal" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "signal-size" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "media-type" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "confidence" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "source" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "start" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "end" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "time-ref-uri" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "time-ref-anchor-point" == name)
-    return new EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>();
-    
-if( 44 == namespaceId && "offset-to-start" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "duration" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "medium" == name)
-    return new ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>();
-    
-if( 44 == namespaceId && "mode" == name)
-    return new ListValue<StringValue>();
-    
-if( 44 == namespaceId && "function" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "verbal" == name)
-    return new BooleanValue();
-    
-if( 44 == namespaceId && "cost" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "grammar-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "endpoint-info-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "model-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "dialog-turn" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "no-input" == name)
-    return new BooleanValue();
-    
-if( 44 == namespaceId && "uninterpreted" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Interpretation>(deep);
 
@@ -958,45 +650,26 @@ public partial class OneOf : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12746;
     /// <inheritdoc/>
     public override string LocalName => "one-of";
-    
     internal override byte NamespaceId => 44;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
-    	private static readonly string[] attributeTagNames = { "disjunction-type","id","tokens","process","lang","signal","signal-size","media-type","confidence","source","start","end","time-ref-uri","time-ref-anchor-point","offset-to-start","duration","medium","mode","function","verbal","cost","grammar-ref","endpoint-info-ref","model-ref","dialog-turn" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> disjunction-type.</para>
     /// <para>Represents the following attribute in the schema: disjunction-type </para>
     /// </summary>
     [SchemaAttr(0, "disjunction-type")]
-    public EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues> DisjunctionType
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues> DisjunctionType { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> tokens.</para>
     /// <para>Represents the following attribute in the schema: emma:tokens </para>
@@ -1004,12 +677,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "tokens")]
-    public StringValue Tokens
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Tokens { get; set; }
     /// <summary>
     /// <para> process.</para>
     /// <para>Represents the following attribute in the schema: emma:process </para>
@@ -1017,12 +686,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "process")]
-    public StringValue Process
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue Process { get; set; }
     /// <summary>
     /// <para> lang.</para>
     /// <para>Represents the following attribute in the schema: emma:lang </para>
@@ -1030,12 +695,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "lang")]
-    public StringValue Language
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Language { get; set; }
     /// <summary>
     /// <para> signal.</para>
     /// <para>Represents the following attribute in the schema: emma:signal </para>
@@ -1043,12 +704,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "signal")]
-    public StringValue Signal
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue Signal { get; set; }
     /// <summary>
     /// <para> signal-size.</para>
     /// <para>Represents the following attribute in the schema: emma:signal-size </para>
@@ -1056,12 +713,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "signal-size")]
-    public IntegerValue SignalSize
-    {
-        get { return (IntegerValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public IntegerValue SignalSize { get; set; }
     /// <summary>
     /// <para> media-type.</para>
     /// <para>Represents the following attribute in the schema: emma:media-type </para>
@@ -1069,12 +722,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "media-type")]
-    public StringValue MediaType
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue MediaType { get; set; }
     /// <summary>
     /// <para> confidence.</para>
     /// <para>Represents the following attribute in the schema: emma:confidence </para>
@@ -1082,12 +731,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "confidence")]
-    public DecimalValue Confidence
-    {
-        get { return (DecimalValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public DecimalValue Confidence { get; set; }
     /// <summary>
     /// <para> source.</para>
     /// <para>Represents the following attribute in the schema: emma:source </para>
@@ -1095,12 +740,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "source")]
-    public StringValue Source
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue Source { get; set; }
     /// <summary>
     /// <para> start.</para>
     /// <para>Represents the following attribute in the schema: emma:start </para>
@@ -1108,12 +749,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "start")]
-    public UInt64Value Start
-    {
-        get { return (UInt64Value)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public UInt64Value Start { get; set; }
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: emma:end </para>
@@ -1121,12 +758,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "end")]
-    public UInt64Value End
-    {
-        get { return (UInt64Value)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public UInt64Value End { get; set; }
     /// <summary>
     /// <para> time-ref-uri.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-uri </para>
@@ -1134,12 +767,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "time-ref-uri")]
-    public StringValue TimeReference
-    {
-        get { return (StringValue)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public StringValue TimeReference { get; set; }
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-anchor-point </para>
@@ -1147,12 +776,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "time-ref-anchor-point")]
-    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
     /// <summary>
     /// <para> offset-to-start.</para>
     /// <para>Represents the following attribute in the schema: emma:offset-to-start </para>
@@ -1160,12 +785,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "offset-to-start")]
-    public IntegerValue OffsetToStart
-    {
-        get { return (IntegerValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public IntegerValue OffsetToStart { get; set; }
     /// <summary>
     /// <para> duration.</para>
     /// <para>Represents the following attribute in the schema: emma:duration </para>
@@ -1173,12 +794,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "duration")]
-    public IntegerValue Duration
-    {
-        get { return (IntegerValue)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public IntegerValue Duration { get; set; }
     /// <summary>
     /// <para> medium.</para>
     /// <para>Represents the following attribute in the schema: emma:medium </para>
@@ -1186,12 +803,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "medium")]
-    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
-    {
-        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
     /// <summary>
     /// <para> mode.</para>
     /// <para>Represents the following attribute in the schema: emma:mode </para>
@@ -1199,12 +812,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "mode")]
-    public ListValue<StringValue> Mode
-    {
-        get { return (ListValue<StringValue>)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public ListValue<StringValue> Mode { get; set; }
     /// <summary>
     /// <para> function.</para>
     /// <para>Represents the following attribute in the schema: emma:function </para>
@@ -1212,12 +821,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "function")]
-    public StringValue Function
-    {
-        get { return (StringValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public StringValue Function { get; set; }
     /// <summary>
     /// <para> verbal.</para>
     /// <para>Represents the following attribute in the schema: emma:verbal </para>
@@ -1225,12 +830,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "verbal")]
-    public BooleanValue Verbal
-    {
-        get { return (BooleanValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public BooleanValue Verbal { get; set; }
     /// <summary>
     /// <para> cost.</para>
     /// <para>Represents the following attribute in the schema: emma:cost </para>
@@ -1238,12 +839,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "cost")]
-    public DecimalValue Cost
-    {
-        get { return (DecimalValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public DecimalValue Cost { get; set; }
     /// <summary>
     /// <para> grammar-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:grammar-ref </para>
@@ -1251,12 +848,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "grammar-ref")]
-    public StringValue GrammarRef
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue GrammarRef { get; set; }
     /// <summary>
     /// <para> endpoint-info-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-info-ref </para>
@@ -1264,12 +857,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "endpoint-info-ref")]
-    public StringValue EndpointInfoRef
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue EndpointInfoRef { get; set; }
     /// <summary>
     /// <para> model-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:model-ref </para>
@@ -1277,12 +866,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "model-ref")]
-    public StringValue ModelRef
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue ModelRef { get; set; }
     /// <summary>
     /// <para> dialog-turn.</para>
     /// <para>Represents the following attribute in the schema: emma:dialog-turn </para>
@@ -1290,12 +875,8 @@ public partial class OneOf : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "dialog-turn")]
-    public StringValue DialogTurn
-    {
-        get { return (StringValue)Attributes[24]; }
-        set { Attributes[24] = value; }
-    }
-    
+    [SchemaIndex(24)]
+    public StringValue DialogTurn { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the OneOf class.
@@ -1356,88 +937,6 @@ if( 44 == namespaceId && "sequence" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "disjunction-type" == name)
-    return new EnumValue<DocumentFormat.OpenXml.EMMA.DisjunctionTypeValues>();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "tokens" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "process" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "lang" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "signal" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "signal-size" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "media-type" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "confidence" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "source" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "start" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "end" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "time-ref-uri" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "time-ref-anchor-point" == name)
-    return new EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>();
-    
-if( 44 == namespaceId && "offset-to-start" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "duration" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "medium" == name)
-    return new ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>();
-    
-if( 44 == namespaceId && "mode" == name)
-    return new ListValue<StringValue>();
-    
-if( 44 == namespaceId && "function" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "verbal" == name)
-    return new BooleanValue();
-    
-if( 44 == namespaceId && "cost" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "grammar-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "endpoint-info-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "model-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "dialog-turn" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OneOf>(deep);
 
@@ -1474,34 +973,19 @@ public partial class Group : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12747;
     /// <inheritdoc/>
     public override string LocalName => "group";
-    
     internal override byte NamespaceId => 44;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
-    	private static readonly string[] attributeTagNames = { "id","tokens","process","lang","signal","signal-size","media-type","confidence","source","start","end","time-ref-uri","time-ref-anchor-point","offset-to-start","duration","medium","mode","function","verbal","cost","grammar-ref","endpoint-info-ref","model-ref","dialog-turn" };
-    private static readonly byte[] attributeNamespaceIds = { 0,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> tokens.</para>
     /// <para>Represents the following attribute in the schema: emma:tokens </para>
@@ -1509,12 +993,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "tokens")]
-    public StringValue Tokens
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue Tokens { get; set; }
     /// <summary>
     /// <para> process.</para>
     /// <para>Represents the following attribute in the schema: emma:process </para>
@@ -1522,12 +1002,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "process")]
-    public StringValue Process
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Process { get; set; }
     /// <summary>
     /// <para> lang.</para>
     /// <para>Represents the following attribute in the schema: emma:lang </para>
@@ -1535,12 +1011,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "lang")]
-    public StringValue Language
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue Language { get; set; }
     /// <summary>
     /// <para> signal.</para>
     /// <para>Represents the following attribute in the schema: emma:signal </para>
@@ -1548,12 +1020,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "signal")]
-    public StringValue Signal
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Signal { get; set; }
     /// <summary>
     /// <para> signal-size.</para>
     /// <para>Represents the following attribute in the schema: emma:signal-size </para>
@@ -1561,12 +1029,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "signal-size")]
-    public IntegerValue SignalSize
-    {
-        get { return (IntegerValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public IntegerValue SignalSize { get; set; }
     /// <summary>
     /// <para> media-type.</para>
     /// <para>Represents the following attribute in the schema: emma:media-type </para>
@@ -1574,12 +1038,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "media-type")]
-    public StringValue MediaType
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue MediaType { get; set; }
     /// <summary>
     /// <para> confidence.</para>
     /// <para>Represents the following attribute in the schema: emma:confidence </para>
@@ -1587,12 +1047,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "confidence")]
-    public DecimalValue Confidence
-    {
-        get { return (DecimalValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public DecimalValue Confidence { get; set; }
     /// <summary>
     /// <para> source.</para>
     /// <para>Represents the following attribute in the schema: emma:source </para>
@@ -1600,12 +1056,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "source")]
-    public StringValue Source
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue Source { get; set; }
     /// <summary>
     /// <para> start.</para>
     /// <para>Represents the following attribute in the schema: emma:start </para>
@@ -1613,12 +1065,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "start")]
-    public UInt64Value Start
-    {
-        get { return (UInt64Value)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public UInt64Value Start { get; set; }
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: emma:end </para>
@@ -1626,12 +1074,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "end")]
-    public UInt64Value End
-    {
-        get { return (UInt64Value)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public UInt64Value End { get; set; }
     /// <summary>
     /// <para> time-ref-uri.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-uri </para>
@@ -1639,12 +1083,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "time-ref-uri")]
-    public StringValue TimeReference
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue TimeReference { get; set; }
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-anchor-point </para>
@@ -1652,12 +1092,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "time-ref-anchor-point")]
-    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
     /// <summary>
     /// <para> offset-to-start.</para>
     /// <para>Represents the following attribute in the schema: emma:offset-to-start </para>
@@ -1665,12 +1101,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "offset-to-start")]
-    public IntegerValue OffsetToStart
-    {
-        get { return (IntegerValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public IntegerValue OffsetToStart { get; set; }
     /// <summary>
     /// <para> duration.</para>
     /// <para>Represents the following attribute in the schema: emma:duration </para>
@@ -1678,12 +1110,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "duration")]
-    public IntegerValue Duration
-    {
-        get { return (IntegerValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public IntegerValue Duration { get; set; }
     /// <summary>
     /// <para> medium.</para>
     /// <para>Represents the following attribute in the schema: emma:medium </para>
@@ -1691,12 +1119,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "medium")]
-    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
-    {
-        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
     /// <summary>
     /// <para> mode.</para>
     /// <para>Represents the following attribute in the schema: emma:mode </para>
@@ -1704,12 +1128,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "mode")]
-    public ListValue<StringValue> Mode
-    {
-        get { return (ListValue<StringValue>)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public ListValue<StringValue> Mode { get; set; }
     /// <summary>
     /// <para> function.</para>
     /// <para>Represents the following attribute in the schema: emma:function </para>
@@ -1717,12 +1137,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "function")]
-    public StringValue Function
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue Function { get; set; }
     /// <summary>
     /// <para> verbal.</para>
     /// <para>Represents the following attribute in the schema: emma:verbal </para>
@@ -1730,12 +1146,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "verbal")]
-    public BooleanValue Verbal
-    {
-        get { return (BooleanValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public BooleanValue Verbal { get; set; }
     /// <summary>
     /// <para> cost.</para>
     /// <para>Represents the following attribute in the schema: emma:cost </para>
@@ -1743,12 +1155,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "cost")]
-    public DecimalValue Cost
-    {
-        get { return (DecimalValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public DecimalValue Cost { get; set; }
     /// <summary>
     /// <para> grammar-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:grammar-ref </para>
@@ -1756,12 +1164,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "grammar-ref")]
-    public StringValue GrammarRef
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue GrammarRef { get; set; }
     /// <summary>
     /// <para> endpoint-info-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-info-ref </para>
@@ -1769,12 +1173,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "endpoint-info-ref")]
-    public StringValue EndpointInfoRef
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue EndpointInfoRef { get; set; }
     /// <summary>
     /// <para> model-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:model-ref </para>
@@ -1782,12 +1182,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "model-ref")]
-    public StringValue ModelRef
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue ModelRef { get; set; }
     /// <summary>
     /// <para> dialog-turn.</para>
     /// <para>Represents the following attribute in the schema: emma:dialog-turn </para>
@@ -1795,12 +1191,8 @@ public partial class Group : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "dialog-turn")]
-    public StringValue DialogTurn
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue DialogTurn { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Group class.
@@ -1864,85 +1256,6 @@ if( 44 == namespaceId && "sequence" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "tokens" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "process" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "lang" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "signal" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "signal-size" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "media-type" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "confidence" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "source" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "start" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "end" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "time-ref-uri" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "time-ref-anchor-point" == name)
-    return new EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>();
-    
-if( 44 == namespaceId && "offset-to-start" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "duration" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "medium" == name)
-    return new ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>();
-    
-if( 44 == namespaceId && "mode" == name)
-    return new ListValue<StringValue>();
-    
-if( 44 == namespaceId && "function" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "verbal" == name)
-    return new BooleanValue();
-    
-if( 44 == namespaceId && "cost" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "grammar-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "endpoint-info-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "model-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "dialog-turn" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Group>(deep);
 
@@ -1977,34 +1290,19 @@ public partial class Sequence : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12748;
     /// <inheritdoc/>
     public override string LocalName => "sequence";
-    
     internal override byte NamespaceId => 44;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
-    	private static readonly string[] attributeTagNames = { "id","tokens","process","lang","signal","signal-size","media-type","confidence","source","start","end","time-ref-uri","time-ref-anchor-point","offset-to-start","duration","medium","mode","function","verbal","cost","grammar-ref","endpoint-info-ref","model-ref","dialog-turn" };
-    private static readonly byte[] attributeNamespaceIds = { 0,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44,44 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> tokens.</para>
     /// <para>Represents the following attribute in the schema: emma:tokens </para>
@@ -2012,12 +1310,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "tokens")]
-    public StringValue Tokens
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue Tokens { get; set; }
     /// <summary>
     /// <para> process.</para>
     /// <para>Represents the following attribute in the schema: emma:process </para>
@@ -2025,12 +1319,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "process")]
-    public StringValue Process
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Process { get; set; }
     /// <summary>
     /// <para> lang.</para>
     /// <para>Represents the following attribute in the schema: emma:lang </para>
@@ -2038,12 +1328,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "lang")]
-    public StringValue Language
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue Language { get; set; }
     /// <summary>
     /// <para> signal.</para>
     /// <para>Represents the following attribute in the schema: emma:signal </para>
@@ -2051,12 +1337,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "signal")]
-    public StringValue Signal
-    {
-        get { return (StringValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public StringValue Signal { get; set; }
     /// <summary>
     /// <para> signal-size.</para>
     /// <para>Represents the following attribute in the schema: emma:signal-size </para>
@@ -2064,12 +1346,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "signal-size")]
-    public IntegerValue SignalSize
-    {
-        get { return (IntegerValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public IntegerValue SignalSize { get; set; }
     /// <summary>
     /// <para> media-type.</para>
     /// <para>Represents the following attribute in the schema: emma:media-type </para>
@@ -2077,12 +1355,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "media-type")]
-    public StringValue MediaType
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue MediaType { get; set; }
     /// <summary>
     /// <para> confidence.</para>
     /// <para>Represents the following attribute in the schema: emma:confidence </para>
@@ -2090,12 +1364,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "confidence")]
-    public DecimalValue Confidence
-    {
-        get { return (DecimalValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public DecimalValue Confidence { get; set; }
     /// <summary>
     /// <para> source.</para>
     /// <para>Represents the following attribute in the schema: emma:source </para>
@@ -2103,12 +1373,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "source")]
-    public StringValue Source
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue Source { get; set; }
     /// <summary>
     /// <para> start.</para>
     /// <para>Represents the following attribute in the schema: emma:start </para>
@@ -2116,12 +1382,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "start")]
-    public UInt64Value Start
-    {
-        get { return (UInt64Value)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public UInt64Value Start { get; set; }
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: emma:end </para>
@@ -2129,12 +1391,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "end")]
-    public UInt64Value End
-    {
-        get { return (UInt64Value)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public UInt64Value End { get; set; }
     /// <summary>
     /// <para> time-ref-uri.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-uri </para>
@@ -2142,12 +1400,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "time-ref-uri")]
-    public StringValue TimeReference
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue TimeReference { get; set; }
     /// <summary>
     /// <para> time-ref-anchor-point.</para>
     /// <para>Represents the following attribute in the schema: emma:time-ref-anchor-point </para>
@@ -2155,12 +1409,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "time-ref-anchor-point")]
-    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>)Attributes[12]; }
-        set { Attributes[12] = value; }
-    }
-    
+    [SchemaIndex(12)]
+    public EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues> TimeReferenceAnchorPoint { get; set; }
     /// <summary>
     /// <para> offset-to-start.</para>
     /// <para>Represents the following attribute in the schema: emma:offset-to-start </para>
@@ -2168,12 +1418,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "offset-to-start")]
-    public IntegerValue OffsetToStart
-    {
-        get { return (IntegerValue)Attributes[13]; }
-        set { Attributes[13] = value; }
-    }
-    
+    [SchemaIndex(13)]
+    public IntegerValue OffsetToStart { get; set; }
     /// <summary>
     /// <para> duration.</para>
     /// <para>Represents the following attribute in the schema: emma:duration </para>
@@ -2181,12 +1427,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "duration")]
-    public IntegerValue Duration
-    {
-        get { return (IntegerValue)Attributes[14]; }
-        set { Attributes[14] = value; }
-    }
-    
+    [SchemaIndex(14)]
+    public IntegerValue Duration { get; set; }
     /// <summary>
     /// <para> medium.</para>
     /// <para>Represents the following attribute in the schema: emma:medium </para>
@@ -2194,12 +1436,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "medium")]
-    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
-    {
-        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[15]; }
-        set { Attributes[15] = value; }
-    }
-    
+    [SchemaIndex(15)]
+    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
     /// <summary>
     /// <para> mode.</para>
     /// <para>Represents the following attribute in the schema: emma:mode </para>
@@ -2207,12 +1445,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "mode")]
-    public ListValue<StringValue> Mode
-    {
-        get { return (ListValue<StringValue>)Attributes[16]; }
-        set { Attributes[16] = value; }
-    }
-    
+    [SchemaIndex(16)]
+    public ListValue<StringValue> Mode { get; set; }
     /// <summary>
     /// <para> function.</para>
     /// <para>Represents the following attribute in the schema: emma:function </para>
@@ -2220,12 +1454,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "function")]
-    public StringValue Function
-    {
-        get { return (StringValue)Attributes[17]; }
-        set { Attributes[17] = value; }
-    }
-    
+    [SchemaIndex(17)]
+    public StringValue Function { get; set; }
     /// <summary>
     /// <para> verbal.</para>
     /// <para>Represents the following attribute in the schema: emma:verbal </para>
@@ -2233,12 +1463,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "verbal")]
-    public BooleanValue Verbal
-    {
-        get { return (BooleanValue)Attributes[18]; }
-        set { Attributes[18] = value; }
-    }
-    
+    [SchemaIndex(18)]
+    public BooleanValue Verbal { get; set; }
     /// <summary>
     /// <para> cost.</para>
     /// <para>Represents the following attribute in the schema: emma:cost </para>
@@ -2246,12 +1472,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "cost")]
-    public DecimalValue Cost
-    {
-        get { return (DecimalValue)Attributes[19]; }
-        set { Attributes[19] = value; }
-    }
-    
+    [SchemaIndex(19)]
+    public DecimalValue Cost { get; set; }
     /// <summary>
     /// <para> grammar-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:grammar-ref </para>
@@ -2259,12 +1481,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "grammar-ref")]
-    public StringValue GrammarRef
-    {
-        get { return (StringValue)Attributes[20]; }
-        set { Attributes[20] = value; }
-    }
-    
+    [SchemaIndex(20)]
+    public StringValue GrammarRef { get; set; }
     /// <summary>
     /// <para> endpoint-info-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-info-ref </para>
@@ -2272,12 +1490,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "endpoint-info-ref")]
-    public StringValue EndpointInfoRef
-    {
-        get { return (StringValue)Attributes[21]; }
-        set { Attributes[21] = value; }
-    }
-    
+    [SchemaIndex(21)]
+    public StringValue EndpointInfoRef { get; set; }
     /// <summary>
     /// <para> model-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:model-ref </para>
@@ -2285,12 +1499,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "model-ref")]
-    public StringValue ModelRef
-    {
-        get { return (StringValue)Attributes[22]; }
-        set { Attributes[22] = value; }
-    }
-    
+    [SchemaIndex(22)]
+    public StringValue ModelRef { get; set; }
     /// <summary>
     /// <para> dialog-turn.</para>
     /// <para>Represents the following attribute in the schema: emma:dialog-turn </para>
@@ -2298,12 +1508,8 @@ public partial class Sequence : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "dialog-turn")]
-    public StringValue DialogTurn
-    {
-        get { return (StringValue)Attributes[23]; }
-        set { Attributes[23] = value; }
-    }
-    
+    [SchemaIndex(23)]
+    public StringValue DialogTurn { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Sequence class.
@@ -2364,85 +1570,6 @@ if( 44 == namespaceId && "sequence" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "tokens" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "process" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "lang" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "signal" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "signal-size" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "media-type" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "confidence" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "source" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "start" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "end" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "time-ref-uri" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "time-ref-anchor-point" == name)
-    return new EnumValue<DocumentFormat.OpenXml.EMMA.AnchorPointValues>();
-    
-if( 44 == namespaceId && "offset-to-start" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "duration" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "medium" == name)
-    return new ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>();
-    
-if( 44 == namespaceId && "mode" == name)
-    return new ListValue<StringValue>();
-    
-if( 44 == namespaceId && "function" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "verbal" == name)
-    return new BooleanValue();
-    
-if( 44 == namespaceId && "cost" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "grammar-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "endpoint-info-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "model-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "dialog-turn" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Sequence>(deep);
 
@@ -2465,34 +1592,19 @@ public partial class GroupInfo : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12749;
     /// <inheritdoc/>
     public override string LocalName => "group-info";
-    
     internal override byte NamespaceId => 44;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
-    	private static readonly string[] attributeTagNames = { "ref" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> ref.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
     [SchemaAttr(0, "ref")]
-    public StringValue Reference
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Reference { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the GroupInfo class.
@@ -2535,16 +1647,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "ref" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupInfo>(deep);
 
@@ -2575,13 +1677,9 @@ public partial class Derivation : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12750;
     /// <inheritdoc/>
     public override string LocalName => "derivation";
-    
     internal override byte NamespaceId => 44;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2639,7 +1737,6 @@ if( 44 == namespaceId && "group" == name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Derivation>(deep);
 
@@ -2657,45 +1754,26 @@ public partial class Grammar : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12751;
     /// <inheritdoc/>
     public override string LocalName => "grammar";
-    
     internal override byte NamespaceId => 44;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
-    	private static readonly string[] attributeTagNames = { "id","ref" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> ref.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
     [SchemaAttr(0, "ref")]
-    public StringValue Reference
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue Reference { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Grammar class.
@@ -2707,19 +1785,6 @@ public partial class Grammar : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ref" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Grammar>(deep);
 
@@ -2742,45 +1807,26 @@ public partial class Model : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12752;
     /// <inheritdoc/>
     public override string LocalName => "model";
-    
     internal override byte NamespaceId => 44;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
-    	private static readonly string[] attributeTagNames = { "id","ref" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> ref.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
     [SchemaAttr(0, "ref")]
-    public StringValue Reference
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue Reference { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Model class.
@@ -2823,19 +1869,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "ref" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Model>(deep);
 
@@ -2860,34 +1893,19 @@ public partial class EndPointInfo : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12753;
     /// <inheritdoc/>
     public override string LocalName => "endpoint-info";
-    
     internal override byte NamespaceId => 44;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
-    	private static readonly string[] attributeTagNames = { "id" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the EndPointInfo class.
@@ -2933,16 +1951,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndPointInfo>(deep);
 
@@ -2965,34 +1973,19 @@ public partial class EndPoint : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12754;
     /// <inheritdoc/>
     public override string LocalName => "endpoint";
-    
     internal override byte NamespaceId => 44;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
-    	private static readonly string[] attributeTagNames = { "id","endpoint-role","endpoint-address","message-id","port-num","port-type","endpoint-pair-ref","service-name","media-type","medium","mode" };
-    private static readonly byte[] attributeNamespaceIds = { 0,44,44,44,44,44,44,44,44,44,44 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> endpoint-role.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-role </para>
@@ -3000,12 +1993,8 @@ public partial class EndPoint : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "endpoint-role")]
-    public EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues> EndpointRole
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues>)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues> EndpointRole { get; set; }
     /// <summary>
     /// <para> endpoint-address.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-address </para>
@@ -3013,12 +2002,8 @@ public partial class EndPoint : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "endpoint-address")]
-    public StringValue EndPointAddress
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue EndPointAddress { get; set; }
     /// <summary>
     /// <para> message-id.</para>
     /// <para>Represents the following attribute in the schema: emma:message-id </para>
@@ -3026,12 +2011,8 @@ public partial class EndPoint : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "message-id")]
-    public StringValue MessageId
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue MessageId { get; set; }
     /// <summary>
     /// <para> port-num.</para>
     /// <para>Represents the following attribute in the schema: emma:port-num </para>
@@ -3039,12 +2020,8 @@ public partial class EndPoint : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "port-num")]
-    public IntegerValue PortNumber
-    {
-        get { return (IntegerValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public IntegerValue PortNumber { get; set; }
     /// <summary>
     /// <para> port-type.</para>
     /// <para>Represents the following attribute in the schema: emma:port-type </para>
@@ -3052,12 +2029,8 @@ public partial class EndPoint : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "port-type")]
-    public StringValue PortType
-    {
-        get { return (StringValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public StringValue PortType { get; set; }
     /// <summary>
     /// <para> endpoint-pair-ref.</para>
     /// <para>Represents the following attribute in the schema: emma:endpoint-pair-ref </para>
@@ -3065,12 +2038,8 @@ public partial class EndPoint : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "endpoint-pair-ref")]
-    public StringValue EndpointPairRef
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue EndpointPairRef { get; set; }
     /// <summary>
     /// <para> service-name.</para>
     /// <para>Represents the following attribute in the schema: emma:service-name </para>
@@ -3078,12 +2047,8 @@ public partial class EndPoint : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "service-name")]
-    public StringValue ServiceName
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue ServiceName { get; set; }
     /// <summary>
     /// <para> media-type.</para>
     /// <para>Represents the following attribute in the schema: emma:media-type </para>
@@ -3091,12 +2056,8 @@ public partial class EndPoint : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "media-type")]
-    public StringValue MediaType
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue MediaType { get; set; }
     /// <summary>
     /// <para> medium.</para>
     /// <para>Represents the following attribute in the schema: emma:medium </para>
@@ -3104,12 +2065,8 @@ public partial class EndPoint : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "medium")]
-    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
-    {
-        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
     /// <summary>
     /// <para> mode.</para>
     /// <para>Represents the following attribute in the schema: emma:mode </para>
@@ -3117,12 +2074,8 @@ public partial class EndPoint : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "mode")]
-    public ListValue<StringValue> Mode
-    {
-        get { return (ListValue<StringValue>)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public ListValue<StringValue> Mode { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the EndPoint class.
@@ -3165,46 +2118,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "endpoint-role" == name)
-    return new EnumValue<DocumentFormat.OpenXml.EMMA.EndPointRoleValues>();
-    
-if( 44 == namespaceId && "endpoint-address" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "message-id" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "port-num" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "port-type" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "endpoint-pair-ref" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "service-name" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "media-type" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "medium" == name)
-    return new ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>();
-    
-if( 44 == namespaceId && "mode" == name)
-    return new ListValue<StringValue>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EndPoint>(deep);
 
@@ -3229,34 +2142,19 @@ public partial class Node : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12755;
     /// <inheritdoc/>
     public override string LocalName => "node";
-    
     internal override byte NamespaceId => 44;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
-    	private static readonly string[] attributeTagNames = { "node-number","confidence","cost" };
-    private static readonly byte[] attributeNamespaceIds = { 0,44,44 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> node-number.</para>
     /// <para>Represents the following attribute in the schema: node-number </para>
     /// </summary>
     [SchemaAttr(0, "node-number")]
-    public IntegerValue NodeNumber
-    {
-        get { return (IntegerValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public IntegerValue NodeNumber { get; set; }
     /// <summary>
     /// <para> confidence.</para>
     /// <para>Represents the following attribute in the schema: emma:confidence </para>
@@ -3264,12 +2162,8 @@ public partial class Node : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "confidence")]
-    public DecimalValue Confidence
-    {
-        get { return (DecimalValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public DecimalValue Confidence { get; set; }
     /// <summary>
     /// <para> cost.</para>
     /// <para>Represents the following attribute in the schema: emma:cost </para>
@@ -3277,12 +2171,8 @@ public partial class Node : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "cost")]
-    public DecimalValue Cost
-    {
-        get { return (DecimalValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public DecimalValue Cost { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Node class.
@@ -3328,22 +2218,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "node-number" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "confidence" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "cost" == name)
-    return new DecimalValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Node>(deep);
 
@@ -3368,45 +2242,26 @@ public partial class Arc : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12756;
     /// <inheritdoc/>
     public override string LocalName => "arc";
-    
     internal override byte NamespaceId => 44;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
-    	private static readonly string[] attributeTagNames = { "from","to","start","end","offset-to-start","duration","confidence","cost","lang","medium","mode","source" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,44,44,44,44,44,44,44,44,44,44 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> from.</para>
     /// <para>Represents the following attribute in the schema: from </para>
     /// </summary>
     [SchemaAttr(0, "from")]
-    public IntegerValue From
-    {
-        get { return (IntegerValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public IntegerValue From { get; set; }
     /// <summary>
     /// <para> to.</para>
     /// <para>Represents the following attribute in the schema: to </para>
     /// </summary>
     [SchemaAttr(0, "to")]
-    public IntegerValue To
-    {
-        get { return (IntegerValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public IntegerValue To { get; set; }
     /// <summary>
     /// <para> start.</para>
     /// <para>Represents the following attribute in the schema: emma:start </para>
@@ -3414,12 +2269,8 @@ public partial class Arc : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "start")]
-    public UInt64Value Start
-    {
-        get { return (UInt64Value)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public UInt64Value Start { get; set; }
     /// <summary>
     /// <para> end.</para>
     /// <para>Represents the following attribute in the schema: emma:end </para>
@@ -3427,12 +2278,8 @@ public partial class Arc : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "end")]
-    public UInt64Value End
-    {
-        get { return (UInt64Value)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public UInt64Value End { get; set; }
     /// <summary>
     /// <para> offset-to-start.</para>
     /// <para>Represents the following attribute in the schema: emma:offset-to-start </para>
@@ -3440,12 +2287,8 @@ public partial class Arc : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "offset-to-start")]
-    public IntegerValue OffsetToStart
-    {
-        get { return (IntegerValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public IntegerValue OffsetToStart { get; set; }
     /// <summary>
     /// <para> duration.</para>
     /// <para>Represents the following attribute in the schema: emma:duration </para>
@@ -3453,12 +2296,8 @@ public partial class Arc : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "duration")]
-    public IntegerValue Duration
-    {
-        get { return (IntegerValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public IntegerValue Duration { get; set; }
     /// <summary>
     /// <para> confidence.</para>
     /// <para>Represents the following attribute in the schema: emma:confidence </para>
@@ -3466,12 +2305,8 @@ public partial class Arc : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "confidence")]
-    public DecimalValue Confidence
-    {
-        get { return (DecimalValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public DecimalValue Confidence { get; set; }
     /// <summary>
     /// <para> cost.</para>
     /// <para>Represents the following attribute in the schema: emma:cost </para>
@@ -3479,12 +2314,8 @@ public partial class Arc : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "cost")]
-    public DecimalValue Cost
-    {
-        get { return (DecimalValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public DecimalValue Cost { get; set; }
     /// <summary>
     /// <para> lang.</para>
     /// <para>Represents the following attribute in the schema: emma:lang </para>
@@ -3492,12 +2323,8 @@ public partial class Arc : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "lang")]
-    public StringValue Language
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue Language { get; set; }
     /// <summary>
     /// <para> medium.</para>
     /// <para>Represents the following attribute in the schema: emma:medium </para>
@@ -3505,12 +2332,8 @@ public partial class Arc : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "medium")]
-    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium
-    {
-        get { return (ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>> Medium { get; set; }
     /// <summary>
     /// <para> mode.</para>
     /// <para>Represents the following attribute in the schema: emma:mode </para>
@@ -3518,12 +2341,8 @@ public partial class Arc : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "mode")]
-    public ListValue<StringValue> Mode
-    {
-        get { return (ListValue<StringValue>)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public ListValue<StringValue> Mode { get; set; }
     /// <summary>
     /// <para> source.</para>
     /// <para>Represents the following attribute in the schema: emma:source </para>
@@ -3531,12 +2350,8 @@ public partial class Arc : OpenXmlCompositeElement
 ///<remark> xmlns:emma=http://www.w3.org/2003/04/emma
 ///</remark>
     [SchemaAttr(44, "source")]
-    public StringValue Source
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue Source { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Arc class.
@@ -3582,49 +2397,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "from" == name)
-    return new IntegerValue();
-    
-if( 0 == namespaceId && "to" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "start" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "end" == name)
-    return new UInt64Value();
-    
-if( 44 == namespaceId && "offset-to-start" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "duration" == name)
-    return new IntegerValue();
-    
-if( 44 == namespaceId && "confidence" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "cost" == name)
-    return new DecimalValue();
-    
-if( 44 == namespaceId && "lang" == name)
-    return new StringValue();
-    
-if( 44 == namespaceId && "medium" == name)
-    return new ListValue<EnumValue<DocumentFormat.OpenXml.EMMA.MediumValues>>();
-    
-if( 44 == namespaceId && "mode" == name)
-    return new ListValue<StringValue>();
-    
-if( 44 == namespaceId && "source" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Arc>(deep);
 
@@ -3665,34 +2437,19 @@ public partial class Emma : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12757;
     /// <inheritdoc/>
     public override string LocalName => "emma";
-    
     internal override byte NamespaceId => 44;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
-    	private static readonly string[] attributeTagNames = { "version" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> version.</para>
     /// <para>Represents the following attribute in the schema: version </para>
     /// </summary>
     [SchemaAttr(0, "version")]
-    public StringValue Version
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Version { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Emma class.
@@ -3762,16 +2519,6 @@ if( 44 == namespaceId && "sequence" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "version" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Emma>(deep);
 

@@ -80,13 +80,9 @@ public partial class Macrosheet : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 12600;
     /// <inheritdoc/>
     public override string LocalName => "macrosheet";
-    
     internal override byte NamespaceId => 32;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -299,7 +295,6 @@ if( 22 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Macrosheet>(deep);
 
@@ -325,13 +320,9 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 12601;
     /// <inheritdoc/>
     public override string LocalName => "worksheetSortMap";
-    
     internal override byte NamespaceId => 32;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -445,7 +436,6 @@ if( 32 == namespaceId && "colSortMap" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorksheetSortMap>(deep);
 
@@ -463,13 +453,9 @@ public partial class ReferenceSequence : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12602;
     /// <inheritdoc/>
     public override string LocalName => "sqref";
-    
     internal override byte NamespaceId => 32;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -497,7 +483,6 @@ public partial class ReferenceSequence : OpenXmlLeafTextElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ReferenceSequence>(deep);
 
@@ -515,13 +500,9 @@ public partial class Formula : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12603;
     /// <inheritdoc/>
     public override string LocalName => "f";
-    
     internal override byte NamespaceId => 32;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -549,7 +530,6 @@ public partial class Formula : OpenXmlLeafTextElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formula>(deep);
 
@@ -574,45 +554,26 @@ public partial class RowSortMap : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12604;
     /// <inheritdoc/>
     public override string LocalName => "rowSortMap";
-    
     internal override byte NamespaceId => 32;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
-    	private static readonly string[] attributeTagNames = { "ref","count" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> Reference.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
     [SchemaAttr(0, "ref")]
-    public StringValue Ref
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Ref { get; set; }
     /// <summary>
     /// <para> Count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
     [SchemaAttr(0, "count")]
-    public UInt32Value Count
-    {
-        get { return (UInt32Value)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public UInt32Value Count { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the RowSortMap class.
@@ -658,19 +619,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "ref" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "count" == name)
-    return new UInt32Value();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowSortMap>(deep);
 
@@ -695,45 +643,26 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12605;
     /// <inheritdoc/>
     public override string LocalName => "colSortMap";
-    
     internal override byte NamespaceId => 32;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
-    	private static readonly string[] attributeTagNames = { "ref","count" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> Reference.</para>
     /// <para>Represents the following attribute in the schema: ref </para>
     /// </summary>
     [SchemaAttr(0, "ref")]
-    public StringValue Ref
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Ref { get; set; }
     /// <summary>
     /// <para> Count.</para>
     /// <para>Represents the following attribute in the schema: count </para>
     /// </summary>
     [SchemaAttr(0, "count")]
-    public UInt32Value Count
-    {
-        get { return (UInt32Value)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public UInt32Value Count { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ColumnSortMap class.
@@ -779,19 +708,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "ref" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "count" == name)
-    return new UInt32Value();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnSortMap>(deep);
 
@@ -809,13 +725,9 @@ public partial class RowSortMapItem : SortMapItemType
     internal const int ElementTypeIdConst = 12606;
     /// <inheritdoc/>
     public override string LocalName => "row";
-    
     internal override byte NamespaceId => 32;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the RowSortMapItem class.
@@ -840,13 +752,9 @@ public partial class ColumnSortMapItem : SortMapItemType
     internal const int ElementTypeIdConst = 12607;
     /// <inheritdoc/>
     public override string LocalName => "col";
-    
     internal override byte NamespaceId => 32;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ColumnSortMapItem class.
@@ -865,52 +773,24 @@ public partial class ColumnSortMapItem : SortMapItemType
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
 public abstract partial class SortMapItemType : OpenXmlLeafElement
 {
-    	private static readonly string[] attributeTagNames = { "newVal","oldVal" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
-    
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-    
+        
         /// <summary>
     /// <para> New Value.</para>
     /// <para>Represents the following attribute in the schema: newVal </para>
     /// </summary>
     [SchemaAttr(0, "newVal")]
-    public UInt32Value NewVal
-    {
-        get { return (UInt32Value)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public UInt32Value NewVal { get; set; }
     /// <summary>
     /// <para> Old Value.</para>
     /// <para>Represents the following attribute in the schema: oldVal </para>
     /// </summary>
     [SchemaAttr(0, "oldVal")]
-    public UInt32Value OldVal
-    {
-        get { return (UInt32Value)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public UInt32Value OldVal { get; set; }
 
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "newVal" == name)
-    return new UInt32Value();
-    
-if( 0 == namespaceId && "oldVal" == name)
-    return new UInt32Value();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     
     /// <summary>
     /// Initializes a new instance of the SortMapItemType class.

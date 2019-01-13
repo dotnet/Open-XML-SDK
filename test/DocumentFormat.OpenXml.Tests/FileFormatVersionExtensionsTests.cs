@@ -83,7 +83,7 @@ namespace DocumentFormat.OpenXml.Tests
             var name = version.ToString().Substring("Office".Length);
             var element = Substitute.ForPartsOf<OpenXmlElement>();
 
-            element.IsInVersion(Arg.Any<FileFormatVersions>()).Returns(false);
+            element.InitialVersion.Returns(FileFormatVersions.None);
 
             var exception = Assert.Throws<InvalidOperationException>(() => version.ThrowIfNotInVersion(element));
 
@@ -130,7 +130,7 @@ namespace DocumentFormat.OpenXml.Tests
             Assert.True(version == default || !Enum.IsDefined(typeof(FileFormatVersions), version));
 
             var element = Substitute.ForPartsOf<OpenXmlElement>();
-            element.IsInVersion(Arg.Any<FileFormatVersions>()).Returns(true);
+            element.InitialVersion.Returns(FileFormatVersions.Office2007);
 
             Assert.Throws<ArgumentOutOfRangeException>(ParamName, () => version.ThrowIfNotInVersion(element));
         }

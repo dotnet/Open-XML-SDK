@@ -32,13 +32,9 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12699;
     /// <inheritdoc/>
     public override string LocalName => "customPropertyEditors";
-    
     internal override byte NamespaceId => 37;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -126,7 +122,6 @@ if( 37 == namespaceId && "customPropertyEditor" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomPropertyEditors>(deep);
 
@@ -144,13 +139,9 @@ public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12700;
     /// <inheritdoc/>
     public override string LocalName => "XMLNamespace";
-    
     internal override byte NamespaceId => 37;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the PropertyEditorNamespace class.
@@ -188,13 +179,9 @@ public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12703;
     /// <inheritdoc/>
     public override string LocalName => "defaultPropertyEditorNamespace";
-    
     internal override byte NamespaceId => 37;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the DefaultPropertyEditorNamespace class.
@@ -232,13 +219,9 @@ public partial class XsnFileLocation : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12701;
     /// <inheritdoc/>
     public override string LocalName => "XSNLocation";
-    
     internal override byte NamespaceId => 37;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -266,7 +249,6 @@ public partial class XsnFileLocation : OpenXmlLeafTextElement
     
     
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<XsnFileLocation>(deep);
 
@@ -284,13 +266,9 @@ public partial class ShowOnOpen : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12702;
     /// <inheritdoc/>
     public override string LocalName => "showOnOpen";
-    
     internal override byte NamespaceId => 37;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -315,7 +293,6 @@ public partial class ShowOnOpen : OpenXmlLeafTextElement
     }
     
  
-    
     
     
     
@@ -345,13 +322,9 @@ public partial class CustomPropertyEditor : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12704;
     /// <inheritdoc/>
     public override string LocalName => "customPropertyEditor";
-    
     internal override byte NamespaceId => 37;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2007);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -436,7 +409,6 @@ if( 37 == namespaceId && "XSNLocation" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomPropertyEditor>(deep);
 

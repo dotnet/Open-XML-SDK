@@ -22,67 +22,40 @@ public partial class BackgroundProperties : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13320;
     /// <inheritdoc/>
     public override string LocalName => "backgroundPr";
-    
     internal override byte NamespaceId => 67;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
-    	private static readonly string[] attributeTagNames = { "bwMode","bwPure","bwNormal","targetScreenSize" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> bwMode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
     [SchemaAttr(0, "bwMode")]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Mode
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Mode { get; set; }
     /// <summary>
     /// <para> bwPure.</para>
     /// <para>Represents the following attribute in the schema: bwPure </para>
     /// </summary>
     [SchemaAttr(0, "bwPure")]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Pure
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Pure { get; set; }
     /// <summary>
     /// <para> bwNormal.</para>
     /// <para>Represents the following attribute in the schema: bwNormal </para>
     /// </summary>
     [SchemaAttr(0, "bwNormal")]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Normal
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> Normal { get; set; }
     /// <summary>
     /// <para> targetScreenSize.</para>
     /// <para>Represents the following attribute in the schema: targetScreenSize </para>
     /// </summary>
     [SchemaAttr(0, "targetScreenSize")]
-    public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize> TargetScreenSize
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize>)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize> TargetScreenSize { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the BackgroundProperties class.
@@ -94,25 +67,6 @@ public partial class BackgroundProperties : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "bwMode" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>();
-    
-if( 0 == namespaceId && "bwPure" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>();
-    
-if( 0 == namespaceId && "bwNormal" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues>();
-    
-if( 0 == namespaceId && "targetScreenSize" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Office2013.Drawing.TargetScreenSize>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackgroundProperties>(deep);
 
@@ -130,34 +84,19 @@ public partial class NonVisualGroupProperties : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13321;
     /// <inheritdoc/>
     public override string LocalName => "nonVisualGroupProps";
-    
     internal override byte NamespaceId => 67;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
-    	private static readonly string[] attributeTagNames = { "isLegacyGroup" };
-    private static readonly byte[] attributeNamespaceIds = { 0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> isLegacyGroup.</para>
     /// <para>Represents the following attribute in the schema: isLegacyGroup </para>
     /// </summary>
     [SchemaAttr(0, "isLegacyGroup")]
-    public BooleanValue IsLegacyGroup
-    {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public BooleanValue IsLegacyGroup { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the NonVisualGroupProperties class.
@@ -169,16 +108,6 @@ public partial class NonVisualGroupProperties : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "isLegacyGroup" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NonVisualGroupProperties>(deep);
 
@@ -196,56 +125,33 @@ public partial class ObjectProperties : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13322;
     /// <inheritdoc/>
     public override string LocalName => "objectPr";
-    
     internal override byte NamespaceId => 67;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
-    	private static readonly string[] attributeTagNames = { "objectId","isActiveX","linkType" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> objectId.</para>
     /// <para>Represents the following attribute in the schema: objectId </para>
     /// </summary>
     [SchemaAttr(0, "objectId")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> isActiveX.</para>
     /// <para>Represents the following attribute in the schema: isActiveX </para>
     /// </summary>
     [SchemaAttr(0, "isActiveX")]
-    public BooleanValue IsActiveX
-    {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public BooleanValue IsActiveX { get; set; }
     /// <summary>
     /// <para> linkType.</para>
     /// <para>Represents the following attribute in the schema: linkType </para>
     /// </summary>
     [SchemaAttr(0, "linkType")]
-    public StringValue LinkType
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue LinkType { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the ObjectProperties class.
@@ -257,22 +163,6 @@ public partial class ObjectProperties : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "objectId" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "isActiveX" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "linkType" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ObjectProperties>(deep);
 
@@ -290,155 +180,96 @@ public partial class SignatureLine : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13323;
     /// <inheritdoc/>
     public override string LocalName => "signatureLine";
-    
     internal override byte NamespaceId => 67;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
-    	private static readonly string[] attributeTagNames = { "isSignatureLine","id","provId","signingInstructionsSet","allowComments","showSignDate","suggestedSigner","suggestedSigner2","suggestedSignerEmail","signingInstructions","addlXml","sigProvUrl" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0,0,0,0,0,0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> isSignatureLine.</para>
     /// <para>Represents the following attribute in the schema: isSignatureLine </para>
     /// </summary>
     [SchemaAttr(0, "isSignatureLine")]
-    public BooleanValue IsSignatureLine
-    {
-        get { return (BooleanValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public BooleanValue IsSignatureLine { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> provId.</para>
     /// <para>Represents the following attribute in the schema: provId </para>
     /// </summary>
     [SchemaAttr(0, "provId")]
-    public StringValue ProviderId
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue ProviderId { get; set; }
     /// <summary>
     /// <para> signingInstructionsSet.</para>
     /// <para>Represents the following attribute in the schema: signingInstructionsSet </para>
     /// </summary>
     [SchemaAttr(0, "signingInstructionsSet")]
-    public BooleanValue SigningInstructionsSet
-    {
-        get { return (BooleanValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public BooleanValue SigningInstructionsSet { get; set; }
     /// <summary>
     /// <para> allowComments.</para>
     /// <para>Represents the following attribute in the schema: allowComments </para>
     /// </summary>
     [SchemaAttr(0, "allowComments")]
-    public BooleanValue AllowComments
-    {
-        get { return (BooleanValue)Attributes[4]; }
-        set { Attributes[4] = value; }
-    }
-    
+    [SchemaIndex(4)]
+    public BooleanValue AllowComments { get; set; }
     /// <summary>
     /// <para> showSignDate.</para>
     /// <para>Represents the following attribute in the schema: showSignDate </para>
     /// </summary>
     [SchemaAttr(0, "showSignDate")]
-    public BooleanValue ShowSignDate
-    {
-        get { return (BooleanValue)Attributes[5]; }
-        set { Attributes[5] = value; }
-    }
-    
+    [SchemaIndex(5)]
+    public BooleanValue ShowSignDate { get; set; }
     /// <summary>
     /// <para> suggestedSigner.</para>
     /// <para>Represents the following attribute in the schema: suggestedSigner </para>
     /// </summary>
     [SchemaAttr(0, "suggestedSigner")]
-    public StringValue SuggestedSigner
-    {
-        get { return (StringValue)Attributes[6]; }
-        set { Attributes[6] = value; }
-    }
-    
+    [SchemaIndex(6)]
+    public StringValue SuggestedSigner { get; set; }
     /// <summary>
     /// <para> suggestedSigner2.</para>
     /// <para>Represents the following attribute in the schema: suggestedSigner2 </para>
     /// </summary>
     [SchemaAttr(0, "suggestedSigner2")]
-    public StringValue SuggestedSigner2
-    {
-        get { return (StringValue)Attributes[7]; }
-        set { Attributes[7] = value; }
-    }
-    
+    [SchemaIndex(7)]
+    public StringValue SuggestedSigner2 { get; set; }
     /// <summary>
     /// <para> suggestedSignerEmail.</para>
     /// <para>Represents the following attribute in the schema: suggestedSignerEmail </para>
     /// </summary>
     [SchemaAttr(0, "suggestedSignerEmail")]
-    public StringValue SuggestedSignerEmail
-    {
-        get { return (StringValue)Attributes[8]; }
-        set { Attributes[8] = value; }
-    }
-    
+    [SchemaIndex(8)]
+    public StringValue SuggestedSignerEmail { get; set; }
     /// <summary>
     /// <para> signingInstructions.</para>
     /// <para>Represents the following attribute in the schema: signingInstructions </para>
     /// </summary>
     [SchemaAttr(0, "signingInstructions")]
-    public StringValue SigningInstructions
-    {
-        get { return (StringValue)Attributes[9]; }
-        set { Attributes[9] = value; }
-    }
-    
+    [SchemaIndex(9)]
+    public StringValue SigningInstructions { get; set; }
     /// <summary>
     /// <para> addlXml.</para>
     /// <para>Represents the following attribute in the schema: addlXml </para>
     /// </summary>
     [SchemaAttr(0, "addlXml")]
-    public StringValue AdditionalXml
-    {
-        get { return (StringValue)Attributes[10]; }
-        set { Attributes[10] = value; }
-    }
-    
+    [SchemaIndex(10)]
+    public StringValue AdditionalXml { get; set; }
     /// <summary>
     /// <para> sigProvUrl.</para>
     /// <para>Represents the following attribute in the schema: sigProvUrl </para>
     /// </summary>
     [SchemaAttr(0, "sigProvUrl")]
-    public StringValue SignatureProviderUrl
-    {
-        get { return (StringValue)Attributes[11]; }
-        set { Attributes[11] = value; }
-    }
-    
+    [SchemaIndex(11)]
+    public StringValue SignatureProviderUrl { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the SignatureLine class.
@@ -450,49 +281,6 @@ public partial class SignatureLine : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "isSignatureLine" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "provId" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "signingInstructionsSet" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "allowComments" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "showSignDate" == name)
-    return new BooleanValue();
-    
-if( 0 == namespaceId && "suggestedSigner" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "suggestedSigner2" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "suggestedSignerEmail" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "signingInstructions" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "addlXml" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "sigProvUrl" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SignatureLine>(deep);
 

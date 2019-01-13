@@ -7,6 +7,8 @@ using System.Globalization;
 using System.IO;
 using System.Xml;
 
+using static System.FormattableString;
+
 namespace DocumentFormat.OpenXml
 {
     /// <summary>
@@ -305,7 +307,6 @@ namespace DocumentFormat.OpenXml
                 case XmlNodeType.XmlDeclaration:
                     Debug.Assert(xmlReader.NodeType != XmlNodeType.XmlDeclaration);
 
-                    // this.RawOuterXml = String.Format("<?xml version='1.0'?>");
                     Value = xmlReader.Value; // version='1.0'
                     break;
 
@@ -332,7 +333,7 @@ namespace DocumentFormat.OpenXml
 
                 case XmlNodeType.CDATA:
                     Value = xmlReader.Value;
-                    RawOuterXml = string.Format(CultureInfo.InvariantCulture, "<![CDATA[{0}]]>", xmlReader.Value);
+                    RawOuterXml = Invariant($"<![CDATA[{xmlReader.Value}]]>");
                     break;
 
                 case XmlNodeType.SignificantWhitespace:
@@ -345,12 +346,12 @@ namespace DocumentFormat.OpenXml
 
                 case XmlNodeType.ProcessingInstruction:
                     Value = xmlReader.Value;
-                    RawOuterXml = string.Format(CultureInfo.InvariantCulture, "<?{0} {1}?>", xmlReader.Name, xmlReader.Value);
+                    RawOuterXml = Invariant($"<?{xmlReader.Name} {xmlReader.Value}?>");
                     break;
 
                 case XmlNodeType.Comment:
                     Value = xmlReader.Value;
-                    RawOuterXml = string.Format(CultureInfo.InvariantCulture, "<!--{0}-->", xmlReader.Value);
+                    RawOuterXml = Invariant($"<!--{xmlReader.Value}-->");
                     break;
 
                 case XmlNodeType.Document:
@@ -358,7 +359,6 @@ namespace DocumentFormat.OpenXml
                     break;
 
                 case XmlNodeType.DocumentType:
-                    // this.RawOuterXml = String.Format(CultureInfo.InvariantCulture, "<!DOCTYPE {0} [{1}]", xmlReader.Name, xmlReader.Value);
                     Debug.Assert(xmlReader.NodeType != XmlNodeType.DocumentType);
                     break;
 
@@ -390,45 +390,41 @@ namespace DocumentFormat.OpenXml
         {
             LoadOuterXml(xmlReader);
             xmlReader.Read();
-
-            // this.RawOuterXml = xmlReader.ReadOuterXml();
         }
 
-        /// <inheritdoc/>
-        internal override bool IsInVersion(FileFormatVersions version)
-        {
-            // For OpenXmlMiscNode, always return true, no matter what the version is.
-            return true;
-        }
+        internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
         internal static OpenXmlMiscNode CreateFromText(string text)
         {
             Debug.Assert(text != null);
 
-            var newMiscNode = new OpenXmlMiscNode(XmlNodeType.Text);
-            newMiscNode.Value = text;
-            newMiscNode.RawOuterXml = text;
-            return newMiscNode;
+            return new OpenXmlMiscNode(XmlNodeType.Text)
+            {
+                Value = text,
+                RawOuterXml = text,
+            };
         }
 
         internal static OpenXmlMiscNode CreateFromCdata(string value)
         {
             Debug.Assert(value != null);
 
-            var newMiscNode = new OpenXmlMiscNode(XmlNodeType.CDATA);
-            newMiscNode.Value = value;
-            newMiscNode.RawOuterXml = string.Format(CultureInfo.InvariantCulture, "<![CDATA[{0}]]>", value);
-            return newMiscNode;
+            return new OpenXmlMiscNode(XmlNodeType.CDATA)
+            {
+                Value = value,
+                RawOuterXml = Invariant($"<![CDATA[{value}]]>"),
+            };
         }
 
         internal static OpenXmlMiscNode CreateFromSignificantWhitespace(string whitespace)
         {
             Debug.Assert(whitespace != null);
 
-            var newMiscNode = new OpenXmlMiscNode(XmlNodeType.SignificantWhitespace);
-            newMiscNode.Value = whitespace;
-            newMiscNode.RawOuterXml = whitespace;
-            return newMiscNode;
+            return new OpenXmlMiscNode(XmlNodeType.SignificantWhitespace)
+            {
+                Value = whitespace,
+                RawOuterXml = whitespace,
+            };
         }
     }
 }

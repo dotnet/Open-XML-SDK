@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## Version 2.9.0 - [vNext]
+## Version 2.9.0 - 2018-06-08
 ### Added
 - `ListValue` now implements `IEnumerable<T>` (#385)
 - Added a `WebExtension.Frozen` and obsoleted misspelled `Fronzen` property (#460)
@@ -19,6 +19,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Fixed race condition while performing strict translation of attributes (#480)
 - Schema data for validation uses a more compact format leading to a reduction in dll size and performance improvements for loading (#482, #483)
 - A number of APIs are marked as obsolete as they have simple workarounds and will be removed in the next major change
+- Fixed some constraint values for validation that contained Office 2007, even when it was only supported in later versions
+- Updated `System.IO.Packaging` to 4.5.0 which fixes some issues on Xamarin platforms as well as minimizes dependencies on .NET Framework
 
 ## Version 2.8.1 - 2018-01-03
 ### Changed

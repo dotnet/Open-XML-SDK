@@ -38,45 +38,26 @@ public partial class WebExtension : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 13310;
     /// <inheritdoc/>
     public override string LocalName => "webextension";
-    
     internal override byte NamespaceId => 66;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
-    	private static readonly string[] attributeTagNames = { "id","frozen" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> frozen.</para>
     /// <para>Represents the following attribute in the schema: frozen </para>
     /// </summary>
     [SchemaAttr(0, "frozen")]
-    public BooleanValue Frozen
-    {
-        get { return (BooleanValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public BooleanValue Frozen { get; set; }
 
     
 	internal WebExtension(WebExtensionPart ownerPart) : base (ownerPart){}
@@ -247,19 +228,6 @@ if( 66 == namespaceId && "extLst" == name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "frozen" == name)
-    return new BooleanValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtension>(deep);
 
@@ -277,22 +245,11 @@ public partial class WebExtensionReference : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13311;
     /// <inheritdoc/>
     public override string LocalName => "webextensionref";
-    
     internal override byte NamespaceId => 66;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
-    	private static readonly string[] attributeTagNames = { "id" };
-    private static readonly byte[] attributeNamespaceIds = { 19 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
@@ -301,12 +258,8 @@ public partial class WebExtensionReference : OpenXmlLeafElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionReference class.
@@ -318,16 +271,6 @@ public partial class WebExtensionReference : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 19 == namespaceId && "id" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtensionReference>(deep);
 
@@ -345,45 +288,26 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13312;
     /// <inheritdoc/>
     public override string LocalName => "property";
-    
     internal override byte NamespaceId => 66;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
-    	private static readonly string[] attributeTagNames = { "name","value" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-    public StringValue Name
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Name { get; set; }
     /// <summary>
     /// <para> value.</para>
     /// <para>Represents the following attribute in the schema: value </para>
     /// </summary>
     [SchemaAttr(0, "value")]
-    public StringValue Value
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue Value { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionProperty class.
@@ -395,19 +319,6 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
     
     
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "name" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "value" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtensionProperty>(deep);
 
@@ -432,13 +343,9 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13313;
     /// <inheritdoc/>
     public override string LocalName => "extLst";
-    
     internal override byte NamespaceId => 66;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -487,7 +394,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeArtExtensionList>(deep);
 
@@ -512,56 +418,33 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13314;
     /// <inheritdoc/>
     public override string LocalName => "binding";
-    
     internal override byte NamespaceId => 66;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
-    	private static readonly string[] attributeTagNames = { "id","type","appref" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> type.</para>
     /// <para>Represents the following attribute in the schema: type </para>
     /// </summary>
     [SchemaAttr(0, "type")]
-    public StringValue Type
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue Type { get; set; }
     /// <summary>
     /// <para> appref.</para>
     /// <para>Represents the following attribute in the schema: appref </para>
     /// </summary>
     [SchemaAttr(0, "appref")]
-    public StringValue AppReference
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue AppReference { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionBinding class.
@@ -628,22 +511,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "type" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "appref" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtensionBinding>(deep);
 
@@ -668,67 +535,40 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13315;
     /// <inheritdoc/>
     public override string LocalName => "reference";
-    
     internal override byte NamespaceId => 66;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
-    	private static readonly string[] attributeTagNames = { "id","version","store","storeType" };
-    private static readonly byte[] attributeNamespaceIds = { 0,0,0,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-    public StringValue Id
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Id { get; set; }
     /// <summary>
     /// <para> version.</para>
     /// <para>Represents the following attribute in the schema: version </para>
     /// </summary>
     [SchemaAttr(0, "version")]
-    public StringValue Version
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue Version { get; set; }
     /// <summary>
     /// <para> store.</para>
     /// <para>Represents the following attribute in the schema: store </para>
     /// </summary>
     [SchemaAttr(0, "store")]
-    public StringValue Store
-    {
-        get { return (StringValue)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public StringValue Store { get; set; }
     /// <summary>
     /// <para> storeType.</para>
     /// <para>Represents the following attribute in the schema: storeType </para>
     /// </summary>
     [SchemaAttr(0, "storeType")]
-    public StringValue StoreType
-    {
-        get { return (StringValue)Attributes[3]; }
-        set { Attributes[3] = value; }
-    }
-    
+    [SchemaIndex(3)]
+    public StringValue StoreType { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionStoreReference class.
@@ -795,25 +635,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     }
 
 
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 0 == namespaceId && "id" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "version" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "store" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "storeType" == name)
-    return new StringValue();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtensionStoreReference>(deep);
 
@@ -838,13 +659,9 @@ public partial class WebExtensionReferenceList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13316;
     /// <inheritdoc/>
     public override string LocalName => "alternateReferences";
-    
     internal override byte NamespaceId => 66;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -893,7 +710,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtensionReferenceList>(deep);
 
@@ -918,13 +734,9 @@ public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13317;
     /// <inheritdoc/>
     public override string LocalName => "properties";
-    
     internal override byte NamespaceId => 66;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -973,7 +785,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtensionPropertyBag>(deep);
 
@@ -998,13 +809,9 @@ public partial class WebExtensionBindingList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13318;
     /// <inheritdoc/>
     public override string LocalName => "bindings";
-    
     internal override byte NamespaceId => 66;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -1052,7 +859,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     return null;
 }
 
-    
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebExtensionBindingList>(deep);
@@ -1112,22 +918,11 @@ public partial class Snapshot : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13319;
     /// <inheritdoc/>
     public override string LocalName => "snapshot";
-    
     internal override byte NamespaceId => 66;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
-    	private static readonly string[] attributeTagNames = { "embed","link","cstate" };
-    private static readonly byte[] attributeNamespaceIds = { 19,19,0 };
     
-    internal override string[] AttributeTagNames => attributeTagNames;
-    
-    internal override byte[] AttributeNamespaceIds => attributeNamespaceIds;
-    
-
     
         /// <summary>
     /// <para> Embedded Picture Reference.</para>
@@ -1136,12 +931,8 @@ public partial class Snapshot : OpenXmlCompositeElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "embed")]
-    public StringValue Embed
-    {
-        get { return (StringValue)Attributes[0]; }
-        set { Attributes[0] = value; }
-    }
-    
+    [SchemaIndex(0)]
+    public StringValue Embed { get; set; }
     /// <summary>
     /// <para> Linked Picture Reference.</para>
     /// <para>Represents the following attribute in the schema: r:link </para>
@@ -1149,23 +940,15 @@ public partial class Snapshot : OpenXmlCompositeElement
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
     [SchemaAttr(19, "link")]
-    public StringValue Link
-    {
-        get { return (StringValue)Attributes[1]; }
-        set { Attributes[1] = value; }
-    }
-    
+    [SchemaIndex(1)]
+    public StringValue Link { get; set; }
     /// <summary>
     /// <para> cstate.</para>
     /// <para>Represents the following attribute in the schema: cstate </para>
     /// </summary>
     [SchemaAttr(0, "cstate")]
-    public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues> CompressionState
-    {
-        get { return (EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>)Attributes[2]; }
-        set { Attributes[2] = value; }
-    }
-    
+    [SchemaIndex(2)]
+    public EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues> CompressionState { get; set; }
 
     /// <summary>
     /// Initializes a new instance of the Snapshot class.
@@ -1262,22 +1045,6 @@ if( 10 == namespaceId && "extLst" == name)
 }
 
     
-    internal override OpenXmlSimpleType AttributeFactory(byte namespaceId, string name)
-{
-    if( 19 == namespaceId && "embed" == name)
-    return new StringValue();
-    
-if( 19 == namespaceId && "link" == name)
-    return new StringValue();
-    
-if( 0 == namespaceId && "cstate" == name)
-    return new EnumValue<DocumentFormat.OpenXml.Drawing.BlipCompressionValues>();
-    
-
-    
-    return base.AttributeFactory(namespaceId, name);
-}
-
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Snapshot>(deep);
 

@@ -47,13 +47,9 @@ public partial class WordprocessingCanvas : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13182;
     /// <inheritdoc/>
     public override string LocalName => "wpc";
-    
     internal override byte NamespaceId => 59;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -156,7 +152,6 @@ if( 59 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WordprocessingCanvas>(deep);
 
@@ -195,13 +190,9 @@ public partial class BackgroundFormatting : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13183;
     /// <inheritdoc/>
     public override string LocalName => "bg";
-    
     internal override byte NamespaceId => 59;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -271,7 +262,6 @@ if( 10 == namespaceId && "effectDag" == name)
 }
 
     
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackgroundFormatting>(deep);
 
@@ -300,13 +290,9 @@ public partial class WholeFormatting : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13184;
     /// <inheritdoc/>
     public override string LocalName => "whole";
-    
     internal override byte NamespaceId => 59;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -382,7 +368,6 @@ if( 10 == namespaceId && "effectDag" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WholeFormatting>(deep);
 
@@ -415,13 +400,9 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13185;
     /// <inheritdoc/>
     public override string LocalName => "graphicFrame";
-    
     internal override byte NamespaceId => 59;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -551,7 +532,6 @@ if( 60 == namespaceId && "extLst" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GraphicFrameType>(deep);
 
@@ -576,13 +556,9 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13186;
     /// <inheritdoc/>
     public override string LocalName => "extLst";
-    
     internal override byte NamespaceId => 59;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2010);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -630,7 +606,6 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     return null;
 }
 
-    
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeArtExtensionList>(deep);

@@ -21,13 +21,9 @@ public partial class Key : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 13436;
     /// <inheritdoc/>
     public override string LocalName => "key";
-    
     internal override byte NamespaceId => 76;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the Key class.
@@ -65,13 +61,9 @@ public partial class Value : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 13437;
     /// <inheritdoc/>
     public override string LocalName => "value";
-    
     internal override byte NamespaceId => 76;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the Value class.
@@ -118,13 +110,9 @@ public partial class RoamingProperty : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13438;
     /// <inheritdoc/>
     public override string LocalName => "props";
-    
     internal override byte NamespaceId => 76;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
-   
-    internal override bool IsInVersion(FileFormatVersions version) => version.AtLeast(FileFormatVersions.Office2013);
-    
+    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -209,7 +197,6 @@ if( 76 == namespaceId && "value" == name)
     }
 
 
-    
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RoamingProperty>(deep);
 
