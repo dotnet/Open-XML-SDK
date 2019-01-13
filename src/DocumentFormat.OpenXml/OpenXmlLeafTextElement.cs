@@ -152,7 +152,7 @@ namespace DocumentFormat.OpenXml
             RawInnerText = null;
         }
 
-        internal override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
+        private protected override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
         {
             LoadAttributes(xmlReader);
 

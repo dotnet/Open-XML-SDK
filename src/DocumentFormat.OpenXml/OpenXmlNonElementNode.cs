@@ -272,7 +272,7 @@ namespace DocumentFormat.OpenXml
         }
 
         /// <inheritdoc/>
-        internal override void LazyLoad(XmlReader xmlReader)
+        private protected override void LazyLoad(XmlReader xmlReader)
         {
             Populate(xmlReader, OpenXmlLoadMode.Full);
         }
@@ -382,11 +382,10 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         internal override void LoadAttributes(XmlReader xmlReader)
         {
-            return;
         }
 
         /// <inheritdoc/>
-        internal override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
+        private protected override void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode)
         {
             LoadOuterXml(xmlReader);
             xmlReader.Read();

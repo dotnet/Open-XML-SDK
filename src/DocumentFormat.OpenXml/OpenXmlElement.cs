@@ -1398,24 +1398,7 @@ namespace DocumentFormat.OpenXml
             return ElementOrder.After;
         }
 
-#if false
-        /// <summary>
-        /// Transforms child elements by using the user callback.
-        /// </summary>
-        /// <param name="callback">The user callback.</param>
-        /// <param name="argument">Argument of the user callback.</param>
-        /// <returns>Returns false if the transformation has been canceled by the callback.</returns>
-        internal virtual bool TransformChildElements(TransformElement callback, object argument)
-        {
-            return true;
-        }
-#endif
-
-        #endregion
-
-        #region internal methods
-
-        internal virtual void WriteAttributesTo(XmlWriter xmlWriter)
+        private protected virtual void WriteAttributesTo(XmlWriter xmlWriter)
         {
             Debug.Assert(xmlWriter != null);
 
@@ -1461,6 +1444,10 @@ namespace DocumentFormat.OpenXml
             }
         }
 
+        #endregion
+
+        #region internal methods
+
         /// <summary>
         /// Saves all of the children of the current node to the specified XmlWriter.
         /// </summary>
@@ -1477,7 +1464,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="value"></param>
         /// <param name="strictTranslation"></param>
         /// <returns>true if the attribute is a known attribute.</returns>
-        internal bool TrySetFixedAttribute(string namespaceUri, string localName, string value, bool strictTranslation)
+        private bool TrySetFixedAttribute(string namespaceUri, string localName, string value, bool strictTranslation)
         {
             if (RawAttributes.Any())
             {
@@ -1569,7 +1556,7 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         /// <param name="xmlReader">This method screen all attribute from xmlReader, and then set the xmlReader back to the element start.</param>
         /// <returns>Returns true if a MCAttributes is pushed.</returns>
-        internal bool PushMcContext(XmlReader xmlReader)
+        private protected bool PushMcContext(XmlReader xmlReader)
         {
             Debug.Assert(xmlReader != null);
             Debug.Assert(xmlReader.NodeType == XmlNodeType.Element);
@@ -1599,7 +1586,7 @@ namespace DocumentFormat.OpenXml
             return false;
         }
 
-        internal void PopMcContext()
+        private protected void PopMcContext()
         {
             if (OpenXmlElementContext != null && OpenXmlElementContext.MCSettings.ProcessMode != DocumentFormat.OpenXml.Packaging.MarkupCompatibilityProcessMode.NoProcess)
             {
@@ -1617,7 +1604,7 @@ namespace DocumentFormat.OpenXml
         /// <param name="reader">The XmlReader.</param>
         /// <param name="mcAttributes">The MarkupCompatibilityAttributes.</param>
         /// <param name="mcSettings">The MarkupCompatibilityProcessSettings.</param>
-        internal static void CheckMustUnderstandAttr(XmlReader reader, MarkupCompatibilityAttributes mcAttributes, MarkupCompatibilityProcessSettings mcSettings)
+        private protected static void CheckMustUnderstandAttr(XmlReader reader, MarkupCompatibilityAttributes mcAttributes, MarkupCompatibilityProcessSettings mcSettings)
         {
             Debug.Assert(mcAttributes != null && mcSettings.ProcessMode != DocumentFormat.OpenXml.Packaging.MarkupCompatibilityProcessMode.NoProcess);
 
@@ -1715,9 +1702,9 @@ namespace DocumentFormat.OpenXml
             RawOuterXml = string.Empty;
         }
 
-        internal virtual void LazyLoad(XmlReader xmlReader) => RawOuterXml = xmlReader.ReadOuterXml();
+        private protected virtual void LazyLoad(XmlReader xmlReader) => RawOuterXml = xmlReader.ReadOuterXml();
 
-        internal abstract void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode);
+        private protected abstract void Populate(XmlReader xmlReader, OpenXmlLoadMode loadMode);
 
         private protected virtual void ParseXml()
         {
@@ -1736,7 +1723,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        internal XmlReader CreateXmlReader()
+        private protected XmlReader CreateXmlReader()
         {
             var stringReader = new StringReader(RawOuterXml);
 
@@ -1755,26 +1742,24 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        internal XmlReader CreateXmlReader(string outerXml)
+        private protected XmlReader CreateXmlReader(string outerXml)
         {
-            XmlReader xmlReader;
-            TextReader stringReader = new StringReader(outerXml);
-
-            if (OpenXmlElementContext != null)
+            using (TextReader stringReader = new StringReader(outerXml))
             {
+                if (OpenXmlElementContext != null)
+                {
 #if FEATURE_XML_PROHIBIT_DTD
-                OpenXmlElementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
+                    OpenXmlElementContext.XmlReaderSettings.ProhibitDtd = true; // set true explicitly for security fix
 #else
-                OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
+                    OpenXmlElementContext.XmlReaderSettings.DtdProcessing = DtdProcessing.Prohibit; // set to prohibit explicitly for security fix
 #endif
-                xmlReader = XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.XmlReaderSettings);
+                    return XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.XmlReaderSettings);
+                }
+                else
+                {
+                    return XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.CreateDefaultXmlReaderSettings());
+                }
             }
-            else
-            {
-                xmlReader = XmlConvertingReaderFactory.Create(stringReader, OpenXmlElementContext.CreateDefaultXmlReaderSettings());
-            }
-
-            return xmlReader;
         }
 
         internal OpenXmlElement ElementFactory(XmlReader xmlReader)
@@ -1810,7 +1795,7 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        internal virtual OpenXmlElement ElementFactory(string prefix, string name, string namespaceUri)
+        internal OpenXmlElement ElementFactory(string prefix, string name, string namespaceUri)
         {
             // Debug.Assert(namespaceUri != null);
             Debug.Assert(!string.IsNullOrEmpty(name));
@@ -1856,7 +1841,7 @@ namespace DocumentFormat.OpenXml
         }
 
         // Copy attributes including Attributes, ExtendedAttributes, MCAttributes from the container.
-        internal void CopyAttributes(OpenXmlElement container)
+        private protected void CopyAttributes(OpenXmlElement container)
         {
             Debug.Assert(container != null);
             if (container.HasAttributes)

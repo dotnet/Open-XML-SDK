@@ -82,23 +82,17 @@ namespace DocumentFormat.OpenXml
 
         internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         {
-            OpenXmlElement newElement = null;
-
-            if (Parent != null &&
-                 Parent is AlternateContent)
+            if (Parent != null && Parent is AlternateContent)
             {
                 var parentsParentElemnt = Parent.Parent;
+
                 if (parentsParentElemnt != null)
                 {
-                    newElement = parentsParentElemnt.ElementFactory(namespaceId, name);
-                    if (newElement == null)
-                    {
-                        newElement = parentsParentElemnt.AlternateContentElementFactory(namespaceId, name);
-                    }
+                    return parentsParentElemnt.ElementFactory(namespaceId, name);
                 }
             }
 
-            return newElement;
+            return null;
         }
 
         /// <returns>The cloned node. </returns>
