@@ -28,9 +28,7 @@ public partial class LongProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12711;
     /// <inheritdoc/>
     public override string LocalName => "LongProperties";
-    
     internal override byte NamespaceId => 40;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -98,9 +96,7 @@ public partial class LongProperty : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12712;
     /// <inheritdoc/>
     public override string LocalName => "LongProp";
-    
     internal override byte NamespaceId => 40;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 

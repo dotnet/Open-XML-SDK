@@ -21,9 +21,7 @@ public partial class TopBorder : BorderType
     internal const int ElementTypeIdConst = 12501;
     /// <inheritdoc/>
     public override string LocalName => "bordertop";
-    
     internal override byte NamespaceId => 28;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -50,9 +48,7 @@ public partial class LeftBorder : BorderType
     internal const int ElementTypeIdConst = 12502;
     /// <inheritdoc/>
     public override string LocalName => "borderleft";
-    
     internal override byte NamespaceId => 28;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -79,9 +75,7 @@ public partial class RightBorder : BorderType
     internal const int ElementTypeIdConst = 12503;
     /// <inheritdoc/>
     public override string LocalName => "borderright";
-    
     internal override byte NamespaceId => 28;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -108,9 +102,7 @@ public partial class BottomBorder : BorderType
     internal const int ElementTypeIdConst = 12504;
     /// <inheritdoc/>
     public override string LocalName => "borderbottom";
-    
     internal override byte NamespaceId => 28;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -178,9 +170,7 @@ public partial class TextWrap : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12505;
     /// <inheritdoc/>
     public override string LocalName => "wrap";
-    
     internal override byte NamespaceId => 28;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -242,9 +232,7 @@ public partial class AnchorLock : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12506;
     /// <inheritdoc/>
     public override string LocalName => "anchorlock";
-    
     internal override byte NamespaceId => 28;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 

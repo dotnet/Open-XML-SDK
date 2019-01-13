@@ -32,9 +32,7 @@ public partial class ContextNode : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12758;
     /// <inheritdoc/>
     public override string LocalName => "context";
-    
     internal override byte NamespaceId => 45;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -255,9 +253,7 @@ public partial class ContextNodeProperty : OpenXmlLeafTextElement
     internal const int ElementTypeIdConst = 12759;
     /// <inheritdoc/>
     public override string LocalName => "property";
-    
     internal override byte NamespaceId => 45;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -311,9 +307,7 @@ public partial class SourceLink : ContextLinkType
     internal const int ElementTypeIdConst = 12760;
     /// <inheritdoc/>
     public override string LocalName => "sourceLink";
-    
     internal override byte NamespaceId => 45;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -340,9 +334,7 @@ public partial class DestinationLink : ContextLinkType
     internal const int ElementTypeIdConst = 12761;
     /// <inheritdoc/>
     public override string LocalName => "destinationLink";
-    
     internal override byte NamespaceId => 45;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 

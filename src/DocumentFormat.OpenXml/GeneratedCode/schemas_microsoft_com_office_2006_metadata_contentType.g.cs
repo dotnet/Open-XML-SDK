@@ -27,9 +27,7 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12705;
     /// <inheritdoc/>
     public override string LocalName => "contentTypeSchema";
-    
     internal override byte NamespaceId => 38;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 

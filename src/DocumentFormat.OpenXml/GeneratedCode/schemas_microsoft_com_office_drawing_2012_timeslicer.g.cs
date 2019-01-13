@@ -29,9 +29,7 @@ public partial class TimeSlicer : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13442;
     /// <inheritdoc/>
     public override string LocalName => "timeslicer";
-    
     internal override byte NamespaceId => 77;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
@@ -134,9 +132,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 13443;
     /// <inheritdoc/>
     public override string LocalName => "extLst";
-    
     internal override byte NamespaceId => 77;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 

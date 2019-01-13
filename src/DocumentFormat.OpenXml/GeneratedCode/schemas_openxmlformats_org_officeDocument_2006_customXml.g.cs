@@ -27,9 +27,7 @@ public partial class DataStoreItem : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 10900;
     /// <inheritdoc/>
     public override string LocalName => "datastoreItem";
-    
     internal override byte NamespaceId => 20;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -156,9 +154,7 @@ public partial class SchemaReference : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10901;
     /// <inheritdoc/>
     public override string LocalName => "schemaRef";
-    
     internal override byte NamespaceId => 20;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -208,9 +204,7 @@ public partial class SchemaReferences : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10902;
     /// <inheritdoc/>
     public override string LocalName => "schemaRefs";
-    
     internal override byte NamespaceId => 20;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 

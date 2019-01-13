@@ -36,9 +36,7 @@ public partial class ColorsDefinition : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 10682;
     /// <inheritdoc/>
     public override string LocalName => "colorsDef";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -174,9 +172,7 @@ public partial class ColorsDefinitionHeader : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10683;
     /// <inheritdoc/>
     public override string LocalName => "colorsDefHdr";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -281,9 +277,7 @@ public partial class ColorsDefinitionHeaderList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10684;
     /// <inheritdoc/>
     public override string LocalName => "colorsDefHdrLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -365,9 +359,7 @@ public partial class DataModelRoot : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 10685;
     /// <inheritdoc/>
     public override string LocalName => "dataModel";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -565,9 +557,7 @@ public partial class LayoutDefinition : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 10686;
     /// <inheritdoc/>
     public override string LocalName => "layoutDef";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -719,9 +709,7 @@ public partial class LayoutDefinitionHeader : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10687;
     /// <inheritdoc/>
     public override string LocalName => "layoutDefHdr";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -833,9 +821,7 @@ public partial class LayoutDefinitionHeaderList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10688;
     /// <inheritdoc/>
     public override string LocalName => "layoutDefHdrLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -903,9 +889,7 @@ public partial class RelationshipIds : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10689;
     /// <inheritdoc/>
     public override string LocalName => "relIds";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -991,9 +975,7 @@ public partial class StyleDefinition : OpenXmlPartRootElement
     internal const int ElementTypeIdConst = 10690;
     /// <inheritdoc/>
     public override string LocalName => "styleDef";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1132,9 +1114,7 @@ public partial class StyleDefinitionHeader : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10691;
     /// <inheritdoc/>
     public override string LocalName => "styleDefHdr";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1239,9 +1219,7 @@ public partial class StyleDefinitionHeaderList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10692;
     /// <inheritdoc/>
     public override string LocalName => "styleDefHdrLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1309,9 +1287,7 @@ public partial class ColorTransformCategory : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10693;
     /// <inheritdoc/>
     public override string LocalName => "cat";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1370,9 +1346,7 @@ public partial class FillColorList : ColorsType
     internal const int ElementTypeIdConst = 10694;
     /// <inheritdoc/>
     public override string LocalName => "fillClrLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1435,9 +1409,7 @@ public partial class LineColorList : ColorsType
     internal const int ElementTypeIdConst = 10695;
     /// <inheritdoc/>
     public override string LocalName => "linClrLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1500,9 +1472,7 @@ public partial class EffectColorList : ColorsType
     internal const int ElementTypeIdConst = 10696;
     /// <inheritdoc/>
     public override string LocalName => "effectClrLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1565,9 +1535,7 @@ public partial class TextLineColorList : ColorsType
     internal const int ElementTypeIdConst = 10697;
     /// <inheritdoc/>
     public override string LocalName => "txLinClrLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1630,9 +1598,7 @@ public partial class TextFillColorList : ColorsType
     internal const int ElementTypeIdConst = 10698;
     /// <inheritdoc/>
     public override string LocalName => "txFillClrLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1695,9 +1661,7 @@ public partial class TextEffectColorList : ColorsType
     internal const int ElementTypeIdConst = 10699;
     /// <inheritdoc/>
     public override string LocalName => "txEffectClrLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1856,9 +1820,7 @@ public partial class ExtensionList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10700;
     /// <inheritdoc/>
     public override string LocalName => "extLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1926,9 +1888,7 @@ public partial class ColorDefinitionTitle : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10701;
     /// <inheritdoc/>
     public override string LocalName => "title";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -1976,9 +1936,7 @@ public partial class ColorTransformDescription : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10702;
     /// <inheritdoc/>
     public override string LocalName => "desc";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2033,9 +1991,7 @@ public partial class ColorTransformCategories : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10703;
     /// <inheritdoc/>
     public override string LocalName => "catLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2122,9 +2078,7 @@ public partial class ColorTransformStyleLabel : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10704;
     /// <inheritdoc/>
     public override string LocalName => "styleLbl";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2323,9 +2277,7 @@ public partial class Point : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10705;
     /// <inheritdoc/>
     public override string LocalName => "pt";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2487,9 +2439,7 @@ public partial class Connection : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10706;
     /// <inheritdoc/>
     public override string LocalName => "cxn";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2648,9 +2598,7 @@ public partial class Constraint : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10707;
     /// <inheritdoc/>
     public override string LocalName => "constr";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2823,9 +2771,7 @@ public partial class Rule : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10708;
     /// <inheritdoc/>
     public override string LocalName => "rule";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -2963,9 +2909,7 @@ public partial class Adjust : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10709;
     /// <inheritdoc/>
     public override string LocalName => "adj";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3020,9 +2964,7 @@ public partial class AdjustList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10710;
     /// <inheritdoc/>
     public override string LocalName => "adjLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3090,9 +3032,7 @@ public partial class Parameter : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10711;
     /// <inheritdoc/>
     public override string LocalName => "param";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3149,9 +3089,7 @@ public partial class Algorithm : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10712;
     /// <inheritdoc/>
     public override string LocalName => "alg";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3245,9 +3183,7 @@ public partial class Shape : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10713;
     /// <inheritdoc/>
     public override string LocalName => "shape";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3409,9 +3345,7 @@ public partial class PresentationOf : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10714;
     /// <inheritdoc/>
     public override string LocalName => "presOf";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3549,9 +3483,7 @@ public partial class Constraints : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10715;
     /// <inheritdoc/>
     public override string LocalName => "constrLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3626,9 +3558,7 @@ public partial class RuleList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10716;
     /// <inheritdoc/>
     public override string LocalName => "ruleLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3710,9 +3640,7 @@ public partial class VariableList : LayoutVariablePropertySetType
     internal const int ElementTypeIdConst = 10717;
     /// <inheritdoc/>
     public override string LocalName => "varLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -3778,9 +3706,7 @@ public partial class PresentationLayoutVariables : LayoutVariablePropertySetType
     internal const int ElementTypeIdConst = 10731;
     /// <inheritdoc/>
     public override string LocalName => "presLayoutVars";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4073,9 +3999,7 @@ public partial class ForEach : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10718;
     /// <inheritdoc/>
     public override string LocalName => "forEach";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4248,9 +4172,7 @@ public partial class LayoutNode : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10719;
     /// <inheritdoc/>
     public override string LocalName => "layoutNode";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4382,9 +4304,7 @@ public partial class Choose : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10720;
     /// <inheritdoc/>
     public override string LocalName => "choose";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4485,9 +4405,7 @@ public partial class DiagramChooseIf : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10721;
     /// <inheritdoc/>
     public override string LocalName => "if";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4679,9 +4597,7 @@ public partial class DiagramChooseElse : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10722;
     /// <inheritdoc/>
     public override string LocalName => "else";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4795,9 +4711,7 @@ public partial class DataModel : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10723;
     /// <inheritdoc/>
     public override string LocalName => "dataModel";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4946,9 +4860,7 @@ public partial class Category : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10724;
     /// <inheritdoc/>
     public override string LocalName => "cat";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -4996,9 +4908,7 @@ public partial class Title : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10725;
     /// <inheritdoc/>
     public override string LocalName => "title";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5046,9 +4956,7 @@ public partial class Description : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10726;
     /// <inheritdoc/>
     public override string LocalName => "desc";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5103,9 +5011,7 @@ public partial class CategoryList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10727;
     /// <inheritdoc/>
     public override string LocalName => "catLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5179,9 +5085,7 @@ public partial class SampleData : SampleDataType
     internal const int ElementTypeIdConst = 10728;
     /// <inheritdoc/>
     public override string LocalName => "sampData";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5239,9 +5143,7 @@ public partial class StyleData : SampleDataType
     internal const int ElementTypeIdConst = 10729;
     /// <inheritdoc/>
     public override string LocalName => "styleData";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5299,9 +5201,7 @@ public partial class ColorData : SampleDataType
     internal const int ElementTypeIdConst = 10730;
     /// <inheritdoc/>
     public override string LocalName => "clrData";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5455,9 +5355,7 @@ public partial class Style : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10732;
     /// <inheritdoc/>
     public override string LocalName => "style";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5591,9 +5489,7 @@ public partial class OrganizationChart : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10733;
     /// <inheritdoc/>
     public override string LocalName => "orgChart";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5634,9 +5530,7 @@ public partial class MaxNumberOfChildren : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10734;
     /// <inheritdoc/>
     public override string LocalName => "chMax";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5677,9 +5571,7 @@ public partial class PreferredNumberOfChildren : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10735;
     /// <inheritdoc/>
     public override string LocalName => "chPref";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5720,9 +5612,7 @@ public partial class BulletEnabled : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10736;
     /// <inheritdoc/>
     public override string LocalName => "bulletEnabled";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5763,9 +5653,7 @@ public partial class Direction : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10737;
     /// <inheritdoc/>
     public override string LocalName => "dir";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5806,9 +5694,7 @@ public partial class HierarchyBranch : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10738;
     /// <inheritdoc/>
     public override string LocalName => "hierBranch";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5849,9 +5735,7 @@ public partial class AnimateOneByOne : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10739;
     /// <inheritdoc/>
     public override string LocalName => "animOne";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5892,9 +5776,7 @@ public partial class AnimationLevel : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10740;
     /// <inheritdoc/>
     public override string LocalName => "animLvl";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5935,9 +5817,7 @@ public partial class ResizeHandles : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10741;
     /// <inheritdoc/>
     public override string LocalName => "resizeHandles";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -5978,9 +5858,7 @@ public partial class StyleDisplayCategory : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10742;
     /// <inheritdoc/>
     public override string LocalName => "cat";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6041,9 +5919,7 @@ public partial class Scene3D : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10743;
     /// <inheritdoc/>
     public override string LocalName => "scene3d";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6192,9 +6068,7 @@ public partial class Shape3D : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10744;
     /// <inheritdoc/>
     public override string LocalName => "sp3d";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6380,9 +6254,7 @@ public partial class TextProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10745;
     /// <inheritdoc/>
     public override string LocalName => "txPr";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6486,9 +6358,7 @@ public partial class StyleDefinitionTitle : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10746;
     /// <inheritdoc/>
     public override string LocalName => "title";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6536,9 +6406,7 @@ public partial class StyleLabelDescription : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 10747;
     /// <inheritdoc/>
     public override string LocalName => "desc";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6593,9 +6461,7 @@ public partial class StyleDisplayCategories : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10748;
     /// <inheritdoc/>
     public override string LocalName => "catLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6678,9 +6544,7 @@ public partial class StyleLabel : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10749;
     /// <inheritdoc/>
     public override string LocalName => "styleLbl";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6843,9 +6707,7 @@ public partial class PointList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10750;
     /// <inheritdoc/>
     public override string LocalName => "ptLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -6920,9 +6782,7 @@ public partial class ConnectionList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10751;
     /// <inheritdoc/>
     public override string LocalName => "cxnLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7011,9 +6871,7 @@ public partial class Background : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10752;
     /// <inheritdoc/>
     public override string LocalName => "bg";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7113,9 +6971,7 @@ public partial class Whole : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10753;
     /// <inheritdoc/>
     public override string LocalName => "whole";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7217,9 +7073,7 @@ public partial class DataModelExtensionList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10754;
     /// <inheritdoc/>
     public override string LocalName => "extLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7296,9 +7150,7 @@ public partial class PropertySet : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10755;
     /// <inheritdoc/>
     public override string LocalName => "prSet";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7633,9 +7485,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10756;
     /// <inheritdoc/>
     public override string LocalName => "spPr";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7784,9 +7634,7 @@ public partial class TextBody : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10757;
     /// <inheritdoc/>
     public override string LocalName => "t";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -7900,9 +7748,7 @@ public partial class PtExtensionList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 10758;
     /// <inheritdoc/>
     public override string LocalName => "extLst";
-    
     internal override byte NamespaceId => 14;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
