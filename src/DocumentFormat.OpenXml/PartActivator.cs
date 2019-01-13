@@ -11,15 +11,18 @@ namespace DocumentFormat.OpenXml
 {
     internal static class PartActivator<T>
     {
-        private static readonly Func<T> _activator = GetActivator(typeof(T));
-
 #if FEATURE_NO_CONDITIONAL_WEAK_TABLE
         private static readonly LockingDictionary<Type, Func<T>> _activatorCache = new LockingDictionary<Type, Func<T>>();
 #else
         private static readonly System.Runtime.CompilerServices.ConditionalWeakTable<Type, Func<T>> _activatorCache = new System.Runtime.CompilerServices.ConditionalWeakTable<Type, Func<T>>();
 #endif
 
-        public static T CreateInstance() => _activator();
+        public static T CreateInstance()
+        {
+            var activator = GetActivator(typeof(T));
+
+            return activator();
+        }
 
         public static Func<T> GetActivator(Type type)
         {
