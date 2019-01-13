@@ -3,13 +3,16 @@
 
 using System;
 using System.Diagnostics;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
+#if NETSTANDARD1_3
+using System.Linq;
+#endif
+
 namespace DocumentFormat.OpenXml
 {
-    internal static class PartActivator<T>
+    internal static class ClassActivator<T>
     {
 #if FEATURE_NO_CONDITIONAL_WEAK_TABLE
         private static readonly LockingDictionary<Type, Func<T>> _activatorCache = new LockingDictionary<Type, Func<T>>();
@@ -24,10 +27,7 @@ namespace DocumentFormat.OpenXml
             return activator();
         }
 
-        public static Func<T> GetActivator(Type type)
-        {
-            return _activatorCache.GetValue(type, CreateActivator);
-        }
+        public static Func<T> GetActivator(Type type) => _activatorCache.GetValue(type, CreateActivator);
 
         private static Func<T> CreateActivator(Type type)
         {

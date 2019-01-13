@@ -894,7 +894,7 @@ namespace DocumentFormat.OpenXml.Packaging
                 mainPart.Destroy();
 
                 // create new part
-                T newMainPart = PartActivator<T>.CreateInstance();
+                T newMainPart = ClassActivator<T>.CreateInstance();
 
                 // do not call this.InitPart( ).  copy the code here
                 newMainPart.CreateInternal2(this, null, MainPartContentType, uri);
