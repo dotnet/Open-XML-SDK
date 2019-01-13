@@ -35,9 +35,7 @@ public partial class ShapeStyle : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12887;
     /// <inheritdoc/>
     public override string LocalName => "style";
-    
     internal override byte NamespaceId => 50;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
@@ -178,9 +176,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12888;
     /// <inheritdoc/>
     public override string LocalName => "extLst";
-    
     internal override byte NamespaceId => 50;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 

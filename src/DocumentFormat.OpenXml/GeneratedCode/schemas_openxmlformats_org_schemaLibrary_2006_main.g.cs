@@ -28,9 +28,7 @@ public partial class SchemaLibrary : OpenXmlCompositeElement
     internal const int ElementTypeIdConst = 12468;
     /// <inheritdoc/>
     public override string LocalName => "schemaLibrary";
-    
     internal override byte NamespaceId => 25;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
@@ -98,9 +96,7 @@ public partial class Schema : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 12469;
     /// <inheritdoc/>
     public override string LocalName => "schema";
-    
     internal override byte NamespaceId => 25;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 

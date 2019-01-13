@@ -22,9 +22,7 @@ public partial class AbsolutePath : OpenXmlLeafElement
     internal const int ElementTypeIdConst = 13434;
     /// <inheritdoc/>
     public override string LocalName => "absPath";
-    
     internal override byte NamespaceId => 74;
-    
     internal override int ElementTypeId => ElementTypeIdConst;
     internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
