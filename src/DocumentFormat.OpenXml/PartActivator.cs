@@ -38,7 +38,7 @@ namespace DocumentFormat.OpenXml
 #if NETSTANDARD1_3
             var constructor = type.GetTypeInfo().DeclaredConstructors.FirstOrDefault(c => !c.GetParameters().Any());
 #else
-            var constructor = type.GetConstructor(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, CallingConvention.HasThis, Type.EmptyTypes, null);
+            var constructor = type.GetConstructor(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, CallingConventions.HasThis, Type.EmptyTypes, null);
 #endif
 
             if (constructor is null)
