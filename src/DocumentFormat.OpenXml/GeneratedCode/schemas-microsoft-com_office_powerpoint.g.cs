@@ -66,7 +66,7 @@ public partial class TextData : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
     [SchemaAttr(0, "id")]
-  [SchemaIndex(0)]
+    [SchemaIndex(0)]
     public StringValue Id { get; set; }
 
     /// <summary>

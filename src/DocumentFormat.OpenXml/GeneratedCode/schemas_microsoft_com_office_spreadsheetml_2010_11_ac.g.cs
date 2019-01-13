@@ -33,7 +33,7 @@ public partial class AbsolutePath : OpenXmlLeafElement
     /// <para>Represents the following attribute in the schema: url </para>
     /// </summary>
     [SchemaAttr(0, "url")]
-  [SchemaIndex(0)]
+    [SchemaIndex(0)]
     public StringValue Url { get; set; }
 
     /// <summary>

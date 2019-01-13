@@ -40,7 +40,7 @@ public partial class TimeSlicer : OpenXmlCompositeElement
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
     [SchemaAttr(0, "name")]
-  [SchemaIndex(0)]
+    [SchemaIndex(0)]
     public StringValue Name { get; set; }
 
     /// <summary>
