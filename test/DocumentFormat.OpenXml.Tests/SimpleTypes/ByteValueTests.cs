@@ -5,11 +5,15 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 {
     public class ByteValueTests : OpenXmlComparableSimpleValueTests<byte>
     {
+        protected override OpenXmlComparableSimpleValue<byte> Create(byte input) => new ByteValue(input);
+
+        protected override byte[] Values { get; } = new byte[] { byte.MinValue, byte.MinValue + 1, byte.MaxValue - 1, byte.MaxValue };
+
         public ByteValueTests()
         {
-            SmallValue1 = new ByteValue((byte) 10);
-            SmallValue2 = new ByteValue((byte) 10);
-            LargeValue = new ByteValue((byte) 20);
+            SmallValue1 = new ByteValue((byte)10);
+            SmallValue2 = new ByteValue((byte)10);
+            LargeValue = new ByteValue((byte)20);
         }
     }
 }
