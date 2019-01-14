@@ -2,7 +2,6 @@
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
 using System;
-using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
@@ -23,7 +22,7 @@ namespace DocumentFormat.OpenXml.Packaging
 
         public static PartConstraintRule Create(Type type, bool minOccursIsNonZero, bool maxOccursGreatThanOne)
         {
-            return new PartConstraintRule(new TypeConstraintInfo(type), minOccursIsNonZero, maxOccursGreatThanOne);
+            return new PartConstraintRule(TypeConstraintInfo.Get(type), minOccursIsNonZero, maxOccursGreatThanOne);
         }
 
         /// <summary>
@@ -57,24 +56,5 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the file format version information.
         /// </summary>
         public FileFormatVersions FileFormat => _info.Availability;
-
-        private class TypeConstraintInfo
-        {
-            public TypeConstraintInfo(Type type)
-            {
-                PartClassName = type.Name;
-                PartContentType = type.GetTypeInfo().GetCustomAttribute<ContentTypeAttribute>()?.ContentType;
-                Availability = type.GetTypeInfo().GetCustomAttribute<OfficeAvailabilityAttribute>()?.OfficeVersion ?? FileFormatVersions.Office2007;
-                RelationshipType = type.GetTypeInfo().GetCustomAttribute<RelationshipTypeAttribute>()?.RelationshipType ?? string.Empty;
-            }
-
-            public string RelationshipType { get; }
-
-            public string PartClassName { get; }
-
-            public string PartContentType { get; }
-
-            public FileFormatVersions Availability { get; }
-        }
     }
 }
