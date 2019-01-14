@@ -62,7 +62,7 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
         public void CompareTo_NoValue()
         {
             var value = Create(default);
-            value.InnerText = string.Empty;
+            value.InnerText = Guid.NewGuid().ToString();
 
             Assert.False(value.HasValue);
             Assert.Equal(1, value.CompareTo(default(T)));
@@ -118,7 +118,7 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
         public void Equals_NoValue()
         {
             var value = Create(default);
-            value.InnerText = string.Empty;
+            value.InnerText = Guid.NewGuid().ToString();
 
             Assert.False(value.HasValue);
 

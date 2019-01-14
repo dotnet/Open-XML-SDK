@@ -67,7 +67,6 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
         [Fact]
         public void CompareTo_ArgumentIncompatible_ExceptionThrown()
         {
-            Assert.Throws<ArgumentException>(() => SmallValue1.CompareTo("Some string"));
             Assert.Throws<ArgumentException>(() => SmallValue1.CompareTo(1));
         }
 
