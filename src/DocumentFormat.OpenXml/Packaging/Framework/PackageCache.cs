@@ -28,7 +28,25 @@ namespace DocumentFormat.OpenXml
         private readonly ConcurrentDictionary<Type, ReadOnlyArray<AttributeTag>> _attributes = new ConcurrentDictionary<Type, ReadOnlyArray<AttributeTag>>();
         private readonly ConcurrentDictionary<Type, Func<OpenXmlSimpleType>> _simpleTypeFactory = new ConcurrentDictionary<Type, Func<OpenXmlSimpleType>>();
 
+#if USE_WEAKREFERENCE_CACHE
+        private readonly static WeakReference<PackageCache> _cache = new WeakReference<PackageCache>(null);
+
+        public static PackageCache Cache
+        {
+            get
+            {
+                if (!_cache.TryGetTarget(out var cache))
+                {
+                    cache = new PackageCache();
+                    _cache.SetTarget(cache);
+                }
+
+                return cache;
+            }
+        }
+#else
         public static PackageCache Cache { get; } = new PackageCache();
+#endif
 
         public ElementTypeInfo GetElementTypeInfo(Type type) => _typeConstraintInfoCache.GetOrAdd(type, ElementTypeInfo.Create);
 
@@ -45,6 +63,30 @@ namespace DocumentFormat.OpenXml
         private PartConstraintCollection CreatePartConstraints(Type type) => PartConstraintCollection.Create<PartConstraintAttribute>(this, type);
 
         private PartConstraintCollection CreateDataPartConstraints(Type type) => PartConstraintCollection.Create<DataPartConstraintAttribute>(this, type);
+
+#if USE_WEAKREFERENCE_CACHE && (NET35 || NET40)
+        private readonly struct WeakReference<T>
+            where T : class
+        {
+            private readonly WeakReference _weak;
+
+            public WeakReference(T instance)
+            {
+                _weak = new WeakReference(instance);
+            }
+
+            public bool TryGetTarget(out T target)
+            {
+                target = _weak.Target as T;
+                return target != null;
+            }
+
+            public void SetTarget(T target)
+            {
+                _weak.Target = target;
+            }
+        }
+#endif
 
 #if NO_CONCURRENT_COLLECTIONS
         private sealed class ConcurrentDictionary<TKey, TValue>

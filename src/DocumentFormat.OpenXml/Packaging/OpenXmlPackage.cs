@@ -16,6 +16,12 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     public abstract partial class OpenXmlPackage : OpenXmlPartContainer, IDisposable
     {
+#if USE_WEAKREFERENCE_CACHE
+        // Hold onto a reference as the static cache is a weak reference. By keeping a strong reference here,
+        // the same cache will be available as long as the package is in use.
+        private readonly PackageCache _cache = PackageCache.Cache;
+#endif
+
         private readonly PartExtensionProvider _partExtensionProvider = new PartExtensionProvider();
         private readonly LinkedList<DataPart> _dataPartList = new LinkedList<DataPart>();
 

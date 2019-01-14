@@ -17,6 +17,10 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);USE_WEAKREFERENCE_CACHE</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
     <!-- Remove all files under System as they need to be specifically opted into. They are
          helper files to fill the gaps of the various platforms that are targeted -->
