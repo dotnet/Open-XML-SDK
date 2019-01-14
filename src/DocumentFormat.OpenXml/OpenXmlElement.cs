@@ -26,6 +26,7 @@ namespace DocumentFormat.OpenXml
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         private OpenXmlElement _next;
+        private AttributeTagCollection _rawAttributes;
 
         // implement annotations mechanism like XObject in LINQ to XML
         // Annotations will not be cloned when calling .Clone() and .CloneNode(bool)
@@ -119,7 +120,6 @@ namespace DocumentFormat.OpenXml
         protected OpenXmlElement()
             : base()
         {
-            RawAttributes = new AttributeTagCollection(this);
         }
 
         /// <summary>
@@ -178,7 +178,18 @@ namespace DocumentFormat.OpenXml
         /// Gets an array of fixed attributes (attributes that are defined in the schema) without forcing any parsing of the element.
         /// If parsing is required, please use <see cref="Attributes"/>
         /// </summary>
-        internal AttributeTagCollection RawAttributes { get; }
+        internal AttributeTagCollection RawAttributes
+        {
+            get
+            {
+                if (!_rawAttributes.IsValid)
+                {
+                    _rawAttributes = new AttributeTagCollection(this, PackageCache.Cache.GetAttributes(GetType()));
+                }
+
+                return _rawAttributes;
+            }
+        }
 
         /// <summary>
         /// Gets an array of fixed attributes which will be parsed out if they are not yet parsed. If parsing is not requried, please

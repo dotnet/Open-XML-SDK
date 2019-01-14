@@ -6,15 +6,9 @@ using System.Reflection;
 
 namespace DocumentFormat.OpenXml.Packaging
 {
-    internal sealed class TypeConstraintInfo
+    internal sealed class ElementTypeInfo
     {
-#if FEATURE_NO_CONDITIONAL_WEAK_TABLE
-        private static readonly LockingDictionary<Type, TypeConstraintInfo> _constraintLookup = new LockingDictionary<Type, TypeConstraintInfo>();
-#else
-        private static readonly System.Runtime.CompilerServices.ConditionalWeakTable<Type, TypeConstraintInfo> _constraintLookup = new System.Runtime.CompilerServices.ConditionalWeakTable<Type, TypeConstraintInfo>();
-#endif
-
-        private TypeConstraintInfo(Type type)
+        public ElementTypeInfo(Type type)
         {
             PartClassName = type.Name;
             PartContentType = type.GetTypeInfo().GetCustomAttribute<ContentTypeAttribute>()?.ContentType;
@@ -22,9 +16,7 @@ namespace DocumentFormat.OpenXml.Packaging
             RelationshipType = type.GetTypeInfo().GetCustomAttribute<RelationshipTypeAttribute>()?.RelationshipType ?? string.Empty;
         }
 
-        public static TypeConstraintInfo Get(Type type) => _constraintLookup.GetValue(type, Create);
-
-        private static TypeConstraintInfo Create(Type type) => new TypeConstraintInfo(type);
+        public static ElementTypeInfo Create(Type type) => new ElementTypeInfo(type);
 
         public string RelationshipType { get; }
 

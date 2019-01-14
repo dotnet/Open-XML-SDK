@@ -7,13 +7,13 @@ namespace DocumentFormat.OpenXml
 {
     internal readonly struct AttributeTag
     {
-        private readonly PropertyAccessor<OpenXmlElement, OpenXmlSimpleType> _accessor;
+        private readonly OpenXmlElementPropertyAccessor _accessor;
 
         internal AttributeTag(
             byte namespaceId,
             string name,
             int order,
-            PropertyAccessor<OpenXmlElement, OpenXmlSimpleType> accessor)
+            OpenXmlElementPropertyAccessor accessor)
         {
             _accessor = accessor;
 
