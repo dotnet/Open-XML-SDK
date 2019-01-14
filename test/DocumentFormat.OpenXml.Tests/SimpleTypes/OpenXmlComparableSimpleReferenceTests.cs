@@ -40,34 +40,33 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
         public void CompareTo_InstanceFollowsArgumentInSortOrder_PositiveValueReturned()
         {
             Assert.True(LargeValue.CompareTo(SmallValue1) > 0);
-            Assert.True(LargeValue.CompareTo((object) SmallValue1) > 0);
+            Assert.True(LargeValue.CompareTo((object)SmallValue1) > 0);
         }
 
         [Fact]
         public void CompareTo_SameSortOrder_ZeroReturned()
         {
             Assert.Equal(0, LargeValue.CompareTo(LargeValue));
-            Assert.Equal(0, LargeValue.CompareTo((object) LargeValue));
+            Assert.Equal(0, LargeValue.CompareTo((object)LargeValue));
         }
 
         [Fact]
         public void CompareTo_InstancePrecedesArgumentInSortOrder_NegativeValueReturned()
         {
             Assert.True(SmallValue1.CompareTo(LargeValue) < 0);
-            Assert.True(SmallValue1.CompareTo((object) LargeValue) < 0);
+            Assert.True(SmallValue1.CompareTo((object)LargeValue) < 0);
         }
 
         [Fact]
         public void CompareTo_ArgumentIsNull_PositiveValueReturned()
         {
             Assert.True(SmallValue1.CompareTo(null) > 0);
-            Assert.True(SmallValue1.CompareTo((object) null) > 0);
+            Assert.True(SmallValue1.CompareTo((object)null) > 0);
         }
 
         [Fact]
         public void CompareTo_ArgumentIncompatible_ExceptionThrown()
         {
-            Assert.Throws<ArgumentException>(() => SmallValue1.CompareTo("Some string"));
             Assert.Throws<ArgumentException>(() => SmallValue1.CompareTo(1));
         }
 

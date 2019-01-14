@@ -359,15 +359,6 @@ namespace DocumentFormat.OpenXml {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The argument&apos;s type is incompatible: `{0}`.
-        /// </summary>
-        internal static string IncompatibleArgumentType {
-            get {
-                return ResourceManager.GetString("IncompatibleArgumentType", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to This OpenXmlElement&apos;s InnerXml cannot be set..
         /// </summary>
         internal static string InnerXmlCannotBeSet {

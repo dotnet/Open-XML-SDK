@@ -393,7 +393,4 @@
   <data name="StreamAccessModeShouldRead" xml:space="preserve">
     <value>The stream was not opened for reading.</value>
   </data>
-  <data name="IncompatibleArgumentType" xml:space="preserve">
-    <value>The argument's type is incompatible: `{0}`</value>
-  </data>
 </root>
