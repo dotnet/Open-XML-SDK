@@ -5,6 +5,10 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 {
     public class TrueFalseValueTests : OpenXmlComparableSimpleValueTests<bool>
     {
+        protected override OpenXmlComparableSimpleValue<bool> Create(bool input) => new TrueFalseBlankValue(input);
+
+        protected override bool[] Values => new[] { true, false };
+
         public TrueFalseValueTests()
         {
             SmallValue1 = new TrueFalseValue(false);

@@ -5,6 +5,10 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 {
     public class Int32ValueTests : OpenXmlComparableSimpleValueTests<int>
     {
+        protected override OpenXmlComparableSimpleValue<int> Create(int input) => new Int32Value(input);
+
+        protected override int[] Values => new int[] { int.MinValue, int.MinValue + 1, int.MaxValue - 1, int.MaxValue };
+
         public Int32ValueTests()
         {
             SmallValue1 = new Int32Value(10);

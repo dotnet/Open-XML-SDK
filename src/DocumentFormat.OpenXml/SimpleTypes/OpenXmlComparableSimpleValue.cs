@@ -10,7 +10,8 @@ namespace DocumentFormat.OpenXml
     /// </summary>
     /// <typeparam name="T">The type of the value.</typeparam>
     public abstract class OpenXmlComparableSimpleValue<T> : OpenXmlSimpleValue<T>,
-        IComparable, IComparable<OpenXmlComparableSimpleValue<T>>, IEquatable<OpenXmlComparableSimpleValue<T>>
+        IComparable, IComparable<T>, IEquatable<T>,
+        IComparable<OpenXmlComparableSimpleValue<T>>, IEquatable<OpenXmlComparableSimpleValue<T>>
         where T : struct, IComparable, IComparable<T>, IEquatable<T>
     {
         /// <summary>
@@ -41,22 +42,50 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc />
         public int CompareTo(object obj)
         {
-            switch (obj)
+            if(obj is null || !HasValue)
             {
-                case null:
-                    return 1;
-
-                case OpenXmlComparableSimpleValue<T> other:
-                    return Value.CompareTo(other.Value);
+                return 1;
             }
 
-            throw new ArgumentException(SR.Format(ExceptionMessages.IncompatibleArgumentType, obj.GetType().FullName));
+            switch (obj)
+            {
+                case OpenXmlComparableSimpleValue<T> other:
+                    return CompareTo(other.Value);
+
+                case T t:
+                    return CompareTo(t);
+
+                default:
+                    return Value.CompareTo(obj);
+            }
+        }
+
+        /// <inheritdoc />
+        public int CompareTo(T other)
+        {
+            if (!HasValue)
+            {
+                return 1;
+            }
+
+            return Value.CompareTo(other);
         }
 
         /// <inheritdoc />
         public int CompareTo(OpenXmlComparableSimpleValue<T> other)
         {
             return other is null ? 1 : Value.CompareTo(other.Value);
+        }
+
+        /// <inheritdoc />
+        public bool Equals(T other)
+        {
+            if (!HasValue)
+            {
+                return false;
+            }
+
+            return other.Equals(Value);
         }
 
         /// <inheritdoc />
@@ -68,27 +97,30 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc />
         public override bool Equals(object obj)
         {
-            switch (obj)
+            if (obj is null)
             {
-                case null:
-                    return false;
-
-                case OpenXmlComparableSimpleValue<T> openXmlComparableValueType:
-                    return Equals(openXmlComparableValueType);
-
-                case T value:
-                    return Value.Equals(value);
-
-                default:
-                    return false;
+                return false;
+            }
+            else if (ReferenceEquals(this, obj))
+            {
+                return true;
+            }
+            else if (obj is T t)
+            {
+                return Equals(t);
+            }
+            else if (obj is OpenXmlComparableSimpleValue<T> simpleValue)
+            {
+                return Equals(simpleValue);
+            }
+            else
+            {
+                return false;
             }
         }
 
         /// <inheritdoc />
-        public override int GetHashCode()
-        {
-            return Value.GetHashCode();
-        }
+        public override int GetHashCode() => Value.GetHashCode();
 
         /// <summary>
         /// Determines whether the specified operands are equal.

@@ -5,6 +5,10 @@ namespace DocumentFormat.OpenXml.Tests.SimpleTypes
 {
     public class Int64ValueTests : OpenXmlComparableSimpleValueTests<long>
     {
+        protected override OpenXmlComparableSimpleValue<long> Create(long input) => new Int64Value(input);
+
+        protected override long[] Values => new long[] { long.MinValue, long.MinValue + 1, long.MaxValue - 1, long.MaxValue };
+
         public Int64ValueTests()
         {
             SmallValue1 = new Int64Value(10L);
