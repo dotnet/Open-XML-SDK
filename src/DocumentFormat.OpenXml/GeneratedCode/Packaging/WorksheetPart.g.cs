@@ -11,11 +11,28 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(SpreadsheetPrinterSettingsPart), false, true)]
+    [PartConstraint(typeof(DrawingsPart), false, false)]
+    [PartConstraint(typeof(VmlDrawingPart), false, true)]
+    [PartConstraint(typeof(WorksheetCommentsPart), false, false)]
+    [PartConstraint(typeof(PivotTablePart), false, true)]
+    [PartConstraint(typeof(SingleCellTablePart), false, false)]
+    [PartConstraint(typeof(TableDefinitionPart), false, true)]
+    [PartConstraint(typeof(EmbeddedControlPersistencePart), false, true)]
+    [PartConstraint(typeof(ControlPropertiesPart), false, true)]
+    [PartConstraint(typeof(EmbeddedObjectPart), false, true)]
+    [PartConstraint(typeof(EmbeddedPackagePart), false, true)]
+    [PartConstraint(typeof(ImagePart), false, true)]
+    [PartConstraint(typeof(CustomPropertyPart), false, true)]
+    [PartConstraint(typeof(WorksheetSortMapPart), false, false)]
+    [PartConstraint(typeof(QueryTablePart), false, true)]
+    [PartConstraint(typeof(EmbeddedControlPersistenceBinaryDataPart), false, true)]
+    [PartConstraint(typeof(SlicersPart), false, true)]
+    [PartConstraint(typeof(TimeLinePart), false, true)]
     public partial class WorksheetPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet";
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Spreadsheet.Worksheet _rootElement;
 
         /// <summary>
@@ -78,40 +95,6 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Spreadsheet.Worksheet;
-            }
-        }
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<SpreadsheetPrinterSettingsPart>(false, true),
-                        PartConstraintRule.Create<DrawingsPart>(false, false),
-                        PartConstraintRule.Create<VmlDrawingPart>(false, true),
-                        PartConstraintRule.Create<WorksheetCommentsPart>(false, false),
-                        PartConstraintRule.Create<PivotTablePart>(false, true),
-                        PartConstraintRule.Create<SingleCellTablePart>(false, false),
-                        PartConstraintRule.Create<TableDefinitionPart>(false, true),
-                        PartConstraintRule.Create<EmbeddedControlPersistencePart>(false, true),
-                        PartConstraintRule.Create<ControlPropertiesPart>(false, true),
-                        PartConstraintRule.Create<EmbeddedObjectPart>(false, true),
-                        PartConstraintRule.Create<EmbeddedPackagePart>(false, true),
-                        PartConstraintRule.Create<ImagePart>(false, true),
-                        PartConstraintRule.Create<CustomPropertyPart>(false, true),
-                        PartConstraintRule.Create<WorksheetSortMapPart>(false, false),
-                        PartConstraintRule.Create<QueryTablePart>(false, true),
-                        PartConstraintRule.Create<EmbeddedControlPersistenceBinaryDataPart>(false, true),
-                        PartConstraintRule.Create<SlicersPart>(false, true),
-                        PartConstraintRule.Create<TimeLinePart>(false, true)
-                    };
-                }
-
-                return _partConstraints;
             }
         }
 

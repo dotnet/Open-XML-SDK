@@ -11,11 +11,11 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(ImagePart), false, true)]
     public partial class NumberingDefinitionsPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/numbering";
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Wordprocessing.Numbering _rootElement;
 
         /// <summary>
@@ -69,23 +69,6 @@ namespace DocumentFormat.OpenXml.Packaging
                 }
 
                 SetDomTree(value);
-            }
-        }
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<ImagePart>(false, true)
-                    };
-                }
-
-                return _partConstraints;
             }
         }
 

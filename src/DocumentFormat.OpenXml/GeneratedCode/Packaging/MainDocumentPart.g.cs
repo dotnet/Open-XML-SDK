@@ -10,11 +10,41 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the MainDocumentPart
     /// </summary>
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(CustomXmlPart), false, true)]
+    [PartConstraint(typeof(GlossaryDocumentPart), false, false)]
+    [PartConstraint(typeof(ThemePart), false, false)]
+    [PartConstraint(typeof(ThumbnailPart), false, false)]
+    [PartConstraint(typeof(WordprocessingCommentsPart), false, false)]
+    [PartConstraint(typeof(DocumentSettingsPart), false, false)]
+    [PartConstraint(typeof(EndnotesPart), false, false)]
+    [PartConstraint(typeof(FontTablePart), false, false)]
+    [PartConstraint(typeof(FootnotesPart), false, false)]
+    [PartConstraint(typeof(NumberingDefinitionsPart), false, false)]
+    [PartConstraint(typeof(StyleDefinitionsPart), false, false)]
+    [PartConstraint(typeof(StylesWithEffectsPart), false, false)]
+    [PartConstraint(typeof(WebSettingsPart), false, false)]
+    [PartConstraint(typeof(FooterPart), false, true)]
+    [PartConstraint(typeof(HeaderPart), false, true)]
+    [PartConstraint(typeof(WordprocessingPrinterSettingsPart), false, true)]
+    [PartConstraint(typeof(CustomizationPart), false, false)]
+    [PartConstraint(typeof(VbaProjectPart), false, false)]
+    [PartConstraint(typeof(WordprocessingCommentsExPart), false, false)]
+    [PartConstraint(typeof(WordprocessingPeoplePart), false, false)]
+    [PartConstraint(typeof(AlternativeFormatImportPart), false, true)]
+    [PartConstraint(typeof(ChartPart), false, true)]
+    [PartConstraint(typeof(DiagramColorsPart), false, true)]
+    [PartConstraint(typeof(DiagramDataPart), false, true)]
+    [PartConstraint(typeof(DiagramPersistLayoutPart), false, true)]
+    [PartConstraint(typeof(DiagramLayoutDefinitionPart), false, true)]
+    [PartConstraint(typeof(DiagramStylePart), false, true)]
+    [PartConstraint(typeof(EmbeddedControlPersistencePart), false, true)]
+    [PartConstraint(typeof(EmbeddedObjectPart), false, true)]
+    [PartConstraint(typeof(EmbeddedPackagePart), false, true)]
+    [PartConstraint(typeof(ImagePart), false, true)]
+    [DataPartConstraint(typeof(VideoReferenceRelationship), false, true)]
     public partial class MainDocumentPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
-        private static PartConstraintCollection _dataPartConstraints;
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Wordprocessing.Document _rootElement;
 
         /// <summary>
@@ -43,23 +73,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the CustomizationPart of the MainDocumentPart
         /// </summary>
         public CustomizationPart CustomizationPart => GetSubPartOfType<CustomizationPart>();
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection DataPartReferenceConstraints
-        {
-            get
-            {
-                if (_dataPartConstraints is null)
-                {
-                    _dataPartConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<VideoReferenceRelationship>(false, true)
-                    };
-                }
-
-                return _dataPartConstraints;
-            }
-        }
 
         /// <summary>
         /// Gets the DiagramColorsParts of the MainDocumentPart
@@ -184,53 +197,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the NumberingDefinitionsPart of the MainDocumentPart
         /// </summary>
         public NumberingDefinitionsPart NumberingDefinitionsPart => GetSubPartOfType<NumberingDefinitionsPart>();
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<CustomXmlPart>(false, true),
-                        PartConstraintRule.Create<GlossaryDocumentPart>(false, false),
-                        PartConstraintRule.Create<ThemePart>(false, false),
-                        PartConstraintRule.Create<ThumbnailPart>(false, false),
-                        PartConstraintRule.Create<WordprocessingCommentsPart>(false, false),
-                        PartConstraintRule.Create<DocumentSettingsPart>(false, false),
-                        PartConstraintRule.Create<EndnotesPart>(false, false),
-                        PartConstraintRule.Create<FontTablePart>(false, false),
-                        PartConstraintRule.Create<FootnotesPart>(false, false),
-                        PartConstraintRule.Create<NumberingDefinitionsPart>(false, false),
-                        PartConstraintRule.Create<StyleDefinitionsPart>(false, false),
-                        PartConstraintRule.Create<StylesWithEffectsPart>(false, false),
-                        PartConstraintRule.Create<WebSettingsPart>(false, false),
-                        PartConstraintRule.Create<FooterPart>(false, true),
-                        PartConstraintRule.Create<HeaderPart>(false, true),
-                        PartConstraintRule.Create<WordprocessingPrinterSettingsPart>(false, true),
-                        PartConstraintRule.Create<CustomizationPart>(false, false),
-                        PartConstraintRule.Create<VbaProjectPart>(false, false),
-                        PartConstraintRule.Create<WordprocessingCommentsExPart>(false, false),
-                        PartConstraintRule.Create<WordprocessingPeoplePart>(false, false),
-                        PartConstraintRule.Create<AlternativeFormatImportPart>(false, true),
-                        PartConstraintRule.Create<ChartPart>(false, true),
-                        PartConstraintRule.Create<DiagramColorsPart>(false, true),
-                        PartConstraintRule.Create<DiagramDataPart>(false, true),
-                        PartConstraintRule.Create<DiagramPersistLayoutPart>(false, true),
-                        PartConstraintRule.Create<DiagramLayoutDefinitionPart>(false, true),
-                        PartConstraintRule.Create<DiagramStylePart>(false, true),
-                        PartConstraintRule.Create<EmbeddedControlPersistencePart>(false, true),
-                        PartConstraintRule.Create<EmbeddedObjectPart>(false, true),
-                        PartConstraintRule.Create<EmbeddedPackagePart>(false, true),
-                        PartConstraintRule.Create<ImagePart>(false, true)
-                    };
-                }
-
-                return _partConstraints;
-            }
-        }
 
         internal override OpenXmlPartRootElement PartRootElement => Document;
 

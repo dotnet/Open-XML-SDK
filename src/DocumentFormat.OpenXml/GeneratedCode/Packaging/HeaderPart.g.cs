@@ -11,12 +11,22 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(AlternativeFormatImportPart), false, true)]
+    [PartConstraint(typeof(ChartPart), false, true)]
+    [PartConstraint(typeof(DiagramColorsPart), false, true)]
+    [PartConstraint(typeof(DiagramDataPart), false, true)]
+    [PartConstraint(typeof(DiagramPersistLayoutPart), false, true)]
+    [PartConstraint(typeof(DiagramLayoutDefinitionPart), false, true)]
+    [PartConstraint(typeof(DiagramStylePart), false, true)]
+    [PartConstraint(typeof(EmbeddedControlPersistencePart), false, true)]
+    [PartConstraint(typeof(EmbeddedObjectPart), false, true)]
+    [PartConstraint(typeof(EmbeddedPackagePart), false, true)]
+    [PartConstraint(typeof(ImagePart), false, true)]
+    [DataPartConstraint(typeof(VideoReferenceRelationship), false, true)]
     public partial class HeaderPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/header";
-        private static PartConstraintCollection _dataPartConstraints;
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Wordprocessing.Header _rootElement;
 
         /// <summary>
@@ -38,23 +48,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
         /// <inheritdoc/>
         public sealed override string ContentType => ContentTypeConstant;
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection DataPartReferenceConstraints
-        {
-            get
-            {
-                if (_dataPartConstraints is null)
-                {
-                    _dataPartConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<VideoReferenceRelationship>(false, true)
-                    };
-                }
-
-                return _dataPartConstraints;
-            }
-        }
 
         /// <summary>
         /// Gets the DiagramColorsParts of the HeaderPart
@@ -137,33 +130,6 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Wordprocessing.Header;
-            }
-        }
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<AlternativeFormatImportPart>(false, true),
-                        PartConstraintRule.Create<ChartPart>(false, true),
-                        PartConstraintRule.Create<DiagramColorsPart>(false, true),
-                        PartConstraintRule.Create<DiagramDataPart>(false, true),
-                        PartConstraintRule.Create<DiagramPersistLayoutPart>(false, true),
-                        PartConstraintRule.Create<DiagramLayoutDefinitionPart>(false, true),
-                        PartConstraintRule.Create<DiagramStylePart>(false, true),
-                        PartConstraintRule.Create<EmbeddedControlPersistencePart>(false, true),
-                        PartConstraintRule.Create<EmbeddedObjectPart>(false, true),
-                        PartConstraintRule.Create<EmbeddedPackagePart>(false, true),
-                        PartConstraintRule.Create<ImagePart>(false, true)
-                    };
-                }
-
-                return _partConstraints;
             }
         }
 

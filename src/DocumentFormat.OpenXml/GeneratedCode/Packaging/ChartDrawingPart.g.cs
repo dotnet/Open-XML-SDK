@@ -11,11 +11,12 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(ChartPart), false, false)]
+    [PartConstraint(typeof(ImagePart), false, true)]
     public partial class ChartDrawingPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawingml.chartshapes+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/chartUserShapes";
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Drawing.Charts.UserShapes _rootElement;
 
         /// <summary>
@@ -48,24 +49,6 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Drawing.Charts.UserShapes;
-            }
-        }
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<ChartPart>(false, false),
-                        PartConstraintRule.Create<ImagePart>(false, true)
-                    };
-                }
-
-                return _partConstraints;
             }
         }
 

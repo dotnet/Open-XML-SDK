@@ -11,11 +11,11 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(WordAttachedToolbarsPart), false, false)]
     public partial class CustomizationPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-word.keyMapCustomizations+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2006/relationships/keyMapCustomizations";
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Office.Word.TemplateCommandGroup _rootElement;
 
         /// <summary>
@@ -38,23 +38,6 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Office.Word.TemplateCommandGroup;
-            }
-        }
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<WordAttachedToolbarsPart>(false, false)
-                    };
-                }
-
-                return _partConstraints;
             }
         }
 

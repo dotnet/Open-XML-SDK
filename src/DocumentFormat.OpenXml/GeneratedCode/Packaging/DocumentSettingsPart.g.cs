@@ -11,11 +11,12 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(MailMergeRecipientDataPart), false, false)]
+    [PartConstraint(typeof(ImagePart), false, true)]
     public partial class DocumentSettingsPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings";
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Wordprocessing.Settings _rootElement;
 
         /// <summary>
@@ -50,24 +51,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the MailMergeRecipientDataPart of the DocumentSettingsPart
         /// </summary>
         public MailMergeRecipientDataPart MailMergeRecipientDataPart => GetSubPartOfType<MailMergeRecipientDataPart>();
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<MailMergeRecipientDataPart>(false, false),
-                        PartConstraintRule.Create<ImagePart>(false, true)
-                    };
-                }
-
-                return _partConstraints;
-            }
-        }
 
         internal override OpenXmlPartRootElement PartRootElement => Settings;
 

@@ -27,6 +27,8 @@ namespace DocumentFormat.OpenXml.Packaging
         /// </summary>
         protected OpenXmlPartContainer()
         {
+            PartConstraints = PartConstraintCollection.Create<PartConstraintAttribute>(GetType());
+            DataPartReferenceConstraints = PartConstraintCollection.Create<DataPartConstraintAttribute>(GetType());
         }
 
         /// <summary>
@@ -2066,13 +2068,13 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the constraint rule
         /// </summary>
         /// <returns>The constraint rule.</returns>
-        internal virtual PartConstraintCollection PartConstraints => PartConstraintCollection.Instance;
+        internal PartConstraintCollection PartConstraints { get; }
 
         /// <summary>
         /// Gets the constraint rule of DataPartReferenceRelationship.
         /// </summary>
         /// <returns>The constraint rule.</returns>
-        internal virtual PartConstraintCollection DataPartReferenceConstraints => PartConstraintCollection.Instance;
+        internal PartConstraintCollection DataPartReferenceConstraints { get; }
 
         /// <summary>
         /// Test whether the object is already disposed.

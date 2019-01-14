@@ -12,49 +12,22 @@ namespace DocumentFormat.OpenXml.Packaging
     /// <summary>
     /// Defines SpreadsheetDocument - an OpenXmlPackage represents a Spreadsheet document.
     /// </summary>
+    [PartConstraint(typeof(WorkbookPart), true, false)]
+    [PartConstraint(typeof(CoreFilePropertiesPart), false, false)]
+    [PartConstraint(typeof(ExtendedFilePropertiesPart), false, false)]
+    [PartConstraint(typeof(CustomFilePropertiesPart), false, false)]
+    [PartConstraint(typeof(ThumbnailPart), false, false)]
+    [PartConstraint(typeof(DigitalSignatureOriginPart), false, false)]
+    [PartConstraint(typeof(QuickAccessToolbarCustomizationsPart), false, false)]
+    [PartConstraint(typeof(RibbonExtensibilityPart), false, false)]
+    [PartConstraint(typeof(RibbonAndBackstageCustomizationsPart), false, false)]
+    [PartConstraint(typeof(WebExTaskpanesPart), false, false)]
     public partial class SpreadsheetDocument : OpenXmlPackage
     {
-        private static PartConstraintCollection _partConstraints;
-
-        /// <summary>
-        /// Gets part constraint data.
-        /// </summary>
-        /// <returns>The constraint data of the part.</returns>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints == null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<WorkbookPart>(true, false),
-                        PartConstraintRule.Create<CoreFilePropertiesPart>(false, false),
-                        PartConstraintRule.Create<ExtendedFilePropertiesPart>(false, false),
-                        PartConstraintRule.Create<CustomFilePropertiesPart>(false, false),
-                        PartConstraintRule.Create<ThumbnailPart>(false, false),
-                        PartConstraintRule.Create<DigitalSignatureOriginPart>(false, false),
-                        PartConstraintRule.Create<QuickAccessToolbarCustomizationsPart>(false, false),
-                        PartConstraintRule.Create<RibbonExtensibilityPart>(false, false),
-                        PartConstraintRule.Create<RibbonAndBackstageCustomizationsPart>(false, false),
-                        PartConstraintRule.Create<WebExTaskpanesPart>(false, false),
-                    };
-                }
-
-                return _partConstraints;
-            }
-        }
-
         /// <summary>
         /// Gets the relationship type of the main part.
         /// </summary>
-        internal sealed override string MainPartRelationshipType
-        {
-            get
-            {
-                return WorkbookPart.RelationshipTypeConstant;
-            }
-        }
+        internal sealed override string MainPartRelationshipType => WorkbookPart.RelationshipTypeConstant;
 
         private static Dictionary<SpreadsheetDocumentType, string> _validMainPartContentType;
 
@@ -81,13 +54,7 @@ namespace DocumentFormat.OpenXml.Packaging
         /// <summary>
         /// Gets the list of valid content type for main part.
         /// </summary>
-        internal sealed override ICollection<string> ValidMainPartContentTypes
-        {
-            get
-            {
-                return MainPartContentTypes.Values;
-            }
-        }
+        internal sealed override ICollection<string> ValidMainPartContentTypes => MainPartContentTypes.Values;
 
         /// <summary>
         /// Creates a SpreadsheetDocument.

@@ -12,11 +12,11 @@ namespace DocumentFormat.OpenXml.Packaging
     [OfficeAvailability(FileFormatVersions.Office2013)]
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(ImagePart), false, true)]
     public partial class WebExtensionPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.ms-office.webextension+xml";
         internal const string RelationshipTypeConstant = "http://schemas.microsoft.com/office/2011/relationships/webextension";
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Office2013.WebExtension.WebExtension _rootElement;
 
         /// <summary>
@@ -44,23 +44,6 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Office2013.WebExtension.WebExtension;
-            }
-        }
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<ImagePart>(false, true)
-                    };
-                }
-
-                return _partConstraints;
             }
         }
 

@@ -6,7 +6,7 @@ using System;
 namespace DocumentFormat.OpenXml.Packaging
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
-    internal class RelationshipTypeAttribute : Attribute
+    internal sealed class RelationshipTypeAttribute : Attribute
     {
         public RelationshipTypeAttribute(string relationshipType)
         {

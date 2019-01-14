@@ -11,11 +11,13 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(ImagePart), false, true)]
+    [PartConstraint(typeof(SlidePart), false, true)]
+    [PartConstraint(typeof(WorksheetPart), false, true)]
     public partial class DiagramDataPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/diagramData";
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Drawing.Diagrams.DataModelRoot _rootElement;
 
         /// <summary>
@@ -69,25 +71,6 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Drawing.Diagrams.DataModelRoot;
-            }
-        }
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<ImagePart>(false, true),
-                        PartConstraintRule.Create<SlidePart>(false, true),
-                        PartConstraintRule.Create<WorksheetPart>(false, true)
-                    };
-                }
-
-                return _partConstraints;
             }
         }
 

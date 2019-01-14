@@ -11,11 +11,12 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(ImagePart), false, true)]
+    [PartConstraint(typeof(LegacyDiagramTextPart), false, true)]
     public partial class VmlDrawingPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.vmlDrawing";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/vmlDrawing";
-        private static PartConstraintCollection _partConstraints;
 
         /// <summary>
         /// Creates an instance of the VmlDrawingPart OpenXmlType
@@ -36,24 +37,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the LegacyDiagramTextParts of the VmlDrawingPart
         /// </summary>
         public IEnumerable<LegacyDiagramTextPart> LegacyDiagramTextParts => GetPartsOfType<LegacyDiagramTextPart>();
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<ImagePart>(false, true),
-                        PartConstraintRule.Create<LegacyDiagramTextPart>(false, true)
-                    };
-                }
-
-                return _partConstraints;
-            }
-        }
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

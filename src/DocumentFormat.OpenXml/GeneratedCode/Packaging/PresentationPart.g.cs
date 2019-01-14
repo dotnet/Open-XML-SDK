@@ -10,10 +10,23 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the PresentationPart
     /// </summary>
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(CustomXmlPart), false, true)]
+    [PartConstraint(typeof(FontPart), false, true)]
+    [PartConstraint(typeof(PresentationPropertiesPart), false, false)]
+    [PartConstraint(typeof(TableStylesPart), false, false)]
+    [PartConstraint(typeof(ThemePart), false, false)]
+    [PartConstraint(typeof(ViewPropertiesPart), false, false)]
+    [PartConstraint(typeof(NotesMasterPart), false, false)]
+    [PartConstraint(typeof(SlidePart), false, true)]
+    [PartConstraint(typeof(SlideMasterPart), true, true)]
+    [PartConstraint(typeof(UserDefinedTagsPart), false, false)]
+    [PartConstraint(typeof(CommentAuthorsPart), false, false)]
+    [PartConstraint(typeof(HandoutMasterPart), false, false)]
+    [PartConstraint(typeof(LegacyDiagramTextInfoPart), false, false)]
+    [PartConstraint(typeof(VbaProjectPart), false, false)]
     public partial class PresentationPart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument";
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Presentation.Presentation _rootElement;
 
         /// <summary>
@@ -65,36 +78,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the NotesMasterPart of the PresentationPart
         /// </summary>
         public NotesMasterPart NotesMasterPart => GetSubPartOfType<NotesMasterPart>();
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<CustomXmlPart>(false, true),
-                        PartConstraintRule.Create<FontPart>(false, true),
-                        PartConstraintRule.Create<PresentationPropertiesPart>(false, false),
-                        PartConstraintRule.Create<TableStylesPart>(false, false),
-                        PartConstraintRule.Create<ThemePart>(false, false),
-                        PartConstraintRule.Create<ViewPropertiesPart>(false, false),
-                        PartConstraintRule.Create<NotesMasterPart>(false, false),
-                        PartConstraintRule.Create<SlidePart>(false, true),
-                        PartConstraintRule.Create<SlideMasterPart>(true, true),
-                        PartConstraintRule.Create<UserDefinedTagsPart>(false, false),
-                        PartConstraintRule.Create<CommentAuthorsPart>(false, false),
-                        PartConstraintRule.Create<HandoutMasterPart>(false, false),
-                        PartConstraintRule.Create<LegacyDiagramTextInfoPart>(false, false),
-                        PartConstraintRule.Create<VbaProjectPart>(false, false)
-                    };
-                }
-
-                return _partConstraints;
-            }
-        }
 
         internal override OpenXmlPartRootElement PartRootElement => Presentation;
 

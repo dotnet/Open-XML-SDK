@@ -10,10 +10,10 @@ namespace DocumentFormat.OpenXml.Packaging
     /// Defines the EmbeddedControlPersistencePart
     /// </summary>
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(EmbeddedControlPersistenceBinaryDataPart), false, true)]
     public partial class EmbeddedControlPersistencePart : OpenXmlPart
     {
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/control";
-        private static PartConstraintCollection _partConstraints;
 
         /// <summary>
         /// Creates an instance of the EmbeddedControlPersistencePart OpenXmlType
@@ -26,23 +26,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the EmbeddedControlPersistenceBinaryDataParts of the EmbeddedControlPersistencePart
         /// </summary>
         public IEnumerable<EmbeddedControlPersistenceBinaryDataPart> EmbeddedControlPersistenceBinaryDataParts => GetPartsOfType<EmbeddedControlPersistenceBinaryDataPart>();
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<EmbeddedControlPersistenceBinaryDataPart>(false, true)
-                    };
-                }
-
-                return _partConstraints;
-            }
-        }
 
         /// <inheritdoc/>
         public sealed override string RelationshipType => RelationshipTypeConstant;

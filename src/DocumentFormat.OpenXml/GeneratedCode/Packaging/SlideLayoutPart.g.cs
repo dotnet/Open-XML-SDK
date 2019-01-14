@@ -11,12 +11,30 @@ namespace DocumentFormat.OpenXml.Packaging
     /// </summary>
     [ContentType(ContentTypeConstant)]
     [RelationshipTypeAttribute(RelationshipTypeConstant)]
+    [PartConstraint(typeof(CustomXmlPart), false, true)]
+    [PartConstraint(typeof(ChartPart), false, true)]
+    [PartConstraint(typeof(DiagramColorsPart), false, true)]
+    [PartConstraint(typeof(DiagramDataPart), false, true)]
+    [PartConstraint(typeof(DiagramPersistLayoutPart), false, true)]
+    [PartConstraint(typeof(DiagramLayoutDefinitionPart), false, true)]
+    [PartConstraint(typeof(DiagramStylePart), false, true)]
+    [PartConstraint(typeof(EmbeddedObjectPart), false, true)]
+    [PartConstraint(typeof(EmbeddedPackagePart), false, true)]
+    [PartConstraint(typeof(ImagePart), false, true)]
+    [PartConstraint(typeof(VmlDrawingPart), false, true)]
+    [PartConstraint(typeof(EmbeddedControlPersistenceBinaryDataPart), false, true)]
+    [PartConstraint(typeof(SlidePart), false, true)]
+    [PartConstraint(typeof(SlideMasterPart), false, false)]
+    [PartConstraint(typeof(ThemeOverridePart), false, false)]
+    [PartConstraint(typeof(UserDefinedTagsPart), false, true)]
+    [PartConstraint(typeof(EmbeddedControlPersistencePart), false, true)]
+    [DataPartConstraint(typeof(AudioReferenceRelationship), false, true)]
+    [DataPartConstraint(typeof(VideoReferenceRelationship), false, true)]
+    [DataPartConstraint(typeof(MediaReferenceRelationship), false, true)]
     public partial class SlideLayoutPart : OpenXmlPart, IFixedContentTypePart
     {
         internal const string ContentTypeConstant = "application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml";
         internal const string RelationshipTypeConstant = "http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideLayout";
-        private static PartConstraintCollection _dataPartConstraints;
-        private static PartConstraintCollection _partConstraints;
         private DocumentFormat.OpenXml.Presentation.SlideLayout _rootElement;
 
         /// <summary>
@@ -38,25 +56,6 @@ namespace DocumentFormat.OpenXml.Packaging
         /// Gets the CustomXmlParts of the SlideLayoutPart
         /// </summary>
         public IEnumerable<CustomXmlPart> CustomXmlParts => GetPartsOfType<CustomXmlPart>();
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection DataPartReferenceConstraints
-        {
-            get
-            {
-                if (_dataPartConstraints is null)
-                {
-                    _dataPartConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<AudioReferenceRelationship>(false, true),
-                        PartConstraintRule.Create<VideoReferenceRelationship>(false, true),
-                        PartConstraintRule.Create<MediaReferenceRelationship>(false, true)
-                    };
-                }
-
-                return _dataPartConstraints;
-            }
-        }
 
         /// <summary>
         /// Gets the DiagramColorsParts of the SlideLayoutPart
@@ -118,39 +117,6 @@ namespace DocumentFormat.OpenXml.Packaging
             set
             {
                 _rootElement = value as DocumentFormat.OpenXml.Presentation.SlideLayout;
-            }
-        }
-
-        /// <inheritdoc/>
-        internal sealed override PartConstraintCollection PartConstraints
-        {
-            get
-            {
-                if (_partConstraints is null)
-                {
-                    _partConstraints = new PartConstraintCollection
-                    {
-                        PartConstraintRule.Create<CustomXmlPart>(false, true),
-                        PartConstraintRule.Create<ChartPart>(false, true),
-                        PartConstraintRule.Create<DiagramColorsPart>(false, true),
-                        PartConstraintRule.Create<DiagramDataPart>(false, true),
-                        PartConstraintRule.Create<DiagramPersistLayoutPart>(false, true),
-                        PartConstraintRule.Create<DiagramLayoutDefinitionPart>(false, true),
-                        PartConstraintRule.Create<DiagramStylePart>(false, true),
-                        PartConstraintRule.Create<EmbeddedObjectPart>(false, true),
-                        PartConstraintRule.Create<EmbeddedPackagePart>(false, true),
-                        PartConstraintRule.Create<ImagePart>(false, true),
-                        PartConstraintRule.Create<VmlDrawingPart>(false, true),
-                        PartConstraintRule.Create<EmbeddedControlPersistenceBinaryDataPart>(false, true),
-                        PartConstraintRule.Create<SlidePart>(false, true),
-                        PartConstraintRule.Create<SlideMasterPart>(false, false),
-                        PartConstraintRule.Create<ThemeOverridePart>(false, false),
-                        PartConstraintRule.Create<UserDefinedTagsPart>(false, true),
-                        PartConstraintRule.Create<EmbeddedControlPersistencePart>(false, true)
-                    };
-                }
-
-                return _partConstraints;
             }
         }
 
