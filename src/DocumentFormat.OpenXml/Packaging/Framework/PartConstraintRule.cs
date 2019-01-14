@@ -7,10 +7,10 @@ namespace DocumentFormat.OpenXml.Packaging
 {
     internal readonly struct PartConstraintRule
     {
-        private readonly TypeConstraintInfo _info;
+        private readonly ElementTypeInfo _info;
 
-        private PartConstraintRule(
-            TypeConstraintInfo info,
+        public PartConstraintRule(
+            ElementTypeInfo info,
             bool minOccursIsNonZero,
             bool maxOccursGreatThanOne)
         {
@@ -18,11 +18,6 @@ namespace DocumentFormat.OpenXml.Packaging
 
             MinOccursIsNonZero = minOccursIsNonZero;
             MaxOccursGreatThanOne = maxOccursGreatThanOne;
-        }
-
-        public static PartConstraintRule Create(Type type, bool minOccursIsNonZero, bool maxOccursGreatThanOne)
-        {
-            return new PartConstraintRule(TypeConstraintInfo.Get(type), minOccursIsNonZero, maxOccursGreatThanOne);
         }
 
         /// <summary>

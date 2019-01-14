@@ -82,7 +82,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         {
             public const string Relationship = "relationship";
 
-            public static PartConstraintRule Rule { get; } = PartConstraintRule.Create(typeof(ConstraintTest1), false, false);
+            public static PartConstraintRule Rule { get; } = new PartConstraintRule(ElementTypeInfo.Create(typeof(ConstraintTest1)), false, false);
         }
 
         [RelationshipType(Relationship)]
@@ -90,7 +90,7 @@ namespace DocumentFormat.OpenXml.Packaging.Tests
         {
             public const string Relationship = "relationship2";
 
-            public static PartConstraintRule Rule { get; } = PartConstraintRule.Create(typeof(ConstraintTest2), false, false);
+            public static PartConstraintRule Rule { get; } = new PartConstraintRule(ElementTypeInfo.Create(typeof(ConstraintTest2)), false, false);
         }
     }
 }

@@ -7,26 +7,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-#if FEATURE_NO_CONDITIONAL_WEAK_TABLE
-using TagLookup = DocumentFormat.OpenXml.LockingDictionary<System.Type, DocumentFormat.OpenXml.AttributeTag[]>;
-#else
-using TagLookup = System.Runtime.CompilerServices.ConditionalWeakTable<System.Type, DocumentFormat.OpenXml.AttributeTag[]>;
-#endif
-
 namespace DocumentFormat.OpenXml
 {
     internal readonly struct AttributeTagCollection : IEnumerable<OpenXmlAttribute>
     {
-        private static TagLookup _allTags = new TagLookup();
-
         private readonly ReadOnlyArray<AttributeTag> _tags;
         private readonly OpenXmlElement _element;
 
-        public AttributeTagCollection(OpenXmlElement element)
+        public AttributeTagCollection(OpenXmlElement element, ReadOnlyArray<AttributeTag> tags)
         {
-            _tags = GetTagCollection(element.GetType());
+            _tags = tags;
             _element = element;
         }
+
+        public bool IsValid => _element != null;
 
         public bool Any() => Length > 0;
 
@@ -80,39 +74,34 @@ namespace DocumentFormat.OpenXml
             }
         }
 
-        public static AttributeTag[] GetTagCollection(Type type)
+        public static ReadOnlyArray<AttributeTag> GetAttributes(PackageCache cache, Type type)
         {
-            AttributeTag[] BuildTagCollection(Type t)
-            {
-                return t.GetRuntimeProperties()
-                   .Select(property =>
+            return type.GetRuntimeProperties()
+               .Select(property =>
+               {
+                   var schema = property.GetCustomAttribute<SchemaAttrAttribute>();
+
+                   if (schema is null)
                    {
-                       var schema = property.GetCustomAttribute<SchemaAttrAttribute>();
+                       return default;
+                   }
 
-                       if (schema is null)
-                       {
-                           return default;
-                       }
+                   var indexAttribute = property.GetCustomAttribute<SchemaIndexAttribute>();
 
-                       var indexAttribute = property.GetCustomAttribute<SchemaIndexAttribute>();
+                   if (indexAttribute is null)
+                   {
+                       throw new InvalidOperationException();
+                   }
 
-                       if (indexAttribute is null)
-                       {
-                           throw new InvalidOperationException();
-                       }
-
-                       return new AttributeTag(
-                           schema.NamespaceId,
-                           schema.Tag,
-                           indexAttribute.Index,
-                           new PropertyAccessor<OpenXmlElement, OpenXmlSimpleType>(property));
-                   })
-                   .Where(tag => tag.IsValid)
-                   .OrderBy(tag => tag.Order)
-                   .ToArray();
-            }
-
-            return _allTags.GetValue(type, BuildTagCollection);
+                   return new AttributeTag(
+                       schema.NamespaceId,
+                       schema.Tag,
+                       indexAttribute.Index,
+                       new OpenXmlElementPropertyAccessor(cache, property));
+               })
+               .Where(tag => tag.IsValid)
+               .OrderBy(tag => tag.Order)
+               .ToArray();
         }
 
         public struct Enumerator
