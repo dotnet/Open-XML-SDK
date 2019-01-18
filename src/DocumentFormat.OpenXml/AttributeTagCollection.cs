@@ -34,7 +34,7 @@ namespace DocumentFormat.OpenXml
 
         private int GetIndex(string namespaceUri, string tagName)
         {
-            if (!string.IsNullOrEmpty(tagName) && namespaceUri != null && NamespaceIdMap.TryGetNamespaceId(namespaceUri, out var nsId))
+            if (!string.IsNullOrEmpty(tagName) && NamespaceIdMap.TryGetNamespaceId(namespaceUri, out var nsId))
             {
                 for (var i = 0; i < _tags.Length; i++)
                 {

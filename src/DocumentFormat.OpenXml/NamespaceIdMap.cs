@@ -484,7 +484,8 @@ namespace DocumentFormat.OpenXml
         {
             if (namespaceUri == null)
             {
-                throw new ArgumentNullException(nameof(namespaceUri));
+                id = 0;
+                return false;
             }
 
             int index = Array.IndexOf(_namespaceList, NormalizeNamespace(namespaceUri));

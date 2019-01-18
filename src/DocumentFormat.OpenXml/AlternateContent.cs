@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Microsoft. All rights reserved.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System;
 using System.Collections.Generic;
 
 namespace DocumentFormat.OpenXml
@@ -9,8 +10,13 @@ namespace DocumentFormat.OpenXml
     /// Represents the mc:AlternateContent element of markup
     /// compatibility.
     /// </summary>
+    [SchemaAttr(Namespace, Name)]
+    [ChildElementInfo(typeof(AlternateContentChoice))]
+    [ChildElementInfo(typeof(AlternateContentFallback))]
     public class AlternateContent : OpenXmlCompositeElement
     {
+        internal const string Namespace = @"http://schemas.openxmlformats.org/markup-compatibility/2006";
+        private const string Name = "AlternateContent";
         private static byte _mcNamespaceId = byte.MaxValue;
 
         /// <summary>
@@ -61,7 +67,7 @@ namespace DocumentFormat.OpenXml
         /// Gets a value that represents the markup compatibility
         /// namespace.
         /// </summary>
-        public static string MarkupCompatibilityNamespace { get; } = @"http://schemas.openxmlformats.org/markup-compatibility/2006";
+        public static string MarkupCompatibilityNamespace => Namespace;
 
         /// <summary>
         /// Gets a value that represents the markup compatibility
@@ -84,25 +90,13 @@ namespace DocumentFormat.OpenXml
         /// Gets a value that represents the tag name of the
         /// AlternateContent element.
         /// </summary>
-        public static string TagName { get; } = "AlternateContent";
+        public static string TagName => Name;
 
         /// <inheritdoc/>
         public override string LocalName => TagName;
 
         /// <inheritdoc/>
         internal override byte NamespaceId => MarkupCompatibilityNamespaceId;
-
-        /// <inheritdoc/>
-        internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-        {
-            if (MarkupCompatibilityNamespaceId == namespaceId && AlternateContentChoice.TagName == name)
-                return new AlternateContentChoice();
-
-            if (MarkupCompatibilityNamespaceId == namespaceId && AlternateContentFallback.TagName == name)
-                return new AlternateContentFallback();
-
-            return null;
-        }
 
         /// <summary>
         /// Appends a new child of type T:DocumentFormat.OpenXml.AlternateContentChoice
