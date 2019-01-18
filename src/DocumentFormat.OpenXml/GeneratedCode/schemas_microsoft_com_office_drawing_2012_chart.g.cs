@@ -163,15 +163,13 @@ public partial class NumberingFormat : OpenXmlLeafElement
     /// <para> Number Format Code.</para>
     /// <para>Represents the following attribute in the schema: formatCode </para>
     /// </summary>
-    [SchemaAttr(0, "formatCode")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "formatCode", 0)]
     public StringValue FormatCode { get; set; }
     /// <summary>
     /// <para> Linked to Source.</para>
     /// <para>Represents the following attribute in the schema: sourceLinked </para>
     /// </summary>
-    [SchemaAttr(0, "sourceLinked")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "sourceLinked", 1)]
     public BooleanValue SourceLinked { get; set; }
 
     /// <summary>
@@ -246,8 +244,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
     /// <para> Black and White Mode.</para>
     /// <para>Represents the following attribute in the schema: bwMode </para>
     /// </summary>
-    [SchemaAttr(0, "bwMode")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "bwMode", 0)]
     public EnumValue<DocumentFormat.OpenXml.Drawing.BlackWhiteModeValues> BlackWhiteMode { get; set; }
 
     /// <summary>
@@ -2159,8 +2156,7 @@ public abstract partial class BooleanType : OpenXmlLeafElement
     /// <para> Boolean Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "val", 0)]
     public BooleanValue Val { get; set; }
 
     
@@ -4634,8 +4630,7 @@ public partial class Explosion : OpenXmlLeafElement
     /// <para> Integer Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "val", 0)]
     public UInt32Value Val { get; set; }
 
     /// <summary>
