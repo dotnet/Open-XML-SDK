@@ -15,6 +15,7 @@ namespace DocumentFormat.OpenXml.Vml.Wordprocessing
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(28, "bordertop")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TopBorder : BorderType
 {
@@ -42,6 +43,7 @@ public partial class TopBorder : BorderType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(28, "borderleft")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LeftBorder : BorderType
 {
@@ -69,6 +71,7 @@ public partial class LeftBorder : BorderType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(28, "borderright")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RightBorder : BorderType
 {
@@ -96,6 +99,7 @@ public partial class RightBorder : BorderType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(28, "borderbottom")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BottomBorder : BorderType
 {
@@ -165,6 +169,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(28, "wrap")]
 public partial class TextWrap : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12505;
@@ -227,6 +232,7 @@ public partial class TextWrap : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(28, "anchorlock")]
 public partial class AnchorLock : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12506;

@@ -22,6 +22,7 @@ namespace DocumentFormat.OpenXml.Wordprocessing
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "cellIns")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CellInsertion : TrackChangeType
 {
@@ -49,6 +50,7 @@ public partial class CellInsertion : TrackChangeType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "cellDel")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CellDeletion : TrackChangeType
 {
@@ -76,6 +78,7 @@ public partial class CellDeletion : TrackChangeType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "customXmlInsRangeStart")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CustomXmlInsRangeStart : TrackChangeType
 {
@@ -103,6 +106,7 @@ public partial class CustomXmlInsRangeStart : TrackChangeType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "customXmlDelRangeStart")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CustomXmlDelRangeStart : TrackChangeType
 {
@@ -130,6 +134,7 @@ public partial class CustomXmlDelRangeStart : TrackChangeType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "customXmlMoveFromRangeStart")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CustomXmlMoveFromRangeStart : TrackChangeType
 {
@@ -157,6 +162,7 @@ public partial class CustomXmlMoveFromRangeStart : TrackChangeType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "customXmlMoveToRangeStart")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CustomXmlMoveToRangeStart : TrackChangeType
 {
@@ -184,6 +190,7 @@ public partial class CustomXmlMoveToRangeStart : TrackChangeType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "ins")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Inserted : TrackChangeType
 {
@@ -211,6 +218,7 @@ public partial class Inserted : TrackChangeType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "del")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Deleted : TrackChangeType
 {
@@ -238,6 +246,7 @@ public partial class Deleted : TrackChangeType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "moveFrom")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MoveFrom : TrackChangeType
 {
@@ -265,6 +274,7 @@ public partial class MoveFrom : TrackChangeType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "moveTo")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MoveTo : TrackChangeType
 {
@@ -340,6 +350,7 @@ public abstract partial class TrackChangeType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "cellMerge")]
 public partial class CellMerge : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11539;
@@ -419,6 +430,7 @@ public partial class CellMerge : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "bookmarkStart")]
 public partial class BookmarkStart : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11540;
@@ -497,6 +509,7 @@ public partial class BookmarkStart : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "bookmarkEnd")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BookmarkEnd : MarkupRangeType
 {
@@ -524,6 +537,7 @@ public partial class BookmarkEnd : MarkupRangeType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "commentRangeStart")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CommentRangeStart : MarkupRangeType
 {
@@ -551,6 +565,7 @@ public partial class CommentRangeStart : MarkupRangeType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "commentRangeEnd")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CommentRangeEnd : MarkupRangeType
 {
@@ -578,6 +593,7 @@ public partial class CommentRangeEnd : MarkupRangeType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "moveFromRangeEnd")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MoveFromRangeEnd : MarkupRangeType
 {
@@ -605,6 +621,7 @@ public partial class MoveFromRangeEnd : MarkupRangeType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "moveToRangeEnd")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MoveToRangeEnd : MarkupRangeType
 {
@@ -670,6 +687,7 @@ public abstract partial class MarkupRangeType : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "moveFromRangeStart")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MoveFromRangeStart : MoveBookmarkType
 {
@@ -697,6 +715,7 @@ public partial class MoveFromRangeStart : MoveBookmarkType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "moveToRangeStart")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MoveToRangeStart : MoveBookmarkType
 {
@@ -807,6 +826,7 @@ public abstract partial class MoveBookmarkType : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "customXmlInsRangeEnd")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CustomXmlInsRangeEnd : MarkupType
 {
@@ -834,6 +854,7 @@ public partial class CustomXmlInsRangeEnd : MarkupType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "customXmlDelRangeEnd")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CustomXmlDelRangeEnd : MarkupType
 {
@@ -861,6 +882,7 @@ public partial class CustomXmlDelRangeEnd : MarkupType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "customXmlMoveFromRangeEnd")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CustomXmlMoveFromRangeEnd : MarkupType
 {
@@ -888,6 +910,7 @@ public partial class CustomXmlMoveFromRangeEnd : MarkupType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "customXmlMoveToRangeEnd")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CustomXmlMoveToRangeEnd : MarkupType
 {
@@ -915,6 +938,7 @@ public partial class CustomXmlMoveToRangeEnd : MarkupType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "commentReference")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CommentReference : MarkupType
 {
@@ -971,6 +995,7 @@ public abstract partial class MarkupType : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "pStyle")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ParagraphStyleId : StringType
 {
@@ -998,6 +1023,7 @@ public partial class ParagraphStyleId : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "dateFormat")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DateFormat : StringType
 {
@@ -1025,6 +1051,7 @@ public partial class DateFormat : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "docPartGallery")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DocPartGallery : StringType
 {
@@ -1052,6 +1079,7 @@ public partial class DocPartGallery : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "docPartCategory")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DocPartCategory : StringType
 {
@@ -1079,6 +1107,7 @@ public partial class DocPartCategory : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "docPart")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DocPartReference : StringType
 {
@@ -1106,6 +1135,7 @@ public partial class DocPartReference : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "placeholder")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CustomXmlPlaceholder : StringType
 {
@@ -1133,6 +1163,7 @@ public partial class CustomXmlPlaceholder : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "tblCaption")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TableCaption : StringType
 {
@@ -1160,6 +1191,7 @@ public partial class TableCaption : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "tblDescription")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TableDescription : StringType
 {
@@ -1187,6 +1219,7 @@ public partial class TableDescription : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "name")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Name : StringType
 {
@@ -1214,6 +1247,7 @@ public partial class Name : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "mappedName")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MappedName : StringType
 {
@@ -1241,6 +1275,7 @@ public partial class MappedName : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "udl")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UdlConnectionString : StringType
 {
@@ -1268,6 +1303,7 @@ public partial class UdlConnectionString : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "table")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DataSourceTableName : StringType
 {
@@ -1295,6 +1331,7 @@ public partial class DataSourceTableName : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "connectString")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ConnectString : StringType
 {
@@ -1322,6 +1359,7 @@ public partial class ConnectString : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "query")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Query : StringType
 {
@@ -1349,6 +1387,7 @@ public partial class Query : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "addressFieldName")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AddressFieldName : StringType
 {
@@ -1376,6 +1415,7 @@ public partial class AddressFieldName : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "mailSubject")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MailSubject : StringType
 {
@@ -1403,6 +1443,7 @@ public partial class MailSubject : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "sz")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FrameSize : StringType
 {
@@ -1430,6 +1471,7 @@ public partial class FrameSize : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "style")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StyleId : StringType
 {
@@ -1457,6 +1499,7 @@ public partial class StyleId : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "description")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Description : StringType
 {
@@ -1484,6 +1527,7 @@ public partial class Description : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "alias")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SdtAlias : StringType
 {
@@ -1511,6 +1555,7 @@ public partial class SdtAlias : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "tag")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Tag : StringType
 {
@@ -1538,6 +1583,7 @@ public partial class Tag : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "attachedSchema")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AttachedSchema : StringType
 {
@@ -1565,6 +1611,7 @@ public partial class AttachedSchema : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "decimalSymbol")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DecimalSymbol : StringType
 {
@@ -1592,6 +1639,7 @@ public partial class DecimalSymbol : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "listSeparator")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ListSeparator : StringType
 {
@@ -1619,6 +1667,7 @@ public partial class ListSeparator : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "encoding")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WebPageEncoding : StringType
 {
@@ -1646,6 +1695,7 @@ public partial class WebPageEncoding : StringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "altName")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AltName : StringType
 {
@@ -1702,6 +1752,7 @@ public abstract partial class StringType : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "keepNext")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class KeepNext : OnOffType
 {
@@ -1729,6 +1780,7 @@ public partial class KeepNext : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "keepLines")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class KeepLines : OnOffType
 {
@@ -1756,6 +1808,7 @@ public partial class KeepLines : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "pageBreakBefore")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PageBreakBefore : OnOffType
 {
@@ -1783,6 +1836,7 @@ public partial class PageBreakBefore : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "widowControl")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WidowControl : OnOffType
 {
@@ -1810,6 +1864,7 @@ public partial class WidowControl : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "suppressLineNumbers")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SuppressLineNumbers : OnOffType
 {
@@ -1837,6 +1892,7 @@ public partial class SuppressLineNumbers : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "suppressAutoHyphens")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SuppressAutoHyphens : OnOffType
 {
@@ -1864,6 +1920,7 @@ public partial class SuppressAutoHyphens : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "kinsoku")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Kinsoku : OnOffType
 {
@@ -1891,6 +1948,7 @@ public partial class Kinsoku : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "wordWrap")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WordWrap : OnOffType
 {
@@ -1918,6 +1976,7 @@ public partial class WordWrap : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "overflowPunct")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OverflowPunctuation : OnOffType
 {
@@ -1945,6 +2004,7 @@ public partial class OverflowPunctuation : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "topLinePunct")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TopLinePunctuation : OnOffType
 {
@@ -1972,6 +2032,7 @@ public partial class TopLinePunctuation : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "autoSpaceDE")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoSpaceDE : OnOffType
 {
@@ -1999,6 +2060,7 @@ public partial class AutoSpaceDE : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "autoSpaceDN")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoSpaceDN : OnOffType
 {
@@ -2026,6 +2088,7 @@ public partial class AutoSpaceDN : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "bidi")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BiDi : OnOffType
 {
@@ -2053,6 +2116,7 @@ public partial class BiDi : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "adjustRightInd")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AdjustRightIndent : OnOffType
 {
@@ -2080,6 +2144,7 @@ public partial class AdjustRightIndent : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "snapToGrid")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SnapToGrid : OnOffType
 {
@@ -2107,6 +2172,7 @@ public partial class SnapToGrid : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "contextualSpacing")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ContextualSpacing : OnOffType
 {
@@ -2134,6 +2200,7 @@ public partial class ContextualSpacing : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "mirrorIndents")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MirrorIndents : OnOffType
 {
@@ -2161,6 +2228,7 @@ public partial class MirrorIndents : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "suppressOverlap")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SuppressOverlap : OnOffType
 {
@@ -2188,6 +2256,7 @@ public partial class SuppressOverlap : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "b")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Bold : OnOffType
 {
@@ -2215,6 +2284,7 @@ public partial class Bold : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "bCs")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BoldComplexScript : OnOffType
 {
@@ -2242,6 +2312,7 @@ public partial class BoldComplexScript : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "i")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Italic : OnOffType
 {
@@ -2269,6 +2340,7 @@ public partial class Italic : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "iCs")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ItalicComplexScript : OnOffType
 {
@@ -2296,6 +2368,7 @@ public partial class ItalicComplexScript : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "caps")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Caps : OnOffType
 {
@@ -2323,6 +2396,7 @@ public partial class Caps : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "smallCaps")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SmallCaps : OnOffType
 {
@@ -2350,6 +2424,7 @@ public partial class SmallCaps : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "strike")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Strike : OnOffType
 {
@@ -2377,6 +2452,7 @@ public partial class Strike : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "dstrike")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoubleStrike : OnOffType
 {
@@ -2404,6 +2480,7 @@ public partial class DoubleStrike : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "outline")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Outline : OnOffType
 {
@@ -2431,6 +2508,7 @@ public partial class Outline : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "shadow")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Shadow : OnOffType
 {
@@ -2458,6 +2536,7 @@ public partial class Shadow : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "emboss")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Emboss : OnOffType
 {
@@ -2485,6 +2564,7 @@ public partial class Emboss : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "imprint")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Imprint : OnOffType
 {
@@ -2512,6 +2592,7 @@ public partial class Imprint : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "noProof")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NoProof : OnOffType
 {
@@ -2539,6 +2620,7 @@ public partial class NoProof : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "vanish")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Vanish : OnOffType
 {
@@ -2566,6 +2648,7 @@ public partial class Vanish : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "webHidden")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WebHidden : OnOffType
 {
@@ -2593,6 +2676,7 @@ public partial class WebHidden : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "rtl")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RightToLeftText : OnOffType
 {
@@ -2620,6 +2704,7 @@ public partial class RightToLeftText : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "cs")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ComplexScript : OnOffType
 {
@@ -2647,6 +2732,7 @@ public partial class ComplexScript : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "specVanish")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SpecVanish : OnOffType
 {
@@ -2674,6 +2760,7 @@ public partial class SpecVanish : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "oMath")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OfficeMath : OnOffType
 {
@@ -2701,6 +2788,7 @@ public partial class OfficeMath : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "hidden")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Hidden : OnOffType
 {
@@ -2728,6 +2816,7 @@ public partial class Hidden : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "formProt")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormProtection : OnOffType
 {
@@ -2755,6 +2844,7 @@ public partial class FormProtection : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "noEndnote")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NoEndnote : OnOffType
 {
@@ -2782,6 +2872,7 @@ public partial class NoEndnote : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "titlePg")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TitlePage : OnOffType
 {
@@ -2809,6 +2900,7 @@ public partial class TitlePage : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "rtlGutter")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GutterOnRight : OnOffType
 {
@@ -2836,6 +2928,7 @@ public partial class GutterOnRight : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "enabled")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Enabled : OnOffType
 {
@@ -2863,6 +2956,7 @@ public partial class Enabled : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "calcOnExit")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CalculateOnExit : OnOffType
 {
@@ -2890,6 +2984,7 @@ public partial class CalculateOnExit : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "sizeAuto")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutomaticallySizeFormField : OnOffType
 {
@@ -2917,6 +3012,7 @@ public partial class AutomaticallySizeFormField : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "default")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DefaultCheckBoxFormFieldState : OnOffType
 {
@@ -2944,6 +3040,7 @@ public partial class DefaultCheckBoxFormFieldState : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "checked")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Checked : OnOffType
 {
@@ -2971,6 +3068,7 @@ public partial class Checked : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "matchSrc")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MatchSource : OnOffType
 {
@@ -2998,6 +3096,7 @@ public partial class MatchSource : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "dirty")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Dirty : OnOffType
 {
@@ -3025,6 +3124,7 @@ public partial class Dirty : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "docPartUnique")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DocPartUnique : OnOffType
 {
@@ -3052,6 +3152,7 @@ public partial class DocPartUnique : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "active")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Active : OnOffType
 {
@@ -3079,6 +3180,7 @@ public partial class Active : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "dynamicAddress")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DynamicAddress : OnOffType
 {
@@ -3106,6 +3208,7 @@ public partial class DynamicAddress : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "fHdr")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FirstRowHeader : OnOffType
 {
@@ -3133,6 +3236,7 @@ public partial class FirstRowHeader : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "linkToQuery")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LinkToQuery : OnOffType
 {
@@ -3160,6 +3264,7 @@ public partial class LinkToQuery : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotSuppressBlankLines")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotSuppressBlankLines : OnOffType
 {
@@ -3187,6 +3292,7 @@ public partial class DoNotSuppressBlankLines : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "mailAsAttachment")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MailAsAttachment : OnOffType
 {
@@ -3214,6 +3320,7 @@ public partial class MailAsAttachment : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "viewMergedData")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ViewMergedData : OnOffType
 {
@@ -3241,6 +3348,7 @@ public partial class ViewMergedData : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "isLgl")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class IsLegalNumberingStyle : OnOffType
 {
@@ -3268,6 +3376,7 @@ public partial class IsLegalNumberingStyle : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "blockQuote")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BlockQuote : OnOffType
 {
@@ -3295,6 +3404,7 @@ public partial class BlockQuote : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "bodyDiv")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BodyDiv : OnOffType
 {
@@ -3322,6 +3432,7 @@ public partial class BodyDiv : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "useSingleBorderforContiguousCells")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UseSingleBorderForContiguousCells : OnOffType
 {
@@ -3349,6 +3460,7 @@ public partial class UseSingleBorderForContiguousCells : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "wpJustification")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WordPerfectJustification : OnOffType
 {
@@ -3376,6 +3488,7 @@ public partial class WordPerfectJustification : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "noTabHangInd")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NoTabHangIndent : OnOffType
 {
@@ -3403,6 +3516,7 @@ public partial class NoTabHangIndent : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "noLeading")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NoLeading : OnOffType
 {
@@ -3430,6 +3544,7 @@ public partial class NoLeading : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "spaceForUL")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SpaceForUnderline : OnOffType
 {
@@ -3457,6 +3572,7 @@ public partial class SpaceForUnderline : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "noColumnBalance")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NoColumnBalance : OnOffType
 {
@@ -3484,6 +3600,7 @@ public partial class NoColumnBalance : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "balanceSingleByteDoubleByteWidth")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BalanceSingleByteDoubleByteWidth : OnOffType
 {
@@ -3511,6 +3628,7 @@ public partial class BalanceSingleByteDoubleByteWidth : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "noExtraLineSpacing")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NoExtraLineSpacing : OnOffType
 {
@@ -3538,6 +3656,7 @@ public partial class NoExtraLineSpacing : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotLeaveBackslashAlone")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotLeaveBackslashAlone : OnOffType
 {
@@ -3565,6 +3684,7 @@ public partial class DoNotLeaveBackslashAlone : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "ulTrailSpace")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UnderlineTrailingSpaces : OnOffType
 {
@@ -3592,6 +3712,7 @@ public partial class UnderlineTrailingSpaces : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotExpandShiftReturn")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotExpandShiftReturn : OnOffType
 {
@@ -3619,6 +3740,7 @@ public partial class DoNotExpandShiftReturn : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "spacingInWholePoints")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SpacingInWholePoints : OnOffType
 {
@@ -3646,6 +3768,7 @@ public partial class SpacingInWholePoints : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "lineWrapLikeWord6")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LineWrapLikeWord6 : OnOffType
 {
@@ -3673,6 +3796,7 @@ public partial class LineWrapLikeWord6 : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "printBodyTextBeforeHeader")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PrintBodyTextBeforeHeader : OnOffType
 {
@@ -3700,6 +3824,7 @@ public partial class PrintBodyTextBeforeHeader : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "printColBlack")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PrintColorBlackWhite : OnOffType
 {
@@ -3727,6 +3852,7 @@ public partial class PrintColorBlackWhite : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "wpSpaceWidth")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WordPerfectSpaceWidth : OnOffType
 {
@@ -3754,6 +3880,7 @@ public partial class WordPerfectSpaceWidth : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "showBreaksInFrames")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowBreaksInFrames : OnOffType
 {
@@ -3781,6 +3908,7 @@ public partial class ShowBreaksInFrames : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "subFontBySize")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SubFontBySize : OnOffType
 {
@@ -3808,6 +3936,7 @@ public partial class SubFontBySize : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "suppressBottomSpacing")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SuppressBottomSpacing : OnOffType
 {
@@ -3835,6 +3964,7 @@ public partial class SuppressBottomSpacing : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "suppressTopSpacing")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SuppressTopSpacing : OnOffType
 {
@@ -3862,6 +3992,7 @@ public partial class SuppressTopSpacing : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "suppressSpacingAtTopOfPage")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SuppressSpacingAtTopOfPage : OnOffType
 {
@@ -3889,6 +4020,7 @@ public partial class SuppressSpacingAtTopOfPage : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "suppressTopSpacingWP")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SuppressTopSpacingWordPerfect : OnOffType
 {
@@ -3916,6 +4048,7 @@ public partial class SuppressTopSpacingWordPerfect : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "suppressSpBfAfterPgBrk")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SuppressSpacingBeforeAfterPageBreak : OnOffType
 {
@@ -3943,6 +4076,7 @@ public partial class SuppressSpacingBeforeAfterPageBreak : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "swapBordersFacingPages")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SwapBordersFacingPages : OnOffType
 {
@@ -3970,6 +4104,7 @@ public partial class SwapBordersFacingPages : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "convMailMergeEsc")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ConvertMailMergeEscape : OnOffType
 {
@@ -3997,6 +4132,7 @@ public partial class ConvertMailMergeEscape : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "truncateFontHeightsLikeWP6")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TruncateFontHeightsLikeWordPerfect : OnOffType
 {
@@ -4024,6 +4160,7 @@ public partial class TruncateFontHeightsLikeWordPerfect : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "mwSmallCaps")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MacWordSmallCaps : OnOffType
 {
@@ -4051,6 +4188,7 @@ public partial class MacWordSmallCaps : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "usePrinterMetrics")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UsePrinterMetrics : OnOffType
 {
@@ -4078,6 +4216,7 @@ public partial class UsePrinterMetrics : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotSuppressParagraphBorders")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotSuppressParagraphBorders : OnOffType
 {
@@ -4105,6 +4244,7 @@ public partial class DoNotSuppressParagraphBorders : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "wrapTrailSpaces")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WrapTrailSpaces : OnOffType
 {
@@ -4132,6 +4272,7 @@ public partial class WrapTrailSpaces : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "footnoteLayoutLikeWW8")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FootnoteLayoutLikeWord8 : OnOffType
 {
@@ -4159,6 +4300,7 @@ public partial class FootnoteLayoutLikeWord8 : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "shapeLayoutLikeWW8")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShapeLayoutLikeWord8 : OnOffType
 {
@@ -4186,6 +4328,7 @@ public partial class ShapeLayoutLikeWord8 : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "alignTablesRowByRow")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AlignTablesRowByRow : OnOffType
 {
@@ -4213,6 +4356,7 @@ public partial class AlignTablesRowByRow : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "forgetLastTabAlignment")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ForgetLastTabAlignment : OnOffType
 {
@@ -4240,6 +4384,7 @@ public partial class ForgetLastTabAlignment : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "adjustLineHeightInTable")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AdjustLineHeightInTable : OnOffType
 {
@@ -4267,6 +4412,7 @@ public partial class AdjustLineHeightInTable : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "autoSpaceLikeWord95")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoSpaceLikeWord95 : OnOffType
 {
@@ -4294,6 +4440,7 @@ public partial class AutoSpaceLikeWord95 : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "noSpaceRaiseLower")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NoSpaceRaiseLower : OnOffType
 {
@@ -4321,6 +4468,7 @@ public partial class NoSpaceRaiseLower : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotUseHTMLParagraphAutoSpacing")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotUseHTMLParagraphAutoSpacing : OnOffType
 {
@@ -4348,6 +4496,7 @@ public partial class DoNotUseHTMLParagraphAutoSpacing : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "layoutRawTableWidth")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LayoutRawTableWidth : OnOffType
 {
@@ -4375,6 +4524,7 @@ public partial class LayoutRawTableWidth : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "layoutTableRowsApart")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LayoutTableRowsApart : OnOffType
 {
@@ -4402,6 +4552,7 @@ public partial class LayoutTableRowsApart : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "useWord97LineBreakRules")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UseWord97LineBreakRules : OnOffType
 {
@@ -4429,6 +4580,7 @@ public partial class UseWord97LineBreakRules : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotBreakWrappedTables")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotBreakWrappedTables : OnOffType
 {
@@ -4456,6 +4608,7 @@ public partial class DoNotBreakWrappedTables : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotSnapToGridInCell")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotSnapToGridInCell : OnOffType
 {
@@ -4483,6 +4636,7 @@ public partial class DoNotSnapToGridInCell : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "selectFldWithFirstOrLastChar")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SelectFieldWithFirstOrLastChar : OnOffType
 {
@@ -4510,6 +4664,7 @@ public partial class SelectFieldWithFirstOrLastChar : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "applyBreakingRules")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ApplyBreakingRules : OnOffType
 {
@@ -4537,6 +4692,7 @@ public partial class ApplyBreakingRules : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotWrapTextWithPunct")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotWrapTextWithPunctuation : OnOffType
 {
@@ -4564,6 +4720,7 @@ public partial class DoNotWrapTextWithPunctuation : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotUseEastAsianBreakRules")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotUseEastAsianBreakRules : OnOffType
 {
@@ -4591,6 +4748,7 @@ public partial class DoNotUseEastAsianBreakRules : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "useWord2002TableStyleRules")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UseWord2002TableStyleRules : OnOffType
 {
@@ -4618,6 +4776,7 @@ public partial class UseWord2002TableStyleRules : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "growAutofit")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GrowAutofit : OnOffType
 {
@@ -4645,6 +4804,7 @@ public partial class GrowAutofit : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "useFELayout")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UseFarEastLayout : OnOffType
 {
@@ -4672,6 +4832,7 @@ public partial class UseFarEastLayout : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "useNormalStyleForList")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UseNormalStyleForList : OnOffType
 {
@@ -4699,6 +4860,7 @@ public partial class UseNormalStyleForList : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotUseIndentAsNumberingTabStop")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotUseIndentAsNumberingTabStop : OnOffType
 {
@@ -4726,6 +4888,7 @@ public partial class DoNotUseIndentAsNumberingTabStop : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "useAltKinsokuLineBreakRules")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UseAltKinsokuLineBreakRules : OnOffType
 {
@@ -4753,6 +4916,7 @@ public partial class UseAltKinsokuLineBreakRules : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "allowSpaceOfSameStyleInTable")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AllowSpaceOfSameStyleInTable : OnOffType
 {
@@ -4780,6 +4944,7 @@ public partial class AllowSpaceOfSameStyleInTable : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotSuppressIndentation")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotSuppressIndentation : OnOffType
 {
@@ -4807,6 +4972,7 @@ public partial class DoNotSuppressIndentation : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotAutofitConstrainedTables")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotAutofitConstrainedTables : OnOffType
 {
@@ -4834,6 +5000,7 @@ public partial class DoNotAutofitConstrainedTables : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "autofitToFirstFixedWidthCell")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutofitToFirstFixedWidthCell : OnOffType
 {
@@ -4861,6 +5028,7 @@ public partial class AutofitToFirstFixedWidthCell : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "underlineTabInNumList")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UnderlineTabInNumberingList : OnOffType
 {
@@ -4888,6 +5056,7 @@ public partial class UnderlineTabInNumberingList : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "displayHangulFixedWidth")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DisplayHangulFixedWidth : OnOffType
 {
@@ -4915,6 +5084,7 @@ public partial class DisplayHangulFixedWidth : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "splitPgBreakAndParaMark")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SplitPageBreakAndParagraphMark : OnOffType
 {
@@ -4942,6 +5112,7 @@ public partial class SplitPageBreakAndParagraphMark : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotVertAlignCellWithSp")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotVerticallyAlignCellWithShape : OnOffType
 {
@@ -4969,6 +5140,7 @@ public partial class DoNotVerticallyAlignCellWithShape : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotBreakConstrainedForcedTable")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotBreakConstrainedForcedTable : OnOffType
 {
@@ -4996,6 +5168,7 @@ public partial class DoNotBreakConstrainedForcedTable : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotVertAlignInTxbx")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotVerticallyAlignInTextBox : OnOffType
 {
@@ -5023,6 +5196,7 @@ public partial class DoNotVerticallyAlignInTextBox : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "useAnsiKerningPairs")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UseAnsiKerningPairs : OnOffType
 {
@@ -5050,6 +5224,7 @@ public partial class UseAnsiKerningPairs : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "cachedColBalance")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CachedColumnBalance : OnOffType
 {
@@ -5077,6 +5252,7 @@ public partial class CachedColumnBalance : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "showingPlcHdr")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowingPlaceholder : OnOffType
 {
@@ -5104,6 +5280,7 @@ public partial class ShowingPlaceholder : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "temporary")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TemporarySdt : OnOffType
 {
@@ -5131,6 +5308,7 @@ public partial class TemporarySdt : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "removePersonalInformation")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RemovePersonalInformation : OnOffType
 {
@@ -5158,6 +5336,7 @@ public partial class RemovePersonalInformation : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "removeDateAndTime")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RemoveDateAndTime : OnOffType
 {
@@ -5185,6 +5364,7 @@ public partial class RemoveDateAndTime : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotDisplayPageBoundaries")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotDisplayPageBoundaries : OnOffType
 {
@@ -5212,6 +5392,7 @@ public partial class DoNotDisplayPageBoundaries : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "displayBackgroundShape")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DisplayBackgroundShape : OnOffType
 {
@@ -5239,6 +5420,7 @@ public partial class DisplayBackgroundShape : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "printPostScriptOverText")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PrintPostScriptOverText : OnOffType
 {
@@ -5266,6 +5448,7 @@ public partial class PrintPostScriptOverText : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "printFractionalCharacterWidth")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PrintFractionalCharacterWidth : OnOffType
 {
@@ -5293,6 +5476,7 @@ public partial class PrintFractionalCharacterWidth : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "printFormsData")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PrintFormsData : OnOffType
 {
@@ -5320,6 +5504,7 @@ public partial class PrintFormsData : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "embedTrueTypeFonts")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EmbedTrueTypeFonts : OnOffType
 {
@@ -5347,6 +5532,7 @@ public partial class EmbedTrueTypeFonts : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "embedSystemFonts")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EmbedSystemFonts : OnOffType
 {
@@ -5374,6 +5560,7 @@ public partial class EmbedSystemFonts : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "saveSubsetFonts")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SaveSubsetFonts : OnOffType
 {
@@ -5401,6 +5588,7 @@ public partial class SaveSubsetFonts : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "saveFormsData")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SaveFormsData : OnOffType
 {
@@ -5428,6 +5616,7 @@ public partial class SaveFormsData : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "mirrorMargins")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MirrorMargins : OnOffType
 {
@@ -5455,6 +5644,7 @@ public partial class MirrorMargins : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "alignBordersAndEdges")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AlignBorderAndEdges : OnOffType
 {
@@ -5482,6 +5672,7 @@ public partial class AlignBorderAndEdges : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "bordersDoNotSurroundHeader")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BordersDoNotSurroundHeader : OnOffType
 {
@@ -5509,6 +5700,7 @@ public partial class BordersDoNotSurroundHeader : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "bordersDoNotSurroundFooter")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BordersDoNotSurroundFooter : OnOffType
 {
@@ -5536,6 +5728,7 @@ public partial class BordersDoNotSurroundFooter : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "gutterAtTop")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GutterAtTop : OnOffType
 {
@@ -5563,6 +5756,7 @@ public partial class GutterAtTop : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "hideSpellingErrors")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HideSpellingErrors : OnOffType
 {
@@ -5590,6 +5784,7 @@ public partial class HideSpellingErrors : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "hideGrammaticalErrors")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HideGrammaticalErrors : OnOffType
 {
@@ -5617,6 +5812,7 @@ public partial class HideGrammaticalErrors : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "formsDesign")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormsDesign : OnOffType
 {
@@ -5644,6 +5840,7 @@ public partial class FormsDesign : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "linkStyles")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LinkStyles : OnOffType
 {
@@ -5671,6 +5868,7 @@ public partial class LinkStyles : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "trackRevisions")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TrackRevisions : OnOffType
 {
@@ -5698,6 +5896,7 @@ public partial class TrackRevisions : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotTrackMoves")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotTrackMoves : OnOffType
 {
@@ -5725,6 +5924,7 @@ public partial class DoNotTrackMoves : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotTrackFormatting")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotTrackFormatting : OnOffType
 {
@@ -5752,6 +5952,7 @@ public partial class DoNotTrackFormatting : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "autoFormatOverride")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoFormatOverride : OnOffType
 {
@@ -5779,6 +5980,7 @@ public partial class AutoFormatOverride : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "styleLockTheme")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StyleLockThemesPart : OnOffType
 {
@@ -5806,6 +6008,7 @@ public partial class StyleLockThemesPart : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "styleLockQFSet")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StyleLockStylesPart : OnOffType
 {
@@ -5833,6 +6036,7 @@ public partial class StyleLockStylesPart : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "autoHyphenation")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoHyphenation : OnOffType
 {
@@ -5860,6 +6064,7 @@ public partial class AutoHyphenation : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotHyphenateCaps")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotHyphenateCaps : OnOffType
 {
@@ -5887,6 +6092,7 @@ public partial class DoNotHyphenateCaps : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "showEnvelope")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowEnvelope : OnOffType
 {
@@ -5914,6 +6120,7 @@ public partial class ShowEnvelope : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "evenAndOddHeaders")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EvenAndOddHeaders : OnOffType
 {
@@ -5941,6 +6148,7 @@ public partial class EvenAndOddHeaders : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "bookFoldRevPrinting")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BookFoldReversePrinting : OnOffType
 {
@@ -5968,6 +6176,7 @@ public partial class BookFoldReversePrinting : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "bookFoldPrinting")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BookFoldPrinting : OnOffType
 {
@@ -5995,6 +6204,7 @@ public partial class BookFoldPrinting : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotUseMarginsForDrawingGridOrigin")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotUseMarginsForDrawingGridOrigin : OnOffType
 {
@@ -6022,6 +6232,7 @@ public partial class DoNotUseMarginsForDrawingGridOrigin : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotShadeFormData")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotShadeFormData : OnOffType
 {
@@ -6049,6 +6260,7 @@ public partial class DoNotShadeFormData : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "noPunctuationKerning")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NoPunctuationKerning : OnOffType
 {
@@ -6076,6 +6288,7 @@ public partial class NoPunctuationKerning : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "printTwoOnOne")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PrintTwoOnOne : OnOffType
 {
@@ -6103,6 +6316,7 @@ public partial class PrintTwoOnOne : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "strictFirstAndLastChars")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StrictFirstAndLastChars : OnOffType
 {
@@ -6130,6 +6344,7 @@ public partial class StrictFirstAndLastChars : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "savePreviewPicture")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SavePreviewPicture : OnOffType
 {
@@ -6157,6 +6372,7 @@ public partial class SavePreviewPicture : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotValidateAgainstSchema")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotValidateAgainstSchema : OnOffType
 {
@@ -6184,6 +6400,7 @@ public partial class DoNotValidateAgainstSchema : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "saveInvalidXml")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SaveInvalidXml : OnOffType
 {
@@ -6211,6 +6428,7 @@ public partial class SaveInvalidXml : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "ignoreMixedContent")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class IgnoreMixedContent : OnOffType
 {
@@ -6238,6 +6456,7 @@ public partial class IgnoreMixedContent : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "alwaysShowPlaceholderText")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AlwaysShowPlaceholderText : OnOffType
 {
@@ -6265,6 +6484,7 @@ public partial class AlwaysShowPlaceholderText : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotDemarcateInvalidXml")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotDemarcateInvalidXml : OnOffType
 {
@@ -6292,6 +6512,7 @@ public partial class DoNotDemarcateInvalidXml : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "saveXmlDataOnly")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SaveXmlDataOnly : OnOffType
 {
@@ -6319,6 +6540,7 @@ public partial class SaveXmlDataOnly : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "useXSLTWhenSaving")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UseXsltWhenSaving : OnOffType
 {
@@ -6346,6 +6568,7 @@ public partial class UseXsltWhenSaving : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "showXMLTags")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowXmlTags : OnOffType
 {
@@ -6373,6 +6596,7 @@ public partial class ShowXmlTags : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "alwaysMergeEmptyNamespace")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AlwaysMergeEmptyNamespace : OnOffType
 {
@@ -6400,6 +6624,7 @@ public partial class AlwaysMergeEmptyNamespace : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "updateFields")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UpdateFieldsOnOpen : OnOffType
 {
@@ -6427,6 +6652,7 @@ public partial class UpdateFieldsOnOpen : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "uiCompat97To2003")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UICompatibleWith97To2003 : OnOffType
 {
@@ -6454,6 +6680,7 @@ public partial class UICompatibleWith97To2003 : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotIncludeSubdocsInStats")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotIncludeSubdocsInStats : OnOffType
 {
@@ -6481,6 +6708,7 @@ public partial class DoNotIncludeSubdocsInStats : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotAutoCompressPictures")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotAutoCompressPictures : OnOffType
 {
@@ -6508,6 +6736,7 @@ public partial class DoNotAutoCompressPictures : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "optimizeForBrowser")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OptimizeForBrowser : OnOffType
 {
@@ -6535,6 +6764,7 @@ public partial class OptimizeForBrowser : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "relyOnVML")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RelyOnVML : OnOffType
 {
@@ -6562,6 +6792,7 @@ public partial class RelyOnVML : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "allowPNG")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AllowPNG : OnOffType
 {
@@ -6589,6 +6820,7 @@ public partial class AllowPNG : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotRelyOnCSS")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotRelyOnCSS : OnOffType
 {
@@ -6616,6 +6848,7 @@ public partial class DoNotRelyOnCSS : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotSaveAsSingleFile")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotSaveAsSingleFile : OnOffType
 {
@@ -6643,6 +6876,7 @@ public partial class DoNotSaveAsSingleFile : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotOrganizeInFolder")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotOrganizeInFolder : OnOffType
 {
@@ -6670,6 +6904,7 @@ public partial class DoNotOrganizeInFolder : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "doNotUseLongFileNames")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DoNotUseLongFileNames : OnOffType
 {
@@ -6697,6 +6932,7 @@ public partial class DoNotUseLongFileNames : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "notTrueType")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NotTrueType : OnOffType
 {
@@ -6754,6 +6990,7 @@ public abstract partial class OnOffType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "framePr")]
 public partial class FrameProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11560;
@@ -6936,6 +7173,7 @@ public partial class FrameProperties : OpenXmlLeafElement
     [ChildElementInfo(typeof(Inserted))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "numPr")]
 public partial class NumberingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11562;
@@ -6978,28 +7216,11 @@ public partial class NumberingProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "ilvl" == name)
-    return new NumberingLevelReference();
     
-if( 23 == namespaceId && "numId" == name)
-    return new NumberingId();
-    
-if( 23 == namespaceId && "numberingChange" == name)
-    return new NumberingChange();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new Inserted();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "ilvl","numId","numberingChange","ins" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23 };
     
@@ -7020,6 +7241,7 @@ if( 23 == namespaceId && "ins" == name)
         get => GetElement<NumberingLevelReference>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Numbering Definition Instance Reference.</para>
     /// <para> Represents the following element tag in the schema: w:numId </para>
@@ -7032,6 +7254,7 @@ if( 23 == namespaceId && "ins" == name)
         get => GetElement<NumberingId>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Previous Paragraph Numbering Properties.</para>
     /// <para> Represents the following element tag in the schema: w:numberingChange </para>
@@ -7044,6 +7267,7 @@ if( 23 == namespaceId && "ins" == name)
         get => GetElement<NumberingChange>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Inserted Numbering Properties.</para>
     /// <para> Represents the following element tag in the schema: w:ins </para>
@@ -7056,6 +7280,7 @@ if( 23 == namespaceId && "ins" == name)
         get => GetElement<Inserted>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -7087,6 +7312,7 @@ if( 23 == namespaceId && "ins" == name)
     [ChildElementInfo(typeof(BarBorder))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "pBdr")]
 public partial class ParagraphBorders : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11564;
@@ -7129,34 +7355,11 @@ public partial class ParagraphBorders : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "top" == name)
-    return new TopBorder();
     
-if( 23 == namespaceId && "left" == name)
-    return new LeftBorder();
-    
-if( 23 == namespaceId && "bottom" == name)
-    return new BottomBorder();
-    
-if( 23 == namespaceId && "right" == name)
-    return new RightBorder();
-    
-if( 23 == namespaceId && "between" == name)
-    return new BetweenBorder();
-    
-if( 23 == namespaceId && "bar" == name)
-    return new BarBorder();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "top","left","bottom","right","between","bar" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23 };
     
@@ -7177,6 +7380,7 @@ if( 23 == namespaceId && "bar" == name)
         get => GetElement<TopBorder>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Left Paragraph Border.</para>
     /// <para> Represents the following element tag in the schema: w:left </para>
@@ -7189,6 +7393,7 @@ if( 23 == namespaceId && "bar" == name)
         get => GetElement<LeftBorder>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Paragraph Border Between Identical Paragraphs.</para>
     /// <para> Represents the following element tag in the schema: w:bottom </para>
@@ -7201,6 +7406,7 @@ if( 23 == namespaceId && "bar" == name)
         get => GetElement<BottomBorder>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Right Paragraph Border.</para>
     /// <para> Represents the following element tag in the schema: w:right </para>
@@ -7213,6 +7419,7 @@ if( 23 == namespaceId && "bar" == name)
         get => GetElement<RightBorder>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Paragraph Border Between Identical Paragraphs.</para>
     /// <para> Represents the following element tag in the schema: w:between </para>
@@ -7225,6 +7432,7 @@ if( 23 == namespaceId && "bar" == name)
         get => GetElement<BetweenBorder>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Paragraph Border Between Facing Pages.</para>
     /// <para> Represents the following element tag in the schema: w:bar </para>
@@ -7237,6 +7445,7 @@ if( 23 == namespaceId && "bar" == name)
         get => GetElement<BarBorder>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -7251,6 +7460,7 @@ if( 23 == namespaceId && "bar" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "shd")]
 public partial class Shading : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11565;
@@ -7373,6 +7583,7 @@ public partial class Shading : OpenXmlLeafElement
     [ChildElementInfo(typeof(TabStop))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tabs")]
 public partial class Tabs : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11566;
@@ -7415,19 +7626,11 @@ public partial class Tabs : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "tab" == name)
-    return new TabStop();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tabs>(deep);
@@ -7441,6 +7644,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "spacing")]
 public partial class SpacingBetweenLines : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11577;
@@ -7547,6 +7751,7 @@ public partial class SpacingBetweenLines : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "ind")]
 public partial class Indentation : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11578;
@@ -7689,6 +7894,7 @@ public partial class Indentation : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "jc")]
 public partial class Justification : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11582;
@@ -7732,6 +7938,7 @@ public partial class Justification : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "textDirection")]
 public partial class TextDirection : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11583;
@@ -7775,6 +7982,7 @@ public partial class TextDirection : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "textAlignment")]
 public partial class TextAlignment : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11584;
@@ -7818,6 +8026,7 @@ public partial class TextAlignment : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "textboxTightWrap")]
 public partial class TextBoxTightWrap : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11585;
@@ -7860,6 +8069,7 @@ public partial class TextBoxTightWrap : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "outlineLvl")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OutlineLevel : DecimalNumberType
 {
@@ -7887,6 +8097,7 @@ public partial class OutlineLevel : DecimalNumberType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "gridSpan")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GridSpan : DecimalNumberType
 {
@@ -7914,6 +8125,7 @@ public partial class GridSpan : DecimalNumberType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "gridBefore")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GridBefore : DecimalNumberType
 {
@@ -7941,6 +8153,7 @@ public partial class GridBefore : DecimalNumberType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "gridAfter")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GridAfter : DecimalNumberType
 {
@@ -7968,6 +8181,7 @@ public partial class GridAfter : DecimalNumberType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "result")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DropDownListSelection : DecimalNumberType
 {
@@ -7995,6 +8209,7 @@ public partial class DropDownListSelection : DecimalNumberType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "activeRecord")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ActiveRecord : DecimalNumberType
 {
@@ -8022,6 +8237,7 @@ public partial class ActiveRecord : DecimalNumberType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "checkErrors")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CheckErrors : DecimalNumberType
 {
@@ -8049,6 +8265,7 @@ public partial class CheckErrors : DecimalNumberType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "lvlRestart")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LevelRestart : DecimalNumberType
 {
@@ -8076,6 +8293,7 @@ public partial class LevelRestart : DecimalNumberType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "lvlPicBulletId")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LevelPictureBulletId : DecimalNumberType
 {
@@ -8103,6 +8321,7 @@ public partial class LevelPictureBulletId : DecimalNumberType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "startOverride")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StartOverrideNumberingValue : DecimalNumberType
 {
@@ -8130,6 +8349,7 @@ public partial class StartOverrideNumberingValue : DecimalNumberType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "numIdMacAtCleanup")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NumberingIdMacAtCleanup : DecimalNumberType
 {
@@ -8157,6 +8377,7 @@ public partial class NumberingIdMacAtCleanup : DecimalNumberType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "id")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SdtId : DecimalNumberType
 {
@@ -8184,6 +8405,7 @@ public partial class SdtId : DecimalNumberType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "pixelsPerInch")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PixelsPerInch : DecimalNumberType
 {
@@ -8248,6 +8470,7 @@ public abstract partial class DecimalNumberType : OpenXmlLeafElement
     [ChildElementInfo(typeof(ParagraphPropertiesExtended))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "pPrChange")]
 public partial class ParagraphPropertiesChange : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11587;
@@ -8317,19 +8540,11 @@ public partial class ParagraphPropertiesChange : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "pPr" == name)
-    return new ParagraphPropertiesExtended();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pPr" };
     private static readonly byte[] eleNamespaceIds = { 23 };
     
@@ -8350,6 +8565,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ParagraphPropertiesExtended>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -8363,6 +8579,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "headerReference")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HeaderReference : HeaderFooterReferenceType
 {
@@ -8390,6 +8607,7 @@ public partial class HeaderReference : HeaderFooterReferenceType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "footerReference")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FooterReference : HeaderFooterReferenceType
 {
@@ -8456,6 +8674,7 @@ public abstract partial class HeaderFooterReferenceType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "br")]
 public partial class Break : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11590;
@@ -8507,6 +8726,7 @@ public partial class Break : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "t")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Text : TextType
 {
@@ -8547,6 +8767,7 @@ public partial class Text : TextType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "delText")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DeletedText : TextType
 {
@@ -8587,6 +8808,7 @@ public partial class DeletedText : TextType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "instrText")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FieldCode : TextType
 {
@@ -8627,6 +8849,7 @@ public partial class FieldCode : TextType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "delInstrText")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DeletedFieldCode : TextType
 {
@@ -8709,6 +8932,7 @@ public abstract partial class TextType : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "noBreakHyphen")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NoBreakHyphen : EmptyType
 {
@@ -8736,6 +8960,7 @@ public partial class NoBreakHyphen : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "softHyphen")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SoftHyphen : EmptyType
 {
@@ -8763,6 +8988,7 @@ public partial class SoftHyphen : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "dayShort")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DayShort : EmptyType
 {
@@ -8790,6 +9016,7 @@ public partial class DayShort : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "monthShort")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MonthShort : EmptyType
 {
@@ -8817,6 +9044,7 @@ public partial class MonthShort : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "yearShort")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class YearShort : EmptyType
 {
@@ -8844,6 +9072,7 @@ public partial class YearShort : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "dayLong")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DayLong : EmptyType
 {
@@ -8871,6 +9100,7 @@ public partial class DayLong : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "monthLong")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MonthLong : EmptyType
 {
@@ -8898,6 +9128,7 @@ public partial class MonthLong : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "yearLong")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class YearLong : EmptyType
 {
@@ -8925,6 +9156,7 @@ public partial class YearLong : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "annotationRef")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AnnotationReferenceMark : EmptyType
 {
@@ -8952,6 +9184,7 @@ public partial class AnnotationReferenceMark : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "footnoteRef")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FootnoteReferenceMark : EmptyType
 {
@@ -8979,6 +9212,7 @@ public partial class FootnoteReferenceMark : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "endnoteRef")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EndnoteReferenceMark : EmptyType
 {
@@ -9006,6 +9240,7 @@ public partial class EndnoteReferenceMark : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "separator")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SeparatorMark : EmptyType
 {
@@ -9033,6 +9268,7 @@ public partial class SeparatorMark : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "continuationSeparator")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ContinuationSeparatorMark : EmptyType
 {
@@ -9060,6 +9296,7 @@ public partial class ContinuationSeparatorMark : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "pgNum")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PageNumber : EmptyType
 {
@@ -9087,6 +9324,7 @@ public partial class PageNumber : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "cr")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CarriageReturn : EmptyType
 {
@@ -9114,6 +9352,7 @@ public partial class CarriageReturn : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "tab")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TabChar : EmptyType
 {
@@ -9141,6 +9380,7 @@ public partial class TabChar : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "lastRenderedPageBreak")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LastRenderedPageBreak : EmptyType
 {
@@ -9168,6 +9408,7 @@ public partial class LastRenderedPageBreak : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "equation")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SdtContentEquation : EmptyType
 {
@@ -9195,6 +9436,7 @@ public partial class SdtContentEquation : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "picture")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SdtContentPicture : EmptyType
 {
@@ -9222,6 +9464,7 @@ public partial class SdtContentPicture : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "richText")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SdtContentRichText : EmptyType
 {
@@ -9249,6 +9492,7 @@ public partial class SdtContentRichText : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "citation")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SdtContentCitation : EmptyType
 {
@@ -9276,6 +9520,7 @@ public partial class SdtContentCitation : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "group")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SdtContentGroup : EmptyType
 {
@@ -9303,6 +9548,7 @@ public partial class SdtContentGroup : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "bibliography")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SdtContentBibliography : EmptyType
 {
@@ -9330,6 +9576,7 @@ public partial class SdtContentBibliography : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "forceUpgrade")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ForceUpgrade : EmptyType
 {
@@ -9378,6 +9625,7 @@ public abstract partial class EmptyType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "sym")]
 public partial class SymbolChar : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11608;
@@ -9467,6 +9715,7 @@ public partial class SymbolChar : OpenXmlLeafElement
     [ChildElementInfo(typeof(ObjectLink))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "object")]
 public partial class EmbeddedObject : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11612;
@@ -9536,64 +9785,11 @@ public partial class EmbeddedObject : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "group" == name)
-    return new DocumentFormat.OpenXml.Vml.Group();
     
-if( 26 == namespaceId && "image" == name)
-    return new DocumentFormat.OpenXml.Vml.ImageFile();
-    
-if( 26 == namespaceId && "line" == name)
-    return new DocumentFormat.OpenXml.Vml.Line();
-    
-if( 26 == namespaceId && "oval" == name)
-    return new DocumentFormat.OpenXml.Vml.Oval();
-    
-if( 26 == namespaceId && "polyline" == name)
-    return new DocumentFormat.OpenXml.Vml.PolyLine();
-    
-if( 26 == namespaceId && "rect" == name)
-    return new DocumentFormat.OpenXml.Vml.Rectangle();
-    
-if( 26 == namespaceId && "roundrect" == name)
-    return new DocumentFormat.OpenXml.Vml.RoundRectangle();
-    
-if( 26 == namespaceId && "shape" == name)
-    return new DocumentFormat.OpenXml.Vml.Shape();
-    
-if( 26 == namespaceId && "shapetype" == name)
-    return new DocumentFormat.OpenXml.Vml.Shapetype();
-    
-if( 26 == namespaceId && "arc" == name)
-    return new DocumentFormat.OpenXml.Vml.Arc();
-    
-if( 26 == namespaceId && "curve" == name)
-    return new DocumentFormat.OpenXml.Vml.Curve();
-    
-if( 27 == namespaceId && "OLEObject" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.OleObject();
-    
-if( 23 == namespaceId && "drawing" == name)
-    return new Drawing();
-    
-if( 23 == namespaceId && "control" == name)
-    return new Control();
-    
-if( 23 == namespaceId && "objectEmbed" == name)
-    return new ObjectEmbed();
-    
-if( 23 == namespaceId && "objectLink" == name)
-    return new ObjectLink();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<EmbeddedObject>(deep);
@@ -9640,6 +9836,7 @@ if( 23 == namespaceId && "objectLink" == name)
     [ChildElementInfo(typeof(Control))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "pict")]
 public partial class Picture : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11613;
@@ -9691,58 +9888,11 @@ public partial class Picture : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "group" == name)
-    return new DocumentFormat.OpenXml.Vml.Group();
     
-if( 26 == namespaceId && "image" == name)
-    return new DocumentFormat.OpenXml.Vml.ImageFile();
-    
-if( 26 == namespaceId && "line" == name)
-    return new DocumentFormat.OpenXml.Vml.Line();
-    
-if( 26 == namespaceId && "oval" == name)
-    return new DocumentFormat.OpenXml.Vml.Oval();
-    
-if( 26 == namespaceId && "polyline" == name)
-    return new DocumentFormat.OpenXml.Vml.PolyLine();
-    
-if( 26 == namespaceId && "rect" == name)
-    return new DocumentFormat.OpenXml.Vml.Rectangle();
-    
-if( 26 == namespaceId && "roundrect" == name)
-    return new DocumentFormat.OpenXml.Vml.RoundRectangle();
-    
-if( 26 == namespaceId && "shape" == name)
-    return new DocumentFormat.OpenXml.Vml.Shape();
-    
-if( 26 == namespaceId && "shapetype" == name)
-    return new DocumentFormat.OpenXml.Vml.Shapetype();
-    
-if( 26 == namespaceId && "arc" == name)
-    return new DocumentFormat.OpenXml.Vml.Arc();
-    
-if( 26 == namespaceId && "curve" == name)
-    return new DocumentFormat.OpenXml.Vml.Curve();
-    
-if( 27 == namespaceId && "OLEObject" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.OleObject();
-    
-if( 23 == namespaceId && "movie" == name)
-    return new MovieReference();
-    
-if( 23 == namespaceId && "control" == name)
-    return new Control();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Picture>(deep);
@@ -9767,6 +9917,7 @@ if( 23 == namespaceId && "control" == name)
     [ChildElementInfo(typeof(NumberingChange))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "fldChar")]
 public partial class FieldChar : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11614;
@@ -9836,25 +9987,11 @@ public partial class FieldChar : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "fldData" == name)
-    return new FieldData();
     
-if( 23 == namespaceId && "ffData" == name)
-    return new FormFieldData();
-    
-if( 23 == namespaceId && "numberingChange" == name)
-    return new NumberingChange();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "fldData","ffData","numberingChange" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23 };
     
@@ -9875,6 +10012,7 @@ if( 23 == namespaceId && "numberingChange" == name)
         get => GetElement<FieldData>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Form Field Properties.</para>
     /// <para> Represents the following element tag in the schema: w:ffData </para>
@@ -9887,6 +10025,7 @@ if( 23 == namespaceId && "numberingChange" == name)
         get => GetElement<FormFieldData>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Previous Numbering Field Properties.</para>
     /// <para> Represents the following element tag in the schema: w:numberingChange </para>
@@ -9899,6 +10038,7 @@ if( 23 == namespaceId && "numberingChange" == name)
         get => GetElement<NumberingChange>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -9924,6 +10064,7 @@ if( 23 == namespaceId && "numberingChange" == name)
     [ChildElementInfo(typeof(RubyBase))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "ruby")]
 public partial class Ruby : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11615;
@@ -9966,25 +10107,11 @@ public partial class Ruby : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rubyPr" == name)
-    return new RubyProperties();
     
-if( 23 == namespaceId && "rt" == name)
-    return new RubyContent();
-    
-if( 23 == namespaceId && "rubyBase" == name)
-    return new RubyBase();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "rubyPr","rt","rubyBase" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23 };
     
@@ -10005,6 +10132,7 @@ if( 23 == namespaceId && "rubyBase" == name)
         get => GetElement<RubyProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Phonetic Guide Text.</para>
     /// <para> Represents the following element tag in the schema: w:rt </para>
@@ -10017,6 +10145,7 @@ if( 23 == namespaceId && "rubyBase" == name)
         get => GetElement<RubyContent>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Phonetic Guide Base Text.</para>
     /// <para> Represents the following element tag in the schema: w:rubyBase </para>
@@ -10029,6 +10158,7 @@ if( 23 == namespaceId && "rubyBase" == name)
         get => GetElement<RubyBase>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -10042,6 +10172,7 @@ if( 23 == namespaceId && "rubyBase" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "footnoteReference")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FootnoteReference : FootnoteEndnoteReferenceType
 {
@@ -10069,6 +10200,7 @@ public partial class FootnoteReference : FootnoteEndnoteReferenceType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "endnoteReference")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EndnoteReference : FootnoteEndnoteReferenceType
 {
@@ -10144,6 +10276,7 @@ public abstract partial class FootnoteEndnoteReferenceType : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "drawing")]
 public partial class Drawing : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11619;
@@ -10186,22 +10319,11 @@ public partial class Drawing : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 16 == namespaceId && "anchor" == name)
-    return new DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor();
     
-if( 16 == namespaceId && "inline" == name)
-    return new DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "anchor","inline" };
     private static readonly byte[] eleNamespaceIds = { 16,16 };
     
@@ -10222,6 +10344,7 @@ if( 16 == namespaceId && "inline" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.Anchor>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Inline Drawing Object.</para>
     /// <para> Represents the following element tag in the schema: wp:inline </para>
@@ -10234,6 +10357,7 @@ if( 16 == namespaceId && "inline" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.Wordprocessing.Inline>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -10248,6 +10372,7 @@ if( 16 == namespaceId && "inline" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "ptab")]
 public partial class PositionalTab : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11620;
@@ -10308,6 +10433,7 @@ public partial class PositionalTab : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "rStyle")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RunStyle : String253Type
 {
@@ -10335,6 +10461,7 @@ public partial class RunStyle : String253Type
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "tblStyle")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TableStyle : String253Type
 {
@@ -10362,6 +10489,7 @@ public partial class TableStyle : String253Type
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "pStyle")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ParagraphStyleIdInLevel : String253Type
 {
@@ -10389,6 +10517,7 @@ public partial class ParagraphStyleIdInLevel : String253Type
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "name")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AbstractNumDefinitionName : String253Type
 {
@@ -10416,6 +10545,7 @@ public partial class AbstractNumDefinitionName : String253Type
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "styleLink")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StyleLink : String253Type
 {
@@ -10443,6 +10573,7 @@ public partial class StyleLink : String253Type
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "numStyleLink")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NumberingStyleLink : String253Type
 {
@@ -10470,6 +10601,7 @@ public partial class NumberingStyleLink : String253Type
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "aliases")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Aliases : String253Type
 {
@@ -10497,6 +10629,7 @@ public partial class Aliases : String253Type
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "basedOn")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BasedOn : String253Type
 {
@@ -10524,6 +10657,7 @@ public partial class BasedOn : String253Type
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "next")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NextParagraphStyle : String253Type
 {
@@ -10551,6 +10685,7 @@ public partial class NextParagraphStyle : String253Type
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "link")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LinkedStyle : String253Type
 {
@@ -10578,6 +10713,7 @@ public partial class LinkedStyle : String253Type
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "clickAndTypeStyle")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ClickAndTypeStyle : String253Type
 {
@@ -10605,6 +10741,7 @@ public partial class ClickAndTypeStyle : String253Type
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "defaultTableStyle")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DefaultTableStyle : String253Type
 {
@@ -10662,6 +10799,7 @@ public abstract partial class String253Type : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "rFonts")]
 public partial class RunFonts : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11623;
@@ -10777,6 +10915,7 @@ public partial class RunFonts : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "color")]
 public partial class Color : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11639;
@@ -10847,6 +10986,7 @@ public partial class Color : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "spacing")]
 public partial class Spacing : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11640;
@@ -10890,6 +11030,7 @@ public partial class Spacing : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "w")]
 public partial class CharacterScale : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11641;
@@ -10933,6 +11074,7 @@ public partial class CharacterScale : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "kern")]
 public partial class Kern : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11642;
@@ -10976,6 +11118,7 @@ public partial class Kern : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "position")]
 public partial class Position : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11643;
@@ -11018,6 +11161,7 @@ public partial class Position : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "sz")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FontSize : HpsMeasureType
 {
@@ -11045,6 +11189,7 @@ public partial class FontSize : HpsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "szCs")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FontSizeComplexScript : HpsMeasureType
 {
@@ -11072,6 +11217,7 @@ public partial class FontSizeComplexScript : HpsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "size")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FormFieldSize : HpsMeasureType
 {
@@ -11099,6 +11245,7 @@ public partial class FormFieldSize : HpsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "hps")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PhoneticGuideTextFontSize : HpsMeasureType
 {
@@ -11126,6 +11273,7 @@ public partial class PhoneticGuideTextFontSize : HpsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "hpsBaseText")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PhoneticGuideBaseTextSize : HpsMeasureType
 {
@@ -11183,6 +11331,7 @@ public abstract partial class HpsMeasureType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "highlight")]
 public partial class Highlight : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11646;
@@ -11226,6 +11375,7 @@ public partial class Highlight : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "u")]
 public partial class Underline : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11647;
@@ -11305,6 +11455,7 @@ public partial class Underline : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "effect")]
 public partial class TextEffect : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11648;
@@ -11347,6 +11498,7 @@ public partial class TextEffect : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "bdr")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Border : BorderType
 {
@@ -11374,6 +11526,7 @@ public partial class Border : BorderType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "top")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TopBorder : BorderType
 {
@@ -11401,6 +11554,7 @@ public partial class TopBorder : BorderType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "left")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LeftBorder : BorderType
 {
@@ -11428,6 +11582,7 @@ public partial class LeftBorder : BorderType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "bottom")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BottomBorder : BorderType
 {
@@ -11455,6 +11610,7 @@ public partial class BottomBorder : BorderType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "right")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RightBorder : BorderType
 {
@@ -11482,6 +11638,7 @@ public partial class RightBorder : BorderType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "between")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BetweenBorder : BorderType
 {
@@ -11509,6 +11666,7 @@ public partial class BetweenBorder : BorderType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "bar")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BarBorder : BorderType
 {
@@ -11536,6 +11694,7 @@ public partial class BarBorder : BorderType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "start")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class StartBorder : BorderType
 {
@@ -11563,6 +11722,7 @@ public partial class StartBorder : BorderType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "end")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class EndBorder : BorderType
 {
@@ -11590,6 +11750,7 @@ public partial class EndBorder : BorderType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "insideH")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class InsideHorizontalBorder : BorderType
 {
@@ -11617,6 +11778,7 @@ public partial class InsideHorizontalBorder : BorderType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "insideV")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class InsideVerticalBorder : BorderType
 {
@@ -11644,6 +11806,7 @@ public partial class InsideVerticalBorder : BorderType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "tl2br")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TopLeftToBottomRightCellBorder : BorderType
 {
@@ -11671,6 +11834,7 @@ public partial class TopLeftToBottomRightCellBorder : BorderType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "tr2bl")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TopRightToBottomLeftCellBorder : BorderType
 {
@@ -11800,6 +11964,7 @@ public abstract partial class BorderType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "fitText")]
 public partial class FitText : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11650;
@@ -11852,6 +12017,7 @@ public partial class FitText : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "vertAlign")]
 public partial class VerticalTextAlignment : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11651;
@@ -11895,6 +12061,7 @@ public partial class VerticalTextAlignment : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "em")]
 public partial class Emphasis : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11654;
@@ -11937,6 +12104,7 @@ public partial class Emphasis : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "lang")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Languages : LanguageType
 {
@@ -11964,6 +12132,7 @@ public partial class Languages : LanguageType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "themeFontLang")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ThemeFontLanguages : LanguageType
 {
@@ -12039,6 +12208,7 @@ public abstract partial class LanguageType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "eastAsianLayout")]
 public partial class EastAsianLayout : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11656;
@@ -12125,6 +12295,7 @@ public partial class EastAsianLayout : OpenXmlLeafElement
     [ChildElementInfo(typeof(PreviousRunProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "rPrChange")]
 public partial class RunPropertiesChange : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11659;
@@ -12194,19 +12365,11 @@ public partial class RunPropertiesChange : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rPr" == name)
-    return new PreviousRunProperties();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "rPr" };
     private static readonly byte[] eleNamespaceIds = { 23 };
     
@@ -12227,6 +12390,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<PreviousRunProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -12348,6 +12512,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(RunPropertiesChange))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "rPr")]
 public partial class RunProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11660;
@@ -12390,169 +12555,11 @@ public partial class RunProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rStyle" == name)
-    return new RunStyle();
     
-if( 23 == namespaceId && "rFonts" == name)
-    return new RunFonts();
-    
-if( 23 == namespaceId && "b" == name)
-    return new Bold();
-    
-if( 23 == namespaceId && "bCs" == name)
-    return new BoldComplexScript();
-    
-if( 23 == namespaceId && "i" == name)
-    return new Italic();
-    
-if( 23 == namespaceId && "iCs" == name)
-    return new ItalicComplexScript();
-    
-if( 23 == namespaceId && "caps" == name)
-    return new Caps();
-    
-if( 23 == namespaceId && "smallCaps" == name)
-    return new SmallCaps();
-    
-if( 23 == namespaceId && "strike" == name)
-    return new Strike();
-    
-if( 23 == namespaceId && "dstrike" == name)
-    return new DoubleStrike();
-    
-if( 23 == namespaceId && "outline" == name)
-    return new Outline();
-    
-if( 23 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 23 == namespaceId && "emboss" == name)
-    return new Emboss();
-    
-if( 23 == namespaceId && "imprint" == name)
-    return new Imprint();
-    
-if( 23 == namespaceId && "noProof" == name)
-    return new NoProof();
-    
-if( 23 == namespaceId && "snapToGrid" == name)
-    return new SnapToGrid();
-    
-if( 23 == namespaceId && "vanish" == name)
-    return new Vanish();
-    
-if( 23 == namespaceId && "webHidden" == name)
-    return new WebHidden();
-    
-if( 23 == namespaceId && "color" == name)
-    return new Color();
-    
-if( 23 == namespaceId && "spacing" == name)
-    return new Spacing();
-    
-if( 23 == namespaceId && "w" == name)
-    return new CharacterScale();
-    
-if( 23 == namespaceId && "kern" == name)
-    return new Kern();
-    
-if( 23 == namespaceId && "position" == name)
-    return new Position();
-    
-if( 23 == namespaceId && "sz" == name)
-    return new FontSize();
-    
-if( 23 == namespaceId && "szCs" == name)
-    return new FontSizeComplexScript();
-    
-if( 23 == namespaceId && "highlight" == name)
-    return new Highlight();
-    
-if( 23 == namespaceId && "u" == name)
-    return new Underline();
-    
-if( 23 == namespaceId && "effect" == name)
-    return new TextEffect();
-    
-if( 23 == namespaceId && "bdr" == name)
-    return new Border();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "fitText" == name)
-    return new FitText();
-    
-if( 23 == namespaceId && "vertAlign" == name)
-    return new VerticalTextAlignment();
-    
-if( 23 == namespaceId && "rtl" == name)
-    return new RightToLeftText();
-    
-if( 23 == namespaceId && "cs" == name)
-    return new ComplexScript();
-    
-if( 23 == namespaceId && "em" == name)
-    return new Emphasis();
-    
-if( 23 == namespaceId && "lang" == name)
-    return new Languages();
-    
-if( 23 == namespaceId && "eastAsianLayout" == name)
-    return new EastAsianLayout();
-    
-if( 23 == namespaceId && "specVanish" == name)
-    return new SpecVanish();
-    
-if( 52 == namespaceId && "glow" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Glow();
-    
-if( 52 == namespaceId && "shadow" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Shadow();
-    
-if( 52 == namespaceId && "reflection" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Reflection();
-    
-if( 52 == namespaceId && "textOutline" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect();
-    
-if( 52 == namespaceId && "textFill" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.FillTextEffect();
-    
-if( 52 == namespaceId && "scene3d" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Scene3D();
-    
-if( 52 == namespaceId && "props3d" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Properties3D();
-    
-if( 52 == namespaceId && "ligatures" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Ligatures();
-    
-if( 52 == namespaceId && "numForm" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.NumberingFormat();
-    
-if( 52 == namespaceId && "numSpacing" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.NumberSpacing();
-    
-if( 52 == namespaceId && "stylisticSets" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.StylisticSets();
-    
-if( 52 == namespaceId && "cntxtAlts" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives();
-    
-if( 23 == namespaceId && "rPrChange" == name)
-    return new RunPropertiesChange();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "rStyle","rFonts","b","bCs","i","iCs","caps","smallCaps","strike","dstrike","outline","shadow","emboss","imprint","noProof","snapToGrid","vanish","webHidden","color","spacing","w","kern","position","sz","szCs","highlight","u","effect","bdr","shd","fitText","vertAlign","rtl","cs","em","lang","eastAsianLayout","specVanish","glow","shadow","reflection","textOutline","textFill","scene3d","props3d","ligatures","numForm","numSpacing","stylisticSets","cntxtAlts","rPrChange" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,52,52,52,52,52,52,52,52,23 };
     
@@ -12573,6 +12580,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<RunStyle>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> RunFonts.</para>
     /// <para> Represents the following element tag in the schema: w:rFonts </para>
@@ -12585,6 +12593,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<RunFonts>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Bold.</para>
     /// <para> Represents the following element tag in the schema: w:b </para>
@@ -12597,6 +12606,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Bold>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> BoldComplexScript.</para>
     /// <para> Represents the following element tag in the schema: w:bCs </para>
@@ -12609,6 +12619,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<BoldComplexScript>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Italic.</para>
     /// <para> Represents the following element tag in the schema: w:i </para>
@@ -12621,6 +12632,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Italic>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> ItalicComplexScript.</para>
     /// <para> Represents the following element tag in the schema: w:iCs </para>
@@ -12633,6 +12645,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<ItalicComplexScript>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Caps.</para>
     /// <para> Represents the following element tag in the schema: w:caps </para>
@@ -12645,6 +12658,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Caps>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> SmallCaps.</para>
     /// <para> Represents the following element tag in the schema: w:smallCaps </para>
@@ -12657,6 +12671,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<SmallCaps>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> Strike.</para>
     /// <para> Represents the following element tag in the schema: w:strike </para>
@@ -12669,6 +12684,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Strike>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> DoubleStrike.</para>
     /// <para> Represents the following element tag in the schema: w:dstrike </para>
@@ -12681,6 +12697,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<DoubleStrike>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> Outline.</para>
     /// <para> Represents the following element tag in the schema: w:outline </para>
@@ -12693,6 +12710,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Outline>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Shadow.</para>
     /// <para> Represents the following element tag in the schema: w:shadow </para>
@@ -12705,6 +12723,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Shadow>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> Emboss.</para>
     /// <para> Represents the following element tag in the schema: w:emboss </para>
@@ -12717,6 +12736,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Emboss>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> Imprint.</para>
     /// <para> Represents the following element tag in the schema: w:imprint </para>
@@ -12729,6 +12749,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Imprint>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> NoProof.</para>
     /// <para> Represents the following element tag in the schema: w:noProof </para>
@@ -12741,6 +12762,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<NoProof>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> SnapToGrid.</para>
     /// <para> Represents the following element tag in the schema: w:snapToGrid </para>
@@ -12753,6 +12775,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<SnapToGrid>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> Vanish.</para>
     /// <para> Represents the following element tag in the schema: w:vanish </para>
@@ -12765,6 +12788,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Vanish>(16);
         set => SetElement(16, value);
     }
+    
     /// <summary>
     /// <para> WebHidden.</para>
     /// <para> Represents the following element tag in the schema: w:webHidden </para>
@@ -12777,6 +12801,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<WebHidden>(17);
         set => SetElement(17, value);
     }
+    
     /// <summary>
     /// <para> Color.</para>
     /// <para> Represents the following element tag in the schema: w:color </para>
@@ -12789,6 +12814,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Color>(18);
         set => SetElement(18, value);
     }
+    
     /// <summary>
     /// <para> Spacing.</para>
     /// <para> Represents the following element tag in the schema: w:spacing </para>
@@ -12801,6 +12827,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Spacing>(19);
         set => SetElement(19, value);
     }
+    
     /// <summary>
     /// <para> CharacterScale.</para>
     /// <para> Represents the following element tag in the schema: w:w </para>
@@ -12813,6 +12840,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<CharacterScale>(20);
         set => SetElement(20, value);
     }
+    
     /// <summary>
     /// <para> Kern.</para>
     /// <para> Represents the following element tag in the schema: w:kern </para>
@@ -12825,6 +12853,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Kern>(21);
         set => SetElement(21, value);
     }
+    
     /// <summary>
     /// <para> Position.</para>
     /// <para> Represents the following element tag in the schema: w:position </para>
@@ -12837,6 +12866,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Position>(22);
         set => SetElement(22, value);
     }
+    
     /// <summary>
     /// <para> FontSize.</para>
     /// <para> Represents the following element tag in the schema: w:sz </para>
@@ -12849,6 +12879,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<FontSize>(23);
         set => SetElement(23, value);
     }
+    
     /// <summary>
     /// <para> FontSizeComplexScript.</para>
     /// <para> Represents the following element tag in the schema: w:szCs </para>
@@ -12861,6 +12892,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<FontSizeComplexScript>(24);
         set => SetElement(24, value);
     }
+    
     /// <summary>
     /// <para> Highlight.</para>
     /// <para> Represents the following element tag in the schema: w:highlight </para>
@@ -12873,6 +12905,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Highlight>(25);
         set => SetElement(25, value);
     }
+    
     /// <summary>
     /// <para> Underline.</para>
     /// <para> Represents the following element tag in the schema: w:u </para>
@@ -12885,6 +12918,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Underline>(26);
         set => SetElement(26, value);
     }
+    
     /// <summary>
     /// <para> TextEffect.</para>
     /// <para> Represents the following element tag in the schema: w:effect </para>
@@ -12897,6 +12931,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<TextEffect>(27);
         set => SetElement(27, value);
     }
+    
     /// <summary>
     /// <para> Border.</para>
     /// <para> Represents the following element tag in the schema: w:bdr </para>
@@ -12909,6 +12944,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Border>(28);
         set => SetElement(28, value);
     }
+    
     /// <summary>
     /// <para> Shading.</para>
     /// <para> Represents the following element tag in the schema: w:shd </para>
@@ -12921,6 +12957,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Shading>(29);
         set => SetElement(29, value);
     }
+    
     /// <summary>
     /// <para> FitText.</para>
     /// <para> Represents the following element tag in the schema: w:fitText </para>
@@ -12933,6 +12970,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<FitText>(30);
         set => SetElement(30, value);
     }
+    
     /// <summary>
     /// <para> VerticalTextAlignment.</para>
     /// <para> Represents the following element tag in the schema: w:vertAlign </para>
@@ -12945,6 +12983,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<VerticalTextAlignment>(31);
         set => SetElement(31, value);
     }
+    
     /// <summary>
     /// <para> RightToLeftText.</para>
     /// <para> Represents the following element tag in the schema: w:rtl </para>
@@ -12957,6 +12996,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<RightToLeftText>(32);
         set => SetElement(32, value);
     }
+    
     /// <summary>
     /// <para> ComplexScript.</para>
     /// <para> Represents the following element tag in the schema: w:cs </para>
@@ -12969,6 +13009,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<ComplexScript>(33);
         set => SetElement(33, value);
     }
+    
     /// <summary>
     /// <para> Emphasis.</para>
     /// <para> Represents the following element tag in the schema: w:em </para>
@@ -12981,6 +13022,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Emphasis>(34);
         set => SetElement(34, value);
     }
+    
     /// <summary>
     /// <para> Languages.</para>
     /// <para> Represents the following element tag in the schema: w:lang </para>
@@ -12993,6 +13035,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Languages>(35);
         set => SetElement(35, value);
     }
+    
     /// <summary>
     /// <para> EastAsianLayout.</para>
     /// <para> Represents the following element tag in the schema: w:eastAsianLayout </para>
@@ -13005,6 +13048,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<EastAsianLayout>(36);
         set => SetElement(36, value);
     }
+    
     /// <summary>
     /// <para> SpecVanish.</para>
     /// <para> Represents the following element tag in the schema: w:specVanish </para>
@@ -13017,6 +13061,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<SpecVanish>(37);
         set => SetElement(37, value);
     }
+    
     /// <summary>
     /// <para> Glow.</para>
     /// <para> Represents the following element tag in the schema: w14:glow </para>
@@ -13029,6 +13074,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Glow>(38);
         set => SetElement(38, value);
     }
+    
     /// <summary>
     /// <para> Shadow14.</para>
     /// <para> Represents the following element tag in the schema: w14:shadow </para>
@@ -13041,6 +13087,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Shadow>(39);
         set => SetElement(39, value);
     }
+    
     /// <summary>
     /// <para> Reflection.</para>
     /// <para> Represents the following element tag in the schema: w14:reflection </para>
@@ -13053,6 +13100,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Reflection>(40);
         set => SetElement(40, value);
     }
+    
     /// <summary>
     /// <para> TextOutlineEffect.</para>
     /// <para> Represents the following element tag in the schema: w14:textOutline </para>
@@ -13065,6 +13113,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect>(41);
         set => SetElement(41, value);
     }
+    
     /// <summary>
     /// <para> FillTextEffect.</para>
     /// <para> Represents the following element tag in the schema: w14:textFill </para>
@@ -13077,6 +13126,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.FillTextEffect>(42);
         set => SetElement(42, value);
     }
+    
     /// <summary>
     /// <para> Scene3D.</para>
     /// <para> Represents the following element tag in the schema: w14:scene3d </para>
@@ -13089,6 +13139,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Scene3D>(43);
         set => SetElement(43, value);
     }
+    
     /// <summary>
     /// <para> Properties3D.</para>
     /// <para> Represents the following element tag in the schema: w14:props3d </para>
@@ -13101,6 +13152,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Properties3D>(44);
         set => SetElement(44, value);
     }
+    
     /// <summary>
     /// <para> Ligatures.</para>
     /// <para> Represents the following element tag in the schema: w14:ligatures </para>
@@ -13113,6 +13165,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Ligatures>(45);
         set => SetElement(45, value);
     }
+    
     /// <summary>
     /// <para> NumberingFormat.</para>
     /// <para> Represents the following element tag in the schema: w14:numForm </para>
@@ -13125,6 +13178,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NumberingFormat>(46);
         set => SetElement(46, value);
     }
+    
     /// <summary>
     /// <para> NumberSpacing.</para>
     /// <para> Represents the following element tag in the schema: w14:numSpacing </para>
@@ -13137,6 +13191,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.NumberSpacing>(47);
         set => SetElement(47, value);
     }
+    
     /// <summary>
     /// <para> StylisticSets.</para>
     /// <para> Represents the following element tag in the schema: w14:stylisticSets </para>
@@ -13149,6 +13204,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.StylisticSets>(48);
         set => SetElement(48, value);
     }
+    
     /// <summary>
     /// <para> ContextualAlternatives.</para>
     /// <para> Represents the following element tag in the schema: w14:cntxtAlts </para>
@@ -13161,6 +13217,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives>(49);
         set => SetElement(49, value);
     }
+    
     /// <summary>
     /// <para> RunPropertiesChange.</para>
     /// <para> Represents the following element tag in the schema: w:rPrChange </para>
@@ -13173,6 +13230,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<RunPropertiesChange>(50);
         set => SetElement(50, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -13196,6 +13254,7 @@ if( 23 == namespaceId && "rPrChange" == name)
     [ChildElementInfo(typeof(DeletedMathControl))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "ins")]
 public partial class InsertedMathControl : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11661;
@@ -13265,22 +13324,11 @@ public partial class InsertedMathControl : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rPr" == name)
-    return new RunProperties();
     
-if( 23 == namespaceId && "del" == name)
-    return new DeletedMathControl();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<InsertedMathControl>(deep);
@@ -13301,6 +13349,7 @@ if( 23 == namespaceId && "del" == name)
     [ChildElementInfo(typeof(RunProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "del")]
 public partial class DeletedMathControl : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11662;
@@ -13370,19 +13419,11 @@ public partial class DeletedMathControl : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rPr" == name)
-    return new RunProperties();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DeletedMathControl>(deep);
@@ -13403,6 +13444,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "moveFrom")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MoveFromMathControl : MathControlMoveType
 {
@@ -13442,6 +13484,7 @@ public partial class MoveFromMathControl : MathControlMoveType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -13463,6 +13506,7 @@ public partial class MoveFromMathControl : MathControlMoveType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "moveTo")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MoveToMathControl : MathControlMoveType
 {
@@ -13502,6 +13546,7 @@ public partial class MoveToMathControl : MathControlMoveType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -13555,22 +13600,7 @@ public abstract partial class MathControlMoveType : OpenXmlCompositeElement
     [SchemaIndex(2)]
     public StringValue Id { get; set; }
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rPr" == name)
-    return new RunProperties();
     
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedMathControl();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedMathControl();
-    
-
-    return null;
-}
-
     
     
     /// <summary>
@@ -13603,6 +13633,7 @@ if( 23 == namespaceId && "del" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -13735,6 +13766,7 @@ if( 23 == namespaceId && "del" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "customXml")]
 public partial class CustomXmlRuby : CustomXmlElement
 {
     internal const int ElementTypeIdConst = 11665;
@@ -13777,190 +13809,11 @@ public partial class CustomXmlRuby : CustomXmlElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "customXmlPr" == name)
-    return new CustomXmlProperties();
     
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlRuby();
-    
-if( 23 == namespaceId && "fldSimple" == name)
-    return new SimpleFieldRuby();
-    
-if( 23 == namespaceId && "hyperlink" == name)
-    return new HyperlinkRuby();
-    
-if( 23 == namespaceId && "r" == name)
-    return new Run();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtRunRuby();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-if( 21 == namespaceId && "oMathPara" == name)
-    return new DocumentFormat.OpenXml.Math.Paragraph();
-    
-if( 21 == namespaceId && "oMath" == name)
-    return new DocumentFormat.OpenXml.Math.OfficeMath();
-    
-if( 21 == namespaceId && "acc" == name)
-    return new DocumentFormat.OpenXml.Math.Accent();
-    
-if( 21 == namespaceId && "bar" == name)
-    return new DocumentFormat.OpenXml.Math.Bar();
-    
-if( 21 == namespaceId && "box" == name)
-    return new DocumentFormat.OpenXml.Math.Box();
-    
-if( 21 == namespaceId && "borderBox" == name)
-    return new DocumentFormat.OpenXml.Math.BorderBox();
-    
-if( 21 == namespaceId && "d" == name)
-    return new DocumentFormat.OpenXml.Math.Delimiter();
-    
-if( 21 == namespaceId && "eqArr" == name)
-    return new DocumentFormat.OpenXml.Math.EquationArray();
-    
-if( 21 == namespaceId && "f" == name)
-    return new DocumentFormat.OpenXml.Math.Fraction();
-    
-if( 21 == namespaceId && "func" == name)
-    return new DocumentFormat.OpenXml.Math.MathFunction();
-    
-if( 21 == namespaceId && "groupChr" == name)
-    return new DocumentFormat.OpenXml.Math.GroupChar();
-    
-if( 21 == namespaceId && "limLow" == name)
-    return new DocumentFormat.OpenXml.Math.LimitLower();
-    
-if( 21 == namespaceId && "limUpp" == name)
-    return new DocumentFormat.OpenXml.Math.LimitUpper();
-    
-if( 21 == namespaceId && "m" == name)
-    return new DocumentFormat.OpenXml.Math.Matrix();
-    
-if( 21 == namespaceId && "nary" == name)
-    return new DocumentFormat.OpenXml.Math.Nary();
-    
-if( 21 == namespaceId && "phant" == name)
-    return new DocumentFormat.OpenXml.Math.Phantom();
-    
-if( 21 == namespaceId && "rad" == name)
-    return new DocumentFormat.OpenXml.Math.Radical();
-    
-if( 21 == namespaceId && "sPre" == name)
-    return new DocumentFormat.OpenXml.Math.PreSubSuper();
-    
-if( 21 == namespaceId && "sSub" == name)
-    return new DocumentFormat.OpenXml.Math.Subscript();
-    
-if( 21 == namespaceId && "sSubSup" == name)
-    return new DocumentFormat.OpenXml.Math.SubSuperscript();
-    
-if( 21 == namespaceId && "sSup" == name)
-    return new DocumentFormat.OpenXml.Math.Superscript();
-    
-if( 21 == namespaceId && "r" == name)
-    return new DocumentFormat.OpenXml.Math.Run();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "customXmlPr","customXml","fldSimple","hyperlink","r","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel","oMathPara","oMath","acc","bar","box","borderBox","d","eqArr","f","func","groupChr","limLow","limUpp","m","nary","phant","rad","sPre","sSub","sSubSup","sSup","r" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21 };
     
@@ -14104,6 +13957,7 @@ if( 21 == namespaceId && "r" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "fldSimple")]
 public partial class SimpleFieldRuby : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11666;
@@ -14173,190 +14027,11 @@ public partial class SimpleFieldRuby : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "fldData" == name)
-    return new FieldData();
     
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlRuby();
-    
-if( 23 == namespaceId && "fldSimple" == name)
-    return new SimpleFieldRuby();
-    
-if( 23 == namespaceId && "hyperlink" == name)
-    return new HyperlinkRuby();
-    
-if( 23 == namespaceId && "r" == name)
-    return new Run();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtRunRuby();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-if( 21 == namespaceId && "oMathPara" == name)
-    return new DocumentFormat.OpenXml.Math.Paragraph();
-    
-if( 21 == namespaceId && "oMath" == name)
-    return new DocumentFormat.OpenXml.Math.OfficeMath();
-    
-if( 21 == namespaceId && "acc" == name)
-    return new DocumentFormat.OpenXml.Math.Accent();
-    
-if( 21 == namespaceId && "bar" == name)
-    return new DocumentFormat.OpenXml.Math.Bar();
-    
-if( 21 == namespaceId && "box" == name)
-    return new DocumentFormat.OpenXml.Math.Box();
-    
-if( 21 == namespaceId && "borderBox" == name)
-    return new DocumentFormat.OpenXml.Math.BorderBox();
-    
-if( 21 == namespaceId && "d" == name)
-    return new DocumentFormat.OpenXml.Math.Delimiter();
-    
-if( 21 == namespaceId && "eqArr" == name)
-    return new DocumentFormat.OpenXml.Math.EquationArray();
-    
-if( 21 == namespaceId && "f" == name)
-    return new DocumentFormat.OpenXml.Math.Fraction();
-    
-if( 21 == namespaceId && "func" == name)
-    return new DocumentFormat.OpenXml.Math.MathFunction();
-    
-if( 21 == namespaceId && "groupChr" == name)
-    return new DocumentFormat.OpenXml.Math.GroupChar();
-    
-if( 21 == namespaceId && "limLow" == name)
-    return new DocumentFormat.OpenXml.Math.LimitLower();
-    
-if( 21 == namespaceId && "limUpp" == name)
-    return new DocumentFormat.OpenXml.Math.LimitUpper();
-    
-if( 21 == namespaceId && "m" == name)
-    return new DocumentFormat.OpenXml.Math.Matrix();
-    
-if( 21 == namespaceId && "nary" == name)
-    return new DocumentFormat.OpenXml.Math.Nary();
-    
-if( 21 == namespaceId && "phant" == name)
-    return new DocumentFormat.OpenXml.Math.Phantom();
-    
-if( 21 == namespaceId && "rad" == name)
-    return new DocumentFormat.OpenXml.Math.Radical();
-    
-if( 21 == namespaceId && "sPre" == name)
-    return new DocumentFormat.OpenXml.Math.PreSubSuper();
-    
-if( 21 == namespaceId && "sSub" == name)
-    return new DocumentFormat.OpenXml.Math.Subscript();
-    
-if( 21 == namespaceId && "sSubSup" == name)
-    return new DocumentFormat.OpenXml.Math.SubSuperscript();
-    
-if( 21 == namespaceId && "sSup" == name)
-    return new DocumentFormat.OpenXml.Math.Superscript();
-    
-if( 21 == namespaceId && "r" == name)
-    return new DocumentFormat.OpenXml.Math.Run();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "fldData","customXml","fldSimple","hyperlink","r","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel","oMathPara","oMath","acc","bar","box","borderBox","d","eqArr","f","func","groupChr","limLow","limUpp","m","nary","phant","rad","sPre","sSub","sSubSup","sSup","r" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21 };
     
@@ -14377,6 +14052,7 @@ if( 21 == namespaceId && "r" == name)
         get => GetElement<FieldData>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -14510,6 +14186,7 @@ if( 21 == namespaceId && "r" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "hyperlink")]
 public partial class HyperlinkRuby : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11667;
@@ -14606,187 +14283,11 @@ public partial class HyperlinkRuby : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlRuby();
     
-if( 23 == namespaceId && "fldSimple" == name)
-    return new SimpleFieldRuby();
-    
-if( 23 == namespaceId && "hyperlink" == name)
-    return new HyperlinkRuby();
-    
-if( 23 == namespaceId && "r" == name)
-    return new Run();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtRunRuby();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-if( 21 == namespaceId && "oMathPara" == name)
-    return new DocumentFormat.OpenXml.Math.Paragraph();
-    
-if( 21 == namespaceId && "oMath" == name)
-    return new DocumentFormat.OpenXml.Math.OfficeMath();
-    
-if( 21 == namespaceId && "acc" == name)
-    return new DocumentFormat.OpenXml.Math.Accent();
-    
-if( 21 == namespaceId && "bar" == name)
-    return new DocumentFormat.OpenXml.Math.Bar();
-    
-if( 21 == namespaceId && "box" == name)
-    return new DocumentFormat.OpenXml.Math.Box();
-    
-if( 21 == namespaceId && "borderBox" == name)
-    return new DocumentFormat.OpenXml.Math.BorderBox();
-    
-if( 21 == namespaceId && "d" == name)
-    return new DocumentFormat.OpenXml.Math.Delimiter();
-    
-if( 21 == namespaceId && "eqArr" == name)
-    return new DocumentFormat.OpenXml.Math.EquationArray();
-    
-if( 21 == namespaceId && "f" == name)
-    return new DocumentFormat.OpenXml.Math.Fraction();
-    
-if( 21 == namespaceId && "func" == name)
-    return new DocumentFormat.OpenXml.Math.MathFunction();
-    
-if( 21 == namespaceId && "groupChr" == name)
-    return new DocumentFormat.OpenXml.Math.GroupChar();
-    
-if( 21 == namespaceId && "limLow" == name)
-    return new DocumentFormat.OpenXml.Math.LimitLower();
-    
-if( 21 == namespaceId && "limUpp" == name)
-    return new DocumentFormat.OpenXml.Math.LimitUpper();
-    
-if( 21 == namespaceId && "m" == name)
-    return new DocumentFormat.OpenXml.Math.Matrix();
-    
-if( 21 == namespaceId && "nary" == name)
-    return new DocumentFormat.OpenXml.Math.Nary();
-    
-if( 21 == namespaceId && "phant" == name)
-    return new DocumentFormat.OpenXml.Math.Phantom();
-    
-if( 21 == namespaceId && "rad" == name)
-    return new DocumentFormat.OpenXml.Math.Radical();
-    
-if( 21 == namespaceId && "sPre" == name)
-    return new DocumentFormat.OpenXml.Math.PreSubSuper();
-    
-if( 21 == namespaceId && "sSub" == name)
-    return new DocumentFormat.OpenXml.Math.Subscript();
-    
-if( 21 == namespaceId && "sSubSup" == name)
-    return new DocumentFormat.OpenXml.Math.SubSuperscript();
-    
-if( 21 == namespaceId && "sSup" == name)
-    return new DocumentFormat.OpenXml.Math.Superscript();
-    
-if( 21 == namespaceId && "r" == name)
-    return new DocumentFormat.OpenXml.Math.Run();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HyperlinkRuby>(deep);
@@ -14871,6 +14372,7 @@ if( 21 == namespaceId && "r" == name)
     [ChildElementInfo(typeof(LastRenderedPageBreak))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "r")]
 public partial class Run : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11668;
@@ -14940,115 +14442,11 @@ public partial class Run : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rPr" == name)
-    return new RunProperties();
     
-if( 23 == namespaceId && "br" == name)
-    return new Break();
-    
-if( 23 == namespaceId && "t" == name)
-    return new Text();
-    
-if( 23 == namespaceId && "delText" == name)
-    return new DeletedText();
-    
-if( 23 == namespaceId && "instrText" == name)
-    return new FieldCode();
-    
-if( 23 == namespaceId && "delInstrText" == name)
-    return new DeletedFieldCode();
-    
-if( 23 == namespaceId && "noBreakHyphen" == name)
-    return new NoBreakHyphen();
-    
-if( 23 == namespaceId && "softHyphen" == name)
-    return new SoftHyphen();
-    
-if( 23 == namespaceId && "dayShort" == name)
-    return new DayShort();
-    
-if( 23 == namespaceId && "monthShort" == name)
-    return new MonthShort();
-    
-if( 23 == namespaceId && "yearShort" == name)
-    return new YearShort();
-    
-if( 23 == namespaceId && "dayLong" == name)
-    return new DayLong();
-    
-if( 23 == namespaceId && "monthLong" == name)
-    return new MonthLong();
-    
-if( 23 == namespaceId && "yearLong" == name)
-    return new YearLong();
-    
-if( 23 == namespaceId && "annotationRef" == name)
-    return new AnnotationReferenceMark();
-    
-if( 23 == namespaceId && "footnoteRef" == name)
-    return new FootnoteReferenceMark();
-    
-if( 23 == namespaceId && "endnoteRef" == name)
-    return new EndnoteReferenceMark();
-    
-if( 23 == namespaceId && "separator" == name)
-    return new SeparatorMark();
-    
-if( 23 == namespaceId && "continuationSeparator" == name)
-    return new ContinuationSeparatorMark();
-    
-if( 23 == namespaceId && "sym" == name)
-    return new SymbolChar();
-    
-if( 23 == namespaceId && "pgNum" == name)
-    return new PageNumber();
-    
-if( 23 == namespaceId && "cr" == name)
-    return new CarriageReturn();
-    
-if( 23 == namespaceId && "tab" == name)
-    return new TabChar();
-    
-if( 23 == namespaceId && "object" == name)
-    return new EmbeddedObject();
-    
-if( 23 == namespaceId && "pict" == name)
-    return new Picture();
-    
-if( 23 == namespaceId && "fldChar" == name)
-    return new FieldChar();
-    
-if( 23 == namespaceId && "ruby" == name)
-    return new Ruby();
-    
-if( 23 == namespaceId && "footnoteReference" == name)
-    return new FootnoteReference();
-    
-if( 23 == namespaceId && "endnoteReference" == name)
-    return new EndnoteReference();
-    
-if( 23 == namespaceId && "commentReference" == name)
-    return new CommentReference();
-    
-if( 23 == namespaceId && "drawing" == name)
-    return new Drawing();
-    
-if( 23 == namespaceId && "ptab" == name)
-    return new PositionalTab();
-    
-if( 23 == namespaceId && "lastRenderedPageBreak" == name)
-    return new LastRenderedPageBreak();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "rPr","br","t","delText","instrText","delInstrText","noBreakHyphen","softHyphen","dayShort","monthShort","yearShort","dayLong","monthLong","yearLong","annotationRef","footnoteRef","endnoteRef","separator","continuationSeparator","sym","pgNum","cr","tab","object","pict","fldChar","ruby","footnoteReference","endnoteReference","commentReference","drawing","ptab","lastRenderedPageBreak" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -15069,6 +14467,7 @@ if( 23 == namespaceId && "lastRenderedPageBreak" == name)
         get => GetElement<RunProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -15134,6 +14533,7 @@ if( 23 == namespaceId && "lastRenderedPageBreak" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "sdt")]
 public partial class SdtRunRuby : SdtElement
 {
     internal const int ElementTypeIdConst = 11669;
@@ -15176,85 +14576,11 @@ public partial class SdtRunRuby : SdtElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "sdtPr" == name)
-    return new SdtProperties();
     
-if( 23 == namespaceId && "sdtEndPr" == name)
-    return new SdtEndCharProperties();
-    
-if( 23 == namespaceId && "sdtContent" == name)
-    return new SdtContentRunRuby();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sdtPr","sdtEndPr","sdtContent","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52 };
     
@@ -15275,6 +14601,7 @@ if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
         get => GetElement<SdtContentRunRuby>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -15289,6 +14616,7 @@ if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "proofErr")]
 public partial class ProofError : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11670;
@@ -15332,6 +14660,7 @@ public partial class ProofError : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "permStart")]
 public partial class PermStart : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11671;
@@ -15420,6 +14749,7 @@ public partial class PermStart : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "permEnd")]
 public partial class PermEnd : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11672;
@@ -15532,6 +14862,7 @@ public partial class PermEnd : OpenXmlLeafElement
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "ins")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class InsertedRun : RunTrackChangeType
 {
@@ -15571,6 +14902,7 @@ public partial class InsertedRun : RunTrackChangeType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -15645,6 +14977,7 @@ public partial class InsertedRun : RunTrackChangeType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "del")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DeletedRun : RunTrackChangeType
 {
@@ -15684,6 +15017,7 @@ public partial class DeletedRun : RunTrackChangeType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -15758,6 +15092,7 @@ public partial class DeletedRun : RunTrackChangeType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "moveFrom")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MoveFromRun : RunTrackChangeType
 {
@@ -15797,6 +15132,7 @@ public partial class MoveFromRun : RunTrackChangeType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -15871,6 +15207,7 @@ public partial class MoveFromRun : RunTrackChangeType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "moveTo")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MoveToRun : RunTrackChangeType
 {
@@ -15910,6 +15247,7 @@ public partial class MoveToRun : RunTrackChangeType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -16069,181 +15407,7 @@ public abstract partial class RunTrackChangeType : OpenXmlCompositeElement
     [SchemaIndex(2)]
     public StringValue Id { get; set; }
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "sdt" == name)
-    return new SdtRun();
     
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-if( 21 == namespaceId && "oMathPara" == name)
-    return new DocumentFormat.OpenXml.Math.Paragraph();
-    
-if( 21 == namespaceId && "oMath" == name)
-    return new DocumentFormat.OpenXml.Math.OfficeMath();
-    
-if( 21 == namespaceId && "acc" == name)
-    return new DocumentFormat.OpenXml.Math.Accent();
-    
-if( 21 == namespaceId && "bar" == name)
-    return new DocumentFormat.OpenXml.Math.Bar();
-    
-if( 21 == namespaceId && "box" == name)
-    return new DocumentFormat.OpenXml.Math.Box();
-    
-if( 21 == namespaceId && "borderBox" == name)
-    return new DocumentFormat.OpenXml.Math.BorderBox();
-    
-if( 21 == namespaceId && "d" == name)
-    return new DocumentFormat.OpenXml.Math.Delimiter();
-    
-if( 21 == namespaceId && "eqArr" == name)
-    return new DocumentFormat.OpenXml.Math.EquationArray();
-    
-if( 21 == namespaceId && "f" == name)
-    return new DocumentFormat.OpenXml.Math.Fraction();
-    
-if( 21 == namespaceId && "func" == name)
-    return new DocumentFormat.OpenXml.Math.MathFunction();
-    
-if( 21 == namespaceId && "groupChr" == name)
-    return new DocumentFormat.OpenXml.Math.GroupChar();
-    
-if( 21 == namespaceId && "limLow" == name)
-    return new DocumentFormat.OpenXml.Math.LimitLower();
-    
-if( 21 == namespaceId && "limUpp" == name)
-    return new DocumentFormat.OpenXml.Math.LimitUpper();
-    
-if( 21 == namespaceId && "m" == name)
-    return new DocumentFormat.OpenXml.Math.Matrix();
-    
-if( 21 == namespaceId && "nary" == name)
-    return new DocumentFormat.OpenXml.Math.Nary();
-    
-if( 21 == namespaceId && "phant" == name)
-    return new DocumentFormat.OpenXml.Math.Phantom();
-    
-if( 21 == namespaceId && "rad" == name)
-    return new DocumentFormat.OpenXml.Math.Radical();
-    
-if( 21 == namespaceId && "sPre" == name)
-    return new DocumentFormat.OpenXml.Math.PreSubSuper();
-    
-if( 21 == namespaceId && "sSub" == name)
-    return new DocumentFormat.OpenXml.Math.Subscript();
-    
-if( 21 == namespaceId && "sSubSup" == name)
-    return new DocumentFormat.OpenXml.Math.SubSuperscript();
-    
-if( 21 == namespaceId && "sSup" == name)
-    return new DocumentFormat.OpenXml.Math.Superscript();
-    
-if( 21 == namespaceId && "r" == name)
-    return new DocumentFormat.OpenXml.Math.Run();
-    
-if( 23 == namespaceId && "r" == name)
-    return new Run();
-    
-if( 23 == namespaceId && "bdo" == name)
-    return new BidirectionalOverride();
-    
-if( 23 == namespaceId && "dir" == name)
-    return new BidirectionalEmbedding();
-    
-
-    return null;
-}
-
     
     
     /// <summary>
@@ -16276,6 +15440,7 @@ if( 23 == namespaceId && "dir" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -16287,6 +15452,7 @@ if( 23 == namespaceId && "dir" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(23, "contentPart")]
 public partial class ContentPart : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11677;
@@ -16381,6 +15547,7 @@ public partial class ContentPart : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "sdt")]
 public partial class SdtRun : SdtElement
 {
     internal const int ElementTypeIdConst = 11678;
@@ -16423,85 +15590,11 @@ public partial class SdtRun : SdtElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "sdtPr" == name)
-    return new SdtProperties();
     
-if( 23 == namespaceId && "sdtEndPr" == name)
-    return new SdtEndCharProperties();
-    
-if( 23 == namespaceId && "sdtContent" == name)
-    return new SdtContentRun();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sdtPr","sdtEndPr","sdtContent","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52 };
     
@@ -16522,6 +15615,7 @@ if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
         get => GetElement<SdtContentRun>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -16611,6 +15705,7 @@ if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "customXml")]
 public partial class CustomXmlBlock : CustomXmlElement
 {
     internal const int ElementTypeIdConst = 11679;
@@ -16653,121 +15748,11 @@ public partial class CustomXmlBlock : CustomXmlElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "customXmlPr" == name)
-    return new CustomXmlProperties();
     
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlBlock();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtBlock();
-    
-if( 23 == namespaceId && "p" == name)
-    return new Paragraph();
-    
-if( 23 == namespaceId && "tbl" == name)
-    return new Table();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "customXmlPr","customXml","sdt","p","tbl","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52 };
     
@@ -16841,6 +15826,7 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "sdt")]
 public partial class SdtBlock : SdtElement
 {
     internal const int ElementTypeIdConst = 11680;
@@ -16883,85 +15869,11 @@ public partial class SdtBlock : SdtElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "sdtPr" == name)
-    return new SdtProperties();
     
-if( 23 == namespaceId && "sdtEndPr" == name)
-    return new SdtEndCharProperties();
-    
-if( 23 == namespaceId && "sdtContent" == name)
-    return new SdtContentBlock();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sdtPr","sdtEndPr","sdtContent","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52 };
     
@@ -16982,6 +15894,7 @@ if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
         get => GetElement<SdtContentBlock>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -17123,6 +16036,7 @@ if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
     [ChildElementInfo(typeof(SubDocumentReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "p")]
 public partial class Paragraph : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11681;
@@ -17237,199 +16151,11 @@ public partial class Paragraph : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "pPr" == name)
-    return new ParagraphProperties();
     
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlRun();
-    
-if( 23 == namespaceId && "fldSimple" == name)
-    return new SimpleField();
-    
-if( 23 == namespaceId && "hyperlink" == name)
-    return new Hyperlink();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtRun();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-if( 21 == namespaceId && "oMathPara" == name)
-    return new DocumentFormat.OpenXml.Math.Paragraph();
-    
-if( 21 == namespaceId && "oMath" == name)
-    return new DocumentFormat.OpenXml.Math.OfficeMath();
-    
-if( 21 == namespaceId && "acc" == name)
-    return new DocumentFormat.OpenXml.Math.Accent();
-    
-if( 21 == namespaceId && "bar" == name)
-    return new DocumentFormat.OpenXml.Math.Bar();
-    
-if( 21 == namespaceId && "box" == name)
-    return new DocumentFormat.OpenXml.Math.Box();
-    
-if( 21 == namespaceId && "borderBox" == name)
-    return new DocumentFormat.OpenXml.Math.BorderBox();
-    
-if( 21 == namespaceId && "d" == name)
-    return new DocumentFormat.OpenXml.Math.Delimiter();
-    
-if( 21 == namespaceId && "eqArr" == name)
-    return new DocumentFormat.OpenXml.Math.EquationArray();
-    
-if( 21 == namespaceId && "f" == name)
-    return new DocumentFormat.OpenXml.Math.Fraction();
-    
-if( 21 == namespaceId && "func" == name)
-    return new DocumentFormat.OpenXml.Math.MathFunction();
-    
-if( 21 == namespaceId && "groupChr" == name)
-    return new DocumentFormat.OpenXml.Math.GroupChar();
-    
-if( 21 == namespaceId && "limLow" == name)
-    return new DocumentFormat.OpenXml.Math.LimitLower();
-    
-if( 21 == namespaceId && "limUpp" == name)
-    return new DocumentFormat.OpenXml.Math.LimitUpper();
-    
-if( 21 == namespaceId && "m" == name)
-    return new DocumentFormat.OpenXml.Math.Matrix();
-    
-if( 21 == namespaceId && "nary" == name)
-    return new DocumentFormat.OpenXml.Math.Nary();
-    
-if( 21 == namespaceId && "phant" == name)
-    return new DocumentFormat.OpenXml.Math.Phantom();
-    
-if( 21 == namespaceId && "rad" == name)
-    return new DocumentFormat.OpenXml.Math.Radical();
-    
-if( 21 == namespaceId && "sPre" == name)
-    return new DocumentFormat.OpenXml.Math.PreSubSuper();
-    
-if( 21 == namespaceId && "sSub" == name)
-    return new DocumentFormat.OpenXml.Math.Subscript();
-    
-if( 21 == namespaceId && "sSubSup" == name)
-    return new DocumentFormat.OpenXml.Math.SubSuperscript();
-    
-if( 21 == namespaceId && "sSup" == name)
-    return new DocumentFormat.OpenXml.Math.Superscript();
-    
-if( 21 == namespaceId && "r" == name)
-    return new DocumentFormat.OpenXml.Math.Run();
-    
-if( 23 == namespaceId && "r" == name)
-    return new Run();
-    
-if( 23 == namespaceId && "bdo" == name)
-    return new BidirectionalOverride();
-    
-if( 23 == namespaceId && "dir" == name)
-    return new BidirectionalEmbedding();
-    
-if( 23 == namespaceId && "subDoc" == name)
-    return new SubDocumentReference();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pPr","customXml","fldSimple","hyperlink","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel","oMathPara","oMath","acc","bar","box","borderBox","d","eqArr","f","func","groupChr","limLow","limUpp","m","nary","phant","rad","sPre","sSub","sSubSup","sSup","r","r","bdo","dir","subDoc" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,23,23,23,23 };
     
@@ -17450,6 +16176,7 @@ if( 23 == namespaceId && "subDoc" == name)
         get => GetElement<ParagraphProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -17539,6 +16266,7 @@ if( 23 == namespaceId && "subDoc" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tbl")]
 public partial class Table : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11682;
@@ -17581,121 +16309,11 @@ public partial class Table : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
     
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "tblPr" == name)
-    return new TableProperties();
-    
-if( 23 == namespaceId && "tblGrid" == name)
-    return new TableGrid();
-    
-if( 23 == namespaceId && "tr" == name)
-    return new TableRow();
-    
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlRow();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtRow();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Table>(deep);
@@ -17784,6 +16402,7 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tr")]
 public partial class TableRow : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11683;
@@ -17880,121 +16499,11 @@ public partial class TableRow : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "tblPrEx" == name)
-    return new TablePropertyExceptions();
     
-if( 23 == namespaceId && "trPr" == name)
-    return new TableRowProperties();
-    
-if( 23 == namespaceId && "tc" == name)
-    return new TableCell();
-    
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlCell();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtCell();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "tblPrEx","trPr","tc","customXml","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52 };
     
@@ -18015,6 +16524,7 @@ if( 52 == namespaceId && "conflictDel" == name)
         get => GetElement<TablePropertyExceptions>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Table Row Properties.</para>
     /// <para> Represents the following element tag in the schema: w:trPr </para>
@@ -18027,6 +16537,7 @@ if( 52 == namespaceId && "conflictDel" == name)
         get => GetElement<TableRowProperties>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -18114,6 +16625,7 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "customXml")]
 public partial class CustomXmlRow : CustomXmlElement
 {
     internal const int ElementTypeIdConst = 11684;
@@ -18156,118 +16668,11 @@ public partial class CustomXmlRow : CustomXmlElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "customXmlPr" == name)
-    return new CustomXmlProperties();
     
-if( 23 == namespaceId && "tr" == name)
-    return new TableRow();
-    
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlRow();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtRow();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "customXmlPr","tr","customXml","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52 };
     
@@ -18341,6 +16746,7 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "sdt")]
 public partial class SdtRow : SdtElement
 {
     internal const int ElementTypeIdConst = 11685;
@@ -18383,85 +16789,11 @@ public partial class SdtRow : SdtElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "sdtPr" == name)
-    return new SdtProperties();
     
-if( 23 == namespaceId && "sdtEndPr" == name)
-    return new SdtEndCharProperties();
-    
-if( 23 == namespaceId && "sdtContent" == name)
-    return new SdtContentRow();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sdtPr","sdtEndPr","sdtContent","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52 };
     
@@ -18482,6 +16814,7 @@ if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
         get => GetElement<SdtContentRow>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -18573,6 +16906,7 @@ if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tc")]
 public partial class TableCell : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11686;
@@ -18615,124 +16949,11 @@ public partial class TableCell : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "tcPr" == name)
-    return new TableCellProperties();
     
-if( 23 == namespaceId && "altChunk" == name)
-    return new AltChunk();
-    
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlBlock();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtBlock();
-    
-if( 23 == namespaceId && "p" == name)
-    return new Paragraph();
-    
-if( 23 == namespaceId && "tbl" == name)
-    return new Table();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "tcPr","altChunk","customXml","sdt","p","tbl","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52 };
     
@@ -18753,6 +16974,7 @@ if( 52 == namespaceId && "conflictDel" == name)
         get => GetElement<TableCellProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -18840,6 +17062,7 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "customXml")]
 public partial class CustomXmlCell : CustomXmlElement
 {
     internal const int ElementTypeIdConst = 11687;
@@ -18882,118 +17105,11 @@ public partial class CustomXmlCell : CustomXmlElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "customXmlPr" == name)
-    return new CustomXmlProperties();
     
-if( 23 == namespaceId && "tc" == name)
-    return new TableCell();
-    
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlCell();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtCell();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "customXmlPr","tc","customXml","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52 };
     
@@ -19067,6 +17183,7 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "sdt")]
 public partial class SdtCell : SdtElement
 {
     internal const int ElementTypeIdConst = 11688;
@@ -19109,85 +17226,11 @@ public partial class SdtCell : SdtElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "sdtPr" == name)
-    return new SdtProperties();
     
-if( 23 == namespaceId && "sdtEndPr" == name)
-    return new SdtEndCharProperties();
-    
-if( 23 == namespaceId && "sdtContent" == name)
-    return new SdtContentCell();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sdtPr","sdtEndPr","sdtContent","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52 };
     
@@ -19208,6 +17251,7 @@ if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
         get => GetElement<SdtContentCell>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -19349,6 +17393,7 @@ if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
     [ChildElementInfo(typeof(SubDocumentReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "customXml")]
 public partial class CustomXmlRun : CustomXmlElement
 {
     internal const int ElementTypeIdConst = 11689;
@@ -19391,199 +17436,11 @@ public partial class CustomXmlRun : CustomXmlElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "customXmlPr" == name)
-    return new CustomXmlProperties();
     
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlRun();
-    
-if( 23 == namespaceId && "fldSimple" == name)
-    return new SimpleField();
-    
-if( 23 == namespaceId && "hyperlink" == name)
-    return new Hyperlink();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtRun();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-if( 21 == namespaceId && "oMathPara" == name)
-    return new DocumentFormat.OpenXml.Math.Paragraph();
-    
-if( 21 == namespaceId && "oMath" == name)
-    return new DocumentFormat.OpenXml.Math.OfficeMath();
-    
-if( 21 == namespaceId && "acc" == name)
-    return new DocumentFormat.OpenXml.Math.Accent();
-    
-if( 21 == namespaceId && "bar" == name)
-    return new DocumentFormat.OpenXml.Math.Bar();
-    
-if( 21 == namespaceId && "box" == name)
-    return new DocumentFormat.OpenXml.Math.Box();
-    
-if( 21 == namespaceId && "borderBox" == name)
-    return new DocumentFormat.OpenXml.Math.BorderBox();
-    
-if( 21 == namespaceId && "d" == name)
-    return new DocumentFormat.OpenXml.Math.Delimiter();
-    
-if( 21 == namespaceId && "eqArr" == name)
-    return new DocumentFormat.OpenXml.Math.EquationArray();
-    
-if( 21 == namespaceId && "f" == name)
-    return new DocumentFormat.OpenXml.Math.Fraction();
-    
-if( 21 == namespaceId && "func" == name)
-    return new DocumentFormat.OpenXml.Math.MathFunction();
-    
-if( 21 == namespaceId && "groupChr" == name)
-    return new DocumentFormat.OpenXml.Math.GroupChar();
-    
-if( 21 == namespaceId && "limLow" == name)
-    return new DocumentFormat.OpenXml.Math.LimitLower();
-    
-if( 21 == namespaceId && "limUpp" == name)
-    return new DocumentFormat.OpenXml.Math.LimitUpper();
-    
-if( 21 == namespaceId && "m" == name)
-    return new DocumentFormat.OpenXml.Math.Matrix();
-    
-if( 21 == namespaceId && "nary" == name)
-    return new DocumentFormat.OpenXml.Math.Nary();
-    
-if( 21 == namespaceId && "phant" == name)
-    return new DocumentFormat.OpenXml.Math.Phantom();
-    
-if( 21 == namespaceId && "rad" == name)
-    return new DocumentFormat.OpenXml.Math.Radical();
-    
-if( 21 == namespaceId && "sPre" == name)
-    return new DocumentFormat.OpenXml.Math.PreSubSuper();
-    
-if( 21 == namespaceId && "sSub" == name)
-    return new DocumentFormat.OpenXml.Math.Subscript();
-    
-if( 21 == namespaceId && "sSubSup" == name)
-    return new DocumentFormat.OpenXml.Math.SubSuperscript();
-    
-if( 21 == namespaceId && "sSup" == name)
-    return new DocumentFormat.OpenXml.Math.Superscript();
-    
-if( 21 == namespaceId && "r" == name)
-    return new DocumentFormat.OpenXml.Math.Run();
-    
-if( 23 == namespaceId && "r" == name)
-    return new Run();
-    
-if( 23 == namespaceId && "bdo" == name)
-    return new BidirectionalOverride();
-    
-if( 23 == namespaceId && "dir" == name)
-    return new BidirectionalEmbedding();
-    
-if( 23 == namespaceId && "subDoc" == name)
-    return new SubDocumentReference();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "customXmlPr","customXml","fldSimple","hyperlink","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel","oMathPara","oMath","acc","bar","box","borderBox","d","eqArr","f","func","groupChr","limLow","limUpp","m","nary","phant","rad","sPre","sSub","sSubSup","sSup","r","r","bdo","dir","subDoc" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,23,23,23,23 };
     
@@ -19733,6 +17590,7 @@ if( 23 == namespaceId && "subDoc" == name)
     [ChildElementInfo(typeof(SubDocumentReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "fldSimple")]
 public partial class SimpleField : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11690;
@@ -19802,199 +17660,11 @@ public partial class SimpleField : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "fldData" == name)
-    return new FieldData();
     
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlRun();
-    
-if( 23 == namespaceId && "fldSimple" == name)
-    return new SimpleField();
-    
-if( 23 == namespaceId && "hyperlink" == name)
-    return new Hyperlink();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtRun();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-if( 21 == namespaceId && "oMathPara" == name)
-    return new DocumentFormat.OpenXml.Math.Paragraph();
-    
-if( 21 == namespaceId && "oMath" == name)
-    return new DocumentFormat.OpenXml.Math.OfficeMath();
-    
-if( 21 == namespaceId && "acc" == name)
-    return new DocumentFormat.OpenXml.Math.Accent();
-    
-if( 21 == namespaceId && "bar" == name)
-    return new DocumentFormat.OpenXml.Math.Bar();
-    
-if( 21 == namespaceId && "box" == name)
-    return new DocumentFormat.OpenXml.Math.Box();
-    
-if( 21 == namespaceId && "borderBox" == name)
-    return new DocumentFormat.OpenXml.Math.BorderBox();
-    
-if( 21 == namespaceId && "d" == name)
-    return new DocumentFormat.OpenXml.Math.Delimiter();
-    
-if( 21 == namespaceId && "eqArr" == name)
-    return new DocumentFormat.OpenXml.Math.EquationArray();
-    
-if( 21 == namespaceId && "f" == name)
-    return new DocumentFormat.OpenXml.Math.Fraction();
-    
-if( 21 == namespaceId && "func" == name)
-    return new DocumentFormat.OpenXml.Math.MathFunction();
-    
-if( 21 == namespaceId && "groupChr" == name)
-    return new DocumentFormat.OpenXml.Math.GroupChar();
-    
-if( 21 == namespaceId && "limLow" == name)
-    return new DocumentFormat.OpenXml.Math.LimitLower();
-    
-if( 21 == namespaceId && "limUpp" == name)
-    return new DocumentFormat.OpenXml.Math.LimitUpper();
-    
-if( 21 == namespaceId && "m" == name)
-    return new DocumentFormat.OpenXml.Math.Matrix();
-    
-if( 21 == namespaceId && "nary" == name)
-    return new DocumentFormat.OpenXml.Math.Nary();
-    
-if( 21 == namespaceId && "phant" == name)
-    return new DocumentFormat.OpenXml.Math.Phantom();
-    
-if( 21 == namespaceId && "rad" == name)
-    return new DocumentFormat.OpenXml.Math.Radical();
-    
-if( 21 == namespaceId && "sPre" == name)
-    return new DocumentFormat.OpenXml.Math.PreSubSuper();
-    
-if( 21 == namespaceId && "sSub" == name)
-    return new DocumentFormat.OpenXml.Math.Subscript();
-    
-if( 21 == namespaceId && "sSubSup" == name)
-    return new DocumentFormat.OpenXml.Math.SubSuperscript();
-    
-if( 21 == namespaceId && "sSup" == name)
-    return new DocumentFormat.OpenXml.Math.Superscript();
-    
-if( 21 == namespaceId && "r" == name)
-    return new DocumentFormat.OpenXml.Math.Run();
-    
-if( 23 == namespaceId && "r" == name)
-    return new Run();
-    
-if( 23 == namespaceId && "bdo" == name)
-    return new BidirectionalOverride();
-    
-if( 23 == namespaceId && "dir" == name)
-    return new BidirectionalEmbedding();
-    
-if( 23 == namespaceId && "subDoc" == name)
-    return new SubDocumentReference();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "fldData","customXml","fldSimple","hyperlink","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel","oMathPara","oMath","acc","bar","box","borderBox","d","eqArr","f","func","groupChr","limLow","limUpp","m","nary","phant","rad","sPre","sSub","sSubSup","sSup","r","r","bdo","dir","subDoc" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,23,23,23,23 };
     
@@ -20015,6 +17685,7 @@ if( 23 == namespaceId && "subDoc" == name)
         get => GetElement<FieldData>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -20154,6 +17825,7 @@ if( 23 == namespaceId && "subDoc" == name)
     [ChildElementInfo(typeof(SubDocumentReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "hyperlink")]
 public partial class Hyperlink : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11691;
@@ -20250,196 +17922,11 @@ public partial class Hyperlink : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlRun();
     
-if( 23 == namespaceId && "fldSimple" == name)
-    return new SimpleField();
-    
-if( 23 == namespaceId && "hyperlink" == name)
-    return new Hyperlink();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtRun();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-if( 21 == namespaceId && "oMathPara" == name)
-    return new DocumentFormat.OpenXml.Math.Paragraph();
-    
-if( 21 == namespaceId && "oMath" == name)
-    return new DocumentFormat.OpenXml.Math.OfficeMath();
-    
-if( 21 == namespaceId && "acc" == name)
-    return new DocumentFormat.OpenXml.Math.Accent();
-    
-if( 21 == namespaceId && "bar" == name)
-    return new DocumentFormat.OpenXml.Math.Bar();
-    
-if( 21 == namespaceId && "box" == name)
-    return new DocumentFormat.OpenXml.Math.Box();
-    
-if( 21 == namespaceId && "borderBox" == name)
-    return new DocumentFormat.OpenXml.Math.BorderBox();
-    
-if( 21 == namespaceId && "d" == name)
-    return new DocumentFormat.OpenXml.Math.Delimiter();
-    
-if( 21 == namespaceId && "eqArr" == name)
-    return new DocumentFormat.OpenXml.Math.EquationArray();
-    
-if( 21 == namespaceId && "f" == name)
-    return new DocumentFormat.OpenXml.Math.Fraction();
-    
-if( 21 == namespaceId && "func" == name)
-    return new DocumentFormat.OpenXml.Math.MathFunction();
-    
-if( 21 == namespaceId && "groupChr" == name)
-    return new DocumentFormat.OpenXml.Math.GroupChar();
-    
-if( 21 == namespaceId && "limLow" == name)
-    return new DocumentFormat.OpenXml.Math.LimitLower();
-    
-if( 21 == namespaceId && "limUpp" == name)
-    return new DocumentFormat.OpenXml.Math.LimitUpper();
-    
-if( 21 == namespaceId && "m" == name)
-    return new DocumentFormat.OpenXml.Math.Matrix();
-    
-if( 21 == namespaceId && "nary" == name)
-    return new DocumentFormat.OpenXml.Math.Nary();
-    
-if( 21 == namespaceId && "phant" == name)
-    return new DocumentFormat.OpenXml.Math.Phantom();
-    
-if( 21 == namespaceId && "rad" == name)
-    return new DocumentFormat.OpenXml.Math.Radical();
-    
-if( 21 == namespaceId && "sPre" == name)
-    return new DocumentFormat.OpenXml.Math.PreSubSuper();
-    
-if( 21 == namespaceId && "sSub" == name)
-    return new DocumentFormat.OpenXml.Math.Subscript();
-    
-if( 21 == namespaceId && "sSubSup" == name)
-    return new DocumentFormat.OpenXml.Math.SubSuperscript();
-    
-if( 21 == namespaceId && "sSup" == name)
-    return new DocumentFormat.OpenXml.Math.Superscript();
-    
-if( 21 == namespaceId && "r" == name)
-    return new DocumentFormat.OpenXml.Math.Run();
-    
-if( 23 == namespaceId && "r" == name)
-    return new Run();
-    
-if( 23 == namespaceId && "bdo" == name)
-    return new BidirectionalOverride();
-    
-if( 23 == namespaceId && "dir" == name)
-    return new BidirectionalEmbedding();
-    
-if( 23 == namespaceId && "subDoc" == name)
-    return new SubDocumentReference();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Hyperlink>(deep);
@@ -20578,6 +18065,7 @@ if( 23 == namespaceId && "subDoc" == name)
     [ChildElementInfo(typeof(SubDocumentReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(23, "bdo")]
 public partial class BidirectionalOverride : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11692;
@@ -20629,196 +18117,11 @@ public partial class BidirectionalOverride : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlRun();
     
-if( 23 == namespaceId && "fldSimple" == name)
-    return new SimpleField();
-    
-if( 23 == namespaceId && "hyperlink" == name)
-    return new Hyperlink();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtRun();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-if( 21 == namespaceId && "oMathPara" == name)
-    return new DocumentFormat.OpenXml.Math.Paragraph();
-    
-if( 21 == namespaceId && "oMath" == name)
-    return new DocumentFormat.OpenXml.Math.OfficeMath();
-    
-if( 21 == namespaceId && "acc" == name)
-    return new DocumentFormat.OpenXml.Math.Accent();
-    
-if( 21 == namespaceId && "bar" == name)
-    return new DocumentFormat.OpenXml.Math.Bar();
-    
-if( 21 == namespaceId && "box" == name)
-    return new DocumentFormat.OpenXml.Math.Box();
-    
-if( 21 == namespaceId && "borderBox" == name)
-    return new DocumentFormat.OpenXml.Math.BorderBox();
-    
-if( 21 == namespaceId && "d" == name)
-    return new DocumentFormat.OpenXml.Math.Delimiter();
-    
-if( 21 == namespaceId && "eqArr" == name)
-    return new DocumentFormat.OpenXml.Math.EquationArray();
-    
-if( 21 == namespaceId && "f" == name)
-    return new DocumentFormat.OpenXml.Math.Fraction();
-    
-if( 21 == namespaceId && "func" == name)
-    return new DocumentFormat.OpenXml.Math.MathFunction();
-    
-if( 21 == namespaceId && "groupChr" == name)
-    return new DocumentFormat.OpenXml.Math.GroupChar();
-    
-if( 21 == namespaceId && "limLow" == name)
-    return new DocumentFormat.OpenXml.Math.LimitLower();
-    
-if( 21 == namespaceId && "limUpp" == name)
-    return new DocumentFormat.OpenXml.Math.LimitUpper();
-    
-if( 21 == namespaceId && "m" == name)
-    return new DocumentFormat.OpenXml.Math.Matrix();
-    
-if( 21 == namespaceId && "nary" == name)
-    return new DocumentFormat.OpenXml.Math.Nary();
-    
-if( 21 == namespaceId && "phant" == name)
-    return new DocumentFormat.OpenXml.Math.Phantom();
-    
-if( 21 == namespaceId && "rad" == name)
-    return new DocumentFormat.OpenXml.Math.Radical();
-    
-if( 21 == namespaceId && "sPre" == name)
-    return new DocumentFormat.OpenXml.Math.PreSubSuper();
-    
-if( 21 == namespaceId && "sSub" == name)
-    return new DocumentFormat.OpenXml.Math.Subscript();
-    
-if( 21 == namespaceId && "sSubSup" == name)
-    return new DocumentFormat.OpenXml.Math.SubSuperscript();
-    
-if( 21 == namespaceId && "sSup" == name)
-    return new DocumentFormat.OpenXml.Math.Superscript();
-    
-if( 21 == namespaceId && "r" == name)
-    return new DocumentFormat.OpenXml.Math.Run();
-    
-if( 23 == namespaceId && "r" == name)
-    return new Run();
-    
-if( 23 == namespaceId && "bdo" == name)
-    return new BidirectionalOverride();
-    
-if( 23 == namespaceId && "dir" == name)
-    return new BidirectionalEmbedding();
-    
-if( 23 == namespaceId && "subDoc" == name)
-    return new SubDocumentReference();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BidirectionalOverride>(deep);
@@ -20957,6 +18260,7 @@ if( 23 == namespaceId && "subDoc" == name)
     [ChildElementInfo(typeof(SubDocumentReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(23, "dir")]
 public partial class BidirectionalEmbedding : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11693;
@@ -21008,196 +18312,11 @@ public partial class BidirectionalEmbedding : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlRun();
     
-if( 23 == namespaceId && "fldSimple" == name)
-    return new SimpleField();
-    
-if( 23 == namespaceId && "hyperlink" == name)
-    return new Hyperlink();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtRun();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-if( 21 == namespaceId && "oMathPara" == name)
-    return new DocumentFormat.OpenXml.Math.Paragraph();
-    
-if( 21 == namespaceId && "oMath" == name)
-    return new DocumentFormat.OpenXml.Math.OfficeMath();
-    
-if( 21 == namespaceId && "acc" == name)
-    return new DocumentFormat.OpenXml.Math.Accent();
-    
-if( 21 == namespaceId && "bar" == name)
-    return new DocumentFormat.OpenXml.Math.Bar();
-    
-if( 21 == namespaceId && "box" == name)
-    return new DocumentFormat.OpenXml.Math.Box();
-    
-if( 21 == namespaceId && "borderBox" == name)
-    return new DocumentFormat.OpenXml.Math.BorderBox();
-    
-if( 21 == namespaceId && "d" == name)
-    return new DocumentFormat.OpenXml.Math.Delimiter();
-    
-if( 21 == namespaceId && "eqArr" == name)
-    return new DocumentFormat.OpenXml.Math.EquationArray();
-    
-if( 21 == namespaceId && "f" == name)
-    return new DocumentFormat.OpenXml.Math.Fraction();
-    
-if( 21 == namespaceId && "func" == name)
-    return new DocumentFormat.OpenXml.Math.MathFunction();
-    
-if( 21 == namespaceId && "groupChr" == name)
-    return new DocumentFormat.OpenXml.Math.GroupChar();
-    
-if( 21 == namespaceId && "limLow" == name)
-    return new DocumentFormat.OpenXml.Math.LimitLower();
-    
-if( 21 == namespaceId && "limUpp" == name)
-    return new DocumentFormat.OpenXml.Math.LimitUpper();
-    
-if( 21 == namespaceId && "m" == name)
-    return new DocumentFormat.OpenXml.Math.Matrix();
-    
-if( 21 == namespaceId && "nary" == name)
-    return new DocumentFormat.OpenXml.Math.Nary();
-    
-if( 21 == namespaceId && "phant" == name)
-    return new DocumentFormat.OpenXml.Math.Phantom();
-    
-if( 21 == namespaceId && "rad" == name)
-    return new DocumentFormat.OpenXml.Math.Radical();
-    
-if( 21 == namespaceId && "sPre" == name)
-    return new DocumentFormat.OpenXml.Math.PreSubSuper();
-    
-if( 21 == namespaceId && "sSub" == name)
-    return new DocumentFormat.OpenXml.Math.Subscript();
-    
-if( 21 == namespaceId && "sSubSup" == name)
-    return new DocumentFormat.OpenXml.Math.SubSuperscript();
-    
-if( 21 == namespaceId && "sSup" == name)
-    return new DocumentFormat.OpenXml.Math.Superscript();
-    
-if( 21 == namespaceId && "r" == name)
-    return new DocumentFormat.OpenXml.Math.Run();
-    
-if( 23 == namespaceId && "r" == name)
-    return new Run();
-    
-if( 23 == namespaceId && "bdo" == name)
-    return new BidirectionalOverride();
-    
-if( 23 == namespaceId && "dir" == name)
-    return new BidirectionalEmbedding();
-    
-if( 23 == namespaceId && "subDoc" == name)
-    return new SubDocumentReference();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BidirectionalEmbedding>(deep);
@@ -21210,6 +18329,7 @@ if( 23 == namespaceId && "subDoc" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "subDoc")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SubDocumentReference : RelationshipType
 {
@@ -21237,6 +18357,7 @@ public partial class SubDocumentReference : RelationshipType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "printerSettings")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PrinterSettingsReference : RelationshipType
 {
@@ -21264,6 +18385,7 @@ public partial class PrinterSettingsReference : RelationshipType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "src")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SourceReference : RelationshipType
 {
@@ -21291,6 +18413,7 @@ public partial class SourceReference : RelationshipType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "recipientData")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RecipientDataReference : RelationshipType
 {
@@ -21318,6 +18441,7 @@ public partial class RecipientDataReference : RelationshipType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "dataSource")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DataSourceReference : RelationshipType
 {
@@ -21345,6 +18469,7 @@ public partial class DataSourceReference : RelationshipType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "headerSource")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HeaderSource : RelationshipType
 {
@@ -21372,6 +18497,7 @@ public partial class HeaderSource : RelationshipType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "sourceFileName")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SourceFileReference : RelationshipType
 {
@@ -21399,6 +18525,7 @@ public partial class SourceFileReference : RelationshipType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "movie")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MovieReference : RelationshipType
 {
@@ -21426,6 +18553,7 @@ public partial class MovieReference : RelationshipType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "attachedTemplate")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AttachedTemplate : RelationshipType
 {
@@ -21483,6 +18611,7 @@ public abstract partial class RelationshipType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "cnfStyle")]
 public partial class ConditionalFormatStyle : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11695;
@@ -21633,6 +18762,7 @@ public partial class ConditionalFormatStyle : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "tcW")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TableCellWidth : TableWidthType
 {
@@ -21660,6 +18790,7 @@ public partial class TableCellWidth : TableWidthType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "wBefore")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WidthBeforeTableRow : TableWidthType
 {
@@ -21687,6 +18818,7 @@ public partial class WidthBeforeTableRow : TableWidthType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "wAfter")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WidthAfterTableRow : TableWidthType
 {
@@ -21714,6 +18846,7 @@ public partial class WidthAfterTableRow : TableWidthType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "tblCellSpacing")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TableCellSpacing : TableWidthType
 {
@@ -21741,6 +18874,7 @@ public partial class TableCellSpacing : TableWidthType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "tblW")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TableWidth : TableWidthType
 {
@@ -21768,6 +18902,7 @@ public partial class TableWidth : TableWidthType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "top")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TopMargin : TableWidthType
 {
@@ -21795,6 +18930,7 @@ public partial class TopMargin : TableWidthType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "start")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class StartMargin : TableWidthType
 {
@@ -21822,6 +18958,7 @@ public partial class StartMargin : TableWidthType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "bottom")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BottomMargin : TableWidthType
 {
@@ -21849,6 +18986,7 @@ public partial class BottomMargin : TableWidthType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "end")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class EndMargin : TableWidthType
 {
@@ -21876,6 +19014,7 @@ public partial class EndMargin : TableWidthType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "left")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LeftMargin : TableWidthType
 {
@@ -21903,6 +19042,7 @@ public partial class LeftMargin : TableWidthType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "right")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RightMargin : TableWidthType
 {
@@ -21969,6 +19109,7 @@ public abstract partial class TableWidthType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "hMerge")]
 public partial class HorizontalMerge : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11698;
@@ -22012,6 +19153,7 @@ public partial class HorizontalMerge : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "vMerge")]
 public partial class VerticalMerge : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11699;
@@ -22080,6 +19222,7 @@ public partial class VerticalMerge : OpenXmlLeafElement
     [ChildElementInfo(typeof(TopRightToBottomLeftCellBorder))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tcBorders")]
 public partial class TableCellBorders : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11700;
@@ -22122,46 +19265,11 @@ public partial class TableCellBorders : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "top" == name)
-    return new TopBorder();
     
-if( 23 == namespaceId && "left" == name)
-    return new LeftBorder();
-    
-if( 23 == namespaceId && "start" == name)
-    return new StartBorder();
-    
-if( 23 == namespaceId && "bottom" == name)
-    return new BottomBorder();
-    
-if( 23 == namespaceId && "right" == name)
-    return new RightBorder();
-    
-if( 23 == namespaceId && "end" == name)
-    return new EndBorder();
-    
-if( 23 == namespaceId && "insideH" == name)
-    return new InsideHorizontalBorder();
-    
-if( 23 == namespaceId && "insideV" == name)
-    return new InsideVerticalBorder();
-    
-if( 23 == namespaceId && "tl2br" == name)
-    return new TopLeftToBottomRightCellBorder();
-    
-if( 23 == namespaceId && "tr2bl" == name)
-    return new TopRightToBottomLeftCellBorder();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "top","left","start","bottom","right","end","insideH","insideV","tl2br","tr2bl" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23 };
     
@@ -22182,6 +19290,7 @@ if( 23 == namespaceId && "tr2bl" == name)
         get => GetElement<TopBorder>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Table Cell Left Border.</para>
     /// <para> Represents the following element tag in the schema: w:left </para>
@@ -22194,6 +19303,7 @@ if( 23 == namespaceId && "tr2bl" == name)
         get => GetElement<LeftBorder>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> StartBorder.</para>
     /// <para> Represents the following element tag in the schema: w:start </para>
@@ -22206,6 +19316,7 @@ if( 23 == namespaceId && "tr2bl" == name)
         get => GetElement<StartBorder>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Table Cell Bottom Border.</para>
     /// <para> Represents the following element tag in the schema: w:bottom </para>
@@ -22218,6 +19329,7 @@ if( 23 == namespaceId && "tr2bl" == name)
         get => GetElement<BottomBorder>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Table Cell Right Border.</para>
     /// <para> Represents the following element tag in the schema: w:right </para>
@@ -22230,6 +19342,7 @@ if( 23 == namespaceId && "tr2bl" == name)
         get => GetElement<RightBorder>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> EndBorder.</para>
     /// <para> Represents the following element tag in the schema: w:end </para>
@@ -22242,6 +19355,7 @@ if( 23 == namespaceId && "tr2bl" == name)
         get => GetElement<EndBorder>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Table Cell Inside Horizontal Edges Border.</para>
     /// <para> Represents the following element tag in the schema: w:insideH </para>
@@ -22254,6 +19368,7 @@ if( 23 == namespaceId && "tr2bl" == name)
         get => GetElement<InsideHorizontalBorder>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Table Cell Inside Vertical Edges Border.</para>
     /// <para> Represents the following element tag in the schema: w:insideV </para>
@@ -22266,6 +19381,7 @@ if( 23 == namespaceId && "tr2bl" == name)
         get => GetElement<InsideVerticalBorder>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> Table Cell Top Left to Bottom Right Diagonal Border.</para>
     /// <para> Represents the following element tag in the schema: w:tl2br </para>
@@ -22278,6 +19394,7 @@ if( 23 == namespaceId && "tr2bl" == name)
         get => GetElement<TopLeftToBottomRightCellBorder>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Table Cell Top Right to Bottom Left Diagonal Border.</para>
     /// <para> Represents the following element tag in the schema: w:tr2bl </para>
@@ -22290,6 +19407,7 @@ if( 23 == namespaceId && "tr2bl" == name)
         get => GetElement<TopRightToBottomLeftCellBorder>(9);
         set => SetElement(9, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -22303,6 +19421,7 @@ if( 23 == namespaceId && "tr2bl" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "noWrap")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NoWrap : OnOffOnlyType
 {
@@ -22330,6 +19449,7 @@ public partial class NoWrap : OnOffOnlyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "tcFitText")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TableCellFitText : OnOffOnlyType
 {
@@ -22357,6 +19477,7 @@ public partial class TableCellFitText : OnOffOnlyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "hideMark")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HideMark : OnOffOnlyType
 {
@@ -22384,6 +19505,7 @@ public partial class HideMark : OnOffOnlyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "cantSplit")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CantSplit : OnOffOnlyType
 {
@@ -22411,6 +19533,7 @@ public partial class CantSplit : OnOffOnlyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "tblHeader")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TableHeader : OnOffOnlyType
 {
@@ -22438,6 +19561,7 @@ public partial class TableHeader : OnOffOnlyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "bidiVisual")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BiDiVisual : OnOffOnlyType
 {
@@ -22465,6 +19589,7 @@ public partial class BiDiVisual : OnOffOnlyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "noResizeAllowed")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NoResizeAllowed : OnOffOnlyType
 {
@@ -22492,6 +19617,7 @@ public partial class NoResizeAllowed : OnOffOnlyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "linkedToFile")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LinkedToFile : OnOffOnlyType
 {
@@ -22519,6 +19645,7 @@ public partial class LinkedToFile : OnOffOnlyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "noBorder")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NoBorder : OnOffOnlyType
 {
@@ -22546,6 +19673,7 @@ public partial class NoBorder : OnOffOnlyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "flatBorders")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FlatBorders : OnOffOnlyType
 {
@@ -22573,6 +19701,7 @@ public partial class FlatBorders : OnOffOnlyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "autoRedefine")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AutoRedefine : OnOffOnlyType
 {
@@ -22600,6 +19729,7 @@ public partial class AutoRedefine : OnOffOnlyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "hidden")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StyleHidden : OnOffOnlyType
 {
@@ -22627,6 +19757,7 @@ public partial class StyleHidden : OnOffOnlyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "semiHidden")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SemiHidden : OnOffOnlyType
 {
@@ -22654,6 +19785,7 @@ public partial class SemiHidden : OnOffOnlyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "unhideWhenUsed")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UnhideWhenUsed : OnOffOnlyType
 {
@@ -22681,6 +19813,7 @@ public partial class UnhideWhenUsed : OnOffOnlyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "qFormat")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PrimaryStyle : OnOffOnlyType
 {
@@ -22708,6 +19841,7 @@ public partial class PrimaryStyle : OnOffOnlyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "locked")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Locked : OnOffOnlyType
 {
@@ -22735,6 +19869,7 @@ public partial class Locked : OnOffOnlyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "personal")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Personal : OnOffOnlyType
 {
@@ -22762,6 +19897,7 @@ public partial class Personal : OnOffOnlyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "personalCompose")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PersonalCompose : OnOffOnlyType
 {
@@ -22789,6 +19925,7 @@ public partial class PersonalCompose : OnOffOnlyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "personalReply")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PersonalReply : OnOffOnlyType
 {
@@ -22863,6 +20000,7 @@ public abstract partial class OnOffOnlyType : OpenXmlLeafElement
     [ChildElementInfo(typeof(EndMargin), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tcMar")]
 public partial class TableCellMargin : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11702;
@@ -22905,34 +20043,11 @@ public partial class TableCellMargin : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "top" == name)
-    return new TopMargin();
     
-if( 23 == namespaceId && "left" == name)
-    return new LeftMargin();
-    
-if( 23 == namespaceId && "start" == name)
-    return new StartMargin();
-    
-if( 23 == namespaceId && "bottom" == name)
-    return new BottomMargin();
-    
-if( 23 == namespaceId && "right" == name)
-    return new RightMargin();
-    
-if( 23 == namespaceId && "end" == name)
-    return new EndMargin();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "top","left","start","bottom","right","end" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23 };
     
@@ -22953,6 +20068,7 @@ if( 23 == namespaceId && "end" == name)
         get => GetElement<TopMargin>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Table Cell Left Margin Exception.</para>
     /// <para> Represents the following element tag in the schema: w:left </para>
@@ -22965,6 +20081,7 @@ if( 23 == namespaceId && "end" == name)
         get => GetElement<LeftMargin>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> StartMargin.</para>
     /// <para> Represents the following element tag in the schema: w:start </para>
@@ -22977,6 +20094,7 @@ if( 23 == namespaceId && "end" == name)
         get => GetElement<StartMargin>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Table Cell Bottom Margin Exception.</para>
     /// <para> Represents the following element tag in the schema: w:bottom </para>
@@ -22989,6 +20107,7 @@ if( 23 == namespaceId && "end" == name)
         get => GetElement<BottomMargin>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Table Cell Right Margin Exception.</para>
     /// <para> Represents the following element tag in the schema: w:right </para>
@@ -23001,6 +20120,7 @@ if( 23 == namespaceId && "end" == name)
         get => GetElement<RightMargin>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> EndMargin.</para>
     /// <para> Represents the following element tag in the schema: w:end </para>
@@ -23013,6 +20133,7 @@ if( 23 == namespaceId && "end" == name)
         get => GetElement<EndMargin>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -23027,6 +20148,7 @@ if( 23 == namespaceId && "end" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "vAlign")]
 public partial class TableCellVerticalAlignment : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11704;
@@ -23070,6 +20192,7 @@ public partial class TableCellVerticalAlignment : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "divId")]
 public partial class DivId : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11706;
@@ -23113,6 +20236,7 @@ public partial class DivId : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "trHeight")]
 public partial class TableRowHeight : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11711;
@@ -23165,6 +20289,7 @@ public partial class TableRowHeight : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "jc")]
 public partial class TableJustification : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11716;
@@ -23208,6 +20333,7 @@ public partial class TableJustification : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblpPr")]
 public partial class TablePositionProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11718;
@@ -23332,6 +20458,7 @@ public partial class TablePositionProperties : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblOverlap")]
 public partial class TableOverlap : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11719;
@@ -23374,6 +20501,7 @@ public partial class TableOverlap : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "tblStyleRowBandSize")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TableStyleRowBandSize : UnsignedDecimalNumberMax3Type
 {
@@ -23401,6 +20529,7 @@ public partial class TableStyleRowBandSize : UnsignedDecimalNumberMax3Type
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "tblStyleColBandSize")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TableStyleColumnBandSize : UnsignedDecimalNumberMax3Type
 {
@@ -23458,6 +20587,7 @@ public abstract partial class UnsignedDecimalNumberMax3Type : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblInd")]
 public partial class TableIndentation : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11724;
@@ -23531,6 +20661,7 @@ public partial class TableIndentation : OpenXmlLeafElement
     [ChildElementInfo(typeof(InsideVerticalBorder))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblBorders")]
 public partial class TableBorders : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11725;
@@ -23573,40 +20704,11 @@ public partial class TableBorders : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "top" == name)
-    return new TopBorder();
     
-if( 23 == namespaceId && "left" == name)
-    return new LeftBorder();
-    
-if( 23 == namespaceId && "start" == name)
-    return new StartBorder();
-    
-if( 23 == namespaceId && "bottom" == name)
-    return new BottomBorder();
-    
-if( 23 == namespaceId && "right" == name)
-    return new RightBorder();
-    
-if( 23 == namespaceId && "end" == name)
-    return new EndBorder();
-    
-if( 23 == namespaceId && "insideH" == name)
-    return new InsideHorizontalBorder();
-    
-if( 23 == namespaceId && "insideV" == name)
-    return new InsideVerticalBorder();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "top","left","start","bottom","right","end","insideH","insideV" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23 };
     
@@ -23627,6 +20729,7 @@ if( 23 == namespaceId && "insideV" == name)
         get => GetElement<TopBorder>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Table Left Border.</para>
     /// <para> Represents the following element tag in the schema: w:left </para>
@@ -23639,6 +20742,7 @@ if( 23 == namespaceId && "insideV" == name)
         get => GetElement<LeftBorder>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> StartBorder.</para>
     /// <para> Represents the following element tag in the schema: w:start </para>
@@ -23651,6 +20755,7 @@ if( 23 == namespaceId && "insideV" == name)
         get => GetElement<StartBorder>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Table Bottom Border.</para>
     /// <para> Represents the following element tag in the schema: w:bottom </para>
@@ -23663,6 +20768,7 @@ if( 23 == namespaceId && "insideV" == name)
         get => GetElement<BottomBorder>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Table Right Border.</para>
     /// <para> Represents the following element tag in the schema: w:right </para>
@@ -23675,6 +20781,7 @@ if( 23 == namespaceId && "insideV" == name)
         get => GetElement<RightBorder>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> EndBorder.</para>
     /// <para> Represents the following element tag in the schema: w:end </para>
@@ -23687,6 +20794,7 @@ if( 23 == namespaceId && "insideV" == name)
         get => GetElement<EndBorder>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Table Inside Horizontal Edges Border.</para>
     /// <para> Represents the following element tag in the schema: w:insideH </para>
@@ -23699,6 +20807,7 @@ if( 23 == namespaceId && "insideV" == name)
         get => GetElement<InsideHorizontalBorder>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Table Inside Vertical Edges Border.</para>
     /// <para> Represents the following element tag in the schema: w:insideV </para>
@@ -23711,6 +20820,7 @@ if( 23 == namespaceId && "insideV" == name)
         get => GetElement<InsideVerticalBorder>(7);
         set => SetElement(7, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -23725,6 +20835,7 @@ if( 23 == namespaceId && "insideV" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblLayout")]
 public partial class TableLayout : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11726;
@@ -23785,6 +20896,7 @@ public partial class TableLayout : OpenXmlLeafElement
     [ChildElementInfo(typeof(EndMargin), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblCellMar")]
 public partial class TableCellMarginDefault : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11727;
@@ -23827,34 +20939,11 @@ public partial class TableCellMarginDefault : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "top" == name)
-    return new TopMargin();
     
-if( 23 == namespaceId && "left" == name)
-    return new TableCellLeftMargin();
-    
-if( 23 == namespaceId && "start" == name)
-    return new StartMargin();
-    
-if( 23 == namespaceId && "bottom" == name)
-    return new BottomMargin();
-    
-if( 23 == namespaceId && "right" == name)
-    return new TableCellRightMargin();
-    
-if( 23 == namespaceId && "end" == name)
-    return new EndMargin();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "top","left","start","bottom","right","end" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23 };
     
@@ -23875,6 +20964,7 @@ if( 23 == namespaceId && "end" == name)
         get => GetElement<TopMargin>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Table Cell Left Margin Default.</para>
     /// <para> Represents the following element tag in the schema: w:left </para>
@@ -23887,6 +20977,7 @@ if( 23 == namespaceId && "end" == name)
         get => GetElement<TableCellLeftMargin>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> StartMargin.</para>
     /// <para> Represents the following element tag in the schema: w:start </para>
@@ -23899,6 +20990,7 @@ if( 23 == namespaceId && "end" == name)
         get => GetElement<StartMargin>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Table Cell Bottom Margin Default.</para>
     /// <para> Represents the following element tag in the schema: w:bottom </para>
@@ -23911,6 +21003,7 @@ if( 23 == namespaceId && "end" == name)
         get => GetElement<BottomMargin>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Table Cell Right Margin Default.</para>
     /// <para> Represents the following element tag in the schema: w:right </para>
@@ -23923,6 +21016,7 @@ if( 23 == namespaceId && "end" == name)
         get => GetElement<TableCellRightMargin>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> EndMargin.</para>
     /// <para> Represents the following element tag in the schema: w:end </para>
@@ -23935,6 +21029,7 @@ if( 23 == namespaceId && "end" == name)
         get => GetElement<EndMargin>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -23949,6 +21044,7 @@ if( 23 == namespaceId && "end" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "numStart")]
 public partial class NumberingStart : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11728;
@@ -23992,6 +21088,7 @@ public partial class NumberingStart : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "numRestart")]
 public partial class NumberingRestart : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11729;
@@ -24042,6 +21139,7 @@ public partial class NumberingRestart : OpenXmlLeafElement
     [ChildElementInfo(typeof(AltChunkProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "altChunk")]
 public partial class AltChunk : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11730;
@@ -24093,19 +21191,11 @@ public partial class AltChunk : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "altChunkPr" == name)
-    return new AltChunkProperties();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "altChunkPr" };
     private static readonly byte[] eleNamespaceIds = { 23 };
     
@@ -24126,6 +21216,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<AltChunkProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -24140,6 +21231,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblLook")]
 public partial class TableLook : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11731;
@@ -24250,6 +21342,7 @@ public partial class TableLook : OpenXmlLeafElement
     [ChildElementInfo(typeof(NumberingRestart))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "footnotePr")]
 public partial class FootnoteProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11736;
@@ -24292,28 +21385,11 @@ public partial class FootnoteProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "pos" == name)
-    return new FootnotePosition();
     
-if( 23 == namespaceId && "numFmt" == name)
-    return new NumberingFormat();
-    
-if( 23 == namespaceId && "numStart" == name)
-    return new NumberingStart();
-    
-if( 23 == namespaceId && "numRestart" == name)
-    return new NumberingRestart();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pos","numFmt","numStart","numRestart" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23 };
     
@@ -24334,6 +21410,7 @@ if( 23 == namespaceId && "numRestart" == name)
         get => GetElement<FootnotePosition>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Footnote Numbering Format.</para>
     /// <para> Represents the following element tag in the schema: w:numFmt </para>
@@ -24346,6 +21423,7 @@ if( 23 == namespaceId && "numRestart" == name)
         get => GetElement<NumberingFormat>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Footnote and Endnote Numbering Starting Value.</para>
     /// <para> Represents the following element tag in the schema: w:numStart </para>
@@ -24358,6 +21436,7 @@ if( 23 == namespaceId && "numRestart" == name)
         get => GetElement<NumberingStart>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Footnote and Endnote Numbering Restart Location.</para>
     /// <para> Represents the following element tag in the schema: w:numRestart </para>
@@ -24370,6 +21449,7 @@ if( 23 == namespaceId && "numRestart" == name)
         get => GetElement<NumberingRestart>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -24397,6 +21477,7 @@ if( 23 == namespaceId && "numRestart" == name)
     [ChildElementInfo(typeof(NumberingRestart))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "endnotePr")]
 public partial class EndnoteProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11737;
@@ -24439,28 +21520,11 @@ public partial class EndnoteProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "pos" == name)
-    return new EndnotePosition();
     
-if( 23 == namespaceId && "numFmt" == name)
-    return new NumberingFormat();
-    
-if( 23 == namespaceId && "numStart" == name)
-    return new NumberingStart();
-    
-if( 23 == namespaceId && "numRestart" == name)
-    return new NumberingRestart();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pos","numFmt","numStart","numRestart" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23 };
     
@@ -24481,6 +21545,7 @@ if( 23 == namespaceId && "numRestart" == name)
         get => GetElement<EndnotePosition>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Endnote Numbering Format.</para>
     /// <para> Represents the following element tag in the schema: w:numFmt </para>
@@ -24493,6 +21558,7 @@ if( 23 == namespaceId && "numRestart" == name)
         get => GetElement<NumberingFormat>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Footnote and Endnote Numbering Starting Value.</para>
     /// <para> Represents the following element tag in the schema: w:numStart </para>
@@ -24505,6 +21571,7 @@ if( 23 == namespaceId && "numRestart" == name)
         get => GetElement<NumberingStart>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Footnote and Endnote Numbering Restart Location.</para>
     /// <para> Represents the following element tag in the schema: w:numRestart </para>
@@ -24517,6 +21584,7 @@ if( 23 == namespaceId && "numRestart" == name)
         get => GetElement<NumberingRestart>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -24531,6 +21599,7 @@ if( 23 == namespaceId && "numRestart" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "type")]
 public partial class SectionType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11738;
@@ -24574,6 +21643,7 @@ public partial class SectionType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "pgSz")]
 public partial class PageSize : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11739;
@@ -24644,6 +21714,7 @@ public partial class PageSize : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "pgMar")]
 public partial class PageMargin : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11740;
@@ -24741,6 +21812,7 @@ public partial class PageMargin : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "paperSrc")]
 public partial class PaperSource : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11741;
@@ -24806,6 +21878,7 @@ public partial class PaperSource : OpenXmlLeafElement
     [ChildElementInfo(typeof(RightBorder))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "pgBorders")]
 public partial class PageBorders : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11742;
@@ -24875,28 +21948,11 @@ public partial class PageBorders : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "top" == name)
-    return new TopBorder();
     
-if( 23 == namespaceId && "left" == name)
-    return new LeftBorder();
-    
-if( 23 == namespaceId && "bottom" == name)
-    return new BottomBorder();
-    
-if( 23 == namespaceId && "right" == name)
-    return new RightBorder();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "top","left","bottom","right" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23 };
     
@@ -24917,6 +21973,7 @@ if( 23 == namespaceId && "right" == name)
         get => GetElement<TopBorder>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Left Border.</para>
     /// <para> Represents the following element tag in the schema: w:left </para>
@@ -24929,6 +21986,7 @@ if( 23 == namespaceId && "right" == name)
         get => GetElement<LeftBorder>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Bottom Border.</para>
     /// <para> Represents the following element tag in the schema: w:bottom </para>
@@ -24941,6 +21999,7 @@ if( 23 == namespaceId && "right" == name)
         get => GetElement<BottomBorder>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Right Border.</para>
     /// <para> Represents the following element tag in the schema: w:right </para>
@@ -24953,6 +22012,7 @@ if( 23 == namespaceId && "right" == name)
         get => GetElement<RightBorder>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -24967,6 +22027,7 @@ if( 23 == namespaceId && "right" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "lnNumType")]
 public partial class LineNumberType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11743;
@@ -25037,6 +22098,7 @@ public partial class LineNumberType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "pgNumType")]
 public partial class PageNumberType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11744;
@@ -25114,6 +22176,7 @@ public partial class PageNumberType : OpenXmlLeafElement
     [ChildElementInfo(typeof(Column))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "cols")]
 public partial class Columns : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11745;
@@ -25192,19 +22255,11 @@ public partial class Columns : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "col" == name)
-    return new Column();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Columns>(deep);
@@ -25218,6 +22273,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "vAlign")]
 public partial class VerticalTextAlignmentOnPage : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11747;
@@ -25261,6 +22317,7 @@ public partial class VerticalTextAlignmentOnPage : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "docGrid")]
 public partial class DocGrid : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11751;
@@ -25329,6 +22386,7 @@ public partial class DocGrid : OpenXmlLeafElement
     [ChildElementInfo(typeof(RecipientData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "recipients")]
 public partial class Recipients : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 11753;
@@ -25371,19 +22429,11 @@ public partial class Recipients : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "recipientData" == name)
-    return new RecipientData();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Recipients>(deep);
@@ -25472,6 +22522,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "txbxContent")]
 public partial class TextBoxContent : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11754;
@@ -25514,121 +22565,11 @@ public partial class TextBoxContent : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "altChunk" == name)
-    return new AltChunk();
     
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlBlock();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtBlock();
-    
-if( 23 == namespaceId && "p" == name)
-    return new Paragraph();
-    
-if( 23 == namespaceId && "tbl" == name)
-    return new Table();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextBoxContent>(deep);
@@ -25647,6 +22588,7 @@ if( 52 == namespaceId && "conflictDel" == name)
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(Comment))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "comments")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Comments : OpenXmlPartRootElement
 {
@@ -25705,6 +22647,7 @@ public partial class Comments : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -25722,16 +22665,7 @@ public partial class Comments : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "comment" == name)
-    return new Comment();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Comments>(deep);
@@ -25750,6 +22684,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(Footnote))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "footnotes")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Footnotes : OpenXmlPartRootElement
 {
@@ -25808,6 +22743,7 @@ public partial class Footnotes : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -25825,16 +22761,7 @@ public partial class Footnotes : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "footnote" == name)
-    return new Footnote();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Footnotes>(deep);
@@ -25853,6 +22780,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(Endnote))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "endnotes")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Endnotes : OpenXmlPartRootElement
 {
@@ -25911,6 +22839,7 @@ public partial class Endnotes : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -25928,16 +22857,7 @@ public partial class Endnotes : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "endnote" == name)
-    return new Endnote();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Endnotes>(deep);
@@ -26024,6 +22944,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "hdr")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Header : OpenXmlPartRootElement
 {
@@ -26082,6 +23003,7 @@ public partial class Header : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -26099,118 +23021,7 @@ public partial class Header : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "altChunk" == name)
-    return new AltChunk();
     
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlBlock();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtBlock();
-    
-if( 23 == namespaceId && "p" == name)
-    return new Paragraph();
-    
-if( 23 == namespaceId && "tbl" == name)
-    return new Table();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Header>(deep);
@@ -26297,6 +23108,7 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "ftr")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Footer : OpenXmlPartRootElement
 {
@@ -26355,6 +23167,7 @@ public partial class Footer : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -26372,118 +23185,7 @@ public partial class Footer : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "altChunk" == name)
-    return new AltChunk();
     
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlBlock();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtBlock();
-    
-if( 23 == namespaceId && "p" == name)
-    return new Paragraph();
-    
-if( 23 == namespaceId && "tbl" == name)
-    return new Table();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Footer>(deep);
@@ -26573,118 +23275,7 @@ public abstract partial class HeaderFooterType : OpenXmlCompositeElement
 {
         
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "altChunk" == name)
-    return new AltChunk();
     
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlBlock();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtBlock();
-    
-if( 23 == namespaceId && "p" == name)
-    return new Paragraph();
-    
-if( 23 == namespaceId && "tbl" == name)
-    return new Table();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-
-    return null;
-}
-
     
     
     /// <summary>
@@ -26717,6 +23308,7 @@ if( 52 == namespaceId && "conflictDel" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -26937,6 +23529,7 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.ChartTrackingRefBased), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.PersistentDocumentId), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "settings")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Settings : OpenXmlPartRootElement
 {
@@ -26995,6 +23588,7 @@ public partial class Settings : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -27012,322 +23606,7 @@ public partial class Settings : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "writeProtection" == name)
-    return new WriteProtection();
     
-if( 23 == namespaceId && "view" == name)
-    return new View();
-    
-if( 23 == namespaceId && "zoom" == name)
-    return new Zoom();
-    
-if( 23 == namespaceId && "removePersonalInformation" == name)
-    return new RemovePersonalInformation();
-    
-if( 23 == namespaceId && "removeDateAndTime" == name)
-    return new RemoveDateAndTime();
-    
-if( 23 == namespaceId && "doNotDisplayPageBoundaries" == name)
-    return new DoNotDisplayPageBoundaries();
-    
-if( 23 == namespaceId && "displayBackgroundShape" == name)
-    return new DisplayBackgroundShape();
-    
-if( 23 == namespaceId && "printPostScriptOverText" == name)
-    return new PrintPostScriptOverText();
-    
-if( 23 == namespaceId && "printFractionalCharacterWidth" == name)
-    return new PrintFractionalCharacterWidth();
-    
-if( 23 == namespaceId && "printFormsData" == name)
-    return new PrintFormsData();
-    
-if( 23 == namespaceId && "embedTrueTypeFonts" == name)
-    return new EmbedTrueTypeFonts();
-    
-if( 23 == namespaceId && "embedSystemFonts" == name)
-    return new EmbedSystemFonts();
-    
-if( 23 == namespaceId && "saveSubsetFonts" == name)
-    return new SaveSubsetFonts();
-    
-if( 23 == namespaceId && "saveFormsData" == name)
-    return new SaveFormsData();
-    
-if( 23 == namespaceId && "mirrorMargins" == name)
-    return new MirrorMargins();
-    
-if( 23 == namespaceId && "alignBordersAndEdges" == name)
-    return new AlignBorderAndEdges();
-    
-if( 23 == namespaceId && "bordersDoNotSurroundHeader" == name)
-    return new BordersDoNotSurroundHeader();
-    
-if( 23 == namespaceId && "bordersDoNotSurroundFooter" == name)
-    return new BordersDoNotSurroundFooter();
-    
-if( 23 == namespaceId && "gutterAtTop" == name)
-    return new GutterAtTop();
-    
-if( 23 == namespaceId && "hideSpellingErrors" == name)
-    return new HideSpellingErrors();
-    
-if( 23 == namespaceId && "hideGrammaticalErrors" == name)
-    return new HideGrammaticalErrors();
-    
-if( 23 == namespaceId && "activeWritingStyle" == name)
-    return new ActiveWritingStyle();
-    
-if( 23 == namespaceId && "proofState" == name)
-    return new ProofState();
-    
-if( 23 == namespaceId && "formsDesign" == name)
-    return new FormsDesign();
-    
-if( 23 == namespaceId && "attachedTemplate" == name)
-    return new AttachedTemplate();
-    
-if( 23 == namespaceId && "linkStyles" == name)
-    return new LinkStyles();
-    
-if( 23 == namespaceId && "stylePaneFormatFilter" == name)
-    return new StylePaneFormatFilter();
-    
-if( 23 == namespaceId && "stylePaneSortMethod" == name)
-    return new StylePaneSortMethods();
-    
-if( 23 == namespaceId && "documentType" == name)
-    return new DocumentType();
-    
-if( 23 == namespaceId && "mailMerge" == name)
-    return new MailMerge();
-    
-if( 23 == namespaceId && "revisionView" == name)
-    return new RevisionView();
-    
-if( 23 == namespaceId && "trackRevisions" == name)
-    return new TrackRevisions();
-    
-if( 23 == namespaceId && "doNotTrackMoves" == name)
-    return new DoNotTrackMoves();
-    
-if( 23 == namespaceId && "doNotTrackFormatting" == name)
-    return new DoNotTrackFormatting();
-    
-if( 23 == namespaceId && "documentProtection" == name)
-    return new DocumentProtection();
-    
-if( 23 == namespaceId && "autoFormatOverride" == name)
-    return new AutoFormatOverride();
-    
-if( 23 == namespaceId && "styleLockTheme" == name)
-    return new StyleLockThemesPart();
-    
-if( 23 == namespaceId && "styleLockQFSet" == name)
-    return new StyleLockStylesPart();
-    
-if( 23 == namespaceId && "defaultTabStop" == name)
-    return new DefaultTabStop();
-    
-if( 23 == namespaceId && "autoHyphenation" == name)
-    return new AutoHyphenation();
-    
-if( 23 == namespaceId && "consecutiveHyphenLimit" == name)
-    return new ConsecutiveHyphenLimit();
-    
-if( 23 == namespaceId && "hyphenationZone" == name)
-    return new HyphenationZone();
-    
-if( 23 == namespaceId && "doNotHyphenateCaps" == name)
-    return new DoNotHyphenateCaps();
-    
-if( 23 == namespaceId && "showEnvelope" == name)
-    return new ShowEnvelope();
-    
-if( 23 == namespaceId && "summaryLength" == name)
-    return new SummaryLength();
-    
-if( 23 == namespaceId && "clickAndTypeStyle" == name)
-    return new ClickAndTypeStyle();
-    
-if( 23 == namespaceId && "defaultTableStyle" == name)
-    return new DefaultTableStyle();
-    
-if( 23 == namespaceId && "evenAndOddHeaders" == name)
-    return new EvenAndOddHeaders();
-    
-if( 23 == namespaceId && "bookFoldRevPrinting" == name)
-    return new BookFoldReversePrinting();
-    
-if( 23 == namespaceId && "bookFoldPrinting" == name)
-    return new BookFoldPrinting();
-    
-if( 23 == namespaceId && "bookFoldPrintingSheets" == name)
-    return new BookFoldPrintingSheets();
-    
-if( 23 == namespaceId && "drawingGridHorizontalSpacing" == name)
-    return new DrawingGridHorizontalSpacing();
-    
-if( 23 == namespaceId && "drawingGridVerticalSpacing" == name)
-    return new DrawingGridVerticalSpacing();
-    
-if( 23 == namespaceId && "displayHorizontalDrawingGridEvery" == name)
-    return new DisplayHorizontalDrawingGrid();
-    
-if( 23 == namespaceId && "displayVerticalDrawingGridEvery" == name)
-    return new DisplayVerticalDrawingGrid();
-    
-if( 23 == namespaceId && "doNotUseMarginsForDrawingGridOrigin" == name)
-    return new DoNotUseMarginsForDrawingGridOrigin();
-    
-if( 23 == namespaceId && "drawingGridHorizontalOrigin" == name)
-    return new DrawingGridHorizontalOrigin();
-    
-if( 23 == namespaceId && "drawingGridVerticalOrigin" == name)
-    return new DrawingGridVerticalOrigin();
-    
-if( 23 == namespaceId && "doNotShadeFormData" == name)
-    return new DoNotShadeFormData();
-    
-if( 23 == namespaceId && "noPunctuationKerning" == name)
-    return new NoPunctuationKerning();
-    
-if( 23 == namespaceId && "characterSpacingControl" == name)
-    return new CharacterSpacingControl();
-    
-if( 23 == namespaceId && "printTwoOnOne" == name)
-    return new PrintTwoOnOne();
-    
-if( 23 == namespaceId && "strictFirstAndLastChars" == name)
-    return new StrictFirstAndLastChars();
-    
-if( 23 == namespaceId && "noLineBreaksAfter" == name)
-    return new NoLineBreaksAfterKinsoku();
-    
-if( 23 == namespaceId && "noLineBreaksBefore" == name)
-    return new NoLineBreaksBeforeKinsoku();
-    
-if( 23 == namespaceId && "savePreviewPicture" == name)
-    return new SavePreviewPicture();
-    
-if( 23 == namespaceId && "doNotValidateAgainstSchema" == name)
-    return new DoNotValidateAgainstSchema();
-    
-if( 23 == namespaceId && "saveInvalidXml" == name)
-    return new SaveInvalidXml();
-    
-if( 23 == namespaceId && "ignoreMixedContent" == name)
-    return new IgnoreMixedContent();
-    
-if( 23 == namespaceId && "alwaysShowPlaceholderText" == name)
-    return new AlwaysShowPlaceholderText();
-    
-if( 23 == namespaceId && "doNotDemarcateInvalidXml" == name)
-    return new DoNotDemarcateInvalidXml();
-    
-if( 23 == namespaceId && "saveXmlDataOnly" == name)
-    return new SaveXmlDataOnly();
-    
-if( 23 == namespaceId && "useXSLTWhenSaving" == name)
-    return new UseXsltWhenSaving();
-    
-if( 23 == namespaceId && "saveThroughXslt" == name)
-    return new SaveThroughXslt();
-    
-if( 23 == namespaceId && "showXMLTags" == name)
-    return new ShowXmlTags();
-    
-if( 23 == namespaceId && "alwaysMergeEmptyNamespace" == name)
-    return new AlwaysMergeEmptyNamespace();
-    
-if( 23 == namespaceId && "updateFields" == name)
-    return new UpdateFieldsOnOpen();
-    
-if( 23 == namespaceId && "hdrShapeDefaults" == name)
-    return new HeaderShapeDefaults();
-    
-if( 23 == namespaceId && "footnotePr" == name)
-    return new FootnoteDocumentWideProperties();
-    
-if( 23 == namespaceId && "endnotePr" == name)
-    return new EndnoteDocumentWideProperties();
-    
-if( 23 == namespaceId && "compat" == name)
-    return new Compatibility();
-    
-if( 23 == namespaceId && "docVars" == name)
-    return new DocumentVariables();
-    
-if( 23 == namespaceId && "rsids" == name)
-    return new Rsids();
-    
-if( 21 == namespaceId && "mathPr" == name)
-    return new DocumentFormat.OpenXml.Math.MathProperties();
-    
-if( 23 == namespaceId && "uiCompat97To2003" == name)
-    return new UICompatibleWith97To2003();
-    
-if( 23 == namespaceId && "attachedSchema" == name)
-    return new AttachedSchema();
-    
-if( 23 == namespaceId && "themeFontLang" == name)
-    return new ThemeFontLanguages();
-    
-if( 23 == namespaceId && "clrSchemeMapping" == name)
-    return new ColorSchemeMapping();
-    
-if( 23 == namespaceId && "doNotIncludeSubdocsInStats" == name)
-    return new DoNotIncludeSubdocsInStats();
-    
-if( 23 == namespaceId && "doNotAutoCompressPictures" == name)
-    return new DoNotAutoCompressPictures();
-    
-if( 23 == namespaceId && "forceUpgrade" == name)
-    return new ForceUpgrade();
-    
-if( 23 == namespaceId && "captions" == name)
-    return new Captions();
-    
-if( 23 == namespaceId && "readModeInkLockDown" == name)
-    return new ReadModeInkLockDown();
-    
-if( 25 == namespaceId && "schemaLibrary" == name)
-    return new DocumentFormat.OpenXml.CustomXmlSchemaReferences.SchemaLibrary();
-    
-if( 23 == namespaceId && "shapeDefaults" == name)
-    return new ShapeDefaults();
-    
-if( 23 == namespaceId && "decimalSymbol" == name)
-    return new DecimalSymbol();
-    
-if( 23 == namespaceId && "listSeparator" == name)
-    return new ListSeparator();
-    
-if( 52 == namespaceId && "docId" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.DocumentId();
-    
-if( 52 == namespaceId && "discardImageEditingData" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.DiscardImageEditingData();
-    
-if( 52 == namespaceId && "defaultImageDpi" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.DefaultImageDpi();
-    
-if( 52 == namespaceId && "conflictMode" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.ConflictMode();
-    
-if( 69 == namespaceId && "chartTrackingRefBased" == name)
-    return new DocumentFormat.OpenXml.Office2013.Word.ChartTrackingRefBased();
-    
-if( 69 == namespaceId && "docId" == name)
-    return new DocumentFormat.OpenXml.Office2013.Word.PersistentDocumentId();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "writeProtection","view","zoom","removePersonalInformation","removeDateAndTime","doNotDisplayPageBoundaries","displayBackgroundShape","printPostScriptOverText","printFractionalCharacterWidth","printFormsData","embedTrueTypeFonts","embedSystemFonts","saveSubsetFonts","saveFormsData","mirrorMargins","alignBordersAndEdges","bordersDoNotSurroundHeader","bordersDoNotSurroundFooter","gutterAtTop","hideSpellingErrors","hideGrammaticalErrors","activeWritingStyle","proofState","formsDesign","attachedTemplate","linkStyles","stylePaneFormatFilter","stylePaneSortMethod","documentType","mailMerge","revisionView","trackRevisions","doNotTrackMoves","doNotTrackFormatting","documentProtection","autoFormatOverride","styleLockTheme","styleLockQFSet","defaultTabStop","autoHyphenation","consecutiveHyphenLimit","hyphenationZone","doNotHyphenateCaps","showEnvelope","summaryLength","clickAndTypeStyle","defaultTableStyle","evenAndOddHeaders","bookFoldRevPrinting","bookFoldPrinting","bookFoldPrintingSheets","drawingGridHorizontalSpacing","drawingGridVerticalSpacing","displayHorizontalDrawingGridEvery","displayVerticalDrawingGridEvery","doNotUseMarginsForDrawingGridOrigin","drawingGridHorizontalOrigin","drawingGridVerticalOrigin","doNotShadeFormData","noPunctuationKerning","characterSpacingControl","printTwoOnOne","strictFirstAndLastChars","noLineBreaksAfter","noLineBreaksBefore","savePreviewPicture","doNotValidateAgainstSchema","saveInvalidXml","ignoreMixedContent","alwaysShowPlaceholderText","doNotDemarcateInvalidXml","saveXmlDataOnly","useXSLTWhenSaving","saveThroughXslt","showXMLTags","alwaysMergeEmptyNamespace","updateFields","hdrShapeDefaults","footnotePr","endnotePr","compat","docVars","rsids","mathPr","uiCompat97To2003","attachedSchema","themeFontLang","clrSchemeMapping","doNotIncludeSubdocsInStats","doNotAutoCompressPictures","forceUpgrade","captions","readModeInkLockDown","schemaLibrary","shapeDefaults","decimalSymbol","listSeparator","docId","discardImageEditingData","defaultImageDpi","conflictMode","chartTrackingRefBased","docId" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,21,23,23,23,23,23,23,23,23,23,25,23,23,23,52,52,52,52,69,69 };
     
@@ -27348,6 +23627,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<WriteProtection>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Document View Setting.</para>
     /// <para> Represents the following element tag in the schema: w:view </para>
@@ -27360,6 +23640,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<View>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Magnification Setting.</para>
     /// <para> Represents the following element tag in the schema: w:zoom </para>
@@ -27372,6 +23653,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<Zoom>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Remove Personal Information from Document Properties.</para>
     /// <para> Represents the following element tag in the schema: w:removePersonalInformation </para>
@@ -27384,6 +23666,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<RemovePersonalInformation>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Remove Date and Time from Annotations.</para>
     /// <para> Represents the following element tag in the schema: w:removeDateAndTime </para>
@@ -27396,6 +23679,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<RemoveDateAndTime>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Do Not Display Visual Boundary For Header/Footer or Between Pages.</para>
     /// <para> Represents the following element tag in the schema: w:doNotDisplayPageBoundaries </para>
@@ -27408,6 +23692,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<DoNotDisplayPageBoundaries>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Display Background Objects When Displaying Document.</para>
     /// <para> Represents the following element tag in the schema: w:displayBackgroundShape </para>
@@ -27420,6 +23705,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<DisplayBackgroundShape>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Print PostScript Codes With Document Text.</para>
     /// <para> Represents the following element tag in the schema: w:printPostScriptOverText </para>
@@ -27432,6 +23718,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<PrintPostScriptOverText>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> Print Fractional Character Widths.</para>
     /// <para> Represents the following element tag in the schema: w:printFractionalCharacterWidth </para>
@@ -27444,6 +23731,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<PrintFractionalCharacterWidth>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Only Print Form Field Content.</para>
     /// <para> Represents the following element tag in the schema: w:printFormsData </para>
@@ -27456,6 +23744,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<PrintFormsData>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> Embed TrueType Fonts.</para>
     /// <para> Represents the following element tag in the schema: w:embedTrueTypeFonts </para>
@@ -27468,6 +23757,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<EmbedTrueTypeFonts>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Embed Common System Fonts.</para>
     /// <para> Represents the following element tag in the schema: w:embedSystemFonts </para>
@@ -27480,6 +23770,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<EmbedSystemFonts>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> Subset Fonts When Embedding.</para>
     /// <para> Represents the following element tag in the schema: w:saveSubsetFonts </para>
@@ -27492,6 +23783,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<SaveSubsetFonts>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> Only Save Form Field Content.</para>
     /// <para> Represents the following element tag in the schema: w:saveFormsData </para>
@@ -27504,6 +23796,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<SaveFormsData>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> Mirror Page Margins.</para>
     /// <para> Represents the following element tag in the schema: w:mirrorMargins </para>
@@ -27516,6 +23809,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<MirrorMargins>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> Align Paragraph and Table Borders with Page Border.</para>
     /// <para> Represents the following element tag in the schema: w:alignBordersAndEdges </para>
@@ -27528,6 +23822,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<AlignBorderAndEdges>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> Page Border Excludes Header.</para>
     /// <para> Represents the following element tag in the schema: w:bordersDoNotSurroundHeader </para>
@@ -27540,6 +23835,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<BordersDoNotSurroundHeader>(16);
         set => SetElement(16, value);
     }
+    
     /// <summary>
     /// <para> Page Border Excludes Footer.</para>
     /// <para> Represents the following element tag in the schema: w:bordersDoNotSurroundFooter </para>
@@ -27552,6 +23848,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<BordersDoNotSurroundFooter>(17);
         set => SetElement(17, value);
     }
+    
     /// <summary>
     /// <para> Position Gutter At Top of Page.</para>
     /// <para> Represents the following element tag in the schema: w:gutterAtTop </para>
@@ -27564,6 +23861,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<GutterAtTop>(18);
         set => SetElement(18, value);
     }
+    
     /// <summary>
     /// <para> Do Not Display Visual Indication of Spelling Errors.</para>
     /// <para> Represents the following element tag in the schema: w:hideSpellingErrors </para>
@@ -27576,6 +23874,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<HideSpellingErrors>(19);
         set => SetElement(19, value);
     }
+    
     /// <summary>
     /// <para> Do Not Display Visual Indication of Grammatical Errors.</para>
     /// <para> Represents the following element tag in the schema: w:hideGrammaticalErrors </para>
@@ -27588,6 +23887,7 @@ if( 69 == namespaceId && "docId" == name)
         get => GetElement<HideGrammaticalErrors>(20);
         set => SetElement(20, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -27629,6 +23929,7 @@ if( 69 == namespaceId && "docId" == name)
     [ChildElementInfo(typeof(PixelsPerInch))]
     [ChildElementInfo(typeof(TargetScreenSize))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "webSettings")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WebSettings : OpenXmlPartRootElement
 {
@@ -27687,6 +23988,7 @@ public partial class WebSettings : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -27704,49 +24006,7 @@ public partial class WebSettings : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "frameset" == name)
-    return new Frameset();
     
-if( 23 == namespaceId && "divs" == name)
-    return new Divs();
-    
-if( 23 == namespaceId && "encoding" == name)
-    return new WebPageEncoding();
-    
-if( 23 == namespaceId && "optimizeForBrowser" == name)
-    return new OptimizeForBrowser();
-    
-if( 23 == namespaceId && "relyOnVML" == name)
-    return new RelyOnVML();
-    
-if( 23 == namespaceId && "allowPNG" == name)
-    return new AllowPNG();
-    
-if( 23 == namespaceId && "doNotRelyOnCSS" == name)
-    return new DoNotRelyOnCSS();
-    
-if( 23 == namespaceId && "doNotSaveAsSingleFile" == name)
-    return new DoNotSaveAsSingleFile();
-    
-if( 23 == namespaceId && "doNotOrganizeInFolder" == name)
-    return new DoNotOrganizeInFolder();
-    
-if( 23 == namespaceId && "doNotUseLongFileNames" == name)
-    return new DoNotUseLongFileNames();
-    
-if( 23 == namespaceId && "pixelsPerInch" == name)
-    return new PixelsPerInch();
-    
-if( 23 == namespaceId && "targetScreenSz" == name)
-    return new TargetScreenSize();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "frameset","divs","encoding","optimizeForBrowser","relyOnVML","allowPNG","doNotRelyOnCSS","doNotSaveAsSingleFile","doNotOrganizeInFolder","doNotUseLongFileNames","pixelsPerInch","targetScreenSz" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -27767,6 +24027,7 @@ if( 23 == namespaceId && "targetScreenSz" == name)
         get => GetElement<Frameset>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Divs.</para>
     /// <para> Represents the following element tag in the schema: w:divs </para>
@@ -27779,6 +24040,7 @@ if( 23 == namespaceId && "targetScreenSz" == name)
         get => GetElement<Divs>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> WebPageEncoding.</para>
     /// <para> Represents the following element tag in the schema: w:encoding </para>
@@ -27791,6 +24053,7 @@ if( 23 == namespaceId && "targetScreenSz" == name)
         get => GetElement<WebPageEncoding>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> OptimizeForBrowser.</para>
     /// <para> Represents the following element tag in the schema: w:optimizeForBrowser </para>
@@ -27803,6 +24066,7 @@ if( 23 == namespaceId && "targetScreenSz" == name)
         get => GetElement<OptimizeForBrowser>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> RelyOnVML.</para>
     /// <para> Represents the following element tag in the schema: w:relyOnVML </para>
@@ -27815,6 +24079,7 @@ if( 23 == namespaceId && "targetScreenSz" == name)
         get => GetElement<RelyOnVML>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> AllowPNG.</para>
     /// <para> Represents the following element tag in the schema: w:allowPNG </para>
@@ -27827,6 +24092,7 @@ if( 23 == namespaceId && "targetScreenSz" == name)
         get => GetElement<AllowPNG>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> DoNotRelyOnCSS.</para>
     /// <para> Represents the following element tag in the schema: w:doNotRelyOnCSS </para>
@@ -27839,6 +24105,7 @@ if( 23 == namespaceId && "targetScreenSz" == name)
         get => GetElement<DoNotRelyOnCSS>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> DoNotSaveAsSingleFile.</para>
     /// <para> Represents the following element tag in the schema: w:doNotSaveAsSingleFile </para>
@@ -27851,6 +24118,7 @@ if( 23 == namespaceId && "targetScreenSz" == name)
         get => GetElement<DoNotSaveAsSingleFile>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> DoNotOrganizeInFolder.</para>
     /// <para> Represents the following element tag in the schema: w:doNotOrganizeInFolder </para>
@@ -27863,6 +24131,7 @@ if( 23 == namespaceId && "targetScreenSz" == name)
         get => GetElement<DoNotOrganizeInFolder>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> DoNotUseLongFileNames.</para>
     /// <para> Represents the following element tag in the schema: w:doNotUseLongFileNames </para>
@@ -27875,6 +24144,7 @@ if( 23 == namespaceId && "targetScreenSz" == name)
         get => GetElement<DoNotUseLongFileNames>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> PixelsPerInch.</para>
     /// <para> Represents the following element tag in the schema: w:pixelsPerInch </para>
@@ -27887,6 +24157,7 @@ if( 23 == namespaceId && "targetScreenSz" == name)
         get => GetElement<PixelsPerInch>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> TargetScreenSize.</para>
     /// <para> Represents the following element tag in the schema: w:targetScreenSz </para>
@@ -27899,6 +24170,7 @@ if( 23 == namespaceId && "targetScreenSz" == name)
         get => GetElement<TargetScreenSize>(11);
         set => SetElement(11, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -27918,6 +24190,7 @@ if( 23 == namespaceId && "targetScreenSz" == name)
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(Font))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "fonts")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Fonts : OpenXmlPartRootElement
 {
@@ -27976,6 +24249,7 @@ public partial class Fonts : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -27993,16 +24267,7 @@ public partial class Fonts : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "font" == name)
-    return new Font();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Fonts>(deep);
@@ -28027,6 +24292,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(NumberingInstance))]
     [ChildElementInfo(typeof(NumberingIdMacAtCleanup))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "numbering")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Numbering : OpenXmlPartRootElement
 {
@@ -28085,6 +24351,7 @@ public partial class Numbering : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -28102,25 +24369,7 @@ public partial class Numbering : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "numPicBullet" == name)
-    return new NumberingPictureBullet();
     
-if( 23 == namespaceId && "abstractNum" == name)
-    return new AbstractNum();
-    
-if( 23 == namespaceId && "num" == name)
-    return new NumberingInstance();
-    
-if( 23 == namespaceId && "numIdMacAtCleanup" == name)
-    return new NumberingIdMacAtCleanup();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Numbering>(deep);
@@ -28145,6 +24394,7 @@ if( 23 == namespaceId && "numIdMacAtCleanup" == name)
     [ChildElementInfo(typeof(Style))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "styles")]
 public partial class Styles : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 11764;
@@ -28187,25 +24437,11 @@ public partial class Styles : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "docDefaults" == name)
-    return new DocDefaults();
     
-if( 23 == namespaceId && "latentStyles" == name)
-    return new LatentStyles();
-    
-if( 23 == namespaceId && "style" == name)
-    return new Style();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "docDefaults","latentStyles","style" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23 };
     
@@ -28226,6 +24462,7 @@ if( 23 == namespaceId && "style" == name)
         get => GetElement<DocDefaults>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Latent Style Information.</para>
     /// <para> Represents the following element tag in the schema: w:latentStyles </para>
@@ -28238,6 +24475,7 @@ if( 23 == namespaceId && "style" == name)
         get => GetElement<LatentStyles>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -28259,6 +24497,7 @@ if( 23 == namespaceId && "style" == name)
     [ChildElementInfo(typeof(DocumentBackground))]
     [ChildElementInfo(typeof(Body))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "document")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Document : OpenXmlPartRootElement
 {
@@ -28326,6 +24565,7 @@ public partial class Document : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -28343,19 +24583,7 @@ public partial class Document : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "background" == name)
-    return new DocumentBackground();
     
-if( 23 == namespaceId && "body" == name)
-    return new Body();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "background","body" };
     private static readonly byte[] eleNamespaceIds = { 23,23 };
     
@@ -28376,6 +24604,7 @@ if( 23 == namespaceId && "body" == name)
         get => GetElement<DocumentBackground>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Body.</para>
     /// <para> Represents the following element tag in the schema: w:body </para>
@@ -28388,6 +24617,7 @@ if( 23 == namespaceId && "body" == name)
         get => GetElement<Body>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -28409,6 +24639,7 @@ if( 23 == namespaceId && "body" == name)
     [ChildElementInfo(typeof(DocumentBackground))]
     [ChildElementInfo(typeof(DocParts))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "glossaryDocument")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GlossaryDocument : OpenXmlPartRootElement
 {
@@ -28467,6 +24698,7 @@ public partial class GlossaryDocument : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -28484,19 +24716,7 @@ public partial class GlossaryDocument : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "background" == name)
-    return new DocumentBackground();
     
-if( 23 == namespaceId && "docParts" == name)
-    return new DocParts();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "background","docParts" };
     private static readonly byte[] eleNamespaceIds = { 23,23 };
     
@@ -28517,6 +24737,7 @@ if( 23 == namespaceId && "docParts" == name)
         get => GetElement<DocumentBackground>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> List of Glossary Document Entries.</para>
     /// <para> Represents the following element tag in the schema: w:docParts </para>
@@ -28529,6 +24750,7 @@ if( 23 == namespaceId && "docParts" == name)
         get => GetElement<DocParts>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -28566,6 +24788,7 @@ if( 23 == namespaceId && "docParts" == name)
     [ChildElementInfo(typeof(TableLook))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblPrEx")]
 public partial class PreviousTablePropertyExceptions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11767;
@@ -28608,43 +24831,11 @@ public partial class PreviousTablePropertyExceptions : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "tblW" == name)
-    return new TableWidth();
     
-if( 23 == namespaceId && "jc" == name)
-    return new TableJustification();
-    
-if( 23 == namespaceId && "tblCellSpacing" == name)
-    return new TableCellSpacing();
-    
-if( 23 == namespaceId && "tblInd" == name)
-    return new TableIndentation();
-    
-if( 23 == namespaceId && "tblBorders" == name)
-    return new TableBorders();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "tblLayout" == name)
-    return new TableLayout();
-    
-if( 23 == namespaceId && "tblCellMar" == name)
-    return new TableCellMarginDefault();
-    
-if( 23 == namespaceId && "tblLook" == name)
-    return new TableLook();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "tblW","jc","tblCellSpacing","tblInd","tblBorders","shd","tblLayout","tblCellMar","tblLook" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23 };
     
@@ -28665,6 +24856,7 @@ if( 23 == namespaceId && "tblLook" == name)
         get => GetElement<TableWidth>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Table Alignment Exception.</para>
     /// <para> Represents the following element tag in the schema: w:jc </para>
@@ -28677,6 +24869,7 @@ if( 23 == namespaceId && "tblLook" == name)
         get => GetElement<TableJustification>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Table Cell Spacing Exception.</para>
     /// <para> Represents the following element tag in the schema: w:tblCellSpacing </para>
@@ -28689,6 +24882,7 @@ if( 23 == namespaceId && "tblLook" == name)
         get => GetElement<TableCellSpacing>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Table Indent from Leading Margin Exception.</para>
     /// <para> Represents the following element tag in the schema: w:tblInd </para>
@@ -28701,6 +24895,7 @@ if( 23 == namespaceId && "tblLook" == name)
         get => GetElement<TableIndentation>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Table Borders Exceptions.</para>
     /// <para> Represents the following element tag in the schema: w:tblBorders </para>
@@ -28713,6 +24908,7 @@ if( 23 == namespaceId && "tblLook" == name)
         get => GetElement<TableBorders>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Table Shading Exception.</para>
     /// <para> Represents the following element tag in the schema: w:shd </para>
@@ -28725,6 +24921,7 @@ if( 23 == namespaceId && "tblLook" == name)
         get => GetElement<Shading>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Table Layout Exception.</para>
     /// <para> Represents the following element tag in the schema: w:tblLayout </para>
@@ -28737,6 +24934,7 @@ if( 23 == namespaceId && "tblLook" == name)
         get => GetElement<TableLayout>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Table Cell Margin Exceptions.</para>
     /// <para> Represents the following element tag in the schema: w:tblCellMar </para>
@@ -28749,6 +24947,7 @@ if( 23 == namespaceId && "tblLook" == name)
         get => GetElement<TableCellMarginDefault>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> Table Style Conditional Formatting Settings Exception.</para>
     /// <para> Represents the following element tag in the schema: w:tblLook </para>
@@ -28761,6 +24960,7 @@ if( 23 == namespaceId && "tblLook" == name)
         get => GetElement<TableLook>(8);
         set => SetElement(8, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -28812,6 +25012,7 @@ if( 23 == namespaceId && "tblLook" == name)
     [ChildElementInfo(typeof(CellMerge))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tcPr")]
 public partial class PreviousTableCellProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11768;
@@ -28854,64 +25055,11 @@ public partial class PreviousTableCellProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "cnfStyle" == name)
-    return new ConditionalFormatStyle();
     
-if( 23 == namespaceId && "tcW" == name)
-    return new TableCellWidth();
-    
-if( 23 == namespaceId && "gridSpan" == name)
-    return new GridSpan();
-    
-if( 23 == namespaceId && "hMerge" == name)
-    return new HorizontalMerge();
-    
-if( 23 == namespaceId && "vMerge" == name)
-    return new VerticalMerge();
-    
-if( 23 == namespaceId && "tcBorders" == name)
-    return new TableCellBorders();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "noWrap" == name)
-    return new NoWrap();
-    
-if( 23 == namespaceId && "tcMar" == name)
-    return new TableCellMargin();
-    
-if( 23 == namespaceId && "textDirection" == name)
-    return new TextDirection();
-    
-if( 23 == namespaceId && "tcFitText" == name)
-    return new TableCellFitText();
-    
-if( 23 == namespaceId && "vAlign" == name)
-    return new TableCellVerticalAlignment();
-    
-if( 23 == namespaceId && "hideMark" == name)
-    return new HideMark();
-    
-if( 23 == namespaceId && "cellIns" == name)
-    return new CellInsertion();
-    
-if( 23 == namespaceId && "cellDel" == name)
-    return new CellDeletion();
-    
-if( 23 == namespaceId && "cellMerge" == name)
-    return new CellMerge();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "cnfStyle","tcW","gridSpan","hMerge","vMerge","tcBorders","shd","noWrap","tcMar","textDirection","tcFitText","vAlign","hideMark","cellIns","cellDel","cellMerge" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -28932,6 +25080,7 @@ if( 23 == namespaceId && "cellMerge" == name)
         get => GetElement<ConditionalFormatStyle>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> TableCellWidth.</para>
     /// <para> Represents the following element tag in the schema: w:tcW </para>
@@ -28944,6 +25093,7 @@ if( 23 == namespaceId && "cellMerge" == name)
         get => GetElement<TableCellWidth>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> GridSpan.</para>
     /// <para> Represents the following element tag in the schema: w:gridSpan </para>
@@ -28956,6 +25106,7 @@ if( 23 == namespaceId && "cellMerge" == name)
         get => GetElement<GridSpan>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> HorizontalMerge.</para>
     /// <para> Represents the following element tag in the schema: w:hMerge </para>
@@ -28968,6 +25119,7 @@ if( 23 == namespaceId && "cellMerge" == name)
         get => GetElement<HorizontalMerge>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> VerticalMerge.</para>
     /// <para> Represents the following element tag in the schema: w:vMerge </para>
@@ -28980,6 +25132,7 @@ if( 23 == namespaceId && "cellMerge" == name)
         get => GetElement<VerticalMerge>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> TableCellBorders.</para>
     /// <para> Represents the following element tag in the schema: w:tcBorders </para>
@@ -28992,6 +25145,7 @@ if( 23 == namespaceId && "cellMerge" == name)
         get => GetElement<TableCellBorders>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Shading.</para>
     /// <para> Represents the following element tag in the schema: w:shd </para>
@@ -29004,6 +25158,7 @@ if( 23 == namespaceId && "cellMerge" == name)
         get => GetElement<Shading>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> NoWrap.</para>
     /// <para> Represents the following element tag in the schema: w:noWrap </para>
@@ -29016,6 +25171,7 @@ if( 23 == namespaceId && "cellMerge" == name)
         get => GetElement<NoWrap>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> TableCellMargin.</para>
     /// <para> Represents the following element tag in the schema: w:tcMar </para>
@@ -29028,6 +25184,7 @@ if( 23 == namespaceId && "cellMerge" == name)
         get => GetElement<TableCellMargin>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> TextDirection.</para>
     /// <para> Represents the following element tag in the schema: w:textDirection </para>
@@ -29040,6 +25197,7 @@ if( 23 == namespaceId && "cellMerge" == name)
         get => GetElement<TextDirection>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> TableCellFitText.</para>
     /// <para> Represents the following element tag in the schema: w:tcFitText </para>
@@ -29052,6 +25210,7 @@ if( 23 == namespaceId && "cellMerge" == name)
         get => GetElement<TableCellFitText>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> TableCellVerticalAlignment.</para>
     /// <para> Represents the following element tag in the schema: w:vAlign </para>
@@ -29064,6 +25223,7 @@ if( 23 == namespaceId && "cellMerge" == name)
         get => GetElement<TableCellVerticalAlignment>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> HideMark.</para>
     /// <para> Represents the following element tag in the schema: w:hideMark </para>
@@ -29076,6 +25236,7 @@ if( 23 == namespaceId && "cellMerge" == name)
         get => GetElement<HideMark>(12);
         set => SetElement(12, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -29119,6 +25280,7 @@ if( 23 == namespaceId && "cellMerge" == name)
     [ChildElementInfo(typeof(TableJustification))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "trPr")]
 public partial class PreviousTableRowProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11769;
@@ -29161,52 +25323,11 @@ public partial class PreviousTableRowProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "cnfStyle" == name)
-    return new ConditionalFormatStyle();
     
-if( 23 == namespaceId && "divId" == name)
-    return new DivId();
-    
-if( 23 == namespaceId && "gridBefore" == name)
-    return new GridBefore();
-    
-if( 23 == namespaceId && "gridAfter" == name)
-    return new GridAfter();
-    
-if( 23 == namespaceId && "wBefore" == name)
-    return new WidthBeforeTableRow();
-    
-if( 23 == namespaceId && "wAfter" == name)
-    return new WidthAfterTableRow();
-    
-if( 23 == namespaceId && "trHeight" == name)
-    return new TableRowHeight();
-    
-if( 23 == namespaceId && "hidden" == name)
-    return new Hidden();
-    
-if( 23 == namespaceId && "cantSplit" == name)
-    return new CantSplit();
-    
-if( 23 == namespaceId && "tblHeader" == name)
-    return new TableHeader();
-    
-if( 23 == namespaceId && "tblCellSpacing" == name)
-    return new TableCellSpacing();
-    
-if( 23 == namespaceId && "jc" == name)
-    return new TableJustification();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PreviousTableRowProperties>(deep);
@@ -29255,6 +25376,7 @@ if( 23 == namespaceId && "jc" == name)
     [ChildElementInfo(typeof(TableDescription), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblPr")]
 public partial class PreviousTableProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11770;
@@ -29297,61 +25419,11 @@ public partial class PreviousTableProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "tblStyle" == name)
-    return new TableStyle();
     
-if( 23 == namespaceId && "tblpPr" == name)
-    return new TablePositionProperties();
-    
-if( 23 == namespaceId && "tblOverlap" == name)
-    return new TableOverlap();
-    
-if( 23 == namespaceId && "bidiVisual" == name)
-    return new BiDiVisual();
-    
-if( 23 == namespaceId && "tblW" == name)
-    return new TableWidth();
-    
-if( 23 == namespaceId && "jc" == name)
-    return new TableJustification();
-    
-if( 23 == namespaceId && "tblCellSpacing" == name)
-    return new TableCellSpacing();
-    
-if( 23 == namespaceId && "tblInd" == name)
-    return new TableIndentation();
-    
-if( 23 == namespaceId && "tblBorders" == name)
-    return new TableBorders();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "tblLayout" == name)
-    return new TableLayout();
-    
-if( 23 == namespaceId && "tblCellMar" == name)
-    return new TableCellMarginDefault();
-    
-if( 23 == namespaceId && "tblLook" == name)
-    return new TableLook();
-    
-if( 23 == namespaceId && "tblCaption" == name)
-    return new TableCaption();
-    
-if( 23 == namespaceId && "tblDescription" == name)
-    return new TableDescription();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "tblStyle","tblpPr","tblOverlap","bidiVisual","tblW","jc","tblCellSpacing","tblInd","tblBorders","shd","tblLayout","tblCellMar","tblLook","tblCaption","tblDescription" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -29372,6 +25444,7 @@ if( 23 == namespaceId && "tblDescription" == name)
         get => GetElement<TableStyle>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> TablePositionProperties.</para>
     /// <para> Represents the following element tag in the schema: w:tblpPr </para>
@@ -29384,6 +25457,7 @@ if( 23 == namespaceId && "tblDescription" == name)
         get => GetElement<TablePositionProperties>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> TableOverlap.</para>
     /// <para> Represents the following element tag in the schema: w:tblOverlap </para>
@@ -29396,6 +25470,7 @@ if( 23 == namespaceId && "tblDescription" == name)
         get => GetElement<TableOverlap>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> BiDiVisual.</para>
     /// <para> Represents the following element tag in the schema: w:bidiVisual </para>
@@ -29408,6 +25483,7 @@ if( 23 == namespaceId && "tblDescription" == name)
         get => GetElement<BiDiVisual>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> TableWidth.</para>
     /// <para> Represents the following element tag in the schema: w:tblW </para>
@@ -29420,6 +25496,7 @@ if( 23 == namespaceId && "tblDescription" == name)
         get => GetElement<TableWidth>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> TableJustification.</para>
     /// <para> Represents the following element tag in the schema: w:jc </para>
@@ -29432,6 +25509,7 @@ if( 23 == namespaceId && "tblDescription" == name)
         get => GetElement<TableJustification>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> TableCellSpacing.</para>
     /// <para> Represents the following element tag in the schema: w:tblCellSpacing </para>
@@ -29444,6 +25522,7 @@ if( 23 == namespaceId && "tblDescription" == name)
         get => GetElement<TableCellSpacing>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> TableIndentation.</para>
     /// <para> Represents the following element tag in the schema: w:tblInd </para>
@@ -29456,6 +25535,7 @@ if( 23 == namespaceId && "tblDescription" == name)
         get => GetElement<TableIndentation>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> TableBorders.</para>
     /// <para> Represents the following element tag in the schema: w:tblBorders </para>
@@ -29468,6 +25548,7 @@ if( 23 == namespaceId && "tblDescription" == name)
         get => GetElement<TableBorders>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Shading.</para>
     /// <para> Represents the following element tag in the schema: w:shd </para>
@@ -29480,6 +25561,7 @@ if( 23 == namespaceId && "tblDescription" == name)
         get => GetElement<Shading>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> TableLayout.</para>
     /// <para> Represents the following element tag in the schema: w:tblLayout </para>
@@ -29492,6 +25574,7 @@ if( 23 == namespaceId && "tblDescription" == name)
         get => GetElement<TableLayout>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> TableCellMarginDefault.</para>
     /// <para> Represents the following element tag in the schema: w:tblCellMar </para>
@@ -29504,6 +25587,7 @@ if( 23 == namespaceId && "tblDescription" == name)
         get => GetElement<TableCellMarginDefault>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> TableLook.</para>
     /// <para> Represents the following element tag in the schema: w:tblLook </para>
@@ -29516,6 +25600,7 @@ if( 23 == namespaceId && "tblDescription" == name)
         get => GetElement<TableLook>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> TableCaption.</para>
     /// <para> Represents the following element tag in the schema: w:tblCaption </para>
@@ -29528,6 +25613,7 @@ if( 23 == namespaceId && "tblDescription" == name)
         get => GetElement<TableCaption>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> TableDescription.</para>
     /// <para> Represents the following element tag in the schema: w:tblDescription </para>
@@ -29540,6 +25626,7 @@ if( 23 == namespaceId && "tblDescription" == name)
         get => GetElement<TableDescription>(14);
         set => SetElement(14, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -29599,6 +25686,7 @@ if( 23 == namespaceId && "tblDescription" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "sectPr")]
 public partial class PreviousSectionProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11771;
@@ -29677,76 +25765,11 @@ public partial class PreviousSectionProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "footnotePr" == name)
-    return new FootnoteProperties();
     
-if( 23 == namespaceId && "endnotePr" == name)
-    return new EndnoteProperties();
-    
-if( 23 == namespaceId && "type" == name)
-    return new SectionType();
-    
-if( 23 == namespaceId && "pgSz" == name)
-    return new PageSize();
-    
-if( 23 == namespaceId && "pgMar" == name)
-    return new PageMargin();
-    
-if( 23 == namespaceId && "paperSrc" == name)
-    return new PaperSource();
-    
-if( 23 == namespaceId && "pgBorders" == name)
-    return new PageBorders();
-    
-if( 23 == namespaceId && "lnNumType" == name)
-    return new LineNumberType();
-    
-if( 23 == namespaceId && "pgNumType" == name)
-    return new PageNumberType();
-    
-if( 23 == namespaceId && "cols" == name)
-    return new Columns();
-    
-if( 23 == namespaceId && "formProt" == name)
-    return new FormProtection();
-    
-if( 23 == namespaceId && "vAlign" == name)
-    return new VerticalTextAlignmentOnPage();
-    
-if( 23 == namespaceId && "noEndnote" == name)
-    return new NoEndnote();
-    
-if( 23 == namespaceId && "titlePg" == name)
-    return new TitlePage();
-    
-if( 23 == namespaceId && "textDirection" == name)
-    return new TextDirection();
-    
-if( 23 == namespaceId && "bidi" == name)
-    return new BiDi();
-    
-if( 23 == namespaceId && "rtlGutter" == name)
-    return new GutterOnRight();
-    
-if( 23 == namespaceId && "docGrid" == name)
-    return new DocGrid();
-    
-if( 23 == namespaceId && "printerSettings" == name)
-    return new PrinterSettingsReference();
-    
-if( 69 == namespaceId && "footnoteColumns" == name)
-    return new DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "footnotePr","endnotePr","type","pgSz","pgMar","paperSrc","pgBorders","lnNumType","pgNumType","cols","formProt","vAlign","noEndnote","titlePg","textDirection","bidi","rtlGutter","docGrid","printerSettings","footnoteColumns" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,69 };
     
@@ -29767,6 +25790,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<FootnoteProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> EndnoteProperties.</para>
     /// <para> Represents the following element tag in the schema: w:endnotePr </para>
@@ -29779,6 +25803,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<EndnoteProperties>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> SectionType.</para>
     /// <para> Represents the following element tag in the schema: w:type </para>
@@ -29791,6 +25816,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<SectionType>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> PageSize.</para>
     /// <para> Represents the following element tag in the schema: w:pgSz </para>
@@ -29803,6 +25829,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<PageSize>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> PageMargin.</para>
     /// <para> Represents the following element tag in the schema: w:pgMar </para>
@@ -29815,6 +25842,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<PageMargin>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> PaperSource.</para>
     /// <para> Represents the following element tag in the schema: w:paperSrc </para>
@@ -29827,6 +25855,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<PaperSource>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> PageBorders.</para>
     /// <para> Represents the following element tag in the schema: w:pgBorders </para>
@@ -29839,6 +25868,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<PageBorders>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> LineNumberType.</para>
     /// <para> Represents the following element tag in the schema: w:lnNumType </para>
@@ -29851,6 +25881,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<LineNumberType>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> PageNumberType.</para>
     /// <para> Represents the following element tag in the schema: w:pgNumType </para>
@@ -29863,6 +25894,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<PageNumberType>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Columns.</para>
     /// <para> Represents the following element tag in the schema: w:cols </para>
@@ -29875,6 +25907,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<Columns>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> FormProtection.</para>
     /// <para> Represents the following element tag in the schema: w:formProt </para>
@@ -29887,6 +25920,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<FormProtection>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> VerticalTextAlignmentOnPage.</para>
     /// <para> Represents the following element tag in the schema: w:vAlign </para>
@@ -29899,6 +25933,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<VerticalTextAlignmentOnPage>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> NoEndnote.</para>
     /// <para> Represents the following element tag in the schema: w:noEndnote </para>
@@ -29911,6 +25946,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<NoEndnote>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> TitlePage.</para>
     /// <para> Represents the following element tag in the schema: w:titlePg </para>
@@ -29923,6 +25959,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<TitlePage>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> TextDirection.</para>
     /// <para> Represents the following element tag in the schema: w:textDirection </para>
@@ -29935,6 +25972,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<TextDirection>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> BiDi.</para>
     /// <para> Represents the following element tag in the schema: w:bidi </para>
@@ -29947,6 +25985,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<BiDi>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> GutterOnRight.</para>
     /// <para> Represents the following element tag in the schema: w:rtlGutter </para>
@@ -29959,6 +25998,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<GutterOnRight>(16);
         set => SetElement(16, value);
     }
+    
     /// <summary>
     /// <para> DocGrid.</para>
     /// <para> Represents the following element tag in the schema: w:docGrid </para>
@@ -29971,6 +26011,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<DocGrid>(17);
         set => SetElement(17, value);
     }
+    
     /// <summary>
     /// <para> PrinterSettingsReference.</para>
     /// <para> Represents the following element tag in the schema: w:printerSettings </para>
@@ -29983,6 +26024,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<PrinterSettingsReference>(18);
         set => SetElement(18, value);
     }
+    
     /// <summary>
     /// <para> FootnoteColumns, this property is only available in Office2013.</para>
     /// <para> Represents the following element tag in the schema: w15:footnoteColumns </para>
@@ -29996,6 +26038,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns>(19);
         set => SetElement(19, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -30081,6 +26124,7 @@ if( 69 == namespaceId && "footnoteColumns" == name)
     [ChildElementInfo(typeof(ConditionalFormatStyle))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "pPr")]
 public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11772;
@@ -30123,115 +26167,11 @@ public partial class ParagraphPropertiesExtended : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "pStyle" == name)
-    return new ParagraphStyleId();
     
-if( 23 == namespaceId && "keepNext" == name)
-    return new KeepNext();
-    
-if( 23 == namespaceId && "keepLines" == name)
-    return new KeepLines();
-    
-if( 23 == namespaceId && "pageBreakBefore" == name)
-    return new PageBreakBefore();
-    
-if( 23 == namespaceId && "framePr" == name)
-    return new FrameProperties();
-    
-if( 23 == namespaceId && "widowControl" == name)
-    return new WidowControl();
-    
-if( 23 == namespaceId && "numPr" == name)
-    return new NumberingProperties();
-    
-if( 23 == namespaceId && "suppressLineNumbers" == name)
-    return new SuppressLineNumbers();
-    
-if( 23 == namespaceId && "pBdr" == name)
-    return new ParagraphBorders();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "tabs" == name)
-    return new Tabs();
-    
-if( 23 == namespaceId && "suppressAutoHyphens" == name)
-    return new SuppressAutoHyphens();
-    
-if( 23 == namespaceId && "kinsoku" == name)
-    return new Kinsoku();
-    
-if( 23 == namespaceId && "wordWrap" == name)
-    return new WordWrap();
-    
-if( 23 == namespaceId && "overflowPunct" == name)
-    return new OverflowPunctuation();
-    
-if( 23 == namespaceId && "topLinePunct" == name)
-    return new TopLinePunctuation();
-    
-if( 23 == namespaceId && "autoSpaceDE" == name)
-    return new AutoSpaceDE();
-    
-if( 23 == namespaceId && "autoSpaceDN" == name)
-    return new AutoSpaceDN();
-    
-if( 23 == namespaceId && "bidi" == name)
-    return new BiDi();
-    
-if( 23 == namespaceId && "adjustRightInd" == name)
-    return new AdjustRightIndent();
-    
-if( 23 == namespaceId && "snapToGrid" == name)
-    return new SnapToGrid();
-    
-if( 23 == namespaceId && "spacing" == name)
-    return new SpacingBetweenLines();
-    
-if( 23 == namespaceId && "ind" == name)
-    return new Indentation();
-    
-if( 23 == namespaceId && "contextualSpacing" == name)
-    return new ContextualSpacing();
-    
-if( 23 == namespaceId && "mirrorIndents" == name)
-    return new MirrorIndents();
-    
-if( 23 == namespaceId && "suppressOverlap" == name)
-    return new SuppressOverlap();
-    
-if( 23 == namespaceId && "jc" == name)
-    return new Justification();
-    
-if( 23 == namespaceId && "textDirection" == name)
-    return new TextDirection();
-    
-if( 23 == namespaceId && "textAlignment" == name)
-    return new TextAlignment();
-    
-if( 23 == namespaceId && "textboxTightWrap" == name)
-    return new TextBoxTightWrap();
-    
-if( 23 == namespaceId && "outlineLvl" == name)
-    return new OutlineLevel();
-    
-if( 23 == namespaceId && "divId" == name)
-    return new DivId();
-    
-if( 23 == namespaceId && "cnfStyle" == name)
-    return new ConditionalFormatStyle();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pStyle","keepNext","keepLines","pageBreakBefore","framePr","widowControl","numPr","suppressLineNumbers","pBdr","shd","tabs","suppressAutoHyphens","kinsoku","wordWrap","overflowPunct","topLinePunct","autoSpaceDE","autoSpaceDN","bidi","adjustRightInd","snapToGrid","spacing","ind","contextualSpacing","mirrorIndents","suppressOverlap","jc","textDirection","textAlignment","textboxTightWrap","outlineLvl","divId","cnfStyle" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -30252,6 +26192,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<ParagraphStyleId>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> KeepNext.</para>
     /// <para> Represents the following element tag in the schema: w:keepNext </para>
@@ -30264,6 +26205,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<KeepNext>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> KeepLines.</para>
     /// <para> Represents the following element tag in the schema: w:keepLines </para>
@@ -30276,6 +26218,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<KeepLines>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> PageBreakBefore.</para>
     /// <para> Represents the following element tag in the schema: w:pageBreakBefore </para>
@@ -30288,6 +26231,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<PageBreakBefore>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> FrameProperties.</para>
     /// <para> Represents the following element tag in the schema: w:framePr </para>
@@ -30300,6 +26244,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<FrameProperties>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> WidowControl.</para>
     /// <para> Represents the following element tag in the schema: w:widowControl </para>
@@ -30312,6 +26257,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<WidowControl>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> NumberingProperties.</para>
     /// <para> Represents the following element tag in the schema: w:numPr </para>
@@ -30324,6 +26270,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<NumberingProperties>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> SuppressLineNumbers.</para>
     /// <para> Represents the following element tag in the schema: w:suppressLineNumbers </para>
@@ -30336,6 +26283,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<SuppressLineNumbers>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> ParagraphBorders.</para>
     /// <para> Represents the following element tag in the schema: w:pBdr </para>
@@ -30348,6 +26296,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<ParagraphBorders>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Shading.</para>
     /// <para> Represents the following element tag in the schema: w:shd </para>
@@ -30360,6 +26309,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<Shading>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> Tabs.</para>
     /// <para> Represents the following element tag in the schema: w:tabs </para>
@@ -30372,6 +26322,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<Tabs>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> SuppressAutoHyphens.</para>
     /// <para> Represents the following element tag in the schema: w:suppressAutoHyphens </para>
@@ -30384,6 +26335,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<SuppressAutoHyphens>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> Kinsoku.</para>
     /// <para> Represents the following element tag in the schema: w:kinsoku </para>
@@ -30396,6 +26348,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<Kinsoku>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> WordWrap.</para>
     /// <para> Represents the following element tag in the schema: w:wordWrap </para>
@@ -30408,6 +26361,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<WordWrap>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> OverflowPunctuation.</para>
     /// <para> Represents the following element tag in the schema: w:overflowPunct </para>
@@ -30420,6 +26374,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<OverflowPunctuation>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> TopLinePunctuation.</para>
     /// <para> Represents the following element tag in the schema: w:topLinePunct </para>
@@ -30432,6 +26387,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<TopLinePunctuation>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> AutoSpaceDE.</para>
     /// <para> Represents the following element tag in the schema: w:autoSpaceDE </para>
@@ -30444,6 +26400,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<AutoSpaceDE>(16);
         set => SetElement(16, value);
     }
+    
     /// <summary>
     /// <para> AutoSpaceDN.</para>
     /// <para> Represents the following element tag in the schema: w:autoSpaceDN </para>
@@ -30456,6 +26413,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<AutoSpaceDN>(17);
         set => SetElement(17, value);
     }
+    
     /// <summary>
     /// <para> BiDi.</para>
     /// <para> Represents the following element tag in the schema: w:bidi </para>
@@ -30468,6 +26426,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<BiDi>(18);
         set => SetElement(18, value);
     }
+    
     /// <summary>
     /// <para> AdjustRightIndent.</para>
     /// <para> Represents the following element tag in the schema: w:adjustRightInd </para>
@@ -30480,6 +26439,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<AdjustRightIndent>(19);
         set => SetElement(19, value);
     }
+    
     /// <summary>
     /// <para> SnapToGrid.</para>
     /// <para> Represents the following element tag in the schema: w:snapToGrid </para>
@@ -30492,6 +26452,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<SnapToGrid>(20);
         set => SetElement(20, value);
     }
+    
     /// <summary>
     /// <para> SpacingBetweenLines.</para>
     /// <para> Represents the following element tag in the schema: w:spacing </para>
@@ -30504,6 +26465,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<SpacingBetweenLines>(21);
         set => SetElement(21, value);
     }
+    
     /// <summary>
     /// <para> Indentation.</para>
     /// <para> Represents the following element tag in the schema: w:ind </para>
@@ -30516,6 +26478,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<Indentation>(22);
         set => SetElement(22, value);
     }
+    
     /// <summary>
     /// <para> ContextualSpacing.</para>
     /// <para> Represents the following element tag in the schema: w:contextualSpacing </para>
@@ -30528,6 +26491,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<ContextualSpacing>(23);
         set => SetElement(23, value);
     }
+    
     /// <summary>
     /// <para> MirrorIndents.</para>
     /// <para> Represents the following element tag in the schema: w:mirrorIndents </para>
@@ -30540,6 +26504,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<MirrorIndents>(24);
         set => SetElement(24, value);
     }
+    
     /// <summary>
     /// <para> SuppressOverlap.</para>
     /// <para> Represents the following element tag in the schema: w:suppressOverlap </para>
@@ -30552,6 +26517,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<SuppressOverlap>(25);
         set => SetElement(25, value);
     }
+    
     /// <summary>
     /// <para> Justification.</para>
     /// <para> Represents the following element tag in the schema: w:jc </para>
@@ -30564,6 +26530,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<Justification>(26);
         set => SetElement(26, value);
     }
+    
     /// <summary>
     /// <para> TextDirection.</para>
     /// <para> Represents the following element tag in the schema: w:textDirection </para>
@@ -30576,6 +26543,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<TextDirection>(27);
         set => SetElement(27, value);
     }
+    
     /// <summary>
     /// <para> TextAlignment.</para>
     /// <para> Represents the following element tag in the schema: w:textAlignment </para>
@@ -30588,6 +26556,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<TextAlignment>(28);
         set => SetElement(28, value);
     }
+    
     /// <summary>
     /// <para> TextBoxTightWrap.</para>
     /// <para> Represents the following element tag in the schema: w:textboxTightWrap </para>
@@ -30600,6 +26569,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<TextBoxTightWrap>(29);
         set => SetElement(29, value);
     }
+    
     /// <summary>
     /// <para> OutlineLevel.</para>
     /// <para> Represents the following element tag in the schema: w:outlineLvl </para>
@@ -30612,6 +26582,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<OutlineLevel>(30);
         set => SetElement(30, value);
     }
+    
     /// <summary>
     /// <para> DivId.</para>
     /// <para> Represents the following element tag in the schema: w:divId </para>
@@ -30624,6 +26595,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<DivId>(31);
         set => SetElement(31, value);
     }
+    
     /// <summary>
     /// <para> ConditionalFormatStyle.</para>
     /// <para> Represents the following element tag in the schema: w:cnfStyle </para>
@@ -30636,6 +26608,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
         get => GetElement<ConditionalFormatStyle>(32);
         set => SetElement(32, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -30755,6 +26728,7 @@ if( 23 == namespaceId && "cnfStyle" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "rPr")]
 public partial class PreviousRunProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11773;
@@ -30797,166 +26771,11 @@ public partial class PreviousRunProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rStyle" == name)
-    return new RunStyle();
     
-if( 23 == namespaceId && "rFonts" == name)
-    return new RunFonts();
-    
-if( 23 == namespaceId && "b" == name)
-    return new Bold();
-    
-if( 23 == namespaceId && "bCs" == name)
-    return new BoldComplexScript();
-    
-if( 23 == namespaceId && "i" == name)
-    return new Italic();
-    
-if( 23 == namespaceId && "iCs" == name)
-    return new ItalicComplexScript();
-    
-if( 23 == namespaceId && "caps" == name)
-    return new Caps();
-    
-if( 23 == namespaceId && "smallCaps" == name)
-    return new SmallCaps();
-    
-if( 23 == namespaceId && "strike" == name)
-    return new Strike();
-    
-if( 23 == namespaceId && "dstrike" == name)
-    return new DoubleStrike();
-    
-if( 23 == namespaceId && "outline" == name)
-    return new Outline();
-    
-if( 23 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 23 == namespaceId && "emboss" == name)
-    return new Emboss();
-    
-if( 23 == namespaceId && "imprint" == name)
-    return new Imprint();
-    
-if( 23 == namespaceId && "noProof" == name)
-    return new NoProof();
-    
-if( 23 == namespaceId && "snapToGrid" == name)
-    return new SnapToGrid();
-    
-if( 23 == namespaceId && "vanish" == name)
-    return new Vanish();
-    
-if( 23 == namespaceId && "webHidden" == name)
-    return new WebHidden();
-    
-if( 23 == namespaceId && "color" == name)
-    return new Color();
-    
-if( 23 == namespaceId && "spacing" == name)
-    return new Spacing();
-    
-if( 23 == namespaceId && "w" == name)
-    return new CharacterScale();
-    
-if( 23 == namespaceId && "kern" == name)
-    return new Kern();
-    
-if( 23 == namespaceId && "position" == name)
-    return new Position();
-    
-if( 23 == namespaceId && "sz" == name)
-    return new FontSize();
-    
-if( 23 == namespaceId && "szCs" == name)
-    return new FontSizeComplexScript();
-    
-if( 23 == namespaceId && "highlight" == name)
-    return new Highlight();
-    
-if( 23 == namespaceId && "u" == name)
-    return new Underline();
-    
-if( 23 == namespaceId && "effect" == name)
-    return new TextEffect();
-    
-if( 23 == namespaceId && "bdr" == name)
-    return new Border();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "fitText" == name)
-    return new FitText();
-    
-if( 23 == namespaceId && "vertAlign" == name)
-    return new VerticalTextAlignment();
-    
-if( 23 == namespaceId && "rtl" == name)
-    return new RightToLeftText();
-    
-if( 23 == namespaceId && "cs" == name)
-    return new ComplexScript();
-    
-if( 23 == namespaceId && "em" == name)
-    return new Emphasis();
-    
-if( 23 == namespaceId && "lang" == name)
-    return new Languages();
-    
-if( 23 == namespaceId && "eastAsianLayout" == name)
-    return new EastAsianLayout();
-    
-if( 23 == namespaceId && "specVanish" == name)
-    return new SpecVanish();
-    
-if( 52 == namespaceId && "glow" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Glow();
-    
-if( 52 == namespaceId && "shadow" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Shadow();
-    
-if( 52 == namespaceId && "reflection" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Reflection();
-    
-if( 52 == namespaceId && "textOutline" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect();
-    
-if( 52 == namespaceId && "textFill" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.FillTextEffect();
-    
-if( 52 == namespaceId && "scene3d" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Scene3D();
-    
-if( 52 == namespaceId && "props3d" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Properties3D();
-    
-if( 52 == namespaceId && "ligatures" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Ligatures();
-    
-if( 52 == namespaceId && "numForm" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.NumberingFormat();
-    
-if( 52 == namespaceId && "numSpacing" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.NumberSpacing();
-    
-if( 52 == namespaceId && "stylisticSets" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.StylisticSets();
-    
-if( 52 == namespaceId && "cntxtAlts" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PreviousRunProperties>(deep);
@@ -31089,6 +26908,7 @@ if( 52 == namespaceId && "cntxtAlts" == name)
     [ChildElementInfo(typeof(OfficeMath))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "rPr")]
 public partial class PreviousParagraphMarkRunProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11774;
@@ -31131,187 +26951,11 @@ public partial class PreviousParagraphMarkRunProperties : OpenXmlCompositeElemen
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "ins" == name)
-    return new Inserted();
     
-if( 23 == namespaceId && "del" == name)
-    return new Deleted();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFrom();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveTo();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion();
-    
-if( 23 == namespaceId && "rStyle" == name)
-    return new RunStyle();
-    
-if( 23 == namespaceId && "rFonts" == name)
-    return new RunFonts();
-    
-if( 23 == namespaceId && "b" == name)
-    return new Bold();
-    
-if( 23 == namespaceId && "bCs" == name)
-    return new BoldComplexScript();
-    
-if( 23 == namespaceId && "i" == name)
-    return new Italic();
-    
-if( 23 == namespaceId && "iCs" == name)
-    return new ItalicComplexScript();
-    
-if( 23 == namespaceId && "caps" == name)
-    return new Caps();
-    
-if( 23 == namespaceId && "smallCaps" == name)
-    return new SmallCaps();
-    
-if( 23 == namespaceId && "strike" == name)
-    return new Strike();
-    
-if( 23 == namespaceId && "dstrike" == name)
-    return new DoubleStrike();
-    
-if( 23 == namespaceId && "outline" == name)
-    return new Outline();
-    
-if( 23 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 23 == namespaceId && "emboss" == name)
-    return new Emboss();
-    
-if( 23 == namespaceId && "imprint" == name)
-    return new Imprint();
-    
-if( 23 == namespaceId && "noProof" == name)
-    return new NoProof();
-    
-if( 23 == namespaceId && "snapToGrid" == name)
-    return new SnapToGrid();
-    
-if( 23 == namespaceId && "vanish" == name)
-    return new Vanish();
-    
-if( 23 == namespaceId && "webHidden" == name)
-    return new WebHidden();
-    
-if( 23 == namespaceId && "color" == name)
-    return new Color();
-    
-if( 23 == namespaceId && "spacing" == name)
-    return new Spacing();
-    
-if( 23 == namespaceId && "w" == name)
-    return new CharacterScale();
-    
-if( 23 == namespaceId && "kern" == name)
-    return new Kern();
-    
-if( 23 == namespaceId && "position" == name)
-    return new Position();
-    
-if( 23 == namespaceId && "sz" == name)
-    return new FontSize();
-    
-if( 23 == namespaceId && "szCs" == name)
-    return new FontSizeComplexScript();
-    
-if( 23 == namespaceId && "highlight" == name)
-    return new Highlight();
-    
-if( 23 == namespaceId && "u" == name)
-    return new Underline();
-    
-if( 23 == namespaceId && "effect" == name)
-    return new TextEffect();
-    
-if( 23 == namespaceId && "bdr" == name)
-    return new Border();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "fitText" == name)
-    return new FitText();
-    
-if( 23 == namespaceId && "vertAlign" == name)
-    return new VerticalTextAlignment();
-    
-if( 23 == namespaceId && "rtl" == name)
-    return new RightToLeftText();
-    
-if( 23 == namespaceId && "cs" == name)
-    return new ComplexScript();
-    
-if( 23 == namespaceId && "em" == name)
-    return new Emphasis();
-    
-if( 23 == namespaceId && "lang" == name)
-    return new Languages();
-    
-if( 23 == namespaceId && "eastAsianLayout" == name)
-    return new EastAsianLayout();
-    
-if( 23 == namespaceId && "specVanish" == name)
-    return new SpecVanish();
-    
-if( 52 == namespaceId && "glow" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Glow();
-    
-if( 52 == namespaceId && "shadow" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Shadow();
-    
-if( 52 == namespaceId && "reflection" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Reflection();
-    
-if( 52 == namespaceId && "textOutline" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect();
-    
-if( 52 == namespaceId && "textFill" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.FillTextEffect();
-    
-if( 52 == namespaceId && "scene3d" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Scene3D();
-    
-if( 52 == namespaceId && "props3d" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Properties3D();
-    
-if( 52 == namespaceId && "ligatures" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Ligatures();
-    
-if( 52 == namespaceId && "numForm" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.NumberingFormat();
-    
-if( 52 == namespaceId && "numSpacing" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.NumberSpacing();
-    
-if( 52 == namespaceId && "stylisticSets" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.StylisticSets();
-    
-if( 52 == namespaceId && "cntxtAlts" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives();
-    
-if( 23 == namespaceId && "oMath" == name)
-    return new OfficeMath();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "ins","del","moveFrom","moveTo","conflictIns","conflictDel","rStyle","rFonts","b","bCs","i","iCs","caps","smallCaps","strike","dstrike","outline","shadow","emboss","imprint","noProof","snapToGrid","vanish","webHidden","color","spacing","w","kern","position","sz","szCs","highlight","u","effect","bdr","shd","fitText","vertAlign","rtl","cs","em","lang","eastAsianLayout","specVanish","glow","shadow","reflection","textOutline","textFill","scene3d","props3d","ligatures","numForm","numSpacing","stylisticSets","cntxtAlts","oMath" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,52,52,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,52,52,52,52,52,52,52,52,23 };
     
@@ -31332,6 +26976,7 @@ if( 23 == namespaceId && "oMath" == name)
         get => GetElement<Inserted>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Deleted Paragraph.</para>
     /// <para> Represents the following element tag in the schema: w:del </para>
@@ -31344,6 +26989,7 @@ if( 23 == namespaceId && "oMath" == name)
         get => GetElement<Deleted>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Move Source Paragraph.</para>
     /// <para> Represents the following element tag in the schema: w:moveFrom </para>
@@ -31356,6 +27002,7 @@ if( 23 == namespaceId && "oMath" == name)
         get => GetElement<MoveFrom>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Move Destination Paragraph.</para>
     /// <para> Represents the following element tag in the schema: w:moveTo </para>
@@ -31368,6 +27015,7 @@ if( 23 == namespaceId && "oMath" == name)
         get => GetElement<MoveTo>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -31382,6 +27030,7 @@ if( 23 == namespaceId && "oMath" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "ilvl")]
 public partial class NumberingLevelReference : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11775;
@@ -31424,6 +27073,7 @@ public partial class NumberingLevelReference : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "numId")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NumberingId : NonNegativeDecimalNumberType
 {
@@ -31451,6 +27101,7 @@ public partial class NumberingId : NonNegativeDecimalNumberType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "start")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StartNumberingValue : NonNegativeDecimalNumberType
 {
@@ -31478,6 +27129,7 @@ public partial class StartNumberingValue : NonNegativeDecimalNumberType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "abstractNumId")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AbstractNumId : NonNegativeDecimalNumberType
 {
@@ -31535,6 +27187,7 @@ public abstract partial class NonNegativeDecimalNumberType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "numberingChange")]
 public partial class NumberingChange : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11777;
@@ -31605,6 +27258,7 @@ public partial class NumberingChange : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tab")]
 public partial class TabStop : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11784;
@@ -31787,6 +27441,7 @@ public partial class TabStop : OpenXmlLeafElement
     [ChildElementInfo(typeof(ParagraphMarkRunPropertiesChange))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "rPr")]
 public partial class ParagraphMarkRunProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11785;
@@ -31829,190 +27484,11 @@ public partial class ParagraphMarkRunProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "ins" == name)
-    return new Inserted();
     
-if( 23 == namespaceId && "del" == name)
-    return new Deleted();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFrom();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveTo();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion();
-    
-if( 23 == namespaceId && "rStyle" == name)
-    return new RunStyle();
-    
-if( 23 == namespaceId && "rFonts" == name)
-    return new RunFonts();
-    
-if( 23 == namespaceId && "b" == name)
-    return new Bold();
-    
-if( 23 == namespaceId && "bCs" == name)
-    return new BoldComplexScript();
-    
-if( 23 == namespaceId && "i" == name)
-    return new Italic();
-    
-if( 23 == namespaceId && "iCs" == name)
-    return new ItalicComplexScript();
-    
-if( 23 == namespaceId && "caps" == name)
-    return new Caps();
-    
-if( 23 == namespaceId && "smallCaps" == name)
-    return new SmallCaps();
-    
-if( 23 == namespaceId && "strike" == name)
-    return new Strike();
-    
-if( 23 == namespaceId && "dstrike" == name)
-    return new DoubleStrike();
-    
-if( 23 == namespaceId && "outline" == name)
-    return new Outline();
-    
-if( 23 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 23 == namespaceId && "emboss" == name)
-    return new Emboss();
-    
-if( 23 == namespaceId && "imprint" == name)
-    return new Imprint();
-    
-if( 23 == namespaceId && "noProof" == name)
-    return new NoProof();
-    
-if( 23 == namespaceId && "snapToGrid" == name)
-    return new SnapToGrid();
-    
-if( 23 == namespaceId && "vanish" == name)
-    return new Vanish();
-    
-if( 23 == namespaceId && "webHidden" == name)
-    return new WebHidden();
-    
-if( 23 == namespaceId && "color" == name)
-    return new Color();
-    
-if( 23 == namespaceId && "spacing" == name)
-    return new Spacing();
-    
-if( 23 == namespaceId && "w" == name)
-    return new CharacterScale();
-    
-if( 23 == namespaceId && "kern" == name)
-    return new Kern();
-    
-if( 23 == namespaceId && "position" == name)
-    return new Position();
-    
-if( 23 == namespaceId && "sz" == name)
-    return new FontSize();
-    
-if( 23 == namespaceId && "szCs" == name)
-    return new FontSizeComplexScript();
-    
-if( 23 == namespaceId && "highlight" == name)
-    return new Highlight();
-    
-if( 23 == namespaceId && "u" == name)
-    return new Underline();
-    
-if( 23 == namespaceId && "effect" == name)
-    return new TextEffect();
-    
-if( 23 == namespaceId && "bdr" == name)
-    return new Border();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "fitText" == name)
-    return new FitText();
-    
-if( 23 == namespaceId && "vertAlign" == name)
-    return new VerticalTextAlignment();
-    
-if( 23 == namespaceId && "rtl" == name)
-    return new RightToLeftText();
-    
-if( 23 == namespaceId && "cs" == name)
-    return new ComplexScript();
-    
-if( 23 == namespaceId && "em" == name)
-    return new Emphasis();
-    
-if( 23 == namespaceId && "lang" == name)
-    return new Languages();
-    
-if( 23 == namespaceId && "eastAsianLayout" == name)
-    return new EastAsianLayout();
-    
-if( 23 == namespaceId && "specVanish" == name)
-    return new SpecVanish();
-    
-if( 52 == namespaceId && "glow" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Glow();
-    
-if( 52 == namespaceId && "shadow" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Shadow();
-    
-if( 52 == namespaceId && "reflection" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Reflection();
-    
-if( 52 == namespaceId && "textOutline" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.TextOutlineEffect();
-    
-if( 52 == namespaceId && "textFill" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.FillTextEffect();
-    
-if( 52 == namespaceId && "scene3d" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Scene3D();
-    
-if( 52 == namespaceId && "props3d" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Properties3D();
-    
-if( 52 == namespaceId && "ligatures" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Ligatures();
-    
-if( 52 == namespaceId && "numForm" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.NumberingFormat();
-    
-if( 52 == namespaceId && "numSpacing" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.NumberSpacing();
-    
-if( 52 == namespaceId && "stylisticSets" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.StylisticSets();
-    
-if( 52 == namespaceId && "cntxtAlts" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.ContextualAlternatives();
-    
-if( 23 == namespaceId && "oMath" == name)
-    return new OfficeMath();
-    
-if( 23 == namespaceId && "rPrChange" == name)
-    return new ParagraphMarkRunPropertiesChange();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "ins","del","moveFrom","moveTo","conflictIns","conflictDel","rStyle","rFonts","b","bCs","i","iCs","caps","smallCaps","strike","dstrike","outline","shadow","emboss","imprint","noProof","snapToGrid","vanish","webHidden","color","spacing","w","kern","position","sz","szCs","highlight","u","effect","bdr","shd","fitText","vertAlign","rtl","cs","em","lang","eastAsianLayout","specVanish","glow","shadow","reflection","textOutline","textFill","scene3d","props3d","ligatures","numForm","numSpacing","stylisticSets","cntxtAlts","oMath","rPrChange" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,52,52,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,52,52,52,52,52,52,52,52,23,23 };
     
@@ -32033,6 +27509,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Inserted>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Deleted Paragraph.</para>
     /// <para> Represents the following element tag in the schema: w:del </para>
@@ -32045,6 +27522,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Deleted>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Move Source Paragraph.</para>
     /// <para> Represents the following element tag in the schema: w:moveFrom </para>
@@ -32057,6 +27535,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<MoveFrom>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Move Destination Paragraph.</para>
     /// <para> Represents the following element tag in the schema: w:moveTo </para>
@@ -32069,6 +27548,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<MoveTo>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -32134,6 +27614,7 @@ if( 23 == namespaceId && "rPrChange" == name)
     [ChildElementInfo(typeof(SectionPropertiesChange))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "sectPr")]
 public partial class SectionProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11786;
@@ -32212,85 +27693,11 @@ public partial class SectionProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "headerReference" == name)
-    return new HeaderReference();
     
-if( 23 == namespaceId && "footerReference" == name)
-    return new FooterReference();
-    
-if( 23 == namespaceId && "footnotePr" == name)
-    return new FootnoteProperties();
-    
-if( 23 == namespaceId && "endnotePr" == name)
-    return new EndnoteProperties();
-    
-if( 23 == namespaceId && "type" == name)
-    return new SectionType();
-    
-if( 23 == namespaceId && "pgSz" == name)
-    return new PageSize();
-    
-if( 23 == namespaceId && "pgMar" == name)
-    return new PageMargin();
-    
-if( 23 == namespaceId && "paperSrc" == name)
-    return new PaperSource();
-    
-if( 23 == namespaceId && "pgBorders" == name)
-    return new PageBorders();
-    
-if( 23 == namespaceId && "lnNumType" == name)
-    return new LineNumberType();
-    
-if( 23 == namespaceId && "pgNumType" == name)
-    return new PageNumberType();
-    
-if( 23 == namespaceId && "cols" == name)
-    return new Columns();
-    
-if( 23 == namespaceId && "formProt" == name)
-    return new FormProtection();
-    
-if( 23 == namespaceId && "vAlign" == name)
-    return new VerticalTextAlignmentOnPage();
-    
-if( 23 == namespaceId && "noEndnote" == name)
-    return new NoEndnote();
-    
-if( 23 == namespaceId && "titlePg" == name)
-    return new TitlePage();
-    
-if( 23 == namespaceId && "textDirection" == name)
-    return new TextDirection();
-    
-if( 23 == namespaceId && "bidi" == name)
-    return new BiDi();
-    
-if( 23 == namespaceId && "rtlGutter" == name)
-    return new GutterOnRight();
-    
-if( 23 == namespaceId && "docGrid" == name)
-    return new DocGrid();
-    
-if( 23 == namespaceId && "printerSettings" == name)
-    return new PrinterSettingsReference();
-    
-if( 69 == namespaceId && "footnoteColumns" == name)
-    return new DocumentFormat.OpenXml.Office2013.Word.FootnoteColumns();
-    
-if( 23 == namespaceId && "sectPrChange" == name)
-    return new SectionPropertiesChange();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SectionProperties>(deep);
@@ -32304,6 +27711,7 @@ if( 23 == namespaceId && "sectPrChange" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "fldData")]
 public partial class FieldData : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11787;
@@ -32376,6 +27784,7 @@ public partial class FieldData : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(TextInput))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "ffData")]
 public partial class FormFieldData : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11788;
@@ -32418,46 +27827,11 @@ public partial class FormFieldData : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "name" == name)
-    return new FormFieldName();
     
-if( 23 == namespaceId && "enabled" == name)
-    return new Enabled();
-    
-if( 23 == namespaceId && "calcOnExit" == name)
-    return new CalculateOnExit();
-    
-if( 23 == namespaceId && "entryMacro" == name)
-    return new EntryMacro();
-    
-if( 23 == namespaceId && "exitMacro" == name)
-    return new ExitMacro();
-    
-if( 23 == namespaceId && "helpText" == name)
-    return new HelpText();
-    
-if( 23 == namespaceId && "statusText" == name)
-    return new StatusText();
-    
-if( 23 == namespaceId && "checkBox" == name)
-    return new CheckBox();
-    
-if( 23 == namespaceId && "ddList" == name)
-    return new DropDownListFormField();
-    
-if( 23 == namespaceId && "textInput" == name)
-    return new TextInput();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FormFieldData>(deep);
@@ -32471,6 +27845,7 @@ if( 23 == namespaceId && "textInput" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "name")]
 public partial class FormFieldName : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11789;
@@ -32513,6 +27888,7 @@ public partial class FormFieldName : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "entryMacro")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EntryMacro : MacroNameType
 {
@@ -32540,6 +27916,7 @@ public partial class EntryMacro : MacroNameType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "exitMacro")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ExitMacro : MacroNameType
 {
@@ -32597,6 +27974,7 @@ public abstract partial class MacroNameType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "helpText")]
 public partial class HelpText : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11794;
@@ -32649,6 +28027,7 @@ public partial class HelpText : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "statusText")]
 public partial class StatusText : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11795;
@@ -32714,6 +28093,7 @@ public partial class StatusText : OpenXmlLeafElement
     [ChildElementInfo(typeof(Checked))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "checkBox")]
 public partial class CheckBox : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11796;
@@ -32756,28 +28136,11 @@ public partial class CheckBox : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "size" == name)
-    return new FormFieldSize();
     
-if( 23 == namespaceId && "sizeAuto" == name)
-    return new AutomaticallySizeFormField();
-    
-if( 23 == namespaceId && "default" == name)
-    return new DefaultCheckBoxFormFieldState();
-    
-if( 23 == namespaceId && "checked" == name)
-    return new Checked();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CheckBox>(deep);
@@ -32802,6 +28165,7 @@ if( 23 == namespaceId && "checked" == name)
     [ChildElementInfo(typeof(ListEntryFormField))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "ddList")]
 public partial class DropDownListFormField : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11797;
@@ -32844,25 +28208,11 @@ public partial class DropDownListFormField : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "result" == name)
-    return new DropDownListSelection();
     
-if( 23 == namespaceId && "default" == name)
-    return new DefaultDropDownListItemIndex();
-    
-if( 23 == namespaceId && "listEntry" == name)
-    return new ListEntryFormField();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "result","default","listEntry" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23 };
     
@@ -32883,6 +28233,7 @@ if( 23 == namespaceId && "listEntry" == name)
         get => GetElement<DropDownListSelection>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Default Drop-Down List Item Index.</para>
     /// <para> Represents the following element tag in the schema: w:default </para>
@@ -32895,6 +28246,7 @@ if( 23 == namespaceId && "listEntry" == name)
         get => GetElement<DefaultDropDownListItemIndex>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -32922,6 +28274,7 @@ if( 23 == namespaceId && "listEntry" == name)
     [ChildElementInfo(typeof(Format))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "textInput")]
 public partial class TextInput : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11798;
@@ -32964,28 +28317,11 @@ public partial class TextInput : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "type" == name)
-    return new TextBoxFormFieldType();
     
-if( 23 == namespaceId && "default" == name)
-    return new DefaultTextBoxFormFieldString();
-    
-if( 23 == namespaceId && "maxLength" == name)
-    return new MaxLength();
-    
-if( 23 == namespaceId && "format" == name)
-    return new Format();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "type","default","maxLength","format" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23 };
     
@@ -33006,6 +28342,7 @@ if( 23 == namespaceId && "format" == name)
         get => GetElement<TextBoxFormFieldType>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Default Text Box Form Field String.</para>
     /// <para> Represents the following element tag in the schema: w:default </para>
@@ -33018,6 +28355,7 @@ if( 23 == namespaceId && "format" == name)
         get => GetElement<DefaultTextBoxFormFieldString>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Text Box Form Field Maximum Length.</para>
     /// <para> Represents the following element tag in the schema: w:maxLength </para>
@@ -33030,6 +28368,7 @@ if( 23 == namespaceId && "format" == name)
         get => GetElement<MaxLength>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Text Box Form Field Formatting.</para>
     /// <para> Represents the following element tag in the schema: w:format </para>
@@ -33042,6 +28381,7 @@ if( 23 == namespaceId && "format" == name)
         get => GetElement<Format>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -33056,6 +28396,7 @@ if( 23 == namespaceId && "format" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "default")]
 public partial class DefaultDropDownListItemIndex : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11804;
@@ -33098,6 +28439,7 @@ public partial class DefaultDropDownListItemIndex : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "listEntry")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ListEntryFormField : String255Type
 {
@@ -33125,6 +28467,7 @@ public partial class ListEntryFormField : String255Type
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "default")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DefaultTextBoxFormFieldString : String255Type
 {
@@ -33152,6 +28495,7 @@ public partial class DefaultTextBoxFormFieldString : String255Type
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "name")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FrameName : String255Type
 {
@@ -33209,6 +28553,7 @@ public abstract partial class String255Type : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "type")]
 public partial class TextBoxFormFieldType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11806;
@@ -33252,6 +28597,7 @@ public partial class TextBoxFormFieldType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "maxLength")]
 public partial class MaxLength : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11808;
@@ -33295,6 +28641,7 @@ public partial class MaxLength : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "format")]
 public partial class Format : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11809;
@@ -33338,6 +28685,7 @@ public partial class Format : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "col")]
 public partial class Column : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11810;
@@ -33397,6 +28745,7 @@ public partial class Column : OpenXmlLeafElement
     [ChildElementInfo(typeof(PreviousSectionProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "sectPrChange")]
 public partial class SectionPropertiesChange : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11811;
@@ -33466,19 +28815,11 @@ public partial class SectionPropertiesChange : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "sectPr" == name)
-    return new PreviousSectionProperties();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sectPr" };
     private static readonly byte[] eleNamespaceIds = { 23 };
     
@@ -33499,6 +28840,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<PreviousSectionProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -33520,6 +28862,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PreviousParagraphMarkRunProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "rPrChange")]
 public partial class ParagraphMarkRunPropertiesChange : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11812;
@@ -33589,19 +28932,11 @@ public partial class ParagraphMarkRunPropertiesChange : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rPr" == name)
-    return new PreviousParagraphMarkRunProperties();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "rPr" };
     private static readonly byte[] eleNamespaceIds = { 23 };
     
@@ -33622,6 +28957,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<PreviousParagraphMarkRunProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -33643,6 +28979,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(MatchSource))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "altChunkPr")]
 public partial class AltChunkProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11813;
@@ -33685,19 +29022,11 @@ public partial class AltChunkProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "matchSrc" == name)
-    return new MatchSource();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "matchSrc" };
     private static readonly byte[] eleNamespaceIds = { 23 };
     
@@ -33718,6 +29047,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<MatchSource>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -33732,6 +29062,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "rubyAlign")]
 public partial class RubyAlign : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11815;
@@ -33775,6 +29106,7 @@ public partial class RubyAlign : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "hpsRaise")]
 public partial class PhoneticGuideRaise : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11817;
@@ -33818,6 +29150,7 @@ public partial class PhoneticGuideRaise : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "lid")]
 public partial class LanguageId : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11819;
@@ -33878,6 +29211,7 @@ public partial class LanguageId : OpenXmlLeafElement
     [ChildElementInfo(typeof(Dirty))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "rubyPr")]
 public partial class RubyProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11821;
@@ -33920,34 +29254,11 @@ public partial class RubyProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rubyAlign" == name)
-    return new RubyAlign();
     
-if( 23 == namespaceId && "hps" == name)
-    return new PhoneticGuideTextFontSize();
-    
-if( 23 == namespaceId && "hpsRaise" == name)
-    return new PhoneticGuideRaise();
-    
-if( 23 == namespaceId && "hpsBaseText" == name)
-    return new PhoneticGuideBaseTextSize();
-    
-if( 23 == namespaceId && "lid" == name)
-    return new LanguageId();
-    
-if( 23 == namespaceId && "dirty" == name)
-    return new Dirty();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "rubyAlign","hps","hpsRaise","hpsBaseText","lid","dirty" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23 };
     
@@ -33968,6 +29279,7 @@ if( 23 == namespaceId && "dirty" == name)
         get => GetElement<RubyAlign>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Phonetic Guide Text Font Size.</para>
     /// <para> Represents the following element tag in the schema: w:hps </para>
@@ -33980,6 +29292,7 @@ if( 23 == namespaceId && "dirty" == name)
         get => GetElement<PhoneticGuideTextFontSize>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Distance Between Phonetic Guide Text and Phonetic Guide Base Text.</para>
     /// <para> Represents the following element tag in the schema: w:hpsRaise </para>
@@ -33992,6 +29305,7 @@ if( 23 == namespaceId && "dirty" == name)
         get => GetElement<PhoneticGuideRaise>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Phonetic Guide Base Text Font Size.</para>
     /// <para> Represents the following element tag in the schema: w:hpsBaseText </para>
@@ -34004,6 +29318,7 @@ if( 23 == namespaceId && "dirty" == name)
         get => GetElement<PhoneticGuideBaseTextSize>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Language ID for Phonetic Guide.</para>
     /// <para> Represents the following element tag in the schema: w:lid </para>
@@ -34016,6 +29331,7 @@ if( 23 == namespaceId && "dirty" == name)
         get => GetElement<LanguageId>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Invalidated Field Cache.</para>
     /// <para> Represents the following element tag in the schema: w:dirty </para>
@@ -34028,6 +29344,7 @@ if( 23 == namespaceId && "dirty" == name)
         get => GetElement<Dirty>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -34103,6 +29420,7 @@ if( 23 == namespaceId && "dirty" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "rt")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RubyContent : RubyContentType
 {
@@ -34142,6 +29460,7 @@ public partial class RubyContent : RubyContentType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -34217,6 +29536,7 @@ public partial class RubyContent : RubyContentType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "rubyBase")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RubyBase : RubyContentType
 {
@@ -34256,6 +29576,7 @@ public partial class RubyBase : RubyContentType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -34390,184 +29711,7 @@ public abstract partial class RubyContentType : OpenXmlCompositeElement
 {
         
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlRuby();
     
-if( 23 == namespaceId && "fldSimple" == name)
-    return new SimpleFieldRuby();
-    
-if( 23 == namespaceId && "hyperlink" == name)
-    return new HyperlinkRuby();
-    
-if( 23 == namespaceId && "r" == name)
-    return new Run();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtRunRuby();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-if( 21 == namespaceId && "oMathPara" == name)
-    return new DocumentFormat.OpenXml.Math.Paragraph();
-    
-if( 21 == namespaceId && "oMath" == name)
-    return new DocumentFormat.OpenXml.Math.OfficeMath();
-    
-if( 21 == namespaceId && "acc" == name)
-    return new DocumentFormat.OpenXml.Math.Accent();
-    
-if( 21 == namespaceId && "bar" == name)
-    return new DocumentFormat.OpenXml.Math.Bar();
-    
-if( 21 == namespaceId && "box" == name)
-    return new DocumentFormat.OpenXml.Math.Box();
-    
-if( 21 == namespaceId && "borderBox" == name)
-    return new DocumentFormat.OpenXml.Math.BorderBox();
-    
-if( 21 == namespaceId && "d" == name)
-    return new DocumentFormat.OpenXml.Math.Delimiter();
-    
-if( 21 == namespaceId && "eqArr" == name)
-    return new DocumentFormat.OpenXml.Math.EquationArray();
-    
-if( 21 == namespaceId && "f" == name)
-    return new DocumentFormat.OpenXml.Math.Fraction();
-    
-if( 21 == namespaceId && "func" == name)
-    return new DocumentFormat.OpenXml.Math.MathFunction();
-    
-if( 21 == namespaceId && "groupChr" == name)
-    return new DocumentFormat.OpenXml.Math.GroupChar();
-    
-if( 21 == namespaceId && "limLow" == name)
-    return new DocumentFormat.OpenXml.Math.LimitLower();
-    
-if( 21 == namespaceId && "limUpp" == name)
-    return new DocumentFormat.OpenXml.Math.LimitUpper();
-    
-if( 21 == namespaceId && "m" == name)
-    return new DocumentFormat.OpenXml.Math.Matrix();
-    
-if( 21 == namespaceId && "nary" == name)
-    return new DocumentFormat.OpenXml.Math.Nary();
-    
-if( 21 == namespaceId && "phant" == name)
-    return new DocumentFormat.OpenXml.Math.Phantom();
-    
-if( 21 == namespaceId && "rad" == name)
-    return new DocumentFormat.OpenXml.Math.Radical();
-    
-if( 21 == namespaceId && "sPre" == name)
-    return new DocumentFormat.OpenXml.Math.PreSubSuper();
-    
-if( 21 == namespaceId && "sSub" == name)
-    return new DocumentFormat.OpenXml.Math.Subscript();
-    
-if( 21 == namespaceId && "sSubSup" == name)
-    return new DocumentFormat.OpenXml.Math.SubSuperscript();
-    
-if( 21 == namespaceId && "sSup" == name)
-    return new DocumentFormat.OpenXml.Math.Superscript();
-    
-if( 21 == namespaceId && "r" == name)
-    return new DocumentFormat.OpenXml.Math.Run();
-    
-
-    return null;
-}
-
     
     
     /// <summary>
@@ -34600,6 +29744,7 @@ if( 21 == namespaceId && "r" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -34611,6 +29756,7 @@ if( 21 == namespaceId && "r" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "storeMappedDataAs")]
 public partial class SdtDateMappingType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11825;
@@ -34654,6 +29800,7 @@ public partial class SdtDateMappingType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "calendar")]
 public partial class Calendar : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11826;
@@ -34697,6 +29844,7 @@ public partial class Calendar : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "listItem")]
 public partial class ListItem : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11827;
@@ -34814,6 +29962,7 @@ public partial class ListItem : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSectionItem), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "sdtPr")]
 public partial class SdtProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11832;
@@ -34856,106 +30005,11 @@ public partial class SdtProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rPr" == name)
-    return new RunProperties();
     
-if( 23 == namespaceId && "alias" == name)
-    return new SdtAlias();
-    
-if( 23 == namespaceId && "lock" == name)
-    return new Lock();
-    
-if( 23 == namespaceId && "placeholder" == name)
-    return new SdtPlaceholder();
-    
-if( 23 == namespaceId && "showingPlcHdr" == name)
-    return new ShowingPlaceholder();
-    
-if( 23 == namespaceId && "dataBinding" == name)
-    return new DataBinding();
-    
-if( 69 == namespaceId && "dataBinding" == name)
-    return new DocumentFormat.OpenXml.Office2013.Word.DataBinding();
-    
-if( 23 == namespaceId && "temporary" == name)
-    return new TemporarySdt();
-    
-if( 23 == namespaceId && "id" == name)
-    return new SdtId();
-    
-if( 23 == namespaceId && "tag" == name)
-    return new Tag();
-    
-if( 69 == namespaceId && "color" == name)
-    return new DocumentFormat.OpenXml.Office2013.Word.Color();
-    
-if( 69 == namespaceId && "appearance" == name)
-    return new DocumentFormat.OpenXml.Office2013.Word.Appearance();
-    
-if( 69 == namespaceId && "webExtensionLinked" == name)
-    return new DocumentFormat.OpenXml.Office2013.Word.WebExtensionLinked();
-    
-if( 69 == namespaceId && "webExtensionCreated" == name)
-    return new DocumentFormat.OpenXml.Office2013.Word.WebExtensionCreated();
-    
-if( 23 == namespaceId && "equation" == name)
-    return new SdtContentEquation();
-    
-if( 23 == namespaceId && "comboBox" == name)
-    return new SdtContentComboBox();
-    
-if( 23 == namespaceId && "date" == name)
-    return new SdtContentDate();
-    
-if( 23 == namespaceId && "docPartObj" == name)
-    return new SdtContentDocPartObject();
-    
-if( 23 == namespaceId && "docPartList" == name)
-    return new SdtContentDocPartList();
-    
-if( 23 == namespaceId && "dropDownList" == name)
-    return new SdtContentDropDownList();
-    
-if( 23 == namespaceId && "picture" == name)
-    return new SdtContentPicture();
-    
-if( 23 == namespaceId && "richText" == name)
-    return new SdtContentRichText();
-    
-if( 23 == namespaceId && "text" == name)
-    return new SdtContentText();
-    
-if( 23 == namespaceId && "citation" == name)
-    return new SdtContentCitation();
-    
-if( 23 == namespaceId && "group" == name)
-    return new SdtContentGroup();
-    
-if( 23 == namespaceId && "bibliography" == name)
-    return new SdtContentBibliography();
-    
-if( 52 == namespaceId && "entityPicker" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.EntityPickerEmpty();
-    
-if( 52 == namespaceId && "checkbox" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.SdtContentCheckBox();
-    
-if( 69 == namespaceId && "repeatingSection" == name)
-    return new DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSection();
-    
-if( 69 == namespaceId && "repeatingSectionItem" == name)
-    return new DocumentFormat.OpenXml.Office2013.Word.SdtRepeatedSectionItem();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtProperties>(deep);
@@ -34976,6 +30030,7 @@ if( 69 == namespaceId && "repeatingSectionItem" == name)
     [ChildElementInfo(typeof(RunProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "sdtEndPr")]
 public partial class SdtEndCharProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11833;
@@ -35018,19 +30073,11 @@ public partial class SdtEndCharProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rPr" == name)
-    return new RunProperties();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtEndCharProperties>(deep);
@@ -35117,6 +30164,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "sdtContent")]
 public partial class SdtContentBlock : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11834;
@@ -35159,118 +30207,11 @@ public partial class SdtContentBlock : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlBlock();
     
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtBlock();
-    
-if( 23 == namespaceId && "p" == name)
-    return new Paragraph();
-    
-if( 23 == namespaceId && "tbl" == name)
-    return new Table();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentBlock>(deep);
@@ -35409,6 +30350,7 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(SubDocumentReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "sdtContent")]
 public partial class SdtContentRun : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11835;
@@ -35451,196 +30393,11 @@ public partial class SdtContentRun : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "r" == name)
-    return new DocumentFormat.OpenXml.Math.Run();
     
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlRun();
-    
-if( 23 == namespaceId && "fldSimple" == name)
-    return new SimpleField();
-    
-if( 23 == namespaceId && "hyperlink" == name)
-    return new Hyperlink();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtRun();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-if( 21 == namespaceId && "oMathPara" == name)
-    return new DocumentFormat.OpenXml.Math.Paragraph();
-    
-if( 21 == namespaceId && "oMath" == name)
-    return new DocumentFormat.OpenXml.Math.OfficeMath();
-    
-if( 21 == namespaceId && "acc" == name)
-    return new DocumentFormat.OpenXml.Math.Accent();
-    
-if( 21 == namespaceId && "bar" == name)
-    return new DocumentFormat.OpenXml.Math.Bar();
-    
-if( 21 == namespaceId && "box" == name)
-    return new DocumentFormat.OpenXml.Math.Box();
-    
-if( 21 == namespaceId && "borderBox" == name)
-    return new DocumentFormat.OpenXml.Math.BorderBox();
-    
-if( 21 == namespaceId && "d" == name)
-    return new DocumentFormat.OpenXml.Math.Delimiter();
-    
-if( 21 == namespaceId && "eqArr" == name)
-    return new DocumentFormat.OpenXml.Math.EquationArray();
-    
-if( 21 == namespaceId && "f" == name)
-    return new DocumentFormat.OpenXml.Math.Fraction();
-    
-if( 21 == namespaceId && "func" == name)
-    return new DocumentFormat.OpenXml.Math.MathFunction();
-    
-if( 21 == namespaceId && "groupChr" == name)
-    return new DocumentFormat.OpenXml.Math.GroupChar();
-    
-if( 21 == namespaceId && "limLow" == name)
-    return new DocumentFormat.OpenXml.Math.LimitLower();
-    
-if( 21 == namespaceId && "limUpp" == name)
-    return new DocumentFormat.OpenXml.Math.LimitUpper();
-    
-if( 21 == namespaceId && "m" == name)
-    return new DocumentFormat.OpenXml.Math.Matrix();
-    
-if( 21 == namespaceId && "nary" == name)
-    return new DocumentFormat.OpenXml.Math.Nary();
-    
-if( 21 == namespaceId && "phant" == name)
-    return new DocumentFormat.OpenXml.Math.Phantom();
-    
-if( 21 == namespaceId && "rad" == name)
-    return new DocumentFormat.OpenXml.Math.Radical();
-    
-if( 21 == namespaceId && "sPre" == name)
-    return new DocumentFormat.OpenXml.Math.PreSubSuper();
-    
-if( 21 == namespaceId && "sSub" == name)
-    return new DocumentFormat.OpenXml.Math.Subscript();
-    
-if( 21 == namespaceId && "sSubSup" == name)
-    return new DocumentFormat.OpenXml.Math.SubSuperscript();
-    
-if( 21 == namespaceId && "sSup" == name)
-    return new DocumentFormat.OpenXml.Math.Superscript();
-    
-if( 23 == namespaceId && "r" == name)
-    return new Run();
-    
-if( 23 == namespaceId && "bdo" == name)
-    return new BidirectionalOverride();
-    
-if( 23 == namespaceId && "dir" == name)
-    return new BidirectionalEmbedding();
-    
-if( 23 == namespaceId && "subDoc" == name)
-    return new SubDocumentReference();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentRun>(deep);
@@ -35773,6 +30530,7 @@ if( 23 == namespaceId && "subDoc" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Math.Run))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "sdtContent")]
 public partial class SdtContentRunRuby : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11836;
@@ -35815,187 +30573,11 @@ public partial class SdtContentRunRuby : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlRuby();
     
-if( 23 == namespaceId && "fldSimple" == name)
-    return new SimpleFieldRuby();
-    
-if( 23 == namespaceId && "hyperlink" == name)
-    return new HyperlinkRuby();
-    
-if( 23 == namespaceId && "r" == name)
-    return new Run();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtRunRuby();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-if( 21 == namespaceId && "oMathPara" == name)
-    return new DocumentFormat.OpenXml.Math.Paragraph();
-    
-if( 21 == namespaceId && "oMath" == name)
-    return new DocumentFormat.OpenXml.Math.OfficeMath();
-    
-if( 21 == namespaceId && "acc" == name)
-    return new DocumentFormat.OpenXml.Math.Accent();
-    
-if( 21 == namespaceId && "bar" == name)
-    return new DocumentFormat.OpenXml.Math.Bar();
-    
-if( 21 == namespaceId && "box" == name)
-    return new DocumentFormat.OpenXml.Math.Box();
-    
-if( 21 == namespaceId && "borderBox" == name)
-    return new DocumentFormat.OpenXml.Math.BorderBox();
-    
-if( 21 == namespaceId && "d" == name)
-    return new DocumentFormat.OpenXml.Math.Delimiter();
-    
-if( 21 == namespaceId && "eqArr" == name)
-    return new DocumentFormat.OpenXml.Math.EquationArray();
-    
-if( 21 == namespaceId && "f" == name)
-    return new DocumentFormat.OpenXml.Math.Fraction();
-    
-if( 21 == namespaceId && "func" == name)
-    return new DocumentFormat.OpenXml.Math.MathFunction();
-    
-if( 21 == namespaceId && "groupChr" == name)
-    return new DocumentFormat.OpenXml.Math.GroupChar();
-    
-if( 21 == namespaceId && "limLow" == name)
-    return new DocumentFormat.OpenXml.Math.LimitLower();
-    
-if( 21 == namespaceId && "limUpp" == name)
-    return new DocumentFormat.OpenXml.Math.LimitUpper();
-    
-if( 21 == namespaceId && "m" == name)
-    return new DocumentFormat.OpenXml.Math.Matrix();
-    
-if( 21 == namespaceId && "nary" == name)
-    return new DocumentFormat.OpenXml.Math.Nary();
-    
-if( 21 == namespaceId && "phant" == name)
-    return new DocumentFormat.OpenXml.Math.Phantom();
-    
-if( 21 == namespaceId && "rad" == name)
-    return new DocumentFormat.OpenXml.Math.Radical();
-    
-if( 21 == namespaceId && "sPre" == name)
-    return new DocumentFormat.OpenXml.Math.PreSubSuper();
-    
-if( 21 == namespaceId && "sSub" == name)
-    return new DocumentFormat.OpenXml.Math.Subscript();
-    
-if( 21 == namespaceId && "sSubSup" == name)
-    return new DocumentFormat.OpenXml.Math.SubSuperscript();
-    
-if( 21 == namespaceId && "sSup" == name)
-    return new DocumentFormat.OpenXml.Math.Superscript();
-    
-if( 21 == namespaceId && "r" == name)
-    return new DocumentFormat.OpenXml.Math.Run();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentRunRuby>(deep);
@@ -36080,6 +30662,7 @@ if( 21 == namespaceId && "r" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "sdtContent")]
 public partial class SdtContentCell : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11837;
@@ -36122,115 +30705,11 @@ public partial class SdtContentCell : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "tc" == name)
-    return new TableCell();
     
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlCell();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtCell();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentCell>(deep);
@@ -36315,6 +30794,7 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "sdtContent")]
 public partial class SdtContentRow : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11838;
@@ -36357,115 +30837,11 @@ public partial class SdtContentRow : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "tr" == name)
-    return new TableRow();
     
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlRow();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtRow();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentRow>(deep);
@@ -36488,6 +30864,7 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(CustomXmlAttribute))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "customXmlPr")]
 public partial class CustomXmlProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11839;
@@ -36530,22 +30907,11 @@ public partial class CustomXmlProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "placeholder" == name)
-    return new CustomXmlPlaceholder();
     
-if( 23 == namespaceId && "attr" == name)
-    return new CustomXmlAttribute();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "placeholder","attr" };
     private static readonly byte[] eleNamespaceIds = { 23,23 };
     
@@ -36566,6 +30932,7 @@ if( 23 == namespaceId && "attr" == name)
         get => GetElement<CustomXmlPlaceholder>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -36580,6 +30947,7 @@ if( 23 == namespaceId && "attr" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "attr")]
 public partial class CustomXmlAttribute : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11841;
@@ -36641,6 +31009,7 @@ public partial class CustomXmlAttribute : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "gridCol")]
 public partial class GridColumn : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11842;
@@ -36691,6 +31060,7 @@ public partial class GridColumn : OpenXmlLeafElement
     [ChildElementInfo(typeof(PreviousTableGrid))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblGridChange")]
 public partial class TableGridChange : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11843;
@@ -36742,19 +31112,11 @@ public partial class TableGridChange : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "tblGrid" == name)
-    return new PreviousTableGrid();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "tblGrid" };
     private static readonly byte[] eleNamespaceIds = { 23 };
     
@@ -36775,6 +31137,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<PreviousTableGrid>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -36796,6 +31159,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PreviousTableCellProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tcPrChange")]
 public partial class TableCellPropertiesChange : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11844;
@@ -36865,19 +31229,11 @@ public partial class TableCellPropertiesChange : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "tcPr" == name)
-    return new PreviousTableCellProperties();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "tcPr" };
     private static readonly byte[] eleNamespaceIds = { 23 };
     
@@ -36898,6 +31254,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<PreviousTableCellProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -36951,6 +31308,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(TableCellPropertiesChange))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tcPr")]
 public partial class TableCellProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11845;
@@ -36993,67 +31351,11 @@ public partial class TableCellProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "cnfStyle" == name)
-    return new ConditionalFormatStyle();
     
-if( 23 == namespaceId && "tcW" == name)
-    return new TableCellWidth();
-    
-if( 23 == namespaceId && "gridSpan" == name)
-    return new GridSpan();
-    
-if( 23 == namespaceId && "hMerge" == name)
-    return new HorizontalMerge();
-    
-if( 23 == namespaceId && "vMerge" == name)
-    return new VerticalMerge();
-    
-if( 23 == namespaceId && "tcBorders" == name)
-    return new TableCellBorders();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "noWrap" == name)
-    return new NoWrap();
-    
-if( 23 == namespaceId && "tcMar" == name)
-    return new TableCellMargin();
-    
-if( 23 == namespaceId && "textDirection" == name)
-    return new TextDirection();
-    
-if( 23 == namespaceId && "tcFitText" == name)
-    return new TableCellFitText();
-    
-if( 23 == namespaceId && "vAlign" == name)
-    return new TableCellVerticalAlignment();
-    
-if( 23 == namespaceId && "hideMark" == name)
-    return new HideMark();
-    
-if( 23 == namespaceId && "cellIns" == name)
-    return new CellInsertion();
-    
-if( 23 == namespaceId && "cellDel" == name)
-    return new CellDeletion();
-    
-if( 23 == namespaceId && "cellMerge" == name)
-    return new CellMerge();
-    
-if( 23 == namespaceId && "tcPrChange" == name)
-    return new TableCellPropertiesChange();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "cnfStyle","tcW","gridSpan","hMerge","vMerge","tcBorders","shd","noWrap","tcMar","textDirection","tcFitText","vAlign","hideMark","cellIns","cellDel","cellMerge","tcPrChange" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -37074,6 +31376,7 @@ if( 23 == namespaceId && "tcPrChange" == name)
         get => GetElement<ConditionalFormatStyle>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> TableCellWidth.</para>
     /// <para> Represents the following element tag in the schema: w:tcW </para>
@@ -37086,6 +31389,7 @@ if( 23 == namespaceId && "tcPrChange" == name)
         get => GetElement<TableCellWidth>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> GridSpan.</para>
     /// <para> Represents the following element tag in the schema: w:gridSpan </para>
@@ -37098,6 +31402,7 @@ if( 23 == namespaceId && "tcPrChange" == name)
         get => GetElement<GridSpan>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> HorizontalMerge.</para>
     /// <para> Represents the following element tag in the schema: w:hMerge </para>
@@ -37110,6 +31415,7 @@ if( 23 == namespaceId && "tcPrChange" == name)
         get => GetElement<HorizontalMerge>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> VerticalMerge.</para>
     /// <para> Represents the following element tag in the schema: w:vMerge </para>
@@ -37122,6 +31428,7 @@ if( 23 == namespaceId && "tcPrChange" == name)
         get => GetElement<VerticalMerge>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> TableCellBorders.</para>
     /// <para> Represents the following element tag in the schema: w:tcBorders </para>
@@ -37134,6 +31441,7 @@ if( 23 == namespaceId && "tcPrChange" == name)
         get => GetElement<TableCellBorders>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Shading.</para>
     /// <para> Represents the following element tag in the schema: w:shd </para>
@@ -37146,6 +31454,7 @@ if( 23 == namespaceId && "tcPrChange" == name)
         get => GetElement<Shading>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> NoWrap.</para>
     /// <para> Represents the following element tag in the schema: w:noWrap </para>
@@ -37158,6 +31467,7 @@ if( 23 == namespaceId && "tcPrChange" == name)
         get => GetElement<NoWrap>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> TableCellMargin.</para>
     /// <para> Represents the following element tag in the schema: w:tcMar </para>
@@ -37170,6 +31480,7 @@ if( 23 == namespaceId && "tcPrChange" == name)
         get => GetElement<TableCellMargin>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> TextDirection.</para>
     /// <para> Represents the following element tag in the schema: w:textDirection </para>
@@ -37182,6 +31493,7 @@ if( 23 == namespaceId && "tcPrChange" == name)
         get => GetElement<TextDirection>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> TableCellFitText.</para>
     /// <para> Represents the following element tag in the schema: w:tcFitText </para>
@@ -37194,6 +31506,7 @@ if( 23 == namespaceId && "tcPrChange" == name)
         get => GetElement<TableCellFitText>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> TableCellVerticalAlignment.</para>
     /// <para> Represents the following element tag in the schema: w:vAlign </para>
@@ -37206,6 +31519,7 @@ if( 23 == namespaceId && "tcPrChange" == name)
         get => GetElement<TableCellVerticalAlignment>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> HideMark.</para>
     /// <para> Represents the following element tag in the schema: w:hideMark </para>
@@ -37218,6 +31532,7 @@ if( 23 == namespaceId && "tcPrChange" == name)
         get => GetElement<HideMark>(12);
         set => SetElement(12, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -37239,6 +31554,7 @@ if( 23 == namespaceId && "tcPrChange" == name)
     [ChildElementInfo(typeof(PreviousTableProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblPrChange")]
 public partial class TablePropertiesChange : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11848;
@@ -37308,19 +31624,11 @@ public partial class TablePropertiesChange : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "tblPr" == name)
-    return new PreviousTableProperties();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "tblPr" };
     private static readonly byte[] eleNamespaceIds = { 23 };
     
@@ -37341,6 +31649,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<PreviousTableProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -37362,6 +31671,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PreviousTablePropertyExceptions))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblPrExChange")]
 public partial class TablePropertyExceptionsChange : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11849;
@@ -37431,19 +31741,11 @@ public partial class TablePropertyExceptionsChange : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "tblPrEx" == name)
-    return new PreviousTablePropertyExceptions();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "tblPrEx" };
     private static readonly byte[] eleNamespaceIds = { 23 };
     
@@ -37464,6 +31766,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<PreviousTablePropertyExceptions>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -37515,6 +31818,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(TablePropertiesChange))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblPr")]
 public partial class TableProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11850;
@@ -37557,64 +31861,11 @@ public partial class TableProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "tblStyle" == name)
-    return new TableStyle();
     
-if( 23 == namespaceId && "tblpPr" == name)
-    return new TablePositionProperties();
-    
-if( 23 == namespaceId && "tblOverlap" == name)
-    return new TableOverlap();
-    
-if( 23 == namespaceId && "bidiVisual" == name)
-    return new BiDiVisual();
-    
-if( 23 == namespaceId && "tblW" == name)
-    return new TableWidth();
-    
-if( 23 == namespaceId && "jc" == name)
-    return new TableJustification();
-    
-if( 23 == namespaceId && "tblCellSpacing" == name)
-    return new TableCellSpacing();
-    
-if( 23 == namespaceId && "tblInd" == name)
-    return new TableIndentation();
-    
-if( 23 == namespaceId && "tblBorders" == name)
-    return new TableBorders();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "tblLayout" == name)
-    return new TableLayout();
-    
-if( 23 == namespaceId && "tblCellMar" == name)
-    return new TableCellMarginDefault();
-    
-if( 23 == namespaceId && "tblLook" == name)
-    return new TableLook();
-    
-if( 23 == namespaceId && "tblCaption" == name)
-    return new TableCaption();
-    
-if( 23 == namespaceId && "tblDescription" == name)
-    return new TableDescription();
-    
-if( 23 == namespaceId && "tblPrChange" == name)
-    return new TablePropertiesChange();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "tblStyle","tblpPr","tblOverlap","bidiVisual","tblW","jc","tblCellSpacing","tblInd","tblBorders","shd","tblLayout","tblCellMar","tblLook","tblCaption","tblDescription","tblPrChange" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -37635,6 +31886,7 @@ if( 23 == namespaceId && "tblPrChange" == name)
         get => GetElement<TableStyle>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> TablePositionProperties.</para>
     /// <para> Represents the following element tag in the schema: w:tblpPr </para>
@@ -37647,6 +31899,7 @@ if( 23 == namespaceId && "tblPrChange" == name)
         get => GetElement<TablePositionProperties>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> TableOverlap.</para>
     /// <para> Represents the following element tag in the schema: w:tblOverlap </para>
@@ -37659,6 +31912,7 @@ if( 23 == namespaceId && "tblPrChange" == name)
         get => GetElement<TableOverlap>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> BiDiVisual.</para>
     /// <para> Represents the following element tag in the schema: w:bidiVisual </para>
@@ -37671,6 +31925,7 @@ if( 23 == namespaceId && "tblPrChange" == name)
         get => GetElement<BiDiVisual>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> TableWidth.</para>
     /// <para> Represents the following element tag in the schema: w:tblW </para>
@@ -37683,6 +31938,7 @@ if( 23 == namespaceId && "tblPrChange" == name)
         get => GetElement<TableWidth>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> TableJustification.</para>
     /// <para> Represents the following element tag in the schema: w:jc </para>
@@ -37695,6 +31951,7 @@ if( 23 == namespaceId && "tblPrChange" == name)
         get => GetElement<TableJustification>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> TableCellSpacing.</para>
     /// <para> Represents the following element tag in the schema: w:tblCellSpacing </para>
@@ -37707,6 +31964,7 @@ if( 23 == namespaceId && "tblPrChange" == name)
         get => GetElement<TableCellSpacing>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> TableIndentation.</para>
     /// <para> Represents the following element tag in the schema: w:tblInd </para>
@@ -37719,6 +31977,7 @@ if( 23 == namespaceId && "tblPrChange" == name)
         get => GetElement<TableIndentation>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> TableBorders.</para>
     /// <para> Represents the following element tag in the schema: w:tblBorders </para>
@@ -37731,6 +31990,7 @@ if( 23 == namespaceId && "tblPrChange" == name)
         get => GetElement<TableBorders>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Shading.</para>
     /// <para> Represents the following element tag in the schema: w:shd </para>
@@ -37743,6 +32003,7 @@ if( 23 == namespaceId && "tblPrChange" == name)
         get => GetElement<Shading>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> TableLayout.</para>
     /// <para> Represents the following element tag in the schema: w:tblLayout </para>
@@ -37755,6 +32016,7 @@ if( 23 == namespaceId && "tblPrChange" == name)
         get => GetElement<TableLayout>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> TableCellMarginDefault.</para>
     /// <para> Represents the following element tag in the schema: w:tblCellMar </para>
@@ -37767,6 +32029,7 @@ if( 23 == namespaceId && "tblPrChange" == name)
         get => GetElement<TableCellMarginDefault>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> TableLook.</para>
     /// <para> Represents the following element tag in the schema: w:tblLook </para>
@@ -37779,6 +32042,7 @@ if( 23 == namespaceId && "tblPrChange" == name)
         get => GetElement<TableLook>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> TableCaption.</para>
     /// <para> Represents the following element tag in the schema: w:tblCaption </para>
@@ -37791,6 +32055,7 @@ if( 23 == namespaceId && "tblPrChange" == name)
         get => GetElement<TableCaption>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> TableDescription.</para>
     /// <para> Represents the following element tag in the schema: w:tblDescription </para>
@@ -37803,6 +32068,7 @@ if( 23 == namespaceId && "tblPrChange" == name)
         get => GetElement<TableDescription>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> Revision Information for Table Properties.</para>
     /// <para> Represents the following element tag in the schema: w:tblPrChange </para>
@@ -37815,6 +32081,7 @@ if( 23 == namespaceId && "tblPrChange" == name)
         get => GetElement<TablePropertiesChange>(15);
         set => SetElement(15, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -37838,6 +32105,7 @@ if( 23 == namespaceId && "tblPrChange" == name)
     [ChildElementInfo(typeof(TableGridChange))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblGrid")]
 public partial class TableGrid : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11851;
@@ -37880,22 +32148,11 @@ public partial class TableGrid : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "gridCol" == name)
-    return new GridColumn();
     
-if( 23 == namespaceId && "tblGridChange" == name)
-    return new TableGridChange();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableGrid>(deep);
@@ -37909,6 +32166,7 @@ if( 23 == namespaceId && "tblGridChange" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "pos")]
 public partial class FootnotePosition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11852;
@@ -37952,6 +32210,7 @@ public partial class FootnotePosition : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "numFmt")]
 public partial class NumberingFormat : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11853;
@@ -38004,6 +32263,7 @@ public partial class NumberingFormat : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "pos")]
 public partial class EndnotePosition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11854;
@@ -38046,6 +32306,7 @@ public partial class EndnotePosition : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "footnote")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FootnoteSpecialReference : FootnoteEndnoteSeparatorReferenceType
 {
@@ -38073,6 +32334,7 @@ public partial class FootnoteSpecialReference : FootnoteEndnoteSeparatorReferenc
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "endnote")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EndnoteSpecialReference : FootnoteEndnoteSeparatorReferenceType
 {
@@ -38129,6 +32391,7 @@ public abstract partial class FootnoteEndnoteSeparatorReferenceType : OpenXmlLea
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "column")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnIndex : UnsignedDecimalNumberType
 {
@@ -38156,6 +32419,7 @@ public partial class ColumnIndex : UnsignedDecimalNumberType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "colDelim")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnDelimiter : UnsignedDecimalNumberType
 {
@@ -38213,6 +32477,7 @@ public abstract partial class UnsignedDecimalNumberType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "uniqueTag")]
 public partial class UniqueTag : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11859;
@@ -38267,6 +32532,7 @@ public partial class UniqueTag : OpenXmlLeafElement
     [ChildElementInfo(typeof(UniqueTag))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "recipientData")]
 public partial class RecipientData : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11860;
@@ -38309,25 +32575,11 @@ public partial class RecipientData : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "active" == name)
-    return new Active();
     
-if( 23 == namespaceId && "column" == name)
-    return new ColumnIndex();
-    
-if( 23 == namespaceId && "uniqueTag" == name)
-    return new UniqueTag();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "active","column","uniqueTag" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23 };
     
@@ -38348,6 +32600,7 @@ if( 23 == namespaceId && "uniqueTag" == name)
         get => GetElement<Active>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Index of Column Containing Unique Values for Record.</para>
     /// <para> Represents the following element tag in the schema: w:column </para>
@@ -38360,6 +32613,7 @@ if( 23 == namespaceId && "uniqueTag" == name)
         get => GetElement<ColumnIndex>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Unique Value for Record.</para>
     /// <para> Represents the following element tag in the schema: w:uniqueTag </para>
@@ -38372,6 +32626,7 @@ if( 23 == namespaceId && "uniqueTag" == name)
         get => GetElement<UniqueTag>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -38386,6 +32641,7 @@ if( 23 == namespaceId && "uniqueTag" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "type")]
 public partial class MailMergeFieldType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11861;
@@ -38429,6 +32685,7 @@ public partial class MailMergeFieldType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "type")]
 public partial class MailMergeSource : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11869;
@@ -38489,6 +32746,7 @@ public partial class MailMergeSource : OpenXmlLeafElement
     [ChildElementInfo(typeof(DynamicAddress))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "fieldMapData")]
 public partial class FieldMapData : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11871;
@@ -38531,34 +32789,11 @@ public partial class FieldMapData : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "type" == name)
-    return new MailMergeFieldType();
     
-if( 23 == namespaceId && "name" == name)
-    return new Name();
-    
-if( 23 == namespaceId && "mappedName" == name)
-    return new MappedName();
-    
-if( 23 == namespaceId && "column" == name)
-    return new ColumnIndex();
-    
-if( 23 == namespaceId && "lid" == name)
-    return new LanguageId();
-    
-if( 23 == namespaceId && "dynamicAddress" == name)
-    return new DynamicAddress();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "type","name","mappedName","column","lid","dynamicAddress" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23 };
     
@@ -38579,6 +32814,7 @@ if( 23 == namespaceId && "dynamicAddress" == name)
         get => GetElement<MailMergeFieldType>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Data Source Name for Column.</para>
     /// <para> Represents the following element tag in the schema: w:name </para>
@@ -38591,6 +32827,7 @@ if( 23 == namespaceId && "dynamicAddress" == name)
         get => GetElement<Name>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Predefined Merge Field Name.</para>
     /// <para> Represents the following element tag in the schema: w:mappedName </para>
@@ -38603,6 +32840,7 @@ if( 23 == namespaceId && "dynamicAddress" == name)
         get => GetElement<MappedName>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Index of Column Being Mapped.</para>
     /// <para> Represents the following element tag in the schema: w:column </para>
@@ -38615,6 +32853,7 @@ if( 23 == namespaceId && "dynamicAddress" == name)
         get => GetElement<ColumnIndex>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Merge Field Name Language ID.</para>
     /// <para> Represents the following element tag in the schema: w:lid </para>
@@ -38627,6 +32866,7 @@ if( 23 == namespaceId && "dynamicAddress" == name)
         get => GetElement<LanguageId>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Use Country/Region-Based Address Field Ordering.</para>
     /// <para> Represents the following element tag in the schema: w:dynamicAddress </para>
@@ -38639,6 +32879,7 @@ if( 23 == namespaceId && "dynamicAddress" == name)
         get => GetElement<DynamicAddress>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -38653,6 +32894,7 @@ if( 23 == namespaceId && "dynamicAddress" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "mainDocumentType")]
 public partial class MainDocumentType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11873;
@@ -38696,6 +32938,7 @@ public partial class MainDocumentType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "dataType")]
 public partial class DataType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11875;
@@ -38739,6 +32982,7 @@ public partial class DataType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "destination")]
 public partial class Destination : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11881;
@@ -38803,6 +33047,7 @@ public partial class Destination : OpenXmlLeafElement
     [ChildElementInfo(typeof(RecipientDataReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "odso")]
 public partial class DataSourceObject : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11888;
@@ -38845,40 +33090,11 @@ public partial class DataSourceObject : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "udl" == name)
-    return new UdlConnectionString();
     
-if( 23 == namespaceId && "table" == name)
-    return new DataSourceTableName();
-    
-if( 23 == namespaceId && "src" == name)
-    return new SourceReference();
-    
-if( 23 == namespaceId && "colDelim" == name)
-    return new ColumnDelimiter();
-    
-if( 23 == namespaceId && "type" == name)
-    return new MailMergeSource();
-    
-if( 23 == namespaceId && "fHdr" == name)
-    return new FirstRowHeader();
-    
-if( 23 == namespaceId && "fieldMapData" == name)
-    return new FieldMapData();
-    
-if( 23 == namespaceId && "recipientData" == name)
-    return new RecipientDataReference();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "udl","table","src","colDelim","type","fHdr","fieldMapData","recipientData" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23 };
     
@@ -38899,6 +33115,7 @@ if( 23 == namespaceId && "recipientData" == name)
         get => GetElement<UdlConnectionString>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Data Source Table Name.</para>
     /// <para> Represents the following element tag in the schema: w:table </para>
@@ -38911,6 +33128,7 @@ if( 23 == namespaceId && "recipientData" == name)
         get => GetElement<DataSourceTableName>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> ODSO Data Source File Path.</para>
     /// <para> Represents the following element tag in the schema: w:src </para>
@@ -38923,6 +33141,7 @@ if( 23 == namespaceId && "recipientData" == name)
         get => GetElement<SourceReference>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Column Delimiter for Data Source.</para>
     /// <para> Represents the following element tag in the schema: w:colDelim </para>
@@ -38935,6 +33154,7 @@ if( 23 == namespaceId && "recipientData" == name)
         get => GetElement<ColumnDelimiter>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> ODSO Data Source Type.</para>
     /// <para> Represents the following element tag in the schema: w:type </para>
@@ -38947,6 +33167,7 @@ if( 23 == namespaceId && "recipientData" == name)
         get => GetElement<MailMergeSource>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> First Row of Data Source Contains Column Names.</para>
     /// <para> Represents the following element tag in the schema: w:fHdr </para>
@@ -38959,6 +33180,7 @@ if( 23 == namespaceId && "recipientData" == name)
         get => GetElement<FirstRowHeader>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -38973,6 +33195,7 @@ if( 23 == namespaceId && "recipientData" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "docVar")]
 public partial class DocumentVariable : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11889;
@@ -39024,6 +33247,7 @@ public partial class DocumentVariable : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "rsidRoot")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RsidRoot : LongHexNumberType
 {
@@ -39051,6 +33275,7 @@ public partial class RsidRoot : LongHexNumberType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "rsid")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Rsid : LongHexNumberType
 {
@@ -39078,6 +33303,7 @@ public partial class Rsid : LongHexNumberType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "nsid")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Nsid : LongHexNumberType
 {
@@ -39105,6 +33331,7 @@ public partial class Nsid : LongHexNumberType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "tmpl")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TemplateCode : LongHexNumberType
 {
@@ -39235,6 +33462,7 @@ public abstract partial class LongHexNumberType : OpenXmlLeafElement
     [ChildElementInfo(typeof(SpecVanish))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "rPr")]
 public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11892;
@@ -39277,118 +33505,11 @@ public partial class RunPropertiesBaseStyle : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rFonts" == name)
-    return new RunFonts();
     
-if( 23 == namespaceId && "b" == name)
-    return new Bold();
-    
-if( 23 == namespaceId && "bCs" == name)
-    return new BoldComplexScript();
-    
-if( 23 == namespaceId && "i" == name)
-    return new Italic();
-    
-if( 23 == namespaceId && "iCs" == name)
-    return new ItalicComplexScript();
-    
-if( 23 == namespaceId && "caps" == name)
-    return new Caps();
-    
-if( 23 == namespaceId && "smallCaps" == name)
-    return new SmallCaps();
-    
-if( 23 == namespaceId && "strike" == name)
-    return new Strike();
-    
-if( 23 == namespaceId && "dstrike" == name)
-    return new DoubleStrike();
-    
-if( 23 == namespaceId && "outline" == name)
-    return new Outline();
-    
-if( 23 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 23 == namespaceId && "emboss" == name)
-    return new Emboss();
-    
-if( 23 == namespaceId && "imprint" == name)
-    return new Imprint();
-    
-if( 23 == namespaceId && "noProof" == name)
-    return new NoProof();
-    
-if( 23 == namespaceId && "snapToGrid" == name)
-    return new SnapToGrid();
-    
-if( 23 == namespaceId && "vanish" == name)
-    return new Vanish();
-    
-if( 23 == namespaceId && "webHidden" == name)
-    return new WebHidden();
-    
-if( 23 == namespaceId && "color" == name)
-    return new Color();
-    
-if( 23 == namespaceId && "spacing" == name)
-    return new Spacing();
-    
-if( 23 == namespaceId && "w" == name)
-    return new CharacterScale();
-    
-if( 23 == namespaceId && "kern" == name)
-    return new Kern();
-    
-if( 23 == namespaceId && "position" == name)
-    return new Position();
-    
-if( 23 == namespaceId && "sz" == name)
-    return new FontSize();
-    
-if( 23 == namespaceId && "szCs" == name)
-    return new FontSizeComplexScript();
-    
-if( 23 == namespaceId && "u" == name)
-    return new Underline();
-    
-if( 23 == namespaceId && "effect" == name)
-    return new TextEffect();
-    
-if( 23 == namespaceId && "bdr" == name)
-    return new Border();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "fitText" == name)
-    return new FitText();
-    
-if( 23 == namespaceId && "vertAlign" == name)
-    return new VerticalTextAlignment();
-    
-if( 23 == namespaceId && "em" == name)
-    return new Emphasis();
-    
-if( 23 == namespaceId && "lang" == name)
-    return new Languages();
-    
-if( 23 == namespaceId && "eastAsianLayout" == name)
-    return new EastAsianLayout();
-    
-if( 23 == namespaceId && "specVanish" == name)
-    return new SpecVanish();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "rFonts","b","bCs","i","iCs","caps","smallCaps","strike","dstrike","outline","shadow","emboss","imprint","noProof","snapToGrid","vanish","webHidden","color","spacing","w","kern","position","sz","szCs","u","effect","bdr","shd","fitText","vertAlign","em","lang","eastAsianLayout","specVanish" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -39409,6 +33530,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<RunFonts>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Bold.</para>
     /// <para> Represents the following element tag in the schema: w:b </para>
@@ -39421,6 +33543,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Bold>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> BoldComplexScript.</para>
     /// <para> Represents the following element tag in the schema: w:bCs </para>
@@ -39433,6 +33556,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<BoldComplexScript>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Italic.</para>
     /// <para> Represents the following element tag in the schema: w:i </para>
@@ -39445,6 +33569,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Italic>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> ItalicComplexScript.</para>
     /// <para> Represents the following element tag in the schema: w:iCs </para>
@@ -39457,6 +33582,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<ItalicComplexScript>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Caps.</para>
     /// <para> Represents the following element tag in the schema: w:caps </para>
@@ -39469,6 +33595,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Caps>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> SmallCaps.</para>
     /// <para> Represents the following element tag in the schema: w:smallCaps </para>
@@ -39481,6 +33608,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<SmallCaps>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Strike.</para>
     /// <para> Represents the following element tag in the schema: w:strike </para>
@@ -39493,6 +33621,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Strike>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> DoubleStrike.</para>
     /// <para> Represents the following element tag in the schema: w:dstrike </para>
@@ -39505,6 +33634,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<DoubleStrike>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Outline.</para>
     /// <para> Represents the following element tag in the schema: w:outline </para>
@@ -39517,6 +33647,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Outline>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> Shadow.</para>
     /// <para> Represents the following element tag in the schema: w:shadow </para>
@@ -39529,6 +33660,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Shadow>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Emboss.</para>
     /// <para> Represents the following element tag in the schema: w:emboss </para>
@@ -39541,6 +33673,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Emboss>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> Imprint.</para>
     /// <para> Represents the following element tag in the schema: w:imprint </para>
@@ -39553,6 +33686,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Imprint>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> NoProof.</para>
     /// <para> Represents the following element tag in the schema: w:noProof </para>
@@ -39565,6 +33699,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<NoProof>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> SnapToGrid.</para>
     /// <para> Represents the following element tag in the schema: w:snapToGrid </para>
@@ -39577,6 +33712,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<SnapToGrid>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> Vanish.</para>
     /// <para> Represents the following element tag in the schema: w:vanish </para>
@@ -39589,6 +33725,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Vanish>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> WebHidden.</para>
     /// <para> Represents the following element tag in the schema: w:webHidden </para>
@@ -39601,6 +33738,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<WebHidden>(16);
         set => SetElement(16, value);
     }
+    
     /// <summary>
     /// <para> Color.</para>
     /// <para> Represents the following element tag in the schema: w:color </para>
@@ -39613,6 +33751,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Color>(17);
         set => SetElement(17, value);
     }
+    
     /// <summary>
     /// <para> Spacing.</para>
     /// <para> Represents the following element tag in the schema: w:spacing </para>
@@ -39625,6 +33764,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Spacing>(18);
         set => SetElement(18, value);
     }
+    
     /// <summary>
     /// <para> CharacterScale.</para>
     /// <para> Represents the following element tag in the schema: w:w </para>
@@ -39637,6 +33777,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<CharacterScale>(19);
         set => SetElement(19, value);
     }
+    
     /// <summary>
     /// <para> Kern.</para>
     /// <para> Represents the following element tag in the schema: w:kern </para>
@@ -39649,6 +33790,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Kern>(20);
         set => SetElement(20, value);
     }
+    
     /// <summary>
     /// <para> Position.</para>
     /// <para> Represents the following element tag in the schema: w:position </para>
@@ -39661,6 +33803,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Position>(21);
         set => SetElement(21, value);
     }
+    
     /// <summary>
     /// <para> FontSize.</para>
     /// <para> Represents the following element tag in the schema: w:sz </para>
@@ -39673,6 +33816,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<FontSize>(22);
         set => SetElement(22, value);
     }
+    
     /// <summary>
     /// <para> FontSizeComplexScript.</para>
     /// <para> Represents the following element tag in the schema: w:szCs </para>
@@ -39685,6 +33829,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<FontSizeComplexScript>(23);
         set => SetElement(23, value);
     }
+    
     /// <summary>
     /// <para> Underline.</para>
     /// <para> Represents the following element tag in the schema: w:u </para>
@@ -39697,6 +33842,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Underline>(24);
         set => SetElement(24, value);
     }
+    
     /// <summary>
     /// <para> TextEffect.</para>
     /// <para> Represents the following element tag in the schema: w:effect </para>
@@ -39709,6 +33855,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<TextEffect>(25);
         set => SetElement(25, value);
     }
+    
     /// <summary>
     /// <para> Border.</para>
     /// <para> Represents the following element tag in the schema: w:bdr </para>
@@ -39721,6 +33868,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Border>(26);
         set => SetElement(26, value);
     }
+    
     /// <summary>
     /// <para> Shading.</para>
     /// <para> Represents the following element tag in the schema: w:shd </para>
@@ -39733,6 +33881,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Shading>(27);
         set => SetElement(27, value);
     }
+    
     /// <summary>
     /// <para> FitText.</para>
     /// <para> Represents the following element tag in the schema: w:fitText </para>
@@ -39745,6 +33894,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<FitText>(28);
         set => SetElement(28, value);
     }
+    
     /// <summary>
     /// <para> VerticalTextAlignment.</para>
     /// <para> Represents the following element tag in the schema: w:vertAlign </para>
@@ -39757,6 +33907,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<VerticalTextAlignment>(29);
         set => SetElement(29, value);
     }
+    
     /// <summary>
     /// <para> Emphasis.</para>
     /// <para> Represents the following element tag in the schema: w:em </para>
@@ -39769,6 +33920,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Emphasis>(30);
         set => SetElement(30, value);
     }
+    
     /// <summary>
     /// <para> Languages.</para>
     /// <para> Represents the following element tag in the schema: w:lang </para>
@@ -39781,6 +33933,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Languages>(31);
         set => SetElement(31, value);
     }
+    
     /// <summary>
     /// <para> EastAsianLayout.</para>
     /// <para> Represents the following element tag in the schema: w:eastAsianLayout </para>
@@ -39793,6 +33946,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<EastAsianLayout>(32);
         set => SetElement(32, value);
     }
+    
     /// <summary>
     /// <para> SpecVanish.</para>
     /// <para> Represents the following element tag in the schema: w:specVanish </para>
@@ -39805,6 +33959,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<SpecVanish>(33);
         set => SetElement(33, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -39884,6 +34039,7 @@ if( 23 == namespaceId && "specVanish" == name)
     [ChildElementInfo(typeof(OutlineLevel))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "pPr")]
 public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11893;
@@ -39926,106 +34082,11 @@ public partial class ParagraphPropertiesBaseStyle : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "keepNext" == name)
-    return new KeepNext();
     
-if( 23 == namespaceId && "keepLines" == name)
-    return new KeepLines();
-    
-if( 23 == namespaceId && "pageBreakBefore" == name)
-    return new PageBreakBefore();
-    
-if( 23 == namespaceId && "framePr" == name)
-    return new FrameProperties();
-    
-if( 23 == namespaceId && "widowControl" == name)
-    return new WidowControl();
-    
-if( 23 == namespaceId && "numPr" == name)
-    return new NumberingProperties();
-    
-if( 23 == namespaceId && "suppressLineNumbers" == name)
-    return new SuppressLineNumbers();
-    
-if( 23 == namespaceId && "pBdr" == name)
-    return new ParagraphBorders();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "tabs" == name)
-    return new Tabs();
-    
-if( 23 == namespaceId && "suppressAutoHyphens" == name)
-    return new SuppressAutoHyphens();
-    
-if( 23 == namespaceId && "kinsoku" == name)
-    return new Kinsoku();
-    
-if( 23 == namespaceId && "wordWrap" == name)
-    return new WordWrap();
-    
-if( 23 == namespaceId && "overflowPunct" == name)
-    return new OverflowPunctuation();
-    
-if( 23 == namespaceId && "topLinePunct" == name)
-    return new TopLinePunctuation();
-    
-if( 23 == namespaceId && "autoSpaceDE" == name)
-    return new AutoSpaceDE();
-    
-if( 23 == namespaceId && "autoSpaceDN" == name)
-    return new AutoSpaceDN();
-    
-if( 23 == namespaceId && "bidi" == name)
-    return new BiDi();
-    
-if( 23 == namespaceId && "adjustRightInd" == name)
-    return new AdjustRightIndent();
-    
-if( 23 == namespaceId && "snapToGrid" == name)
-    return new SnapToGrid();
-    
-if( 23 == namespaceId && "spacing" == name)
-    return new SpacingBetweenLines();
-    
-if( 23 == namespaceId && "ind" == name)
-    return new Indentation();
-    
-if( 23 == namespaceId && "contextualSpacing" == name)
-    return new ContextualSpacing();
-    
-if( 23 == namespaceId && "mirrorIndents" == name)
-    return new MirrorIndents();
-    
-if( 23 == namespaceId && "suppressOverlap" == name)
-    return new SuppressOverlap();
-    
-if( 23 == namespaceId && "jc" == name)
-    return new Justification();
-    
-if( 23 == namespaceId && "textDirection" == name)
-    return new TextDirection();
-    
-if( 23 == namespaceId && "textAlignment" == name)
-    return new TextAlignment();
-    
-if( 23 == namespaceId && "textboxTightWrap" == name)
-    return new TextBoxTightWrap();
-    
-if( 23 == namespaceId && "outlineLvl" == name)
-    return new OutlineLevel();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "keepNext","keepLines","pageBreakBefore","framePr","widowControl","numPr","suppressLineNumbers","pBdr","shd","tabs","suppressAutoHyphens","kinsoku","wordWrap","overflowPunct","topLinePunct","autoSpaceDE","autoSpaceDN","bidi","adjustRightInd","snapToGrid","spacing","ind","contextualSpacing","mirrorIndents","suppressOverlap","jc","textDirection","textAlignment","textboxTightWrap","outlineLvl" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -40046,6 +34107,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<KeepNext>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> KeepLines.</para>
     /// <para> Represents the following element tag in the schema: w:keepLines </para>
@@ -40058,6 +34120,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<KeepLines>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> PageBreakBefore.</para>
     /// <para> Represents the following element tag in the schema: w:pageBreakBefore </para>
@@ -40070,6 +34133,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<PageBreakBefore>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> FrameProperties.</para>
     /// <para> Represents the following element tag in the schema: w:framePr </para>
@@ -40082,6 +34146,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<FrameProperties>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> WidowControl.</para>
     /// <para> Represents the following element tag in the schema: w:widowControl </para>
@@ -40094,6 +34159,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<WidowControl>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> NumberingProperties.</para>
     /// <para> Represents the following element tag in the schema: w:numPr </para>
@@ -40106,6 +34172,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<NumberingProperties>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> SuppressLineNumbers.</para>
     /// <para> Represents the following element tag in the schema: w:suppressLineNumbers </para>
@@ -40118,6 +34185,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<SuppressLineNumbers>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> ParagraphBorders.</para>
     /// <para> Represents the following element tag in the schema: w:pBdr </para>
@@ -40130,6 +34198,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<ParagraphBorders>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> Shading.</para>
     /// <para> Represents the following element tag in the schema: w:shd </para>
@@ -40142,6 +34211,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<Shading>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Tabs.</para>
     /// <para> Represents the following element tag in the schema: w:tabs </para>
@@ -40154,6 +34224,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<Tabs>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> SuppressAutoHyphens.</para>
     /// <para> Represents the following element tag in the schema: w:suppressAutoHyphens </para>
@@ -40166,6 +34237,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<SuppressAutoHyphens>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Kinsoku.</para>
     /// <para> Represents the following element tag in the schema: w:kinsoku </para>
@@ -40178,6 +34250,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<Kinsoku>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> WordWrap.</para>
     /// <para> Represents the following element tag in the schema: w:wordWrap </para>
@@ -40190,6 +34263,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<WordWrap>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> OverflowPunctuation.</para>
     /// <para> Represents the following element tag in the schema: w:overflowPunct </para>
@@ -40202,6 +34276,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<OverflowPunctuation>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> TopLinePunctuation.</para>
     /// <para> Represents the following element tag in the schema: w:topLinePunct </para>
@@ -40214,6 +34289,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<TopLinePunctuation>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> AutoSpaceDE.</para>
     /// <para> Represents the following element tag in the schema: w:autoSpaceDE </para>
@@ -40226,6 +34302,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<AutoSpaceDE>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> AutoSpaceDN.</para>
     /// <para> Represents the following element tag in the schema: w:autoSpaceDN </para>
@@ -40238,6 +34315,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<AutoSpaceDN>(16);
         set => SetElement(16, value);
     }
+    
     /// <summary>
     /// <para> BiDi.</para>
     /// <para> Represents the following element tag in the schema: w:bidi </para>
@@ -40250,6 +34328,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<BiDi>(17);
         set => SetElement(17, value);
     }
+    
     /// <summary>
     /// <para> AdjustRightIndent.</para>
     /// <para> Represents the following element tag in the schema: w:adjustRightInd </para>
@@ -40262,6 +34341,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<AdjustRightIndent>(18);
         set => SetElement(18, value);
     }
+    
     /// <summary>
     /// <para> SnapToGrid.</para>
     /// <para> Represents the following element tag in the schema: w:snapToGrid </para>
@@ -40274,6 +34354,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<SnapToGrid>(19);
         set => SetElement(19, value);
     }
+    
     /// <summary>
     /// <para> SpacingBetweenLines.</para>
     /// <para> Represents the following element tag in the schema: w:spacing </para>
@@ -40286,6 +34367,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<SpacingBetweenLines>(20);
         set => SetElement(20, value);
     }
+    
     /// <summary>
     /// <para> Indentation.</para>
     /// <para> Represents the following element tag in the schema: w:ind </para>
@@ -40298,6 +34380,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<Indentation>(21);
         set => SetElement(21, value);
     }
+    
     /// <summary>
     /// <para> ContextualSpacing.</para>
     /// <para> Represents the following element tag in the schema: w:contextualSpacing </para>
@@ -40310,6 +34393,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<ContextualSpacing>(22);
         set => SetElement(22, value);
     }
+    
     /// <summary>
     /// <para> MirrorIndents.</para>
     /// <para> Represents the following element tag in the schema: w:mirrorIndents </para>
@@ -40322,6 +34406,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<MirrorIndents>(23);
         set => SetElement(23, value);
     }
+    
     /// <summary>
     /// <para> SuppressOverlap.</para>
     /// <para> Represents the following element tag in the schema: w:suppressOverlap </para>
@@ -40334,6 +34419,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<SuppressOverlap>(24);
         set => SetElement(24, value);
     }
+    
     /// <summary>
     /// <para> Justification.</para>
     /// <para> Represents the following element tag in the schema: w:jc </para>
@@ -40346,6 +34432,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<Justification>(25);
         set => SetElement(25, value);
     }
+    
     /// <summary>
     /// <para> TextDirection.</para>
     /// <para> Represents the following element tag in the schema: w:textDirection </para>
@@ -40358,6 +34445,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<TextDirection>(26);
         set => SetElement(26, value);
     }
+    
     /// <summary>
     /// <para> TextAlignment.</para>
     /// <para> Represents the following element tag in the schema: w:textAlignment </para>
@@ -40370,6 +34458,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<TextAlignment>(27);
         set => SetElement(27, value);
     }
+    
     /// <summary>
     /// <para> TextBoxTightWrap.</para>
     /// <para> Represents the following element tag in the schema: w:textboxTightWrap </para>
@@ -40382,6 +34471,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<TextBoxTightWrap>(28);
         set => SetElement(28, value);
     }
+    
     /// <summary>
     /// <para> OutlineLevel.</para>
     /// <para> Represents the following element tag in the schema: w:outlineLvl </para>
@@ -40394,6 +34484,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<OutlineLevel>(29);
         set => SetElement(29, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -40415,6 +34506,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
     [ChildElementInfo(typeof(RunPropertiesBaseStyle))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "rPrDefault")]
 public partial class RunPropertiesDefault : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11894;
@@ -40457,19 +34549,11 @@ public partial class RunPropertiesDefault : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rPr" == name)
-    return new RunPropertiesBaseStyle();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "rPr" };
     private static readonly byte[] eleNamespaceIds = { 23 };
     
@@ -40490,6 +34574,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<RunPropertiesBaseStyle>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -40511,6 +34596,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ParagraphPropertiesBaseStyle))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "pPrDefault")]
 public partial class ParagraphPropertiesDefault : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11895;
@@ -40553,19 +34639,11 @@ public partial class ParagraphPropertiesDefault : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "pPr" == name)
-    return new ParagraphPropertiesBaseStyle();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pPr" };
     private static readonly byte[] eleNamespaceIds = { 23 };
     
@@ -40586,6 +34664,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ParagraphPropertiesBaseStyle>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -40599,6 +34678,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "marW")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MarginWidth : PixelsMeasureType
 {
@@ -40626,6 +34706,7 @@ public partial class MarginWidth : PixelsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "marH")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MarginHeight : PixelsMeasureType
 {
@@ -40683,6 +34764,7 @@ public abstract partial class PixelsMeasureType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "scrollbar")]
 public partial class ScrollbarVisibility : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11901;
@@ -40725,6 +34807,7 @@ public partial class ScrollbarVisibility : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "w")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Width : TwipsMeasureType
 {
@@ -40752,6 +34835,7 @@ public partial class Width : TwipsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "hyphenationZone")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HyphenationZone : TwipsMeasureType
 {
@@ -40779,6 +34863,7 @@ public partial class HyphenationZone : TwipsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "drawingGridHorizontalSpacing")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DrawingGridHorizontalSpacing : TwipsMeasureType
 {
@@ -40806,6 +34891,7 @@ public partial class DrawingGridHorizontalSpacing : TwipsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "drawingGridVerticalSpacing")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DrawingGridVerticalSpacing : TwipsMeasureType
 {
@@ -40833,6 +34919,7 @@ public partial class DrawingGridVerticalSpacing : TwipsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "drawingGridHorizontalOrigin")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DrawingGridHorizontalOrigin : TwipsMeasureType
 {
@@ -40860,6 +34947,7 @@ public partial class DrawingGridHorizontalOrigin : TwipsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "drawingGridVerticalOrigin")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DrawingGridVerticalOrigin : TwipsMeasureType
 {
@@ -40930,6 +35018,7 @@ public abstract partial class TwipsMeasureType : OpenXmlLeafElement
     [ChildElementInfo(typeof(FlatBorders))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "framesetSplitbar")]
 public partial class FramesetSplitbar : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11907;
@@ -40972,28 +35061,11 @@ public partial class FramesetSplitbar : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "w" == name)
-    return new Width();
     
-if( 23 == namespaceId && "color" == name)
-    return new Color();
-    
-if( 23 == namespaceId && "noBorder" == name)
-    return new NoBorder();
-    
-if( 23 == namespaceId && "flatBorders" == name)
-    return new FlatBorders();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "w","color","noBorder","flatBorders" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23 };
     
@@ -41014,6 +35086,7 @@ if( 23 == namespaceId && "flatBorders" == name)
         get => GetElement<Width>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Frameset Splitter Color.</para>
     /// <para> Represents the following element tag in the schema: w:color </para>
@@ -41026,6 +35099,7 @@ if( 23 == namespaceId && "flatBorders" == name)
         get => GetElement<Color>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Do Not Display Frameset Splitters.</para>
     /// <para> Represents the following element tag in the schema: w:noBorder </para>
@@ -41038,6 +35112,7 @@ if( 23 == namespaceId && "flatBorders" == name)
         get => GetElement<NoBorder>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Frameset Splitter Border Style.</para>
     /// <para> Represents the following element tag in the schema: w:flatBorders </para>
@@ -41050,6 +35125,7 @@ if( 23 == namespaceId && "flatBorders" == name)
         get => GetElement<FlatBorders>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -41064,6 +35140,7 @@ if( 23 == namespaceId && "flatBorders" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "frameLayout")]
 public partial class FrameLayout : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11908;
@@ -41122,6 +35199,7 @@ public partial class FrameLayout : OpenXmlLeafElement
     [ChildElementInfo(typeof(Frame))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "frameset")]
 public partial class Frameset : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11909;
@@ -41164,31 +35242,11 @@ public partial class Frameset : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "sz" == name)
-    return new FrameSize();
     
-if( 23 == namespaceId && "framesetSplitbar" == name)
-    return new FramesetSplitbar();
-    
-if( 23 == namespaceId && "frameLayout" == name)
-    return new FrameLayout();
-    
-if( 23 == namespaceId && "frameset" == name)
-    return new Frameset();
-    
-if( 23 == namespaceId && "frame" == name)
-    return new Frame();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sz","framesetSplitbar","frameLayout","frameset","frame" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23 };
     
@@ -41209,6 +35267,7 @@ if( 23 == namespaceId && "frame" == name)
         get => GetElement<FrameSize>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Frameset Splitter Properties.</para>
     /// <para> Represents the following element tag in the schema: w:framesetSplitbar </para>
@@ -41221,6 +35280,7 @@ if( 23 == namespaceId && "frame" == name)
         get => GetElement<FramesetSplitbar>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Frameset Layout.</para>
     /// <para> Represents the following element tag in the schema: w:frameLayout </para>
@@ -41233,6 +35293,7 @@ if( 23 == namespaceId && "frame" == name)
         get => GetElement<FrameLayout>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -41268,6 +35329,7 @@ if( 23 == namespaceId && "frame" == name)
     [ChildElementInfo(typeof(LinkedToFile))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "frame")]
 public partial class Frame : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11910;
@@ -41310,40 +35372,11 @@ public partial class Frame : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "sz" == name)
-    return new FrameSize();
     
-if( 23 == namespaceId && "name" == name)
-    return new FrameName();
-    
-if( 23 == namespaceId && "sourceFileName" == name)
-    return new SourceFileReference();
-    
-if( 23 == namespaceId && "marW" == name)
-    return new MarginWidth();
-    
-if( 23 == namespaceId && "marH" == name)
-    return new MarginHeight();
-    
-if( 23 == namespaceId && "scrollbar" == name)
-    return new ScrollbarVisibility();
-    
-if( 23 == namespaceId && "noResizeAllowed" == name)
-    return new NoResizeAllowed();
-    
-if( 23 == namespaceId && "linkedToFile" == name)
-    return new LinkedToFile();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sz","name","sourceFileName","marW","marH","scrollbar","noResizeAllowed","linkedToFile" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23 };
     
@@ -41364,6 +35397,7 @@ if( 23 == namespaceId && "linkedToFile" == name)
         get => GetElement<FrameSize>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Frame Name.</para>
     /// <para> Represents the following element tag in the schema: w:name </para>
@@ -41376,6 +35410,7 @@ if( 23 == namespaceId && "linkedToFile" == name)
         get => GetElement<FrameName>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Source File for Frame.</para>
     /// <para> Represents the following element tag in the schema: w:sourceFileName </para>
@@ -41388,6 +35423,7 @@ if( 23 == namespaceId && "linkedToFile" == name)
         get => GetElement<SourceFileReference>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Left and Right Margin for Frame.</para>
     /// <para> Represents the following element tag in the schema: w:marW </para>
@@ -41400,6 +35436,7 @@ if( 23 == namespaceId && "linkedToFile" == name)
         get => GetElement<MarginWidth>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Top and Bottom Margin for Frame.</para>
     /// <para> Represents the following element tag in the schema: w:marH </para>
@@ -41412,6 +35449,7 @@ if( 23 == namespaceId && "linkedToFile" == name)
         get => GetElement<MarginHeight>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Scrollbar Display Option.</para>
     /// <para> Represents the following element tag in the schema: w:scrollbar </para>
@@ -41424,6 +35462,7 @@ if( 23 == namespaceId && "linkedToFile" == name)
         get => GetElement<ScrollbarVisibility>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Frame Cannot Be Resized.</para>
     /// <para> Represents the following element tag in the schema: w:noResizeAllowed </para>
@@ -41436,6 +35475,7 @@ if( 23 == namespaceId && "linkedToFile" == name)
         get => GetElement<NoResizeAllowed>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Maintain Link to Existing File.</para>
     /// <para> Represents the following element tag in the schema: w:linkedToFile </para>
@@ -41448,6 +35488,7 @@ if( 23 == namespaceId && "linkedToFile" == name)
         get => GetElement<LinkedToFile>(7);
         set => SetElement(7, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -41462,6 +35503,7 @@ if( 23 == namespaceId && "linkedToFile" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "suff")]
 public partial class LevelSuffix : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11915;
@@ -41505,6 +35547,7 @@ public partial class LevelSuffix : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "lvlText")]
 public partial class LevelText : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11916;
@@ -41557,6 +35600,7 @@ public partial class LevelText : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "legacy")]
 public partial class LegacyNumbering : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11918;
@@ -41618,6 +35662,7 @@ public partial class LegacyNumbering : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "lvlJc")]
 public partial class LevelJustification : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11919;
@@ -41728,6 +35773,7 @@ public partial class LevelJustification : OpenXmlLeafElement
     [ChildElementInfo(typeof(OutlineLevel))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "pPr")]
 public partial class PreviousParagraphProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11920;
@@ -41770,109 +35816,11 @@ public partial class PreviousParagraphProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "pStyle" == name)
-    return new ParagraphStyleId();
     
-if( 23 == namespaceId && "keepNext" == name)
-    return new KeepNext();
-    
-if( 23 == namespaceId && "keepLines" == name)
-    return new KeepLines();
-    
-if( 23 == namespaceId && "pageBreakBefore" == name)
-    return new PageBreakBefore();
-    
-if( 23 == namespaceId && "framePr" == name)
-    return new FrameProperties();
-    
-if( 23 == namespaceId && "widowControl" == name)
-    return new WidowControl();
-    
-if( 23 == namespaceId && "numPr" == name)
-    return new NumberingProperties();
-    
-if( 23 == namespaceId && "suppressLineNumbers" == name)
-    return new SuppressLineNumbers();
-    
-if( 23 == namespaceId && "pBdr" == name)
-    return new ParagraphBorders();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "tabs" == name)
-    return new Tabs();
-    
-if( 23 == namespaceId && "suppressAutoHyphens" == name)
-    return new SuppressAutoHyphens();
-    
-if( 23 == namespaceId && "kinsoku" == name)
-    return new Kinsoku();
-    
-if( 23 == namespaceId && "wordWrap" == name)
-    return new WordWrap();
-    
-if( 23 == namespaceId && "overflowPunct" == name)
-    return new OverflowPunctuation();
-    
-if( 23 == namespaceId && "topLinePunct" == name)
-    return new TopLinePunctuation();
-    
-if( 23 == namespaceId && "autoSpaceDE" == name)
-    return new AutoSpaceDE();
-    
-if( 23 == namespaceId && "autoSpaceDN" == name)
-    return new AutoSpaceDN();
-    
-if( 23 == namespaceId && "bidi" == name)
-    return new BiDi();
-    
-if( 23 == namespaceId && "adjustRightInd" == name)
-    return new AdjustRightIndent();
-    
-if( 23 == namespaceId && "snapToGrid" == name)
-    return new SnapToGrid();
-    
-if( 23 == namespaceId && "spacing" == name)
-    return new SpacingBetweenLines();
-    
-if( 23 == namespaceId && "ind" == name)
-    return new Indentation();
-    
-if( 23 == namespaceId && "contextualSpacing" == name)
-    return new ContextualSpacing();
-    
-if( 23 == namespaceId && "mirrorIndents" == name)
-    return new MirrorIndents();
-    
-if( 23 == namespaceId && "suppressOverlap" == name)
-    return new SuppressOverlap();
-    
-if( 23 == namespaceId && "jc" == name)
-    return new Justification();
-    
-if( 23 == namespaceId && "textDirection" == name)
-    return new TextDirection();
-    
-if( 23 == namespaceId && "textAlignment" == name)
-    return new TextAlignment();
-    
-if( 23 == namespaceId && "textboxTightWrap" == name)
-    return new TextBoxTightWrap();
-    
-if( 23 == namespaceId && "outlineLvl" == name)
-    return new OutlineLevel();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pStyle","keepNext","keepLines","pageBreakBefore","framePr","widowControl","numPr","suppressLineNumbers","pBdr","shd","tabs","suppressAutoHyphens","kinsoku","wordWrap","overflowPunct","topLinePunct","autoSpaceDE","autoSpaceDN","bidi","adjustRightInd","snapToGrid","spacing","ind","contextualSpacing","mirrorIndents","suppressOverlap","jc","textDirection","textAlignment","textboxTightWrap","outlineLvl" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -41893,6 +35841,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<ParagraphStyleId>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> KeepNext.</para>
     /// <para> Represents the following element tag in the schema: w:keepNext </para>
@@ -41905,6 +35854,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<KeepNext>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> KeepLines.</para>
     /// <para> Represents the following element tag in the schema: w:keepLines </para>
@@ -41917,6 +35867,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<KeepLines>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> PageBreakBefore.</para>
     /// <para> Represents the following element tag in the schema: w:pageBreakBefore </para>
@@ -41929,6 +35880,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<PageBreakBefore>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> FrameProperties.</para>
     /// <para> Represents the following element tag in the schema: w:framePr </para>
@@ -41941,6 +35893,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<FrameProperties>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> WidowControl.</para>
     /// <para> Represents the following element tag in the schema: w:widowControl </para>
@@ -41953,6 +35906,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<WidowControl>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> NumberingProperties.</para>
     /// <para> Represents the following element tag in the schema: w:numPr </para>
@@ -41965,6 +35919,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<NumberingProperties>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> SuppressLineNumbers.</para>
     /// <para> Represents the following element tag in the schema: w:suppressLineNumbers </para>
@@ -41977,6 +35932,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<SuppressLineNumbers>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> ParagraphBorders.</para>
     /// <para> Represents the following element tag in the schema: w:pBdr </para>
@@ -41989,6 +35945,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<ParagraphBorders>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Shading.</para>
     /// <para> Represents the following element tag in the schema: w:shd </para>
@@ -42001,6 +35958,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<Shading>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> Tabs.</para>
     /// <para> Represents the following element tag in the schema: w:tabs </para>
@@ -42013,6 +35971,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<Tabs>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> SuppressAutoHyphens.</para>
     /// <para> Represents the following element tag in the schema: w:suppressAutoHyphens </para>
@@ -42025,6 +35984,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<SuppressAutoHyphens>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> Kinsoku.</para>
     /// <para> Represents the following element tag in the schema: w:kinsoku </para>
@@ -42037,6 +35997,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<Kinsoku>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> WordWrap.</para>
     /// <para> Represents the following element tag in the schema: w:wordWrap </para>
@@ -42049,6 +36010,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<WordWrap>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> OverflowPunctuation.</para>
     /// <para> Represents the following element tag in the schema: w:overflowPunct </para>
@@ -42061,6 +36023,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<OverflowPunctuation>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> TopLinePunctuation.</para>
     /// <para> Represents the following element tag in the schema: w:topLinePunct </para>
@@ -42073,6 +36036,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<TopLinePunctuation>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> AutoSpaceDE.</para>
     /// <para> Represents the following element tag in the schema: w:autoSpaceDE </para>
@@ -42085,6 +36049,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<AutoSpaceDE>(16);
         set => SetElement(16, value);
     }
+    
     /// <summary>
     /// <para> AutoSpaceDN.</para>
     /// <para> Represents the following element tag in the schema: w:autoSpaceDN </para>
@@ -42097,6 +36062,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<AutoSpaceDN>(17);
         set => SetElement(17, value);
     }
+    
     /// <summary>
     /// <para> BiDi.</para>
     /// <para> Represents the following element tag in the schema: w:bidi </para>
@@ -42109,6 +36075,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<BiDi>(18);
         set => SetElement(18, value);
     }
+    
     /// <summary>
     /// <para> AdjustRightIndent.</para>
     /// <para> Represents the following element tag in the schema: w:adjustRightInd </para>
@@ -42121,6 +36088,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<AdjustRightIndent>(19);
         set => SetElement(19, value);
     }
+    
     /// <summary>
     /// <para> SnapToGrid.</para>
     /// <para> Represents the following element tag in the schema: w:snapToGrid </para>
@@ -42133,6 +36101,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<SnapToGrid>(20);
         set => SetElement(20, value);
     }
+    
     /// <summary>
     /// <para> SpacingBetweenLines.</para>
     /// <para> Represents the following element tag in the schema: w:spacing </para>
@@ -42145,6 +36114,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<SpacingBetweenLines>(21);
         set => SetElement(21, value);
     }
+    
     /// <summary>
     /// <para> Indentation.</para>
     /// <para> Represents the following element tag in the schema: w:ind </para>
@@ -42157,6 +36127,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<Indentation>(22);
         set => SetElement(22, value);
     }
+    
     /// <summary>
     /// <para> ContextualSpacing.</para>
     /// <para> Represents the following element tag in the schema: w:contextualSpacing </para>
@@ -42169,6 +36140,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<ContextualSpacing>(23);
         set => SetElement(23, value);
     }
+    
     /// <summary>
     /// <para> MirrorIndents.</para>
     /// <para> Represents the following element tag in the schema: w:mirrorIndents </para>
@@ -42181,6 +36153,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<MirrorIndents>(24);
         set => SetElement(24, value);
     }
+    
     /// <summary>
     /// <para> SuppressOverlap.</para>
     /// <para> Represents the following element tag in the schema: w:suppressOverlap </para>
@@ -42193,6 +36166,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<SuppressOverlap>(25);
         set => SetElement(25, value);
     }
+    
     /// <summary>
     /// <para> Justification.</para>
     /// <para> Represents the following element tag in the schema: w:jc </para>
@@ -42205,6 +36179,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<Justification>(26);
         set => SetElement(26, value);
     }
+    
     /// <summary>
     /// <para> TextDirection.</para>
     /// <para> Represents the following element tag in the schema: w:textDirection </para>
@@ -42217,6 +36192,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<TextDirection>(27);
         set => SetElement(27, value);
     }
+    
     /// <summary>
     /// <para> TextAlignment.</para>
     /// <para> Represents the following element tag in the schema: w:textAlignment </para>
@@ -42229,6 +36205,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<TextAlignment>(28);
         set => SetElement(28, value);
     }
+    
     /// <summary>
     /// <para> TextBoxTightWrap.</para>
     /// <para> Represents the following element tag in the schema: w:textboxTightWrap </para>
@@ -42241,6 +36218,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<TextBoxTightWrap>(29);
         set => SetElement(29, value);
     }
+    
     /// <summary>
     /// <para> OutlineLevel.</para>
     /// <para> Represents the following element tag in the schema: w:outlineLvl </para>
@@ -42253,6 +36231,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
         get => GetElement<OutlineLevel>(30);
         set => SetElement(30, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -42344,6 +36323,7 @@ if( 23 == namespaceId && "outlineLvl" == name)
     [ChildElementInfo(typeof(SpecVanish))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "rPr")]
 public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11921;
@@ -42386,124 +36366,11 @@ public partial class NumberingSymbolRunProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rFonts" == name)
-    return new RunFonts();
     
-if( 23 == namespaceId && "b" == name)
-    return new Bold();
-    
-if( 23 == namespaceId && "bCs" == name)
-    return new BoldComplexScript();
-    
-if( 23 == namespaceId && "i" == name)
-    return new Italic();
-    
-if( 23 == namespaceId && "iCs" == name)
-    return new ItalicComplexScript();
-    
-if( 23 == namespaceId && "caps" == name)
-    return new Caps();
-    
-if( 23 == namespaceId && "smallCaps" == name)
-    return new SmallCaps();
-    
-if( 23 == namespaceId && "strike" == name)
-    return new Strike();
-    
-if( 23 == namespaceId && "dstrike" == name)
-    return new DoubleStrike();
-    
-if( 23 == namespaceId && "outline" == name)
-    return new Outline();
-    
-if( 23 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 23 == namespaceId && "emboss" == name)
-    return new Emboss();
-    
-if( 23 == namespaceId && "imprint" == name)
-    return new Imprint();
-    
-if( 23 == namespaceId && "noProof" == name)
-    return new NoProof();
-    
-if( 23 == namespaceId && "snapToGrid" == name)
-    return new SnapToGrid();
-    
-if( 23 == namespaceId && "vanish" == name)
-    return new Vanish();
-    
-if( 23 == namespaceId && "webHidden" == name)
-    return new WebHidden();
-    
-if( 23 == namespaceId && "color" == name)
-    return new Color();
-    
-if( 23 == namespaceId && "spacing" == name)
-    return new Spacing();
-    
-if( 23 == namespaceId && "w" == name)
-    return new CharacterScale();
-    
-if( 23 == namespaceId && "kern" == name)
-    return new Kern();
-    
-if( 23 == namespaceId && "position" == name)
-    return new Position();
-    
-if( 23 == namespaceId && "sz" == name)
-    return new FontSize();
-    
-if( 23 == namespaceId && "szCs" == name)
-    return new FontSizeComplexScript();
-    
-if( 23 == namespaceId && "u" == name)
-    return new Underline();
-    
-if( 23 == namespaceId && "effect" == name)
-    return new TextEffect();
-    
-if( 23 == namespaceId && "bdr" == name)
-    return new Border();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "fitText" == name)
-    return new FitText();
-    
-if( 23 == namespaceId && "vertAlign" == name)
-    return new VerticalTextAlignment();
-    
-if( 23 == namespaceId && "rtl" == name)
-    return new RightToLeftText();
-    
-if( 23 == namespaceId && "cs" == name)
-    return new ComplexScript();
-    
-if( 23 == namespaceId && "em" == name)
-    return new Emphasis();
-    
-if( 23 == namespaceId && "lang" == name)
-    return new Languages();
-    
-if( 23 == namespaceId && "eastAsianLayout" == name)
-    return new EastAsianLayout();
-    
-if( 23 == namespaceId && "specVanish" == name)
-    return new SpecVanish();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "rFonts","b","bCs","i","iCs","caps","smallCaps","strike","dstrike","outline","shadow","emboss","imprint","noProof","snapToGrid","vanish","webHidden","color","spacing","w","kern","position","sz","szCs","u","effect","bdr","shd","fitText","vertAlign","rtl","cs","em","lang","eastAsianLayout","specVanish" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -42524,6 +36391,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<RunFonts>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Bold.</para>
     /// <para> Represents the following element tag in the schema: w:b </para>
@@ -42536,6 +36404,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Bold>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> BoldComplexScript.</para>
     /// <para> Represents the following element tag in the schema: w:bCs </para>
@@ -42548,6 +36417,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<BoldComplexScript>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Italic.</para>
     /// <para> Represents the following element tag in the schema: w:i </para>
@@ -42560,6 +36430,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Italic>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> ItalicComplexScript.</para>
     /// <para> Represents the following element tag in the schema: w:iCs </para>
@@ -42572,6 +36443,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<ItalicComplexScript>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Caps.</para>
     /// <para> Represents the following element tag in the schema: w:caps </para>
@@ -42584,6 +36456,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Caps>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> SmallCaps.</para>
     /// <para> Represents the following element tag in the schema: w:smallCaps </para>
@@ -42596,6 +36469,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<SmallCaps>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Strike.</para>
     /// <para> Represents the following element tag in the schema: w:strike </para>
@@ -42608,6 +36482,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Strike>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> DoubleStrike.</para>
     /// <para> Represents the following element tag in the schema: w:dstrike </para>
@@ -42620,6 +36495,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<DoubleStrike>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Outline.</para>
     /// <para> Represents the following element tag in the schema: w:outline </para>
@@ -42632,6 +36508,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Outline>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> Shadow.</para>
     /// <para> Represents the following element tag in the schema: w:shadow </para>
@@ -42644,6 +36521,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Shadow>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Emboss.</para>
     /// <para> Represents the following element tag in the schema: w:emboss </para>
@@ -42656,6 +36534,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Emboss>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> Imprint.</para>
     /// <para> Represents the following element tag in the schema: w:imprint </para>
@@ -42668,6 +36547,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Imprint>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> NoProof.</para>
     /// <para> Represents the following element tag in the schema: w:noProof </para>
@@ -42680,6 +36560,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<NoProof>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> SnapToGrid.</para>
     /// <para> Represents the following element tag in the schema: w:snapToGrid </para>
@@ -42692,6 +36573,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<SnapToGrid>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> Vanish.</para>
     /// <para> Represents the following element tag in the schema: w:vanish </para>
@@ -42704,6 +36586,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Vanish>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> WebHidden.</para>
     /// <para> Represents the following element tag in the schema: w:webHidden </para>
@@ -42716,6 +36599,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<WebHidden>(16);
         set => SetElement(16, value);
     }
+    
     /// <summary>
     /// <para> Color.</para>
     /// <para> Represents the following element tag in the schema: w:color </para>
@@ -42728,6 +36612,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Color>(17);
         set => SetElement(17, value);
     }
+    
     /// <summary>
     /// <para> Spacing.</para>
     /// <para> Represents the following element tag in the schema: w:spacing </para>
@@ -42740,6 +36625,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Spacing>(18);
         set => SetElement(18, value);
     }
+    
     /// <summary>
     /// <para> CharacterScale.</para>
     /// <para> Represents the following element tag in the schema: w:w </para>
@@ -42752,6 +36638,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<CharacterScale>(19);
         set => SetElement(19, value);
     }
+    
     /// <summary>
     /// <para> Kern.</para>
     /// <para> Represents the following element tag in the schema: w:kern </para>
@@ -42764,6 +36651,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Kern>(20);
         set => SetElement(20, value);
     }
+    
     /// <summary>
     /// <para> Position.</para>
     /// <para> Represents the following element tag in the schema: w:position </para>
@@ -42776,6 +36664,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Position>(21);
         set => SetElement(21, value);
     }
+    
     /// <summary>
     /// <para> FontSize.</para>
     /// <para> Represents the following element tag in the schema: w:sz </para>
@@ -42788,6 +36677,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<FontSize>(22);
         set => SetElement(22, value);
     }
+    
     /// <summary>
     /// <para> FontSizeComplexScript.</para>
     /// <para> Represents the following element tag in the schema: w:szCs </para>
@@ -42800,6 +36690,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<FontSizeComplexScript>(23);
         set => SetElement(23, value);
     }
+    
     /// <summary>
     /// <para> Underline.</para>
     /// <para> Represents the following element tag in the schema: w:u </para>
@@ -42812,6 +36703,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Underline>(24);
         set => SetElement(24, value);
     }
+    
     /// <summary>
     /// <para> TextEffect.</para>
     /// <para> Represents the following element tag in the schema: w:effect </para>
@@ -42824,6 +36716,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<TextEffect>(25);
         set => SetElement(25, value);
     }
+    
     /// <summary>
     /// <para> Border.</para>
     /// <para> Represents the following element tag in the schema: w:bdr </para>
@@ -42836,6 +36729,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Border>(26);
         set => SetElement(26, value);
     }
+    
     /// <summary>
     /// <para> Shading.</para>
     /// <para> Represents the following element tag in the schema: w:shd </para>
@@ -42848,6 +36742,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Shading>(27);
         set => SetElement(27, value);
     }
+    
     /// <summary>
     /// <para> FitText.</para>
     /// <para> Represents the following element tag in the schema: w:fitText </para>
@@ -42860,6 +36755,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<FitText>(28);
         set => SetElement(28, value);
     }
+    
     /// <summary>
     /// <para> VerticalTextAlignment.</para>
     /// <para> Represents the following element tag in the schema: w:vertAlign </para>
@@ -42872,6 +36768,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<VerticalTextAlignment>(29);
         set => SetElement(29, value);
     }
+    
     /// <summary>
     /// <para> RightToLeftText.</para>
     /// <para> Represents the following element tag in the schema: w:rtl </para>
@@ -42884,6 +36781,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<RightToLeftText>(30);
         set => SetElement(30, value);
     }
+    
     /// <summary>
     /// <para> ComplexScript.</para>
     /// <para> Represents the following element tag in the schema: w:cs </para>
@@ -42896,6 +36794,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<ComplexScript>(31);
         set => SetElement(31, value);
     }
+    
     /// <summary>
     /// <para> Emphasis.</para>
     /// <para> Represents the following element tag in the schema: w:em </para>
@@ -42908,6 +36807,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Emphasis>(32);
         set => SetElement(32, value);
     }
+    
     /// <summary>
     /// <para> Languages.</para>
     /// <para> Represents the following element tag in the schema: w:lang </para>
@@ -42920,6 +36820,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<Languages>(33);
         set => SetElement(33, value);
     }
+    
     /// <summary>
     /// <para> EastAsianLayout.</para>
     /// <para> Represents the following element tag in the schema: w:eastAsianLayout </para>
@@ -42932,6 +36833,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<EastAsianLayout>(34);
         set => SetElement(34, value);
     }
+    
     /// <summary>
     /// <para> SpecVanish.</para>
     /// <para> Represents the following element tag in the schema: w:specVanish </para>
@@ -42944,6 +36846,7 @@ if( 23 == namespaceId && "specVanish" == name)
         get => GetElement<SpecVanish>(35);
         set => SetElement(35, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -42958,6 +36861,7 @@ if( 23 == namespaceId && "specVanish" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "multiLevelType")]
 public partial class MultiLevelType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11923;
@@ -43030,6 +36934,7 @@ public partial class MultiLevelType : OpenXmlLeafElement
     [ChildElementInfo(typeof(NumberingSymbolRunProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "lvl")]
 public partial class Level : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11928;
@@ -43099,52 +37004,11 @@ public partial class Level : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "start" == name)
-    return new StartNumberingValue();
     
-if( 23 == namespaceId && "numFmt" == name)
-    return new NumberingFormat();
-    
-if( 23 == namespaceId && "lvlRestart" == name)
-    return new LevelRestart();
-    
-if( 23 == namespaceId && "pStyle" == name)
-    return new ParagraphStyleIdInLevel();
-    
-if( 23 == namespaceId && "isLgl" == name)
-    return new IsLegalNumberingStyle();
-    
-if( 23 == namespaceId && "suff" == name)
-    return new LevelSuffix();
-    
-if( 23 == namespaceId && "lvlText" == name)
-    return new LevelText();
-    
-if( 23 == namespaceId && "lvlPicBulletId" == name)
-    return new LevelPictureBulletId();
-    
-if( 23 == namespaceId && "legacy" == name)
-    return new LegacyNumbering();
-    
-if( 23 == namespaceId && "lvlJc" == name)
-    return new LevelJustification();
-    
-if( 23 == namespaceId && "pPr" == name)
-    return new PreviousParagraphProperties();
-    
-if( 23 == namespaceId && "rPr" == name)
-    return new NumberingSymbolRunProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "start","numFmt","lvlRestart","pStyle","isLgl","suff","lvlText","lvlPicBulletId","legacy","lvlJc","pPr","rPr" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -43165,6 +37029,7 @@ if( 23 == namespaceId && "rPr" == name)
         get => GetElement<StartNumberingValue>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Numbering Format.</para>
     /// <para> Represents the following element tag in the schema: w:numFmt </para>
@@ -43177,6 +37042,7 @@ if( 23 == namespaceId && "rPr" == name)
         get => GetElement<NumberingFormat>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Restart Numbering Level Symbol.</para>
     /// <para> Represents the following element tag in the schema: w:lvlRestart </para>
@@ -43189,6 +37055,7 @@ if( 23 == namespaceId && "rPr" == name)
         get => GetElement<LevelRestart>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Paragraph Style's Associated Numbering Level.</para>
     /// <para> Represents the following element tag in the schema: w:pStyle </para>
@@ -43201,6 +37068,7 @@ if( 23 == namespaceId && "rPr" == name)
         get => GetElement<ParagraphStyleIdInLevel>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Display All Levels Using Arabic Numerals.</para>
     /// <para> Represents the following element tag in the schema: w:isLgl </para>
@@ -43213,6 +37081,7 @@ if( 23 == namespaceId && "rPr" == name)
         get => GetElement<IsLegalNumberingStyle>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Content Between Numbering Symbol and Paragraph Text.</para>
     /// <para> Represents the following element tag in the schema: w:suff </para>
@@ -43225,6 +37094,7 @@ if( 23 == namespaceId && "rPr" == name)
         get => GetElement<LevelSuffix>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Numbering Level Text.</para>
     /// <para> Represents the following element tag in the schema: w:lvlText </para>
@@ -43237,6 +37107,7 @@ if( 23 == namespaceId && "rPr" == name)
         get => GetElement<LevelText>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Picture Numbering Symbol Definition Reference.</para>
     /// <para> Represents the following element tag in the schema: w:lvlPicBulletId </para>
@@ -43249,6 +37120,7 @@ if( 23 == namespaceId && "rPr" == name)
         get => GetElement<LevelPictureBulletId>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> Legacy Numbering Level Properties.</para>
     /// <para> Represents the following element tag in the schema: w:legacy </para>
@@ -43261,6 +37133,7 @@ if( 23 == namespaceId && "rPr" == name)
         get => GetElement<LegacyNumbering>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Justification.</para>
     /// <para> Represents the following element tag in the schema: w:lvlJc </para>
@@ -43273,6 +37146,7 @@ if( 23 == namespaceId && "rPr" == name)
         get => GetElement<LevelJustification>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> Numbering Level Associated Paragraph Properties.</para>
     /// <para> Represents the following element tag in the schema: w:pPr </para>
@@ -43285,6 +37159,7 @@ if( 23 == namespaceId && "rPr" == name)
         get => GetElement<PreviousParagraphProperties>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Numbering Symbol Run Properties.</para>
     /// <para> Represents the following element tag in the schema: w:rPr </para>
@@ -43297,6 +37172,7 @@ if( 23 == namespaceId && "rPr" == name)
         get => GetElement<NumberingSymbolRunProperties>(11);
         set => SetElement(11, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -43320,6 +37196,7 @@ if( 23 == namespaceId && "rPr" == name)
     [ChildElementInfo(typeof(Level))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "lvlOverride")]
 public partial class LevelOverride : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11931;
@@ -43371,22 +37248,11 @@ public partial class LevelOverride : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "startOverride" == name)
-    return new StartOverrideNumberingValue();
     
-if( 23 == namespaceId && "lvl" == name)
-    return new Level();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "startOverride","lvl" };
     private static readonly byte[] eleNamespaceIds = { 23,23 };
     
@@ -43407,6 +37273,7 @@ if( 23 == namespaceId && "lvl" == name)
         get => GetElement<StartOverrideNumberingValue>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Numbering Level Override Definition.</para>
     /// <para> Represents the following element tag in the schema: w:lvl </para>
@@ -43419,6 +37286,7 @@ if( 23 == namespaceId && "lvl" == name)
         get => GetElement<Level>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -43442,6 +37310,7 @@ if( 23 == namespaceId && "lvl" == name)
     [ChildElementInfo(typeof(Drawing))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "numPicBullet")]
 public partial class NumberingPictureBullet : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11932;
@@ -43493,22 +37362,11 @@ public partial class NumberingPictureBullet : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "pict" == name)
-    return new PictureBulletBase();
     
-if( 23 == namespaceId && "drawing" == name)
-    return new Drawing();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pict","drawing" };
     private static readonly byte[] eleNamespaceIds = { 23,23 };
     
@@ -43529,6 +37387,7 @@ if( 23 == namespaceId && "drawing" == name)
         get => GetElement<PictureBulletBase>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Drawing.</para>
     /// <para> Represents the following element tag in the schema: w:drawing </para>
@@ -43541,6 +37400,7 @@ if( 23 == namespaceId && "drawing" == name)
         get => GetElement<Drawing>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -43574,6 +37434,7 @@ if( 23 == namespaceId && "drawing" == name)
     [ChildElementInfo(typeof(Level))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "abstractNum")]
 public partial class AbstractNum : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11933;
@@ -43625,37 +37486,11 @@ public partial class AbstractNum : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "nsid" == name)
-    return new Nsid();
     
-if( 23 == namespaceId && "multiLevelType" == name)
-    return new MultiLevelType();
-    
-if( 23 == namespaceId && "tmpl" == name)
-    return new TemplateCode();
-    
-if( 23 == namespaceId && "name" == name)
-    return new AbstractNumDefinitionName();
-    
-if( 23 == namespaceId && "styleLink" == name)
-    return new StyleLink();
-    
-if( 23 == namespaceId && "numStyleLink" == name)
-    return new NumberingStyleLink();
-    
-if( 23 == namespaceId && "lvl" == name)
-    return new Level();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "nsid","multiLevelType","tmpl","name","styleLink","numStyleLink","lvl" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23 };
     
@@ -43676,6 +37511,7 @@ if( 23 == namespaceId && "lvl" == name)
         get => GetElement<Nsid>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Abstract Numbering Definition Type.</para>
     /// <para> Represents the following element tag in the schema: w:multiLevelType </para>
@@ -43688,6 +37524,7 @@ if( 23 == namespaceId && "lvl" == name)
         get => GetElement<MultiLevelType>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Numbering Template Code.</para>
     /// <para> Represents the following element tag in the schema: w:tmpl </para>
@@ -43700,6 +37537,7 @@ if( 23 == namespaceId && "lvl" == name)
         get => GetElement<TemplateCode>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Abstract Numbering Definition Name.</para>
     /// <para> Represents the following element tag in the schema: w:name </para>
@@ -43712,6 +37550,7 @@ if( 23 == namespaceId && "lvl" == name)
         get => GetElement<AbstractNumDefinitionName>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Numbering Style Definition.</para>
     /// <para> Represents the following element tag in the schema: w:styleLink </para>
@@ -43724,6 +37563,7 @@ if( 23 == namespaceId && "lvl" == name)
         get => GetElement<StyleLink>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Numbering Style Reference.</para>
     /// <para> Represents the following element tag in the schema: w:numStyleLink </para>
@@ -43736,6 +37576,7 @@ if( 23 == namespaceId && "lvl" == name)
         get => GetElement<NumberingStyleLink>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -43759,6 +37600,7 @@ if( 23 == namespaceId && "lvl" == name)
     [ChildElementInfo(typeof(LevelOverride))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "num")]
 public partial class NumberingInstance : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11934;
@@ -43810,22 +37652,11 @@ public partial class NumberingInstance : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "abstractNumId" == name)
-    return new AbstractNumId();
     
-if( 23 == namespaceId && "lvlOverride" == name)
-    return new LevelOverride();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "abstractNumId","lvlOverride" };
     private static readonly byte[] eleNamespaceIds = { 23,23 };
     
@@ -43846,6 +37677,7 @@ if( 23 == namespaceId && "lvlOverride" == name)
         get => GetElement<AbstractNumId>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -43927,6 +37759,7 @@ if( 23 == namespaceId && "lvlOverride" == name)
     [ChildElementInfo(typeof(ParagraphPropertiesChange))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "pPr")]
 public partial class StyleParagraphProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11936;
@@ -43969,109 +37802,11 @@ public partial class StyleParagraphProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "keepNext" == name)
-    return new KeepNext();
     
-if( 23 == namespaceId && "keepLines" == name)
-    return new KeepLines();
-    
-if( 23 == namespaceId && "pageBreakBefore" == name)
-    return new PageBreakBefore();
-    
-if( 23 == namespaceId && "framePr" == name)
-    return new FrameProperties();
-    
-if( 23 == namespaceId && "widowControl" == name)
-    return new WidowControl();
-    
-if( 23 == namespaceId && "numPr" == name)
-    return new NumberingProperties();
-    
-if( 23 == namespaceId && "suppressLineNumbers" == name)
-    return new SuppressLineNumbers();
-    
-if( 23 == namespaceId && "pBdr" == name)
-    return new ParagraphBorders();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "tabs" == name)
-    return new Tabs();
-    
-if( 23 == namespaceId && "suppressAutoHyphens" == name)
-    return new SuppressAutoHyphens();
-    
-if( 23 == namespaceId && "kinsoku" == name)
-    return new Kinsoku();
-    
-if( 23 == namespaceId && "wordWrap" == name)
-    return new WordWrap();
-    
-if( 23 == namespaceId && "overflowPunct" == name)
-    return new OverflowPunctuation();
-    
-if( 23 == namespaceId && "topLinePunct" == name)
-    return new TopLinePunctuation();
-    
-if( 23 == namespaceId && "autoSpaceDE" == name)
-    return new AutoSpaceDE();
-    
-if( 23 == namespaceId && "autoSpaceDN" == name)
-    return new AutoSpaceDN();
-    
-if( 23 == namespaceId && "bidi" == name)
-    return new BiDi();
-    
-if( 23 == namespaceId && "adjustRightInd" == name)
-    return new AdjustRightIndent();
-    
-if( 23 == namespaceId && "snapToGrid" == name)
-    return new SnapToGrid();
-    
-if( 23 == namespaceId && "spacing" == name)
-    return new SpacingBetweenLines();
-    
-if( 23 == namespaceId && "ind" == name)
-    return new Indentation();
-    
-if( 23 == namespaceId && "contextualSpacing" == name)
-    return new ContextualSpacing();
-    
-if( 23 == namespaceId && "mirrorIndents" == name)
-    return new MirrorIndents();
-    
-if( 23 == namespaceId && "suppressOverlap" == name)
-    return new SuppressOverlap();
-    
-if( 23 == namespaceId && "jc" == name)
-    return new Justification();
-    
-if( 23 == namespaceId && "textDirection" == name)
-    return new TextDirection();
-    
-if( 23 == namespaceId && "textAlignment" == name)
-    return new TextAlignment();
-    
-if( 23 == namespaceId && "textboxTightWrap" == name)
-    return new TextBoxTightWrap();
-    
-if( 23 == namespaceId && "outlineLvl" == name)
-    return new OutlineLevel();
-    
-if( 23 == namespaceId && "pPrChange" == name)
-    return new ParagraphPropertiesChange();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "keepNext","keepLines","pageBreakBefore","framePr","widowControl","numPr","suppressLineNumbers","pBdr","shd","tabs","suppressAutoHyphens","kinsoku","wordWrap","overflowPunct","topLinePunct","autoSpaceDE","autoSpaceDN","bidi","adjustRightInd","snapToGrid","spacing","ind","contextualSpacing","mirrorIndents","suppressOverlap","jc","textDirection","textAlignment","textboxTightWrap","outlineLvl","pPrChange" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -44092,6 +37827,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<KeepNext>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> KeepLines.</para>
     /// <para> Represents the following element tag in the schema: w:keepLines </para>
@@ -44104,6 +37840,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<KeepLines>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> PageBreakBefore.</para>
     /// <para> Represents the following element tag in the schema: w:pageBreakBefore </para>
@@ -44116,6 +37853,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<PageBreakBefore>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> FrameProperties.</para>
     /// <para> Represents the following element tag in the schema: w:framePr </para>
@@ -44128,6 +37866,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<FrameProperties>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> WidowControl.</para>
     /// <para> Represents the following element tag in the schema: w:widowControl </para>
@@ -44140,6 +37879,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<WidowControl>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> NumberingProperties.</para>
     /// <para> Represents the following element tag in the schema: w:numPr </para>
@@ -44152,6 +37892,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<NumberingProperties>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> SuppressLineNumbers.</para>
     /// <para> Represents the following element tag in the schema: w:suppressLineNumbers </para>
@@ -44164,6 +37905,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<SuppressLineNumbers>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> ParagraphBorders.</para>
     /// <para> Represents the following element tag in the schema: w:pBdr </para>
@@ -44176,6 +37918,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<ParagraphBorders>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> Shading.</para>
     /// <para> Represents the following element tag in the schema: w:shd </para>
@@ -44188,6 +37931,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<Shading>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Tabs.</para>
     /// <para> Represents the following element tag in the schema: w:tabs </para>
@@ -44200,6 +37944,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<Tabs>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> SuppressAutoHyphens.</para>
     /// <para> Represents the following element tag in the schema: w:suppressAutoHyphens </para>
@@ -44212,6 +37957,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<SuppressAutoHyphens>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Kinsoku.</para>
     /// <para> Represents the following element tag in the schema: w:kinsoku </para>
@@ -44224,6 +37970,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<Kinsoku>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> WordWrap.</para>
     /// <para> Represents the following element tag in the schema: w:wordWrap </para>
@@ -44236,6 +37983,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<WordWrap>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> OverflowPunctuation.</para>
     /// <para> Represents the following element tag in the schema: w:overflowPunct </para>
@@ -44248,6 +37996,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<OverflowPunctuation>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> TopLinePunctuation.</para>
     /// <para> Represents the following element tag in the schema: w:topLinePunct </para>
@@ -44260,6 +38009,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<TopLinePunctuation>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> AutoSpaceDE.</para>
     /// <para> Represents the following element tag in the schema: w:autoSpaceDE </para>
@@ -44272,6 +38022,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<AutoSpaceDE>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> AutoSpaceDN.</para>
     /// <para> Represents the following element tag in the schema: w:autoSpaceDN </para>
@@ -44284,6 +38035,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<AutoSpaceDN>(16);
         set => SetElement(16, value);
     }
+    
     /// <summary>
     /// <para> BiDi.</para>
     /// <para> Represents the following element tag in the schema: w:bidi </para>
@@ -44296,6 +38048,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<BiDi>(17);
         set => SetElement(17, value);
     }
+    
     /// <summary>
     /// <para> AdjustRightIndent.</para>
     /// <para> Represents the following element tag in the schema: w:adjustRightInd </para>
@@ -44308,6 +38061,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<AdjustRightIndent>(18);
         set => SetElement(18, value);
     }
+    
     /// <summary>
     /// <para> SnapToGrid.</para>
     /// <para> Represents the following element tag in the schema: w:snapToGrid </para>
@@ -44320,6 +38074,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<SnapToGrid>(19);
         set => SetElement(19, value);
     }
+    
     /// <summary>
     /// <para> SpacingBetweenLines.</para>
     /// <para> Represents the following element tag in the schema: w:spacing </para>
@@ -44332,6 +38087,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<SpacingBetweenLines>(20);
         set => SetElement(20, value);
     }
+    
     /// <summary>
     /// <para> Indentation.</para>
     /// <para> Represents the following element tag in the schema: w:ind </para>
@@ -44344,6 +38100,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<Indentation>(21);
         set => SetElement(21, value);
     }
+    
     /// <summary>
     /// <para> ContextualSpacing.</para>
     /// <para> Represents the following element tag in the schema: w:contextualSpacing </para>
@@ -44356,6 +38113,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<ContextualSpacing>(22);
         set => SetElement(22, value);
     }
+    
     /// <summary>
     /// <para> MirrorIndents.</para>
     /// <para> Represents the following element tag in the schema: w:mirrorIndents </para>
@@ -44368,6 +38126,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<MirrorIndents>(23);
         set => SetElement(23, value);
     }
+    
     /// <summary>
     /// <para> SuppressOverlap.</para>
     /// <para> Represents the following element tag in the schema: w:suppressOverlap </para>
@@ -44380,6 +38139,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<SuppressOverlap>(24);
         set => SetElement(24, value);
     }
+    
     /// <summary>
     /// <para> Justification.</para>
     /// <para> Represents the following element tag in the schema: w:jc </para>
@@ -44392,6 +38152,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<Justification>(25);
         set => SetElement(25, value);
     }
+    
     /// <summary>
     /// <para> TextDirection.</para>
     /// <para> Represents the following element tag in the schema: w:textDirection </para>
@@ -44404,6 +38165,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<TextDirection>(26);
         set => SetElement(26, value);
     }
+    
     /// <summary>
     /// <para> TextAlignment.</para>
     /// <para> Represents the following element tag in the schema: w:textAlignment </para>
@@ -44416,6 +38178,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<TextAlignment>(27);
         set => SetElement(27, value);
     }
+    
     /// <summary>
     /// <para> TextBoxTightWrap.</para>
     /// <para> Represents the following element tag in the schema: w:textboxTightWrap </para>
@@ -44428,6 +38191,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<TextBoxTightWrap>(28);
         set => SetElement(28, value);
     }
+    
     /// <summary>
     /// <para> OutlineLevel.</para>
     /// <para> Represents the following element tag in the schema: w:outlineLvl </para>
@@ -44440,6 +38204,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<OutlineLevel>(29);
         set => SetElement(29, value);
     }
+    
     /// <summary>
     /// <para> ParagraphPropertiesChange.</para>
     /// <para> Represents the following element tag in the schema: w:pPrChange </para>
@@ -44452,6 +38217,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<ParagraphPropertiesChange>(30);
         set => SetElement(30, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -44483,6 +38249,7 @@ if( 23 == namespaceId && "pPrChange" == name)
     [ChildElementInfo(typeof(TableCellMarginDefault))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblPr")]
 public partial class TableStyleConditionalFormattingTableProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11937;
@@ -44525,34 +38292,11 @@ public partial class TableStyleConditionalFormattingTableProperties : OpenXmlCom
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "jc" == name)
-    return new TableJustification();
     
-if( 23 == namespaceId && "tblCellSpacing" == name)
-    return new TableCellSpacing();
-    
-if( 23 == namespaceId && "tblInd" == name)
-    return new TableIndentation();
-    
-if( 23 == namespaceId && "tblBorders" == name)
-    return new TableBorders();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "tblCellMar" == name)
-    return new TableCellMarginDefault();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "jc","tblCellSpacing","tblInd","tblBorders","shd","tblCellMar" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23 };
     
@@ -44573,6 +38317,7 @@ if( 23 == namespaceId && "tblCellMar" == name)
         get => GetElement<TableJustification>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> TableCellSpacing.</para>
     /// <para> Represents the following element tag in the schema: w:tblCellSpacing </para>
@@ -44585,6 +38330,7 @@ if( 23 == namespaceId && "tblCellMar" == name)
         get => GetElement<TableCellSpacing>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> TableIndentation.</para>
     /// <para> Represents the following element tag in the schema: w:tblInd </para>
@@ -44597,6 +38343,7 @@ if( 23 == namespaceId && "tblCellMar" == name)
         get => GetElement<TableIndentation>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> TableBorders.</para>
     /// <para> Represents the following element tag in the schema: w:tblBorders </para>
@@ -44609,6 +38356,7 @@ if( 23 == namespaceId && "tblCellMar" == name)
         get => GetElement<TableBorders>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Shading.</para>
     /// <para> Represents the following element tag in the schema: w:shd </para>
@@ -44621,6 +38369,7 @@ if( 23 == namespaceId && "tblCellMar" == name)
         get => GetElement<Shading>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> TableCellMarginDefault.</para>
     /// <para> Represents the following element tag in the schema: w:tblCellMar </para>
@@ -44633,6 +38382,7 @@ if( 23 == namespaceId && "tblCellMar" == name)
         get => GetElement<TableCellMarginDefault>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -44662,6 +38412,7 @@ if( 23 == namespaceId && "tblCellMar" == name)
     [ChildElementInfo(typeof(TableJustification))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "trPr")]
 public partial class TableStyleConditionalFormattingTableRowProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11938;
@@ -44704,31 +38455,11 @@ public partial class TableStyleConditionalFormattingTableRowProperties : OpenXml
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "hidden" == name)
-    return new Hidden();
     
-if( 23 == namespaceId && "cantSplit" == name)
-    return new CantSplit();
-    
-if( 23 == namespaceId && "tblHeader" == name)
-    return new TableHeader();
-    
-if( 23 == namespaceId && "tblCellSpacing" == name)
-    return new TableCellSpacing();
-    
-if( 23 == namespaceId && "jc" == name)
-    return new TableJustification();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyleConditionalFormattingTableRowProperties>(deep);
@@ -44757,6 +38488,7 @@ if( 23 == namespaceId && "jc" == name)
     [ChildElementInfo(typeof(TableCellVerticalAlignment))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tcPr")]
 public partial class TableStyleConditionalFormattingTableCellProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11939;
@@ -44799,31 +38531,11 @@ public partial class TableStyleConditionalFormattingTableCellProperties : OpenXm
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "tcBorders" == name)
-    return new TableCellBorders();
     
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "noWrap" == name)
-    return new NoWrap();
-    
-if( 23 == namespaceId && "tcMar" == name)
-    return new TableCellMargin();
-    
-if( 23 == namespaceId && "vAlign" == name)
-    return new TableCellVerticalAlignment();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "tcBorders","shd","noWrap","tcMar","vAlign" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23 };
     
@@ -44844,6 +38556,7 @@ if( 23 == namespaceId && "vAlign" == name)
         get => GetElement<TableCellBorders>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Shading.</para>
     /// <para> Represents the following element tag in the schema: w:shd </para>
@@ -44856,6 +38569,7 @@ if( 23 == namespaceId && "vAlign" == name)
         get => GetElement<Shading>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> NoWrap.</para>
     /// <para> Represents the following element tag in the schema: w:noWrap </para>
@@ -44868,6 +38582,7 @@ if( 23 == namespaceId && "vAlign" == name)
         get => GetElement<NoWrap>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> TableCellMargin.</para>
     /// <para> Represents the following element tag in the schema: w:tcMar </para>
@@ -44880,6 +38595,7 @@ if( 23 == namespaceId && "vAlign" == name)
         get => GetElement<TableCellMargin>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> TableCellVerticalAlignment.</para>
     /// <para> Represents the following element tag in the schema: w:vAlign </para>
@@ -44892,6 +38608,7 @@ if( 23 == namespaceId && "vAlign" == name)
         get => GetElement<TableCellVerticalAlignment>(4);
         set => SetElement(4, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -44906,6 +38623,7 @@ if( 23 == namespaceId && "vAlign" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "name")]
 public partial class StyleName : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11940;
@@ -44949,6 +38667,7 @@ public partial class StyleName : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "uiPriority")]
 public partial class UIPriority : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11947;
@@ -45067,6 +38786,7 @@ public partial class UIPriority : OpenXmlLeafElement
     [ChildElementInfo(typeof(RunPropertiesChange))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "rPr")]
 public partial class StyleRunProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11955;
@@ -45109,121 +38829,11 @@ public partial class StyleRunProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rFonts" == name)
-    return new RunFonts();
     
-if( 23 == namespaceId && "b" == name)
-    return new Bold();
-    
-if( 23 == namespaceId && "bCs" == name)
-    return new BoldComplexScript();
-    
-if( 23 == namespaceId && "i" == name)
-    return new Italic();
-    
-if( 23 == namespaceId && "iCs" == name)
-    return new ItalicComplexScript();
-    
-if( 23 == namespaceId && "caps" == name)
-    return new Caps();
-    
-if( 23 == namespaceId && "smallCaps" == name)
-    return new SmallCaps();
-    
-if( 23 == namespaceId && "strike" == name)
-    return new Strike();
-    
-if( 23 == namespaceId && "dstrike" == name)
-    return new DoubleStrike();
-    
-if( 23 == namespaceId && "outline" == name)
-    return new Outline();
-    
-if( 23 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 23 == namespaceId && "emboss" == name)
-    return new Emboss();
-    
-if( 23 == namespaceId && "imprint" == name)
-    return new Imprint();
-    
-if( 23 == namespaceId && "noProof" == name)
-    return new NoProof();
-    
-if( 23 == namespaceId && "snapToGrid" == name)
-    return new SnapToGrid();
-    
-if( 23 == namespaceId && "vanish" == name)
-    return new Vanish();
-    
-if( 23 == namespaceId && "webHidden" == name)
-    return new WebHidden();
-    
-if( 23 == namespaceId && "color" == name)
-    return new Color();
-    
-if( 23 == namespaceId && "spacing" == name)
-    return new Spacing();
-    
-if( 23 == namespaceId && "w" == name)
-    return new CharacterScale();
-    
-if( 23 == namespaceId && "kern" == name)
-    return new Kern();
-    
-if( 23 == namespaceId && "position" == name)
-    return new Position();
-    
-if( 23 == namespaceId && "sz" == name)
-    return new FontSize();
-    
-if( 23 == namespaceId && "szCs" == name)
-    return new FontSizeComplexScript();
-    
-if( 23 == namespaceId && "u" == name)
-    return new Underline();
-    
-if( 23 == namespaceId && "effect" == name)
-    return new TextEffect();
-    
-if( 23 == namespaceId && "bdr" == name)
-    return new Border();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "fitText" == name)
-    return new FitText();
-    
-if( 23 == namespaceId && "vertAlign" == name)
-    return new VerticalTextAlignment();
-    
-if( 23 == namespaceId && "em" == name)
-    return new Emphasis();
-    
-if( 23 == namespaceId && "lang" == name)
-    return new Languages();
-    
-if( 23 == namespaceId && "eastAsianLayout" == name)
-    return new EastAsianLayout();
-    
-if( 23 == namespaceId && "specVanish" == name)
-    return new SpecVanish();
-    
-if( 23 == namespaceId && "rPrChange" == name)
-    return new RunPropertiesChange();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "rFonts","b","bCs","i","iCs","caps","smallCaps","strike","dstrike","outline","shadow","emboss","imprint","noProof","snapToGrid","vanish","webHidden","color","spacing","w","kern","position","sz","szCs","u","effect","bdr","shd","fitText","vertAlign","em","lang","eastAsianLayout","specVanish","rPrChange" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -45244,6 +38854,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<RunFonts>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Bold.</para>
     /// <para> Represents the following element tag in the schema: w:b </para>
@@ -45256,6 +38867,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Bold>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> BoldComplexScript.</para>
     /// <para> Represents the following element tag in the schema: w:bCs </para>
@@ -45268,6 +38880,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<BoldComplexScript>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Italic.</para>
     /// <para> Represents the following element tag in the schema: w:i </para>
@@ -45280,6 +38893,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Italic>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> ItalicComplexScript.</para>
     /// <para> Represents the following element tag in the schema: w:iCs </para>
@@ -45292,6 +38906,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<ItalicComplexScript>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Caps.</para>
     /// <para> Represents the following element tag in the schema: w:caps </para>
@@ -45304,6 +38919,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Caps>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> SmallCaps.</para>
     /// <para> Represents the following element tag in the schema: w:smallCaps </para>
@@ -45316,6 +38932,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<SmallCaps>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Strike.</para>
     /// <para> Represents the following element tag in the schema: w:strike </para>
@@ -45328,6 +38945,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Strike>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> DoubleStrike.</para>
     /// <para> Represents the following element tag in the schema: w:dstrike </para>
@@ -45340,6 +38958,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<DoubleStrike>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Outline.</para>
     /// <para> Represents the following element tag in the schema: w:outline </para>
@@ -45352,6 +38971,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Outline>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> Shadow.</para>
     /// <para> Represents the following element tag in the schema: w:shadow </para>
@@ -45364,6 +38984,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Shadow>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Emboss.</para>
     /// <para> Represents the following element tag in the schema: w:emboss </para>
@@ -45376,6 +38997,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Emboss>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> Imprint.</para>
     /// <para> Represents the following element tag in the schema: w:imprint </para>
@@ -45388,6 +39010,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Imprint>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> NoProof.</para>
     /// <para> Represents the following element tag in the schema: w:noProof </para>
@@ -45400,6 +39023,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<NoProof>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> SnapToGrid.</para>
     /// <para> Represents the following element tag in the schema: w:snapToGrid </para>
@@ -45412,6 +39036,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<SnapToGrid>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> Vanish.</para>
     /// <para> Represents the following element tag in the schema: w:vanish </para>
@@ -45424,6 +39049,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Vanish>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> WebHidden.</para>
     /// <para> Represents the following element tag in the schema: w:webHidden </para>
@@ -45436,6 +39062,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<WebHidden>(16);
         set => SetElement(16, value);
     }
+    
     /// <summary>
     /// <para> Color.</para>
     /// <para> Represents the following element tag in the schema: w:color </para>
@@ -45448,6 +39075,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Color>(17);
         set => SetElement(17, value);
     }
+    
     /// <summary>
     /// <para> Spacing.</para>
     /// <para> Represents the following element tag in the schema: w:spacing </para>
@@ -45460,6 +39088,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Spacing>(18);
         set => SetElement(18, value);
     }
+    
     /// <summary>
     /// <para> CharacterScale.</para>
     /// <para> Represents the following element tag in the schema: w:w </para>
@@ -45472,6 +39101,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<CharacterScale>(19);
         set => SetElement(19, value);
     }
+    
     /// <summary>
     /// <para> Kern.</para>
     /// <para> Represents the following element tag in the schema: w:kern </para>
@@ -45484,6 +39114,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Kern>(20);
         set => SetElement(20, value);
     }
+    
     /// <summary>
     /// <para> Position.</para>
     /// <para> Represents the following element tag in the schema: w:position </para>
@@ -45496,6 +39127,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Position>(21);
         set => SetElement(21, value);
     }
+    
     /// <summary>
     /// <para> FontSize.</para>
     /// <para> Represents the following element tag in the schema: w:sz </para>
@@ -45508,6 +39140,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<FontSize>(22);
         set => SetElement(22, value);
     }
+    
     /// <summary>
     /// <para> FontSizeComplexScript.</para>
     /// <para> Represents the following element tag in the schema: w:szCs </para>
@@ -45520,6 +39153,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<FontSizeComplexScript>(23);
         set => SetElement(23, value);
     }
+    
     /// <summary>
     /// <para> Underline.</para>
     /// <para> Represents the following element tag in the schema: w:u </para>
@@ -45532,6 +39166,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Underline>(24);
         set => SetElement(24, value);
     }
+    
     /// <summary>
     /// <para> TextEffect.</para>
     /// <para> Represents the following element tag in the schema: w:effect </para>
@@ -45544,6 +39179,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<TextEffect>(25);
         set => SetElement(25, value);
     }
+    
     /// <summary>
     /// <para> Border.</para>
     /// <para> Represents the following element tag in the schema: w:bdr </para>
@@ -45556,6 +39192,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Border>(26);
         set => SetElement(26, value);
     }
+    
     /// <summary>
     /// <para> Shading.</para>
     /// <para> Represents the following element tag in the schema: w:shd </para>
@@ -45568,6 +39205,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Shading>(27);
         set => SetElement(27, value);
     }
+    
     /// <summary>
     /// <para> FitText.</para>
     /// <para> Represents the following element tag in the schema: w:fitText </para>
@@ -45580,6 +39218,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<FitText>(28);
         set => SetElement(28, value);
     }
+    
     /// <summary>
     /// <para> VerticalTextAlignment.</para>
     /// <para> Represents the following element tag in the schema: w:vertAlign </para>
@@ -45592,6 +39231,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<VerticalTextAlignment>(29);
         set => SetElement(29, value);
     }
+    
     /// <summary>
     /// <para> Emphasis.</para>
     /// <para> Represents the following element tag in the schema: w:em </para>
@@ -45604,6 +39244,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Emphasis>(30);
         set => SetElement(30, value);
     }
+    
     /// <summary>
     /// <para> Languages.</para>
     /// <para> Represents the following element tag in the schema: w:lang </para>
@@ -45616,6 +39257,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<Languages>(31);
         set => SetElement(31, value);
     }
+    
     /// <summary>
     /// <para> EastAsianLayout.</para>
     /// <para> Represents the following element tag in the schema: w:eastAsianLayout </para>
@@ -45628,6 +39270,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<EastAsianLayout>(32);
         set => SetElement(32, value);
     }
+    
     /// <summary>
     /// <para> SpecVanish.</para>
     /// <para> Represents the following element tag in the schema: w:specVanish </para>
@@ -45640,6 +39283,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<SpecVanish>(33);
         set => SetElement(33, value);
     }
+    
     /// <summary>
     /// <para> RunPropertiesChange.</para>
     /// <para> Represents the following element tag in the schema: w:rPrChange </para>
@@ -45652,6 +39296,7 @@ if( 23 == namespaceId && "rPrChange" == name)
         get => GetElement<RunPropertiesChange>(34);
         set => SetElement(34, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -45687,6 +39332,7 @@ if( 23 == namespaceId && "rPrChange" == name)
     [ChildElementInfo(typeof(TableCellMarginDefault))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblPr")]
 public partial class StyleTableProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11956;
@@ -45729,40 +39375,11 @@ public partial class StyleTableProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "tblStyleRowBandSize" == name)
-    return new TableStyleRowBandSize();
     
-if( 23 == namespaceId && "tblStyleColBandSize" == name)
-    return new TableStyleColumnBandSize();
-    
-if( 23 == namespaceId && "jc" == name)
-    return new TableJustification();
-    
-if( 23 == namespaceId && "tblCellSpacing" == name)
-    return new TableCellSpacing();
-    
-if( 23 == namespaceId && "tblInd" == name)
-    return new TableIndentation();
-    
-if( 23 == namespaceId && "tblBorders" == name)
-    return new TableBorders();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "tblCellMar" == name)
-    return new TableCellMarginDefault();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "tblStyleRowBandSize","tblStyleColBandSize","jc","tblCellSpacing","tblInd","tblBorders","shd","tblCellMar" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23 };
     
@@ -45783,6 +39400,7 @@ if( 23 == namespaceId && "tblCellMar" == name)
         get => GetElement<TableStyleRowBandSize>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> TableStyleColumnBandSize.</para>
     /// <para> Represents the following element tag in the schema: w:tblStyleColBandSize </para>
@@ -45795,6 +39413,7 @@ if( 23 == namespaceId && "tblCellMar" == name)
         get => GetElement<TableStyleColumnBandSize>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> TableJustification.</para>
     /// <para> Represents the following element tag in the schema: w:jc </para>
@@ -45807,6 +39426,7 @@ if( 23 == namespaceId && "tblCellMar" == name)
         get => GetElement<TableJustification>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> TableCellSpacing.</para>
     /// <para> Represents the following element tag in the schema: w:tblCellSpacing </para>
@@ -45819,6 +39439,7 @@ if( 23 == namespaceId && "tblCellMar" == name)
         get => GetElement<TableCellSpacing>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> TableIndentation.</para>
     /// <para> Represents the following element tag in the schema: w:tblInd </para>
@@ -45831,6 +39452,7 @@ if( 23 == namespaceId && "tblCellMar" == name)
         get => GetElement<TableIndentation>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> TableBorders.</para>
     /// <para> Represents the following element tag in the schema: w:tblBorders </para>
@@ -45843,6 +39465,7 @@ if( 23 == namespaceId && "tblCellMar" == name)
         get => GetElement<TableBorders>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Shading.</para>
     /// <para> Represents the following element tag in the schema: w:shd </para>
@@ -45855,6 +39478,7 @@ if( 23 == namespaceId && "tblCellMar" == name)
         get => GetElement<Shading>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> TableCellMarginDefault.</para>
     /// <para> Represents the following element tag in the schema: w:tblCellMar </para>
@@ -45867,6 +39491,7 @@ if( 23 == namespaceId && "tblCellMar" == name)
         get => GetElement<TableCellMarginDefault>(7);
         set => SetElement(7, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -45894,6 +39519,7 @@ if( 23 == namespaceId && "tblCellMar" == name)
     [ChildElementInfo(typeof(TableCellVerticalAlignment))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tcPr")]
 public partial class StyleTableCellProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11957;
@@ -45936,28 +39562,11 @@ public partial class StyleTableCellProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "shd" == name)
-    return new Shading();
     
-if( 23 == namespaceId && "noWrap" == name)
-    return new NoWrap();
-    
-if( 23 == namespaceId && "tcMar" == name)
-    return new TableCellMargin();
-    
-if( 23 == namespaceId && "vAlign" == name)
-    return new TableCellVerticalAlignment();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "shd","noWrap","tcMar","vAlign" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23 };
     
@@ -45978,6 +39587,7 @@ if( 23 == namespaceId && "vAlign" == name)
         get => GetElement<Shading>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> NoWrap.</para>
     /// <para> Represents the following element tag in the schema: w:noWrap </para>
@@ -45990,6 +39600,7 @@ if( 23 == namespaceId && "vAlign" == name)
         get => GetElement<NoWrap>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> TableCellMargin.</para>
     /// <para> Represents the following element tag in the schema: w:tcMar </para>
@@ -46002,6 +39613,7 @@ if( 23 == namespaceId && "vAlign" == name)
         get => GetElement<TableCellMargin>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> TableCellVerticalAlignment.</para>
     /// <para> Represents the following element tag in the schema: w:vAlign </para>
@@ -46014,6 +39626,7 @@ if( 23 == namespaceId && "vAlign" == name)
         get => GetElement<TableCellVerticalAlignment>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -46043,6 +39656,7 @@ if( 23 == namespaceId && "vAlign" == name)
     [ChildElementInfo(typeof(TableStyleConditionalFormattingTableCellProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblStylePr")]
 public partial class TableStyleProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11958;
@@ -46094,31 +39708,11 @@ public partial class TableStyleProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "pPr" == name)
-    return new StyleParagraphProperties();
     
-if( 23 == namespaceId && "rPr" == name)
-    return new RunPropertiesBaseStyle();
-    
-if( 23 == namespaceId && "tblPr" == name)
-    return new TableStyleConditionalFormattingTableProperties();
-    
-if( 23 == namespaceId && "trPr" == name)
-    return new TableStyleConditionalFormattingTableRowProperties();
-    
-if( 23 == namespaceId && "tcPr" == name)
-    return new TableStyleConditionalFormattingTableCellProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pPr","rPr","tblPr","trPr","tcPr" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23 };
     
@@ -46139,6 +39733,7 @@ if( 23 == namespaceId && "tcPr" == name)
         get => GetElement<StyleParagraphProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Table Style Conditional Formatting Run Properties.</para>
     /// <para> Represents the following element tag in the schema: w:rPr </para>
@@ -46151,6 +39746,7 @@ if( 23 == namespaceId && "tcPr" == name)
         get => GetElement<RunPropertiesBaseStyle>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Table Style Conditional Formatting Table Properties.</para>
     /// <para> Represents the following element tag in the schema: w:tblPr </para>
@@ -46163,6 +39759,7 @@ if( 23 == namespaceId && "tcPr" == name)
         get => GetElement<TableStyleConditionalFormattingTableProperties>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Table Style Conditional Formatting Table Row Properties.</para>
     /// <para> Represents the following element tag in the schema: w:trPr </para>
@@ -46175,6 +39772,7 @@ if( 23 == namespaceId && "tcPr" == name)
         get => GetElement<TableStyleConditionalFormattingTableRowProperties>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Table Style Conditional Formatting Table Cell Properties.</para>
     /// <para> Represents the following element tag in the schema: w:tcPr </para>
@@ -46187,6 +39785,7 @@ if( 23 == namespaceId && "tcPr" == name)
         get => GetElement<TableStyleConditionalFormattingTableCellProperties>(4);
         set => SetElement(4, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -46201,6 +39800,7 @@ if( 23 == namespaceId && "tcPr" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "lsdException")]
 public partial class LatentStyleExceptionInfo : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11959;
@@ -46298,6 +39898,7 @@ public partial class LatentStyleExceptionInfo : OpenXmlLeafElement
     [ChildElementInfo(typeof(ParagraphPropertiesDefault))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "docDefaults")]
 public partial class DocDefaults : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11960;
@@ -46340,22 +39941,11 @@ public partial class DocDefaults : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rPrDefault" == name)
-    return new RunPropertiesDefault();
     
-if( 23 == namespaceId && "pPrDefault" == name)
-    return new ParagraphPropertiesDefault();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "rPrDefault","pPrDefault" };
     private static readonly byte[] eleNamespaceIds = { 23,23 };
     
@@ -46376,6 +39966,7 @@ if( 23 == namespaceId && "pPrDefault" == name)
         get => GetElement<RunPropertiesDefault>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Default Paragraph Properties.</para>
     /// <para> Represents the following element tag in the schema: w:pPrDefault </para>
@@ -46388,6 +39979,7 @@ if( 23 == namespaceId && "pPrDefault" == name)
         get => GetElement<ParagraphPropertiesDefault>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -46409,6 +40001,7 @@ if( 23 == namespaceId && "pPrDefault" == name)
     [ChildElementInfo(typeof(LatentStyleExceptionInfo))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "latentStyles")]
 public partial class LatentStyles : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11961;
@@ -46505,19 +40098,11 @@ public partial class LatentStyles : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "lsdException" == name)
-    return new LatentStyleExceptionInfo();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LatentStyles>(deep);
@@ -46580,6 +40165,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(TableStyleProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "style")]
 public partial class Style : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11962;
@@ -46658,82 +40244,11 @@ public partial class Style : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "name" == name)
-    return new StyleName();
     
-if( 23 == namespaceId && "aliases" == name)
-    return new Aliases();
-    
-if( 23 == namespaceId && "basedOn" == name)
-    return new BasedOn();
-    
-if( 23 == namespaceId && "next" == name)
-    return new NextParagraphStyle();
-    
-if( 23 == namespaceId && "link" == name)
-    return new LinkedStyle();
-    
-if( 23 == namespaceId && "autoRedefine" == name)
-    return new AutoRedefine();
-    
-if( 23 == namespaceId && "hidden" == name)
-    return new StyleHidden();
-    
-if( 23 == namespaceId && "uiPriority" == name)
-    return new UIPriority();
-    
-if( 23 == namespaceId && "semiHidden" == name)
-    return new SemiHidden();
-    
-if( 23 == namespaceId && "unhideWhenUsed" == name)
-    return new UnhideWhenUsed();
-    
-if( 23 == namespaceId && "qFormat" == name)
-    return new PrimaryStyle();
-    
-if( 23 == namespaceId && "locked" == name)
-    return new Locked();
-    
-if( 23 == namespaceId && "personal" == name)
-    return new Personal();
-    
-if( 23 == namespaceId && "personalCompose" == name)
-    return new PersonalCompose();
-    
-if( 23 == namespaceId && "personalReply" == name)
-    return new PersonalReply();
-    
-if( 23 == namespaceId && "rsid" == name)
-    return new Rsid();
-    
-if( 23 == namespaceId && "pPr" == name)
-    return new StyleParagraphProperties();
-    
-if( 23 == namespaceId && "rPr" == name)
-    return new StyleRunProperties();
-    
-if( 23 == namespaceId && "tblPr" == name)
-    return new StyleTableProperties();
-    
-if( 23 == namespaceId && "trPr" == name)
-    return new TableStyleConditionalFormattingTableRowProperties();
-    
-if( 23 == namespaceId && "tcPr" == name)
-    return new StyleTableCellProperties();
-    
-if( 23 == namespaceId && "tblStylePr" == name)
-    return new TableStyleProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "name","aliases","basedOn","next","link","autoRedefine","hidden","uiPriority","semiHidden","unhideWhenUsed","qFormat","locked","personal","personalCompose","personalReply","rsid","pPr","rPr","tblPr","trPr","tcPr","tblStylePr" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -46754,6 +40269,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<StyleName>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Alternate Style Names.</para>
     /// <para> Represents the following element tag in the schema: w:aliases </para>
@@ -46766,6 +40282,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<Aliases>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Parent Style ID.</para>
     /// <para> Represents the following element tag in the schema: w:basedOn </para>
@@ -46778,6 +40295,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<BasedOn>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Style For Next Paragraph.</para>
     /// <para> Represents the following element tag in the schema: w:next </para>
@@ -46790,6 +40308,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<NextParagraphStyle>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Linked Style Reference.</para>
     /// <para> Represents the following element tag in the schema: w:link </para>
@@ -46802,6 +40321,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<LinkedStyle>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Automatically Merge User Formatting Into Style Definition.</para>
     /// <para> Represents the following element tag in the schema: w:autoRedefine </para>
@@ -46814,6 +40334,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<AutoRedefine>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Hide Style From User Interface.</para>
     /// <para> Represents the following element tag in the schema: w:hidden </para>
@@ -46826,6 +40347,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<StyleHidden>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Optional User Interface Sorting Order.</para>
     /// <para> Represents the following element tag in the schema: w:uiPriority </para>
@@ -46838,6 +40360,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<UIPriority>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> Hide Style From Main User Interface.</para>
     /// <para> Represents the following element tag in the schema: w:semiHidden </para>
@@ -46850,6 +40373,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<SemiHidden>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Remove Semi-Hidden Property When Style Is Used.</para>
     /// <para> Represents the following element tag in the schema: w:unhideWhenUsed </para>
@@ -46862,6 +40386,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<UnhideWhenUsed>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> Primary Style.</para>
     /// <para> Represents the following element tag in the schema: w:qFormat </para>
@@ -46874,6 +40399,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<PrimaryStyle>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Style Cannot Be Applied.</para>
     /// <para> Represents the following element tag in the schema: w:locked </para>
@@ -46886,6 +40412,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<Locked>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> E-Mail Message Text Style.</para>
     /// <para> Represents the following element tag in the schema: w:personal </para>
@@ -46898,6 +40425,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<Personal>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> E-Mail Message Composition Style.</para>
     /// <para> Represents the following element tag in the schema: w:personalCompose </para>
@@ -46910,6 +40438,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<PersonalCompose>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> E-Mail Message Reply Style.</para>
     /// <para> Represents the following element tag in the schema: w:personalReply </para>
@@ -46922,6 +40451,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<PersonalReply>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> Revision Identifier for Style Definition.</para>
     /// <para> Represents the following element tag in the schema: w:rsid </para>
@@ -46934,6 +40464,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<Rsid>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> Style Paragraph Properties.</para>
     /// <para> Represents the following element tag in the schema: w:pPr </para>
@@ -46946,6 +40477,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<StyleParagraphProperties>(16);
         set => SetElement(16, value);
     }
+    
     /// <summary>
     /// <para> Run Properties.</para>
     /// <para> Represents the following element tag in the schema: w:rPr </para>
@@ -46958,6 +40490,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<StyleRunProperties>(17);
         set => SetElement(17, value);
     }
+    
     /// <summary>
     /// <para> Style Table Properties.</para>
     /// <para> Represents the following element tag in the schema: w:tblPr </para>
@@ -46970,6 +40503,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<StyleTableProperties>(18);
         set => SetElement(18, value);
     }
+    
     /// <summary>
     /// <para> Style Table Row Properties.</para>
     /// <para> Represents the following element tag in the schema: w:trPr </para>
@@ -46982,6 +40516,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<TableStyleConditionalFormattingTableRowProperties>(19);
         set => SetElement(19, value);
     }
+    
     /// <summary>
     /// <para> Style Table Cell Properties.</para>
     /// <para> Represents the following element tag in the schema: w:tcPr </para>
@@ -46994,6 +40529,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
         get => GetElement<StyleTableCellProperties>(20);
         set => SetElement(20, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -47035,6 +40571,7 @@ if( 23 == namespaceId && "tblStylePr" == name)
     [ChildElementInfo(typeof(EmbedBoldItalicFont))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "font")]
 public partial class Font : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11963;
@@ -47086,49 +40623,11 @@ public partial class Font : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "altName" == name)
-    return new AltName();
     
-if( 23 == namespaceId && "panose1" == name)
-    return new Panose1Number();
-    
-if( 23 == namespaceId && "charset" == name)
-    return new FontCharSet();
-    
-if( 23 == namespaceId && "family" == name)
-    return new FontFamily();
-    
-if( 23 == namespaceId && "notTrueType" == name)
-    return new NotTrueType();
-    
-if( 23 == namespaceId && "pitch" == name)
-    return new Pitch();
-    
-if( 23 == namespaceId && "sig" == name)
-    return new FontSignature();
-    
-if( 23 == namespaceId && "embedRegular" == name)
-    return new EmbedRegularFont();
-    
-if( 23 == namespaceId && "embedBold" == name)
-    return new EmbedBoldFont();
-    
-if( 23 == namespaceId && "embedItalic" == name)
-    return new EmbedItalicFont();
-    
-if( 23 == namespaceId && "embedBoldItalic" == name)
-    return new EmbedBoldItalicFont();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "altName","panose1","charset","family","notTrueType","pitch","sig","embedRegular","embedBold","embedItalic","embedBoldItalic" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -47149,6 +40648,7 @@ if( 23 == namespaceId && "embedBoldItalic" == name)
         get => GetElement<AltName>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Panose1Number.</para>
     /// <para> Represents the following element tag in the schema: w:panose1 </para>
@@ -47161,6 +40661,7 @@ if( 23 == namespaceId && "embedBoldItalic" == name)
         get => GetElement<Panose1Number>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> FontCharSet.</para>
     /// <para> Represents the following element tag in the schema: w:charset </para>
@@ -47173,6 +40674,7 @@ if( 23 == namespaceId && "embedBoldItalic" == name)
         get => GetElement<FontCharSet>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> FontFamily.</para>
     /// <para> Represents the following element tag in the schema: w:family </para>
@@ -47185,6 +40687,7 @@ if( 23 == namespaceId && "embedBoldItalic" == name)
         get => GetElement<FontFamily>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> NotTrueType.</para>
     /// <para> Represents the following element tag in the schema: w:notTrueType </para>
@@ -47197,6 +40700,7 @@ if( 23 == namespaceId && "embedBoldItalic" == name)
         get => GetElement<NotTrueType>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Pitch.</para>
     /// <para> Represents the following element tag in the schema: w:pitch </para>
@@ -47209,6 +40713,7 @@ if( 23 == namespaceId && "embedBoldItalic" == name)
         get => GetElement<Pitch>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> FontSignature.</para>
     /// <para> Represents the following element tag in the schema: w:sig </para>
@@ -47221,6 +40726,7 @@ if( 23 == namespaceId && "embedBoldItalic" == name)
         get => GetElement<FontSignature>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> EmbedRegularFont.</para>
     /// <para> Represents the following element tag in the schema: w:embedRegular </para>
@@ -47233,6 +40739,7 @@ if( 23 == namespaceId && "embedBoldItalic" == name)
         get => GetElement<EmbedRegularFont>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> EmbedBoldFont.</para>
     /// <para> Represents the following element tag in the schema: w:embedBold </para>
@@ -47245,6 +40752,7 @@ if( 23 == namespaceId && "embedBoldItalic" == name)
         get => GetElement<EmbedBoldFont>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> EmbedItalicFont.</para>
     /// <para> Represents the following element tag in the schema: w:embedItalic </para>
@@ -47257,6 +40765,7 @@ if( 23 == namespaceId && "embedBoldItalic" == name)
         get => GetElement<EmbedItalicFont>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> EmbedBoldItalicFont.</para>
     /// <para> Represents the following element tag in the schema: w:embedBoldItalic </para>
@@ -47269,6 +40778,7 @@ if( 23 == namespaceId && "embedBoldItalic" == name)
         get => GetElement<EmbedBoldItalicFont>(10);
         set => SetElement(10, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -47282,6 +40792,7 @@ if( 23 == namespaceId && "embedBoldItalic" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "marLeft")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LeftMarginDiv : SignedTwipsMeasureType
 {
@@ -47309,6 +40820,7 @@ public partial class LeftMarginDiv : SignedTwipsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "marRight")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RightMarginDiv : SignedTwipsMeasureType
 {
@@ -47336,6 +40848,7 @@ public partial class RightMarginDiv : SignedTwipsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "marTop")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TopMarginDiv : SignedTwipsMeasureType
 {
@@ -47363,6 +40876,7 @@ public partial class TopMarginDiv : SignedTwipsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "marBottom")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BottomMarginDiv : SignedTwipsMeasureType
 {
@@ -47433,6 +40947,7 @@ public abstract partial class SignedTwipsMeasureType : OpenXmlLeafElement
     [ChildElementInfo(typeof(RightBorder))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "divBdr")]
 public partial class DivBorder : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11970;
@@ -47475,28 +40990,11 @@ public partial class DivBorder : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "top" == name)
-    return new TopBorder();
     
-if( 23 == namespaceId && "left" == name)
-    return new LeftBorder();
-    
-if( 23 == namespaceId && "bottom" == name)
-    return new BottomBorder();
-    
-if( 23 == namespaceId && "right" == name)
-    return new RightBorder();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "top","left","bottom","right" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23 };
     
@@ -47517,6 +41015,7 @@ if( 23 == namespaceId && "right" == name)
         get => GetElement<TopBorder>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Left Border for HTML div.</para>
     /// <para> Represents the following element tag in the schema: w:left </para>
@@ -47529,6 +41028,7 @@ if( 23 == namespaceId && "right" == name)
         get => GetElement<LeftBorder>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Bottom Border for HTML div.</para>
     /// <para> Represents the following element tag in the schema: w:bottom </para>
@@ -47541,6 +41041,7 @@ if( 23 == namespaceId && "right" == name)
         get => GetElement<BottomBorder>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Right Border for HTML div.</para>
     /// <para> Represents the following element tag in the schema: w:right </para>
@@ -47553,6 +41054,7 @@ if( 23 == namespaceId && "right" == name)
         get => GetElement<RightBorder>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -47572,6 +41074,7 @@ if( 23 == namespaceId && "right" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "divsChild")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DivsChild : DivsType
 {
@@ -47611,6 +41114,7 @@ public partial class DivsChild : DivsType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -47630,6 +41134,7 @@ public partial class DivsChild : DivsType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "divs")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Divs : DivsType
 {
@@ -47669,6 +41174,7 @@ public partial class Divs : DivsType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -47691,16 +41197,7 @@ public abstract partial class DivsType : OpenXmlCompositeElement
 {
         
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "div" == name)
-    return new Div();
     
-
-    return null;
-}
-
     
     
     /// <summary>
@@ -47733,6 +41230,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -47765,6 +41263,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DivsChild))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "div")]
 public partial class Div : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11972;
@@ -47816,40 +41315,11 @@ public partial class Div : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "blockQuote" == name)
-    return new BlockQuote();
     
-if( 23 == namespaceId && "bodyDiv" == name)
-    return new BodyDiv();
-    
-if( 23 == namespaceId && "marLeft" == name)
-    return new LeftMarginDiv();
-    
-if( 23 == namespaceId && "marRight" == name)
-    return new RightMarginDiv();
-    
-if( 23 == namespaceId && "marTop" == name)
-    return new TopMarginDiv();
-    
-if( 23 == namespaceId && "marBottom" == name)
-    return new BottomMarginDiv();
-    
-if( 23 == namespaceId && "divBdr" == name)
-    return new DivBorder();
-    
-if( 23 == namespaceId && "divsChild" == name)
-    return new DivsChild();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "blockQuote","bodyDiv","marLeft","marRight","marTop","marBottom","divBdr","divsChild" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23 };
     
@@ -47870,6 +41340,7 @@ if( 23 == namespaceId && "divsChild" == name)
         get => GetElement<BlockQuote>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Data for HTML body Element.</para>
     /// <para> Represents the following element tag in the schema: w:bodyDiv </para>
@@ -47882,6 +41353,7 @@ if( 23 == namespaceId && "divsChild" == name)
         get => GetElement<BodyDiv>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Left Margin for HTML div.</para>
     /// <para> Represents the following element tag in the schema: w:marLeft </para>
@@ -47894,6 +41366,7 @@ if( 23 == namespaceId && "divsChild" == name)
         get => GetElement<LeftMarginDiv>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Right Margin for HTML div.</para>
     /// <para> Represents the following element tag in the schema: w:marRight </para>
@@ -47906,6 +41379,7 @@ if( 23 == namespaceId && "divsChild" == name)
         get => GetElement<RightMarginDiv>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Top Margin for HTML div.</para>
     /// <para> Represents the following element tag in the schema: w:marTop </para>
@@ -47918,6 +41392,7 @@ if( 23 == namespaceId && "divsChild" == name)
         get => GetElement<TopMarginDiv>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Bottom Margin for HTML div.</para>
     /// <para> Represents the following element tag in the schema: w:marBottom </para>
@@ -47930,6 +41405,7 @@ if( 23 == namespaceId && "divsChild" == name)
         get => GetElement<BottomMarginDiv>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Set of Borders for HTML div.</para>
     /// <para> Represents the following element tag in the schema: w:divBdr </para>
@@ -47942,6 +41418,7 @@ if( 23 == namespaceId && "divsChild" == name)
         get => GetElement<DivBorder>(6);
         set => SetElement(6, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -47985,6 +41462,7 @@ if( 23 == namespaceId && "divsChild" == name)
     [ChildElementInfo(typeof(CommentRangeEnd))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "comment")]
 public partial class Comment : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11973;
@@ -48063,52 +41541,11 @@ public partial class Comment : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "altChunk" == name)
-    return new AltChunk();
     
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlBlock();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtBlock();
-    
-if( 23 == namespaceId && "p" == name)
-    return new Paragraph();
-    
-if( 23 == namespaceId && "tbl" == name)
-    return new Table();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Comment>(deep);
@@ -48161,6 +41598,7 @@ if( 23 == namespaceId && "commentRangeEnd" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "footnote")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Footnote : FootnoteEndnoteType
 {
@@ -48200,6 +41638,7 @@ public partial class Footnote : FootnoteEndnoteType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -48253,6 +41692,7 @@ public partial class Footnote : FootnoteEndnoteType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "endnote")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Endnote : FootnoteEndnoteType
 {
@@ -48292,6 +41732,7 @@ public partial class Endnote : FootnoteEndnoteType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -48400,118 +41841,7 @@ public abstract partial class FootnoteEndnoteType : OpenXmlCompositeElement
     [SchemaIndex(1)]
     public IntegerValue Id { get; set; }
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "altChunk" == name)
-    return new AltChunk();
     
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlBlock();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtBlock();
-    
-if( 23 == namespaceId && "p" == name)
-    return new Paragraph();
-    
-if( 23 == namespaceId && "tbl" == name)
-    return new Table();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-
-    return null;
-}
-
     
     
     /// <summary>
@@ -48544,6 +41874,7 @@ if( 52 == namespaceId && "conflictDel" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -48555,6 +41886,7 @@ if( 52 == namespaceId && "conflictDel" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "behavior")]
 public partial class Behavior : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11976;
@@ -48598,6 +41930,7 @@ public partial class Behavior : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "type")]
 public partial class DocPartType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11977;
@@ -48641,6 +41974,7 @@ public partial class DocPartType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "gallery")]
 public partial class Gallery : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11978;
@@ -48684,6 +42018,7 @@ public partial class Gallery : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "autoCaption")]
 public partial class AutoCaption : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11979;
@@ -48736,6 +42071,7 @@ public partial class AutoCaption : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "caption")]
 public partial class Caption : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11980;
@@ -48840,6 +42176,7 @@ public partial class Caption : OpenXmlLeafElement
     [ChildElementInfo(typeof(AutoCaption))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "autoCaptions")]
 public partial class AutoCaptions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11981;
@@ -48882,19 +42219,11 @@ public partial class AutoCaptions : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "autoCaption" == name)
-    return new AutoCaption();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoCaptions>(deep);
@@ -48915,6 +42244,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Background))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "background")]
 public partial class DocumentBackground : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11982;
@@ -48993,19 +42323,11 @@ public partial class DocumentBackground : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "background" == name)
-    return new DocumentFormat.OpenXml.Vml.Background();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "background" };
     private static readonly byte[] eleNamespaceIds = { 26 };
     
@@ -49026,6 +42348,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<DocumentFormat.OpenXml.Vml.Background>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -49047,6 +42370,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocPart))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "docParts")]
 public partial class DocParts : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11983;
@@ -49089,19 +42413,11 @@ public partial class DocParts : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "docPart" == name)
-    return new DocPart();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocParts>(deep);
@@ -49115,6 +42431,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "name")]
 public partial class DocPartName : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11984;
@@ -49176,6 +42493,7 @@ public partial class DocPartName : OpenXmlLeafElement
     [ChildElementInfo(typeof(Gallery))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "category")]
 public partial class Category : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11986;
@@ -49218,22 +42536,11 @@ public partial class Category : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "name" == name)
-    return new Name();
     
-if( 23 == namespaceId && "gallery" == name)
-    return new Gallery();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "name","gallery" };
     private static readonly byte[] eleNamespaceIds = { 23,23 };
     
@@ -49254,6 +42561,7 @@ if( 23 == namespaceId && "gallery" == name)
         get => GetElement<Name>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Gallery Associated With Entry.</para>
     /// <para> Represents the following element tag in the schema: w:gallery </para>
@@ -49266,6 +42574,7 @@ if( 23 == namespaceId && "gallery" == name)
         get => GetElement<Gallery>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -49287,6 +42596,7 @@ if( 23 == namespaceId && "gallery" == name)
     [ChildElementInfo(typeof(DocPartType))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "types")]
 public partial class DocPartTypes : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11987;
@@ -49338,19 +42648,11 @@ public partial class DocPartTypes : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "type" == name)
-    return new DocPartType();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocPartTypes>(deep);
@@ -49371,6 +42673,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Behavior))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "behaviors")]
 public partial class Behaviors : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11988;
@@ -49413,19 +42716,11 @@ public partial class Behaviors : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "behavior" == name)
-    return new Behavior();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Behaviors>(deep);
@@ -49439,6 +42734,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "guid")]
 public partial class DocPartId : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11990;
@@ -49501,6 +42797,7 @@ public partial class DocPartId : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocPartId))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "docPartPr")]
 public partial class DocPartProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11991;
@@ -49543,37 +42840,11 @@ public partial class DocPartProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "name" == name)
-    return new DocPartName();
     
-if( 23 == namespaceId && "style" == name)
-    return new StyleId();
-    
-if( 23 == namespaceId && "category" == name)
-    return new Category();
-    
-if( 23 == namespaceId && "types" == name)
-    return new DocPartTypes();
-    
-if( 23 == namespaceId && "behaviors" == name)
-    return new Behaviors();
-    
-if( 23 == namespaceId && "description" == name)
-    return new Description();
-    
-if( 23 == namespaceId && "guid" == name)
-    return new DocPartId();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "name","style","category","types","behaviors","description","guid" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23 };
     
@@ -49594,6 +42865,7 @@ if( 23 == namespaceId && "guid" == name)
         get => GetElement<DocPartName>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Associated Paragraph Style Name.</para>
     /// <para> Represents the following element tag in the schema: w:style </para>
@@ -49606,6 +42878,7 @@ if( 23 == namespaceId && "guid" == name)
         get => GetElement<StyleId>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Entry Categorization.</para>
     /// <para> Represents the following element tag in the schema: w:category </para>
@@ -49618,6 +42891,7 @@ if( 23 == namespaceId && "guid" == name)
         get => GetElement<Category>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Entry Types.</para>
     /// <para> Represents the following element tag in the schema: w:types </para>
@@ -49630,6 +42904,7 @@ if( 23 == namespaceId && "guid" == name)
         get => GetElement<DocPartTypes>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Entry Insertion Behaviors.</para>
     /// <para> Represents the following element tag in the schema: w:behaviors </para>
@@ -49642,6 +42917,7 @@ if( 23 == namespaceId && "guid" == name)
         get => GetElement<Behaviors>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Description for Entry.</para>
     /// <para> Represents the following element tag in the schema: w:description </para>
@@ -49654,6 +42930,7 @@ if( 23 == namespaceId && "guid" == name)
         get => GetElement<Description>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Entry ID.</para>
     /// <para> Represents the following element tag in the schema: w:guid </para>
@@ -49666,6 +42943,7 @@ if( 23 == namespaceId && "guid" == name)
         get => GetElement<DocPartId>(6);
         set => SetElement(6, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -49720,6 +42998,7 @@ if( 23 == namespaceId && "guid" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "docPartBody")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DocPartBody : BodyType
 {
@@ -49759,6 +43038,7 @@ public partial class DocPartBody : BodyType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -49813,6 +43093,7 @@ public partial class DocPartBody : BodyType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "body")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Body : BodyType
 {
@@ -49852,6 +43133,7 @@ public partial class Body : BodyType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -49944,121 +43226,7 @@ public abstract partial class BodyType : OpenXmlCompositeElement
 {
         
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "altChunk" == name)
-    return new AltChunk();
     
-if( 23 == namespaceId && "customXml" == name)
-    return new CustomXmlBlock();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new SdtBlock();
-    
-if( 23 == namespaceId && "p" == name)
-    return new Paragraph();
-    
-if( 23 == namespaceId && "tbl" == name)
-    return new Table();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-if( 23 == namespaceId && "sectPr" == name)
-    return new SectionProperties();
-    
-
-    return null;
-}
-
     
     
     /// <summary>
@@ -50091,6 +43259,7 @@ if( 23 == namespaceId && "sectPr" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -50111,6 +43280,7 @@ if( 23 == namespaceId && "sectPr" == name)
     [ChildElementInfo(typeof(DocPartBody))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "docPart")]
 public partial class DocPart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11993;
@@ -50153,22 +43323,11 @@ public partial class DocPart : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "docPartPr" == name)
-    return new DocPartProperties();
     
-if( 23 == namespaceId && "docPartBody" == name)
-    return new DocPartBody();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "docPartPr","docPartBody" };
     private static readonly byte[] eleNamespaceIds = { 23,23 };
     
@@ -50189,6 +43348,7 @@ if( 23 == namespaceId && "docPartBody" == name)
         get => GetElement<DocPartProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Contents of Glossary Document Entry.</para>
     /// <para> Represents the following element tag in the schema: w:docPartBody </para>
@@ -50201,6 +43361,7 @@ if( 23 == namespaceId && "docPartBody" == name)
         get => GetElement<DocPartBody>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -50215,6 +43376,7 @@ if( 23 == namespaceId && "docPartBody" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "compatSetting")]
 public partial class CompatibilitySetting : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12059;
@@ -50275,6 +43437,7 @@ public partial class CompatibilitySetting : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "left")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TableCellLeftMargin : TableWidthDxaNilType
 {
@@ -50302,6 +43465,7 @@ public partial class TableCellLeftMargin : TableWidthDxaNilType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "right")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TableCellRightMargin : TableWidthDxaNilType
 {
@@ -50393,6 +43557,7 @@ public abstract partial class TableWidthDxaNilType : OpenXmlLeafElement
     [ChildElementInfo(typeof(TablePropertyExceptionsChange))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblPrEx")]
 public partial class TablePropertyExceptions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12070;
@@ -50435,46 +43600,11 @@ public partial class TablePropertyExceptions : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "tblW" == name)
-    return new TableWidth();
     
-if( 23 == namespaceId && "jc" == name)
-    return new TableJustification();
-    
-if( 23 == namespaceId && "tblCellSpacing" == name)
-    return new TableCellSpacing();
-    
-if( 23 == namespaceId && "tblInd" == name)
-    return new TableIndentation();
-    
-if( 23 == namespaceId && "tblBorders" == name)
-    return new TableBorders();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "tblLayout" == name)
-    return new TableLayout();
-    
-if( 23 == namespaceId && "tblCellMar" == name)
-    return new TableCellMarginDefault();
-    
-if( 23 == namespaceId && "tblLook" == name)
-    return new TableLook();
-    
-if( 23 == namespaceId && "tblPrExChange" == name)
-    return new TablePropertyExceptionsChange();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "tblW","jc","tblCellSpacing","tblInd","tblBorders","shd","tblLayout","tblCellMar","tblLook","tblPrExChange" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23 };
     
@@ -50495,6 +43625,7 @@ if( 23 == namespaceId && "tblPrExChange" == name)
         get => GetElement<TableWidth>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Table Alignment Exception.</para>
     /// <para> Represents the following element tag in the schema: w:jc </para>
@@ -50507,6 +43638,7 @@ if( 23 == namespaceId && "tblPrExChange" == name)
         get => GetElement<TableJustification>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Table Cell Spacing Exception.</para>
     /// <para> Represents the following element tag in the schema: w:tblCellSpacing </para>
@@ -50519,6 +43651,7 @@ if( 23 == namespaceId && "tblPrExChange" == name)
         get => GetElement<TableCellSpacing>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Table Indent from Leading Margin Exception.</para>
     /// <para> Represents the following element tag in the schema: w:tblInd </para>
@@ -50531,6 +43664,7 @@ if( 23 == namespaceId && "tblPrExChange" == name)
         get => GetElement<TableIndentation>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Table Borders Exceptions.</para>
     /// <para> Represents the following element tag in the schema: w:tblBorders </para>
@@ -50543,6 +43677,7 @@ if( 23 == namespaceId && "tblPrExChange" == name)
         get => GetElement<TableBorders>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Table Shading Exception.</para>
     /// <para> Represents the following element tag in the schema: w:shd </para>
@@ -50555,6 +43690,7 @@ if( 23 == namespaceId && "tblPrExChange" == name)
         get => GetElement<Shading>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Table Layout Exception.</para>
     /// <para> Represents the following element tag in the schema: w:tblLayout </para>
@@ -50567,6 +43703,7 @@ if( 23 == namespaceId && "tblPrExChange" == name)
         get => GetElement<TableLayout>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Table Cell Margin Exceptions.</para>
     /// <para> Represents the following element tag in the schema: w:tblCellMar </para>
@@ -50579,6 +43716,7 @@ if( 23 == namespaceId && "tblPrExChange" == name)
         get => GetElement<TableCellMarginDefault>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> Table Style Conditional Formatting Settings Exception.</para>
     /// <para> Represents the following element tag in the schema: w:tblLook </para>
@@ -50591,6 +43729,7 @@ if( 23 == namespaceId && "tblPrExChange" == name)
         get => GetElement<TableLook>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Revision Information for Table-Level Property Exceptions.</para>
     /// <para> Represents the following element tag in the schema: w:tblPrExChange </para>
@@ -50603,6 +43742,7 @@ if( 23 == namespaceId && "tblPrExChange" == name)
         get => GetElement<TablePropertyExceptionsChange>(9);
         set => SetElement(9, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -50656,6 +43796,7 @@ if( 23 == namespaceId && "tblPrExChange" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "trPr")]
 public partial class TableRowProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12071;
@@ -50698,67 +43839,11 @@ public partial class TableRowProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "cnfStyle" == name)
-    return new ConditionalFormatStyle();
     
-if( 23 == namespaceId && "divId" == name)
-    return new DivId();
-    
-if( 23 == namespaceId && "gridBefore" == name)
-    return new GridBefore();
-    
-if( 23 == namespaceId && "gridAfter" == name)
-    return new GridAfter();
-    
-if( 23 == namespaceId && "wBefore" == name)
-    return new WidthBeforeTableRow();
-    
-if( 23 == namespaceId && "wAfter" == name)
-    return new WidthAfterTableRow();
-    
-if( 23 == namespaceId && "trHeight" == name)
-    return new TableRowHeight();
-    
-if( 23 == namespaceId && "hidden" == name)
-    return new Hidden();
-    
-if( 23 == namespaceId && "cantSplit" == name)
-    return new CantSplit();
-    
-if( 23 == namespaceId && "tblHeader" == name)
-    return new TableHeader();
-    
-if( 23 == namespaceId && "tblCellSpacing" == name)
-    return new TableCellSpacing();
-    
-if( 23 == namespaceId && "jc" == name)
-    return new TableJustification();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new Inserted();
-    
-if( 23 == namespaceId && "del" == name)
-    return new Deleted();
-    
-if( 23 == namespaceId && "trPrChange" == name)
-    return new TableRowPropertiesChange();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.ConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.ConflictDeletion();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableRowProperties>(deep);
@@ -50779,6 +43864,7 @@ if( 52 == namespaceId && "conflictDel" == name)
     [ChildElementInfo(typeof(PreviousTableRowProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "trPrChange")]
 public partial class TableRowPropertiesChange : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12072;
@@ -50848,19 +43934,11 @@ public partial class TableRowPropertiesChange : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "trPr" == name)
-    return new PreviousTableRowProperties();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "trPr" };
     private static readonly byte[] eleNamespaceIds = { 23 };
     
@@ -50881,6 +43959,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<PreviousTableRowProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -50972,6 +44051,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ParagraphPropertiesChange))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "pPr")]
 public partial class ParagraphProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12077;
@@ -51014,124 +44094,11 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "pStyle" == name)
-    return new ParagraphStyleId();
     
-if( 23 == namespaceId && "keepNext" == name)
-    return new KeepNext();
-    
-if( 23 == namespaceId && "keepLines" == name)
-    return new KeepLines();
-    
-if( 23 == namespaceId && "pageBreakBefore" == name)
-    return new PageBreakBefore();
-    
-if( 23 == namespaceId && "framePr" == name)
-    return new FrameProperties();
-    
-if( 23 == namespaceId && "widowControl" == name)
-    return new WidowControl();
-    
-if( 23 == namespaceId && "numPr" == name)
-    return new NumberingProperties();
-    
-if( 23 == namespaceId && "suppressLineNumbers" == name)
-    return new SuppressLineNumbers();
-    
-if( 23 == namespaceId && "pBdr" == name)
-    return new ParagraphBorders();
-    
-if( 23 == namespaceId && "shd" == name)
-    return new Shading();
-    
-if( 23 == namespaceId && "tabs" == name)
-    return new Tabs();
-    
-if( 23 == namespaceId && "suppressAutoHyphens" == name)
-    return new SuppressAutoHyphens();
-    
-if( 23 == namespaceId && "kinsoku" == name)
-    return new Kinsoku();
-    
-if( 23 == namespaceId && "wordWrap" == name)
-    return new WordWrap();
-    
-if( 23 == namespaceId && "overflowPunct" == name)
-    return new OverflowPunctuation();
-    
-if( 23 == namespaceId && "topLinePunct" == name)
-    return new TopLinePunctuation();
-    
-if( 23 == namespaceId && "autoSpaceDE" == name)
-    return new AutoSpaceDE();
-    
-if( 23 == namespaceId && "autoSpaceDN" == name)
-    return new AutoSpaceDN();
-    
-if( 23 == namespaceId && "bidi" == name)
-    return new BiDi();
-    
-if( 23 == namespaceId && "adjustRightInd" == name)
-    return new AdjustRightIndent();
-    
-if( 23 == namespaceId && "snapToGrid" == name)
-    return new SnapToGrid();
-    
-if( 23 == namespaceId && "spacing" == name)
-    return new SpacingBetweenLines();
-    
-if( 23 == namespaceId && "ind" == name)
-    return new Indentation();
-    
-if( 23 == namespaceId && "contextualSpacing" == name)
-    return new ContextualSpacing();
-    
-if( 23 == namespaceId && "mirrorIndents" == name)
-    return new MirrorIndents();
-    
-if( 23 == namespaceId && "suppressOverlap" == name)
-    return new SuppressOverlap();
-    
-if( 23 == namespaceId && "jc" == name)
-    return new Justification();
-    
-if( 23 == namespaceId && "textDirection" == name)
-    return new TextDirection();
-    
-if( 23 == namespaceId && "textAlignment" == name)
-    return new TextAlignment();
-    
-if( 23 == namespaceId && "textboxTightWrap" == name)
-    return new TextBoxTightWrap();
-    
-if( 23 == namespaceId && "outlineLvl" == name)
-    return new OutlineLevel();
-    
-if( 23 == namespaceId && "divId" == name)
-    return new DivId();
-    
-if( 23 == namespaceId && "cnfStyle" == name)
-    return new ConditionalFormatStyle();
-    
-if( 23 == namespaceId && "rPr" == name)
-    return new ParagraphMarkRunProperties();
-    
-if( 23 == namespaceId && "sectPr" == name)
-    return new SectionProperties();
-    
-if( 23 == namespaceId && "pPrChange" == name)
-    return new ParagraphPropertiesChange();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pStyle","keepNext","keepLines","pageBreakBefore","framePr","widowControl","numPr","suppressLineNumbers","pBdr","shd","tabs","suppressAutoHyphens","kinsoku","wordWrap","overflowPunct","topLinePunct","autoSpaceDE","autoSpaceDN","bidi","adjustRightInd","snapToGrid","spacing","ind","contextualSpacing","mirrorIndents","suppressOverlap","jc","textDirection","textAlignment","textboxTightWrap","outlineLvl","divId","cnfStyle","rPr","sectPr","pPrChange" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -51152,6 +44119,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<ParagraphStyleId>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> KeepNext.</para>
     /// <para> Represents the following element tag in the schema: w:keepNext </para>
@@ -51164,6 +44132,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<KeepNext>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> KeepLines.</para>
     /// <para> Represents the following element tag in the schema: w:keepLines </para>
@@ -51176,6 +44145,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<KeepLines>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> PageBreakBefore.</para>
     /// <para> Represents the following element tag in the schema: w:pageBreakBefore </para>
@@ -51188,6 +44158,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<PageBreakBefore>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> FrameProperties.</para>
     /// <para> Represents the following element tag in the schema: w:framePr </para>
@@ -51200,6 +44171,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<FrameProperties>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> WidowControl.</para>
     /// <para> Represents the following element tag in the schema: w:widowControl </para>
@@ -51212,6 +44184,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<WidowControl>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> NumberingProperties.</para>
     /// <para> Represents the following element tag in the schema: w:numPr </para>
@@ -51224,6 +44197,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<NumberingProperties>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> SuppressLineNumbers.</para>
     /// <para> Represents the following element tag in the schema: w:suppressLineNumbers </para>
@@ -51236,6 +44210,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<SuppressLineNumbers>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> ParagraphBorders.</para>
     /// <para> Represents the following element tag in the schema: w:pBdr </para>
@@ -51248,6 +44223,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<ParagraphBorders>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Shading.</para>
     /// <para> Represents the following element tag in the schema: w:shd </para>
@@ -51260,6 +44236,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<Shading>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> Tabs.</para>
     /// <para> Represents the following element tag in the schema: w:tabs </para>
@@ -51272,6 +44249,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<Tabs>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> SuppressAutoHyphens.</para>
     /// <para> Represents the following element tag in the schema: w:suppressAutoHyphens </para>
@@ -51284,6 +44262,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<SuppressAutoHyphens>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> Kinsoku.</para>
     /// <para> Represents the following element tag in the schema: w:kinsoku </para>
@@ -51296,6 +44275,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<Kinsoku>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> WordWrap.</para>
     /// <para> Represents the following element tag in the schema: w:wordWrap </para>
@@ -51308,6 +44288,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<WordWrap>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> OverflowPunctuation.</para>
     /// <para> Represents the following element tag in the schema: w:overflowPunct </para>
@@ -51320,6 +44301,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<OverflowPunctuation>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> TopLinePunctuation.</para>
     /// <para> Represents the following element tag in the schema: w:topLinePunct </para>
@@ -51332,6 +44314,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<TopLinePunctuation>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> AutoSpaceDE.</para>
     /// <para> Represents the following element tag in the schema: w:autoSpaceDE </para>
@@ -51344,6 +44327,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<AutoSpaceDE>(16);
         set => SetElement(16, value);
     }
+    
     /// <summary>
     /// <para> AutoSpaceDN.</para>
     /// <para> Represents the following element tag in the schema: w:autoSpaceDN </para>
@@ -51356,6 +44340,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<AutoSpaceDN>(17);
         set => SetElement(17, value);
     }
+    
     /// <summary>
     /// <para> BiDi.</para>
     /// <para> Represents the following element tag in the schema: w:bidi </para>
@@ -51368,6 +44353,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<BiDi>(18);
         set => SetElement(18, value);
     }
+    
     /// <summary>
     /// <para> AdjustRightIndent.</para>
     /// <para> Represents the following element tag in the schema: w:adjustRightInd </para>
@@ -51380,6 +44366,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<AdjustRightIndent>(19);
         set => SetElement(19, value);
     }
+    
     /// <summary>
     /// <para> SnapToGrid.</para>
     /// <para> Represents the following element tag in the schema: w:snapToGrid </para>
@@ -51392,6 +44379,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<SnapToGrid>(20);
         set => SetElement(20, value);
     }
+    
     /// <summary>
     /// <para> SpacingBetweenLines.</para>
     /// <para> Represents the following element tag in the schema: w:spacing </para>
@@ -51404,6 +44392,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<SpacingBetweenLines>(21);
         set => SetElement(21, value);
     }
+    
     /// <summary>
     /// <para> Indentation.</para>
     /// <para> Represents the following element tag in the schema: w:ind </para>
@@ -51416,6 +44405,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<Indentation>(22);
         set => SetElement(22, value);
     }
+    
     /// <summary>
     /// <para> ContextualSpacing.</para>
     /// <para> Represents the following element tag in the schema: w:contextualSpacing </para>
@@ -51428,6 +44418,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<ContextualSpacing>(23);
         set => SetElement(23, value);
     }
+    
     /// <summary>
     /// <para> MirrorIndents.</para>
     /// <para> Represents the following element tag in the schema: w:mirrorIndents </para>
@@ -51440,6 +44431,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<MirrorIndents>(24);
         set => SetElement(24, value);
     }
+    
     /// <summary>
     /// <para> SuppressOverlap.</para>
     /// <para> Represents the following element tag in the schema: w:suppressOverlap </para>
@@ -51452,6 +44444,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<SuppressOverlap>(25);
         set => SetElement(25, value);
     }
+    
     /// <summary>
     /// <para> Justification.</para>
     /// <para> Represents the following element tag in the schema: w:jc </para>
@@ -51464,6 +44457,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<Justification>(26);
         set => SetElement(26, value);
     }
+    
     /// <summary>
     /// <para> TextDirection.</para>
     /// <para> Represents the following element tag in the schema: w:textDirection </para>
@@ -51476,6 +44470,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<TextDirection>(27);
         set => SetElement(27, value);
     }
+    
     /// <summary>
     /// <para> TextAlignment.</para>
     /// <para> Represents the following element tag in the schema: w:textAlignment </para>
@@ -51488,6 +44483,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<TextAlignment>(28);
         set => SetElement(28, value);
     }
+    
     /// <summary>
     /// <para> TextBoxTightWrap.</para>
     /// <para> Represents the following element tag in the schema: w:textboxTightWrap </para>
@@ -51500,6 +44496,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<TextBoxTightWrap>(29);
         set => SetElement(29, value);
     }
+    
     /// <summary>
     /// <para> OutlineLevel.</para>
     /// <para> Represents the following element tag in the schema: w:outlineLvl </para>
@@ -51512,6 +44509,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<OutlineLevel>(30);
         set => SetElement(30, value);
     }
+    
     /// <summary>
     /// <para> DivId.</para>
     /// <para> Represents the following element tag in the schema: w:divId </para>
@@ -51524,6 +44522,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<DivId>(31);
         set => SetElement(31, value);
     }
+    
     /// <summary>
     /// <para> ConditionalFormatStyle.</para>
     /// <para> Represents the following element tag in the schema: w:cnfStyle </para>
@@ -51536,6 +44535,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<ConditionalFormatStyle>(32);
         set => SetElement(32, value);
     }
+    
     /// <summary>
     /// <para> Run Properties for the Paragraph Mark.</para>
     /// <para> Represents the following element tag in the schema: w:rPr </para>
@@ -51548,6 +44548,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<ParagraphMarkRunProperties>(33);
         set => SetElement(33, value);
     }
+    
     /// <summary>
     /// <para> Section Properties.</para>
     /// <para> Represents the following element tag in the schema: w:sectPr </para>
@@ -51560,6 +44561,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<SectionProperties>(34);
         set => SetElement(34, value);
     }
+    
     /// <summary>
     /// <para> ParagraphPropertiesChange.</para>
     /// <para> Represents the following element tag in the schema: w:pPrChange </para>
@@ -51572,6 +44574,7 @@ if( 23 == namespaceId && "pPrChange" == name)
         get => GetElement<ParagraphPropertiesChange>(35);
         set => SetElement(35, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -51586,6 +44589,7 @@ if( 23 == namespaceId && "pPrChange" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "control")]
 public partial class Control : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12079;
@@ -51654,6 +44658,7 @@ public partial class Control : OpenXmlLeafElement
     [ChildElementInfo(typeof(GridColumn))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "tblGrid")]
 public partial class PreviousTableGrid : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12080;
@@ -51696,19 +44701,11 @@ public partial class PreviousTableGrid : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "gridCol" == name)
-    return new GridColumn();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PreviousTableGrid>(deep);
@@ -51722,6 +44719,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "objectEmbed")]
 public partial class ObjectEmbed : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12081;
@@ -51801,6 +44799,7 @@ public partial class ObjectEmbed : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "objectLink")]
 public partial class ObjectLink : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12082;
@@ -51898,6 +44897,7 @@ public partial class ObjectLink : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "lock")]
 public partial class Lock : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12084;
@@ -51948,6 +44948,7 @@ public partial class Lock : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocPartReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "placeholder")]
 public partial class SdtPlaceholder : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12085;
@@ -51990,19 +44991,11 @@ public partial class SdtPlaceholder : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "docPart" == name)
-    return new DocPartReference();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "docPart" };
     private static readonly byte[] eleNamespaceIds = { 23 };
     
@@ -52023,6 +45016,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<DocPartReference>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -52037,6 +45031,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "dataBinding")]
 public partial class DataBinding : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12087;
@@ -52105,6 +45100,7 @@ public partial class DataBinding : OpenXmlLeafElement
     [ChildElementInfo(typeof(ListItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "comboBox")]
 public partial class SdtContentComboBox : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12092;
@@ -52156,19 +45152,11 @@ public partial class SdtContentComboBox : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "listItem" == name)
-    return new ListItem();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentComboBox>(deep);
@@ -52195,6 +45183,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Calendar))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "date")]
 public partial class SdtContentDate : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12093;
@@ -52246,28 +45235,11 @@ public partial class SdtContentDate : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "dateFormat" == name)
-    return new DateFormat();
     
-if( 23 == namespaceId && "lid" == name)
-    return new LanguageId();
-    
-if( 23 == namespaceId && "storeMappedDataAs" == name)
-    return new SdtDateMappingType();
-    
-if( 23 == namespaceId && "calendar" == name)
-    return new Calendar();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "dateFormat","lid","storeMappedDataAs","calendar" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23 };
     
@@ -52288,6 +45260,7 @@ if( 23 == namespaceId && "calendar" == name)
         get => GetElement<DateFormat>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Date Picker Language ID.</para>
     /// <para> Represents the following element tag in the schema: w:lid </para>
@@ -52300,6 +45273,7 @@ if( 23 == namespaceId && "calendar" == name)
         get => GetElement<LanguageId>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Custom XML Data Date Storage Format.</para>
     /// <para> Represents the following element tag in the schema: w:storeMappedDataAs </para>
@@ -52312,6 +45286,7 @@ if( 23 == namespaceId && "calendar" == name)
         get => GetElement<SdtDateMappingType>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Date Picker Calendar Type.</para>
     /// <para> Represents the following element tag in the schema: w:calendar </para>
@@ -52324,6 +45299,7 @@ if( 23 == namespaceId && "calendar" == name)
         get => GetElement<Calendar>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -52345,6 +45321,7 @@ if( 23 == namespaceId && "calendar" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "docPartObj")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SdtContentDocPartObject : SdtDocPartType
 {
@@ -52384,6 +45361,7 @@ public partial class SdtContentDocPartObject : SdtDocPartType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -52405,6 +45383,7 @@ public partial class SdtContentDocPartObject : SdtDocPartType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "docPartList")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SdtContentDocPartList : SdtDocPartType
 {
@@ -52444,6 +45423,7 @@ public partial class SdtContentDocPartList : SdtDocPartType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -52470,22 +45450,7 @@ public abstract partial class SdtDocPartType : OpenXmlCompositeElement
 {
         
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "docPartGallery" == name)
-    return new DocPartGallery();
     
-if( 23 == namespaceId && "docPartCategory" == name)
-    return new DocPartCategory();
-    
-if( 23 == namespaceId && "docPartUnique" == name)
-    return new DocPartUnique();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "docPartGallery","docPartCategory","docPartUnique" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23 };
     
@@ -52506,6 +45471,7 @@ if( 23 == namespaceId && "docPartUnique" == name)
         get => GetElement<DocPartGallery>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Document Part Category Filter.</para>
     /// <para> Represents the following element tag in the schema: w:docPartCategory </para>
@@ -52518,6 +45484,7 @@ if( 23 == namespaceId && "docPartUnique" == name)
         get => GetElement<DocPartCategory>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Built-In Document Part.</para>
     /// <para> Represents the following element tag in the schema: w:docPartUnique </para>
@@ -52530,6 +45497,7 @@ if( 23 == namespaceId && "docPartUnique" == name)
         get => GetElement<DocPartUnique>(2);
         set => SetElement(2, value);
     }
+    
 
 
     
@@ -52563,6 +45531,7 @@ if( 23 == namespaceId && "docPartUnique" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -52581,6 +45550,7 @@ if( 23 == namespaceId && "docPartUnique" == name)
     [ChildElementInfo(typeof(ListItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "dropDownList")]
 public partial class SdtContentDropDownList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12096;
@@ -52632,19 +45602,11 @@ public partial class SdtContentDropDownList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "listItem" == name)
-    return new ListItem();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SdtContentDropDownList>(deep);
@@ -52658,6 +45620,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "text")]
 public partial class SdtContentText : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12099;
@@ -52701,6 +45664,7 @@ public partial class SdtContentText : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "writeProtection")]
 public partial class WriteProtection : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12103;
@@ -52888,6 +45852,7 @@ public partial class WriteProtection : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "view")]
 public partial class View : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12104;
@@ -52931,6 +45896,7 @@ public partial class View : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "zoom")]
 public partial class Zoom : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12105;
@@ -52983,6 +45949,7 @@ public partial class Zoom : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "activeWritingStyle")]
 public partial class ActiveWritingStyle : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12124;
@@ -53071,6 +46038,7 @@ public partial class ActiveWritingStyle : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "proofState")]
 public partial class ProofState : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12125;
@@ -53123,6 +46091,7 @@ public partial class ProofState : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "stylePaneFormatFilter")]
 public partial class StylePaneFormatFilter : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12129;
@@ -53301,6 +46270,7 @@ public partial class StylePaneFormatFilter : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "stylePaneSortMethod")]
 public partial class StylePaneSortMethods : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12130;
@@ -53344,6 +46314,7 @@ public partial class StylePaneSortMethods : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "documentType")]
 public partial class DocumentType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12131;
@@ -53424,6 +46395,7 @@ public partial class DocumentType : OpenXmlLeafElement
     [ChildElementInfo(typeof(DataSourceObject))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "mailMerge")]
 public partial class MailMerge : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12132;
@@ -53466,64 +46438,11 @@ public partial class MailMerge : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "mainDocumentType" == name)
-    return new MainDocumentType();
     
-if( 23 == namespaceId && "linkToQuery" == name)
-    return new LinkToQuery();
-    
-if( 23 == namespaceId && "dataType" == name)
-    return new DataType();
-    
-if( 23 == namespaceId && "connectString" == name)
-    return new ConnectString();
-    
-if( 23 == namespaceId && "query" == name)
-    return new Query();
-    
-if( 23 == namespaceId && "dataSource" == name)
-    return new DataSourceReference();
-    
-if( 23 == namespaceId && "headerSource" == name)
-    return new HeaderSource();
-    
-if( 23 == namespaceId && "doNotSuppressBlankLines" == name)
-    return new DoNotSuppressBlankLines();
-    
-if( 23 == namespaceId && "destination" == name)
-    return new Destination();
-    
-if( 23 == namespaceId && "addressFieldName" == name)
-    return new AddressFieldName();
-    
-if( 23 == namespaceId && "mailSubject" == name)
-    return new MailSubject();
-    
-if( 23 == namespaceId && "mailAsAttachment" == name)
-    return new MailAsAttachment();
-    
-if( 23 == namespaceId && "viewMergedData" == name)
-    return new ViewMergedData();
-    
-if( 23 == namespaceId && "activeRecord" == name)
-    return new ActiveRecord();
-    
-if( 23 == namespaceId && "checkErrors" == name)
-    return new CheckErrors();
-    
-if( 23 == namespaceId && "odso" == name)
-    return new DataSourceObject();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "mainDocumentType","linkToQuery","dataType","connectString","query","dataSource","headerSource","doNotSuppressBlankLines","destination","addressFieldName","mailSubject","mailAsAttachment","viewMergedData","activeRecord","checkErrors","odso" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -53544,6 +46463,7 @@ if( 23 == namespaceId && "odso" == name)
         get => GetElement<MainDocumentType>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Query Contains Link to External Query File.</para>
     /// <para> Represents the following element tag in the schema: w:linkToQuery </para>
@@ -53556,6 +46476,7 @@ if( 23 == namespaceId && "odso" == name)
         get => GetElement<LinkToQuery>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Data Source Type.</para>
     /// <para> Represents the following element tag in the schema: w:dataType </para>
@@ -53568,6 +46489,7 @@ if( 23 == namespaceId && "odso" == name)
         get => GetElement<DataType>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Data Source Connection String.</para>
     /// <para> Represents the following element tag in the schema: w:connectString </para>
@@ -53580,6 +46502,7 @@ if( 23 == namespaceId && "odso" == name)
         get => GetElement<ConnectString>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Query For Data Source Records To Merge.</para>
     /// <para> Represents the following element tag in the schema: w:query </para>
@@ -53592,6 +46515,7 @@ if( 23 == namespaceId && "odso" == name)
         get => GetElement<Query>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Data Source File Path.</para>
     /// <para> Represents the following element tag in the schema: w:dataSource </para>
@@ -53604,6 +46528,7 @@ if( 23 == namespaceId && "odso" == name)
         get => GetElement<DataSourceReference>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Header Definition File Path.</para>
     /// <para> Represents the following element tag in the schema: w:headerSource </para>
@@ -53616,6 +46541,7 @@ if( 23 == namespaceId && "odso" == name)
         get => GetElement<HeaderSource>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Remove Blank Lines from Merged Documents.</para>
     /// <para> Represents the following element tag in the schema: w:doNotSuppressBlankLines </para>
@@ -53628,6 +46554,7 @@ if( 23 == namespaceId && "odso" == name)
         get => GetElement<DoNotSuppressBlankLines>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> Merged Document Destination.</para>
     /// <para> Represents the following element tag in the schema: w:destination </para>
@@ -53640,6 +46567,7 @@ if( 23 == namespaceId && "odso" == name)
         get => GetElement<Destination>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Column Containing E-mail Address.</para>
     /// <para> Represents the following element tag in the schema: w:addressFieldName </para>
@@ -53652,6 +46580,7 @@ if( 23 == namespaceId && "odso" == name)
         get => GetElement<AddressFieldName>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> Merged E-mail or Fax Subject Line.</para>
     /// <para> Represents the following element tag in the schema: w:mailSubject </para>
@@ -53664,6 +46593,7 @@ if( 23 == namespaceId && "odso" == name)
         get => GetElement<MailSubject>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Merged Document To E-Mail Attachment.</para>
     /// <para> Represents the following element tag in the schema: w:mailAsAttachment </para>
@@ -53676,6 +46606,7 @@ if( 23 == namespaceId && "odso" == name)
         get => GetElement<MailAsAttachment>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> View Merged Data Within Document.</para>
     /// <para> Represents the following element tag in the schema: w:viewMergedData </para>
@@ -53688,6 +46619,7 @@ if( 23 == namespaceId && "odso" == name)
         get => GetElement<ViewMergedData>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> Record Currently Displayed In Merged Document.</para>
     /// <para> Represents the following element tag in the schema: w:activeRecord </para>
@@ -53700,6 +46632,7 @@ if( 23 == namespaceId && "odso" == name)
         get => GetElement<ActiveRecord>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> Mail Merge Error Reporting Setting.</para>
     /// <para> Represents the following element tag in the schema: w:checkErrors </para>
@@ -53712,6 +46645,7 @@ if( 23 == namespaceId && "odso" == name)
         get => GetElement<CheckErrors>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> Office Data Source Object Settings.</para>
     /// <para> Represents the following element tag in the schema: w:odso </para>
@@ -53724,6 +46658,7 @@ if( 23 == namespaceId && "odso" == name)
         get => GetElement<DataSourceObject>(15);
         set => SetElement(15, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -53738,6 +46673,7 @@ if( 23 == namespaceId && "odso" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "revisionView")]
 public partial class RevisionView : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12133;
@@ -53817,6 +46753,7 @@ public partial class RevisionView : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "documentProtection")]
 public partial class DocumentProtection : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12137;
@@ -54021,6 +46958,7 @@ public partial class DocumentProtection : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "defaultTabStop")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DefaultTabStop : NonNegativeShortType
 {
@@ -54048,6 +46986,7 @@ public partial class DefaultTabStop : NonNegativeShortType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "bookFoldPrintingSheets")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BookFoldPrintingSheets : NonNegativeShortType
 {
@@ -54105,6 +47044,7 @@ public abstract partial class NonNegativeShortType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "consecutiveHyphenLimit")]
 public partial class ConsecutiveHyphenLimit : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12143;
@@ -54148,6 +47088,7 @@ public partial class ConsecutiveHyphenLimit : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "summaryLength")]
 public partial class SummaryLength : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12147;
@@ -54190,6 +47131,7 @@ public partial class SummaryLength : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "displayHorizontalDrawingGridEvery")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DisplayHorizontalDrawingGrid : UnsignedInt7Type
 {
@@ -54217,6 +47159,7 @@ public partial class DisplayHorizontalDrawingGrid : UnsignedInt7Type
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "displayVerticalDrawingGridEvery")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DisplayVerticalDrawingGrid : UnsignedInt7Type
 {
@@ -54274,6 +47217,7 @@ public abstract partial class UnsignedInt7Type : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "characterSpacingControl")]
 public partial class CharacterSpacingControl : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12163;
@@ -54317,6 +47261,7 @@ public partial class CharacterSpacingControl : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "noLineBreaksAfter")]
 public partial class NoLineBreaksAfterKinsoku : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12166;
@@ -54369,6 +47314,7 @@ public partial class NoLineBreaksAfterKinsoku : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "noLineBreaksBefore")]
 public partial class NoLineBreaksBeforeKinsoku : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12167;
@@ -54421,6 +47367,7 @@ public partial class NoLineBreaksBeforeKinsoku : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "saveThroughXslt")]
 public partial class SaveThroughXslt : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12176;
@@ -54479,6 +47426,7 @@ public partial class SaveThroughXslt : OpenXmlLeafElement
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "hdrShapeDefaults")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HeaderShapeDefaults : ShapeDefaultsType
 {
@@ -54518,6 +47466,7 @@ public partial class HeaderShapeDefaults : ShapeDefaultsType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -54538,6 +47487,7 @@ public partial class HeaderShapeDefaults : ShapeDefaultsType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "shapeDefaults")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShapeDefaults : ShapeDefaultsType
 {
@@ -54577,6 +47527,7 @@ public partial class ShapeDefaults : ShapeDefaultsType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -54601,19 +47552,7 @@ public abstract partial class ShapeDefaultsType : OpenXmlCompositeElement
 {
         
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 27 == namespaceId && "shapedefaults" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.ShapeDefaults();
     
-if( 27 == namespaceId && "shapelayout" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.ShapeLayout();
-    
-
-    return null;
-}
-
     
     
     /// <summary>
@@ -54646,6 +47585,7 @@ if( 27 == namespaceId && "shapelayout" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -54672,6 +47612,7 @@ if( 27 == namespaceId && "shapelayout" == name)
     [ChildElementInfo(typeof(FootnoteSpecialReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "footnotePr")]
 public partial class FootnoteDocumentWideProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12181;
@@ -54714,31 +47655,11 @@ public partial class FootnoteDocumentWideProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "pos" == name)
-    return new FootnotePosition();
     
-if( 23 == namespaceId && "numFmt" == name)
-    return new NumberingFormat();
-    
-if( 23 == namespaceId && "numStart" == name)
-    return new NumberingStart();
-    
-if( 23 == namespaceId && "numRestart" == name)
-    return new NumberingRestart();
-    
-if( 23 == namespaceId && "footnote" == name)
-    return new FootnoteSpecialReference();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pos","numFmt","numStart","numRestart","footnote" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23 };
     
@@ -54759,6 +47680,7 @@ if( 23 == namespaceId && "footnote" == name)
         get => GetElement<FootnotePosition>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Footnote Numbering Format.</para>
     /// <para> Represents the following element tag in the schema: w:numFmt </para>
@@ -54771,6 +47693,7 @@ if( 23 == namespaceId && "footnote" == name)
         get => GetElement<NumberingFormat>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Footnote and Endnote Numbering Starting Value.</para>
     /// <para> Represents the following element tag in the schema: w:numStart </para>
@@ -54783,6 +47706,7 @@ if( 23 == namespaceId && "footnote" == name)
         get => GetElement<NumberingStart>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Footnote and Endnote Numbering Restart Location.</para>
     /// <para> Represents the following element tag in the schema: w:numRestart </para>
@@ -54795,6 +47719,7 @@ if( 23 == namespaceId && "footnote" == name)
         get => GetElement<NumberingRestart>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -54824,6 +47749,7 @@ if( 23 == namespaceId && "footnote" == name)
     [ChildElementInfo(typeof(EndnoteSpecialReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "endnotePr")]
 public partial class EndnoteDocumentWideProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12182;
@@ -54866,31 +47792,11 @@ public partial class EndnoteDocumentWideProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "pos" == name)
-    return new EndnotePosition();
     
-if( 23 == namespaceId && "numFmt" == name)
-    return new NumberingFormat();
-    
-if( 23 == namespaceId && "numStart" == name)
-    return new NumberingStart();
-    
-if( 23 == namespaceId && "numRestart" == name)
-    return new NumberingRestart();
-    
-if( 23 == namespaceId && "endnote" == name)
-    return new EndnoteSpecialReference();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pos","numFmt","numStart","numRestart","endnote" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23 };
     
@@ -54911,6 +47817,7 @@ if( 23 == namespaceId && "endnote" == name)
         get => GetElement<EndnotePosition>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Endnote Numbering Format.</para>
     /// <para> Represents the following element tag in the schema: w:numFmt </para>
@@ -54923,6 +47830,7 @@ if( 23 == namespaceId && "endnote" == name)
         get => GetElement<NumberingFormat>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Footnote and Endnote Numbering Starting Value.</para>
     /// <para> Represents the following element tag in the schema: w:numStart </para>
@@ -54935,6 +47843,7 @@ if( 23 == namespaceId && "endnote" == name)
         get => GetElement<NumberingStart>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Footnote and Endnote Numbering Restart Location.</para>
     /// <para> Represents the following element tag in the schema: w:numRestart </para>
@@ -54947,6 +47856,7 @@ if( 23 == namespaceId && "endnote" == name)
         get => GetElement<NumberingRestart>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -55098,6 +48008,7 @@ if( 23 == namespaceId && "endnote" == name)
     [ChildElementInfo(typeof(CompatibilitySetting))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "compat")]
 public partial class Compatibility : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12183;
@@ -55140,214 +48051,11 @@ public partial class Compatibility : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "useSingleBorderforContiguousCells" == name)
-    return new UseSingleBorderForContiguousCells();
     
-if( 23 == namespaceId && "wpJustification" == name)
-    return new WordPerfectJustification();
-    
-if( 23 == namespaceId && "noTabHangInd" == name)
-    return new NoTabHangIndent();
-    
-if( 23 == namespaceId && "noLeading" == name)
-    return new NoLeading();
-    
-if( 23 == namespaceId && "spaceForUL" == name)
-    return new SpaceForUnderline();
-    
-if( 23 == namespaceId && "noColumnBalance" == name)
-    return new NoColumnBalance();
-    
-if( 23 == namespaceId && "balanceSingleByteDoubleByteWidth" == name)
-    return new BalanceSingleByteDoubleByteWidth();
-    
-if( 23 == namespaceId && "noExtraLineSpacing" == name)
-    return new NoExtraLineSpacing();
-    
-if( 23 == namespaceId && "doNotLeaveBackslashAlone" == name)
-    return new DoNotLeaveBackslashAlone();
-    
-if( 23 == namespaceId && "ulTrailSpace" == name)
-    return new UnderlineTrailingSpaces();
-    
-if( 23 == namespaceId && "doNotExpandShiftReturn" == name)
-    return new DoNotExpandShiftReturn();
-    
-if( 23 == namespaceId && "spacingInWholePoints" == name)
-    return new SpacingInWholePoints();
-    
-if( 23 == namespaceId && "lineWrapLikeWord6" == name)
-    return new LineWrapLikeWord6();
-    
-if( 23 == namespaceId && "printBodyTextBeforeHeader" == name)
-    return new PrintBodyTextBeforeHeader();
-    
-if( 23 == namespaceId && "printColBlack" == name)
-    return new PrintColorBlackWhite();
-    
-if( 23 == namespaceId && "wpSpaceWidth" == name)
-    return new WordPerfectSpaceWidth();
-    
-if( 23 == namespaceId && "showBreaksInFrames" == name)
-    return new ShowBreaksInFrames();
-    
-if( 23 == namespaceId && "subFontBySize" == name)
-    return new SubFontBySize();
-    
-if( 23 == namespaceId && "suppressBottomSpacing" == name)
-    return new SuppressBottomSpacing();
-    
-if( 23 == namespaceId && "suppressTopSpacing" == name)
-    return new SuppressTopSpacing();
-    
-if( 23 == namespaceId && "suppressSpacingAtTopOfPage" == name)
-    return new SuppressSpacingAtTopOfPage();
-    
-if( 23 == namespaceId && "suppressTopSpacingWP" == name)
-    return new SuppressTopSpacingWordPerfect();
-    
-if( 23 == namespaceId && "suppressSpBfAfterPgBrk" == name)
-    return new SuppressSpacingBeforeAfterPageBreak();
-    
-if( 23 == namespaceId && "swapBordersFacingPages" == name)
-    return new SwapBordersFacingPages();
-    
-if( 23 == namespaceId && "convMailMergeEsc" == name)
-    return new ConvertMailMergeEscape();
-    
-if( 23 == namespaceId && "truncateFontHeightsLikeWP6" == name)
-    return new TruncateFontHeightsLikeWordPerfect();
-    
-if( 23 == namespaceId && "mwSmallCaps" == name)
-    return new MacWordSmallCaps();
-    
-if( 23 == namespaceId && "usePrinterMetrics" == name)
-    return new UsePrinterMetrics();
-    
-if( 23 == namespaceId && "doNotSuppressParagraphBorders" == name)
-    return new DoNotSuppressParagraphBorders();
-    
-if( 23 == namespaceId && "wrapTrailSpaces" == name)
-    return new WrapTrailSpaces();
-    
-if( 23 == namespaceId && "footnoteLayoutLikeWW8" == name)
-    return new FootnoteLayoutLikeWord8();
-    
-if( 23 == namespaceId && "shapeLayoutLikeWW8" == name)
-    return new ShapeLayoutLikeWord8();
-    
-if( 23 == namespaceId && "alignTablesRowByRow" == name)
-    return new AlignTablesRowByRow();
-    
-if( 23 == namespaceId && "forgetLastTabAlignment" == name)
-    return new ForgetLastTabAlignment();
-    
-if( 23 == namespaceId && "adjustLineHeightInTable" == name)
-    return new AdjustLineHeightInTable();
-    
-if( 23 == namespaceId && "autoSpaceLikeWord95" == name)
-    return new AutoSpaceLikeWord95();
-    
-if( 23 == namespaceId && "noSpaceRaiseLower" == name)
-    return new NoSpaceRaiseLower();
-    
-if( 23 == namespaceId && "doNotUseHTMLParagraphAutoSpacing" == name)
-    return new DoNotUseHTMLParagraphAutoSpacing();
-    
-if( 23 == namespaceId && "layoutRawTableWidth" == name)
-    return new LayoutRawTableWidth();
-    
-if( 23 == namespaceId && "layoutTableRowsApart" == name)
-    return new LayoutTableRowsApart();
-    
-if( 23 == namespaceId && "useWord97LineBreakRules" == name)
-    return new UseWord97LineBreakRules();
-    
-if( 23 == namespaceId && "doNotBreakWrappedTables" == name)
-    return new DoNotBreakWrappedTables();
-    
-if( 23 == namespaceId && "doNotSnapToGridInCell" == name)
-    return new DoNotSnapToGridInCell();
-    
-if( 23 == namespaceId && "selectFldWithFirstOrLastChar" == name)
-    return new SelectFieldWithFirstOrLastChar();
-    
-if( 23 == namespaceId && "applyBreakingRules" == name)
-    return new ApplyBreakingRules();
-    
-if( 23 == namespaceId && "doNotWrapTextWithPunct" == name)
-    return new DoNotWrapTextWithPunctuation();
-    
-if( 23 == namespaceId && "doNotUseEastAsianBreakRules" == name)
-    return new DoNotUseEastAsianBreakRules();
-    
-if( 23 == namespaceId && "useWord2002TableStyleRules" == name)
-    return new UseWord2002TableStyleRules();
-    
-if( 23 == namespaceId && "growAutofit" == name)
-    return new GrowAutofit();
-    
-if( 23 == namespaceId && "useFELayout" == name)
-    return new UseFarEastLayout();
-    
-if( 23 == namespaceId && "useNormalStyleForList" == name)
-    return new UseNormalStyleForList();
-    
-if( 23 == namespaceId && "doNotUseIndentAsNumberingTabStop" == name)
-    return new DoNotUseIndentAsNumberingTabStop();
-    
-if( 23 == namespaceId && "useAltKinsokuLineBreakRules" == name)
-    return new UseAltKinsokuLineBreakRules();
-    
-if( 23 == namespaceId && "allowSpaceOfSameStyleInTable" == name)
-    return new AllowSpaceOfSameStyleInTable();
-    
-if( 23 == namespaceId && "doNotSuppressIndentation" == name)
-    return new DoNotSuppressIndentation();
-    
-if( 23 == namespaceId && "doNotAutofitConstrainedTables" == name)
-    return new DoNotAutofitConstrainedTables();
-    
-if( 23 == namespaceId && "autofitToFirstFixedWidthCell" == name)
-    return new AutofitToFirstFixedWidthCell();
-    
-if( 23 == namespaceId && "underlineTabInNumList" == name)
-    return new UnderlineTabInNumberingList();
-    
-if( 23 == namespaceId && "displayHangulFixedWidth" == name)
-    return new DisplayHangulFixedWidth();
-    
-if( 23 == namespaceId && "splitPgBreakAndParaMark" == name)
-    return new SplitPageBreakAndParagraphMark();
-    
-if( 23 == namespaceId && "doNotVertAlignCellWithSp" == name)
-    return new DoNotVerticallyAlignCellWithShape();
-    
-if( 23 == namespaceId && "doNotBreakConstrainedForcedTable" == name)
-    return new DoNotBreakConstrainedForcedTable();
-    
-if( 23 == namespaceId && "doNotVertAlignInTxbx" == name)
-    return new DoNotVerticallyAlignInTextBox();
-    
-if( 23 == namespaceId && "useAnsiKerningPairs" == name)
-    return new UseAnsiKerningPairs();
-    
-if( 23 == namespaceId && "cachedColBalance" == name)
-    return new CachedColumnBalance();
-    
-if( 23 == namespaceId && "compatSetting" == name)
-    return new CompatibilitySetting();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "useSingleBorderforContiguousCells","wpJustification","noTabHangInd","noLeading","spaceForUL","noColumnBalance","balanceSingleByteDoubleByteWidth","noExtraLineSpacing","doNotLeaveBackslashAlone","ulTrailSpace","doNotExpandShiftReturn","spacingInWholePoints","lineWrapLikeWord6","printBodyTextBeforeHeader","printColBlack","wpSpaceWidth","showBreaksInFrames","subFontBySize","suppressBottomSpacing","suppressTopSpacing","suppressSpacingAtTopOfPage","suppressTopSpacingWP","suppressSpBfAfterPgBrk","swapBordersFacingPages","convMailMergeEsc","truncateFontHeightsLikeWP6","mwSmallCaps","usePrinterMetrics","doNotSuppressParagraphBorders","wrapTrailSpaces","footnoteLayoutLikeWW8","shapeLayoutLikeWW8","alignTablesRowByRow","forgetLastTabAlignment","adjustLineHeightInTable","autoSpaceLikeWord95","noSpaceRaiseLower","doNotUseHTMLParagraphAutoSpacing","layoutRawTableWidth","layoutTableRowsApart","useWord97LineBreakRules","doNotBreakWrappedTables","doNotSnapToGridInCell","selectFldWithFirstOrLastChar","applyBreakingRules","doNotWrapTextWithPunct","doNotUseEastAsianBreakRules","useWord2002TableStyleRules","growAutofit","useFELayout","useNormalStyleForList","doNotUseIndentAsNumberingTabStop","useAltKinsokuLineBreakRules","allowSpaceOfSameStyleInTable","doNotSuppressIndentation","doNotAutofitConstrainedTables","autofitToFirstFixedWidthCell","underlineTabInNumList","displayHangulFixedWidth","splitPgBreakAndParaMark","doNotVertAlignCellWithSp","doNotBreakConstrainedForcedTable","doNotVertAlignInTxbx","useAnsiKerningPairs","cachedColBalance","compatSetting" };
     private static readonly byte[] eleNamespaceIds = { 23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23 };
     
@@ -55368,6 +48076,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<UseSingleBorderForContiguousCells>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Emulate WordPerfect 6.x Paragraph Justification.</para>
     /// <para> Represents the following element tag in the schema: w:wpJustification </para>
@@ -55380,6 +48089,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<WordPerfectJustification>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Do Not Create Custom Tab Stop for Hanging Indent.</para>
     /// <para> Represents the following element tag in the schema: w:noTabHangInd </para>
@@ -55392,6 +48102,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<NoTabHangIndent>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Do Not Add Leading Between Lines of Text.</para>
     /// <para> Represents the following element tag in the schema: w:noLeading </para>
@@ -55404,6 +48115,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<NoLeading>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Add Additional Space Below Baseline For Underlined East Asian Text.</para>
     /// <para> Represents the following element tag in the schema: w:spaceForUL </para>
@@ -55416,6 +48128,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<SpaceForUnderline>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Do Not Balance Text Columns within a Section.</para>
     /// <para> Represents the following element tag in the schema: w:noColumnBalance </para>
@@ -55428,6 +48141,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<NoColumnBalance>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Balance Single Byte and Double Byte Characters.</para>
     /// <para> Represents the following element tag in the schema: w:balanceSingleByteDoubleByteWidth </para>
@@ -55440,6 +48154,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<BalanceSingleByteDoubleByteWidth>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Do Not Center Content on Lines With Exact Line Height.</para>
     /// <para> Represents the following element tag in the schema: w:noExtraLineSpacing </para>
@@ -55452,6 +48167,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<NoExtraLineSpacing>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> Convert Backslash To Yen Sign When Entered.</para>
     /// <para> Represents the following element tag in the schema: w:doNotLeaveBackslashAlone </para>
@@ -55464,6 +48180,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<DoNotLeaveBackslashAlone>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Underline All Trailing Spaces.</para>
     /// <para> Represents the following element tag in the schema: w:ulTrailSpace </para>
@@ -55476,6 +48193,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<UnderlineTrailingSpaces>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> Don't Justify Lines Ending in Soft Line Break.</para>
     /// <para> Represents the following element tag in the schema: w:doNotExpandShiftReturn </para>
@@ -55488,6 +48206,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<DoNotExpandShiftReturn>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Only Expand/Condense Text By Whole Points.</para>
     /// <para> Represents the following element tag in the schema: w:spacingInWholePoints </para>
@@ -55500,6 +48219,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<SpacingInWholePoints>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> Emulate Word 6.0 Line Wrapping for East Asian Text.</para>
     /// <para> Represents the following element tag in the schema: w:lineWrapLikeWord6 </para>
@@ -55512,6 +48232,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<LineWrapLikeWord6>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> Print Body Text before Header/Footer Contents.</para>
     /// <para> Represents the following element tag in the schema: w:printBodyTextBeforeHeader </para>
@@ -55524,6 +48245,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<PrintBodyTextBeforeHeader>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> Print Colors as Black And White without Dithering.</para>
     /// <para> Represents the following element tag in the schema: w:printColBlack </para>
@@ -55536,6 +48258,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<PrintColorBlackWhite>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> Space width.</para>
     /// <para> Represents the following element tag in the schema: w:wpSpaceWidth </para>
@@ -55548,6 +48271,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<WordPerfectSpaceWidth>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> Display Page/Column Breaks Present in Frames.</para>
     /// <para> Represents the following element tag in the schema: w:showBreaksInFrames </para>
@@ -55560,6 +48284,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<ShowBreaksInFrames>(16);
         set => SetElement(16, value);
     }
+    
     /// <summary>
     /// <para> Increase Priority Of Font Size During Font Substitution.</para>
     /// <para> Represents the following element tag in the schema: w:subFontBySize </para>
@@ -55572,6 +48297,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<SubFontBySize>(17);
         set => SetElement(17, value);
     }
+    
     /// <summary>
     /// <para> Ignore Exact Line Height for Last Line on Page.</para>
     /// <para> Represents the following element tag in the schema: w:suppressBottomSpacing </para>
@@ -55584,6 +48310,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<SuppressBottomSpacing>(18);
         set => SetElement(18, value);
     }
+    
     /// <summary>
     /// <para> Ignore Minimum and Exact Line Height for First Line on Page.</para>
     /// <para> Represents the following element tag in the schema: w:suppressTopSpacing </para>
@@ -55596,6 +48323,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<SuppressTopSpacing>(19);
         set => SetElement(19, value);
     }
+    
     /// <summary>
     /// <para> Ignore Minimum Line Height for First Line on Page.</para>
     /// <para> Represents the following element tag in the schema: w:suppressSpacingAtTopOfPage </para>
@@ -55608,6 +48336,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<SuppressSpacingAtTopOfPage>(20);
         set => SetElement(20, value);
     }
+    
     /// <summary>
     /// <para> Emulate WordPerfect 5.x Line Spacing.</para>
     /// <para> Represents the following element tag in the schema: w:suppressTopSpacingWP </para>
@@ -55620,6 +48349,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<SuppressTopSpacingWordPerfect>(21);
         set => SetElement(21, value);
     }
+    
     /// <summary>
     /// <para> Do Not Use Space Before On First Line After a Page Break.</para>
     /// <para> Represents the following element tag in the schema: w:suppressSpBfAfterPgBrk </para>
@@ -55632,6 +48362,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<SuppressSpacingBeforeAfterPageBreak>(22);
         set => SetElement(22, value);
     }
+    
     /// <summary>
     /// <para> Swap Paragraph Borders on Odd Numbered Pages.</para>
     /// <para> Represents the following element tag in the schema: w:swapBordersFacingPages </para>
@@ -55644,6 +48375,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<SwapBordersFacingPages>(23);
         set => SetElement(23, value);
     }
+    
     /// <summary>
     /// <para> Treat Backslash Quotation Delimiter as Two Quotation Marks.</para>
     /// <para> Represents the following element tag in the schema: w:convMailMergeEsc </para>
@@ -55656,6 +48388,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<ConvertMailMergeEscape>(24);
         set => SetElement(24, value);
     }
+    
     /// <summary>
     /// <para> Emulate WordPerfect 6.x Font Height Calculation.</para>
     /// <para> Represents the following element tag in the schema: w:truncateFontHeightsLikeWP6 </para>
@@ -55668,6 +48401,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<TruncateFontHeightsLikeWordPerfect>(25);
         set => SetElement(25, value);
     }
+    
     /// <summary>
     /// <para> Emulate Word 5.x for the Macintosh Small Caps Formatting.</para>
     /// <para> Represents the following element tag in the schema: w:mwSmallCaps </para>
@@ -55680,6 +48414,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<MacWordSmallCaps>(26);
         set => SetElement(26, value);
     }
+    
     /// <summary>
     /// <para> Use Printer Metrics To Display Documents.</para>
     /// <para> Represents the following element tag in the schema: w:usePrinterMetrics </para>
@@ -55692,6 +48427,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<UsePrinterMetrics>(27);
         set => SetElement(27, value);
     }
+    
     /// <summary>
     /// <para> Do Not Suppress Paragraph Borders Next To Frames.</para>
     /// <para> Represents the following element tag in the schema: w:doNotSuppressParagraphBorders </para>
@@ -55704,6 +48440,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<DoNotSuppressParagraphBorders>(28);
         set => SetElement(28, value);
     }
+    
     /// <summary>
     /// <para> Line Wrap Trailing Spaces.</para>
     /// <para> Represents the following element tag in the schema: w:wrapTrailSpaces </para>
@@ -55716,6 +48453,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<WrapTrailSpaces>(29);
         set => SetElement(29, value);
     }
+    
     /// <summary>
     /// <para> Emulate Word 6.x/95/97 Footnote Placement.</para>
     /// <para> Represents the following element tag in the schema: w:footnoteLayoutLikeWW8 </para>
@@ -55728,6 +48466,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<FootnoteLayoutLikeWord8>(30);
         set => SetElement(30, value);
     }
+    
     /// <summary>
     /// <para> Emulate Word 97 Text Wrapping Around Floating Objects.</para>
     /// <para> Represents the following element tag in the schema: w:shapeLayoutLikeWW8 </para>
@@ -55740,6 +48479,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<ShapeLayoutLikeWord8>(31);
         set => SetElement(31, value);
     }
+    
     /// <summary>
     /// <para> Align Table Rows Independently.</para>
     /// <para> Represents the following element tag in the schema: w:alignTablesRowByRow </para>
@@ -55752,6 +48492,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<AlignTablesRowByRow>(32);
         set => SetElement(32, value);
     }
+    
     /// <summary>
     /// <para> Ignore Width of Last Tab Stop When Aligning Paragraph If It Is Not Left Aligned.</para>
     /// <para> Represents the following element tag in the schema: w:forgetLastTabAlignment </para>
@@ -55764,6 +48505,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<ForgetLastTabAlignment>(33);
         set => SetElement(33, value);
     }
+    
     /// <summary>
     /// <para> Add Document Grid Line Pitch To Lines in Table Cells.</para>
     /// <para> Represents the following element tag in the schema: w:adjustLineHeightInTable </para>
@@ -55776,6 +48518,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<AdjustLineHeightInTable>(34);
         set => SetElement(34, value);
     }
+    
     /// <summary>
     /// <para> Emulate Word 95 Full-Width Character Spacing.</para>
     /// <para> Represents the following element tag in the schema: w:autoSpaceLikeWord95 </para>
@@ -55788,6 +48531,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<AutoSpaceLikeWord95>(35);
         set => SetElement(35, value);
     }
+    
     /// <summary>
     /// <para> Do Not Increase Line Height for Raised/Lowered Text.</para>
     /// <para> Represents the following element tag in the schema: w:noSpaceRaiseLower </para>
@@ -55800,6 +48544,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<NoSpaceRaiseLower>(36);
         set => SetElement(36, value);
     }
+    
     /// <summary>
     /// <para> Use Fixed Paragraph Spacing for HTML Auto Setting.</para>
     /// <para> Represents the following element tag in the schema: w:doNotUseHTMLParagraphAutoSpacing </para>
@@ -55812,6 +48557,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<DoNotUseHTMLParagraphAutoSpacing>(37);
         set => SetElement(37, value);
     }
+    
     /// <summary>
     /// <para> Ignore Space Before Table When Deciding If Table Should Wrap Floating Object.</para>
     /// <para> Represents the following element tag in the schema: w:layoutRawTableWidth </para>
@@ -55824,6 +48570,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<LayoutRawTableWidth>(38);
         set => SetElement(38, value);
     }
+    
     /// <summary>
     /// <para> Allow Table Rows to Wrap Inline Objects Independently.</para>
     /// <para> Represents the following element tag in the schema: w:layoutTableRowsApart </para>
@@ -55836,6 +48583,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<LayoutTableRowsApart>(39);
         set => SetElement(39, value);
     }
+    
     /// <summary>
     /// <para> Emulate Word 97 East Asian Line Breaking.</para>
     /// <para> Represents the following element tag in the schema: w:useWord97LineBreakRules </para>
@@ -55848,6 +48596,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<UseWord97LineBreakRules>(40);
         set => SetElement(40, value);
     }
+    
     /// <summary>
     /// <para> Do Not Allow Floating Tables To Break Across Pages.</para>
     /// <para> Represents the following element tag in the schema: w:doNotBreakWrappedTables </para>
@@ -55860,6 +48609,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<DoNotBreakWrappedTables>(41);
         set => SetElement(41, value);
     }
+    
     /// <summary>
     /// <para> Do Not Snap to Document Grid in Table Cells with Objects.</para>
     /// <para> Represents the following element tag in the schema: w:doNotSnapToGridInCell </para>
@@ -55872,6 +48622,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<DoNotSnapToGridInCell>(42);
         set => SetElement(42, value);
     }
+    
     /// <summary>
     /// <para> Select Field When First or Last Character Is Selected.</para>
     /// <para> Represents the following element tag in the schema: w:selectFldWithFirstOrLastChar </para>
@@ -55884,6 +48635,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<SelectFieldWithFirstOrLastChar>(43);
         set => SetElement(43, value);
     }
+    
     /// <summary>
     /// <para> Use Legacy Ethiopic and Amharic Line Breaking Rules.</para>
     /// <para> Represents the following element tag in the schema: w:applyBreakingRules </para>
@@ -55896,6 +48648,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<ApplyBreakingRules>(44);
         set => SetElement(44, value);
     }
+    
     /// <summary>
     /// <para> Do Not Allow Hanging Punctuation With Character Grid.</para>
     /// <para> Represents the following element tag in the schema: w:doNotWrapTextWithPunct </para>
@@ -55908,6 +48661,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<DoNotWrapTextWithPunctuation>(45);
         set => SetElement(45, value);
     }
+    
     /// <summary>
     /// <para> Do Not Compress Compressible Characters When Using Document Grid.</para>
     /// <para> Represents the following element tag in the schema: w:doNotUseEastAsianBreakRules </para>
@@ -55920,6 +48674,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<DoNotUseEastAsianBreakRules>(46);
         set => SetElement(46, value);
     }
+    
     /// <summary>
     /// <para> Emulate Word 2002 Table Style Rules.</para>
     /// <para> Represents the following element tag in the schema: w:useWord2002TableStyleRules </para>
@@ -55932,6 +48687,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<UseWord2002TableStyleRules>(47);
         set => SetElement(47, value);
     }
+    
     /// <summary>
     /// <para> Allow Tables to AutoFit Into Page Margins.</para>
     /// <para> Represents the following element tag in the schema: w:growAutofit </para>
@@ -55944,6 +48700,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<GrowAutofit>(48);
         set => SetElement(48, value);
     }
+    
     /// <summary>
     /// <para> Do Not Bypass East Asian/Complex Script Layout Code.</para>
     /// <para> Represents the following element tag in the schema: w:useFELayout </para>
@@ -55956,6 +48713,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<UseFarEastLayout>(49);
         set => SetElement(49, value);
     }
+    
     /// <summary>
     /// <para> Do Not Automatically Apply List Paragraph Style To Bulleted/Numbered Text.</para>
     /// <para> Represents the following element tag in the schema: w:useNormalStyleForList </para>
@@ -55968,6 +48726,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<UseNormalStyleForList>(50);
         set => SetElement(50, value);
     }
+    
     /// <summary>
     /// <para> Ignore Hanging Indent When Creating Tab Stop After Numbering.</para>
     /// <para> Represents the following element tag in the schema: w:doNotUseIndentAsNumberingTabStop </para>
@@ -55980,6 +48739,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<DoNotUseIndentAsNumberingTabStop>(51);
         set => SetElement(51, value);
     }
+    
     /// <summary>
     /// <para> Use Alternate Set of East Asian Line Breaking Rules.</para>
     /// <para> Represents the following element tag in the schema: w:useAltKinsokuLineBreakRules </para>
@@ -55992,6 +48752,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<UseAltKinsokuLineBreakRules>(52);
         set => SetElement(52, value);
     }
+    
     /// <summary>
     /// <para> Allow Contextual Spacing of Paragraphs in Tables.</para>
     /// <para> Represents the following element tag in the schema: w:allowSpaceOfSameStyleInTable </para>
@@ -56004,6 +48765,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<AllowSpaceOfSameStyleInTable>(53);
         set => SetElement(53, value);
     }
+    
     /// <summary>
     /// <para> Do Not Ignore Floating Objects When Calculating Paragraph Indentation.</para>
     /// <para> Represents the following element tag in the schema: w:doNotSuppressIndentation </para>
@@ -56016,6 +48778,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<DoNotSuppressIndentation>(54);
         set => SetElement(54, value);
     }
+    
     /// <summary>
     /// <para> Do Not AutoFit Tables To Fit Next To Wrapped Objects.</para>
     /// <para> Represents the following element tag in the schema: w:doNotAutofitConstrainedTables </para>
@@ -56028,6 +48791,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<DoNotAutofitConstrainedTables>(55);
         set => SetElement(55, value);
     }
+    
     /// <summary>
     /// <para> Allow Table Columns To Exceed Preferred Widths of Constituent Cells.</para>
     /// <para> Represents the following element tag in the schema: w:autofitToFirstFixedWidthCell </para>
@@ -56040,6 +48804,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<AutofitToFirstFixedWidthCell>(56);
         set => SetElement(56, value);
     }
+    
     /// <summary>
     /// <para> Underline Following Character Following Numbering.</para>
     /// <para> Represents the following element tag in the schema: w:underlineTabInNumList </para>
@@ -56052,6 +48817,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<UnderlineTabInNumberingList>(57);
         set => SetElement(57, value);
     }
+    
     /// <summary>
     /// <para> Always Use Fixed Width for Hangul Characters.</para>
     /// <para> Represents the following element tag in the schema: w:displayHangulFixedWidth </para>
@@ -56064,6 +48830,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<DisplayHangulFixedWidth>(58);
         set => SetElement(58, value);
     }
+    
     /// <summary>
     /// <para> Always Move Paragraph Mark to Page after a Page Break.</para>
     /// <para> Represents the following element tag in the schema: w:splitPgBreakAndParaMark </para>
@@ -56076,6 +48843,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<SplitPageBreakAndParagraphMark>(59);
         set => SetElement(59, value);
     }
+    
     /// <summary>
     /// <para> Don't Vertically Align Cells Containing Floating Objects.</para>
     /// <para> Represents the following element tag in the schema: w:doNotVertAlignCellWithSp </para>
@@ -56088,6 +48856,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<DoNotVerticallyAlignCellWithShape>(60);
         set => SetElement(60, value);
     }
+    
     /// <summary>
     /// <para> Don't Break Table Rows Around Floating Tables.</para>
     /// <para> Represents the following element tag in the schema: w:doNotBreakConstrainedForcedTable </para>
@@ -56100,6 +48869,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<DoNotBreakConstrainedForcedTable>(61);
         set => SetElement(61, value);
     }
+    
     /// <summary>
     /// <para> Ignore Vertical Alignment in Textboxes.</para>
     /// <para> Represents the following element tag in the schema: w:doNotVertAlignInTxbx </para>
@@ -56112,6 +48882,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<DoNotVerticallyAlignInTextBox>(62);
         set => SetElement(62, value);
     }
+    
     /// <summary>
     /// <para> Use ANSI Kerning Pairs from Fonts.</para>
     /// <para> Represents the following element tag in the schema: w:useAnsiKerningPairs </para>
@@ -56124,6 +48895,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<UseAnsiKerningPairs>(63);
         set => SetElement(63, value);
     }
+    
     /// <summary>
     /// <para> Use Cached Paragraph Information for Column Balancing.</para>
     /// <para> Represents the following element tag in the schema: w:cachedColBalance </para>
@@ -56136,6 +48908,7 @@ if( 23 == namespaceId && "compatSetting" == name)
         get => GetElement<CachedColumnBalance>(64);
         set => SetElement(64, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -56157,6 +48930,7 @@ if( 23 == namespaceId && "compatSetting" == name)
     [ChildElementInfo(typeof(DocumentVariable))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "docVars")]
 public partial class DocumentVariables : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12184;
@@ -56199,19 +48973,11 @@ public partial class DocumentVariables : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "docVar" == name)
-    return new DocumentVariable();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DocumentVariables>(deep);
@@ -56234,6 +49000,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Rsid))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "rsids")]
 public partial class Rsids : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12185;
@@ -56276,22 +49043,11 @@ public partial class Rsids : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rsidRoot" == name)
-    return new RsidRoot();
     
-if( 23 == namespaceId && "rsid" == name)
-    return new Rsid();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "rsidRoot","rsid" };
     private static readonly byte[] eleNamespaceIds = { 23,23 };
     
@@ -56312,6 +49068,7 @@ if( 23 == namespaceId && "rsid" == name)
         get => GetElement<RsidRoot>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -56326,6 +49083,7 @@ if( 23 == namespaceId && "rsid" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "clrSchemeMapping")]
 public partial class ColorSchemeMapping : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12189;
@@ -56477,6 +49235,7 @@ public partial class ColorSchemeMapping : OpenXmlLeafElement
     [ChildElementInfo(typeof(AutoCaptions))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "captions")]
 public partial class Captions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12193;
@@ -56519,22 +49278,11 @@ public partial class Captions : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "caption" == name)
-    return new Caption();
     
-if( 23 == namespaceId && "autoCaptions" == name)
-    return new AutoCaptions();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Captions>(deep);
@@ -56548,6 +49296,7 @@ if( 23 == namespaceId && "autoCaptions" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "readModeInkLockDown")]
 public partial class ReadModeInkLockDown : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12194;
@@ -56618,6 +49367,7 @@ public partial class ReadModeInkLockDown : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "targetScreenSz")]
 public partial class TargetScreenSize : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12208;
@@ -56684,6 +49434,7 @@ public partial class TargetScreenSize : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Shapetype))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "pict")]
 public partial class PictureBulletBase : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12209;
@@ -56726,43 +49477,11 @@ public partial class PictureBulletBase : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "group" == name)
-    return new DocumentFormat.OpenXml.Vml.Group();
     
-if( 26 == namespaceId && "image" == name)
-    return new DocumentFormat.OpenXml.Vml.ImageFile();
-    
-if( 26 == namespaceId && "line" == name)
-    return new DocumentFormat.OpenXml.Vml.Line();
-    
-if( 26 == namespaceId && "oval" == name)
-    return new DocumentFormat.OpenXml.Vml.Oval();
-    
-if( 26 == namespaceId && "polyline" == name)
-    return new DocumentFormat.OpenXml.Vml.PolyLine();
-    
-if( 26 == namespaceId && "rect" == name)
-    return new DocumentFormat.OpenXml.Vml.Rectangle();
-    
-if( 26 == namespaceId && "roundrect" == name)
-    return new DocumentFormat.OpenXml.Vml.RoundRectangle();
-    
-if( 26 == namespaceId && "shape" == name)
-    return new DocumentFormat.OpenXml.Vml.Shape();
-    
-if( 26 == namespaceId && "shapetype" == name)
-    return new DocumentFormat.OpenXml.Vml.Shapetype();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PictureBulletBase>(deep);
@@ -56776,6 +49495,7 @@ if( 26 == namespaceId && "shapetype" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "panose1")]
 public partial class Panose1Number : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12211;
@@ -56819,6 +49539,7 @@ public partial class Panose1Number : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "charset")]
 public partial class FontCharSet : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12212;
@@ -56871,6 +49592,7 @@ public partial class FontCharSet : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "family")]
 public partial class FontFamily : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12213;
@@ -56914,6 +49636,7 @@ public partial class FontFamily : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "pitch")]
 public partial class Pitch : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12215;
@@ -56957,6 +49680,7 @@ public partial class Pitch : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(23, "sig")]
 public partial class FontSignature : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12216;
@@ -57044,6 +49768,7 @@ public partial class FontSignature : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "embedRegular")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EmbedRegularFont : FontRelationshipType
 {
@@ -57071,6 +49796,7 @@ public partial class EmbedRegularFont : FontRelationshipType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "embedBold")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EmbedBoldFont : FontRelationshipType
 {
@@ -57098,6 +49824,7 @@ public partial class EmbedBoldFont : FontRelationshipType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "embedItalic")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EmbedItalicFont : FontRelationshipType
 {
@@ -57125,6 +49852,7 @@ public partial class EmbedItalicFont : FontRelationshipType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(23, "embedBoldItalic")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EmbedBoldItalicFont : FontRelationshipType
 {

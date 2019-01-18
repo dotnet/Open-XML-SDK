@@ -35,6 +35,7 @@ namespace DocumentFormat.OpenXml.InkML
     [ChildElementInfo(typeof(TraceView))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "ink")]
 public partial class Ink : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 12714;
@@ -84,37 +85,11 @@ public partial class Ink : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 43 == namespaceId && "annotation" == name)
-    return new Annotation();
     
-if( 43 == namespaceId && "annotationXML" == name)
-    return new AnnotationXml();
-    
-if( 43 == namespaceId && "definitions" == name)
-    return new Definitions();
-    
-if( 43 == namespaceId && "context" == name)
-    return new Context();
-    
-if( 43 == namespaceId && "trace" == name)
-    return new Trace();
-    
-if( 43 == namespaceId && "traceGroup" == name)
-    return new TraceGroup();
-    
-if( 43 == namespaceId && "traceView" == name)
-    return new TraceView();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Ink>(deep);
@@ -128,6 +103,7 @@ if( 43 == namespaceId && "traceView" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "bind")]
 public partial class Bind : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12715;
@@ -190,6 +166,7 @@ public partial class Bind : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "table")]
 public partial class Table : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12716;
@@ -260,6 +237,7 @@ public partial class Table : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "matrix")]
 public partial class Matrix : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12717;
@@ -329,6 +307,7 @@ public partial class Matrix : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(Mapping))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "mapping")]
 public partial class Mapping : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12718;
@@ -394,28 +373,11 @@ public partial class Mapping : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 43 == namespaceId && "bind" == name)
-    return new Bind();
     
-if( 43 == namespaceId && "table" == name)
-    return new Table();
-    
-if( 43 == namespaceId && "matrix" == name)
-    return new Matrix();
-    
-if( 43 == namespaceId && "mapping" == name)
-    return new Mapping();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Mapping>(deep);
@@ -436,6 +398,7 @@ if( 43 == namespaceId && "mapping" == name)
     [ChildElementInfo(typeof(Mapping))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "channel")]
 public partial class Channel : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12719;
@@ -543,19 +506,11 @@ public partial class Channel : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 43 == namespaceId && "mapping" == name)
-    return new Mapping();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Channel>(deep);
@@ -576,6 +531,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Channel))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "intermittentChannels")]
 public partial class IntermittentChannels : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12720;
@@ -618,19 +574,11 @@ public partial class IntermittentChannels : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 43 == namespaceId && "channel" == name)
-    return new Channel();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<IntermittentChannels>(deep);
@@ -644,6 +592,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "channelProperty")]
 public partial class ChannelProperty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12721;
@@ -715,6 +664,7 @@ public partial class ChannelProperty : OpenXmlLeafElement
     [ChildElementInfo(typeof(IntermittentChannels))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "traceFormat")]
 public partial class TraceFormat : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12722;
@@ -766,22 +716,11 @@ public partial class TraceFormat : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 43 == namespaceId && "channel" == name)
-    return new Channel();
     
-if( 43 == namespaceId && "intermittentChannels" == name)
-    return new IntermittentChannels();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TraceFormat>(deep);
@@ -795,6 +734,7 @@ if( 43 == namespaceId && "intermittentChannels" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "sampleRate")]
 public partial class SampleRate : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12723;
@@ -843,6 +783,7 @@ public partial class SampleRate : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "latency")]
 public partial class Latency : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12724;
@@ -884,6 +825,7 @@ public partial class Latency : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "activeArea")]
 public partial class ActiveArea : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12725;
@@ -946,6 +888,7 @@ public partial class ActiveArea : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "srcProperty")]
 public partial class SourceProperty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12726;
@@ -1008,6 +951,7 @@ public partial class SourceProperty : OpenXmlLeafElement
     [ChildElementInfo(typeof(ChannelProperty))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "channelProperties")]
 public partial class ChannelProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12727;
@@ -1050,19 +994,11 @@ public partial class ChannelProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 43 == namespaceId && "channelProperty" == name)
-    return new ChannelProperty();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChannelProperties>(deep);
@@ -1076,6 +1012,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "annotation")]
 public partial class Annotation : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12728;
@@ -1144,6 +1081,7 @@ public partial class Annotation : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.EMMA.Emma))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "annotationXML")]
 public partial class AnnotationXml : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12729;
@@ -1207,19 +1145,11 @@ public partial class AnnotationXml : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 44 == namespaceId && "emma" == name)
-    return new DocumentFormat.OpenXml.EMMA.Emma();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "emma" };
     private static readonly byte[] eleNamespaceIds = { 44 };
     
@@ -1240,6 +1170,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<DocumentFormat.OpenXml.EMMA.Emma>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1263,6 +1194,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(AnnotationXml))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "brushProperty")]
 public partial class BrushProperty : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12730;
@@ -1326,22 +1258,11 @@ public partial class BrushProperty : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 43 == namespaceId && "annotation" == name)
-    return new Annotation();
     
-if( 43 == namespaceId && "annotationXML" == name)
-    return new AnnotationXml();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BrushProperty>(deep);
@@ -1362,6 +1283,7 @@ if( 43 == namespaceId && "annotationXML" == name)
     [ChildElementInfo(typeof(TraceFormat))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "canvas")]
 public partial class Canvas : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12731;
@@ -1420,19 +1342,11 @@ public partial class Canvas : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 43 == namespaceId && "traceFormat" == name)
-    return new TraceFormat();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "traceFormat" };
     private static readonly byte[] eleNamespaceIds = { 43 };
     
@@ -1453,6 +1367,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<TraceFormat>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1474,6 +1389,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Mapping))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "canvasTransform")]
 public partial class CanvasTransform : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12732;
@@ -1532,19 +1448,11 @@ public partial class CanvasTransform : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 43 == namespaceId && "mapping" == name)
-    return new Mapping();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CanvasTransform>(deep);
@@ -1575,6 +1483,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ChannelProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "inkSource")]
 public partial class InkSource : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12733;
@@ -1661,34 +1570,11 @@ public partial class InkSource : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 43 == namespaceId && "traceFormat" == name)
-    return new TraceFormat();
     
-if( 43 == namespaceId && "sampleRate" == name)
-    return new SampleRate();
-    
-if( 43 == namespaceId && "latency" == name)
-    return new Latency();
-    
-if( 43 == namespaceId && "activeArea" == name)
-    return new ActiveArea();
-    
-if( 43 == namespaceId && "srcProperty" == name)
-    return new SourceProperty();
-    
-if( 43 == namespaceId && "channelProperties" == name)
-    return new ChannelProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "traceFormat","sampleRate","latency","activeArea","srcProperty","channelProperties" };
     private static readonly byte[] eleNamespaceIds = { 43,43,43,43,43,43 };
     
@@ -1709,6 +1595,7 @@ if( 43 == namespaceId && "channelProperties" == name)
         get => GetElement<TraceFormat>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> SampleRate.</para>
     /// <para> Represents the following element tag in the schema: inkml:sampleRate </para>
@@ -1721,6 +1608,7 @@ if( 43 == namespaceId && "channelProperties" == name)
         get => GetElement<SampleRate>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Latency.</para>
     /// <para> Represents the following element tag in the schema: inkml:latency </para>
@@ -1733,6 +1621,7 @@ if( 43 == namespaceId && "channelProperties" == name)
         get => GetElement<Latency>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> ActiveArea.</para>
     /// <para> Represents the following element tag in the schema: inkml:activeArea </para>
@@ -1745,6 +1634,7 @@ if( 43 == namespaceId && "channelProperties" == name)
         get => GetElement<ActiveArea>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1770,6 +1660,7 @@ if( 43 == namespaceId && "channelProperties" == name)
     [ChildElementInfo(typeof(BrushProperty))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "brush")]
 public partial class Brush : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12734;
@@ -1828,25 +1719,11 @@ public partial class Brush : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 43 == namespaceId && "annotation" == name)
-    return new Annotation();
     
-if( 43 == namespaceId && "annotationXML" == name)
-    return new AnnotationXml();
-    
-if( 43 == namespaceId && "brushProperty" == name)
-    return new BrushProperty();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Brush>(deep);
@@ -1860,6 +1737,7 @@ if( 43 == namespaceId && "brushProperty" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "timestamp")]
 public partial class Timestamp : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12735;
@@ -1931,6 +1809,7 @@ public partial class Timestamp : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "trace")]
 public partial class Trace : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12736;
@@ -2049,6 +1928,7 @@ public partial class Trace : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(TraceGroup))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "traceGroup")]
 public partial class TraceGroup : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12737;
@@ -2114,28 +1994,11 @@ public partial class TraceGroup : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 43 == namespaceId && "annotation" == name)
-    return new Annotation();
     
-if( 43 == namespaceId && "annotationXML" == name)
-    return new AnnotationXml();
-    
-if( 43 == namespaceId && "trace" == name)
-    return new Trace();
-    
-if( 43 == namespaceId && "traceGroup" == name)
-    return new TraceGroup();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TraceGroup>(deep);
@@ -2160,6 +2023,7 @@ if( 43 == namespaceId && "traceGroup" == name)
     [ChildElementInfo(typeof(TraceView))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "traceView")]
 public partial class TraceView : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12738;
@@ -2239,25 +2103,11 @@ public partial class TraceView : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 43 == namespaceId && "annotation" == name)
-    return new Annotation();
     
-if( 43 == namespaceId && "annotationXML" == name)
-    return new AnnotationXml();
-    
-if( 43 == namespaceId && "traceView" == name)
-    return new TraceView();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TraceView>(deep);
@@ -2288,6 +2138,7 @@ if( 43 == namespaceId && "traceView" == name)
     [ChildElementInfo(typeof(Timestamp))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "context")]
 public partial class Context : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12739;
@@ -2388,34 +2239,11 @@ public partial class Context : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 43 == namespaceId && "canvas" == name)
-    return new Canvas();
     
-if( 43 == namespaceId && "canvasTransform" == name)
-    return new CanvasTransform();
-    
-if( 43 == namespaceId && "traceFormat" == name)
-    return new TraceFormat();
-    
-if( 43 == namespaceId && "inkSource" == name)
-    return new InkSource();
-    
-if( 43 == namespaceId && "brush" == name)
-    return new Brush();
-    
-if( 43 == namespaceId && "timestamp" == name)
-    return new Timestamp();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "canvas","canvasTransform","traceFormat","inkSource","brush","timestamp" };
     private static readonly byte[] eleNamespaceIds = { 43,43,43,43,43,43 };
     
@@ -2436,6 +2264,7 @@ if( 43 == namespaceId && "timestamp" == name)
         get => GetElement<Canvas>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> CanvasTransform.</para>
     /// <para> Represents the following element tag in the schema: inkml:canvasTransform </para>
@@ -2448,6 +2277,7 @@ if( 43 == namespaceId && "timestamp" == name)
         get => GetElement<CanvasTransform>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> TraceFormat.</para>
     /// <para> Represents the following element tag in the schema: inkml:traceFormat </para>
@@ -2460,6 +2290,7 @@ if( 43 == namespaceId && "timestamp" == name)
         get => GetElement<TraceFormat>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> InkSource.</para>
     /// <para> Represents the following element tag in the schema: inkml:inkSource </para>
@@ -2472,6 +2303,7 @@ if( 43 == namespaceId && "timestamp" == name)
         get => GetElement<InkSource>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Brush.</para>
     /// <para> Represents the following element tag in the schema: inkml:brush </para>
@@ -2484,6 +2316,7 @@ if( 43 == namespaceId && "timestamp" == name)
         get => GetElement<Brush>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Timestamp.</para>
     /// <para> Represents the following element tag in the schema: inkml:timestamp </para>
@@ -2496,6 +2329,7 @@ if( 43 == namespaceId && "timestamp" == name)
         get => GetElement<Timestamp>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -2537,6 +2371,7 @@ if( 43 == namespaceId && "timestamp" == name)
     [ChildElementInfo(typeof(TraceView))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(43, "definitions")]
 public partial class Definitions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12740;
@@ -2579,49 +2414,11 @@ public partial class Definitions : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 43 == namespaceId && "brush" == name)
-    return new Brush();
     
-if( 43 == namespaceId && "canvas" == name)
-    return new Canvas();
-    
-if( 43 == namespaceId && "canvasTransform" == name)
-    return new CanvasTransform();
-    
-if( 43 == namespaceId && "context" == name)
-    return new Context();
-    
-if( 43 == namespaceId && "inkSource" == name)
-    return new InkSource();
-    
-if( 43 == namespaceId && "mapping" == name)
-    return new Mapping();
-    
-if( 43 == namespaceId && "timestamp" == name)
-    return new Timestamp();
-    
-if( 43 == namespaceId && "trace" == name)
-    return new Trace();
-    
-if( 43 == namespaceId && "traceFormat" == name)
-    return new TraceFormat();
-    
-if( 43 == namespaceId && "traceGroup" == name)
-    return new TraceGroup();
-    
-if( 43 == namespaceId && "traceView" == name)
-    return new TraceView();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Definitions>(deep);

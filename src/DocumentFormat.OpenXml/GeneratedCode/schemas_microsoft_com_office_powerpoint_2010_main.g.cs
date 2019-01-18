@@ -30,6 +30,7 @@ namespace DocumentFormat.OpenXml.Office2010.PowerPoint
     [ChildElementInfo(typeof(ApplicationNonVisualDrawingProperties), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "nvContentPartPr")]
 public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12831;
@@ -72,25 +73,11 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 49 == namespaceId && "cNvPr" == name)
-    return new NonVisualDrawingProperties();
     
-if( 49 == namespaceId && "cNvContentPartPr" == name)
-    return new NonVisualInkContentPartProperties();
-    
-if( 49 == namespaceId && "nvPr" == name)
-    return new ApplicationNonVisualDrawingProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "cNvPr","cNvContentPartPr","nvPr" };
     private static readonly byte[] eleNamespaceIds = { 49,49,49 };
     
@@ -111,6 +98,7 @@ if( 49 == namespaceId && "nvPr" == name)
         get => GetElement<NonVisualDrawingProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> NonVisualInkContentPartProperties.</para>
     /// <para> Represents the following element tag in the schema: p14:cNvContentPartPr </para>
@@ -123,6 +111,7 @@ if( 49 == namespaceId && "nvPr" == name)
         get => GetElement<NonVisualInkContentPartProperties>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> ApplicationNonVisualDrawingProperties.</para>
     /// <para> Represents the following element tag in the schema: p14:nvPr </para>
@@ -135,6 +124,7 @@ if( 49 == namespaceId && "nvPr" == name)
         get => GetElement<ApplicationNonVisualDrawingProperties>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -158,6 +148,7 @@ if( 49 == namespaceId && "nvPr" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "xfrm")]
 public partial class Transform2D : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12832;
@@ -221,22 +212,11 @@ public partial class Transform2D : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "off" == name)
-    return new DocumentFormat.OpenXml.Drawing.Offset();
     
-if( 10 == namespaceId && "ext" == name)
-    return new DocumentFormat.OpenXml.Drawing.Extents();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "off","ext" };
     private static readonly byte[] eleNamespaceIds = { 10,10 };
     
@@ -257,6 +237,7 @@ if( 10 == namespaceId && "ext" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Extents.</para>
     /// <para> Represents the following element tag in the schema: a:ext </para>
@@ -269,6 +250,7 @@ if( 10 == namespaceId && "ext" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -290,6 +272,7 @@ if( 10 == namespaceId && "ext" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.Extension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "extLst")]
 public partial class ExtensionListModify : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12833;
@@ -339,19 +322,11 @@ public partial class ExtensionListModify : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 24 == namespaceId && "ext" == name)
-    return new DocumentFormat.OpenXml.Presentation.Extension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExtensionListModify>(deep);
@@ -378,6 +353,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "media")]
 public partial class Media : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12834;
@@ -438,28 +414,11 @@ public partial class Media : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 49 == namespaceId && "trim" == name)
-    return new MediaTrim();
     
-if( 49 == namespaceId && "fade" == name)
-    return new MediaFade();
-    
-if( 49 == namespaceId && "bmkLst" == name)
-    return new MediaBookmarkList();
-    
-if( 49 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "trim","fade","bmkLst","extLst" };
     private static readonly byte[] eleNamespaceIds = { 49,49,49,49 };
     
@@ -480,6 +439,7 @@ if( 49 == namespaceId && "extLst" == name)
         get => GetElement<MediaTrim>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> MediaFade.</para>
     /// <para> Represents the following element tag in the schema: p14:fade </para>
@@ -492,6 +452,7 @@ if( 49 == namespaceId && "extLst" == name)
         get => GetElement<MediaFade>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> MediaBookmarkList.</para>
     /// <para> Represents the following element tag in the schema: p14:bmkLst </para>
@@ -504,6 +465,7 @@ if( 49 == namespaceId && "extLst" == name)
         get => GetElement<MediaBookmarkList>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: p14:extLst </para>
@@ -516,6 +478,7 @@ if( 49 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -529,6 +492,7 @@ if( 49 == namespaceId && "extLst" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(49, "vortex")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class VortexTransition : SideDirectionTransitionType
 {
@@ -556,6 +520,7 @@ public partial class VortexTransition : SideDirectionTransitionType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(49, "pan")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PanTransition : SideDirectionTransitionType
 {
@@ -610,6 +575,7 @@ public abstract partial class SideDirectionTransitionType : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(49, "switch")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SwitchTransition : LeftRightDirectionTransitionType
 {
@@ -637,6 +603,7 @@ public partial class SwitchTransition : LeftRightDirectionTransitionType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(49, "flip")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class FlipTransition : LeftRightDirectionTransitionType
 {
@@ -664,6 +631,7 @@ public partial class FlipTransition : LeftRightDirectionTransitionType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(49, "ferris")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class FerrisTransition : LeftRightDirectionTransitionType
 {
@@ -691,6 +659,7 @@ public partial class FerrisTransition : LeftRightDirectionTransitionType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(49, "gallery")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class GalleryTransition : LeftRightDirectionTransitionType
 {
@@ -718,6 +687,7 @@ public partial class GalleryTransition : LeftRightDirectionTransitionType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(49, "conveyor")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ConveyorTransition : LeftRightDirectionTransitionType
 {
@@ -773,6 +743,7 @@ public abstract partial class LeftRightDirectionTransitionType : OpenXmlLeafElem
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "ripple")]
 public partial class RippleTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12838;
@@ -813,6 +784,7 @@ public partial class RippleTransition : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(49, "honeycomb")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class HoneycombTransition : EmptyType
 {
@@ -840,6 +812,7 @@ public partial class HoneycombTransition : EmptyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(49, "flash")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class FlashTransition : EmptyType
 {
@@ -888,6 +861,7 @@ public abstract partial class EmptyType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "prism")]
 public partial class PrismTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12840;
@@ -942,6 +916,7 @@ public partial class PrismTransition : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(49, "doors")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DoorsTransition : OrientationTransitionType
 {
@@ -969,6 +944,7 @@ public partial class DoorsTransition : OrientationTransitionType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(49, "window")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class WindowTransition : OrientationTransitionType
 {
@@ -1024,6 +1000,7 @@ public abstract partial class OrientationTransitionType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "glitter")]
 public partial class GlitterTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12847;
@@ -1072,6 +1049,7 @@ public partial class GlitterTransition : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "warp")]
 public partial class WarpTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12848;
@@ -1113,6 +1091,7 @@ public partial class WarpTransition : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "flythrough")]
 public partial class FlythroughTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12849;
@@ -1161,6 +1140,7 @@ public partial class FlythroughTransition : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "shred")]
 public partial class ShredTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12851;
@@ -1209,6 +1189,7 @@ public partial class ShredTransition : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "reveal")]
 public partial class RevealTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12852;
@@ -1257,6 +1238,7 @@ public partial class RevealTransition : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "wheelReverse")]
 public partial class WheelReverseTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12853;
@@ -1298,6 +1280,7 @@ public partial class WheelReverseTransition : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "bmkTgt")]
 public partial class BookmarkTarget : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12854;
@@ -1353,6 +1336,7 @@ public partial class BookmarkTarget : OpenXmlLeafElement
     [ChildElementInfo(typeof(SectionOld), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "sectionPr")]
 public partial class SectionProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12855;
@@ -1395,19 +1379,11 @@ public partial class SectionProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 49 == namespaceId && "section" == name)
-    return new SectionOld();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SectionProperties>(deep);
@@ -1428,6 +1404,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Section), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "sectionLst")]
 public partial class SectionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12856;
@@ -1470,19 +1447,11 @@ public partial class SectionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 49 == namespaceId && "section" == name)
-    return new Section();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SectionList>(deep);
@@ -1496,6 +1465,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "browseMode")]
 public partial class BrowseMode : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12857;
@@ -1554,6 +1524,7 @@ public partial class BrowseMode : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.PresetColor))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "laserClr")]
 public partial class LaserColor : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12858;
@@ -1596,34 +1567,11 @@ public partial class LaserColor : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "scrgbClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage();
     
-if( 10 == namespaceId && "srgbClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.RgbColorModelHex();
-    
-if( 10 == namespaceId && "hslClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.HslColor();
-    
-if( 10 == namespaceId && "sysClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.SystemColor();
-    
-if( 10 == namespaceId && "schemeClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.SchemeColor();
-    
-if( 10 == namespaceId && "prstClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.PresetColor();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "scrgbClr","srgbClr","hslClr","sysClr","schemeClr","prstClr" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
     
@@ -1644,6 +1592,7 @@ if( 10 == namespaceId && "prstClr" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> RGB Color Model - Hex Variant.</para>
     /// <para> Represents the following element tag in the schema: a:srgbClr </para>
@@ -1656,6 +1605,7 @@ if( 10 == namespaceId && "prstClr" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.RgbColorModelHex>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Hue, Saturation, Luminance Color Model.</para>
     /// <para> Represents the following element tag in the schema: a:hslClr </para>
@@ -1668,6 +1618,7 @@ if( 10 == namespaceId && "prstClr" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.HslColor>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> System Color.</para>
     /// <para> Represents the following element tag in the schema: a:sysClr </para>
@@ -1680,6 +1631,7 @@ if( 10 == namespaceId && "prstClr" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.SystemColor>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Scheme Color.</para>
     /// <para> Represents the following element tag in the schema: a:schemeClr </para>
@@ -1692,6 +1644,7 @@ if( 10 == namespaceId && "prstClr" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.SchemeColor>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Preset Color.</para>
     /// <para> Represents the following element tag in the schema: a:prstClr </para>
@@ -1704,6 +1657,7 @@ if( 10 == namespaceId && "prstClr" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.PresetColor>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1718,6 +1672,7 @@ if( 10 == namespaceId && "prstClr" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "defaultImageDpi")]
 public partial class DefaultImageDpi : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12859;
@@ -1759,6 +1714,7 @@ public partial class DefaultImageDpi : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "discardImageEditData")]
 public partial class DiscardImageEditData : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12860;
@@ -1800,6 +1756,7 @@ public partial class DiscardImageEditData : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "showMediaCtrls")]
 public partial class ShowMediaControls : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12861;
@@ -1848,6 +1805,7 @@ public partial class ShowMediaControls : OpenXmlLeafElement
     [ChildElementInfo(typeof(TracePointList), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "laserTraceLst")]
 public partial class LaserTraceList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12862;
@@ -1890,19 +1848,11 @@ public partial class LaserTraceList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 49 == namespaceId && "tracePtLst" == name)
-    return new TracePointList();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LaserTraceList>(deep);
@@ -1915,6 +1865,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(49, "creationId")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class CreationId : RandomIdType
 {
@@ -1942,6 +1893,7 @@ public partial class CreationId : RandomIdType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(49, "modId")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ModificationId : RandomIdType
 {
@@ -2016,6 +1968,7 @@ public abstract partial class RandomIdType : OpenXmlLeafElement
     [ChildElementInfo(typeof(NullEventRecord), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "showEvtLst")]
 public partial class ShowEventRecordList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12865;
@@ -2058,37 +2011,11 @@ public partial class ShowEventRecordList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 49 == namespaceId && "triggerEvt" == name)
-    return new TriggerEventRecord();
     
-if( 49 == namespaceId && "playEvt" == name)
-    return new PlayEventRecord();
-    
-if( 49 == namespaceId && "stopEvt" == name)
-    return new StopEventRecord();
-    
-if( 49 == namespaceId && "pauseEvt" == name)
-    return new PauseEventRecord();
-    
-if( 49 == namespaceId && "resumeEvt" == name)
-    return new ResumeEventRecord();
-    
-if( 49 == namespaceId && "seekEvt" == name)
-    return new SeekEventRecord();
-    
-if( 49 == namespaceId && "nullEvt" == name)
-    return new NullEventRecord();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "triggerEvt","playEvt","stopEvt","pauseEvt","resumeEvt","seekEvt","nullEvt" };
     private static readonly byte[] eleNamespaceIds = { 49,49,49,49,49,49,49 };
     
@@ -2109,6 +2036,7 @@ if( 49 == namespaceId && "nullEvt" == name)
         get => GetElement<TriggerEventRecord>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> PlayEventRecord.</para>
     /// <para> Represents the following element tag in the schema: p14:playEvt </para>
@@ -2121,6 +2049,7 @@ if( 49 == namespaceId && "nullEvt" == name)
         get => GetElement<PlayEventRecord>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> StopEventRecord.</para>
     /// <para> Represents the following element tag in the schema: p14:stopEvt </para>
@@ -2133,6 +2062,7 @@ if( 49 == namespaceId && "nullEvt" == name)
         get => GetElement<StopEventRecord>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> PauseEventRecord.</para>
     /// <para> Represents the following element tag in the schema: p14:pauseEvt </para>
@@ -2145,6 +2075,7 @@ if( 49 == namespaceId && "nullEvt" == name)
         get => GetElement<PauseEventRecord>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> ResumeEventRecord.</para>
     /// <para> Represents the following element tag in the schema: p14:resumeEvt </para>
@@ -2157,6 +2088,7 @@ if( 49 == namespaceId && "nullEvt" == name)
         get => GetElement<ResumeEventRecord>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> SeekEventRecord.</para>
     /// <para> Represents the following element tag in the schema: p14:seekEvt </para>
@@ -2169,6 +2101,7 @@ if( 49 == namespaceId && "nullEvt" == name)
         get => GetElement<SeekEventRecord>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> NullEventRecord.</para>
     /// <para> Represents the following element tag in the schema: p14:nullEvt </para>
@@ -2181,6 +2114,7 @@ if( 49 == namespaceId && "nullEvt" == name)
         get => GetElement<NullEventRecord>(6);
         set => SetElement(6, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -2206,6 +2140,7 @@ if( 49 == namespaceId && "nullEvt" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "cNvPr")]
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12866;
@@ -2283,25 +2218,11 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "hlinkClick" == name)
-    return new DocumentFormat.OpenXml.Drawing.HyperlinkOnClick();
     
-if( 10 == namespaceId && "hlinkHover" == name)
-    return new DocumentFormat.OpenXml.Drawing.HyperlinkOnHover();
-    
-if( 10 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "hlinkClick","hlinkHover","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10 };
     
@@ -2322,6 +2243,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
     /// <para> Represents the following element tag in the schema: a:hlinkHover </para>
@@ -2334,6 +2256,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -2346,6 +2269,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -2369,6 +2293,7 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "cNvContentPartPr")]
 public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12867;
@@ -2418,22 +2343,11 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 48 == namespaceId && "cpLocks" == name)
-    return new DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks();
     
-if( 48 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "cpLocks","extLst" };
     private static readonly byte[] eleNamespaceIds = { 48,48 };
     
@@ -2454,6 +2368,7 @@ if( 48 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.ContentPartLocks>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a14:extLst </para>
@@ -2466,6 +2381,7 @@ if( 48 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.Drawing.OfficeArtExtensionList>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -2501,6 +2417,7 @@ if( 48 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "nvPr")]
 public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12868;
@@ -2557,40 +2474,11 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlCompositeEle
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 24 == namespaceId && "ph" == name)
-    return new DocumentFormat.OpenXml.Presentation.PlaceholderShape();
     
-if( 10 == namespaceId && "audioCd" == name)
-    return new DocumentFormat.OpenXml.Drawing.AudioFromCD();
-    
-if( 10 == namespaceId && "wavAudioFile" == name)
-    return new DocumentFormat.OpenXml.Drawing.WaveAudioFile();
-    
-if( 10 == namespaceId && "audioFile" == name)
-    return new DocumentFormat.OpenXml.Drawing.AudioFromFile();
-    
-if( 10 == namespaceId && "videoFile" == name)
-    return new DocumentFormat.OpenXml.Drawing.VideoFromFile();
-    
-if( 10 == namespaceId && "quickTimeFile" == name)
-    return new DocumentFormat.OpenXml.Drawing.QuickTimeFromFile();
-    
-if( 24 == namespaceId && "custDataLst" == name)
-    return new DocumentFormat.OpenXml.Presentation.CustomerDataList();
-    
-if( 24 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Presentation.ApplicationNonVisualDrawingPropertiesExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "ph","audioCd","wavAudioFile","audioFile","videoFile","quickTimeFile","custDataLst","extLst" };
     private static readonly byte[] eleNamespaceIds = { 24,10,10,10,10,10,24,24 };
     
@@ -2611,6 +2499,7 @@ if( 24 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Presentation.PlaceholderShape>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -2625,6 +2514,7 @@ if( 24 == namespaceId && "extLst" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "bmk")]
 public partial class MediaBookmark : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12869;
@@ -2673,6 +2563,7 @@ public partial class MediaBookmark : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "trim")]
 public partial class MediaTrim : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12870;
@@ -2721,6 +2612,7 @@ public partial class MediaTrim : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "fade")]
 public partial class MediaFade : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12871;
@@ -2776,6 +2668,7 @@ public partial class MediaFade : OpenXmlLeafElement
     [ChildElementInfo(typeof(MediaBookmark), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "bmkLst")]
 public partial class MediaBookmarkList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12872;
@@ -2818,19 +2711,11 @@ public partial class MediaBookmarkList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 49 == namespaceId && "bmk" == name)
-    return new MediaBookmark();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MediaBookmarkList>(deep);
@@ -2851,6 +2736,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Presentation.Extension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "extLst")]
 public partial class ExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12873;
@@ -2893,19 +2779,11 @@ public partial class ExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 24 == namespaceId && "ext" == name)
-    return new DocumentFormat.OpenXml.Presentation.Extension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExtensionList>(deep);
@@ -2926,6 +2804,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "section")]
 public partial class SectionOld : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12874;
@@ -2989,19 +2868,11 @@ public partial class SectionOld : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 49 == namespaceId && "extLst" == name)
-    return new ExtensionList();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 49 };
     
@@ -3022,6 +2893,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ExtensionList>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -3036,6 +2908,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "sldId")]
 public partial class SectionSlideIdListEntry : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12875;
@@ -3084,6 +2957,7 @@ public partial class SectionSlideIdListEntry : OpenXmlLeafElement
     [ChildElementInfo(typeof(SectionSlideIdListEntry), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "sldIdLst")]
 public partial class SectionSlideIdList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12876;
@@ -3126,19 +3000,11 @@ public partial class SectionSlideIdList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 49 == namespaceId && "sldId" == name)
-    return new SectionSlideIdListEntry();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SectionSlideIdList>(deep);
@@ -3161,6 +3027,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ExtensionList), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "section")]
 public partial class Section : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12877;
@@ -3217,22 +3084,11 @@ public partial class Section : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 49 == namespaceId && "sldIdLst" == name)
-    return new SectionSlideIdList();
     
-if( 49 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sldIdLst","extLst" };
     private static readonly byte[] eleNamespaceIds = { 49,49 };
     
@@ -3253,6 +3109,7 @@ if( 49 == namespaceId && "extLst" == name)
         get => GetElement<SectionSlideIdList>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: p14:extLst </para>
@@ -3265,6 +3122,7 @@ if( 49 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -3279,6 +3137,7 @@ if( 49 == namespaceId && "extLst" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "tracePt")]
 public partial class TracePoint : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12878;
@@ -3341,6 +3200,7 @@ public partial class TracePoint : OpenXmlLeafElement
     [ChildElementInfo(typeof(TracePoint), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "tracePtLst")]
 public partial class TracePointList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12879;
@@ -3383,19 +3243,11 @@ public partial class TracePointList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 49 == namespaceId && "tracePt" == name)
-    return new TracePoint();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TracePointList>(deep);
@@ -3409,6 +3261,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "triggerEvt")]
 public partial class TriggerEventRecord : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12880;
@@ -3463,6 +3316,7 @@ public partial class TriggerEventRecord : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(49, "playEvt")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PlayEventRecord : MediaPlaybackEventRecordType
 {
@@ -3490,6 +3344,7 @@ public partial class PlayEventRecord : MediaPlaybackEventRecordType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(49, "stopEvt")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class StopEventRecord : MediaPlaybackEventRecordType
 {
@@ -3517,6 +3372,7 @@ public partial class StopEventRecord : MediaPlaybackEventRecordType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(49, "pauseEvt")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class PauseEventRecord : MediaPlaybackEventRecordType
 {
@@ -3544,6 +3400,7 @@ public partial class PauseEventRecord : MediaPlaybackEventRecordType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(49, "resumeEvt")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ResumeEventRecord : MediaPlaybackEventRecordType
 {
@@ -3606,6 +3463,7 @@ public abstract partial class MediaPlaybackEventRecordType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "seekEvt")]
 public partial class SeekEventRecord : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12885;
@@ -3661,6 +3519,7 @@ public partial class SeekEventRecord : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(49, "nullEvt")]
 public partial class NullEventRecord : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12886;

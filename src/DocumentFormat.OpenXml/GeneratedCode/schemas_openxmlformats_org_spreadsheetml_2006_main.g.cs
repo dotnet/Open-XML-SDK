@@ -26,6 +26,7 @@ namespace DocumentFormat.OpenXml.Spreadsheet
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class Extension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11092;
@@ -75,16 +76,11 @@ public partial class Extension : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
     
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Extension>(deep);
@@ -105,6 +101,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(CalculationCell))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "calcChain")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CalculationChain : OpenXmlPartRootElement
 {
@@ -163,6 +160,7 @@ public partial class CalculationChain : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -180,19 +178,7 @@ public partial class CalculationChain : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "c" == name)
-    return new CalculationCell();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculationChain>(deep);
@@ -215,6 +201,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(CommentList))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "comments")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Comments : OpenXmlPartRootElement
 {
@@ -273,6 +260,7 @@ public partial class Comments : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -290,22 +278,7 @@ public partial class Comments : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "authors" == name)
-    return new Authors();
     
-if( 22 == namespaceId && "commentList" == name)
-    return new CommentList();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "authors","commentList","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22 };
     
@@ -326,6 +299,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Authors>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> List of Comments.</para>
     /// <para> Represents the following element tag in the schema: x:commentList </para>
@@ -338,6 +312,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CommentList>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -350,6 +325,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -371,6 +347,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(Schema))]
     [ChildElementInfo(typeof(Map))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "MapInfo")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MapInfo : OpenXmlPartRootElement
 {
@@ -436,6 +413,7 @@ public partial class MapInfo : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -453,19 +431,7 @@ public partial class MapInfo : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "Schema" == name)
-    return new Schema();
     
-if( 22 == namespaceId && "Map" == name)
-    return new Map();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MapInfo>(deep);
@@ -484,6 +450,7 @@ if( 22 == namespaceId && "Map" == name)
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(Connection))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "connections")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Connections : OpenXmlPartRootElement
 {
@@ -542,6 +509,7 @@ public partial class Connections : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -559,16 +527,7 @@ public partial class Connections : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "connection" == name)
-    return new Connection();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Connections>(deep);
@@ -607,6 +566,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Maps))]
     [ChildElementInfo(typeof(PivotCacheDefinitionExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "pivotCacheDefinition")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PivotCacheDefinition : OpenXmlPartRootElement
 {
@@ -800,6 +760,7 @@ public partial class PivotCacheDefinition : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -817,46 +778,7 @@ public partial class PivotCacheDefinition : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "cacheSource" == name)
-    return new CacheSource();
     
-if( 22 == namespaceId && "cacheFields" == name)
-    return new CacheFields();
-    
-if( 22 == namespaceId && "cacheHierarchies" == name)
-    return new CacheHierarchies();
-    
-if( 22 == namespaceId && "kpis" == name)
-    return new Kpis();
-    
-if( 22 == namespaceId && "tupleCache" == name)
-    return new TupleCache();
-    
-if( 22 == namespaceId && "calculatedItems" == name)
-    return new CalculatedItems();
-    
-if( 22 == namespaceId && "calculatedMembers" == name)
-    return new CalculatedMembers();
-    
-if( 22 == namespaceId && "dimensions" == name)
-    return new Dimensions();
-    
-if( 22 == namespaceId && "measureGroups" == name)
-    return new MeasureGroups();
-    
-if( 22 == namespaceId && "maps" == name)
-    return new Maps();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new PivotCacheDefinitionExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "cacheSource","cacheFields","cacheHierarchies","kpis","tupleCache","calculatedItems","calculatedMembers","dimensions","measureGroups","maps","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22,22 };
     
@@ -877,6 +799,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CacheSource>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> CacheFields.</para>
     /// <para> Represents the following element tag in the schema: x:cacheFields </para>
@@ -889,6 +812,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CacheFields>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> CacheHierarchies.</para>
     /// <para> Represents the following element tag in the schema: x:cacheHierarchies </para>
@@ -901,6 +825,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CacheHierarchies>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Kpis.</para>
     /// <para> Represents the following element tag in the schema: x:kpis </para>
@@ -913,6 +838,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Kpis>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> TupleCache.</para>
     /// <para> Represents the following element tag in the schema: x:tupleCache </para>
@@ -925,6 +851,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<TupleCache>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> CalculatedItems.</para>
     /// <para> Represents the following element tag in the schema: x:calculatedItems </para>
@@ -937,6 +864,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CalculatedItems>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> CalculatedMembers.</para>
     /// <para> Represents the following element tag in the schema: x:calculatedMembers </para>
@@ -949,6 +877,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CalculatedMembers>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Dimensions.</para>
     /// <para> Represents the following element tag in the schema: x:dimensions </para>
@@ -961,6 +890,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Dimensions>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> MeasureGroups.</para>
     /// <para> Represents the following element tag in the schema: x:measureGroups </para>
@@ -973,6 +903,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<MeasureGroups>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Maps.</para>
     /// <para> Represents the following element tag in the schema: x:maps </para>
@@ -985,6 +916,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Maps>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> PivotCacheDefinitionExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -997,6 +929,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PivotCacheDefinitionExtensionList>(10);
         set => SetElement(10, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1018,6 +951,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(PivotCacheRecord))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "pivotCacheRecords")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PivotCacheRecords : OpenXmlPartRootElement
 {
@@ -1083,6 +1017,7 @@ public partial class PivotCacheRecords : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -1100,19 +1035,7 @@ public partial class PivotCacheRecords : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "r" == name)
-    return new PivotCacheRecord();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotCacheRecords>(deep);
@@ -1163,6 +1086,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(ColumnHierarchiesUsage))]
     [ChildElementInfo(typeof(PivotTableDefinitionExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "pivotTableDefinition")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PivotTableDefinition : OpenXmlPartRootElement
 {
@@ -1697,6 +1621,7 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -1714,64 +1639,7 @@ public partial class PivotTableDefinition : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "location" == name)
-    return new Location();
     
-if( 22 == namespaceId && "pivotFields" == name)
-    return new PivotFields();
-    
-if( 22 == namespaceId && "rowFields" == name)
-    return new RowFields();
-    
-if( 22 == namespaceId && "rowItems" == name)
-    return new RowItems();
-    
-if( 22 == namespaceId && "colFields" == name)
-    return new ColumnFields();
-    
-if( 22 == namespaceId && "colItems" == name)
-    return new ColumnItems();
-    
-if( 22 == namespaceId && "pageFields" == name)
-    return new PageFields();
-    
-if( 22 == namespaceId && "dataFields" == name)
-    return new DataFields();
-    
-if( 22 == namespaceId && "formats" == name)
-    return new Formats();
-    
-if( 22 == namespaceId && "conditionalFormats" == name)
-    return new ConditionalFormats();
-    
-if( 22 == namespaceId && "chartFormats" == name)
-    return new ChartFormats();
-    
-if( 22 == namespaceId && "pivotHierarchies" == name)
-    return new PivotHierarchies();
-    
-if( 22 == namespaceId && "pivotTableStyleInfo" == name)
-    return new PivotTableStyle();
-    
-if( 22 == namespaceId && "filters" == name)
-    return new PivotFilters();
-    
-if( 22 == namespaceId && "rowHierarchiesUsage" == name)
-    return new RowHierarchiesUsage();
-    
-if( 22 == namespaceId && "colHierarchiesUsage" == name)
-    return new ColumnHierarchiesUsage();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new PivotTableDefinitionExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "location","pivotFields","rowFields","rowItems","colFields","colItems","pageFields","dataFields","formats","conditionalFormats","chartFormats","pivotHierarchies","pivotTableStyleInfo","filters","rowHierarchiesUsage","colHierarchiesUsage","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22 };
     
@@ -1792,6 +1660,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Location>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> PivotFields.</para>
     /// <para> Represents the following element tag in the schema: x:pivotFields </para>
@@ -1804,6 +1673,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PivotFields>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> RowFields.</para>
     /// <para> Represents the following element tag in the schema: x:rowFields </para>
@@ -1816,6 +1686,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<RowFields>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> RowItems.</para>
     /// <para> Represents the following element tag in the schema: x:rowItems </para>
@@ -1828,6 +1699,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<RowItems>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> ColumnFields.</para>
     /// <para> Represents the following element tag in the schema: x:colFields </para>
@@ -1840,6 +1712,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ColumnFields>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> ColumnItems.</para>
     /// <para> Represents the following element tag in the schema: x:colItems </para>
@@ -1852,6 +1725,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ColumnItems>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> PageFields.</para>
     /// <para> Represents the following element tag in the schema: x:pageFields </para>
@@ -1864,6 +1738,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PageFields>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> DataFields.</para>
     /// <para> Represents the following element tag in the schema: x:dataFields </para>
@@ -1876,6 +1751,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<DataFields>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> Formats.</para>
     /// <para> Represents the following element tag in the schema: x:formats </para>
@@ -1888,6 +1764,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Formats>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> ConditionalFormats.</para>
     /// <para> Represents the following element tag in the schema: x:conditionalFormats </para>
@@ -1900,6 +1777,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ConditionalFormats>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> ChartFormats.</para>
     /// <para> Represents the following element tag in the schema: x:chartFormats </para>
@@ -1912,6 +1790,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ChartFormats>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> PivotHierarchies.</para>
     /// <para> Represents the following element tag in the schema: x:pivotHierarchies </para>
@@ -1924,6 +1803,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PivotHierarchies>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> PivotTableStyle.</para>
     /// <para> Represents the following element tag in the schema: x:pivotTableStyleInfo </para>
@@ -1936,6 +1816,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PivotTableStyle>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> PivotFilters.</para>
     /// <para> Represents the following element tag in the schema: x:filters </para>
@@ -1948,6 +1829,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PivotFilters>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> RowHierarchiesUsage.</para>
     /// <para> Represents the following element tag in the schema: x:rowHierarchiesUsage </para>
@@ -1960,6 +1842,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<RowHierarchiesUsage>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> ColumnHierarchiesUsage.</para>
     /// <para> Represents the following element tag in the schema: x:colHierarchiesUsage </para>
@@ -1972,6 +1855,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ColumnHierarchiesUsage>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> PivotTableDefinitionExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -1984,6 +1868,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PivotTableDefinitionExtensionList>(16);
         set => SetElement(16, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -2005,6 +1890,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(QueryTableRefresh))]
     [ChildElementInfo(typeof(QueryTableExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "queryTable")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class QueryTable : OpenXmlPartRootElement
 {
@@ -2217,6 +2103,7 @@ public partial class QueryTable : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -2234,19 +2121,7 @@ public partial class QueryTable : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "queryTableRefresh" == name)
-    return new QueryTableRefresh();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new QueryTableExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "queryTableRefresh","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22 };
     
@@ -2267,6 +2142,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<QueryTableRefresh>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> QueryTableExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -2279,6 +2155,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<QueryTableExtensionList>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -2300,6 +2177,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(SharedStringItem))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "sst")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SharedStringTable : OpenXmlPartRootElement
 {
@@ -2372,6 +2250,7 @@ public partial class SharedStringTable : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -2389,19 +2268,7 @@ public partial class SharedStringTable : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "si" == name)
-    return new SharedStringItem();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SharedStringTable>(deep);
@@ -2420,6 +2287,7 @@ if( 22 == namespaceId && "extLst" == name)
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(Header))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "headers")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Headers : OpenXmlPartRootElement
 {
@@ -2562,6 +2430,7 @@ public partial class Headers : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -2579,16 +2448,7 @@ public partial class Headers : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "header" == name)
-    return new Header();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Headers>(deep);
@@ -2629,6 +2489,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(RevisionQueryTable))]
     [ChildElementInfo(typeof(RevisionConflict))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "revisions")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Revisions : OpenXmlPartRootElement
 {
@@ -2687,6 +2548,7 @@ public partial class Revisions : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -2704,49 +2566,7 @@ public partial class Revisions : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "rrc" == name)
-    return new RevisionRowColumn();
     
-if( 22 == namespaceId && "rm" == name)
-    return new RevisionMove();
-    
-if( 22 == namespaceId && "rcv" == name)
-    return new RevisionCustomView();
-    
-if( 22 == namespaceId && "rsnm" == name)
-    return new RevisionSheetName();
-    
-if( 22 == namespaceId && "ris" == name)
-    return new RevisionInsertSheet();
-    
-if( 22 == namespaceId && "rcc" == name)
-    return new RevisionCellChange();
-    
-if( 22 == namespaceId && "rfmt" == name)
-    return new RevisionFormat();
-    
-if( 22 == namespaceId && "raf" == name)
-    return new RevisionAutoFormat();
-    
-if( 22 == namespaceId && "rdn" == name)
-    return new RevisionDefinedName();
-    
-if( 22 == namespaceId && "rcmt" == name)
-    return new RevisionComment();
-    
-if( 22 == namespaceId && "rqt" == name)
-    return new RevisionQueryTable();
-    
-if( 22 == namespaceId && "rcft" == name)
-    return new RevisionConflict();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Revisions>(deep);
@@ -2765,6 +2585,7 @@ if( 22 == namespaceId && "rcft" == name)
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(UserInfo))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "users")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Users : OpenXmlPartRootElement
 {
@@ -2830,6 +2651,7 @@ public partial class Users : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -2847,16 +2669,7 @@ public partial class Users : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "userInfo" == name)
-    return new UserInfo();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Users>(deep);
@@ -2949,6 +2762,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(TableParts))]
     [ChildElementInfo(typeof(WorksheetExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "worksheet")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Worksheet : OpenXmlPartRootElement
 {
@@ -3007,6 +2821,7 @@ public partial class Worksheet : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -3024,127 +2839,7 @@ public partial class Worksheet : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "sheetPr" == name)
-    return new SheetProperties();
     
-if( 22 == namespaceId && "dimension" == name)
-    return new SheetDimension();
-    
-if( 22 == namespaceId && "sheetViews" == name)
-    return new SheetViews();
-    
-if( 22 == namespaceId && "sheetFormatPr" == name)
-    return new SheetFormatProperties();
-    
-if( 22 == namespaceId && "cols" == name)
-    return new Columns();
-    
-if( 22 == namespaceId && "sheetData" == name)
-    return new SheetData();
-    
-if( 22 == namespaceId && "sheetCalcPr" == name)
-    return new SheetCalculationProperties();
-    
-if( 22 == namespaceId && "sheetProtection" == name)
-    return new SheetProtection();
-    
-if( 22 == namespaceId && "protectedRanges" == name)
-    return new ProtectedRanges();
-    
-if( 22 == namespaceId && "scenarios" == name)
-    return new Scenarios();
-    
-if( 22 == namespaceId && "autoFilter" == name)
-    return new AutoFilter();
-    
-if( 22 == namespaceId && "sortState" == name)
-    return new SortState();
-    
-if( 22 == namespaceId && "dataConsolidate" == name)
-    return new DataConsolidate();
-    
-if( 22 == namespaceId && "customSheetViews" == name)
-    return new CustomSheetViews();
-    
-if( 22 == namespaceId && "mergeCells" == name)
-    return new MergeCells();
-    
-if( 22 == namespaceId && "phoneticPr" == name)
-    return new PhoneticProperties();
-    
-if( 22 == namespaceId && "conditionalFormatting" == name)
-    return new ConditionalFormatting();
-    
-if( 22 == namespaceId && "dataValidations" == name)
-    return new DataValidations();
-    
-if( 22 == namespaceId && "hyperlinks" == name)
-    return new Hyperlinks();
-    
-if( 22 == namespaceId && "printOptions" == name)
-    return new PrintOptions();
-    
-if( 22 == namespaceId && "pageMargins" == name)
-    return new PageMargins();
-    
-if( 22 == namespaceId && "pageSetup" == name)
-    return new PageSetup();
-    
-if( 22 == namespaceId && "headerFooter" == name)
-    return new HeaderFooter();
-    
-if( 22 == namespaceId && "rowBreaks" == name)
-    return new RowBreaks();
-    
-if( 22 == namespaceId && "colBreaks" == name)
-    return new ColumnBreaks();
-    
-if( 22 == namespaceId && "customProperties" == name)
-    return new CustomProperties();
-    
-if( 22 == namespaceId && "cellWatches" == name)
-    return new CellWatches();
-    
-if( 22 == namespaceId && "ignoredErrors" == name)
-    return new IgnoredErrors();
-    
-if( 22 == namespaceId && "drawing" == name)
-    return new Drawing();
-    
-if( 22 == namespaceId && "legacyDrawing" == name)
-    return new LegacyDrawing();
-    
-if( 22 == namespaceId && "legacyDrawingHF" == name)
-    return new LegacyDrawingHeaderFooter();
-    
-if( 22 == namespaceId && "drawingHF" == name)
-    return new DrawingHeaderFooter();
-    
-if( 22 == namespaceId && "picture" == name)
-    return new Picture();
-    
-if( 22 == namespaceId && "oleObjects" == name)
-    return new OleObjects();
-    
-if( 22 == namespaceId && "controls" == name)
-    return new Controls();
-    
-if( 22 == namespaceId && "webPublishItems" == name)
-    return new WebPublishItems();
-    
-if( 22 == namespaceId && "tableParts" == name)
-    return new TableParts();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new WorksheetExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sheetPr","dimension","sheetViews","sheetFormatPr","cols","sheetData","sheetCalcPr","sheetProtection","protectedRanges","scenarios","autoFilter","sortState","dataConsolidate","customSheetViews","mergeCells","phoneticPr","conditionalFormatting","dataValidations","hyperlinks","printOptions","pageMargins","pageSetup","headerFooter","rowBreaks","colBreaks","customProperties","cellWatches","ignoredErrors","drawing","legacyDrawing","legacyDrawingHF","drawingHF","picture","oleObjects","controls","webPublishItems","tableParts","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22 };
     
@@ -3165,6 +2860,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<SheetProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> SheetDimension.</para>
     /// <para> Represents the following element tag in the schema: x:dimension </para>
@@ -3177,6 +2873,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<SheetDimension>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> SheetViews.</para>
     /// <para> Represents the following element tag in the schema: x:sheetViews </para>
@@ -3189,6 +2886,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<SheetViews>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> SheetFormatProperties.</para>
     /// <para> Represents the following element tag in the schema: x:sheetFormatPr </para>
@@ -3201,6 +2899,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<SheetFormatProperties>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -3246,6 +2945,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(WebPublishItems))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "chartsheet")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Chartsheet : OpenXmlPartRootElement
 {
@@ -3304,6 +3004,7 @@ public partial class Chartsheet : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -3321,55 +3022,7 @@ public partial class Chartsheet : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "sheetPr" == name)
-    return new ChartSheetProperties();
     
-if( 22 == namespaceId && "sheetViews" == name)
-    return new ChartSheetViews();
-    
-if( 22 == namespaceId && "sheetProtection" == name)
-    return new ChartSheetProtection();
-    
-if( 22 == namespaceId && "customSheetViews" == name)
-    return new CustomChartsheetViews();
-    
-if( 22 == namespaceId && "pageMargins" == name)
-    return new PageMargins();
-    
-if( 22 == namespaceId && "pageSetup" == name)
-    return new ChartSheetPageSetup();
-    
-if( 22 == namespaceId && "headerFooter" == name)
-    return new HeaderFooter();
-    
-if( 22 == namespaceId && "drawing" == name)
-    return new Drawing();
-    
-if( 22 == namespaceId && "legacyDrawing" == name)
-    return new LegacyDrawing();
-    
-if( 22 == namespaceId && "legacyDrawingHF" == name)
-    return new LegacyDrawingHeaderFooter();
-    
-if( 22 == namespaceId && "drawingHF" == name)
-    return new DrawingHeaderFooter();
-    
-if( 22 == namespaceId && "picture" == name)
-    return new Picture();
-    
-if( 22 == namespaceId && "webPublishItems" == name)
-    return new WebPublishItems();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sheetPr","sheetViews","sheetProtection","customSheetViews","pageMargins","pageSetup","headerFooter","drawing","legacyDrawing","legacyDrawingHF","drawingHF","picture","webPublishItems","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22,22,22,22,22 };
     
@@ -3390,6 +3043,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ChartSheetProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Chart Sheet Views.</para>
     /// <para> Represents the following element tag in the schema: x:sheetViews </para>
@@ -3402,6 +3056,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ChartSheetViews>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Chart Sheet Protection.</para>
     /// <para> Represents the following element tag in the schema: x:sheetProtection </para>
@@ -3414,6 +3069,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ChartSheetProtection>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Custom Chart Sheet Views.</para>
     /// <para> Represents the following element tag in the schema: x:customSheetViews </para>
@@ -3426,6 +3082,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CustomChartsheetViews>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> PageMargins.</para>
     /// <para> Represents the following element tag in the schema: x:pageMargins </para>
@@ -3438,6 +3095,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PageMargins>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> ChartSheetPageSetup.</para>
     /// <para> Represents the following element tag in the schema: x:pageSetup </para>
@@ -3450,6 +3108,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ChartSheetPageSetup>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> HeaderFooter.</para>
     /// <para> Represents the following element tag in the schema: x:headerFooter </para>
@@ -3462,6 +3121,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<HeaderFooter>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Drawing.</para>
     /// <para> Represents the following element tag in the schema: x:drawing </para>
@@ -3474,6 +3134,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Drawing>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> LegacyDrawing.</para>
     /// <para> Represents the following element tag in the schema: x:legacyDrawing </para>
@@ -3486,6 +3147,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<LegacyDrawing>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Legacy Drawing Reference in  Header Footer.</para>
     /// <para> Represents the following element tag in the schema: x:legacyDrawingHF </para>
@@ -3498,6 +3160,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<LegacyDrawingHeaderFooter>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> DrawingHeaderFooter.</para>
     /// <para> Represents the following element tag in the schema: x:drawingHF </para>
@@ -3510,6 +3173,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<DrawingHeaderFooter>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Picture.</para>
     /// <para> Represents the following element tag in the schema: x:picture </para>
@@ -3522,6 +3186,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Picture>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> WebPublishItems.</para>
     /// <para> Represents the following element tag in the schema: x:webPublishItems </para>
@@ -3534,6 +3199,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<WebPublishItems>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -3546,6 +3212,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(13);
         set => SetElement(13, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -3595,6 +3262,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(Controls), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "dialogsheet")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DialogSheet : OpenXmlPartRootElement
 {
@@ -3653,6 +3321,7 @@ public partial class DialogSheet : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -3670,61 +3339,7 @@ public partial class DialogSheet : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "sheetPr" == name)
-    return new SheetProperties();
     
-if( 22 == namespaceId && "sheetViews" == name)
-    return new SheetViews();
-    
-if( 22 == namespaceId && "sheetFormatPr" == name)
-    return new SheetFormatProperties();
-    
-if( 22 == namespaceId && "sheetProtection" == name)
-    return new SheetProtection();
-    
-if( 22 == namespaceId && "customSheetViews" == name)
-    return new CustomSheetViews();
-    
-if( 22 == namespaceId && "printOptions" == name)
-    return new PrintOptions();
-    
-if( 22 == namespaceId && "pageMargins" == name)
-    return new PageMargins();
-    
-if( 22 == namespaceId && "pageSetup" == name)
-    return new PageSetup();
-    
-if( 22 == namespaceId && "headerFooter" == name)
-    return new HeaderFooter();
-    
-if( 22 == namespaceId && "drawing" == name)
-    return new Drawing();
-    
-if( 22 == namespaceId && "legacyDrawing" == name)
-    return new LegacyDrawing();
-    
-if( 22 == namespaceId && "legacyDrawingHF" == name)
-    return new LegacyDrawingHeaderFooter();
-    
-if( 22 == namespaceId && "drawingHF" == name)
-    return new DrawingHeaderFooter();
-    
-if( 22 == namespaceId && "oleObjects" == name)
-    return new OleObjects();
-    
-if( 22 == namespaceId && "controls" == name)
-    return new Controls();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sheetPr","sheetViews","sheetFormatPr","sheetProtection","customSheetViews","printOptions","pageMargins","pageSetup","headerFooter","drawing","legacyDrawing","legacyDrawingHF","drawingHF","oleObjects","controls","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22 };
     
@@ -3745,6 +3360,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<SheetProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Dialog Sheet Views.</para>
     /// <para> Represents the following element tag in the schema: x:sheetViews </para>
@@ -3757,6 +3373,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<SheetViews>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Dialog Sheet Format Properties.</para>
     /// <para> Represents the following element tag in the schema: x:sheetFormatPr </para>
@@ -3769,6 +3386,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<SheetFormatProperties>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Sheet Protection.</para>
     /// <para> Represents the following element tag in the schema: x:sheetProtection </para>
@@ -3781,6 +3399,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<SheetProtection>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Custom Sheet Views.</para>
     /// <para> Represents the following element tag in the schema: x:customSheetViews </para>
@@ -3793,6 +3412,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CustomSheetViews>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Print Options.</para>
     /// <para> Represents the following element tag in the schema: x:printOptions </para>
@@ -3805,6 +3425,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PrintOptions>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Page Margins.</para>
     /// <para> Represents the following element tag in the schema: x:pageMargins </para>
@@ -3817,6 +3438,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PageMargins>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Page Setup Settings.</para>
     /// <para> Represents the following element tag in the schema: x:pageSetup </para>
@@ -3829,6 +3451,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PageSetup>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> Header and Footer Settings.</para>
     /// <para> Represents the following element tag in the schema: x:headerFooter </para>
@@ -3841,6 +3464,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<HeaderFooter>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Drawing.</para>
     /// <para> Represents the following element tag in the schema: x:drawing </para>
@@ -3853,6 +3477,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Drawing>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> Legacy Drawing.</para>
     /// <para> Represents the following element tag in the schema: x:legacyDrawing </para>
@@ -3865,6 +3490,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<LegacyDrawing>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Legacy Drawing Header Footer.</para>
     /// <para> Represents the following element tag in the schema: x:legacyDrawingHF </para>
@@ -3877,6 +3503,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<LegacyDrawingHeaderFooter>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> DrawingHeaderFooter.</para>
     /// <para> Represents the following element tag in the schema: x:drawingHF </para>
@@ -3889,6 +3516,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<DrawingHeaderFooter>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> OleObjects.</para>
     /// <para> Represents the following element tag in the schema: x:oleObjects </para>
@@ -3901,6 +3529,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<OleObjects>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> Controls.</para>
     /// <para> Represents the following element tag in the schema: x:controls </para>
@@ -3913,6 +3542,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Controls>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -3925,6 +3555,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(15);
         set => SetElement(15, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -3956,6 +3587,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(ValueMetadata))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "metadata")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Metadata : OpenXmlPartRootElement
 {
@@ -4014,6 +3646,7 @@ public partial class Metadata : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -4031,34 +3664,7 @@ public partial class Metadata : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "metadataTypes" == name)
-    return new MetadataTypes();
     
-if( 22 == namespaceId && "metadataStrings" == name)
-    return new MetadataStrings();
-    
-if( 22 == namespaceId && "mdxMetadata" == name)
-    return new MdxMetadata();
-    
-if( 22 == namespaceId && "futureMetadata" == name)
-    return new FutureMetadata();
-    
-if( 22 == namespaceId && "cellMetadata" == name)
-    return new CellMetadata();
-    
-if( 22 == namespaceId && "valueMetadata" == name)
-    return new ValueMetadata();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "metadataTypes","metadataStrings","mdxMetadata","futureMetadata","cellMetadata","valueMetadata","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22 };
     
@@ -4079,6 +3685,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<MetadataTypes>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Metadata String Store.</para>
     /// <para> Represents the following element tag in the schema: x:metadataStrings </para>
@@ -4091,6 +3698,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<MetadataStrings>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> MDX Metadata Information.</para>
     /// <para> Represents the following element tag in the schema: x:mdxMetadata </para>
@@ -4103,6 +3711,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<MdxMetadata>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -4122,6 +3731,7 @@ if( 22 == namespaceId && "extLst" == name)
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(SingleXmlCell))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "singleXmlCells")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SingleXmlCells : OpenXmlPartRootElement
 {
@@ -4180,6 +3790,7 @@ public partial class SingleXmlCells : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -4197,16 +3808,7 @@ public partial class SingleXmlCells : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "singleXmlCell" == name)
-    return new SingleXmlCell();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SingleXmlCells>(deep);
@@ -4245,6 +3847,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Colors))]
     [ChildElementInfo(typeof(StylesheetExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "styleSheet")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Stylesheet : OpenXmlPartRootElement
 {
@@ -4303,6 +3906,7 @@ public partial class Stylesheet : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -4320,46 +3924,7 @@ public partial class Stylesheet : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "numFmts" == name)
-    return new NumberingFormats();
     
-if( 22 == namespaceId && "fonts" == name)
-    return new Fonts();
-    
-if( 22 == namespaceId && "fills" == name)
-    return new Fills();
-    
-if( 22 == namespaceId && "borders" == name)
-    return new Borders();
-    
-if( 22 == namespaceId && "cellStyleXfs" == name)
-    return new CellStyleFormats();
-    
-if( 22 == namespaceId && "cellXfs" == name)
-    return new CellFormats();
-    
-if( 22 == namespaceId && "cellStyles" == name)
-    return new CellStyles();
-    
-if( 22 == namespaceId && "dxfs" == name)
-    return new DifferentialFormats();
-    
-if( 22 == namespaceId && "tableStyles" == name)
-    return new TableStyles();
-    
-if( 22 == namespaceId && "colors" == name)
-    return new Colors();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new StylesheetExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "numFmts","fonts","fills","borders","cellStyleXfs","cellXfs","cellStyles","dxfs","tableStyles","colors","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22,22 };
     
@@ -4380,6 +3945,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<NumberingFormats>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Fonts.</para>
     /// <para> Represents the following element tag in the schema: x:fonts </para>
@@ -4392,6 +3958,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Fonts>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Fills.</para>
     /// <para> Represents the following element tag in the schema: x:fills </para>
@@ -4404,6 +3971,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Fills>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Borders.</para>
     /// <para> Represents the following element tag in the schema: x:borders </para>
@@ -4416,6 +3984,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Borders>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> CellStyleFormats.</para>
     /// <para> Represents the following element tag in the schema: x:cellStyleXfs </para>
@@ -4428,6 +3997,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CellStyleFormats>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> CellFormats.</para>
     /// <para> Represents the following element tag in the schema: x:cellXfs </para>
@@ -4440,6 +4010,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CellFormats>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> CellStyles.</para>
     /// <para> Represents the following element tag in the schema: x:cellStyles </para>
@@ -4452,6 +4023,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CellStyles>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> DifferentialFormats.</para>
     /// <para> Represents the following element tag in the schema: x:dxfs </para>
@@ -4464,6 +4036,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<DifferentialFormats>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> TableStyles.</para>
     /// <para> Represents the following element tag in the schema: x:tableStyles </para>
@@ -4476,6 +4049,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<TableStyles>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Colors.</para>
     /// <para> Represents the following element tag in the schema: x:colors </para>
@@ -4488,6 +4062,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Colors>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> StylesheetExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -4500,6 +4075,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<StylesheetExtensionList>(10);
         set => SetElement(10, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -4525,6 +4101,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(OleLink))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "externalLink")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ExternalLink : OpenXmlPartRootElement
 {
@@ -4583,6 +4160,7 @@ public partial class ExternalLink : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -4600,25 +4178,7 @@ public partial class ExternalLink : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "externalBook" == name)
-    return new ExternalBook();
     
-if( 22 == namespaceId && "ddeLink" == name)
-    return new DdeLink();
-    
-if( 22 == namespaceId && "oleLink" == name)
-    return new OleLink();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExternalLink>(deep);
@@ -4645,6 +4205,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(TableStyleInfo))]
     [ChildElementInfo(typeof(TableExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "table")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Table : OpenXmlPartRootElement
 {
@@ -4857,6 +4418,7 @@ public partial class Table : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -4874,28 +4436,7 @@ public partial class Table : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "autoFilter" == name)
-    return new AutoFilter();
     
-if( 22 == namespaceId && "sortState" == name)
-    return new SortState();
-    
-if( 22 == namespaceId && "tableColumns" == name)
-    return new TableColumns();
-    
-if( 22 == namespaceId && "tableStyleInfo" == name)
-    return new TableStyleInfo();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new TableExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "autoFilter","sortState","tableColumns","tableStyleInfo","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22 };
     
@@ -4916,6 +4457,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<AutoFilter>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Sort State.</para>
     /// <para> Represents the following element tag in the schema: x:sortState </para>
@@ -4928,6 +4470,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<SortState>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Table Columns.</para>
     /// <para> Represents the following element tag in the schema: x:tableColumns </para>
@@ -4940,6 +4483,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<TableColumns>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Table Style.</para>
     /// <para> Represents the following element tag in the schema: x:tableStyleInfo </para>
@@ -4952,6 +4496,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<TableStyleInfo>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -4964,6 +4509,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<TableExtensionList>(4);
         set => SetElement(4, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -4985,6 +4531,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(VolatileType))]
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "volTypes")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VolatileTypes : OpenXmlPartRootElement
 {
@@ -5043,6 +4590,7 @@ public partial class VolatileTypes : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -5060,19 +4608,7 @@ public partial class VolatileTypes : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "volType" == name)
-    return new VolatileType();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VolatileTypes>(deep);
@@ -5125,6 +4661,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(WebPublishObjects))]
     [ChildElementInfo(typeof(WorkbookExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "workbook")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Workbook : OpenXmlPartRootElement
 {
@@ -5190,6 +4727,7 @@ public partial class Workbook : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -5207,67 +4745,7 @@ public partial class Workbook : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "fileVersion" == name)
-    return new FileVersion();
     
-if( 22 == namespaceId && "fileSharing" == name)
-    return new FileSharing();
-    
-if( 22 == namespaceId && "workbookPr" == name)
-    return new WorkbookProperties();
-    
-if( 74 == namespaceId && "absPath" == name)
-    return new DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath();
-    
-if( 22 == namespaceId && "workbookProtection" == name)
-    return new WorkbookProtection();
-    
-if( 22 == namespaceId && "bookViews" == name)
-    return new BookViews();
-    
-if( 22 == namespaceId && "sheets" == name)
-    return new Sheets();
-    
-if( 22 == namespaceId && "functionGroups" == name)
-    return new FunctionGroups();
-    
-if( 22 == namespaceId && "externalReferences" == name)
-    return new ExternalReferences();
-    
-if( 22 == namespaceId && "definedNames" == name)
-    return new DefinedNames();
-    
-if( 22 == namespaceId && "calcPr" == name)
-    return new CalculationProperties();
-    
-if( 22 == namespaceId && "oleSize" == name)
-    return new OleSize();
-    
-if( 22 == namespaceId && "customWorkbookViews" == name)
-    return new CustomWorkbookViews();
-    
-if( 22 == namespaceId && "pivotCaches" == name)
-    return new PivotCaches();
-    
-if( 22 == namespaceId && "webPublishing" == name)
-    return new WebPublishing();
-    
-if( 22 == namespaceId && "fileRecoveryPr" == name)
-    return new FileRecoveryProperties();
-    
-if( 22 == namespaceId && "webPublishObjects" == name)
-    return new WebPublishObjects();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new WorkbookExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "fileVersion","fileSharing","workbookPr","absPath","workbookProtection","bookViews","sheets","functionGroups","externalReferences","definedNames","calcPr","oleSize","customWorkbookViews","pivotCaches","webPublishing","fileRecoveryPr","webPublishObjects","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,74,22,22,22,22,22,22,22,22,22,22,22,22,22,22 };
     
@@ -5288,6 +4766,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<FileVersion>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> FileSharing.</para>
     /// <para> Represents the following element tag in the schema: x:fileSharing </para>
@@ -5300,6 +4779,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<FileSharing>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> WorkbookProperties.</para>
     /// <para> Represents the following element tag in the schema: x:workbookPr </para>
@@ -5312,6 +4792,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<WorkbookProperties>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> AbsolutePath, this property is only available in Office2013.</para>
     /// <para> Represents the following element tag in the schema: x15ac:absPath </para>
@@ -5325,6 +4806,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2013.ExcelAc.AbsolutePath>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> WorkbookProtection.</para>
     /// <para> Represents the following element tag in the schema: x:workbookProtection </para>
@@ -5337,6 +4819,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<WorkbookProtection>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> BookViews.</para>
     /// <para> Represents the following element tag in the schema: x:bookViews </para>
@@ -5349,6 +4832,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<BookViews>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Sheets.</para>
     /// <para> Represents the following element tag in the schema: x:sheets </para>
@@ -5361,6 +4845,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Sheets>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> FunctionGroups.</para>
     /// <para> Represents the following element tag in the schema: x:functionGroups </para>
@@ -5373,6 +4858,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<FunctionGroups>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> ExternalReferences.</para>
     /// <para> Represents the following element tag in the schema: x:externalReferences </para>
@@ -5385,6 +4871,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExternalReferences>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> DefinedNames.</para>
     /// <para> Represents the following element tag in the schema: x:definedNames </para>
@@ -5397,6 +4884,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<DefinedNames>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> CalculationProperties.</para>
     /// <para> Represents the following element tag in the schema: x:calcPr </para>
@@ -5409,6 +4897,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CalculationProperties>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> OleSize.</para>
     /// <para> Represents the following element tag in the schema: x:oleSize </para>
@@ -5421,6 +4910,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<OleSize>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> CustomWorkbookViews.</para>
     /// <para> Represents the following element tag in the schema: x:customWorkbookViews </para>
@@ -5433,6 +4923,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CustomWorkbookViews>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> PivotCaches.</para>
     /// <para> Represents the following element tag in the schema: x:pivotCaches </para>
@@ -5445,6 +4936,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PivotCaches>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> WebPublishing.</para>
     /// <para> Represents the following element tag in the schema: x:webPublishing </para>
@@ -5457,6 +4949,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<WebPublishing>(14);
         set => SetElement(14, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -5494,6 +4987,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "filterColumn")]
 public partial class FilterColumn : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11115;
@@ -5557,43 +5051,11 @@ public partial class FilterColumn : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "filters" == name)
-    return new Filters();
     
-if( 22 == namespaceId && "top10" == name)
-    return new Top10();
-    
-if( 53 == namespaceId && "customFilters" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.CustomFilters();
-    
-if( 22 == namespaceId && "customFilters" == name)
-    return new CustomFilters();
-    
-if( 22 == namespaceId && "dynamicFilter" == name)
-    return new DynamicFilter();
-    
-if( 22 == namespaceId && "colorFilter" == name)
-    return new ColorFilter();
-    
-if( 53 == namespaceId && "iconFilter" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.IconFilter();
-    
-if( 22 == namespaceId && "iconFilter" == name)
-    return new IconFilter();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "filters","top10","customFilters","customFilters","dynamicFilter","colorFilter","iconFilter","iconFilter","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,53,22,22,22,53,22,22 };
     
@@ -5614,6 +5076,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Filters>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Top 10.</para>
     /// <para> Represents the following element tag in the schema: x:top10 </para>
@@ -5626,6 +5089,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Top10>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> CustomFilters14.</para>
     /// <para> Represents the following element tag in the schema: x14:customFilters </para>
@@ -5638,6 +5102,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.CustomFilters>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Custom Filters.</para>
     /// <para> Represents the following element tag in the schema: x:customFilters </para>
@@ -5650,6 +5115,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CustomFilters>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Dynamic Filter.</para>
     /// <para> Represents the following element tag in the schema: x:dynamicFilter </para>
@@ -5662,6 +5128,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<DynamicFilter>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Color Filter Criteria.</para>
     /// <para> Represents the following element tag in the schema: x:colorFilter </para>
@@ -5674,6 +5141,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ColorFilter>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> IconFilter14.</para>
     /// <para> Represents the following element tag in the schema: x14:iconFilter </para>
@@ -5686,6 +5154,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.Excel.IconFilter>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Icon Filter.</para>
     /// <para> Represents the following element tag in the schema: x:iconFilter </para>
@@ -5698,6 +5167,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<IconFilter>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -5710,6 +5180,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(8);
         set => SetElement(8, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -5735,6 +5206,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sortState")]
 public partial class SortState : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11116;
@@ -5805,25 +5277,11 @@ public partial class SortState : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 53 == namespaceId && "sortCondition" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.SortCondition();
     
-if( 22 == namespaceId && "sortCondition" == name)
-    return new SortCondition();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SortState>(deep);
@@ -5844,6 +5302,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(Extension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "extLst")]
 public partial class ExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11117;
@@ -5886,19 +5345,11 @@ public partial class ExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ext" == name)
-    return new Extension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExtensionList>(deep);
@@ -5912,6 +5363,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "customFilter")]
 public partial class CustomFilter : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11118;
@@ -5960,6 +5412,7 @@ public partial class CustomFilter : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "c")]
 public partial class CalculationCell : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11119;
@@ -6043,6 +5496,7 @@ public partial class CalculationCell : OpenXmlLeafElement
     [ChildElementInfo(typeof(Author))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "authors")]
 public partial class Authors : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11120;
@@ -6085,19 +5539,11 @@ public partial class Authors : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "author" == name)
-    return new Author();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Authors>(deep);
@@ -6118,6 +5564,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Comment))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "commentList")]
 public partial class CommentList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11121;
@@ -6160,19 +5607,11 @@ public partial class CommentList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "comment" == name)
-    return new Comment();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentList>(deep);
@@ -6195,6 +5634,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(CommentProperties), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "comment")]
 public partial class Comment : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11122;
@@ -6265,22 +5705,11 @@ public partial class Comment : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "text" == name)
-    return new CommentText();
     
-if( 22 == namespaceId && "commentPr" == name)
-    return new CommentProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "text","commentPr" };
     private static readonly byte[] eleNamespaceIds = { 22,22 };
     
@@ -6301,6 +5730,7 @@ if( 22 == namespaceId && "commentPr" == name)
         get => GetElement<CommentText>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> CommentProperties.</para>
     /// <para> Represents the following element tag in the schema: x:commentPr </para>
@@ -6313,6 +5743,7 @@ if( 22 == namespaceId && "commentPr" == name)
         get => GetElement<CommentProperties>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -6326,6 +5757,7 @@ if( 22 == namespaceId && "commentPr" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "author")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Author : XstringType
 {
@@ -6366,6 +5798,7 @@ public partial class Author : XstringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "t")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Text : XstringType
 {
@@ -6406,6 +5839,7 @@ public partial class Text : XstringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "v")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CellValue : XstringType
 {
@@ -6446,6 +5880,7 @@ public partial class CellValue : XstringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "formula")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Formula : XstringType
 {
@@ -6486,6 +5921,7 @@ public partial class Formula : XstringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "oldFormula")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OldFormula : XstringType
 {
@@ -6526,6 +5962,7 @@ public partial class OldFormula : XstringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "oddHeader")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OddHeader : XstringType
 {
@@ -6566,6 +6003,7 @@ public partial class OddHeader : XstringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "oddFooter")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OddFooter : XstringType
 {
@@ -6606,6 +6044,7 @@ public partial class OddFooter : XstringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "evenHeader")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EvenHeader : XstringType
 {
@@ -6646,6 +6085,7 @@ public partial class EvenHeader : XstringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "evenFooter")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EvenFooter : XstringType
 {
@@ -6686,6 +6126,7 @@ public partial class EvenFooter : XstringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "firstHeader")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FirstHeader : XstringType
 {
@@ -6726,6 +6167,7 @@ public partial class FirstHeader : XstringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "firstFooter")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FirstFooter : XstringType
 {
@@ -6766,6 +6208,7 @@ public partial class FirstFooter : XstringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "val")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DdeLinkValue : XstringType
 {
@@ -6806,6 +6249,7 @@ public partial class DdeLinkValue : XstringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "stp")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Subtopic : XstringType
 {
@@ -6846,6 +6290,7 @@ public partial class Subtopic : XstringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "formula1")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Formula1 : XstringType
 {
@@ -6886,6 +6331,7 @@ public partial class Formula1 : XstringType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "formula2")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Formula2 : XstringType
 {
@@ -6974,6 +6420,7 @@ public abstract partial class XstringType : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "Schema")]
 public partial class Schema : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11124;
@@ -7037,16 +6484,11 @@ public partial class Schema : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
     
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Schema>(deep);
@@ -7067,6 +6509,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DataBinding))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "Map")]
 public partial class Map : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11125;
@@ -7172,19 +6615,11 @@ public partial class Map : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "DataBinding" == name)
-    return new DataBinding();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "DataBinding" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -7205,6 +6640,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<DataBinding>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -7224,6 +6660,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "DataBinding")]
 public partial class DataBinding : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11126;
@@ -7301,16 +6738,11 @@ public partial class DataBinding : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
     
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataBinding>(deep);
@@ -7341,6 +6773,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ConnectionExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "connection")]
 public partial class Connection : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11127;
@@ -7523,34 +6956,11 @@ public partial class Connection : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "dbPr" == name)
-    return new DatabaseProperties();
     
-if( 22 == namespaceId && "olapPr" == name)
-    return new OlapProperties();
-    
-if( 22 == namespaceId && "webPr" == name)
-    return new WebQueryProperties();
-    
-if( 22 == namespaceId && "textPr" == name)
-    return new TextProperties();
-    
-if( 22 == namespaceId && "parameters" == name)
-    return new Parameters();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ConnectionExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "dbPr","olapPr","webPr","textPr","parameters","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22 };
     
@@ -7571,6 +6981,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<DatabaseProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> OlapProperties.</para>
     /// <para> Represents the following element tag in the schema: x:olapPr </para>
@@ -7583,6 +6994,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<OlapProperties>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> WebQueryProperties.</para>
     /// <para> Represents the following element tag in the schema: x:webPr </para>
@@ -7595,6 +7007,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<WebQueryProperties>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> TextProperties.</para>
     /// <para> Represents the following element tag in the schema: x:textPr </para>
@@ -7607,6 +7020,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<TextProperties>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Parameters.</para>
     /// <para> Represents the following element tag in the schema: x:parameters </para>
@@ -7619,6 +7033,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Parameters>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> ConnectionExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -7631,6 +7046,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ConnectionExtensionList>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -7656,6 +7072,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(FieldItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "tables")]
 public partial class Tables : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11128;
@@ -7705,25 +7122,11 @@ public partial class Tables : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "m" == name)
-    return new MissingTable();
     
-if( 22 == namespaceId && "s" == name)
-    return new CharacterValue();
-    
-if( 22 == namespaceId && "x" == name)
-    return new FieldItem();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tables>(deep);
@@ -7737,6 +7140,7 @@ if( 22 == namespaceId && "x" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "parameter")]
 public partial class Parameter : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11129;
@@ -7841,6 +7245,7 @@ public partial class Parameter : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "m")]
 public partial class MissingTable : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11130;
@@ -7875,6 +7280,7 @@ public partial class MissingTable : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "s")]
 public partial class CharacterValue : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11131;
@@ -7916,6 +7322,7 @@ public partial class CharacterValue : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "x")]
 public partial class FieldItem : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11132;
@@ -7957,6 +7364,7 @@ public partial class FieldItem : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "textField")]
 public partial class TextField : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11133;
@@ -8018,6 +7426,7 @@ public partial class TextField : OpenXmlLeafElement
     [ChildElementInfo(typeof(CacheFieldExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "cacheField")]
 public partial class CacheField : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11134;
@@ -8151,28 +7560,11 @@ public partial class CacheField : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "sharedItems" == name)
-    return new SharedItems();
     
-if( 22 == namespaceId && "fieldGroup" == name)
-    return new FieldGroup();
-    
-if( 22 == namespaceId && "mpMap" == name)
-    return new MemberPropertiesMap();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new CacheFieldExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sharedItems","fieldGroup","mpMap","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22 };
     
@@ -8193,6 +7585,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<SharedItems>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> FieldGroup.</para>
     /// <para> Represents the following element tag in the schema: x:fieldGroup </para>
@@ -8205,6 +7598,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<FieldGroup>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -8226,6 +7620,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(Page))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pages")]
 public partial class Pages : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11135;
@@ -8275,19 +7670,11 @@ public partial class Pages : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "page" == name)
-    return new Page();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Pages>(deep);
@@ -8308,6 +7695,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(RangeSet))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rangeSets")]
 public partial class RangeSets : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11136;
@@ -8357,19 +7745,11 @@ public partial class RangeSets : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "rangeSet" == name)
-    return new RangeSet();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RangeSets>(deep);
@@ -8390,6 +7770,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PageItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "page")]
 public partial class Page : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11137;
@@ -8439,19 +7820,11 @@ public partial class Page : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "pageItem" == name)
-    return new PageItem();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Page>(deep);
@@ -8465,6 +7838,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pageItem")]
 public partial class PageItem : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11138;
@@ -8506,6 +7880,7 @@ public partial class PageItem : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rangeSet")]
 public partial class RangeSet : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11139;
@@ -8607,6 +7982,7 @@ public partial class RangeSet : OpenXmlLeafElement
     [ChildElementInfo(typeof(MemberPropertyIndex))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "m")]
 public partial class MissingItem : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11140;
@@ -8726,22 +8102,11 @@ public partial class MissingItem : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "tpls" == name)
-    return new Tuples();
     
-if( 22 == namespaceId && "x" == name)
-    return new MemberPropertyIndex();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MissingItem>(deep);
@@ -8764,6 +8129,7 @@ if( 22 == namespaceId && "x" == name)
     [ChildElementInfo(typeof(MemberPropertyIndex))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "n")]
 public partial class NumberItem : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11141;
@@ -8890,22 +8256,11 @@ public partial class NumberItem : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "tpls" == name)
-    return new Tuples();
     
-if( 22 == namespaceId && "x" == name)
-    return new MemberPropertyIndex();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberItem>(deep);
@@ -8926,6 +8281,7 @@ if( 22 == namespaceId && "x" == name)
     [ChildElementInfo(typeof(MemberPropertyIndex))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "b")]
 public partial class BooleanItem : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11142;
@@ -9003,19 +8359,11 @@ public partial class BooleanItem : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "x" == name)
-    return new MemberPropertyIndex();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BooleanItem>(deep);
@@ -9038,6 +8386,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(MemberPropertyIndex))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "e")]
 public partial class ErrorItem : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11143;
@@ -9164,22 +8513,11 @@ public partial class ErrorItem : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "tpls" == name)
-    return new Tuples();
     
-if( 22 == namespaceId && "x" == name)
-    return new MemberPropertyIndex();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "tpls","x" };
     private static readonly byte[] eleNamespaceIds = { 22,22 };
     
@@ -9200,6 +8538,7 @@ if( 22 == namespaceId && "x" == name)
         get => GetElement<Tuples>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -9223,6 +8562,7 @@ if( 22 == namespaceId && "x" == name)
     [ChildElementInfo(typeof(MemberPropertyIndex))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "s")]
 public partial class StringItem : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11144;
@@ -9349,22 +8689,11 @@ public partial class StringItem : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "tpls" == name)
-    return new Tuples();
     
-if( 22 == namespaceId && "x" == name)
-    return new MemberPropertyIndex();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StringItem>(deep);
@@ -9385,6 +8714,7 @@ if( 22 == namespaceId && "x" == name)
     [ChildElementInfo(typeof(MemberPropertyIndex))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "d")]
 public partial class DateTimeItem : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11145;
@@ -9462,19 +8792,11 @@ public partial class DateTimeItem : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "x" == name)
-    return new MemberPropertyIndex();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DateTimeItem>(deep);
@@ -9493,6 +8815,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "tpls")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Tuples : TuplesType
 {
@@ -9532,6 +8855,7 @@ public partial class Tuples : TuplesType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -9551,6 +8875,7 @@ public partial class Tuples : TuplesType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "sortByTuple")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SortByTuple : TuplesType
 {
@@ -9590,6 +8915,7 @@ public partial class SortByTuple : TuplesType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -9619,16 +8945,7 @@ public abstract partial class TuplesType : OpenXmlCompositeElement
     [SchemaIndex(0)]
     public UInt32Value MemberNameCount { get; set; }
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "tpl" == name)
-    return new Tuple();
     
-
-    return null;
-}
-
     
     
     /// <summary>
@@ -9661,6 +8978,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -9671,6 +8989,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "x")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MemberPropertyIndex : XType
 {
@@ -9698,6 +9017,7 @@ public partial class MemberPropertyIndex : XType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "mpMap")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MemberPropertiesMap : XType
 {
@@ -9772,6 +9092,7 @@ public abstract partial class XType : OpenXmlLeafElement
     [ChildElementInfo(typeof(FieldItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "r")]
 public partial class PivotCacheRecord : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11148;
@@ -9814,37 +9135,11 @@ public partial class PivotCacheRecord : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "m" == name)
-    return new MissingItem();
     
-if( 22 == namespaceId && "n" == name)
-    return new NumberItem();
-    
-if( 22 == namespaceId && "b" == name)
-    return new BooleanItem();
-    
-if( 22 == namespaceId && "e" == name)
-    return new ErrorItem();
-    
-if( 22 == namespaceId && "s" == name)
-    return new StringItem();
-    
-if( 22 == namespaceId && "d" == name)
-    return new DateTimeItem();
-    
-if( 22 == namespaceId && "x" == name)
-    return new FieldItem();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotCacheRecord>(deep);
@@ -9858,6 +9153,7 @@ if( 22 == namespaceId && "x" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "kpi")]
 public partial class Kpi : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11149;
@@ -9962,6 +9258,7 @@ public partial class Kpi : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "fieldUsage")]
 public partial class FieldUsage : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11150;
@@ -10012,6 +9309,7 @@ public partial class FieldUsage : OpenXmlLeafElement
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "groupLevel")]
 public partial class GroupLevel : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11151;
@@ -10082,22 +9380,11 @@ public partial class GroupLevel : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "groups" == name)
-    return new Groups();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "groups","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22 };
     
@@ -10118,6 +9405,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Groups>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -10130,6 +9418,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -10151,6 +9440,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(Group))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "groups")]
 public partial class Groups : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11152;
@@ -10200,19 +9490,11 @@ public partial class Groups : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "group" == name)
-    return new Group();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Groups>(deep);
@@ -10233,6 +9515,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(GroupMembers))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "group")]
 public partial class Group : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11153;
@@ -10310,19 +9593,11 @@ public partial class Group : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "groupMembers" == name)
-    return new GroupMembers();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "groupMembers" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -10343,6 +9618,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<GroupMembers>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -10364,6 +9640,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(GroupMember))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "groupMembers")]
 public partial class GroupMembers : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11154;
@@ -10413,19 +9690,11 @@ public partial class GroupMembers : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "groupMember" == name)
-    return new GroupMember();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupMembers>(deep);
@@ -10439,6 +9708,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "groupMember")]
 public partial class GroupMember : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11155;
@@ -10500,6 +9770,7 @@ public partial class GroupMember : OpenXmlLeafElement
     [ChildElementInfo(typeof(StringItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "entries")]
 public partial class Entries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11156;
@@ -10549,28 +9820,11 @@ public partial class Entries : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "m" == name)
-    return new MissingItem();
     
-if( 22 == namespaceId && "n" == name)
-    return new NumberItem();
-    
-if( 22 == namespaceId && "e" == name)
-    return new ErrorItem();
-    
-if( 22 == namespaceId && "s" == name)
-    return new StringItem();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Entries>(deep);
@@ -10591,6 +9845,7 @@ if( 22 == namespaceId && "s" == name)
     [ChildElementInfo(typeof(TupleSet))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sets")]
 public partial class Sets : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11157;
@@ -10640,19 +9895,11 @@ public partial class Sets : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "set" == name)
-    return new TupleSet();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Sets>(deep);
@@ -10673,6 +9920,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Query))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "queryCache")]
 public partial class QueryCache : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11158;
@@ -10722,19 +9970,11 @@ public partial class QueryCache : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "query" == name)
-    return new Query();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<QueryCache>(deep);
@@ -10755,6 +9995,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ServerFormat))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "serverFormats")]
 public partial class ServerFormats : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11159;
@@ -10804,19 +10045,11 @@ public partial class ServerFormats : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "serverFormat" == name)
-    return new ServerFormat();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ServerFormats>(deep);
@@ -10830,6 +10063,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "serverFormat")]
 public partial class ServerFormat : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11160;
@@ -10878,6 +10112,7 @@ public partial class ServerFormat : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "tpl")]
 public partial class Tuple : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11161;
@@ -10942,6 +10177,7 @@ public partial class Tuple : OpenXmlLeafElement
     [ChildElementInfo(typeof(SortByTuple))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "set")]
 public partial class TupleSet : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11162;
@@ -11019,22 +10255,11 @@ public partial class TupleSet : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "tpls" == name)
-    return new Tuples();
     
-if( 22 == namespaceId && "sortByTuple" == name)
-    return new SortByTuple();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TupleSet>(deep);
@@ -11055,6 +10280,7 @@ if( 22 == namespaceId && "sortByTuple" == name)
     [ChildElementInfo(typeof(Tuples))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "query")]
 public partial class Query : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11164;
@@ -11104,19 +10330,11 @@ public partial class Query : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "tpls" == name)
-    return new Tuples();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "tpls" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -11137,6 +10355,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<Tuples>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -11160,6 +10379,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "calculatedItem")]
 public partial class CalculatedItem : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11165;
@@ -11216,22 +10436,11 @@ public partial class CalculatedItem : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "pivotArea" == name)
-    return new PivotArea();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pivotArea","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22 };
     
@@ -11252,6 +10461,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PivotArea>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -11264,6 +10474,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -11287,6 +10498,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pivotArea")]
 public partial class PivotArea : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11166;
@@ -11413,22 +10625,11 @@ public partial class PivotArea : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "references" == name)
-    return new PivotAreaReferences();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "references","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22 };
     
@@ -11449,6 +10650,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PivotAreaReferences>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -11461,6 +10663,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -11482,6 +10685,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(CalculatedMemberExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "calculatedMember")]
 public partial class CalculatedMember : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11167;
@@ -11573,19 +10777,11 @@ public partial class CalculatedMember : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "extLst" == name)
-    return new CalculatedMemberExtensionList();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -11606,6 +10802,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<CalculatedMemberExtensionList>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -11631,6 +10828,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PivotFieldExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pivotField")]
 public partial class PivotField : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11168;
@@ -12009,25 +11207,11 @@ public partial class PivotField : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "items" == name)
-    return new Items();
     
-if( 22 == namespaceId && "autoSortScope" == name)
-    return new AutoSortScope();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new PivotFieldExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "items","autoSortScope","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22 };
     
@@ -12048,6 +11232,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Items>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> AutoSort Scope.</para>
     /// <para> Represents the following element tag in the schema: x:autoSortScope </para>
@@ -12060,6 +11245,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<AutoSortScope>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -12072,6 +11258,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PivotFieldExtensionList>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -12086,6 +11273,7 @@ if( 22 == namespaceId && "extLst" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "item")]
 public partial class Item : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11169;
@@ -12204,6 +11392,7 @@ public partial class Item : OpenXmlLeafElement
     [ChildElementInfo(typeof(DataFieldExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "dataField")]
 public partial class DataField : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11170;
@@ -12295,19 +11484,11 @@ public partial class DataField : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "extLst" == name)
-    return new DataFieldExtensionList();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -12328,6 +11509,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<DataFieldExtensionList>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -12349,6 +11531,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(MemberPropertyIndex))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "i")]
 public partial class RowItem : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11171;
@@ -12412,19 +11595,11 @@ public partial class RowItem : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "x" == name)
-    return new MemberPropertyIndex();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowItem>(deep);
@@ -12438,6 +11613,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "field")]
 public partial class Field : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11172;
@@ -12488,6 +11664,7 @@ public partial class Field : OpenXmlLeafElement
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "format")]
 public partial class Format : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11173;
@@ -12544,22 +11721,11 @@ public partial class Format : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "pivotArea" == name)
-    return new PivotArea();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pivotArea","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22 };
     
@@ -12580,6 +11746,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PivotArea>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -12592,6 +11759,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -12615,6 +11783,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "conditionalFormat")]
 public partial class ConditionalFormat : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11174;
@@ -12678,22 +11847,11 @@ public partial class ConditionalFormat : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "pivotAreas" == name)
-    return new PivotAreas();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pivotAreas","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22 };
     
@@ -12714,6 +11872,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PivotAreas>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -12726,6 +11885,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -12747,6 +11907,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(PivotArea))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pivotAreas")]
 public partial class PivotAreas : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11175;
@@ -12796,19 +11957,11 @@ public partial class PivotAreas : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "pivotArea" == name)
-    return new PivotArea();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotAreas>(deep);
@@ -12829,6 +11982,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PivotArea))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "chartFormat")]
 public partial class ChartFormat : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11176;
@@ -12892,19 +12046,11 @@ public partial class ChartFormat : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "pivotArea" == name)
-    return new PivotArea();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pivotArea" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -12925,6 +12071,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<PivotArea>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -12950,6 +12097,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PivotHierarchyExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pivotHierarchy")]
 public partial class PivotHierarchy : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11177;
@@ -13069,25 +12217,11 @@ public partial class PivotHierarchy : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "mps" == name)
-    return new MemberProperties();
     
-if( 22 == namespaceId && "members" == name)
-    return new Members();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new PivotHierarchyExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "mps","members","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22 };
     
@@ -13108,6 +12242,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<MemberProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -13121,6 +12256,7 @@ if( 22 == namespaceId && "extLst" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "rowHierarchyUsage")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RowHierarchyUsage : HierarchyUsageType
 {
@@ -13148,6 +12284,7 @@ public partial class RowHierarchyUsage : HierarchyUsageType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "colHierarchyUsage")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnHierarchyUsage : HierarchyUsageType
 {
@@ -13203,6 +12340,7 @@ public abstract partial class HierarchyUsageType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "mp")]
 public partial class MemberProperty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11179;
@@ -13300,6 +12438,7 @@ public partial class MemberProperty : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "member")]
 public partial class Member : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11180;
@@ -13341,6 +12480,7 @@ public partial class Member : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "dimension")]
 public partial class Dimension : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11181;
@@ -13403,6 +12543,7 @@ public partial class Dimension : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "measureGroup")]
 public partial class MeasureGroup : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11182;
@@ -13451,6 +12592,7 @@ public partial class MeasureGroup : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "map")]
 public partial class MeasureDimensionMap : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11183;
@@ -13508,6 +12650,7 @@ public partial class MeasureDimensionMap : OpenXmlLeafElement
     [ChildElementInfo(typeof(PivotFilterExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "filter")]
 public partial class PivotFilter : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11184;
@@ -13627,22 +12770,11 @@ public partial class PivotFilter : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "autoFilter" == name)
-    return new AutoFilter();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new PivotFilterExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "autoFilter","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22 };
     
@@ -13663,6 +12795,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<AutoFilter>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> PivotFilterExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -13675,6 +12808,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PivotFilterExtensionList>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -13700,6 +12834,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(CacheHierarchyExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "cacheHierarchy")]
 public partial class CacheHierarchy : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11185;
@@ -13896,25 +13031,11 @@ public partial class CacheHierarchy : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "fieldsUsage" == name)
-    return new FieldsUsage();
     
-if( 22 == namespaceId && "groupLevels" == name)
-    return new GroupLevels();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new CacheHierarchyExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "fieldsUsage","groupLevels","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22 };
     
@@ -13935,6 +13056,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<FieldsUsage>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> GroupLevels.</para>
     /// <para> Represents the following element tag in the schema: x:groupLevels </para>
@@ -13947,6 +13069,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<GroupLevels>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> CacheHierarchyExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -13959,6 +13082,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CacheHierarchyExtensionList>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -13973,6 +13097,7 @@ if( 22 == namespaceId && "extLst" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rangePr")]
 public partial class RangeProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11186;
@@ -14070,6 +13195,7 @@ public partial class RangeProperties : OpenXmlLeafElement
     [ChildElementInfo(typeof(FieldItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "discretePr")]
 public partial class DiscreteProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11187;
@@ -14119,19 +13245,11 @@ public partial class DiscreteProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "x" == name)
-    return new FieldItem();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DiscreteProperties>(deep);
@@ -14162,6 +13280,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DateTimeItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "groupItems")]
 public partial class GroupItems : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11188;
@@ -14211,34 +13330,11 @@ public partial class GroupItems : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "m" == name)
-    return new MissingItem();
     
-if( 22 == namespaceId && "n" == name)
-    return new NumberItem();
-    
-if( 22 == namespaceId && "b" == name)
-    return new BooleanItem();
-    
-if( 22 == namespaceId && "e" == name)
-    return new ErrorItem();
-    
-if( 22 == namespaceId && "s" == name)
-    return new StringItem();
-    
-if( 22 == namespaceId && "d" == name)
-    return new DateTimeItem();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupItems>(deep);
@@ -14259,6 +13355,7 @@ if( 22 == namespaceId && "d" == name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pageField")]
 public partial class PageField : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11189;
@@ -14336,19 +13433,11 @@ public partial class PageField : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -14369,6 +13458,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ExtensionList>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -14390,6 +13480,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PivotAreaReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "references")]
 public partial class PivotAreaReferences : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11191;
@@ -14439,19 +13530,11 @@ public partial class PivotAreaReferences : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "reference" == name)
-    return new PivotAreaReference();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotAreaReferences>(deep);
@@ -14474,6 +13557,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "reference")]
 public partial class PivotAreaReference : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11192;
@@ -14635,22 +13719,11 @@ public partial class PivotAreaReference : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "x" == name)
-    return new FieldItem();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotAreaReference>(deep);
@@ -14671,6 +13744,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(QueryTableField))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "queryTableFields")]
 public partial class QueryTableFields : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11193;
@@ -14720,19 +13794,11 @@ public partial class QueryTableFields : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "queryTableField" == name)
-    return new QueryTableField();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<QueryTableFields>(deep);
@@ -14753,6 +13819,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DeletedField))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "queryTableDeletedFields")]
 public partial class QueryTableDeletedFields : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11194;
@@ -14802,19 +13869,11 @@ public partial class QueryTableDeletedFields : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "deletedField" == name)
-    return new DeletedField();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<QueryTableDeletedFields>(deep);
@@ -14828,6 +13887,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "deletedField")]
 public partial class DeletedField : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11195;
@@ -14876,6 +13936,7 @@ public partial class DeletedField : OpenXmlLeafElement
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "queryTableField")]
 public partial class QueryTableField : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11196;
@@ -14967,19 +14028,11 @@ public partial class QueryTableField : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -15000,6 +14053,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ExtensionList>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -15022,6 +14076,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "si")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SharedStringItem : RstType
 {
@@ -15061,6 +14116,7 @@ public partial class SharedStringItem : RstType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -15083,6 +14139,7 @@ public partial class SharedStringItem : RstType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "is")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class InlineString : RstType
 {
@@ -15122,6 +14179,7 @@ public partial class InlineString : RstType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -15144,6 +14202,7 @@ public partial class InlineString : RstType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "text")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CommentText : RstType
 {
@@ -15183,6 +14242,7 @@ public partial class CommentText : RstType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -15211,25 +14271,7 @@ public abstract partial class RstType : OpenXmlCompositeElement
 {
         
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "t" == name)
-    return new Text();
     
-if( 22 == namespaceId && "r" == name)
-    return new Run();
-    
-if( 22 == namespaceId && "rPh" == name)
-    return new PhoneticRun();
-    
-if( 22 == namespaceId && "phoneticPr" == name)
-    return new PhoneticProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "t","r","rPh","phoneticPr" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22 };
     
@@ -15250,6 +14292,7 @@ if( 22 == namespaceId && "phoneticPr" == name)
         get => GetElement<Text>(0);
         set => SetElement(0, value);
     }
+    
 
 
     
@@ -15283,6 +14326,7 @@ if( 22 == namespaceId && "phoneticPr" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -15293,6 +14337,7 @@ if( 22 == namespaceId && "phoneticPr" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "b")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Bold : BooleanPropertyType
 {
@@ -15320,6 +14365,7 @@ public partial class Bold : BooleanPropertyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "i")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Italic : BooleanPropertyType
 {
@@ -15347,6 +14393,7 @@ public partial class Italic : BooleanPropertyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "strike")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Strike : BooleanPropertyType
 {
@@ -15374,6 +14421,7 @@ public partial class Strike : BooleanPropertyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "condense")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Condense : BooleanPropertyType
 {
@@ -15401,6 +14449,7 @@ public partial class Condense : BooleanPropertyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "extend")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Extend : BooleanPropertyType
 {
@@ -15428,6 +14477,7 @@ public partial class Extend : BooleanPropertyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "outline")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Outline : BooleanPropertyType
 {
@@ -15455,6 +14505,7 @@ public partial class Outline : BooleanPropertyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "shadow")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Shadow : BooleanPropertyType
 {
@@ -15510,6 +14561,7 @@ public abstract partial class BooleanPropertyType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "u")]
 public partial class Underline : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11205;
@@ -15551,6 +14603,7 @@ public partial class Underline : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "vertAlign")]
 public partial class VerticalTextAlignment : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11206;
@@ -15592,6 +14645,7 @@ public partial class VerticalTextAlignment : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sz")]
 public partial class FontSize : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11207;
@@ -15632,6 +14686,7 @@ public partial class FontSize : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "color")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Color : ColorType
 {
@@ -15659,6 +14714,7 @@ public partial class Color : ColorType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "tabColor")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TabColor : ColorType
 {
@@ -15686,6 +14742,7 @@ public partial class TabColor : ColorType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "fgColor")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ForegroundColor : ColorType
 {
@@ -15713,6 +14770,7 @@ public partial class ForegroundColor : ColorType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "bgColor")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BackgroundColor : ColorType
 {
@@ -15796,6 +14854,7 @@ public abstract partial class ColorType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rFont")]
 public partial class RunFont : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11209;
@@ -15836,6 +14895,7 @@ public partial class RunFont : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "family")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FontFamily : InternationalPropertyType
 {
@@ -15863,6 +14923,7 @@ public partial class FontFamily : InternationalPropertyType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "charset")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RunPropertyCharSet : InternationalPropertyType
 {
@@ -15918,6 +14979,7 @@ public abstract partial class InternationalPropertyType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "scheme")]
 public partial class FontScheme : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11212;
@@ -15994,6 +15056,7 @@ public partial class FontScheme : OpenXmlLeafElement
     [ChildElementInfo(typeof(FontScheme))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rPr")]
 public partial class RunProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11214;
@@ -16036,61 +15099,11 @@ public partial class RunProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "b" == name)
-    return new Bold();
     
-if( 22 == namespaceId && "i" == name)
-    return new Italic();
-    
-if( 22 == namespaceId && "strike" == name)
-    return new Strike();
-    
-if( 22 == namespaceId && "condense" == name)
-    return new Condense();
-    
-if( 22 == namespaceId && "extend" == name)
-    return new Extend();
-    
-if( 22 == namespaceId && "outline" == name)
-    return new Outline();
-    
-if( 22 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 22 == namespaceId && "u" == name)
-    return new Underline();
-    
-if( 22 == namespaceId && "vertAlign" == name)
-    return new VerticalTextAlignment();
-    
-if( 22 == namespaceId && "sz" == name)
-    return new FontSize();
-    
-if( 22 == namespaceId && "color" == name)
-    return new Color();
-    
-if( 22 == namespaceId && "rFont" == name)
-    return new RunFont();
-    
-if( 22 == namespaceId && "family" == name)
-    return new FontFamily();
-    
-if( 22 == namespaceId && "charset" == name)
-    return new RunPropertyCharSet();
-    
-if( 22 == namespaceId && "scheme" == name)
-    return new FontScheme();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RunProperties>(deep);
@@ -16113,6 +15126,7 @@ if( 22 == namespaceId && "scheme" == name)
     [ChildElementInfo(typeof(Text))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "r")]
 public partial class Run : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11215;
@@ -16155,22 +15169,11 @@ public partial class Run : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "rPr" == name)
-    return new RunProperties();
     
-if( 22 == namespaceId && "t" == name)
-    return new Text();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "rPr","t" };
     private static readonly byte[] eleNamespaceIds = { 22,22 };
     
@@ -16191,6 +15194,7 @@ if( 22 == namespaceId && "t" == name)
         get => GetElement<RunProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Text.</para>
     /// <para> Represents the following element tag in the schema: x:t </para>
@@ -16203,6 +15207,7 @@ if( 22 == namespaceId && "t" == name)
         get => GetElement<Text>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -16224,6 +15229,7 @@ if( 22 == namespaceId && "t" == name)
     [ChildElementInfo(typeof(Text))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rPh")]
 public partial class PhoneticRun : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11216;
@@ -16280,19 +15286,11 @@ public partial class PhoneticRun : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "t" == name)
-    return new Text();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "t" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -16313,6 +15311,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<Text>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -16327,6 +15326,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "phoneticPr")]
 public partial class PhoneticProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11217;
@@ -16393,6 +15393,7 @@ public partial class PhoneticProperties : OpenXmlLeafElement
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "header")]
 public partial class Header : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11218;
@@ -16486,25 +15487,11 @@ public partial class Header : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "sheetIdMap" == name)
-    return new SheetIdMap();
     
-if( 22 == namespaceId && "reviewedList" == name)
-    return new ReviewedList();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sheetIdMap","reviewedList","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22 };
     
@@ -16525,6 +15512,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<SheetIdMap>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Reviewed List.</para>
     /// <para> Represents the following element tag in the schema: x:reviewedList </para>
@@ -16537,6 +15525,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ReviewedList>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -16549,6 +15538,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -16574,6 +15564,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(RevisionFormat))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rrc")]
 public partial class RevisionRowColumn : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11219;
@@ -16672,25 +15663,11 @@ public partial class RevisionRowColumn : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "undo" == name)
-    return new Undo();
     
-if( 22 == namespaceId && "rcc" == name)
-    return new RevisionCellChange();
-    
-if( 22 == namespaceId && "rfmt" == name)
-    return new RevisionFormat();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionRowColumn>(deep);
@@ -16715,6 +15692,7 @@ if( 22 == namespaceId && "rfmt" == name)
     [ChildElementInfo(typeof(RevisionFormat))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rm")]
 public partial class RevisionMove : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11220;
@@ -16806,25 +15784,11 @@ public partial class RevisionMove : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "undo" == name)
-    return new Undo();
     
-if( 22 == namespaceId && "rcc" == name)
-    return new RevisionCellChange();
-    
-if( 22 == namespaceId && "rfmt" == name)
-    return new RevisionFormat();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RevisionMove>(deep);
@@ -16838,6 +15802,7 @@ if( 22 == namespaceId && "rfmt" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rcv")]
 public partial class RevisionCustomView : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11221;
@@ -16893,6 +15858,7 @@ public partial class RevisionCustomView : OpenXmlLeafElement
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rsnm")]
 public partial class RevisionSheetName : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11222;
@@ -16977,19 +15943,11 @@ public partial class RevisionSheetName : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -17010,6 +15968,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ExtensionList>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -17024,6 +15983,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ris")]
 public partial class RevisionInsertSheet : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11223;
@@ -17115,6 +16075,7 @@ public partial class RevisionInsertSheet : OpenXmlLeafElement
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rcc")]
 public partial class RevisionCellChange : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11224;
@@ -17255,31 +16216,11 @@ public partial class RevisionCellChange : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "oc" == name)
-    return new OldCell();
     
-if( 22 == namespaceId && "nc" == name)
-    return new NewCell();
-    
-if( 22 == namespaceId && "odxf" == name)
-    return new OldDifferentialFormat();
-    
-if( 22 == namespaceId && "ndxf" == name)
-    return new NewDifferentialFormat();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "oc","nc","odxf","ndxf","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22 };
     
@@ -17300,6 +16241,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<OldCell>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> New Cell Data.</para>
     /// <para> Represents the following element tag in the schema: x:nc </para>
@@ -17312,6 +16254,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<NewCell>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Old Formatting Information.</para>
     /// <para> Represents the following element tag in the schema: x:odxf </para>
@@ -17324,6 +16267,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<OldDifferentialFormat>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> New Formatting Information.</para>
     /// <para> Represents the following element tag in the schema: x:ndxf </para>
@@ -17336,6 +16280,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<NewDifferentialFormat>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -17348,6 +16293,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(4);
         set => SetElement(4, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -17371,6 +16317,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rfmt")]
 public partial class RevisionFormat : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11225;
@@ -17455,22 +16402,11 @@ public partial class RevisionFormat : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "dxf" == name)
-    return new DifferentialFormat();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "dxf","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22 };
     
@@ -17491,6 +16427,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<DifferentialFormat>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -17503,6 +16440,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -17517,6 +16455,7 @@ if( 22 == namespaceId && "extLst" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "raf")]
 public partial class RevisionAutoFormat : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11226;
@@ -17625,6 +16564,7 @@ public partial class RevisionAutoFormat : OpenXmlLeafElement
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rdn")]
 public partial class RevisionDefinedName : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11227;
@@ -17835,25 +16775,11 @@ public partial class RevisionDefinedName : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "formula" == name)
-    return new Formula();
     
-if( 22 == namespaceId && "oldFormula" == name)
-    return new OldFormula();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "formula","oldFormula","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22 };
     
@@ -17874,6 +16800,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Formula>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Old Formula.</para>
     /// <para> Represents the following element tag in the schema: x:oldFormula </para>
@@ -17886,6 +16813,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<OldFormula>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -17898,6 +16826,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -17912,6 +16841,7 @@ if( 22 == namespaceId && "extLst" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rcmt")]
 public partial class RevisionComment : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11228;
@@ -18023,6 +16953,7 @@ public partial class RevisionComment : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rqt")]
 public partial class RevisionQueryTable : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11229;
@@ -18078,6 +17009,7 @@ public partial class RevisionQueryTable : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rcft")]
 public partial class RevisionConflict : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11230;
@@ -18147,6 +17079,7 @@ public partial class RevisionConflict : OpenXmlLeafElement
     [ChildElementInfo(typeof(SheetId))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheetIdMap")]
 public partial class SheetIdMap : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11231;
@@ -18196,19 +17129,11 @@ public partial class SheetIdMap : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "sheetId" == name)
-    return new SheetId();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SheetIdMap>(deep);
@@ -18229,6 +17154,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Reviewed))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "reviewedList")]
 public partial class ReviewedList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11232;
@@ -18278,19 +17204,11 @@ public partial class ReviewedList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "reviewed" == name)
-    return new Reviewed();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ReviewedList>(deep);
@@ -18304,6 +17222,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "reviewed")]
 public partial class Reviewed : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11233;
@@ -18345,6 +17264,7 @@ public partial class Reviewed : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "undo")]
 public partial class Undo : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11234;
@@ -18464,6 +17384,7 @@ public partial class Undo : OpenXmlLeafElement
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "oc")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OldCell : CellType
 {
@@ -18503,6 +17424,7 @@ public partial class OldCell : CellType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -18525,6 +17447,7 @@ public partial class OldCell : CellType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "c")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Cell : CellType
 {
@@ -18564,6 +17487,7 @@ public partial class Cell : CellType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -18634,25 +17558,7 @@ public abstract partial class CellType : OpenXmlCompositeElement
     [SchemaIndex(5)]
     public BooleanValue ShowPhonetic { get; set; }
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "f" == name)
-    return new CellFormula();
     
-if( 22 == namespaceId && "v" == name)
-    return new CellValue();
-    
-if( 22 == namespaceId && "is" == name)
-    return new InlineString();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "f","v","is","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22 };
     
@@ -18673,6 +17579,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CellFormula>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Cell Value.</para>
     /// <para> Represents the following element tag in the schema: x:v </para>
@@ -18685,6 +17592,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CellValue>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Rich Text Inline.</para>
     /// <para> Represents the following element tag in the schema: x:is </para>
@@ -18697,6 +17605,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<InlineString>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -18709,6 +17618,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(3);
         set => SetElement(3, value);
     }
+    
 
 
     
@@ -18742,6 +17652,7 @@ if( 22 == namespaceId && "extLst" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -18766,6 +17677,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "nc")]
 public partial class NewCell : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11236;
@@ -18850,28 +17762,11 @@ public partial class NewCell : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "f" == name)
-    return new CellFormula();
     
-if( 22 == namespaceId && "v" == name)
-    return new CellValue();
-    
-if( 22 == namespaceId && "is" == name)
-    return new InlineString();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "f","v","is","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22 };
     
@@ -18892,6 +17787,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CellFormula>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Cell Value.</para>
     /// <para> Represents the following element tag in the schema: x:v </para>
@@ -18904,6 +17800,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CellValue>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Rich Text Inline.</para>
     /// <para> Represents the following element tag in the schema: x:is </para>
@@ -18916,6 +17813,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<InlineString>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -18928,6 +17826,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -18953,6 +17852,7 @@ if( 22 == namespaceId && "extLst" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "odxf")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OldDifferentialFormat : DifferentialFormatType
 {
@@ -18992,6 +17892,7 @@ public partial class OldDifferentialFormat : DifferentialFormatType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -19017,6 +17918,7 @@ public partial class OldDifferentialFormat : DifferentialFormatType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "ndxf")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NewDifferentialFormat : DifferentialFormatType
 {
@@ -19056,6 +17958,7 @@ public partial class NewDifferentialFormat : DifferentialFormatType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -19081,6 +17984,7 @@ public partial class NewDifferentialFormat : DifferentialFormatType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "dxf")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DifferentialFormat : DifferentialFormatType
 {
@@ -19120,6 +18024,7 @@ public partial class DifferentialFormat : DifferentialFormatType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -19154,34 +18059,7 @@ public abstract partial class DifferentialFormatType : OpenXmlCompositeElement
 {
         
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "font" == name)
-    return new Font();
     
-if( 22 == namespaceId && "numFmt" == name)
-    return new NumberingFormat();
-    
-if( 22 == namespaceId && "fill" == name)
-    return new Fill();
-    
-if( 22 == namespaceId && "alignment" == name)
-    return new Alignment();
-    
-if( 22 == namespaceId && "border" == name)
-    return new Border();
-    
-if( 22 == namespaceId && "protection" == name)
-    return new Protection();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "font","numFmt","fill","alignment","border","protection","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22 };
     
@@ -19202,6 +18080,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Font>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Number Format.</para>
     /// <para> Represents the following element tag in the schema: x:numFmt </para>
@@ -19214,6 +18093,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<NumberingFormat>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Fill.</para>
     /// <para> Represents the following element tag in the schema: x:fill </para>
@@ -19226,6 +18106,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Fill>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Alignment.</para>
     /// <para> Represents the following element tag in the schema: x:alignment </para>
@@ -19238,6 +18119,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Alignment>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Border Properties.</para>
     /// <para> Represents the following element tag in the schema: x:border </para>
@@ -19250,6 +18132,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Border>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Protection Properties.</para>
     /// <para> Represents the following element tag in the schema: x:protection </para>
@@ -19262,6 +18145,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Protection>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -19274,6 +18158,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(6);
         set => SetElement(6, value);
     }
+    
 
 
     
@@ -19307,6 +18192,7 @@ if( 22 == namespaceId && "extLst" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -19318,6 +18204,7 @@ if( 22 == namespaceId && "extLst" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheetId")]
 public partial class SheetId : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11240;
@@ -19359,6 +18246,7 @@ public partial class SheetId : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "f")]
 public partial class CellFormula : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11241;
@@ -19506,6 +18394,7 @@ public partial class CellFormula : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "userInfo")]
 public partial class UserInfo : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11246;
@@ -19576,19 +18465,11 @@ public partial class UserInfo : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -19609,6 +18490,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ExtensionList>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -19632,6 +18514,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "row")]
 public partial class Row : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11247;
@@ -19767,22 +18650,11 @@ public partial class Row : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "c" == name)
-    return new Cell();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Row>(deep);
@@ -19796,6 +18668,7 @@ if( 22 == namespaceId && "extLst" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "col")]
 public partial class Column : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11248;
@@ -19900,6 +18773,7 @@ public partial class Column : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "outlinePr")]
 public partial class OutlineProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11250;
@@ -19962,6 +18836,7 @@ public partial class OutlineProperties : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pageSetUpPr")]
 public partial class PageSetupProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11251;
@@ -20010,6 +18885,7 @@ public partial class PageSetupProperties : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pane")]
 public partial class Pane : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11252;
@@ -20079,6 +18955,7 @@ public partial class Pane : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "selection")]
 public partial class Selection : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11253;
@@ -20148,6 +19025,7 @@ public partial class Selection : OpenXmlLeafElement
     [ChildElementInfo(typeof(PivotArea))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pivotSelection")]
 public partial class PivotSelection : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11254;
@@ -20311,19 +19189,11 @@ public partial class PivotSelection : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "pivotArea" == name)
-    return new PivotArea();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pivotArea" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -20344,6 +19214,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<PivotArea>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -20358,6 +19229,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "brk")]
 public partial class Break : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11255;
@@ -20427,6 +19299,7 @@ public partial class Break : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "dataRef")]
 public partial class DataReference : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11256;
@@ -20496,6 +19369,7 @@ public partial class DataReference : OpenXmlLeafElement
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "rowBreaks")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RowBreaks : PageBreakType
 {
@@ -20535,6 +19409,7 @@ public partial class RowBreaks : PageBreakType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -20554,6 +19429,7 @@ public partial class RowBreaks : PageBreakType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "colBreaks")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnBreaks : PageBreakType
 {
@@ -20593,6 +19469,7 @@ public partial class ColumnBreaks : PageBreakType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -20629,16 +19506,7 @@ public abstract partial class PageBreakType : OpenXmlCompositeElement
     [SchemaIndex(1)]
     public UInt32Value ManualBreakCount { get; set; }
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "brk" == name)
-    return new Break();
     
-
-    return null;
-}
-
     
     
     /// <summary>
@@ -20671,6 +19539,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -20682,6 +19551,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pageMargins")]
 public partial class PageMargins : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11259;
@@ -20758,6 +19628,7 @@ public partial class PageMargins : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "printOptions")]
 public partial class PrintOptions : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11260;
@@ -20827,6 +19698,7 @@ public partial class PrintOptions : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pageSetup")]
 public partial class PageSetup : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11261;
@@ -20999,6 +19871,7 @@ public partial class PageSetup : OpenXmlLeafElement
     [ChildElementInfo(typeof(FirstFooter))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "headerFooter")]
 public partial class HeaderFooter : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11262;
@@ -21069,34 +19942,11 @@ public partial class HeaderFooter : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "oddHeader" == name)
-    return new OddHeader();
     
-if( 22 == namespaceId && "oddFooter" == name)
-    return new OddFooter();
-    
-if( 22 == namespaceId && "evenHeader" == name)
-    return new EvenHeader();
-    
-if( 22 == namespaceId && "evenFooter" == name)
-    return new EvenFooter();
-    
-if( 22 == namespaceId && "firstHeader" == name)
-    return new FirstHeader();
-    
-if( 22 == namespaceId && "firstFooter" == name)
-    return new FirstFooter();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "oddHeader","oddFooter","evenHeader","evenFooter","firstHeader","firstFooter" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22 };
     
@@ -21117,6 +19967,7 @@ if( 22 == namespaceId && "firstFooter" == name)
         get => GetElement<OddHeader>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Odd Page Footer.</para>
     /// <para> Represents the following element tag in the schema: x:oddFooter </para>
@@ -21129,6 +19980,7 @@ if( 22 == namespaceId && "firstFooter" == name)
         get => GetElement<OddFooter>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Even Page Header.</para>
     /// <para> Represents the following element tag in the schema: x:evenHeader </para>
@@ -21141,6 +19993,7 @@ if( 22 == namespaceId && "firstFooter" == name)
         get => GetElement<EvenHeader>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Even Page Footer.</para>
     /// <para> Represents the following element tag in the schema: x:evenFooter </para>
@@ -21153,6 +20006,7 @@ if( 22 == namespaceId && "firstFooter" == name)
         get => GetElement<EvenFooter>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> First Page Header.</para>
     /// <para> Represents the following element tag in the schema: x:firstHeader </para>
@@ -21165,6 +20019,7 @@ if( 22 == namespaceId && "firstFooter" == name)
         get => GetElement<FirstHeader>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> First Page Footer.</para>
     /// <para> Represents the following element tag in the schema: x:firstFooter </para>
@@ -21177,6 +20032,7 @@ if( 22 == namespaceId && "firstFooter" == name)
         get => GetElement<FirstFooter>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -21202,6 +20058,7 @@ if( 22 == namespaceId && "firstFooter" == name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "autoFilter")]
 public partial class AutoFilter : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11263;
@@ -21251,25 +20108,11 @@ public partial class AutoFilter : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "filterColumn" == name)
-    return new FilterColumn();
     
-if( 22 == namespaceId && "sortState" == name)
-    return new SortState();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AutoFilter>(deep);
@@ -21298,6 +20141,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(ConditionalFormattingRuleExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "cfRule")]
 public partial class ConditionalFormattingRule : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11264;
@@ -21431,31 +20275,11 @@ public partial class ConditionalFormattingRule : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "formula" == name)
-    return new Formula();
     
-if( 22 == namespaceId && "colorScale" == name)
-    return new ColorScale();
-    
-if( 22 == namespaceId && "dataBar" == name)
-    return new DataBar();
-    
-if( 22 == namespaceId && "iconSet" == name)
-    return new IconSet();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ConditionalFormattingRuleExtensionList();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConditionalFormattingRule>(deep);
@@ -21469,6 +20293,7 @@ if( 22 == namespaceId && "extLst" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "hyperlink")]
 public partial class Hyperlink : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11265;
@@ -21547,6 +20372,7 @@ public partial class Hyperlink : OpenXmlLeafElement
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "cfvo")]
 public partial class ConditionalFormatValueObject : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11266;
@@ -21610,19 +20436,11 @@ public partial class ConditionalFormatValueObject : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -21643,6 +20461,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ExtensionList>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -21664,6 +20483,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(InputCells))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "scenario")]
 public partial class Scenario : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11267;
@@ -21748,19 +20568,11 @@ public partial class Scenario : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "inputCells" == name)
-    return new InputCells();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Scenario>(deep);
@@ -21774,6 +20586,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "protectedRange")]
 public partial class ProtectedRange : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11268;
@@ -21864,6 +20677,7 @@ public partial class ProtectedRange : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "cellWatch")]
 public partial class CellWatch : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11269;
@@ -21905,6 +20719,7 @@ public partial class CellWatch : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pageSetup")]
 public partial class ChartSheetPageSetup : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11270;
@@ -22018,6 +20833,7 @@ public partial class ChartSheetPageSetup : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "customPr")]
 public partial class CustomProperty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11271;
@@ -22068,6 +20884,7 @@ public partial class CustomProperty : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "webPublishItem")]
 public partial class WebPublishItem : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11272;
@@ -22158,6 +20975,7 @@ public partial class WebPublishItem : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "tablePart")]
 public partial class TablePart : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11273;
@@ -22208,6 +21026,7 @@ public partial class TablePart : OpenXmlLeafElement
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheetView")]
 public partial class ChartSheetView : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11274;
@@ -22278,19 +21097,11 @@ public partial class ChartSheetView : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -22311,6 +21122,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ExtensionList>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -22336,6 +21148,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(HeaderFooter))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "customSheetView")]
 public partial class CustomChartsheetView : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11275;
@@ -22406,25 +21219,11 @@ public partial class CustomChartsheetView : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "pageMargins" == name)
-    return new PageMargins();
     
-if( 22 == namespaceId && "pageSetup" == name)
-    return new ChartSheetPageSetup();
-    
-if( 22 == namespaceId && "headerFooter" == name)
-    return new HeaderFooter();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pageMargins","pageSetup","headerFooter" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22 };
     
@@ -22445,6 +21244,7 @@ if( 22 == namespaceId && "headerFooter" == name)
         get => GetElement<PageMargins>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Chart Sheet Page Setup.</para>
     /// <para> Represents the following element tag in the schema: x:pageSetup </para>
@@ -22457,6 +21257,7 @@ if( 22 == namespaceId && "headerFooter" == name)
         get => GetElement<ChartSheetPageSetup>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> HeaderFooter.</para>
     /// <para> Represents the following element tag in the schema: x:headerFooter </para>
@@ -22469,6 +21270,7 @@ if( 22 == namespaceId && "headerFooter" == name)
         get => GetElement<HeaderFooter>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -22483,6 +21285,7 @@ if( 22 == namespaceId && "headerFooter" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "inputCells")]
 public partial class InputCells : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11276;
@@ -22559,6 +21362,7 @@ public partial class InputCells : OpenXmlLeafElement
     [ChildElementInfo(typeof(ControlProperties), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "control")]
 public partial class Control : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11277;
@@ -22624,19 +21428,11 @@ public partial class Control : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "controlPr" == name)
-    return new ControlProperties();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "controlPr" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -22657,6 +21453,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -22671,6 +21468,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ignoredError")]
 public partial class IgnoredError : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11278;
@@ -22775,6 +21573,7 @@ public partial class IgnoredError : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "mergeCell")]
 public partial class MergeCell : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11279;
@@ -22827,6 +21626,7 @@ public partial class MergeCell : OpenXmlLeafElement
     [ChildElementInfo(typeof(Formula2))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "dataValidation")]
 public partial class DataValidation : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11280;
@@ -22960,25 +21760,11 @@ public partial class DataValidation : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 72 == namespaceId && "list" == name)
-    return new DocumentFormat.OpenXml.Office2010.ExcelAc.List();
     
-if( 22 == namespaceId && "formula1" == name)
-    return new Formula1();
-    
-if( 22 == namespaceId && "formula2" == name)
-    return new Formula2();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "list","formula1","formula2" };
     private static readonly byte[] eleNamespaceIds = { 72,22,22 };
     
@@ -23000,6 +21786,7 @@ if( 22 == namespaceId && "formula2" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.ExcelAc.List>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Formula1.</para>
     /// <para> Represents the following element tag in the schema: x:formula1 </para>
@@ -23012,6 +21799,7 @@ if( 22 == namespaceId && "formula2" == name)
         get => GetElement<Formula1>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Formula2.</para>
     /// <para> Represents the following element tag in the schema: x:formula2 </para>
@@ -23024,6 +21812,7 @@ if( 22 == namespaceId && "formula2" == name)
         get => GetElement<Formula2>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -23051,6 +21840,7 @@ if( 22 == namespaceId && "formula2" == name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheetView")]
 public partial class SheetView : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11281;
@@ -23226,28 +22016,11 @@ public partial class SheetView : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "pane" == name)
-    return new Pane();
     
-if( 22 == namespaceId && "selection" == name)
-    return new Selection();
-    
-if( 22 == namespaceId && "pivotSelection" == name)
-    return new PivotSelection();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pane","selection","pivotSelection","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22 };
     
@@ -23268,6 +22041,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Pane>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -23307,6 +22081,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "customSheetView")]
 public partial class CustomSheetView : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11282;
@@ -23489,46 +22264,11 @@ public partial class CustomSheetView : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "pane" == name)
-    return new Pane();
     
-if( 22 == namespaceId && "selection" == name)
-    return new Selection();
-    
-if( 22 == namespaceId && "rowBreaks" == name)
-    return new RowBreaks();
-    
-if( 22 == namespaceId && "colBreaks" == name)
-    return new ColumnBreaks();
-    
-if( 22 == namespaceId && "pageMargins" == name)
-    return new PageMargins();
-    
-if( 22 == namespaceId && "printOptions" == name)
-    return new PrintOptions();
-    
-if( 22 == namespaceId && "pageSetup" == name)
-    return new PageSetup();
-    
-if( 22 == namespaceId && "headerFooter" == name)
-    return new HeaderFooter();
-    
-if( 22 == namespaceId && "autoFilter" == name)
-    return new AutoFilter();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pane","selection","rowBreaks","colBreaks","pageMargins","printOptions","pageSetup","headerFooter","autoFilter","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22 };
     
@@ -23549,6 +22289,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Pane>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Selection.</para>
     /// <para> Represents the following element tag in the schema: x:selection </para>
@@ -23561,6 +22302,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Selection>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Horizontal Page Breaks.</para>
     /// <para> Represents the following element tag in the schema: x:rowBreaks </para>
@@ -23573,6 +22315,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<RowBreaks>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Vertical Page Breaks.</para>
     /// <para> Represents the following element tag in the schema: x:colBreaks </para>
@@ -23585,6 +22328,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ColumnBreaks>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Page Margins.</para>
     /// <para> Represents the following element tag in the schema: x:pageMargins </para>
@@ -23597,6 +22341,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PageMargins>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Print Options.</para>
     /// <para> Represents the following element tag in the schema: x:printOptions </para>
@@ -23609,6 +22354,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PrintOptions>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Page Setup Settings.</para>
     /// <para> Represents the following element tag in the schema: x:pageSetup </para>
@@ -23621,6 +22367,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<PageSetup>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Header Footer Settings.</para>
     /// <para> Represents the following element tag in the schema: x:headerFooter </para>
@@ -23633,6 +22380,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<HeaderFooter>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> AutoFilter Settings.</para>
     /// <para> Represents the following element tag in the schema: x:autoFilter </para>
@@ -23645,6 +22393,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<AutoFilter>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -23657,6 +22406,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(9);
         set => SetElement(9, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -23678,6 +22428,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(EmbeddedObjectProperties), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "oleObject")]
 public partial class OleObject : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11283;
@@ -23771,19 +22522,11 @@ public partial class OleObject : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "objectPr" == name)
-    return new EmbeddedObjectProperties();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "objectPr" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -23804,6 +22547,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<EmbeddedObjectProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -23825,6 +22569,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(MetadataType))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "metadataTypes")]
 public partial class MetadataTypes : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11290;
@@ -23874,19 +22619,11 @@ public partial class MetadataTypes : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "metadataType" == name)
-    return new MetadataType();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MetadataTypes>(deep);
@@ -23907,6 +22644,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(CharacterValue))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "metadataStrings")]
 public partial class MetadataStrings : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11291;
@@ -23956,19 +22694,11 @@ public partial class MetadataStrings : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "s" == name)
-    return new CharacterValue();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MetadataStrings>(deep);
@@ -23989,6 +22719,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Mdx))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "mdxMetadata")]
 public partial class MdxMetadata : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11292;
@@ -24038,19 +22769,11 @@ public partial class MdxMetadata : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "mdx" == name)
-    return new Mdx();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MdxMetadata>(deep);
@@ -24073,6 +22796,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "futureMetadata")]
 public partial class FutureMetadata : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11293;
@@ -24129,22 +22853,11 @@ public partial class FutureMetadata : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "bk" == name)
-    return new FutureMetadataBlock();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FutureMetadata>(deep);
@@ -24163,6 +22876,7 @@ if( 22 == namespaceId && "extLst" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "cellMetadata")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CellMetadata : MetadataBlocksType
 {
@@ -24202,6 +22916,7 @@ public partial class CellMetadata : MetadataBlocksType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -24221,6 +22936,7 @@ public partial class CellMetadata : MetadataBlocksType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "valueMetadata")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ValueMetadata : MetadataBlocksType
 {
@@ -24260,6 +22976,7 @@ public partial class ValueMetadata : MetadataBlocksType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -24289,16 +23006,7 @@ public abstract partial class MetadataBlocksType : OpenXmlCompositeElement
     [SchemaIndex(0)]
     public UInt32Value Count { get; set; }
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "bk" == name)
-    return new MetadataBlock();
     
-
-    return null;
-}
-
     
     
     /// <summary>
@@ -24331,6 +23039,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -24342,6 +23051,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "metadataType")]
 public partial class MetadataType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11296;
@@ -24579,6 +23289,7 @@ public partial class MetadataType : OpenXmlLeafElement
     [ChildElementInfo(typeof(MetadataRecord))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "bk")]
 public partial class MetadataBlock : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11297;
@@ -24621,19 +23332,11 @@ public partial class MetadataBlock : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "rc" == name)
-    return new MetadataRecord();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MetadataBlock>(deep);
@@ -24647,6 +23350,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rc")]
 public partial class MetadataRecord : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11298;
@@ -24702,6 +23406,7 @@ public partial class MetadataRecord : OpenXmlLeafElement
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "bk")]
 public partial class FutureMetadataBlock : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11299;
@@ -24744,19 +23449,11 @@ public partial class FutureMetadataBlock : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -24777,6 +23474,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ExtensionList>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -24804,6 +23502,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(MdxKpi))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "mdx")]
 public partial class Mdx : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11300;
@@ -24860,28 +23559,11 @@ public partial class Mdx : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "t" == name)
-    return new MdxTuple();
     
-if( 22 == namespaceId && "ms" == name)
-    return new MdxSet();
-    
-if( 22 == namespaceId && "p" == name)
-    return new MdxMemberProp();
-    
-if( 22 == namespaceId && "k" == name)
-    return new MdxKpi();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "t","ms","p","k" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22 };
     
@@ -24902,6 +23584,7 @@ if( 22 == namespaceId && "k" == name)
         get => GetElement<MdxTuple>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Set MDX Metadata.</para>
     /// <para> Represents the following element tag in the schema: x:ms </para>
@@ -24914,6 +23597,7 @@ if( 22 == namespaceId && "k" == name)
         get => GetElement<MdxSet>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Member Property MDX Metadata.</para>
     /// <para> Represents the following element tag in the schema: x:p </para>
@@ -24926,6 +23610,7 @@ if( 22 == namespaceId && "k" == name)
         get => GetElement<MdxMemberProp>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> KPI MDX Metadata.</para>
     /// <para> Represents the following element tag in the schema: x:k </para>
@@ -24938,6 +23623,7 @@ if( 22 == namespaceId && "k" == name)
         get => GetElement<MdxKpi>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -24959,6 +23645,7 @@ if( 22 == namespaceId && "k" == name)
     [ChildElementInfo(typeof(NameIndex))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "t")]
 public partial class MdxTuple : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11301;
@@ -25071,19 +23758,11 @@ public partial class MdxTuple : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "n" == name)
-    return new NameIndex();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MdxTuple>(deep);
@@ -25104,6 +23783,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(NameIndex))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ms")]
 public partial class MdxSet : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11302;
@@ -25167,19 +23847,11 @@ public partial class MdxSet : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "n" == name)
-    return new NameIndex();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MdxSet>(deep);
@@ -25193,6 +23865,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "p")]
 public partial class MdxMemberProp : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11303;
@@ -25241,6 +23914,7 @@ public partial class MdxMemberProp : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "k")]
 public partial class MdxKpi : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11304;
@@ -25296,6 +23970,7 @@ public partial class MdxKpi : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "n")]
 public partial class NameIndex : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11305;
@@ -25353,6 +24028,7 @@ public partial class NameIndex : OpenXmlLeafElement
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "singleXmlCell")]
 public partial class SingleXmlCell : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11306;
@@ -25416,22 +24092,11 @@ public partial class SingleXmlCell : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "xmlCellPr" == name)
-    return new XmlCellProperties();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "xmlCellPr","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22 };
     
@@ -25452,6 +24117,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<XmlCellProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -25464,6 +24130,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -25487,6 +24154,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "xmlCellPr")]
 public partial class XmlCellProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11307;
@@ -25543,22 +24211,11 @@ public partial class XmlCellProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "xmlPr" == name)
-    return new XmlProperties();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "xmlPr","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22 };
     
@@ -25579,6 +24236,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<XmlProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -25591,6 +24249,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -25612,6 +24271,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "xmlPr")]
 public partial class XmlProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11308;
@@ -25675,19 +24335,11 @@ public partial class XmlProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -25708,6 +24360,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ExtensionList>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -25731,6 +24384,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(BackgroundColor))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "patternFill")]
 public partial class PatternFill : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11309;
@@ -25780,22 +24434,11 @@ public partial class PatternFill : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "fgColor" == name)
-    return new ForegroundColor();
     
-if( 22 == namespaceId && "bgColor" == name)
-    return new BackgroundColor();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "fgColor","bgColor" };
     private static readonly byte[] eleNamespaceIds = { 22,22 };
     
@@ -25816,6 +24459,7 @@ if( 22 == namespaceId && "bgColor" == name)
         get => GetElement<ForegroundColor>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Background Color.</para>
     /// <para> Represents the following element tag in the schema: x:bgColor </para>
@@ -25828,6 +24472,7 @@ if( 22 == namespaceId && "bgColor" == name)
         get => GetElement<BackgroundColor>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -25849,6 +24494,7 @@ if( 22 == namespaceId && "bgColor" == name)
     [ChildElementInfo(typeof(GradientStop))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "gradientFill")]
 public partial class GradientFill : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11310;
@@ -25933,19 +24579,11 @@ public partial class GradientFill : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "stop" == name)
-    return new GradientStop();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GradientFill>(deep);
@@ -25966,6 +24604,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Color))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "stop")]
 public partial class GradientStop : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11313;
@@ -26015,19 +24654,11 @@ public partial class GradientStop : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "color" == name)
-    return new Color();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "color" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -26048,6 +24679,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<Color>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -26062,6 +24694,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "numFmt")]
 public partial class NumberingFormat : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11314;
@@ -26110,6 +24743,7 @@ public partial class NumberingFormat : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "alignment")]
 public partial class Alignment : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11315;
@@ -26214,6 +24848,7 @@ public partial class Alignment : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "protection")]
 public partial class Protection : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11316;
@@ -26297,6 +24932,7 @@ public partial class Protection : OpenXmlLeafElement
     [ChildElementInfo(typeof(FontScheme))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "font")]
 public partial class Font : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11317;
@@ -26339,61 +24975,11 @@ public partial class Font : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "b" == name)
-    return new Bold();
     
-if( 22 == namespaceId && "i" == name)
-    return new Italic();
-    
-if( 22 == namespaceId && "strike" == name)
-    return new Strike();
-    
-if( 22 == namespaceId && "condense" == name)
-    return new Condense();
-    
-if( 22 == namespaceId && "extend" == name)
-    return new Extend();
-    
-if( 22 == namespaceId && "outline" == name)
-    return new Outline();
-    
-if( 22 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 22 == namespaceId && "u" == name)
-    return new Underline();
-    
-if( 22 == namespaceId && "vertAlign" == name)
-    return new VerticalTextAlignment();
-    
-if( 22 == namespaceId && "sz" == name)
-    return new FontSize();
-    
-if( 22 == namespaceId && "color" == name)
-    return new Color();
-    
-if( 22 == namespaceId && "name" == name)
-    return new FontName();
-    
-if( 22 == namespaceId && "family" == name)
-    return new FontFamilyNumbering();
-    
-if( 22 == namespaceId && "charset" == name)
-    return new FontCharSet();
-    
-if( 22 == namespaceId && "scheme" == name)
-    return new FontScheme();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "b","i","strike","condense","extend","outline","shadow","u","vertAlign","sz","color","name","family","charset","scheme" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22 };
     
@@ -26414,6 +25000,7 @@ if( 22 == namespaceId && "scheme" == name)
         get => GetElement<Bold>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Italic.</para>
     /// <para> Represents the following element tag in the schema: x:i </para>
@@ -26426,6 +25013,7 @@ if( 22 == namespaceId && "scheme" == name)
         get => GetElement<Italic>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Strike Through.</para>
     /// <para> Represents the following element tag in the schema: x:strike </para>
@@ -26438,6 +25026,7 @@ if( 22 == namespaceId && "scheme" == name)
         get => GetElement<Strike>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Condense.</para>
     /// <para> Represents the following element tag in the schema: x:condense </para>
@@ -26450,6 +25039,7 @@ if( 22 == namespaceId && "scheme" == name)
         get => GetElement<Condense>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Extend.</para>
     /// <para> Represents the following element tag in the schema: x:extend </para>
@@ -26462,6 +25052,7 @@ if( 22 == namespaceId && "scheme" == name)
         get => GetElement<Extend>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Outline.</para>
     /// <para> Represents the following element tag in the schema: x:outline </para>
@@ -26474,6 +25065,7 @@ if( 22 == namespaceId && "scheme" == name)
         get => GetElement<Outline>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Shadow.</para>
     /// <para> Represents the following element tag in the schema: x:shadow </para>
@@ -26486,6 +25078,7 @@ if( 22 == namespaceId && "scheme" == name)
         get => GetElement<Shadow>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Underline.</para>
     /// <para> Represents the following element tag in the schema: x:u </para>
@@ -26498,6 +25091,7 @@ if( 22 == namespaceId && "scheme" == name)
         get => GetElement<Underline>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> Text Vertical Alignment.</para>
     /// <para> Represents the following element tag in the schema: x:vertAlign </para>
@@ -26510,6 +25104,7 @@ if( 22 == namespaceId && "scheme" == name)
         get => GetElement<VerticalTextAlignment>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Font Size.</para>
     /// <para> Represents the following element tag in the schema: x:sz </para>
@@ -26522,6 +25117,7 @@ if( 22 == namespaceId && "scheme" == name)
         get => GetElement<FontSize>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> Text Color.</para>
     /// <para> Represents the following element tag in the schema: x:color </para>
@@ -26534,6 +25130,7 @@ if( 22 == namespaceId && "scheme" == name)
         get => GetElement<Color>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Font Name.</para>
     /// <para> Represents the following element tag in the schema: x:name </para>
@@ -26546,6 +25143,7 @@ if( 22 == namespaceId && "scheme" == name)
         get => GetElement<FontName>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> Font Family.</para>
     /// <para> Represents the following element tag in the schema: x:family </para>
@@ -26558,6 +25156,7 @@ if( 22 == namespaceId && "scheme" == name)
         get => GetElement<FontFamilyNumbering>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> Character Set.</para>
     /// <para> Represents the following element tag in the schema: x:charset </para>
@@ -26570,6 +25169,7 @@ if( 22 == namespaceId && "scheme" == name)
         get => GetElement<FontCharSet>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> Scheme.</para>
     /// <para> Represents the following element tag in the schema: x:scheme </para>
@@ -26582,6 +25182,7 @@ if( 22 == namespaceId && "scheme" == name)
         get => GetElement<FontScheme>(14);
         set => SetElement(14, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -26605,6 +25206,7 @@ if( 22 == namespaceId && "scheme" == name)
     [ChildElementInfo(typeof(GradientFill))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "fill")]
 public partial class Fill : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11318;
@@ -26647,22 +25249,11 @@ public partial class Fill : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "patternFill" == name)
-    return new PatternFill();
     
-if( 22 == namespaceId && "gradientFill" == name)
-    return new GradientFill();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "patternFill","gradientFill" };
     private static readonly byte[] eleNamespaceIds = { 22,22 };
     
@@ -26683,6 +25274,7 @@ if( 22 == namespaceId && "gradientFill" == name)
         get => GetElement<PatternFill>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Gradient.</para>
     /// <para> Represents the following element tag in the schema: x:gradientFill </para>
@@ -26695,6 +25287,7 @@ if( 22 == namespaceId && "gradientFill" == name)
         get => GetElement<GradientFill>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -26732,6 +25325,7 @@ if( 22 == namespaceId && "gradientFill" == name)
     [ChildElementInfo(typeof(HorizontalBorder))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "border")]
 public partial class Border : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11319;
@@ -26795,43 +25389,11 @@ public partial class Border : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "start" == name)
-    return new StartBorder();
     
-if( 22 == namespaceId && "end" == name)
-    return new EndBorder();
-    
-if( 22 == namespaceId && "left" == name)
-    return new LeftBorder();
-    
-if( 22 == namespaceId && "right" == name)
-    return new RightBorder();
-    
-if( 22 == namespaceId && "top" == name)
-    return new TopBorder();
-    
-if( 22 == namespaceId && "bottom" == name)
-    return new BottomBorder();
-    
-if( 22 == namespaceId && "diagonal" == name)
-    return new DiagonalBorder();
-    
-if( 22 == namespaceId && "vertical" == name)
-    return new VerticalBorder();
-    
-if( 22 == namespaceId && "horizontal" == name)
-    return new HorizontalBorder();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "start","end","left","right","top","bottom","diagonal","vertical","horizontal" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22 };
     
@@ -26852,6 +25414,7 @@ if( 22 == namespaceId && "horizontal" == name)
         get => GetElement<StartBorder>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> EndBorder.</para>
     /// <para> Represents the following element tag in the schema: x:end </para>
@@ -26864,6 +25427,7 @@ if( 22 == namespaceId && "horizontal" == name)
         get => GetElement<EndBorder>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Left Border.</para>
     /// <para> Represents the following element tag in the schema: x:left </para>
@@ -26876,6 +25440,7 @@ if( 22 == namespaceId && "horizontal" == name)
         get => GetElement<LeftBorder>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Right Border.</para>
     /// <para> Represents the following element tag in the schema: x:right </para>
@@ -26888,6 +25453,7 @@ if( 22 == namespaceId && "horizontal" == name)
         get => GetElement<RightBorder>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Top Border.</para>
     /// <para> Represents the following element tag in the schema: x:top </para>
@@ -26900,6 +25466,7 @@ if( 22 == namespaceId && "horizontal" == name)
         get => GetElement<TopBorder>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Bottom Border.</para>
     /// <para> Represents the following element tag in the schema: x:bottom </para>
@@ -26912,6 +25479,7 @@ if( 22 == namespaceId && "horizontal" == name)
         get => GetElement<BottomBorder>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Diagonal.</para>
     /// <para> Represents the following element tag in the schema: x:diagonal </para>
@@ -26924,6 +25492,7 @@ if( 22 == namespaceId && "horizontal" == name)
         get => GetElement<DiagonalBorder>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Vertical Inner Border.</para>
     /// <para> Represents the following element tag in the schema: x:vertical </para>
@@ -26936,6 +25505,7 @@ if( 22 == namespaceId && "horizontal" == name)
         get => GetElement<VerticalBorder>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> Horizontal Inner Borders.</para>
     /// <para> Represents the following element tag in the schema: x:horizontal </para>
@@ -26948,6 +25518,7 @@ if( 22 == namespaceId && "horizontal" == name)
         get => GetElement<HorizontalBorder>(8);
         set => SetElement(8, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -26969,6 +25540,7 @@ if( 22 == namespaceId && "horizontal" == name)
     [ChildElementInfo(typeof(RgbColor))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "indexedColors")]
 public partial class IndexedColors : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11320;
@@ -27011,19 +25583,11 @@ public partial class IndexedColors : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "rgbColor" == name)
-    return new RgbColor();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<IndexedColors>(deep);
@@ -27044,6 +25608,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Color))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "mruColors")]
 public partial class MruColors : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11321;
@@ -27086,19 +25651,11 @@ public partial class MruColors : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "color" == name)
-    return new Color();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MruColors>(deep);
@@ -27119,6 +25676,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(TableStyleElement))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "tableStyle")]
 public partial class TableStyle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11322;
@@ -27189,19 +25747,11 @@ public partial class TableStyle : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "tableStyleElement" == name)
-    return new TableStyleElement();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyle>(deep);
@@ -27215,6 +25765,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rgbColor")]
 public partial class RgbColor : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11323;
@@ -27263,6 +25814,7 @@ public partial class RgbColor : OpenXmlLeafElement
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "cellStyle")]
 public partial class CellStyle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11324;
@@ -27347,19 +25899,11 @@ public partial class CellStyle : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -27380,6 +25924,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ExtensionList>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -27405,6 +25950,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "xf")]
 public partial class CellFormat : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11325;
@@ -27538,25 +26084,11 @@ public partial class CellFormat : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "alignment" == name)
-    return new Alignment();
     
-if( 22 == namespaceId && "protection" == name)
-    return new Protection();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "alignment","protection","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22 };
     
@@ -27577,6 +26109,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Alignment>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Protection.</para>
     /// <para> Represents the following element tag in the schema: x:protection </para>
@@ -27589,6 +26122,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Protection>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -27601,6 +26135,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -27615,6 +26150,7 @@ if( 22 == namespaceId && "extLst" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "name")]
 public partial class FontName : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11326;
@@ -27656,6 +26192,7 @@ public partial class FontName : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "family")]
 public partial class FontFamilyNumbering : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11327;
@@ -27697,6 +26234,7 @@ public partial class FontFamilyNumbering : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "charset")]
 public partial class FontCharSet : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11328;
@@ -27738,6 +26276,7 @@ public partial class FontCharSet : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "tableStyleElement")]
 public partial class TableStyleElement : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11329;
@@ -27800,6 +26339,7 @@ public partial class TableStyleElement : OpenXmlLeafElement
     [ChildElementInfo(typeof(SheetName))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheetNames")]
 public partial class SheetNames : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11330;
@@ -27842,19 +26382,11 @@ public partial class SheetNames : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "sheetName" == name)
-    return new SheetName();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SheetNames>(deep);
@@ -27875,6 +26407,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ExternalDefinedName))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "definedNames")]
 public partial class ExternalDefinedNames : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11331;
@@ -27917,19 +26450,11 @@ public partial class ExternalDefinedNames : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "definedName" == name)
-    return new ExternalDefinedName();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExternalDefinedNames>(deep);
@@ -27950,6 +26475,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ExternalSheetData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheetDataSet")]
 public partial class SheetDataSet : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11332;
@@ -27992,19 +26518,11 @@ public partial class SheetDataSet : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "sheetData" == name)
-    return new ExternalSheetData();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SheetDataSet>(deep);
@@ -28018,6 +26536,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "definedName")]
 public partial class ExternalDefinedName : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11333;
@@ -28080,6 +26599,7 @@ public partial class ExternalDefinedName : OpenXmlLeafElement
     [ChildElementInfo(typeof(ExternalRow))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheetData")]
 public partial class ExternalSheetData : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11334;
@@ -28136,19 +26656,11 @@ public partial class ExternalSheetData : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "row" == name)
-    return new ExternalRow();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExternalSheetData>(deep);
@@ -28169,6 +26681,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ExternalCell))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "row")]
 public partial class ExternalRow : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11335;
@@ -28218,19 +26731,11 @@ public partial class ExternalRow : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "cell" == name)
-    return new ExternalCell();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExternalRow>(deep);
@@ -28251,6 +26756,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Xstring))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "cell")]
 public partial class ExternalCell : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11336;
@@ -28314,19 +26820,11 @@ public partial class ExternalCell : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "v" == name)
-    return new Xstring();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "v" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -28347,6 +26845,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<Xstring>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -28368,6 +26867,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DdeItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ddeItems")]
 public partial class DdeItems : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11337;
@@ -28410,19 +26910,11 @@ public partial class DdeItems : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ddeItem" == name)
-    return new DdeItem();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DdeItems>(deep);
@@ -28443,6 +26935,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Values))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ddeItem")]
 public partial class DdeItem : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11338;
@@ -28513,19 +27006,11 @@ public partial class DdeItem : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "values" == name)
-    return new Values();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "values" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -28546,6 +27031,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<Values>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -28567,6 +27053,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Value))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "values")]
 public partial class Values : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11339;
@@ -28623,19 +27110,11 @@ public partial class Values : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "value" == name)
-    return new Value();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Values>(deep);
@@ -28656,6 +27135,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DdeLinkValue))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "value")]
 public partial class Value : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11340;
@@ -28705,19 +27185,11 @@ public partial class Value : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "val" == name)
-    return new DdeLinkValue();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "val" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -28738,6 +27210,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<DdeLinkValue>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -28761,6 +27234,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.OleItem), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "oleItems")]
 public partial class OleItems : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11341;
@@ -28803,22 +27277,11 @@ public partial class OleItems : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "oleItem" == name)
-    return new OleItem();
     
-if( 53 == namespaceId && "oleItem" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.OleItem();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OleItems>(deep);
@@ -28843,6 +27306,7 @@ if( 53 == namespaceId && "oleItem" == name)
     [ChildElementInfo(typeof(SheetDataSet))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "externalBook")]
 public partial class ExternalBook : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11342;
@@ -28894,25 +27358,11 @@ public partial class ExternalBook : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "sheetNames" == name)
-    return new SheetNames();
     
-if( 22 == namespaceId && "definedNames" == name)
-    return new ExternalDefinedNames();
-    
-if( 22 == namespaceId && "sheetDataSet" == name)
-    return new SheetDataSet();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sheetNames","definedNames","sheetDataSet" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22 };
     
@@ -28933,6 +27383,7 @@ if( 22 == namespaceId && "sheetDataSet" == name)
         get => GetElement<SheetNames>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Named Links.</para>
     /// <para> Represents the following element tag in the schema: x:definedNames </para>
@@ -28945,6 +27396,7 @@ if( 22 == namespaceId && "sheetDataSet" == name)
         get => GetElement<ExternalDefinedNames>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Cached Worksheet Data.</para>
     /// <para> Represents the following element tag in the schema: x:sheetDataSet </para>
@@ -28957,6 +27409,7 @@ if( 22 == namespaceId && "sheetDataSet" == name)
         get => GetElement<SheetDataSet>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -28978,6 +27431,7 @@ if( 22 == namespaceId && "sheetDataSet" == name)
     [ChildElementInfo(typeof(DdeItems))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ddeLink")]
 public partial class DdeLink : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11343;
@@ -29034,19 +27488,11 @@ public partial class DdeLink : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ddeItems" == name)
-    return new DdeItems();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "ddeItems" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -29067,6 +27513,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<DdeItems>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -29088,6 +27535,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(OleItems))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "oleLink")]
 public partial class OleLink : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11344;
@@ -29146,19 +27594,11 @@ public partial class OleLink : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "oleItems" == name)
-    return new OleItems();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "oleItems" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -29179,6 +27619,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<OleItems>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -29193,6 +27634,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheetName")]
 public partial class SheetName : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11345;
@@ -29234,6 +27676,7 @@ public partial class SheetName : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "v")]
 public partial class Xstring : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11346;
@@ -29294,6 +27737,7 @@ public partial class Xstring : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "tableColumn")]
 public partial class TableColumn : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11348;
@@ -29420,28 +27864,11 @@ public partial class TableColumn : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "calculatedColumnFormula" == name)
-    return new CalculatedColumnFormula();
     
-if( 22 == namespaceId && "totalsRowFormula" == name)
-    return new TotalsRowFormula();
-    
-if( 22 == namespaceId && "xmlColumnPr" == name)
-    return new XmlColumnProperties();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "calculatedColumnFormula","totalsRowFormula","xmlColumnPr","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22 };
     
@@ -29462,6 +27889,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CalculatedColumnFormula>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Totals Row Formula.</para>
     /// <para> Represents the following element tag in the schema: x:totalsRowFormula </para>
@@ -29474,6 +27902,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<TotalsRowFormula>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> XML Column Properties.</para>
     /// <para> Represents the following element tag in the schema: x:xmlColumnPr </para>
@@ -29486,6 +27915,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<XmlColumnProperties>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -29498,6 +27928,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -29511,6 +27942,7 @@ if( 22 == namespaceId && "extLst" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "calculatedColumnFormula")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CalculatedColumnFormula : TableFormulaType
 {
@@ -29551,6 +27983,7 @@ public partial class CalculatedColumnFormula : TableFormulaType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "totalsRowFormula")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TotalsRowFormula : TableFormulaType
 {
@@ -29648,6 +28081,7 @@ public abstract partial class TableFormulaType : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "xmlColumnPr")]
 public partial class XmlColumnProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11351;
@@ -29718,19 +28152,11 @@ public partial class XmlColumnProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -29751,6 +28177,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ExtensionList>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -29772,6 +28199,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Main))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "volType")]
 public partial class VolatileType : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11352;
@@ -29821,19 +28249,11 @@ public partial class VolatileType : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "main" == name)
-    return new Main();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VolatileType>(deep);
@@ -29854,6 +28274,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Topic))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "main")]
 public partial class Main : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11353;
@@ -29903,19 +28324,11 @@ public partial class Main : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "tp" == name)
-    return new Topic();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Main>(deep);
@@ -29940,6 +28353,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(TopicReferences))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "tp")]
 public partial class Topic : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11354;
@@ -29989,25 +28403,11 @@ public partial class Topic : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "v" == name)
-    return new Xstring();
     
-if( 22 == namespaceId && "stp" == name)
-    return new Subtopic();
-    
-if( 22 == namespaceId && "tr" == name)
-    return new TopicReferences();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "v","stp","tr" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22 };
     
@@ -30028,6 +28428,7 @@ if( 22 == namespaceId && "tr" == name)
         get => GetElement<Xstring>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -30042,6 +28443,7 @@ if( 22 == namespaceId && "tr" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "tr")]
 public partial class TopicReferences : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11356;
@@ -30090,6 +28492,7 @@ public partial class TopicReferences : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pivotCache")]
 public partial class PivotCache : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11357;
@@ -30140,6 +28543,7 @@ public partial class PivotCache : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "webPublishObject")]
 public partial class WebPublishObject : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11358;
@@ -30216,6 +28620,7 @@ public partial class WebPublishObject : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "externalReference")]
 public partial class ExternalReference : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11359;
@@ -30266,6 +28671,7 @@ public partial class ExternalReference : OpenXmlLeafElement
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "customWorkbookView")]
 public partial class CustomWorkbookView : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11360;
@@ -30476,19 +28882,11 @@ public partial class CustomWorkbookView : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -30509,6 +28907,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ExtensionList>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -30523,6 +28922,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheet")]
 public partial class Sheet : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11361;
@@ -30594,6 +28994,7 @@ public partial class Sheet : OpenXmlLeafElement
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "workbookView")]
 public partial class WorkbookView : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11362;
@@ -30727,19 +29128,11 @@ public partial class WorkbookView : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -30760,6 +29153,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ExtensionList>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -30774,6 +29168,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "definedName")]
 public partial class DefinedName : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11363;
@@ -30926,6 +29321,7 @@ public partial class DefinedName : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "functionGroup")]
 public partial class FunctionGroup : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11364;
@@ -30974,6 +29370,7 @@ public partial class FunctionGroup : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Table), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class TableExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11365;
@@ -31023,19 +29420,11 @@ public partial class TableExtension : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 53 == namespaceId && "table" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.Table();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableExtension>(deep);
@@ -31058,6 +29447,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ToMarker), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(22, "anchor")]
 public partial class ObjectAnchor : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11366;
@@ -31121,22 +29511,11 @@ public partial class ObjectAnchor : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "from" == name)
-    return new FromMarker();
     
-if( 22 == namespaceId && "to" == name)
-    return new ToMarker();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "from","to" };
     private static readonly byte[] eleNamespaceIds = { 22,22 };
     
@@ -31157,6 +29536,7 @@ if( 22 == namespaceId && "to" == name)
         get => GetElement<FromMarker>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> ToMarker.</para>
     /// <para> Represents the following element tag in the schema: x:to </para>
@@ -31169,6 +29549,7 @@ if( 22 == namespaceId && "to" == name)
         get => GetElement<ToMarker>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -31191,6 +29572,7 @@ if( 22 == namespaceId && "to" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "from")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class FromMarker : MarkerType
 {
@@ -31230,6 +29612,7 @@ public partial class FromMarker : MarkerType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -31252,6 +29635,7 @@ public partial class FromMarker : MarkerType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "to")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ToMarker : MarkerType
 {
@@ -31291,6 +29675,7 @@ public partial class ToMarker : MarkerType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -31319,25 +29704,7 @@ public abstract partial class MarkerType : OpenXmlCompositeElement
 {
         
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 18 == namespaceId && "col" == name)
-    return new DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId();
     
-if( 18 == namespaceId && "colOff" == name)
-    return new DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset();
-    
-if( 18 == namespaceId && "row" == name)
-    return new DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId();
-    
-if( 18 == namespaceId && "rowOff" == name)
-    return new DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "col","colOff","row","rowOff" };
     private static readonly byte[] eleNamespaceIds = { 18,18,18,18 };
     
@@ -31358,6 +29725,7 @@ if( 18 == namespaceId && "rowOff" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnId>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Column Offset.</para>
     /// <para> Represents the following element tag in the schema: xdr:colOff </para>
@@ -31370,6 +29738,7 @@ if( 18 == namespaceId && "rowOff" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.ColumnOffset>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Row.</para>
     /// <para> Represents the following element tag in the schema: xdr:row </para>
@@ -31382,6 +29751,7 @@ if( 18 == namespaceId && "rowOff" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowId>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Row Offset.</para>
     /// <para> Represents the following element tag in the schema: xdr:rowOff </para>
@@ -31394,6 +29764,7 @@ if( 18 == namespaceId && "rowOff" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.Spreadsheet.RowOffset>(3);
         set => SetElement(3, value);
     }
+    
 
 
     
@@ -31427,6 +29798,7 @@ if( 18 == namespaceId && "rowOff" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -31445,6 +29817,7 @@ if( 18 == namespaceId && "rowOff" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.Id), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class ConditionalFormattingRuleExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11369;
@@ -31494,19 +29867,11 @@ public partial class ConditionalFormattingRuleExtension : OpenXmlCompositeElemen
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 53 == namespaceId && "id" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.Id();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConditionalFormattingRuleExtension>(deep);
@@ -31527,6 +29892,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class PivotHierarchyExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11370;
@@ -31576,19 +29942,11 @@ public partial class PivotHierarchyExtension : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 53 == namespaceId && "pivotHierarchy" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.PivotHierarchy();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotHierarchyExtension>(deep);
@@ -31609,6 +29967,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.PivotField), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class PivotFieldExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11371;
@@ -31658,19 +30017,11 @@ public partial class PivotFieldExtension : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 53 == namespaceId && "pivotField" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.PivotField();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotFieldExtension>(deep);
@@ -31691,6 +30042,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Excel.SourceConnection), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class CacheSourceExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11372;
@@ -31740,19 +30092,11 @@ public partial class CacheSourceExtension : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 53 == namespaceId && "sourceConnection" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.SourceConnection();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CacheSourceExtension>(deep);
@@ -31773,6 +30117,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(TableColumn))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "tableColumns")]
 public partial class TableColumns : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11373;
@@ -31822,19 +30167,11 @@ public partial class TableColumns : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "tableColumn" == name)
-    return new TableColumn();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableColumns>(deep);
@@ -31848,6 +30185,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "tableStyleInfo")]
 public partial class TableStyleInfo : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11374;
@@ -31924,6 +30262,7 @@ public partial class TableStyleInfo : OpenXmlLeafElement
     [ChildElementInfo(typeof(TableExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "extLst")]
 public partial class TableExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11375;
@@ -31966,19 +30305,11 @@ public partial class TableExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ext" == name)
-    return new TableExtension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableExtensionList>(deep);
@@ -31992,6 +30323,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "oleItem")]
 public partial class OleItem : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11376;
@@ -32059,6 +30391,7 @@ public partial class OleItem : OpenXmlLeafElement
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "start")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class StartBorder : BorderPropertiesType
 {
@@ -32098,6 +30431,7 @@ public partial class StartBorder : BorderPropertiesType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -32117,6 +30451,7 @@ public partial class StartBorder : BorderPropertiesType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "end")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class EndBorder : BorderPropertiesType
 {
@@ -32156,6 +30491,7 @@ public partial class EndBorder : BorderPropertiesType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -32175,6 +30511,7 @@ public partial class EndBorder : BorderPropertiesType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "left")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LeftBorder : BorderPropertiesType
 {
@@ -32214,6 +30551,7 @@ public partial class LeftBorder : BorderPropertiesType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -32233,6 +30571,7 @@ public partial class LeftBorder : BorderPropertiesType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "right")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RightBorder : BorderPropertiesType
 {
@@ -32272,6 +30611,7 @@ public partial class RightBorder : BorderPropertiesType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -32291,6 +30631,7 @@ public partial class RightBorder : BorderPropertiesType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "top")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TopBorder : BorderPropertiesType
 {
@@ -32330,6 +30671,7 @@ public partial class TopBorder : BorderPropertiesType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -32349,6 +30691,7 @@ public partial class TopBorder : BorderPropertiesType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "bottom")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BottomBorder : BorderPropertiesType
 {
@@ -32388,6 +30731,7 @@ public partial class BottomBorder : BorderPropertiesType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -32407,6 +30751,7 @@ public partial class BottomBorder : BorderPropertiesType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "diagonal")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DiagonalBorder : BorderPropertiesType
 {
@@ -32446,6 +30791,7 @@ public partial class DiagonalBorder : BorderPropertiesType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -32465,6 +30811,7 @@ public partial class DiagonalBorder : BorderPropertiesType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "vertical")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VerticalBorder : BorderPropertiesType
 {
@@ -32504,6 +30851,7 @@ public partial class VerticalBorder : BorderPropertiesType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -32523,6 +30871,7 @@ public partial class VerticalBorder : BorderPropertiesType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "horizontal")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HorizontalBorder : BorderPropertiesType
 {
@@ -32562,6 +30911,7 @@ public partial class HorizontalBorder : BorderPropertiesType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -32591,16 +30941,7 @@ public abstract partial class BorderPropertiesType : OpenXmlCompositeElement
     [SchemaIndex(0)]
     public EnumValue<DocumentFormat.OpenXml.Spreadsheet.BorderStyleValues> Style { get; set; }
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "color" == name)
-    return new Color();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "color" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -32621,6 +30962,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<Color>(0);
         set => SetElement(0, value);
     }
+    
 
 
     
@@ -32654,6 +30996,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -32672,6 +31015,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ObjectAnchor), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(22, "controlPr")]
 public partial class ControlProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11386;
@@ -32821,19 +31165,11 @@ public partial class ControlProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "anchor" == name)
-    return new ObjectAnchor();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "anchor" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -32854,6 +31190,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ObjectAnchor>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -32875,6 +31212,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ObjectAnchor), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(22, "objectPr")]
 public partial class EmbeddedObjectProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11387;
@@ -33003,19 +31341,11 @@ public partial class EmbeddedObjectProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "anchor" == name)
-    return new ObjectAnchor();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "anchor" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -33036,6 +31366,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ObjectAnchor>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -33057,6 +31388,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(TabColor))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheetPr")]
 public partial class ChartSheetProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11388;
@@ -33113,19 +31445,11 @@ public partial class ChartSheetProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "tabColor" == name)
-    return new TabColor();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "tabColor" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -33146,6 +31470,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<TabColor>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -33169,6 +31494,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheetViews")]
 public partial class ChartSheetViews : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11389;
@@ -33211,22 +31537,11 @@ public partial class ChartSheetViews : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "sheetView" == name)
-    return new ChartSheetView();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartSheetViews>(deep);
@@ -33240,6 +31555,7 @@ if( 22 == namespaceId && "extLst" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheetProtection")]
 public partial class ChartSheetProtection : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11390;
@@ -33330,6 +31646,7 @@ public partial class ChartSheetProtection : OpenXmlLeafElement
     [ChildElementInfo(typeof(CustomChartsheetView))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "customSheetViews")]
 public partial class CustomChartsheetViews : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11391;
@@ -33372,19 +31689,11 @@ public partial class CustomChartsheetViews : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "customSheetView" == name)
-    return new CustomChartsheetView();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomChartsheetViews>(deep);
@@ -33398,6 +31707,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "drawing")]
 public partial class Drawing : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11392;
@@ -33440,6 +31750,7 @@ public partial class Drawing : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "legacyDrawing")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LegacyDrawing : LegacyDrawingType
 {
@@ -33467,6 +31778,7 @@ public partial class LegacyDrawing : LegacyDrawingType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(22, "legacyDrawingHF")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LegacyDrawingHeaderFooter : LegacyDrawingType
 {
@@ -33524,6 +31836,7 @@ public abstract partial class LegacyDrawingType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "drawingHF")]
 public partial class DrawingHeaderFooter : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11395;
@@ -33693,6 +32006,7 @@ public partial class DrawingHeaderFooter : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "picture")]
 public partial class Picture : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11396;
@@ -33743,6 +32057,7 @@ public partial class Picture : OpenXmlLeafElement
     [ChildElementInfo(typeof(WebPublishItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "webPublishItems")]
 public partial class WebPublishItems : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11397;
@@ -33792,19 +32107,11 @@ public partial class WebPublishItems : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "webPublishItem" == name)
-    return new WebPublishItem();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebPublishItems>(deep);
@@ -33827,6 +32134,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Color))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "colorScale")]
 public partial class ColorScale : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11398;
@@ -33869,22 +32177,11 @@ public partial class ColorScale : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "cfvo" == name)
-    return new ConditionalFormatValueObject();
     
-if( 22 == namespaceId && "color" == name)
-    return new Color();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorScale>(deep);
@@ -33907,6 +32204,7 @@ if( 22 == namespaceId && "color" == name)
     [ChildElementInfo(typeof(Color))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "dataBar")]
 public partial class DataBar : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11399;
@@ -33970,22 +32268,11 @@ public partial class DataBar : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "cfvo" == name)
-    return new ConditionalFormatValueObject();
     
-if( 22 == namespaceId && "color" == name)
-    return new Color();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataBar>(deep);
@@ -34006,6 +32293,7 @@ if( 22 == namespaceId && "color" == name)
     [ChildElementInfo(typeof(ConditionalFormatValueObject))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "iconSet")]
 public partial class IconSet : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11400;
@@ -34076,19 +32364,11 @@ public partial class IconSet : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "cfvo" == name)
-    return new ConditionalFormatValueObject();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<IconSet>(deep);
@@ -34109,6 +32389,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ConditionalFormattingRuleExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "extLst")]
 public partial class ConditionalFormattingRuleExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11401;
@@ -34151,19 +32432,11 @@ public partial class ConditionalFormattingRuleExtensionList : OpenXmlCompositeEl
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ext" == name)
-    return new ConditionalFormattingRuleExtension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConditionalFormattingRuleExtensionList>(deep);
@@ -34184,6 +32457,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DataReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "dataRefs")]
 public partial class DataReferences : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11402;
@@ -34233,19 +32507,11 @@ public partial class DataReferences : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "dataRef" == name)
-    return new DataReference();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataReferences>(deep);
@@ -34270,6 +32536,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PageSetupProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheetPr")]
 public partial class SheetProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11404;
@@ -34375,25 +32642,11 @@ public partial class SheetProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "tabColor" == name)
-    return new TabColor();
     
-if( 22 == namespaceId && "outlinePr" == name)
-    return new OutlineProperties();
-    
-if( 22 == namespaceId && "pageSetUpPr" == name)
-    return new PageSetupProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "tabColor","outlinePr","pageSetUpPr" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22 };
     
@@ -34414,6 +32667,7 @@ if( 22 == namespaceId && "pageSetUpPr" == name)
         get => GetElement<TabColor>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Outline Properties.</para>
     /// <para> Represents the following element tag in the schema: x:outlinePr </para>
@@ -34426,6 +32680,7 @@ if( 22 == namespaceId && "pageSetUpPr" == name)
         get => GetElement<OutlineProperties>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Page Setup Properties.</para>
     /// <para> Represents the following element tag in the schema: x:pageSetUpPr </para>
@@ -34438,6 +32693,7 @@ if( 22 == namespaceId && "pageSetUpPr" == name)
         get => GetElement<PageSetupProperties>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -34461,6 +32717,7 @@ if( 22 == namespaceId && "pageSetUpPr" == name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheetViews")]
 public partial class SheetViews : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11405;
@@ -34503,22 +32760,11 @@ public partial class SheetViews : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "sheetView" == name)
-    return new SheetView();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SheetViews>(deep);
@@ -34532,6 +32778,7 @@ if( 22 == namespaceId && "extLst" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheetFormatPr")]
 public partial class SheetFormatProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11406;
@@ -34638,6 +32885,7 @@ public partial class SheetFormatProperties : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheetProtection")]
 public partial class SheetProtection : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11407;
@@ -34826,6 +33074,7 @@ public partial class SheetProtection : OpenXmlLeafElement
     [ChildElementInfo(typeof(CustomSheetView))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "customSheetViews")]
 public partial class CustomSheetViews : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11408;
@@ -34868,19 +33117,11 @@ public partial class CustomSheetViews : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "customSheetView" == name)
-    return new CustomSheetView();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomSheetViews>(deep);
@@ -34901,6 +33142,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(OleObject))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "oleObjects")]
 public partial class OleObjects : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11409;
@@ -34943,19 +33185,11 @@ public partial class OleObjects : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "oleObject" == name)
-    return new OleObject();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OleObjects>(deep);
@@ -34976,6 +33210,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Control))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "controls")]
 public partial class Controls : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11410;
@@ -35018,19 +33253,11 @@ public partial class Controls : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "control" == name)
-    return new Control();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Controls>(deep);
@@ -35044,6 +33271,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "dimension")]
 public partial class SheetDimension : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11411;
@@ -35092,6 +33320,7 @@ public partial class SheetDimension : OpenXmlLeafElement
     [ChildElementInfo(typeof(Column))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "cols")]
 public partial class Columns : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11412;
@@ -35134,19 +33363,11 @@ public partial class Columns : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "col" == name)
-    return new Column();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Columns>(deep);
@@ -35167,6 +33388,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Row))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheetData")]
 public partial class SheetData : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11413;
@@ -35209,19 +33431,11 @@ public partial class SheetData : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "row" == name)
-    return new Row();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SheetData>(deep);
@@ -35242,6 +33456,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DataReferences))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "dataConsolidate")]
 public partial class DataConsolidate : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11414;
@@ -35319,19 +33534,11 @@ public partial class DataConsolidate : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "dataRefs" == name)
-    return new DataReferences();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "dataRefs" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -35352,6 +33559,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<DataReferences>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -35375,6 +33583,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "conditionalFormatting")]
 public partial class ConditionalFormatting : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11415;
@@ -35431,22 +33640,11 @@ public partial class ConditionalFormatting : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "cfRule" == name)
-    return new ConditionalFormattingRule();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConditionalFormatting>(deep);
@@ -35467,6 +33665,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(CustomProperty))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "customProperties")]
 public partial class CustomProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11416;
@@ -35509,19 +33708,11 @@ public partial class CustomProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "customPr" == name)
-    return new CustomProperty();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomProperties>(deep);
@@ -35542,6 +33733,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(MemberProperty))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "mps")]
 public partial class MemberProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11417;
@@ -35591,19 +33783,11 @@ public partial class MemberProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "mp" == name)
-    return new MemberProperty();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MemberProperties>(deep);
@@ -35624,6 +33808,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Member))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "members")]
 public partial class Members : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11418;
@@ -35680,19 +33865,11 @@ public partial class Members : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "member" == name)
-    return new Member();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Members>(deep);
@@ -35713,6 +33890,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PivotHierarchyExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "extLst")]
 public partial class PivotHierarchyExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11419;
@@ -35755,19 +33933,11 @@ public partial class PivotHierarchyExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ext" == name)
-    return new PivotHierarchyExtension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotHierarchyExtensionList>(deep);
@@ -35788,6 +33958,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Item))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "items")]
 public partial class Items : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11420;
@@ -35837,19 +34008,11 @@ public partial class Items : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "item" == name)
-    return new Item();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Items>(deep);
@@ -35870,6 +34033,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PivotArea))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "autoSortScope")]
 public partial class AutoSortScope : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11421;
@@ -35912,19 +34076,11 @@ public partial class AutoSortScope : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "pivotArea" == name)
-    return new PivotArea();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pivotArea" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -35945,6 +34101,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<PivotArea>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -35966,6 +34123,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PivotFieldExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "extLst")]
 public partial class PivotFieldExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11422;
@@ -36008,19 +34166,11 @@ public partial class PivotFieldExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ext" == name)
-    return new PivotFieldExtension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotFieldExtensionList>(deep);
@@ -36034,6 +34184,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "worksheetSource")]
 public partial class WorksheetSource : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11423;
@@ -36107,6 +34258,7 @@ public partial class WorksheetSource : OpenXmlLeafElement
     [ChildElementInfo(typeof(RangeSets))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "consolidation")]
 public partial class Consolidation : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11424;
@@ -36156,22 +34308,11 @@ public partial class Consolidation : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "pages" == name)
-    return new Pages();
     
-if( 22 == namespaceId && "rangeSets" == name)
-    return new RangeSets();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pages","rangeSets" };
     private static readonly byte[] eleNamespaceIds = { 22,22 };
     
@@ -36192,6 +34333,7 @@ if( 22 == namespaceId && "rangeSets" == name)
         get => GetElement<Pages>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Range Sets.</para>
     /// <para> Represents the following element tag in the schema: x:rangeSets </para>
@@ -36204,6 +34346,7 @@ if( 22 == namespaceId && "rangeSets" == name)
         get => GetElement<RangeSets>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -36225,6 +34368,7 @@ if( 22 == namespaceId && "rangeSets" == name)
     [ChildElementInfo(typeof(CacheSourceExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "extLst")]
 public partial class CacheSourceExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11425;
@@ -36267,19 +34411,11 @@ public partial class CacheSourceExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ext" == name)
-    return new CacheSourceExtension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CacheSourceExtensionList>(deep);
@@ -36300,6 +34436,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ObjectAnchor), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(22, "commentPr")]
 public partial class CommentProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11427;
@@ -36447,19 +34584,11 @@ public partial class CommentProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "anchor" == name)
-    return new ObjectAnchor();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "anchor" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -36480,6 +34609,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ObjectAnchor>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -36494,6 +34624,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sortCondition")]
 public partial class SortCondition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11428;
@@ -36577,6 +34708,7 @@ public partial class SortCondition : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "filter")]
 public partial class Filter : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11429;
@@ -36618,6 +34750,7 @@ public partial class Filter : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "dateGroupItem")]
 public partial class DateGroupItem : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11430;
@@ -36712,6 +34845,7 @@ public partial class DateGroupItem : OpenXmlLeafElement
     [ChildElementInfo(typeof(DateGroupItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "filters")]
 public partial class Filters : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11431;
@@ -36768,25 +34902,11 @@ public partial class Filters : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 53 == namespaceId && "filter" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.Filter();
     
-if( 22 == namespaceId && "filter" == name)
-    return new Filter();
-    
-if( 22 == namespaceId && "dateGroupItem" == name)
-    return new DateGroupItem();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Filters>(deep);
@@ -36800,6 +34920,7 @@ if( 22 == namespaceId && "dateGroupItem" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "top10")]
 public partial class Top10 : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11432;
@@ -36869,6 +34990,7 @@ public partial class Top10 : OpenXmlLeafElement
     [ChildElementInfo(typeof(CustomFilter))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "customFilters")]
 public partial class CustomFilters : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11433;
@@ -36918,19 +35040,11 @@ public partial class CustomFilters : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "customFilter" == name)
-    return new CustomFilter();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomFilters>(deep);
@@ -36944,6 +35058,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "dynamicFilter")]
 public partial class DynamicFilter : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11434;
@@ -37013,6 +35128,7 @@ public partial class DynamicFilter : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "colorFilter")]
 public partial class ColorFilter : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11435;
@@ -37061,6 +35177,7 @@ public partial class ColorFilter : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "iconFilter")]
 public partial class IconFilter : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11436;
@@ -37120,6 +35237,7 @@ public partial class IconFilter : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheHideItemsWithNoData), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class SlicerCacheDefinitionExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11437;
@@ -37169,25 +35287,11 @@ public partial class SlicerCacheDefinitionExtension : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 71 == namespaceId && "slicerCachePivotTables" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.SlicerCachePivotTables();
     
-if( 71 == namespaceId && "tableSlicerCache" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.TableSlicerCache();
-    
-if( 71 == namespaceId && "slicerCacheHideItemsWithNoData" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.SlicerCacheHideItemsWithNoData();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SlicerCacheDefinitionExtension>(deep);
@@ -37210,6 +35314,7 @@ if( 71 == namespaceId && "slicerCacheHideItemsWithNoData" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class PivotFilterExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11438;
@@ -37259,22 +35364,11 @@ public partial class PivotFilterExtension : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 71 == namespaceId && "pivotFilter" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.PivotFilter();
     
-if( 71 == namespaceId && "movingPeriodState" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.MovingPeriodState();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotFilterExtension>(deep);
@@ -37295,6 +35389,7 @@ if( 71 == namespaceId && "movingPeriodState" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.QueryTable), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class QueryTableExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11439;
@@ -37344,19 +35439,11 @@ public partial class QueryTableExtension : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 71 == namespaceId && "queryTable" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.QueryTable();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<QueryTableExtension>(deep);
@@ -37370,6 +35457,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "dbPr")]
 public partial class DatabaseProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11440;
@@ -37432,6 +35520,7 @@ public partial class DatabaseProperties : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "olapPr")]
 public partial class OlapProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11441;
@@ -37536,6 +35625,7 @@ public partial class OlapProperties : OpenXmlLeafElement
     [ChildElementInfo(typeof(Tables))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "webPr")]
 public partial class WebQueryProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11442;
@@ -37669,19 +35759,11 @@ public partial class WebQueryProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "tables" == name)
-    return new Tables();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "tables" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -37702,6 +35784,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<Tables>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -37723,6 +35806,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(TextFields))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "textPr")]
 public partial class TextProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11443;
@@ -37877,19 +35961,11 @@ public partial class TextProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "textFields" == name)
-    return new TextFields();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "textFields" };
     private static readonly byte[] eleNamespaceIds = { 22 };
     
@@ -37910,6 +35986,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<TextFields>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -37931,6 +36008,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Parameter))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "parameters")]
 public partial class Parameters : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11444;
@@ -37980,19 +36058,11 @@ public partial class Parameters : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "parameter" == name)
-    return new Parameter();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Parameters>(deep);
@@ -38013,6 +36083,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ConnectionExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "extLst")]
 public partial class ConnectionExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11445;
@@ -38055,19 +36126,11 @@ public partial class ConnectionExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ext" == name)
-    return new ConnectionExtension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConnectionExtensionList>(deep);
@@ -38090,6 +36153,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.Connection), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class ConnectionExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11446;
@@ -38139,22 +36203,11 @@ public partial class ConnectionExtension : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 53 == namespaceId && "connection" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.Connection();
     
-if( 71 == namespaceId && "connection" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.Connection();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConnectionExtension>(deep);
@@ -38175,6 +36228,7 @@ if( 71 == namespaceId && "connection" == name)
     [ChildElementInfo(typeof(TextField))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "textFields")]
 public partial class TextFields : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11447;
@@ -38224,19 +36278,11 @@ public partial class TextFields : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "textField" == name)
-    return new TextField();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextFields>(deep);
@@ -38261,6 +36307,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(CacheSourceExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "cacheSource")]
 public partial class CacheSource : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11448;
@@ -38317,25 +36364,11 @@ public partial class CacheSource : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "worksheetSource" == name)
-    return new WorksheetSource();
     
-if( 22 == namespaceId && "consolidation" == name)
-    return new Consolidation();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new CacheSourceExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "worksheetSource","consolidation","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22 };
     
@@ -38356,6 +36389,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<WorksheetSource>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Consolidation.</para>
     /// <para> Represents the following element tag in the schema: x:consolidation </para>
@@ -38368,6 +36402,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Consolidation>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> CacheSourceExtensionList.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -38380,6 +36415,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<CacheSourceExtensionList>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -38401,6 +36437,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(CacheField))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "cacheFields")]
 public partial class CacheFields : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11449;
@@ -38450,19 +36487,11 @@ public partial class CacheFields : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "cacheField" == name)
-    return new CacheField();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CacheFields>(deep);
@@ -38483,6 +36512,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(CacheHierarchy))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "cacheHierarchies")]
 public partial class CacheHierarchies : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11450;
@@ -38532,19 +36562,11 @@ public partial class CacheHierarchies : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "cacheHierarchy" == name)
-    return new CacheHierarchy();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CacheHierarchies>(deep);
@@ -38565,6 +36587,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Kpi))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "kpis")]
 public partial class Kpis : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11451;
@@ -38614,19 +36637,11 @@ public partial class Kpis : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "kpi" == name)
-    return new Kpi();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Kpis>(deep);
@@ -38655,6 +36670,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "tupleCache")]
 public partial class TupleCache : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11452;
@@ -38697,31 +36713,11 @@ public partial class TupleCache : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "entries" == name)
-    return new Entries();
     
-if( 22 == namespaceId && "sets" == name)
-    return new Sets();
-    
-if( 22 == namespaceId && "queryCache" == name)
-    return new QueryCache();
-    
-if( 22 == namespaceId && "serverFormats" == name)
-    return new ServerFormats();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "entries","sets","queryCache","serverFormats","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22 };
     
@@ -38742,6 +36738,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Entries>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Sets.</para>
     /// <para> Represents the following element tag in the schema: x:sets </para>
@@ -38754,6 +36751,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<Sets>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> OLAP Query Cache.</para>
     /// <para> Represents the following element tag in the schema: x:queryCache </para>
@@ -38766,6 +36764,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<QueryCache>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Server Formats.</para>
     /// <para> Represents the following element tag in the schema: x:serverFormats </para>
@@ -38778,6 +36777,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ServerFormats>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -38790,6 +36790,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(4);
         set => SetElement(4, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -38811,6 +36812,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(CalculatedItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "calculatedItems")]
 public partial class CalculatedItems : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11453;
@@ -38860,19 +36862,11 @@ public partial class CalculatedItems : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "calculatedItem" == name)
-    return new CalculatedItem();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculatedItems>(deep);
@@ -38893,6 +36887,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(CalculatedMember))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "calculatedMembers")]
 public partial class CalculatedMembers : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11454;
@@ -38942,19 +36937,11 @@ public partial class CalculatedMembers : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "calculatedMember" == name)
-    return new CalculatedMember();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculatedMembers>(deep);
@@ -38975,6 +36962,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Dimension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "dimensions")]
 public partial class Dimensions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11455;
@@ -39024,19 +37012,11 @@ public partial class Dimensions : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "dimension" == name)
-    return new Dimension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Dimensions>(deep);
@@ -39057,6 +37037,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(MeasureGroup))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "measureGroups")]
 public partial class MeasureGroups : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11456;
@@ -39106,19 +37087,11 @@ public partial class MeasureGroups : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "measureGroup" == name)
-    return new MeasureGroup();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MeasureGroups>(deep);
@@ -39139,6 +37112,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(MeasureDimensionMap))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "maps")]
 public partial class Maps : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11457;
@@ -39188,19 +37162,11 @@ public partial class Maps : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "map" == name)
-    return new MeasureDimensionMap();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Maps>(deep);
@@ -39221,6 +37187,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PivotCacheDefinitionExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "extLst")]
 public partial class PivotCacheDefinitionExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11458;
@@ -39263,19 +37230,11 @@ public partial class PivotCacheDefinitionExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ext" == name)
-    return new PivotCacheDefinitionExtension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotCacheDefinitionExtensionList>(deep);
@@ -39302,6 +37261,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class PivotCacheDefinitionExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11459;
@@ -39351,28 +37311,11 @@ public partial class PivotCacheDefinitionExtension : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 53 == namespaceId && "pivotCacheDefinition" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.PivotCacheDefinition();
     
-if( 71 == namespaceId && "pivotCacheDecoupled" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.PivotCacheDecoupled();
-    
-if( 71 == namespaceId && "timelinePivotCacheDefinition" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.TimelinePivotCacheDefinition();
-    
-if( 71 == namespaceId && "pivotCacheIdVersion" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.PivotCacheIdVersion();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotCacheDefinitionExtension>(deep);
@@ -39403,6 +37346,7 @@ if( 71 == namespaceId && "pivotCacheIdVersion" == name)
     [ChildElementInfo(typeof(DateTimeItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sharedItems")]
 public partial class SharedItems : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11460;
@@ -39543,34 +37487,11 @@ public partial class SharedItems : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "m" == name)
-    return new MissingItem();
     
-if( 22 == namespaceId && "n" == name)
-    return new NumberItem();
-    
-if( 22 == namespaceId && "b" == name)
-    return new BooleanItem();
-    
-if( 22 == namespaceId && "e" == name)
-    return new ErrorItem();
-    
-if( 22 == namespaceId && "s" == name)
-    return new StringItem();
-    
-if( 22 == namespaceId && "d" == name)
-    return new DateTimeItem();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SharedItems>(deep);
@@ -39595,6 +37516,7 @@ if( 22 == namespaceId && "d" == name)
     [ChildElementInfo(typeof(GroupItems))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "fieldGroup")]
 public partial class FieldGroup : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11461;
@@ -39651,25 +37573,11 @@ public partial class FieldGroup : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "rangePr" == name)
-    return new RangeProperties();
     
-if( 22 == namespaceId && "discretePr" == name)
-    return new DiscreteProperties();
-    
-if( 22 == namespaceId && "groupItems" == name)
-    return new GroupItems();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FieldGroup>(deep);
@@ -39690,6 +37598,7 @@ if( 22 == namespaceId && "groupItems" == name)
     [ChildElementInfo(typeof(CacheFieldExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "extLst")]
 public partial class CacheFieldExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11463;
@@ -39732,19 +37641,11 @@ public partial class CacheFieldExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ext" == name)
-    return new CacheFieldExtension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CacheFieldExtensionList>(deep);
@@ -39767,6 +37668,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class CacheFieldExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11464;
@@ -39816,22 +37718,11 @@ public partial class CacheFieldExtension : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 53 == namespaceId && "cacheField" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.CacheField();
     
-if( 71 == namespaceId && "cachedUniqueNames" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.CachedUniqueNames();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CacheFieldExtension>(deep);
@@ -39852,6 +37743,7 @@ if( 71 == namespaceId && "cachedUniqueNames" == name)
     [ChildElementInfo(typeof(FieldUsage))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "fieldsUsage")]
 public partial class FieldsUsage : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11465;
@@ -39901,19 +37793,11 @@ public partial class FieldsUsage : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "fieldUsage" == name)
-    return new FieldUsage();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FieldsUsage>(deep);
@@ -39934,6 +37818,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(GroupLevel))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "groupLevels")]
 public partial class GroupLevels : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11466;
@@ -39983,19 +37868,11 @@ public partial class GroupLevels : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "groupLevel" == name)
-    return new GroupLevel();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupLevels>(deep);
@@ -40016,6 +37893,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(CacheHierarchyExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "extLst")]
 public partial class CacheHierarchyExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11467;
@@ -40058,19 +37936,11 @@ public partial class CacheHierarchyExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ext" == name)
-    return new CacheHierarchyExtension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CacheHierarchyExtensionList>(deep);
@@ -40093,6 +37963,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class CacheHierarchyExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11468;
@@ -40142,22 +38013,11 @@ public partial class CacheHierarchyExtension : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 53 == namespaceId && "cacheHierarchy" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.CacheHierarchy();
     
-if( 71 == namespaceId && "cacheHierarchy" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.CacheHierarchy();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CacheHierarchyExtension>(deep);
@@ -40178,6 +38038,7 @@ if( 71 == namespaceId && "cacheHierarchy" == name)
     [ChildElementInfo(typeof(CalculatedMemberExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "extLst")]
 public partial class CalculatedMemberExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11469;
@@ -40220,19 +38081,11 @@ public partial class CalculatedMemberExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ext" == name)
-    return new CalculatedMemberExtension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculatedMemberExtensionList>(deep);
@@ -40255,6 +38108,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class CalculatedMemberExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11470;
@@ -40304,22 +38158,11 @@ public partial class CalculatedMemberExtension : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 53 == namespaceId && "calculatedMember" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.CalculatedMember();
     
-if( 71 == namespaceId && "calculatedMember" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.CalculatedMember();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CalculatedMemberExtension>(deep);
@@ -40333,6 +38176,7 @@ if( 71 == namespaceId && "calculatedMember" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "location")]
 public partial class Location : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11471;
@@ -40416,6 +38260,7 @@ public partial class Location : OpenXmlLeafElement
     [ChildElementInfo(typeof(PivotField))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pivotFields")]
 public partial class PivotFields : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11472;
@@ -40465,19 +38310,11 @@ public partial class PivotFields : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "pivotField" == name)
-    return new PivotField();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotFields>(deep);
@@ -40498,6 +38335,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Field))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rowFields")]
 public partial class RowFields : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11473;
@@ -40547,19 +38385,11 @@ public partial class RowFields : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "field" == name)
-    return new Field();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowFields>(deep);
@@ -40580,6 +38410,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(RowItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rowItems")]
 public partial class RowItems : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11474;
@@ -40629,19 +38460,11 @@ public partial class RowItems : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "i" == name)
-    return new RowItem();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowItems>(deep);
@@ -40662,6 +38485,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Field))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "colFields")]
 public partial class ColumnFields : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11475;
@@ -40711,19 +38535,11 @@ public partial class ColumnFields : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "field" == name)
-    return new Field();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnFields>(deep);
@@ -40744,6 +38560,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(RowItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "colItems")]
 public partial class ColumnItems : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11476;
@@ -40793,19 +38610,11 @@ public partial class ColumnItems : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "i" == name)
-    return new RowItem();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnItems>(deep);
@@ -40826,6 +38635,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PageField))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pageFields")]
 public partial class PageFields : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11477;
@@ -40875,19 +38685,11 @@ public partial class PageFields : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "pageField" == name)
-    return new PageField();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PageFields>(deep);
@@ -40908,6 +38710,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DataField))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "dataFields")]
 public partial class DataFields : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11478;
@@ -40957,19 +38760,11 @@ public partial class DataFields : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "dataField" == name)
-    return new DataField();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataFields>(deep);
@@ -40990,6 +38785,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Format))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "formats")]
 public partial class Formats : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11479;
@@ -41039,19 +38835,11 @@ public partial class Formats : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "format" == name)
-    return new Format();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formats>(deep);
@@ -41072,6 +38860,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ConditionalFormat))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "conditionalFormats")]
 public partial class ConditionalFormats : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11480;
@@ -41121,19 +38910,11 @@ public partial class ConditionalFormats : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "conditionalFormat" == name)
-    return new ConditionalFormat();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ConditionalFormats>(deep);
@@ -41154,6 +38935,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ChartFormat))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "chartFormats")]
 public partial class ChartFormats : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11481;
@@ -41203,19 +38985,11 @@ public partial class ChartFormats : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "chartFormat" == name)
-    return new ChartFormat();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ChartFormats>(deep);
@@ -41236,6 +39010,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PivotHierarchy))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pivotHierarchies")]
 public partial class PivotHierarchies : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11482;
@@ -41285,19 +39060,11 @@ public partial class PivotHierarchies : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "pivotHierarchy" == name)
-    return new PivotHierarchy();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotHierarchies>(deep);
@@ -41311,6 +39078,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pivotTableStyleInfo")]
 public partial class PivotTableStyle : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11483;
@@ -41394,6 +39162,7 @@ public partial class PivotTableStyle : OpenXmlLeafElement
     [ChildElementInfo(typeof(PivotFilter))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "filters")]
 public partial class PivotFilters : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11484;
@@ -41443,19 +39212,11 @@ public partial class PivotFilters : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "filter" == name)
-    return new PivotFilter();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotFilters>(deep);
@@ -41476,6 +39237,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(RowHierarchyUsage))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "rowHierarchiesUsage")]
 public partial class RowHierarchiesUsage : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11485;
@@ -41525,19 +39287,11 @@ public partial class RowHierarchiesUsage : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "rowHierarchyUsage" == name)
-    return new RowHierarchyUsage();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowHierarchiesUsage>(deep);
@@ -41558,6 +39312,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ColumnHierarchyUsage))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "colHierarchiesUsage")]
 public partial class ColumnHierarchiesUsage : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11486;
@@ -41607,19 +39362,11 @@ public partial class ColumnHierarchiesUsage : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "colHierarchyUsage" == name)
-    return new ColumnHierarchyUsage();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnHierarchiesUsage>(deep);
@@ -41640,6 +39387,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PivotTableDefinitionExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "extLst")]
 public partial class PivotTableDefinitionExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11487;
@@ -41682,19 +39430,11 @@ public partial class PivotTableDefinitionExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ext" == name)
-    return new PivotTableDefinitionExtension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotTableDefinitionExtensionList>(deep);
@@ -41719,6 +39459,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.PivotTableUISettings), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class PivotTableDefinitionExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11488;
@@ -41768,25 +39509,11 @@ public partial class PivotTableDefinitionExtension : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 53 == namespaceId && "pivotTableDefinition" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.PivotTableDefinition();
     
-if( 71 == namespaceId && "pivotTableData" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.PivotTableData();
-    
-if( 71 == namespaceId && "pivotTableUISettings" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.PivotTableUISettings();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotTableDefinitionExtension>(deep);
@@ -41807,6 +39534,7 @@ if( 71 == namespaceId && "pivotTableUISettings" == name)
     [ChildElementInfo(typeof(DataFieldExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "extLst")]
 public partial class DataFieldExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11489;
@@ -41849,19 +39577,11 @@ public partial class DataFieldExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ext" == name)
-    return new DataFieldExtension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataFieldExtensionList>(deep);
@@ -41884,6 +39604,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.DataField), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class DataFieldExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11490;
@@ -41933,22 +39654,11 @@ public partial class DataFieldExtension : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 53 == namespaceId && "dataField" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.DataField();
     
-if( 71 == namespaceId && "dataField" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.DataField();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataFieldExtension>(deep);
@@ -41969,6 +39679,7 @@ if( 71 == namespaceId && "dataField" == name)
     [ChildElementInfo(typeof(PivotFilterExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "extLst")]
 public partial class PivotFilterExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11491;
@@ -42011,19 +39722,11 @@ public partial class PivotFilterExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ext" == name)
-    return new PivotFilterExtension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotFilterExtensionList>(deep);
@@ -42050,6 +39753,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "queryTableRefresh")]
 public partial class QueryTableRefresh : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11492;
@@ -42141,28 +39845,11 @@ public partial class QueryTableRefresh : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "queryTableFields" == name)
-    return new QueryTableFields();
     
-if( 22 == namespaceId && "queryTableDeletedFields" == name)
-    return new QueryTableDeletedFields();
-    
-if( 22 == namespaceId && "sortState" == name)
-    return new SortState();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "queryTableFields","queryTableDeletedFields","sortState","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22 };
     
@@ -42183,6 +39870,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<QueryTableFields>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Deleted Fields.</para>
     /// <para> Represents the following element tag in the schema: x:queryTableDeletedFields </para>
@@ -42195,6 +39883,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<QueryTableDeletedFields>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Sort State.</para>
     /// <para> Represents the following element tag in the schema: x:sortState </para>
@@ -42207,6 +39896,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<SortState>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Future Feature Data Storage Area.</para>
     /// <para> Represents the following element tag in the schema: x:extLst </para>
@@ -42219,6 +39909,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<ExtensionList>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -42240,6 +39931,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(QueryTableExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "extLst")]
 public partial class QueryTableExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11493;
@@ -42282,19 +39974,11 @@ public partial class QueryTableExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ext" == name)
-    return new QueryTableExtension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<QueryTableExtensionList>(deep);
@@ -42308,6 +39992,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheetCalcPr")]
 public partial class SheetCalculationProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11494;
@@ -42356,6 +40041,7 @@ public partial class SheetCalculationProperties : OpenXmlLeafElement
     [ChildElementInfo(typeof(ProtectedRange))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "protectedRanges")]
 public partial class ProtectedRanges : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11495;
@@ -42398,19 +40084,11 @@ public partial class ProtectedRanges : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "protectedRange" == name)
-    return new ProtectedRange();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ProtectedRanges>(deep);
@@ -42431,6 +40109,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Scenario))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "scenarios")]
 public partial class Scenarios : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11496;
@@ -42494,19 +40173,11 @@ public partial class Scenarios : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "scenario" == name)
-    return new Scenario();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Scenarios>(deep);
@@ -42527,6 +40198,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(MergeCell))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "mergeCells")]
 public partial class MergeCells : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11497;
@@ -42576,19 +40248,11 @@ public partial class MergeCells : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "mergeCell" == name)
-    return new MergeCell();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MergeCells>(deep);
@@ -42609,6 +40273,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DataValidation))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "dataValidations")]
 public partial class DataValidations : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11498;
@@ -42679,19 +40344,11 @@ public partial class DataValidations : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "dataValidation" == name)
-    return new DataValidation();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DataValidations>(deep);
@@ -42712,6 +40369,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Hyperlink))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "hyperlinks")]
 public partial class Hyperlinks : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11499;
@@ -42754,19 +40412,11 @@ public partial class Hyperlinks : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "hyperlink" == name)
-    return new Hyperlink();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Hyperlinks>(deep);
@@ -42787,6 +40437,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(CellWatch))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "cellWatches")]
 public partial class CellWatches : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11500;
@@ -42829,19 +40480,11 @@ public partial class CellWatches : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "cellWatch" == name)
-    return new CellWatch();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CellWatches>(deep);
@@ -42864,6 +40507,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ignoredErrors")]
 public partial class IgnoredErrors : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11501;
@@ -42906,22 +40550,11 @@ public partial class IgnoredErrors : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ignoredError" == name)
-    return new IgnoredError();
     
-if( 22 == namespaceId && "extLst" == name)
-    return new ExtensionList();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<IgnoredErrors>(deep);
@@ -42942,6 +40575,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(TablePart))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "tableParts")]
 public partial class TableParts : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11502;
@@ -42991,19 +40625,11 @@ public partial class TableParts : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "tablePart" == name)
-    return new TablePart();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableParts>(deep);
@@ -43024,6 +40650,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(WorksheetExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "extLst")]
 public partial class WorksheetExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11503;
@@ -43066,19 +40693,11 @@ public partial class WorksheetExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ext" == name)
-    return new WorksheetExtension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorksheetExtensionList>(deep);
@@ -43113,6 +40732,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineReferences), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class WorksheetExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11504;
@@ -43162,40 +40782,11 @@ public partial class WorksheetExtension : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 53 == namespaceId && "conditionalFormattings" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.ConditionalFormattings();
     
-if( 53 == namespaceId && "dataValidations" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.DataValidations();
-    
-if( 53 == namespaceId && "sparklineGroups" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.SparklineGroups();
-    
-if( 53 == namespaceId && "slicerList" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.SlicerList();
-    
-if( 53 == namespaceId && "protectedRanges" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.ProtectedRanges();
-    
-if( 53 == namespaceId && "ignoredErrors" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.IgnoredErrors();
-    
-if( 71 == namespaceId && "webExtensions" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.WebExtensions();
-    
-if( 71 == namespaceId && "timelineRefs" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.TimelineReferences();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorksheetExtension>(deep);
@@ -43216,6 +40807,7 @@ if( 71 == namespaceId && "timelineRefs" == name)
     [ChildElementInfo(typeof(NumberingFormat))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "numFmts")]
 public partial class NumberingFormats : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11507;
@@ -43265,19 +40857,11 @@ public partial class NumberingFormats : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "numFmt" == name)
-    return new NumberingFormat();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NumberingFormats>(deep);
@@ -43298,6 +40882,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Font))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "fonts")]
 public partial class Fonts : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11508;
@@ -43356,19 +40941,11 @@ public partial class Fonts : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "font" == name)
-    return new Font();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Fonts>(deep);
@@ -43389,6 +40966,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Fill))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "fills")]
 public partial class Fills : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11509;
@@ -43438,19 +41016,11 @@ public partial class Fills : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "fill" == name)
-    return new Fill();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Fills>(deep);
@@ -43471,6 +41041,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Border))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "borders")]
 public partial class Borders : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11510;
@@ -43520,19 +41091,11 @@ public partial class Borders : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "border" == name)
-    return new Border();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Borders>(deep);
@@ -43553,6 +41116,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(CellFormat))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "cellStyleXfs")]
 public partial class CellStyleFormats : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11511;
@@ -43602,19 +41166,11 @@ public partial class CellStyleFormats : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "xf" == name)
-    return new CellFormat();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CellStyleFormats>(deep);
@@ -43635,6 +41191,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(CellFormat))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "cellXfs")]
 public partial class CellFormats : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11512;
@@ -43684,19 +41241,11 @@ public partial class CellFormats : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "xf" == name)
-    return new CellFormat();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CellFormats>(deep);
@@ -43717,6 +41266,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(CellStyle))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "cellStyles")]
 public partial class CellStyles : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11513;
@@ -43766,19 +41316,11 @@ public partial class CellStyles : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "cellStyle" == name)
-    return new CellStyle();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CellStyles>(deep);
@@ -43799,6 +41341,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DifferentialFormat))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "dxfs")]
 public partial class DifferentialFormats : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11514;
@@ -43848,19 +41391,11 @@ public partial class DifferentialFormats : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "dxf" == name)
-    return new DifferentialFormat();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DifferentialFormats>(deep);
@@ -43881,6 +41416,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(TableStyle))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "tableStyles")]
 public partial class TableStyles : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11515;
@@ -43944,19 +41480,11 @@ public partial class TableStyles : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "tableStyle" == name)
-    return new TableStyle();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TableStyles>(deep);
@@ -43979,6 +41507,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(MruColors))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "colors")]
 public partial class Colors : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11516;
@@ -44021,22 +41550,11 @@ public partial class Colors : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "indexedColors" == name)
-    return new IndexedColors();
     
-if( 22 == namespaceId && "mruColors" == name)
-    return new MruColors();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "indexedColors","mruColors" };
     private static readonly byte[] eleNamespaceIds = { 22,22 };
     
@@ -44057,6 +41575,7 @@ if( 22 == namespaceId && "mruColors" == name)
         get => GetElement<IndexedColors>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> MRU Colors.</para>
     /// <para> Represents the following element tag in the schema: x:mruColors </para>
@@ -44069,6 +41588,7 @@ if( 22 == namespaceId && "mruColors" == name)
         get => GetElement<MruColors>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -44090,6 +41610,7 @@ if( 22 == namespaceId && "mruColors" == name)
     [ChildElementInfo(typeof(StylesheetExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "extLst")]
 public partial class StylesheetExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11517;
@@ -44132,19 +41653,11 @@ public partial class StylesheetExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ext" == name)
-    return new StylesheetExtension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StylesheetExtensionList>(deep);
@@ -44171,6 +41684,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.TimelineStyles), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class StylesheetExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11518;
@@ -44220,28 +41734,11 @@ public partial class StylesheetExtension : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 53 == namespaceId && "dxfs" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.DifferentialFormats();
     
-if( 53 == namespaceId && "slicerStyles" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.SlicerStyles();
-    
-if( 71 == namespaceId && "dxfs" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.DifferentialFormats();
-    
-if( 71 == namespaceId && "timelineStyles" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.TimelineStyles();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StylesheetExtension>(deep);
@@ -44255,6 +41752,7 @@ if( 71 == namespaceId && "timelineStyles" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "fileVersion")]
 public partial class FileVersion : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11519;
@@ -44324,6 +41822,7 @@ public partial class FileVersion : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "fileSharing")]
 public partial class FileSharing : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11520;
@@ -44407,6 +41906,7 @@ public partial class FileSharing : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "workbookPr")]
 public partial class WorkbookProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11521;
@@ -44574,6 +42074,7 @@ public partial class WorkbookProperties : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "workbookProtection")]
 public partial class WorkbookProtection : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11522;
@@ -44706,6 +42207,7 @@ public partial class WorkbookProtection : OpenXmlLeafElement
     [ChildElementInfo(typeof(WorkbookView))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "bookViews")]
 public partial class BookViews : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11523;
@@ -44748,19 +42250,11 @@ public partial class BookViews : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "workbookView" == name)
-    return new WorkbookView();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BookViews>(deep);
@@ -44781,6 +42275,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Sheet))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "sheets")]
 public partial class Sheets : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11524;
@@ -44823,19 +42318,11 @@ public partial class Sheets : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "sheet" == name)
-    return new Sheet();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Sheets>(deep);
@@ -44856,6 +42343,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(FunctionGroup))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "functionGroups")]
 public partial class FunctionGroups : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11525;
@@ -44905,19 +42393,11 @@ public partial class FunctionGroups : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "functionGroup" == name)
-    return new FunctionGroup();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FunctionGroups>(deep);
@@ -44938,6 +42418,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ExternalReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "externalReferences")]
 public partial class ExternalReferences : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11526;
@@ -44980,19 +42461,11 @@ public partial class ExternalReferences : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "externalReference" == name)
-    return new ExternalReference();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ExternalReferences>(deep);
@@ -45013,6 +42486,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DefinedName))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "definedNames")]
 public partial class DefinedNames : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11527;
@@ -45055,19 +42529,11 @@ public partial class DefinedNames : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "definedName" == name)
-    return new DefinedName();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DefinedNames>(deep);
@@ -45081,6 +42547,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "calcPr")]
 public partial class CalculationProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11528;
@@ -45206,6 +42673,7 @@ public partial class CalculationProperties : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "oleSize")]
 public partial class OleSize : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11529;
@@ -45254,6 +42722,7 @@ public partial class OleSize : OpenXmlLeafElement
     [ChildElementInfo(typeof(CustomWorkbookView))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "customWorkbookViews")]
 public partial class CustomWorkbookViews : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11530;
@@ -45296,19 +42765,11 @@ public partial class CustomWorkbookViews : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "customWorkbookView" == name)
-    return new CustomWorkbookView();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CustomWorkbookViews>(deep);
@@ -45329,6 +42790,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(PivotCache))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "pivotCaches")]
 public partial class PivotCaches : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11531;
@@ -45371,19 +42833,11 @@ public partial class PivotCaches : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "pivotCache" == name)
-    return new PivotCache();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PivotCaches>(deep);
@@ -45397,6 +42851,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "webPublishing")]
 public partial class WebPublishing : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11532;
@@ -45494,6 +42949,7 @@ public partial class WebPublishing : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "fileRecoveryPr")]
 public partial class FileRecoveryProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11533;
@@ -45563,6 +43019,7 @@ public partial class FileRecoveryProperties : OpenXmlLeafElement
     [ChildElementInfo(typeof(WebPublishObject))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "webPublishObjects")]
 public partial class WebPublishObjects : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11534;
@@ -45612,19 +43069,11 @@ public partial class WebPublishObjects : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "webPublishObject" == name)
-    return new WebPublishObject();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WebPublishObjects>(deep);
@@ -45645,6 +43094,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(WorkbookExtension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "extLst")]
 public partial class WorkbookExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11535;
@@ -45687,19 +43137,11 @@ public partial class WorkbookExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "ext" == name)
-    return new WorkbookExtension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorkbookExtensionList>(deep);
@@ -45740,6 +43182,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2013.Excel.DataModel), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(22, "ext")]
 public partial class WorkbookExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11536;
@@ -45789,49 +43232,11 @@ public partial class WorkbookExtension : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 53 == namespaceId && "definedNames" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.DefinedNames();
     
-if( 53 == namespaceId && "pivotCaches" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.PivotCaches();
-    
-if( 53 == namespaceId && "slicerCaches" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.SlicerCaches();
-    
-if( 71 == namespaceId && "slicerCaches" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.SlicerCaches();
-    
-if( 53 == namespaceId && "workbookPr" == name)
-    return new DocumentFormat.OpenXml.Office2010.Excel.WorkbookProperties();
-    
-if( 71 == namespaceId && "pivotCaches" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.PivotCaches();
-    
-if( 71 == namespaceId && "pivotTableReferences" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.PivotTableReferences();
-    
-if( 71 == namespaceId && "timelineCachePivotCaches" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.TimelineCachePivotCaches();
-    
-if( 71 == namespaceId && "timelineCacheRefs" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.TimelineCacheReferences();
-    
-if( 71 == namespaceId && "workbookPr" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.WorkbookProperties();
-    
-if( 71 == namespaceId && "dataModel" == name)
-    return new DocumentFormat.OpenXml.Office2013.Excel.DataModel();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<WorkbookExtension>(deep);

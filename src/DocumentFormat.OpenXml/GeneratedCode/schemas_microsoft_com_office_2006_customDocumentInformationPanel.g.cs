@@ -27,6 +27,7 @@ namespace DocumentFormat.OpenXml.Office.CustomDocumentInformationPanel
     [ChildElementInfo(typeof(CustomPropertyEditor))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(37, "customPropertyEditors")]
 public partial class CustomPropertyEditors : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12699;
@@ -69,25 +70,11 @@ public partial class CustomPropertyEditors : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 37 == namespaceId && "showOnOpen" == name)
-    return new ShowOnOpen();
     
-if( 37 == namespaceId && "defaultPropertyEditorNamespace" == name)
-    return new DefaultPropertyEditorNamespace();
-    
-if( 37 == namespaceId && "customPropertyEditor" == name)
-    return new CustomPropertyEditor();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "showOnOpen","defaultPropertyEditorNamespace","customPropertyEditor" };
     private static readonly byte[] eleNamespaceIds = { 37,37,37 };
     
@@ -108,6 +95,7 @@ if( 37 == namespaceId && "customPropertyEditor" == name)
         get => GetElement<ShowOnOpen>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> DefaultPropertyEditorNamespace.</para>
     /// <para> Represents the following element tag in the schema: cdip:defaultPropertyEditorNamespace </para>
@@ -120,6 +108,7 @@ if( 37 == namespaceId && "customPropertyEditor" == name)
         get => GetElement<DefaultPropertyEditorNamespace>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -133,6 +122,7 @@ if( 37 == namespaceId && "customPropertyEditor" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(37, "XMLNamespace")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
 {
@@ -173,6 +163,7 @@ public partial class PropertyEditorNamespace : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(37, "defaultPropertyEditorNamespace")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
 {
@@ -214,6 +205,7 @@ public partial class DefaultPropertyEditorNamespace : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(37, "XSNLocation")]
 public partial class XsnFileLocation : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12701;
@@ -261,6 +253,7 @@ public partial class XsnFileLocation : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(37, "showOnOpen")]
 public partial class ShowOnOpen : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12702;
@@ -317,6 +310,7 @@ public partial class ShowOnOpen : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(XsnFileLocation))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(37, "customPropertyEditor")]
 public partial class CustomPropertyEditor : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12704;
@@ -359,22 +353,11 @@ public partial class CustomPropertyEditor : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 37 == namespaceId && "XMLNamespace" == name)
-    return new PropertyEditorNamespace();
     
-if( 37 == namespaceId && "XSNLocation" == name)
-    return new XsnFileLocation();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "XMLNamespace","XSNLocation" };
     private static readonly byte[] eleNamespaceIds = { 37,37 };
     
@@ -395,6 +378,7 @@ if( 37 == namespaceId && "XSNLocation" == name)
         get => GetElement<PropertyEditorNamespace>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> XsnFileLocation.</para>
     /// <para> Represents the following element tag in the schema: cdip:XSNLocation </para>
@@ -407,6 +391,7 @@ if( 37 == namespaceId && "XSNLocation" == name)
         get => GetElement<XsnFileLocation>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>

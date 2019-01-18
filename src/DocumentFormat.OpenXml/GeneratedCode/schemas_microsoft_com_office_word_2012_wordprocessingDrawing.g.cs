@@ -17,6 +17,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(75, "webVideoPr")]
 public partial class WebVideoProperty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13435;

@@ -27,6 +27,7 @@ namespace DocumentFormat.OpenXml.Office2010.Ink
     [ChildElementInfo(typeof(DestinationLink))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(45, "context")]
 public partial class ContextNode : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12758;
@@ -216,25 +217,11 @@ public partial class ContextNode : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 45 == namespaceId && "property" == name)
-    return new ContextNodeProperty();
     
-if( 45 == namespaceId && "sourceLink" == name)
-    return new SourceLink();
-    
-if( 45 == namespaceId && "destinationLink" == name)
-    return new DestinationLink();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContextNode>(deep);
@@ -248,6 +235,7 @@ if( 45 == namespaceId && "destinationLink" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(45, "property")]
 public partial class ContextNodeProperty : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12759;
@@ -301,6 +289,7 @@ public partial class ContextNodeProperty : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(45, "sourceLink")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SourceLink : ContextLinkType
 {
@@ -328,6 +317,7 @@ public partial class SourceLink : ContextLinkType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(45, "destinationLink")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DestinationLink : ContextLinkType
 {

@@ -17,6 +17,7 @@ namespace DocumentFormat.OpenXml.Office2013.ExcelAc
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(74, "absPath")]
 public partial class AbsolutePath : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13434;

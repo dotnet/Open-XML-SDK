@@ -21,6 +21,7 @@ namespace DocumentFormat.OpenXml.CustomXmlDataProperties
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(SchemaReferences))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(20, "datastoreItem")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DataStoreItem : OpenXmlPartRootElement
 {
@@ -88,6 +89,7 @@ public partial class DataStoreItem : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -105,16 +107,7 @@ public partial class DataStoreItem : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 20 == namespaceId && "schemaRefs" == name)
-    return new SchemaReferences();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "schemaRefs" };
     private static readonly byte[] eleNamespaceIds = { 20 };
     
@@ -135,6 +128,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<SchemaReferences>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -149,6 +143,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(20, "schemaRef")]
 public partial class SchemaReference : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10901;
@@ -199,6 +194,7 @@ public partial class SchemaReference : OpenXmlLeafElement
     [ChildElementInfo(typeof(SchemaReference))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(20, "schemaRefs")]
 public partial class SchemaReferences : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10902;
@@ -241,19 +237,11 @@ public partial class SchemaReferences : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 20 == namespaceId && "schemaRef" == name)
-    return new SchemaReference();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SchemaReferences>(deep);

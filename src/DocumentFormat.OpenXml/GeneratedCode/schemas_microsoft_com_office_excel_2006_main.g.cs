@@ -74,6 +74,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Spreadsheet.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(32, "macrosheet")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Macrosheet : OpenXmlPartRootElement
 {
@@ -132,6 +133,7 @@ public partial class Macrosheet : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -149,94 +151,7 @@ public partial class Macrosheet : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 22 == namespaceId && "sheetPr" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.SheetProperties();
     
-if( 22 == namespaceId && "dimension" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.SheetDimension();
-    
-if( 22 == namespaceId && "sheetViews" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.SheetViews();
-    
-if( 22 == namespaceId && "sheetFormatPr" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties();
-    
-if( 22 == namespaceId && "cols" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.Columns();
-    
-if( 22 == namespaceId && "sheetData" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.SheetData();
-    
-if( 22 == namespaceId && "sheetProtection" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.SheetProtection();
-    
-if( 22 == namespaceId && "autoFilter" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.AutoFilter();
-    
-if( 22 == namespaceId && "sortState" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.SortState();
-    
-if( 22 == namespaceId && "dataConsolidate" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.DataConsolidate();
-    
-if( 22 == namespaceId && "customSheetViews" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.CustomSheetViews();
-    
-if( 22 == namespaceId && "phoneticPr" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.PhoneticProperties();
-    
-if( 22 == namespaceId && "conditionalFormatting" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.ConditionalFormatting();
-    
-if( 22 == namespaceId && "printOptions" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.PrintOptions();
-    
-if( 22 == namespaceId && "pageMargins" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.PageMargins();
-    
-if( 22 == namespaceId && "pageSetup" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.PageSetup();
-    
-if( 22 == namespaceId && "headerFooter" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.HeaderFooter();
-    
-if( 22 == namespaceId && "rowBreaks" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.RowBreaks();
-    
-if( 22 == namespaceId && "colBreaks" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.ColumnBreaks();
-    
-if( 22 == namespaceId && "customProperties" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.CustomProperties();
-    
-if( 22 == namespaceId && "drawing" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.Drawing();
-    
-if( 22 == namespaceId && "legacyDrawing" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.LegacyDrawing();
-    
-if( 22 == namespaceId && "legacyDrawingHF" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.LegacyDrawingHeaderFooter();
-    
-if( 22 == namespaceId && "picture" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.Picture();
-    
-if( 22 == namespaceId && "oleObjects" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.OleObjects();
-    
-if( 22 == namespaceId && "drawingHF" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.DrawingHeaderFooter();
-    
-if( 22 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Spreadsheet.ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sheetPr","dimension","sheetViews","sheetFormatPr","cols","sheetData","sheetProtection","autoFilter","sortState","dataConsolidate","customSheetViews","phoneticPr","conditionalFormatting","printOptions","pageMargins","pageSetup","headerFooter","rowBreaks","colBreaks","customProperties","drawing","legacyDrawing","legacyDrawingHF","picture","oleObjects","drawingHF","extLst" };
     private static readonly byte[] eleNamespaceIds = { 22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22,22 };
     
@@ -257,6 +172,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Macro Sheet Dimensions.</para>
     /// <para> Represents the following element tag in the schema: x:dimension </para>
@@ -269,6 +185,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetDimension>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Macro Sheet Views.</para>
     /// <para> Represents the following element tag in the schema: x:sheetViews </para>
@@ -281,6 +198,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetViews>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Sheet Format Properties.</para>
     /// <para> Represents the following element tag in the schema: x:sheetFormatPr </para>
@@ -293,6 +211,7 @@ if( 22 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Spreadsheet.SheetFormatProperties>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -314,6 +233,7 @@ if( 22 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(RowSortMap))]
     [ChildElementInfo(typeof(ColumnSortMap))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(32, "worksheetSortMap")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WorksheetSortMap : OpenXmlPartRootElement
 {
@@ -372,6 +292,7 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -389,19 +310,7 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 32 == namespaceId && "rowSortMap" == name)
-    return new RowSortMap();
     
-if( 32 == namespaceId && "colSortMap" == name)
-    return new ColumnSortMap();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "rowSortMap","colSortMap" };
     private static readonly byte[] eleNamespaceIds = { 32,32 };
     
@@ -422,6 +331,7 @@ if( 32 == namespaceId && "colSortMap" == name)
         get => GetElement<RowSortMap>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Column Sort Map.</para>
     /// <para> Represents the following element tag in the schema: xne:colSortMap </para>
@@ -434,6 +344,7 @@ if( 32 == namespaceId && "colSortMap" == name)
         get => GetElement<ColumnSortMap>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -448,6 +359,7 @@ if( 32 == namespaceId && "colSortMap" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(32, "sqref")]
 public partial class ReferenceSequence : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12602;
@@ -495,6 +407,7 @@ public partial class ReferenceSequence : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(32, "f")]
 public partial class Formula : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12603;
@@ -549,6 +462,7 @@ public partial class Formula : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(RowSortMapItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(32, "rowSortMap")]
 public partial class RowSortMap : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12604;
@@ -605,19 +519,11 @@ public partial class RowSortMap : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 32 == namespaceId && "row" == name)
-    return new RowSortMapItem();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RowSortMap>(deep);
@@ -638,6 +544,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ColumnSortMapItem))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(32, "colSortMap")]
 public partial class ColumnSortMap : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12605;
@@ -694,19 +601,11 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 32 == namespaceId && "col" == name)
-    return new ColumnSortMapItem();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColumnSortMap>(deep);
@@ -719,6 +618,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(32, "row")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RowSortMapItem : SortMapItemType
 {
@@ -746,6 +646,7 @@ public partial class RowSortMapItem : SortMapItemType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(32, "col")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnSortMapItem : SortMapItemType
 {

@@ -17,6 +17,7 @@ namespace DocumentFormat.OpenXml.Math
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "scr")]
 public partial class Script : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10905;
@@ -60,6 +61,7 @@ public partial class Script : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "sty")]
 public partial class Style : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10906;
@@ -178,6 +180,7 @@ public partial class Style : OpenXmlLeafElement
     [ChildElementInfo(typeof(Text))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "r")]
 public partial class Run : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10907;
@@ -220,121 +223,11 @@ public partial class Run : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "rPr" == name)
-    return new RunProperties();
     
-if( 23 == namespaceId && "rPr" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.RunProperties();
-    
-if( 23 == namespaceId && "br" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.Break();
-    
-if( 23 == namespaceId && "t" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.Text();
-    
-if( 23 == namespaceId && "delText" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.DeletedText();
-    
-if( 23 == namespaceId && "instrText" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.FieldCode();
-    
-if( 23 == namespaceId && "delInstrText" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.DeletedFieldCode();
-    
-if( 23 == namespaceId && "noBreakHyphen" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.NoBreakHyphen();
-    
-if( 23 == namespaceId && "softHyphen" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.SoftHyphen();
-    
-if( 23 == namespaceId && "dayShort" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.DayShort();
-    
-if( 23 == namespaceId && "monthShort" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MonthShort();
-    
-if( 23 == namespaceId && "yearShort" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.YearShort();
-    
-if( 23 == namespaceId && "dayLong" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.DayLong();
-    
-if( 23 == namespaceId && "monthLong" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MonthLong();
-    
-if( 23 == namespaceId && "yearLong" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.YearLong();
-    
-if( 23 == namespaceId && "annotationRef" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.AnnotationReferenceMark();
-    
-if( 23 == namespaceId && "footnoteRef" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.FootnoteReferenceMark();
-    
-if( 23 == namespaceId && "endnoteRef" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.EndnoteReferenceMark();
-    
-if( 23 == namespaceId && "separator" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.SeparatorMark();
-    
-if( 23 == namespaceId && "continuationSeparator" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.ContinuationSeparatorMark();
-    
-if( 23 == namespaceId && "sym" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.SymbolChar();
-    
-if( 23 == namespaceId && "pgNum" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.PageNumber();
-    
-if( 23 == namespaceId && "cr" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CarriageReturn();
-    
-if( 23 == namespaceId && "tab" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.TabChar();
-    
-if( 23 == namespaceId && "object" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.EmbeddedObject();
-    
-if( 23 == namespaceId && "pict" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.Picture();
-    
-if( 23 == namespaceId && "fldChar" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.FieldChar();
-    
-if( 23 == namespaceId && "ruby" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.Ruby();
-    
-if( 23 == namespaceId && "footnoteReference" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.FootnoteReference();
-    
-if( 23 == namespaceId && "endnoteReference" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.EndnoteReference();
-    
-if( 23 == namespaceId && "commentReference" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CommentReference();
-    
-if( 23 == namespaceId && "drawing" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.Drawing();
-    
-if( 23 == namespaceId && "ptab" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.PositionalTab();
-    
-if( 23 == namespaceId && "lastRenderedPageBreak" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.LastRenderedPageBreak();
-    
-if( 21 == namespaceId && "t" == name)
-    return new Text();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "rPr","rPr","br","t","delText","instrText","delInstrText","noBreakHyphen","softHyphen","dayShort","monthShort","yearShort","dayLong","monthLong","yearLong","annotationRef","footnoteRef","endnoteRef","separator","continuationSeparator","sym","pgNum","cr","tab","object","pict","fldChar","ruby","footnoteReference","endnoteReference","commentReference","drawing","ptab","lastRenderedPageBreak","t" };
     private static readonly byte[] eleNamespaceIds = { 21,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,21 };
     
@@ -355,6 +248,7 @@ if( 21 == namespaceId && "t" == name)
         get => GetElement<RunProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Run Properties.</para>
     /// <para> Represents the following element tag in the schema: w:rPr </para>
@@ -367,6 +261,7 @@ if( 21 == namespaceId && "t" == name)
         get => GetElement<DocumentFormat.OpenXml.Wordprocessing.RunProperties>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -390,6 +285,7 @@ if( 21 == namespaceId && "t" == name)
     [ChildElementInfo(typeof(Base))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "acc")]
 public partial class Accent : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10908;
@@ -432,22 +328,11 @@ public partial class Accent : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "accPr" == name)
-    return new AccentProperties();
     
-if( 21 == namespaceId && "e" == name)
-    return new Base();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "accPr","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
     
@@ -468,6 +353,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<AccentProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -480,6 +366,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<Base>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -503,6 +390,7 @@ if( 21 == namespaceId && "e" == name)
     [ChildElementInfo(typeof(Base))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "bar")]
 public partial class Bar : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10909;
@@ -545,22 +433,11 @@ public partial class Bar : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "barPr" == name)
-    return new BarProperties();
     
-if( 21 == namespaceId && "e" == name)
-    return new Base();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "barPr","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
     
@@ -581,6 +458,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<BarProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -593,6 +471,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<Base>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -616,6 +495,7 @@ if( 21 == namespaceId && "e" == name)
     [ChildElementInfo(typeof(Base))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "box")]
 public partial class Box : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10910;
@@ -658,22 +538,11 @@ public partial class Box : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "boxPr" == name)
-    return new BoxProperties();
     
-if( 21 == namespaceId && "e" == name)
-    return new Base();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "boxPr","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
     
@@ -694,6 +563,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<BoxProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -706,6 +576,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<Base>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -729,6 +600,7 @@ if( 21 == namespaceId && "e" == name)
     [ChildElementInfo(typeof(Base))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "borderBox")]
 public partial class BorderBox : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10911;
@@ -771,22 +643,11 @@ public partial class BorderBox : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "borderBoxPr" == name)
-    return new BorderBoxProperties();
     
-if( 21 == namespaceId && "e" == name)
-    return new Base();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "borderBoxPr","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
     
@@ -807,6 +668,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<BorderBoxProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -819,6 +681,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<Base>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -842,6 +705,7 @@ if( 21 == namespaceId && "e" == name)
     [ChildElementInfo(typeof(Base))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "d")]
 public partial class Delimiter : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10912;
@@ -884,22 +748,11 @@ public partial class Delimiter : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "dPr" == name)
-    return new DelimiterProperties();
     
-if( 21 == namespaceId && "e" == name)
-    return new Base();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "dPr","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
     
@@ -920,6 +773,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<DelimiterProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -943,6 +797,7 @@ if( 21 == namespaceId && "e" == name)
     [ChildElementInfo(typeof(Base))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "eqArr")]
 public partial class EquationArray : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10913;
@@ -985,22 +840,11 @@ public partial class EquationArray : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "eqArrPr" == name)
-    return new EquationArrayProperties();
     
-if( 21 == namespaceId && "e" == name)
-    return new Base();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "eqArrPr","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
     
@@ -1021,6 +865,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<EquationArrayProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1046,6 +891,7 @@ if( 21 == namespaceId && "e" == name)
     [ChildElementInfo(typeof(Denominator))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "f")]
 public partial class Fraction : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10914;
@@ -1088,25 +934,11 @@ public partial class Fraction : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "fPr" == name)
-    return new FractionProperties();
     
-if( 21 == namespaceId && "num" == name)
-    return new Numerator();
-    
-if( 21 == namespaceId && "den" == name)
-    return new Denominator();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "fPr","num","den" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21 };
     
@@ -1127,6 +959,7 @@ if( 21 == namespaceId && "den" == name)
         get => GetElement<FractionProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Numerator.</para>
     /// <para> Represents the following element tag in the schema: m:num </para>
@@ -1139,6 +972,7 @@ if( 21 == namespaceId && "den" == name)
         get => GetElement<Numerator>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Denominator.</para>
     /// <para> Represents the following element tag in the schema: m:den </para>
@@ -1151,6 +985,7 @@ if( 21 == namespaceId && "den" == name)
         get => GetElement<Denominator>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1176,6 +1011,7 @@ if( 21 == namespaceId && "den" == name)
     [ChildElementInfo(typeof(Base))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "func")]
 public partial class MathFunction : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10915;
@@ -1218,25 +1054,11 @@ public partial class MathFunction : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "funcPr" == name)
-    return new FunctionProperties();
     
-if( 21 == namespaceId && "fName" == name)
-    return new FunctionName();
-    
-if( 21 == namespaceId && "e" == name)
-    return new Base();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "funcPr","fName","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21 };
     
@@ -1257,6 +1079,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<FunctionProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Function Name.</para>
     /// <para> Represents the following element tag in the schema: m:fName </para>
@@ -1269,6 +1092,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<FunctionName>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Base (Argument).</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -1281,6 +1105,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<Base>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1304,6 +1129,7 @@ if( 21 == namespaceId && "e" == name)
     [ChildElementInfo(typeof(Base))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "groupChr")]
 public partial class GroupChar : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10916;
@@ -1346,22 +1172,11 @@ public partial class GroupChar : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "groupChrPr" == name)
-    return new GroupCharProperties();
     
-if( 21 == namespaceId && "e" == name)
-    return new Base();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "groupChrPr","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
     
@@ -1382,6 +1197,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<GroupCharProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -1394,6 +1210,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<Base>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1419,6 +1236,7 @@ if( 21 == namespaceId && "e" == name)
     [ChildElementInfo(typeof(Limit))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "limLow")]
 public partial class LimitLower : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10917;
@@ -1461,25 +1279,11 @@ public partial class LimitLower : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "limLowPr" == name)
-    return new LimitLowerProperties();
     
-if( 21 == namespaceId && "e" == name)
-    return new Base();
-    
-if( 21 == namespaceId && "lim" == name)
-    return new Limit();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "limLowPr","e","lim" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21 };
     
@@ -1500,6 +1304,7 @@ if( 21 == namespaceId && "lim" == name)
         get => GetElement<LimitLowerProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -1512,6 +1317,7 @@ if( 21 == namespaceId && "lim" == name)
         get => GetElement<Base>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Limit (Lower).</para>
     /// <para> Represents the following element tag in the schema: m:lim </para>
@@ -1524,6 +1330,7 @@ if( 21 == namespaceId && "lim" == name)
         get => GetElement<Limit>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1549,6 +1356,7 @@ if( 21 == namespaceId && "lim" == name)
     [ChildElementInfo(typeof(Limit))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "limUpp")]
 public partial class LimitUpper : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10918;
@@ -1591,25 +1399,11 @@ public partial class LimitUpper : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "limUppPr" == name)
-    return new LimitUpperProperties();
     
-if( 21 == namespaceId && "e" == name)
-    return new Base();
-    
-if( 21 == namespaceId && "lim" == name)
-    return new Limit();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "limUppPr","e","lim" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21 };
     
@@ -1630,6 +1424,7 @@ if( 21 == namespaceId && "lim" == name)
         get => GetElement<LimitUpperProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -1642,6 +1437,7 @@ if( 21 == namespaceId && "lim" == name)
         get => GetElement<Base>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Limit (Upper).</para>
     /// <para> Represents the following element tag in the schema: m:lim </para>
@@ -1654,6 +1450,7 @@ if( 21 == namespaceId && "lim" == name)
         get => GetElement<Limit>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1677,6 +1474,7 @@ if( 21 == namespaceId && "lim" == name)
     [ChildElementInfo(typeof(MatrixRow))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "m")]
 public partial class Matrix : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10919;
@@ -1719,22 +1517,11 @@ public partial class Matrix : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "mPr" == name)
-    return new MatrixProperties();
     
-if( 21 == namespaceId && "mr" == name)
-    return new MatrixRow();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "mPr","mr" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
     
@@ -1755,6 +1542,7 @@ if( 21 == namespaceId && "mr" == name)
         get => GetElement<MatrixProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1782,6 +1570,7 @@ if( 21 == namespaceId && "mr" == name)
     [ChildElementInfo(typeof(Base))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "nary")]
 public partial class Nary : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10920;
@@ -1824,28 +1613,11 @@ public partial class Nary : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "naryPr" == name)
-    return new NaryProperties();
     
-if( 21 == namespaceId && "sub" == name)
-    return new SubArgument();
-    
-if( 21 == namespaceId && "sup" == name)
-    return new SuperArgument();
-    
-if( 21 == namespaceId && "e" == name)
-    return new Base();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "naryPr","sub","sup","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21 };
     
@@ -1866,6 +1638,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<NaryProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Lower limit (n-ary) .</para>
     /// <para> Represents the following element tag in the schema: m:sub </para>
@@ -1878,6 +1651,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<SubArgument>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Upper limit (n-ary).</para>
     /// <para> Represents the following element tag in the schema: m:sup </para>
@@ -1890,6 +1664,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<SuperArgument>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Base (Argument).</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -1902,6 +1677,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<Base>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1925,6 +1701,7 @@ if( 21 == namespaceId && "e" == name)
     [ChildElementInfo(typeof(Base))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "phant")]
 public partial class Phantom : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10921;
@@ -1967,22 +1744,11 @@ public partial class Phantom : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "phantPr" == name)
-    return new PhantomProperties();
     
-if( 21 == namespaceId && "e" == name)
-    return new Base();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "phantPr","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
     
@@ -2003,6 +1769,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<PhantomProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -2015,6 +1782,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<Base>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -2040,6 +1808,7 @@ if( 21 == namespaceId && "e" == name)
     [ChildElementInfo(typeof(Base))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "rad")]
 public partial class Radical : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10922;
@@ -2082,25 +1851,11 @@ public partial class Radical : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "radPr" == name)
-    return new RadicalProperties();
     
-if( 21 == namespaceId && "deg" == name)
-    return new Degree();
-    
-if( 21 == namespaceId && "e" == name)
-    return new Base();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "radPr","deg","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21 };
     
@@ -2121,6 +1876,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<RadicalProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Degree.</para>
     /// <para> Represents the following element tag in the schema: m:deg </para>
@@ -2133,6 +1889,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<Degree>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -2145,6 +1902,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<Base>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -2172,6 +1930,7 @@ if( 21 == namespaceId && "e" == name)
     [ChildElementInfo(typeof(Base))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "sPre")]
 public partial class PreSubSuper : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10923;
@@ -2214,28 +1973,11 @@ public partial class PreSubSuper : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "sPrePr" == name)
-    return new PreSubSuperProperties();
     
-if( 21 == namespaceId && "sub" == name)
-    return new SubArgument();
-    
-if( 21 == namespaceId && "sup" == name)
-    return new SuperArgument();
-    
-if( 21 == namespaceId && "e" == name)
-    return new Base();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sPrePr","sub","sup","e" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21 };
     
@@ -2256,6 +1998,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<PreSubSuperProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Subscript (Pre-Sub-Superscript).</para>
     /// <para> Represents the following element tag in the schema: m:sub </para>
@@ -2268,6 +2011,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<SubArgument>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Superscript(Pre-Sub-Superscript function).</para>
     /// <para> Represents the following element tag in the schema: m:sup </para>
@@ -2280,6 +2024,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<SuperArgument>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -2292,6 +2037,7 @@ if( 21 == namespaceId && "e" == name)
         get => GetElement<Base>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -2317,6 +2063,7 @@ if( 21 == namespaceId && "e" == name)
     [ChildElementInfo(typeof(SubArgument))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "sSub")]
 public partial class Subscript : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10924;
@@ -2359,25 +2106,11 @@ public partial class Subscript : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "sSubPr" == name)
-    return new SubscriptProperties();
     
-if( 21 == namespaceId && "e" == name)
-    return new Base();
-    
-if( 21 == namespaceId && "sub" == name)
-    return new SubArgument();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sSubPr","e","sub" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21 };
     
@@ -2398,6 +2131,7 @@ if( 21 == namespaceId && "sub" == name)
         get => GetElement<SubscriptProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -2410,6 +2144,7 @@ if( 21 == namespaceId && "sub" == name)
         get => GetElement<Base>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Subscript (Subscript function).</para>
     /// <para> Represents the following element tag in the schema: m:sub </para>
@@ -2422,6 +2157,7 @@ if( 21 == namespaceId && "sub" == name)
         get => GetElement<SubArgument>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -2449,6 +2185,7 @@ if( 21 == namespaceId && "sub" == name)
     [ChildElementInfo(typeof(SuperArgument))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "sSubSup")]
 public partial class SubSuperscript : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10925;
@@ -2491,28 +2228,11 @@ public partial class SubSuperscript : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "sSubSupPr" == name)
-    return new SubSuperscriptProperties();
     
-if( 21 == namespaceId && "e" == name)
-    return new Base();
-    
-if( 21 == namespaceId && "sub" == name)
-    return new SubArgument();
-    
-if( 21 == namespaceId && "sup" == name)
-    return new SuperArgument();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sSubSupPr","e","sub","sup" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21 };
     
@@ -2533,6 +2253,7 @@ if( 21 == namespaceId && "sup" == name)
         get => GetElement<SubSuperscriptProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -2545,6 +2266,7 @@ if( 21 == namespaceId && "sup" == name)
         get => GetElement<Base>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Subscript (Sub-Superscript).</para>
     /// <para> Represents the following element tag in the schema: m:sub </para>
@@ -2557,6 +2279,7 @@ if( 21 == namespaceId && "sup" == name)
         get => GetElement<SubArgument>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Superscript (Sub-Superscript function).</para>
     /// <para> Represents the following element tag in the schema: m:sup </para>
@@ -2569,6 +2292,7 @@ if( 21 == namespaceId && "sup" == name)
         get => GetElement<SuperArgument>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -2594,6 +2318,7 @@ if( 21 == namespaceId && "sup" == name)
     [ChildElementInfo(typeof(SuperArgument))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "sSup")]
 public partial class Superscript : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10926;
@@ -2636,25 +2361,11 @@ public partial class Superscript : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "sSupPr" == name)
-    return new SuperscriptProperties();
     
-if( 21 == namespaceId && "e" == name)
-    return new Base();
-    
-if( 21 == namespaceId && "sup" == name)
-    return new SuperArgument();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sSupPr","e","sup" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21 };
     
@@ -2675,6 +2386,7 @@ if( 21 == namespaceId && "sup" == name)
         get => GetElement<SuperscriptProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Base.</para>
     /// <para> Represents the following element tag in the schema: m:e </para>
@@ -2687,6 +2399,7 @@ if( 21 == namespaceId && "sup" == name)
         get => GetElement<Base>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Superscript (Superscript function).</para>
     /// <para> Represents the following element tag in the schema: m:sup </para>
@@ -2699,6 +2412,7 @@ if( 21 == namespaceId && "sup" == name)
         get => GetElement<SuperArgument>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -2786,6 +2500,7 @@ if( 21 == namespaceId && "sup" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.Run))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "oMathPara")]
 public partial class Paragraph : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10927;
@@ -2828,118 +2543,11 @@ public partial class Paragraph : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "oMathParaPr" == name)
-    return new ParagraphProperties();
     
-if( 21 == namespaceId && "oMath" == name)
-    return new OfficeMath();
-    
-if( 21 == namespaceId && "r" == name)
-    return new Run();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-if( 23 == namespaceId && "r" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.Run();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "oMathParaPr","oMath","r","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel","r" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52,23 };
     
@@ -2960,6 +2568,7 @@ if( 23 == namespaceId && "r" == name)
         get => GetElement<ParagraphProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -3091,6 +2700,7 @@ if( 23 == namespaceId && "r" == name)
     [ChildElementInfo(typeof(OfficeMath))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "oMath")]
 public partial class OfficeMath : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10928;
@@ -3133,184 +2743,11 @@ public partial class OfficeMath : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "acc" == name)
-    return new Accent();
     
-if( 21 == namespaceId && "bar" == name)
-    return new Bar();
-    
-if( 21 == namespaceId && "box" == name)
-    return new Box();
-    
-if( 21 == namespaceId && "borderBox" == name)
-    return new BorderBox();
-    
-if( 21 == namespaceId && "d" == name)
-    return new Delimiter();
-    
-if( 21 == namespaceId && "eqArr" == name)
-    return new EquationArray();
-    
-if( 21 == namespaceId && "f" == name)
-    return new Fraction();
-    
-if( 21 == namespaceId && "func" == name)
-    return new MathFunction();
-    
-if( 21 == namespaceId && "groupChr" == name)
-    return new GroupChar();
-    
-if( 21 == namespaceId && "limLow" == name)
-    return new LimitLower();
-    
-if( 21 == namespaceId && "limUpp" == name)
-    return new LimitUpper();
-    
-if( 21 == namespaceId && "m" == name)
-    return new Matrix();
-    
-if( 21 == namespaceId && "nary" == name)
-    return new Nary();
-    
-if( 21 == namespaceId && "phant" == name)
-    return new Phantom();
-    
-if( 21 == namespaceId && "rad" == name)
-    return new Radical();
-    
-if( 21 == namespaceId && "sPre" == name)
-    return new PreSubSuper();
-    
-if( 21 == namespaceId && "sSub" == name)
-    return new Subscript();
-    
-if( 21 == namespaceId && "sSubSup" == name)
-    return new SubSuperscript();
-    
-if( 21 == namespaceId && "sSup" == name)
-    return new Superscript();
-    
-if( 21 == namespaceId && "r" == name)
-    return new Run();
-    
-if( 23 == namespaceId && "customXml" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun();
-    
-if( 23 == namespaceId && "fldSimple" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.SimpleField();
-    
-if( 23 == namespaceId && "hyperlink" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.Hyperlink();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.SdtRun();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-if( 21 == namespaceId && "oMathPara" == name)
-    return new Paragraph();
-    
-if( 21 == namespaceId && "oMath" == name)
-    return new OfficeMath();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeMath>(deep);
@@ -3361,6 +2798,7 @@ if( 21 == namespaceId && "oMath" == name)
     [ChildElementInfo(typeof(NaryLimitLocation))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "mathPr")]
 public partial class MathProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10929;
@@ -3403,64 +2841,11 @@ public partial class MathProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "mathFont" == name)
-    return new MathFont();
     
-if( 21 == namespaceId && "brkBin" == name)
-    return new BreakBinary();
-    
-if( 21 == namespaceId && "brkBinSub" == name)
-    return new BreakBinarySubtraction();
-    
-if( 21 == namespaceId && "smallFrac" == name)
-    return new SmallFraction();
-    
-if( 21 == namespaceId && "dispDef" == name)
-    return new DisplayDefaults();
-    
-if( 21 == namespaceId && "lMargin" == name)
-    return new LeftMargin();
-    
-if( 21 == namespaceId && "rMargin" == name)
-    return new RightMargin();
-    
-if( 21 == namespaceId && "defJc" == name)
-    return new DefaultJustification();
-    
-if( 21 == namespaceId && "preSp" == name)
-    return new PreSpacing();
-    
-if( 21 == namespaceId && "postSp" == name)
-    return new PostSpacing();
-    
-if( 21 == namespaceId && "interSp" == name)
-    return new InterSpacing();
-    
-if( 21 == namespaceId && "intraSp" == name)
-    return new IntraSpacing();
-    
-if( 21 == namespaceId && "wrapIndent" == name)
-    return new WrapIndent();
-    
-if( 21 == namespaceId && "wrapRight" == name)
-    return new WrapRight();
-    
-if( 21 == namespaceId && "intLim" == name)
-    return new IntegralLimitLocation();
-    
-if( 21 == namespaceId && "naryLim" == name)
-    return new NaryLimitLocation();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "mathFont","brkBin","brkBinSub","smallFrac","dispDef","lMargin","rMargin","defJc","preSp","postSp","interSp","intraSp","wrapIndent","wrapRight","intLim","naryLim" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21 };
     
@@ -3481,6 +2866,7 @@ if( 21 == namespaceId && "naryLim" == name)
         get => GetElement<MathFont>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Break on Binary Operators.</para>
     /// <para> Represents the following element tag in the schema: m:brkBin </para>
@@ -3493,6 +2879,7 @@ if( 21 == namespaceId && "naryLim" == name)
         get => GetElement<BreakBinary>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Break on Binary Subtraction.</para>
     /// <para> Represents the following element tag in the schema: m:brkBinSub </para>
@@ -3505,6 +2892,7 @@ if( 21 == namespaceId && "naryLim" == name)
         get => GetElement<BreakBinarySubtraction>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Small Fraction.</para>
     /// <para> Represents the following element tag in the schema: m:smallFrac </para>
@@ -3517,6 +2905,7 @@ if( 21 == namespaceId && "naryLim" == name)
         get => GetElement<SmallFraction>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Use Display Math Defaults.</para>
     /// <para> Represents the following element tag in the schema: m:dispDef </para>
@@ -3529,6 +2918,7 @@ if( 21 == namespaceId && "naryLim" == name)
         get => GetElement<DisplayDefaults>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Left Margin.</para>
     /// <para> Represents the following element tag in the schema: m:lMargin </para>
@@ -3541,6 +2931,7 @@ if( 21 == namespaceId && "naryLim" == name)
         get => GetElement<LeftMargin>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Right Margin.</para>
     /// <para> Represents the following element tag in the schema: m:rMargin </para>
@@ -3553,6 +2944,7 @@ if( 21 == namespaceId && "naryLim" == name)
         get => GetElement<RightMargin>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Default Justification.</para>
     /// <para> Represents the following element tag in the schema: m:defJc </para>
@@ -3565,6 +2957,7 @@ if( 21 == namespaceId && "naryLim" == name)
         get => GetElement<DefaultJustification>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> Pre-Equation Spacing.</para>
     /// <para> Represents the following element tag in the schema: m:preSp </para>
@@ -3577,6 +2970,7 @@ if( 21 == namespaceId && "naryLim" == name)
         get => GetElement<PreSpacing>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Post-Equation Spacing.</para>
     /// <para> Represents the following element tag in the schema: m:postSp </para>
@@ -3589,6 +2983,7 @@ if( 21 == namespaceId && "naryLim" == name)
         get => GetElement<PostSpacing>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> Inter-Equation Spacing.</para>
     /// <para> Represents the following element tag in the schema: m:interSp </para>
@@ -3601,6 +2996,7 @@ if( 21 == namespaceId && "naryLim" == name)
         get => GetElement<InterSpacing>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Intra-Equation Spacing.</para>
     /// <para> Represents the following element tag in the schema: m:intraSp </para>
@@ -3613,6 +3009,7 @@ if( 21 == namespaceId && "naryLim" == name)
         get => GetElement<IntraSpacing>(11);
         set => SetElement(11, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -3626,6 +3023,7 @@ if( 21 == namespaceId && "naryLim" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "lit")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Literal : OnOffType
 {
@@ -3653,6 +3051,7 @@ public partial class Literal : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "nor")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NormalText : OnOffType
 {
@@ -3680,6 +3079,7 @@ public partial class NormalText : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "aln")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Alignment : OnOffType
 {
@@ -3707,6 +3107,7 @@ public partial class Alignment : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "opEmu")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OperatorEmulator : OnOffType
 {
@@ -3734,6 +3135,7 @@ public partial class OperatorEmulator : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "noBreak")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NoBreak : OnOffType
 {
@@ -3761,6 +3163,7 @@ public partial class NoBreak : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "diff")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Differential : OnOffType
 {
@@ -3788,6 +3191,7 @@ public partial class Differential : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "hideTop")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HideTop : OnOffType
 {
@@ -3815,6 +3219,7 @@ public partial class HideTop : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "hideBot")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HideBottom : OnOffType
 {
@@ -3842,6 +3247,7 @@ public partial class HideBottom : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "hideLeft")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HideLeft : OnOffType
 {
@@ -3869,6 +3275,7 @@ public partial class HideLeft : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "hideRight")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HideRight : OnOffType
 {
@@ -3896,6 +3303,7 @@ public partial class HideRight : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "strikeH")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StrikeHorizontal : OnOffType
 {
@@ -3923,6 +3331,7 @@ public partial class StrikeHorizontal : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "strikeV")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StrikeVertical : OnOffType
 {
@@ -3950,6 +3359,7 @@ public partial class StrikeVertical : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "strikeBLTR")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StrikeBottomLeftToTopRight : OnOffType
 {
@@ -3977,6 +3387,7 @@ public partial class StrikeBottomLeftToTopRight : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "strikeTLBR")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StrikeTopLeftToBottomRight : OnOffType
 {
@@ -4004,6 +3415,7 @@ public partial class StrikeTopLeftToBottomRight : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "grow")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GrowOperators : OnOffType
 {
@@ -4031,6 +3443,7 @@ public partial class GrowOperators : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "maxDist")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MaxDistribution : OnOffType
 {
@@ -4058,6 +3471,7 @@ public partial class MaxDistribution : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "objDist")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ObjectDistribution : OnOffType
 {
@@ -4085,6 +3499,7 @@ public partial class ObjectDistribution : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "plcHide")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HidePlaceholder : OnOffType
 {
@@ -4112,6 +3527,7 @@ public partial class HidePlaceholder : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "subHide")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HideSubArgument : OnOffType
 {
@@ -4139,6 +3555,7 @@ public partial class HideSubArgument : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "supHide")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HideSuperArgument : OnOffType
 {
@@ -4166,6 +3583,7 @@ public partial class HideSuperArgument : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "show")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShowPhantom : OnOffType
 {
@@ -4193,6 +3611,7 @@ public partial class ShowPhantom : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "zeroWid")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ZeroWidth : OnOffType
 {
@@ -4220,6 +3639,7 @@ public partial class ZeroWidth : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "zeroAsc")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ZeroAscent : OnOffType
 {
@@ -4247,6 +3667,7 @@ public partial class ZeroAscent : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "zeroDesc")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ZeroDescent : OnOffType
 {
@@ -4274,6 +3695,7 @@ public partial class ZeroDescent : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "transp")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Transparent : OnOffType
 {
@@ -4301,6 +3723,7 @@ public partial class Transparent : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "degHide")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HideDegree : OnOffType
 {
@@ -4328,6 +3751,7 @@ public partial class HideDegree : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "alnScr")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AlignScripts : OnOffType
 {
@@ -4355,6 +3779,7 @@ public partial class AlignScripts : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "smallFrac")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SmallFraction : OnOffType
 {
@@ -4382,6 +3807,7 @@ public partial class SmallFraction : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "dispDef")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DisplayDefaults : OnOffType
 {
@@ -4409,6 +3835,7 @@ public partial class DisplayDefaults : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "wrapRight")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WrapRight : OnOffType
 {
@@ -4466,6 +3893,7 @@ public abstract partial class OnOffType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "brk")]
 public partial class Break : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10932;
@@ -4535,6 +3963,7 @@ public partial class Break : OpenXmlLeafElement
     [ChildElementInfo(typeof(Alignment))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "rPr")]
 public partial class RunProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10934;
@@ -4577,34 +4006,11 @@ public partial class RunProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "lit" == name)
-    return new Literal();
     
-if( 21 == namespaceId && "nor" == name)
-    return new NormalText();
-    
-if( 21 == namespaceId && "scr" == name)
-    return new Script();
-    
-if( 21 == namespaceId && "sty" == name)
-    return new Style();
-    
-if( 21 == namespaceId && "brk" == name)
-    return new Break();
-    
-if( 21 == namespaceId && "aln" == name)
-    return new Alignment();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "lit","nor","scr","sty","brk","aln" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
     
@@ -4625,6 +4031,7 @@ if( 21 == namespaceId && "aln" == name)
         get => GetElement<Literal>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -4639,6 +4046,7 @@ if( 21 == namespaceId && "aln" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "t")]
 public partial class Text : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10935;
@@ -4694,6 +4102,7 @@ public partial class Text : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "chr")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AccentChar : CharType
 {
@@ -4721,6 +4130,7 @@ public partial class AccentChar : CharType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "begChr")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BeginChar : CharType
 {
@@ -4748,6 +4158,7 @@ public partial class BeginChar : CharType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "sepChr")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SeparatorChar : CharType
 {
@@ -4775,6 +4186,7 @@ public partial class SeparatorChar : CharType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "endChr")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EndChar : CharType
 {
@@ -4847,6 +4259,7 @@ public abstract partial class CharType : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.MoveToMathControl))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "ctrlPr")]
 public partial class ControlProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10937;
@@ -4889,31 +4302,11 @@ public partial class ControlProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "rPr" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.RunProperties();
     
-if( 23 == namespaceId && "ins" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.InsertedMathControl();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.DeletedMathControl();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveFromMathControl();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveToMathControl();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ControlProperties>(deep);
@@ -4936,6 +4329,7 @@ if( 23 == namespaceId && "moveTo" == name)
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "accPr")]
 public partial class AccentProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10938;
@@ -4978,22 +4372,11 @@ public partial class AccentProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "chr" == name)
-    return new AccentChar();
     
-if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "chr","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
     
@@ -5014,6 +4397,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<AccentChar>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Control Properties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -5026,6 +4410,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ControlProperties>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -5102,6 +4487,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "e")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Base : OfficeMathArgumentType
 {
@@ -5141,6 +4527,7 @@ public partial class Base : OfficeMathArgumentType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -5217,6 +4604,7 @@ public partial class Base : OfficeMathArgumentType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "num")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Numerator : OfficeMathArgumentType
 {
@@ -5256,6 +4644,7 @@ public partial class Numerator : OfficeMathArgumentType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -5332,6 +4721,7 @@ public partial class Numerator : OfficeMathArgumentType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "den")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Denominator : OfficeMathArgumentType
 {
@@ -5371,6 +4761,7 @@ public partial class Denominator : OfficeMathArgumentType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -5447,6 +4838,7 @@ public partial class Denominator : OfficeMathArgumentType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "fName")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class FunctionName : OfficeMathArgumentType
 {
@@ -5486,6 +4878,7 @@ public partial class FunctionName : OfficeMathArgumentType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -5562,6 +4955,7 @@ public partial class FunctionName : OfficeMathArgumentType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "lim")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Limit : OfficeMathArgumentType
 {
@@ -5601,6 +4995,7 @@ public partial class Limit : OfficeMathArgumentType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -5677,6 +5072,7 @@ public partial class Limit : OfficeMathArgumentType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "sub")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SubArgument : OfficeMathArgumentType
 {
@@ -5716,6 +5112,7 @@ public partial class SubArgument : OfficeMathArgumentType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -5792,6 +5189,7 @@ public partial class SubArgument : OfficeMathArgumentType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "sup")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SuperArgument : OfficeMathArgumentType
 {
@@ -5831,6 +5229,7 @@ public partial class SuperArgument : OfficeMathArgumentType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -5907,6 +5306,7 @@ public partial class SuperArgument : OfficeMathArgumentType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "deg")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Degree : OfficeMathArgumentType
 {
@@ -5946,6 +5346,7 @@ public partial class Degree : OfficeMathArgumentType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -6082,187 +5483,7 @@ public abstract partial class OfficeMathArgumentType : OpenXmlCompositeElement
 {
         
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "argPr" == name)
-    return new ArgumentProperties();
     
-if( 21 == namespaceId && "acc" == name)
-    return new Accent();
-    
-if( 21 == namespaceId && "bar" == name)
-    return new Bar();
-    
-if( 21 == namespaceId && "box" == name)
-    return new Box();
-    
-if( 21 == namespaceId && "borderBox" == name)
-    return new BorderBox();
-    
-if( 21 == namespaceId && "d" == name)
-    return new Delimiter();
-    
-if( 21 == namespaceId && "eqArr" == name)
-    return new EquationArray();
-    
-if( 21 == namespaceId && "f" == name)
-    return new Fraction();
-    
-if( 21 == namespaceId && "func" == name)
-    return new MathFunction();
-    
-if( 21 == namespaceId && "groupChr" == name)
-    return new GroupChar();
-    
-if( 21 == namespaceId && "limLow" == name)
-    return new LimitLower();
-    
-if( 21 == namespaceId && "limUpp" == name)
-    return new LimitUpper();
-    
-if( 21 == namespaceId && "m" == name)
-    return new Matrix();
-    
-if( 21 == namespaceId && "nary" == name)
-    return new Nary();
-    
-if( 21 == namespaceId && "phant" == name)
-    return new Phantom();
-    
-if( 21 == namespaceId && "rad" == name)
-    return new Radical();
-    
-if( 21 == namespaceId && "sPre" == name)
-    return new PreSubSuper();
-    
-if( 21 == namespaceId && "sSub" == name)
-    return new Subscript();
-    
-if( 21 == namespaceId && "sSubSup" == name)
-    return new SubSuperscript();
-    
-if( 21 == namespaceId && "sSup" == name)
-    return new Superscript();
-    
-if( 21 == namespaceId && "r" == name)
-    return new Run();
-    
-if( 23 == namespaceId && "customXml" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlRun();
-    
-if( 23 == namespaceId && "fldSimple" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.SimpleField();
-    
-if( 23 == namespaceId && "hyperlink" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.Hyperlink();
-    
-if( 23 == namespaceId && "sdt" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.SdtRun();
-    
-if( 23 == namespaceId && "proofErr" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.ProofError();
-    
-if( 23 == namespaceId && "permStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.PermStart();
-    
-if( 23 == namespaceId && "permEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.PermEnd();
-    
-if( 23 == namespaceId && "bookmarkStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.BookmarkStart();
-    
-if( 23 == namespaceId && "bookmarkEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.BookmarkEnd();
-    
-if( 23 == namespaceId && "commentRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CommentRangeStart();
-    
-if( 23 == namespaceId && "commentRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CommentRangeEnd();
-    
-if( 23 == namespaceId && "moveFromRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeStart();
-    
-if( 23 == namespaceId && "moveFromRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveFromRangeEnd();
-    
-if( 23 == namespaceId && "moveToRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeStart();
-    
-if( 23 == namespaceId && "moveToRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveToRangeEnd();
-    
-if( 23 == namespaceId && "customXmlInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeStart();
-    
-if( 23 == namespaceId && "customXmlInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlInsRangeEnd();
-    
-if( 23 == namespaceId && "customXmlDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeStart();
-    
-if( 23 == namespaceId && "customXmlDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlDelRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveFromRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveFromRangeEnd();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeStart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeStart();
-    
-if( 23 == namespaceId && "customXmlMoveToRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.CustomXmlMoveToRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictInsRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictInsertionRangeEnd();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeStart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeStart();
-    
-if( 52 == namespaceId && "customXmlConflictDelRangeEnd" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.CustomXmlConflictDeletionRangeEnd();
-    
-if( 23 == namespaceId && "ins" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.InsertedRun();
-    
-if( 23 == namespaceId && "del" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.DeletedRun();
-    
-if( 23 == namespaceId && "moveFrom" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveFromRun();
-    
-if( 23 == namespaceId && "moveTo" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.MoveToRun();
-    
-if( 23 == namespaceId && "contentPart" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.ContentPart();
-    
-if( 52 == namespaceId && "conflictIns" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictInsertion();
-    
-if( 52 == namespaceId && "conflictDel" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.RunConflictDeletion();
-    
-if( 21 == namespaceId && "oMathPara" == name)
-    return new Paragraph();
-    
-if( 21 == namespaceId && "oMath" == name)
-    return new OfficeMath();
-    
-if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "argPr","acc","bar","box","borderBox","d","eqArr","f","func","groupChr","limLow","limUpp","m","nary","phant","rad","sPre","sSub","sSubSup","sSup","r","customXml","fldSimple","hyperlink","sdt","proofErr","permStart","permEnd","bookmarkStart","bookmarkEnd","commentRangeStart","commentRangeEnd","moveFromRangeStart","moveFromRangeEnd","moveToRangeStart","moveToRangeEnd","customXmlInsRangeStart","customXmlInsRangeEnd","customXmlDelRangeStart","customXmlDelRangeEnd","customXmlMoveFromRangeStart","customXmlMoveFromRangeEnd","customXmlMoveToRangeStart","customXmlMoveToRangeEnd","customXmlConflictInsRangeStart","customXmlConflictInsRangeEnd","customXmlConflictDelRangeStart","customXmlConflictDelRangeEnd","ins","del","moveFrom","moveTo","contentPart","conflictIns","conflictDel","oMathPara","oMath","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,23,52,52,52,52,23,23,23,23,23,52,52,21,21,21 };
     
@@ -6283,6 +5504,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ArgumentProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     
@@ -6316,6 +5538,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -6326,6 +5549,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "pos")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Position : TopBottomType
 {
@@ -6353,6 +5577,7 @@ public partial class Position : TopBottomType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "vertJc")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VerticalJustification : TopBottomType
 {
@@ -6419,6 +5644,7 @@ public abstract partial class TopBottomType : OpenXmlLeafElement
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "barPr")]
 public partial class BarProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10941;
@@ -6461,22 +5687,11 @@ public partial class BarProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "pos" == name)
-    return new Position();
     
-if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "pos","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
     
@@ -6497,6 +5712,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<Position>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -6509,6 +5725,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ControlProperties>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -6540,6 +5757,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "boxPr")]
 public partial class BoxProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10945;
@@ -6582,34 +5800,11 @@ public partial class BoxProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "opEmu" == name)
-    return new OperatorEmulator();
     
-if( 21 == namespaceId && "noBreak" == name)
-    return new NoBreak();
-    
-if( 21 == namespaceId && "diff" == name)
-    return new Differential();
-    
-if( 21 == namespaceId && "brk" == name)
-    return new Break();
-    
-if( 21 == namespaceId && "aln" == name)
-    return new Alignment();
-    
-if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "opEmu","noBreak","diff","brk","aln","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
     
@@ -6630,6 +5825,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<OperatorEmulator>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> No Break.</para>
     /// <para> Represents the following element tag in the schema: m:noBreak </para>
@@ -6642,6 +5838,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<NoBreak>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Differential.</para>
     /// <para> Represents the following element tag in the schema: m:diff </para>
@@ -6654,6 +5851,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<Differential>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Break.</para>
     /// <para> Represents the following element tag in the schema: m:brk </para>
@@ -6666,6 +5864,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<Break>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Alignment.</para>
     /// <para> Represents the following element tag in the schema: m:aln </para>
@@ -6678,6 +5877,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<Alignment>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -6690,6 +5890,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ControlProperties>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -6727,6 +5928,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "borderBoxPr")]
 public partial class BorderBoxProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10954;
@@ -6769,43 +5971,11 @@ public partial class BorderBoxProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "hideTop" == name)
-    return new HideTop();
     
-if( 21 == namespaceId && "hideBot" == name)
-    return new HideBottom();
-    
-if( 21 == namespaceId && "hideLeft" == name)
-    return new HideLeft();
-    
-if( 21 == namespaceId && "hideRight" == name)
-    return new HideRight();
-    
-if( 21 == namespaceId && "strikeH" == name)
-    return new StrikeHorizontal();
-    
-if( 21 == namespaceId && "strikeV" == name)
-    return new StrikeVertical();
-    
-if( 21 == namespaceId && "strikeBLTR" == name)
-    return new StrikeBottomLeftToTopRight();
-    
-if( 21 == namespaceId && "strikeTLBR" == name)
-    return new StrikeTopLeftToBottomRight();
-    
-if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "hideTop","hideBot","hideLeft","hideRight","strikeH","strikeV","strikeBLTR","strikeTLBR","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21,21,21,21 };
     
@@ -6826,6 +5996,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<HideTop>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Hide Bottom Edge.</para>
     /// <para> Represents the following element tag in the schema: m:hideBot </para>
@@ -6838,6 +6009,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<HideBottom>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Hide Left Edge.</para>
     /// <para> Represents the following element tag in the schema: m:hideLeft </para>
@@ -6850,6 +6022,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<HideLeft>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Hide Right Edge.</para>
     /// <para> Represents the following element tag in the schema: m:hideRight </para>
@@ -6862,6 +6035,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<HideRight>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Border Box Strikethrough Horizontal.</para>
     /// <para> Represents the following element tag in the schema: m:strikeH </para>
@@ -6874,6 +6048,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<StrikeHorizontal>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Border Box Strikethrough Vertical.</para>
     /// <para> Represents the following element tag in the schema: m:strikeV </para>
@@ -6886,6 +6061,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<StrikeVertical>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Border Box Strikethrough Bottom-Left to Top-Right.</para>
     /// <para> Represents the following element tag in the schema: m:strikeBLTR </para>
@@ -6898,6 +6074,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<StrikeBottomLeftToTopRight>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Border Box Strikethrough Top-Left to Bottom-Right.</para>
     /// <para> Represents the following element tag in the schema: m:strikeTLBR </para>
@@ -6910,6 +6087,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<StrikeTopLeftToBottomRight>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -6922,6 +6100,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ControlProperties>(8);
         set => SetElement(8, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -6936,6 +6115,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "shp")]
 public partial class Shape : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10959;
@@ -6996,6 +6176,7 @@ public partial class Shape : OpenXmlLeafElement
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "dPr")]
 public partial class DelimiterProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10960;
@@ -7038,34 +6219,11 @@ public partial class DelimiterProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "begChr" == name)
-    return new BeginChar();
     
-if( 21 == namespaceId && "sepChr" == name)
-    return new SeparatorChar();
-    
-if( 21 == namespaceId && "endChr" == name)
-    return new EndChar();
-    
-if( 21 == namespaceId && "grow" == name)
-    return new GrowOperators();
-    
-if( 21 == namespaceId && "shp" == name)
-    return new Shape();
-    
-if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "begChr","sepChr","endChr","grow","shp","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
     
@@ -7086,6 +6244,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<BeginChar>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Delimiter Separator Character.</para>
     /// <para> Represents the following element tag in the schema: m:sepChr </para>
@@ -7098,6 +6257,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<SeparatorChar>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Delimiter Ending Character.</para>
     /// <para> Represents the following element tag in the schema: m:endChr </para>
@@ -7110,6 +6270,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<EndChar>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Delimiter Grow.</para>
     /// <para> Represents the following element tag in the schema: m:grow </para>
@@ -7122,6 +6283,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<GrowOperators>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Shape (Delimiters).</para>
     /// <para> Represents the following element tag in the schema: m:shp </para>
@@ -7134,6 +6296,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<Shape>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -7146,6 +6309,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ControlProperties>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -7160,6 +6324,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "baseJc")]
 public partial class BaseJustification : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10961;
@@ -7202,6 +6367,7 @@ public partial class BaseJustification : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "rSpRule")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RowSpacingRule : SpacingRuleType
 {
@@ -7229,6 +6395,7 @@ public partial class RowSpacingRule : SpacingRuleType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "cGpRule")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnGapRule : SpacingRuleType
 {
@@ -7285,6 +6452,7 @@ public abstract partial class SpacingRuleType : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "rSp")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RowSpacing : UnsignedShortType
 {
@@ -7312,6 +6480,7 @@ public partial class RowSpacing : UnsignedShortType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "cGp")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnGap : UnsignedShortType
 {
@@ -7386,6 +6555,7 @@ public abstract partial class UnsignedShortType : OpenXmlLeafElement
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "eqArrPr")]
 public partial class EquationArrayProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10966;
@@ -7428,34 +6598,11 @@ public partial class EquationArrayProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "baseJc" == name)
-    return new BaseJustification();
     
-if( 21 == namespaceId && "maxDist" == name)
-    return new MaxDistribution();
-    
-if( 21 == namespaceId && "objDist" == name)
-    return new ObjectDistribution();
-    
-if( 21 == namespaceId && "rSpRule" == name)
-    return new RowSpacingRule();
-    
-if( 21 == namespaceId && "rSp" == name)
-    return new RowSpacing();
-    
-if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "baseJc","maxDist","objDist","rSpRule","rSp","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
     
@@ -7476,6 +6623,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<BaseJustification>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Maximum Distribution.</para>
     /// <para> Represents the following element tag in the schema: m:maxDist </para>
@@ -7488,6 +6636,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<MaxDistribution>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Object Distribution.</para>
     /// <para> Represents the following element tag in the schema: m:objDist </para>
@@ -7500,6 +6649,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ObjectDistribution>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Row Spacing Rule.</para>
     /// <para> Represents the following element tag in the schema: m:rSpRule </para>
@@ -7512,6 +6662,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<RowSpacingRule>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Row Spacing (Equation Array).</para>
     /// <para> Represents the following element tag in the schema: m:rSp </para>
@@ -7524,6 +6675,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<RowSpacing>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -7536,6 +6688,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ControlProperties>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -7550,6 +6703,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "type")]
 public partial class FractionType : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10967;
@@ -7602,6 +6756,7 @@ public partial class FractionType : OpenXmlLeafElement
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "fPr")]
 public partial class FractionProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10968;
@@ -7644,22 +6799,11 @@ public partial class FractionProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "type" == name)
-    return new FractionType();
     
-if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "type","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
     
@@ -7680,6 +6824,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<FractionType>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -7692,6 +6837,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ControlProperties>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -7713,6 +6859,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "funcPr")]
 public partial class FunctionProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10971;
@@ -7755,19 +6902,11 @@ public partial class FunctionProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21 };
     
@@ -7788,6 +6927,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -7815,6 +6955,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "groupChrPr")]
 public partial class GroupCharProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10974;
@@ -7857,28 +6998,11 @@ public partial class GroupCharProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "chr" == name)
-    return new AccentChar();
     
-if( 21 == namespaceId && "pos" == name)
-    return new Position();
-    
-if( 21 == namespaceId && "vertJc" == name)
-    return new VerticalJustification();
-    
-if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "chr","pos","vertJc","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21 };
     
@@ -7899,6 +7023,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<AccentChar>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Position (Group Character).</para>
     /// <para> Represents the following element tag in the schema: m:pos </para>
@@ -7911,6 +7036,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<Position>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Vertical Justification.</para>
     /// <para> Represents the following element tag in the schema: m:vertJc </para>
@@ -7923,6 +7049,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<VerticalJustification>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -7935,6 +7062,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ControlProperties>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -7956,6 +7084,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "limLowPr")]
 public partial class LimitLowerProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10975;
@@ -7998,19 +7127,11 @@ public partial class LimitLowerProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21 };
     
@@ -8031,6 +7152,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -8052,6 +7174,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "limUppPr")]
 public partial class LimitUpperProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10977;
@@ -8094,19 +7217,11 @@ public partial class LimitUpperProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21 };
     
@@ -8127,6 +7242,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -8141,6 +7257,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "count")]
 public partial class MatrixColumnCount : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10978;
@@ -8184,6 +7301,7 @@ public partial class MatrixColumnCount : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "mcJc")]
 public partial class MatrixColumnJustification : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10979;
@@ -8236,6 +7354,7 @@ public partial class MatrixColumnJustification : OpenXmlLeafElement
     [ChildElementInfo(typeof(MatrixColumnJustification))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "mcPr")]
 public partial class MatrixColumnProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10980;
@@ -8278,22 +7397,11 @@ public partial class MatrixColumnProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "count" == name)
-    return new MatrixColumnCount();
     
-if( 21 == namespaceId && "mcJc" == name)
-    return new MatrixColumnJustification();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "count","mcJc" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
     
@@ -8314,6 +7422,7 @@ if( 21 == namespaceId && "mcJc" == name)
         get => GetElement<MatrixColumnCount>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Matrix Column Justification.</para>
     /// <para> Represents the following element tag in the schema: m:mcJc </para>
@@ -8326,6 +7435,7 @@ if( 21 == namespaceId && "mcJc" == name)
         get => GetElement<MatrixColumnJustification>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -8347,6 +7457,7 @@ if( 21 == namespaceId && "mcJc" == name)
     [ChildElementInfo(typeof(MatrixColumnProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "mc")]
 public partial class MatrixColumn : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10981;
@@ -8389,19 +7500,11 @@ public partial class MatrixColumn : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "mcPr" == name)
-    return new MatrixColumnProperties();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "mcPr" };
     private static readonly byte[] eleNamespaceIds = { 21 };
     
@@ -8422,6 +7525,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<MatrixColumnProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -8435,6 +7539,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "cSp")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ColumnSpacing : TwipsMeasureType
 {
@@ -8462,6 +7567,7 @@ public partial class ColumnSpacing : TwipsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "lMargin")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LeftMargin : TwipsMeasureType
 {
@@ -8489,6 +7595,7 @@ public partial class LeftMargin : TwipsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "rMargin")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RightMargin : TwipsMeasureType
 {
@@ -8516,6 +7623,7 @@ public partial class RightMargin : TwipsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "preSp")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PreSpacing : TwipsMeasureType
 {
@@ -8543,6 +7651,7 @@ public partial class PreSpacing : TwipsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "postSp")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PostSpacing : TwipsMeasureType
 {
@@ -8570,6 +7679,7 @@ public partial class PostSpacing : TwipsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "interSp")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class InterSpacing : TwipsMeasureType
 {
@@ -8597,6 +7707,7 @@ public partial class InterSpacing : TwipsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "intraSp")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class IntraSpacing : TwipsMeasureType
 {
@@ -8624,6 +7735,7 @@ public partial class IntraSpacing : TwipsMeasureType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "wrapIndent")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WrapIndent : TwipsMeasureType
 {
@@ -8688,6 +7800,7 @@ public abstract partial class TwipsMeasureType : OpenXmlLeafElement
     [ChildElementInfo(typeof(MatrixColumn))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "mcs")]
 public partial class MatrixColumns : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10986;
@@ -8730,19 +7843,11 @@ public partial class MatrixColumns : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "mc" == name)
-    return new MatrixColumn();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MatrixColumns>(deep);
@@ -8779,6 +7884,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "mPr")]
 public partial class MatrixProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10987;
@@ -8821,43 +7927,11 @@ public partial class MatrixProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "baseJc" == name)
-    return new BaseJustification();
     
-if( 21 == namespaceId && "plcHide" == name)
-    return new HidePlaceholder();
-    
-if( 21 == namespaceId && "rSpRule" == name)
-    return new RowSpacingRule();
-    
-if( 21 == namespaceId && "cGpRule" == name)
-    return new ColumnGapRule();
-    
-if( 21 == namespaceId && "rSp" == name)
-    return new RowSpacing();
-    
-if( 21 == namespaceId && "cSp" == name)
-    return new ColumnSpacing();
-    
-if( 21 == namespaceId && "cGp" == name)
-    return new ColumnGap();
-    
-if( 21 == namespaceId && "mcs" == name)
-    return new MatrixColumns();
-    
-if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "baseJc","plcHide","rSpRule","cGpRule","rSp","cSp","cGp","mcs","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21,21,21,21 };
     
@@ -8878,6 +7952,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<BaseJustification>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Hide Placeholders (Matrix).</para>
     /// <para> Represents the following element tag in the schema: m:plcHide </para>
@@ -8890,6 +7965,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<HidePlaceholder>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Row Spacing Rule.</para>
     /// <para> Represents the following element tag in the schema: m:rSpRule </para>
@@ -8902,6 +7978,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<RowSpacingRule>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Matrix Column Gap Rule.</para>
     /// <para> Represents the following element tag in the schema: m:cGpRule </para>
@@ -8914,6 +7991,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ColumnGapRule>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Row Spacing (Matrix).</para>
     /// <para> Represents the following element tag in the schema: m:rSp </para>
@@ -8926,6 +8004,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<RowSpacing>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Matrix Column Spacing.</para>
     /// <para> Represents the following element tag in the schema: m:cSp </para>
@@ -8938,6 +8017,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ColumnSpacing>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Matrix Column Gap.</para>
     /// <para> Represents the following element tag in the schema: m:cGp </para>
@@ -8950,6 +8030,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ColumnGap>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Matrix Columns.</para>
     /// <para> Represents the following element tag in the schema: m:mcs </para>
@@ -8962,6 +8043,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<MatrixColumns>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -8974,6 +8056,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ControlProperties>(8);
         set => SetElement(8, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -8995,6 +8078,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
     [ChildElementInfo(typeof(Base))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "mr")]
 public partial class MatrixRow : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10988;
@@ -9037,19 +8121,11 @@ public partial class MatrixRow : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "e" == name)
-    return new Base();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MatrixRow>(deep);
@@ -9062,6 +8138,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "limLoc")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LimitLocation : LimitLocationType
 {
@@ -9089,6 +8166,7 @@ public partial class LimitLocation : LimitLocationType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "intLim")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class IntegralLimitLocation : LimitLocationType
 {
@@ -9116,6 +8194,7 @@ public partial class IntegralLimitLocation : LimitLocationType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "naryLim")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NaryLimitLocation : LimitLocationType
 {
@@ -9190,6 +8269,7 @@ public abstract partial class LimitLocationType : OpenXmlLeafElement
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "naryPr")]
 public partial class NaryProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10992;
@@ -9232,34 +8312,11 @@ public partial class NaryProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "chr" == name)
-    return new AccentChar();
     
-if( 21 == namespaceId && "limLoc" == name)
-    return new LimitLocation();
-    
-if( 21 == namespaceId && "grow" == name)
-    return new GrowOperators();
-    
-if( 21 == namespaceId && "subHide" == name)
-    return new HideSubArgument();
-    
-if( 21 == namespaceId && "supHide" == name)
-    return new HideSuperArgument();
-    
-if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "chr","limLoc","grow","subHide","supHide","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
     
@@ -9280,6 +8337,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<AccentChar>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> n-ary Limit Location.</para>
     /// <para> Represents the following element tag in the schema: m:limLoc </para>
@@ -9292,6 +8350,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<LimitLocation>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> n-ary Grow.</para>
     /// <para> Represents the following element tag in the schema: m:grow </para>
@@ -9304,6 +8363,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<GrowOperators>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Hide Subscript (n-ary).</para>
     /// <para> Represents the following element tag in the schema: m:subHide </para>
@@ -9316,6 +8376,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<HideSubArgument>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Hide Superscript (n-ary).</para>
     /// <para> Represents the following element tag in the schema: m:supHide </para>
@@ -9328,6 +8389,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<HideSuperArgument>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -9340,6 +8402,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ControlProperties>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -9371,6 +8434,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "phantPr")]
 public partial class PhantomProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11000;
@@ -9413,34 +8477,11 @@ public partial class PhantomProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "show" == name)
-    return new ShowPhantom();
     
-if( 21 == namespaceId && "zeroWid" == name)
-    return new ZeroWidth();
-    
-if( 21 == namespaceId && "zeroAsc" == name)
-    return new ZeroAscent();
-    
-if( 21 == namespaceId && "zeroDesc" == name)
-    return new ZeroDescent();
-    
-if( 21 == namespaceId && "transp" == name)
-    return new Transparent();
-    
-if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "show","zeroWid","zeroAsc","zeroDesc","transp","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21,21,21,21,21 };
     
@@ -9461,6 +8502,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ShowPhantom>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Phantom Zero Width.</para>
     /// <para> Represents the following element tag in the schema: m:zeroWid </para>
@@ -9473,6 +8515,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ZeroWidth>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Phantom Zero Ascent.</para>
     /// <para> Represents the following element tag in the schema: m:zeroAsc </para>
@@ -9485,6 +8528,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ZeroAscent>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Phantom Zero Descent.</para>
     /// <para> Represents the following element tag in the schema: m:zeroDesc </para>
@@ -9497,6 +8541,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ZeroDescent>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Transparent (Phantom).</para>
     /// <para> Represents the following element tag in the schema: m:transp </para>
@@ -9509,6 +8554,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<Transparent>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -9521,6 +8567,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ControlProperties>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -9544,6 +8591,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "radPr")]
 public partial class RadicalProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11002;
@@ -9586,22 +8634,11 @@ public partial class RadicalProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "degHide" == name)
-    return new HideDegree();
     
-if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "degHide","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
     
@@ -9622,6 +8659,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<HideDegree>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -9634,6 +8672,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ControlProperties>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -9655,6 +8694,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "sPrePr")]
 public partial class PreSubSuperProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11004;
@@ -9697,19 +8737,11 @@ public partial class PreSubSuperProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21 };
     
@@ -9730,6 +8762,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -9751,6 +8784,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "sSubPr")]
 public partial class SubscriptProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11005;
@@ -9793,19 +8827,11 @@ public partial class SubscriptProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21 };
     
@@ -9826,6 +8852,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -9849,6 +8876,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "sSubSupPr")]
 public partial class SubSuperscriptProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11007;
@@ -9891,22 +8919,11 @@ public partial class SubSuperscriptProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "alnScr" == name)
-    return new AlignScripts();
     
-if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "alnScr","ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21,21 };
     
@@ -9927,6 +8944,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<AlignScripts>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> ControlProperties.</para>
     /// <para> Represents the following element tag in the schema: m:ctrlPr </para>
@@ -9939,6 +8957,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
         get => GetElement<ControlProperties>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -9960,6 +8979,7 @@ if( 21 == namespaceId && "ctrlPr" == name)
     [ChildElementInfo(typeof(ControlProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "sSupPr")]
 public partial class SuperscriptProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11008;
@@ -10002,19 +9022,11 @@ public partial class SuperscriptProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "ctrlPr" == name)
-    return new ControlProperties();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "ctrlPr" };
     private static readonly byte[] eleNamespaceIds = { 21 };
     
@@ -10035,6 +9047,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ControlProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -10049,6 +9062,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "argSz")]
 public partial class ArgumentSize : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11009;
@@ -10099,6 +9113,7 @@ public partial class ArgumentSize : OpenXmlLeafElement
     [ChildElementInfo(typeof(ArgumentSize))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "argPr")]
 public partial class ArgumentProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11010;
@@ -10141,19 +9156,11 @@ public partial class ArgumentProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "argSz" == name)
-    return new ArgumentSize();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "argSz" };
     private static readonly byte[] eleNamespaceIds = { 21 };
     
@@ -10174,6 +9181,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ArgumentSize>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -10187,6 +9195,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "jc")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Justification : OfficeMathJustificationType
 {
@@ -10214,6 +9223,7 @@ public partial class Justification : OfficeMathJustificationType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(21, "defJc")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DefaultJustification : OfficeMathJustificationType
 {
@@ -10271,6 +9281,7 @@ public abstract partial class OfficeMathJustificationType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "mathFont")]
 public partial class MathFont : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11012;
@@ -10314,6 +9325,7 @@ public partial class MathFont : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "brkBin")]
 public partial class BreakBinary : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11013;
@@ -10357,6 +9369,7 @@ public partial class BreakBinary : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "brkBinSub")]
 public partial class BreakBinarySubtraction : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11014;
@@ -10407,6 +9420,7 @@ public partial class BreakBinarySubtraction : OpenXmlLeafElement
     [ChildElementInfo(typeof(Justification))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(21, "oMathParaPr")]
 public partial class ParagraphProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11028;
@@ -10449,19 +9463,11 @@ public partial class ParagraphProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 21 == namespaceId && "jc" == name)
-    return new Justification();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "jc" };
     private static readonly byte[] eleNamespaceIds = { 21 };
     
@@ -10482,6 +9488,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<Justification>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>

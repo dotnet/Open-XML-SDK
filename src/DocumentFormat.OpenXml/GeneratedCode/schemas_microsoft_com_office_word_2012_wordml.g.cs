@@ -17,6 +17,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(69, "color")]
 public partial class Color : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13334;
@@ -87,6 +88,7 @@ public partial class Color : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(69, "dataBinding")]
 public partial class DataBinding : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13335;
@@ -148,6 +150,7 @@ public partial class DataBinding : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(69, "appearance")]
 public partial class Appearance : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13336;
@@ -196,6 +199,7 @@ public partial class Appearance : OpenXmlLeafElement
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(CommentEx), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(69, "commentsEx")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class CommentsEx : OpenXmlPartRootElement
 {
@@ -254,6 +258,7 @@ public partial class CommentsEx : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -271,16 +276,7 @@ public partial class CommentsEx : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 69 == namespaceId && "commentEx" == name)
-    return new CommentEx();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<CommentsEx>(deep);
@@ -299,6 +295,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
     [ChildElementInfo(typeof(Person), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(69, "people")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class People : OpenXmlPartRootElement
 {
@@ -357,6 +354,7 @@ public partial class People : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -374,16 +372,7 @@ public partial class People : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 69 == namespaceId && "person" == name)
-    return new Person();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<People>(deep);
@@ -406,6 +395,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DoNotAllowInsertDeleteSection), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(69, "repeatingSection")]
 public partial class SdtRepeatedSection : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13339;
@@ -448,22 +438,11 @@ public partial class SdtRepeatedSection : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 69 == namespaceId && "sectionTitle" == name)
-    return new SectionTitle();
     
-if( 69 == namespaceId && "doNotAllowInsertDeleteSection" == name)
-    return new DoNotAllowInsertDeleteSection();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sectionTitle","doNotAllowInsertDeleteSection" };
     private static readonly byte[] eleNamespaceIds = { 69,69 };
     
@@ -484,6 +463,7 @@ if( 69 == namespaceId && "doNotAllowInsertDeleteSection" == name)
         get => GetElement<SectionTitle>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> DoNotAllowInsertDeleteSection.</para>
     /// <para> Represents the following element tag in the schema: w15:doNotAllowInsertDeleteSection </para>
@@ -496,6 +476,7 @@ if( 69 == namespaceId && "doNotAllowInsertDeleteSection" == name)
         get => GetElement<DoNotAllowInsertDeleteSection>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -510,6 +491,7 @@ if( 69 == namespaceId && "doNotAllowInsertDeleteSection" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(69, "repeatingSectionItem")]
 public partial class SdtRepeatedSectionItem : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13340;
@@ -543,6 +525,7 @@ public partial class SdtRepeatedSectionItem : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(69, "chartTrackingRefBased")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ChartTrackingRefBased : OnOffType
 {
@@ -570,6 +553,7 @@ public partial class ChartTrackingRefBased : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(69, "collapsed")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DefaultCollapsed : OnOffType
 {
@@ -597,6 +581,7 @@ public partial class DefaultCollapsed : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(69, "webExtensionLinked")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtensionLinked : OnOffType
 {
@@ -624,6 +609,7 @@ public partial class WebExtensionLinked : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(69, "webExtensionCreated")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class WebExtensionCreated : OnOffType
 {
@@ -651,6 +637,7 @@ public partial class WebExtensionCreated : OnOffType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(69, "doNotAllowInsertDeleteSection")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DoNotAllowInsertDeleteSection : OnOffType
 {
@@ -708,6 +695,7 @@ public abstract partial class OnOffType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(69, "docId")]
 public partial class PersistentDocumentId : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13343;
@@ -751,6 +739,7 @@ public partial class PersistentDocumentId : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(69, "footnoteColumns")]
 public partial class FootnoteColumns : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13344;
@@ -794,6 +783,7 @@ public partial class FootnoteColumns : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(69, "commentEx")]
 public partial class CommentEx : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13347;
@@ -862,6 +852,7 @@ public partial class CommentEx : OpenXmlLeafElement
     [ChildElementInfo(typeof(PresenceInfo), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(69, "person")]
 public partial class Person : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13348;
@@ -922,19 +913,11 @@ public partial class Person : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 69 == namespaceId && "presenceInfo" == name)
-    return new PresenceInfo();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "presenceInfo" };
     private static readonly byte[] eleNamespaceIds = { 69 };
     
@@ -955,6 +938,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<PresenceInfo>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -969,6 +953,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(69, "presenceInfo")]
 public partial class PresenceInfo : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13349;
@@ -1021,6 +1006,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(69, "sectionTitle")]
 public partial class SectionTitle : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13350;

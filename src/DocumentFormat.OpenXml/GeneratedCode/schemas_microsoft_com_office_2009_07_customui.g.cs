@@ -16,6 +16,7 @@ namespace DocumentFormat.OpenXml.Office2010.CustomUI
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "control")]
 public partial class ControlCloneRegular : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13099;
@@ -232,6 +233,7 @@ public partial class ControlCloneRegular : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "button")]
 public partial class ButtonRegular : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13100;
@@ -476,6 +478,7 @@ public partial class ButtonRegular : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "checkBox")]
 public partial class CheckBox : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13101;
@@ -687,6 +690,7 @@ public partial class CheckBox : OpenXmlLeafElement
     [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "gallery")]
 public partial class GalleryRegular : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13102;
@@ -1072,22 +1076,11 @@ public partial class GalleryRegular : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "item" == name)
-    return new Item();
     
-if( 57 == namespaceId && "button" == name)
-    return new ButtonRegular();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GalleryRegular>(deep);
@@ -1101,6 +1094,7 @@ if( 57 == namespaceId && "button" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "toggleButton")]
 public partial class ToggleButtonRegular : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13103;
@@ -1352,6 +1346,7 @@ public partial class ToggleButtonRegular : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "menuSeparator")]
 public partial class MenuSeparator : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13104;
@@ -1460,6 +1455,7 @@ public partial class MenuSeparator : OpenXmlLeafElement
     [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "splitButton")]
 public partial class SplitButtonRegular : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13105;
@@ -1614,25 +1610,11 @@ public partial class SplitButtonRegular : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "button" == name)
-    return new VisibleButton();
     
-if( 57 == namespaceId && "toggleButton" == name)
-    return new VisibleToggleButton();
-    
-if( 57 == namespaceId && "menu" == name)
-    return new MenuRegular();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SplitButtonRegular>(deep);
@@ -1669,6 +1651,7 @@ if( 57 == namespaceId && "menu" == name)
     [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "menu")]
 public partial class MenuRegular : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13106;
@@ -1921,43 +1904,11 @@ public partial class MenuRegular : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "control" == name)
-    return new ControlCloneRegular();
     
-if( 57 == namespaceId && "button" == name)
-    return new ButtonRegular();
-    
-if( 57 == namespaceId && "checkBox" == name)
-    return new CheckBox();
-    
-if( 57 == namespaceId && "gallery" == name)
-    return new GalleryRegular();
-    
-if( 57 == namespaceId && "toggleButton" == name)
-    return new ToggleButtonRegular();
-    
-if( 57 == namespaceId && "menuSeparator" == name)
-    return new MenuSeparator();
-    
-if( 57 == namespaceId && "splitButton" == name)
-    return new SplitButtonRegular();
-    
-if( 57 == namespaceId && "menu" == name)
-    return new MenuRegular();
-    
-if( 57 == namespaceId && "dynamicMenu" == name)
-    return new DynamicMenuRegular();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MenuRegular>(deep);
@@ -1971,6 +1922,7 @@ if( 57 == namespaceId && "dynamicMenu" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "dynamicMenu")]
 public partial class DynamicMenuRegular : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13107;
@@ -2233,6 +2185,7 @@ public partial class DynamicMenuRegular : OpenXmlLeafElement
     [ChildElementInfo(typeof(MenuWithTitle), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "splitButton")]
 public partial class SplitButtonWithTitle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13108;
@@ -2387,25 +2340,11 @@ public partial class SplitButtonWithTitle : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "button" == name)
-    return new VisibleButton();
     
-if( 57 == namespaceId && "toggleButton" == name)
-    return new VisibleToggleButton();
-    
-if( 57 == namespaceId && "menu" == name)
-    return new MenuWithTitle();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SplitButtonWithTitle>(deep);
@@ -2442,6 +2381,7 @@ if( 57 == namespaceId && "menu" == name)
     [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "menu")]
 public partial class MenuWithTitle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13109;
@@ -2694,43 +2634,11 @@ public partial class MenuWithTitle : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "control" == name)
-    return new ControlCloneRegular();
     
-if( 57 == namespaceId && "button" == name)
-    return new ButtonRegular();
-    
-if( 57 == namespaceId && "checkBox" == name)
-    return new CheckBox();
-    
-if( 57 == namespaceId && "gallery" == name)
-    return new GalleryRegular();
-    
-if( 57 == namespaceId && "toggleButton" == name)
-    return new ToggleButtonRegular();
-    
-if( 57 == namespaceId && "menuSeparator" == name)
-    return new MenuSeparator();
-    
-if( 57 == namespaceId && "splitButton" == name)
-    return new SplitButtonWithTitle();
-    
-if( 57 == namespaceId && "menu" == name)
-    return new MenuWithTitle();
-    
-if( 57 == namespaceId && "dynamicMenu" == name)
-    return new DynamicMenuRegular();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MenuWithTitle>(deep);
@@ -2744,6 +2652,7 @@ if( 57 == namespaceId && "dynamicMenu" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "menuSeparator")]
 public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13110;
@@ -2827,6 +2736,7 @@ public partial class MenuSeparatorNoTitle : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "control")]
 public partial class ControlClone : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13111;
@@ -3071,6 +2981,7 @@ public partial class ControlClone : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "labelControl")]
 public partial class LabelControl : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13112;
@@ -3245,6 +3156,7 @@ public partial class LabelControl : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "button")]
 public partial class Button : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13113;
@@ -3503,6 +3415,7 @@ public partial class Button : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "toggleButton")]
 public partial class ToggleButton : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13114;
@@ -3768,6 +3681,7 @@ public partial class ToggleButton : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "editBox")]
 public partial class EditBox : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13115;
@@ -4026,6 +3940,7 @@ public partial class EditBox : OpenXmlLeafElement
     [ChildElementInfo(typeof(Item), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "comboBox")]
 public partial class ComboBox : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13116;
@@ -4341,19 +4256,11 @@ public partial class ComboBox : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "item" == name)
-    return new Item();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ComboBox>(deep);
@@ -4376,6 +4283,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "dropDown")]
 public partial class DropDownRegular : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13117;
@@ -4691,22 +4599,11 @@ public partial class DropDownRegular : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "item" == name)
-    return new Item();
     
-if( 57 == namespaceId && "button" == name)
-    return new ButtonRegular();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<DropDownRegular>(deep);
@@ -4729,6 +4626,7 @@ if( 57 == namespaceId && "button" == name)
     [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "gallery")]
 public partial class Gallery : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13118;
@@ -5128,22 +5026,11 @@ public partial class Gallery : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "item" == name)
-    return new Item();
     
-if( 57 == namespaceId && "button" == name)
-    return new ButtonRegular();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Gallery>(deep);
@@ -5180,6 +5067,7 @@ if( 57 == namespaceId && "button" == name)
     [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "menu")]
 public partial class Menu : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13119;
@@ -5446,43 +5334,11 @@ public partial class Menu : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "control" == name)
-    return new ControlCloneRegular();
     
-if( 57 == namespaceId && "button" == name)
-    return new ButtonRegular();
-    
-if( 57 == namespaceId && "checkBox" == name)
-    return new CheckBox();
-    
-if( 57 == namespaceId && "gallery" == name)
-    return new GalleryRegular();
-    
-if( 57 == namespaceId && "toggleButton" == name)
-    return new ToggleButtonRegular();
-    
-if( 57 == namespaceId && "menuSeparator" == name)
-    return new MenuSeparator();
-    
-if( 57 == namespaceId && "splitButton" == name)
-    return new SplitButtonRegular();
-    
-if( 57 == namespaceId && "menu" == name)
-    return new MenuRegular();
-    
-if( 57 == namespaceId && "dynamicMenu" == name)
-    return new DynamicMenuRegular();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Menu>(deep);
@@ -5496,6 +5352,7 @@ if( 57 == namespaceId && "dynamicMenu" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "dynamicMenu")]
 public partial class DynamicMenu : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13120;
@@ -5772,6 +5629,7 @@ public partial class DynamicMenu : OpenXmlLeafElement
     [ChildElementInfo(typeof(MenuRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "splitButton")]
 public partial class SplitButton : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13121;
@@ -5940,25 +5798,11 @@ public partial class SplitButton : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "button" == name)
-    return new VisibleButton();
     
-if( 57 == namespaceId && "toggleButton" == name)
-    return new VisibleToggleButton();
-    
-if( 57 == namespaceId && "menu" == name)
-    return new MenuRegular();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SplitButton>(deep);
@@ -6005,6 +5849,7 @@ if( 57 == namespaceId && "menu" == name)
     [ChildElementInfo(typeof(ButtonGroup), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "box")]
 public partial class Box : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13122;
@@ -6117,58 +5962,11 @@ public partial class Box : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "control" == name)
-    return new ControlClone();
     
-if( 57 == namespaceId && "labelControl" == name)
-    return new LabelControl();
-    
-if( 57 == namespaceId && "button" == name)
-    return new Button();
-    
-if( 57 == namespaceId && "toggleButton" == name)
-    return new ToggleButton();
-    
-if( 57 == namespaceId && "checkBox" == name)
-    return new CheckBox();
-    
-if( 57 == namespaceId && "editBox" == name)
-    return new EditBox();
-    
-if( 57 == namespaceId && "comboBox" == name)
-    return new ComboBox();
-    
-if( 57 == namespaceId && "dropDown" == name)
-    return new DropDownRegular();
-    
-if( 57 == namespaceId && "gallery" == name)
-    return new Gallery();
-    
-if( 57 == namespaceId && "menu" == name)
-    return new Menu();
-    
-if( 57 == namespaceId && "dynamicMenu" == name)
-    return new DynamicMenu();
-    
-if( 57 == namespaceId && "splitButton" == name)
-    return new SplitButton();
-    
-if( 57 == namespaceId && "box" == name)
-    return new Box();
-    
-if( 57 == namespaceId && "buttonGroup" == name)
-    return new ButtonGroup();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Box>(deep);
@@ -6203,6 +6001,7 @@ if( 57 == namespaceId && "buttonGroup" == name)
     [ChildElementInfo(typeof(Separator), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "buttonGroup")]
 public partial class ButtonGroup : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13123;
@@ -6308,40 +6107,11 @@ public partial class ButtonGroup : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "control" == name)
-    return new ControlCloneRegular();
     
-if( 57 == namespaceId && "button" == name)
-    return new ButtonRegular();
-    
-if( 57 == namespaceId && "toggleButton" == name)
-    return new ToggleButtonRegular();
-    
-if( 57 == namespaceId && "gallery" == name)
-    return new GalleryRegular();
-    
-if( 57 == namespaceId && "menu" == name)
-    return new MenuRegular();
-    
-if( 57 == namespaceId && "dynamicMenu" == name)
-    return new DynamicMenuRegular();
-    
-if( 57 == namespaceId && "splitButton" == name)
-    return new SplitButtonRegular();
-    
-if( 57 == namespaceId && "separator" == name)
-    return new Separator();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ButtonGroup>(deep);
@@ -6355,6 +6125,7 @@ if( 57 == namespaceId && "separator" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "button")]
 public partial class BackstageMenuButton : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13124;
@@ -6515,6 +6286,7 @@ public partial class BackstageMenuButton : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "checkBox")]
 public partial class BackstageMenuCheckBox : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13125;
@@ -6661,6 +6433,7 @@ public partial class BackstageMenuCheckBox : OpenXmlLeafElement
     [ChildElementInfo(typeof(BackstageMenuGroup), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "menu")]
 public partial class BackstageSubMenu : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13126;
@@ -6815,19 +6588,11 @@ public partial class BackstageSubMenu : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "menuGroup" == name)
-    return new BackstageMenuGroup();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageSubMenu>(deep);
@@ -6841,6 +6606,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "toggleButton")]
 public partial class BackstageMenuToggleButton : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13127;
@@ -7001,6 +6767,7 @@ public partial class BackstageMenuToggleButton : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "button")]
 public partial class BackstageGroupButton : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13128;
@@ -7189,6 +6956,7 @@ public partial class BackstageGroupButton : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "checkBox")]
 public partial class BackstageCheckBox : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13129;
@@ -7363,6 +7131,7 @@ public partial class BackstageCheckBox : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "editBox")]
 public partial class BackstageEditBox : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13130;
@@ -7523,6 +7292,7 @@ public partial class BackstageEditBox : OpenXmlLeafElement
     [ChildElementInfo(typeof(ItemBackstageItem), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "dropDown")]
 public partial class BackstageDropDown : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13131;
@@ -7726,19 +7496,11 @@ public partial class BackstageDropDown : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "item" == name)
-    return new ItemBackstageItem();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageDropDown>(deep);
@@ -7759,6 +7521,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(RadioButtonBackstageItem), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "radioGroup")]
 public partial class RadioGroup : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13132;
@@ -7927,19 +7690,11 @@ public partial class RadioGroup : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "radioButton" == name)
-    return new RadioButtonBackstageItem();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RadioGroup>(deep);
@@ -7960,6 +7715,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ItemBackstageItem), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "comboBox")]
 public partial class BackstageComboBox : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13133;
@@ -8135,19 +7891,11 @@ public partial class BackstageComboBox : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "item" == name)
-    return new ItemBackstageItem();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageComboBox>(deep);
@@ -8161,6 +7909,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "hyperlink")]
 public partial class Hyperlink : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13134;
@@ -8356,6 +8105,7 @@ public partial class Hyperlink : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "labelControl")]
 public partial class BackstageLabelControl : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13135;
@@ -8501,6 +8251,7 @@ public partial class BackstageLabelControl : OpenXmlLeafElement
     [ChildElementInfo(typeof(ImageControl), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "groupBox")]
 public partial class GroupBox : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13136;
@@ -8585,49 +8336,11 @@ public partial class GroupBox : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "button" == name)
-    return new BackstageGroupButton();
     
-if( 57 == namespaceId && "checkBox" == name)
-    return new BackstageCheckBox();
-    
-if( 57 == namespaceId && "editBox" == name)
-    return new BackstageEditBox();
-    
-if( 57 == namespaceId && "dropDown" == name)
-    return new BackstageDropDown();
-    
-if( 57 == namespaceId && "radioGroup" == name)
-    return new RadioGroup();
-    
-if( 57 == namespaceId && "comboBox" == name)
-    return new BackstageComboBox();
-    
-if( 57 == namespaceId && "hyperlink" == name)
-    return new Hyperlink();
-    
-if( 57 == namespaceId && "labelControl" == name)
-    return new BackstageLabelControl();
-    
-if( 57 == namespaceId && "groupBox" == name)
-    return new GroupBox();
-    
-if( 57 == namespaceId && "layoutContainer" == name)
-    return new LayoutContainer();
-    
-if( 57 == namespaceId && "imageControl" == name)
-    return new ImageControl();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<GroupBox>(deep);
@@ -8668,6 +8381,7 @@ if( 57 == namespaceId && "imageControl" == name)
     [ChildElementInfo(typeof(ImageControl), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "layoutContainer")]
 public partial class LayoutContainer : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13137;
@@ -8752,49 +8466,11 @@ public partial class LayoutContainer : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "button" == name)
-    return new BackstageGroupButton();
     
-if( 57 == namespaceId && "checkBox" == name)
-    return new BackstageCheckBox();
-    
-if( 57 == namespaceId && "editBox" == name)
-    return new BackstageEditBox();
-    
-if( 57 == namespaceId && "dropDown" == name)
-    return new BackstageDropDown();
-    
-if( 57 == namespaceId && "radioGroup" == name)
-    return new RadioGroup();
-    
-if( 57 == namespaceId && "comboBox" == name)
-    return new BackstageComboBox();
-    
-if( 57 == namespaceId && "hyperlink" == name)
-    return new Hyperlink();
-    
-if( 57 == namespaceId && "labelControl" == name)
-    return new BackstageLabelControl();
-    
-if( 57 == namespaceId && "groupBox" == name)
-    return new GroupBox();
-    
-if( 57 == namespaceId && "layoutContainer" == name)
-    return new LayoutContainer();
-    
-if( 57 == namespaceId && "imageControl" == name)
-    return new ImageControl();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LayoutContainer>(deep);
@@ -8808,6 +8484,7 @@ if( 57 == namespaceId && "imageControl" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "imageControl")]
 public partial class ImageControl : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13138;
@@ -8937,6 +8614,7 @@ public partial class ImageControl : OpenXmlLeafElement
     [ChildElementInfo(typeof(BottomItemsGroupControls), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "group")]
 public partial class BackstageGroup : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13139;
@@ -9105,25 +8783,11 @@ public partial class BackstageGroup : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "primaryItem" == name)
-    return new PrimaryItem();
     
-if( 57 == namespaceId && "topItems" == name)
-    return new TopItemsGroupControls();
-    
-if( 57 == namespaceId && "bottomItems" == name)
-    return new BottomItemsGroupControls();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageGroup>(deep);
@@ -9144,6 +8808,7 @@ if( 57 == namespaceId && "bottomItems" == name)
     [ChildElementInfo(typeof(TaskGroupCategory), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "taskGroup")]
 public partial class TaskGroup : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13140;
@@ -9305,19 +8970,11 @@ public partial class TaskGroup : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "category" == name)
-    return new TaskGroupCategory();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TaskGroup>(deep);
@@ -9354,6 +9011,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DynamicMenuRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "menu")]
 public partial class MenuRoot : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13141;
@@ -9417,43 +9075,11 @@ public partial class MenuRoot : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "control" == name)
-    return new ControlCloneRegular();
     
-if( 57 == namespaceId && "button" == name)
-    return new ButtonRegular();
-    
-if( 57 == namespaceId && "checkBox" == name)
-    return new CheckBox();
-    
-if( 57 == namespaceId && "gallery" == name)
-    return new GalleryRegular();
-    
-if( 57 == namespaceId && "toggleButton" == name)
-    return new ToggleButtonRegular();
-    
-if( 57 == namespaceId && "menuSeparator" == name)
-    return new MenuSeparator();
-    
-if( 57 == namespaceId && "splitButton" == name)
-    return new SplitButtonRegular();
-    
-if( 57 == namespaceId && "menu" == name)
-    return new MenuRegular();
-    
-if( 57 == namespaceId && "dynamicMenu" == name)
-    return new DynamicMenuRegular();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MenuRoot>(deep);
@@ -9478,6 +9104,7 @@ if( 57 == namespaceId && "dynamicMenu" == name)
     [ChildElementInfo(typeof(Backstage), FileFormatVersions.Office2010)]
     [ChildElementInfo(typeof(ContextMenus), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(57, "customUI")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class CustomUI : OpenXmlPartRootElement
 {
@@ -9550,6 +9177,7 @@ public partial class CustomUI : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -9567,25 +9195,7 @@ public partial class CustomUI : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "commands" == name)
-    return new Commands();
     
-if( 57 == namespaceId && "ribbon" == name)
-    return new Ribbon();
-    
-if( 57 == namespaceId && "backstage" == name)
-    return new Backstage();
-    
-if( 57 == namespaceId && "contextMenus" == name)
-    return new ContextMenus();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "commands","ribbon","backstage","contextMenus" };
     private static readonly byte[] eleNamespaceIds = { 57,57,57,57 };
     
@@ -9606,6 +9216,7 @@ if( 57 == namespaceId && "contextMenus" == name)
         get => GetElement<Commands>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Ribbon.</para>
     /// <para> Represents the following element tag in the schema: mso14:ribbon </para>
@@ -9618,6 +9229,7 @@ if( 57 == namespaceId && "contextMenus" == name)
         get => GetElement<Ribbon>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Backstage.</para>
     /// <para> Represents the following element tag in the schema: mso14:backstage </para>
@@ -9630,6 +9242,7 @@ if( 57 == namespaceId && "contextMenus" == name)
         get => GetElement<Backstage>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> ContextMenus.</para>
     /// <para> Represents the following element tag in the schema: mso14:contextMenus </para>
@@ -9642,6 +9255,7 @@ if( 57 == namespaceId && "contextMenus" == name)
         get => GetElement<ContextMenus>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -9656,6 +9270,7 @@ if( 57 == namespaceId && "contextMenus" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "item")]
 public partial class Item : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13143;
@@ -9732,6 +9347,7 @@ public partial class Item : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "button")]
 public partial class VisibleButton : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13144;
@@ -9962,6 +9578,7 @@ public partial class VisibleButton : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "toggleButton")]
 public partial class VisibleToggleButton : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13145;
@@ -10199,6 +9816,7 @@ public partial class VisibleToggleButton : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "separator")]
 public partial class Separator : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13146;
@@ -10303,6 +9921,7 @@ public partial class Separator : OpenXmlLeafElement
     [ChildElementInfo(typeof(ButtonRegular), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "dialogBoxLauncher")]
 public partial class DialogBoxLauncher : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13147;
@@ -10345,19 +9964,11 @@ public partial class DialogBoxLauncher : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "button" == name)
-    return new ButtonRegular();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "button" };
     private static readonly byte[] eleNamespaceIds = { 57 };
     
@@ -10378,6 +9989,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ButtonRegular>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -10429,6 +10041,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DialogBoxLauncher), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "group")]
 public partial class Group : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13148;
@@ -10632,64 +10245,11 @@ public partial class Group : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "control" == name)
-    return new ControlClone();
     
-if( 57 == namespaceId && "labelControl" == name)
-    return new LabelControl();
-    
-if( 57 == namespaceId && "button" == name)
-    return new Button();
-    
-if( 57 == namespaceId && "toggleButton" == name)
-    return new ToggleButton();
-    
-if( 57 == namespaceId && "checkBox" == name)
-    return new CheckBox();
-    
-if( 57 == namespaceId && "editBox" == name)
-    return new EditBox();
-    
-if( 57 == namespaceId && "comboBox" == name)
-    return new ComboBox();
-    
-if( 57 == namespaceId && "dropDown" == name)
-    return new DropDownRegular();
-    
-if( 57 == namespaceId && "gallery" == name)
-    return new Gallery();
-    
-if( 57 == namespaceId && "menu" == name)
-    return new Menu();
-    
-if( 57 == namespaceId && "dynamicMenu" == name)
-    return new DynamicMenu();
-    
-if( 57 == namespaceId && "splitButton" == name)
-    return new SplitButton();
-    
-if( 57 == namespaceId && "box" == name)
-    return new Box();
-    
-if( 57 == namespaceId && "buttonGroup" == name)
-    return new ButtonGroup();
-    
-if( 57 == namespaceId && "separator" == name)
-    return new Separator();
-    
-if( 57 == namespaceId && "dialogBoxLauncher" == name)
-    return new DialogBoxLauncher();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Group>(deep);
@@ -10703,6 +10263,7 @@ if( 57 == namespaceId && "dialogBoxLauncher" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "control")]
 public partial class ControlCloneQat : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13149;
@@ -10954,6 +10515,7 @@ public partial class ControlCloneQat : OpenXmlLeafElement
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(57, "sharedControls")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class SharedControlsQatItems : QatItemsType
 {
@@ -10993,6 +10555,7 @@ public partial class SharedControlsQatItems : QatItemsType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -11014,6 +10577,7 @@ public partial class SharedControlsQatItems : QatItemsType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(57, "documentControls")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DocumentControlsQatItems : QatItemsType
 {
@@ -11053,6 +10617,7 @@ public partial class DocumentControlsQatItems : QatItemsType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -11079,22 +10644,7 @@ public abstract partial class QatItemsType : OpenXmlCompositeElement
 {
         
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "control" == name)
-    return new ControlCloneQat();
     
-if( 57 == namespaceId && "button" == name)
-    return new ButtonRegular();
-    
-if( 57 == namespaceId && "separator" == name)
-    return new Separator();
-    
-
-    return null;
-}
-
     
     
     /// <summary>
@@ -11127,6 +10677,7 @@ if( 57 == namespaceId && "separator" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -11145,6 +10696,7 @@ if( 57 == namespaceId && "separator" == name)
     [ChildElementInfo(typeof(Group), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "tab")]
 public partial class Tab : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13152;
@@ -11285,19 +10837,11 @@ public partial class Tab : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "group" == name)
-    return new Group();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tab>(deep);
@@ -11318,6 +10862,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Tab), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "tabSet")]
 public partial class TabSet : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13153;
@@ -11381,19 +10926,11 @@ public partial class TabSet : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "tab" == name)
-    return new Tab();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TabSet>(deep);
@@ -11407,6 +10944,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "command")]
 public partial class Command : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13154;
@@ -11478,6 +11016,7 @@ public partial class Command : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentControlsQatItems), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "qat")]
 public partial class QuickAccessToolbar : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13155;
@@ -11520,22 +11059,11 @@ public partial class QuickAccessToolbar : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "sharedControls" == name)
-    return new SharedControlsQatItems();
     
-if( 57 == namespaceId && "documentControls" == name)
-    return new DocumentControlsQatItems();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "sharedControls","documentControls" };
     private static readonly byte[] eleNamespaceIds = { 57,57 };
     
@@ -11556,6 +11084,7 @@ if( 57 == namespaceId && "documentControls" == name)
         get => GetElement<SharedControlsQatItems>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> DocumentControlsQatItems.</para>
     /// <para> Represents the following element tag in the schema: mso14:documentControls </para>
@@ -11568,6 +11097,7 @@ if( 57 == namespaceId && "documentControls" == name)
         get => GetElement<DocumentControlsQatItems>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -11589,6 +11119,7 @@ if( 57 == namespaceId && "documentControls" == name)
     [ChildElementInfo(typeof(Tab), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "tabs")]
 public partial class Tabs : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13156;
@@ -11631,19 +11162,11 @@ public partial class Tabs : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "tab" == name)
-    return new Tab();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Tabs>(deep);
@@ -11664,6 +11187,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(TabSet), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "contextualTabs")]
 public partial class ContextualTabs : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13157;
@@ -11706,19 +11230,11 @@ public partial class ContextualTabs : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "tabSet" == name)
-    return new TabSet();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContextualTabs>(deep);
@@ -11755,6 +11271,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(MenuSeparatorNoTitle), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "contextMenu")]
 public partial class ContextMenu : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13158;
@@ -11804,43 +11321,11 @@ public partial class ContextMenu : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "control" == name)
-    return new ControlCloneRegular();
     
-if( 57 == namespaceId && "button" == name)
-    return new ButtonRegular();
-    
-if( 57 == namespaceId && "checkBox" == name)
-    return new CheckBox();
-    
-if( 57 == namespaceId && "gallery" == name)
-    return new GalleryRegular();
-    
-if( 57 == namespaceId && "toggleButton" == name)
-    return new ToggleButtonRegular();
-    
-if( 57 == namespaceId && "splitButton" == name)
-    return new SplitButtonRegular();
-    
-if( 57 == namespaceId && "menu" == name)
-    return new MenuRegular();
-    
-if( 57 == namespaceId && "dynamicMenu" == name)
-    return new DynamicMenuRegular();
-    
-if( 57 == namespaceId && "menuSeparator" == name)
-    return new MenuSeparatorNoTitle();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContextMenu>(deep);
@@ -11853,6 +11338,7 @@ if( 57 == namespaceId && "menuSeparator" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(57, "item")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class ItemBackstageItem : BackstageItemType
 {
@@ -11880,6 +11366,7 @@ public partial class ItemBackstageItem : BackstageItemType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(57, "radioButton")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class RadioButtonBackstageItem : BackstageItemType
 {
@@ -11949,6 +11436,7 @@ public abstract partial class BackstageItemType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "button")]
 public partial class BackstageRegularButton : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13161;
@@ -12130,6 +11618,7 @@ public partial class BackstageRegularButton : OpenXmlLeafElement
     [ChildElementInfo(typeof(BackstageMenuGroup), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "menu")]
 public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13162;
@@ -12298,19 +11787,11 @@ public partial class BackstagePrimaryMenu : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "menuGroup" == name)
-    return new BackstageMenuGroup();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstagePrimaryMenu>(deep);
@@ -12337,6 +11818,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(BackstageMenuToggleButton), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "menuGroup")]
 public partial class BackstageMenuGroup : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13163;
@@ -12421,28 +11903,11 @@ public partial class BackstageMenuGroup : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "button" == name)
-    return new BackstageMenuButton();
     
-if( 57 == namespaceId && "checkBox" == name)
-    return new BackstageMenuCheckBox();
-    
-if( 57 == namespaceId && "menu" == name)
-    return new BackstageSubMenu();
-    
-if( 57 == namespaceId && "toggleButton" == name)
-    return new BackstageMenuToggleButton();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageMenuGroup>(deep);
@@ -12465,6 +11930,7 @@ if( 57 == namespaceId && "toggleButton" == name)
     [ChildElementInfo(typeof(BackstagePrimaryMenu), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "primaryItem")]
 public partial class PrimaryItem : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13164;
@@ -12507,22 +11973,11 @@ public partial class PrimaryItem : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "button" == name)
-    return new BackstageRegularButton();
     
-if( 57 == namespaceId && "menu" == name)
-    return new BackstagePrimaryMenu();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "button","menu" };
     private static readonly byte[] eleNamespaceIds = { 57,57 };
     
@@ -12543,6 +11998,7 @@ if( 57 == namespaceId && "menu" == name)
         get => GetElement<BackstageRegularButton>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> BackstagePrimaryMenu.</para>
     /// <para> Represents the following element tag in the schema: mso14:menu </para>
@@ -12555,6 +12011,7 @@ if( 57 == namespaceId && "menu" == name)
         get => GetElement<BackstagePrimaryMenu>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -12584,6 +12041,7 @@ if( 57 == namespaceId && "menu" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(57, "topItems")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class TopItemsGroupControls : GroupControlsType
 {
@@ -12623,6 +12081,7 @@ public partial class TopItemsGroupControls : GroupControlsType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -12652,6 +12111,7 @@ public partial class TopItemsGroupControls : GroupControlsType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(57, "bottomItems")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class BottomItemsGroupControls : GroupControlsType
 {
@@ -12691,6 +12151,7 @@ public partial class BottomItemsGroupControls : GroupControlsType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -12733,46 +12194,7 @@ public abstract partial class GroupControlsType : OpenXmlCompositeElement
 {
         
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "button" == name)
-    return new BackstageGroupButton();
     
-if( 57 == namespaceId && "checkBox" == name)
-    return new BackstageCheckBox();
-    
-if( 57 == namespaceId && "editBox" == name)
-    return new BackstageEditBox();
-    
-if( 57 == namespaceId && "dropDown" == name)
-    return new BackstageDropDown();
-    
-if( 57 == namespaceId && "radioGroup" == name)
-    return new RadioGroup();
-    
-if( 57 == namespaceId && "comboBox" == name)
-    return new BackstageComboBox();
-    
-if( 57 == namespaceId && "hyperlink" == name)
-    return new Hyperlink();
-    
-if( 57 == namespaceId && "labelControl" == name)
-    return new BackstageLabelControl();
-    
-if( 57 == namespaceId && "groupBox" == name)
-    return new GroupBox();
-    
-if( 57 == namespaceId && "layoutContainer" == name)
-    return new LayoutContainer();
-    
-if( 57 == namespaceId && "imageControl" == name)
-    return new ImageControl();
-    
-
-    return null;
-}
-
     
     
     /// <summary>
@@ -12805,6 +12227,7 @@ if( 57 == namespaceId && "imageControl" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -12823,6 +12246,7 @@ if( 57 == namespaceId && "imageControl" == name)
     [ChildElementInfo(typeof(TaskGroupTask), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "category")]
 public partial class TaskGroupCategory : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13167;
@@ -12949,19 +12373,11 @@ public partial class TaskGroupCategory : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "task" == name)
-    return new TaskGroupTask();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TaskGroupCategory>(deep);
@@ -12975,6 +12391,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "task")]
 public partial class TaskGroupTask : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13168;
@@ -13177,6 +12594,7 @@ public partial class TaskGroupTask : OpenXmlLeafElement
     [ChildElementInfo(typeof(TaskFormGroupTask), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "category")]
 public partial class TaskFormGroupCategory : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13169;
@@ -13303,19 +12721,11 @@ public partial class TaskFormGroupCategory : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "task" == name)
-    return new TaskFormGroupTask();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TaskFormGroupCategory>(deep);
@@ -13336,6 +12746,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(BackstageGroup), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "task")]
 public partial class TaskFormGroupTask : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13170;
@@ -13525,19 +12936,11 @@ public partial class TaskFormGroupTask : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "group" == name)
-    return new BackstageGroup();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TaskFormGroupTask>(deep);
@@ -13558,6 +12961,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(TaskFormGroupCategory), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "taskFormGroup")]
 public partial class TaskFormGroup : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13171;
@@ -13691,19 +13095,11 @@ public partial class TaskFormGroup : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "category" == name)
-    return new TaskFormGroupCategory();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TaskFormGroup>(deep);
@@ -13728,6 +13124,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(TaskGroup), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "firstColumn")]
 public partial class BackstageGroups : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13172;
@@ -13770,25 +13167,11 @@ public partial class BackstageGroups : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "taskFormGroup" == name)
-    return new TaskFormGroup();
     
-if( 57 == namespaceId && "group" == name)
-    return new BackstageGroup();
-    
-if( 57 == namespaceId && "taskGroup" == name)
-    return new TaskGroup();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackstageGroups>(deep);
@@ -13811,6 +13194,7 @@ if( 57 == namespaceId && "taskGroup" == name)
     [ChildElementInfo(typeof(TaskGroup), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "secondColumn")]
 public partial class SimpleGroups : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13173;
@@ -13853,22 +13237,11 @@ public partial class SimpleGroups : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "group" == name)
-    return new BackstageGroup();
     
-if( 57 == namespaceId && "taskGroup" == name)
-    return new TaskGroup();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SimpleGroups>(deep);
@@ -13891,6 +13264,7 @@ if( 57 == namespaceId && "taskGroup" == name)
     [ChildElementInfo(typeof(SimpleGroups), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "tab")]
 public partial class BackstageTab : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13174;
@@ -14094,22 +13468,11 @@ public partial class BackstageTab : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "firstColumn" == name)
-    return new BackstageGroups();
     
-if( 57 == namespaceId && "secondColumn" == name)
-    return new SimpleGroups();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "firstColumn","secondColumn" };
     private static readonly byte[] eleNamespaceIds = { 57,57 };
     
@@ -14130,6 +13493,7 @@ if( 57 == namespaceId && "secondColumn" == name)
         get => GetElement<BackstageGroups>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> SimpleGroups.</para>
     /// <para> Represents the following element tag in the schema: mso14:secondColumn </para>
@@ -14142,6 +13506,7 @@ if( 57 == namespaceId && "secondColumn" == name)
         get => GetElement<SimpleGroups>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -14156,6 +13521,7 @@ if( 57 == namespaceId && "secondColumn" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "button")]
 public partial class BackstageFastCommandButton : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13175;
@@ -14344,6 +13710,7 @@ public partial class BackstageFastCommandButton : OpenXmlLeafElement
     [ChildElementInfo(typeof(Command), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "commands")]
 public partial class Commands : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13176;
@@ -14386,19 +13753,11 @@ public partial class Commands : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "command" == name)
-    return new Command();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Commands>(deep);
@@ -14423,6 +13782,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ContextualTabs), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "ribbon")]
 public partial class Ribbon : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13177;
@@ -14472,25 +13832,11 @@ public partial class Ribbon : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "qat" == name)
-    return new QuickAccessToolbar();
     
-if( 57 == namespaceId && "tabs" == name)
-    return new Tabs();
-    
-if( 57 == namespaceId && "contextualTabs" == name)
-    return new ContextualTabs();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "qat","tabs","contextualTabs" };
     private static readonly byte[] eleNamespaceIds = { 57,57,57 };
     
@@ -14511,6 +13857,7 @@ if( 57 == namespaceId && "contextualTabs" == name)
         get => GetElement<QuickAccessToolbar>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Tabs.</para>
     /// <para> Represents the following element tag in the schema: mso14:tabs </para>
@@ -14523,6 +13870,7 @@ if( 57 == namespaceId && "contextualTabs" == name)
         get => GetElement<Tabs>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> ContextualTabs.</para>
     /// <para> Represents the following element tag in the schema: mso14:contextualTabs </para>
@@ -14535,6 +13883,7 @@ if( 57 == namespaceId && "contextualTabs" == name)
         get => GetElement<ContextualTabs>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -14558,6 +13907,7 @@ if( 57 == namespaceId && "contextualTabs" == name)
     [ChildElementInfo(typeof(BackstageFastCommandButton), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "backstage")]
 public partial class Backstage : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13178;
@@ -14614,22 +13964,11 @@ public partial class Backstage : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "tab" == name)
-    return new BackstageTab();
     
-if( 57 == namespaceId && "button" == name)
-    return new BackstageFastCommandButton();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Backstage>(deep);
@@ -14650,6 +13989,7 @@ if( 57 == namespaceId && "button" == name)
     [ChildElementInfo(typeof(ContextMenu), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(57, "contextMenus")]
 public partial class ContextMenus : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13179;
@@ -14692,19 +14032,11 @@ public partial class ContextMenus : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 57 == namespaceId && "contextMenu" == name)
-    return new ContextMenu();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContextMenus>(deep);

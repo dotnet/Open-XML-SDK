@@ -22,6 +22,7 @@ namespace DocumentFormat.OpenXml.Office.ContentType
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(38, "contentTypeSchema")]
 public partial class ContentTypeSchema : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12705;
@@ -136,16 +137,11 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
     
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ContentTypeSchema>(deep);

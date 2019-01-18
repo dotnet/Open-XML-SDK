@@ -17,6 +17,7 @@ namespace DocumentFormat.OpenXml.Office2010.ExcelAc
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(72, "list")]
 public partial class List : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 13429;

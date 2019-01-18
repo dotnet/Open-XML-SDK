@@ -15,6 +15,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(76, "key")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Key : OpenXmlLeafTextElement
 {
@@ -55,6 +56,7 @@ public partial class Key : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(76, "value")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Value : OpenXmlLeafTextElement
 {
@@ -105,6 +107,7 @@ public partial class Value : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(Value), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(76, "props")]
 public partial class RoamingProperty : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13438;
@@ -147,22 +150,11 @@ public partial class RoamingProperty : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 76 == namespaceId && "key" == name)
-    return new Key();
     
-if( 76 == namespaceId && "value" == name)
-    return new Value();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "key","value" };
     private static readonly byte[] eleNamespaceIds = { 76,76 };
     
@@ -183,6 +175,7 @@ if( 76 == namespaceId && "value" == name)
         get => GetElement<Key>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Value.</para>
     /// <para> Represents the following element tag in the schema: pRoam:value </para>
@@ -195,6 +188,7 @@ if( 76 == namespaceId && "value" == name)
         get => GetElement<Value>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>

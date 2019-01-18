@@ -21,6 +21,7 @@ namespace DocumentFormat.OpenXml.Vml
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "path")]
 public partial class Path : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12577;
@@ -175,6 +176,7 @@ public partial class Path : OpenXmlLeafElement
     [ChildElementInfo(typeof(Formula))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "formulas")]
 public partial class Formulas : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12578;
@@ -217,19 +219,11 @@ public partial class Formulas : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "f" == name)
-    return new Formula();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Formulas>(deep);
@@ -250,6 +244,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ShapeHandle))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "handles")]
 public partial class ShapeHandles : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12579;
@@ -292,19 +287,11 @@ public partial class ShapeHandles : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "h" == name)
-    return new ShapeHandle();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ShapeHandles>(deep);
@@ -325,6 +312,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "fill")]
 public partial class Fill : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12580;
@@ -561,19 +549,11 @@ public partial class Fill : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 27 == namespaceId && "fill" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "fill" };
     private static readonly byte[] eleNamespaceIds = { 27 };
     
@@ -594,6 +574,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<DocumentFormat.OpenXml.Vml.Office.FillExtendedProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -623,6 +604,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.ColumnStroke))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "stroke")]
 public partial class Stroke : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12581;
@@ -871,31 +853,11 @@ public partial class Stroke : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 27 == namespaceId && "left" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.LeftStroke();
     
-if( 27 == namespaceId && "top" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.TopStroke();
-    
-if( 27 == namespaceId && "right" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.RightStroke();
-    
-if( 27 == namespaceId && "bottom" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.BottomStroke();
-    
-if( 27 == namespaceId && "column" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.ColumnStroke();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "left","top","right","bottom","column" };
     private static readonly byte[] eleNamespaceIds = { 27,27,27,27,27 };
     
@@ -916,6 +878,7 @@ if( 27 == namespaceId && "column" == name)
         get => GetElement<DocumentFormat.OpenXml.Vml.Office.LeftStroke>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> TopStroke.</para>
     /// <para> Represents the following element tag in the schema: o:top </para>
@@ -928,6 +891,7 @@ if( 27 == namespaceId && "column" == name)
         get => GetElement<DocumentFormat.OpenXml.Vml.Office.TopStroke>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> RightStroke.</para>
     /// <para> Represents the following element tag in the schema: o:right </para>
@@ -940,6 +904,7 @@ if( 27 == namespaceId && "column" == name)
         get => GetElement<DocumentFormat.OpenXml.Vml.Office.RightStroke>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> BottomStroke.</para>
     /// <para> Represents the following element tag in the schema: o:bottom </para>
@@ -952,6 +917,7 @@ if( 27 == namespaceId && "column" == name)
         get => GetElement<DocumentFormat.OpenXml.Vml.Office.BottomStroke>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> ColumnStroke.</para>
     /// <para> Represents the following element tag in the schema: o:column </para>
@@ -964,6 +930,7 @@ if( 27 == namespaceId && "column" == name)
         get => GetElement<DocumentFormat.OpenXml.Vml.Office.ColumnStroke>(4);
         set => SetElement(4, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -978,6 +945,7 @@ if( 27 == namespaceId && "column" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "shadow")]
 public partial class Shadow : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12582;
@@ -1096,6 +1064,7 @@ public partial class Shadow : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Wordprocessing.TextBoxContent))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "textbox")]
 public partial class TextBox : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12583;
@@ -1168,19 +1137,11 @@ public partial class TextBox : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 23 == namespaceId && "txbxContent" == name)
-    return new DocumentFormat.OpenXml.Wordprocessing.TextBoxContent();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TextBox>(deep);
@@ -1194,6 +1155,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "textpath")]
 public partial class TextPath : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12584;
@@ -1284,6 +1246,7 @@ public partial class TextPath : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "imagedata")]
 public partial class ImageData : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12585;
@@ -1518,6 +1481,7 @@ public partial class ImageData : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "shape")]
 public partial class Shape : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12586;
@@ -2022,91 +1986,11 @@ public partial class Shape : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "path" == name)
-    return new Path();
     
-if( 26 == namespaceId && "formulas" == name)
-    return new Formulas();
-    
-if( 26 == namespaceId && "handles" == name)
-    return new ShapeHandles();
-    
-if( 26 == namespaceId && "fill" == name)
-    return new Fill();
-    
-if( 26 == namespaceId && "stroke" == name)
-    return new Stroke();
-    
-if( 26 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 26 == namespaceId && "textbox" == name)
-    return new TextBox();
-    
-if( 26 == namespaceId && "textpath" == name)
-    return new TextPath();
-    
-if( 26 == namespaceId && "imagedata" == name)
-    return new ImageData();
-    
-if( 27 == namespaceId && "skew" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Skew();
-    
-if( 27 == namespaceId && "extrusion" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Extrusion();
-    
-if( 27 == namespaceId && "callout" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Callout();
-    
-if( 27 == namespaceId && "lock" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Lock();
-    
-if( 27 == namespaceId && "clippath" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.ClipPath();
-    
-if( 27 == namespaceId && "signatureline" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.SignatureLine();
-    
-if( 28 == namespaceId && "wrap" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap();
-    
-if( 28 == namespaceId && "anchorlock" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock();
-    
-if( 28 == namespaceId && "bordertop" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder();
-    
-if( 28 == namespaceId && "borderbottom" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder();
-    
-if( 28 == namespaceId && "borderleft" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder();
-    
-if( 28 == namespaceId && "borderright" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder();
-    
-if( 29 == namespaceId && "ClientData" == name)
-    return new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData();
-    
-if( 30 == namespaceId && "textdata" == name)
-    return new DocumentFormat.OpenXml.Vml.Presentation.TextData();
-    
-if( 27 == namespaceId && "ink" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Ink();
-    
-if( 30 == namespaceId && "iscomment" == name)
-    return new DocumentFormat.OpenXml.Vml.Presentation.InkAnnotationFlag();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shape>(deep);
@@ -2173,6 +2057,7 @@ if( 30 == namespaceId && "iscomment" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Complex))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "shapetype")]
 public partial class Shapetype : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12587;
@@ -2663,88 +2548,11 @@ public partial class Shapetype : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "path" == name)
-    return new Path();
     
-if( 26 == namespaceId && "formulas" == name)
-    return new Formulas();
-    
-if( 26 == namespaceId && "handles" == name)
-    return new ShapeHandles();
-    
-if( 26 == namespaceId && "fill" == name)
-    return new Fill();
-    
-if( 26 == namespaceId && "stroke" == name)
-    return new Stroke();
-    
-if( 26 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 26 == namespaceId && "textbox" == name)
-    return new TextBox();
-    
-if( 26 == namespaceId && "textpath" == name)
-    return new TextPath();
-    
-if( 26 == namespaceId && "imagedata" == name)
-    return new ImageData();
-    
-if( 27 == namespaceId && "skew" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Skew();
-    
-if( 27 == namespaceId && "extrusion" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Extrusion();
-    
-if( 27 == namespaceId && "callout" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Callout();
-    
-if( 27 == namespaceId && "lock" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Lock();
-    
-if( 27 == namespaceId && "clippath" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.ClipPath();
-    
-if( 27 == namespaceId && "signatureline" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.SignatureLine();
-    
-if( 28 == namespaceId && "wrap" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap();
-    
-if( 28 == namespaceId && "anchorlock" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock();
-    
-if( 28 == namespaceId && "bordertop" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder();
-    
-if( 28 == namespaceId && "borderbottom" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder();
-    
-if( 28 == namespaceId && "borderleft" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder();
-    
-if( 28 == namespaceId && "borderright" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder();
-    
-if( 29 == namespaceId && "ClientData" == name)
-    return new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData();
-    
-if( 30 == namespaceId && "textdata" == name)
-    return new DocumentFormat.OpenXml.Vml.Presentation.TextData();
-    
-if( 27 == namespaceId && "complex" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Complex();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Shapetype>(deep);
@@ -2797,6 +2605,7 @@ if( 27 == namespaceId && "complex" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "group")]
 public partial class Group : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12588;
@@ -3112,67 +2921,11 @@ public partial class Group : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "group" == name)
-    return new Group();
     
-if( 26 == namespaceId && "shape" == name)
-    return new Shape();
-    
-if( 26 == namespaceId && "shapetype" == name)
-    return new Shapetype();
-    
-if( 26 == namespaceId && "arc" == name)
-    return new Arc();
-    
-if( 26 == namespaceId && "curve" == name)
-    return new Curve();
-    
-if( 26 == namespaceId && "image" == name)
-    return new ImageFile();
-    
-if( 26 == namespaceId && "line" == name)
-    return new Line();
-    
-if( 26 == namespaceId && "oval" == name)
-    return new Oval();
-    
-if( 26 == namespaceId && "polyline" == name)
-    return new PolyLine();
-    
-if( 26 == namespaceId && "rect" == name)
-    return new Rectangle();
-    
-if( 26 == namespaceId && "roundrect" == name)
-    return new RoundRectangle();
-    
-if( 27 == namespaceId && "diagram" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Diagram();
-    
-if( 27 == namespaceId && "lock" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Lock();
-    
-if( 27 == namespaceId && "clippath" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.ClipPath();
-    
-if( 28 == namespaceId && "wrap" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap();
-    
-if( 28 == namespaceId && "anchorlock" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock();
-    
-if( 29 == namespaceId && "ClientData" == name)
-    return new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Group>(deep);
@@ -3193,6 +2946,7 @@ if( 29 == namespaceId && "ClientData" == name)
     [ChildElementInfo(typeof(Fill))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "background")]
 public partial class Background : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12589;
@@ -3292,19 +3046,11 @@ public partial class Background : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "fill" == name)
-    return new Fill();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "fill" };
     private static readonly byte[] eleNamespaceIds = { 26 };
     
@@ -3325,6 +3071,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<Fill>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -3390,6 +3137,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "arc")]
 public partial class Arc : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12590;
@@ -3864,85 +3612,11 @@ public partial class Arc : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "path" == name)
-    return new Path();
     
-if( 26 == namespaceId && "formulas" == name)
-    return new Formulas();
-    
-if( 26 == namespaceId && "handles" == name)
-    return new ShapeHandles();
-    
-if( 26 == namespaceId && "fill" == name)
-    return new Fill();
-    
-if( 26 == namespaceId && "stroke" == name)
-    return new Stroke();
-    
-if( 26 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 26 == namespaceId && "textbox" == name)
-    return new TextBox();
-    
-if( 26 == namespaceId && "textpath" == name)
-    return new TextPath();
-    
-if( 26 == namespaceId && "imagedata" == name)
-    return new ImageData();
-    
-if( 27 == namespaceId && "skew" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Skew();
-    
-if( 27 == namespaceId && "extrusion" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Extrusion();
-    
-if( 27 == namespaceId && "callout" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Callout();
-    
-if( 27 == namespaceId && "lock" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Lock();
-    
-if( 27 == namespaceId && "clippath" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.ClipPath();
-    
-if( 27 == namespaceId && "signatureline" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.SignatureLine();
-    
-if( 28 == namespaceId && "wrap" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap();
-    
-if( 28 == namespaceId && "anchorlock" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock();
-    
-if( 28 == namespaceId && "bordertop" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder();
-    
-if( 28 == namespaceId && "borderbottom" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder();
-    
-if( 28 == namespaceId && "borderleft" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder();
-    
-if( 28 == namespaceId && "borderright" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder();
-    
-if( 29 == namespaceId && "ClientData" == name)
-    return new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData();
-    
-if( 30 == namespaceId && "textdata" == name)
-    return new DocumentFormat.OpenXml.Vml.Presentation.TextData();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Arc>(deep);
@@ -4007,6 +3681,7 @@ if( 30 == namespaceId && "textdata" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "curve")]
 public partial class Curve : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12591;
@@ -4502,85 +4177,11 @@ public partial class Curve : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "path" == name)
-    return new Path();
     
-if( 26 == namespaceId && "formulas" == name)
-    return new Formulas();
-    
-if( 26 == namespaceId && "handles" == name)
-    return new ShapeHandles();
-    
-if( 26 == namespaceId && "fill" == name)
-    return new Fill();
-    
-if( 26 == namespaceId && "stroke" == name)
-    return new Stroke();
-    
-if( 26 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 26 == namespaceId && "textbox" == name)
-    return new TextBox();
-    
-if( 26 == namespaceId && "textpath" == name)
-    return new TextPath();
-    
-if( 26 == namespaceId && "imagedata" == name)
-    return new ImageData();
-    
-if( 27 == namespaceId && "skew" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Skew();
-    
-if( 27 == namespaceId && "extrusion" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Extrusion();
-    
-if( 27 == namespaceId && "callout" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Callout();
-    
-if( 27 == namespaceId && "lock" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Lock();
-    
-if( 27 == namespaceId && "clippath" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.ClipPath();
-    
-if( 27 == namespaceId && "signatureline" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.SignatureLine();
-    
-if( 28 == namespaceId && "wrap" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap();
-    
-if( 28 == namespaceId && "anchorlock" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock();
-    
-if( 28 == namespaceId && "bordertop" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder();
-    
-if( 28 == namespaceId && "borderbottom" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder();
-    
-if( 28 == namespaceId && "borderleft" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder();
-    
-if( 28 == namespaceId && "borderright" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder();
-    
-if( 29 == namespaceId && "ClientData" == name)
-    return new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData();
-    
-if( 30 == namespaceId && "textdata" == name)
-    return new DocumentFormat.OpenXml.Vml.Presentation.TextData();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Curve>(deep);
@@ -4645,6 +4246,7 @@ if( 30 == namespaceId && "textdata" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "image")]
 public partial class ImageFile : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12592;
@@ -5175,85 +4777,11 @@ public partial class ImageFile : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "path" == name)
-    return new Path();
     
-if( 26 == namespaceId && "formulas" == name)
-    return new Formulas();
-    
-if( 26 == namespaceId && "handles" == name)
-    return new ShapeHandles();
-    
-if( 26 == namespaceId && "fill" == name)
-    return new Fill();
-    
-if( 26 == namespaceId && "stroke" == name)
-    return new Stroke();
-    
-if( 26 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 26 == namespaceId && "textbox" == name)
-    return new TextBox();
-    
-if( 26 == namespaceId && "textpath" == name)
-    return new TextPath();
-    
-if( 26 == namespaceId && "imagedata" == name)
-    return new ImageData();
-    
-if( 27 == namespaceId && "skew" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Skew();
-    
-if( 27 == namespaceId && "extrusion" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Extrusion();
-    
-if( 27 == namespaceId && "callout" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Callout();
-    
-if( 27 == namespaceId && "lock" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Lock();
-    
-if( 27 == namespaceId && "clippath" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.ClipPath();
-    
-if( 27 == namespaceId && "signatureline" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.SignatureLine();
-    
-if( 28 == namespaceId && "wrap" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap();
-    
-if( 28 == namespaceId && "anchorlock" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock();
-    
-if( 28 == namespaceId && "bordertop" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder();
-    
-if( 28 == namespaceId && "borderbottom" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder();
-    
-if( 28 == namespaceId && "borderleft" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder();
-    
-if( 28 == namespaceId && "borderright" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder();
-    
-if( 29 == namespaceId && "ClientData" == name)
-    return new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData();
-    
-if( 30 == namespaceId && "textdata" == name)
-    return new DocumentFormat.OpenXml.Vml.Presentation.TextData();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ImageFile>(deep);
@@ -5318,6 +4846,7 @@ if( 30 == namespaceId && "textdata" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "line")]
 public partial class Line : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12593;
@@ -5799,85 +5328,11 @@ public partial class Line : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "path" == name)
-    return new Path();
     
-if( 26 == namespaceId && "formulas" == name)
-    return new Formulas();
-    
-if( 26 == namespaceId && "handles" == name)
-    return new ShapeHandles();
-    
-if( 26 == namespaceId && "fill" == name)
-    return new Fill();
-    
-if( 26 == namespaceId && "stroke" == name)
-    return new Stroke();
-    
-if( 26 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 26 == namespaceId && "textbox" == name)
-    return new TextBox();
-    
-if( 26 == namespaceId && "textpath" == name)
-    return new TextPath();
-    
-if( 26 == namespaceId && "imagedata" == name)
-    return new ImageData();
-    
-if( 27 == namespaceId && "skew" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Skew();
-    
-if( 27 == namespaceId && "extrusion" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Extrusion();
-    
-if( 27 == namespaceId && "callout" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Callout();
-    
-if( 27 == namespaceId && "lock" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Lock();
-    
-if( 27 == namespaceId && "clippath" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.ClipPath();
-    
-if( 27 == namespaceId && "signatureline" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.SignatureLine();
-    
-if( 28 == namespaceId && "wrap" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap();
-    
-if( 28 == namespaceId && "anchorlock" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock();
-    
-if( 28 == namespaceId && "bordertop" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder();
-    
-if( 28 == namespaceId && "borderbottom" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder();
-    
-if( 28 == namespaceId && "borderleft" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder();
-    
-if( 28 == namespaceId && "borderright" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder();
-    
-if( 29 == namespaceId && "ClientData" == name)
-    return new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData();
-    
-if( 30 == namespaceId && "textdata" == name)
-    return new DocumentFormat.OpenXml.Vml.Presentation.TextData();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Line>(deep);
@@ -5942,6 +5397,7 @@ if( 30 == namespaceId && "textdata" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "oval")]
 public partial class Oval : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12594;
@@ -6409,85 +5865,11 @@ public partial class Oval : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "path" == name)
-    return new Path();
     
-if( 26 == namespaceId && "formulas" == name)
-    return new Formulas();
-    
-if( 26 == namespaceId && "handles" == name)
-    return new ShapeHandles();
-    
-if( 26 == namespaceId && "fill" == name)
-    return new Fill();
-    
-if( 26 == namespaceId && "stroke" == name)
-    return new Stroke();
-    
-if( 26 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 26 == namespaceId && "textbox" == name)
-    return new TextBox();
-    
-if( 26 == namespaceId && "textpath" == name)
-    return new TextPath();
-    
-if( 26 == namespaceId && "imagedata" == name)
-    return new ImageData();
-    
-if( 27 == namespaceId && "skew" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Skew();
-    
-if( 27 == namespaceId && "extrusion" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Extrusion();
-    
-if( 27 == namespaceId && "callout" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Callout();
-    
-if( 27 == namespaceId && "lock" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Lock();
-    
-if( 27 == namespaceId && "clippath" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.ClipPath();
-    
-if( 27 == namespaceId && "signatureline" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.SignatureLine();
-    
-if( 28 == namespaceId && "wrap" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap();
-    
-if( 28 == namespaceId && "anchorlock" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock();
-    
-if( 28 == namespaceId && "bordertop" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder();
-    
-if( 28 == namespaceId && "borderbottom" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder();
-    
-if( 28 == namespaceId && "borderleft" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder();
-    
-if( 28 == namespaceId && "borderright" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder();
-    
-if( 29 == namespaceId && "ClientData" == name)
-    return new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData();
-    
-if( 30 == namespaceId && "textdata" == name)
-    return new DocumentFormat.OpenXml.Vml.Presentation.TextData();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Oval>(deep);
@@ -6554,6 +5936,7 @@ if( 30 == namespaceId && "textdata" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Office.Ink))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "polyline")]
 public partial class PolyLine : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12595;
@@ -7028,88 +6411,11 @@ public partial class PolyLine : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "path" == name)
-    return new Path();
     
-if( 26 == namespaceId && "formulas" == name)
-    return new Formulas();
-    
-if( 26 == namespaceId && "handles" == name)
-    return new ShapeHandles();
-    
-if( 26 == namespaceId && "fill" == name)
-    return new Fill();
-    
-if( 26 == namespaceId && "stroke" == name)
-    return new Stroke();
-    
-if( 26 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 26 == namespaceId && "textbox" == name)
-    return new TextBox();
-    
-if( 26 == namespaceId && "textpath" == name)
-    return new TextPath();
-    
-if( 26 == namespaceId && "imagedata" == name)
-    return new ImageData();
-    
-if( 27 == namespaceId && "skew" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Skew();
-    
-if( 27 == namespaceId && "extrusion" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Extrusion();
-    
-if( 27 == namespaceId && "callout" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Callout();
-    
-if( 27 == namespaceId && "lock" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Lock();
-    
-if( 27 == namespaceId && "clippath" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.ClipPath();
-    
-if( 27 == namespaceId && "signatureline" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.SignatureLine();
-    
-if( 28 == namespaceId && "wrap" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap();
-    
-if( 28 == namespaceId && "anchorlock" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock();
-    
-if( 28 == namespaceId && "bordertop" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder();
-    
-if( 28 == namespaceId && "borderbottom" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder();
-    
-if( 28 == namespaceId && "borderleft" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder();
-    
-if( 28 == namespaceId && "borderright" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder();
-    
-if( 29 == namespaceId && "ClientData" == name)
-    return new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData();
-    
-if( 30 == namespaceId && "textdata" == name)
-    return new DocumentFormat.OpenXml.Vml.Presentation.TextData();
-    
-if( 27 == namespaceId && "ink" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Ink();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<PolyLine>(deep);
@@ -7174,6 +6480,7 @@ if( 27 == namespaceId && "ink" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "rect")]
 public partial class Rectangle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12596;
@@ -7641,85 +6948,11 @@ public partial class Rectangle : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "path" == name)
-    return new Path();
     
-if( 26 == namespaceId && "formulas" == name)
-    return new Formulas();
-    
-if( 26 == namespaceId && "handles" == name)
-    return new ShapeHandles();
-    
-if( 26 == namespaceId && "fill" == name)
-    return new Fill();
-    
-if( 26 == namespaceId && "stroke" == name)
-    return new Stroke();
-    
-if( 26 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 26 == namespaceId && "textbox" == name)
-    return new TextBox();
-    
-if( 26 == namespaceId && "textpath" == name)
-    return new TextPath();
-    
-if( 26 == namespaceId && "imagedata" == name)
-    return new ImageData();
-    
-if( 27 == namespaceId && "skew" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Skew();
-    
-if( 27 == namespaceId && "extrusion" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Extrusion();
-    
-if( 27 == namespaceId && "callout" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Callout();
-    
-if( 27 == namespaceId && "lock" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Lock();
-    
-if( 27 == namespaceId && "clippath" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.ClipPath();
-    
-if( 27 == namespaceId && "signatureline" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.SignatureLine();
-    
-if( 28 == namespaceId && "wrap" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap();
-    
-if( 28 == namespaceId && "anchorlock" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock();
-    
-if( 28 == namespaceId && "bordertop" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder();
-    
-if( 28 == namespaceId && "borderbottom" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder();
-    
-if( 28 == namespaceId && "borderleft" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder();
-    
-if( 28 == namespaceId && "borderright" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder();
-    
-if( 29 == namespaceId && "ClientData" == name)
-    return new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData();
-    
-if( 30 == namespaceId && "textdata" == name)
-    return new DocumentFormat.OpenXml.Vml.Presentation.TextData();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Rectangle>(deep);
@@ -7784,6 +7017,7 @@ if( 30 == namespaceId && "textdata" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Vml.Presentation.TextData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "roundrect")]
 public partial class RoundRectangle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12597;
@@ -8251,85 +7485,11 @@ public partial class RoundRectangle : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 26 == namespaceId && "path" == name)
-    return new Path();
     
-if( 26 == namespaceId && "formulas" == name)
-    return new Formulas();
-    
-if( 26 == namespaceId && "handles" == name)
-    return new ShapeHandles();
-    
-if( 26 == namespaceId && "fill" == name)
-    return new Fill();
-    
-if( 26 == namespaceId && "stroke" == name)
-    return new Stroke();
-    
-if( 26 == namespaceId && "shadow" == name)
-    return new Shadow();
-    
-if( 26 == namespaceId && "textbox" == name)
-    return new TextBox();
-    
-if( 26 == namespaceId && "textpath" == name)
-    return new TextPath();
-    
-if( 26 == namespaceId && "imagedata" == name)
-    return new ImageData();
-    
-if( 27 == namespaceId && "skew" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Skew();
-    
-if( 27 == namespaceId && "extrusion" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Extrusion();
-    
-if( 27 == namespaceId && "callout" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Callout();
-    
-if( 27 == namespaceId && "lock" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.Lock();
-    
-if( 27 == namespaceId && "clippath" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.ClipPath();
-    
-if( 27 == namespaceId && "signatureline" == name)
-    return new DocumentFormat.OpenXml.Vml.Office.SignatureLine();
-    
-if( 28 == namespaceId && "wrap" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TextWrap();
-    
-if( 28 == namespaceId && "anchorlock" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.AnchorLock();
-    
-if( 28 == namespaceId && "bordertop" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.TopBorder();
-    
-if( 28 == namespaceId && "borderbottom" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.BottomBorder();
-    
-if( 28 == namespaceId && "borderleft" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.LeftBorder();
-    
-if( 28 == namespaceId && "borderright" == name)
-    return new DocumentFormat.OpenXml.Vml.Wordprocessing.RightBorder();
-    
-if( 29 == namespaceId && "ClientData" == name)
-    return new DocumentFormat.OpenXml.Vml.Spreadsheet.ClientData();
-    
-if( 30 == namespaceId && "textdata" == name)
-    return new DocumentFormat.OpenXml.Vml.Presentation.TextData();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<RoundRectangle>(deep);
@@ -8343,6 +7503,7 @@ if( 30 == namespaceId && "textdata" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "h")]
 public partial class ShapeHandle : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12598;
@@ -8440,6 +7601,7 @@ public partial class ShapeHandle : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(26, "f")]
 public partial class Formula : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12599;

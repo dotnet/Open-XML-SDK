@@ -36,6 +36,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
     [ChildElementInfo(typeof(ColorStyleVariation), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "colorStyle")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ColorStyle : OpenXmlPartRootElement
 {
@@ -108,6 +109,7 @@ public partial class ColorStyle : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -125,37 +127,7 @@ public partial class ColorStyle : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "scrgbClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage();
     
-if( 10 == namespaceId && "srgbClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.RgbColorModelHex();
-    
-if( 10 == namespaceId && "hslClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.HslColor();
-    
-if( 10 == namespaceId && "sysClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.SystemColor();
-    
-if( 10 == namespaceId && "schemeClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.SchemeColor();
-    
-if( 10 == namespaceId && "prstClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.PresetColor();
-    
-if( 65 == namespaceId && "variation" == name)
-    return new ColorStyleVariation();
-    
-if( 65 == namespaceId && "extLst" == name)
-    return new OfficeArtExtensionList();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorStyle>(deep);
@@ -236,6 +208,7 @@ if( 65 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(Wall), FileFormatVersions.Office2013)]
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "chartStyle")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ChartStyle : OpenXmlPartRootElement
 {
@@ -301,6 +274,7 @@ public partial class ChartStyle : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -318,109 +292,7 @@ public partial class ChartStyle : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 65 == namespaceId && "axisTitle" == name)
-    return new AxisTitle();
     
-if( 65 == namespaceId && "categoryAxis" == name)
-    return new CategoryAxis();
-    
-if( 65 == namespaceId && "chartArea" == name)
-    return new ChartArea();
-    
-if( 65 == namespaceId && "dataLabel" == name)
-    return new DataLabel();
-    
-if( 65 == namespaceId && "dataLabelCallout" == name)
-    return new DataLabelCallout();
-    
-if( 65 == namespaceId && "dataPoint" == name)
-    return new DataPoint();
-    
-if( 65 == namespaceId && "dataPoint3D" == name)
-    return new DataPoint3D();
-    
-if( 65 == namespaceId && "dataPointLine" == name)
-    return new DataPointLine();
-    
-if( 65 == namespaceId && "dataPointMarker" == name)
-    return new DataPointMarker();
-    
-if( 65 == namespaceId && "dataPointMarkerLayout" == name)
-    return new MarkerLayoutProperties();
-    
-if( 65 == namespaceId && "dataPointWireframe" == name)
-    return new DataPointWireframe();
-    
-if( 65 == namespaceId && "dataTable" == name)
-    return new DataTableStyle();
-    
-if( 65 == namespaceId && "downBar" == name)
-    return new DownBar();
-    
-if( 65 == namespaceId && "dropLine" == name)
-    return new DropLine();
-    
-if( 65 == namespaceId && "errorBar" == name)
-    return new ErrorBar();
-    
-if( 65 == namespaceId && "floor" == name)
-    return new Floor();
-    
-if( 65 == namespaceId && "gridlineMajor" == name)
-    return new GridlineMajor();
-    
-if( 65 == namespaceId && "gridlineMinor" == name)
-    return new GridlineMinor();
-    
-if( 65 == namespaceId && "hiLoLine" == name)
-    return new HiLoLine();
-    
-if( 65 == namespaceId && "leaderLine" == name)
-    return new LeaderLine();
-    
-if( 65 == namespaceId && "legend" == name)
-    return new LegendStyle();
-    
-if( 65 == namespaceId && "plotArea" == name)
-    return new PlotArea();
-    
-if( 65 == namespaceId && "plotArea3D" == name)
-    return new PlotArea3D();
-    
-if( 65 == namespaceId && "seriesAxis" == name)
-    return new SeriesAxis();
-    
-if( 65 == namespaceId && "seriesLine" == name)
-    return new SeriesLine();
-    
-if( 65 == namespaceId && "title" == name)
-    return new TitleStyle();
-    
-if( 65 == namespaceId && "trendline" == name)
-    return new TrendlineStyle();
-    
-if( 65 == namespaceId && "trendlineLabel" == name)
-    return new TrendlineLabel();
-    
-if( 65 == namespaceId && "upBar" == name)
-    return new UpBar();
-    
-if( 65 == namespaceId && "valueAxis" == name)
-    return new ValueAxis();
-    
-if( 65 == namespaceId && "wall" == name)
-    return new Wall();
-    
-if( 65 == namespaceId && "extLst" == name)
-    return new OfficeArtExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "axisTitle","categoryAxis","chartArea","dataLabel","dataLabelCallout","dataPoint","dataPoint3D","dataPointLine","dataPointMarker","dataPointMarkerLayout","dataPointWireframe","dataTable","downBar","dropLine","errorBar","floor","gridlineMajor","gridlineMinor","hiLoLine","leaderLine","legend","plotArea","plotArea3D","seriesAxis","seriesLine","title","trendline","trendlineLabel","upBar","valueAxis","wall","extLst" };
     private static readonly byte[] eleNamespaceIds = { 65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65,65 };
     
@@ -441,6 +313,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<AxisTitle>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> CategoryAxis.</para>
     /// <para> Represents the following element tag in the schema: cs:categoryAxis </para>
@@ -453,6 +326,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<CategoryAxis>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> ChartArea.</para>
     /// <para> Represents the following element tag in the schema: cs:chartArea </para>
@@ -465,6 +339,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<ChartArea>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> DataLabel.</para>
     /// <para> Represents the following element tag in the schema: cs:dataLabel </para>
@@ -477,6 +352,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<DataLabel>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> DataLabelCallout.</para>
     /// <para> Represents the following element tag in the schema: cs:dataLabelCallout </para>
@@ -489,6 +365,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<DataLabelCallout>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> DataPoint.</para>
     /// <para> Represents the following element tag in the schema: cs:dataPoint </para>
@@ -501,6 +378,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<DataPoint>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> DataPoint3D.</para>
     /// <para> Represents the following element tag in the schema: cs:dataPoint3D </para>
@@ -513,6 +391,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<DataPoint3D>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> DataPointLine.</para>
     /// <para> Represents the following element tag in the schema: cs:dataPointLine </para>
@@ -525,6 +404,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<DataPointLine>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> DataPointMarker.</para>
     /// <para> Represents the following element tag in the schema: cs:dataPointMarker </para>
@@ -537,6 +417,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<DataPointMarker>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> MarkerLayoutProperties.</para>
     /// <para> Represents the following element tag in the schema: cs:dataPointMarkerLayout </para>
@@ -549,6 +430,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<MarkerLayoutProperties>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> DataPointWireframe.</para>
     /// <para> Represents the following element tag in the schema: cs:dataPointWireframe </para>
@@ -561,6 +443,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<DataPointWireframe>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> DataTableStyle.</para>
     /// <para> Represents the following element tag in the schema: cs:dataTable </para>
@@ -573,6 +456,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<DataTableStyle>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> DownBar.</para>
     /// <para> Represents the following element tag in the schema: cs:downBar </para>
@@ -585,6 +469,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<DownBar>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> DropLine.</para>
     /// <para> Represents the following element tag in the schema: cs:dropLine </para>
@@ -597,6 +482,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<DropLine>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> ErrorBar.</para>
     /// <para> Represents the following element tag in the schema: cs:errorBar </para>
@@ -609,6 +495,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<ErrorBar>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> Floor.</para>
     /// <para> Represents the following element tag in the schema: cs:floor </para>
@@ -621,6 +508,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<Floor>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> GridlineMajor.</para>
     /// <para> Represents the following element tag in the schema: cs:gridlineMajor </para>
@@ -633,6 +521,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<GridlineMajor>(16);
         set => SetElement(16, value);
     }
+    
     /// <summary>
     /// <para> GridlineMinor.</para>
     /// <para> Represents the following element tag in the schema: cs:gridlineMinor </para>
@@ -645,6 +534,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<GridlineMinor>(17);
         set => SetElement(17, value);
     }
+    
     /// <summary>
     /// <para> HiLoLine.</para>
     /// <para> Represents the following element tag in the schema: cs:hiLoLine </para>
@@ -657,6 +547,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<HiLoLine>(18);
         set => SetElement(18, value);
     }
+    
     /// <summary>
     /// <para> LeaderLine.</para>
     /// <para> Represents the following element tag in the schema: cs:leaderLine </para>
@@ -669,6 +560,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<LeaderLine>(19);
         set => SetElement(19, value);
     }
+    
     /// <summary>
     /// <para> LegendStyle.</para>
     /// <para> Represents the following element tag in the schema: cs:legend </para>
@@ -681,6 +573,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<LegendStyle>(20);
         set => SetElement(20, value);
     }
+    
     /// <summary>
     /// <para> PlotArea.</para>
     /// <para> Represents the following element tag in the schema: cs:plotArea </para>
@@ -693,6 +586,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<PlotArea>(21);
         set => SetElement(21, value);
     }
+    
     /// <summary>
     /// <para> PlotArea3D.</para>
     /// <para> Represents the following element tag in the schema: cs:plotArea3D </para>
@@ -705,6 +599,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<PlotArea3D>(22);
         set => SetElement(22, value);
     }
+    
     /// <summary>
     /// <para> SeriesAxis.</para>
     /// <para> Represents the following element tag in the schema: cs:seriesAxis </para>
@@ -717,6 +612,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<SeriesAxis>(23);
         set => SetElement(23, value);
     }
+    
     /// <summary>
     /// <para> SeriesLine.</para>
     /// <para> Represents the following element tag in the schema: cs:seriesLine </para>
@@ -729,6 +625,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<SeriesLine>(24);
         set => SetElement(24, value);
     }
+    
     /// <summary>
     /// <para> TitleStyle.</para>
     /// <para> Represents the following element tag in the schema: cs:title </para>
@@ -741,6 +638,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<TitleStyle>(25);
         set => SetElement(25, value);
     }
+    
     /// <summary>
     /// <para> TrendlineStyle.</para>
     /// <para> Represents the following element tag in the schema: cs:trendline </para>
@@ -753,6 +651,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<TrendlineStyle>(26);
         set => SetElement(26, value);
     }
+    
     /// <summary>
     /// <para> TrendlineLabel.</para>
     /// <para> Represents the following element tag in the schema: cs:trendlineLabel </para>
@@ -765,6 +664,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<TrendlineLabel>(27);
         set => SetElement(27, value);
     }
+    
     /// <summary>
     /// <para> UpBar.</para>
     /// <para> Represents the following element tag in the schema: cs:upBar </para>
@@ -777,6 +677,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<UpBar>(28);
         set => SetElement(28, value);
     }
+    
     /// <summary>
     /// <para> ValueAxis.</para>
     /// <para> Represents the following element tag in the schema: cs:valueAxis </para>
@@ -789,6 +690,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<ValueAxis>(29);
         set => SetElement(29, value);
     }
+    
     /// <summary>
     /// <para> Wall.</para>
     /// <para> Represents the following element tag in the schema: cs:wall </para>
@@ -801,6 +703,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<Wall>(30);
         set => SetElement(30, value);
     }
+    
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: cs:extLst </para>
@@ -813,6 +716,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<OfficeArtExtensionList>(31);
         set => SetElement(31, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -888,6 +792,7 @@ if( 65 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.InverseGamma))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(65, "variation")]
 public partial class ColorStyleVariation : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13258;
@@ -930,100 +835,11 @@ public partial class ColorStyleVariation : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "tint" == name)
-    return new DocumentFormat.OpenXml.Drawing.Tint();
     
-if( 10 == namespaceId && "shade" == name)
-    return new DocumentFormat.OpenXml.Drawing.Shade();
-    
-if( 10 == namespaceId && "comp" == name)
-    return new DocumentFormat.OpenXml.Drawing.Complement();
-    
-if( 10 == namespaceId && "inv" == name)
-    return new DocumentFormat.OpenXml.Drawing.Inverse();
-    
-if( 10 == namespaceId && "gray" == name)
-    return new DocumentFormat.OpenXml.Drawing.Gray();
-    
-if( 10 == namespaceId && "alpha" == name)
-    return new DocumentFormat.OpenXml.Drawing.Alpha();
-    
-if( 10 == namespaceId && "alphaOff" == name)
-    return new DocumentFormat.OpenXml.Drawing.AlphaOffset();
-    
-if( 10 == namespaceId && "alphaMod" == name)
-    return new DocumentFormat.OpenXml.Drawing.AlphaModulation();
-    
-if( 10 == namespaceId && "hue" == name)
-    return new DocumentFormat.OpenXml.Drawing.Hue();
-    
-if( 10 == namespaceId && "hueOff" == name)
-    return new DocumentFormat.OpenXml.Drawing.HueOffset();
-    
-if( 10 == namespaceId && "hueMod" == name)
-    return new DocumentFormat.OpenXml.Drawing.HueModulation();
-    
-if( 10 == namespaceId && "sat" == name)
-    return new DocumentFormat.OpenXml.Drawing.Saturation();
-    
-if( 10 == namespaceId && "satOff" == name)
-    return new DocumentFormat.OpenXml.Drawing.SaturationOffset();
-    
-if( 10 == namespaceId && "satMod" == name)
-    return new DocumentFormat.OpenXml.Drawing.SaturationModulation();
-    
-if( 10 == namespaceId && "lum" == name)
-    return new DocumentFormat.OpenXml.Drawing.Luminance();
-    
-if( 10 == namespaceId && "lumOff" == name)
-    return new DocumentFormat.OpenXml.Drawing.LuminanceOffset();
-    
-if( 10 == namespaceId && "lumMod" == name)
-    return new DocumentFormat.OpenXml.Drawing.LuminanceModulation();
-    
-if( 10 == namespaceId && "red" == name)
-    return new DocumentFormat.OpenXml.Drawing.Red();
-    
-if( 10 == namespaceId && "redOff" == name)
-    return new DocumentFormat.OpenXml.Drawing.RedOffset();
-    
-if( 10 == namespaceId && "redMod" == name)
-    return new DocumentFormat.OpenXml.Drawing.RedModulation();
-    
-if( 10 == namespaceId && "green" == name)
-    return new DocumentFormat.OpenXml.Drawing.Green();
-    
-if( 10 == namespaceId && "greenOff" == name)
-    return new DocumentFormat.OpenXml.Drawing.GreenOffset();
-    
-if( 10 == namespaceId && "greenMod" == name)
-    return new DocumentFormat.OpenXml.Drawing.GreenModulation();
-    
-if( 10 == namespaceId && "blue" == name)
-    return new DocumentFormat.OpenXml.Drawing.Blue();
-    
-if( 10 == namespaceId && "blueOff" == name)
-    return new DocumentFormat.OpenXml.Drawing.BlueOffset();
-    
-if( 10 == namespaceId && "blueMod" == name)
-    return new DocumentFormat.OpenXml.Drawing.BlueModulation();
-    
-if( 10 == namespaceId && "gamma" == name)
-    return new DocumentFormat.OpenXml.Drawing.Gamma();
-    
-if( 10 == namespaceId && "invGamma" == name)
-    return new DocumentFormat.OpenXml.Drawing.InverseGamma();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ColorStyleVariation>(deep);
@@ -1044,6 +860,7 @@ if( 10 == namespaceId && "invGamma" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(65, "extLst")]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13259;
@@ -1086,19 +903,11 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "ext" == name)
-    return new DocumentFormat.OpenXml.Drawing.Extension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeArtExtensionList>(deep);
@@ -1173,6 +982,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.InverseGamma))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(65, "styleClr")]
 public partial class StyleColor : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13260;
@@ -1222,100 +1032,11 @@ public partial class StyleColor : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "tint" == name)
-    return new DocumentFormat.OpenXml.Drawing.Tint();
     
-if( 10 == namespaceId && "shade" == name)
-    return new DocumentFormat.OpenXml.Drawing.Shade();
-    
-if( 10 == namespaceId && "comp" == name)
-    return new DocumentFormat.OpenXml.Drawing.Complement();
-    
-if( 10 == namespaceId && "inv" == name)
-    return new DocumentFormat.OpenXml.Drawing.Inverse();
-    
-if( 10 == namespaceId && "gray" == name)
-    return new DocumentFormat.OpenXml.Drawing.Gray();
-    
-if( 10 == namespaceId && "alpha" == name)
-    return new DocumentFormat.OpenXml.Drawing.Alpha();
-    
-if( 10 == namespaceId && "alphaOff" == name)
-    return new DocumentFormat.OpenXml.Drawing.AlphaOffset();
-    
-if( 10 == namespaceId && "alphaMod" == name)
-    return new DocumentFormat.OpenXml.Drawing.AlphaModulation();
-    
-if( 10 == namespaceId && "hue" == name)
-    return new DocumentFormat.OpenXml.Drawing.Hue();
-    
-if( 10 == namespaceId && "hueOff" == name)
-    return new DocumentFormat.OpenXml.Drawing.HueOffset();
-    
-if( 10 == namespaceId && "hueMod" == name)
-    return new DocumentFormat.OpenXml.Drawing.HueModulation();
-    
-if( 10 == namespaceId && "sat" == name)
-    return new DocumentFormat.OpenXml.Drawing.Saturation();
-    
-if( 10 == namespaceId && "satOff" == name)
-    return new DocumentFormat.OpenXml.Drawing.SaturationOffset();
-    
-if( 10 == namespaceId && "satMod" == name)
-    return new DocumentFormat.OpenXml.Drawing.SaturationModulation();
-    
-if( 10 == namespaceId && "lum" == name)
-    return new DocumentFormat.OpenXml.Drawing.Luminance();
-    
-if( 10 == namespaceId && "lumOff" == name)
-    return new DocumentFormat.OpenXml.Drawing.LuminanceOffset();
-    
-if( 10 == namespaceId && "lumMod" == name)
-    return new DocumentFormat.OpenXml.Drawing.LuminanceModulation();
-    
-if( 10 == namespaceId && "red" == name)
-    return new DocumentFormat.OpenXml.Drawing.Red();
-    
-if( 10 == namespaceId && "redOff" == name)
-    return new DocumentFormat.OpenXml.Drawing.RedOffset();
-    
-if( 10 == namespaceId && "redMod" == name)
-    return new DocumentFormat.OpenXml.Drawing.RedModulation();
-    
-if( 10 == namespaceId && "green" == name)
-    return new DocumentFormat.OpenXml.Drawing.Green();
-    
-if( 10 == namespaceId && "greenOff" == name)
-    return new DocumentFormat.OpenXml.Drawing.GreenOffset();
-    
-if( 10 == namespaceId && "greenMod" == name)
-    return new DocumentFormat.OpenXml.Drawing.GreenModulation();
-    
-if( 10 == namespaceId && "blue" == name)
-    return new DocumentFormat.OpenXml.Drawing.Blue();
-    
-if( 10 == namespaceId && "blueOff" == name)
-    return new DocumentFormat.OpenXml.Drawing.BlueOffset();
-    
-if( 10 == namespaceId && "blueMod" == name)
-    return new DocumentFormat.OpenXml.Drawing.BlueModulation();
-    
-if( 10 == namespaceId && "gamma" == name)
-    return new DocumentFormat.OpenXml.Drawing.Gamma();
-    
-if( 10 == namespaceId && "invGamma" == name)
-    return new DocumentFormat.OpenXml.Drawing.InverseGamma();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<StyleColor>(deep);
@@ -1340,6 +1061,7 @@ if( 10 == namespaceId && "invGamma" == name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "lnRef")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class LineReference : StyleReference
 {
@@ -1379,6 +1101,7 @@ public partial class LineReference : StyleReference
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -1404,6 +1127,7 @@ public partial class LineReference : StyleReference
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "fillRef")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class FillReference : StyleReference
 {
@@ -1443,6 +1167,7 @@ public partial class FillReference : StyleReference
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -1468,6 +1193,7 @@ public partial class FillReference : StyleReference
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "effectRef")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class EffectReference : StyleReference
 {
@@ -1507,6 +1233,7 @@ public partial class EffectReference : StyleReference
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -1555,34 +1282,7 @@ public abstract partial class StyleReference : OpenXmlCompositeElement
     [SchemaIndex(1)]
     public ListValue<StringValue> Modifiers { get; set; }
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "scrgbClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage();
     
-if( 10 == namespaceId && "srgbClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.RgbColorModelHex();
-    
-if( 10 == namespaceId && "hslClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.HslColor();
-    
-if( 10 == namespaceId && "sysClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.SystemColor();
-    
-if( 10 == namespaceId && "schemeClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.SchemeColor();
-    
-if( 10 == namespaceId && "prstClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.PresetColor();
-    
-if( 65 == namespaceId && "styleClr" == name)
-    return new StyleColor();
-    
-
-    return null;
-}
-
     
     
     /// <summary>
@@ -1615,6 +1315,7 @@ if( 65 == namespaceId && "styleClr" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -1626,6 +1327,7 @@ if( 65 == namespaceId && "styleClr" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(65, "lineWidthScale")]
 public partial class LineWidthScale : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 13262;
@@ -1692,6 +1394,7 @@ public partial class LineWidthScale : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(StyleColor), FileFormatVersions.Office2013)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(65, "fontRef")]
 public partial class FontReference : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13265;
@@ -1748,37 +1451,11 @@ public partial class FontReference : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "scrgbClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.RgbColorModelPercentage();
     
-if( 10 == namespaceId && "srgbClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.RgbColorModelHex();
-    
-if( 10 == namespaceId && "hslClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.HslColor();
-    
-if( 10 == namespaceId && "sysClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.SystemColor();
-    
-if( 10 == namespaceId && "schemeClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.SchemeColor();
-    
-if( 10 == namespaceId && "prstClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.PresetColor();
-    
-if( 65 == namespaceId && "styleClr" == name)
-    return new StyleColor();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<FontReference>(deep);
@@ -1827,6 +1504,7 @@ if( 65 == namespaceId && "styleClr" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(65, "spPr")]
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13266;
@@ -1876,61 +1554,11 @@ public partial class ShapeProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "xfrm" == name)
-    return new DocumentFormat.OpenXml.Drawing.Transform2D();
     
-if( 10 == namespaceId && "custGeom" == name)
-    return new DocumentFormat.OpenXml.Drawing.CustomGeometry();
-    
-if( 10 == namespaceId && "prstGeom" == name)
-    return new DocumentFormat.OpenXml.Drawing.PresetGeometry();
-    
-if( 10 == namespaceId && "noFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.NoFill();
-    
-if( 10 == namespaceId && "solidFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.SolidFill();
-    
-if( 10 == namespaceId && "gradFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.GradientFill();
-    
-if( 10 == namespaceId && "blipFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.BlipFill();
-    
-if( 10 == namespaceId && "pattFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.PatternFill();
-    
-if( 10 == namespaceId && "grpFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.GroupFill();
-    
-if( 10 == namespaceId && "ln" == name)
-    return new DocumentFormat.OpenXml.Drawing.Outline();
-    
-if( 10 == namespaceId && "effectLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.EffectList();
-    
-if( 10 == namespaceId && "effectDag" == name)
-    return new DocumentFormat.OpenXml.Drawing.EffectDag();
-    
-if( 10 == namespaceId && "scene3d" == name)
-    return new DocumentFormat.OpenXml.Drawing.Scene3DType();
-    
-if( 10 == namespaceId && "sp3d" == name)
-    return new DocumentFormat.OpenXml.Drawing.Shape3DType();
-    
-if( 10 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "xfrm","custGeom","prstGeom","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","ln","effectLst","effectDag","scene3d","sp3d","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10 };
     
@@ -1951,6 +1579,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -2014,6 +1643,7 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(65, "defRPr")]
 public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13267;
@@ -2175,82 +1805,11 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "ln" == name)
-    return new DocumentFormat.OpenXml.Drawing.Outline();
     
-if( 10 == namespaceId && "noFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.NoFill();
-    
-if( 10 == namespaceId && "solidFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.SolidFill();
-    
-if( 10 == namespaceId && "gradFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.GradientFill();
-    
-if( 10 == namespaceId && "blipFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.BlipFill();
-    
-if( 10 == namespaceId && "pattFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.PatternFill();
-    
-if( 10 == namespaceId && "grpFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.GroupFill();
-    
-if( 10 == namespaceId && "effectLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.EffectList();
-    
-if( 10 == namespaceId && "effectDag" == name)
-    return new DocumentFormat.OpenXml.Drawing.EffectDag();
-    
-if( 10 == namespaceId && "highlight" == name)
-    return new DocumentFormat.OpenXml.Drawing.Highlight();
-    
-if( 10 == namespaceId && "uLnTx" == name)
-    return new DocumentFormat.OpenXml.Drawing.UnderlineFollowsText();
-    
-if( 10 == namespaceId && "uLn" == name)
-    return new DocumentFormat.OpenXml.Drawing.Underline();
-    
-if( 10 == namespaceId && "uFillTx" == name)
-    return new DocumentFormat.OpenXml.Drawing.UnderlineFillText();
-    
-if( 10 == namespaceId && "uFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.UnderlineFill();
-    
-if( 10 == namespaceId && "latin" == name)
-    return new DocumentFormat.OpenXml.Drawing.LatinFont();
-    
-if( 10 == namespaceId && "ea" == name)
-    return new DocumentFormat.OpenXml.Drawing.EastAsianFont();
-    
-if( 10 == namespaceId && "cs" == name)
-    return new DocumentFormat.OpenXml.Drawing.ComplexScriptFont();
-    
-if( 10 == namespaceId && "sym" == name)
-    return new DocumentFormat.OpenXml.Drawing.SymbolFont();
-    
-if( 10 == namespaceId && "hlinkClick" == name)
-    return new DocumentFormat.OpenXml.Drawing.HyperlinkOnClick();
-    
-if( 10 == namespaceId && "hlinkMouseOver" == name)
-    return new DocumentFormat.OpenXml.Drawing.HyperlinkOnMouseOver();
-    
-if( 10 == namespaceId && "rtl" == name)
-    return new DocumentFormat.OpenXml.Drawing.RightToLeft();
-    
-if( 10 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "ln","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","effectLst","effectDag","highlight","uLnTx","uLn","uFillTx","uFill","latin","ea","cs","sym","hlinkClick","hlinkMouseOver","rtl","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10 };
     
@@ -2271,6 +1830,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.Outline>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -2306,6 +1866,7 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(65, "bodyPr")]
 public partial class TextBodyProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13268;
@@ -2481,40 +2042,11 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "prstTxWarp" == name)
-    return new DocumentFormat.OpenXml.Drawing.PresetTextWrap();
     
-if( 10 == namespaceId && "noAutofit" == name)
-    return new DocumentFormat.OpenXml.Drawing.NoAutoFit();
-    
-if( 10 == namespaceId && "normAutofit" == name)
-    return new DocumentFormat.OpenXml.Drawing.NormalAutoFit();
-    
-if( 10 == namespaceId && "spAutoFit" == name)
-    return new DocumentFormat.OpenXml.Drawing.ShapeAutoFit();
-    
-if( 10 == namespaceId && "scene3d" == name)
-    return new DocumentFormat.OpenXml.Drawing.Scene3DType();
-    
-if( 10 == namespaceId && "sp3d" == name)
-    return new DocumentFormat.OpenXml.Drawing.Shape3DType();
-    
-if( 10 == namespaceId && "flatTx" == name)
-    return new DocumentFormat.OpenXml.Drawing.FlatText();
-    
-if( 10 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "prstTxWarp","noAutofit","normAutofit","spAutoFit","scene3d","sp3d","flatTx","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10 };
     
@@ -2535,6 +2067,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.PresetTextWrap>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -2548,6 +2081,7 @@ if( 10 == namespaceId && "extLst" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "categoryAxis")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class CategoryAxisProperties : AxisProperties
 {
@@ -2575,6 +2109,7 @@ public partial class CategoryAxisProperties : AxisProperties
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "seriesAxis")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SeriesAxisProperties : AxisProperties
 {
@@ -2602,6 +2137,7 @@ public partial class SeriesAxisProperties : AxisProperties
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "valueAxis")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ValueAxisProperties : AxisProperties
 {
@@ -2699,6 +2235,7 @@ public abstract partial class AxisProperties : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(65, "dataSeries")]
 public partial class DataSeries : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13270;
@@ -2789,6 +2326,7 @@ public partial class DataSeries : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(65, "dataLabels")]
 public partial class DataLabels : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13271;
@@ -2865,6 +2403,7 @@ public partial class DataLabels : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(65, "dataTable")]
 public partial class DataTable : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13272;
@@ -2927,6 +2466,7 @@ public partial class DataTable : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(65, "legend")]
 public partial class Legend : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13273;
@@ -2982,6 +2522,7 @@ public partial class Legend : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(65, "title")]
 public partial class Title : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13275;
@@ -3023,6 +2564,7 @@ public partial class Title : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(65, "trendline")]
 public partial class Trendline : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13276;
@@ -3078,6 +2620,7 @@ public partial class Trendline : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(65, "view3D")]
 public partial class View3DProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13278;
@@ -3167,6 +2710,7 @@ public partial class View3DProperties : OpenXmlLeafElement
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "axisTitle")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class AxisTitle : StyleEntry
 {
@@ -3206,6 +2750,7 @@ public partial class AxisTitle : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3233,6 +2778,7 @@ public partial class AxisTitle : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "categoryAxis")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class CategoryAxis : StyleEntry
 {
@@ -3272,6 +2818,7 @@ public partial class CategoryAxis : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3299,6 +2846,7 @@ public partial class CategoryAxis : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "chartArea")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ChartArea : StyleEntry
 {
@@ -3338,6 +2886,7 @@ public partial class ChartArea : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3365,6 +2914,7 @@ public partial class ChartArea : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "dataLabel")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataLabel : StyleEntry
 {
@@ -3404,6 +2954,7 @@ public partial class DataLabel : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3431,6 +2982,7 @@ public partial class DataLabel : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "dataLabelCallout")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataLabelCallout : StyleEntry
 {
@@ -3470,6 +3022,7 @@ public partial class DataLabelCallout : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3497,6 +3050,7 @@ public partial class DataLabelCallout : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "dataPoint")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataPoint : StyleEntry
 {
@@ -3536,6 +3090,7 @@ public partial class DataPoint : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3563,6 +3118,7 @@ public partial class DataPoint : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "dataPoint3D")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataPoint3D : StyleEntry
 {
@@ -3602,6 +3158,7 @@ public partial class DataPoint3D : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3629,6 +3186,7 @@ public partial class DataPoint3D : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "dataPointLine")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataPointLine : StyleEntry
 {
@@ -3668,6 +3226,7 @@ public partial class DataPointLine : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3695,6 +3254,7 @@ public partial class DataPointLine : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "dataPointMarker")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataPointMarker : StyleEntry
 {
@@ -3734,6 +3294,7 @@ public partial class DataPointMarker : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3761,6 +3322,7 @@ public partial class DataPointMarker : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "dataPointWireframe")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataPointWireframe : StyleEntry
 {
@@ -3800,6 +3362,7 @@ public partial class DataPointWireframe : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3827,6 +3390,7 @@ public partial class DataPointWireframe : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "dataTable")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DataTableStyle : StyleEntry
 {
@@ -3866,6 +3430,7 @@ public partial class DataTableStyle : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3893,6 +3458,7 @@ public partial class DataTableStyle : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "downBar")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DownBar : StyleEntry
 {
@@ -3932,6 +3498,7 @@ public partial class DownBar : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3959,6 +3526,7 @@ public partial class DownBar : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "dropLine")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class DropLine : StyleEntry
 {
@@ -3998,6 +3566,7 @@ public partial class DropLine : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -4025,6 +3594,7 @@ public partial class DropLine : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "errorBar")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ErrorBar : StyleEntry
 {
@@ -4064,6 +3634,7 @@ public partial class ErrorBar : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -4091,6 +3662,7 @@ public partial class ErrorBar : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "floor")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Floor : StyleEntry
 {
@@ -4130,6 +3702,7 @@ public partial class Floor : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -4157,6 +3730,7 @@ public partial class Floor : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "gridlineMajor")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class GridlineMajor : StyleEntry
 {
@@ -4196,6 +3770,7 @@ public partial class GridlineMajor : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -4223,6 +3798,7 @@ public partial class GridlineMajor : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "gridlineMinor")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class GridlineMinor : StyleEntry
 {
@@ -4262,6 +3838,7 @@ public partial class GridlineMinor : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -4289,6 +3866,7 @@ public partial class GridlineMinor : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "hiLoLine")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class HiLoLine : StyleEntry
 {
@@ -4328,6 +3906,7 @@ public partial class HiLoLine : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -4355,6 +3934,7 @@ public partial class HiLoLine : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "leaderLine")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class LeaderLine : StyleEntry
 {
@@ -4394,6 +3974,7 @@ public partial class LeaderLine : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -4421,6 +4002,7 @@ public partial class LeaderLine : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "legend")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class LegendStyle : StyleEntry
 {
@@ -4460,6 +4042,7 @@ public partial class LegendStyle : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -4487,6 +4070,7 @@ public partial class LegendStyle : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "plotArea")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class PlotArea : StyleEntry
 {
@@ -4526,6 +4110,7 @@ public partial class PlotArea : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -4553,6 +4138,7 @@ public partial class PlotArea : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "plotArea3D")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class PlotArea3D : StyleEntry
 {
@@ -4592,6 +4178,7 @@ public partial class PlotArea3D : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -4619,6 +4206,7 @@ public partial class PlotArea3D : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "seriesAxis")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SeriesAxis : StyleEntry
 {
@@ -4658,6 +4246,7 @@ public partial class SeriesAxis : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -4685,6 +4274,7 @@ public partial class SeriesAxis : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "seriesLine")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class SeriesLine : StyleEntry
 {
@@ -4724,6 +4314,7 @@ public partial class SeriesLine : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -4751,6 +4342,7 @@ public partial class SeriesLine : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "title")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TitleStyle : StyleEntry
 {
@@ -4790,6 +4382,7 @@ public partial class TitleStyle : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -4817,6 +4410,7 @@ public partial class TitleStyle : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "trendline")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TrendlineStyle : StyleEntry
 {
@@ -4856,6 +4450,7 @@ public partial class TrendlineStyle : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -4883,6 +4478,7 @@ public partial class TrendlineStyle : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "trendlineLabel")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class TrendlineLabel : StyleEntry
 {
@@ -4922,6 +4518,7 @@ public partial class TrendlineLabel : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -4949,6 +4546,7 @@ public partial class TrendlineLabel : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "upBar")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class UpBar : StyleEntry
 {
@@ -4988,6 +4586,7 @@ public partial class UpBar : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -5015,6 +4614,7 @@ public partial class UpBar : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "valueAxis")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class ValueAxis : StyleEntry
 {
@@ -5054,6 +4654,7 @@ public partial class ValueAxis : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -5081,6 +4682,7 @@ public partial class ValueAxis : StyleEntry
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(65, "wall")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
 public partial class Wall : StyleEntry
 {
@@ -5120,6 +4722,7 @@ public partial class Wall : StyleEntry
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -5165,40 +4768,7 @@ public abstract partial class StyleEntry : OpenXmlCompositeElement
     [SchemaIndex(0)]
     public ListValue<StringValue> Modifiers { get; set; }
 
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 65 == namespaceId && "lnRef" == name)
-    return new LineReference();
     
-if( 65 == namespaceId && "lineWidthScale" == name)
-    return new LineWidthScale();
-    
-if( 65 == namespaceId && "fillRef" == name)
-    return new FillReference();
-    
-if( 65 == namespaceId && "effectRef" == name)
-    return new EffectReference();
-    
-if( 65 == namespaceId && "fontRef" == name)
-    return new FontReference();
-    
-if( 65 == namespaceId && "spPr" == name)
-    return new ShapeProperties();
-    
-if( 65 == namespaceId && "defRPr" == name)
-    return new TextCharacterPropertiesType();
-    
-if( 65 == namespaceId && "bodyPr" == name)
-    return new TextBodyProperties();
-    
-if( 65 == namespaceId && "extLst" == name)
-    return new OfficeArtExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "lnRef","lineWidthScale","fillRef","effectRef","fontRef","spPr","defRPr","bodyPr","extLst" };
     private static readonly byte[] eleNamespaceIds = { 65,65,65,65,65,65,65,65,65 };
     
@@ -5219,6 +4789,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<LineReference>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> LineWidthScale.</para>
     /// <para> Represents the following element tag in the schema: cs:lineWidthScale </para>
@@ -5231,6 +4802,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<LineWidthScale>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> FillReference.</para>
     /// <para> Represents the following element tag in the schema: cs:fillRef </para>
@@ -5243,6 +4815,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<FillReference>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> EffectReference.</para>
     /// <para> Represents the following element tag in the schema: cs:effectRef </para>
@@ -5255,6 +4828,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<EffectReference>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> FontReference.</para>
     /// <para> Represents the following element tag in the schema: cs:fontRef </para>
@@ -5267,6 +4841,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<FontReference>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> ShapeProperties.</para>
     /// <para> Represents the following element tag in the schema: cs:spPr </para>
@@ -5279,6 +4854,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<ShapeProperties>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> TextCharacterPropertiesType.</para>
     /// <para> Represents the following element tag in the schema: cs:defRPr </para>
@@ -5291,6 +4867,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<TextCharacterPropertiesType>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> TextBodyProperties.</para>
     /// <para> Represents the following element tag in the schema: cs:bodyPr </para>
@@ -5303,6 +4880,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<TextBodyProperties>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: cs:extLst </para>
@@ -5315,6 +4893,7 @@ if( 65 == namespaceId && "extLst" == name)
         get => GetElement<OfficeArtExtensionList>(8);
         set => SetElement(8, value);
     }
+    
 
 
     
@@ -5348,6 +4927,7 @@ if( 65 == namespaceId && "extLst" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -5359,6 +4939,7 @@ if( 65 == namespaceId && "extLst" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(65, "dataPointMarkerLayout")]
 public partial class MarkerLayoutProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13288;
