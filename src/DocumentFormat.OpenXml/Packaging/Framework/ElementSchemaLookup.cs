@@ -75,11 +75,21 @@ namespace DocumentFormat.OpenXml
         {
             if (typeof(OpenXmlPartReader) == type)
             {
-                foreach (var elementType in typeof(OpenXmlPartRootElement).GetTypeInfo().Assembly.DefinedTypes)
+#if NETSTANDARD1_3
+                var types = typeof(OpenXmlPartRootElement).GetTypeInfo().Assembly.DefinedTypes;
+#else
+                var types = typeof(OpenXmlPartRootElement).Assembly.GetTypes();
+#endif
+
+                foreach (var elementType in types)
                 {
                     if (!elementType.IsAbstract && typeof(OpenXmlPartRootElement).GetTypeInfo().IsAssignableFrom(elementType))
                     {
+#if NETSTANDARD1_3
                         yield return elementType.AsType();
+#else
+                        yield return elementType;
+#endif
                     }
                 }
             }
