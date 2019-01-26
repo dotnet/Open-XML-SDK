@@ -17,6 +17,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(67, "backgroundPr")]
 public partial class BackgroundProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13320;
@@ -75,6 +76,7 @@ public partial class BackgroundProperties : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(67, "nonVisualGroupProps")]
 public partial class NonVisualGroupProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13321;
@@ -115,6 +117,7 @@ public partial class NonVisualGroupProperties : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(67, "objectPr")]
 public partial class ObjectProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13322;
@@ -167,6 +170,7 @@ public partial class ObjectProperties : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2013)]
+[SchemaAttr(67, "signatureLine")]
 public partial class SignatureLine : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13323;

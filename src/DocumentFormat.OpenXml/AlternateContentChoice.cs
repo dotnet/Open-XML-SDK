@@ -8,8 +8,11 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Defines an mc:Choice element in mc:AlternateContent.
     /// </summary>
+    [SchemaAttr(AlternateContent.Namespace, Name)]
     public class AlternateContentChoice : OpenXmlCompositeElement
     {
+        private const string Name = "Choice";
+
         /// <summary>
         /// Initializes a new instance of the
         /// AlternateContentChoice class.
@@ -62,7 +65,7 @@ namespace DocumentFormat.OpenXml
         /// Gets a value that represents the tag name of the
         /// Choice element.
         /// </summary>
-        public static string TagName { get; } = "Choice";
+        public static string TagName =>Name;
 
         /// <summary>
         /// Gets the local name of the Choice element.
@@ -81,13 +84,13 @@ namespace DocumentFormat.OpenXml
 
         internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         {
-            if (Parent != null && Parent is AlternateContent)
+            if (Parent is AlternateContent)
             {
-                var parentsParentElemnt = Parent.Parent;
+                var parentsParentElement = Parent.Parent;
 
-                if (parentsParentElemnt != null)
+                if (parentsParentElement != null)
                 {
-                    return parentsParentElemnt.ElementFactory(namespaceId, name);
+                    return parentsParentElement.ElementFactory(namespaceId, name);
                 }
             }
 

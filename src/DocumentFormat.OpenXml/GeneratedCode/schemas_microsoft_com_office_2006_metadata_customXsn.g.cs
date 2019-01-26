@@ -29,6 +29,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
     [ChildElementInfo(typeof(Scope))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(39, "customXsn")]
 public partial class CustomXsn : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12706;
@@ -71,28 +72,11 @@ public partial class CustomXsn : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 39 == namespaceId && "xsnLocation" == name)
-    return new XsnLocation();
     
-if( 39 == namespaceId && "cached" == name)
-    return new CachedView();
-    
-if( 39 == namespaceId && "openByDefault" == name)
-    return new OpenByDefault();
-    
-if( 39 == namespaceId && "xsnScope" == name)
-    return new Scope();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "xsnLocation","cached","openByDefault","xsnScope" };
     private static readonly byte[] eleNamespaceIds = { 39,39,39,39 };
     
@@ -113,6 +97,7 @@ if( 39 == namespaceId && "xsnScope" == name)
         get => GetElement<XsnLocation>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> CachedView.</para>
     /// <para> Represents the following element tag in the schema: ntns:cached </para>
@@ -125,6 +110,7 @@ if( 39 == namespaceId && "xsnScope" == name)
         get => GetElement<CachedView>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> OpenByDefault.</para>
     /// <para> Represents the following element tag in the schema: ntns:openByDefault </para>
@@ -137,6 +123,7 @@ if( 39 == namespaceId && "xsnScope" == name)
         get => GetElement<OpenByDefault>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Scope.</para>
     /// <para> Represents the following element tag in the schema: ntns:xsnScope </para>
@@ -149,6 +136,7 @@ if( 39 == namespaceId && "xsnScope" == name)
         get => GetElement<Scope>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -162,6 +150,7 @@ if( 39 == namespaceId && "xsnScope" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(39, "xsnLocation")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class XsnLocation : OpenXmlLeafTextElement
 {
@@ -202,6 +191,7 @@ public partial class XsnLocation : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(39, "cached")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CachedView : OpenXmlLeafTextElement
 {
@@ -242,6 +232,7 @@ public partial class CachedView : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(39, "openByDefault")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class OpenByDefault : OpenXmlLeafTextElement
 {
@@ -282,6 +273,7 @@ public partial class OpenByDefault : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(39, "xsnScope")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Scope : OpenXmlLeafTextElement
 {

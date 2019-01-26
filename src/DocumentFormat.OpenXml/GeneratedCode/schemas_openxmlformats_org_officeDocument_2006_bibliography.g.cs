@@ -23,6 +23,7 @@ namespace DocumentFormat.OpenXml.Bibliography
     [ChildElementInfo(typeof(Source))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(9, "Sources")]
 public partial class Sources : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 10824;
@@ -83,19 +84,11 @@ public partial class Sources : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 9 == namespaceId && "Source" == name)
-    return new Source();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Sources>(deep);
@@ -120,6 +113,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(Middle))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(9, "Person")]
 public partial class Person : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10825;
@@ -162,25 +156,11 @@ public partial class Person : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 9 == namespaceId && "Last" == name)
-    return new Last();
     
-if( 9 == namespaceId && "First" == name)
-    return new First();
-    
-if( 9 == namespaceId && "Middle" == name)
-    return new Middle();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Person>(deep);
@@ -193,6 +173,7 @@ if( 9 == namespaceId && "Middle" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Last")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Last : OpenXmlLeafTextElement
 {
@@ -233,6 +214,7 @@ public partial class Last : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "First")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class First : OpenXmlLeafTextElement
 {
@@ -273,6 +255,7 @@ public partial class First : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Middle")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Middle : OpenXmlLeafTextElement
 {
@@ -313,6 +296,7 @@ public partial class Middle : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Corporate")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Corporate : OpenXmlLeafTextElement
 {
@@ -353,6 +337,7 @@ public partial class Corporate : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "AbbreviatedCaseNumber")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AbbreviatedCaseNumber : OpenXmlLeafTextElement
 {
@@ -393,6 +378,7 @@ public partial class AbbreviatedCaseNumber : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "AlbumTitle")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AlbumTitle : OpenXmlLeafTextElement
 {
@@ -433,6 +419,7 @@ public partial class AlbumTitle : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "BookTitle")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BookTitle : OpenXmlLeafTextElement
 {
@@ -473,6 +460,7 @@ public partial class BookTitle : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Broadcaster")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Broadcaster : OpenXmlLeafTextElement
 {
@@ -513,6 +501,7 @@ public partial class Broadcaster : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "BroadcastTitle")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BroadcastTitle : OpenXmlLeafTextElement
 {
@@ -553,6 +542,7 @@ public partial class BroadcastTitle : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "CaseNumber")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CaseNumber : OpenXmlLeafTextElement
 {
@@ -593,6 +583,7 @@ public partial class CaseNumber : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "ChapterNumber")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ChapterNumber : OpenXmlLeafTextElement
 {
@@ -633,6 +624,7 @@ public partial class ChapterNumber : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "City")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class City : OpenXmlLeafTextElement
 {
@@ -673,6 +665,7 @@ public partial class City : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Comments")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Comments : OpenXmlLeafTextElement
 {
@@ -713,6 +706,7 @@ public partial class Comments : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "ConferenceName")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ConferenceName : OpenXmlLeafTextElement
 {
@@ -753,6 +747,7 @@ public partial class ConferenceName : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "CountryRegion")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CountryRegion : OpenXmlLeafTextElement
 {
@@ -793,6 +788,7 @@ public partial class CountryRegion : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Court")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Court : OpenXmlLeafTextElement
 {
@@ -833,6 +829,7 @@ public partial class Court : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Day")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Day : OpenXmlLeafTextElement
 {
@@ -873,6 +870,7 @@ public partial class Day : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "DayAccessed")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DayAccessed : OpenXmlLeafTextElement
 {
@@ -913,6 +911,7 @@ public partial class DayAccessed : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Department")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Department : OpenXmlLeafTextElement
 {
@@ -953,6 +952,7 @@ public partial class Department : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Distributor")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Distributor : OpenXmlLeafTextElement
 {
@@ -993,6 +993,7 @@ public partial class Distributor : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Edition")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Edition : OpenXmlLeafTextElement
 {
@@ -1033,6 +1034,7 @@ public partial class Edition : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Guid")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class GuidString : OpenXmlLeafTextElement
 {
@@ -1073,6 +1075,7 @@ public partial class GuidString : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Institution")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Institution : OpenXmlLeafTextElement
 {
@@ -1113,6 +1116,7 @@ public partial class Institution : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "InternetSiteTitle")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class InternetSiteTitle : OpenXmlLeafTextElement
 {
@@ -1153,6 +1157,7 @@ public partial class InternetSiteTitle : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Issue")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Issue : OpenXmlLeafTextElement
 {
@@ -1193,6 +1198,7 @@ public partial class Issue : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "JournalName")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class JournalName : OpenXmlLeafTextElement
 {
@@ -1233,6 +1239,7 @@ public partial class JournalName : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "LCID")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LcId : OpenXmlLeafTextElement
 {
@@ -1273,6 +1280,7 @@ public partial class LcId : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Medium")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Medium : OpenXmlLeafTextElement
 {
@@ -1313,6 +1321,7 @@ public partial class Medium : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Month")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Month : OpenXmlLeafTextElement
 {
@@ -1353,6 +1362,7 @@ public partial class Month : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "MonthAccessed")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MonthAccessed : OpenXmlLeafTextElement
 {
@@ -1393,6 +1403,7 @@ public partial class MonthAccessed : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "NumberVolumes")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class NumberVolumes : OpenXmlLeafTextElement
 {
@@ -1433,6 +1444,7 @@ public partial class NumberVolumes : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Pages")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Pages : OpenXmlLeafTextElement
 {
@@ -1473,6 +1485,7 @@ public partial class Pages : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "PatentNumber")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PatentNumber : OpenXmlLeafTextElement
 {
@@ -1513,6 +1526,7 @@ public partial class PatentNumber : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "PeriodicalTitle")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PeriodicalTitle : OpenXmlLeafTextElement
 {
@@ -1553,6 +1567,7 @@ public partial class PeriodicalTitle : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "ProductionCompany")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ProductionCompany : OpenXmlLeafTextElement
 {
@@ -1593,6 +1608,7 @@ public partial class ProductionCompany : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "PublicationTitle")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PublicationTitle : OpenXmlLeafTextElement
 {
@@ -1633,6 +1649,7 @@ public partial class PublicationTitle : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Publisher")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Publisher : OpenXmlLeafTextElement
 {
@@ -1673,6 +1690,7 @@ public partial class Publisher : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "RecordingNumber")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class RecordingNumber : OpenXmlLeafTextElement
 {
@@ -1713,6 +1731,7 @@ public partial class RecordingNumber : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "RefOrder")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ReferenceOrder : OpenXmlLeafTextElement
 {
@@ -1753,6 +1772,7 @@ public partial class ReferenceOrder : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Reporter")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Reporter : OpenXmlLeafTextElement
 {
@@ -1793,6 +1813,7 @@ public partial class Reporter : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "ShortTitle")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ShortTitle : OpenXmlLeafTextElement
 {
@@ -1833,6 +1854,7 @@ public partial class ShortTitle : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "StandardNumber")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StandardNumber : OpenXmlLeafTextElement
 {
@@ -1873,6 +1895,7 @@ public partial class StandardNumber : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "StateProvince")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StateProvince : OpenXmlLeafTextElement
 {
@@ -1913,6 +1936,7 @@ public partial class StateProvince : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Station")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Station : OpenXmlLeafTextElement
 {
@@ -1953,6 +1977,7 @@ public partial class Station : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Tag")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Tag : OpenXmlLeafTextElement
 {
@@ -1993,6 +2018,7 @@ public partial class Tag : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Theater")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Theater : OpenXmlLeafTextElement
 {
@@ -2033,6 +2059,7 @@ public partial class Theater : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "ThesisType")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ThesisType : OpenXmlLeafTextElement
 {
@@ -2073,6 +2100,7 @@ public partial class ThesisType : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Title")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Title : OpenXmlLeafTextElement
 {
@@ -2113,6 +2141,7 @@ public partial class Title : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Type")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PatentType : OpenXmlLeafTextElement
 {
@@ -2153,6 +2182,7 @@ public partial class PatentType : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "URL")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class UrlString : OpenXmlLeafTextElement
 {
@@ -2193,6 +2223,7 @@ public partial class UrlString : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Version")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Version : OpenXmlLeafTextElement
 {
@@ -2233,6 +2264,7 @@ public partial class Version : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Volume")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Volume : OpenXmlLeafTextElement
 {
@@ -2273,6 +2305,7 @@ public partial class Volume : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Year")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Year : OpenXmlLeafTextElement
 {
@@ -2313,6 +2346,7 @@ public partial class Year : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "YearAccessed")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class YearAccessed : OpenXmlLeafTextElement
 {
@@ -2361,6 +2395,7 @@ public partial class YearAccessed : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(Person))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(9, "NameList")]
 public partial class NameList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10829;
@@ -2403,19 +2438,11 @@ public partial class NameList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 9 == namespaceId && "Person" == name)
-    return new Person();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<NameList>(deep);
@@ -2434,6 +2461,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Artist")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Artist : NameType
 {
@@ -2473,6 +2501,7 @@ public partial class Artist : NameType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -2492,6 +2521,7 @@ public partial class Artist : NameType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "BookAuthor")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class BookAuthor : NameType
 {
@@ -2531,6 +2561,7 @@ public partial class BookAuthor : NameType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -2550,6 +2581,7 @@ public partial class BookAuthor : NameType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Compiler")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Compiler : NameType
 {
@@ -2589,6 +2621,7 @@ public partial class Compiler : NameType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -2608,6 +2641,7 @@ public partial class Compiler : NameType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Composer")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Composer : NameType
 {
@@ -2647,6 +2681,7 @@ public partial class Composer : NameType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -2666,6 +2701,7 @@ public partial class Composer : NameType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Conductor")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Conductor : NameType
 {
@@ -2705,6 +2741,7 @@ public partial class Conductor : NameType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -2724,6 +2761,7 @@ public partial class Conductor : NameType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Counsel")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Counsel : NameType
 {
@@ -2763,6 +2801,7 @@ public partial class Counsel : NameType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -2782,6 +2821,7 @@ public partial class Counsel : NameType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Director")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Director : NameType
 {
@@ -2821,6 +2861,7 @@ public partial class Director : NameType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -2840,6 +2881,7 @@ public partial class Director : NameType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Editor")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Editor : NameType
 {
@@ -2879,6 +2921,7 @@ public partial class Editor : NameType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -2898,6 +2941,7 @@ public partial class Editor : NameType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Interviewee")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Interviewee : NameType
 {
@@ -2937,6 +2981,7 @@ public partial class Interviewee : NameType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -2956,6 +3001,7 @@ public partial class Interviewee : NameType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Interviewer")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Interviewer : NameType
 {
@@ -2995,6 +3041,7 @@ public partial class Interviewer : NameType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3014,6 +3061,7 @@ public partial class Interviewer : NameType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Inventor")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Inventor : NameType
 {
@@ -3053,6 +3101,7 @@ public partial class Inventor : NameType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3072,6 +3121,7 @@ public partial class Inventor : NameType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "ProducerName")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ProducerName : NameType
 {
@@ -3111,6 +3161,7 @@ public partial class ProducerName : NameType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3130,6 +3181,7 @@ public partial class ProducerName : NameType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Translator")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Translator : NameType
 {
@@ -3169,6 +3221,7 @@ public partial class Translator : NameType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3188,6 +3241,7 @@ public partial class Translator : NameType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Writer")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Writer : NameType
 {
@@ -3227,6 +3281,7 @@ public partial class Writer : NameType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3249,16 +3304,7 @@ public abstract partial class NameType : OpenXmlCompositeElement
 {
         
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 9 == namespaceId && "NameList" == name)
-    return new NameList();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "NameList" };
     private static readonly byte[] eleNamespaceIds = { 9 };
     
@@ -3279,6 +3325,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<NameList>(0);
         set => SetElement(0, value);
     }
+    
 
 
     
@@ -3312,6 +3359,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -3329,6 +3377,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Author")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Author : NameOrCorporateType
 {
@@ -3368,6 +3417,7 @@ public partial class Author : NameOrCorporateType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3388,6 +3438,7 @@ public partial class Author : NameOrCorporateType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(9, "Performer")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Performer : NameOrCorporateType
 {
@@ -3427,6 +3478,7 @@ public partial class Performer : NameOrCorporateType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -3451,19 +3503,7 @@ public abstract partial class NameOrCorporateType : OpenXmlCompositeElement
 {
         
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 9 == namespaceId && "NameList" == name)
-    return new NameList();
     
-if( 9 == namespaceId && "Corporate" == name)
-    return new Corporate();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "NameList","Corporate" };
     private static readonly byte[] eleNamespaceIds = { 9,9 };
     
@@ -3484,6 +3524,7 @@ if( 9 == namespaceId && "Corporate" == name)
         get => GetElement<NameList>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Corporate Author.</para>
     /// <para> Represents the following element tag in the schema: b:Corporate </para>
@@ -3496,6 +3537,7 @@ if( 9 == namespaceId && "Corporate" == name)
         get => GetElement<Corporate>(1);
         set => SetElement(1, value);
     }
+    
 
 
     
@@ -3529,6 +3571,7 @@ if( 9 == namespaceId && "Corporate" == name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -3577,6 +3620,7 @@ if( 9 == namespaceId && "Corporate" == name)
     [ChildElementInfo(typeof(Writer))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(9, "Author")]
 public partial class AuthorList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10849;
@@ -3619,64 +3663,11 @@ public partial class AuthorList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 9 == namespaceId && "Artist" == name)
-    return new Artist();
     
-if( 9 == namespaceId && "Author" == name)
-    return new Author();
-    
-if( 9 == namespaceId && "BookAuthor" == name)
-    return new BookAuthor();
-    
-if( 9 == namespaceId && "Compiler" == name)
-    return new Compiler();
-    
-if( 9 == namespaceId && "Composer" == name)
-    return new Composer();
-    
-if( 9 == namespaceId && "Conductor" == name)
-    return new Conductor();
-    
-if( 9 == namespaceId && "Counsel" == name)
-    return new Counsel();
-    
-if( 9 == namespaceId && "Director" == name)
-    return new Director();
-    
-if( 9 == namespaceId && "Editor" == name)
-    return new Editor();
-    
-if( 9 == namespaceId && "Interviewee" == name)
-    return new Interviewee();
-    
-if( 9 == namespaceId && "Interviewer" == name)
-    return new Interviewer();
-    
-if( 9 == namespaceId && "Inventor" == name)
-    return new Inventor();
-    
-if( 9 == namespaceId && "Performer" == name)
-    return new Performer();
-    
-if( 9 == namespaceId && "ProducerName" == name)
-    return new ProducerName();
-    
-if( 9 == namespaceId && "Translator" == name)
-    return new Translator();
-    
-if( 9 == namespaceId && "Writer" == name)
-    return new Writer();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "Artist","Author","BookAuthor","Compiler","Composer","Conductor","Counsel","Director","Editor","Interviewee","Interviewer","Inventor","Performer","ProducerName","Translator","Writer" };
     private static readonly byte[] eleNamespaceIds = { 9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9 };
     
@@ -3697,6 +3688,7 @@ if( 9 == namespaceId && "Writer" == name)
         get => GetElement<Artist>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Author.</para>
     /// <para> Represents the following element tag in the schema: b:Author </para>
@@ -3709,6 +3701,7 @@ if( 9 == namespaceId && "Writer" == name)
         get => GetElement<Author>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Book Author.</para>
     /// <para> Represents the following element tag in the schema: b:BookAuthor </para>
@@ -3721,6 +3714,7 @@ if( 9 == namespaceId && "Writer" == name)
         get => GetElement<BookAuthor>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Compiler.</para>
     /// <para> Represents the following element tag in the schema: b:Compiler </para>
@@ -3733,6 +3727,7 @@ if( 9 == namespaceId && "Writer" == name)
         get => GetElement<Compiler>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Composer.</para>
     /// <para> Represents the following element tag in the schema: b:Composer </para>
@@ -3745,6 +3740,7 @@ if( 9 == namespaceId && "Writer" == name)
         get => GetElement<Composer>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Conductor.</para>
     /// <para> Represents the following element tag in the schema: b:Conductor </para>
@@ -3757,6 +3753,7 @@ if( 9 == namespaceId && "Writer" == name)
         get => GetElement<Conductor>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Counsel.</para>
     /// <para> Represents the following element tag in the schema: b:Counsel </para>
@@ -3769,6 +3766,7 @@ if( 9 == namespaceId && "Writer" == name)
         get => GetElement<Counsel>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Director.</para>
     /// <para> Represents the following element tag in the schema: b:Director </para>
@@ -3781,6 +3779,7 @@ if( 9 == namespaceId && "Writer" == name)
         get => GetElement<Director>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> Editor.</para>
     /// <para> Represents the following element tag in the schema: b:Editor </para>
@@ -3793,6 +3792,7 @@ if( 9 == namespaceId && "Writer" == name)
         get => GetElement<Editor>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Interviewee.</para>
     /// <para> Represents the following element tag in the schema: b:Interviewee </para>
@@ -3805,6 +3805,7 @@ if( 9 == namespaceId && "Writer" == name)
         get => GetElement<Interviewee>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> Interviewer.</para>
     /// <para> Represents the following element tag in the schema: b:Interviewer </para>
@@ -3817,6 +3818,7 @@ if( 9 == namespaceId && "Writer" == name)
         get => GetElement<Interviewer>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Inventor.</para>
     /// <para> Represents the following element tag in the schema: b:Inventor </para>
@@ -3829,6 +3831,7 @@ if( 9 == namespaceId && "Writer" == name)
         get => GetElement<Inventor>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> Performer.</para>
     /// <para> Represents the following element tag in the schema: b:Performer </para>
@@ -3841,6 +3844,7 @@ if( 9 == namespaceId && "Writer" == name)
         get => GetElement<Performer>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> Producer Name.</para>
     /// <para> Represents the following element tag in the schema: b:ProducerName </para>
@@ -3853,6 +3857,7 @@ if( 9 == namespaceId && "Writer" == name)
         get => GetElement<ProducerName>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> Translator.</para>
     /// <para> Represents the following element tag in the schema: b:Translator </para>
@@ -3865,6 +3870,7 @@ if( 9 == namespaceId && "Writer" == name)
         get => GetElement<Translator>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> Writer.</para>
     /// <para> Represents the following element tag in the schema: b:Writer </para>
@@ -3877,6 +3883,7 @@ if( 9 == namespaceId && "Writer" == name)
         get => GetElement<Writer>(15);
         set => SetElement(15, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -3891,6 +3898,7 @@ if( 9 == namespaceId && "Writer" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(9, "SourceType")]
 public partial class SourceType : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10884;
@@ -4047,6 +4055,7 @@ public partial class SourceType : OpenXmlLeafTextElement
     [ChildElementInfo(typeof(YearAccessed))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(9, "Source")]
 public partial class Source : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10899;
@@ -4089,172 +4098,11 @@ public partial class Source : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 9 == namespaceId && "AbbreviatedCaseNumber" == name)
-    return new AbbreviatedCaseNumber();
     
-if( 9 == namespaceId && "AlbumTitle" == name)
-    return new AlbumTitle();
-    
-if( 9 == namespaceId && "Author" == name)
-    return new AuthorList();
-    
-if( 9 == namespaceId && "BookTitle" == name)
-    return new BookTitle();
-    
-if( 9 == namespaceId && "Broadcaster" == name)
-    return new Broadcaster();
-    
-if( 9 == namespaceId && "BroadcastTitle" == name)
-    return new BroadcastTitle();
-    
-if( 9 == namespaceId && "CaseNumber" == name)
-    return new CaseNumber();
-    
-if( 9 == namespaceId && "ChapterNumber" == name)
-    return new ChapterNumber();
-    
-if( 9 == namespaceId && "City" == name)
-    return new City();
-    
-if( 9 == namespaceId && "Comments" == name)
-    return new Comments();
-    
-if( 9 == namespaceId && "ConferenceName" == name)
-    return new ConferenceName();
-    
-if( 9 == namespaceId && "CountryRegion" == name)
-    return new CountryRegion();
-    
-if( 9 == namespaceId && "Court" == name)
-    return new Court();
-    
-if( 9 == namespaceId && "Day" == name)
-    return new Day();
-    
-if( 9 == namespaceId && "DayAccessed" == name)
-    return new DayAccessed();
-    
-if( 9 == namespaceId && "Department" == name)
-    return new Department();
-    
-if( 9 == namespaceId && "Distributor" == name)
-    return new Distributor();
-    
-if( 9 == namespaceId && "Edition" == name)
-    return new Edition();
-    
-if( 9 == namespaceId && "Guid" == name)
-    return new GuidString();
-    
-if( 9 == namespaceId && "Institution" == name)
-    return new Institution();
-    
-if( 9 == namespaceId && "InternetSiteTitle" == name)
-    return new InternetSiteTitle();
-    
-if( 9 == namespaceId && "Issue" == name)
-    return new Issue();
-    
-if( 9 == namespaceId && "JournalName" == name)
-    return new JournalName();
-    
-if( 9 == namespaceId && "LCID" == name)
-    return new LcId();
-    
-if( 9 == namespaceId && "Medium" == name)
-    return new Medium();
-    
-if( 9 == namespaceId && "Month" == name)
-    return new Month();
-    
-if( 9 == namespaceId && "MonthAccessed" == name)
-    return new MonthAccessed();
-    
-if( 9 == namespaceId && "NumberVolumes" == name)
-    return new NumberVolumes();
-    
-if( 9 == namespaceId && "Pages" == name)
-    return new Pages();
-    
-if( 9 == namespaceId && "PatentNumber" == name)
-    return new PatentNumber();
-    
-if( 9 == namespaceId && "PeriodicalTitle" == name)
-    return new PeriodicalTitle();
-    
-if( 9 == namespaceId && "ProductionCompany" == name)
-    return new ProductionCompany();
-    
-if( 9 == namespaceId && "PublicationTitle" == name)
-    return new PublicationTitle();
-    
-if( 9 == namespaceId && "Publisher" == name)
-    return new Publisher();
-    
-if( 9 == namespaceId && "RecordingNumber" == name)
-    return new RecordingNumber();
-    
-if( 9 == namespaceId && "RefOrder" == name)
-    return new ReferenceOrder();
-    
-if( 9 == namespaceId && "Reporter" == name)
-    return new Reporter();
-    
-if( 9 == namespaceId && "SourceType" == name)
-    return new SourceType();
-    
-if( 9 == namespaceId && "ShortTitle" == name)
-    return new ShortTitle();
-    
-if( 9 == namespaceId && "StandardNumber" == name)
-    return new StandardNumber();
-    
-if( 9 == namespaceId && "StateProvince" == name)
-    return new StateProvince();
-    
-if( 9 == namespaceId && "Station" == name)
-    return new Station();
-    
-if( 9 == namespaceId && "Tag" == name)
-    return new Tag();
-    
-if( 9 == namespaceId && "Theater" == name)
-    return new Theater();
-    
-if( 9 == namespaceId && "ThesisType" == name)
-    return new ThesisType();
-    
-if( 9 == namespaceId && "Title" == name)
-    return new Title();
-    
-if( 9 == namespaceId && "Type" == name)
-    return new PatentType();
-    
-if( 9 == namespaceId && "URL" == name)
-    return new UrlString();
-    
-if( 9 == namespaceId && "Version" == name)
-    return new Version();
-    
-if( 9 == namespaceId && "Volume" == name)
-    return new Volume();
-    
-if( 9 == namespaceId && "Year" == name)
-    return new Year();
-    
-if( 9 == namespaceId && "YearAccessed" == name)
-    return new YearAccessed();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "AbbreviatedCaseNumber","AlbumTitle","Author","BookTitle","Broadcaster","BroadcastTitle","CaseNumber","ChapterNumber","City","Comments","ConferenceName","CountryRegion","Court","Day","DayAccessed","Department","Distributor","Edition","Guid","Institution","InternetSiteTitle","Issue","JournalName","LCID","Medium","Month","MonthAccessed","NumberVolumes","Pages","PatentNumber","PeriodicalTitle","ProductionCompany","PublicationTitle","Publisher","RecordingNumber","RefOrder","Reporter","SourceType","ShortTitle","StandardNumber","StateProvince","Station","Tag","Theater","ThesisType","Title","Type","URL","Version","Volume","Year","YearAccessed" };
     private static readonly byte[] eleNamespaceIds = { 9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9 };
     
@@ -4275,6 +4123,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<AbbreviatedCaseNumber>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Album Title.</para>
     /// <para> Represents the following element tag in the schema: b:AlbumTitle </para>
@@ -4287,6 +4136,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<AlbumTitle>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Contributors List.</para>
     /// <para> Represents the following element tag in the schema: b:Author </para>
@@ -4299,6 +4149,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<AuthorList>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Book Title.</para>
     /// <para> Represents the following element tag in the schema: b:BookTitle </para>
@@ -4311,6 +4162,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<BookTitle>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Broadcaster.</para>
     /// <para> Represents the following element tag in the schema: b:Broadcaster </para>
@@ -4323,6 +4175,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Broadcaster>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Broadcast Title.</para>
     /// <para> Represents the following element tag in the schema: b:BroadcastTitle </para>
@@ -4335,6 +4188,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<BroadcastTitle>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Case Number.</para>
     /// <para> Represents the following element tag in the schema: b:CaseNumber </para>
@@ -4347,6 +4201,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<CaseNumber>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Chapter Number.</para>
     /// <para> Represents the following element tag in the schema: b:ChapterNumber </para>
@@ -4359,6 +4214,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<ChapterNumber>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> City.</para>
     /// <para> Represents the following element tag in the schema: b:City </para>
@@ -4371,6 +4227,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<City>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Comments.</para>
     /// <para> Represents the following element tag in the schema: b:Comments </para>
@@ -4383,6 +4240,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Comments>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> Conference or Proceedings Name.</para>
     /// <para> Represents the following element tag in the schema: b:ConferenceName </para>
@@ -4395,6 +4253,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<ConferenceName>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Country or Region.</para>
     /// <para> Represents the following element tag in the schema: b:CountryRegion </para>
@@ -4407,6 +4266,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<CountryRegion>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> Court.</para>
     /// <para> Represents the following element tag in the schema: b:Court </para>
@@ -4419,6 +4279,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Court>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> Day.</para>
     /// <para> Represents the following element tag in the schema: b:Day </para>
@@ -4431,6 +4292,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Day>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> Day Accessed.</para>
     /// <para> Represents the following element tag in the schema: b:DayAccessed </para>
@@ -4443,6 +4305,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<DayAccessed>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> Department.</para>
     /// <para> Represents the following element tag in the schema: b:Department </para>
@@ -4455,6 +4318,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Department>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> Distributor.</para>
     /// <para> Represents the following element tag in the schema: b:Distributor </para>
@@ -4467,6 +4331,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Distributor>(16);
         set => SetElement(16, value);
     }
+    
     /// <summary>
     /// <para> Editor.</para>
     /// <para> Represents the following element tag in the schema: b:Edition </para>
@@ -4479,6 +4344,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Edition>(17);
         set => SetElement(17, value);
     }
+    
     /// <summary>
     /// <para> GUID.</para>
     /// <para> Represents the following element tag in the schema: b:Guid </para>
@@ -4491,6 +4357,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<GuidString>(18);
         set => SetElement(18, value);
     }
+    
     /// <summary>
     /// <para> Institution.</para>
     /// <para> Represents the following element tag in the schema: b:Institution </para>
@@ -4503,6 +4370,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Institution>(19);
         set => SetElement(19, value);
     }
+    
     /// <summary>
     /// <para> Internet Site Title.</para>
     /// <para> Represents the following element tag in the schema: b:InternetSiteTitle </para>
@@ -4515,6 +4383,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<InternetSiteTitle>(20);
         set => SetElement(20, value);
     }
+    
     /// <summary>
     /// <para> Issue.</para>
     /// <para> Represents the following element tag in the schema: b:Issue </para>
@@ -4527,6 +4396,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Issue>(21);
         set => SetElement(21, value);
     }
+    
     /// <summary>
     /// <para> Journal Name.</para>
     /// <para> Represents the following element tag in the schema: b:JournalName </para>
@@ -4539,6 +4409,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<JournalName>(22);
         set => SetElement(22, value);
     }
+    
     /// <summary>
     /// <para> Locale ID.</para>
     /// <para> Represents the following element tag in the schema: b:LCID </para>
@@ -4551,6 +4422,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<LcId>(23);
         set => SetElement(23, value);
     }
+    
     /// <summary>
     /// <para> Medium.</para>
     /// <para> Represents the following element tag in the schema: b:Medium </para>
@@ -4563,6 +4435,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Medium>(24);
         set => SetElement(24, value);
     }
+    
     /// <summary>
     /// <para> Month.</para>
     /// <para> Represents the following element tag in the schema: b:Month </para>
@@ -4575,6 +4448,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Month>(25);
         set => SetElement(25, value);
     }
+    
     /// <summary>
     /// <para> Month Accessed.</para>
     /// <para> Represents the following element tag in the schema: b:MonthAccessed </para>
@@ -4587,6 +4461,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<MonthAccessed>(26);
         set => SetElement(26, value);
     }
+    
     /// <summary>
     /// <para> Number of Volumes.</para>
     /// <para> Represents the following element tag in the schema: b:NumberVolumes </para>
@@ -4599,6 +4474,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<NumberVolumes>(27);
         set => SetElement(27, value);
     }
+    
     /// <summary>
     /// <para> Pages.</para>
     /// <para> Represents the following element tag in the schema: b:Pages </para>
@@ -4611,6 +4487,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Pages>(28);
         set => SetElement(28, value);
     }
+    
     /// <summary>
     /// <para> Patent Number.</para>
     /// <para> Represents the following element tag in the schema: b:PatentNumber </para>
@@ -4623,6 +4500,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<PatentNumber>(29);
         set => SetElement(29, value);
     }
+    
     /// <summary>
     /// <para> Periodical Title.</para>
     /// <para> Represents the following element tag in the schema: b:PeriodicalTitle </para>
@@ -4635,6 +4513,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<PeriodicalTitle>(30);
         set => SetElement(30, value);
     }
+    
     /// <summary>
     /// <para> Production Company.</para>
     /// <para> Represents the following element tag in the schema: b:ProductionCompany </para>
@@ -4647,6 +4526,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<ProductionCompany>(31);
         set => SetElement(31, value);
     }
+    
     /// <summary>
     /// <para> Publication Title.</para>
     /// <para> Represents the following element tag in the schema: b:PublicationTitle </para>
@@ -4659,6 +4539,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<PublicationTitle>(32);
         set => SetElement(32, value);
     }
+    
     /// <summary>
     /// <para> Publisher.</para>
     /// <para> Represents the following element tag in the schema: b:Publisher </para>
@@ -4671,6 +4552,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Publisher>(33);
         set => SetElement(33, value);
     }
+    
     /// <summary>
     /// <para> Recording Number.</para>
     /// <para> Represents the following element tag in the schema: b:RecordingNumber </para>
@@ -4683,6 +4565,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<RecordingNumber>(34);
         set => SetElement(34, value);
     }
+    
     /// <summary>
     /// <para> Reference Order.</para>
     /// <para> Represents the following element tag in the schema: b:RefOrder </para>
@@ -4695,6 +4578,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<ReferenceOrder>(35);
         set => SetElement(35, value);
     }
+    
     /// <summary>
     /// <para> Reporter.</para>
     /// <para> Represents the following element tag in the schema: b:Reporter </para>
@@ -4707,6 +4591,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Reporter>(36);
         set => SetElement(36, value);
     }
+    
     /// <summary>
     /// <para> Source Type.</para>
     /// <para> Represents the following element tag in the schema: b:SourceType </para>
@@ -4719,6 +4604,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<SourceType>(37);
         set => SetElement(37, value);
     }
+    
     /// <summary>
     /// <para> Short Title.</para>
     /// <para> Represents the following element tag in the schema: b:ShortTitle </para>
@@ -4731,6 +4617,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<ShortTitle>(38);
         set => SetElement(38, value);
     }
+    
     /// <summary>
     /// <para> Standard Number.</para>
     /// <para> Represents the following element tag in the schema: b:StandardNumber </para>
@@ -4743,6 +4630,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<StandardNumber>(39);
         set => SetElement(39, value);
     }
+    
     /// <summary>
     /// <para> State or Province.</para>
     /// <para> Represents the following element tag in the schema: b:StateProvince </para>
@@ -4755,6 +4643,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<StateProvince>(40);
         set => SetElement(40, value);
     }
+    
     /// <summary>
     /// <para> Station.</para>
     /// <para> Represents the following element tag in the schema: b:Station </para>
@@ -4767,6 +4656,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Station>(41);
         set => SetElement(41, value);
     }
+    
     /// <summary>
     /// <para> Tag.</para>
     /// <para> Represents the following element tag in the schema: b:Tag </para>
@@ -4779,6 +4669,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Tag>(42);
         set => SetElement(42, value);
     }
+    
     /// <summary>
     /// <para> Theater.</para>
     /// <para> Represents the following element tag in the schema: b:Theater </para>
@@ -4791,6 +4682,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Theater>(43);
         set => SetElement(43, value);
     }
+    
     /// <summary>
     /// <para> Thesis Type.</para>
     /// <para> Represents the following element tag in the schema: b:ThesisType </para>
@@ -4803,6 +4695,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<ThesisType>(44);
         set => SetElement(44, value);
     }
+    
     /// <summary>
     /// <para> Title.</para>
     /// <para> Represents the following element tag in the schema: b:Title </para>
@@ -4815,6 +4708,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Title>(45);
         set => SetElement(45, value);
     }
+    
     /// <summary>
     /// <para> Type.</para>
     /// <para> Represents the following element tag in the schema: b:Type </para>
@@ -4827,6 +4721,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<PatentType>(46);
         set => SetElement(46, value);
     }
+    
     /// <summary>
     /// <para> URL.</para>
     /// <para> Represents the following element tag in the schema: b:URL </para>
@@ -4839,6 +4734,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<UrlString>(47);
         set => SetElement(47, value);
     }
+    
     /// <summary>
     /// <para> Version.</para>
     /// <para> Represents the following element tag in the schema: b:Version </para>
@@ -4851,6 +4747,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Version>(48);
         set => SetElement(48, value);
     }
+    
     /// <summary>
     /// <para> Volume.</para>
     /// <para> Represents the following element tag in the schema: b:Volume </para>
@@ -4863,6 +4760,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Volume>(49);
         set => SetElement(49, value);
     }
+    
     /// <summary>
     /// <para> Year.</para>
     /// <para> Represents the following element tag in the schema: b:Year </para>
@@ -4875,6 +4773,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<Year>(50);
         set => SetElement(50, value);
     }
+    
     /// <summary>
     /// <para> Year Accessed.</para>
     /// <para> Represents the following element tag in the schema: b:YearAccessed </para>
@@ -4887,6 +4786,7 @@ if( 9 == namespaceId && "YearAccessed" == name)
         get => GetElement<YearAccessed>(51);
         set => SetElement(51, value);
     }
+    
 
 
     /// <inheritdoc/>

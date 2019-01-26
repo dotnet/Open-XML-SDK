@@ -17,6 +17,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(63, "compatSp")]
 public partial class CompatibilityShape : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13208;

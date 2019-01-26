@@ -16,6 +16,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(41, "DummyContentTypeElement")]
 public partial class Dummy : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12713;

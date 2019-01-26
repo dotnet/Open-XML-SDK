@@ -33,6 +33,7 @@ namespace DocumentFormat.OpenXml.Office.CoverPageProps
     [ChildElementInfo(typeof(CompanyEmailAddress))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(36, "CoverPageProperties")]
 public partial class CoverPageProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12692;
@@ -75,34 +76,11 @@ public partial class CoverPageProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 36 == namespaceId && "PublishDate" == name)
-    return new PublishDate();
     
-if( 36 == namespaceId && "Abstract" == name)
-    return new DocumentAbstract();
-    
-if( 36 == namespaceId && "CompanyAddress" == name)
-    return new CompanyAddress();
-    
-if( 36 == namespaceId && "CompanyPhone" == name)
-    return new CompanyPhoneNumber();
-    
-if( 36 == namespaceId && "CompanyFax" == name)
-    return new CompanyFaxNumber();
-    
-if( 36 == namespaceId && "CompanyEmail" == name)
-    return new CompanyEmailAddress();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "PublishDate","Abstract","CompanyAddress","CompanyPhone","CompanyFax","CompanyEmail" };
     private static readonly byte[] eleNamespaceIds = { 36,36,36,36,36,36 };
     
@@ -123,6 +101,7 @@ if( 36 == namespaceId && "CompanyEmail" == name)
         get => GetElement<PublishDate>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> DocumentAbstract.</para>
     /// <para> Represents the following element tag in the schema: cppr:Abstract </para>
@@ -135,6 +114,7 @@ if( 36 == namespaceId && "CompanyEmail" == name)
         get => GetElement<DocumentAbstract>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> CompanyAddress.</para>
     /// <para> Represents the following element tag in the schema: cppr:CompanyAddress </para>
@@ -147,6 +127,7 @@ if( 36 == namespaceId && "CompanyEmail" == name)
         get => GetElement<CompanyAddress>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> CompanyPhoneNumber.</para>
     /// <para> Represents the following element tag in the schema: cppr:CompanyPhone </para>
@@ -159,6 +140,7 @@ if( 36 == namespaceId && "CompanyEmail" == name)
         get => GetElement<CompanyPhoneNumber>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> CompanyFaxNumber.</para>
     /// <para> Represents the following element tag in the schema: cppr:CompanyFax </para>
@@ -171,6 +153,7 @@ if( 36 == namespaceId && "CompanyEmail" == name)
         get => GetElement<CompanyFaxNumber>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> CompanyEmailAddress.</para>
     /// <para> Represents the following element tag in the schema: cppr:CompanyEmail </para>
@@ -183,6 +166,7 @@ if( 36 == namespaceId && "CompanyEmail" == name)
         get => GetElement<CompanyEmailAddress>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -197,6 +181,7 @@ if( 36 == namespaceId && "CompanyEmail" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(36, "PublishDate")]
 public partial class PublishDate : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12693;
@@ -243,6 +228,7 @@ public partial class PublishDate : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(36, "Abstract")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DocumentAbstract : OpenXmlLeafTextElement
 {
@@ -283,6 +269,7 @@ public partial class DocumentAbstract : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(36, "CompanyAddress")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CompanyAddress : OpenXmlLeafTextElement
 {
@@ -323,6 +310,7 @@ public partial class CompanyAddress : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(36, "CompanyPhone")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
 {
@@ -363,6 +351,7 @@ public partial class CompanyPhoneNumber : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(36, "CompanyFax")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CompanyFaxNumber : OpenXmlLeafTextElement
 {
@@ -403,6 +392,7 @@ public partial class CompanyFaxNumber : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(36, "CompanyEmail")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CompanyEmailAddress : OpenXmlLeafTextElement
 {

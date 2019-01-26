@@ -42,6 +42,7 @@ namespace DocumentFormat.OpenXml.Drawing.LockedCanvas
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(15, "lockedCanvas")]
 public partial class LockedCanvas : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10759;
@@ -84,46 +85,11 @@ public partial class LockedCanvas : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "nvGrpSpPr" == name)
-    return new DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties();
     
-if( 10 == namespaceId && "grpSpPr" == name)
-    return new DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties();
-    
-if( 10 == namespaceId && "txSp" == name)
-    return new DocumentFormat.OpenXml.Drawing.TextShape();
-    
-if( 10 == namespaceId && "sp" == name)
-    return new DocumentFormat.OpenXml.Drawing.Shape();
-    
-if( 10 == namespaceId && "cxnSp" == name)
-    return new DocumentFormat.OpenXml.Drawing.ConnectionShape();
-    
-if( 10 == namespaceId && "pic" == name)
-    return new DocumentFormat.OpenXml.Drawing.Picture();
-    
-if( 48 == namespaceId && "contentPart" == name)
-    return new DocumentFormat.OpenXml.Office2010.Drawing.GvmlContentPart();
-    
-if( 10 == namespaceId && "graphicFrame" == name)
-    return new DocumentFormat.OpenXml.Drawing.GraphicFrame();
-    
-if( 10 == namespaceId && "grpSp" == name)
-    return new DocumentFormat.OpenXml.Drawing.GroupShape();
-    
-if( 10 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.GvmlGroupShapeExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "nvGrpSpPr","grpSpPr","txSp","sp","cxnSp","pic","contentPart","graphicFrame","grpSp","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,48,10,10,10 };
     
@@ -144,6 +110,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualGroupShapeProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Visual Group Shape Properties.</para>
     /// <para> Represents the following element tag in the schema: a:grpSpPr </para>
@@ -156,6 +123,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.VisualGroupShapeProperties>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>

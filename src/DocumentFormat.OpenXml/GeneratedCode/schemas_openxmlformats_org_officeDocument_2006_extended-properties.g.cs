@@ -74,6 +74,7 @@ namespace DocumentFormat.OpenXml.ExtendedProperties
     [ChildElementInfo(typeof(ApplicationVersion))]
     [ChildElementInfo(typeof(DocumentSecurity))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "Properties")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Properties : OpenXmlPartRootElement
 {
@@ -132,6 +133,7 @@ public partial class Properties : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -149,94 +151,7 @@ public partial class Properties : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 3 == namespaceId && "Template" == name)
-    return new Template();
     
-if( 3 == namespaceId && "Manager" == name)
-    return new Manager();
-    
-if( 3 == namespaceId && "Company" == name)
-    return new Company();
-    
-if( 3 == namespaceId && "Pages" == name)
-    return new Pages();
-    
-if( 3 == namespaceId && "Words" == name)
-    return new Words();
-    
-if( 3 == namespaceId && "Characters" == name)
-    return new Characters();
-    
-if( 3 == namespaceId && "PresentationFormat" == name)
-    return new PresentationFormat();
-    
-if( 3 == namespaceId && "Lines" == name)
-    return new Lines();
-    
-if( 3 == namespaceId && "Paragraphs" == name)
-    return new Paragraphs();
-    
-if( 3 == namespaceId && "Slides" == name)
-    return new Slides();
-    
-if( 3 == namespaceId && "Notes" == name)
-    return new Notes();
-    
-if( 3 == namespaceId && "TotalTime" == name)
-    return new TotalTime();
-    
-if( 3 == namespaceId && "HiddenSlides" == name)
-    return new HiddenSlides();
-    
-if( 3 == namespaceId && "MMClips" == name)
-    return new MultimediaClips();
-    
-if( 3 == namespaceId && "ScaleCrop" == name)
-    return new ScaleCrop();
-    
-if( 3 == namespaceId && "HeadingPairs" == name)
-    return new HeadingPairs();
-    
-if( 3 == namespaceId && "TitlesOfParts" == name)
-    return new TitlesOfParts();
-    
-if( 3 == namespaceId && "LinksUpToDate" == name)
-    return new LinksUpToDate();
-    
-if( 3 == namespaceId && "CharactersWithSpaces" == name)
-    return new CharactersWithSpaces();
-    
-if( 3 == namespaceId && "SharedDoc" == name)
-    return new SharedDocument();
-    
-if( 3 == namespaceId && "HyperlinkBase" == name)
-    return new HyperlinkBase();
-    
-if( 3 == namespaceId && "HLinks" == name)
-    return new HyperlinkList();
-    
-if( 3 == namespaceId && "HyperlinksChanged" == name)
-    return new HyperlinksChanged();
-    
-if( 3 == namespaceId && "DigSig" == name)
-    return new DigitalSignature();
-    
-if( 3 == namespaceId && "Application" == name)
-    return new Application();
-    
-if( 3 == namespaceId && "AppVersion" == name)
-    return new ApplicationVersion();
-    
-if( 3 == namespaceId && "DocSecurity" == name)
-    return new DocumentSecurity();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "Template","Manager","Company","Pages","Words","Characters","PresentationFormat","Lines","Paragraphs","Slides","Notes","TotalTime","HiddenSlides","MMClips","ScaleCrop","HeadingPairs","TitlesOfParts","LinksUpToDate","CharactersWithSpaces","SharedDoc","HyperlinkBase","HLinks","HyperlinksChanged","DigSig","Application","AppVersion","DocSecurity" };
     private static readonly byte[] eleNamespaceIds = { 3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3 };
     
@@ -257,6 +172,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<Template>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Name of Manager.</para>
     /// <para> Represents the following element tag in the schema: ap:Manager </para>
@@ -269,6 +185,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<Manager>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Name of Company.</para>
     /// <para> Represents the following element tag in the schema: ap:Company </para>
@@ -281,6 +198,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<Company>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Total Number of Pages.</para>
     /// <para> Represents the following element tag in the schema: ap:Pages </para>
@@ -293,6 +211,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<Pages>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Word Count.</para>
     /// <para> Represents the following element tag in the schema: ap:Words </para>
@@ -305,6 +224,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<Words>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Total Number of Characters.</para>
     /// <para> Represents the following element tag in the schema: ap:Characters </para>
@@ -317,6 +237,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<Characters>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Intended Format of Presentation.</para>
     /// <para> Represents the following element tag in the schema: ap:PresentationFormat </para>
@@ -329,6 +250,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<PresentationFormat>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> Number of Lines.</para>
     /// <para> Represents the following element tag in the schema: ap:Lines </para>
@@ -341,6 +263,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<Lines>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> Total Number of Paragraphs.</para>
     /// <para> Represents the following element tag in the schema: ap:Paragraphs </para>
@@ -353,6 +276,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<Paragraphs>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> Slides Metadata Element.</para>
     /// <para> Represents the following element tag in the schema: ap:Slides </para>
@@ -365,6 +289,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<Slides>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> Number of Slides Containing Notes.</para>
     /// <para> Represents the following element tag in the schema: ap:Notes </para>
@@ -377,6 +302,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<Notes>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Total Edit Time Metadata Element.</para>
     /// <para> Represents the following element tag in the schema: ap:TotalTime </para>
@@ -389,6 +315,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<TotalTime>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> Number of Hidden Slides.</para>
     /// <para> Represents the following element tag in the schema: ap:HiddenSlides </para>
@@ -401,6 +328,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<HiddenSlides>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> Total Number of Multimedia Clips.</para>
     /// <para> Represents the following element tag in the schema: ap:MMClips </para>
@@ -413,6 +341,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<MultimediaClips>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> Thumbnail Display Mode.</para>
     /// <para> Represents the following element tag in the schema: ap:ScaleCrop </para>
@@ -425,6 +354,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<ScaleCrop>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> Heading Pairs.</para>
     /// <para> Represents the following element tag in the schema: ap:HeadingPairs </para>
@@ -437,6 +367,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<HeadingPairs>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> Part Titles.</para>
     /// <para> Represents the following element tag in the schema: ap:TitlesOfParts </para>
@@ -449,6 +380,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<TitlesOfParts>(16);
         set => SetElement(16, value);
     }
+    
     /// <summary>
     /// <para> Links Up-to-Date.</para>
     /// <para> Represents the following element tag in the schema: ap:LinksUpToDate </para>
@@ -461,6 +393,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<LinksUpToDate>(17);
         set => SetElement(17, value);
     }
+    
     /// <summary>
     /// <para> Number of Characters (With Spaces).</para>
     /// <para> Represents the following element tag in the schema: ap:CharactersWithSpaces </para>
@@ -473,6 +406,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<CharactersWithSpaces>(18);
         set => SetElement(18, value);
     }
+    
     /// <summary>
     /// <para> Shared Document.</para>
     /// <para> Represents the following element tag in the schema: ap:SharedDoc </para>
@@ -485,6 +419,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<SharedDocument>(19);
         set => SetElement(19, value);
     }
+    
     /// <summary>
     /// <para> Relative Hyperlink Base.</para>
     /// <para> Represents the following element tag in the schema: ap:HyperlinkBase </para>
@@ -497,6 +432,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<HyperlinkBase>(20);
         set => SetElement(20, value);
     }
+    
     /// <summary>
     /// <para> Hyperlink List.</para>
     /// <para> Represents the following element tag in the schema: ap:HLinks </para>
@@ -509,6 +445,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<HyperlinkList>(21);
         set => SetElement(21, value);
     }
+    
     /// <summary>
     /// <para> Hyperlinks Changed.</para>
     /// <para> Represents the following element tag in the schema: ap:HyperlinksChanged </para>
@@ -521,6 +458,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<HyperlinksChanged>(22);
         set => SetElement(22, value);
     }
+    
     /// <summary>
     /// <para> Digital Signature.</para>
     /// <para> Represents the following element tag in the schema: ap:DigSig </para>
@@ -533,6 +471,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<DigitalSignature>(23);
         set => SetElement(23, value);
     }
+    
     /// <summary>
     /// <para> Application Name.</para>
     /// <para> Represents the following element tag in the schema: ap:Application </para>
@@ -545,6 +484,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<Application>(24);
         set => SetElement(24, value);
     }
+    
     /// <summary>
     /// <para> Application Version.</para>
     /// <para> Represents the following element tag in the schema: ap:AppVersion </para>
@@ -557,6 +497,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<ApplicationVersion>(25);
         set => SetElement(25, value);
     }
+    
     /// <summary>
     /// <para> Document Security.</para>
     /// <para> Represents the following element tag in the schema: ap:DocSecurity </para>
@@ -569,6 +510,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
         get => GetElement<DocumentSecurity>(26);
         set => SetElement(26, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -582,6 +524,7 @@ if( 3 == namespaceId && "DocSecurity" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "Template")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Template : OpenXmlLeafTextElement
 {
@@ -622,6 +565,7 @@ public partial class Template : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "Manager")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Manager : OpenXmlLeafTextElement
 {
@@ -662,6 +606,7 @@ public partial class Manager : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "Company")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Company : OpenXmlLeafTextElement
 {
@@ -702,6 +647,7 @@ public partial class Company : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "PresentationFormat")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class PresentationFormat : OpenXmlLeafTextElement
 {
@@ -742,6 +688,7 @@ public partial class PresentationFormat : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "HyperlinkBase")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HyperlinkBase : OpenXmlLeafTextElement
 {
@@ -782,6 +729,7 @@ public partial class HyperlinkBase : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "Application")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Application : OpenXmlLeafTextElement
 {
@@ -822,6 +770,7 @@ public partial class Application : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "AppVersion")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ApplicationVersion : OpenXmlLeafTextElement
 {
@@ -862,6 +811,7 @@ public partial class ApplicationVersion : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "Pages")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Pages : OpenXmlLeafTextElement
 {
@@ -902,6 +852,7 @@ public partial class Pages : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "Words")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Words : OpenXmlLeafTextElement
 {
@@ -942,6 +893,7 @@ public partial class Words : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "Characters")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Characters : OpenXmlLeafTextElement
 {
@@ -982,6 +934,7 @@ public partial class Characters : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "Lines")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Lines : OpenXmlLeafTextElement
 {
@@ -1022,6 +975,7 @@ public partial class Lines : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "Paragraphs")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Paragraphs : OpenXmlLeafTextElement
 {
@@ -1062,6 +1016,7 @@ public partial class Paragraphs : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "Slides")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Slides : OpenXmlLeafTextElement
 {
@@ -1102,6 +1057,7 @@ public partial class Slides : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "Notes")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class Notes : OpenXmlLeafTextElement
 {
@@ -1142,6 +1098,7 @@ public partial class Notes : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "TotalTime")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TotalTime : OpenXmlLeafTextElement
 {
@@ -1182,6 +1139,7 @@ public partial class TotalTime : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "HiddenSlides")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HiddenSlides : OpenXmlLeafTextElement
 {
@@ -1222,6 +1180,7 @@ public partial class HiddenSlides : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "MMClips")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MultimediaClips : OpenXmlLeafTextElement
 {
@@ -1262,6 +1221,7 @@ public partial class MultimediaClips : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "CharactersWithSpaces")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class CharactersWithSpaces : OpenXmlLeafTextElement
 {
@@ -1302,6 +1262,7 @@ public partial class CharactersWithSpaces : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "DocSecurity")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class DocumentSecurity : OpenXmlLeafTextElement
 {
@@ -1342,6 +1303,7 @@ public partial class DocumentSecurity : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "ScaleCrop")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class ScaleCrop : OpenXmlLeafTextElement
 {
@@ -1382,6 +1344,7 @@ public partial class ScaleCrop : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "LinksUpToDate")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LinksUpToDate : OpenXmlLeafTextElement
 {
@@ -1422,6 +1385,7 @@ public partial class LinksUpToDate : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "SharedDoc")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SharedDocument : OpenXmlLeafTextElement
 {
@@ -1462,6 +1426,7 @@ public partial class SharedDocument : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "HyperlinksChanged")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HyperlinksChanged : OpenXmlLeafTextElement
 {
@@ -1508,6 +1473,7 @@ public partial class HyperlinksChanged : OpenXmlLeafTextElement
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "HeadingPairs")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HeadingPairs : VectorVariantType
 {
@@ -1547,6 +1513,7 @@ public partial class HeadingPairs : VectorVariantType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -1566,6 +1533,7 @@ public partial class HeadingPairs : VectorVariantType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(3, "HLinks")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class HyperlinkList : VectorVariantType
 {
@@ -1605,6 +1573,7 @@ public partial class HyperlinkList : VectorVariantType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -1627,16 +1596,7 @@ public abstract partial class VectorVariantType : OpenXmlCompositeElement
 {
         
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 5 == namespaceId && "vector" == name)
-    return new DocumentFormat.OpenXml.VariantTypes.VTVector();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "vector" };
     private static readonly byte[] eleNamespaceIds = { 5 };
     
@@ -1657,6 +1617,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>(0);
         set => SetElement(0, value);
     }
+    
 
 
     
@@ -1690,6 +1651,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -1708,6 +1670,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTVector))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(3, "TitlesOfParts")]
 public partial class TitlesOfParts : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11081;
@@ -1750,19 +1713,11 @@ public partial class TitlesOfParts : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 5 == namespaceId && "vector" == name)
-    return new DocumentFormat.OpenXml.VariantTypes.VTVector();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "vector" };
     private static readonly byte[] eleNamespaceIds = { 5 };
     
@@ -1783,6 +1738,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTVector>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1804,6 +1760,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.VariantTypes.VTBlob))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(3, "DigSig")]
 public partial class DigitalSignature : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11088;
@@ -1846,19 +1803,11 @@ public partial class DigitalSignature : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 5 == namespaceId && "blob" == name)
-    return new DocumentFormat.OpenXml.VariantTypes.VTBlob();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "blob" };
     private static readonly byte[] eleNamespaceIds = { 5 };
     
@@ -1879,6 +1828,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<DocumentFormat.OpenXml.VariantTypes.VTBlob>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>

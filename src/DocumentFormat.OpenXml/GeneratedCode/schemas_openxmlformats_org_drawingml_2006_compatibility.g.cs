@@ -17,6 +17,7 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(13, "legacyDrawing")]
 public partial class LegacyDrawing : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10681;

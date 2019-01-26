@@ -736,7 +736,7 @@ namespace DocumentFormat.OpenXml
             }
 
             // create the root element object
-            OpenXmlElement rootElement = RootElementFactory.CreateElement(_xmlReader.NamespaceURI, _xmlReader.LocalName);
+            OpenXmlElement rootElement = CreateElement(_xmlReader.NamespaceURI, _xmlReader.LocalName);
 
             if (rootElement == null)
             {
@@ -758,6 +758,23 @@ namespace DocumentFormat.OpenXml
             }
 
             return true;
+        }
+
+        private OpenXmlElement CreateElement(string namespaceUri, string name)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new ArgumentException(nameof(name));
+            }
+
+            if (NamespaceIdMap.TryGetNamespaceId(namespaceUri, out byte nsId)
+                && PackageCache.Cache.CreateElement(GetType(), nsId, name) is OpenXmlElement element)
+            {
+                return element;
+            }
+
+            // return unknown element instead of throw exception.
+            return new OpenXmlUnknownElement();
         }
 
         private void LoadAttributes()

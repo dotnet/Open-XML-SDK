@@ -23,6 +23,7 @@ namespace DocumentFormat.OpenXml.CustomXmlSchemaReferences
     [ChildElementInfo(typeof(Schema))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(25, "schemaLibrary")]
 public partial class SchemaLibrary : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12468;
@@ -65,19 +66,11 @@ public partial class SchemaLibrary : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 25 == namespaceId && "schema" == name)
-    return new Schema();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SchemaLibrary>(deep);
@@ -91,6 +84,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(25, "schema")]
 public partial class Schema : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12469;

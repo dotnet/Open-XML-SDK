@@ -16,6 +16,7 @@ namespace DocumentFormat.OpenXml.Vml.Presentation
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(30, "iscomment")]
 public partial class InkAnnotationFlag : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12575;
@@ -50,6 +51,7 @@ public partial class InkAnnotationFlag : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(30, "textdata")]
 public partial class TextData : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12576;

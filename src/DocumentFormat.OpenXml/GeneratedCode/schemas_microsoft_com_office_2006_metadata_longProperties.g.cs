@@ -23,6 +23,7 @@ namespace DocumentFormat.OpenXml.Office.LongProperties
     [ChildElementInfo(typeof(LongProperty))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(40, "LongProperties")]
 public partial class LongProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12711;
@@ -65,19 +66,11 @@ public partial class LongProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 40 == namespaceId && "LongProp" == name)
-    return new LongProperty();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<LongProperties>(deep);
@@ -91,6 +84,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(40, "LongProp")]
 public partial class LongProperty : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12712;

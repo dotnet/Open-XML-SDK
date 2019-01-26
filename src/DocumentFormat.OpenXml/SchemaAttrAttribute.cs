@@ -8,7 +8,7 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Defines the attribute which is used to decorate a property for its corresponding attribute information.
     /// </summary>
-    [AttributeUsage(AttributeTargets.Property, Inherited = true, AllowMultiple = false)]
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Class, Inherited = true, AllowMultiple = false)]
     public sealed class SchemaAttrAttribute : Attribute
     {
         /// <summary>
@@ -31,6 +31,11 @@ namespace DocumentFormat.OpenXml
             NamespaceId = nsId;
             Tag = tag;
             Index = index;
+        }
+
+        internal SchemaAttrAttribute(string ns, string tag)
+            : this(NamespaceIdMap.GetNamespaceId(ns), tag)
+        {
         }
 
         /// <summary>

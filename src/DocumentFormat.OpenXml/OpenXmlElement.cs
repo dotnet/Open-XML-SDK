@@ -1808,12 +1808,11 @@ namespace DocumentFormat.OpenXml
 
         internal OpenXmlElement ElementFactory(string prefix, string name, string namespaceUri)
         {
-            // Debug.Assert(namespaceUri != null);
             Debug.Assert(!string.IsNullOrEmpty(name));
 
             OpenXmlElement newElement = null;
 
-            if ((!string.IsNullOrEmpty(namespaceUri)) && NamespaceIdMap.TryGetNamespaceId(namespaceUri, out var nsId))
+            if (NamespaceIdMap.TryGetNamespaceId(namespaceUri, out var nsId))
             {
                 newElement = ElementFactory(nsId, name);
 
@@ -1834,9 +1833,7 @@ namespace DocumentFormat.OpenXml
             return newElement;
         }
 
-        internal virtual OpenXmlElement ElementFactory(byte namespaceId, string name) => null;
-
-        internal virtual OpenXmlElement AlternateContentElementFactory(byte namespaceId, string name) => null;
+        internal virtual OpenXmlElement ElementFactory(byte namespaceId, string name) => PackageCache.Cache.CreateElement(GetType(), namespaceId, name);
 
         internal virtual T CloneImp<T>(bool deep) where T : OpenXmlElement, new()
         {
@@ -2311,7 +2308,7 @@ namespace DocumentFormat.OpenXml
         /// <returns></returns>
         internal static bool IsKnownNamespace(string namespaceUri)
         {
-            return NamespaceIdMap.TryGetNamespaceId(namespaceUri, out var id);
+            return NamespaceIdMap.TryGetNamespaceId(namespaceUri, out _);
         }
 
         /// <summary>

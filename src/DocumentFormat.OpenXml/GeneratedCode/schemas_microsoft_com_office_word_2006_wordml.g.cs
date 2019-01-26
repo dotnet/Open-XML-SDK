@@ -27,6 +27,7 @@ namespace DocumentFormat.OpenXml.Office.Word
     [ChildElementInfo(typeof(Toolbars))]
     [ChildElementInfo(typeof(AllocatedCommands))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "tcg")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class TemplateCommandGroup : OpenXmlPartRootElement
 {
@@ -85,6 +86,7 @@ public partial class TemplateCommandGroup : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -102,25 +104,7 @@ public partial class TemplateCommandGroup : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "keymaps" == name)
-    return new KeyMapCustomizations();
     
-if( 33 == namespaceId && "keymapsBad" == name)
-    return new MismatchedKeyMapCustomization();
-    
-if( 33 == namespaceId && "toolbars" == name)
-    return new Toolbars();
-    
-if( 33 == namespaceId && "acds" == name)
-    return new AllocatedCommands();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<TemplateCommandGroup>(deep);
@@ -141,6 +125,7 @@ if( 33 == namespaceId && "acds" == name)
     [ChildElementInfo(typeof(Mcd))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(33, "mcds")]
 public partial class Mcds : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12609;
@@ -183,19 +168,11 @@ public partial class Mcds : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "mcd" == name)
-    return new Mcd();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Mcds>(deep);
@@ -216,6 +193,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocEvents))]
     [ChildElementInfo(typeof(Mcds))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "vbaSuppData")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VbaSuppData : OpenXmlPartRootElement
 {
@@ -274,6 +252,7 @@ public partial class VbaSuppData : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
 
     
     
@@ -291,19 +270,7 @@ public partial class VbaSuppData : OpenXmlPartRootElement
         base.SaveToPart(openXmlPart);
     }
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "docEvents" == name)
-    return new DocEvents();
     
-if( 33 == namespaceId && "mcds" == name)
-    return new Mcds();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "docEvents","mcds" };
     private static readonly byte[] eleNamespaceIds = { 33,33 };
     
@@ -324,6 +291,7 @@ if( 33 == namespaceId && "mcds" == name)
         get => GetElement<DocEvents>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Mcds.</para>
     /// <para> Represents the following element tag in the schema: wne:mcds </para>
@@ -336,6 +304,7 @@ if( 33 == namespaceId && "mcds" == name)
         get => GetElement<Mcds>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -357,6 +326,7 @@ if( 33 == namespaceId && "mcds" == name)
     [ChildElementInfo(typeof(SingleDataSourceRecord))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(33, "recipients")]
 public partial class MailMergeRecipients : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 12611;
@@ -399,19 +369,11 @@ public partial class MailMergeRecipients : OpenXmlPartRootElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "recipientData" == name)
-    return new SingleDataSourceRecord();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<MailMergeRecipients>(deep);
@@ -425,6 +387,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(33, "fci")]
 public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12612;
@@ -482,6 +445,7 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "macro")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MacroKeyboardCustomization : MacroWllType
 {
@@ -509,6 +473,7 @@ public partial class MacroKeyboardCustomization : MacroWllType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "wll")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class WllMacroKeyboardCustomization : MacroWllType
 {
@@ -564,6 +529,7 @@ public abstract partial class MacroWllType : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "acd")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AllocatedCommandKeyboardCustomization : AcceleratorKeymapType
 {
@@ -591,6 +557,7 @@ public partial class AllocatedCommandKeyboardCustomization : AcceleratorKeymapTy
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "acdEntry")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class AllocatedCommandManifestEntry : AcceleratorKeymapType
 {
@@ -647,6 +614,7 @@ public abstract partial class AcceleratorKeymapType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(33, "wch")]
 public partial class CharacterInsertion : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12616;
@@ -704,6 +672,7 @@ public partial class CharacterInsertion : OpenXmlLeafElement
     [ChildElementInfo(typeof(CharacterInsertion))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(33, "keymap")]
 public partial class KeyMapEntry : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12617;
@@ -786,31 +755,11 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "fci" == name)
-    return new FixedCommandKeyboardCustomization();
     
-if( 33 == namespaceId && "macro" == name)
-    return new MacroKeyboardCustomization();
-    
-if( 33 == namespaceId && "acd" == name)
-    return new AllocatedCommandKeyboardCustomization();
-    
-if( 33 == namespaceId && "wll" == name)
-    return new WllMacroKeyboardCustomization();
-    
-if( 33 == namespaceId && "wch" == name)
-    return new CharacterInsertion();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "fci","macro","acd","wll","wch" };
     private static readonly byte[] eleNamespaceIds = { 33,33,33,33,33 };
     
@@ -831,6 +780,7 @@ if( 33 == namespaceId && "wch" == name)
         get => GetElement<FixedCommandKeyboardCustomization>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> MacroKeyboardCustomization.</para>
     /// <para> Represents the following element tag in the schema: wne:macro </para>
@@ -843,6 +793,7 @@ if( 33 == namespaceId && "wch" == name)
         get => GetElement<MacroKeyboardCustomization>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> AllocatedCommandKeyboardCustomization.</para>
     /// <para> Represents the following element tag in the schema: wne:acd </para>
@@ -855,6 +806,7 @@ if( 33 == namespaceId && "wch" == name)
         get => GetElement<AllocatedCommandKeyboardCustomization>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> WllMacroKeyboardCustomization.</para>
     /// <para> Represents the following element tag in the schema: wne:wll </para>
@@ -867,6 +819,7 @@ if( 33 == namespaceId && "wch" == name)
         get => GetElement<WllMacroKeyboardCustomization>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> CharacterInsertion.</para>
     /// <para> Represents the following element tag in the schema: wne:wch </para>
@@ -879,6 +832,7 @@ if( 33 == namespaceId && "wch" == name)
         get => GetElement<CharacterInsertion>(4);
         set => SetElement(4, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -893,6 +847,7 @@ if( 33 == namespaceId && "wch" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(33, "acd")]
 public partial class AllocatedCommand : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12618;
@@ -959,6 +914,7 @@ public partial class AllocatedCommand : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(33, "mcd")]
 public partial class Mcd : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12619;
@@ -1032,6 +988,7 @@ public partial class Mcd : OpenXmlLeafElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "eventDocNew")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocNewXsdString : OpenXmlLeafTextElement
 {
@@ -1072,6 +1029,7 @@ public partial class EventDocNewXsdString : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "eventDocOpen")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocOpenXsdString : OpenXmlLeafTextElement
 {
@@ -1112,6 +1070,7 @@ public partial class EventDocOpenXsdString : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "eventDocClose")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocCloseXsdString : OpenXmlLeafTextElement
 {
@@ -1152,6 +1111,7 @@ public partial class EventDocCloseXsdString : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "eventDocSync")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocSyncXsdString : OpenXmlLeafTextElement
 {
@@ -1192,6 +1152,7 @@ public partial class EventDocSyncXsdString : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "eventDocXmlAfterInsert")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocXmlAfterInsertXsdString : OpenXmlLeafTextElement
 {
@@ -1232,6 +1193,7 @@ public partial class EventDocXmlAfterInsertXsdString : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "eventDocXmlBeforeDelete")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocXmlBeforeDeleteXsdString : OpenXmlLeafTextElement
 {
@@ -1272,6 +1234,7 @@ public partial class EventDocXmlBeforeDeleteXsdString : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "eventDocContentControlAfterInsert")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocContentControlAfterInsertXsdString : OpenXmlLeafTextElement
 {
@@ -1312,6 +1275,7 @@ public partial class EventDocContentControlAfterInsertXsdString : OpenXmlLeafTex
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "eventDocContentControlBeforeDelete")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocContentControlBeforeDeleteXsdString : OpenXmlLeafTextElement
 {
@@ -1352,6 +1316,7 @@ public partial class EventDocContentControlBeforeDeleteXsdString : OpenXmlLeafTe
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "eventDocContentControlOnExit")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocContentControlOnExistXsdString : OpenXmlLeafTextElement
 {
@@ -1392,6 +1357,7 @@ public partial class EventDocContentControlOnExistXsdString : OpenXmlLeafTextEle
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "eventDocContentControlOnEnter")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocContentControlOnEnterXsdString : OpenXmlLeafTextElement
 {
@@ -1432,6 +1398,7 @@ public partial class EventDocContentControlOnEnterXsdString : OpenXmlLeafTextEle
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "eventDocStoreUpdate")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocStoreUpdateXsdString : OpenXmlLeafTextElement
 {
@@ -1472,6 +1439,7 @@ public partial class EventDocStoreUpdateXsdString : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "eventDocContentControlContentUpdate")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocContentControlUpdateXsdString : OpenXmlLeafTextElement
 {
@@ -1512,6 +1480,7 @@ public partial class EventDocContentControlUpdateXsdString : OpenXmlLeafTextElem
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "eventDocBuildingBlockAfterInsert")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class EventDocBuildingBlockAfterInsertXsdString : OpenXmlLeafTextElement
 {
@@ -1584,6 +1553,7 @@ public partial class EventDocBuildingBlockAfterInsertXsdString : OpenXmlLeafText
     [ChildElementInfo(typeof(EventDocBuildingBlockAfterInsertXsdString))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(33, "docEvents")]
 public partial class DocEvents : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12633;
@@ -1626,55 +1596,11 @@ public partial class DocEvents : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "eventDocNew" == name)
-    return new EventDocNewXsdString();
     
-if( 33 == namespaceId && "eventDocOpen" == name)
-    return new EventDocOpenXsdString();
-    
-if( 33 == namespaceId && "eventDocClose" == name)
-    return new EventDocCloseXsdString();
-    
-if( 33 == namespaceId && "eventDocSync" == name)
-    return new EventDocSyncXsdString();
-    
-if( 33 == namespaceId && "eventDocXmlAfterInsert" == name)
-    return new EventDocXmlAfterInsertXsdString();
-    
-if( 33 == namespaceId && "eventDocXmlBeforeDelete" == name)
-    return new EventDocXmlBeforeDeleteXsdString();
-    
-if( 33 == namespaceId && "eventDocContentControlAfterInsert" == name)
-    return new EventDocContentControlAfterInsertXsdString();
-    
-if( 33 == namespaceId && "eventDocContentControlBeforeDelete" == name)
-    return new EventDocContentControlBeforeDeleteXsdString();
-    
-if( 33 == namespaceId && "eventDocContentControlOnExit" == name)
-    return new EventDocContentControlOnExistXsdString();
-    
-if( 33 == namespaceId && "eventDocContentControlOnEnter" == name)
-    return new EventDocContentControlOnEnterXsdString();
-    
-if( 33 == namespaceId && "eventDocStoreUpdate" == name)
-    return new EventDocStoreUpdateXsdString();
-    
-if( 33 == namespaceId && "eventDocContentControlContentUpdate" == name)
-    return new EventDocContentControlUpdateXsdString();
-    
-if( 33 == namespaceId && "eventDocBuildingBlockAfterInsert" == name)
-    return new EventDocBuildingBlockAfterInsertXsdString();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "eventDocNew","eventDocOpen","eventDocClose","eventDocSync","eventDocXmlAfterInsert","eventDocXmlBeforeDelete","eventDocContentControlAfterInsert","eventDocContentControlBeforeDelete","eventDocContentControlOnExit","eventDocContentControlOnEnter","eventDocStoreUpdate","eventDocContentControlContentUpdate","eventDocBuildingBlockAfterInsert" };
     private static readonly byte[] eleNamespaceIds = { 33,33,33,33,33,33,33,33,33,33,33,33,33 };
     
@@ -1695,6 +1621,7 @@ if( 33 == namespaceId && "eventDocBuildingBlockAfterInsert" == name)
         get => GetElement<EventDocNewXsdString>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> EventDocOpenXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocOpen </para>
@@ -1707,6 +1634,7 @@ if( 33 == namespaceId && "eventDocBuildingBlockAfterInsert" == name)
         get => GetElement<EventDocOpenXsdString>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> EventDocCloseXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocClose </para>
@@ -1719,6 +1647,7 @@ if( 33 == namespaceId && "eventDocBuildingBlockAfterInsert" == name)
         get => GetElement<EventDocCloseXsdString>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> EventDocSyncXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocSync </para>
@@ -1731,6 +1660,7 @@ if( 33 == namespaceId && "eventDocBuildingBlockAfterInsert" == name)
         get => GetElement<EventDocSyncXsdString>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> EventDocXmlAfterInsertXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocXmlAfterInsert </para>
@@ -1743,6 +1673,7 @@ if( 33 == namespaceId && "eventDocBuildingBlockAfterInsert" == name)
         get => GetElement<EventDocXmlAfterInsertXsdString>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> EventDocXmlBeforeDeleteXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocXmlBeforeDelete </para>
@@ -1755,6 +1686,7 @@ if( 33 == namespaceId && "eventDocBuildingBlockAfterInsert" == name)
         get => GetElement<EventDocXmlBeforeDeleteXsdString>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> EventDocContentControlAfterInsertXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocContentControlAfterInsert </para>
@@ -1767,6 +1699,7 @@ if( 33 == namespaceId && "eventDocBuildingBlockAfterInsert" == name)
         get => GetElement<EventDocContentControlAfterInsertXsdString>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> EventDocContentControlBeforeDeleteXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocContentControlBeforeDelete </para>
@@ -1779,6 +1712,7 @@ if( 33 == namespaceId && "eventDocBuildingBlockAfterInsert" == name)
         get => GetElement<EventDocContentControlBeforeDeleteXsdString>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> EventDocContentControlOnExistXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocContentControlOnExit </para>
@@ -1791,6 +1725,7 @@ if( 33 == namespaceId && "eventDocBuildingBlockAfterInsert" == name)
         get => GetElement<EventDocContentControlOnExistXsdString>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> EventDocContentControlOnEnterXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocContentControlOnEnter </para>
@@ -1803,6 +1738,7 @@ if( 33 == namespaceId && "eventDocBuildingBlockAfterInsert" == name)
         get => GetElement<EventDocContentControlOnEnterXsdString>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> EventDocStoreUpdateXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocStoreUpdate </para>
@@ -1815,6 +1751,7 @@ if( 33 == namespaceId && "eventDocBuildingBlockAfterInsert" == name)
         get => GetElement<EventDocStoreUpdateXsdString>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> EventDocContentControlUpdateXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocContentControlContentUpdate </para>
@@ -1827,6 +1764,7 @@ if( 33 == namespaceId && "eventDocBuildingBlockAfterInsert" == name)
         get => GetElement<EventDocContentControlUpdateXsdString>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> EventDocBuildingBlockAfterInsertXsdString.</para>
     /// <para> Represents the following element tag in the schema: wne:eventDocBuildingBlockAfterInsert </para>
@@ -1839,6 +1777,7 @@ if( 33 == namespaceId && "eventDocBuildingBlockAfterInsert" == name)
         get => GetElement<EventDocBuildingBlockAfterInsertXsdString>(12);
         set => SetElement(12, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1860,6 +1799,7 @@ if( 33 == namespaceId && "eventDocBuildingBlockAfterInsert" == name)
     [ChildElementInfo(typeof(AllocatedCommandManifestEntry))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(33, "acdManifest")]
 public partial class AllocatedCommandManifest : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12635;
@@ -1902,19 +1842,11 @@ public partial class AllocatedCommandManifest : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "acdEntry" == name)
-    return new AllocatedCommandManifestEntry();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AllocatedCommandManifest>(deep);
@@ -1928,6 +1860,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(33, "toolbarData")]
 public partial class ToolbarData : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12636;
@@ -1975,6 +1908,7 @@ public partial class ToolbarData : OpenXmlLeafElement
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "keymaps")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class KeyMapCustomizations : KeymapsType
 {
@@ -2014,6 +1948,7 @@ public partial class KeyMapCustomizations : KeymapsType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -2033,6 +1968,7 @@ public partial class KeyMapCustomizations : KeymapsType
 /// </remarks>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(33, "keymapsBad")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class MismatchedKeyMapCustomization : KeymapsType
 {
@@ -2072,6 +2008,7 @@ public partial class MismatchedKeyMapCustomization : KeymapsType
         : base(outerXml)
     {
     }
+    
 
     
     /// <inheritdoc/>
@@ -2094,16 +2031,7 @@ public abstract partial class KeymapsType : OpenXmlCompositeElement
 {
         
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "keymap" == name)
-    return new KeyMapEntry();
     
-
-    return null;
-}
-
     
     
     /// <summary>
@@ -2136,6 +2064,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         : base(outerXml)
     {
     }
+    
 
     
 }
@@ -2156,6 +2085,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(ToolbarData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(33, "toolbars")]
 public partial class Toolbars : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12639;
@@ -2198,22 +2128,11 @@ public partial class Toolbars : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "acdManifest" == name)
-    return new AllocatedCommandManifest();
     
-if( 33 == namespaceId && "toolbarData" == name)
-    return new ToolbarData();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<Toolbars>(deep);
@@ -2234,6 +2153,7 @@ if( 33 == namespaceId && "toolbarData" == name)
     [ChildElementInfo(typeof(AllocatedCommand))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(33, "acds")]
 public partial class AllocatedCommands : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12640;
@@ -2276,19 +2196,11 @@ public partial class AllocatedCommands : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "acd" == name)
-    return new AllocatedCommand();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<AllocatedCommands>(deep);
@@ -2302,6 +2214,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(33, "active")]
 public partial class RecordIncluded : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12641;
@@ -2344,6 +2257,7 @@ public partial class RecordIncluded : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(33, "hash")]
 public partial class RecordHashCode : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12642;
@@ -2395,6 +2309,7 @@ public partial class RecordHashCode : OpenXmlLeafElement
     [ChildElementInfo(typeof(RecordHashCode))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(33, "recipientData")]
 public partial class SingleDataSourceRecord : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12643;
@@ -2437,22 +2352,11 @@ public partial class SingleDataSourceRecord : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 33 == namespaceId && "active" == name)
-    return new RecordIncluded();
     
-if( 33 == namespaceId && "hash" == name)
-    return new RecordHashCode();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "active","hash" };
     private static readonly byte[] eleNamespaceIds = { 33,33 };
     
@@ -2473,6 +2377,7 @@ if( 33 == namespaceId && "hash" == name)
         get => GetElement<RecordIncluded>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> RecordHashCode.</para>
     /// <para> Represents the following element tag in the schema: wne:hash </para>
@@ -2485,6 +2390,7 @@ if( 33 == namespaceId && "hash" == name)
         get => GetElement<RecordHashCode>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>

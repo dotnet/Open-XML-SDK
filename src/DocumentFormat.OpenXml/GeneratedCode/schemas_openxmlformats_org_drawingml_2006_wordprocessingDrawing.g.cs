@@ -18,6 +18,7 @@ namespace DocumentFormat.OpenXml.Drawing.Wordprocessing
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(16, "wrapNone")]
 public partial class WrapNone : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10760;
@@ -59,6 +60,7 @@ public partial class WrapNone : OpenXmlLeafElement
     [ChildElementInfo(typeof(EffectExtent))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(16, "wrapSquare")]
 public partial class WrapSquare : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10761;
@@ -131,19 +133,11 @@ public partial class WrapSquare : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 16 == namespaceId && "effectExtent" == name)
-    return new EffectExtent();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "effectExtent" };
     private static readonly byte[] eleNamespaceIds = { 16 };
     
@@ -164,6 +158,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<EffectExtent>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -185,6 +180,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(WrapPolygon))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(16, "wrapTight")]
 public partial class WrapTight : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10762;
@@ -245,19 +241,11 @@ public partial class WrapTight : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 16 == namespaceId && "wrapPolygon" == name)
-    return new WrapPolygon();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "wrapPolygon" };
     private static readonly byte[] eleNamespaceIds = { 16 };
     
@@ -278,6 +266,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<WrapPolygon>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -299,6 +288,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(WrapPolygon))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(16, "wrapThrough")]
 public partial class WrapThrough : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10763;
@@ -359,19 +349,11 @@ public partial class WrapThrough : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 16 == namespaceId && "wrapPolygon" == name)
-    return new WrapPolygon();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "wrapPolygon" };
     private static readonly byte[] eleNamespaceIds = { 16 };
     
@@ -392,6 +374,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<WrapPolygon>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -413,6 +396,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(EffectExtent))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(16, "wrapTopAndBottom")]
 public partial class WrapTopBottom : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10764;
@@ -467,19 +451,11 @@ public partial class WrapTopBottom : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 16 == namespaceId && "effectExtent" == name)
-    return new EffectExtent();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "effectExtent" };
     private static readonly byte[] eleNamespaceIds = { 16 };
     
@@ -500,6 +476,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<EffectExtent>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -529,6 +506,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Graphic))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(16, "inline")]
 public partial class Inline : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10765;
@@ -611,31 +589,11 @@ public partial class Inline : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 16 == namespaceId && "extent" == name)
-    return new Extent();
     
-if( 16 == namespaceId && "effectExtent" == name)
-    return new EffectExtent();
-    
-if( 16 == namespaceId && "docPr" == name)
-    return new DocProperties();
-    
-if( 16 == namespaceId && "cNvGraphicFramePr" == name)
-    return new NonVisualGraphicFrameDrawingProperties();
-    
-if( 10 == namespaceId && "graphic" == name)
-    return new DocumentFormat.OpenXml.Drawing.Graphic();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "extent","effectExtent","docPr","cNvGraphicFramePr","graphic" };
     private static readonly byte[] eleNamespaceIds = { 16,16,16,16,10 };
     
@@ -656,6 +614,7 @@ if( 10 == namespaceId && "graphic" == name)
         get => GetElement<Extent>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Inline Wrapping Extent.</para>
     /// <para> Represents the following element tag in the schema: wp:effectExtent </para>
@@ -668,6 +627,7 @@ if( 10 == namespaceId && "graphic" == name)
         get => GetElement<EffectExtent>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Drawing Object Non-Visual Properties.</para>
     /// <para> Represents the following element tag in the schema: wp:docPr </para>
@@ -680,6 +640,7 @@ if( 10 == namespaceId && "graphic" == name)
         get => GetElement<DocProperties>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Common DrawingML Non-Visual Properties.</para>
     /// <para> Represents the following element tag in the schema: wp:cNvGraphicFramePr </para>
@@ -692,6 +653,7 @@ if( 10 == namespaceId && "graphic" == name)
         get => GetElement<NonVisualGraphicFrameDrawingProperties>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Graphic.</para>
     /// <para> Represents the following element tag in the schema: a:graphic </para>
@@ -704,6 +666,7 @@ if( 10 == namespaceId && "graphic" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.Graphic>(4);
         set => SetElement(4, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -753,6 +716,7 @@ if( 10 == namespaceId && "graphic" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(16, "anchor")]
 public partial class Anchor : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10766;
@@ -877,61 +841,11 @@ public partial class Anchor : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 16 == namespaceId && "simplePos" == name)
-    return new SimplePosition();
     
-if( 16 == namespaceId && "positionH" == name)
-    return new HorizontalPosition();
-    
-if( 16 == namespaceId && "positionV" == name)
-    return new VerticalPosition();
-    
-if( 16 == namespaceId && "extent" == name)
-    return new Extent();
-    
-if( 16 == namespaceId && "effectExtent" == name)
-    return new EffectExtent();
-    
-if( 16 == namespaceId && "wrapNone" == name)
-    return new WrapNone();
-    
-if( 16 == namespaceId && "wrapSquare" == name)
-    return new WrapSquare();
-    
-if( 16 == namespaceId && "wrapTight" == name)
-    return new WrapTight();
-    
-if( 16 == namespaceId && "wrapThrough" == name)
-    return new WrapThrough();
-    
-if( 16 == namespaceId && "wrapTopAndBottom" == name)
-    return new WrapTopBottom();
-    
-if( 16 == namespaceId && "docPr" == name)
-    return new DocProperties();
-    
-if( 16 == namespaceId && "cNvGraphicFramePr" == name)
-    return new NonVisualGraphicFrameDrawingProperties();
-    
-if( 10 == namespaceId && "graphic" == name)
-    return new DocumentFormat.OpenXml.Drawing.Graphic();
-    
-if( 51 == namespaceId && "sizeRelH" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeWidth();
-    
-if( 51 == namespaceId && "sizeRelV" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Drawing.RelativeHeight();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "simplePos","positionH","positionV","extent","effectExtent","wrapNone","wrapSquare","wrapTight","wrapThrough","wrapTopAndBottom","docPr","cNvGraphicFramePr","graphic","sizeRelH","sizeRelV" };
     private static readonly byte[] eleNamespaceIds = { 16,16,16,16,16,16,16,16,16,16,16,16,10,51,51 };
     
@@ -952,6 +866,7 @@ if( 51 == namespaceId && "sizeRelV" == name)
         get => GetElement<SimplePosition>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Horizontal Positioning.</para>
     /// <para> Represents the following element tag in the schema: wp:positionH </para>
@@ -964,6 +879,7 @@ if( 51 == namespaceId && "sizeRelV" == name)
         get => GetElement<HorizontalPosition>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Vertical Positioning.</para>
     /// <para> Represents the following element tag in the schema: wp:positionV </para>
@@ -976,6 +892,7 @@ if( 51 == namespaceId && "sizeRelV" == name)
         get => GetElement<VerticalPosition>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Inline Drawing Object Extents.</para>
     /// <para> Represents the following element tag in the schema: wp:extent </para>
@@ -988,6 +905,7 @@ if( 51 == namespaceId && "sizeRelV" == name)
         get => GetElement<Extent>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> EffectExtent.</para>
     /// <para> Represents the following element tag in the schema: wp:effectExtent </para>
@@ -1000,6 +918,7 @@ if( 51 == namespaceId && "sizeRelV" == name)
         get => GetElement<EffectExtent>(4);
         set => SetElement(4, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1013,6 +932,7 @@ if( 51 == namespaceId && "sizeRelV" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(16, "start")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class StartPoint : Point2DType
 {
@@ -1040,6 +960,7 @@ public partial class StartPoint : Point2DType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(16, "lineTo")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class LineTo : Point2DType
 {
@@ -1067,6 +988,7 @@ public partial class LineTo : Point2DType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(16, "simplePos")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class SimplePosition : Point2DType
 {
@@ -1127,6 +1049,7 @@ public abstract partial class Point2DType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(16, "effectExtent")]
 public partial class EffectExtent : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10769;
@@ -1194,6 +1117,7 @@ public partial class EffectExtent : OpenXmlLeafElement
     [ChildElementInfo(typeof(LineTo))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(16, "wrapPolygon")]
 public partial class WrapPolygon : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10770;
@@ -1242,22 +1166,11 @@ public partial class WrapPolygon : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 16 == namespaceId && "start" == name)
-    return new StartPoint();
     
-if( 16 == namespaceId && "lineTo" == name)
-    return new LineTo();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "start","lineTo" };
     private static readonly byte[] eleNamespaceIds = { 16,16 };
     
@@ -1278,6 +1191,7 @@ if( 16 == namespaceId && "lineTo" == name)
         get => GetElement<StartPoint>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1303,6 +1217,7 @@ if( 16 == namespaceId && "lineTo" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(16, "positionH")]
 public partial class HorizontalPosition : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10772;
@@ -1351,25 +1266,11 @@ public partial class HorizontalPosition : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 16 == namespaceId && "align" == name)
-    return new HorizontalAlignment();
     
-if( 16 == namespaceId && "posOffset" == name)
-    return new PositionOffset();
-    
-if( 51 == namespaceId && "pctPosHOffset" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "align","posOffset","pctPosHOffset" };
     private static readonly byte[] eleNamespaceIds = { 16,16,51 };
     
@@ -1390,6 +1291,7 @@ if( 51 == namespaceId && "pctPosHOffset" == name)
         get => GetElement<HorizontalAlignment>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Absolute Position Offset.</para>
     /// <para> Represents the following element tag in the schema: wp:posOffset </para>
@@ -1402,6 +1304,7 @@ if( 51 == namespaceId && "pctPosHOffset" == name)
         get => GetElement<PositionOffset>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> PercentagePositionHeightOffset.</para>
     /// <para> Represents the following element tag in the schema: wp14:pctPosHOffset </para>
@@ -1414,6 +1317,7 @@ if( 51 == namespaceId && "pctPosHOffset" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionHeightOffset>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1439,6 +1343,7 @@ if( 51 == namespaceId && "pctPosHOffset" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(16, "positionV")]
 public partial class VerticalPosition : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10773;
@@ -1487,25 +1392,11 @@ public partial class VerticalPosition : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 16 == namespaceId && "align" == name)
-    return new VerticalAlignment();
     
-if( 16 == namespaceId && "posOffset" == name)
-    return new PositionOffset();
-    
-if( 51 == namespaceId && "pctPosVOffset" == name)
-    return new DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "align","posOffset","pctPosVOffset" };
     private static readonly byte[] eleNamespaceIds = { 16,16,51 };
     
@@ -1526,6 +1417,7 @@ if( 51 == namespaceId && "pctPosVOffset" == name)
         get => GetElement<VerticalAlignment>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> PositionOffset.</para>
     /// <para> Represents the following element tag in the schema: wp:posOffset </para>
@@ -1538,6 +1430,7 @@ if( 51 == namespaceId && "pctPosVOffset" == name)
         get => GetElement<PositionOffset>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> PercentagePositionVerticalOffset.</para>
     /// <para> Represents the following element tag in the schema: wp14:pctPosVOffset </para>
@@ -1550,6 +1443,7 @@ if( 51 == namespaceId && "pctPosVOffset" == name)
         get => GetElement<DocumentFormat.OpenXml.Office2010.Word.Drawing.PercentagePositionVerticalOffset>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1564,6 +1458,7 @@ if( 51 == namespaceId && "pctPosVOffset" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(16, "extent")]
 public partial class Extent : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10774;
@@ -1621,6 +1516,7 @@ public partial class Extent : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(16, "docPr")]
 public partial class DocProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10775;
@@ -1693,25 +1589,11 @@ public partial class DocProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "hlinkClick" == name)
-    return new DocumentFormat.OpenXml.Drawing.HyperlinkOnClick();
     
-if( 10 == namespaceId && "hlinkHover" == name)
-    return new DocumentFormat.OpenXml.Drawing.HyperlinkOnHover();
-    
-if( 10 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "hlinkClick","hlinkHover","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10 };
     
@@ -1732,6 +1614,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
     /// <para> Represents the following element tag in the schema: a:hlinkHover </para>
@@ -1744,6 +1627,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -1756,6 +1640,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1779,6 +1664,7 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(16, "cNvGraphicFramePr")]
 public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10776;
@@ -1821,22 +1707,11 @@ public partial class NonVisualGraphicFrameDrawingProperties : OpenXmlCompositeEl
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "graphicFrameLocks" == name)
-    return new DocumentFormat.OpenXml.Drawing.GraphicFrameLocks();
     
-if( 10 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "graphicFrameLocks","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10 };
     
@@ -1857,6 +1732,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.GraphicFrameLocks>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -1869,6 +1745,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1883,6 +1760,7 @@ if( 10 == namespaceId && "extLst" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(16, "align")]
 public partial class VerticalAlignment : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10777;
@@ -1930,6 +1808,7 @@ public partial class VerticalAlignment : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(16, "posOffset")]
 public partial class PositionOffset : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10778;
@@ -1977,6 +1856,7 @@ public partial class PositionOffset : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(16, "align")]
 public partial class HorizontalAlignment : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 10779;

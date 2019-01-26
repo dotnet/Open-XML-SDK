@@ -34,6 +34,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
     [ChildElementInfo(typeof(DropZonesVisible), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(46, "pivotOptions")]
 public partial class PivotOptions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12762;
@@ -76,31 +77,11 @@ public partial class PivotOptions : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 46 == namespaceId && "dropZoneFilter" == name)
-    return new DropZoneFilter();
     
-if( 46 == namespaceId && "dropZoneCategories" == name)
-    return new DropZoneCategories();
-    
-if( 46 == namespaceId && "dropZoneData" == name)
-    return new DropZoneData();
-    
-if( 46 == namespaceId && "dropZoneSeries" == name)
-    return new DropZoneSeries();
-    
-if( 46 == namespaceId && "dropZonesVisible" == name)
-    return new DropZonesVisible();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "dropZoneFilter","dropZoneCategories","dropZoneData","dropZoneSeries","dropZonesVisible" };
     private static readonly byte[] eleNamespaceIds = { 46,46,46,46,46 };
     
@@ -121,6 +102,7 @@ if( 46 == namespaceId && "dropZonesVisible" == name)
         get => GetElement<DropZoneFilter>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> DropZoneCategories.</para>
     /// <para> Represents the following element tag in the schema: c14:dropZoneCategories </para>
@@ -133,6 +115,7 @@ if( 46 == namespaceId && "dropZonesVisible" == name)
         get => GetElement<DropZoneCategories>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> DropZoneData.</para>
     /// <para> Represents the following element tag in the schema: c14:dropZoneData </para>
@@ -145,6 +128,7 @@ if( 46 == namespaceId && "dropZonesVisible" == name)
         get => GetElement<DropZoneData>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> DropZoneSeries.</para>
     /// <para> Represents the following element tag in the schema: c14:dropZoneSeries </para>
@@ -157,6 +141,7 @@ if( 46 == namespaceId && "dropZonesVisible" == name)
         get => GetElement<DropZoneSeries>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> DropZonesVisible.</para>
     /// <para> Represents the following element tag in the schema: c14:dropZonesVisible </para>
@@ -169,6 +154,7 @@ if( 46 == namespaceId && "dropZonesVisible" == name)
         get => GetElement<DropZonesVisible>(4);
         set => SetElement(4, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -192,6 +178,7 @@ if( 46 == namespaceId && "dropZonesVisible" == name)
     [ChildElementInfo(typeof(ShowSketchButton), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(46, "sketchOptions")]
 public partial class SketchOptions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12763;
@@ -234,22 +221,11 @@ public partial class SketchOptions : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 46 == namespaceId && "inSketchMode" == name)
-    return new InSketchMode();
     
-if( 46 == namespaceId && "showSketchBtn" == name)
-    return new ShowSketchButton();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "inSketchMode","showSketchBtn" };
     private static readonly byte[] eleNamespaceIds = { 46,46 };
     
@@ -270,6 +246,7 @@ if( 46 == namespaceId && "showSketchBtn" == name)
         get => GetElement<InSketchMode>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> ShowSketchButton.</para>
     /// <para> Represents the following element tag in the schema: c14:showSketchBtn </para>
@@ -282,6 +259,7 @@ if( 46 == namespaceId && "showSketchBtn" == name)
         get => GetElement<ShowSketchButton>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -303,6 +281,7 @@ if( 46 == namespaceId && "showSketchBtn" == name)
     [ChildElementInfo(typeof(ShapeProperties), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(46, "invertSolidFillFmt")]
 public partial class InvertSolidFillFormat : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12764;
@@ -345,19 +324,11 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 46 == namespaceId && "spPr" == name)
-    return new ShapeProperties();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "spPr" };
     private static readonly byte[] eleNamespaceIds = { 46 };
     
@@ -378,6 +349,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ShapeProperties>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -392,6 +364,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(46, "style")]
 public partial class Style : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12765;
@@ -467,6 +440,7 @@ public partial class Style : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(46, "spPr")]
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12766;
@@ -515,61 +489,11 @@ public partial class ShapeProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "xfrm" == name)
-    return new DocumentFormat.OpenXml.Drawing.Transform2D();
     
-if( 10 == namespaceId && "custGeom" == name)
-    return new DocumentFormat.OpenXml.Drawing.CustomGeometry();
-    
-if( 10 == namespaceId && "prstGeom" == name)
-    return new DocumentFormat.OpenXml.Drawing.PresetGeometry();
-    
-if( 10 == namespaceId && "noFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.NoFill();
-    
-if( 10 == namespaceId && "solidFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.SolidFill();
-    
-if( 10 == namespaceId && "gradFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.GradientFill();
-    
-if( 10 == namespaceId && "blipFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.BlipFill();
-    
-if( 10 == namespaceId && "pattFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.PatternFill();
-    
-if( 10 == namespaceId && "grpFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.GroupFill();
-    
-if( 10 == namespaceId && "ln" == name)
-    return new DocumentFormat.OpenXml.Drawing.Outline();
-    
-if( 10 == namespaceId && "effectLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.EffectList();
-    
-if( 10 == namespaceId && "effectDag" == name)
-    return new DocumentFormat.OpenXml.Drawing.EffectDag();
-    
-if( 10 == namespaceId && "scene3d" == name)
-    return new DocumentFormat.OpenXml.Drawing.Scene3DType();
-    
-if( 10 == namespaceId && "sp3d" == name)
-    return new DocumentFormat.OpenXml.Drawing.Shape3DType();
-    
-if( 10 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.ShapePropertiesExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "xfrm","custGeom","prstGeom","noFill","solidFill","gradFill","blipFill","pattFill","grpFill","ln","effectLst","effectDag","scene3d","sp3d","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10,10,10,10,10,10,10,10,10,10 };
     
@@ -590,6 +514,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.Transform2D>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -603,6 +528,7 @@ if( 10 == namespaceId && "extLst" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(46, "dropZoneFilter")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DropZoneFilter : BooleanFalseType
 {
@@ -630,6 +556,7 @@ public partial class DropZoneFilter : BooleanFalseType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(46, "dropZoneCategories")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DropZoneCategories : BooleanFalseType
 {
@@ -657,6 +584,7 @@ public partial class DropZoneCategories : BooleanFalseType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(46, "dropZoneData")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DropZoneData : BooleanFalseType
 {
@@ -684,6 +612,7 @@ public partial class DropZoneData : BooleanFalseType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(46, "dropZoneSeries")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DropZoneSeries : BooleanFalseType
 {
@@ -711,6 +640,7 @@ public partial class DropZoneSeries : BooleanFalseType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(46, "dropZonesVisible")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class DropZonesVisible : BooleanFalseType
 {
@@ -738,6 +668,7 @@ public partial class DropZonesVisible : BooleanFalseType
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(46, "inSketchMode")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
 public partial class InSketchMode : BooleanFalseType
 {
@@ -792,6 +723,7 @@ public abstract partial class BooleanFalseType : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(46, "showSketchBtn")]
 public partial class ShowSketchButton : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12773;

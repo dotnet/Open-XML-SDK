@@ -91,6 +91,7 @@ namespace DocumentFormat.OpenXml.VariantTypes
     [ChildElementInfo(typeof(VTClipboardData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "variant")]
 public partial class Variant : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11029;
@@ -133,121 +134,11 @@ public partial class Variant : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 5 == namespaceId && "variant" == name)
-    return new Variant();
     
-if( 5 == namespaceId && "vector" == name)
-    return new VTVector();
-    
-if( 5 == namespaceId && "array" == name)
-    return new VTArray();
-    
-if( 5 == namespaceId && "blob" == name)
-    return new VTBlob();
-    
-if( 5 == namespaceId && "oblob" == name)
-    return new VTOBlob();
-    
-if( 5 == namespaceId && "empty" == name)
-    return new VTEmpty();
-    
-if( 5 == namespaceId && "null" == name)
-    return new VTNull();
-    
-if( 5 == namespaceId && "i1" == name)
-    return new VTByte();
-    
-if( 5 == namespaceId && "i2" == name)
-    return new VTShort();
-    
-if( 5 == namespaceId && "i4" == name)
-    return new VTInt32();
-    
-if( 5 == namespaceId && "i8" == name)
-    return new VTInt64();
-    
-if( 5 == namespaceId && "int" == name)
-    return new VTInteger();
-    
-if( 5 == namespaceId && "ui1" == name)
-    return new VTUnsignedByte();
-    
-if( 5 == namespaceId && "ui2" == name)
-    return new VTUnsignedShort();
-    
-if( 5 == namespaceId && "ui4" == name)
-    return new VTUnsignedInt32();
-    
-if( 5 == namespaceId && "ui8" == name)
-    return new VTUnsignedInt64();
-    
-if( 5 == namespaceId && "uint" == name)
-    return new VTUnsignedInteger();
-    
-if( 5 == namespaceId && "r4" == name)
-    return new VTFloat();
-    
-if( 5 == namespaceId && "r8" == name)
-    return new VTDouble();
-    
-if( 5 == namespaceId && "decimal" == name)
-    return new VTDecimal();
-    
-if( 5 == namespaceId && "lpstr" == name)
-    return new VTLPSTR();
-    
-if( 5 == namespaceId && "lpwstr" == name)
-    return new VTLPWSTR();
-    
-if( 5 == namespaceId && "bstr" == name)
-    return new VTBString();
-    
-if( 5 == namespaceId && "date" == name)
-    return new VTDate();
-    
-if( 5 == namespaceId && "filetime" == name)
-    return new VTFileTime();
-    
-if( 5 == namespaceId && "bool" == name)
-    return new VTBool();
-    
-if( 5 == namespaceId && "cy" == name)
-    return new VTCurrency();
-    
-if( 5 == namespaceId && "error" == name)
-    return new VTError();
-    
-if( 5 == namespaceId && "stream" == name)
-    return new VTStreamData();
-    
-if( 5 == namespaceId && "ostream" == name)
-    return new VTOStreamData();
-    
-if( 5 == namespaceId && "storage" == name)
-    return new VTStorage();
-    
-if( 5 == namespaceId && "ostorage" == name)
-    return new VTOStorage();
-    
-if( 5 == namespaceId && "vstream" == name)
-    return new VTVStreamData();
-    
-if( 5 == namespaceId && "clsid" == name)
-    return new VTClassId();
-    
-if( 5 == namespaceId && "cf" == name)
-    return new VTClipboardData();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "variant","vector","array","blob","oblob","empty","null","i1","i2","i4","i8","int","ui1","ui2","ui4","ui8","uint","r4","r8","decimal","lpstr","lpwstr","bstr","date","filetime","bool","cy","error","stream","ostream","storage","ostorage","vstream","clsid","cf" };
     private static readonly byte[] eleNamespaceIds = { 5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5 };
     
@@ -268,6 +159,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<Variant>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Vector.</para>
     /// <para> Represents the following element tag in the schema: vt:vector </para>
@@ -280,6 +172,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTVector>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Array.</para>
     /// <para> Represents the following element tag in the schema: vt:array </para>
@@ -292,6 +185,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTArray>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Binary Blob.</para>
     /// <para> Represents the following element tag in the schema: vt:blob </para>
@@ -304,6 +198,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTBlob>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Binary Blob Object.</para>
     /// <para> Represents the following element tag in the schema: vt:oblob </para>
@@ -316,6 +211,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTOBlob>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Empty.</para>
     /// <para> Represents the following element tag in the schema: vt:empty </para>
@@ -328,6 +224,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTEmpty>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> Null.</para>
     /// <para> Represents the following element tag in the schema: vt:null </para>
@@ -340,6 +237,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTNull>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> 1-Byte Signed Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:i1 </para>
@@ -352,6 +250,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTByte>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> 2-Byte Signed Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:i2 </para>
@@ -364,6 +263,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTShort>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> 4-Byte Signed Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:i4 </para>
@@ -376,6 +276,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTInt32>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> 8-Byte Signed Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:i8 </para>
@@ -388,6 +289,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTInt64>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:int </para>
@@ -400,6 +302,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTInteger>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> 1-Byte Unsigned Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:ui1 </para>
@@ -412,6 +315,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTUnsignedByte>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> 2-Byte Unsigned Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:ui2 </para>
@@ -424,6 +328,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTUnsignedShort>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> 4-Byte Unsigned Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:ui4 </para>
@@ -436,6 +341,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTUnsignedInt32>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> 8-Byte Unsigned Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:ui8 </para>
@@ -448,6 +354,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTUnsignedInt64>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> Unsigned Integer.</para>
     /// <para> Represents the following element tag in the schema: vt:uint </para>
@@ -460,6 +367,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTUnsignedInteger>(16);
         set => SetElement(16, value);
     }
+    
     /// <summary>
     /// <para> 4-Byte Real Number.</para>
     /// <para> Represents the following element tag in the schema: vt:r4 </para>
@@ -472,6 +380,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTFloat>(17);
         set => SetElement(17, value);
     }
+    
     /// <summary>
     /// <para> 8-Byte Real Number.</para>
     /// <para> Represents the following element tag in the schema: vt:r8 </para>
@@ -484,6 +393,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTDouble>(18);
         set => SetElement(18, value);
     }
+    
     /// <summary>
     /// <para> Decimal.</para>
     /// <para> Represents the following element tag in the schema: vt:decimal </para>
@@ -496,6 +406,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTDecimal>(19);
         set => SetElement(19, value);
     }
+    
     /// <summary>
     /// <para> LPSTR.</para>
     /// <para> Represents the following element tag in the schema: vt:lpstr </para>
@@ -508,6 +419,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTLPSTR>(20);
         set => SetElement(20, value);
     }
+    
     /// <summary>
     /// <para> LPWSTR.</para>
     /// <para> Represents the following element tag in the schema: vt:lpwstr </para>
@@ -520,6 +432,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTLPWSTR>(21);
         set => SetElement(21, value);
     }
+    
     /// <summary>
     /// <para> Basic String.</para>
     /// <para> Represents the following element tag in the schema: vt:bstr </para>
@@ -532,6 +445,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTBString>(22);
         set => SetElement(22, value);
     }
+    
     /// <summary>
     /// <para> Date and Time.</para>
     /// <para> Represents the following element tag in the schema: vt:date </para>
@@ -544,6 +458,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTDate>(23);
         set => SetElement(23, value);
     }
+    
     /// <summary>
     /// <para> File Time.</para>
     /// <para> Represents the following element tag in the schema: vt:filetime </para>
@@ -556,6 +471,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTFileTime>(24);
         set => SetElement(24, value);
     }
+    
     /// <summary>
     /// <para> Boolean.</para>
     /// <para> Represents the following element tag in the schema: vt:bool </para>
@@ -568,6 +484,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTBool>(25);
         set => SetElement(25, value);
     }
+    
     /// <summary>
     /// <para> Currency.</para>
     /// <para> Represents the following element tag in the schema: vt:cy </para>
@@ -580,6 +497,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTCurrency>(26);
         set => SetElement(26, value);
     }
+    
     /// <summary>
     /// <para> Error Status Code.</para>
     /// <para> Represents the following element tag in the schema: vt:error </para>
@@ -592,6 +510,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTError>(27);
         set => SetElement(27, value);
     }
+    
     /// <summary>
     /// <para> Binary Stream.</para>
     /// <para> Represents the following element tag in the schema: vt:stream </para>
@@ -604,6 +523,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTStreamData>(28);
         set => SetElement(28, value);
     }
+    
     /// <summary>
     /// <para> Binary Stream Object.</para>
     /// <para> Represents the following element tag in the schema: vt:ostream </para>
@@ -616,6 +536,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTOStreamData>(29);
         set => SetElement(29, value);
     }
+    
     /// <summary>
     /// <para> Binary Storage.</para>
     /// <para> Represents the following element tag in the schema: vt:storage </para>
@@ -628,6 +549,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTStorage>(30);
         set => SetElement(30, value);
     }
+    
     /// <summary>
     /// <para> Binary Storage Object.</para>
     /// <para> Represents the following element tag in the schema: vt:ostorage </para>
@@ -640,6 +562,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTOStorage>(31);
         set => SetElement(31, value);
     }
+    
     /// <summary>
     /// <para> Binary Versioned Stream.</para>
     /// <para> Represents the following element tag in the schema: vt:vstream </para>
@@ -652,6 +575,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTVStreamData>(32);
         set => SetElement(32, value);
     }
+    
     /// <summary>
     /// <para> Class ID.</para>
     /// <para> Represents the following element tag in the schema: vt:clsid </para>
@@ -664,6 +588,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTClassId>(33);
         set => SetElement(33, value);
     }
+    
     /// <summary>
     /// <para> Clipboard Data.</para>
     /// <para> Represents the following element tag in the schema: vt:cf </para>
@@ -676,6 +601,7 @@ if( 5 == namespaceId && "cf" == name)
         get => GetElement<VTClipboardData>(34);
         set => SetElement(34, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -737,6 +663,7 @@ if( 5 == namespaceId && "cf" == name)
     [ChildElementInfo(typeof(VTClipboardData))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "vector")]
 public partial class VTVector : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11030;
@@ -791,79 +718,11 @@ public partial class VTVector : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 5 == namespaceId && "variant" == name)
-    return new Variant();
     
-if( 5 == namespaceId && "i1" == name)
-    return new VTByte();
-    
-if( 5 == namespaceId && "i2" == name)
-    return new VTShort();
-    
-if( 5 == namespaceId && "i4" == name)
-    return new VTInt32();
-    
-if( 5 == namespaceId && "i8" == name)
-    return new VTInt64();
-    
-if( 5 == namespaceId && "ui1" == name)
-    return new VTUnsignedByte();
-    
-if( 5 == namespaceId && "ui2" == name)
-    return new VTUnsignedShort();
-    
-if( 5 == namespaceId && "ui4" == name)
-    return new VTUnsignedInt32();
-    
-if( 5 == namespaceId && "ui8" == name)
-    return new VTUnsignedInt64();
-    
-if( 5 == namespaceId && "r4" == name)
-    return new VTFloat();
-    
-if( 5 == namespaceId && "r8" == name)
-    return new VTDouble();
-    
-if( 5 == namespaceId && "lpstr" == name)
-    return new VTLPSTR();
-    
-if( 5 == namespaceId && "lpwstr" == name)
-    return new VTLPWSTR();
-    
-if( 5 == namespaceId && "bstr" == name)
-    return new VTBString();
-    
-if( 5 == namespaceId && "date" == name)
-    return new VTDate();
-    
-if( 5 == namespaceId && "filetime" == name)
-    return new VTFileTime();
-    
-if( 5 == namespaceId && "bool" == name)
-    return new VTBool();
-    
-if( 5 == namespaceId && "cy" == name)
-    return new VTCurrency();
-    
-if( 5 == namespaceId && "error" == name)
-    return new VTError();
-    
-if( 5 == namespaceId && "clsid" == name)
-    return new VTClassId();
-    
-if( 5 == namespaceId && "cf" == name)
-    return new VTClipboardData();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTVector>(deep);
@@ -916,6 +775,7 @@ if( 5 == namespaceId && "cf" == name)
     [ChildElementInfo(typeof(VTCurrency))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "array")]
 public partial class VTArray : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 11031;
@@ -976,67 +836,11 @@ public partial class VTArray : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 5 == namespaceId && "variant" == name)
-    return new Variant();
     
-if( 5 == namespaceId && "i1" == name)
-    return new VTByte();
-    
-if( 5 == namespaceId && "i2" == name)
-    return new VTShort();
-    
-if( 5 == namespaceId && "i4" == name)
-    return new VTInt32();
-    
-if( 5 == namespaceId && "int" == name)
-    return new VTInteger();
-    
-if( 5 == namespaceId && "ui1" == name)
-    return new VTUnsignedByte();
-    
-if( 5 == namespaceId && "ui2" == name)
-    return new VTUnsignedShort();
-    
-if( 5 == namespaceId && "ui4" == name)
-    return new VTUnsignedInt32();
-    
-if( 5 == namespaceId && "uint" == name)
-    return new VTUnsignedInteger();
-    
-if( 5 == namespaceId && "r4" == name)
-    return new VTFloat();
-    
-if( 5 == namespaceId && "r8" == name)
-    return new VTDouble();
-    
-if( 5 == namespaceId && "decimal" == name)
-    return new VTDecimal();
-    
-if( 5 == namespaceId && "bstr" == name)
-    return new VTBString();
-    
-if( 5 == namespaceId && "date" == name)
-    return new VTDate();
-    
-if( 5 == namespaceId && "bool" == name)
-    return new VTBool();
-    
-if( 5 == namespaceId && "error" == name)
-    return new VTError();
-    
-if( 5 == namespaceId && "cy" == name)
-    return new VTCurrency();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<VTArray>(deep);
@@ -1049,6 +853,7 @@ if( 5 == namespaceId && "cy" == name)
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(5, "blob")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTBlob : OpenXmlLeafTextElement
 {
@@ -1089,6 +894,7 @@ public partial class VTBlob : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(5, "oblob")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTOBlob : OpenXmlLeafTextElement
 {
@@ -1129,6 +935,7 @@ public partial class VTOBlob : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(5, "stream")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTStreamData : OpenXmlLeafTextElement
 {
@@ -1169,6 +976,7 @@ public partial class VTStreamData : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(5, "ostream")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTOStreamData : OpenXmlLeafTextElement
 {
@@ -1209,6 +1017,7 @@ public partial class VTOStreamData : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(5, "storage")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTStorage : OpenXmlLeafTextElement
 {
@@ -1249,6 +1058,7 @@ public partial class VTStorage : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(5, "ostorage")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTOStorage : OpenXmlLeafTextElement
 {
@@ -1290,6 +1100,7 @@ public partial class VTOStorage : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "empty")]
 public partial class VTEmpty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11034;
@@ -1324,6 +1135,7 @@ public partial class VTEmpty : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "null")]
 public partial class VTNull : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 11035;
@@ -1358,6 +1170,7 @@ public partial class VTNull : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "i1")]
 public partial class VTByte : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11036;
@@ -1405,6 +1218,7 @@ public partial class VTByte : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "i2")]
 public partial class VTShort : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11037;
@@ -1451,6 +1265,7 @@ public partial class VTShort : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(5, "i4")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTInt32 : OpenXmlLeafTextElement
 {
@@ -1491,6 +1306,7 @@ public partial class VTInt32 : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(5, "int")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTInteger : OpenXmlLeafTextElement
 {
@@ -1532,6 +1348,7 @@ public partial class VTInteger : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "i8")]
 public partial class VTInt64 : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11039;
@@ -1579,6 +1396,7 @@ public partial class VTInt64 : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "ui1")]
 public partial class VTUnsignedByte : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11041;
@@ -1626,6 +1444,7 @@ public partial class VTUnsignedByte : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "ui2")]
 public partial class VTUnsignedShort : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11042;
@@ -1672,6 +1491,7 @@ public partial class VTUnsignedShort : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(5, "ui4")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
 {
@@ -1712,6 +1532,7 @@ public partial class VTUnsignedInt32 : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(5, "uint")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTUnsignedInteger : OpenXmlLeafTextElement
 {
@@ -1753,6 +1574,7 @@ public partial class VTUnsignedInteger : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "ui8")]
 public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11044;
@@ -1800,6 +1622,7 @@ public partial class VTUnsignedInt64 : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "r4")]
 public partial class VTFloat : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11046;
@@ -1847,6 +1670,7 @@ public partial class VTFloat : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "r8")]
 public partial class VTDouble : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11047;
@@ -1894,6 +1718,7 @@ public partial class VTDouble : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "decimal")]
 public partial class VTDecimal : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11048;
@@ -1940,6 +1765,7 @@ public partial class VTDecimal : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(5, "lpstr")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTLPSTR : OpenXmlLeafTextElement
 {
@@ -1980,6 +1806,7 @@ public partial class VTLPSTR : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(5, "lpwstr")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTLPWSTR : OpenXmlLeafTextElement
 {
@@ -2020,6 +1847,7 @@ public partial class VTLPWSTR : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(5, "bstr")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTBString : OpenXmlLeafTextElement
 {
@@ -2060,6 +1888,7 @@ public partial class VTBString : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(5, "date")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTDate : OpenXmlLeafTextElement
 {
@@ -2100,6 +1929,7 @@ public partial class VTDate : OpenXmlLeafTextElement
 /// </summary>
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1710:IdentifiersShouldHaveCorrectSuffix")]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "2.0")]
+[SchemaAttr(5, "filetime")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
 public partial class VTFileTime : OpenXmlLeafTextElement
 {
@@ -2141,6 +1971,7 @@ public partial class VTFileTime : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "bool")]
 public partial class VTBool : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11054;
@@ -2188,6 +2019,7 @@ public partial class VTBool : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "cy")]
 public partial class VTCurrency : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11055;
@@ -2235,6 +2067,7 @@ public partial class VTCurrency : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "error")]
 public partial class VTError : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11056;
@@ -2282,6 +2115,7 @@ public partial class VTError : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "vstream")]
 public partial class VTVStreamData : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11061;
@@ -2335,6 +2169,7 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "clsid")]
 public partial class VTClassId : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11062;
@@ -2382,6 +2217,7 @@ public partial class VTClassId : OpenXmlLeafTextElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(5, "cf")]
 public partial class VTClipboardData : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 11063;

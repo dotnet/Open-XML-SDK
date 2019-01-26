@@ -8,8 +8,11 @@ namespace DocumentFormat.OpenXml
     /// <summary>
     /// Defines a mc:Fallback element in mc:AlternateContent.
     /// </summary>
+    [SchemaAttr(AlternateContent.Namespace, Name)]
     public class AlternateContentFallback : OpenXmlCompositeElement
     {
+        private const string Name = "Fallback";
+
         /// <summary>
         /// Initializes a new instance of the AlternateContentFallback class.
         /// </summary>
@@ -55,7 +58,7 @@ namespace DocumentFormat.OpenXml
         /// <summary>
         /// Gets a value that represents the tag name of the AlternateContentFallback element.
         /// </summary>
-        public static string TagName { get; } = "Fallback";
+        public static string TagName => Name;
 
         /// <summary>
         /// Gets the local name of the element.

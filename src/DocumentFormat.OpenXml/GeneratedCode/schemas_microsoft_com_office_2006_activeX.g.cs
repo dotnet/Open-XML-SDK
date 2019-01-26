@@ -23,6 +23,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
     [ChildElementInfo(typeof(ActiveXObjectProperty))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(35, "ocx")]
 public partial class ActiveXControlData : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12688;
@@ -97,19 +98,11 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 35 == namespaceId && "ocxPr" == name)
-    return new ActiveXObjectProperty();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ActiveXControlData>(deep);
@@ -132,6 +125,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(SharedComPicture))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(35, "ocxPr")]
 public partial class ActiveXObjectProperty : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12689;
@@ -190,22 +184,11 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 35 == namespaceId && "font" == name)
-    return new SharedComFont();
     
-if( 35 == namespaceId && "picture" == name)
-    return new SharedComPicture();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "font","picture" };
     private static readonly byte[] eleNamespaceIds = { 35,35 };
     
@@ -226,6 +209,7 @@ if( 35 == namespaceId && "picture" == name)
         get => GetElement<SharedComFont>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> SharedComPicture.</para>
     /// <para> Represents the following element tag in the schema: ax:picture </para>
@@ -238,6 +222,7 @@ if( 35 == namespaceId && "picture" == name)
         get => GetElement<SharedComPicture>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -259,6 +244,7 @@ if( 35 == namespaceId && "picture" == name)
     [ChildElementInfo(typeof(ActiveXObjectProperty))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(35, "font")]
 public partial class SharedComFont : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12690;
@@ -317,19 +303,11 @@ public partial class SharedComFont : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 35 == namespaceId && "ocxPr" == name)
-    return new ActiveXObjectProperty();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<SharedComFont>(deep);
@@ -343,6 +321,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2007)]
+[SchemaAttr(35, "picture")]
 public partial class SharedComPicture : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12691;

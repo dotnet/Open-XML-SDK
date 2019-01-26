@@ -27,6 +27,8 @@ namespace DocumentFormat.OpenXml
         private readonly ConcurrentDictionary<Type, PartConstraintCollection> _dataPartConstraints = new ConcurrentDictionary<Type, PartConstraintCollection>();
         private readonly ConcurrentDictionary<Type, ReadOnlyArray<AttributeTag>> _attributes = new ConcurrentDictionary<Type, ReadOnlyArray<AttributeTag>>();
         private readonly ConcurrentDictionary<Type, Func<OpenXmlSimpleType>> _simpleTypeFactory = new ConcurrentDictionary<Type, Func<OpenXmlSimpleType>>();
+        private readonly ConcurrentDictionary<Type, Func<OpenXmlElement>> _elementFactory = new ConcurrentDictionary<Type, Func<OpenXmlElement>>();
+        private readonly ConcurrentDictionary<Type, ElementSchemaLookup> _factory = new ConcurrentDictionary<Type, ElementSchemaLookup>();
 
         public static PackageCache Cache { get; } = new PackageCache();
 
@@ -38,7 +40,15 @@ namespace DocumentFormat.OpenXml
 
         public ReadOnlyArray<AttributeTag> GetAttributes(Type type) => _attributes.GetOrAdd(type, CreateAttributes);
 
+        public Func<OpenXmlElement> GetElementFactory(Type type) => _elementFactory.GetOrAdd(type, ClassActivator<OpenXmlElement>.CreateActivator);
+
+        public OpenXmlElement CreateElement(Type type, byte ns, string name) => _factory.GetOrAdd(type, CreateLookup).Create(ns, name);
+
+        public OpenXmlElement CreateElement(Type type) => GetElementFactory(type)();
+
         public Func<OpenXmlSimpleType> GetSimpleTypeFactory(Type type) => _simpleTypeFactory.GetOrAdd(type, ClassActivator<OpenXmlSimpleType>.CreateActivator);
+
+        private ElementSchemaLookup CreateLookup(Type type) => ElementSchemaLookup.CreateLookup(type, this);
 
         private ReadOnlyArray<AttributeTag> CreateAttributes(Type type) => AttributeTagCollection.GetAttributes(this, type);
 

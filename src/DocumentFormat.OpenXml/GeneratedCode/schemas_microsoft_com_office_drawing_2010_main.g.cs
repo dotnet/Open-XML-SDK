@@ -17,6 +17,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "cameraTool")]
 public partial class CameraTool : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12781;
@@ -63,6 +64,7 @@ public partial class CameraTool : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "compatExt")]
 public partial class CompatExtension : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12782;
@@ -103,6 +105,7 @@ public partial class CompatExtension : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "isCanvas")]
 public partial class IsCanvas : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12783;
@@ -154,6 +157,7 @@ public partial class IsCanvas : OpenXmlLeafElement
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "contentPart")]
 public partial class GvmlContentPart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12784;
@@ -210,25 +214,11 @@ public partial class GvmlContentPart : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 48 == namespaceId && "nvContentPartPr" == name)
-    return new NonVisualContentPartProperties();
     
-if( 48 == namespaceId && "xfrm" == name)
-    return new Transform2D();
-    
-if( 48 == namespaceId && "extLst" == name)
-    return new OfficeArtExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "nvContentPartPr","xfrm","extLst" };
     private static readonly byte[] eleNamespaceIds = { 48,48,48 };
     
@@ -249,6 +239,7 @@ if( 48 == namespaceId && "extLst" == name)
         get => GetElement<NonVisualContentPartProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Transform2D.</para>
     /// <para> Represents the following element tag in the schema: a14:xfrm </para>
@@ -261,6 +252,7 @@ if( 48 == namespaceId && "extLst" == name)
         get => GetElement<Transform2D>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a14:extLst </para>
@@ -273,6 +265,7 @@ if( 48 == namespaceId && "extLst" == name)
         get => GetElement<OfficeArtExtensionList>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -287,6 +280,7 @@ if( 48 == namespaceId && "extLst" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "shadowObscured")]
 public partial class ShadowObscured : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12785;
@@ -344,6 +338,7 @@ public partial class ShadowObscured : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.GroupFill))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "hiddenFill")]
 public partial class HiddenFillProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12786;
@@ -386,34 +381,11 @@ public partial class HiddenFillProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "noFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.NoFill();
     
-if( 10 == namespaceId && "solidFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.SolidFill();
-    
-if( 10 == namespaceId && "gradFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.GradientFill();
-    
-if( 10 == namespaceId && "blipFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.BlipFill();
-    
-if( 10 == namespaceId && "pattFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.PatternFill();
-    
-if( 10 == namespaceId && "grpFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.GroupFill();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "noFill","solidFill","gradFill","blipFill","pattFill","grpFill" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10,10 };
     
@@ -434,6 +406,7 @@ if( 10 == namespaceId && "grpFill" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.NoFill>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> SolidFill.</para>
     /// <para> Represents the following element tag in the schema: a:solidFill </para>
@@ -446,6 +419,7 @@ if( 10 == namespaceId && "grpFill" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.SolidFill>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> GradientFill.</para>
     /// <para> Represents the following element tag in the schema: a:gradFill </para>
@@ -458,6 +432,7 @@ if( 10 == namespaceId && "grpFill" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.GradientFill>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> BlipFill.</para>
     /// <para> Represents the following element tag in the schema: a:blipFill </para>
@@ -470,6 +445,7 @@ if( 10 == namespaceId && "grpFill" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.BlipFill>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> Pattern Fill.</para>
     /// <para> Represents the following element tag in the schema: a:pattFill </para>
@@ -482,6 +458,7 @@ if( 10 == namespaceId && "grpFill" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.PatternFill>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> Group Fill.</para>
     /// <para> Represents the following element tag in the schema: a:grpFill </para>
@@ -494,6 +471,7 @@ if( 10 == namespaceId && "grpFill" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.GroupFill>(5);
         set => SetElement(5, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -537,6 +515,7 @@ if( 10 == namespaceId && "grpFill" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "hiddenLine")]
 public partial class HiddenLineProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12787;
@@ -603,52 +582,11 @@ public partial class HiddenLineProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "noFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.NoFill();
     
-if( 10 == namespaceId && "solidFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.SolidFill();
-    
-if( 10 == namespaceId && "gradFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.GradientFill();
-    
-if( 10 == namespaceId && "pattFill" == name)
-    return new DocumentFormat.OpenXml.Drawing.PatternFill();
-    
-if( 10 == namespaceId && "prstDash" == name)
-    return new DocumentFormat.OpenXml.Drawing.PresetDash();
-    
-if( 10 == namespaceId && "custDash" == name)
-    return new DocumentFormat.OpenXml.Drawing.CustomDash();
-    
-if( 10 == namespaceId && "round" == name)
-    return new DocumentFormat.OpenXml.Drawing.Round();
-    
-if( 10 == namespaceId && "bevel" == name)
-    return new DocumentFormat.OpenXml.Drawing.LineJoinBevel();
-    
-if( 10 == namespaceId && "miter" == name)
-    return new DocumentFormat.OpenXml.Drawing.Miter();
-    
-if( 10 == namespaceId && "headEnd" == name)
-    return new DocumentFormat.OpenXml.Drawing.HeadEnd();
-    
-if( 10 == namespaceId && "tailEnd" == name)
-    return new DocumentFormat.OpenXml.Drawing.TailEnd();
-    
-if( 10 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.ExtensionList();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<HiddenLineProperties>(deep);
@@ -671,6 +609,7 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.EffectDag))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "hiddenEffects")]
 public partial class HiddenEffectsProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12788;
@@ -713,22 +652,11 @@ public partial class HiddenEffectsProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "effectLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.EffectList();
     
-if( 10 == namespaceId && "effectDag" == name)
-    return new DocumentFormat.OpenXml.Drawing.EffectDag();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "effectLst","effectDag" };
     private static readonly byte[] eleNamespaceIds = { 10,10 };
     
@@ -749,6 +677,7 @@ if( 10 == namespaceId && "effectDag" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.EffectList>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Effect Container.</para>
     /// <para> Represents the following element tag in the schema: a:effectDag </para>
@@ -761,6 +690,7 @@ if( 10 == namespaceId && "effectDag" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.EffectDag>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -788,6 +718,7 @@ if( 10 == namespaceId && "effectDag" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "hiddenScene3d")]
 public partial class HiddenScene3D : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12789;
@@ -830,28 +761,11 @@ public partial class HiddenScene3D : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "camera" == name)
-    return new DocumentFormat.OpenXml.Drawing.Camera();
     
-if( 10 == namespaceId && "lightRig" == name)
-    return new DocumentFormat.OpenXml.Drawing.LightRig();
-    
-if( 10 == namespaceId && "backdrop" == name)
-    return new DocumentFormat.OpenXml.Drawing.Backdrop();
-    
-if( 10 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "camera","lightRig","backdrop","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10 };
     
@@ -872,6 +786,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.Camera>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Light Rig.</para>
     /// <para> Represents the following element tag in the schema: a:lightRig </para>
@@ -884,6 +799,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.LightRig>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Backdrop Plane.</para>
     /// <para> Represents the following element tag in the schema: a:backdrop </para>
@@ -896,6 +812,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.Backdrop>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -908,6 +825,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(3);
         set => SetElement(3, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -937,6 +855,7 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.ExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "hiddenSp3d")]
 public partial class HiddenShape3D : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12790;
@@ -1003,31 +922,11 @@ public partial class HiddenShape3D : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "bevelT" == name)
-    return new DocumentFormat.OpenXml.Drawing.BevelTop();
     
-if( 10 == namespaceId && "bevelB" == name)
-    return new DocumentFormat.OpenXml.Drawing.BevelBottom();
-    
-if( 10 == namespaceId && "extrusionClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.ExtrusionColor();
-    
-if( 10 == namespaceId && "contourClr" == name)
-    return new DocumentFormat.OpenXml.Drawing.ContourColor();
-    
-if( 10 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.ExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "bevelT","bevelB","extrusionClr","contourClr","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10,10,10 };
     
@@ -1048,6 +947,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.BevelTop>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Bottom Bevel.</para>
     /// <para> Represents the following element tag in the schema: a:bevelB </para>
@@ -1060,6 +960,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.BevelBottom>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> Extrusion Color.</para>
     /// <para> Represents the following element tag in the schema: a:extrusionClr </para>
@@ -1072,6 +973,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.ExtrusionColor>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> Contour Color.</para>
     /// <para> Represents the following element tag in the schema: a:contourClr </para>
@@ -1084,6 +986,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.ContourColor>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> ExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -1096,6 +999,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.ExtensionList>(4);
         set => SetElement(4, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1117,6 +1021,7 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(ImageLayer), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "imgProps")]
 public partial class ImageProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12791;
@@ -1159,19 +1064,11 @@ public partial class ImageProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 48 == namespaceId && "imgLayer" == name)
-    return new ImageLayer();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "imgLayer" };
     private static readonly byte[] eleNamespaceIds = { 48 };
     
@@ -1192,6 +1089,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<ImageLayer>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1206,6 +1104,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "useLocalDpi")]
 public partial class UseLocalDpi : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12792;
@@ -1246,6 +1145,7 @@ public partial class UseLocalDpi : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "m")]
 public partial class TextMath : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12793;
@@ -1287,6 +1187,7 @@ public partial class TextMath : OpenXmlLeafElement
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extension))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "extLst")]
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12794;
@@ -1329,19 +1230,11 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "ext" == name)
-    return new DocumentFormat.OpenXml.Drawing.Extension();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<OfficeArtExtensionList>(deep);
@@ -1362,6 +1255,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "cpLocks")]
 public partial class ContentPartLocks : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12795;
@@ -1464,19 +1358,11 @@ public partial class ContentPartLocks : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 48 == namespaceId && "extLst" == name)
-    return new OfficeArtExtensionList();
     
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "extLst" };
     private static readonly byte[] eleNamespaceIds = { 48 };
     
@@ -1497,6 +1383,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
         get => GetElement<OfficeArtExtensionList>(0);
         set => SetElement(0, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -1511,6 +1398,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "foregroundMark")]
 public partial class ForegroundMark : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12796;
@@ -1569,6 +1457,7 @@ public partial class ForegroundMark : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "backgroundMark")]
 public partial class BackgroundMark : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12797;
@@ -1627,6 +1516,7 @@ public partial class BackgroundMark : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticBlur")]
 public partial class ArtisticBlur : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12798;
@@ -1667,6 +1557,7 @@ public partial class ArtisticBlur : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticCement")]
 public partial class ArtisticCement : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12799;
@@ -1713,6 +1604,7 @@ public partial class ArtisticCement : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticChalkSketch")]
 public partial class ArtisticChalkSketch : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12800;
@@ -1759,6 +1651,7 @@ public partial class ArtisticChalkSketch : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticCrisscrossEtching")]
 public partial class ArtisticCrisscrossEtching : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12801;
@@ -1805,6 +1698,7 @@ public partial class ArtisticCrisscrossEtching : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticCutout")]
 public partial class ArtisticCutout : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12802;
@@ -1851,6 +1745,7 @@ public partial class ArtisticCutout : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticFilmGrain")]
 public partial class ArtisticFilmGrain : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12803;
@@ -1897,6 +1792,7 @@ public partial class ArtisticFilmGrain : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticGlass")]
 public partial class ArtisticGlass : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12804;
@@ -1943,6 +1839,7 @@ public partial class ArtisticGlass : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticGlowDiffused")]
 public partial class ArtisticGlowDiffused : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12805;
@@ -1989,6 +1886,7 @@ public partial class ArtisticGlowDiffused : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticGlowEdges")]
 public partial class ArtisticGlowEdges : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12806;
@@ -2035,6 +1933,7 @@ public partial class ArtisticGlowEdges : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticLightScreen")]
 public partial class ArtisticLightScreen : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12807;
@@ -2081,6 +1980,7 @@ public partial class ArtisticLightScreen : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticLineDrawing")]
 public partial class ArtisticLineDrawing : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12808;
@@ -2127,6 +2027,7 @@ public partial class ArtisticLineDrawing : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticMarker")]
 public partial class ArtisticMarker : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12809;
@@ -2173,6 +2074,7 @@ public partial class ArtisticMarker : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticMosiaicBubbles")]
 public partial class ArtisticMosaicBubbles : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12810;
@@ -2219,6 +2121,7 @@ public partial class ArtisticMosaicBubbles : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticPaintStrokes")]
 public partial class ArtisticPaintStrokes : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12811;
@@ -2265,6 +2168,7 @@ public partial class ArtisticPaintStrokes : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticPaintBrush")]
 public partial class ArtisticPaintBrush : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12812;
@@ -2311,6 +2215,7 @@ public partial class ArtisticPaintBrush : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticPastelsSmooth")]
 public partial class ArtisticPastelsSmooth : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12813;
@@ -2357,6 +2262,7 @@ public partial class ArtisticPastelsSmooth : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticPencilGrayscale")]
 public partial class ArtisticPencilGrayscale : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12814;
@@ -2403,6 +2309,7 @@ public partial class ArtisticPencilGrayscale : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticPencilSketch")]
 public partial class ArtisticPencilSketch : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12815;
@@ -2449,6 +2356,7 @@ public partial class ArtisticPencilSketch : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticPhotocopy")]
 public partial class ArtisticPhotocopy : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12816;
@@ -2495,6 +2403,7 @@ public partial class ArtisticPhotocopy : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticPlasticWrap")]
 public partial class ArtisticPlasticWrap : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12817;
@@ -2541,6 +2450,7 @@ public partial class ArtisticPlasticWrap : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticTexturizer")]
 public partial class ArtisticTexturizer : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12818;
@@ -2587,6 +2497,7 @@ public partial class ArtisticTexturizer : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "artisticWatercolorSponge")]
 public partial class ArtisticWatercolorSponge : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12819;
@@ -2642,6 +2553,7 @@ public partial class ArtisticWatercolorSponge : OpenXmlLeafElement
     [ChildElementInfo(typeof(BackgroundMark), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "backgroundRemoval")]
 public partial class BackgroundRemoval : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12820;
@@ -2708,22 +2620,11 @@ public partial class BackgroundRemoval : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 48 == namespaceId && "foregroundMark" == name)
-    return new ForegroundMark();
     
-if( 48 == namespaceId && "backgroundMark" == name)
-    return new BackgroundMark();
-    
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<BackgroundRemoval>(deep);
@@ -2737,6 +2638,7 @@ if( 48 == namespaceId && "backgroundMark" == name)
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "brightnessContrast")]
 public partial class BrightnessContrast : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12821;
@@ -2783,6 +2685,7 @@ public partial class BrightnessContrast : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "colorTemperature")]
 public partial class ColorTemperature : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12822;
@@ -2823,6 +2726,7 @@ public partial class ColorTemperature : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "saturation")]
 public partial class Saturation : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12823;
@@ -2863,6 +2767,7 @@ public partial class Saturation : OpenXmlLeafElement
 
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "sharpenSoften")]
 public partial class SharpenSoften : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12824;
@@ -2962,6 +2867,7 @@ public partial class SharpenSoften : OpenXmlLeafElement
     [ChildElementInfo(typeof(SharpenSoften), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "imgEffect")]
 public partial class ImageEffect : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12825;
@@ -3010,97 +2916,11 @@ public partial class ImageEffect : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 48 == namespaceId && "artisticBlur" == name)
-    return new ArtisticBlur();
     
-if( 48 == namespaceId && "artisticCement" == name)
-    return new ArtisticCement();
-    
-if( 48 == namespaceId && "artisticChalkSketch" == name)
-    return new ArtisticChalkSketch();
-    
-if( 48 == namespaceId && "artisticCrisscrossEtching" == name)
-    return new ArtisticCrisscrossEtching();
-    
-if( 48 == namespaceId && "artisticCutout" == name)
-    return new ArtisticCutout();
-    
-if( 48 == namespaceId && "artisticFilmGrain" == name)
-    return new ArtisticFilmGrain();
-    
-if( 48 == namespaceId && "artisticGlass" == name)
-    return new ArtisticGlass();
-    
-if( 48 == namespaceId && "artisticGlowDiffused" == name)
-    return new ArtisticGlowDiffused();
-    
-if( 48 == namespaceId && "artisticGlowEdges" == name)
-    return new ArtisticGlowEdges();
-    
-if( 48 == namespaceId && "artisticLightScreen" == name)
-    return new ArtisticLightScreen();
-    
-if( 48 == namespaceId && "artisticLineDrawing" == name)
-    return new ArtisticLineDrawing();
-    
-if( 48 == namespaceId && "artisticMarker" == name)
-    return new ArtisticMarker();
-    
-if( 48 == namespaceId && "artisticMosiaicBubbles" == name)
-    return new ArtisticMosaicBubbles();
-    
-if( 48 == namespaceId && "artisticPaintStrokes" == name)
-    return new ArtisticPaintStrokes();
-    
-if( 48 == namespaceId && "artisticPaintBrush" == name)
-    return new ArtisticPaintBrush();
-    
-if( 48 == namespaceId && "artisticPastelsSmooth" == name)
-    return new ArtisticPastelsSmooth();
-    
-if( 48 == namespaceId && "artisticPencilGrayscale" == name)
-    return new ArtisticPencilGrayscale();
-    
-if( 48 == namespaceId && "artisticPencilSketch" == name)
-    return new ArtisticPencilSketch();
-    
-if( 48 == namespaceId && "artisticPhotocopy" == name)
-    return new ArtisticPhotocopy();
-    
-if( 48 == namespaceId && "artisticPlasticWrap" == name)
-    return new ArtisticPlasticWrap();
-    
-if( 48 == namespaceId && "artisticTexturizer" == name)
-    return new ArtisticTexturizer();
-    
-if( 48 == namespaceId && "artisticWatercolorSponge" == name)
-    return new ArtisticWatercolorSponge();
-    
-if( 48 == namespaceId && "backgroundRemoval" == name)
-    return new BackgroundRemoval();
-    
-if( 48 == namespaceId && "brightnessContrast" == name)
-    return new BrightnessContrast();
-    
-if( 48 == namespaceId && "colorTemperature" == name)
-    return new ColorTemperature();
-    
-if( 48 == namespaceId && "saturation" == name)
-    return new Saturation();
-    
-if( 48 == namespaceId && "sharpenSoften" == name)
-    return new SharpenSoften();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "artisticBlur","artisticCement","artisticChalkSketch","artisticCrisscrossEtching","artisticCutout","artisticFilmGrain","artisticGlass","artisticGlowDiffused","artisticGlowEdges","artisticLightScreen","artisticLineDrawing","artisticMarker","artisticMosiaicBubbles","artisticPaintStrokes","artisticPaintBrush","artisticPastelsSmooth","artisticPencilGrayscale","artisticPencilSketch","artisticPhotocopy","artisticPlasticWrap","artisticTexturizer","artisticWatercolorSponge","backgroundRemoval","brightnessContrast","colorTemperature","saturation","sharpenSoften" };
     private static readonly byte[] eleNamespaceIds = { 48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48,48 };
     
@@ -3121,6 +2941,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticBlur>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> ArtisticCement.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticCement </para>
@@ -3133,6 +2954,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticCement>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> ArtisticChalkSketch.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticChalkSketch </para>
@@ -3145,6 +2967,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticChalkSketch>(2);
         set => SetElement(2, value);
     }
+    
     /// <summary>
     /// <para> ArtisticCrisscrossEtching.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticCrisscrossEtching </para>
@@ -3157,6 +2980,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticCrisscrossEtching>(3);
         set => SetElement(3, value);
     }
+    
     /// <summary>
     /// <para> ArtisticCutout.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticCutout </para>
@@ -3169,6 +2993,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticCutout>(4);
         set => SetElement(4, value);
     }
+    
     /// <summary>
     /// <para> ArtisticFilmGrain.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticFilmGrain </para>
@@ -3181,6 +3006,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticFilmGrain>(5);
         set => SetElement(5, value);
     }
+    
     /// <summary>
     /// <para> ArtisticGlass.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticGlass </para>
@@ -3193,6 +3019,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticGlass>(6);
         set => SetElement(6, value);
     }
+    
     /// <summary>
     /// <para> ArtisticGlowDiffused.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticGlowDiffused </para>
@@ -3205,6 +3032,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticGlowDiffused>(7);
         set => SetElement(7, value);
     }
+    
     /// <summary>
     /// <para> ArtisticGlowEdges.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticGlowEdges </para>
@@ -3217,6 +3045,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticGlowEdges>(8);
         set => SetElement(8, value);
     }
+    
     /// <summary>
     /// <para> ArtisticLightScreen.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticLightScreen </para>
@@ -3229,6 +3058,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticLightScreen>(9);
         set => SetElement(9, value);
     }
+    
     /// <summary>
     /// <para> ArtisticLineDrawing.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticLineDrawing </para>
@@ -3241,6 +3071,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticLineDrawing>(10);
         set => SetElement(10, value);
     }
+    
     /// <summary>
     /// <para> ArtisticMarker.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticMarker </para>
@@ -3253,6 +3084,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticMarker>(11);
         set => SetElement(11, value);
     }
+    
     /// <summary>
     /// <para> ArtisticMosaicBubbles.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticMosiaicBubbles </para>
@@ -3265,6 +3097,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticMosaicBubbles>(12);
         set => SetElement(12, value);
     }
+    
     /// <summary>
     /// <para> ArtisticPaintStrokes.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticPaintStrokes </para>
@@ -3277,6 +3110,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticPaintStrokes>(13);
         set => SetElement(13, value);
     }
+    
     /// <summary>
     /// <para> ArtisticPaintBrush.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticPaintBrush </para>
@@ -3289,6 +3123,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticPaintBrush>(14);
         set => SetElement(14, value);
     }
+    
     /// <summary>
     /// <para> ArtisticPastelsSmooth.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticPastelsSmooth </para>
@@ -3301,6 +3136,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticPastelsSmooth>(15);
         set => SetElement(15, value);
     }
+    
     /// <summary>
     /// <para> ArtisticPencilGrayscale.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticPencilGrayscale </para>
@@ -3313,6 +3149,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticPencilGrayscale>(16);
         set => SetElement(16, value);
     }
+    
     /// <summary>
     /// <para> ArtisticPencilSketch.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticPencilSketch </para>
@@ -3325,6 +3162,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticPencilSketch>(17);
         set => SetElement(17, value);
     }
+    
     /// <summary>
     /// <para> ArtisticPhotocopy.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticPhotocopy </para>
@@ -3337,6 +3175,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticPhotocopy>(18);
         set => SetElement(18, value);
     }
+    
     /// <summary>
     /// <para> ArtisticPlasticWrap.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticPlasticWrap </para>
@@ -3349,6 +3188,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticPlasticWrap>(19);
         set => SetElement(19, value);
     }
+    
     /// <summary>
     /// <para> ArtisticTexturizer.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticTexturizer </para>
@@ -3361,6 +3201,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticTexturizer>(20);
         set => SetElement(20, value);
     }
+    
     /// <summary>
     /// <para> ArtisticWatercolorSponge.</para>
     /// <para> Represents the following element tag in the schema: a14:artisticWatercolorSponge </para>
@@ -3373,6 +3214,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ArtisticWatercolorSponge>(21);
         set => SetElement(21, value);
     }
+    
     /// <summary>
     /// <para> BackgroundRemoval.</para>
     /// <para> Represents the following element tag in the schema: a14:backgroundRemoval </para>
@@ -3385,6 +3227,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<BackgroundRemoval>(22);
         set => SetElement(22, value);
     }
+    
     /// <summary>
     /// <para> BrightnessContrast.</para>
     /// <para> Represents the following element tag in the schema: a14:brightnessContrast </para>
@@ -3397,6 +3240,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<BrightnessContrast>(23);
         set => SetElement(23, value);
     }
+    
     /// <summary>
     /// <para> ColorTemperature.</para>
     /// <para> Represents the following element tag in the schema: a14:colorTemperature </para>
@@ -3409,6 +3253,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<ColorTemperature>(24);
         set => SetElement(24, value);
     }
+    
     /// <summary>
     /// <para> Saturation.</para>
     /// <para> Represents the following element tag in the schema: a14:saturation </para>
@@ -3421,6 +3266,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<Saturation>(25);
         set => SetElement(25, value);
     }
+    
     /// <summary>
     /// <para> SharpenSoften.</para>
     /// <para> Represents the following element tag in the schema: a14:sharpenSoften </para>
@@ -3433,6 +3279,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
         get => GetElement<SharpenSoften>(26);
         set => SetElement(26, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -3454,6 +3301,7 @@ if( 48 == namespaceId && "sharpenSoften" == name)
     [ChildElementInfo(typeof(ImageEffect), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "imgLayer")]
 public partial class ImageLayer : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12826;
@@ -3504,19 +3352,11 @@ public partial class ImageLayer : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 48 == namespaceId && "imgEffect" == name)
-    return new ImageEffect();
     
-
-    return null;
-}
-
     
     /// <inheritdoc/>
     public override OpenXmlElement CloneNode(bool deep) => CloneImp<ImageLayer>(deep);
@@ -3541,6 +3381,7 @@ internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "cNvPr")]
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12827;
@@ -3613,25 +3454,11 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "hlinkClick" == name)
-    return new DocumentFormat.OpenXml.Drawing.HyperlinkOnClick();
     
-if( 10 == namespaceId && "hlinkHover" == name)
-    return new DocumentFormat.OpenXml.Drawing.HyperlinkOnHover();
-    
-if( 10 == namespaceId && "extLst" == name)
-    return new DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "hlinkClick","hlinkHover","extLst" };
     private static readonly byte[] eleNamespaceIds = { 10,10,10 };
     
@@ -3652,6 +3479,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnClick>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> HyperlinkOnHover.</para>
     /// <para> Represents the following element tag in the schema: a:hlinkHover </para>
@@ -3664,6 +3492,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.HyperlinkOnHover>(1);
         set => SetElement(1, value);
     }
+    
     /// <summary>
     /// <para> NonVisualDrawingPropertiesExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a:extLst </para>
@@ -3676,6 +3505,7 @@ if( 10 == namespaceId && "extLst" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.NonVisualDrawingPropertiesExtensionList>(2);
         set => SetElement(2, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -3699,6 +3529,7 @@ if( 10 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(OfficeArtExtensionList), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "cNvContentPartPr")]
 public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12828;
@@ -3747,22 +3578,11 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 48 == namespaceId && "cpLocks" == name)
-    return new ContentPartLocks();
     
-if( 48 == namespaceId && "extLst" == name)
-    return new OfficeArtExtensionList();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "cpLocks","extLst" };
     private static readonly byte[] eleNamespaceIds = { 48,48 };
     
@@ -3783,6 +3603,7 @@ if( 48 == namespaceId && "extLst" == name)
         get => GetElement<ContentPartLocks>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> OfficeArtExtensionList.</para>
     /// <para> Represents the following element tag in the schema: a14:extLst </para>
@@ -3795,6 +3616,7 @@ if( 48 == namespaceId && "extLst" == name)
         get => GetElement<OfficeArtExtensionList>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -3818,6 +3640,7 @@ if( 48 == namespaceId && "extLst" == name)
     [ChildElementInfo(typeof(NonVisualInkContentPartProperties), FileFormatVersions.Office2010)]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "nvContentPartPr")]
 public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12829;
@@ -3860,22 +3683,11 @@ public partial class NonVisualContentPartProperties : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 48 == namespaceId && "cNvPr" == name)
-    return new NonVisualDrawingProperties();
     
-if( 48 == namespaceId && "cNvContentPartPr" == name)
-    return new NonVisualInkContentPartProperties();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "cNvPr","cNvContentPartPr" };
     private static readonly byte[] eleNamespaceIds = { 48,48 };
     
@@ -3896,6 +3708,7 @@ if( 48 == namespaceId && "cNvContentPartPr" == name)
         get => GetElement<NonVisualDrawingProperties>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> NonVisualInkContentPartProperties.</para>
     /// <para> Represents the following element tag in the schema: a14:cNvContentPartPr </para>
@@ -3908,6 +3721,7 @@ if( 48 == namespaceId && "cNvContentPartPr" == name)
         get => GetElement<NonVisualInkContentPartProperties>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
@@ -3931,6 +3745,7 @@ if( 48 == namespaceId && "cNvContentPartPr" == name)
     [ChildElementInfo(typeof(DocumentFormat.OpenXml.Drawing.Extents))]
 [System.CodeDom.Compiler.GeneratedCode("DomGen", "3.0")]
 [OfficeAvailability(FileFormatVersions.Office2010)]
+[SchemaAttr(48, "xfrm")]
 public partial class Transform2D : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12830;
@@ -3991,22 +3806,11 @@ public partial class Transform2D : OpenXmlCompositeElement
         : base(outerXml)
     {
     }
+    
   
      
     
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-internal override OpenXmlElement ElementFactory(byte namespaceId, string name)
-{
-    if( 10 == namespaceId && "off" == name)
-    return new DocumentFormat.OpenXml.Drawing.Offset();
     
-if( 10 == namespaceId && "ext" == name)
-    return new DocumentFormat.OpenXml.Drawing.Extents();
-    
-
-    return null;
-}
-
         private static readonly string[] eleTagNames = { "off","ext" };
     private static readonly byte[] eleNamespaceIds = { 10,10 };
     
@@ -4027,6 +3831,7 @@ if( 10 == namespaceId && "ext" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.Offset>(0);
         set => SetElement(0, value);
     }
+    
     /// <summary>
     /// <para> Extents.</para>
     /// <para> Represents the following element tag in the schema: a:ext </para>
@@ -4039,6 +3844,7 @@ if( 10 == namespaceId && "ext" == name)
         get => GetElement<DocumentFormat.OpenXml.Drawing.Extents>(1);
         set => SetElement(1, value);
     }
+    
 
 
     /// <inheritdoc/>
