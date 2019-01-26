@@ -33,22 +33,19 @@ public partial class WebVideoProperty : OpenXmlLeafElement
     /// <para> embeddedHtml.</para>
     /// <para>Represents the following attribute in the schema: embeddedHtml </para>
     /// </summary>
-    [SchemaAttr(0, "embeddedHtml")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "embeddedHtml", 0)]
     public StringValue EmbeddedHtml { get; set; }
     /// <summary>
     /// <para> h.</para>
     /// <para>Represents the following attribute in the schema: h </para>
     /// </summary>
-    [SchemaAttr(0, "h")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "h", 1)]
     public UInt32Value Height { get; set; }
     /// <summary>
     /// <para> w.</para>
     /// <para>Represents the following attribute in the schema: w </para>
     /// </summary>
-    [SchemaAttr(0, "w")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "w", 2)]
     public UInt32Value Width { get; set; }
 
     /// <summary>

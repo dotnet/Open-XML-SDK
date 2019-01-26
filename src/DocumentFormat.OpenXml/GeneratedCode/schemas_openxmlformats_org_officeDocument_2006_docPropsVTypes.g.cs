@@ -679,15 +679,13 @@ public partial class VTVector : OpenXmlCompositeElement
     /// <para> Vector Base Type.</para>
     /// <para>Represents the following attribute in the schema: baseType </para>
     /// </summary>
-    [SchemaAttr(0, "baseType")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "baseType", 0)]
     public EnumValue<DocumentFormat.OpenXml.VariantTypes.VectorBaseValues> BaseType { get; set; }
     /// <summary>
     /// <para> Vector Size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
-    [SchemaAttr(0, "size")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "size", 1)]
     public UInt32Value Size { get; set; }
 
     /// <summary>
@@ -793,22 +791,19 @@ public partial class VTArray : OpenXmlCompositeElement
     /// <para> Array Lower Bounds Attribute.</para>
     /// <para>Represents the following attribute in the schema: lBound </para>
     /// </summary>
-    [SchemaAttr(0, "lBound")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "lBound", 0)]
     public Int32Value LowerBounds { get; set; }
     /// <summary>
     /// <para> Array Upper Bounds Attribute.</para>
     /// <para>Represents the following attribute in the schema: uBound </para>
     /// </summary>
-    [SchemaAttr(0, "uBound")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "uBound", 1)]
     public Int32Value UpperBounds { get; set; }
     /// <summary>
     /// <para> Array Base Type.</para>
     /// <para>Represents the following attribute in the schema: baseType </para>
     /// </summary>
-    [SchemaAttr(0, "baseType")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "baseType", 2)]
     public EnumValue<DocumentFormat.OpenXml.VariantTypes.ArrayBaseValues> BaseType { get; set; }
 
     /// <summary>
@@ -2136,8 +2131,7 @@ public partial class VTVStreamData : OpenXmlLeafTextElement
     /// <para> VSTREAM Version Attribute.</para>
     /// <para>Represents the following attribute in the schema: version </para>
     /// </summary>
-    [SchemaAttr(0, "version")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "version", 0)]
     public StringValue Version { get; set; }
 
     /// <summary>
@@ -2239,15 +2233,13 @@ public partial class VTClipboardData : OpenXmlLeafTextElement
     /// <para> Format Attribute.</para>
     /// <para>Represents the following attribute in the schema: format </para>
     /// </summary>
-    [SchemaAttr(0, "format")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "format", 0)]
     public Int32Value Format { get; set; }
     /// <summary>
     /// <para> size.</para>
     /// <para>Represents the following attribute in the schema: size </para>
     /// </summary>
-    [SchemaAttr(0, "size")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "size", 1)]
     public UInt32Value Size { get; set; }
 
     /// <summary>

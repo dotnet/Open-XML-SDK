@@ -40,22 +40,19 @@ public partial class ThemeFamily : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "name", 0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> id.</para>
     /// <para>Represents the following attribute in the schema: id </para>
     /// </summary>
-    [SchemaAttr(0, "id")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "id", 1)]
     public StringValue Id { get; set; }
     /// <summary>
     /// <para> vid.</para>
     /// <para>Represents the following attribute in the schema: vid </para>
     /// </summary>
-    [SchemaAttr(0, "vid")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "vid", 2)]
     public StringValue Vid { get; set; }
 
     /// <summary>
@@ -219,29 +216,25 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     /// <para> name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "name", 0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> vid.</para>
     /// <para>Represents the following attribute in the schema: vid </para>
     /// </summary>
-    [SchemaAttr(0, "vid")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "vid", 1)]
     public StringValue Vid { get; set; }
     /// <summary>
     /// <para> cx.</para>
     /// <para>Represents the following attribute in the schema: cx </para>
     /// </summary>
-    [SchemaAttr(0, "cx")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "cx", 2)]
     public Int64Value X { get; set; }
     /// <summary>
     /// <para> cy.</para>
     /// <para>Represents the following attribute in the schema: cy </para>
     /// </summary>
-    [SchemaAttr(0, "cy")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "cy", 3)]
     public Int64Value Y { get; set; }
     /// <summary>
     /// <para> id.</para>
@@ -249,8 +242,7 @@ public partial class ThemeVariant : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:r=http://schemas.openxmlformats.org/officeDocument/2006/relationships
 ///</remark>
-    [SchemaAttr(19, "id")]
-    [SchemaIndex(4)]
+    [SchemaAttr(19, "id", 4)]
     public StringValue Id { get; set; }
 
     /// <summary>

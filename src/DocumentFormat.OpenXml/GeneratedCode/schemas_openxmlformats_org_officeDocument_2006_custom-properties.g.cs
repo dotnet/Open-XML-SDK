@@ -202,29 +202,25 @@ public partial class CustomDocumentProperty : OpenXmlCompositeElement
     /// <para> Format ID.</para>
     /// <para>Represents the following attribute in the schema: fmtid </para>
     /// </summary>
-    [SchemaAttr(0, "fmtid")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "fmtid", 0)]
     public StringValue FormatId { get; set; }
     /// <summary>
     /// <para> Property ID.</para>
     /// <para>Represents the following attribute in the schema: pid </para>
     /// </summary>
-    [SchemaAttr(0, "pid")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "pid", 1)]
     public Int32Value PropertyId { get; set; }
     /// <summary>
     /// <para> Custom File Property Name.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "name", 2)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> Bookmark Link Target.</para>
     /// <para>Represents the following attribute in the schema: linkTarget </para>
     /// </summary>
-    [SchemaAttr(0, "linkTarget")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "linkTarget", 3)]
     public StringValue LinkTarget { get; set; }
 
     /// <summary>

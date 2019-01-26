@@ -40,8 +40,7 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ct=http://schemas.microsoft.com/office/2006/metadata/contentType
 ///</remark>
-    [SchemaAttr(38, "_")]
-    [SchemaIndex(0)]
+    [SchemaAttr(38, "_", 0)]
     public StringValue UnderScore { get; set; }
     /// <summary>
     /// <para> _.</para>
@@ -49,8 +48,7 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
 ///</remark>
-    [SchemaAttr(41, "_")]
-    [SchemaIndex(1)]
+    [SchemaAttr(41, "_", 1)]
     public StringValue ReservedAttributeString { get; set; }
     /// <summary>
     /// <para> contentTypeName.</para>
@@ -58,8 +56,7 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
 ///</remark>
-    [SchemaAttr(41, "contentTypeName")]
-    [SchemaIndex(2)]
+    [SchemaAttr(41, "contentTypeName", 2)]
     public StringValue ContentTypeName { get; set; }
     /// <summary>
     /// <para> contentTypeID.</para>
@@ -67,8 +64,7 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
 ///</remark>
-    [SchemaAttr(41, "contentTypeID")]
-    [SchemaIndex(3)]
+    [SchemaAttr(41, "contentTypeID", 3)]
     public StringValue ContentTypeID { get; set; }
     /// <summary>
     /// <para> contentTypeVersion.</para>
@@ -76,8 +72,7 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
 ///</remark>
-    [SchemaAttr(41, "contentTypeVersion")]
-    [SchemaIndex(4)]
+    [SchemaAttr(41, "contentTypeVersion", 4)]
     public Int32Value ContentTypeVersion { get; set; }
     /// <summary>
     /// <para> contentTypeDescription.</para>
@@ -85,8 +80,7 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
 ///</remark>
-    [SchemaAttr(41, "contentTypeDescription")]
-    [SchemaIndex(5)]
+    [SchemaAttr(41, "contentTypeDescription", 5)]
     public StringValue ContentTypeDescription { get; set; }
     /// <summary>
     /// <para> contentTypeScope.</para>
@@ -94,8 +88,7 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
 ///</remark>
-    [SchemaAttr(41, "contentTypeScope")]
-    [SchemaIndex(6)]
+    [SchemaAttr(41, "contentTypeScope", 6)]
     public StringValue ContentTypeScope { get; set; }
     /// <summary>
     /// <para> versionID.</para>
@@ -103,8 +96,7 @@ public partial class ContentTypeSchema : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:ma=http://schemas.microsoft.com/office/2006/metadata/properties/metaAttributes
 ///</remark>
-    [SchemaAttr(41, "versionID")]
-    [SchemaIndex(7)]
+    [SchemaAttr(41, "versionID", 7)]
     public StringValue VersionID { get; set; }
 
     /// <summary>

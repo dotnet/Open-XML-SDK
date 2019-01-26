@@ -35,8 +35,7 @@ public partial class Color : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+    [SchemaAttr(23, "val", 0)]
     public StringValue Val { get; set; }
     /// <summary>
     /// <para> Run Content Theme Color.</para>
@@ -44,8 +43,7 @@ public partial class Color : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "themeColor")]
-    [SchemaIndex(1)]
+    [SchemaAttr(23, "themeColor", 1)]
     public EnumValue<DocumentFormat.OpenXml.Wordprocessing.ThemeColorValues> ThemeColor { get; set; }
     /// <summary>
     /// <para> Run Content Theme Color Tint.</para>
@@ -53,8 +51,7 @@ public partial class Color : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "themeTint")]
-    [SchemaIndex(2)]
+    [SchemaAttr(23, "themeTint", 2)]
     public StringValue ThemeTint { get; set; }
     /// <summary>
     /// <para> Run Content Theme Color Shade.</para>
@@ -62,8 +59,7 @@ public partial class Color : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "themeShade")]
-    [SchemaIndex(3)]
+    [SchemaAttr(23, "themeShade", 3)]
     public StringValue ThemeShade { get; set; }
 
     /// <summary>
@@ -106,8 +102,7 @@ public partial class DataBinding : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "prefixMappings")]
-    [SchemaIndex(0)]
+    [SchemaAttr(23, "prefixMappings", 0)]
     public StringValue PrefixMappings { get; set; }
     /// <summary>
     /// <para> XPath.</para>
@@ -115,8 +110,7 @@ public partial class DataBinding : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "xpath")]
-    [SchemaIndex(1)]
+    [SchemaAttr(23, "xpath", 1)]
     public StringValue XPath { get; set; }
     /// <summary>
     /// <para> Custom XML Data Storage ID.</para>
@@ -124,8 +118,7 @@ public partial class DataBinding : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "storeItemID")]
-    [SchemaIndex(2)]
+    [SchemaAttr(23, "storeItemID", 2)]
     public StringValue StoreItemId { get; set; }
 
     /// <summary>
@@ -168,8 +161,7 @@ public partial class Appearance : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
-    [SchemaAttr(69, "val")]
-    [SchemaIndex(0)]
+    [SchemaAttr(69, "val", 0)]
     public EnumValue<DocumentFormat.OpenXml.Office2013.Word.SdtAppearance> Val { get; set; }
 
     /// <summary>
@@ -672,8 +664,7 @@ public abstract partial class OnOffType : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+    [SchemaAttr(23, "val", 0)]
     public OnOffValue Val { get; set; }
 
     
@@ -713,8 +704,7 @@ public partial class PersistentDocumentId : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
-    [SchemaAttr(69, "val")]
-    [SchemaIndex(0)]
+    [SchemaAttr(69, "val", 0)]
     public StringValue Val { get; set; }
 
     /// <summary>
@@ -757,8 +747,7 @@ public partial class FootnoteColumns : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+    [SchemaAttr(23, "val", 0)]
     public Int32Value Val { get; set; }
 
     /// <summary>
@@ -801,8 +790,7 @@ public partial class CommentEx : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
-    [SchemaAttr(69, "paraId")]
-    [SchemaIndex(0)]
+    [SchemaAttr(69, "paraId", 0)]
     public HexBinaryValue ParaId { get; set; }
     /// <summary>
     /// <para> paraIdParent.</para>
@@ -810,8 +798,7 @@ public partial class CommentEx : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
-    [SchemaAttr(69, "paraIdParent")]
-    [SchemaIndex(1)]
+    [SchemaAttr(69, "paraIdParent", 1)]
     public HexBinaryValue ParaIdParent { get; set; }
     /// <summary>
     /// <para> done.</para>
@@ -819,8 +806,7 @@ public partial class CommentEx : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
-    [SchemaAttr(69, "done")]
-    [SchemaIndex(2)]
+    [SchemaAttr(69, "done", 2)]
     public OnOffValue Done { get; set; }
 
     /// <summary>
@@ -870,8 +856,7 @@ public partial class Person : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
-    [SchemaAttr(69, "author")]
-    [SchemaIndex(0)]
+    [SchemaAttr(69, "author", 0)]
     public StringValue Author { get; set; }
     /// <summary>
     /// <para> contact.</para>
@@ -879,8 +864,7 @@ public partial class Person : OpenXmlCompositeElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
-    [SchemaAttr(69, "contact")]
-    [SchemaIndex(1)]
+    [SchemaAttr(69, "contact", 1)]
     public StringValue Contact { get; set; }
 
     /// <summary>
@@ -971,8 +955,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
-    [SchemaAttr(69, "providerId")]
-    [SchemaIndex(0)]
+    [SchemaAttr(69, "providerId", 0)]
     public StringValue ProviderId { get; set; }
     /// <summary>
     /// <para> userId.</para>
@@ -980,8 +963,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w15=http://schemas.microsoft.com/office/word/2012/wordml
 ///</remark>
-    [SchemaAttr(69, "userId")]
-    [SchemaIndex(1)]
+    [SchemaAttr(69, "userId", 1)]
     public StringValue UserId { get; set; }
 
     /// <summary>
@@ -1024,8 +1006,7 @@ public partial class SectionTitle : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:w=http://schemas.openxmlformats.org/wordprocessingml/2006/main
 ///</remark>
-    [SchemaAttr(23, "val")]
-    [SchemaIndex(0)]
+    [SchemaAttr(23, "val", 0)]
     public StringValue Val { get; set; }
 
     /// <summary>

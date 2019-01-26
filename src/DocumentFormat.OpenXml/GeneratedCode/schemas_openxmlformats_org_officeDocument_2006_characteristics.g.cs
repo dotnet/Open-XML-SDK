@@ -100,29 +100,25 @@ public partial class Characteristic : OpenXmlLeafElement
     /// <para> Name of Characteristic.</para>
     /// <para>Represents the following attribute in the schema: name </para>
     /// </summary>
-    [SchemaAttr(0, "name")]
-    [SchemaIndex(0)]
+    [SchemaAttr(0, "name", 0)]
     public StringValue Name { get; set; }
     /// <summary>
     /// <para> Relationship of Value to Name.</para>
     /// <para>Represents the following attribute in the schema: relation </para>
     /// </summary>
-    [SchemaAttr(0, "relation")]
-    [SchemaIndex(1)]
+    [SchemaAttr(0, "relation", 1)]
     public EnumValue<DocumentFormat.OpenXml.AdditionalCharacteristics.RelationValues> Relation { get; set; }
     /// <summary>
     /// <para> Characteristic Value.</para>
     /// <para>Represents the following attribute in the schema: val </para>
     /// </summary>
-    [SchemaAttr(0, "val")]
-    [SchemaIndex(2)]
+    [SchemaAttr(0, "val", 2)]
     public StringValue Val { get; set; }
     /// <summary>
     /// <para> Characteristic Grammar.</para>
     /// <para>Represents the following attribute in the schema: vocabulary </para>
     /// </summary>
-    [SchemaAttr(0, "vocabulary")]
-    [SchemaIndex(3)]
+    [SchemaAttr(0, "vocabulary", 3)]
     public StringValue Vocabulary { get; set; }
 
     /// <summary>

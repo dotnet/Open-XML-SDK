@@ -102,8 +102,7 @@ public partial class Schema : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
-    [SchemaAttr(25, "uri")]
-    [SchemaIndex(0)]
+    [SchemaAttr(25, "uri", 0)]
     public StringValue Uri { get; set; }
     /// <summary>
     /// <para> Resource File Location.</para>
@@ -111,8 +110,7 @@ public partial class Schema : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
-    [SchemaAttr(25, "manifestLocation")]
-    [SchemaIndex(1)]
+    [SchemaAttr(25, "manifestLocation", 1)]
     public StringValue ManifestLocation { get; set; }
     /// <summary>
     /// <para> Custom XML Schema Location.</para>
@@ -120,8 +118,7 @@ public partial class Schema : OpenXmlLeafElement
     /// </summary>
 ///<remark> xmlns:sl=http://schemas.openxmlformats.org/schemaLibrary/2006/main
 ///</remark>
-    [SchemaAttr(25, "schemaLocation")]
-    [SchemaIndex(2)]
+    [SchemaAttr(25, "schemaLocation", 2)]
     public StringValue SchemaLocation { get; set; }
 
     /// <summary>

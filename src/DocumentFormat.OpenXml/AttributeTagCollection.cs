@@ -86,17 +86,10 @@ namespace DocumentFormat.OpenXml
                        return default;
                    }
 
-                   var indexAttribute = property.GetCustomAttribute<SchemaIndexAttribute>();
-
-                   if (indexAttribute is null)
-                   {
-                       throw new InvalidOperationException();
-                   }
-
                    return new AttributeTag(
                        schema.NamespaceId,
                        schema.Tag,
-                       indexAttribute.Index,
+                       schema.Index,
                        new OpenXmlElementPropertyAccessor(cache, property));
                })
                .Where(tag => tag.IsValid)
