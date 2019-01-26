@@ -20,11 +20,7 @@ namespace DocumentFormat.OpenXml.Office.MetaAttributes
 public partial class Dummy : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12713;
-    /// <inheritdoc/>
-    public override string LocalName => "DummyContentTypeElement";
-    internal override byte NamespaceId => 41;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     

@@ -37,11 +37,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtension
 public partial class WebExtension : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 13310;
-    /// <inheritdoc/>
-    public override string LocalName => "webextension";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -226,11 +222,7 @@ public partial class WebExtension : OpenXmlPartRootElement
 public partial class WebExtensionReference : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13311;
-    /// <inheritdoc/>
-    public override string LocalName => "webextensionref";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -269,11 +261,7 @@ public partial class WebExtensionReference : OpenXmlLeafElement
 public partial class WebExtensionProperty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13312;
-    /// <inheritdoc/>
-    public override string LocalName => "property";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -323,11 +311,7 @@ public partial class WebExtensionProperty : OpenXmlLeafElement
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13313;
-    /// <inheritdoc/>
-    public override string LocalName => "extLst";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -391,11 +375,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 public partial class WebExtensionBinding : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13314;
-    /// <inheritdoc/>
-    public override string LocalName => "binding";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -499,11 +479,7 @@ public partial class WebExtensionBinding : OpenXmlCompositeElement
 public partial class WebExtensionStoreReference : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13315;
-    /// <inheritdoc/>
-    public override string LocalName => "reference";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -613,11 +589,7 @@ public partial class WebExtensionStoreReference : OpenXmlCompositeElement
 public partial class WebExtensionReferenceList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13316;
-    /// <inheritdoc/>
-    public override string LocalName => "alternateReferences";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -681,11 +653,7 @@ public partial class WebExtensionReferenceList : OpenXmlCompositeElement
 public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13317;
-    /// <inheritdoc/>
-    public override string LocalName => "properties";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -749,11 +717,7 @@ public partial class WebExtensionPropertyBag : OpenXmlCompositeElement
 public partial class WebExtensionBindingList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13318;
-    /// <inheritdoc/>
-    public override string LocalName => "bindings";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -851,11 +815,7 @@ public partial class WebExtensionBindingList : OpenXmlCompositeElement
 public partial class Snapshot : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13319;
-    /// <inheritdoc/>
-    public override string LocalName => "snapshot";
-    internal override byte NamespaceId => 66;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     

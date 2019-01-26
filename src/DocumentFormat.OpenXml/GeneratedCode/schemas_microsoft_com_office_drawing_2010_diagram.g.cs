@@ -32,11 +32,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Diagram
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13180;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvPr";
-    internal override byte NamespaceId => 58;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -171,11 +167,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 public partial class RecolorImages : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13181;
-    /// <inheritdoc/>
-    public override string LocalName => "recolorImg";
-    internal override byte NamespaceId => 58;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     

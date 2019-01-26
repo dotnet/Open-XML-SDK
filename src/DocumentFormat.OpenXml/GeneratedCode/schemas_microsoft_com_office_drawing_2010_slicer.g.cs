@@ -29,11 +29,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Slicer
 public partial class Slicer : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13206;
-    /// <inheritdoc/>
-    public override string LocalName => "slicer";
-    internal override byte NamespaceId => 62;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -125,11 +121,7 @@ public partial class Slicer : OpenXmlCompositeElement
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13207;
-    /// <inheritdoc/>
-    public override string LocalName => "extLst";
-    internal override byte NamespaceId => 62;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     

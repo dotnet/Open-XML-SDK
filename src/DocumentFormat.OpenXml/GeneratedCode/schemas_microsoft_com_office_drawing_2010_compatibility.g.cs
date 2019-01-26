@@ -21,11 +21,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.LegacyCompatibility
 public partial class CompatibilityShape : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13208;
-    /// <inheritdoc/>
-    public override string LocalName => "compatSp";
-    internal override byte NamespaceId => 63;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     

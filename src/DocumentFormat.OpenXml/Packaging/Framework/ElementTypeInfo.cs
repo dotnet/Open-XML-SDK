@@ -14,6 +14,7 @@ namespace DocumentFormat.OpenXml.Packaging
             PartContentType = type.GetTypeInfo().GetCustomAttribute<ContentTypeAttribute>()?.ContentType;
             Availability = type.GetTypeInfo().GetCustomAttribute<OfficeAvailabilityAttribute>()?.OfficeVersion ?? FileFormatVersions.Office2007;
             RelationshipType = type.GetTypeInfo().GetCustomAttribute<RelationshipTypeAttribute>()?.RelationshipType ?? string.Empty;
+            Schema = type.GetTypeInfo().GetCustomAttribute<SchemaAttrAttribute>();
         }
 
         public static ElementTypeInfo Create(Type type) => new ElementTypeInfo(type);
@@ -23,6 +24,8 @@ namespace DocumentFormat.OpenXml.Packaging
         public string PartClassName { get; }
 
         public string PartContentType { get; }
+
+        public SchemaAttrAttribute Schema { get; }
 
         public FileFormatVersions Availability { get; }
     }

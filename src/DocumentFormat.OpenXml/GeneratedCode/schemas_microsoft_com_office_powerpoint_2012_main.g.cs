@@ -22,11 +22,7 @@ namespace DocumentFormat.OpenXml.Office2013.PowerPoint
 public partial class PresetTransition : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13324;
-    /// <inheritdoc/>
-    public override string LocalName => "prstTrans";
-    internal override byte NamespaceId => 68;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -75,11 +71,7 @@ public partial class PresetTransition : OpenXmlLeafElement
 public partial class PresenceInfo : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13325;
-    /// <inheritdoc/>
-    public override string LocalName => "presenceInfo";
-    internal override byte NamespaceId => 68;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -129,11 +121,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
 public partial class ThreadingInfo : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13326;
-    /// <inheritdoc/>
-    public override string LocalName => "threadingInfo";
-    internal override byte NamespaceId => 68;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -225,11 +213,7 @@ public partial class ThreadingInfo : OpenXmlCompositeElement
 public partial class SlideGuideList : ExtendedGuideList
 {
     internal const int ElementTypeIdConst = 13327;
-    /// <inheritdoc/>
-    public override string LocalName => "sldGuideLst";
-    internal override byte NamespaceId => 68;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the SlideGuideList class.
@@ -286,11 +270,7 @@ public partial class SlideGuideList : ExtendedGuideList
 public partial class NotesGuideList : ExtendedGuideList
 {
     internal const int ElementTypeIdConst = 13328;
-    /// <inheritdoc/>
-    public override string LocalName => "notesGuideLst";
-    internal override byte NamespaceId => 68;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the NotesGuideList class.
@@ -395,11 +375,7 @@ public abstract partial class ExtendedGuideList : OpenXmlCompositeElement
 public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13329;
-    /// <inheritdoc/>
-    public override string LocalName => "chartTrackingRefBased";
-    internal override byte NamespaceId => 68;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -436,11 +412,7 @@ public partial class ChartTrackingReferenceBased : OpenXmlLeafElement
 public partial class ParentCommentIdentifier : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13330;
-    /// <inheritdoc/>
-    public override string LocalName => "parentCm";
-    internal override byte NamespaceId => 68;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -500,11 +472,7 @@ public partial class ParentCommentIdentifier : OpenXmlLeafElement
 public partial class ColorType : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13331;
-    /// <inheritdoc/>
-    public override string LocalName => "clr";
-    internal override byte NamespaceId => 68;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -655,11 +623,7 @@ public partial class ColorType : OpenXmlCompositeElement
 public partial class ExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13332;
-    /// <inheritdoc/>
-    public override string LocalName => "extLst";
-    internal override byte NamespaceId => 68;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -725,11 +689,7 @@ public partial class ExtensionList : OpenXmlCompositeElement
 public partial class ExtendedGuide : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13333;
-    /// <inheritdoc/>
-    public override string LocalName => "guide";
-    internal override byte NamespaceId => 68;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     

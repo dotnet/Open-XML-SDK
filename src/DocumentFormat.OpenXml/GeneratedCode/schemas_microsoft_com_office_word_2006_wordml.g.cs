@@ -32,11 +32,7 @@ namespace DocumentFormat.OpenXml.Office.Word
 public partial class TemplateCommandGroup : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 12608;
-    /// <inheritdoc/>
-    public override string LocalName => "tcg";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -129,11 +125,7 @@ public partial class TemplateCommandGroup : OpenXmlPartRootElement
 public partial class Mcds : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12609;
-    /// <inheritdoc/>
-    public override string LocalName => "mcds";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -198,11 +190,7 @@ public partial class Mcds : OpenXmlCompositeElement
 public partial class VbaSuppData : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 12610;
-    /// <inheritdoc/>
-    public override string LocalName => "vbaSuppData";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -330,11 +318,7 @@ public partial class VbaSuppData : OpenXmlPartRootElement
 public partial class MailMergeRecipients : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 12611;
-    /// <inheritdoc/>
-    public override string LocalName => "recipients";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -391,11 +375,7 @@ public partial class MailMergeRecipients : OpenXmlPartRootElement
 public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12612;
-    /// <inheritdoc/>
-    public override string LocalName => "fci";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -450,11 +430,7 @@ public partial class FixedCommandKeyboardCustomization : OpenXmlLeafElement
 public partial class MacroKeyboardCustomization : MacroWllType
 {
     internal const int ElementTypeIdConst = 12613;
-    /// <inheritdoc/>
-    public override string LocalName => "macro";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the MacroKeyboardCustomization class.
@@ -478,11 +454,7 @@ public partial class MacroKeyboardCustomization : MacroWllType
 public partial class WllMacroKeyboardCustomization : MacroWllType
 {
     internal const int ElementTypeIdConst = 12615;
-    /// <inheritdoc/>
-    public override string LocalName => "wll";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the WllMacroKeyboardCustomization class.
@@ -534,11 +506,7 @@ public abstract partial class MacroWllType : OpenXmlLeafElement
 public partial class AllocatedCommandKeyboardCustomization : AcceleratorKeymapType
 {
     internal const int ElementTypeIdConst = 12614;
-    /// <inheritdoc/>
-    public override string LocalName => "acd";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the AllocatedCommandKeyboardCustomization class.
@@ -562,11 +530,7 @@ public partial class AllocatedCommandKeyboardCustomization : AcceleratorKeymapTy
 public partial class AllocatedCommandManifestEntry : AcceleratorKeymapType
 {
     internal const int ElementTypeIdConst = 12634;
-    /// <inheritdoc/>
-    public override string LocalName => "acdEntry";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the AllocatedCommandManifestEntry class.
@@ -618,11 +582,7 @@ public abstract partial class AcceleratorKeymapType : OpenXmlLeafElement
 public partial class CharacterInsertion : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12616;
-    /// <inheritdoc/>
-    public override string LocalName => "wch";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -676,11 +636,7 @@ public partial class CharacterInsertion : OpenXmlLeafElement
 public partial class KeyMapEntry : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12617;
-    /// <inheritdoc/>
-    public override string LocalName => "keymap";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -851,11 +807,7 @@ public partial class KeyMapEntry : OpenXmlCompositeElement
 public partial class AllocatedCommand : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12618;
-    /// <inheritdoc/>
-    public override string LocalName => "acd";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -918,11 +870,7 @@ public partial class AllocatedCommand : OpenXmlLeafElement
 public partial class Mcd : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12619;
-    /// <inheritdoc/>
-    public override string LocalName => "mcd";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -993,11 +941,7 @@ public partial class Mcd : OpenXmlLeafElement
 public partial class EventDocNewXsdString : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12620;
-    /// <inheritdoc/>
-    public override string LocalName => "eventDocNew";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the EventDocNewXsdString class.
@@ -1034,11 +978,7 @@ public partial class EventDocNewXsdString : OpenXmlLeafTextElement
 public partial class EventDocOpenXsdString : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12621;
-    /// <inheritdoc/>
-    public override string LocalName => "eventDocOpen";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the EventDocOpenXsdString class.
@@ -1075,11 +1015,7 @@ public partial class EventDocOpenXsdString : OpenXmlLeafTextElement
 public partial class EventDocCloseXsdString : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12622;
-    /// <inheritdoc/>
-    public override string LocalName => "eventDocClose";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the EventDocCloseXsdString class.
@@ -1116,11 +1052,7 @@ public partial class EventDocCloseXsdString : OpenXmlLeafTextElement
 public partial class EventDocSyncXsdString : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12623;
-    /// <inheritdoc/>
-    public override string LocalName => "eventDocSync";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the EventDocSyncXsdString class.
@@ -1157,11 +1089,7 @@ public partial class EventDocSyncXsdString : OpenXmlLeafTextElement
 public partial class EventDocXmlAfterInsertXsdString : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12624;
-    /// <inheritdoc/>
-    public override string LocalName => "eventDocXmlAfterInsert";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the EventDocXmlAfterInsertXsdString class.
@@ -1198,11 +1126,7 @@ public partial class EventDocXmlAfterInsertXsdString : OpenXmlLeafTextElement
 public partial class EventDocXmlBeforeDeleteXsdString : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12625;
-    /// <inheritdoc/>
-    public override string LocalName => "eventDocXmlBeforeDelete";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the EventDocXmlBeforeDeleteXsdString class.
@@ -1239,11 +1163,7 @@ public partial class EventDocXmlBeforeDeleteXsdString : OpenXmlLeafTextElement
 public partial class EventDocContentControlAfterInsertXsdString : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12626;
-    /// <inheritdoc/>
-    public override string LocalName => "eventDocContentControlAfterInsert";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the EventDocContentControlAfterInsertXsdString class.
@@ -1280,11 +1200,7 @@ public partial class EventDocContentControlAfterInsertXsdString : OpenXmlLeafTex
 public partial class EventDocContentControlBeforeDeleteXsdString : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12627;
-    /// <inheritdoc/>
-    public override string LocalName => "eventDocContentControlBeforeDelete";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the EventDocContentControlBeforeDeleteXsdString class.
@@ -1321,11 +1237,7 @@ public partial class EventDocContentControlBeforeDeleteXsdString : OpenXmlLeafTe
 public partial class EventDocContentControlOnExistXsdString : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12628;
-    /// <inheritdoc/>
-    public override string LocalName => "eventDocContentControlOnExit";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the EventDocContentControlOnExistXsdString class.
@@ -1362,11 +1274,7 @@ public partial class EventDocContentControlOnExistXsdString : OpenXmlLeafTextEle
 public partial class EventDocContentControlOnEnterXsdString : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12629;
-    /// <inheritdoc/>
-    public override string LocalName => "eventDocContentControlOnEnter";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the EventDocContentControlOnEnterXsdString class.
@@ -1403,11 +1311,7 @@ public partial class EventDocContentControlOnEnterXsdString : OpenXmlLeafTextEle
 public partial class EventDocStoreUpdateXsdString : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12630;
-    /// <inheritdoc/>
-    public override string LocalName => "eventDocStoreUpdate";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the EventDocStoreUpdateXsdString class.
@@ -1444,11 +1348,7 @@ public partial class EventDocStoreUpdateXsdString : OpenXmlLeafTextElement
 public partial class EventDocContentControlUpdateXsdString : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12631;
-    /// <inheritdoc/>
-    public override string LocalName => "eventDocContentControlContentUpdate";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the EventDocContentControlUpdateXsdString class.
@@ -1485,11 +1385,7 @@ public partial class EventDocContentControlUpdateXsdString : OpenXmlLeafTextElem
 public partial class EventDocBuildingBlockAfterInsertXsdString : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12632;
-    /// <inheritdoc/>
-    public override string LocalName => "eventDocBuildingBlockAfterInsert";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the EventDocBuildingBlockAfterInsertXsdString class.
@@ -1557,11 +1453,7 @@ public partial class EventDocBuildingBlockAfterInsertXsdString : OpenXmlLeafText
 public partial class DocEvents : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12633;
-    /// <inheritdoc/>
-    public override string LocalName => "docEvents";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1803,11 +1695,7 @@ public partial class DocEvents : OpenXmlCompositeElement
 public partial class AllocatedCommandManifest : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12635;
-    /// <inheritdoc/>
-    public override string LocalName => "acdManifest";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1864,11 +1752,7 @@ public partial class AllocatedCommandManifest : OpenXmlCompositeElement
 public partial class ToolbarData : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12636;
-    /// <inheritdoc/>
-    public override string LocalName => "toolbarData";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -1913,11 +1797,7 @@ public partial class ToolbarData : OpenXmlLeafElement
 public partial class KeyMapCustomizations : KeymapsType
 {
     internal const int ElementTypeIdConst = 12637;
-    /// <inheritdoc/>
-    public override string LocalName => "keymaps";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the KeyMapCustomizations class.
@@ -1973,11 +1853,7 @@ public partial class KeyMapCustomizations : KeymapsType
 public partial class MismatchedKeyMapCustomization : KeymapsType
 {
     internal const int ElementTypeIdConst = 12638;
-    /// <inheritdoc/>
-    public override string LocalName => "keymapsBad";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the MismatchedKeyMapCustomization class.
@@ -2089,11 +1965,7 @@ public abstract partial class KeymapsType : OpenXmlCompositeElement
 public partial class Toolbars : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12639;
-    /// <inheritdoc/>
-    public override string LocalName => "toolbars";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2157,11 +2029,7 @@ public partial class Toolbars : OpenXmlCompositeElement
 public partial class AllocatedCommands : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12640;
-    /// <inheritdoc/>
-    public override string LocalName => "acds";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2218,11 +2086,7 @@ public partial class AllocatedCommands : OpenXmlCompositeElement
 public partial class RecordIncluded : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12641;
-    /// <inheritdoc/>
-    public override string LocalName => "active";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2261,11 +2125,7 @@ public partial class RecordIncluded : OpenXmlLeafElement
 public partial class RecordHashCode : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12642;
-    /// <inheritdoc/>
-    public override string LocalName => "hash";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -2313,11 +2173,7 @@ public partial class RecordHashCode : OpenXmlLeafElement
 public partial class SingleDataSourceRecord : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12643;
-    /// <inheritdoc/>
-    public override string LocalName => "recipientData";
-    internal override byte NamespaceId => 33;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     

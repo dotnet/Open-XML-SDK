@@ -21,11 +21,7 @@ namespace DocumentFormat.OpenXml.Drawing.LegacyCompatibility
 public partial class LegacyDrawing : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 10681;
-    /// <inheritdoc/>
-    public override string LocalName => "legacyDrawing";
-    internal override byte NamespaceId => 13;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     

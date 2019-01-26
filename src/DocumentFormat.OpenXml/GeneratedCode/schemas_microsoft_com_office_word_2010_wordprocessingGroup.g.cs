@@ -38,11 +38,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingGroup
 public partial class WordprocessingGroup : WordprocessingGroupType
 {
     internal const int ElementTypeIdConst = 13187;
-    /// <inheritdoc/>
-    public override string LocalName => "wgp";
-    internal override byte NamespaceId => 60;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the WordprocessingGroup class.
@@ -106,11 +102,7 @@ public partial class WordprocessingGroup : WordprocessingGroupType
 public partial class GroupShape : WordprocessingGroupType
 {
     internal const int ElementTypeIdConst = 13194;
-    /// <inheritdoc/>
-    public override string LocalName => "grpSp";
-    internal override byte NamespaceId => 60;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the GroupShape class.
@@ -288,11 +280,7 @@ public abstract partial class WordprocessingGroupType : OpenXmlCompositeElement
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13188;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvPr";
-    internal override byte NamespaceId => 60;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -436,11 +424,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13189;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvFrPr";
-    internal override byte NamespaceId => 60;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -541,11 +525,7 @@ public partial class NonVisualGraphicFrameProperties : OpenXmlCompositeElement
 public partial class Transform2D : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13190;
-    /// <inheritdoc/>
-    public override string LocalName => "xfrm";
-    internal override byte NamespaceId => 60;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -662,11 +642,7 @@ public partial class Transform2D : OpenXmlCompositeElement
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13191;
-    /// <inheritdoc/>
-    public override string LocalName => "extLst";
-    internal override byte NamespaceId => 60;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -732,11 +708,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13192;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvGrpSpPr";
-    internal override byte NamespaceId => 60;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -855,11 +827,7 @@ public partial class NonVisualGroupDrawingShapeProperties : OpenXmlCompositeElem
 public partial class GroupShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13193;
-    /// <inheritdoc/>
-    public override string LocalName => "grpSpPr";
-    internal override byte NamespaceId => 60;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -959,11 +927,7 @@ public partial class GroupShapeProperties : OpenXmlCompositeElement
 public partial class GraphicFrame : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13195;
-    /// <inheritdoc/>
-    public override string LocalName => "graphicFrame";
-    internal override byte NamespaceId => 60;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     

@@ -21,11 +21,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing
 public partial class BackgroundProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13320;
-    /// <inheritdoc/>
-    public override string LocalName => "backgroundPr";
-    internal override byte NamespaceId => 67;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -80,11 +76,7 @@ public partial class BackgroundProperties : OpenXmlLeafElement
 public partial class NonVisualGroupProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13321;
-    /// <inheritdoc/>
-    public override string LocalName => "nonVisualGroupProps";
-    internal override byte NamespaceId => 67;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -121,11 +113,7 @@ public partial class NonVisualGroupProperties : OpenXmlLeafElement
 public partial class ObjectProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13322;
-    /// <inheritdoc/>
-    public override string LocalName => "objectPr";
-    internal override byte NamespaceId => 67;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -174,11 +162,7 @@ public partial class ObjectProperties : OpenXmlLeafElement
 public partial class SignatureLine : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13323;
-    /// <inheritdoc/>
-    public override string LocalName => "signatureLine";
-    internal override byte NamespaceId => 67;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     

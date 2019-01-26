@@ -72,8 +72,6 @@ namespace DocumentFormat.OpenXml
         /// </summary>
         public override string LocalName => TagName;
 
-        internal override byte NamespaceId => AlternateContent.MarkupCompatibilityNamespaceId;
-
         /// <summary>
         /// Gets or sets a whitespace-delimited list of namespace prefixes that identify the
         /// namespaces a markup consumer needs in order to understand and select that
@@ -112,7 +110,5 @@ namespace DocumentFormat.OpenXml
         /// Gets the type ID of the element.
         /// </summary>
         internal override int ElementTypeId => ReservedElementTypeIds.AlternateContentChoiceId;
-
-        internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     }
 }

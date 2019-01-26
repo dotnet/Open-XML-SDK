@@ -27,11 +27,7 @@ namespace DocumentFormat.OpenXml.CustomProperties
 public partial class Properties : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 10903;
-    /// <inheritdoc/>
-    public override string LocalName => "Properties";
-    internal override byte NamespaceId => 4;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -190,11 +186,7 @@ public partial class Properties : OpenXmlPartRootElement
 public partial class CustomDocumentProperty : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10904;
-    /// <inheritdoc/>
-    public override string LocalName => "property";
-    internal override byte NamespaceId => 4;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     

@@ -35,11 +35,7 @@ namespace DocumentFormat.OpenXml.Office2010.Excel.Drawing
 public partial class ContentPart : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13076;
-    /// <inheritdoc/>
-    public override string LocalName => "contentPart";
-    internal override byte NamespaceId => 54;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -182,11 +178,7 @@ public partial class ContentPart : OpenXmlCompositeElement
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13077;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvPr";
-    internal override byte NamespaceId => 54;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -330,11 +322,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13078;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvContentPartPr";
-    internal override byte NamespaceId => 54;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -441,11 +429,7 @@ public partial class NonVisualInkContentPartProperties : OpenXmlCompositeElement
 public partial class ExcelNonVisualContentPartShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13079;
-    /// <inheritdoc/>
-    public override string LocalName => "nvContentPartPr";
-    internal override byte NamespaceId => 54;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -537,11 +521,7 @@ public partial class ExcelNonVisualContentPartShapeProperties : OpenXmlComposite
 public partial class ApplicationNonVisualDrawingProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13080;
-    /// <inheritdoc/>
-    public override string LocalName => "nvPr";
-    internal override byte NamespaceId => 54;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -593,11 +573,7 @@ public partial class ApplicationNonVisualDrawingProperties : OpenXmlLeafElement
 public partial class Transform2D : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13081;
-    /// <inheritdoc/>
-    public override string LocalName => "xfrm";
-    internal override byte NamespaceId => 54;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -714,11 +690,7 @@ public partial class Transform2D : OpenXmlCompositeElement
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13082;
-    /// <inheritdoc/>
-    public override string LocalName => "extLst";
-    internal override byte NamespaceId => 54;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     

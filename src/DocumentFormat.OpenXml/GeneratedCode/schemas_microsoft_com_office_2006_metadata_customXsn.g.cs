@@ -33,11 +33,7 @@ namespace DocumentFormat.OpenXml.Office.CustomXsn
 public partial class CustomXsn : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12706;
-    /// <inheritdoc/>
-    public override string LocalName => "customXsn";
-    internal override byte NamespaceId => 39;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -155,11 +151,7 @@ public partial class CustomXsn : OpenXmlCompositeElement
 public partial class XsnLocation : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12707;
-    /// <inheritdoc/>
-    public override string LocalName => "xsnLocation";
-    internal override byte NamespaceId => 39;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the XsnLocation class.
@@ -196,11 +188,7 @@ public partial class XsnLocation : OpenXmlLeafTextElement
 public partial class CachedView : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12708;
-    /// <inheritdoc/>
-    public override string LocalName => "cached";
-    internal override byte NamespaceId => 39;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the CachedView class.
@@ -237,11 +225,7 @@ public partial class CachedView : OpenXmlLeafTextElement
 public partial class OpenByDefault : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12709;
-    /// <inheritdoc/>
-    public override string LocalName => "openByDefault";
-    internal override byte NamespaceId => 39;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the OpenByDefault class.
@@ -278,11 +262,7 @@ public partial class OpenByDefault : OpenXmlLeafTextElement
 public partial class Scope : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12710;
-    /// <inheritdoc/>
-    public override string LocalName => "xsnScope";
-    internal override byte NamespaceId => 39;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the Scope class.

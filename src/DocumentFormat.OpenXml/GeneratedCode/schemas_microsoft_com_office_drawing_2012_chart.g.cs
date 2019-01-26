@@ -33,11 +33,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.Chart
 public partial class PivotSource : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13209;
-    /// <inheritdoc/>
-    public override string LocalName => "pivotSource";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -142,11 +138,7 @@ public partial class PivotSource : OpenXmlCompositeElement
 public partial class NumberingFormat : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13210;
-    /// <inheritdoc/>
-    public override string LocalName => "numFmt";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -224,11 +216,7 @@ public partial class NumberingFormat : OpenXmlLeafElement
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13211;
-    /// <inheritdoc/>
-    public override string LocalName => "spPr";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -322,11 +310,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
 public partial class Layout : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13212;
-    /// <inheritdoc/>
-    public override string LocalName => "layout";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -425,11 +409,7 @@ public partial class Layout : OpenXmlCompositeElement
 public partial class FullReference : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13213;
-    /// <inheritdoc/>
-    public override string LocalName => "fullRef";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -515,11 +495,7 @@ public partial class FullReference : OpenXmlCompositeElement
 public partial class LevelReference : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13214;
-    /// <inheritdoc/>
-    public override string LocalName => "levelRef";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -605,11 +581,7 @@ public partial class LevelReference : OpenXmlCompositeElement
 public partial class FormulaReference : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13215;
-    /// <inheritdoc/>
-    public override string LocalName => "formulaRef";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -695,11 +667,7 @@ public partial class FormulaReference : OpenXmlCompositeElement
 public partial class FilteredSeriesTitle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13216;
-    /// <inheritdoc/>
-    public override string LocalName => "filteredSeriesTitle";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -785,11 +753,7 @@ public partial class FilteredSeriesTitle : OpenXmlCompositeElement
 public partial class FilteredCategoryTitle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13217;
-    /// <inheritdoc/>
-    public override string LocalName => "filteredCategoryTitle";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -875,11 +839,7 @@ public partial class FilteredCategoryTitle : OpenXmlCompositeElement
 public partial class FilteredAreaSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13218;
-    /// <inheritdoc/>
-    public override string LocalName => "filteredAreaSeries";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -965,11 +925,7 @@ public partial class FilteredAreaSeries : OpenXmlCompositeElement
 public partial class FilteredBarSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13219;
-    /// <inheritdoc/>
-    public override string LocalName => "filteredBarSeries";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -1055,11 +1011,7 @@ public partial class FilteredBarSeries : OpenXmlCompositeElement
 public partial class FilteredBubbleSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13220;
-    /// <inheritdoc/>
-    public override string LocalName => "filteredBubbleSeries";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -1145,11 +1097,7 @@ public partial class FilteredBubbleSeries : OpenXmlCompositeElement
 public partial class FilteredLineSeriesExtension : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13221;
-    /// <inheritdoc/>
-    public override string LocalName => "filteredLineSeries";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -1235,11 +1183,7 @@ public partial class FilteredLineSeriesExtension : OpenXmlCompositeElement
 public partial class FilteredPieSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13222;
-    /// <inheritdoc/>
-    public override string LocalName => "filteredPieSeries";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -1325,11 +1269,7 @@ public partial class FilteredPieSeries : OpenXmlCompositeElement
 public partial class FilteredRadarSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13223;
-    /// <inheritdoc/>
-    public override string LocalName => "filteredRadarSeries";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -1415,11 +1355,7 @@ public partial class FilteredRadarSeries : OpenXmlCompositeElement
 public partial class FilteredScatterSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13224;
-    /// <inheritdoc/>
-    public override string LocalName => "filteredScatterSeries";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -1505,11 +1441,7 @@ public partial class FilteredScatterSeries : OpenXmlCompositeElement
 public partial class FilteredSurfaceSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13225;
-    /// <inheritdoc/>
-    public override string LocalName => "filteredSurfaceSeries";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -1597,11 +1529,7 @@ public partial class FilteredSurfaceSeries : OpenXmlCompositeElement
 public partial class DataLabelsRange : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13226;
-    /// <inheritdoc/>
-    public override string LocalName => "datalabelsRange";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -1700,11 +1628,7 @@ public partial class DataLabelsRange : OpenXmlCompositeElement
 public partial class CategoryFilterExceptions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13227;
-    /// <inheritdoc/>
-    public override string LocalName => "categoryFilterExceptions";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -1768,11 +1692,7 @@ public partial class CategoryFilterExceptions : OpenXmlCompositeElement
 public partial class DataLabelFieldTable : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13228;
-    /// <inheritdoc/>
-    public override string LocalName => "dlblFieldTable";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -1829,11 +1749,7 @@ public partial class DataLabelFieldTable : OpenXmlCompositeElement
 public partial class ExceptionForSave : BooleanType
 {
     internal const int ElementTypeIdConst = 13229;
-    /// <inheritdoc/>
-    public override string LocalName => "xForSave";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the ExceptionForSave class.
@@ -1857,11 +1773,7 @@ public partial class ExceptionForSave : BooleanType
 public partial class ShowDataLabelsRange : BooleanType
 {
     internal const int ElementTypeIdConst = 13230;
-    /// <inheritdoc/>
-    public override string LocalName => "showDataLabelsRange";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the ShowDataLabelsRange class.
@@ -1885,11 +1797,7 @@ public partial class ShowDataLabelsRange : BooleanType
 public partial class ShowLeaderLines : BooleanType
 {
     internal const int ElementTypeIdConst = 13232;
-    /// <inheritdoc/>
-    public override string LocalName => "showLeaderLines";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the ShowLeaderLines class.
@@ -1913,11 +1821,7 @@ public partial class ShowLeaderLines : BooleanType
 public partial class AutoGeneneratedCategories : BooleanType
 {
     internal const int ElementTypeIdConst = 13234;
-    /// <inheritdoc/>
-    public override string LocalName => "autoCat";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the AutoGeneneratedCategories class.
@@ -1941,11 +1845,7 @@ public partial class AutoGeneneratedCategories : BooleanType
 public partial class InvertIfNegativeBoolean : BooleanType
 {
     internal const int ElementTypeIdConst = 13248;
-    /// <inheritdoc/>
-    public override string LocalName => "invertIfNegative";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the InvertIfNegativeBoolean class.
@@ -1969,11 +1869,7 @@ public partial class InvertIfNegativeBoolean : BooleanType
 public partial class Bubble3D : BooleanType
 {
     internal const int ElementTypeIdConst = 13249;
-    /// <inheritdoc/>
-    public override string LocalName => "bubble3D";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the Bubble3D class.
@@ -2034,11 +1930,7 @@ public abstract partial class BooleanType : OpenXmlLeafElement
 public partial class ChartText : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13231;
-    /// <inheritdoc/>
-    public override string LocalName => "tx";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -2150,11 +2042,7 @@ public partial class ChartText : OpenXmlCompositeElement
 public partial class LeaderLines : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13233;
-    /// <inheritdoc/>
-    public override string LocalName => "leaderLines";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -2233,11 +2121,7 @@ public partial class LeaderLines : OpenXmlCompositeElement
 public partial class SequenceOfReferences : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 13235;
-    /// <inheritdoc/>
-    public override string LocalName => "sqref";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the SequenceOfReferences class.
@@ -2274,11 +2158,7 @@ public partial class SequenceOfReferences : OpenXmlLeafTextElement
 public partial class Formula : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 13245;
-    /// <inheritdoc/>
-    public override string LocalName => "f";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the Formula class.
@@ -2315,11 +2195,7 @@ public partial class Formula : OpenXmlLeafTextElement
 public partial class TextFieldGuid : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 13253;
-    /// <inheritdoc/>
-    public override string LocalName => "txfldGUID";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the TextFieldGuid class.
@@ -2371,11 +2247,7 @@ public partial class TextFieldGuid : OpenXmlLeafTextElement
 public partial class AxisDataSourceType : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13236;
-    /// <inheritdoc/>
-    public override string LocalName => "cat";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -2539,11 +2411,7 @@ public partial class AxisDataSourceType : OpenXmlCompositeElement
 public partial class BarChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13237;
-    /// <inheritdoc/>
-    public override string LocalName => "ser";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -2720,11 +2588,7 @@ public partial class BarChartSeries : OpenXmlCompositeElement
 public partial class LineChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13238;
-    /// <inheritdoc/>
-    public override string LocalName => "ser";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -2899,11 +2763,7 @@ public partial class LineChartSeries : OpenXmlCompositeElement
 public partial class ScatterChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13239;
-    /// <inheritdoc/>
-    public override string LocalName => "ser";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -3063,11 +2923,7 @@ public partial class ScatterChartSeries : OpenXmlCompositeElement
 public partial class AreaChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13240;
-    /// <inheritdoc/>
-    public override string LocalName => "ser";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -3225,11 +3081,7 @@ public partial class AreaChartSeries : OpenXmlCompositeElement
 public partial class PieChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13241;
-    /// <inheritdoc/>
-    public override string LocalName => "ser";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -3408,11 +3260,7 @@ public partial class PieChartSeries : OpenXmlCompositeElement
 public partial class BubbleChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13242;
-    /// <inheritdoc/>
-    public override string LocalName => "ser";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -3583,11 +3431,7 @@ public partial class BubbleChartSeries : OpenXmlCompositeElement
 public partial class RadarChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13243;
-    /// <inheritdoc/>
-    public override string LocalName => "ser";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -3754,11 +3598,7 @@ public partial class RadarChartSeries : OpenXmlCompositeElement
 public partial class SurfaceChartSeries : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13244;
-    /// <inheritdoc/>
-    public override string LocalName => "ser";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -3949,11 +3789,7 @@ public partial class SurfaceChartSeries : OpenXmlCompositeElement
 public partial class DataLabelsRangeChache : StringDataType
 {
     internal const int ElementTypeIdConst = 13246;
-    /// <inheritdoc/>
-    public override string LocalName => "dlblRangeCache";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the DataLabelsRangeChache class.
@@ -4011,11 +3847,7 @@ public partial class DataLabelsRangeChache : StringDataType
 public partial class DataLabelFieldTableCache : StringDataType
 {
     internal const int ElementTypeIdConst = 13254;
-    /// <inheritdoc/>
-    public override string LocalName => "dlblFieldTableCache";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the DataLabelFieldTableCache class.
@@ -4144,11 +3976,7 @@ public abstract partial class StringDataType : OpenXmlCompositeElement
 public partial class Explosion : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13247;
-    /// <inheritdoc/>
-    public override string LocalName => "explosion";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -4198,11 +4026,7 @@ public partial class Explosion : OpenXmlLeafElement
 public partial class Marker : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13250;
-    /// <inheritdoc/>
-    public override string LocalName => "marker";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -4357,11 +4181,7 @@ public partial class Marker : OpenXmlCompositeElement
 public partial class DataLabel : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13251;
-    /// <inheritdoc/>
-    public override string LocalName => "dLbl";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -4459,11 +4279,7 @@ public partial class DataLabel : OpenXmlCompositeElement
 public partial class CategoryFilterException : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13252;
-    /// <inheritdoc/>
-    public override string LocalName => "categoryFilterException";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -4631,11 +4447,7 @@ public partial class CategoryFilterException : OpenXmlCompositeElement
 public partial class DataLabelFieldTableEntry : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13255;
-    /// <inheritdoc/>
-    public override string LocalName => "dlblFTEntry";
-    internal override byte NamespaceId => 64;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     

@@ -45,11 +45,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingShape
 public partial class WordprocessingShape : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13196;
-    /// <inheritdoc/>
-    public override string LocalName => "wsp";
-    internal override byte NamespaceId => 61;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -141,11 +137,7 @@ public partial class WordprocessingShape : OpenXmlCompositeElement
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13197;
-    /// <inheritdoc/>
-    public override string LocalName => "extLst";
-    internal override byte NamespaceId => 61;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -213,11 +205,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13198;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvPr";
-    internal override byte NamespaceId => 61;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -361,11 +349,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13199;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvSpPr";
-    internal override byte NamespaceId => 61;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -476,11 +460,7 @@ public partial class NonVisualDrawingShapeProperties : OpenXmlCompositeElement
 public partial class NonVisualConnectorProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13200;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvCnPr";
-    internal override byte NamespaceId => 61;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -633,11 +613,7 @@ public partial class NonVisualConnectorProperties : OpenXmlCompositeElement
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13201;
-    /// <inheritdoc/>
-    public override string LocalName => "spPr";
-    internal override byte NamespaceId => 61;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -735,11 +711,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
 public partial class ShapeStyle : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13202;
-    /// <inheritdoc/>
-    public override string LocalName => "style";
-    internal override byte NamespaceId => 61;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -866,11 +838,7 @@ public partial class ShapeStyle : OpenXmlCompositeElement
 public partial class TextBoxInfo2 : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13203;
-    /// <inheritdoc/>
-    public override string LocalName => "txbx";
-    internal override byte NamespaceId => 61;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -975,11 +943,7 @@ public partial class TextBoxInfo2 : OpenXmlCompositeElement
 public partial class LinkedTextBox : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13204;
-    /// <inheritdoc/>
-    public override string LocalName => "linkedTxbx";
-    internal override byte NamespaceId => 61;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -1091,11 +1055,7 @@ public partial class LinkedTextBox : OpenXmlCompositeElement
 public partial class TextBodyProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13205;
-    /// <inheritdoc/>
-    public override string LocalName => "bodyPr";
-    internal override byte NamespaceId => 61;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     

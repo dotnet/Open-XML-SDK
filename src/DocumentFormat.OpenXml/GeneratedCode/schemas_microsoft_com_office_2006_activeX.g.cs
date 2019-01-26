@@ -27,11 +27,7 @@ namespace DocumentFormat.OpenXml.Office.ActiveX
 public partial class ActiveXControlData : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12688;
-    /// <inheritdoc/>
-    public override string LocalName => "ocx";
-    internal override byte NamespaceId => 35;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -129,11 +125,7 @@ public partial class ActiveXControlData : OpenXmlCompositeElement
 public partial class ActiveXObjectProperty : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12689;
-    /// <inheritdoc/>
-    public override string LocalName => "ocxPr";
-    internal override byte NamespaceId => 35;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -248,11 +240,7 @@ public partial class ActiveXObjectProperty : OpenXmlCompositeElement
 public partial class SharedComFont : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12690;
-    /// <inheritdoc/>
-    public override string LocalName => "font";
-    internal override byte NamespaceId => 35;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -325,11 +313,7 @@ public partial class SharedComFont : OpenXmlCompositeElement
 public partial class SharedComPicture : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12691;
-    /// <inheritdoc/>
-    public override string LocalName => "picture";
-    internal override byte NamespaceId => 35;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     

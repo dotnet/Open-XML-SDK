@@ -46,11 +46,7 @@ namespace DocumentFormat.OpenXml.Office2010.Word.DrawingCanvas
 public partial class WordprocessingCanvas : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13182;
-    /// <inheritdoc/>
-    public override string LocalName => "wpc";
-    internal override byte NamespaceId => 59;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -163,11 +159,7 @@ public partial class WordprocessingCanvas : OpenXmlCompositeElement
 public partial class BackgroundFormatting : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13183;
-    /// <inheritdoc/>
-    public override string LocalName => "bg";
-    internal override byte NamespaceId => 59;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -235,11 +227,7 @@ public partial class BackgroundFormatting : OpenXmlCompositeElement
 public partial class WholeFormatting : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13184;
-    /// <inheritdoc/>
-    public override string LocalName => "whole";
-    internal override byte NamespaceId => 59;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -333,11 +321,7 @@ public partial class WholeFormatting : OpenXmlCompositeElement
 public partial class GraphicFrameType : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13185;
-    /// <inheritdoc/>
-    public override string LocalName => "graphicFrame";
-    internal override byte NamespaceId => 59;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -475,11 +459,7 @@ public partial class GraphicFrameType : OpenXmlCompositeElement
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13186;
-    /// <inheritdoc/>
-    public override string LocalName => "extLst";
-    internal override byte NamespaceId => 59;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     

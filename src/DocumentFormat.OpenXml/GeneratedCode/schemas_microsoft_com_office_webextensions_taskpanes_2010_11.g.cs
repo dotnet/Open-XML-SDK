@@ -28,11 +28,7 @@ namespace DocumentFormat.OpenXml.Office2013.WebExtentionPane
 public partial class Taskpanes : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 13352;
-    /// <inheritdoc/>
-    public override string LocalName => "taskpanes";
-    internal override byte NamespaceId => 70;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -118,11 +114,7 @@ public partial class Taskpanes : OpenXmlPartRootElement
 public partial class WebExtensionPartReference : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13353;
-    /// <inheritdoc/>
-    public override string LocalName => "webextensionref";
-    internal override byte NamespaceId => 70;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -168,11 +160,7 @@ public partial class WebExtensionPartReference : OpenXmlLeafElement
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13354;
-    /// <inheritdoc/>
-    public override string LocalName => "extLst";
-    internal override byte NamespaceId => 70;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -238,11 +226,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 public partial class WebExtensionTaskpane : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13355;
-    /// <inheritdoc/>
-    public override string LocalName => "taskpane";
-    internal override byte NamespaceId => 70;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     

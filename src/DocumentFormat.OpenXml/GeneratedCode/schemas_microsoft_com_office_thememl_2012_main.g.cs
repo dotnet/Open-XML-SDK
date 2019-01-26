@@ -28,11 +28,7 @@ namespace DocumentFormat.OpenXml.Office2013.Theme
 public partial class ThemeFamily : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13430;
-    /// <inheritdoc/>
-    public override string LocalName => "themeFamily";
-    internal override byte NamespaceId => 73;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -136,11 +132,7 @@ public partial class ThemeFamily : OpenXmlCompositeElement
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13431;
-    /// <inheritdoc/>
-    public override string LocalName => "extLst";
-    internal override byte NamespaceId => 73;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -204,11 +196,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 public partial class ThemeVariant : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13432;
-    /// <inheritdoc/>
-    public override string LocalName => "themeVariant";
-    internal override byte NamespaceId => 73;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -326,11 +314,7 @@ public partial class ThemeVariant : OpenXmlCompositeElement
 public partial class ThemeVariantList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13433;
-    /// <inheritdoc/>
-    public override string LocalName => "themeVariantLst";
-    internal override byte NamespaceId => 73;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     

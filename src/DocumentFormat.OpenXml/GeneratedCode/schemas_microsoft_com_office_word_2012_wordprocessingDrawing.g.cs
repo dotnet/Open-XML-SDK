@@ -21,11 +21,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word.Drawing
 public partial class WebVideoProperty : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13435;
-    /// <inheritdoc/>
-    public override string LocalName => "webVideoPr";
-    internal override byte NamespaceId => 75;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     

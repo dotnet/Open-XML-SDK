@@ -21,11 +21,7 @@ namespace DocumentFormat.OpenXml.Office2013.Word
 public partial class Color : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13334;
-    /// <inheritdoc/>
-    public override string LocalName => "color";
-    internal override byte NamespaceId => 69;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -88,11 +84,7 @@ public partial class Color : OpenXmlLeafElement
 public partial class DataBinding : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13335;
-    /// <inheritdoc/>
-    public override string LocalName => "dataBinding";
-    internal override byte NamespaceId => 69;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -147,11 +139,7 @@ public partial class DataBinding : OpenXmlLeafElement
 public partial class Appearance : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13336;
-    /// <inheritdoc/>
-    public override string LocalName => "appearance";
-    internal override byte NamespaceId => 69;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -196,11 +184,7 @@ public partial class Appearance : OpenXmlLeafElement
 public partial class CommentsEx : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 13337;
-    /// <inheritdoc/>
-    public override string LocalName => "commentsEx";
-    internal override byte NamespaceId => 69;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -292,11 +276,7 @@ public partial class CommentsEx : OpenXmlPartRootElement
 public partial class People : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 13338;
-    /// <inheritdoc/>
-    public override string LocalName => "people";
-    internal override byte NamespaceId => 69;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -391,11 +371,7 @@ public partial class People : OpenXmlPartRootElement
 public partial class SdtRepeatedSection : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13339;
-    /// <inheritdoc/>
-    public override string LocalName => "repeatingSection";
-    internal override byte NamespaceId => 69;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -487,11 +463,7 @@ public partial class SdtRepeatedSection : OpenXmlCompositeElement
 public partial class SdtRepeatedSectionItem : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13340;
-    /// <inheritdoc/>
-    public override string LocalName => "repeatingSectionItem";
-    internal override byte NamespaceId => 69;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -522,11 +494,7 @@ public partial class SdtRepeatedSectionItem : OpenXmlLeafElement
 public partial class ChartTrackingRefBased : OnOffType
 {
     internal const int ElementTypeIdConst = 13341;
-    /// <inheritdoc/>
-    public override string LocalName => "chartTrackingRefBased";
-    internal override byte NamespaceId => 69;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the ChartTrackingRefBased class.
@@ -550,11 +518,7 @@ public partial class ChartTrackingRefBased : OnOffType
 public partial class DefaultCollapsed : OnOffType
 {
     internal const int ElementTypeIdConst = 13342;
-    /// <inheritdoc/>
-    public override string LocalName => "collapsed";
-    internal override byte NamespaceId => 69;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the DefaultCollapsed class.
@@ -578,11 +542,7 @@ public partial class DefaultCollapsed : OnOffType
 public partial class WebExtensionLinked : OnOffType
 {
     internal const int ElementTypeIdConst = 13345;
-    /// <inheritdoc/>
-    public override string LocalName => "webExtensionLinked";
-    internal override byte NamespaceId => 69;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionLinked class.
@@ -606,11 +566,7 @@ public partial class WebExtensionLinked : OnOffType
 public partial class WebExtensionCreated : OnOffType
 {
     internal const int ElementTypeIdConst = 13346;
-    /// <inheritdoc/>
-    public override string LocalName => "webExtensionCreated";
-    internal override byte NamespaceId => 69;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the WebExtensionCreated class.
@@ -634,11 +590,7 @@ public partial class WebExtensionCreated : OnOffType
 public partial class DoNotAllowInsertDeleteSection : OnOffType
 {
     internal const int ElementTypeIdConst = 13351;
-    /// <inheritdoc/>
-    public override string LocalName => "doNotAllowInsertDeleteSection";
-    internal override byte NamespaceId => 69;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the DoNotAllowInsertDeleteSection class.
@@ -690,11 +642,7 @@ public abstract partial class OnOffType : OpenXmlLeafElement
 public partial class PersistentDocumentId : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13343;
-    /// <inheritdoc/>
-    public override string LocalName => "docId";
-    internal override byte NamespaceId => 69;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -733,11 +681,7 @@ public partial class PersistentDocumentId : OpenXmlLeafElement
 public partial class FootnoteColumns : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13344;
-    /// <inheritdoc/>
-    public override string LocalName => "footnoteColumns";
-    internal override byte NamespaceId => 69;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -776,11 +720,7 @@ public partial class FootnoteColumns : OpenXmlLeafElement
 public partial class CommentEx : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13347;
-    /// <inheritdoc/>
-    public override string LocalName => "commentEx";
-    internal override byte NamespaceId => 69;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -842,11 +782,7 @@ public partial class CommentEx : OpenXmlLeafElement
 public partial class Person : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13348;
-    /// <inheritdoc/>
-    public override string LocalName => "person";
-    internal override byte NamespaceId => 69;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -941,11 +877,7 @@ public partial class Person : OpenXmlCompositeElement
 public partial class PresenceInfo : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13349;
-    /// <inheritdoc/>
-    public override string LocalName => "presenceInfo";
-    internal override byte NamespaceId => 69;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -992,11 +924,7 @@ public partial class PresenceInfo : OpenXmlLeafElement
 public partial class SectionTitle : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13350;
-    /// <inheritdoc/>
-    public override string LocalName => "sectionTitle";
-    internal override byte NamespaceId => 69;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     

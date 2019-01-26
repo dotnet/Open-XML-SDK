@@ -41,11 +41,7 @@ namespace DocumentFormat.OpenXml.Office2013.Drawing.ChartStyle
 public partial class ColorStyle : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 13256;
-    /// <inheritdoc/>
-    public override string LocalName => "colorStyle";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -211,11 +207,7 @@ public partial class ColorStyle : OpenXmlPartRootElement
 public partial class ChartStyle : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 13257;
-    /// <inheritdoc/>
-    public override string LocalName => "chartStyle";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -793,11 +785,7 @@ public partial class ChartStyle : OpenXmlPartRootElement
 public partial class ColorStyleVariation : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13258;
-    /// <inheritdoc/>
-    public override string LocalName => "variation";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -861,11 +849,7 @@ public partial class ColorStyleVariation : OpenXmlCompositeElement
 public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13259;
-    /// <inheritdoc/>
-    public override string LocalName => "extLst";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -983,11 +967,7 @@ public partial class OfficeArtExtensionList : OpenXmlCompositeElement
 public partial class StyleColor : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13260;
-    /// <inheritdoc/>
-    public override string LocalName => "styleClr";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -1062,11 +1042,7 @@ public partial class StyleColor : OpenXmlCompositeElement
 public partial class LineReference : StyleReference
 {
     internal const int ElementTypeIdConst = 13261;
-    /// <inheritdoc/>
-    public override string LocalName => "lnRef";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the LineReference class.
@@ -1128,11 +1104,7 @@ public partial class LineReference : StyleReference
 public partial class FillReference : StyleReference
 {
     internal const int ElementTypeIdConst = 13263;
-    /// <inheritdoc/>
-    public override string LocalName => "fillRef";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the FillReference class.
@@ -1194,11 +1166,7 @@ public partial class FillReference : StyleReference
 public partial class EffectReference : StyleReference
 {
     internal const int ElementTypeIdConst = 13264;
-    /// <inheritdoc/>
-    public override string LocalName => "effectRef";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the EffectReference class.
@@ -1325,11 +1293,7 @@ public abstract partial class StyleReference : OpenXmlCompositeElement
 public partial class LineWidthScale : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 13262;
-    /// <inheritdoc/>
-    public override string LocalName => "lineWidthScale";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -1392,11 +1356,7 @@ public partial class LineWidthScale : OpenXmlLeafTextElement
 public partial class FontReference : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13265;
-    /// <inheritdoc/>
-    public override string LocalName => "fontRef";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -1500,11 +1460,7 @@ public partial class FontReference : OpenXmlCompositeElement
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13266;
-    /// <inheritdoc/>
-    public override string LocalName => "spPr";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -1638,11 +1594,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
 public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13267;
-    /// <inheritdoc/>
-    public override string LocalName => "defRPr";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -1844,11 +1796,7 @@ public partial class TextCharacterPropertiesType : OpenXmlCompositeElement
 public partial class TextBodyProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 13268;
-    /// <inheritdoc/>
-    public override string LocalName => "bodyPr";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -2041,11 +1989,7 @@ public partial class TextBodyProperties : OpenXmlCompositeElement
 public partial class CategoryAxisProperties : AxisProperties
 {
     internal const int ElementTypeIdConst = 13269;
-    /// <inheritdoc/>
-    public override string LocalName => "categoryAxis";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the CategoryAxisProperties class.
@@ -2069,11 +2013,7 @@ public partial class CategoryAxisProperties : AxisProperties
 public partial class SeriesAxisProperties : AxisProperties
 {
     internal const int ElementTypeIdConst = 13274;
-    /// <inheritdoc/>
-    public override string LocalName => "seriesAxis";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the SeriesAxisProperties class.
@@ -2097,11 +2037,7 @@ public partial class SeriesAxisProperties : AxisProperties
 public partial class ValueAxisProperties : AxisProperties
 {
     internal const int ElementTypeIdConst = 13277;
-    /// <inheritdoc/>
-    public override string LocalName => "valueAxis";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the ValueAxisProperties class.
@@ -2187,11 +2123,7 @@ public abstract partial class AxisProperties : OpenXmlLeafElement
 public partial class DataSeries : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13270;
-    /// <inheritdoc/>
-    public override string LocalName => "dataSeries";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -2270,11 +2202,7 @@ public partial class DataSeries : OpenXmlLeafElement
 public partial class DataLabels : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13271;
-    /// <inheritdoc/>
-    public override string LocalName => "dataLabels";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -2341,11 +2269,7 @@ public partial class DataLabels : OpenXmlLeafElement
 public partial class DataTable : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13272;
-    /// <inheritdoc/>
-    public override string LocalName => "dataTable";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -2400,11 +2324,7 @@ public partial class DataTable : OpenXmlLeafElement
 public partial class Legend : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13273;
-    /// <inheritdoc/>
-    public override string LocalName => "legend";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -2453,11 +2373,7 @@ public partial class Legend : OpenXmlLeafElement
 public partial class Title : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13275;
-    /// <inheritdoc/>
-    public override string LocalName => "title";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -2494,11 +2410,7 @@ public partial class Title : OpenXmlLeafElement
 public partial class Trendline : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13276;
-    /// <inheritdoc/>
-    public override string LocalName => "trendline";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -2547,11 +2459,7 @@ public partial class Trendline : OpenXmlLeafElement
 public partial class View3DProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13278;
-    /// <inheritdoc/>
-    public override string LocalName => "view3D";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     
@@ -2632,11 +2540,7 @@ public partial class View3DProperties : OpenXmlLeafElement
 public partial class AxisTitle : StyleEntry
 {
     internal const int ElementTypeIdConst = 13279;
-    /// <inheritdoc/>
-    public override string LocalName => "axisTitle";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the AxisTitle class.
@@ -2700,11 +2604,7 @@ public partial class AxisTitle : StyleEntry
 public partial class CategoryAxis : StyleEntry
 {
     internal const int ElementTypeIdConst = 13280;
-    /// <inheritdoc/>
-    public override string LocalName => "categoryAxis";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the CategoryAxis class.
@@ -2768,11 +2668,7 @@ public partial class CategoryAxis : StyleEntry
 public partial class ChartArea : StyleEntry
 {
     internal const int ElementTypeIdConst = 13281;
-    /// <inheritdoc/>
-    public override string LocalName => "chartArea";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the ChartArea class.
@@ -2836,11 +2732,7 @@ public partial class ChartArea : StyleEntry
 public partial class DataLabel : StyleEntry
 {
     internal const int ElementTypeIdConst = 13282;
-    /// <inheritdoc/>
-    public override string LocalName => "dataLabel";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the DataLabel class.
@@ -2904,11 +2796,7 @@ public partial class DataLabel : StyleEntry
 public partial class DataLabelCallout : StyleEntry
 {
     internal const int ElementTypeIdConst = 13283;
-    /// <inheritdoc/>
-    public override string LocalName => "dataLabelCallout";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the DataLabelCallout class.
@@ -2972,11 +2860,7 @@ public partial class DataLabelCallout : StyleEntry
 public partial class DataPoint : StyleEntry
 {
     internal const int ElementTypeIdConst = 13284;
-    /// <inheritdoc/>
-    public override string LocalName => "dataPoint";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the DataPoint class.
@@ -3040,11 +2924,7 @@ public partial class DataPoint : StyleEntry
 public partial class DataPoint3D : StyleEntry
 {
     internal const int ElementTypeIdConst = 13285;
-    /// <inheritdoc/>
-    public override string LocalName => "dataPoint3D";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the DataPoint3D class.
@@ -3108,11 +2988,7 @@ public partial class DataPoint3D : StyleEntry
 public partial class DataPointLine : StyleEntry
 {
     internal const int ElementTypeIdConst = 13286;
-    /// <inheritdoc/>
-    public override string LocalName => "dataPointLine";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the DataPointLine class.
@@ -3176,11 +3052,7 @@ public partial class DataPointLine : StyleEntry
 public partial class DataPointMarker : StyleEntry
 {
     internal const int ElementTypeIdConst = 13287;
-    /// <inheritdoc/>
-    public override string LocalName => "dataPointMarker";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the DataPointMarker class.
@@ -3244,11 +3116,7 @@ public partial class DataPointMarker : StyleEntry
 public partial class DataPointWireframe : StyleEntry
 {
     internal const int ElementTypeIdConst = 13289;
-    /// <inheritdoc/>
-    public override string LocalName => "dataPointWireframe";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the DataPointWireframe class.
@@ -3312,11 +3180,7 @@ public partial class DataPointWireframe : StyleEntry
 public partial class DataTableStyle : StyleEntry
 {
     internal const int ElementTypeIdConst = 13290;
-    /// <inheritdoc/>
-    public override string LocalName => "dataTable";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the DataTableStyle class.
@@ -3380,11 +3244,7 @@ public partial class DataTableStyle : StyleEntry
 public partial class DownBar : StyleEntry
 {
     internal const int ElementTypeIdConst = 13291;
-    /// <inheritdoc/>
-    public override string LocalName => "downBar";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the DownBar class.
@@ -3448,11 +3308,7 @@ public partial class DownBar : StyleEntry
 public partial class DropLine : StyleEntry
 {
     internal const int ElementTypeIdConst = 13292;
-    /// <inheritdoc/>
-    public override string LocalName => "dropLine";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the DropLine class.
@@ -3516,11 +3372,7 @@ public partial class DropLine : StyleEntry
 public partial class ErrorBar : StyleEntry
 {
     internal const int ElementTypeIdConst = 13293;
-    /// <inheritdoc/>
-    public override string LocalName => "errorBar";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the ErrorBar class.
@@ -3584,11 +3436,7 @@ public partial class ErrorBar : StyleEntry
 public partial class Floor : StyleEntry
 {
     internal const int ElementTypeIdConst = 13294;
-    /// <inheritdoc/>
-    public override string LocalName => "floor";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the Floor class.
@@ -3652,11 +3500,7 @@ public partial class Floor : StyleEntry
 public partial class GridlineMajor : StyleEntry
 {
     internal const int ElementTypeIdConst = 13295;
-    /// <inheritdoc/>
-    public override string LocalName => "gridlineMajor";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the GridlineMajor class.
@@ -3720,11 +3564,7 @@ public partial class GridlineMajor : StyleEntry
 public partial class GridlineMinor : StyleEntry
 {
     internal const int ElementTypeIdConst = 13296;
-    /// <inheritdoc/>
-    public override string LocalName => "gridlineMinor";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the GridlineMinor class.
@@ -3788,11 +3628,7 @@ public partial class GridlineMinor : StyleEntry
 public partial class HiLoLine : StyleEntry
 {
     internal const int ElementTypeIdConst = 13297;
-    /// <inheritdoc/>
-    public override string LocalName => "hiLoLine";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the HiLoLine class.
@@ -3856,11 +3692,7 @@ public partial class HiLoLine : StyleEntry
 public partial class LeaderLine : StyleEntry
 {
     internal const int ElementTypeIdConst = 13298;
-    /// <inheritdoc/>
-    public override string LocalName => "leaderLine";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the LeaderLine class.
@@ -3924,11 +3756,7 @@ public partial class LeaderLine : StyleEntry
 public partial class LegendStyle : StyleEntry
 {
     internal const int ElementTypeIdConst = 13299;
-    /// <inheritdoc/>
-    public override string LocalName => "legend";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the LegendStyle class.
@@ -3992,11 +3820,7 @@ public partial class LegendStyle : StyleEntry
 public partial class PlotArea : StyleEntry
 {
     internal const int ElementTypeIdConst = 13300;
-    /// <inheritdoc/>
-    public override string LocalName => "plotArea";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the PlotArea class.
@@ -4060,11 +3884,7 @@ public partial class PlotArea : StyleEntry
 public partial class PlotArea3D : StyleEntry
 {
     internal const int ElementTypeIdConst = 13301;
-    /// <inheritdoc/>
-    public override string LocalName => "plotArea3D";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the PlotArea3D class.
@@ -4128,11 +3948,7 @@ public partial class PlotArea3D : StyleEntry
 public partial class SeriesAxis : StyleEntry
 {
     internal const int ElementTypeIdConst = 13302;
-    /// <inheritdoc/>
-    public override string LocalName => "seriesAxis";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the SeriesAxis class.
@@ -4196,11 +4012,7 @@ public partial class SeriesAxis : StyleEntry
 public partial class SeriesLine : StyleEntry
 {
     internal const int ElementTypeIdConst = 13303;
-    /// <inheritdoc/>
-    public override string LocalName => "seriesLine";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the SeriesLine class.
@@ -4264,11 +4076,7 @@ public partial class SeriesLine : StyleEntry
 public partial class TitleStyle : StyleEntry
 {
     internal const int ElementTypeIdConst = 13304;
-    /// <inheritdoc/>
-    public override string LocalName => "title";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the TitleStyle class.
@@ -4332,11 +4140,7 @@ public partial class TitleStyle : StyleEntry
 public partial class TrendlineStyle : StyleEntry
 {
     internal const int ElementTypeIdConst = 13305;
-    /// <inheritdoc/>
-    public override string LocalName => "trendline";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the TrendlineStyle class.
@@ -4400,11 +4204,7 @@ public partial class TrendlineStyle : StyleEntry
 public partial class TrendlineLabel : StyleEntry
 {
     internal const int ElementTypeIdConst = 13306;
-    /// <inheritdoc/>
-    public override string LocalName => "trendlineLabel";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the TrendlineLabel class.
@@ -4468,11 +4268,7 @@ public partial class TrendlineLabel : StyleEntry
 public partial class UpBar : StyleEntry
 {
     internal const int ElementTypeIdConst = 13307;
-    /// <inheritdoc/>
-    public override string LocalName => "upBar";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the UpBar class.
@@ -4536,11 +4332,7 @@ public partial class UpBar : StyleEntry
 public partial class ValueAxis : StyleEntry
 {
     internal const int ElementTypeIdConst = 13308;
-    /// <inheritdoc/>
-    public override string LocalName => "valueAxis";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the ValueAxis class.
@@ -4604,11 +4396,7 @@ public partial class ValueAxis : StyleEntry
 public partial class Wall : StyleEntry
 {
     internal const int ElementTypeIdConst = 13309;
-    /// <inheritdoc/>
-    public override string LocalName => "wall";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     /// <summary>
     /// Initializes a new instance of the Wall class.
@@ -4859,11 +4647,7 @@ public abstract partial class StyleEntry : OpenXmlCompositeElement
 public partial class MarkerLayoutProperties : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 13288;
-    /// <inheritdoc/>
-    public override string LocalName => "dataPointMarkerLayout";
-    internal override byte NamespaceId => 65;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2013;
 
     
     

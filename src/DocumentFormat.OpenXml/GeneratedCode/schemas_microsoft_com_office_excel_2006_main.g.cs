@@ -79,11 +79,7 @@ namespace DocumentFormat.OpenXml.Office.Excel
 public partial class Macrosheet : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 12600;
-    /// <inheritdoc/>
-    public override string LocalName => "macrosheet";
-    internal override byte NamespaceId => 32;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -238,11 +234,7 @@ public partial class Macrosheet : OpenXmlPartRootElement
 public partial class WorksheetSortMap : OpenXmlPartRootElement
 {
     internal const int ElementTypeIdConst = 12601;
-    /// <inheritdoc/>
-    public override string LocalName => "worksheetSortMap";
-    internal override byte NamespaceId => 32;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -363,11 +355,7 @@ public partial class WorksheetSortMap : OpenXmlPartRootElement
 public partial class ReferenceSequence : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12602;
-    /// <inheritdoc/>
-    public override string LocalName => "sqref";
-    internal override byte NamespaceId => 32;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -411,11 +399,7 @@ public partial class ReferenceSequence : OpenXmlLeafTextElement
 public partial class Formula : OpenXmlLeafTextElement
 {
     internal const int ElementTypeIdConst = 12603;
-    /// <inheritdoc/>
-    public override string LocalName => "f";
-    internal override byte NamespaceId => 32;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -466,11 +450,7 @@ public partial class Formula : OpenXmlLeafTextElement
 public partial class RowSortMap : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12604;
-    /// <inheritdoc/>
-    public override string LocalName => "rowSortMap";
-    internal override byte NamespaceId => 32;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -546,11 +526,7 @@ public partial class RowSortMap : OpenXmlCompositeElement
 public partial class ColumnSortMap : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12605;
-    /// <inheritdoc/>
-    public override string LocalName => "colSortMap";
-    internal override byte NamespaceId => 32;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -619,11 +595,7 @@ public partial class ColumnSortMap : OpenXmlCompositeElement
 public partial class RowSortMapItem : SortMapItemType
 {
     internal const int ElementTypeIdConst = 12606;
-    /// <inheritdoc/>
-    public override string LocalName => "row";
-    internal override byte NamespaceId => 32;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the RowSortMapItem class.
@@ -647,11 +619,7 @@ public partial class RowSortMapItem : SortMapItemType
 public partial class ColumnSortMapItem : SortMapItemType
 {
     internal const int ElementTypeIdConst = 12607;
-    /// <inheritdoc/>
-    public override string LocalName => "col";
-    internal override byte NamespaceId => 32;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     /// <summary>
     /// Initializes a new instance of the ColumnSortMapItem class.

@@ -38,11 +38,7 @@ namespace DocumentFormat.OpenXml.Office2010.Drawing.Charts
 public partial class PivotOptions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12762;
-    /// <inheritdoc/>
-    public override string LocalName => "pivotOptions";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -182,11 +178,7 @@ public partial class PivotOptions : OpenXmlCompositeElement
 public partial class SketchOptions : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12763;
-    /// <inheritdoc/>
-    public override string LocalName => "sketchOptions";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -285,11 +277,7 @@ public partial class SketchOptions : OpenXmlCompositeElement
 public partial class InvertSolidFillFormat : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12764;
-    /// <inheritdoc/>
-    public override string LocalName => "invertSolidFillFmt";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -368,11 +356,7 @@ public partial class InvertSolidFillFormat : OpenXmlCompositeElement
 public partial class Style : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12765;
-    /// <inheritdoc/>
-    public override string LocalName => "style";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -444,11 +428,7 @@ public partial class Style : OpenXmlLeafElement
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 12766;
-    /// <inheritdoc/>
-    public override string LocalName => "spPr";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     
@@ -533,11 +513,7 @@ public partial class ShapeProperties : OpenXmlCompositeElement
 public partial class DropZoneFilter : BooleanFalseType
 {
     internal const int ElementTypeIdConst = 12767;
-    /// <inheritdoc/>
-    public override string LocalName => "dropZoneFilter";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the DropZoneFilter class.
@@ -561,11 +537,7 @@ public partial class DropZoneFilter : BooleanFalseType
 public partial class DropZoneCategories : BooleanFalseType
 {
     internal const int ElementTypeIdConst = 12768;
-    /// <inheritdoc/>
-    public override string LocalName => "dropZoneCategories";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the DropZoneCategories class.
@@ -589,11 +561,7 @@ public partial class DropZoneCategories : BooleanFalseType
 public partial class DropZoneData : BooleanFalseType
 {
     internal const int ElementTypeIdConst = 12769;
-    /// <inheritdoc/>
-    public override string LocalName => "dropZoneData";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the DropZoneData class.
@@ -617,11 +585,7 @@ public partial class DropZoneData : BooleanFalseType
 public partial class DropZoneSeries : BooleanFalseType
 {
     internal const int ElementTypeIdConst = 12770;
-    /// <inheritdoc/>
-    public override string LocalName => "dropZoneSeries";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the DropZoneSeries class.
@@ -645,11 +609,7 @@ public partial class DropZoneSeries : BooleanFalseType
 public partial class DropZonesVisible : BooleanFalseType
 {
     internal const int ElementTypeIdConst = 12771;
-    /// <inheritdoc/>
-    public override string LocalName => "dropZonesVisible";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the DropZonesVisible class.
@@ -673,11 +633,7 @@ public partial class DropZonesVisible : BooleanFalseType
 public partial class InSketchMode : BooleanFalseType
 {
     internal const int ElementTypeIdConst = 12772;
-    /// <inheritdoc/>
-    public override string LocalName => "inSketchMode";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     /// <summary>
     /// Initializes a new instance of the InSketchMode class.
@@ -727,11 +683,7 @@ public abstract partial class BooleanFalseType : OpenXmlLeafElement
 public partial class ShowSketchButton : OpenXmlLeafElement
 {
     internal const int ElementTypeIdConst = 12773;
-    /// <inheritdoc/>
-    public override string LocalName => "showSketchBtn";
-    internal override byte NamespaceId => 46;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2010;
 
     
     

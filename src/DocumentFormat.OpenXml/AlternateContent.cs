@@ -95,9 +95,6 @@ namespace DocumentFormat.OpenXml
         /// <inheritdoc/>
         public override string LocalName => TagName;
 
-        /// <inheritdoc/>
-        internal override byte NamespaceId => MarkupCompatibilityNamespaceId;
-
         /// <summary>
         /// Appends a new child of type T:DocumentFormat.OpenXml.AlternateContentChoice
         ///  to the current element.
@@ -132,8 +129,5 @@ namespace DocumentFormat.OpenXml
 
         /// <inheritdoc/>
         internal override int ElementTypeId => ReservedElementTypeIds.AlternateContentId;
-
-        /// <inheritdoc/>
-        internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
     }
 }

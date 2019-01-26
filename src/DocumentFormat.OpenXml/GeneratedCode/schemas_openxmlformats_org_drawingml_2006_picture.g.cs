@@ -37,11 +37,7 @@ namespace DocumentFormat.OpenXml.Drawing.Pictures
 public partial class Picture : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10780;
-    /// <inheritdoc/>
-    public override string LocalName => "pic";
-    internal override byte NamespaceId => 17;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -183,11 +179,7 @@ public partial class Picture : OpenXmlCompositeElement
 public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10781;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvPr";
-    internal override byte NamespaceId => 17;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -331,11 +323,7 @@ public partial class NonVisualDrawingProperties : OpenXmlCompositeElement
 public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10782;
-    /// <inheritdoc/>
-    public override string LocalName => "cNvPicPr";
-    internal override byte NamespaceId => 17;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -442,11 +430,7 @@ public partial class NonVisualPictureDrawingProperties : OpenXmlCompositeElement
 public partial class NonVisualPictureProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10783;
-    /// <inheritdoc/>
-    public override string LocalName => "nvPicPr";
-    internal override byte NamespaceId => 17;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -551,11 +535,7 @@ public partial class NonVisualPictureProperties : OpenXmlCompositeElement
 public partial class BlipFill : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10784;
-    /// <inheritdoc/>
-    public override string LocalName => "blipFill";
-    internal override byte NamespaceId => 17;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
@@ -694,11 +674,7 @@ public partial class BlipFill : OpenXmlCompositeElement
 public partial class ShapeProperties : OpenXmlCompositeElement
 {
     internal const int ElementTypeIdConst = 10785;
-    /// <inheritdoc/>
-    public override string LocalName => "spPr";
-    internal override byte NamespaceId => 17;
     internal override int ElementTypeId => ElementTypeIdConst;
-    internal override FileFormatVersions InitialVersion => FileFormatVersions.Office2007;
 
     
     
